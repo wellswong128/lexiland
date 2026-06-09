@@ -253,13 +253,13 @@ npm run build
 ## Phase 18: Deploy To Vercel
 
 - [x] Push the project to GitHub.
-- [ ] Create a new Vercel project.
-- [ ] Connect the GitHub repository.
-- [ ] Confirm Vercel detects Vite.
-- [ ] Set build command to `npm run build`.
-- [ ] Set output directory to `dist`.
-- [ ] Deploy the first version.
-- [ ] Test every route on the deployed URL.
+- [x] Create a new Vercel project.
+- [x] Connect the GitHub repository.
+- [x] Confirm Vercel detects Vite.
+- [x] Set build command to `npm run build`.
+- [x] Set output directory to `dist`.
+- [x] Deploy the first version.
+- [x] Test every route on the deployed URL.
 
 ## Phase 19: Prepare Supabase Version
 
