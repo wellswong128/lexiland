@@ -263,17 +263,17 @@ npm run build
 
 ## Phase 19: Prepare Supabase Version
 
-- [ ] Create a Supabase project.
-- [ ] Design tables based on `DATA_MODEL.md`.
-- [ ] Add authentication.
-- [ ] Create a `profiles` table if user profile data is needed.
-- [ ] Create a `words` table.
-- [ ] Create a `review_events` table.
-- [ ] Create a `mistakes` table if mistakes are separated from words.
-- [ ] Add Row Level Security policies.
-- [ ] Create a Supabase client in the React app.
-- [ ] Replace localStorage reads and writes with Supabase queries.
-- [ ] Keep the UI mostly unchanged.
+- [x] Create a Supabase project.
+- [x] Design tables based on `DATA_MODEL.md`.
+- [x] Add authentication.
+- [x] Create a `profiles` table if user profile data is needed.
+- [x] Create a `words` table.
+- [x] Create a `review_events` table.
+- [x] Decide not to create a separate `mistakes` table because mistake state stays on `words`.
+- [x] Add Row Level Security policies.
+- [x] Create a Supabase client in the React app.
+- [x] Replace localStorage reads and writes with Supabase queries.
+- [x] Keep the UI mostly unchanged.
 
 ## Phase 20: Future AI Auto-Completion
 

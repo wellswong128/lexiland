@@ -17,6 +17,7 @@ function AddWordPage() {
   const { addWord } = useWordsContext();
   const [formValues, setFormValues] = useState(initialFormValues);
   const [error, setError] = useState("");
+  const [isSaving, setIsSaving] = useState(false);
 
   function handleChange(event) {
     const { name, value } = event.target;
@@ -27,7 +28,7 @@ function AddWordPage() {
     }));
   }
 
-  function handleSubmit(event) {
+  async function handleSubmit(event) {
     event.preventDefault();
 
     if (!formValues.term.trim() || !formValues.definition.trim()) {
@@ -35,9 +36,16 @@ function AddWordPage() {
       return;
     }
 
-    addWord(formValues);
-    setError("");
-    navigate("/words");
+    try {
+      setIsSaving(true);
+      await addWord(formValues);
+      setError("");
+      navigate("/words");
+    } catch (saveError) {
+      setError(saveError.message);
+    } finally {
+      setIsSaving(false);
+    }
   }
 
   return (
@@ -161,10 +169,11 @@ function AddWordPage() {
 
         <div className="flex justify-end">
           <button
-            className="rounded-full bg-blue-700 px-6 py-3 text-sm font-bold text-white shadow-lg shadow-blue-900/20 transition hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-200"
+            className="rounded-full bg-blue-700 px-6 py-3 text-sm font-bold text-white shadow-lg shadow-blue-900/20 transition hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-200 disabled:bg-slate-300"
+            disabled={isSaving}
             type="submit"
           >
-            Save Word
+            {isSaving ? "Saving..." : "Save Word"}
           </button>
         </div>
       </form>

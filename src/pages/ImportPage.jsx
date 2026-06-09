@@ -43,6 +43,7 @@ function ImportPage() {
   const [previewWords, setPreviewWords] = useState([]);
   const [error, setError] = useState("");
   const [summary, setSummary] = useState(null);
+  const [isImporting, setIsImporting] = useState(false);
 
   function handlePreview() {
     setError("");
@@ -65,14 +66,23 @@ function ImportPage() {
     }
   }
 
-  function handleImport() {
-    const result = importWords(previewWords);
+  async function handleImport() {
+    try {
+      setError("");
+      setIsImporting(true);
 
-    setSummary({
-      importedCount: result.importedWords.length,
-      skippedCount: result.skippedWords.length,
-    });
-    setPreviewWords([]);
+      const result = await importWords(previewWords);
+
+      setSummary({
+        importedCount: result.importedWords.length,
+        skippedCount: result.skippedWords.length,
+      });
+      setPreviewWords([]);
+    } catch (importError) {
+      setError(importError.message);
+    } finally {
+      setIsImporting(false);
+    }
   }
 
   return (
@@ -129,11 +139,11 @@ function ImportPage() {
             </button>
             <button
               className="rounded-full bg-blue-700 px-5 py-3 text-sm font-bold text-white transition hover:bg-blue-800 disabled:cursor-not-allowed disabled:bg-slate-300"
-              disabled={previewWords.length === 0}
+              disabled={previewWords.length === 0 || isImporting}
               onClick={handleImport}
               type="button"
             >
-              Import Words
+              {isImporting ? "Importing..." : "Import Words"}
             </button>
             <Link
               className="rounded-full bg-slate-100 px-5 py-3 text-sm font-bold text-slate-700 transition hover:bg-slate-200"

@@ -1,0 +1,176 @@
+import { supabase } from "../../lib/supabaseClient.js";
+
+const WORD_COLUMNS = `
+  id,
+  user_id,
+  term,
+  definition,
+  translation,
+  pronunciation,
+  part_of_speech,
+  example,
+  notes,
+  tags,
+  source,
+  review_level,
+  next_review_at,
+  last_reviewed_at,
+  correct_count,
+  incorrect_count,
+  last_result,
+  is_mistake,
+  last_mistake_at,
+  mistake_count,
+  created_at,
+  updated_at
+`;
+
+function mapDbWordToWord(row) {
+  return {
+    id: row.id,
+    term: row.term,
+    definition: row.definition,
+    translation: row.translation ?? "",
+    pronunciation: row.pronunciation ?? "",
+    partOfSpeech: row.part_of_speech ?? "",
+    example: row.example ?? "",
+    notes: row.notes ?? "",
+    tags: row.tags ?? [],
+    source: row.source,
+    createdAt: row.created_at,
+    updatedAt: row.updated_at,
+    review: {
+      level: row.review_level,
+      nextReviewAt: row.next_review_at,
+      lastReviewedAt: row.last_reviewed_at,
+      correctCount: row.correct_count,
+      incorrectCount: row.incorrect_count,
+      lastResult: row.last_result,
+    },
+    mistake: {
+      isMistake: row.is_mistake,
+      lastMistakeAt: row.last_mistake_at,
+      mistakeCount: row.mistake_count,
+    },
+  };
+}
+
+function mapWordToInsert(word, userId) {
+  return {
+    user_id: userId,
+    term: word.term,
+    definition: word.definition,
+    translation: word.translation,
+    pronunciation: word.pronunciation,
+    part_of_speech: word.partOfSpeech,
+    example: word.example,
+    notes: word.notes,
+    tags: word.tags,
+    source: word.source,
+    review_level: word.review.level,
+    next_review_at: word.review.nextReviewAt,
+    last_reviewed_at: word.review.lastReviewedAt,
+    correct_count: word.review.correctCount,
+    incorrect_count: word.review.incorrectCount,
+    last_result: word.review.lastResult,
+    is_mistake: word.mistake.isMistake,
+    last_mistake_at: word.mistake.lastMistakeAt,
+    mistake_count: word.mistake.mistakeCount,
+  };
+}
+
+function mapWordChangesToUpdate(changes) {
+  const update = {};
+
+  if (Object.hasOwn(changes, "term")) update.term = changes.term;
+  if (Object.hasOwn(changes, "definition")) update.definition = changes.definition;
+  if (Object.hasOwn(changes, "translation")) update.translation = changes.translation;
+  if (Object.hasOwn(changes, "pronunciation")) update.pronunciation = changes.pronunciation;
+  if (Object.hasOwn(changes, "partOfSpeech")) update.part_of_speech = changes.partOfSpeech;
+  if (Object.hasOwn(changes, "example")) update.example = changes.example;
+  if (Object.hasOwn(changes, "notes")) update.notes = changes.notes;
+  if (Object.hasOwn(changes, "tags")) update.tags = changes.tags;
+  if (Object.hasOwn(changes, "source")) update.source = changes.source;
+
+  if (changes.review) {
+    update.review_level = changes.review.level;
+    update.next_review_at = changes.review.nextReviewAt;
+    update.last_reviewed_at = changes.review.lastReviewedAt;
+    update.correct_count = changes.review.correctCount;
+    update.incorrect_count = changes.review.incorrectCount;
+    update.last_result = changes.review.lastResult;
+  }
+
+  if (changes.mistake) {
+    update.is_mistake = changes.mistake.isMistake;
+    update.last_mistake_at = changes.mistake.lastMistakeAt;
+    update.mistake_count = changes.mistake.mistakeCount;
+  }
+
+  return update;
+}
+
+function ensureSupabase() {
+  if (!supabase) {
+    throw new Error("Supabase is not configured.");
+  }
+}
+
+export async function fetchWordsFromSupabase(userId) {
+  ensureSupabase();
+
+  const { data, error } = await supabase
+    .from("words")
+    .select(WORD_COLUMNS)
+    .eq("user_id", userId)
+    .order("created_at", { ascending: false });
+
+  if (error) throw error;
+
+  return data.map(mapDbWordToWord);
+}
+
+export async function insertWordInSupabase(word, userId) {
+  ensureSupabase();
+
+  const { data, error } = await supabase
+    .from("words")
+    .insert(mapWordToInsert(word, userId))
+    .select(WORD_COLUMNS)
+    .single();
+
+  if (error) throw error;
+
+  return mapDbWordToWord(data);
+}
+
+export async function updateWordInSupabase(wordId, changes) {
+  ensureSupabase();
+
+  const { data, error } = await supabase
+    .from("words")
+    .update(mapWordChangesToUpdate(changes))
+    .eq("id", wordId)
+    .select(WORD_COLUMNS)
+    .single();
+
+  if (error) throw error;
+
+  return mapDbWordToWord(data);
+}
+
+export async function deleteWordFromSupabase(wordId) {
+  ensureSupabase();
+
+  const { error } = await supabase.from("words").delete().eq("id", wordId);
+
+  if (error) throw error;
+}
+
+export async function deleteAllWordsFromSupabase(userId) {
+  ensureSupabase();
+
+  const { error } = await supabase.from("words").delete().eq("user_id", userId);
+
+  if (error) throw error;
+}

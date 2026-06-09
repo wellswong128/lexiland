@@ -1,13 +1,20 @@
 import { createContext, useContext } from "react";
+import { useSupabaseAuth } from "../auth/useSupabaseAuth.js";
 import { useWords } from "./useWords.js";
 
 const WordsContext = createContext(null);
 
 export function WordsProvider({ children }) {
-  const wordsState = useWords();
+  const authState = useSupabaseAuth();
+  const wordsState = useWords({
+    isAuthLoading: authState.isAuthLoading,
+    user: authState.user,
+  });
 
   return (
-    <WordsContext.Provider value={wordsState}>{children}</WordsContext.Provider>
+    <WordsContext.Provider value={{ ...authState, ...wordsState }}>
+      {children}
+    </WordsContext.Provider>
   );
 }
 

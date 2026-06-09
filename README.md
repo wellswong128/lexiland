@@ -96,6 +96,27 @@ Planned Supabase features:
 - Row Level Security so users can only access their own data.
 - Possible local cache later for offline-friendly behavior.
 
+Prepared Supabase files:
+
+- `supabase/schema.sql`: tables, indexes, triggers, and Row Level Security policies.
+- `.env.example`: required Vite environment variables.
+- `src/lib/supabaseClient.js`: shared Supabase client helper.
+
+Current data behavior:
+
+- Signed-in users with Supabase env vars use Supabase for word reads and writes.
+- Users without a Supabase session continue to use the localStorage fallback.
+- The UI is kept mostly unchanged; sign in and sign out live on the Settings page.
+
+Environment variables for the future Supabase version:
+
+```bash
+VITE_SUPABASE_URL=your_supabase_project_url
+VITE_SUPABASE_ANON_KEY=your_supabase_anon_key
+```
+
+Do not commit real `.env` files or service role keys.
+
 ## Future AI Auto-Completion
 
 AI auto-completion should be added after the manual app flow is stable.
