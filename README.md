@@ -113,7 +113,15 @@ Environment variables for the future Supabase version:
 ```bash
 VITE_SUPABASE_URL=your_supabase_project_url
 VITE_SUPABASE_ANON_KEY=your_supabase_anon_key
+VITE_AUTH_REDIRECT_URL=https://your-vercel-domain.vercel.app
 ```
+
+For Supabase magic link login, also set these in the Supabase dashboard under Authentication URL configuration:
+
+- Site URL: your Vercel deployment URL.
+- Redirect URLs: your Vercel deployment URL and local dev URL if needed.
+
+Do not use `localhost` as the production Site URL, because mobile devices cannot open your Mac's local server.
 
 Do not commit real `.env` files or service role keys.
 
