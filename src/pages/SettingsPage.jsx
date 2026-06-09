@@ -1,6 +1,16 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { WORDS_STORAGE_KEY } from "../lib/storage.js";
 import { useWordsContext } from "../features/words/WordsContext.jsx";
+
+const EMAIL_COOLDOWN_SECONDS = 60;
+
+function getFriendlyAuthError(message) {
+  if (message.toLowerCase().includes("rate limit")) {
+    return "Email rate limit exceeded. Please wait a few minutes before requesting another login link.";
+  }
+
+  return message;
+}
 
 function SettingsPage() {
   const {
@@ -16,24 +26,49 @@ function SettingsPage() {
     wordsError,
   } = useWordsContext();
   const [email, setEmail] = useState("");
+  const [emailCooldown, setEmailCooldown] = useState(0);
   const [isAuthSubmitting, setIsAuthSubmitting] = useState(false);
   const [isResetting, setIsResetting] = useState(false);
-  const [message, setMessage] = useState("");
+  const [notice, setNotice] = useState("");
+  const [noticeType, setNoticeType] = useState("success");
+
+  useEffect(() => {
+    if (emailCooldown <= 0) {
+      return undefined;
+    }
+
+    const timerId = window.setTimeout(() => {
+      setEmailCooldown((currentSeconds) => Math.max(currentSeconds - 1, 0));
+    }, 1000);
+
+    return () => window.clearTimeout(timerId);
+  }, [emailCooldown]);
 
   async function handleSignIn(event) {
     event.preventDefault();
 
     if (!email.trim()) {
-      setMessage("Please enter your email address.");
+      setNoticeType("error");
+      setNotice("Please enter your email address.");
+      return;
+    }
+
+    if (emailCooldown > 0) {
+      setNoticeType("error");
+      setNotice(`Please wait ${emailCooldown} seconds before trying again.`);
       return;
     }
 
     try {
       setIsAuthSubmitting(true);
       await signInWithEmail(email.trim());
-      setMessage("Check your email for the Supabase login link.");
+      setNoticeType("success");
+      setNotice("Check your email for the Supabase login link.");
+      setEmailCooldown(EMAIL_COOLDOWN_SECONDS);
     } catch (error) {
-      setMessage(error.message);
+      setNoticeType("error");
+      setNotice(getFriendlyAuthError(error.message));
+      setEmailCooldown(EMAIL_COOLDOWN_SECONDS);
     } finally {
       setIsAuthSubmitting(false);
     }
@@ -43,9 +78,11 @@ function SettingsPage() {
     try {
       setIsAuthSubmitting(true);
       await signOut();
-      setMessage("Signed out. The app is using local browser data now.");
+      setNoticeType("success");
+      setNotice("Signed out. The app is using local browser data now.");
     } catch (error) {
-      setMessage(error.message);
+      setNoticeType("error");
+      setNotice(error.message);
     } finally {
       setIsAuthSubmitting(false);
     }
@@ -63,13 +100,20 @@ function SettingsPage() {
     try {
       setIsResetting(true);
       await resetAllWords();
-      setMessage("All words were deleted.");
+      setNoticeType("success");
+      setNotice("All words were deleted.");
     } catch (error) {
-      setMessage(error.message);
+      setNoticeType("error");
+      setNotice(error.message);
     } finally {
       setIsResetting(false);
     }
   }
+
+  const currentError = authError || wordsError;
+  const friendlyCurrentError = currentError
+    ? getFriendlyAuthError(currentError)
+    : "";
 
   return (
     <section className="w-full max-w-4xl rounded-3xl border border-blue-200/70 bg-white/90 p-6 shadow-2xl shadow-blue-950/10 sm:p-10">
@@ -86,15 +130,22 @@ function SettingsPage() {
         </p>
       </div>
 
-      {message ? (
-        <p className="mb-6 rounded-2xl border border-green-200 bg-green-50 px-4 py-3 text-sm font-medium text-green-700">
-          {message}
+      {notice ? (
+        <p
+          className={[
+            "mb-6 rounded-2xl border px-4 py-3 text-sm font-medium",
+            noticeType === "success"
+              ? "border-green-200 bg-green-50 text-green-700"
+              : "border-red-200 bg-red-50 text-red-700",
+          ].join(" ")}
+        >
+          {notice}
         </p>
       ) : null}
 
-      {authError || wordsError ? (
+      {friendlyCurrentError && friendlyCurrentError !== notice ? (
         <p className="mb-6 rounded-2xl border border-red-200 bg-red-50 px-4 py-3 text-sm font-medium text-red-700">
-          {authError || wordsError}
+          {friendlyCurrentError}
         </p>
       ) : null}
 
@@ -132,10 +183,14 @@ function SettingsPage() {
             />
             <button
               className="rounded-full bg-blue-700 px-5 py-3 text-sm font-bold text-white transition hover:bg-blue-800 disabled:bg-slate-300"
-              disabled={isAuthSubmitting}
+              disabled={isAuthSubmitting || emailCooldown > 0}
               type="submit"
             >
-              {isAuthSubmitting ? "Sending..." : "Email Login Link"}
+              {isAuthSubmitting
+                ? "Sending..."
+                : emailCooldown > 0
+                  ? `Try Again in ${emailCooldown}s`
+                  : "Email Login Link"}
             </button>
           </form>
         )}
