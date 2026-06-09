@@ -22,15 +22,29 @@ function SpeakButton({ className = "", label = "Speak", text }) {
   return (
     <button
       aria-label={`${label}: ${text}`}
+      title={`${label}: ${text}`}
       className={[
-        "rounded-full bg-blue-100 px-3 py-1.5 text-sm font-bold text-blue-700 transition hover:bg-blue-200 disabled:cursor-not-allowed disabled:bg-slate-100 disabled:text-slate-400",
+        "inline-flex size-9 items-center justify-center rounded-full bg-blue-100 text-blue-700 transition hover:bg-blue-200 disabled:cursor-not-allowed disabled:bg-slate-100 disabled:text-slate-400",
         className,
       ].join(" ")}
       disabled={disabled}
       onClick={() => speakText(text)}
       type="button"
     >
-      Speak
+      <svg
+        aria-hidden="true"
+        className="size-5"
+        fill="none"
+        stroke="currentColor"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="2"
+        viewBox="0 0 24 24"
+      >
+        <path d="M4 9v6h4l5 4V5L8 9H4Z" />
+        <path d="M16 9.5a4 4 0 0 1 0 5" />
+        <path d="M18.5 7a7 7 0 0 1 0 10" />
+      </svg>
     </button>
   );
 }

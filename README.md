@@ -146,6 +146,15 @@ AGNES_MODEL=agnes-2.0-flash
 
 Important: `AGNES_API_KEY` must be configured in Vercel environment variables. Do not expose it with a `VITE_` prefix and do not store it in frontend code.
 
+For local development, add the same server-side values to `.env.local`:
+
+```bash
+AGNES_API_KEY=your_agnes_api_key
+AGNES_MODEL=agnes-2.0-flash
+```
+
+Then restart `npm run dev`. The Vite dev server includes a local `/api/complete-word` middleware so AI Fill works locally too.
+
 ## Deployment
 
 The app is ready to deploy to Vercel after the production build succeeds.
