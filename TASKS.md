@@ -252,7 +252,7 @@ npm run build
 
 ## Phase 18: Deploy To Vercel
 
-- [ ] Push the project to GitHub.
+- [x] Push the project to GitHub.
 - [ ] Create a new Vercel project.
 - [ ] Connect the GitHub repository.
 - [ ] Confirm Vercel detects Vite.
