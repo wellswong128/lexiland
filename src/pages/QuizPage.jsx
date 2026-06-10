@@ -1,12 +1,14 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import SpeakButton from "../components/SpeakButton.jsx";
+import { useLocale } from "../features/locale/LocaleContext.jsx";
 import { createQuizQuestions } from "../features/review/quizHelpers.js";
 import { updateReviewResult } from "../features/review/reviewHelpers.js";
 import { useWordsContext } from "../features/words/WordsContext.jsx";
 import { REVIEW_RESULTS } from "../features/words/wordTypes.js";
 
 function QuizPage() {
+  const { t } = useLocale();
   const { updateWord, words } = useWordsContext();
   const [questions] = useState(() => createQuizQuestions(words));
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -16,9 +18,10 @@ function QuizPage() {
   const [isComplete, setIsComplete] = useState(false);
 
   const currentQuestion = questions[currentIndex];
-  const progressText = `${Math.min(currentIndex + 1, questions.length)} of ${
-    questions.length
-  }`;
+  const progressText = t("quiz.progress", {
+    current: Math.min(currentIndex + 1, questions.length),
+    total: questions.length,
+  });
 
   function handleAnswer(answer) {
     if (feedback) {
@@ -52,19 +55,19 @@ function QuizPage() {
     return (
       <section className="w-full max-w-3xl rounded-3xl border border-blue-200/70 bg-white/90 p-8 text-center shadow-2xl shadow-blue-950/10 sm:p-14">
         <p className="mb-3 text-xs font-bold uppercase tracking-[0.16em] text-blue-700">
-          Practice Test
+          {t("quiz.eyebrow")}
         </p>
         <h1 className="text-4xl font-bold text-blue-950 sm:text-5xl">
-          Not Enough Words
+          {t("quiz.notEnoughTitle")}
         </h1>
         <p className="mx-auto mt-4 max-w-xl text-slate-600">
-          Add at least two words before starting a multiple choice quiz.
+          {t("quiz.notEnoughDescription")}
         </p>
         <Link
           className="mt-8 inline-flex rounded-full bg-blue-700 px-5 py-3 text-sm font-bold text-white transition hover:bg-blue-800"
           to="/words/new"
         >
-          Add Word
+          {t("common.addWord")}
         </Link>
       </section>
     );
@@ -74,29 +77,29 @@ function QuizPage() {
     return (
       <section className="w-full max-w-3xl rounded-3xl border border-blue-200/70 bg-white/90 p-8 text-center shadow-2xl shadow-blue-950/10 sm:p-14">
         <p className="mb-3 text-xs font-bold uppercase tracking-[0.16em] text-blue-700">
-          Quiz Complete
+          {t("quiz.completeEyebrow")}
         </p>
         <h1 className="text-4xl font-bold text-blue-950 sm:text-5xl">
-          Your Score
+          {t("quiz.completeTitle")}
         </h1>
         <p className="mt-6 text-6xl font-bold text-blue-700">
           {score}/{questions.length}
         </p>
         <p className="mx-auto mt-4 max-w-xl text-slate-600">
-          Incorrect answers were added to your mistake notebook automatically.
+          {t("quiz.completeDescription")}
         </p>
         <div className="mt-8 flex flex-wrap justify-center gap-3">
           <Link
             className="rounded-full bg-blue-700 px-5 py-3 text-sm font-bold text-white transition hover:bg-blue-800"
             to="/mistakes"
           >
-            View Mistakes
+            {t("quiz.viewMistakes")}
           </Link>
           <Link
             className="rounded-full bg-blue-100 px-5 py-3 text-sm font-bold text-blue-700 transition hover:bg-blue-200"
             to="/words"
           >
-            Back to Word List
+            {t("quiz.backToList")}
           </Link>
         </div>
       </section>
@@ -108,10 +111,10 @@ function QuizPage() {
       <div className="mb-8 flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
         <div>
           <p className="mb-3 text-xs font-bold uppercase tracking-[0.16em] text-blue-700">
-            Practice Test
+            {t("quiz.eyebrow")}
           </p>
           <h1 className="text-4xl font-bold text-blue-950 sm:text-5xl">
-            Quiz
+            {t("quiz.title")}
           </h1>
         </div>
         <p className="rounded-full bg-blue-100 px-4 py-2 text-sm font-bold text-blue-700">
@@ -121,7 +124,7 @@ function QuizPage() {
 
       <div className="rounded-3xl border border-blue-100 bg-blue-50/70 p-8 text-center">
         <p className="text-sm font-bold uppercase tracking-[0.14em] text-blue-700">
-          Choose the correct definition
+          {t("quiz.chooseTranslation")}
         </p>
         <div className="mt-4 flex flex-col items-center gap-3">
           <h2 className="text-5xl font-bold text-blue-950">
@@ -133,8 +136,8 @@ function QuizPage() {
 
       <div className="mt-6 grid gap-3">
         {currentQuestion.options.map((option, optionIndex) => {
-          const isSelected = selectedAnswer === option;
-          const isCorrectAnswer = option === currentQuestion.correctAnswer;
+          const isSelected = selectedAnswer === option.wordId;
+          const isCorrectAnswer = option.wordId === currentQuestion.correctAnswer;
           const showCorrect = feedback && isCorrectAnswer;
           const showIncorrect = feedback === "incorrect" && isSelected;
 
@@ -151,11 +154,11 @@ function QuizPage() {
                   : "",
               ].join(" ")}
               disabled={Boolean(feedback)}
-              key={`${option}-${optionIndex}`}
-              onClick={() => handleAnswer(option)}
+              key={`${option.wordId}-${optionIndex}`}
+              onClick={() => handleAnswer(option.wordId)}
               type="button"
             >
-              {option}
+              {option.label}
             </button>
           );
         })}
@@ -170,11 +173,13 @@ function QuizPage() {
                 : "font-bold text-red-700"
             }
           >
-            {feedback === "correct" ? "Correct!" : "Incorrect."}
+            {feedback === "correct" ? t("quiz.correct") : t("quiz.incorrect")}
           </p>
           {feedback === "incorrect" ? (
             <p className="mt-2 text-slate-600">
-              Correct answer: {currentQuestion.correctAnswer}
+              {t("quiz.correctAnswer", {
+                answer: currentQuestion.correctLabel,
+              })}
             </p>
           ) : null}
           <button
@@ -182,7 +187,9 @@ function QuizPage() {
             onClick={handleNextQuestion}
             type="button"
           >
-            {currentIndex >= questions.length - 1 ? "Finish Quiz" : "Next Question"}
+            {currentIndex >= questions.length - 1
+              ? t("quiz.finishQuiz")
+              : t("quiz.nextQuestion")}
           </button>
         </div>
       ) : null}

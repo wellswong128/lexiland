@@ -1,5 +1,7 @@
 import { useCallback, useEffect, useMemo, useState } from "react";
 import { Link } from "react-router-dom";
+import LanguageToggle from "../components/LanguageToggle.jsx";
+import { useLocale } from "../features/locale/LocaleContext.jsx";
 import { useWordsContext } from "../features/words/WordsContext.jsx";
 
 const fallbackWords = [
@@ -109,6 +111,7 @@ function createRound(wordBank, level) {
 }
 
 function SpellingNinjaPage() {
+  const { t } = useLocale();
   const { words } = useWordsContext();
   const wordBank = useMemo(() => {
     const savedWords = words
@@ -228,7 +231,7 @@ function SpellingNinjaPage() {
     setFever(0);
     setFeverActive(false);
     setStatus({
-      text: `Word cleared: ${round.word.word.toUpperCase()}!`,
+      text: t("games.correct"),
       type: "bonus",
     });
     setFlash("good");
@@ -246,7 +249,7 @@ function SpellingNinjaPage() {
         return nextLevel;
       });
     }, 900);
-  }, [feverActive, round, startRound, timeLeft]);
+  }, [feverActive, round, startRound, t, timeLeft]);
 
   const handleTimeout = useCallback(() => {
     if (!round || roundLocked) return;
@@ -257,7 +260,7 @@ function SpellingNinjaPage() {
     setCombo(0);
     setFever((value) => Math.max(0, value - 30));
     setFeverActive(false);
-    setStatus({ text: "Time up! The monster escaped.", type: "bad" });
+    setStatus({ text: t("games.ninja.missed", { word: round.word.word }), type: "bad" });
     setFlash("bad");
     playTone(120, 0.2, "sawtooth", 0.035);
 
@@ -278,7 +281,7 @@ function SpellingNinjaPage() {
 
       return Math.max(0, nextHp);
     });
-  }, [addMissedWord, endGame, round, roundLocked, startRound]);
+  }, [addMissedWord, endGame, round, roundLocked, startRound, t]);
 
   const pressLetter = useCallback(
     (id) => {
@@ -297,12 +300,12 @@ function SpellingNinjaPage() {
       }));
 
       if (item.bomb) {
-        handleMistake("Bomb! You hit a trap letter!");
+        handleMistake(t("games.ninja.missed", { word: round.word.word }));
         return;
       }
 
       if (item.letter !== expected) {
-        handleMistake(`Wrong letter! Expected: ${expected.toUpperCase()}`);
+        handleMistake(t("games.ninja.missed", { word: round.word.word }));
         return;
       }
 
@@ -323,10 +326,10 @@ function SpellingNinjaPage() {
 
         if (nextFever >= 100 && !feverActive) {
           setFeverActive(true);
-          setStatus({ text: "FEVER MODE! Score boosted!", type: "bonus" });
+          setStatus({ text: t("games.ninja.fever"), type: "bonus" });
           playTone(1000, 0.13, "triangle", 0.045);
         } else {
-          setStatus({ text: "Slash! Correct letter.", type: "good" });
+          setStatus({ text: t("games.ninja.slashCorrect"), type: "good" });
         }
 
         return nextFever;
@@ -347,6 +350,7 @@ function SpellingNinjaPage() {
       handleMistake,
       round,
       roundLocked,
+      t,
     ],
   );
 
@@ -398,21 +402,24 @@ function SpellingNinjaPage() {
   return (
     <section className="flex h-[calc(100svh-1rem)] max-h-[calc(100svh-1rem)] w-full max-w-5xl flex-col overflow-hidden rounded-[1.5rem] bg-slate-950 p-2 text-slate-50 shadow-2xl shadow-slate-950/30 sm:p-4">
       <div className="relative mb-2">
-        <Link
-          className="absolute right-0 top-0 rounded-full border border-slate-700 bg-slate-900 px-3 py-1.5 text-xs font-bold text-slate-200 transition hover:bg-slate-800"
-          to="/"
-        >
-          Home
-        </Link>
+        <div className="absolute right-0 top-0 flex items-center gap-2">
+          <LanguageToggle />
+          <Link
+            className="rounded-full border border-slate-700 bg-slate-900 px-3 py-1.5 text-xs font-bold text-slate-200 transition hover:bg-slate-800"
+            to="/"
+          >
+            {t("common.home")}
+          </Link>
+        </div>
         <div className="text-center">
           <p className="text-[0.6rem] font-black uppercase tracking-[0.32em] text-cyan-300 sm:text-xs">
-            Training Dojo
+            {t("games.ninja.title")}
           </p>
           <h1 className="text-3xl font-black tracking-tight text-cyan-300 drop-shadow-[0_0_18px_rgba(34,211,238,0.5)] sm:text-5xl">
-            Spelling Ninja
+            {t("games.ninja.title")}
           </h1>
           <p className="text-[0.7rem] text-slate-400 sm:text-sm">
-            Click letters in order. Slice the word monster.
+            {t("games.ninja.subtitle")}
           </p>
         </div>
       </div>
@@ -421,12 +428,12 @@ function SpellingNinjaPage() {
         <>
           <div className="mb-1.5 grid grid-cols-6 gap-1.5">
             {[
-              ["Score", score, "text-cyan-300"],
-              ["Combo", combo, "text-yellow-300"],
-              ["HP", `${hp}/${maxHp}`, "text-rose-300"],
-              ["Time", timeLeft, "text-green-300"],
-              ["Level", level, "text-purple-300"],
-              ["Fever", feverActive ? "FEVER" : `${fever}%`, "text-orange-300"],
+              [t("games.score"), score, "text-cyan-300"],
+              [t("games.combo"), combo, "text-yellow-300"],
+              [t("games.hp"), `${hp}/${maxHp}`, "text-rose-300"],
+              [t("games.time"), timeLeft, "text-green-300"],
+              [t("games.level"), level, "text-purple-300"],
+              ["FEVER", feverActive ? "FEVER" : `${fever}%`, "text-orange-300"],
             ].map(([label, value, color]) => (
               <div
                 className="rounded-lg border border-slate-700/70 bg-slate-900/90 px-1 py-1 text-center sm:rounded-2xl sm:px-2 sm:py-2"
@@ -462,16 +469,16 @@ function SpellingNinjaPage() {
           <div className="text-center">
             <div className="spelling-ninja-dojo mb-4 rounded-3xl border border-slate-700/70 p-4">
               <p className="text-[0.65rem] font-black uppercase tracking-[0.25em] text-slate-400">
-                Training Dojo
+                {t("games.demoMode")}
               </p>
               <div className="spelling-ninja-enemy spelling-ninja-enemy-compact mx-auto mt-5">
                 🥷
               </div>
               <h2 className="mt-4 text-3xl font-black text-yellow-300">
-                Ready?
+                {t("games.startGame")}
               </h2>
               <p className="mx-auto mt-2 max-w-xl text-sm text-slate-300">
-                看提示，依序點擊字母拼出英文單字。答對斬擊怪物，點錯或踩炸彈會扣血。
+                {t("games.ninja.startHint")}
               </p>
             </div>
             <div className="flex flex-wrap justify-center gap-2">
@@ -480,13 +487,13 @@ function SpellingNinjaPage() {
                 onClick={startGame}
                 type="button"
               >
-                Start Game
+                {t("games.startGame")}
               </button>
               <Link
                 className="rounded-2xl border border-slate-700 bg-slate-800 px-7 py-3 text-base font-black text-white transition hover:-translate-y-0.5"
                 to="/"
               >
-                Home
+                {t("common.home")}
               </Link>
             </div>
           </div>
@@ -496,7 +503,7 @@ function SpellingNinjaPage() {
           <div>
             <div className="spelling-ninja-dojo relative mb-1.5 overflow-hidden rounded-2xl border border-slate-700/70 p-2 text-center sm:rounded-3xl sm:p-4">
               <p className="text-[0.55rem] font-black uppercase tracking-[0.22em] text-slate-400 sm:text-[0.65rem]">
-                {isBoss ? "Boss Word" : "Ninja Dojo"} | Level {level}
+                {isBoss ? "Boss Word" : "Ninja Dojo"} | {t("games.level")} {level}
               </p>
 
               <div
@@ -521,9 +528,7 @@ function SpellingNinjaPage() {
                   {round.word.meaning}
                 </div>
                 <p className="mt-1.5 text-[0.65rem] leading-relaxed text-slate-300 sm:text-xs">
-                  詞性：{round.word.type} | 字數：{round.word.word.length} | 下一個字母：
-                  {Math.min(round.targetIndex + 1, round.word.word.length)}/
-                  {round.word.word.length}
+                  {t("games.partOfSpeech", { type: round.word.type })} | {round.word.word.length} | {Math.min(round.targetIndex + 1, round.word.word.length)}/{round.word.word.length}
                 </p>
               </div>
 
@@ -586,7 +591,7 @@ function SpellingNinjaPage() {
           <div className="text-center">
             <div className="spelling-ninja-dojo mb-3 rounded-3xl border border-slate-700/70 p-4">
               <p className="text-[0.65rem] font-black uppercase tracking-[0.25em] text-slate-400">
-                Training Complete
+                {t("games.result")}
               </p>
               <div className="spelling-ninja-stage mx-auto mt-3">
                 <div className="spelling-ninja-enemy spelling-ninja-boss spelling-ninja-enemy-compact">
@@ -594,16 +599,16 @@ function SpellingNinjaPage() {
                 </div>
               </div>
               <h2 className="mt-5 text-3xl font-black text-rose-300">
-                Game Over
+                {t("games.gameOver")}
               </h2>
             </div>
 
             <div className="grid grid-cols-2 gap-2 lg:grid-cols-4">
               {[
-                ["Score", score],
-                ["Level", level],
-                ["Best Combo", bestCombo],
-                ["Accuracy", `${accuracy}%`],
+                [t("games.score"), score],
+                [t("games.level"), level],
+                [t("games.bestCombo"), bestCombo],
+                [t("games.accuracy"), `${accuracy}%`],
               ].map(([label, value]) => (
                 <div className="rounded-2xl bg-slate-800 p-3" key={label}>
                   <p className="text-[0.65rem] font-bold uppercase text-slate-400">
@@ -618,11 +623,11 @@ function SpellingNinjaPage() {
 
             <div className="mt-3 rounded-2xl border border-slate-700 bg-slate-800/80 p-3 text-left">
               <h3 className="text-base font-black text-cyan-200">
-                Words to Review
+                {t("games.ninja.missedWords")}
               </h3>
               {missedWords.length === 0 ? (
                 <p className="mt-1 text-sm text-slate-300">
-                  Perfect! 沒有錯過的單字。
+                  {t("games.ninja.perfectMissed")}
                 </p>
               ) : (
                 <ul className="mt-2 grid max-h-24 gap-1.5 overflow-y-auto">
@@ -646,19 +651,19 @@ function SpellingNinjaPage() {
                 onClick={startGame}
                 type="button"
               >
-                Play Again
+                {t("games.playAgain")}
               </button>
               <Link
                 className="rounded-2xl bg-slate-800 px-5 py-2.5 font-black text-white transition hover:-translate-y-0.5"
                 to="/"
               >
-                Home
+                {t("common.home")}
               </Link>
               <Link
                 className="rounded-2xl border border-slate-700 bg-slate-900 px-5 py-2.5 font-black text-slate-200 transition hover:-translate-y-0.5"
                 to="/words"
               >
-                Words
+                {t("nav.words")}
               </Link>
             </div>
           </div>
@@ -667,9 +672,9 @@ function SpellingNinjaPage() {
 
       {gameState === "playing" ? null : (
         <p className="mt-2 text-center text-xs text-slate-400">
-          Using {wordBank === fallbackWords ? "demo words" : "your saved words"}.
+          {wordBank === fallbackWords ? t("games.usingDemoWords") : t("games.usingSavedWords")}
           {defeatedWords.length > 0
-            ? ` Cleared ${defeatedWords.length} words.`
+            ? ` ${t("games.ninja.resultCount", { count: defeatedWords.length })}`
             : ""}
         </p>
       )}

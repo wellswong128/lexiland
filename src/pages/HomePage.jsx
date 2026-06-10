@@ -1,63 +1,147 @@
 import { Link } from "react-router-dom";
+import { useLocale } from "../features/locale/LocaleContext.jsx";
 import { getDueWords } from "../features/review/reviewHelpers.js";
 import { useWordsContext } from "../features/words/WordsContext.jsx";
 
+const statCards = [
+  {
+    key: "savedWords",
+    valueKey: "words",
+    tone: "saved",
+    icon: "📚",
+  },
+  {
+    key: "dueReviews",
+    valueKey: "due",
+    tone: "due",
+    icon: "⏰",
+  },
+  {
+    key: "mistakes",
+    valueKey: "mistakes",
+    tone: "mistakes",
+    icon: "🎯",
+  },
+];
+
+const actionLinks = [
+  {
+    key: "addWord",
+    labelKey: "common.addWord",
+    to: "/words/new",
+    variant: "primary",
+  },
+  {
+    key: "flashcards",
+    labelKey: "home.flashcards",
+    to: "/review/flashcards",
+    variant: "secondary",
+  },
+  {
+    key: "quiz",
+    labelKey: "home.startQuiz",
+    to: "/review/quiz",
+    variant: "neutral",
+  },
+];
+
+const gameTiles = [
+  {
+    key: "ninja",
+    labelKey: "home.ninja",
+    to: "/games/spelling-ninja",
+    tone: "ninja",
+    icon: "🥷",
+  },
+  {
+    key: "fishBlast",
+    labelKey: "home.fishBlast",
+    to: "/games/fishing-blast",
+    tone: "fish",
+    icon: "🐟",
+  },
+  {
+    key: "wordKart",
+    labelKey: "home.wordKart",
+    to: "/games/word-kart",
+    tone: "kart",
+    icon: "🏎️",
+  },
+  {
+    key: "grammar",
+    labelKey: "home.grammar",
+    to: "/games/grammar-arena",
+    tone: "grammar",
+    icon: "⚔️",
+  },
+];
+
 function HomePage() {
+  const { t } = useLocale();
   const { words } = useWordsContext();
   const dueWords = getDueWords(words);
   const mistakeWords = words.filter((word) => word.mistake.isMistake);
 
+  const values = {
+    words: words.length,
+    due: dueWords.length,
+    mistakes: mistakeWords.length,
+  };
+
   return (
-    <section className="w-full max-w-5xl rounded-3xl border border-blue-200/70 bg-white/90 p-6 shadow-2xl shadow-blue-950/10 sm:p-10">
-      <div className="text-center">
-        <p className="mb-3 text-xs font-bold uppercase tracking-[0.16em] text-blue-700">
-          English Vocabulary Memory App
-        </p>
-        <h1 className="text-5xl font-bold leading-none text-blue-950 sm:text-7xl">
-          LexiLoop
-        </h1>
-        <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-slate-600">
-          Save English words, review them with flashcards, and build a simple
-          spaced repetition habit.
-        </p>
+    <section className="home-page relative w-full max-w-5xl overflow-hidden rounded-[2rem] border border-blue-200/60 bg-white/95 p-4 shadow-2xl shadow-blue-950/10 backdrop-blur sm:p-8">
+      <div aria-hidden="true" className="home-page-glow home-page-glow-left" />
+      <div aria-hidden="true" className="home-page-glow home-page-glow-right" />
+
+      <div className="home-hero relative text-center">
+        <p className="home-eyebrow">{t("home.eyebrow")}</p>
+        <h1 className="home-title">LexiLoop</h1>
+        <p className="home-description">{t("home.description")}</p>
       </div>
 
-      <div className="mt-8 grid gap-4 sm:grid-cols-3">
-        <div className="rounded-2xl bg-blue-50 p-5 text-center">
-          <p className="text-3xl font-bold text-blue-950">{words.length}</p>
-          <p className="mt-1 text-sm font-semibold text-blue-700">Saved Words</p>
-        </div>
-        <div className="rounded-2xl bg-blue-50 p-5 text-center">
-          <p className="text-3xl font-bold text-blue-950">{dueWords.length}</p>
-          <p className="mt-1 text-sm font-semibold text-blue-700">Due Reviews</p>
-        </div>
-        <div className="rounded-2xl bg-blue-50 p-5 text-center">
-          <p className="text-3xl font-bold text-blue-950">
-            {mistakeWords.length}
-          </p>
-          <p className="mt-1 text-sm font-semibold text-blue-700">Mistakes</p>
+      <div className="home-stats relative mt-5 grid grid-cols-3 gap-2 sm:mt-8 sm:gap-4">
+        {statCards.map((card) => (
+          <div className={`home-stat-card home-stat-${card.tone}`} key={card.key}>
+            <span aria-hidden="true" className="home-stat-icon">
+              {card.icon}
+            </span>
+            <p className="home-stat-value">{values[card.valueKey]}</p>
+            <p className="home-stat-label">{t(`home.${card.key}`)}</p>
+          </div>
+        ))}
+      </div>
+
+      <div className="home-actions relative mt-5 sm:mt-8">
+        <p className="home-section-label">{t("home.quickActions")}</p>
+        <div className="mt-3 grid grid-cols-2 gap-2 sm:flex sm:flex-wrap sm:justify-center sm:gap-3">
+          {actionLinks.map((action) => (
+            <Link
+              className={`home-action-btn home-action-${action.variant}`}
+              key={action.key}
+              to={action.to}
+            >
+              {t(action.labelKey)}
+            </Link>
+          ))}
         </div>
       </div>
 
-      <div className="mt-8 flex flex-wrap justify-center gap-3">
-        <Link
-          className="rounded-full bg-blue-700 px-5 py-3 text-sm font-bold text-white shadow-lg shadow-blue-900/20 transition hover:bg-blue-800"
-          to="/words/new"
-        >
-          Add Word
-        </Link>
-        <Link
-          className="rounded-full bg-blue-100 px-5 py-3 text-sm font-bold text-blue-700 transition hover:bg-blue-200"
-          to="/review/flashcards"
-        >
-          Review Flashcards
-        </Link>
-        <Link
-          className="rounded-full bg-slate-100 px-5 py-3 text-sm font-bold text-slate-700 transition hover:bg-slate-200"
-          to="/review/quiz"
-        >
-          Start Quiz
-        </Link>
+      <div className="home-games relative mt-5 sm:mt-8">
+        <p className="home-section-label">{t("home.games")}</p>
+        <div className="mt-3 grid grid-cols-2 gap-2.5 sm:gap-3">
+          {gameTiles.map((game) => (
+            <Link
+              className={`home-game-tile home-game-${game.tone}`}
+              key={game.key}
+              to={game.to}
+            >
+              <span aria-hidden="true" className="home-game-icon">
+                {game.icon}
+              </span>
+              <span className="home-game-name">{t(game.labelKey)}</span>
+            </Link>
+          ))}
+        </div>
       </div>
     </section>
   );

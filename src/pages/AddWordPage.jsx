@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { useLocale } from "../features/locale/LocaleContext.jsx";
 import { useWordsContext } from "../features/words/WordsContext.jsx";
 
 const initialFormValues = {
@@ -45,6 +46,7 @@ async function readJsonResponse(response) {
 }
 
 function AddWordPage() {
+  const { t } = useLocale();
   const navigate = useNavigate();
   const { addWord } = useWordsContext();
   const [formValues, setFormValues] = useState(initialFormValues);
@@ -66,7 +68,7 @@ function AddWordPage() {
     const term = formValues.term.trim();
 
     if (!term) {
-      setError("Enter an English word before using AI Fill.");
+      setError(t("addWord.enterWordFirst"));
       return;
     }
 
@@ -104,13 +106,11 @@ function AddWordPage() {
       }
 
       applySuggestion(data.suggestion);
-      setAiMessage("AI suggestions were added. Review and edit before saving.");
+      setAiMessage(t("addWord.aiSuccess"));
     } catch (aiError) {
       applySuggestion(createDemoSuggestion(term));
       setError("");
-      setAiMessage(
-        `AI service was unavailable, so demo data was added instead. Reason: ${aiError.message}`,
-      );
+      setAiMessage(t("addWord.aiFallback", { reason: aiError.message }));
     } finally {
       setIsAiLoading(false);
     }
@@ -120,7 +120,7 @@ function AddWordPage() {
     event.preventDefault();
 
     if (!formValues.term.trim() || !formValues.definition.trim()) {
-      setError("Please enter both an English word and a definition.");
+      setError(t("addWord.requiredFields"));
       return;
     }
 
@@ -140,13 +140,13 @@ function AddWordPage() {
     <section className="w-full max-w-3xl rounded-3xl border border-blue-200/70 bg-white/90 p-6 shadow-2xl shadow-blue-950/10 sm:p-10">
       <div className="mb-8 text-center">
         <p className="mb-3 text-xs font-bold uppercase tracking-[0.16em] text-blue-700">
-          New Vocabulary
+          {t("addWord.eyebrow")}
         </p>
         <h1 className="text-4xl font-bold text-blue-950 sm:text-5xl">
-          Add Word
+          {t("addWord.title")}
         </h1>
         <p className="mx-auto mt-4 max-w-xl text-slate-600">
-          Save a word now. Flashcards and quizzes will use this data later.
+          {t("addWord.description")}
         </p>
       </div>
 
@@ -154,10 +154,8 @@ function AddWordPage() {
         <div className="rounded-2xl border border-blue-100 bg-blue-50 p-4">
           <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
             <div>
-              <h2 className="font-bold text-blue-950">AI Auto-Fill</h2>
-              <p className="mt-1 text-sm text-slate-600">
-                Type an English word, then let AI suggest editable word data.
-              </p>
+              <h2 className="font-bold text-blue-950">{t("addWord.aiTitle")}</h2>
+              <p className="mt-1 text-sm text-slate-600">{t("addWord.aiDescription")}</p>
             </div>
             <button
               className="rounded-full bg-blue-700 px-5 py-3 text-sm font-bold text-white transition hover:bg-blue-800 disabled:bg-slate-300"
@@ -165,7 +163,7 @@ function AddWordPage() {
               onClick={handleAiFill}
               type="button"
             >
-              {isAiLoading ? "Filling..." : "AI Fill"}
+              {isAiLoading ? t("addWord.aiFilling") : t("addWord.aiFill")}
             </button>
           </div>
           {aiMessage ? (
@@ -184,98 +182,98 @@ function AddWordPage() {
         <div className="grid gap-5 sm:grid-cols-2">
           <label className="block">
             <span className="text-sm font-semibold text-slate-700">
-              English word
+              {t("addWord.englishWord")}
             </span>
             <input
               className="mt-2 w-full rounded-2xl border border-slate-200 bg-white px-4 py-3 text-slate-900 outline-none transition focus:border-blue-500 focus:ring-4 focus:ring-blue-100"
               name="term"
-              value={formValues.term}
               onChange={handleChange}
-              placeholder="resilient"
+              placeholder={t("addWord.placeholderTerm")}
+              value={formValues.term}
             />
           </label>
 
           <label className="block">
             <span className="text-sm font-semibold text-slate-700">
-              Part of speech
+              {t("addWord.partOfSpeech")}
             </span>
             <input
               className="mt-2 w-full rounded-2xl border border-slate-200 bg-white px-4 py-3 text-slate-900 outline-none transition focus:border-blue-500 focus:ring-4 focus:ring-blue-100"
               name="partOfSpeech"
-              value={formValues.partOfSpeech}
               onChange={handleChange}
-              placeholder="adjective"
+              placeholder={t("addWord.placeholderPos")}
+              value={formValues.partOfSpeech}
             />
           </label>
         </div>
 
         <label className="block">
           <span className="text-sm font-semibold text-slate-700">
-            Definition
+            {t("addWord.definition")}
           </span>
           <textarea
             className="mt-2 min-h-28 w-full rounded-2xl border border-slate-200 bg-white px-4 py-3 text-slate-900 outline-none transition focus:border-blue-500 focus:ring-4 focus:ring-blue-100"
             name="definition"
-            value={formValues.definition}
             onChange={handleChange}
-            placeholder="Able to recover quickly from difficulty."
+            placeholder={t("addWord.placeholderDefinition")}
+            value={formValues.definition}
           />
         </label>
 
         <div className="grid gap-5 sm:grid-cols-2">
           <label className="block">
             <span className="text-sm font-semibold text-slate-700">
-              Translation
+              {t("addWord.translation")}
             </span>
             <input
               className="mt-2 w-full rounded-2xl border border-slate-200 bg-white px-4 py-3 text-slate-900 outline-none transition focus:border-blue-500 focus:ring-4 focus:ring-blue-100"
               name="translation"
-              value={formValues.translation}
               onChange={handleChange}
-              placeholder="Optional"
+              placeholder={t("addWord.placeholderTranslation")}
+              value={formValues.translation}
             />
           </label>
 
           <label className="block">
             <span className="text-sm font-semibold text-slate-700">
-              Pronunciation
+              {t("addWord.pronunciation")}
             </span>
             <input
               className="mt-2 w-full rounded-2xl border border-slate-200 bg-white px-4 py-3 text-slate-900 outline-none transition focus:border-blue-500 focus:ring-4 focus:ring-blue-100"
               name="pronunciation"
-              value={formValues.pronunciation}
               onChange={handleChange}
-              placeholder="/ri-ZIL-yent/"
+              placeholder={t("addWord.placeholderPronunciation")}
+              value={formValues.pronunciation}
             />
           </label>
         </div>
 
         <label className="block">
           <span className="text-sm font-semibold text-slate-700">
-            Example sentence
+            {t("addWord.exampleSentence")}
           </span>
           <textarea
             className="mt-2 min-h-24 w-full rounded-2xl border border-slate-200 bg-white px-4 py-3 text-slate-900 outline-none transition focus:border-blue-500 focus:ring-4 focus:ring-blue-100"
             name="example"
-            value={formValues.example}
             onChange={handleChange}
-            placeholder="She is resilient after every setback."
+            placeholder={t("addWord.placeholderExample")}
+            value={formValues.example}
           />
         </label>
 
         <label className="block">
           <span className="text-sm font-semibold text-slate-700">
-            Tags
+            {t("addWord.tags")}
           </span>
           <input
             className="mt-2 w-full rounded-2xl border border-slate-200 bg-white px-4 py-3 text-slate-900 outline-none transition focus:border-blue-500 focus:ring-4 focus:ring-blue-100"
             name="tags"
-            value={formValues.tags}
             onChange={handleChange}
-            placeholder="advanced, personality"
+            placeholder={t("addWord.placeholderTags")}
+            value={formValues.tags}
           />
           <span className="mt-2 block text-sm text-slate-500">
-            Separate tags with commas.
+            {t("addWord.tagsHint")}
           </span>
         </label>
 
@@ -285,7 +283,7 @@ function AddWordPage() {
             disabled={isSaving}
             type="submit"
           >
-            {isSaving ? "Saving..." : "Save Word"}
+            {isSaving ? t("common.saving") : t("common.saveWord")}
           </button>
         </div>
       </form>

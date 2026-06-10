@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import SpeakButton from "../components/SpeakButton.jsx";
+import { useLocale } from "../features/locale/LocaleContext.jsx";
 import { useWordsContext } from "../features/words/WordsContext.jsx";
 
 function getFormValues(word) {
@@ -16,21 +17,26 @@ function getFormValues(word) {
   };
 }
 
-function formatDate(value) {
-  if (!value) {
-    return "Not yet";
-  }
-
-  return new Date(value).toLocaleString();
-}
-
 function WordDetailPage() {
+  const { dateLocale, t } = useLocale();
   const { wordId } = useParams();
   const { updateWord, words } = useWordsContext();
   const word = words.find((currentWord) => currentWord.id === wordId);
   const [isEditing, setIsEditing] = useState(false);
   const [formValues, setFormValues] = useState(null);
   const [error, setError] = useState("");
+
+  function formatDate(value) {
+    if (!value) {
+      return t("common.notYet");
+    }
+
+    return new Date(value).toLocaleString(dateLocale);
+  }
+
+  function displayValue(value) {
+    return value || t("common.none");
+  }
 
   useEffect(() => {
     if (word) {
@@ -59,7 +65,7 @@ function WordDetailPage() {
     event.preventDefault();
 
     if (!formValues.term.trim() || !formValues.definition.trim()) {
-      setError("Please keep both the English word and definition filled in.");
+      setError(t("wordDetail.requiredFields"));
       return;
     }
 
@@ -72,17 +78,19 @@ function WordDetailPage() {
     return (
       <section className="w-full max-w-3xl rounded-3xl border border-blue-200/70 bg-white/90 p-8 text-center shadow-2xl shadow-blue-950/10 sm:p-14">
         <p className="mb-3 text-xs font-bold uppercase tracking-[0.16em] text-blue-700">
-          Word Detail
+          {t("wordDetail.eyebrow")}
         </p>
-        <h1 className="text-4xl font-bold text-blue-950">Word Not Found</h1>
+        <h1 className="text-4xl font-bold text-blue-950">
+          {t("wordDetail.notFoundTitle")}
+        </h1>
         <p className="mx-auto mt-4 max-w-xl text-slate-600">
-          This word may have been deleted or does not exist.
+          {t("wordDetail.notFoundDescription")}
         </p>
         <Link
           className="mt-6 inline-flex rounded-full bg-blue-700 px-5 py-3 text-sm font-bold text-white transition hover:bg-blue-800"
           to="/words"
         >
-          Back to Word List
+          {t("wordDetail.backToList")}
         </Link>
       </section>
     );
@@ -97,7 +105,7 @@ function WordDetailPage() {
       <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
         <div>
           <p className="mb-3 text-xs font-bold uppercase tracking-[0.16em] text-blue-700">
-            Word Detail
+            {t("wordDetail.eyebrow")}
           </p>
           <div className="flex flex-wrap items-center gap-3">
             <h1 className="text-4xl font-bold text-blue-950 sm:text-5xl">
@@ -105,9 +113,7 @@ function WordDetailPage() {
             </h1>
             <SpeakButton text={word.term} />
           </div>
-          <p className="mt-4 text-lg leading-8 text-slate-600">
-            {word.definition}
-          </p>
+          <p className="mt-4 text-lg leading-8 text-slate-600">{word.definition}</p>
         </div>
 
         {!isEditing ? (
@@ -116,7 +122,7 @@ function WordDetailPage() {
             onClick={() => setIsEditing(true)}
             type="button"
           >
-            Edit Word
+            {t("wordDetail.editWord")}
           </button>
         ) : null}
       </div>
@@ -132,7 +138,7 @@ function WordDetailPage() {
           <div className="grid gap-5 sm:grid-cols-2">
             <label className="block">
               <span className="text-sm font-semibold text-slate-700">
-                English word
+                {t("addWord.englishWord")}
               </span>
               <input
                 className="mt-2 w-full rounded-2xl border border-slate-200 bg-white px-4 py-3 text-slate-900 outline-none transition focus:border-blue-500 focus:ring-4 focus:ring-blue-100"
@@ -144,7 +150,7 @@ function WordDetailPage() {
 
             <label className="block">
               <span className="text-sm font-semibold text-slate-700">
-                Part of speech
+                {t("addWord.partOfSpeech")}
               </span>
               <input
                 className="mt-2 w-full rounded-2xl border border-slate-200 bg-white px-4 py-3 text-slate-900 outline-none transition focus:border-blue-500 focus:ring-4 focus:ring-blue-100"
@@ -157,7 +163,7 @@ function WordDetailPage() {
 
           <label className="block">
             <span className="text-sm font-semibold text-slate-700">
-              Definition
+              {t("addWord.definition")}
             </span>
             <textarea
               className="mt-2 min-h-28 w-full rounded-2xl border border-slate-200 bg-white px-4 py-3 text-slate-900 outline-none transition focus:border-blue-500 focus:ring-4 focus:ring-blue-100"
@@ -170,7 +176,7 @@ function WordDetailPage() {
           <div className="grid gap-5 sm:grid-cols-2">
             <label className="block">
               <span className="text-sm font-semibold text-slate-700">
-                Translation
+                {t("addWord.translation")}
               </span>
               <input
                 className="mt-2 w-full rounded-2xl border border-slate-200 bg-white px-4 py-3 text-slate-900 outline-none transition focus:border-blue-500 focus:ring-4 focus:ring-blue-100"
@@ -182,7 +188,7 @@ function WordDetailPage() {
 
             <label className="block">
               <span className="text-sm font-semibold text-slate-700">
-                Pronunciation
+                {t("addWord.pronunciation")}
               </span>
               <input
                 className="mt-2 w-full rounded-2xl border border-slate-200 bg-white px-4 py-3 text-slate-900 outline-none transition focus:border-blue-500 focus:ring-4 focus:ring-blue-100"
@@ -195,7 +201,7 @@ function WordDetailPage() {
 
           <label className="block">
             <span className="text-sm font-semibold text-slate-700">
-              Example sentence
+              {t("addWord.exampleSentence")}
             </span>
             <textarea
               className="mt-2 min-h-24 w-full rounded-2xl border border-slate-200 bg-white px-4 py-3 text-slate-900 outline-none transition focus:border-blue-500 focus:ring-4 focus:ring-blue-100"
@@ -206,7 +212,9 @@ function WordDetailPage() {
           </label>
 
           <label className="block">
-            <span className="text-sm font-semibold text-slate-700">Notes</span>
+            <span className="text-sm font-semibold text-slate-700">
+              {t("wordDetail.notes")}
+            </span>
             <textarea
               className="mt-2 min-h-24 w-full rounded-2xl border border-slate-200 bg-white px-4 py-3 text-slate-900 outline-none transition focus:border-blue-500 focus:ring-4 focus:ring-blue-100"
               name="notes"
@@ -216,7 +224,9 @@ function WordDetailPage() {
           </label>
 
           <label className="block">
-            <span className="text-sm font-semibold text-slate-700">Tags</span>
+            <span className="text-sm font-semibold text-slate-700">
+              {t("addWord.tags")}
+            </span>
             <input
               className="mt-2 w-full rounded-2xl border border-slate-200 bg-white px-4 py-3 text-slate-900 outline-none transition focus:border-blue-500 focus:ring-4 focus:ring-blue-100"
               name="tags"
@@ -224,7 +234,7 @@ function WordDetailPage() {
               value={formValues.tags}
             />
             <span className="mt-2 block text-sm text-slate-500">
-              Separate tags with commas.
+              {t("addWord.tagsHint")}
             </span>
           </label>
 
@@ -234,13 +244,13 @@ function WordDetailPage() {
               onClick={handleCancel}
               type="button"
             >
-              Cancel
+              {t("wordDetail.cancelEdit")}
             </button>
             <button
               className="rounded-full bg-blue-700 px-5 py-3 text-sm font-bold text-white transition hover:bg-blue-800"
               type="submit"
             >
-              Save Changes
+              {t("wordDetail.saveChanges")}
             </button>
           </div>
         </form>
@@ -248,116 +258,146 @@ function WordDetailPage() {
         <div className="mt-8 space-y-4">
           <dl className="grid gap-4 sm:grid-cols-2">
             <div className="rounded-2xl bg-blue-50 p-4">
-              <dt className="text-sm font-bold text-blue-700">Translation</dt>
+              <dt className="text-sm font-bold text-blue-700">
+                {t("addWord.translation")}
+              </dt>
               <dd className="mt-1 text-slate-700">
-                {word.translation || "None"}
+                {displayValue(word.translation)}
               </dd>
             </div>
             <div className="rounded-2xl bg-blue-50 p-4">
               <dt className="text-sm font-bold text-blue-700">
-                Part of Speech
+                {t("addWord.partOfSpeech")}
               </dt>
               <dd className="mt-1 text-slate-700">
-                {word.partOfSpeech || "None"}
+                {displayValue(word.partOfSpeech)}
               </dd>
             </div>
             <div className="rounded-2xl bg-blue-50 p-4">
-              <dt className="text-sm font-bold text-blue-700">Pronunciation</dt>
+              <dt className="text-sm font-bold text-blue-700">
+                {t("addWord.pronunciation")}
+              </dt>
               <dd className="mt-1 text-slate-700">
-                {word.pronunciation || "None"}
+                {displayValue(word.pronunciation)}
               </dd>
             </div>
             <div className="rounded-2xl bg-blue-50 p-4">
-              <dt className="text-sm font-bold text-blue-700">Tags</dt>
+              <dt className="text-sm font-bold text-blue-700">
+                {t("addWord.tags")}
+              </dt>
               <dd className="mt-1 text-slate-700">
-                {word.tags.length > 0 ? word.tags.join(", ") : "None"}
+                {word.tags.length > 0 ? word.tags.join(", ") : t("common.none")}
               </dd>
             </div>
             <div className="rounded-2xl bg-blue-50 p-4">
-              <dt className="text-sm font-bold text-blue-700">Source</dt>
+              <dt className="text-sm font-bold text-blue-700">
+                {t("wordDetail.source")}
+              </dt>
               <dd className="mt-1 text-slate-700">{word.source}</dd>
             </div>
             <div className="rounded-2xl bg-blue-50 p-4">
-              <dt className="text-sm font-bold text-blue-700">Created</dt>
-              <dd className="mt-1 text-slate-700">
-                {formatDate(word.createdAt)}
-              </dd>
+              <dt className="text-sm font-bold text-blue-700">
+                {t("wordDetail.created")}
+              </dt>
+              <dd className="mt-1 text-slate-700">{formatDate(word.createdAt)}</dd>
             </div>
             <div className="rounded-2xl bg-blue-50 p-4">
-              <dt className="text-sm font-bold text-blue-700">Updated</dt>
-              <dd className="mt-1 text-slate-700">
-                {formatDate(word.updatedAt)}
-              </dd>
+              <dt className="text-sm font-bold text-blue-700">
+                {t("wordDetail.updated")}
+              </dt>
+              <dd className="mt-1 text-slate-700">{formatDate(word.updatedAt)}</dd>
             </div>
           </dl>
 
           <div className="rounded-2xl bg-slate-50 p-4">
-            <h2 className="text-sm font-bold text-slate-700">Example</h2>
-            <p className="mt-1 text-slate-600">{word.example || "None"}</p>
+            <h2 className="text-sm font-bold text-slate-700">
+              {t("wordDetail.example")}
+            </h2>
+            <p className="mt-1 text-slate-600">{displayValue(word.example)}</p>
           </div>
 
           <div className="rounded-2xl bg-slate-50 p-4">
-            <h2 className="text-sm font-bold text-slate-700">Notes</h2>
-            <p className="mt-1 text-slate-600">{word.notes || "None"}</p>
+            <h2 className="text-sm font-bold text-slate-700">
+              {t("wordDetail.notes")}
+            </h2>
+            <p className="mt-1 text-slate-600">{displayValue(word.notes)}</p>
           </div>
         </div>
       )}
 
       <div className="mt-8 rounded-2xl border border-blue-100 bg-blue-50/70 p-5">
-        <h2 className="text-lg font-bold text-blue-950">Review Status</h2>
+        <h2 className="text-lg font-bold text-blue-950">
+          {t("wordDetail.reviewStatus")}
+        </h2>
         <dl className="mt-4 grid gap-4 sm:grid-cols-2">
           <div>
-            <dt className="text-sm font-bold text-blue-700">Level</dt>
+            <dt className="text-sm font-bold text-blue-700">
+              {t("wordDetail.level")}
+            </dt>
             <dd className="mt-1 text-slate-700">{word.review.level}</dd>
           </div>
           <div>
-            <dt className="text-sm font-bold text-blue-700">Next Review</dt>
+            <dt className="text-sm font-bold text-blue-700">
+              {t("wordDetail.nextReview")}
+            </dt>
             <dd className="mt-1 text-slate-700">
               {formatDate(word.review.nextReviewAt)}
             </dd>
           </div>
           <div>
-            <dt className="text-sm font-bold text-blue-700">Correct Count</dt>
+            <dt className="text-sm font-bold text-blue-700">
+              {t("wordDetail.correctCount")}
+            </dt>
             <dd className="mt-1 text-slate-700">{word.review.correctCount}</dd>
           </div>
           <div>
-            <dt className="text-sm font-bold text-blue-700">Incorrect Count</dt>
-            <dd className="mt-1 text-slate-700">
-              {word.review.incorrectCount}
-            </dd>
+            <dt className="text-sm font-bold text-blue-700">
+              {t("wordDetail.incorrectCount")}
+            </dt>
+            <dd className="mt-1 text-slate-700">{word.review.incorrectCount}</dd>
           </div>
           <div>
-            <dt className="text-sm font-bold text-blue-700">Last Reviewed</dt>
+            <dt className="text-sm font-bold text-blue-700">
+              {t("wordDetail.lastReviewed")}
+            </dt>
             <dd className="mt-1 text-slate-700">
               {formatDate(word.review.lastReviewedAt)}
             </dd>
           </div>
           <div>
-            <dt className="text-sm font-bold text-blue-700">Last Result</dt>
+            <dt className="text-sm font-bold text-blue-700">
+              {t("wordDetail.lastResult")}
+            </dt>
             <dd className="mt-1 text-slate-700">
-              {word.review.lastResult || "None"}
+              {displayValue(word.review.lastResult)}
             </dd>
           </div>
         </dl>
       </div>
 
       <div className="mt-6 rounded-2xl border border-slate-100 bg-slate-50 p-5">
-        <h2 className="text-lg font-bold text-slate-800">Mistake Status</h2>
+        <h2 className="text-lg font-bold text-slate-800">
+          {t("wordDetail.mistakeStatus")}
+        </h2>
         <dl className="mt-4 grid gap-4 sm:grid-cols-2">
           <div>
-            <dt className="text-sm font-bold text-slate-600">In Mistakes</dt>
+            <dt className="text-sm font-bold text-slate-600">
+              {t("wordDetail.inMistakes")}
+            </dt>
             <dd className="mt-1 text-slate-700">
-              {word.mistake.isMistake ? "Yes" : "No"}
+              {word.mistake.isMistake ? t("common.yes") : t("common.no")}
             </dd>
           </div>
           <div>
-            <dt className="text-sm font-bold text-slate-600">Mistake Count</dt>
-            <dd className="mt-1 text-slate-700">
-              {word.mistake.mistakeCount}
-            </dd>
+            <dt className="text-sm font-bold text-slate-600">
+              {t("wordDetail.mistakeCount")}
+            </dt>
+            <dd className="mt-1 text-slate-700">{word.mistake.mistakeCount}</dd>
           </div>
           <div>
-            <dt className="text-sm font-bold text-slate-600">Last Mistake</dt>
+            <dt className="text-sm font-bold text-slate-600">
+              {t("wordDetail.lastMistake")}
+            </dt>
             <dd className="mt-1 text-slate-700">
               {formatDate(word.mistake.lastMistakeAt)}
             </dd>
@@ -369,7 +409,7 @@ function WordDetailPage() {
         className="mt-8 inline-flex rounded-full bg-blue-700 px-5 py-3 text-sm font-bold text-white transition hover:bg-blue-800"
         to="/words"
       >
-        Back to Word List
+        {t("wordDetail.backToList")}
       </Link>
     </section>
   );

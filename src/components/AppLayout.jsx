@@ -1,16 +1,21 @@
 import { useEffect, useState } from "react";
 import { NavLink, useLocation } from "react-router-dom";
+import { useLocale } from "../features/locale/LocaleContext.jsx";
+import LanguageToggle from "./LanguageToggle.jsx";
 
 const navItems = [
-  { to: "/", label: "Home", end: true },
-  { to: "/words", label: "Words" },
-  { to: "/words/new", label: "Add Word" },
-  { to: "/review/flashcards", label: "Flashcards" },
-  { to: "/review/quiz", label: "Quiz" },
-  { to: "/games/spelling-ninja", label: "Ninja Game" },
-  { to: "/mistakes", label: "Mistakes" },
-  { to: "/import", label: "Import" },
-  { to: "/settings", label: "Settings" },
+  { to: "/", labelKey: "nav.home", end: true },
+  { to: "/words", labelKey: "nav.words" },
+  { to: "/words/new", labelKey: "nav.addWord" },
+  { to: "/review/flashcards", labelKey: "nav.flashcards" },
+  { to: "/review/quiz", labelKey: "nav.quiz" },
+  { to: "/games/spelling-ninja", labelKey: "nav.ninjaGame" },
+  { to: "/games/fishing-blast", labelKey: "nav.fishBlast" },
+  { to: "/games/word-kart", labelKey: "nav.wordKart" },
+  { to: "/games/grammar-arena", labelKey: "nav.grammarArena" },
+  { to: "/mistakes", labelKey: "nav.mistakes" },
+  { to: "/import", labelKey: "nav.import" },
+  { to: "/settings", labelKey: "nav.settings" },
 ];
 
 function MenuIcon({ isOpen }) {
@@ -46,8 +51,9 @@ function MenuIcon({ isOpen }) {
 }
 
 function AppLayout({ children }) {
+  const { t } = useLocale();
   const location = useLocation();
-  const isGamePage = location.pathname.startsWith("/games/spelling-ninja");
+  const isGamePage = location.pathname.startsWith("/games/");
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   useEffect(() => {
@@ -55,13 +61,13 @@ function AppLayout({ children }) {
   }, [location.pathname]);
 
   return (
-    <div className="min-h-screen bg-blue-50 text-slate-900">
+    <div className="flex min-h-[100svh] flex-col bg-blue-50 text-slate-900">
       {isGamePage ? null : (
         <header className="border-b border-blue-200/70 bg-white/80 backdrop-blur">
-          <div className="mx-auto flex max-w-6xl items-center gap-3 px-4 py-4 sm:px-6">
+          <div className="mx-auto flex max-w-6xl items-center gap-3 px-4 py-3 sm:px-6 sm:py-4">
             <button
               aria-expanded={isMenuOpen}
-              aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+              aria-label={isMenuOpen ? t("nav.closeMenu") : t("nav.openMenu")}
               className="inline-flex size-11 items-center justify-center rounded-xl border border-blue-200 bg-white text-blue-950 transition hover:bg-blue-50"
               onClick={() => setIsMenuOpen((open) => !open)}
               type="button"
@@ -74,6 +80,9 @@ function AppLayout({ children }) {
             >
               LexiLoop
             </NavLink>
+            <div className="ml-auto">
+              <LanguageToggle />
+            </div>
           </div>
 
           {isMenuOpen ? (
@@ -94,7 +103,7 @@ function AppLayout({ children }) {
                       }
                       onClick={() => setIsMenuOpen(false)}
                     >
-                      {item.label}
+                      {t(item.labelKey)}
                     </NavLink>
                   </li>
                 ))}
@@ -108,7 +117,7 @@ function AppLayout({ children }) {
         className={
           isGamePage
             ? "mx-auto grid min-h-[100svh] w-full max-w-6xl place-items-center px-2 py-2"
-            : "mx-auto grid min-h-[calc(100vh-5rem)] max-w-6xl place-items-center px-4 py-8 sm:px-6 sm:py-10"
+            : "mx-auto flex w-full max-w-6xl flex-1 items-start justify-center px-3 py-3 sm:px-6 sm:py-6"
         }
       >
         {children}

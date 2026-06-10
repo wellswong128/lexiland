@@ -2,24 +2,38 @@ function shuffleItems(items) {
   return [...items].sort(() => Math.random() - 0.5);
 }
 
+export function getQuizOptionLabel(word) {
+  const translation = String(word.translation ?? "").trim();
+  return translation || word.definition;
+}
+
 export function createQuizQuestions(words, optionCount = 4) {
-  if (words.length < 2) {
+  const eligibleWords = words.filter((word) => getQuizOptionLabel(word));
+
+  if (eligibleWords.length < 2) {
     return [];
   }
 
-  return shuffleItems(words).map((word) => {
+  return shuffleItems(eligibleWords).map((word) => {
     const wrongOptions = shuffleItems(
-      words.filter((candidate) => candidate.id !== word.id),
+      eligibleWords.filter((candidate) => candidate.id !== word.id),
     )
       .slice(0, optionCount - 1)
-      .map((candidate) => candidate.definition);
+      .map((candidate) => ({
+        wordId: candidate.id,
+        label: getQuizOptionLabel(candidate),
+      }));
 
-    const options = shuffleItems([word.definition, ...wrongOptions]);
+    const options = shuffleItems([
+      { wordId: word.id, label: getQuizOptionLabel(word) },
+      ...wrongOptions,
+    ]);
 
     return {
       word,
       options,
-      correctAnswer: word.definition,
+      correctAnswer: word.id,
+      correctLabel: getQuizOptionLabel(word),
     };
   });
 }

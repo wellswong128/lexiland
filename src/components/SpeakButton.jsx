@@ -1,3 +1,5 @@
+import { useLocale } from "../features/locale/LocaleContext.jsx";
+
 function canSpeak() {
   return typeof window !== "undefined" && "speechSynthesis" in window;
 }
@@ -16,7 +18,9 @@ function speakText(text) {
   window.speechSynthesis.speak(utterance);
 }
 
-function SpeakButton({ className = "", label = "Speak", text }) {
+function SpeakButton({ className = "", text }) {
+  const { t } = useLocale();
+  const label = t("common.speak");
   const disabled = !text?.trim() || !canSpeak();
 
   return (

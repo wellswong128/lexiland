@@ -1,8 +1,6 @@
 import { useCallback, useEffect, useState } from "react";
+import { resolveAuthRedirectUrl } from "./authRedirect.js";
 import { hasSupabaseConfig, supabase } from "../../lib/supabaseClient.js";
-
-const authRedirectUrl =
-  import.meta.env.VITE_AUTH_REDIRECT_URL || window.location.origin;
 
 export function useSupabaseAuth() {
   const [session, setSession] = useState(null);
@@ -49,10 +47,12 @@ export function useSupabaseAuth() {
 
     setAuthError("");
 
+    const emailRedirectTo = resolveAuthRedirectUrl({ strict: true });
+
     const { error } = await supabase.auth.signInWithOtp({
       email,
       options: {
-        emailRedirectTo: authRedirectUrl,
+        emailRedirectTo,
       },
     });
 

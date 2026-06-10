@@ -1,9 +1,11 @@
 import { useMemo, useState } from "react";
 import { Link } from "react-router-dom";
 import SpeakButton from "../components/SpeakButton.jsx";
+import { useLocale } from "../features/locale/LocaleContext.jsx";
 import { useWordsContext } from "../features/words/WordsContext.jsx";
 
 function WordListPage() {
+  const { t } = useLocale();
   const { deleteWord, words } = useWordsContext();
   const [searchQuery, setSearchQuery] = useState("");
 
@@ -23,7 +25,9 @@ function WordListPage() {
   }, [searchQuery, words]);
 
   function handleDelete(word) {
-    const shouldDelete = window.confirm(`Delete "${word.term}" from your list?`);
+    const shouldDelete = window.confirm(
+      t("wordList.deleteConfirm", { term: word.term }),
+    );
 
     if (shouldDelete) {
       deleteWord(word.id);
@@ -35,13 +39,13 @@ function WordListPage() {
       <div className="mb-8 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
         <div>
           <p className="mb-3 text-xs font-bold uppercase tracking-[0.16em] text-blue-700">
-            Word Collection
+            {t("wordList.eyebrow")}
           </p>
           <h1 className="text-4xl font-bold text-blue-950 sm:text-5xl">
-            Word List
+            {t("wordList.title")}
           </h1>
           <p className="mt-4 text-slate-600">
-            You have saved {words.length} {words.length === 1 ? "word" : "words"}.
+            {t("wordList.count", { count: words.length })}
           </p>
         </div>
 
@@ -49,19 +53,19 @@ function WordListPage() {
           className="inline-flex justify-center rounded-full bg-blue-700 px-5 py-3 text-sm font-bold text-white shadow-lg shadow-blue-900/20 transition hover:bg-blue-800"
           to="/words/new"
         >
-          Add Word
+          {t("common.addWord")}
         </Link>
       </div>
 
       {words.length > 0 ? (
         <label className="mb-6 block">
           <span className="text-sm font-semibold text-slate-700">
-            Search by word or definition
+            {t("wordList.searchLabel")}
           </span>
           <input
             className="mt-2 w-full rounded-2xl border border-slate-200 bg-white px-4 py-3 text-slate-900 outline-none transition focus:border-blue-500 focus:ring-4 focus:ring-blue-100"
             onChange={(event) => setSearchQuery(event.target.value)}
-            placeholder="Search resilient or recover..."
+            placeholder={t("wordList.searchPlaceholder")}
             value={searchQuery}
           />
         </label>
@@ -69,16 +73,18 @@ function WordListPage() {
 
       {words.length === 0 ? (
         <div className="rounded-2xl border border-dashed border-blue-200 bg-blue-50/70 p-8 text-center">
-          <h2 className="text-xl font-bold text-blue-950">No words yet</h2>
-          <p className="mt-2 text-slate-600">
-            Add your first word to start building your vocabulary list.
-          </p>
+          <h2 className="text-xl font-bold text-blue-950">
+            {t("wordList.emptyTitle")}
+          </h2>
+          <p className="mt-2 text-slate-600">{t("wordList.emptyDescription")}</p>
         </div>
       ) : filteredWords.length === 0 ? (
         <div className="rounded-2xl border border-dashed border-blue-200 bg-blue-50/70 p-8 text-center">
-          <h2 className="text-xl font-bold text-blue-950">No matches</h2>
+          <h2 className="text-xl font-bold text-blue-950">
+            {t("wordList.noMatchesTitle")}
+          </h2>
           <p className="mt-2 text-slate-600">
-            Try a different word or definition search.
+            {t("wordList.noMatchesDescription")}
           </p>
         </div>
       ) : (
@@ -99,7 +105,7 @@ function WordListPage() {
                   <p className="mt-2 text-slate-600">{word.definition}</p>
                   {word.translation ? (
                     <p className="mt-2 text-sm font-medium text-slate-500">
-                      Translation: {word.translation}
+                      {t("common.translation")}: {word.translation}
                     </p>
                   ) : null}
                 </div>
@@ -123,14 +129,14 @@ function WordListPage() {
                   className="rounded-full bg-blue-100 px-4 py-2 text-sm font-bold text-blue-700 transition hover:bg-blue-200"
                   to={`/words/${word.id}`}
                 >
-                  View Details
+                  {t("common.viewDetails")}
                 </Link>
                 <button
                   className="rounded-full bg-red-50 px-4 py-2 text-sm font-bold text-red-700 transition hover:bg-red-100"
                   onClick={() => handleDelete(word)}
                   type="button"
                 >
-                  Delete
+                  {t("common.delete")}
                 </button>
               </div>
             </li>

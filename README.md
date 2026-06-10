@@ -116,12 +116,16 @@ VITE_SUPABASE_ANON_KEY=your_supabase_anon_key
 VITE_AUTH_REDIRECT_URL=https://your-vercel-domain.vercel.app
 ```
 
-For Supabase magic link login, also set these in the Supabase dashboard under Authentication URL configuration:
+For Supabase magic link login, also set these in the Supabase dashboard under Authentication -> URL Configuration:
 
-- Site URL: your Vercel deployment URL.
-- Redirect URLs: your Vercel deployment URL and local dev URL if needed.
+- Site URL: `https://your-vercel-domain.vercel.app`
+- Redirect URLs: add your Vercel URL and `http://localhost:5173` only if you need local testing.
 
-Do not use `localhost` as the production Site URL, because mobile devices cannot open your Mac's local server.
+Important:
+
+- Do not use `http://localhost:3000` as the Site URL.
+- If Gmail opens `localhost:3000` after login, Supabase Site URL or `VITE_AUTH_REDIRECT_URL` is still pointing to localhost.
+- Request a new login link after fixing the URLs. Old magic links keep the old redirect target.
 
 Do not commit real `.env` files or service role keys.
 

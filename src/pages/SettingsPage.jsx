@@ -1,18 +1,25 @@
 import { useEffect, useState } from "react";
-import { WORDS_STORAGE_KEY } from "../lib/storage.js";
+import LanguageToggle from "../components/LanguageToggle.jsx";
+import {
+  isLocalhostUrl,
+  resolveAuthRedirectUrl,
+} from "../features/auth/authRedirect.js";
+import { useLocale } from "../features/locale/LocaleContext.jsx";
 import { useWordsContext } from "../features/words/WordsContext.jsx";
+import { WORDS_STORAGE_KEY } from "../lib/storage.js";
 
 const EMAIL_COOLDOWN_SECONDS = 60;
 
-function getFriendlyAuthError(message) {
+function getFriendlyAuthError(message, t) {
   if (message.toLowerCase().includes("rate limit")) {
-    return "Email rate limit exceeded. Please wait a few minutes before requesting another login link.";
+    return t("settings.rateLimit");
   }
 
   return message;
 }
 
 function SettingsPage() {
+  const { t } = useLocale();
   const {
     authError,
     hasSupabaseConfig,
@@ -49,13 +56,13 @@ function SettingsPage() {
 
     if (!email.trim()) {
       setNoticeType("error");
-      setNotice("Please enter your email address.");
+      setNotice(t("settings.enterEmail"));
       return;
     }
 
     if (emailCooldown > 0) {
       setNoticeType("error");
-      setNotice(`Please wait ${emailCooldown} seconds before trying again.`);
+      setNotice(t("settings.waitCooldown", { seconds: emailCooldown }));
       return;
     }
 
@@ -63,11 +70,11 @@ function SettingsPage() {
       setIsAuthSubmitting(true);
       await signInWithEmail(email.trim());
       setNoticeType("success");
-      setNotice("Check your email for the Supabase login link.");
+      setNotice(t("settings.checkEmail"));
       setEmailCooldown(EMAIL_COOLDOWN_SECONDS);
     } catch (error) {
       setNoticeType("error");
-      setNotice(getFriendlyAuthError(error.message));
+      setNotice(getFriendlyAuthError(error.message, t));
       setEmailCooldown(EMAIL_COOLDOWN_SECONDS);
     } finally {
       setIsAuthSubmitting(false);
@@ -79,7 +86,7 @@ function SettingsPage() {
       setIsAuthSubmitting(true);
       await signOut();
       setNoticeType("success");
-      setNotice("Signed out. The app is using local browser data now.");
+      setNotice(t("settings.signedOut"));
     } catch (error) {
       setNoticeType("error");
       setNotice(error.message);
@@ -89,9 +96,7 @@ function SettingsPage() {
   }
 
   async function handleReset() {
-    const shouldReset = window.confirm(
-      "Delete all current LexiLoop words? This cannot be undone.",
-    );
+    const shouldReset = window.confirm(t("settings.resetConfirm"));
 
     if (!shouldReset) {
       return;
@@ -101,7 +106,7 @@ function SettingsPage() {
       setIsResetting(true);
       await resetAllWords();
       setNoticeType("success");
-      setNotice("All words were deleted.");
+      setNotice(t("settings.resetSuccess"));
     } catch (error) {
       setNoticeType("error");
       setNotice(error.message);
@@ -112,22 +117,23 @@ function SettingsPage() {
 
   const currentError = authError || wordsError;
   const friendlyCurrentError = currentError
-    ? getFriendlyAuthError(currentError)
+    ? getFriendlyAuthError(currentError, t)
     : "";
+  const authRedirectUrl = resolveAuthRedirectUrl();
+  const hasLocalRedirectConfig = isLocalhostUrl(
+    import.meta.env.VITE_AUTH_REDIRECT_URL || "",
+  );
 
   return (
     <section className="w-full max-w-4xl rounded-3xl border border-blue-200/70 bg-white/90 p-6 shadow-2xl shadow-blue-950/10 sm:p-10">
       <div className="mb-8">
         <p className="mb-3 text-xs font-bold uppercase tracking-[0.16em] text-blue-700">
-          App Preferences
+          {t("settings.eyebrow")}
         </p>
         <h1 className="text-4xl font-bold text-blue-950 sm:text-5xl">
-          Settings
+          {t("settings.title")}
         </h1>
-        <p className="mt-4 max-w-2xl text-slate-600">
-          Manage storage for this MVP. Signed-in users use Supabase; otherwise
-          this browser keeps using local data.
-        </p>
+        <p className="mt-4 max-w-2xl text-slate-600">{t("settings.description")}</p>
       </div>
 
       {notice ? (
@@ -150,18 +156,27 @@ function SettingsPage() {
       ) : null}
 
       <div className="mb-5 rounded-2xl bg-blue-50 p-5">
-        <h2 className="text-lg font-bold text-blue-950">Supabase Account</h2>
+        <h2 className="text-lg font-bold text-blue-950">{t("language.title")}</h2>
+        <p className="mt-2 text-sm leading-6 text-slate-600">
+          {t("language.description")}
+        </p>
+        <div className="mt-4">
+          <LanguageToggle />
+        </div>
+      </div>
+
+      <div className="mb-5 rounded-2xl bg-blue-50 p-5">
+        <h2 className="text-lg font-bold text-blue-950">{t("settings.supabaseAccount")}</h2>
         {!hasSupabaseConfig ? (
           <p className="mt-2 text-sm leading-6 text-slate-600">
-            Supabase environment variables are not configured, so the app is
-            using localStorage.
+            {t("settings.noSupabaseConfig")}
           </p>
         ) : isAuthLoading ? (
-          <p className="mt-2 text-sm text-slate-600">Checking session...</p>
+          <p className="mt-2 text-sm text-slate-600">{t("settings.checkingSession")}</p>
         ) : user ? (
           <div className="mt-4 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
             <p className="text-sm text-slate-700">
-              Signed in as <span className="font-bold">{user.email}</span>.
+              {t("settings.signedInAs", { email: user.email })}
             </p>
             <button
               className="rounded-full bg-slate-100 px-5 py-3 text-sm font-bold text-slate-700 transition hover:bg-slate-200 disabled:bg-slate-300"
@@ -169,61 +184,71 @@ function SettingsPage() {
               onClick={handleSignOut}
               type="button"
             >
-              Sign Out
+              {t("settings.signOut")}
             </button>
           </div>
         ) : (
-          <form className="mt-4 flex flex-col gap-3 sm:flex-row" onSubmit={handleSignIn}>
-            <input
-              className="min-w-0 flex-1 rounded-2xl border border-slate-200 bg-white px-4 py-3 text-slate-900 outline-none transition focus:border-blue-500 focus:ring-4 focus:ring-blue-100"
-              onChange={(event) => setEmail(event.target.value)}
-              placeholder="you@example.com"
-              type="email"
-              value={email}
-            />
-            <button
-              className="rounded-full bg-blue-700 px-5 py-3 text-sm font-bold text-white transition hover:bg-blue-800 disabled:bg-slate-300"
-              disabled={isAuthSubmitting || emailCooldown > 0}
-              type="submit"
-            >
-              {isAuthSubmitting
-                ? "Sending..."
-                : emailCooldown > 0
-                  ? `Try Again in ${emailCooldown}s`
-                  : "Email Login Link"}
-            </button>
-          </form>
+          <>
+            <p className="mt-3 text-sm text-slate-600">
+              {t("settings.loginRedirect")}{" "}
+              <span className="font-semibold text-blue-950">
+                {authRedirectUrl || t("settings.notConfigured")}
+              </span>
+            </p>
+            {hasLocalRedirectConfig ? (
+              <p className="mt-2 rounded-xl border border-amber-200 bg-amber-50 px-3 py-2 text-sm text-amber-800">
+                {t("settings.localhostWarning")}
+              </p>
+            ) : null}
+            <form className="mt-4 flex flex-col gap-3 sm:flex-row" onSubmit={handleSignIn}>
+              <input
+                className="min-w-0 flex-1 rounded-2xl border border-slate-200 bg-white px-4 py-3 text-slate-900 outline-none transition focus:border-blue-500 focus:ring-4 focus:ring-blue-100"
+                onChange={(event) => setEmail(event.target.value)}
+                placeholder={t("settings.emailPlaceholder")}
+                type="email"
+                value={email}
+              />
+              <button
+                className="rounded-full bg-blue-700 px-5 py-3 text-sm font-bold text-white transition hover:bg-blue-800 disabled:bg-slate-300"
+                disabled={isAuthSubmitting || emailCooldown > 0}
+                type="submit"
+              >
+                {isAuthSubmitting
+                  ? t("settings.sending")
+                  : emailCooldown > 0
+                    ? t("settings.tryAgainIn", { seconds: emailCooldown })
+                    : t("settings.emailLoginLink")}
+              </button>
+            </form>
+          </>
         )}
       </div>
 
       <div className="grid gap-5 sm:grid-cols-2">
         <div className="rounded-2xl bg-blue-50 p-5">
-          <h2 className="text-lg font-bold text-blue-950">Current Storage</h2>
+          <h2 className="text-lg font-bold text-blue-950">{t("settings.currentStorage")}</h2>
           <dl className="mt-4 space-y-3 text-sm">
             <div>
-              <dt className="font-bold text-blue-700">Mode</dt>
+              <dt className="font-bold text-blue-700">{t("settings.mode")}</dt>
               <dd className="mt-1 text-slate-700">
                 {isUsingSupabase ? "Supabase" : "localStorage"}
               </dd>
             </div>
             <div>
-              <dt className="font-bold text-blue-700">Local Fallback Key</dt>
-              <dd className="mt-1 break-all text-slate-700">
-                {WORDS_STORAGE_KEY}
-              </dd>
+              <dt className="font-bold text-blue-700">{t("settings.localFallbackKey")}</dt>
+              <dd className="mt-1 break-all text-slate-700">{WORDS_STORAGE_KEY}</dd>
             </div>
             <div>
-              <dt className="font-bold text-blue-700">Saved Words</dt>
+              <dt className="font-bold text-blue-700">{t("settings.savedWords")}</dt>
               <dd className="mt-1 text-slate-700">{words.length}</dd>
             </div>
           </dl>
         </div>
 
         <div className="rounded-2xl border border-red-100 bg-red-50 p-5">
-          <h2 className="text-lg font-bold text-red-800">Danger Zone</h2>
+          <h2 className="text-lg font-bold text-red-800">{t("settings.dangerZone")}</h2>
           <p className="mt-2 text-sm leading-6 text-red-700">
-            Resetting data removes all words, review progress, and mistake
-            history from this browser.
+            {t("settings.dangerDescription")}
           </p>
           <button
             className="mt-5 rounded-full bg-red-600 px-5 py-3 text-sm font-bold text-white transition hover:bg-red-700 disabled:bg-slate-300"
@@ -231,7 +256,7 @@ function SettingsPage() {
             onClick={handleReset}
             type="button"
           >
-            {isResetting ? "Resetting..." : "Reset Current Data"}
+            {isResetting ? t("settings.resetting") : t("settings.resetData")}
           </button>
         </div>
       </div>

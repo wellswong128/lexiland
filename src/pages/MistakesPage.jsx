@@ -1,17 +1,19 @@
 import { Link } from "react-router-dom";
+import { useLocale } from "../features/locale/LocaleContext.jsx";
 import { useWordsContext } from "../features/words/WordsContext.jsx";
 
-function formatDate(value) {
-  if (!value) {
-    return "Not yet";
-  }
-
-  return new Date(value).toLocaleString();
-}
-
 function MistakesPage() {
+  const { dateLocale, t } = useLocale();
   const { updateWord, words } = useWordsContext();
   const mistakeWords = words.filter((word) => word.mistake.isMistake);
+
+  function formatDate(value) {
+    if (!value) {
+      return t("common.notYet");
+    }
+
+    return new Date(value).toLocaleString(dateLocale);
+  }
 
   function handleClearMistake(word) {
     updateWord(word.id, {
@@ -28,14 +30,13 @@ function MistakesPage() {
       <div className="mb-8 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
         <div>
           <p className="mb-3 text-xs font-bold uppercase tracking-[0.16em] text-blue-700">
-            Focus Area
+            {t("mistakes.eyebrow")}
           </p>
           <h1 className="text-4xl font-bold text-blue-950 sm:text-5xl">
-            Mistake Notebook
+            {t("mistakes.title")}
           </h1>
           <p className="mt-4 text-slate-600">
-            You have {mistakeWords.length} mistake{" "}
-            {mistakeWords.length === 1 ? "word" : "words"} to revisit.
+            {t("mistakes.count", { count: mistakeWords.length })}
           </p>
         </div>
 
@@ -43,16 +44,16 @@ function MistakesPage() {
           className="inline-flex justify-center rounded-full bg-blue-700 px-5 py-3 text-sm font-bold text-white shadow-lg shadow-blue-900/20 transition hover:bg-blue-800"
           to="/review/flashcards?mode=mistakes"
         >
-          Review Mistakes
+          {t("mistakes.reviewMistakes")}
         </Link>
       </div>
 
       {mistakeWords.length === 0 ? (
         <div className="rounded-2xl border border-dashed border-blue-200 bg-blue-50/70 p-8 text-center">
-          <h2 className="text-xl font-bold text-blue-950">No mistakes yet</h2>
-          <p className="mt-2 text-slate-600">
-            Incorrect quiz or flashcard answers will appear here.
-          </p>
+          <h2 className="text-xl font-bold text-blue-950">
+            {t("mistakes.emptyTitle")}
+          </h2>
+          <p className="mt-2 text-slate-600">{t("mistakes.emptyDescription")}</p>
         </div>
       ) : (
         <ul className="space-y-4">
@@ -63,14 +64,12 @@ function MistakesPage() {
             >
               <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
                 <div>
-                  <h2 className="text-2xl font-bold text-blue-950">
-                    {word.term}
-                  </h2>
+                  <h2 className="text-2xl font-bold text-blue-950">{word.term}</h2>
                   <p className="mt-2 text-slate-600">{word.definition}</p>
                   <dl className="mt-4 grid gap-3 text-sm sm:grid-cols-2">
                     <div>
                       <dt className="font-bold text-slate-500">
-                        Incorrect Count
+                        {t("mistakes.incorrectCount")}
                       </dt>
                       <dd className="mt-1 text-slate-700">
                         {word.review.incorrectCount}
@@ -78,7 +77,7 @@ function MistakesPage() {
                     </div>
                     <div>
                       <dt className="font-bold text-slate-500">
-                        Last Mistake
+                        {t("mistakes.lastMistake")}
                       </dt>
                       <dd className="mt-1 text-slate-700">
                         {formatDate(word.mistake.lastMistakeAt)}
@@ -92,14 +91,14 @@ function MistakesPage() {
                     className="rounded-full bg-blue-100 px-4 py-2 text-sm font-bold text-blue-700 transition hover:bg-blue-200"
                     to={`/words/${word.id}`}
                   >
-                    Details
+                    {t("common.details")}
                   </Link>
                   <button
                     className="rounded-full bg-slate-100 px-4 py-2 text-sm font-bold text-slate-700 transition hover:bg-slate-200"
                     onClick={() => handleClearMistake(word)}
                     type="button"
                   >
-                    Clear Mistake
+                    {t("mistakes.clearMistake")}
                   </button>
                 </div>
               </div>
