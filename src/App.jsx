@@ -5,7 +5,6 @@ import { WordsProvider } from "./features/words/WordsContext.jsx";
 import AddWordPage from "./pages/AddWordPage.jsx";
 import FlashcardsPage from "./pages/FlashcardsPage.jsx";
 import HomePage from "./pages/HomePage.jsx";
-import ImportPage from "./pages/ImportPage.jsx";
 import MistakesPage from "./pages/MistakesPage.jsx";
 import NotFoundPage from "./pages/NotFoundPage.jsx";
 import QuizPage from "./pages/QuizPage.jsx";
@@ -38,7 +37,6 @@ function App() {
           <Route path="/games/battle-jet" element={<BattleJetQuizPage />} />
           <Route path="/games/penalty-twelve" element={<PenaltyTwelvePage />} />
           <Route path="/mistakes" element={<MistakesPage />} />
-          <Route path="/import" element={<ImportPage />} />
           <Route path="/settings" element={<SettingsPage />} />
           <Route path="*" element={<NotFoundPage />} />
         </Routes>

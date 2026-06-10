@@ -270,6 +270,15 @@ const zhHant = {
         "重設資料會刪除此瀏覽器中的所有單字、複習進度與錯題紀錄。",
       resetting: "重設中...",
       resetData: "重設目前資料",
+      syncLocalTitle: "上傳本機單字",
+      syncLocalDescription:
+        "將此瀏覽器 localStorage 中的單字上傳到你的 Supabase 帳號。雲端已有的單字會略過。",
+      syncLocalCount: "本機待上傳：{{count}} 個單字",
+      syncLocalButton: "上傳本機單字到雲端",
+      syncLocalUploading: "上傳中...",
+      syncLocalSuccess: "已上傳 {{imported}} 個單字，略過 {{skipped}} 個。",
+      syncLocalEmpty: "本機沒有可上傳的單字。",
+      syncLocalSignInRequired: "請先登入，才能上傳本機單字。",
     },
     notFound: {
       eyebrow: "找不到頁面",
@@ -691,6 +700,15 @@ export const translations = {
         "Resetting data removes all words, review progress, and mistake history from this browser.",
       resetting: "Resetting...",
       resetData: "Reset Current Data",
+      syncLocalTitle: "Upload Local Words",
+      syncLocalDescription:
+        "Upload words saved in this browser's localStorage to your Supabase account. Words already in the cloud are skipped.",
+      syncLocalCount: "Local words ready to upload: {{count}}",
+      syncLocalButton: "Upload Local Words to Cloud",
+      syncLocalUploading: "Uploading...",
+      syncLocalSuccess: "Uploaded {{imported}} words and skipped {{skipped}}.",
+      syncLocalEmpty: "No local words are available to upload.",
+      syncLocalSignInRequired: "Sign in first to upload local words.",
     },
     notFound: {
       eyebrow: "Not Found",

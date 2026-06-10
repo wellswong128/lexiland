@@ -2,6 +2,8 @@ import { useCallback, useEffect, useState } from "react";
 import { hasSupabaseConfig } from "../../lib/supabaseClient.js";
 import { loadWords, resetWords, saveWords } from "../../lib/storage.js";
 import {
+  createInitialMistake,
+  createInitialReview,
   createWord,
   getCurrentIsoDate,
   normalizeTags,
@@ -248,6 +250,87 @@ export function useWords({ isAuthLoading = false, user = null } = {}, storage) {
     [isUsingSupabase, user, words],
   );
 
+  const syncLocalWordsToSupabase = useCallback(async () => {
+    if (!isUsingSupabase) {
+      throw new Error("Sign in to upload local words to Supabase.");
+    }
+
+    const localWords = loadWords(storage);
+
+    if (localWords.length === 0) {
+      return {
+        importedWords: [],
+        localCount: 0,
+        skippedWords: [],
+      };
+    }
+
+    const existingTerms = new Set(words.map((word) => normalizeTerm(word.term)));
+    const importedWords = [];
+    const skippedWords = [];
+
+    for (const localWord of localWords) {
+      const normalizedTerm = normalizeTerm(localWord?.term);
+      const definition = normalizeText(localWord?.definition);
+
+      if (!normalizedTerm || !definition) {
+        skippedWords.push(localWord);
+        continue;
+      }
+
+      if (existingTerms.has(normalizedTerm)) {
+        skippedWords.push(localWord);
+        continue;
+      }
+
+      try {
+        const source = Object.values(WORD_SOURCES).includes(localWord.source)
+          && localWord.source !== WORD_SOURCES.PHOTO
+          ? localWord.source
+          : WORD_SOURCES.IMPORT;
+
+        const savedWord = await insertWordInSupabase(
+          {
+            ...localWord,
+            term: normalizeText(localWord.term),
+            definition,
+            translation: normalizeText(localWord.translation),
+            pronunciation: normalizeText(localWord.pronunciation),
+            partOfSpeech: normalizeText(localWord.partOfSpeech),
+            example: normalizeText(localWord.example),
+            notes: normalizeText(localWord.notes),
+            tags: normalizeTags(localWord.tags),
+            source,
+            review: {
+              ...createInitialReview(),
+              ...localWord.review,
+            },
+            mistake: {
+              ...createInitialMistake(),
+              ...localWord.mistake,
+            },
+          },
+          user.id,
+        );
+
+        importedWords.push(savedWord);
+        existingTerms.add(normalizedTerm);
+      } catch {
+        skippedWords.push(localWord);
+      }
+    }
+
+    if (importedWords.length > 0) {
+      setWords((currentWords) => [...importedWords, ...currentWords]);
+    }
+
+    return {
+      importedWords,
+      localCount: localWords.length,
+      skippedWords,
+    };
+  }, [isUsingSupabase, storage, user, words]);
+
   const resetAllWords = useCallback(async () => {
     if (isUsingSupabase) {
       try {
@@ -271,6 +354,7 @@ export function useWords({ isAuthLoading = false, user = null } = {}, storage) {
     isUsingSupabase,
     isWordsLoading: isAuthLoading || isWordsLoading,
     resetAllWords,
+    syncLocalWordsToSupabase,
     words,
     wordsError,
   };

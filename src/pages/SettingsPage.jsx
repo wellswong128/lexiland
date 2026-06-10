@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import LanguageToggle from "../components/LanguageToggle.jsx";
 import {
   isLocalhostUrl,
@@ -6,7 +6,7 @@ import {
 } from "../features/auth/authRedirect.js";
 import { useLocale } from "../features/locale/LocaleContext.jsx";
 import { useWordsContext } from "../features/words/WordsContext.jsx";
-import { WORDS_STORAGE_KEY } from "../lib/storage.js";
+import { loadWords, WORDS_STORAGE_KEY } from "../lib/storage.js";
 
 const EMAIL_COOLDOWN_SECONDS = 60;
 
@@ -28,6 +28,7 @@ function SettingsPage() {
     resetAllWords,
     signInWithEmail,
     signOut,
+    syncLocalWordsToSupabase,
     user,
     words,
     wordsError,
@@ -36,6 +37,7 @@ function SettingsPage() {
   const [emailCooldown, setEmailCooldown] = useState(0);
   const [isAuthSubmitting, setIsAuthSubmitting] = useState(false);
   const [isResetting, setIsResetting] = useState(false);
+  const [isSyncingLocal, setIsSyncingLocal] = useState(false);
   const [notice, setNotice] = useState("");
   const [noticeType, setNoticeType] = useState("success");
 
@@ -115,6 +117,40 @@ function SettingsPage() {
     }
   }
 
+  const localWordCount = useMemo(() => loadWords().length, [words, notice]);
+
+  async function handleSyncLocal() {
+    if (!user) {
+      setNoticeType("error");
+      setNotice(t("settings.syncLocalSignInRequired"));
+      return;
+    }
+
+    if (localWordCount === 0) {
+      setNoticeType("error");
+      setNotice(t("settings.syncLocalEmpty"));
+      return;
+    }
+
+    try {
+      setIsSyncingLocal(true);
+      const result = await syncLocalWordsToSupabase();
+
+      setNoticeType("success");
+      setNotice(
+        t("settings.syncLocalSuccess", {
+          imported: result.importedWords.length,
+          skipped: result.skippedWords.length,
+        }),
+      );
+    } catch (error) {
+      setNoticeType("error");
+      setNotice(error.message);
+    } finally {
+      setIsSyncingLocal(false);
+    }
+  }
+
   const currentError = authError || wordsError;
   const friendlyCurrentError = currentError
     ? getFriendlyAuthError(currentError, t)
@@ -174,19 +210,43 @@ function SettingsPage() {
         ) : isAuthLoading ? (
           <p className="mt-2 text-sm text-slate-600">{t("settings.checkingSession")}</p>
         ) : user ? (
-          <div className="mt-4 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
-            <p className="text-sm text-slate-700">
-              {t("settings.signedInAs", { email: user.email })}
-            </p>
-            <button
-              className="rounded-full bg-slate-100 px-5 py-3 text-sm font-bold text-slate-700 transition hover:bg-slate-200 disabled:bg-slate-300"
-              disabled={isAuthSubmitting}
-              onClick={handleSignOut}
-              type="button"
-            >
-              {t("settings.signOut")}
-            </button>
-          </div>
+          <>
+            <div className="mt-4 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+              <p className="text-sm text-slate-700">
+                {t("settings.signedInAs", { email: user.email })}
+              </p>
+              <button
+                className="rounded-full bg-slate-100 px-5 py-3 text-sm font-bold text-slate-700 transition hover:bg-slate-200 disabled:bg-slate-300"
+                disabled={isAuthSubmitting}
+                onClick={handleSignOut}
+                type="button"
+              >
+                {t("settings.signOut")}
+              </button>
+            </div>
+
+            <div className="mt-5 rounded-2xl border border-blue-200 bg-white p-4">
+              <h3 className="text-base font-bold text-blue-950">
+                {t("settings.syncLocalTitle")}
+              </h3>
+              <p className="mt-2 text-sm leading-6 text-slate-600">
+                {t("settings.syncLocalDescription")}
+              </p>
+              <p className="mt-3 text-sm font-semibold text-blue-900">
+                {t("settings.syncLocalCount", { count: localWordCount })}
+              </p>
+              <button
+                className="mt-4 rounded-full bg-blue-700 px-5 py-3 text-sm font-bold text-white transition hover:bg-blue-800 disabled:bg-slate-300"
+                disabled={isSyncingLocal || localWordCount === 0}
+                onClick={handleSyncLocal}
+                type="button"
+              >
+                {isSyncingLocal
+                  ? t("settings.syncLocalUploading")
+                  : t("settings.syncLocalButton")}
+              </button>
+            </div>
+          </>
         ) : (
           <>
             <p className="mt-3 text-sm text-slate-600">

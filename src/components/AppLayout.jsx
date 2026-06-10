@@ -16,7 +16,6 @@ const navItems = [
   { to: "/games/battle-jet", labelKey: "nav.battleJet" },
   { to: "/games/penalty-twelve", labelKey: "nav.penaltyTwelve" },
   { to: "/mistakes", labelKey: "nav.mistakes" },
-  { to: "/import", labelKey: "nav.import" },
   { to: "/settings", labelKey: "nav.settings" },
 ];
 
