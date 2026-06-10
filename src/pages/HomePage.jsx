@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import GameHomeButton from "../components/GameHomeButton.jsx";
 import { useLocale } from "../features/locale/LocaleContext.jsx";
 import { getDueWords } from "../features/review/reviewHelpers.js";
 import { useWordsContext } from "../features/words/WordsContext.jsx";
@@ -107,13 +108,11 @@ function HomePage() {
       <div aria-hidden="true" className="home-page-glow home-page-glow-left" />
       <div aria-hidden="true" className="home-page-glow home-page-glow-right" />
 
-      <div className="home-hero relative text-center">
-        <p className="home-eyebrow">{t("home.eyebrow")}</p>
-        <h1 className="home-title">{t("brand.name")}</h1>
-        <p className="home-description home-tagline">{t("brand.tagline")}</p>
+      <div className="relative z-50 mb-2">
+        <GameHomeButton variant="light" />
       </div>
 
-      <div className="home-stats relative mt-5 grid grid-cols-3 gap-2 sm:mt-8 sm:gap-4">
+      <div className="home-stats relative grid grid-cols-3 gap-2 sm:gap-4">
         {statCards.map((card) => (
           <div className={`home-stat-card home-stat-${card.tone}`} key={card.key}>
             <span aria-hidden="true" className="home-stat-icon">
