@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useMemo, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import LanguageToggle from "../components/LanguageToggle.jsx";
 import { useLocale } from "../features/locale/LocaleContext.jsx";
 import { useWordsContext } from "../features/words/WordsContext.jsx";
@@ -81,8 +81,8 @@ function Kart({ lane, state = "" }) {
   return (
     <div className={["word-kart-kart", state].filter(Boolean).join(" ")} style={{ "--lane": lane }}>
       <div className="word-kart-driver-head" />
-      <div className="word-kart-front" />
-      <div className="word-kart-body" />
+      <div className="word-kart-kart-front" />
+      <div className="word-kart-kart-body" />
       <div className="word-kart-wheel left" />
       <div className="word-kart-wheel right" />
       <div className="word-kart-flame" />
@@ -118,7 +118,6 @@ function RaceDecorations() {
 }
 
 function WordKartPage() {
-  const navigate = useNavigate();
   const { t } = useLocale();
   const { words } = useWordsContext();
 
@@ -331,15 +330,8 @@ function WordKartPage() {
             {t("games.wordKart.subtitle")}
           </p>
         </div>
-        <div className="relative z-50 flex min-w-[4.5rem] items-center justify-end gap-2">
+        <div className="relative z-50 flex min-w-[4.5rem] items-center justify-end">
           <LanguageToggle />
-          <button
-            className="relative z-50 min-h-11 min-w-[4.5rem] rounded-full border border-white/25 bg-slate-950/70 px-3 py-2 text-xs font-bold text-sky-100 transition hover:bg-slate-900"
-            onClick={() => navigate("/")}
-            type="button"
-          >
-            {t("common.home")}
-          </button>
         </div>
       </header>
 

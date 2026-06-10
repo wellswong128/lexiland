@@ -402,14 +402,8 @@ function SpellingNinjaPage() {
   return (
     <section className="flex h-[calc(100svh-1rem)] max-h-[calc(100svh-1rem)] w-full max-w-5xl flex-col overflow-hidden rounded-[1.5rem] bg-slate-950 p-2 text-slate-50 shadow-2xl shadow-slate-950/30 sm:p-4">
       <div className="relative mb-2">
-        <div className="absolute right-0 top-0 flex items-center gap-2">
+        <div className="absolute right-0 top-0">
           <LanguageToggle />
-          <Link
-            className="rounded-full border border-slate-700 bg-slate-900 px-3 py-1.5 text-xs font-bold text-slate-200 transition hover:bg-slate-800"
-            to="/"
-          >
-            {t("common.home")}
-          </Link>
         </div>
         <div className="text-center">
           <p className="text-[0.6rem] font-black uppercase tracking-[0.32em] text-cyan-300 sm:text-xs">

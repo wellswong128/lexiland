@@ -63,7 +63,7 @@ function AppLayout({ children }) {
   return (
     <div className="flex min-h-[100svh] flex-col bg-blue-50 text-slate-900">
       {isGamePage ? null : (
-        <header className="border-b border-blue-200/70 bg-white/80 backdrop-blur">
+        <header className="relative z-50 overflow-visible border-b border-blue-200/70 bg-white/80 backdrop-blur">
           <div className="mx-auto flex max-w-6xl items-center gap-3 px-4 py-3 sm:px-6 sm:py-4">
             <button
               aria-expanded={isMenuOpen}
@@ -76,11 +76,11 @@ function AppLayout({ children }) {
             </button>
             <NavLink
               to="/"
-              className="rounded-lg text-2xl font-bold tracking-tight text-blue-950"
+              className="min-w-0 flex-1 truncate rounded-lg text-2xl font-bold tracking-tight text-blue-950"
             >
               LexiLoop
             </NavLink>
-            <div className="ml-auto">
+            <div className="relative z-50 ml-auto shrink-0">
               <LanguageToggle />
             </div>
           </div>
@@ -117,7 +117,7 @@ function AppLayout({ children }) {
         className={
           isGamePage
             ? "mx-auto grid min-h-[100svh] w-full max-w-6xl place-items-center px-2 py-2"
-            : "mx-auto flex w-full max-w-6xl flex-1 items-start justify-center px-3 py-3 sm:px-6 sm:py-6"
+            : "relative z-0 mx-auto flex w-full max-w-6xl flex-1 items-start justify-center px-3 py-3 sm:px-6 sm:py-6"
         }
       >
         {children}

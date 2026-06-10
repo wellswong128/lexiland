@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useMemo, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import LanguageToggle from "../components/LanguageToggle.jsx";
 import { useLocale } from "../features/locale/LocaleContext.jsx";
 
@@ -244,7 +244,6 @@ function ArenaScene({
 }
 
 function GrammarArenaPage() {
-  const navigate = useNavigate();
   const { t } = useLocale();
 
   const [gameState, setGameState] = useState("start");
@@ -442,15 +441,8 @@ function GrammarArenaPage() {
             {t("games.grammarArena.subtitle")}
           </p>
         </div>
-        <div className="relative z-50 flex min-w-[4.5rem] items-center justify-end gap-2">
+        <div className="relative z-50 flex min-w-[4.5rem] items-center justify-end">
           <LanguageToggle />
-          <button
-            className="relative z-50 min-h-11 min-w-[4.5rem] rounded-full border border-white/25 bg-slate-950/70 px-3 py-2 text-xs font-bold text-sky-100 transition hover:bg-slate-900"
-            onClick={() => navigate("/")}
-            type="button"
-          >
-            {t("common.home")}
-          </button>
         </div>
       </header>
 

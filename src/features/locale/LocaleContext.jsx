@@ -3,10 +3,23 @@ import { translations } from "../../i18n/translations.js";
 import {
   DEFAULT_LOCALE,
   loadLocale,
+  normalizeLocale,
   saveLocale,
 } from "../../lib/localeStorage.js";
 
 const LocaleContext = createContext(null);
+
+const DATE_LOCALES = {
+  "zh-Hans": "zh-CN",
+  "zh-Hant": "zh-TW",
+  en: "en-US",
+};
+
+const DOCUMENT_LANGS = {
+  "zh-Hans": "zh-Hans",
+  "zh-Hant": "zh-Hant",
+  en: "en",
+};
 
 function resolvePath(object, path) {
   return path.split(".").reduce((current, key) => current?.[key], object);
@@ -22,20 +35,17 @@ function interpolate(template, values = {}) {
   );
 }
 
-function getDocumentLang(locale) {
-  return locale === "zh" ? "zh-Hant" : "en";
-}
-
 export function LocaleProvider({ children }) {
   const [locale, setLocaleState] = useState(loadLocale);
 
   const setLocale = useCallback((nextLocale) => {
-    setLocaleState(nextLocale);
-    saveLocale(nextLocale);
+    const normalizedLocale = normalizeLocale(nextLocale);
+    setLocaleState(normalizedLocale);
+    saveLocale(normalizedLocale);
   }, []);
 
   useEffect(() => {
-    document.documentElement.lang = getDocumentLang(locale);
+    document.documentElement.lang = DOCUMENT_LANGS[locale] ?? "en";
   }, [locale]);
 
   const t = useCallback(
@@ -56,7 +66,7 @@ export function LocaleProvider({ children }) {
       locale,
       setLocale,
       t,
-      dateLocale: locale === "zh" ? "zh-TW" : "en-US",
+      dateLocale: DATE_LOCALES[locale] ?? "en-US",
     }),
     [locale, setLocale, t],
   );

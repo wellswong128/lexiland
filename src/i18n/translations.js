@@ -1,12 +1,14 @@
-export const translations = {
-  zh: {
-    language: {
-      toggleLabel: "切換語言",
-      title: "介面語言",
-      description: "選擇應用程式顯示語言，可隨時切換。",
-      chinese: "繁體中文",
-      english: "English",
-    },
+import { toSimplifiedLocale } from "./simplifyZh.js";
+
+const zhHant = {
+  language: {
+    toggleLabel: "選擇語言",
+    title: "介面語言",
+    description: "選擇應用程式顯示語言，可隨時切換。",
+    simplified: "簡體",
+    traditional: "繁體",
+    english: "英文",
+  },
     nav: {
       home: "首頁",
       words: "單字庫",
@@ -306,13 +308,18 @@ export const translations = {
         reviewTitle: "錯題複習",
       },
     },
-  },
+};
+
+export const translations = {
+  "zh-Hant": zhHant,
+  "zh-Hans": toSimplifiedLocale(zhHant),
   en: {
     language: {
-      toggleLabel: "Switch language",
+      toggleLabel: "Select language",
       title: "App Language",
       description: "Choose the display language. You can change it anytime.",
-      chinese: "繁體中文",
+      simplified: "Simplified",
+      traditional: "Traditional",
       english: "English",
     },
     nav: {

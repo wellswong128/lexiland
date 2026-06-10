@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import LanguageToggle from "../components/LanguageToggle.jsx";
 import { useLocale } from "../features/locale/LocaleContext.jsx";
 import { getDueWords } from "../features/review/reviewHelpers.js";
 import { useWordsContext } from "../features/words/WordsContext.jsx";
@@ -97,6 +98,9 @@ function HomePage() {
         <p className="home-eyebrow">{t("home.eyebrow")}</p>
         <h1 className="home-title">LexiLoop</h1>
         <p className="home-description">{t("home.description")}</p>
+        <div className="mt-4 flex justify-center">
+          <LanguageToggle showInlineOptions />
+        </div>
       </div>
 
       <div className="home-stats relative mt-5 grid grid-cols-3 gap-2 sm:mt-8 sm:gap-4">
