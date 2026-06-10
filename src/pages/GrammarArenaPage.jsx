@@ -166,6 +166,7 @@ function ArenaScene({
   onChoose,
   locked,
   answerStates = {},
+  answerPanelKey,
   heroHpLabel,
   monsterHpLabel,
 }) {
@@ -224,15 +225,15 @@ function ArenaScene({
         </div>
       </div>
 
-      <div className="grammar-arena-answer-panel">
-        {choices.map((choice) => (
+      <div className="grammar-arena-answer-panel" key={answerPanelKey}>
+        {choices.map((choice, index) => (
           <button
             className={[
               "grammar-arena-answer-btn",
               answerStates[choice] ?? "",
             ].join(" ")}
             disabled={locked || !onChoose}
-            key={choice}
+            key={`${answerPanelKey}-${index}-${choice}`}
             onClick={() => onChoose?.(choice)}
             type="button"
           >
@@ -302,10 +303,14 @@ function GrammarArenaPage() {
     [resetCombatAnim],
   );
 
+  const resetOptionState = useCallback(() => {
+    resetCombatAnim();
+    setLocked(false);
+  }, [resetCombatAnim]);
+
   const nextQuestion = useCallback(
     (monsterDefeated = false) => {
-      resetCombatAnim();
-      setLocked(false);
+      resetOptionState();
       setStatus({ text: "", type: "" });
       if (monsterDefeated) {
         setMonsterHp(100);
@@ -313,7 +318,7 @@ function GrammarArenaPage() {
       setRound((value) => value + 1);
       setCurrentQuestion(createQuestion());
     },
-    [resetCombatAnim],
+    [resetOptionState],
   );
 
   const chooseAnswer = useCallback(
@@ -433,7 +438,7 @@ function GrammarArenaPage() {
   return (
     <section className="grammar-arena-app flex h-[calc(100svh-1rem)] max-h-[calc(100svh-1rem)] w-full max-w-5xl flex-col overflow-hidden rounded-[1.5rem] p-2 sm:p-4">
       <header className="relative z-50 mb-2 flex shrink-0 items-center justify-between gap-2">
-        <GameHomeButton />
+        {gameState === "playing" ? <GameHomeButton /> : <div className="min-w-[4.5rem]" />}
         <div className="pointer-events-none flex-1 text-center">
           <h1 className="text-3xl font-black text-amber-50 drop-shadow sm:text-5xl">
             {t("games.grammarArena.title")}
@@ -521,6 +526,7 @@ function GrammarArenaPage() {
 
         {gameState === "playing" && currentQuestion ? (
           <ArenaScene
+            answerPanelKey={`${round}-${currentQuestion.sentence}`}
             answerStates={answerStates}
             choices={currentQuestion.shuffledChoices}
             effectType={effectType}

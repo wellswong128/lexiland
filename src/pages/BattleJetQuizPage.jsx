@@ -323,6 +323,11 @@ function BattleJetQuizPage() {
 
   useEffect(() => () => clearScheduled(), [clearScheduled]);
 
+  const resetOptionState = useCallback(() => {
+    setLocked(false);
+    setOptionStates({});
+  }, []);
+
   const resetAnimation = useCallback(() => {
     setMessage(null);
     setJetExploding(false);
@@ -342,8 +347,8 @@ function BattleJetQuizPage() {
     setLaunchFlash(false);
     setJetParts([]);
     setDebris([]);
-    setOptionStates({});
-  }, []);
+    resetOptionState();
+  }, [resetOptionState]);
 
   const startRandomJet = useCallback(() => {
     const path = JET_PATHS[Math.floor(Math.random() * JET_PATHS.length)];
@@ -460,6 +465,12 @@ function BattleJetQuizPage() {
       setJetExploding(true);
       setMissileVisible(false);
       createDebris(target.x, target.y);
+
+      schedule(() => {
+        setJetExploding(false);
+        setJetPaused(false);
+        startRandomJet();
+      }, 520);
     }, 920);
   }, [
     burstJetIntoParts,
@@ -468,6 +479,7 @@ function BattleJetQuizPage() {
     getJetCenter,
     playExplosionSound,
     schedule,
+    startRandomJet,
   ]);
 
   const playMissAnimation = useCallback(() => {
@@ -502,26 +514,24 @@ function BattleJetQuizPage() {
       resetAnimation();
       startRandomJet();
       setCurrentIndex(index);
-      setLocked(false);
-      setOptionStates({});
+      resetOptionState();
     },
-    [resetAnimation, startRandomJet],
+    [resetAnimation, resetOptionState, startRandomJet],
   );
 
   const startGame = useCallback(() => {
     clearScheduled();
     initAudio();
 
-    setQuestions(makeQuestions(wordBank));
+    const nextQuestions = makeQuestions(wordBank);
+
+    setQuestions(nextQuestions);
     setHits(0);
     setScore(0);
     setCombo(0);
-    setCurrentIndex(0);
-    setLocked(false);
-    resetAnimation();
-    startRandomJet();
     setGameState("playing");
-  }, [clearScheduled, initAudio, resetAnimation, startRandomJet, wordBank]);
+    loadQuestion(0);
+  }, [clearScheduled, initAudio, loadQuestion, wordBank]);
 
   const getComboMessage = useCallback(
     (nextCombo) => {
@@ -702,7 +712,7 @@ function BattleJetQuizPage() {
         </header>
       ) : (
         <header className="relative z-50 mb-2 flex shrink-0 items-center justify-between gap-2">
-          <GameHomeButton variant="light" />
+          <div className="min-w-[4.5rem]" />
           <div className="pointer-events-none flex-1 text-center">
             <h1 className="text-2xl font-black text-[#0d62bd] drop-shadow sm:text-4xl">
               {t("games.battleJet.title")}
@@ -886,7 +896,7 @@ function BattleJetQuizPage() {
                 ) : null}
               </div>
 
-              <div className="battle-jet-options-panel">
+              <div className="battle-jet-options-panel" key={currentIndex}>
                 {currentQuestion.choices.map((choice, index) => {
                   const state = optionStates[choice] || "";
                   const isDisabled = locked || Boolean(optionStates.selected);

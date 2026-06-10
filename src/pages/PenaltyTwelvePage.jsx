@@ -497,6 +497,11 @@ function PenaltyTwelvePage() {
     schedule(() => setImpact(null), 360);
   }, [schedule]);
 
+  const resetOptionState = useCallback(() => {
+    setLocked(false);
+    setOptionStates({});
+  }, []);
+
   const resetAnimation = useCallback(() => {
     setMessage(null);
     setBallPower(false);
@@ -508,8 +513,8 @@ function PenaltyTwelvePage() {
     setGoalFrameShake(false);
     setTrailShow(false);
     setImpact(null);
-    setOptionStates({});
-  }, []);
+    resetOptionState();
+  }, [resetOptionState]);
 
   const loadQuestion = useCallback(
     (index, questionList = questions) => {
@@ -528,10 +533,9 @@ function PenaltyTwelvePage() {
       }
 
       setCurrentIndex(index);
-      setLocked(false);
-      setOptionStates({});
+      resetOptionState();
     },
-    [questions, resetAnimation, wordBank],
+    [questions, resetAnimation, resetOptionState, wordBank],
   );
 
   const getRank = useCallback(
@@ -932,7 +936,7 @@ function PenaltyTwelvePage() {
         </header>
       ) : (
         <header className="relative z-50 mb-2 flex shrink-0 items-center justify-between gap-2">
-          <GameHomeButton variant="light" />
+          <div className="min-w-[4.5rem]" />
           <div className="pointer-events-none flex-1 text-center">
             <h1 className="text-2xl font-black text-[#0d62bd] drop-shadow sm:text-4xl">
               {t("games.penaltyTwelve.title")}

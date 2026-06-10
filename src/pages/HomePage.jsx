@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import GameHomeButton from "../components/GameHomeButton.jsx";
 import { useLocale } from "../features/locale/LocaleContext.jsx";
 import { getDueWords } from "../features/review/reviewHelpers.js";
 import { useWordsContext } from "../features/words/WordsContext.jsx";
@@ -9,19 +8,16 @@ const statCards = [
     key: "savedWords",
     valueKey: "words",
     tone: "saved",
-    icon: "📚",
   },
   {
     key: "dueReviews",
     valueKey: "due",
     tone: "due",
-    icon: "⏰",
   },
   {
     key: "mistakes",
     valueKey: "mistakes",
     tone: "mistakes",
-    icon: "🎯",
   },
 ];
 
@@ -108,25 +104,17 @@ function HomePage() {
       <div aria-hidden="true" className="home-page-glow home-page-glow-left" />
       <div aria-hidden="true" className="home-page-glow home-page-glow-right" />
 
-      <div className="relative z-50 mb-2">
-        <GameHomeButton variant="light" />
-      </div>
-
       <div className="home-stats relative grid grid-cols-3 gap-2 sm:gap-4">
         {statCards.map((card) => (
           <div className={`home-stat-card home-stat-${card.tone}`} key={card.key}>
-            <span aria-hidden="true" className="home-stat-icon">
-              {card.icon}
-            </span>
-            <p className="home-stat-value">{values[card.valueKey]}</p>
             <p className="home-stat-label">{t(`home.${card.key}`)}</p>
+            <p className="home-stat-value">{values[card.valueKey]}</p>
           </div>
         ))}
       </div>
 
       <div className="home-actions relative mt-5 sm:mt-8">
-        <p className="home-section-label">{t("home.quickActions")}</p>
-        <div className="mt-3 grid grid-cols-2 gap-2 sm:flex sm:flex-wrap sm:justify-center sm:gap-3">
+        <div className="grid grid-cols-2 gap-2 sm:flex sm:flex-wrap sm:justify-center sm:gap-3">
           {actionLinks.map((action) => (
             <Link
               className={`home-action-btn home-action-${action.variant}`}

@@ -245,13 +245,17 @@ function FishingBlastPage() {
     setFishingLine(null);
   }, []);
 
-  const nextQuestion = useCallback(() => {
+  const resetOptionState = useCallback(() => {
     setLocked(false);
-    setStatus({ text: "", type: "" });
     setFishStates({});
     setFishingLine(null);
+  }, []);
+
+  const nextQuestion = useCallback(() => {
+    resetOptionState();
+    setStatus({ text: "", type: "" });
     setCurrentRound(createQuestion(wordBank));
-  }, [wordBank]);
+  }, [resetOptionState, wordBank]);
 
   const drawFishingLine = useCallback((fishId) => {
     const gameArea = gameAreaRef.current;
@@ -370,7 +374,7 @@ function FishingBlastPage() {
   return (
     <section className="fishing-blast-app flex h-[calc(100svh-1rem)] max-h-[calc(100svh-1rem)] w-full max-w-5xl flex-col overflow-hidden rounded-[1.5rem] p-2 sm:p-4">
       <header className="relative z-50 mb-2 flex shrink-0 items-center justify-between gap-2">
-        <GameHomeButton />
+        {gameState === "playing" ? <GameHomeButton /> : <div className="min-w-[4.5rem]" />}
         <div className="pointer-events-none flex-1 text-center">
           <h1 className="text-3xl font-black text-sky-100 drop-shadow sm:text-5xl">
             {t("games.fishingBlast.title")}
@@ -513,7 +517,7 @@ function FishingBlastPage() {
                 </div>
               </div>
             ) : null}
-            <div className="fishing-blast-fish-zone">
+            <div className="fishing-blast-fish-zone" key={round}>
               {currentRound.choices.map((fish) => (
                 <FishButton
                   disabled={locked}

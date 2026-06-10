@@ -154,6 +154,7 @@ function SpellingNinjaPage() {
       setRoundLocked(false);
       setStatus({ text: "", type: "" });
       setFlash("");
+      setSlashKey((value) => value + 1);
     },
     [wordBank],
   );
@@ -403,9 +404,11 @@ function SpellingNinjaPage() {
   return (
     <section className="flex h-[calc(100svh-1rem)] max-h-[calc(100svh-1rem)] w-full max-w-5xl flex-col overflow-hidden rounded-[1.5rem] bg-slate-950 p-2 text-slate-50 shadow-2xl shadow-slate-950/30 sm:p-4">
       <div className="relative mb-2">
-        <div className="absolute left-0 top-0">
-          <GameHomeButton />
-        </div>
+        {gameState === "playing" ? (
+          <div className="absolute left-0 top-0">
+            <GameHomeButton />
+          </div>
+        ) : null}
         <div className="absolute right-0 top-0">
           <LanguageToggle />
         </div>
@@ -562,7 +565,7 @@ function SpellingNinjaPage() {
             </div>
 
             <div className="mt-1.5 rounded-2xl border border-slate-700 bg-slate-950/60 p-1.5 sm:p-3">
-              <div className="grid grid-cols-7 gap-1.5 sm:grid-cols-8 sm:gap-2">
+              <div className="grid grid-cols-7 gap-1.5 sm:grid-cols-8 sm:gap-2" key={level}>
                 {round.letters.map((item) => (
                   <button
                     className={[

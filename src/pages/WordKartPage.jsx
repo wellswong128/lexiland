@@ -177,16 +177,20 @@ function WordKartPage() {
     setLocked(true);
   }, []);
 
+  const resetOptionState = useCallback(() => {
+    setLocked(false);
+    setGateStates({});
+    setKartState("");
+  }, []);
+
   const nextQuestion = useCallback(() => {
     const nextRound = createQuestion(wordBank);
 
-    setLocked(false);
+    resetOptionState();
     setStatus({ text: "", type: "" });
-    setGateStates({});
-    setKartState("");
     setCurrentRound(nextRound);
     setSelectedLane(nextRound.selectedLane);
-  }, [wordBank]);
+  }, [resetOptionState, wordBank]);
 
   const checkLane = useCallback(
     (lane) => {
@@ -322,7 +326,7 @@ function WordKartPage() {
   return (
     <section className="word-kart-app flex h-[calc(100svh-1rem)] max-h-[calc(100svh-1rem)] w-full max-w-5xl flex-col overflow-hidden rounded-[1.5rem] p-2 sm:p-4">
       <header className="relative z-50 mb-2 flex shrink-0 items-center justify-between gap-2">
-        <GameHomeButton />
+        {gameState === "playing" ? <GameHomeButton /> : <div className="min-w-[4.5rem]" />}
         <div className="pointer-events-none flex-1 text-center">
           <h1 className="text-3xl font-black text-orange-50 drop-shadow sm:text-5xl">
             {t("games.wordKart.title")}
@@ -431,7 +435,7 @@ function WordKartPage() {
               </p>
             </div>
             <div className="word-kart-track" />
-            <div className="word-kart-answer-gates">
+            <div className="word-kart-answer-gates" key={round}>
               {currentRound.choices.map((choice, index) => (
                 <Gate
                   colorIndex={index}
@@ -441,7 +445,7 @@ function WordKartPage() {
                 />
               ))}
             </div>
-            <div className="word-kart-controls">
+            <div className="word-kart-controls" key={`controls-${round}`}>
               {currentRound.choices.map((choice, index) => (
                 <button
                   className="word-kart-lane-btn"
