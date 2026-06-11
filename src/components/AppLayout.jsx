@@ -55,6 +55,8 @@ function AppLayout({ children }) {
   const { t } = useLocale();
   const location = useLocation();
   const isGamePage = location.pathname.startsWith("/games/");
+  const isAuthPage = location.pathname.startsWith("/auth");
+  const hideHeader = isGamePage || isAuthPage;
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   useEffect(() => {
@@ -63,7 +65,7 @@ function AppLayout({ children }) {
 
   return (
     <div className="flex min-h-[100svh] flex-col bg-blue-50 text-slate-900">
-      {isGamePage ? null : (
+      {hideHeader ? null : (
         <header className="relative z-50 overflow-visible border-b border-blue-200/70 bg-white/80 backdrop-blur">
           <div className="mx-auto flex max-w-6xl items-center gap-3 px-4 py-3 sm:px-6 sm:py-4">
             <button
@@ -116,7 +118,7 @@ function AppLayout({ children }) {
 
       <main
         className={
-          isGamePage
+          hideHeader
             ? "mx-auto grid min-h-[100svh] w-full max-w-6xl place-items-center px-2 py-2"
             : "relative z-0 mx-auto flex w-full max-w-6xl flex-1 items-start justify-center px-3 py-3 sm:px-6 sm:py-6"
         }

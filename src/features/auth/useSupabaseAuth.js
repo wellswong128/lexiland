@@ -72,7 +72,7 @@ export function useSupabaseAuth() {
     };
   }, []);
 
-  const signInWithEmail = useCallback(async (email) => {
+  const signInWithEmail = useCallback(async (email, { shouldCreateUser = true } = {}) => {
     if (!supabase) {
       throw new Error("Supabase is not configured.");
     }
@@ -97,7 +97,35 @@ export function useSupabaseAuth() {
       email: normalizedEmail,
       options: {
         emailRedirectTo,
-        shouldCreateUser: true,
+        shouldCreateUser,
+      },
+    });
+
+    if (error) {
+      setAuthError(error.message);
+      throw error;
+    }
+  }, []);
+
+  const signInWithOAuth = useCallback(async (provider) => {
+    if (!supabase) {
+      throw new Error("Supabase is not configured.");
+    }
+
+    setAuthError("");
+
+    const redirectTo = resolveAuthRedirectUrl({ strict: true });
+
+    if (!redirectTo) {
+      throw new Error(
+        "Auth redirect URL is not configured. Set VITE_AUTH_REDIRECT_URL and add it to Supabase Redirect URLs.",
+      );
+    }
+
+    const { error } = await supabase.auth.signInWithOAuth({
+      provider,
+      options: {
+        redirectTo,
       },
     });
 
@@ -128,6 +156,7 @@ export function useSupabaseAuth() {
     isAuthLoading,
     session,
     signInWithEmail,
+    signInWithOAuth,
     signOut,
     user: session?.user ?? null,
   };

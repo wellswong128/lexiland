@@ -9,6 +9,7 @@ import MistakesPage from "./pages/MistakesPage.jsx";
 import NotFoundPage from "./pages/NotFoundPage.jsx";
 import QuizPage from "./pages/QuizPage.jsx";
 import SettingsPage from "./pages/SettingsPage.jsx";
+import AuthPage from "./pages/AuthPage.jsx";
 import FishingBlastPage from "./pages/FishingBlastPage.jsx";
 import SpellingNinjaPage from "./pages/SpellingNinjaPage.jsx";
 import GrammarArenaPage from "./pages/GrammarArenaPage.jsx";
@@ -37,6 +38,7 @@ function App() {
           <Route path="/games/battle-jet" element={<BattleJetQuizPage />} />
           <Route path="/games/penalty-twelve" element={<PenaltyTwelvePage />} />
           <Route path="/mistakes" element={<MistakesPage />} />
+          <Route path="/auth" element={<AuthPage />} />
           <Route path="/settings" element={<SettingsPage />} />
           <Route path="*" element={<NotFoundPage />} />
         </Routes>

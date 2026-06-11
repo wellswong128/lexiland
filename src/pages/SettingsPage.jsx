@@ -1,16 +1,11 @@
-import { useEffect, useMemo, useState } from "react";
+import { useMemo, useState } from "react";
+import { Link } from "react-router-dom";
 import LanguageToggle from "../components/LanguageToggle.jsx";
-import {
-  isLocalhostUrl,
-  resolveAuthRedirectUrl,
-} from "../features/auth/authRedirect.js";
 import { getFriendlyAuthError } from "../features/auth/authErrors.js";
 import { useLocale } from "../features/locale/LocaleContext.jsx";
 import { useWordsContext } from "../features/words/WordsContext.jsx";
 import { normalizeTerm, normalizeText } from "../features/words/wordTypes.js";
 import { loadWords, WORDS_STORAGE_KEY } from "../lib/storage.js";
-
-const EMAIL_COOLDOWN_SECONDS = 60;
 
 function SettingsPage() {
   const { t } = useLocale();
@@ -20,61 +15,17 @@ function SettingsPage() {
     isAuthLoading,
     isUsingSupabase,
     resetAllWords,
-    signInWithEmail,
     signOut,
     syncLocalWordsToSupabase,
     user,
     words,
     wordsError,
   } = useWordsContext();
-  const [email, setEmail] = useState("");
-  const [emailCooldown, setEmailCooldown] = useState(0);
   const [isAuthSubmitting, setIsAuthSubmitting] = useState(false);
   const [isResetting, setIsResetting] = useState(false);
   const [isSyncingLocal, setIsSyncingLocal] = useState(false);
   const [notice, setNotice] = useState("");
   const [noticeType, setNoticeType] = useState("success");
-
-  useEffect(() => {
-    if (emailCooldown <= 0) {
-      return undefined;
-    }
-
-    const timerId = window.setTimeout(() => {
-      setEmailCooldown((currentSeconds) => Math.max(currentSeconds - 1, 0));
-    }, 1000);
-
-    return () => window.clearTimeout(timerId);
-  }, [emailCooldown]);
-
-  async function handleSignIn(event) {
-    event.preventDefault();
-
-    if (!email.trim()) {
-      setNoticeType("error");
-      setNotice(t("settings.enterEmail"));
-      return;
-    }
-
-    if (emailCooldown > 0) {
-      setNoticeType("error");
-      setNotice(t("settings.waitCooldown", { seconds: emailCooldown }));
-      return;
-    }
-
-    try {
-      setIsAuthSubmitting(true);
-      await signInWithEmail(email.trim());
-      setNoticeType("success");
-      setNotice(t("settings.checkEmail"));
-      setEmailCooldown(EMAIL_COOLDOWN_SECONDS);
-    } catch (error) {
-      setNoticeType("error");
-      setNotice(getFriendlyAuthError(error.message, t));
-    } finally {
-      setIsAuthSubmitting(false);
-    }
-  }
 
   async function handleSignOut() {
     try {
@@ -157,10 +108,6 @@ function SettingsPage() {
   const friendlyCurrentError = currentError
     ? getFriendlyAuthError(currentError, t)
     : "";
-  const authRedirectUrl = resolveAuthRedirectUrl();
-  const hasLocalRedirectConfig = isLocalhostUrl(
-    import.meta.env.VITE_AUTH_REDIRECT_URL || "",
-  );
 
   return (
     <section className="w-full max-w-4xl rounded-3xl border border-blue-200/70 bg-white/90 p-6 shadow-2xl shadow-blue-950/10 sm:p-10">
@@ -252,39 +199,23 @@ function SettingsPage() {
             ) : null}
           </>
         ) : (
-          <>
-            <p className="mt-3 text-sm text-slate-600">
-              {t("settings.loginRedirect")}{" "}
-              <span className="font-semibold text-blue-950">
-                {authRedirectUrl || t("settings.notConfigured")}
-              </span>
-            </p>
-            {hasLocalRedirectConfig ? (
-              <p className="mt-2 rounded-xl border border-amber-200 bg-amber-50 px-3 py-2 text-sm text-amber-800">
-                {t("settings.localhostWarning")}
-              </p>
-            ) : null}
-            <form className="mt-4 flex flex-col gap-3 sm:flex-row" onSubmit={handleSignIn}>
-              <input
-                className="min-w-0 flex-1 rounded-2xl border border-slate-200 bg-white px-4 py-3 text-slate-900 outline-none transition focus:border-blue-500 focus:ring-4 focus:ring-blue-100"
-                onChange={(event) => setEmail(event.target.value)}
-                placeholder={t("settings.emailPlaceholder")}
-                type="email"
-                value={email}
-              />
-              <button
-                className="rounded-full bg-blue-700 px-5 py-3 text-sm font-bold text-white transition hover:bg-blue-800 disabled:bg-slate-300"
-                disabled={isAuthSubmitting || emailCooldown > 0}
-                type="submit"
+          <div className="mt-4 space-y-3">
+            <p className="text-sm leading-6 text-slate-600">{t("auth.settingsPrompt")}</p>
+            <div className="flex flex-col gap-3 sm:flex-row">
+              <Link
+                className="inline-flex justify-center rounded-full bg-blue-700 px-5 py-3 text-sm font-bold text-white transition hover:bg-blue-800"
+                to="/auth?mode=signup&redirect=/settings"
               >
-                {isAuthSubmitting
-                  ? t("settings.sending")
-                  : emailCooldown > 0
-                    ? t("settings.tryAgainIn", { seconds: emailCooldown })
-                    : t("settings.emailLoginLink")}
-              </button>
-            </form>
-          </>
+                {t("auth.signupLink")}
+              </Link>
+              <Link
+                className="inline-flex justify-center rounded-full border border-blue-200 bg-white px-5 py-3 text-sm font-bold text-blue-700 transition hover:bg-blue-50"
+                to="/auth?mode=login&redirect=/settings"
+              >
+                {t("auth.loginLink")}
+              </Link>
+            </div>
+          </div>
         )}
       </div>
 
