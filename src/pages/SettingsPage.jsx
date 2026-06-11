@@ -7,6 +7,7 @@ import {
 import { getFriendlyAuthError } from "../features/auth/authErrors.js";
 import { useLocale } from "../features/locale/LocaleContext.jsx";
 import { useWordsContext } from "../features/words/WordsContext.jsx";
+import { normalizeTerm, normalizeText } from "../features/words/wordTypes.js";
 import { loadWords, WORDS_STORAGE_KEY } from "../lib/storage.js";
 
 const EMAIL_COOLDOWN_SECONDS = 60;
@@ -109,7 +110,16 @@ function SettingsPage() {
     }
   }
 
-  const localWordCount = useMemo(() => loadWords().length, [words, notice]);
+  const pendingLocalWordCount = useMemo(() => {
+    const cloudTerms = new Set(words.map((word) => normalizeTerm(word.term)));
+
+    return loadWords().filter((word) => {
+      const term = normalizeTerm(word.term);
+      const definition = normalizeText(word.definition);
+
+      return term && definition && !cloudTerms.has(term);
+    }).length;
+  }, [words, notice, isSyncingLocal]);
 
   async function handleSyncLocal() {
     if (!user) {
@@ -118,7 +128,7 @@ function SettingsPage() {
       return;
     }
 
-    if (localWordCount === 0) {
+    if (pendingLocalWordCount === 0) {
       setNoticeType("error");
       setNotice(t("settings.syncLocalEmpty"));
       return;
@@ -217,27 +227,29 @@ function SettingsPage() {
               </button>
             </div>
 
-            <div className="mt-5 rounded-2xl border border-blue-200 bg-white p-4">
-              <h3 className="text-base font-bold text-blue-950">
-                {t("settings.syncLocalTitle")}
-              </h3>
-              <p className="mt-2 text-sm leading-6 text-slate-600">
-                {t("settings.syncLocalDescription")}
-              </p>
-              <p className="mt-3 text-sm font-semibold text-blue-900">
-                {t("settings.syncLocalCount", { count: localWordCount })}
-              </p>
-              <button
-                className="mt-4 rounded-full bg-blue-700 px-5 py-3 text-sm font-bold text-white transition hover:bg-blue-800 disabled:bg-slate-300"
-                disabled={isSyncingLocal || localWordCount === 0}
-                onClick={handleSyncLocal}
-                type="button"
-              >
-                {isSyncingLocal
-                  ? t("settings.syncLocalUploading")
-                  : t("settings.syncLocalButton")}
-              </button>
-            </div>
+            {pendingLocalWordCount > 0 ? (
+              <div className="mt-5 rounded-2xl border border-blue-200 bg-white p-4">
+                <h3 className="text-base font-bold text-blue-950">
+                  {t("settings.syncLocalTitle")}
+                </h3>
+                <p className="mt-2 text-sm leading-6 text-slate-600">
+                  {t("settings.syncLocalDescription")}
+                </p>
+                <p className="mt-3 text-sm font-semibold text-blue-900">
+                  {t("settings.syncLocalCount", { count: pendingLocalWordCount })}
+                </p>
+                <button
+                  className="mt-4 rounded-full bg-blue-700 px-5 py-3 text-sm font-bold text-white transition hover:bg-blue-800 disabled:bg-slate-300"
+                  disabled={isSyncingLocal}
+                  onClick={handleSyncLocal}
+                  type="button"
+                >
+                  {isSyncingLocal
+                    ? t("settings.syncLocalUploading")
+                    : t("settings.syncLocalButton")}
+                </button>
+              </div>
+            ) : null}
           </>
         ) : (
           <>

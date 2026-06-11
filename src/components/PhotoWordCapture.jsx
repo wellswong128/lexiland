@@ -95,6 +95,13 @@ function PhotoWordCapture() {
     [previewWords],
   );
 
+  const enabledDemoPreviewWords = useMemo(
+    () => previewWords.filter((word) => word.enabled && word.usedFallback),
+    [previewWords],
+  );
+
+  const canSavePreviewWords = enabledDemoPreviewWords.length === 0;
+
   useEffect(() => {
     if (!initialState.hasRestoredDraft || hasShownRestoreMessageRef.current) {
       return;
@@ -361,8 +368,17 @@ function PhotoWordCapture() {
   }
 
   async function handleSaveAll() {
+    if (!canSavePreviewWords) {
+      setError(
+        t("addWord.photo.saveBlockedDemo", {
+          count: enabledDemoPreviewWords.length,
+        }),
+      );
+      return;
+    }
+
     const wordsToSave = previewWords
-      .filter((word) => word.enabled)
+      .filter((word) => word.enabled && !word.usedFallback)
       .map((word) => ({
         term: word.term,
         definition: word.definition,
@@ -712,10 +728,17 @@ function PhotoWordCapture() {
             ))}
           </div>
 
-          <div className="flex justify-end">
+          <div className="flex flex-col items-end gap-2">
+            {!canSavePreviewWords ? (
+              <p className="max-w-md text-right text-sm font-medium text-amber-800">
+                {t("addWord.photo.saveBlockedDemoHint", {
+                  count: enabledDemoPreviewWords.length,
+                })}
+              </p>
+            ) : null}
             <button
               className="rounded-full bg-blue-700 px-6 py-3 text-sm font-bold text-white shadow-lg shadow-blue-900/20 transition hover:bg-blue-800 disabled:bg-slate-300"
-              disabled={isSaving}
+              disabled={isSaving || !canSavePreviewWords}
               onClick={handleSaveAll}
               type="button"
             >

@@ -151,6 +151,9 @@ const zhHant = {
         retryAllPartial:
           "已重新完成 {{success}} 個單字，仍有 {{failed}} 個需要再試。",
         retryAllFailedMessage: "AI 填寫仍然失敗，請稍後再試。",
+        saveBlockedDemo: "尚有 {{count}} 個單字未完成 AI 填寫，無法儲存示範資料。",
+        saveBlockedDemoHint:
+          "尚有 {{count}} 個單字仍為示範資料，請先完成 AI 填寫後再儲存。",
       },
     },
     wordDetail: {
@@ -604,6 +607,10 @@ export const translations = {
         retryAllSuccess: "AI fill completed for {{count}} words.",
         retryAllPartial: "AI fill completed for {{success}} words. {{failed}} still need retry.",
         retryAllFailedMessage: "AI fill still failed. Please try again later.",
+        saveBlockedDemo:
+          "{{count}} word(s) still need AI fill. Demo data cannot be saved.",
+        saveBlockedDemoHint:
+          "{{count}} word(s) still have demo data. Complete AI fill before saving.",
       },
     },
     wordDetail: {
