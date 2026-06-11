@@ -15,6 +15,23 @@ export function useSupabaseAuth() {
 
     let isMounted = true;
 
+    if (typeof window !== "undefined") {
+      const hashParams = window.location.hash.startsWith("#")
+        ? new URLSearchParams(window.location.hash.slice(1))
+        : new URLSearchParams();
+      const authCallbackError =
+        hashParams.get("error_description") || hashParams.get("error");
+
+      if (authCallbackError) {
+        setAuthError(decodeURIComponent(authCallbackError.replace(/\+/g, " ")));
+        window.history.replaceState(
+          {},
+          document.title,
+          `${window.location.pathname}${window.location.search}`,
+        );
+      }
+    }
+
     supabase.auth.getSession().then(({ data, error }) => {
       if (!isMounted) return;
 
@@ -24,6 +41,19 @@ export function useSupabaseAuth() {
 
       setSession(data.session);
       setIsAuthLoading(false);
+
+      if (
+        typeof window !== "undefined" &&
+        data.session &&
+        (window.location.search.includes("code=") ||
+          window.location.hash.includes("access_token="))
+      ) {
+        window.history.replaceState(
+          {},
+          document.title,
+          window.location.pathname,
+        );
+      }
     });
 
     const {
@@ -31,7 +61,9 @@ export function useSupabaseAuth() {
     } = supabase.auth.onAuthStateChange((_event, nextSession) => {
       setSession(nextSession);
       setIsAuthLoading(false);
-      setAuthError("");
+      if (nextSession) {
+        setAuthError("");
+      }
     });
 
     return () => {
@@ -45,14 +77,27 @@ export function useSupabaseAuth() {
       throw new Error("Supabase is not configured.");
     }
 
+    const normalizedEmail = email.trim().toLowerCase();
+
+    if (!normalizedEmail) {
+      throw new Error("Please enter your email address.");
+    }
+
     setAuthError("");
 
     const emailRedirectTo = resolveAuthRedirectUrl({ strict: true });
 
+    if (!emailRedirectTo) {
+      throw new Error(
+        "Auth redirect URL is not configured. Set VITE_AUTH_REDIRECT_URL and add it to Supabase Redirect URLs.",
+      );
+    }
+
     const { error } = await supabase.auth.signInWithOtp({
-      email,
+      email: normalizedEmail,
       options: {
         emailRedirectTo,
+        shouldCreateUser: true,
       },
     });
 

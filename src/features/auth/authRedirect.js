@@ -31,18 +31,17 @@ export function resolveAuthRedirectUrl({ strict = false } = {}) {
       ? normalizeUrl(window.location.origin)
       : "";
 
+  // Prefer the site the user is actually on to avoid env/allowlist mismatches.
+  if (
+    runtimeOrigin &&
+    !isLocalhostUrl(runtimeOrigin) &&
+    !isLanHost(runtimeOrigin)
+  ) {
+    return runtimeOrigin;
+  }
+
   if (configured) {
-    const normalizedConfigured = normalizeUrl(configured);
-
-    if (
-      isLocalhostUrl(normalizedConfigured) &&
-      runtimeOrigin &&
-      !isLocalhostUrl(runtimeOrigin)
-    ) {
-      return runtimeOrigin;
-    }
-
-    return normalizedConfigured;
+    return normalizeUrl(configured);
   }
 
   if (!runtimeOrigin) {

@@ -4,19 +4,12 @@ import {
   isLocalhostUrl,
   resolveAuthRedirectUrl,
 } from "../features/auth/authRedirect.js";
+import { getFriendlyAuthError } from "../features/auth/authErrors.js";
 import { useLocale } from "../features/locale/LocaleContext.jsx";
 import { useWordsContext } from "../features/words/WordsContext.jsx";
 import { loadWords, WORDS_STORAGE_KEY } from "../lib/storage.js";
 
 const EMAIL_COOLDOWN_SECONDS = 60;
-
-function getFriendlyAuthError(message, t) {
-  if (message.toLowerCase().includes("rate limit")) {
-    return t("settings.rateLimit");
-  }
-
-  return message;
-}
 
 function SettingsPage() {
   const { t } = useLocale();
@@ -77,7 +70,6 @@ function SettingsPage() {
     } catch (error) {
       setNoticeType("error");
       setNotice(getFriendlyAuthError(error.message, t));
-      setEmailCooldown(EMAIL_COOLDOWN_SECONDS);
     } finally {
       setIsAuthSubmitting(false);
     }
