@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link, useSearchParams } from "react-router-dom";
 import SpeakButton from "../components/SpeakButton.jsx";
+import MemoryTipsPanel from "../components/MemoryTipsPanel.jsx";
 import { useLocale } from "../features/locale/LocaleContext.jsx";
 import {
   getDueWords,
@@ -146,6 +147,9 @@ function FlashcardsPage() {
                 {currentWord.example}
               </p>
             ) : null}
+            <div className="mt-4">
+              <MemoryTipsPanel compact word={currentWord} />
+            </div>
           </div>
         ) : (
           <div className="text-center">

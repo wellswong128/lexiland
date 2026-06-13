@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import MemoryTipsPanel from "../components/MemoryTipsPanel.jsx";
 import { useLocale } from "../features/locale/LocaleContext.jsx";
 import { useWordsContext } from "../features/words/WordsContext.jsx";
 
@@ -101,6 +102,10 @@ function MistakesPage() {
                     {t("mistakes.clearMistake")}
                   </button>
                 </div>
+              </div>
+
+              <div className="mt-4">
+                <MemoryTipsPanel compact word={word} />
               </div>
             </li>
           ))}

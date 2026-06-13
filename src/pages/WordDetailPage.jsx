@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import SpeakButton from "../components/SpeakButton.jsx";
+import MemoryTipsPanel from "../components/MemoryTipsPanel.jsx";
 import { useLocale } from "../features/locale/LocaleContext.jsx";
 import {
   createDemoSuggestion,
@@ -385,6 +386,8 @@ function WordDetailPage() {
             </h2>
             <p className="mt-1 text-slate-600">{displayValue(word.notes)}</p>
           </div>
+
+          <MemoryTipsPanel word={word} />
         </div>
       )}
 

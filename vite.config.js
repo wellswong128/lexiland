@@ -3,6 +3,7 @@ import react from "@vitejs/plugin-react";
 import tailwindcss from "@tailwindcss/vite";
 import completeWordHandler from "./api/complete-word.js";
 import extractWordsHandler from "./api/extract-words-from-image.js";
+import wordMemoryTipsHandler from "./api/word-memory-tips.js";
 
 function readRequestBody(request) {
   return new Promise((resolve, reject) => {
@@ -39,6 +40,17 @@ function localApiPlugin() {
         try {
           request.body = await readRequestBody(request);
           await extractWordsHandler(request, response);
+        } catch (error) {
+          response.statusCode = 500;
+          response.setHeader("Content-Type", "application/json");
+          response.end(JSON.stringify({ error: error.message }));
+        }
+      });
+
+      server.middlewares.use("/api/word-memory-tips", async (request, response) => {
+        try {
+          request.body = await readRequestBody(request);
+          await wordMemoryTipsHandler(request, response);
         } catch (error) {
           response.statusCode = 500;
           response.setHeader("Content-Type", "application/json");

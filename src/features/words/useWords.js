@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useState } from "react";
 import { hasSupabaseConfig } from "../../lib/supabaseClient.js";
 import { clearLearningActivity } from "../../lib/learningActivity.js";
+import { clearMemoryTipsCache } from "./memoryTipsApi.js";
 import { loadWords, resetWords, saveWords } from "../../lib/storage.js";
 import {
   createInitialMistake,
@@ -351,6 +352,7 @@ export function useWords({ isAuthLoading = false, user = null } = {}, storage) {
     }
 
     clearLearningActivity(storage);
+    clearMemoryTipsCache(storage);
     setWords([]);
   }, [isUsingSupabase, storage, user]);
 
