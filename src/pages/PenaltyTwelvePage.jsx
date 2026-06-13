@@ -1,32 +1,17 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import GameHomeButton from "../components/GameHomeButton.jsx";
+import GameMistakeSummary from "../components/GameMistakeSummary.jsx";
+import GameWordBankStatus from "../components/GameWordBankStatus.jsx";
 import LanguageToggle from "../components/LanguageToggle.jsx";
+import {
+  buildGameWordBank,
+  pickFixedRoundEntries,
+  shuffleArray,
+} from "../features/games/gameWordBank.js";
 import { useLocale } from "../features/locale/LocaleContext.jsx";
+import { useGameMistakeTracker } from "../features/review/useGameMistakeTracker.js";
 import { useWordsContext } from "../features/words/WordsContext.jsx";
-
-const fallbackWords = [
-  { word: "apple", meaning: "蘋果", type: "noun" },
-  { word: "banana", meaning: "香蕉", type: "noun" },
-  { word: "orange", meaning: "橙", type: "noun" },
-  { word: "grape", meaning: "葡萄", type: "noun" },
-  { word: "teacher", meaning: "老師", type: "noun" },
-  { word: "student", meaning: "學生", type: "noun" },
-  { word: "happy", meaning: "開心", type: "adj" },
-  { word: "sad", meaning: "傷心", type: "adj" },
-  { word: "water", meaning: "水", type: "noun" },
-  { word: "milk", meaning: "牛奶", type: "noun" },
-  { word: "school", meaning: "學校", type: "noun" },
-  { word: "book", meaning: "書", type: "noun" },
-  { word: "dog", meaning: "狗", type: "noun" },
-  { word: "cat", meaning: "貓", type: "noun" },
-  { word: "friend", meaning: "朋友", type: "noun" },
-  { word: "morning", meaning: "早上", type: "noun" },
-  { word: "night", meaning: "晚上", type: "noun" },
-  { word: "run", meaning: "跑", type: "verb" },
-  { word: "window", meaning: "窗", type: "noun" },
-  { word: "door", meaning: "門", type: "noun" },
-];
 
 const TOTAL_ROUNDS = 10;
 
@@ -98,15 +83,23 @@ const INITIAL_SHADOW_STYLE = {
   width: "",
 };
 
-function shuffleArray(array) {
-  const arr = [...array];
+function makeChoicesForWord(entries, item) {
+  const wrongPool = [
+    ...new Set(
+      entries
+        .filter((candidate) => candidate.meaning !== item.meaning)
+        .map((candidate) => candidate.meaning),
+    ),
+  ];
 
-  for (let index = arr.length - 1; index > 0; index -= 1) {
-    const swapIndex = Math.floor(Math.random() * (index + 1));
-    [arr[index], arr[swapIndex]] = [arr[swapIndex], arr[index]];
-  }
+  return shuffleArray([item.meaning, ...shuffleArray(wrongPool).slice(0, 3)]);
+}
 
-  return arr;
+function makeQuestions(entries, priorityWordIds) {
+  return pickFixedRoundEntries(entries, priorityWordIds, TOTAL_ROUNDS).map((item) => ({
+    en: item.word,
+    zh: item.meaning,
+  }));
 }
 
 function usePenaltyTwelveAudio() {
@@ -385,28 +378,11 @@ function usePenaltyTwelveAudio() {
   };
 }
 
-function makeChoicesForWord(wordBank, item) {
-  const wrongPool = [
-    ...new Set(
-      wordBank
-        .filter((candidate) => candidate.meaning !== item.meaning)
-        .map((candidate) => candidate.meaning),
-    ),
-  ];
-
-  return shuffleArray([item.meaning, ...shuffleArray(wrongPool).slice(0, 3)]);
-}
-
-function makeQuestions(wordBank) {
-  return shuffleArray(wordBank).slice(0, TOTAL_ROUNDS).map((item) => ({
-    en: item.word,
-    zh: item.meaning,
-  }));
-}
-
 function PenaltyTwelvePage() {
   const { t } = useLocale();
   const { words } = useWordsContext();
+  const { commitMistakes, lastCommittedTerms, recordWrong, resetTracker } =
+    useGameMistakeTracker();
   const {
     initAudio,
     playGoalSound,
@@ -420,17 +396,10 @@ function PenaltyTwelvePage() {
   const timeoutIdsRef = useRef([]);
   const advanceAfterMessageRef = useRef(null);
 
-  const wordBank = useMemo(() => {
-    const savedWords = words
-      .map((word) => ({
-        word: word.term.trim().toLowerCase(),
-        meaning: (word.translation || word.definition || "").trim(),
-        type: word.partOfSpeech || "word",
-      }))
-      .filter((item) => item.word && item.meaning);
-
-    return savedWords.length >= 4 ? savedWords : fallbackWords;
-  }, [words]);
+  const { entries, priorityCount, priorityWordIds, usingFallback } = useMemo(
+    () => buildGameWordBank(words, { minWords: 4 }),
+    [words],
+  );
 
   const [gameState, setGameState] = useState("start");
   const [questions, setQuestions] = useState([]);
@@ -525,7 +494,7 @@ function PenaltyTwelvePage() {
       const question = questionList[index];
       if (question) {
         setCurrentChoices(
-          makeChoicesForWord(wordBank, {
+          makeChoicesForWord(entries, {
             word: question.en,
             meaning: question.zh,
           }),
@@ -537,7 +506,7 @@ function PenaltyTwelvePage() {
       setCurrentIndex(index);
       resetOptionState();
     },
-    [questions, resetAnimation, resetOptionState, wordBank],
+    [entries, questions, resetAnimation, resetOptionState],
   );
 
   const getRank = useCallback(
@@ -561,6 +530,7 @@ function PenaltyTwelvePage() {
 
   const endGame = useCallback(
     (finalGoals, finalScore) => {
+      commitMistakes();
       setFinalResults({
         goals: finalGoals,
         rank: getRank(finalGoals),
@@ -568,7 +538,7 @@ function PenaltyTwelvePage() {
       });
       setGameState("end");
     },
-    [getRank],
+    [commitMistakes, getRank],
   );
 
   const dismissMessage = useCallback(() => {
@@ -585,8 +555,9 @@ function PenaltyTwelvePage() {
   const startGame = useCallback(() => {
     clearScheduled();
     initAudio();
+    resetTracker();
 
-    const nextQuestions = makeQuestions(wordBank);
+    const nextQuestions = makeQuestions(entries, priorityWordIds);
 
     setQuestions(nextQuestions);
     setGoals(0);
@@ -595,7 +566,7 @@ function PenaltyTwelvePage() {
     setLocked(false);
     setGameState("playing");
     loadQuestion(0, nextQuestions);
-  }, [clearScheduled, initAudio, loadQuestion, wordBank]);
+  }, [clearScheduled, entries, initAudio, loadQuestion, priorityWordIds, resetTracker]);
 
   const getComboMessage = useCallback(
     (nextCombo) => {
@@ -853,6 +824,7 @@ function PenaltyTwelvePage() {
 
   const handleWrong = useCallback(
     (choice, question) => {
+      recordWrong(question.en);
       setCombo(0);
       setOptionStates({
         [choice]: "wrong",
@@ -884,6 +856,7 @@ function PenaltyTwelvePage() {
       getRandomMissLabel,
       goals,
       loadQuestion,
+      recordWrong,
       score,
       t,
     ],
@@ -1155,6 +1128,7 @@ function PenaltyTwelvePage() {
                 {t("games.penaltyTwelve.totalPoints", { score: finalResults.score })}
               </p>
               <p className="penalty-twelve-rank">{finalResults.rank}</p>
+              <GameMistakeSummary className="mt-4 text-left" terms={lastCommittedTerms} />
               <button className="penalty-twelve-btn" onClick={startGame} type="button">
                 {t("games.playAgain")}
               </button>
@@ -1167,11 +1141,11 @@ function PenaltyTwelvePage() {
       </div>
 
       {!isPlaying ? (
-        <p className="mt-2 shrink-0 text-center text-xs font-semibold text-[#4d6878] sm:text-xs">
-          {wordBank === fallbackWords
-            ? t("games.usingDemoWords")
-            : t("games.usingSavedWords")}
-        </p>
+        <GameWordBankStatus
+          className="mt-2 block shrink-0 text-center text-xs font-semibold text-[#4d6878] sm:text-xs"
+          priorityCount={priorityCount}
+          usingFallback={usingFallback}
+        />
       ) : null}
     </section>
   );

@@ -1,27 +1,17 @@
 import { forwardRef, useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import GameHomeButton from "../components/GameHomeButton.jsx";
+import GameMistakeSummary from "../components/GameMistakeSummary.jsx";
+import GameWordBankStatus from "../components/GameWordBankStatus.jsx";
 import LanguageToggle from "../components/LanguageToggle.jsx";
+import {
+  buildGameWordBank,
+  pickRandomEntry,
+  shuffleArray,
+} from "../features/games/gameWordBank.js";
 import { useLocale } from "../features/locale/LocaleContext.jsx";
+import { useGameMistakeTracker } from "../features/review/useGameMistakeTracker.js";
 import { useWordsContext } from "../features/words/WordsContext.jsx";
-
-const fallbackWords = [
-  { word: "apple", meaning: "蘋果", type: "noun" },
-  { word: "school", meaning: "學校", type: "noun" },
-  { word: "friend", meaning: "朋友", type: "noun" },
-  { word: "protect", meaning: "保護", type: "verb" },
-  { word: "future", meaning: "未來", type: "noun" },
-  { word: "simple", meaning: "簡單的", type: "adj" },
-  { word: "planet", meaning: "行星", type: "noun" },
-  { word: "challenge", meaning: "挑戰", type: "noun / verb" },
-  { word: "beautiful", meaning: "美麗的", type: "adj" },
-  { word: "dangerous", meaning: "危險的", type: "adj" },
-  { word: "important", meaning: "重要的", type: "adj" },
-  { word: "discover", meaning: "發現", type: "verb" },
-  { word: "memory", meaning: "記憶", type: "noun" },
-  { word: "journey", meaning: "旅程", type: "noun" },
-  { word: "solution", meaning: "解決方法", type: "noun" },
-];
 
 const fishColors = [
   ["#fb7185", "#f97316"],
@@ -77,10 +67,6 @@ const seaweedSeeds = [
 
 const maxTime = 60;
 
-function shuffleArray(array) {
-  return [...array].sort(() => Math.random() - 0.5);
-}
-
 function getGameId(prefix) {
   const randomId =
     typeof crypto !== "undefined" && typeof crypto.randomUUID === "function"
@@ -110,10 +96,15 @@ function playTone(freq, duration, type = "sine", volume = 0.035) {
   }
 }
 
-function createQuestion(wordBank) {
-  const question = wordBank[Math.floor(Math.random() * wordBank.length)];
+function createQuestion(entries, priorityWordIds) {
+  const question = pickRandomEntry(entries, priorityWordIds);
+
+  if (!question) {
+    return null;
+  }
+
   const wrongChoices = shuffleArray(
-    wordBank.filter((item) => item.word !== question.word),
+    entries.filter((item) => item.word !== question.word),
   ).slice(0, 3);
   const positions =
     fishLayouts[Math.floor(Math.random() * fishLayouts.length)] ?? fishLayouts[0];
@@ -190,20 +181,15 @@ function SceneDecorations() {
 function FishingBlastPage() {
   const { t } = useLocale();
   const { words } = useWordsContext();
+  const { commitMistakes, lastCommittedTerms, recordWrong, resetTracker } =
+    useGameMistakeTracker();
   const gameAreaRef = useRef(null);
   const fishRefs = useRef({});
 
-  const wordBank = useMemo(() => {
-    const savedWords = words
-      .map((word) => ({
-        word: word.term.trim().toLowerCase(),
-        meaning: word.translation || word.definition,
-        type: word.partOfSpeech || "word",
-      }))
-      .filter((word) => word.word && word.meaning);
-
-    return savedWords.length >= 4 ? savedWords : fallbackWords;
-  }, [words]);
+  const { entries, priorityCount, priorityWordIds, usingFallback } = useMemo(
+    () => buildGameWordBank(words, { minWords: 4 }),
+    [words],
+  );
 
   const [gameState, setGameState] = useState("start");
   const [score, setScore] = useState(0);
@@ -222,6 +208,7 @@ function FishingBlastPage() {
   const [fishingLine, setFishingLine] = useState(null);
 
   const startGame = useCallback(() => {
+    resetTracker();
     setScore(0);
     setCombo(0);
     setBestCombo(0);
@@ -235,15 +222,16 @@ function FishingBlastPage() {
     setStatus({ text: "", type: "" });
     setFishStates({});
     setFishingLine(null);
-    setCurrentRound(createQuestion(wordBank));
+    setCurrentRound(createQuestion(entries, priorityWordIds));
     setGameState("playing");
-  }, [wordBank]);
+  }, [entries, priorityWordIds, resetTracker]);
 
   const endGame = useCallback(() => {
+    commitMistakes();
     setGameState("over");
     setLocked(true);
     setFishingLine(null);
-  }, []);
+  }, [commitMistakes]);
 
   const resetOptionState = useCallback(() => {
     setLocked(false);
@@ -254,8 +242,8 @@ function FishingBlastPage() {
   const nextQuestion = useCallback(() => {
     resetOptionState();
     setStatus({ text: "", type: "" });
-    setCurrentRound(createQuestion(wordBank));
-  }, [resetOptionState, wordBank]);
+    setCurrentRound(createQuestion(entries, priorityWordIds));
+  }, [entries, priorityWordIds, resetOptionState]);
 
   const drawFishingLine = useCallback((fishId) => {
     const gameArea = gameAreaRef.current;
@@ -315,6 +303,7 @@ function FishingBlastPage() {
       }
 
       setFishStates((current) => ({ ...current, [fishId]: "wrong" }));
+      recordWrong(currentRound.question.word);
       setCombo(0);
       setStreak(0);
       setWrongCount((value) => value + 1);
@@ -345,7 +334,7 @@ function FishingBlastPage() {
         });
       }, 900);
     },
-    [currentRound, drawFishingLine, endGame, locked, nextQuestion, t, timeLeft],
+    [currentRound, drawFishingLine, endGame, locked, nextQuestion, recordWrong, t, timeLeft],
   );
 
   useEffect(() => {
@@ -593,6 +582,8 @@ function FishingBlastPage() {
               )}
             </div>
 
+            <GameMistakeSummary className="mt-3 text-left" terms={lastCommittedTerms} />
+
             <div className="mt-3 flex flex-wrap justify-center gap-2 pb-1">
               <button
                 className="fishing-blast-primary-btn"
@@ -610,9 +601,11 @@ function FishingBlastPage() {
       </div>
 
       {gameState === "playing" ? null : (
-        <p className="mt-2 text-center text-xs text-sky-200">
-          {wordBank === fallbackWords ? t("games.usingDemoWords") : t("games.usingSavedWords")}
-        </p>
+        <GameWordBankStatus
+          className="mt-2 block text-center text-xs text-sky-200"
+          priorityCount={priorityCount}
+          usingFallback={usingFallback}
+        />
       )}
     </section>
   );

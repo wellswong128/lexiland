@@ -1,27 +1,17 @@
 import { useCallback, useEffect, useMemo, useState } from "react";
 import { Link } from "react-router-dom";
 import GameHomeButton from "../components/GameHomeButton.jsx";
+import GameMistakeSummary from "../components/GameMistakeSummary.jsx";
+import GameWordBankStatus from "../components/GameWordBankStatus.jsx";
 import LanguageToggle from "../components/LanguageToggle.jsx";
+import {
+  buildGameWordBank,
+  normalizeGameWord,
+  pickNinjaWord,
+} from "../features/games/gameWordBank.js";
 import { useLocale } from "../features/locale/LocaleContext.jsx";
+import { useGameMistakeTracker } from "../features/review/useGameMistakeTracker.js";
 import { useWordsContext } from "../features/words/WordsContext.jsx";
-
-const fallbackWords = [
-  { word: "apple", meaning: "蘋果", type: "noun" },
-  { word: "school", meaning: "學校", type: "noun" },
-  { word: "friend", meaning: "朋友", type: "noun" },
-  { word: "protect", meaning: "保護", type: "verb" },
-  { word: "future", meaning: "未來", type: "noun" },
-  { word: "simple", meaning: "簡單的", type: "adj" },
-  { word: "planet", meaning: "行星", type: "noun" },
-  { word: "challenge", meaning: "挑戰", type: "noun / verb" },
-  { word: "beautiful", meaning: "美麗的", type: "adj" },
-  { word: "dangerous", meaning: "危險的", type: "adj" },
-  { word: "important", meaning: "重要的", type: "adj" },
-  { word: "confident", meaning: "有自信的", type: "adj" },
-  { word: "efficient", meaning: "有效率的", type: "adj" },
-  { word: "evidence", meaning: "證據", type: "noun" },
-  { word: "phenomenon", meaning: "現象", type: "noun" },
-];
 
 const alphabet = "abcdefghijklmnopqrstuvwxyz".split("");
 const maxHp = 3;
@@ -29,10 +19,6 @@ const maxTime = 30;
 
 function shuffleArray(array) {
   return [...array].sort(() => Math.random() - 0.5);
-}
-
-function normalizeGameWord(term) {
-  return term.toLowerCase().replace(/[^a-z]/g, "");
 }
 
 function getGameId(prefix) {
@@ -91,18 +77,8 @@ function createLetters(word, level) {
   return shuffleArray([...mainLetters, ...distractors, ...bombs]);
 }
 
-function getWordForLevel(wordBank, level) {
-  const available = wordBank.filter((item) => {
-    if (level <= 2) return item.word.length <= 6;
-    if (level <= 5) return item.word.length <= 9;
-    return true;
-  });
-
-  return available[Math.floor(Math.random() * available.length)] ?? wordBank[0];
-}
-
-function createRound(wordBank, level) {
-  const word = getWordForLevel(wordBank, level);
+function createRound(entries, priorityWordIds, level) {
+  const word = pickNinjaWord(entries, priorityWordIds, level);
 
   return {
     word,
@@ -114,17 +90,17 @@ function createRound(wordBank, level) {
 function SpellingNinjaPage() {
   const { t } = useLocale();
   const { words } = useWordsContext();
-  const wordBank = useMemo(() => {
-    const savedWords = words
-      .map((word) => ({
-        word: normalizeGameWord(word.term),
-        meaning: word.translation || word.definition,
-        type: word.partOfSpeech || "word",
-      }))
-      .filter((word) => word.word.length >= 3);
-
-    return savedWords.length >= 3 ? savedWords : fallbackWords;
-  }, [words]);
+  const { commitMistakes, lastCommittedTerms, recordWrong, resetTracker } =
+    useGameMistakeTracker();
+  const { entries, priorityCount, priorityWordIds, usingFallback } = useMemo(
+    () =>
+      buildGameWordBank(words, {
+        minLength: 3,
+        minWords: 3,
+        normalizeWord: normalizeGameWord,
+      }),
+    [words],
+  );
 
   const [gameState, setGameState] = useState("start");
   const [round, setRound] = useState(null);
@@ -147,7 +123,7 @@ function SpellingNinjaPage() {
 
   const startRound = useCallback(
     (nextLevel) => {
-      const nextRound = createRound(wordBank, nextLevel);
+      const nextRound = createRound(entries, priorityWordIds, nextLevel);
 
       setRound(nextRound);
       setTimeLeft(Math.max(12, maxTime - Math.floor(nextLevel * 1.3)));
@@ -156,11 +132,12 @@ function SpellingNinjaPage() {
       setFlash("");
       setSlashKey((value) => value + 1);
     },
-    [wordBank],
+    [entries, priorityWordIds],
   );
 
   function startGame() {
-    const firstRound = createRound(wordBank, 1);
+    resetTracker();
+    const firstRound = createRound(entries, priorityWordIds, 1);
 
     setScore(0);
     setCombo(0);
@@ -182,9 +159,10 @@ function SpellingNinjaPage() {
   }
 
   const endGame = useCallback(() => {
+    commitMistakes();
     setGameState("over");
     setRoundLocked(true);
-  }, []);
+  }, [commitMistakes]);
 
   const addMissedWord = useCallback((word) => {
     setMissedWords((currentWords) => {
@@ -207,6 +185,7 @@ function SpellingNinjaPage() {
       playTone(150, 0.16, "sawtooth", 0.035);
 
       if (round?.word) {
+        recordWrong(round.word.word);
         addMissedWord(round.word);
       }
 
@@ -220,7 +199,7 @@ function SpellingNinjaPage() {
         return Math.max(0, nextHp);
       });
     },
-    [addMissedWord, endGame, round],
+    [addMissedWord, endGame, recordWrong, round],
   );
 
   const completeWord = useCallback(() => {
@@ -257,6 +236,7 @@ function SpellingNinjaPage() {
     if (!round || roundLocked) return;
 
     setRoundLocked(true);
+    recordWrong(round.word.word);
     addMissedWord(round.word);
     setMistakes((count) => count + 1);
     setCombo(0);
@@ -283,7 +263,7 @@ function SpellingNinjaPage() {
 
       return Math.max(0, nextHp);
     });
-  }, [addMissedWord, endGame, round, roundLocked, startRound, t]);
+  }, [addMissedWord, endGame, recordWrong, round, roundLocked, startRound, t]);
 
   const pressLetter = useCallback(
     (id) => {
@@ -622,6 +602,8 @@ function SpellingNinjaPage() {
               ))}
             </div>
 
+            <GameMistakeSummary className="mt-3 text-left" terms={lastCommittedTerms} />
+
             <div className="mt-3 rounded-2xl border border-slate-700 bg-slate-800/80 p-3 text-left">
               <h3 className="text-base font-black text-cyan-200">
                 {t("games.ninja.missedWords")}
@@ -673,7 +655,10 @@ function SpellingNinjaPage() {
 
       {gameState === "playing" ? null : (
         <p className="mt-2 text-center text-xs text-slate-400">
-          {wordBank === fallbackWords ? t("games.usingDemoWords") : t("games.usingSavedWords")}
+          <GameWordBankStatus
+            priorityCount={priorityCount}
+            usingFallback={usingFallback}
+          />
           {defeatedWords.length > 0
             ? ` ${t("games.ninja.resultCount", { count: defeatedWords.length })}`
             : ""}

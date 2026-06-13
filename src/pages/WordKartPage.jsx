@@ -1,27 +1,17 @@
 import { useCallback, useEffect, useMemo, useState } from "react";
 import { Link } from "react-router-dom";
 import GameHomeButton from "../components/GameHomeButton.jsx";
+import GameMistakeSummary from "../components/GameMistakeSummary.jsx";
+import GameWordBankStatus from "../components/GameWordBankStatus.jsx";
 import LanguageToggle from "../components/LanguageToggle.jsx";
+import {
+  buildGameWordBank,
+  pickRandomEntry,
+  shuffleArray,
+} from "../features/games/gameWordBank.js";
 import { useLocale } from "../features/locale/LocaleContext.jsx";
+import { useGameMistakeTracker } from "../features/review/useGameMistakeTracker.js";
 import { useWordsContext } from "../features/words/WordsContext.jsx";
-
-const fallbackWords = [
-  { word: "apple", meaning: "蘋果", type: "noun" },
-  { word: "school", meaning: "學校", type: "noun" },
-  { word: "friend", meaning: "朋友", type: "noun" },
-  { word: "protect", meaning: "保護", type: "verb" },
-  { word: "future", meaning: "未來", type: "noun" },
-  { word: "simple", meaning: "簡單的", type: "adj" },
-  { word: "planet", meaning: "行星", type: "noun" },
-  { word: "challenge", meaning: "挑戰", type: "noun / verb" },
-  { word: "beautiful", meaning: "美麗的", type: "adj" },
-  { word: "dangerous", meaning: "危險的", type: "adj" },
-  { word: "important", meaning: "重要的", type: "adj" },
-  { word: "discover", meaning: "發現", type: "verb" },
-  { word: "memory", meaning: "記憶", type: "noun" },
-  { word: "journey", meaning: "旅程", type: "noun" },
-  { word: "solution", meaning: "解決方法", type: "noun" },
-];
 
 const gateColors = [
   ["#ef4444", "#991b1b"],
@@ -40,10 +30,6 @@ const treeSeeds = [
 ];
 
 const maxTime = 60;
-
-function shuffleArray(array) {
-  return [...array].sort(() => Math.random() - 0.5);
-}
 
 function playTone(freq, duration, type = "sine", volume = 0.035) {
   try {
@@ -65,10 +51,15 @@ function playTone(freq, duration, type = "sine", volume = 0.035) {
   }
 }
 
-function createQuestion(wordBank) {
-  const question = wordBank[Math.floor(Math.random() * wordBank.length)];
+function createQuestion(entries, priorityWordIds) {
+  const question = pickRandomEntry(entries, priorityWordIds);
+
+  if (!question) {
+    return null;
+  }
+
   const wrongChoices = shuffleArray(
-    wordBank.filter((item) => item.word !== question.word),
+    entries.filter((item) => item.word !== question.word),
   ).slice(0, 3);
 
   return {
@@ -121,18 +112,13 @@ function RaceDecorations() {
 function WordKartPage() {
   const { t } = useLocale();
   const { words } = useWordsContext();
+  const { commitMistakes, lastCommittedTerms, recordWrong, resetTracker } =
+    useGameMistakeTracker();
 
-  const wordBank = useMemo(() => {
-    const savedWords = words
-      .map((word) => ({
-        word: word.term.trim().toLowerCase(),
-        meaning: word.translation || word.definition,
-        type: word.partOfSpeech || "word",
-      }))
-      .filter((word) => word.word && word.meaning);
-
-    return savedWords.length >= 4 ? savedWords : fallbackWords;
-  }, [words]);
+  const { entries, priorityCount, priorityWordIds, usingFallback } = useMemo(
+    () => buildGameWordBank(words, { minWords: 4 }),
+    [words],
+  );
 
   const [gameState, setGameState] = useState("start");
   const [score, setScore] = useState(0);
@@ -152,7 +138,8 @@ function WordKartPage() {
   const [kartState, setKartState] = useState("");
 
   const startGame = useCallback(() => {
-    const firstRound = createQuestion(wordBank);
+    resetTracker();
+    const firstRound = createQuestion(entries, priorityWordIds);
 
     setScore(0);
     setCombo(0);
@@ -170,12 +157,13 @@ function WordKartPage() {
     setCurrentRound(firstRound);
     setSelectedLane(firstRound.selectedLane);
     setGameState("playing");
-  }, [wordBank]);
+  }, [entries, priorityWordIds, resetTracker]);
 
   const endGame = useCallback(() => {
+    commitMistakes();
     setGameState("over");
     setLocked(true);
-  }, []);
+  }, [commitMistakes]);
 
   const resetOptionState = useCallback(() => {
     setLocked(false);
@@ -184,13 +172,13 @@ function WordKartPage() {
   }, []);
 
   const nextQuestion = useCallback(() => {
-    const nextRound = createQuestion(wordBank);
+    const nextRound = createQuestion(entries, priorityWordIds);
 
     resetOptionState();
     setStatus({ text: "", type: "" });
     setCurrentRound(nextRound);
     setSelectedLane(nextRound.selectedLane);
-  }, [resetOptionState, wordBank]);
+  }, [entries, priorityWordIds, resetOptionState]);
 
   const checkLane = useCallback(
     (lane) => {
@@ -228,6 +216,7 @@ function WordKartPage() {
 
       setGateStates({ [lane]: "wrong-flash" });
       setKartState("crash");
+      recordWrong(currentRound.question.word);
       setCombo(0);
       setSpeedLevel(1);
       setWrongCount((value) => value + 1);
@@ -258,7 +247,7 @@ function WordKartPage() {
         });
       }, 900);
     },
-    [currentRound, endGame, nextQuestion, t],
+    [currentRound, endGame, nextQuestion, recordWrong, t],
   );
 
   const chooseLane = useCallback(
@@ -524,6 +513,8 @@ function WordKartPage() {
               )}
             </div>
 
+            <GameMistakeSummary className="mt-3 text-left" terms={lastCommittedTerms} />
+
             <div className="mt-3 flex flex-wrap justify-center gap-2 pb-1">
               <button className="word-kart-primary-btn" onClick={startGame} type="button">
                 {t("games.playAgain")}
@@ -537,9 +528,11 @@ function WordKartPage() {
       </div>
 
       {gameState === "playing" ? null : (
-        <p className="mt-2 text-center text-xs text-sky-100">
-          {wordBank === fallbackWords ? t("games.usingDemoWords") : t("games.usingSavedWords")}
-        </p>
+        <GameWordBankStatus
+          className="mt-2 block text-center text-xs text-sky-100"
+          priorityCount={priorityCount}
+          usingFallback={usingFallback}
+        />
       )}
     </section>
   );
