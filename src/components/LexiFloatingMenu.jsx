@@ -37,11 +37,28 @@ const navSections = [
   },
 ];
 
+function MenuIcon() {
+  return (
+    <svg
+      aria-hidden="true"
+      className="lexi-menu-fab-icon size-6"
+      fill="none"
+      stroke="currentColor"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth="2.25"
+      viewBox="0 0 24 24"
+    >
+      <path d="M4 7h16M4 12h16M4 17h16" />
+    </svg>
+  );
+}
+
 function CloseIcon() {
   return (
     <svg
       aria-hidden="true"
-      className="size-5"
+      className="lexi-menu-fab-icon size-5"
       fill="none"
       stroke="currentColor"
       strokeLinecap="round"
@@ -97,7 +114,7 @@ function LexiFloatingMenu() {
         onClick={() => setIsOpen((open) => !open)}
         type="button"
       >
-        <LexiMascot className="lexi-menu-fab-mascot" size="sm" title={t("brand.mascotAlt")} />
+        {isOpen ? <CloseIcon /> : <MenuIcon />}
       </button>
 
       <div

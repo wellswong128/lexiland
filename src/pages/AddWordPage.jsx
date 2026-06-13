@@ -20,7 +20,7 @@ const initialFormValues = {
 };
 
 function getInitialTab(searchParams) {
-  return searchParams.get("tab") === "photo" ? "photo" : "manual";
+  return searchParams.get("tab") === "manual" ? "manual" : "photo";
 }
 
 function AddWordPage() {

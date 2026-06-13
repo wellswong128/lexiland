@@ -2255,12 +2255,12 @@ button:disabled {
 }
 
 .lexi-menu-fab-open {
-  transform: rotate(8deg) scale(1.02);
+  background: linear-gradient(145deg, #dbeafe 0%, #bfdbfe 100%);
 }
 
-.lexi-menu-fab-mascot {
+.lexi-menu-fab-icon {
+  color: #1d4ed8;
   pointer-events: none;
-  filter: drop-shadow(0 2px 4px rgba(37, 99, 235, 0.18));
 }
 
 .lexi-menu-backdrop {

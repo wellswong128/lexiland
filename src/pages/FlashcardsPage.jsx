@@ -10,6 +10,27 @@ import {
 import { useWordsContext } from "../features/words/WordsContext.jsx";
 import { REVIEW_RESULTS } from "../features/words/wordTypes.js";
 
+function FlashcardReviewButtons({ onForgot, onRemembered, t }) {
+  return (
+    <div className="mt-4 flex gap-3">
+      <button
+        className="flex-1 rounded-full bg-red-50 px-4 py-3 text-sm font-bold text-red-700 transition hover:bg-red-100"
+        onClick={onForgot}
+        type="button"
+      >
+        {t("flashcards.forgot")}
+      </button>
+      <button
+        className="flex-1 rounded-full bg-green-600 px-4 py-3 text-sm font-bold text-white transition hover:bg-green-700"
+        onClick={onRemembered}
+        type="button"
+      >
+        {t("flashcards.remembered")}
+      </button>
+    </div>
+  );
+}
+
 function FlashcardsPage() {
   const { t } = useLocale();
   const { updateWord, words } = useWordsContext();
@@ -134,14 +155,16 @@ function FlashcardsPage() {
             <p className="text-sm font-bold uppercase tracking-[0.14em] text-slate-500">
               {t("flashcards.answer")}
             </p>
-            <p className="mt-3 text-xl font-semibold leading-8 text-slate-800">
-              {currentWord.definition}
-            </p>
             {currentWord.translation ? (
-              <p className="mt-3 text-slate-600">
-                {t("common.translation")}: {currentWord.translation}
+              <p className="mt-3 rounded-2xl border border-amber-200 bg-amber-50 px-4 py-4 text-center text-2xl font-bold leading-8 text-amber-950 shadow-sm sm:text-3xl">
+                {currentWord.translation}
               </p>
             ) : null}
+            <FlashcardReviewButtons
+              onForgot={() => handleReview(REVIEW_RESULTS.FORGOT)}
+              onRemembered={() => handleReview(REVIEW_RESULTS.REMEMBERED)}
+              t={t}
+            />
             {currentWord.example ? (
               <p className="mt-3 rounded-2xl bg-slate-50 p-4 text-slate-600">
                 {currentWord.example}
@@ -164,25 +187,6 @@ function FlashcardsPage() {
           </div>
         )}
       </div>
-
-      {showAnswer ? (
-        <div className="mt-6 grid gap-3 sm:grid-cols-2">
-          <button
-            className="rounded-full bg-red-50 px-6 py-3 text-sm font-bold text-red-700 transition hover:bg-red-100"
-            onClick={() => handleReview(REVIEW_RESULTS.FORGOT)}
-            type="button"
-          >
-            {t("flashcards.forgot")}
-          </button>
-          <button
-            className="rounded-full bg-green-600 px-6 py-3 text-sm font-bold text-white transition hover:bg-green-700"
-            onClick={() => handleReview(REVIEW_RESULTS.REMEMBERED)}
-            type="button"
-          >
-            {t("flashcards.remembered")}
-          </button>
-        </div>
-      ) : null}
     </section>
   );
 }
