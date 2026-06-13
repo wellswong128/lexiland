@@ -1,6 +1,10 @@
 import { useEffect, useState } from "react";
 import { NavLink, useLocation } from "react-router-dom";
 import { useLocale } from "../features/locale/LocaleContext.jsx";
+import {
+  getActivityForLocation,
+  recordLearningActivity,
+} from "../lib/learningActivity.js";
 import LanguageToggle from "./LanguageToggle.jsx";
 
 const navItems = [
@@ -62,6 +66,14 @@ function AppLayout({ children }) {
   useEffect(() => {
     setIsMenuOpen(false);
   }, [location.pathname]);
+
+  useEffect(() => {
+    const activity = getActivityForLocation(location.pathname, location.search);
+
+    if (activity) {
+      recordLearningActivity(activity);
+    }
+  }, [location.pathname, location.search]);
 
   return (
     <div className="flex min-h-[100svh] flex-col bg-blue-50 text-slate-900">

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useSearchParams } from "react-router-dom";
 import PhotoWordCapture from "../components/PhotoWordCapture.jsx";
 import { useLocale } from "../features/locale/LocaleContext.jsx";
 import {
@@ -19,11 +19,16 @@ const initialFormValues = {
   tags: "",
 };
 
+function getInitialTab(searchParams) {
+  return searchParams.get("tab") === "photo" ? "photo" : "manual";
+}
+
 function AddWordPage() {
   const { t } = useLocale();
   const navigate = useNavigate();
+  const [searchParams] = useSearchParams();
   const { addWord } = useWordsContext();
-  const [activeTab, setActiveTab] = useState("manual");
+  const [activeTab, setActiveTab] = useState(() => getInitialTab(searchParams));
   const [formValues, setFormValues] = useState(initialFormValues);
   const [aiMessage, setAiMessage] = useState("");
   const [error, setError] = useState("");
