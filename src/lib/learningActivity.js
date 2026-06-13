@@ -128,32 +128,27 @@ export function getLearningSnapshot(words, storage = getDefaultStorage()) {
 export const PAGE_ACTIVITIES = {
   "/games/spelling-ninja": {
     kind: "game",
-    labelKey: "home.ninja",
+    labelKey: "nav.ninjaGame",
     icon: "🥷",
   },
   "/games/fishing-blast": {
     kind: "game",
-    labelKey: "home.fishBlast",
+    labelKey: "nav.fishBlast",
     icon: "🐟",
   },
   "/games/word-kart": {
     kind: "game",
-    labelKey: "home.wordKart",
+    labelKey: "nav.wordKart",
     icon: "🏎️",
-  },
-  "/games/grammar-arena": {
-    kind: "game",
-    labelKey: "home.grammar",
-    icon: "⚔️",
   },
   "/games/battle-jet": {
     kind: "game",
-    labelKey: "home.battleJet",
+    labelKey: "nav.battleJet",
     icon: "✈️",
   },
   "/games/penalty-twelve": {
     kind: "game",
-    labelKey: "home.penaltyTwelve",
+    labelKey: "nav.penaltyTwelve",
     icon: "⚽",
   },
   "/review/quiz": {

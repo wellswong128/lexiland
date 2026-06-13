@@ -20,7 +20,7 @@ function HomeIcon() {
   );
 }
 
-function GameHomeButton({ className = "", variant = "dark" }) {
+function GameHomeButton({ className = "", variant = "dark", fixed = false }) {
   const { t } = useLocale();
 
   const variantClass =
@@ -32,7 +32,8 @@ function GameHomeButton({ className = "", variant = "dark" }) {
     <Link
       aria-label={t("common.home")}
       className={[
-        "relative z-50 inline-flex size-11 shrink-0 items-center justify-center rounded-full border backdrop-blur transition",
+        fixed ? "game-home-btn-fixed" : "relative z-50",
+        "inline-flex size-11 shrink-0 items-center justify-center rounded-full border backdrop-blur transition",
         variantClass,
         className,
       ]

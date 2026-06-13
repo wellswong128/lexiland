@@ -25,6 +25,73 @@ body {
   margin: 0;
 }
 
+html.game-active,
+html.game-active body {
+  overflow: hidden;
+  overscroll-behavior: none;
+}
+
+html.game-active #root {
+  height: var(--game-vh, 100svh);
+  overflow: hidden;
+}
+
+.game-layout-shell {
+  position: fixed;
+  top: var(--game-vt, 0px);
+  left: var(--game-vl, 0px);
+  z-index: 0;
+  box-sizing: border-box;
+  width: var(--game-vw, 100%);
+  height: var(--game-vh, 100svh);
+  max-width: 100%;
+}
+
+.game-home-btn-fixed {
+  position: fixed;
+  top: calc(var(--game-vt, 0px) + max(0.75rem, env(safe-area-inset-top, 0px)));
+  left: calc(var(--game-vl, 0px) + max(0.75rem, env(safe-area-inset-left, 0px)));
+  z-index: 100;
+}
+
+.game-page-shell {
+  box-sizing: border-box;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  max-height: 100%;
+  min-height: 0;
+  flex: 1 1 auto;
+  flex-direction: column;
+  overflow: hidden;
+  overscroll-behavior: contain;
+  padding:
+    max(0.75rem, env(safe-area-inset-top, 0px))
+    max(0.5rem, env(safe-area-inset-right, 0px))
+    max(0.5rem, env(safe-area-inset-bottom, 0px))
+    max(0.5rem, env(safe-area-inset-left, 0px));
+}
+
+.game-page-header {
+  z-index: 50;
+  flex-shrink: 0;
+  min-height: 2.75rem;
+}
+
+.game-page-header h1 {
+  font-size: clamp(1.25rem, 4.5vw, 2.5rem);
+  line-height: 1.1;
+}
+
+.game-page-header p {
+  font-size: clamp(0.6875rem, 2.8vw, 0.875rem);
+  line-height: 1.35;
+}
+
+.game-page-footer {
+  flex-shrink: 0;
+}
+
 button,
 input,
 select,
@@ -255,6 +322,20 @@ button:disabled {
   box-shadow: 0 24px 80px rgba(2, 6, 23, 0.35);
 }
 
+@media (max-width: 640px) {
+  .fishing-blast-start-layout {
+    min-height: 0;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .fishing-blast-start-layout .fishing-blast-game-area {
+    flex: 0 1 auto;
+    min-height: 13rem;
+    max-height: min(46svh, 340px);
+  }
+}
+
 .fishing-blast-stat,
 .fishing-blast-summary-card {
   border: 1px solid rgba(224, 242, 254, 0.24);
@@ -334,7 +415,7 @@ button:disabled {
 
 .fishing-blast-waterline {
   position: absolute;
-  top: 108px;
+  top: 128px;
   right: 0;
   left: 0;
   z-index: 2;
@@ -350,12 +431,12 @@ button:disabled {
   position: absolute;
   top: 12px;
   left: 50%;
-  z-index: 4;
+  z-index: 7;
   width: min(620px, calc(100% - 24px));
   transform: translateX(-50%);
   border: 1px solid rgba(224, 242, 254, 0.26);
   border-radius: 18px;
-  background: rgba(2, 6, 23, 0.42);
+  background: rgba(2, 6, 23, 0.82);
   padding: 10px 12px;
   text-align: center;
   backdrop-filter: blur(8px);
@@ -401,12 +482,11 @@ button:disabled {
 
 .fishing-blast-fisher {
   position: absolute;
-  top: 88px;
-  left: 50%;
-  z-index: 5;
+  top: 150px;
+  left: 14px;
+  z-index: 4;
   width: 72px;
   height: 72px;
-  transform: translateX(-50%);
   pointer-events: none;
 }
 
@@ -446,7 +526,7 @@ button:disabled {
 
 .fishing-blast-fish-zone {
   position: absolute;
-  top: 138px;
+  top: 186px;
   right: 0;
   bottom: 12px;
   left: 0;
@@ -2081,6 +2161,258 @@ button:disabled {
 .home-actions,
 .home-games {
   z-index: 1;
+}
+
+.home-mascot-wrap {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 0.35rem;
+}
+
+.lexi-mascot {
+  display: block;
+  overflow: visible;
+}
+
+.lexi-mascot-home {
+  filter: drop-shadow(0 10px 18px rgba(37, 99, 235, 0.22));
+}
+
+.lexi-mascot-home .lexi-mascot-body {
+  transform-origin: 60px 72px;
+  animation: lexiMascotFloat 3.2s ease-in-out infinite;
+}
+
+.lexi-mascot-home .lexi-mascot-star {
+  transform-origin: 60px 10px;
+  animation: lexiMascotTwinkle 2.4s ease-in-out infinite;
+}
+
+.lexi-mascot-header {
+  filter: drop-shadow(0 2px 4px rgba(37, 99, 235, 0.18));
+}
+
+.lexi-mascot-auth {
+  filter: drop-shadow(0 8px 14px rgba(37, 99, 235, 0.16));
+}
+
+.lexi-mascot-auth .lexi-mascot-body {
+  transform-origin: 60px 72px;
+  animation: lexiMascotFloat 3.2s ease-in-out infinite;
+}
+
+@keyframes lexiMascotFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-4px);
+  }
+}
+
+@keyframes lexiMascotTwinkle {
+  0%,
+  100% {
+    transform: rotate(0deg) scale(1);
+    opacity: 1;
+  }
+
+  50% {
+    transform: rotate(12deg) scale(1.08);
+    opacity: 0.82;
+  }
+}
+
+.lexi-menu-fab {
+  position: fixed;
+  right: max(1rem, env(safe-area-inset-right, 0px));
+  bottom: max(1rem, env(safe-area-inset-bottom, 0px));
+  z-index: 60;
+  display: inline-flex;
+  width: 3.75rem;
+  height: 3.75rem;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border: 3px solid rgba(255, 255, 255, 0.92);
+  border-radius: 999px;
+  background: linear-gradient(145deg, #eff6ff 0%, #dbeafe 100%);
+  box-shadow:
+    0 12px 28px rgba(37, 99, 235, 0.28),
+    0 2px 8px rgba(15, 23, 42, 0.12);
+  transition:
+    transform 0.18s ease,
+    box-shadow 0.18s ease;
+}
+
+.lexi-menu-fab:hover {
+  transform: translateY(-2px) scale(1.03);
+  box-shadow:
+    0 16px 32px rgba(37, 99, 235, 0.32),
+    0 4px 10px rgba(15, 23, 42, 0.14);
+}
+
+.lexi-menu-fab-open {
+  transform: rotate(8deg) scale(1.02);
+}
+
+.lexi-menu-fab-mascot {
+  pointer-events: none;
+  filter: drop-shadow(0 2px 4px rgba(37, 99, 235, 0.18));
+}
+
+.lexi-menu-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 70;
+  background: rgba(15, 23, 42, 0.42);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.22s ease;
+}
+
+.lexi-menu-backdrop-open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.lexi-menu-panel {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 80;
+  display: flex;
+  width: min(100vw, 22rem);
+  height: 100%;
+  max-height: 100dvh;
+  flex-direction: column;
+  border-left: 1px solid rgba(191, 219, 254, 0.8);
+  background: linear-gradient(180deg, #ffffff 0%, #eff6ff 100%);
+  box-shadow: -16px 0 40px rgba(15, 23, 42, 0.16);
+  transform: translateX(100%);
+  transition: transform 0.24s ease;
+  padding-top: env(safe-area-inset-top, 0px);
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+.lexi-menu-panel-open {
+  transform: translateX(0);
+}
+
+.lexi-menu-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0.75rem;
+  border-bottom: 1px solid rgba(191, 219, 254, 0.8);
+  padding: 1rem 1rem 0.9rem;
+}
+
+.lexi-menu-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.lexi-menu-title {
+  font-size: 1rem;
+  font-weight: 900;
+  color: #1e3a8a;
+}
+
+.lexi-menu-subtitle {
+  margin-top: 0.1rem;
+  font-size: 12pt;
+  font-weight: 700;
+  color: #2563eb;
+}
+
+.lexi-menu-close {
+  display: inline-flex;
+  width: 2.5rem;
+  height: 2.5rem;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(191, 219, 254, 0.9);
+  border-radius: 999px;
+  background: white;
+  color: #334155;
+  transition: background 0.15s ease;
+}
+
+.lexi-menu-close:hover {
+  background: #eff6ff;
+}
+
+.lexi-menu-nav {
+  flex: 1;
+  overflow-y: auto;
+  padding: 0.75rem 1rem 1rem;
+}
+
+.lexi-menu-section + .lexi-menu-section {
+  margin-top: 1rem;
+}
+
+.lexi-menu-section-label {
+  margin-bottom: 0.35rem;
+  padding-inline: 0.35rem;
+  font-size: 12pt;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #60a5fa;
+}
+
+.lexi-menu-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.lexi-menu-link {
+  display: block;
+  border-radius: 0.9rem;
+  padding: 0.72rem 0.85rem;
+  font-size: 12pt;
+  font-weight: 700;
+  color: #334155;
+  transition:
+    background 0.15s ease,
+    color 0.15s ease;
+}
+
+.lexi-menu-link:hover {
+  background: rgba(219, 234, 254, 0.85);
+  color: #1e3a8a;
+}
+
+.lexi-menu-link-active {
+  background: #2563eb;
+  color: white;
+  box-shadow: 0 8px 18px rgba(37, 99, 235, 0.22);
+}
+
+.lexi-menu-footer {
+  border-top: 1px solid rgba(191, 219, 254, 0.8);
+  padding: 0.9rem 1rem 1rem;
+}
+
+.lexi-menu-footer-label {
+  margin-bottom: 0.55rem;
+  font-size: 12pt;
+  font-weight: 800;
+  color: #475569;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .lexi-menu-backdrop,
+  .lexi-menu-panel,
+  .lexi-menu-fab {
+    transition: none;
+  }
 }
 
 .home-eyebrow {

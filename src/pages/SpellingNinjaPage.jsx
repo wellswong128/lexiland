@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import GameHomeButton from "../components/GameHomeButton.jsx";
 import GameMistakeSummary from "../components/GameMistakeSummary.jsx";
 import GameWordBankStatus from "../components/GameWordBankStatus.jsx";
-import LanguageToggle from "../components/LanguageToggle.jsx";
 import {
   buildGameWordBank,
   normalizeGameWord,
@@ -382,28 +381,22 @@ function SpellingNinjaPage() {
       : 0;
 
   return (
-    <section className="flex h-[calc(100svh-1rem)] max-h-[calc(100svh-1rem)] w-full max-w-5xl flex-col overflow-hidden rounded-[1.5rem] bg-slate-950 p-2 text-slate-50 shadow-2xl shadow-slate-950/30 sm:p-4">
-      <div className="relative mb-2">
-        {gameState === "playing" ? (
-          <div className="absolute left-0 top-0">
-            <GameHomeButton />
-          </div>
-        ) : null}
-        <div className="absolute right-0 top-0">
-          <LanguageToggle />
-        </div>
-        <div className="text-center">
+    <section className="game-page-shell flex flex-col bg-slate-950 text-slate-50">
+      <header className="game-page-header relative z-50 mb-1.5 flex shrink-0 items-center justify-between gap-2">
+        <GameHomeButton fixed />
+        <div className="pointer-events-none flex-1 text-center">
           <p className="text-xs font-black uppercase tracking-[0.32em] text-cyan-300 sm:text-xs">
             {t("games.ninja.title")}
           </p>
-          <h1 className="text-3xl font-black tracking-tight text-cyan-300 drop-shadow-[0_0_18px_rgba(34,211,238,0.5)] sm:text-5xl">
+          <h1 className="font-black tracking-tight text-cyan-300 drop-shadow-[0_0_18px_rgba(34,211,238,0.5)]">
             {t("games.ninja.title")}
           </h1>
-          <p className="text-xs text-slate-400 sm:text-sm">
+          <p className="text-slate-400">
             {t("games.ninja.subtitle")}
           </p>
         </div>
-      </div>
+        <div className="min-w-[4.5rem]" />
+      </header>
 
       {gameState === "playing" ? (
         <>
@@ -470,12 +463,6 @@ function SpellingNinjaPage() {
               >
                 {t("games.startGame")}
               </button>
-              <Link
-                className="rounded-2xl border border-slate-700 bg-slate-800 px-7 py-3 text-base font-black text-white transition hover:-translate-y-0.5"
-                to="/"
-              >
-                {t("common.home")}
-              </Link>
             </div>
           </div>
         ) : null}
@@ -654,7 +641,7 @@ function SpellingNinjaPage() {
       </div>
 
       {gameState === "playing" ? null : (
-        <p className="mt-2 text-center text-xs text-slate-400">
+        <p className="game-page-footer mt-1 text-center text-xs text-slate-400">
           <GameWordBankStatus
             priorityCount={priorityCount}
             usingFallback={usingFallback}

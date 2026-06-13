@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link, useNavigate, useSearchParams } from "react-router-dom";
+import LexiMascot from "../components/LexiMascot.jsx";
 import { getFriendlyAuthError } from "../features/auth/authErrors.js";
 import { useLocale } from "../features/locale/LocaleContext.jsx";
 import { useWordsContext } from "../features/words/WordsContext.jsx";
@@ -48,16 +49,17 @@ function MailIcon() {
 }
 
 function AuthHero() {
+  const { t } = useLocale();
+
   return (
-    <div className="relative mx-auto mb-8 flex w-full max-w-[17rem] justify-center">
+    <div className="relative mx-auto mb-8 flex w-full max-w-[17rem] flex-col items-center justify-center">
       <div className="relative">
         <div className="absolute -right-3 -top-2 size-16 rotate-12 rounded-full bg-blue-200/80 blur-[1px]" />
-        <div className="relative overflow-hidden rounded-[2rem] rounded-br-md border-4 border-white bg-gradient-to-br from-blue-100 via-white to-amber-50 p-6 shadow-xl shadow-blue-900/10">
-          <div className="flex size-28 items-center justify-center rounded-[1.5rem] bg-white text-5xl shadow-inner">
-            📚
-          </div>
+        <div className="relative overflow-hidden rounded-[2rem] rounded-br-md border-4 border-white bg-gradient-to-br from-blue-100 via-white to-amber-50 px-6 py-5 shadow-xl shadow-blue-900/10">
+          <LexiMascot className="lexi-mascot-auth" size="lg" title={t("brand.mascotAlt")} />
         </div>
       </div>
+      <p className="mt-3 text-sm font-bold text-blue-700">{t("brand.mascotName")}</p>
     </div>
   );
 }

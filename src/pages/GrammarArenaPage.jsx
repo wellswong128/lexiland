@@ -1,7 +1,6 @@
 import { useCallback, useEffect, useMemo, useState } from "react";
 import { Link } from "react-router-dom";
 import GameHomeButton from "../components/GameHomeButton.jsx";
-import LanguageToggle from "../components/LanguageToggle.jsx";
 import { useLocale } from "../features/locale/LocaleContext.jsx";
 
 const grammarBank = [
@@ -436,20 +435,18 @@ function GrammarArenaPage() {
   );
 
   return (
-    <section className="grammar-arena-app flex h-[calc(100svh-1rem)] max-h-[calc(100svh-1rem)] w-full max-w-5xl flex-col overflow-hidden rounded-[1.5rem] p-2 sm:p-4">
-      <header className="relative z-50 mb-2 flex shrink-0 items-center justify-between gap-2">
-        {gameState === "playing" ? <GameHomeButton /> : <div className="min-w-[4.5rem]" />}
+    <section className="game-page-shell grammar-arena-app flex flex-col">
+      <header className="game-page-header relative z-50 mb-1.5 flex shrink-0 items-center justify-between gap-2">
+        <GameHomeButton fixed />
         <div className="pointer-events-none flex-1 text-center">
-          <h1 className="text-3xl font-black text-amber-50 drop-shadow sm:text-5xl">
+          <h1 className="font-black text-amber-50 drop-shadow">
             {t("games.grammarArena.title")}
           </h1>
-          <p className="text-xs text-sky-100 sm:text-sm">
+          <p className="text-sky-100">
             {t("games.grammarArena.subtitle")}
           </p>
         </div>
-        <div className="relative z-50 flex min-w-[4.5rem] items-center justify-end">
-          <LanguageToggle />
-        </div>
+        <div className="min-w-[4.5rem]" />
       </header>
 
       {gameState === "playing" ? (
@@ -489,7 +486,7 @@ function GrammarArenaPage() {
 
       <div className="grammar-arena-card relative z-0 min-h-0 flex-1 overflow-hidden p-2 sm:p-3">
         {gameState === "start" ? (
-          <div className="flex h-full flex-col overflow-y-auto text-center">
+          <div className="flex h-full flex-col overflow-hidden text-center">
             <div className="relative min-h-0 flex-1">
               <ArenaScene
                 choices={demoChoices}
@@ -516,9 +513,6 @@ function GrammarArenaPage() {
                 >
                   {t("games.startGame")}
                 </button>
-                <Link className="grammar-arena-secondary-btn" to="/">
-                  {t("common.home")}
-                </Link>
               </div>
             </div>
           </div>

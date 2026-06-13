@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import GameHomeButton from "../components/GameHomeButton.jsx";
 import GameMistakeSummary from "../components/GameMistakeSummary.jsx";
 import GameWordBankStatus from "../components/GameWordBankStatus.jsx";
-import LanguageToggle from "../components/LanguageToggle.jsx";
 import {
   buildGameWordBank,
   pickFixedRoundEntries,
@@ -907,33 +906,26 @@ function PenaltyTwelvePage() {
   return (
     <section
       className={[
-        "penalty-twelve-app flex h-[calc(100svh-0.5rem)] max-h-[calc(100svh-0.5rem)] w-full max-w-[580px] flex-col overflow-hidden rounded-[1.5rem] p-2 text-[#143047] sm:p-2.5",
+        "game-page-shell penalty-twelve-app flex flex-col text-[#143047]",
         isPlaying ? "penalty-twelve-app--playing" : "",
       ]
         .filter(Boolean)
         .join(" ")}
     >
-      {isPlaying ? (
-        <header className="relative z-50 mb-1 flex shrink-0 items-center justify-between gap-2">
-          <GameHomeButton variant="light" />
-          <LanguageToggle />
-        </header>
-      ) : (
-        <header className="relative z-50 mb-2 flex shrink-0 items-center justify-between gap-2">
-          <div className="min-w-[4.5rem]" />
+      <header className="game-page-header relative z-50 mb-1.5 flex shrink-0 items-center justify-between gap-2">
+        <GameHomeButton fixed variant="light" />
+        {isPlaying ? null : (
           <div className="pointer-events-none flex-1 text-center">
-            <h1 className="text-2xl font-black text-[#0d62bd] drop-shadow sm:text-4xl">
+            <h1 className="font-black text-[#0d62bd] drop-shadow">
               {t("games.penaltyTwelve.title")}
             </h1>
-            <p className="text-xs font-bold text-[#13803d] sm:text-sm">
+            <p className="font-bold text-[#13803d]">
               {t("games.penaltyTwelve.subtitle")}
             </p>
           </div>
-          <div className="relative z-50 flex min-w-[4.5rem] items-center justify-end">
-            <LanguageToggle />
-          </div>
-        </header>
-      )}
+        )}
+        {isPlaying ? null : <div className="min-w-[4.5rem]" />}
+      </header>
 
       <div className="penalty-twelve-wrapper min-h-0 flex-1 overflow-hidden">
         {gameState === "start" ? (
@@ -948,9 +940,6 @@ function PenaltyTwelvePage() {
               <button className="penalty-twelve-btn" onClick={startGame} type="button">
                 {t("games.penaltyTwelve.startMatch")}
               </button>
-              <Link className="penalty-twelve-secondary-btn" to="/">
-                {t("common.home")}
-              </Link>
             </div>
           </div>
         ) : null}
@@ -1142,7 +1131,7 @@ function PenaltyTwelvePage() {
 
       {!isPlaying ? (
         <GameWordBankStatus
-          className="mt-2 block shrink-0 text-center text-xs font-semibold text-[#4d6878] sm:text-xs"
+          className="game-page-footer mt-1 block shrink-0 text-center text-xs font-semibold text-[#4d6878] sm:text-xs"
           priorityCount={priorityCount}
           usingFallback={usingFallback}
         />

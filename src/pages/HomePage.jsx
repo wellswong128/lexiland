@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import LexiMascot from "../components/LexiMascot.jsx";
 import { useLocale } from "../features/locale/LocaleContext.jsx";
 import { getDueWords } from "../features/review/reviewHelpers.js";
 import { useWordsContext } from "../features/words/WordsContext.jsx";
@@ -65,7 +66,7 @@ const quickActionLinks = [
 const featuredGames = [
   {
     key: "ninja",
-    labelKey: "home.ninja",
+    labelKey: "nav.ninjaGame",
     descKey: "home.ninjaDesc",
     to: "/games/spelling-ninja",
     tone: "ninja",
@@ -73,7 +74,7 @@ const featuredGames = [
   },
   {
     key: "penaltyTwelve",
-    labelKey: "home.penaltyTwelve",
+    labelKey: "nav.penaltyTwelve",
     descKey: "home.penaltyTwelveDesc",
     to: "/games/penalty-twelve",
     tone: "penalty",
@@ -81,7 +82,7 @@ const featuredGames = [
   },
   {
     key: "fishBlast",
-    labelKey: "home.fishBlast",
+    labelKey: "nav.fishBlast",
     descKey: "home.fishBlastDesc",
     to: "/games/fishing-blast",
     tone: "fish",
@@ -92,23 +93,15 @@ const featuredGames = [
 const moreGames = [
   {
     key: "wordKart",
-    labelKey: "home.wordKart",
+    labelKey: "nav.wordKart",
     descKey: "home.wordKartDesc",
     to: "/games/word-kart",
     tone: "kart",
     icon: "🏎️",
   },
   {
-    key: "grammar",
-    labelKey: "home.grammar",
-    descKey: "home.grammarDesc",
-    to: "/games/grammar-arena",
-    tone: "grammar",
-    icon: "⚔️",
-  },
-  {
     key: "battleJet",
-    labelKey: "home.battleJet",
+    labelKey: "nav.battleJet",
     descKey: "home.battleJetDesc",
     to: "/games/battle-jet",
     tone: "jet",
@@ -210,7 +203,20 @@ function HomePage() {
       <div aria-hidden="true" className="home-page-glow home-page-glow-right" />
 
       <div className="home-hero relative text-center">
-        <p className="home-description">{heroMessage}</p>
+        <div className="home-mascot-wrap">
+          <LexiMascot className="lexi-mascot-home" size="xl" title={t("brand.mascotAlt")} />
+        </div>
+        <p className="home-eyebrow">{t("home.eyebrow")}</p>
+        <h1 className="home-title">{t("brand.name")}</h1>
+        <p className="home-description">
+          <span className="home-tagline">{t("brand.tagline")}</span>
+          {!isEmpty && heroMessage !== t("home.description") ? (
+            <>
+              <br />
+              {heroMessage}
+            </>
+          ) : null}
+        </p>
       </div>
 
       {showProgress ? (

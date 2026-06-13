@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import GameHomeButton from "../components/GameHomeButton.jsx";
 import GameMistakeSummary from "../components/GameMistakeSummary.jsx";
 import GameWordBankStatus from "../components/GameWordBankStatus.jsx";
-import LanguageToggle from "../components/LanguageToggle.jsx";
 import {
   buildGameWordBank,
   pickRandomEntry,
@@ -184,6 +183,7 @@ function FishingBlastPage() {
   const { commitMistakes, lastCommittedTerms, recordWrong, resetTracker } =
     useGameMistakeTracker();
   const gameAreaRef = useRef(null);
+  const fisherRef = useRef(null);
   const fishRefs = useRef({});
 
   const { entries, priorityCount, priorityWordIds, usingFallback } = useMemo(
@@ -248,14 +248,17 @@ function FishingBlastPage() {
   const drawFishingLine = useCallback((fishId) => {
     const gameArea = gameAreaRef.current;
     const fishEl = fishRefs.current[fishId];
+    const fisherEl = fisherRef.current;
+    const rodEl = fisherEl?.querySelector(".fishing-blast-rod");
 
-    if (!gameArea || !fishEl) return;
+    if (!gameArea || !fishEl || !rodEl) return;
 
     const areaRect = gameArea.getBoundingClientRect();
     const fishRect = fishEl.getBoundingClientRect();
+    const rodRect = rodEl.getBoundingClientRect();
 
-    const startX = areaRect.width / 2 + 56;
-    const startY = 132;
+    const startX = rodRect.left - areaRect.left;
+    const startY = rodRect.top - areaRect.top + rodRect.height / 2;
     const targetX = fishRect.left - areaRect.left + fishRect.width / 2;
     const targetY = fishRect.top - areaRect.top + fishRect.height / 2;
     const dx = targetX - startX;
@@ -361,20 +364,24 @@ function FishingBlastPage() {
     totalAttempts > 0 ? Math.round((correctCount / totalAttempts) * 100) : 0;
 
   return (
-    <section className="fishing-blast-app flex h-[calc(100svh-1rem)] max-h-[calc(100svh-1rem)] w-full max-w-5xl flex-col overflow-hidden rounded-[1.5rem] p-2 sm:p-4">
-      <header className="relative z-50 mb-2 flex shrink-0 items-center justify-between gap-2">
-        {gameState === "playing" ? <GameHomeButton /> : <div className="min-w-[4.5rem]" />}
-        <div className="pointer-events-none flex-1 text-center">
-          <h1 className="text-3xl font-black text-sky-100 drop-shadow sm:text-5xl">
-            {t("games.fishingBlast.title")}
-          </h1>
-          <p className="text-xs text-sky-200 sm:text-sm">
-            {t("games.fishingBlast.subtitle")}
-          </p>
-        </div>
-        <div className="relative z-50 flex min-w-[4.5rem] items-center justify-end">
-          <LanguageToggle />
-        </div>
+    <section className="game-page-shell fishing-blast-app flex flex-col text-slate-50">
+      <header className="game-page-header relative z-50 mb-1.5 flex shrink-0 items-center justify-between gap-2">
+        <GameHomeButton fixed />
+        {gameState === "start" ? (
+          <div className="flex-1" aria-hidden="true" />
+        ) : (
+          <>
+            <div className="pointer-events-none flex-1 text-center">
+              <h1 className="font-black text-sky-100 drop-shadow">
+                {t("games.fishingBlast.title")}
+              </h1>
+              <p className="text-sky-200">
+                {t("games.fishingBlast.subtitle")}
+              </p>
+            </div>
+            <div className="min-w-[4.5rem]" />
+          </>
+        )}
       </header>
 
       {gameState === "playing" ? (
@@ -412,14 +419,14 @@ function FishingBlastPage() {
         </>
       ) : null}
 
-      <div className="fishing-blast-card relative z-0 min-h-0 flex-1 overflow-hidden p-2 sm:p-4">
+      <div className="fishing-blast-card relative z-0 min-h-0 flex-1 overflow-x-hidden overflow-y-auto p-1.5 sm:overflow-hidden sm:p-2">
         {gameState === "start" ? (
-          <div className="flex h-full flex-col text-center">
+          <div className="fishing-blast-start-layout flex h-full min-h-0 flex-col text-center">
             <div className="fishing-blast-game-area relative min-h-0 flex-1" ref={gameAreaRef}>
               <div className="fishing-blast-sun" />
               <div className="fishing-blast-cloud" />
               <div className="fishing-blast-waterline" />
-              <div className="fishing-blast-fisher">
+              <div className="fishing-blast-fisher" ref={fisherRef}>
                 <div className="fishing-blast-person" />
                 <div className="fishing-blast-rod" />
                 <div className="fishing-blast-boat" />
@@ -441,7 +448,7 @@ function FishingBlastPage() {
               </div>
               <div className="fishing-blast-sand" />
             </div>
-            <div className="mt-3">
+            <div className="mt-2 shrink-0">
               <p className="text-sm text-sky-100">
                 {t("games.fishingBlast.startHint")}
               </p>
@@ -453,9 +460,6 @@ function FishingBlastPage() {
                 >
                   {t("games.startGame")}
                 </button>
-                <Link className="fishing-blast-secondary-btn" to="/">
-                  {t("common.home")}
-                </Link>
               </div>
             </div>
           </div>
@@ -485,7 +489,7 @@ function FishingBlastPage() {
                 {status.text}
               </p>
             </div>
-            <div className="fishing-blast-fisher">
+            <div className="fishing-blast-fisher" ref={fisherRef}>
               <div className="fishing-blast-person" />
               <div className="fishing-blast-rod" />
               <div className="fishing-blast-boat" />
@@ -537,7 +541,7 @@ function FishingBlastPage() {
                   {t("games.fishingBlast.resultCount", { count: correctCount })}
                 </p>
               </div>
-              <div className="fishing-blast-fisher">
+              <div className="fishing-blast-fisher" ref={fisherRef}>
                 <div className="fishing-blast-person" />
                 <div className="fishing-blast-rod" />
                 <div className="fishing-blast-boat" />
@@ -602,7 +606,7 @@ function FishingBlastPage() {
 
       {gameState === "playing" ? null : (
         <GameWordBankStatus
-          className="mt-2 block text-center text-xs text-sky-200"
+          className="game-page-footer mt-1 block text-center text-xs text-sky-200"
           priorityCount={priorityCount}
           usingFallback={usingFallback}
         />

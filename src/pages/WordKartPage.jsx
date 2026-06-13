@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import GameHomeButton from "../components/GameHomeButton.jsx";
 import GameMistakeSummary from "../components/GameMistakeSummary.jsx";
 import GameWordBankStatus from "../components/GameWordBankStatus.jsx";
-import LanguageToggle from "../components/LanguageToggle.jsx";
 import {
   buildGameWordBank,
   pickRandomEntry,
@@ -313,20 +312,18 @@ function WordKartPage() {
   const isFast = speedLevel >= 3;
 
   return (
-    <section className="word-kart-app flex h-[calc(100svh-1rem)] max-h-[calc(100svh-1rem)] w-full max-w-5xl flex-col overflow-hidden rounded-[1.5rem] p-2 sm:p-4">
-      <header className="relative z-50 mb-2 flex shrink-0 items-center justify-between gap-2">
-        {gameState === "playing" ? <GameHomeButton /> : <div className="min-w-[4.5rem]" />}
+    <section className="game-page-shell word-kart-app flex flex-col">
+      <header className="game-page-header relative z-50 mb-1.5 flex shrink-0 items-center justify-between gap-2">
+        <GameHomeButton fixed />
         <div className="pointer-events-none flex-1 text-center">
-          <h1 className="text-3xl font-black text-orange-50 drop-shadow sm:text-5xl">
+          <h1 className="font-black text-orange-50 drop-shadow">
             {t("games.wordKart.title")}
           </h1>
-          <p className="text-xs text-sky-100 sm:text-sm">
+          <p className="text-sky-100">
             {t("games.wordKart.subtitle")}
           </p>
         </div>
-        <div className="relative z-50 flex min-w-[4.5rem] items-center justify-end">
-          <LanguageToggle />
-        </div>
+        <div className="min-w-[4.5rem]" />
       </header>
 
       {gameState === "playing" ? (
@@ -394,9 +391,6 @@ function WordKartPage() {
                 <button className="word-kart-primary-btn" onClick={startGame} type="button">
                   {t("games.startGame")}
                 </button>
-                <Link className="word-kart-secondary-btn" to="/">
-                  {t("common.home")}
-                </Link>
               </div>
             </div>
           </div>
@@ -529,7 +523,7 @@ function WordKartPage() {
 
       {gameState === "playing" ? null : (
         <GameWordBankStatus
-          className="mt-2 block text-center text-xs text-sky-100"
+          className="game-page-footer mt-1 block text-center text-xs text-sky-100"
           priorityCount={priorityCount}
           usingFallback={usingFallback}
         />
