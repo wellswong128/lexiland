@@ -595,6 +595,13 @@
   flex-shrink: 0;
 }
 
+.home-more-art-lg {
+  width: 56px;
+  height: 56px;
+  border-radius: 14px;
+  font-size: 34px;
+}
+
 .home-more-play {
   display: flex;
   width: 30px;

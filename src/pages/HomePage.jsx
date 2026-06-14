@@ -342,7 +342,10 @@ function HomePage() {
             {moreGames.map((game) => (
               <Link className={`home-more ${game.tone}`} key={game.key} to={game.to}>
                 <div className="home-more-header">
-                  <span aria-hidden="true" className="home-more-art">
+                  <span
+                    aria-hidden="true"
+                    className="home-more-art home-more-art-lg"
+                  >
                     {game.art}
                   </span>
                   <span aria-hidden="true" className="home-more-play">
