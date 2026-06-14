@@ -2160,6 +2160,18 @@ button:disabled {
   box-shadow: none;
 }
 
+.mistakes-word-translation {
+  display: inline-block;
+  border-radius: 12px;
+  background: linear-gradient(180deg, #fef3c7 0%, #fde68a 100%);
+  padding: 6px 12px;
+  font-size: 1.125rem;
+  font-weight: 800;
+  line-height: 1.4;
+  color: #92400e;
+  box-shadow: inset 0 0 0 1px rgba(245, 158, 11, 0.25);
+}
+
 .auth-mascot-name {
   color: var(--lexi-ink);
   font-family: Fredoka, Nunito, sans-serif;

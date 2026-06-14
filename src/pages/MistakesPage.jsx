@@ -64,10 +64,28 @@ function MistakesPage() {
               key={word.id}
             >
               <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
-                <div>
+                <div className="min-w-0 flex-1">
                   <h2 className="text-2xl font-bold text-blue-950">{word.term}</h2>
-                  <p className="mt-2 text-slate-600">{word.definition}</p>
-                  <dl className="mt-4 grid gap-3 text-sm sm:grid-cols-2">
+
+                  {word.translation ? (
+                    <p className="mistakes-word-translation mt-2">{word.translation}</p>
+                  ) : (
+                    <p className="mt-2 text-sm font-semibold text-slate-400">
+                      {t("common.translation")}: {t("common.notYet")}
+                    </p>
+                  )}
+
+                  {word.example ? (
+                    <p className="mt-3 text-base leading-relaxed text-slate-700">
+                      {word.example}
+                    </p>
+                  ) : null}
+
+                  <p className="mt-3 text-sm leading-relaxed text-slate-600">
+                    {word.definition}
+                  </p>
+
+                  <dl className="mt-4 grid gap-3 border-t border-slate-100 pt-4 text-sm sm:grid-cols-2">
                     <div>
                       <dt className="font-bold text-slate-500">
                         {t("mistakes.incorrectCount")}
