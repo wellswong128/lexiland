@@ -8,7 +8,7 @@ const LOCALE_OPTIONS = [
 ];
 
 function getCurrentLabel(locale) {
-  return LOCALE_OPTIONS.find((option) => option.id === locale)?.label ?? "繁體";
+  return LOCALE_OPTIONS.find((option) => option.id === locale)?.label ?? "English";
 }
 
 function GlobeIcon() {
