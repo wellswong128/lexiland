@@ -98,6 +98,9 @@ function MistakesPage() {
                 </dl>
               }
               key={word.id}
+              memoryImageCompact={false}
+              memoryTipsCompact={false}
+              showMemoryImage
               t={t}
               word={word}
             />

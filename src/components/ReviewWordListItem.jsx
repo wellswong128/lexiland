@@ -1,9 +1,13 @@
 import SpeakButton from "./SpeakButton.jsx";
 import MemoryTipsPanel from "./MemoryTipsPanel.jsx";
+import WordImagePanel from "./WordImagePanel.jsx";
 
 function ReviewWordListItem({
   actions = null,
   footer = null,
+  memoryImageCompact = true,
+  memoryTipsCompact = true,
+  showMemoryImage = false,
   showMemoryTips = true,
   t,
   word,
@@ -39,9 +43,15 @@ function ReviewWordListItem({
         {actions ? <div className="flex flex-wrap gap-3 sm:justify-end">{actions}</div> : null}
       </div>
 
+      {showMemoryImage ? (
+        <div className="mt-4">
+          <WordImagePanel compact={memoryImageCompact} word={word} />
+        </div>
+      ) : null}
+
       {showMemoryTips ? (
         <div className="mt-4">
-          <MemoryTipsPanel compact word={word} />
+          <MemoryTipsPanel compact={memoryTipsCompact} word={word} />
         </div>
       ) : null}
     </li>
