@@ -3,6 +3,12 @@ import { useLocale } from "../features/locale/LocaleContext.jsx";
 
 const navItems = [
   { key: "home", labelKey: "bottomNav.home", to: "/", end: true, emoji: "🏠" },
+  {
+    key: "photoScan",
+    labelKey: "bottomNav.photoScan",
+    to: "/words/new?tab=photo&scan=camera",
+    emoji: "📷",
+  },
   { key: "achievements", labelKey: "bottomNav.achievements", to: "/achievements", emoji: "🏆" },
   { key: "menu", labelKey: "bottomNav.menu", emoji: "☰", action: "menu" },
 ];

@@ -64,6 +64,7 @@ const zhHant = {
     bottomNav: {
       label: "主要導覽",
       home: "首頁",
+      photoScan: "拍照掃描",
       achievements: "成就",
       learningRecord: "學習紀錄",
       favorites: "收藏",
@@ -717,6 +718,7 @@ export const translations = {
     bottomNav: {
       label: "Main navigation",
       home: "Home",
+      photoScan: "Photo Scan",
       achievements: "Achievements",
       learningRecord: "Records",
       favorites: "Saved",

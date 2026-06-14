@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useNavigate, useSearchParams } from "react-router-dom";
 import PhotoWordCapture from "../components/PhotoWordCapture.jsx";
 import { useLocale } from "../features/locale/LocaleContext.jsx";
@@ -26,14 +26,30 @@ function getInitialTab(searchParams) {
 function AddWordPage() {
   const { t } = useLocale();
   const navigate = useNavigate();
-  const [searchParams] = useSearchParams();
+  const [searchParams, setSearchParams] = useSearchParams();
   const { addWord } = useWordsContext();
   const [activeTab, setActiveTab] = useState(() => getInitialTab(searchParams));
+  const autoOpenCamera = searchParams.get("scan") === "camera";
   const [formValues, setFormValues] = useState(initialFormValues);
   const [aiMessage, setAiMessage] = useState("");
   const [error, setError] = useState("");
   const [isAiLoading, setIsAiLoading] = useState(false);
   const [isSaving, setIsSaving] = useState(false);
+
+  useEffect(() => {
+    setActiveTab(getInitialTab(searchParams));
+  }, [searchParams]);
+
+  function handleAutoOpenCameraConsumed() {
+    if (searchParams.get("scan") !== "camera") {
+      return;
+    }
+
+    const nextParams = new URLSearchParams(searchParams);
+    nextParams.delete("scan");
+    nextParams.set("tab", "photo");
+    setSearchParams(nextParams, { replace: true });
+  }
 
   function handleChange(event) {
     const { name, value } = event.target;
@@ -137,7 +153,12 @@ function AddWordPage() {
         </button>
       </div>
 
-      {activeTab === "photo" ? <PhotoWordCapture /> : null}
+      {activeTab === "photo" ? (
+        <PhotoWordCapture
+          autoOpenCamera={autoOpenCamera}
+          onAutoOpenCameraConsumed={handleAutoOpenCameraConsumed}
+        />
+      ) : null}
 
       {activeTab === "manual" ? (
         <form className="space-y-5" onSubmit={handleSubmit}>

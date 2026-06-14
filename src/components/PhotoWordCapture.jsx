@@ -51,7 +51,7 @@ function removeSavedTermsFromPreview(previewWords, savedWords) {
   return previewWords.filter((word) => !savedTerms.has(normalizeTerm(word.term)));
 }
 
-function PhotoWordCapture() {
+function PhotoWordCapture({ autoOpenCamera = false, onAutoOpenCameraConsumed }) {
   const initialState = useMemo(() => getInitialPhotoCaptureState(), []);
   const { t } = useLocale();
   const navigate = useNavigate();
@@ -110,6 +110,19 @@ function PhotoWordCapture() {
     hasShownRestoreMessageRef.current = true;
     setStatusMessage(t("addWord.photo.draftRestored"));
   }, [initialState.hasRestoredDraft, t]);
+
+  useEffect(() => {
+    if (!autoOpenCamera || step !== "upload" || isExtracting) {
+      return undefined;
+    }
+
+    const timer = window.setTimeout(() => {
+      cameraInputRef.current?.click();
+      onAutoOpenCameraConsumed?.();
+    }, 150);
+
+    return () => window.clearTimeout(timer);
+  }, [autoOpenCamera, isExtracting, onAutoOpenCameraConsumed, step]);
 
   useEffect(() => {
     if (step === "upload") {
