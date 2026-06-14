@@ -3,6 +3,7 @@ import { Link, useSearchParams } from "react-router-dom";
 import ReviewWordListItem from "../components/ReviewWordListItem.jsx";
 import SpeakButton from "../components/SpeakButton.jsx";
 import MemoryTipsPanel from "../components/MemoryTipsPanel.jsx";
+import WordImagePanel from "../components/WordImagePanel.jsx";
 import { useLocale } from "../features/locale/LocaleContext.jsx";
 import {
   getDueWords,
@@ -220,7 +221,8 @@ function FlashcardsPage() {
                 {currentWord.example}
               </p>
             ) : null}
-            <div className="mt-4">
+            <div className="mt-4 space-y-4">
+              <WordImagePanel compact word={currentWord} />
               <MemoryTipsPanel compact word={currentWord} />
             </div>
           </div>
