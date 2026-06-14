@@ -139,6 +139,75 @@ const zhHant = {
       battleJetDesc: "導彈選字防空",
       penaltyTwelveDesc: "十二碼罰球選答案",
     },
+    achievements: {
+      title: "成就",
+      summary: "已解鎖 {{unlocked}} / {{total}}",
+      nextGoal: "下一個目標",
+      allUnlocked: "太棒了！所有成就都解鎖了！",
+      progress: "{{current}} / {{target}}",
+      unlocked: "已解鎖",
+      locked: "未解鎖",
+      emptyHint: "開始學習、複習和玩遊戲，解鎖你的第一個成就吧！",
+      categories: {
+        learning: "學習里程",
+        consistency: "連續學習",
+        games: "遊戲挑戰",
+      },
+      badges: {
+        firstWord: {
+          title: "第一個單字",
+          desc: "加入第一個單字到單字庫",
+        },
+        firstPhotoWord: {
+          title: "拍照學字",
+          desc: "用拍照方式加入第一個單字",
+        },
+        words10: {
+          title: "單字小苗",
+          desc: "累積 10 個單字",
+        },
+        words50: {
+          title: "單字達人",
+          desc: "累積 50 個單字",
+        },
+        correct10: {
+          title: "答對高手",
+          desc: "累積答對 10 次",
+        },
+        allCaughtUp: {
+          title: "全部複習完",
+          desc: "所有單字都跟上進度",
+        },
+        mistakeFixer: {
+          title: "錯題剋星",
+          desc: "把錯題本清空",
+        },
+        bounceBack: {
+          title: "東山再起",
+          desc: "把一個錯題字答對回來",
+        },
+        firstReview: {
+          title: "第一次複習",
+          desc: "完成第一次字卡複習",
+        },
+        firstQuiz: {
+          title: "測驗新手",
+          desc: "完成第一次測驗",
+        },
+        streak3: {
+          title: "連續 3 天",
+          desc: "連續學習 3 天",
+        },
+        streak7: {
+          title: "連續 7 天",
+          desc: "連續學習 7 天",
+        },
+        gameExplorer: {
+          title: "遊戲探險家",
+          desc: "玩過全部 5 款遊戲",
+        },
+      },
+    },
     wordList: {
       eyebrow: "單字收藏",
       title: "單字庫",
@@ -681,6 +750,75 @@ export const translations = {
       grammarDesc: "Fill-in grammar battles",
       battleJetDesc: "Shoot down wrong answers",
       penaltyTwelveDesc: "Pick answers in penalty kicks",
+    },
+    achievements: {
+      title: "Achievements",
+      summary: "{{unlocked}} / {{total}} unlocked",
+      nextGoal: "Next goal",
+      allUnlocked: "Amazing! You unlocked every badge!",
+      progress: "{{current}} / {{target}}",
+      unlocked: "Unlocked",
+      locked: "Locked",
+      emptyHint: "Start learning, reviewing, and playing games to earn your first badge!",
+      categories: {
+        learning: "Learning Milestones",
+        consistency: "Streaks",
+        games: "Game Challenges",
+      },
+      badges: {
+        firstWord: {
+          title: "First Word",
+          desc: "Add your first word to the library",
+        },
+        firstPhotoWord: {
+          title: "Photo Learner",
+          desc: "Add your first word with a photo",
+        },
+        words10: {
+          title: "Word Sprout",
+          desc: "Save 10 words",
+        },
+        words50: {
+          title: "Word Master",
+          desc: "Save 50 words",
+        },
+        correct10: {
+          title: "Correct Champ",
+          desc: "Get 10 answers right",
+        },
+        allCaughtUp: {
+          title: "All Caught Up",
+          desc: "Clear every due review",
+        },
+        mistakeFixer: {
+          title: "Mistake Fixer",
+          desc: "Clear your mistake notebook",
+        },
+        bounceBack: {
+          title: "Bounce Back",
+          desc: "Answer a mistake word correctly",
+        },
+        firstReview: {
+          title: "First Review",
+          desc: "Complete your first flashcard review",
+        },
+        firstQuiz: {
+          title: "Quiz Rookie",
+          desc: "Complete your first quiz",
+        },
+        streak3: {
+          title: "3-Day Streak",
+          desc: "Learn 3 days in a row",
+        },
+        streak7: {
+          title: "7-Day Streak",
+          desc: "Learn 7 days in a row",
+        },
+        gameExplorer: {
+          title: "Game Explorer",
+          desc: "Play all 5 games",
+        },
+      },
     },
     wordList: {
       eyebrow: "Word Collection",

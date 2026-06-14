@@ -13,6 +13,8 @@ function AppLayout({ children }) {
   const isGamePage = location.pathname.startsWith("/games/");
   const isAuthPage = location.pathname.startsWith("/auth");
   const isHomePage = location.pathname === "/";
+  const isAchievementsPage = location.pathname === "/achievements";
+  const isMobileShellPage = isHomePage || isAchievementsPage;
   const showFloatingMenu = !isGamePage && !isAuthPage;
   const showBottomNav = showFloatingMenu;
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -81,7 +83,7 @@ function AppLayout({ children }) {
             ? "flex h-full w-full min-h-0 flex-1 flex-col"
             : isAuthPage
               ? "mx-auto grid min-h-[100svh] w-full max-w-6xl flex-1 place-items-center px-2 py-2"
-              : isHomePage
+              : isMobileShellPage
                 ? "relative z-0 mx-auto flex w-full max-w-[430px] flex-1 items-start justify-center px-0 py-0 pb-[calc(96px+env(safe-area-inset-bottom,0px))]"
                 : "relative z-0 mx-auto flex w-full max-w-6xl flex-1 items-start justify-center px-3 py-3 pb-[calc(96px+env(safe-area-inset-bottom,0px))] sm:px-6 sm:py-6"
         }

@@ -4,6 +4,7 @@ const defaultActivity = {
   currentStreak: 0,
   lastActiveDate: null,
   lastActivity: null,
+  visitedPaths: [],
 };
 
 function getDefaultStorage() {
@@ -51,6 +52,7 @@ export function loadLearningActivity(storage = getDefaultStorage()) {
     return {
       ...defaultActivity,
       ...parsedValue,
+      visitedPaths: Array.isArray(parsedValue.visitedPaths) ? parsedValue.visitedPaths : [],
     };
   } catch (error) {
     console.warn("Could not parse stored learning activity.", error);
@@ -88,8 +90,16 @@ export function recordLearningActivity(partial, storage = getDefaultStorage()) {
   const dateKey = getLocalDateKey();
   const currentActivity = loadLearningActivity(storage);
   const withStreak = applyStreak(currentActivity, dateKey);
+  const path = partial.path;
+  const visitedPaths = [...(withStreak.visitedPaths || [])];
+
+  if (path && !visitedPaths.includes(path)) {
+    visitedPaths.push(path);
+  }
+
   const nextActivity = {
     ...withStreak,
+    visitedPaths,
     lastActivity: {
       ...partial,
       recordedAt: new Date().toISOString(),

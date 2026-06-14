@@ -2,6 +2,7 @@ import { Route, Routes } from "react-router-dom";
 import AppLayout from "./components/AppLayout.jsx";
 import { LocaleProvider } from "./features/locale/LocaleContext.jsx";
 import { WordsProvider } from "./features/words/WordsContext.jsx";
+import AchievementsPage from "./pages/AchievementsPage.jsx";
 import AddWordPage from "./pages/AddWordPage.jsx";
 import FlashcardsPage from "./pages/FlashcardsPage.jsx";
 import HomePage from "./pages/HomePage.jsx";
@@ -26,6 +27,7 @@ function App() {
         <AppLayout>
         <Routes>
           <Route path="/" element={<HomePage />} />
+          <Route path="/achievements" element={<AchievementsPage />} />
           <Route path="/words" element={<WordListPage />} />
           <Route path="/words/new" element={<AddWordPage />} />
           <Route path="/words/:wordId" element={<WordDetailPage />} />
