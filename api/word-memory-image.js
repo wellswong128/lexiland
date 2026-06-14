@@ -3,6 +3,72 @@ const DEFAULT_IMAGE_MODEL = "agnes-image-2.1-flash";
 const FALLBACK_IMAGE_MODEL = "agnes-image-2.0-flash";
 const SUPPORTED_IMAGE_SIZE = "1024x768";
 
+const NO_TEXT_NEGATIVE_PROMPT = [
+  "text",
+  "words",
+  "letters",
+  "alphabet",
+  "writing",
+  "written language",
+  "readable characters",
+  "caption",
+  "subtitles",
+  "title",
+  "label",
+  "name tag",
+  "sign",
+  "signage",
+  "street sign",
+  "shop sign",
+  "billboard",
+  "poster",
+  "banner",
+  "logo",
+  "brand mark",
+  "watermark",
+  "speech bubble",
+  "thought bubble",
+  "comic bubble",
+  "typography",
+  "font",
+  "handwriting",
+  "calligraphy",
+  "graffiti",
+  "inscription",
+  "embroidery text",
+  "carved letters",
+  "numbers",
+  "digits",
+  "date stamp",
+  "clock face numbers",
+  "book page",
+  "newspaper",
+  "magazine",
+  "document",
+  "certificate",
+  "menu",
+  "screen text",
+  "UI text",
+  "phone screen text",
+  "computer screen text",
+  "keyboard letters",
+  "Chinese characters",
+  "Japanese characters",
+  "Korean characters",
+  "Arabic script",
+  "Cyrillic letters",
+  "Latin letters",
+  "punctuation as writing",
+  "subtitle bar",
+  "closed captions",
+].join(", ");
+
+const NO_TEXT_PROMPT_PREFIX =
+  "STRICT RULE: Generate a completely text-free illustration. The image must not contain any text, letters, numbers, symbols used as writing, captions, labels, signs, logos, watermarks, speech bubbles, or readable characters in any language.";
+
+const NO_TEXT_PROMPT_SUFFIX =
+  "Remember: absolutely no text anywhere in the image. Pure visual storytelling with objects, actions, scenery, colors, and expressions only.";
+
 function sendJson(response, statusCode, payload) {
   response.statusCode = statusCode;
   response.setHeader("Content-Type", "application/json");
@@ -27,7 +93,7 @@ function truncateText(value, maxLength = 220) {
   return `${text.slice(0, maxLength - 1)}…`;
 }
 
-function buildImagePrompt({ term, definition, translation, partOfSpeech, example }) {
+function buildImagePrompt({ definition, translation, example }) {
   const meaningParts = [];
 
   if (definition) {
@@ -39,20 +105,26 @@ function buildImagePrompt({ term, definition, translation, partOfSpeech, example
   }
 
   if (example) {
-    meaningParts.push(`scene idea: ${truncateText(example, 120)}`);
+    meaningParts.push(
+      `visual scene idea inspired by this context, never render the sentence as written text: ${truncateText(example, 120)}`,
+    );
   }
 
   const meaningSummary =
     meaningParts.length > 0
       ? meaningParts.join("; ")
-      : `a visual idea related to ${term}`;
+      : "a clear visual concept for the word meaning";
 
   return [
-    "Text-free cartoon illustration for a vocabulary memory aid.",
-    "No text, letters, numbers, captions, labels, signs, speech bubbles, logos, or watermarks.",
-    `Illustrate this meaning visually without writing the word ${term}${partOfSpeech ? ` (${partOfSpeech})` : ""}: ${meaningSummary}.`,
-    "Use objects, actions, and expressions only.",
+    NO_TEXT_PROMPT_PREFIX,
+    "This is the highest priority constraint and overrides every other instruction.",
+    "Do not write, print, engrave, stitch, paint, or display any characters, words, numbers, or symbols that could be read.",
+    "Cartoon illustration for a vocabulary memory aid.",
+    "Depict the meaning using objects, actions, facial expressions, and scenery only.",
+    `Visual concept: ${meaningSummary}.`,
     "Bright, kid-friendly cartoon style, soft lighting, simple background.",
+    NO_TEXT_PROMPT_SUFFIX,
+    "Final check: the image must be 100% free of all text and readable symbols.",
   ].join(" ");
 }
 
@@ -114,6 +186,7 @@ async function requestImageGeneration({ apiKey, model, prompt, size }) {
       size,
       extra_body: {
         response_format: "url",
+        negative_prompt: `${NO_TEXT_NEGATIVE_PROMPT}, readable, subtitle, lettering, wordmark`,
       },
     }),
   });
@@ -167,13 +240,12 @@ export default async function handler(request, response) {
     return;
   }
 
-  const prompt = buildImagePrompt({
-    term,
+  const meaning = {
     definition: String(body.definition ?? "").trim(),
     translation: String(body.translation ?? "").trim(),
-    partOfSpeech: String(body.partOfSpeech ?? "").trim(),
     example: String(body.example ?? "").trim(),
-  });
+  };
+  const prompt = buildImagePrompt(meaning);
 
   const attempts = buildGenerationAttempts();
   const errors = [];
