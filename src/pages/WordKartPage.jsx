@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import GameHomeButton from "../components/GameHomeButton.jsx";
 import GameMistakeSummary from "../components/GameMistakeSummary.jsx";
 import GameWordBankStatus from "../components/GameWordBankStatus.jsx";
+import GameWordWithSpeak from "../components/GameWordWithSpeak.jsx";
 import {
   buildGameWordBank,
   pickRandomEntry,
@@ -403,7 +404,11 @@ function WordKartPage() {
             <RaceDecorations />
             <div className="word-kart-prompt-panel">
               <p className="word-kart-prompt-label">{t("games.wordKart.prompt")}</p>
-              <p className="word-kart-prompt-word">{currentRound.question.word}</p>
+              <GameWordWithSpeak
+                as="p"
+                className="word-kart-prompt-word"
+                text={currentRound.question.word}
+              />
               <p className="word-kart-prompt-type">
                 {t("games.partOfSpeech", { type: currentRound.question.type })}
               </p>

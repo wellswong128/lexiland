@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link, useSearchParams } from "react-router-dom";
+import ReviewWordListItem from "../components/ReviewWordListItem.jsx";
 import SpeakButton from "../components/SpeakButton.jsx";
 import MemoryTipsPanel from "../components/MemoryTipsPanel.jsx";
 import { useLocale } from "../features/locale/LocaleContext.jsx";
@@ -43,6 +44,7 @@ function FlashcardsPage() {
 
     return reviewWords;
   });
+  const [hasStarted, setHasStarted] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [showAnswer, setShowAnswer] = useState(false);
   const [isComplete, setIsComplete] = useState(false);
@@ -93,6 +95,54 @@ function FlashcardsPage() {
             {t("common.wordList")}
           </Link>
         </div>
+      </section>
+    );
+  }
+
+  if (!hasStarted) {
+    return (
+      <section className="w-full max-w-4xl rounded-3xl border border-blue-200/70 bg-white/90 p-6 shadow-2xl shadow-blue-950/10 sm:p-10">
+        <div className="mb-8 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
+          <div>
+            <p className="mb-3 text-xs font-bold uppercase tracking-[0.16em] text-blue-700">
+              {t("flashcards.listEyebrow")}
+            </p>
+            <h1 className="text-4xl font-bold text-blue-950 sm:text-5xl">
+              {mistakesOnly ? t("flashcards.listTitleMistakes") : t("flashcards.listTitle")}
+            </h1>
+            <p className="mt-4 text-slate-600">
+              {mistakesOnly
+                ? t("flashcards.listCountMistakes", { count: sessionWords.length })
+                : t("flashcards.listCount", { count: sessionWords.length })}
+            </p>
+          </div>
+
+          <button
+            className="inline-flex justify-center rounded-full bg-blue-700 px-5 py-3 text-sm font-bold text-white shadow-lg shadow-blue-900/20 transition hover:bg-blue-800"
+            onClick={() => setHasStarted(true)}
+            type="button"
+          >
+            {t("flashcards.startReview")}
+          </button>
+        </div>
+
+        <ul className="space-y-4">
+          {sessionWords.map((word) => (
+            <ReviewWordListItem
+              actions={
+                <Link
+                  className="rounded-full bg-blue-100 px-4 py-2 text-sm font-bold text-blue-700 transition hover:bg-blue-200"
+                  to={`/words/${word.id}`}
+                >
+                  {t("common.details")}
+                </Link>
+              }
+              key={word.id}
+              t={t}
+              word={word}
+            />
+          ))}
+        </ul>
       </section>
     );
   }

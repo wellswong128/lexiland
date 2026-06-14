@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
-import MemoryTipsPanel from "../components/MemoryTipsPanel.jsx";
-import SpeakButton from "../components/SpeakButton.jsx";
+import ReviewWordListItem from "../components/ReviewWordListItem.jsx";
 import { useLocale } from "../features/locale/LocaleContext.jsx";
 import { useWordsContext } from "../features/words/WordsContext.jsx";
 
@@ -60,56 +59,9 @@ function MistakesPage() {
       ) : (
         <ul className="space-y-4">
           {mistakeWords.map((word) => (
-            <li
-              className="rounded-2xl border border-slate-200 bg-white p-5"
-              key={word.id}
-            >
-              <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
-                <div className="min-w-0 flex-1">
-                  <div className="flex flex-wrap items-center gap-3">
-                    <h2 className="text-2xl font-bold text-blue-950">{word.term}</h2>
-                    <SpeakButton text={word.term} />
-                  </div>
-
-                  {word.translation ? (
-                    <p className="mistakes-word-translation mt-2">{word.translation}</p>
-                  ) : (
-                    <p className="mt-2 text-sm font-semibold text-slate-400">
-                      {t("common.translation")}: {t("common.notYet")}
-                    </p>
-                  )}
-
-                  {word.example ? (
-                    <p className="mt-3 text-base leading-relaxed text-slate-700">
-                      {word.example}
-                    </p>
-                  ) : null}
-
-                  <p className="mt-3 text-sm leading-relaxed text-slate-600">
-                    {word.definition}
-                  </p>
-
-                  <dl className="mt-4 grid gap-3 border-t border-slate-100 pt-4 text-sm sm:grid-cols-2">
-                    <div>
-                      <dt className="font-bold text-slate-500">
-                        {t("mistakes.incorrectCount")}
-                      </dt>
-                      <dd className="mt-1 text-slate-700">
-                        {word.review.incorrectCount}
-                      </dd>
-                    </div>
-                    <div>
-                      <dt className="font-bold text-slate-500">
-                        {t("mistakes.lastMistake")}
-                      </dt>
-                      <dd className="mt-1 text-slate-700">
-                        {formatDate(word.mistake.lastMistakeAt)}
-                      </dd>
-                    </div>
-                  </dl>
-                </div>
-
-                <div className="flex flex-wrap gap-3 sm:justify-end">
+            <ReviewWordListItem
+              actions={
+                <>
                   <Link
                     className="rounded-full bg-blue-100 px-4 py-2 text-sm font-bold text-blue-700 transition hover:bg-blue-200"
                     to={`/words/${word.id}`}
@@ -123,13 +75,32 @@ function MistakesPage() {
                   >
                     {t("mistakes.clearMistake")}
                   </button>
-                </div>
-              </div>
-
-              <div className="mt-4">
-                <MemoryTipsPanel compact word={word} />
-              </div>
-            </li>
+                </>
+              }
+              footer={
+                <dl className="mt-4 grid gap-3 border-t border-slate-100 pt-4 text-sm sm:grid-cols-2">
+                  <div>
+                    <dt className="font-bold text-slate-500">
+                      {t("mistakes.incorrectCount")}
+                    </dt>
+                    <dd className="mt-1 text-slate-700">
+                      {word.review.incorrectCount}
+                    </dd>
+                  </div>
+                  <div>
+                    <dt className="font-bold text-slate-500">
+                      {t("mistakes.lastMistake")}
+                    </dt>
+                    <dd className="mt-1 text-slate-700">
+                      {formatDate(word.mistake.lastMistakeAt)}
+                    </dd>
+                  </div>
+                </dl>
+              }
+              key={word.id}
+              t={t}
+              word={word}
+            />
           ))}
         </ul>
       )}

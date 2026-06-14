@@ -102,12 +102,16 @@ function WordListPage() {
                     </h2>
                     <SpeakButton text={word.term} />
                   </div>
-                  <p className="mt-2 text-slate-600">{word.definition}</p>
                   {word.translation ? (
-                    <p className="mt-2 text-sm font-medium text-slate-500">
-                      {t("common.translation")}: {word.translation}
+                    <p className="review-word-translation mt-2">{word.translation}</p>
+                  ) : (
+                    <p className="mt-2 text-sm font-semibold text-slate-400">
+                      {t("common.translation")}: {t("common.notYet")}
                     </p>
-                  ) : null}
+                  )}
+                  <p className="mt-3 text-sm leading-relaxed text-slate-600">
+                    {word.definition}
+                  </p>
                 </div>
 
                 {word.tags.length > 0 ? (

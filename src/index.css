@@ -2160,7 +2160,8 @@ button:disabled {
   box-shadow: none;
 }
 
-.mistakes-word-translation {
+.mistakes-word-translation,
+.review-word-translation {
   display: inline-block;
   border-radius: 12px;
   background: linear-gradient(180deg, #fef3c7 0%, #fde68a 100%);
@@ -2170,6 +2171,30 @@ button:disabled {
   line-height: 1.4;
   color: #92400e;
   box-shadow: inset 0 0 0 1px rgba(245, 158, 11, 0.25);
+}
+
+.review-word-field-label {
+  margin: 0 0 4px;
+  font-size: 12px;
+  font-weight: 800;
+  color: #64748b;
+  letter-spacing: 0.04em;
+}
+
+.game-word-with-speak {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.game-word-with-speak-text {
+  min-width: 0;
+}
+
+.game-word-speak-btn {
+  flex-shrink: 0;
 }
 
 .auth-mascot-name {

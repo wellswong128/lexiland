@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import GameHomeButton from "../components/GameHomeButton.jsx";
 import GameMistakeSummary from "../components/GameMistakeSummary.jsx";
 import GameWordBankStatus from "../components/GameWordBankStatus.jsx";
+import GameWordWithSpeak from "../components/GameWordWithSpeak.jsx";
 import {
   buildGameWordBank,
   pickFixedRoundEntries,
@@ -971,7 +972,10 @@ function PenaltyTwelvePage() {
                 <div className="penalty-twelve-word-label">
                   {t("games.penaltyTwelve.missionLabel")}
                 </div>
-                <div className="penalty-twelve-english-word">{currentQuestion.en}</div>
+                <GameWordWithSpeak
+                  className="penalty-twelve-english-word"
+                  text={currentQuestion.en}
+                />
               </div>
 
               <div className="penalty-twelve-stadium">

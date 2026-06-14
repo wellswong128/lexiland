@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import GameHomeButton from "../components/GameHomeButton.jsx";
 import GameMistakeSummary from "../components/GameMistakeSummary.jsx";
 import GameWordBankStatus from "../components/GameWordBankStatus.jsx";
+import GameWordWithSpeak from "../components/GameWordWithSpeak.jsx";
 import {
   buildGameWordBank,
   buildTranslationQuizQuestions,
@@ -732,7 +733,10 @@ function BattleJetQuizPage() {
                 <div className="battle-jet-mission-label">
                   {t("games.battleJet.missionLabel")}
                 </div>
-                <div className="battle-jet-question-word">{currentQuestion.en}</div>
+                <GameWordWithSpeak
+                  className="battle-jet-question-word"
+                  text={currentQuestion.en}
+                />
               </div>
 
               <div className="battle-jet-battlefield" ref={battlefieldRef}>

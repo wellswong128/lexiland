@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import GameHomeButton from "../components/GameHomeButton.jsx";
 import GameMistakeSummary from "../components/GameMistakeSummary.jsx";
 import GameWordBankStatus from "../components/GameWordBankStatus.jsx";
+import GameWordWithSpeak from "../components/GameWordWithSpeak.jsx";
 import {
   buildGameWordBank,
   pickRandomEntry,
@@ -475,7 +476,11 @@ function FishingBlastPage() {
             <div className="fishing-blast-waterline" />
             <div className="fishing-blast-prompt-panel">
               <p className="fishing-blast-prompt-label">{t("games.fishingBlast.prompt")}</p>
-              <p className="fishing-blast-prompt-word">{currentRound.question.word}</p>
+              <GameWordWithSpeak
+                as="p"
+                className="fishing-blast-prompt-word"
+                text={currentRound.question.word}
+              />
               <p className="fishing-blast-prompt-type">
                 {t("games.partOfSpeech", { type: currentRound.question.type })}
               </p>
