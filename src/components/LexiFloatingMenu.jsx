@@ -1,8 +1,6 @@
-import { useEffect, useState } from "react";
-import { NavLink, useLocation } from "react-router-dom";
+import { useEffect } from "react";
+import { NavLink } from "react-router-dom";
 import { useLocale } from "../features/locale/LocaleContext.jsx";
-import LanguageToggle from "./LanguageToggle.jsx";
-import LexiMascot from "./LexiMascot.jsx";
 
 const navSections = [
   {
@@ -10,7 +8,6 @@ const navSections = [
     items: [
       { to: "/", labelKey: "nav.home", end: true },
       { to: "/words", labelKey: "nav.words" },
-      { to: "/words/new", labelKey: "nav.addWord" },
     ],
   },
   {
@@ -37,47 +34,8 @@ const navSections = [
   },
 ];
 
-function MenuIcon() {
-  return (
-    <svg
-      aria-hidden="true"
-      className="lexi-menu-fab-icon size-6"
-      fill="none"
-      stroke="currentColor"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      strokeWidth="2.25"
-      viewBox="0 0 24 24"
-    >
-      <path d="M4 7h16M4 12h16M4 17h16" />
-    </svg>
-  );
-}
-
-function CloseIcon() {
-  return (
-    <svg
-      aria-hidden="true"
-      className="lexi-menu-fab-icon size-5"
-      fill="none"
-      stroke="currentColor"
-      strokeLinecap="round"
-      strokeWidth="2"
-      viewBox="0 0 24 24"
-    >
-      <path d="M6 6l12 12M18 6 6 18" />
-    </svg>
-  );
-}
-
-function LexiFloatingMenu() {
+function LexiFloatingMenu({ isOpen, onOpenChange }) {
   const { t } = useLocale();
-  const location = useLocation();
-  const [isOpen, setIsOpen] = useState(false);
-
-  useEffect(() => {
-    setIsOpen(false);
-  }, [location.pathname]);
 
   useEffect(() => {
     if (!isOpen) {
@@ -89,7 +47,7 @@ function LexiFloatingMenu() {
 
     function handleEscape(event) {
       if (event.key === "Escape") {
-        setIsOpen(false);
+        onOpenChange(false);
       }
     }
 
@@ -99,24 +57,14 @@ function LexiFloatingMenu() {
       document.body.style.overflow = previousOverflow;
       document.removeEventListener("keydown", handleEscape);
     };
-  }, [isOpen]);
+  }, [isOpen, onOpenChange]);
 
   function closeMenu() {
-    setIsOpen(false);
+    onOpenChange(false);
   }
 
   return (
     <>
-      <button
-        aria-expanded={isOpen}
-        aria-label={isOpen ? t("nav.closeMenu") : t("nav.openMenu")}
-        className={["lexi-menu-fab", isOpen ? "lexi-menu-fab-open" : ""].filter(Boolean).join(" ")}
-        onClick={() => setIsOpen((open) => !open)}
-        type="button"
-      >
-        {isOpen ? <CloseIcon /> : <MenuIcon />}
-      </button>
-
       <div
         aria-hidden={!isOpen}
         className={["lexi-menu-backdrop", isOpen ? "lexi-menu-backdrop-open" : ""]
@@ -132,24 +80,6 @@ function LexiFloatingMenu() {
           .filter(Boolean)
           .join(" ")}
       >
-        <div className="lexi-menu-header">
-          <div className="lexi-menu-brand">
-            <LexiMascot size="md" title={t("brand.mascotAlt")} />
-            <div>
-              <p className="lexi-menu-title">{t("nav.menuTitle")}</p>
-              <p className="lexi-menu-subtitle">{t("brand.mascotName")}</p>
-            </div>
-          </div>
-          <button
-            aria-label={t("nav.closeMenu")}
-            className="lexi-menu-close"
-            onClick={closeMenu}
-            type="button"
-          >
-            <CloseIcon />
-          </button>
-        </div>
-
         <nav className="lexi-menu-nav">
           {navSections.map((section) => (
             <div className="lexi-menu-section" key={section.labelKey}>
@@ -176,11 +106,6 @@ function LexiFloatingMenu() {
             </div>
           ))}
         </nav>
-
-        <div className="lexi-menu-footer">
-          <p className="lexi-menu-footer-label">{t("language.title")}</p>
-          <LanguageToggle className="w-full" showInlineOptions />
-        </div>
       </aside>
     </>
   );

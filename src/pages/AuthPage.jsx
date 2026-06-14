@@ -55,7 +55,7 @@ function AuthHero() {
     <div className="relative mx-auto mb-8 flex w-full max-w-[17rem] flex-col items-center justify-center">
       <div className="relative">
         <div className="absolute -right-3 -top-2 size-16 rotate-12 rounded-full bg-amber-200/80 blur-[1px]" />
-        <div className="auth-mascot-card relative overflow-hidden rounded-[2rem] rounded-br-md border-4 border-white px-6 py-5">
+        <div className="auth-mascot-card relative px-2 py-2">
           <LexiMascot className="lexi-mascot-auth" size="lg" title={t("brand.mascotAlt")} />
         </div>
       </div>
