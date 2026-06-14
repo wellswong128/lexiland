@@ -155,7 +155,22 @@ function WordDetailPage() {
             </h1>
             <SpeakButton text={word.term} />
           </div>
-          <p className="mt-4 text-lg leading-8 text-slate-600">{word.definition}</p>
+
+          <div className="mt-4">
+            <p className="review-word-field-label">{t("common.translation")}</p>
+            {word.translation ? (
+              <p className="review-word-translation">{word.translation}</p>
+            ) : (
+              <p className="text-sm font-semibold text-slate-400">{t("common.notYet")}</p>
+            )}
+          </div>
+
+          {word.example ? (
+            <div className="mt-3">
+              <p className="review-word-field-label">{t("wordDetail.example")}</p>
+              <p className="text-base leading-relaxed text-slate-700">{word.example}</p>
+            </div>
+          ) : null}
         </div>
 
         {!isEditing ? (
@@ -321,13 +336,11 @@ function WordDetailPage() {
       ) : (
         <div className="mt-8 space-y-4">
           <dl className="grid gap-4 sm:grid-cols-2">
-            <div className="rounded-2xl bg-blue-50 p-4">
+            <div className="rounded-2xl bg-blue-50 p-4 sm:col-span-2">
               <dt className="text-sm font-bold text-blue-700">
-                {t("addWord.translation")}
+                {t("addWord.definition")}
               </dt>
-              <dd className="mt-1 text-slate-700">
-                {displayValue(word.translation)}
-              </dd>
+              <dd className="mt-1 text-slate-700">{displayValue(word.definition)}</dd>
             </div>
             <div className="rounded-2xl bg-blue-50 p-4">
               <dt className="text-sm font-bold text-blue-700">
@@ -372,13 +385,6 @@ function WordDetailPage() {
               <dd className="mt-1 text-slate-700">{formatDate(word.updatedAt)}</dd>
             </div>
           </dl>
-
-          <div className="rounded-2xl bg-slate-50 p-4">
-            <h2 className="text-sm font-bold text-slate-700">
-              {t("wordDetail.example")}
-            </h2>
-            <p className="mt-1 text-slate-600">{displayValue(word.example)}</p>
-          </div>
 
           <div className="rounded-2xl bg-slate-50 p-4">
             <h2 className="text-sm font-bold text-slate-700">
