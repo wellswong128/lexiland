@@ -4,7 +4,7 @@ const zhHant = {
   brand: {
     name: "力思樂園 LexiLand",
     displayName: "LexiLand",
-    tagline: "玩出詞彙力，學出英語力！",
+    tagline: "用遊戲背單字，每天10分鐘，考前不再臨時抱佛腳。",
     mascotName: "樂思 Lexi",
     mascotAlt: "LexiLand 吉祥物樂思",
   },
@@ -89,7 +89,7 @@ const zhHant = {
     },
     home: {
       eyebrow: "英文單字學習樂園",
-      description: "玩出詞彙力，學出英語力。",
+      description: "用遊戲背單字，每天10分鐘，考前不再臨時抱佛腳。",
       savedWords: "已儲存單字",
       savedWordsShort: "單字",
       savedWordsDesc: "已學單字",
@@ -614,14 +614,20 @@ const zhHant = {
     },
 };
 
+const zhHans = toSimplifiedLocale(zhHant);
+zhHans.brand.tagline =
+  "帮助中学生用游戏化练习背单字，每天10分钟，提升默书与考试表现。";
+zhHans.home.description =
+  "帮助中学生用游戏化练习背单字，每天10分钟，提升默书与考试表现。";
+
 export const translations = {
   "zh-Hant": zhHant,
-  "zh-Hans": toSimplifiedLocale(zhHant),
+  "zh-Hans": zhHans,
   en: {
     brand: {
       name: "LexiLand",
       displayName: "LexiLand",
-      tagline: "Play for vocabulary power. Learn for English power!",
+      tagline: "10 minutes a day on LexiLand helps secondary school students learn vocabulary and feel more confident in exams.",
       mascotName: "Lexi",
       mascotAlt: "LexiLand mascot Lexi",
     },
@@ -707,7 +713,8 @@ export const translations = {
     },
     home: {
       eyebrow: "English Learning Playground",
-      description: "Play for vocabulary power. Learn for English power.",
+      description:
+        "10 minutes a day on LexiLand helps secondary school students learn vocabulary and feel more confident in exams.",
       savedWords: "Saved Words",
       savedWordsShort: "Words",
       savedWordsDesc: "Words learned",
