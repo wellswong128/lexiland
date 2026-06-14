@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import MemoryTipsPanel from "../components/MemoryTipsPanel.jsx";
+import SpeakButton from "../components/SpeakButton.jsx";
 import { useLocale } from "../features/locale/LocaleContext.jsx";
 import { useWordsContext } from "../features/words/WordsContext.jsx";
 
@@ -65,7 +66,10 @@ function MistakesPage() {
             >
               <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
                 <div className="min-w-0 flex-1">
-                  <h2 className="text-2xl font-bold text-blue-950">{word.term}</h2>
+                  <div className="flex flex-wrap items-center gap-3">
+                    <h2 className="text-2xl font-bold text-blue-950">{word.term}</h2>
+                    <SpeakButton text={word.term} />
+                  </div>
 
                   {word.translation ? (
                     <p className="mistakes-word-translation mt-2">{word.translation}</p>
