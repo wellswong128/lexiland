@@ -1,8 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import SpeakButton from "../components/SpeakButton.jsx";
-import MemoryTipsPanel from "../components/MemoryTipsPanel.jsx";
-import WordImagePanel from "../components/WordImagePanel.jsx";
+import WordMemoryPanel from "../components/WordMemoryPanel.jsx";
 import { useLocale } from "../features/locale/LocaleContext.jsx";
 import { createQuizQuestions } from "../features/review/quizHelpers.js";
 import { updateReviewResult } from "../features/review/reviewHelpers.js";
@@ -186,9 +185,8 @@ function QuizPage() {
               })}
             </p>
           ) : null}
-          <div className="mt-4 space-y-4">
-            <WordImagePanel compact word={currentWord} />
-            <MemoryTipsPanel compact word={currentWord} />
+          <div className="mt-4">
+            <WordMemoryPanel compact word={currentWord} />
           </div>
           <button
             className="mt-5 rounded-full bg-blue-700 px-5 py-3 text-sm font-bold text-white transition hover:bg-blue-800"
