@@ -50,7 +50,9 @@ function FlashcardsPage() {
   const [showAnswer, setShowAnswer] = useState(false);
   const [isComplete, setIsComplete] = useState(false);
 
-  const currentWord = sessionWords[currentIndex];
+  const currentWord =
+    words.find((word) => word.id === sessionWords[currentIndex]?.id) ??
+    sessionWords[currentIndex];
   const progressText = t("flashcards.progress", {
     current: Math.min(currentIndex + 1, sessionWords.length),
     total: sessionWords.length,

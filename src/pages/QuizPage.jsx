@@ -20,6 +20,8 @@ function QuizPage() {
   const [isComplete, setIsComplete] = useState(false);
 
   const currentQuestion = questions[currentIndex];
+  const currentWord =
+    words.find((word) => word.id === currentQuestion?.word.id) ?? currentQuestion?.word;
   const progressText = t("quiz.progress", {
     current: Math.min(currentIndex + 1, questions.length),
     total: questions.length,
@@ -185,8 +187,8 @@ function QuizPage() {
             </p>
           ) : null}
           <div className="mt-4 space-y-4">
-            <WordImagePanel compact word={currentQuestion.word} />
-            <MemoryTipsPanel compact word={currentQuestion.word} />
+            <WordImagePanel compact word={currentWord} />
+            <MemoryTipsPanel compact word={currentWord} />
           </div>
           <button
             className="mt-5 rounded-full bg-blue-700 px-5 py-3 text-sm font-bold text-white transition hover:bg-blue-800"

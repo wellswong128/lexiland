@@ -68,6 +68,8 @@ create table if not exists public.words (
   is_mistake boolean not null default false,
   last_mistake_at timestamptz,
   mistake_count integer not null default 0,
+  memory_tips_by_locale jsonb not null default '{}'::jsonb,
+  memory_image jsonb,
   created_at timestamptz not null default now(),
   updated_at timestamptz not null default now(),
   constraint words_source_check check (source in ('manual', 'import', 'ai')),

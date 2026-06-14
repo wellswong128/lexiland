@@ -1,31 +1,39 @@
 import { useEffect, useState } from "react";
 import { useLocale } from "../features/locale/LocaleContext.jsx";
+import { useWordsContext } from "../features/words/WordsContext.jsx";
 import {
   fetchMemoryTipsWithFallback,
-  readCachedMemoryTips,
+  readWordMemoryTips,
 } from "../features/words/memoryTipsApi.js";
 
 function MemoryTipsPanel({ compact = false, word }) {
   const { locale, t } = useLocale();
-  const [memoryTips, setMemoryTips] = useState(() => readCachedMemoryTips(word, locale));
+  const { updateWord } = useWordsContext();
+  const [memoryTips, setMemoryTips] = useState(() => readWordMemoryTips(word, locale));
   const [isExpanded, setIsExpanded] = useState(!compact);
   const [isLoading, setIsLoading] = useState(false);
   const [notice, setNotice] = useState("");
   const [usedFallback, setUsedFallback] = useState(false);
 
   useEffect(() => {
-    setMemoryTips(readCachedMemoryTips(word, locale));
+    setMemoryTips(readWordMemoryTips(word, locale));
     setIsExpanded(!compact);
     setNotice("");
     setUsedFallback(false);
-  }, [compact, locale, word.id, word.updatedAt]);
+  }, [compact, locale, word.id, word.memoryTipsByLocale, word.updatedAt]);
 
-  async function handleGenerate() {
+  async function handleGenerate({ forceRefresh = false } = {}) {
     try {
       setIsLoading(true);
       setNotice("");
 
-      const result = await fetchMemoryTipsWithFallback(word, locale);
+      const result = await fetchMemoryTipsWithFallback(word, locale, {
+        forceRefresh,
+      });
+
+      if (result.changes) {
+        await updateWord(word.id, result.changes);
+      }
 
       setMemoryTips(result.memoryTips);
       setUsedFallback(result.usedFallback);
@@ -61,7 +69,7 @@ function MemoryTipsPanel({ compact = false, word }) {
         <button
           className="inline-flex shrink-0 justify-center rounded-full bg-violet-700 px-5 py-3 text-sm font-bold text-white transition hover:bg-violet-800 disabled:bg-slate-300"
           disabled={isLoading}
-          onClick={handleGenerate}
+          onClick={() => handleGenerate({ forceRefresh: Boolean(memoryTips) })}
           type="button"
         >
           {isLoading

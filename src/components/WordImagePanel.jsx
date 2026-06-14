@@ -1,24 +1,26 @@
 import { useEffect, useState } from "react";
 import { useLocale } from "../features/locale/LocaleContext.jsx";
+import { useWordsContext } from "../features/words/WordsContext.jsx";
 import {
   fetchWordImageWithCache,
-  readCachedWordImage,
+  readWordMemoryImage,
 } from "../features/words/wordImageApi.js";
 
 function WordImagePanel({ compact = false, word }) {
   const { t } = useLocale();
-  const [image, setImage] = useState(() => readCachedWordImage(word));
+  const { updateWord } = useWordsContext();
+  const [image, setImage] = useState(() => readWordMemoryImage(word));
   const [isExpanded, setIsExpanded] = useState(!compact);
   const [isLoading, setIsLoading] = useState(false);
   const [notice, setNotice] = useState("");
   const [noticeType, setNoticeType] = useState("success");
 
   useEffect(() => {
-    setImage(readCachedWordImage(word));
+    setImage(readWordMemoryImage(word));
     setIsExpanded(!compact);
     setNotice("");
     setNoticeType("success");
-  }, [compact, word.id, word.updatedAt]);
+  }, [compact, word.id, word.memoryImage, word.updatedAt]);
 
   async function handleGenerate({ forceRefresh = false } = {}) {
     try {
@@ -26,6 +28,10 @@ function WordImagePanel({ compact = false, word }) {
       setNotice("");
 
       const result = await fetchWordImageWithCache(word, { forceRefresh });
+
+      if (result.changes) {
+        await updateWord(word.id, result.changes);
+      }
 
       setImage(result);
       setIsExpanded(true);
@@ -97,7 +103,7 @@ function WordImagePanel({ compact = false, word }) {
             <figure className="overflow-hidden rounded-2xl border border-sky-100 bg-white">
               <img
                 alt={t("wordImage.alt", { term: word.term })}
-                className="h-auto w-full object-cover"
+                className="mx-auto h-auto max-h-[600px] w-full max-w-[800px] object-contain"
                 loading="lazy"
                 src={image.imageUrl}
               />

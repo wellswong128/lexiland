@@ -1,4 +1,9 @@
 import { readJsonResponse } from "./completeWordApi.js";
+import {
+  buildWordMemoryTipsChanges,
+  readStoredMemoryTips,
+  writeStoredMemoryTips,
+} from "../../lib/wordAiMemoryStorage.js";
 
 export const MEMORY_TIPS_CACHE_KEY = "lexiland.memoryTipsCache.v1";
 
@@ -10,7 +15,7 @@ function getDefaultStorage() {
   return window.localStorage;
 }
 
-function loadCache(storage = getDefaultStorage()) {
+function loadLegacyCache(storage = getDefaultStorage()) {
   if (!storage) {
     return {};
   }
@@ -30,41 +35,71 @@ function loadCache(storage = getDefaultStorage()) {
   }
 }
 
-function saveCache(cache, storage = getDefaultStorage()) {
-  if (!storage) {
-    return;
+function stripSavedAt(value) {
+  if (!value || typeof value !== "object") {
+    return value;
   }
 
-  storage.setItem(MEMORY_TIPS_CACHE_KEY, JSON.stringify(cache));
+  const { savedAt: _savedAt, ...memoryTips } = value;
+
+  return memoryTips;
 }
 
-export function getMemoryTipsCacheKey(word, locale = "zh-Hant") {
-  return `${word.id}:${word.updatedAt ?? word.createdAt ?? word.term}:${locale}`;
+function hasMemoryTips(value) {
+  return Array.isArray(value?.tips) && value.tips.length > 0;
 }
 
-export function readCachedMemoryTips(word, locale = "zh-Hant", storage = getDefaultStorage()) {
-  const cache = loadCache(storage);
-  const entry = cache[getMemoryTipsCacheKey(word, locale)];
+function readLegacyCachedMemoryTips(word, locale = "zh-Hant", storage = getDefaultStorage()) {
+  const cache = loadLegacyCache(storage);
+  const legacyKeys = [
+    `${word.id}:${locale}`,
+    `${word.id}:${word.updatedAt ?? word.createdAt ?? word.term}:${locale}`,
+  ];
 
-  if (!entry?.memoryTips) {
-    return null;
+  for (const key of legacyKeys) {
+    const entry = cache[key];
+
+    if (entry?.memoryTips) {
+      return entry.memoryTips;
+    }
   }
 
-  return entry.memoryTips;
+  for (const [key, entry] of Object.entries(cache)) {
+    if (key.startsWith(`${word.id}:`) && key.endsWith(`:${locale}`) && entry?.memoryTips) {
+      return entry.memoryTips;
+    }
+  }
+
+  return null;
 }
 
-export function writeCachedMemoryTips(
-  word,
-  memoryTips,
-  locale = "zh-Hant",
-  storage = getDefaultStorage(),
-) {
-  const cache = loadCache(storage);
-  cache[getMemoryTipsCacheKey(word, locale)] = {
-    memoryTips,
-    savedAt: new Date().toISOString(),
-  };
-  saveCache(cache, storage);
+export function readWordMemoryTips(word, locale = "zh-Hant", storage = getDefaultStorage()) {
+  const fromWord = word.memoryTipsByLocale?.[locale];
+
+  if (hasMemoryTips(fromWord)) {
+    return stripSavedAt(fromWord);
+  }
+
+  const fromStore = readStoredMemoryTips(word.id, locale, storage);
+
+  if (hasMemoryTips(fromStore)) {
+    return stripSavedAt(fromStore);
+  }
+
+  const legacyTips = readLegacyCachedMemoryTips(word, locale, storage);
+
+  if (hasMemoryTips(legacyTips)) {
+    writeStoredMemoryTips(word.id, locale, legacyTips, storage);
+    return legacyTips;
+  }
+
+  return null;
+}
+
+export function persistWordMemoryTips(word, locale, memoryTips, storage = getDefaultStorage()) {
+  writeStoredMemoryTips(word.id, locale, memoryTips, storage);
+
+  return buildWordMemoryTipsChanges(word, locale, memoryTips);
 }
 
 export function clearMemoryTipsCache(storage = getDefaultStorage()) {
@@ -162,31 +197,41 @@ export async function fetchMemoryTips(word, locale) {
   };
 }
 
-export async function fetchMemoryTipsWithFallback(word, locale) {
-  const cachedTips = readCachedMemoryTips(word, locale);
+export async function fetchMemoryTipsWithFallback(
+  word,
+  locale,
+  { forceRefresh = false } = {},
+) {
+  if (!forceRefresh) {
+    const savedTips = readWordMemoryTips(word, locale);
 
-  if (cachedTips) {
-    return {
-      memoryTips: cachedTips,
-      usedFallback: false,
-      fromCache: true,
-    };
+    if (savedTips) {
+      return {
+        memoryTips: savedTips,
+        usedFallback: false,
+        fromCache: true,
+      };
+    }
   }
 
   try {
     const result = await fetchMemoryTips(word, locale);
-    writeCachedMemoryTips(word, result.memoryTips, locale);
+    const changes = persistWordMemoryTips(word, locale, result.memoryTips);
+
     return {
       ...result,
+      changes,
       fromCache: false,
     };
   } catch (error) {
     const memoryTips = createDemoMemoryTips(word, locale);
+    const changes = persistWordMemoryTips(word, locale, memoryTips);
 
     return {
       memoryTips,
       usedFallback: true,
       fallbackReason: error.message,
+      changes,
       fromCache: false,
     };
   }

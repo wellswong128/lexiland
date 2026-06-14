@@ -22,6 +22,8 @@ const WORD_COLUMNS = `
   is_mistake,
   last_mistake_at,
   mistake_count,
+  memory_tips_by_locale,
+  memory_image,
   created_at,
   updated_at
 `;
@@ -53,6 +55,8 @@ function mapDbWordToWord(row) {
       lastMistakeAt: row.last_mistake_at,
       mistakeCount: row.mistake_count,
     },
+    memoryTipsByLocale: row.memory_tips_by_locale ?? {},
+    memoryImage: row.memory_image ?? null,
   };
 }
 
@@ -77,10 +81,12 @@ function mapWordToInsert(word, userId) {
     is_mistake: word.mistake.isMistake,
     last_mistake_at: word.mistake.lastMistakeAt,
     mistake_count: word.mistake.mistakeCount,
+    memory_tips_by_locale: word.memoryTipsByLocale ?? {},
+    memory_image: word.memoryImage ?? null,
   };
 }
 
-function mapWordChangesToUpdate(changes) {
+export function mapWordChangesToUpdate(changes) {
   const update = {};
 
   if (Object.hasOwn(changes, "term")) update.term = changes.term;
@@ -106,6 +112,14 @@ function mapWordChangesToUpdate(changes) {
     update.is_mistake = changes.mistake.isMistake;
     update.last_mistake_at = changes.mistake.lastMistakeAt;
     update.mistake_count = changes.mistake.mistakeCount;
+  }
+
+  if (Object.hasOwn(changes, "memoryTipsByLocale")) {
+    update.memory_tips_by_locale = changes.memoryTipsByLocale ?? {};
+  }
+
+  if (Object.hasOwn(changes, "memoryImage")) {
+    update.memory_image = changes.memoryImage ?? null;
   }
 
   return update;

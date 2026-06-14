@@ -1,4 +1,7 @@
 const AGNES_IMAGE_API_URL = "https://apihub.agnes-ai.com/v1/images/generations";
+const DEFAULT_IMAGE_MODEL = "agnes-image-2.1-flash";
+const FALLBACK_IMAGE_MODEL = "agnes-image-2.0-flash";
+const SUPPORTED_IMAGE_SIZE = "1024x768";
 
 function sendJson(response, statusCode, payload) {
   response.statusCode = statusCode;
@@ -14,40 +17,131 @@ function getRequestBody(request) {
   return request.body ?? {};
 }
 
+function truncateText(value, maxLength = 220) {
+  const text = String(value ?? "").trim();
+
+  if (text.length <= maxLength) {
+    return text;
+  }
+
+  return `${text.slice(0, maxLength - 1)}…`;
+}
+
 function buildImagePrompt({ term, definition, translation, partOfSpeech, example }) {
   const meaningParts = [];
 
   if (definition) {
-    meaningParts.push(definition);
+    meaningParts.push(truncateText(definition));
   }
 
   if (translation) {
-    meaningParts.push(`Chinese meaning concept: ${translation}`);
+    meaningParts.push(`meaning concept: ${truncateText(translation, 80)}`);
   }
 
   if (example) {
-    meaningParts.push(`Scene idea from example: ${example}`);
+    meaningParts.push(`scene idea: ${truncateText(example, 120)}`);
   }
 
   const meaningSummary =
     meaningParts.length > 0
-      ? meaningParts.join(" ")
-      : `a clear visual idea related to the vocabulary concept for "${term}"`;
+      ? meaningParts.join("; ")
+      : `a visual idea related to ${term}`;
 
-  const parts = [
-    "Pure illustration only.",
-    "CRITICAL: The image must contain zero text of any kind.",
-    "Do not include words, letters, numbers, captions, titles, subtitles, labels, signs, banners, speech bubbles, book pages with writing, UI text, logos, or watermarks.",
-    "Do not render English or Chinese characters anywhere in the image.",
-    "Create a bright, kid-friendly cartoon illustration for a secondary school vocabulary memory aid.",
-    `Visual concept to illustrate (for meaning only — never write or display the word "${term}" in the image)${partOfSpeech ? ` (${partOfSpeech})` : ""}: ${meaningSummary}.`,
-    "Show one simple, clear scene that helps the learner remember the meaning through visuals alone.",
-    "Use objects, actions, facial expressions, and environment instead of written language.",
-    "Style: colorful cartoon illustration, soft lighting, uncluttered background, positive mood.",
-    "Final check: absolutely no readable text or characters in the image.",
-  ];
+  return [
+    "Text-free cartoon illustration for a vocabulary memory aid.",
+    "No text, letters, numbers, captions, labels, signs, speech bubbles, logos, or watermarks.",
+    `Illustrate this meaning visually without writing the word ${term}${partOfSpeech ? ` (${partOfSpeech})` : ""}: ${meaningSummary}.`,
+    "Use objects, actions, and expressions only.",
+    "Bright, kid-friendly cartoon style, soft lighting, simple background.",
+  ].join(" ");
+}
 
-  return parts.join(" ");
+function parseImageApiError(errorText) {
+  try {
+    const data = JSON.parse(errorText);
+    const message = String(data.error?.message ?? data.error ?? errorText).trim();
+
+    if (/internal server error|upstream_error|500/i.test(message)) {
+      return "The image service is temporarily unavailable. Please try again.";
+    }
+
+    return message;
+  } catch {
+    return errorText;
+  }
+}
+
+function buildGenerationAttempts() {
+  const preferredModel = process.env.AGNES_IMAGE_MODEL || DEFAULT_IMAGE_MODEL;
+  const preferredSize = process.env.AGNES_IMAGE_SIZE || SUPPORTED_IMAGE_SIZE;
+  const attempts = [];
+  const seen = new Set();
+
+  function addAttempt(model, size) {
+    const key = `${model}:${size}`;
+
+    if (seen.has(key)) {
+      return;
+    }
+
+    seen.add(key);
+    attempts.push({ model, size });
+  }
+
+  addAttempt(preferredModel, preferredSize);
+
+  if (preferredSize !== SUPPORTED_IMAGE_SIZE) {
+    addAttempt(preferredModel, SUPPORTED_IMAGE_SIZE);
+  }
+
+  if (preferredModel !== FALLBACK_IMAGE_MODEL) {
+    addAttempt(FALLBACK_IMAGE_MODEL, SUPPORTED_IMAGE_SIZE);
+  }
+
+  return attempts;
+}
+
+async function requestImageGeneration({ apiKey, model, prompt, size }) {
+  const imageResponse = await fetch(AGNES_IMAGE_API_URL, {
+    method: "POST",
+    headers: {
+      Authorization: `Bearer ${apiKey}`,
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      model,
+      prompt,
+      size,
+      extra_body: {
+        response_format: "url",
+      },
+    }),
+  });
+
+  const responseText = await imageResponse.text();
+  let data = null;
+
+  if (responseText) {
+    try {
+      data = JSON.parse(responseText);
+    } catch {
+      data = null;
+    }
+  }
+
+  if (!imageResponse.ok) {
+    const error = new Error(parseImageApiError(responseText));
+    error.statusCode = imageResponse.status;
+    throw error;
+  }
+
+  const imageUrl = data?.data?.[0]?.url;
+
+  if (!imageUrl) {
+    throw new Error("Image generation did not return an image URL.");
+  }
+
+  return { imageUrl, model, size };
 }
 
 export default async function handler(request, response) {
@@ -81,42 +175,34 @@ export default async function handler(request, response) {
     example: String(body.example ?? "").trim(),
   });
 
+  const attempts = buildGenerationAttempts();
+  const errors = [];
+
   try {
-    const imageResponse = await fetch(AGNES_IMAGE_API_URL, {
-      method: "POST",
-      headers: {
-        Authorization: `Bearer ${apiKey}`,
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        model: process.env.AGNES_IMAGE_MODEL || "agnes-image-2.1-flash",
-        prompt,
-        size: process.env.AGNES_IMAGE_SIZE || "800x600",
-        extra_body: {
-          response_format: "url",
-        },
-      }),
+    for (const attempt of attempts) {
+      try {
+        const result = await requestImageGeneration({
+          apiKey,
+          model: attempt.model,
+          prompt,
+          size: attempt.size,
+        });
+
+        sendJson(response, 200, {
+          imageUrl: result.imageUrl,
+          prompt,
+          model: result.model,
+          size: result.size,
+        });
+        return;
+      } catch (error) {
+        errors.push(`${attempt.model} @ ${attempt.size}: ${error.message}`);
+      }
+    }
+
+    sendJson(response, 502, {
+      error: errors.at(-1) || "Image generation failed.",
     });
-
-    if (!imageResponse.ok) {
-      const errorText = await imageResponse.text();
-      sendJson(response, imageResponse.status, {
-        error: `Image generation failed: ${errorText}`,
-      });
-      return;
-    }
-
-    const data = await imageResponse.json();
-    const imageUrl = data.data?.[0]?.url;
-
-    if (!imageUrl) {
-      sendJson(response, 502, {
-        error: "Image generation did not return an image URL.",
-      });
-      return;
-    }
-
-    sendJson(response, 200, { imageUrl, prompt });
   } catch (error) {
     sendJson(response, 500, { error: error.message });
   }

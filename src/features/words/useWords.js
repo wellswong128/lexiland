@@ -1,7 +1,13 @@
 import { useCallback, useEffect, useState } from "react";
 import { hasSupabaseConfig } from "../../lib/supabaseClient.js";
 import { clearLearningActivity } from "../../lib/learningActivity.js";
+import {
+  clearAllStoredWordAiMemory,
+  clearStoredWordAiMemory,
+  hydrateWordAiMemory,
+} from "../../lib/wordAiMemoryStorage.js";
 import { clearMemoryTipsCache } from "./memoryTipsApi.js";
+import { clearWordImageCache } from "./wordImageApi.js";
 import { loadWords, resetWords, saveWords } from "../../lib/storage.js";
 import {
   createInitialMistake,
@@ -19,6 +25,7 @@ import {
   deleteWordFromSupabase,
   fetchWordsFromSupabase,
   insertWordInSupabase,
+  mapWordChangesToUpdate,
   updateWordInSupabase,
 } from "./wordsApi.js";
 
@@ -57,6 +64,16 @@ function normalizeWordChanges(changes) {
     normalizedChanges.tags = normalizeTags(normalizedChanges.tags);
   }
 
+  if (Object.hasOwn(normalizedChanges, "memoryTipsByLocale")) {
+    normalizedChanges.memoryTipsByLocale = {
+      ...(normalizedChanges.memoryTipsByLocale ?? {}),
+    };
+  }
+
+  if (Object.hasOwn(normalizedChanges, "memoryImage")) {
+    normalizedChanges.memoryImage = normalizedChanges.memoryImage ?? null;
+  }
+
   return normalizedChanges;
 }
 
@@ -66,6 +83,14 @@ function applyWordChanges(word, changes) {
     ...changes,
     id: word.id,
     createdAt: word.createdAt,
+    memoryTipsByLocale: changes.memoryTipsByLocale
+      ? {
+          ...(word.memoryTipsByLocale ?? {}),
+          ...changes.memoryTipsByLocale,
+        }
+      : word.memoryTipsByLocale,
+    memoryImage:
+      Object.hasOwn(changes, "memoryImage") ? changes.memoryImage : word.memoryImage,
     review: changes.review ? { ...word.review, ...changes.review } : word.review,
     mistake: changes.mistake
       ? { ...word.mistake, ...changes.mistake }
@@ -73,15 +98,41 @@ function applyWordChanges(word, changes) {
   };
 }
 
+function hydrateWords(words, storage) {
+  return words.map((word) => hydrateWordAiMemory(word, storage));
+}
+
+function splitWordChanges(changes) {
+  const { memoryTipsByLocale, memoryImage, ...remoteChanges } = changes;
+
+  return {
+    remoteChanges,
+    memoryTipsByLocale,
+    memoryImage,
+  };
+}
+
+function mergeWordAiMemory(word, sourceWord) {
+  return {
+    ...word,
+    memoryTipsByLocale: sourceWord.memoryTipsByLocale ?? word.memoryTipsByLocale,
+    memoryImage: sourceWord.memoryImage ?? word.memoryImage,
+  };
+}
+
+function hasRemoteWordChanges(changes) {
+  return Object.keys(mapWordChangesToUpdate(changes)).length > 0;
+}
+
 export function useWords({ isAuthLoading = false, user = null } = {}, storage) {
-  const [words, setWords] = useState(() => loadWords(storage));
+  const [words, setWords] = useState(() => hydrateWords(loadWords(storage), storage));
   const [isWordsLoading, setIsWordsLoading] = useState(hasSupabaseConfig);
   const [wordsError, setWordsError] = useState("");
   const isUsingSupabase = hasSupabaseConfig && Boolean(user);
 
   useEffect(() => {
     if (!hasSupabaseConfig || !user) {
-      setWords(loadWords(storage));
+      setWords(hydrateWords(loadWords(storage), storage));
       setIsWordsLoading(false);
       return undefined;
     }
@@ -94,7 +145,7 @@ export function useWords({ isAuthLoading = false, user = null } = {}, storage) {
     fetchWordsFromSupabase(user.id)
       .then((remoteWords) => {
         if (isMounted) {
-          setWords(remoteWords);
+          setWords(hydrateWords(remoteWords, storage));
         }
       })
       .catch((error) => {
@@ -162,11 +213,38 @@ export function useWords({ isAuthLoading = false, user = null } = {}, storage) {
       );
 
       if (isUsingSupabase) {
+        const { remoteChanges } = splitWordChanges(normalizedChanges);
+        const supabaseChanges = { ...remoteChanges };
+
+        if (Object.hasOwn(normalizedChanges, "memoryTipsByLocale")) {
+          supabaseChanges.memoryTipsByLocale = normalizedChanges.memoryTipsByLocale;
+        }
+
+        if (Object.hasOwn(normalizedChanges, "memoryImage")) {
+          supabaseChanges.memoryImage = normalizedChanges.memoryImage;
+        }
+
+        if (!hasRemoteWordChanges(supabaseChanges)) {
+          return;
+        }
+
         try {
-          const savedWord = await updateWordInSupabase(wordId, normalizedChanges);
+          let savedWord;
+
+          try {
+            savedWord = await updateWordInSupabase(wordId, supabaseChanges);
+          } catch (error) {
+            if (!hasRemoteWordChanges(remoteChanges)) {
+              return;
+            }
+
+            savedWord = await updateWordInSupabase(wordId, remoteChanges);
+          }
 
           setWords((currentWords) =>
-            currentWords.map((word) => (word.id === wordId ? savedWord : word)),
+            currentWords.map((word) =>
+              word.id === wordId ? mergeWordAiMemory(savedWord, nextWord) : word,
+            ),
           );
         } catch (error) {
           setWordsError(error.message);
@@ -188,6 +266,7 @@ export function useWords({ isAuthLoading = false, user = null } = {}, storage) {
       setWords((currentWords) =>
         currentWords.filter((word) => word.id !== wordId),
       );
+      clearStoredWordAiMemory(wordId, storage);
 
       if (isUsingSupabase) {
         try {
@@ -353,6 +432,8 @@ export function useWords({ isAuthLoading = false, user = null } = {}, storage) {
 
     clearLearningActivity(storage);
     clearMemoryTipsCache(storage);
+    clearWordImageCache(storage);
+    clearAllStoredWordAiMemory(storage);
     setWords([]);
   }, [isUsingSupabase, storage, user]);
 

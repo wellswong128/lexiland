@@ -1,4 +1,9 @@
 import { readJsonResponse } from "./completeWordApi.js";
+import {
+  buildWordMemoryImageChanges,
+  readStoredMemoryImage,
+  writeStoredMemoryImage,
+} from "../../lib/wordAiMemoryStorage.js";
 
 export const WORD_IMAGE_CACHE_KEY = "lexiland.wordImageCache.v1";
 
@@ -10,7 +15,7 @@ function getDefaultStorage() {
   return window.localStorage;
 }
 
-function loadCache(storage = getDefaultStorage()) {
+function loadLegacyCache(storage = getDefaultStorage()) {
   if (!storage) {
     return {};
   }
@@ -30,36 +35,65 @@ function loadCache(storage = getDefaultStorage()) {
   }
 }
 
-function saveCache(cache, storage = getDefaultStorage()) {
-  if (!storage) {
-    return;
+function stripSavedAt(value) {
+  if (!value || typeof value !== "object") {
+    return value;
   }
 
-  storage.setItem(WORD_IMAGE_CACHE_KEY, JSON.stringify(cache));
+  const { savedAt: _savedAt, ...image } = value;
+
+  return image;
 }
 
-export function getWordImageCacheKey(word) {
-  return `${word.id}:${word.updatedAt ?? word.createdAt ?? word.term}`;
-}
+function readLegacyCachedWordImage(word, storage = getDefaultStorage()) {
+  const cache = loadLegacyCache(storage);
+  const legacyKeys = [
+    word.id,
+    `${word.id}:${word.updatedAt ?? word.createdAt ?? word.term}`,
+  ];
 
-export function readCachedWordImage(word, storage = getDefaultStorage()) {
-  const cache = loadCache(storage);
-  const entry = cache[getWordImageCacheKey(word)];
+  for (const key of legacyKeys) {
+    const entry = cache[key];
 
-  if (!entry?.imageUrl) {
-    return null;
+    if (entry?.imageUrl) {
+      return entry;
+    }
   }
 
-  return entry;
+  for (const [key, entry] of Object.entries(cache)) {
+    if (key.startsWith(`${word.id}:`) && entry?.imageUrl) {
+      return entry;
+    }
+  }
+
+  return null;
 }
 
-export function writeCachedWordImage(word, image, storage = getDefaultStorage()) {
-  const cache = loadCache(storage);
-  cache[getWordImageCacheKey(word)] = {
-    ...image,
-    savedAt: new Date().toISOString(),
-  };
-  saveCache(cache, storage);
+export function readWordMemoryImage(word, storage = getDefaultStorage()) {
+  if (word.memoryImage?.imageUrl) {
+    return stripSavedAt(word.memoryImage);
+  }
+
+  const fromStore = readStoredMemoryImage(word.id, storage);
+
+  if (fromStore?.imageUrl) {
+    return stripSavedAt(fromStore);
+  }
+
+  const legacyImage = readLegacyCachedWordImage(word, storage);
+
+  if (legacyImage?.imageUrl) {
+    writeStoredMemoryImage(word.id, legacyImage, storage);
+    return legacyImage;
+  }
+
+  return null;
+}
+
+export function persistWordMemoryImage(word, memoryImage, storage = getDefaultStorage()) {
+  writeStoredMemoryImage(word.id, memoryImage, storage);
+
+  return buildWordMemoryImageChanges(memoryImage);
 }
 
 export function clearWordImageCache(storage = getDefaultStorage()) {
@@ -96,23 +130,27 @@ export async function fetchWordImage(word) {
   };
 }
 
-export async function fetchWordImageWithCache(word, { forceRefresh = false } = {}) {
+export async function fetchWordImageWithCache(
+  word,
+  { forceRefresh = false } = {},
+) {
   if (!forceRefresh) {
-    const cachedImage = readCachedWordImage(word);
+    const savedImage = readWordMemoryImage(word);
 
-    if (cachedImage) {
+    if (savedImage) {
       return {
-        ...cachedImage,
+        ...savedImage,
         fromCache: true,
       };
     }
   }
 
   const image = await fetchWordImage(word);
-  writeCachedWordImage(word, image);
+  const changes = persistWordMemoryImage(word, image);
 
   return {
     ...image,
+    changes,
     fromCache: false,
   };
 }
