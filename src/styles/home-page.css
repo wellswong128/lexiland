@@ -119,6 +119,10 @@
   text-shadow: 0 1px 6px rgba(255, 255, 255, 0.85);
 }
 
+.home-brand-due {
+  margin-top: 8px;
+}
+
 .home-brand-sub2 {
   margin-top: 4px;
   color: #6d7c9d;

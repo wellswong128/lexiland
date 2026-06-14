@@ -199,11 +199,11 @@ function HomePage() {
             <div className="home-brand-title">{t("brand.displayName")}</div>
             <div className="home-brand-sub">{t("brand.tagline")}</div>
             {!isEmpty && dueCount > 0 ? (
-              <div className="home-brand-sub2">
-                {t("home.heroDuePrefix")}
-                <span className="home-brand-count">{dueCount}</span>
-                {t("home.heroDueSuffix")}
-              </div>
+              <p className="home-brand-due">
+                <span className="review-word-translation">
+                  {t("home.heroDue", { count: dueCount })}
+                </span>
+              </p>
             ) : null}
           </div>
         </div>
