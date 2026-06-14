@@ -1,43 +1,23 @@
 import { useMemo, useState } from "react";
 import { Link } from "react-router-dom";
 import SpeakButton from "../components/SpeakButton.jsx";
+import WordMemoryPanel from "../components/WordMemoryPanel.jsx";
 import { useLocale } from "../features/locale/LocaleContext.jsx";
 import { useWordsContext } from "../features/words/WordsContext.jsx";
-
-function getTagCounts(words) {
-  const tagCounts = new Map();
-
-  for (const word of words) {
-    for (const tag of word.tags) {
-      tagCounts.set(tag, (tagCounts.get(tag) ?? 0) + 1);
-    }
-  }
-
-  return [...tagCounts.entries()].sort(([leftTag], [rightTag]) =>
-    leftTag.localeCompare(rightTag),
-  );
-}
 
 function WordListPage() {
   const { t } = useLocale();
   const { deleteWord, words } = useWordsContext();
   const [searchQuery, setSearchQuery] = useState("");
-  const [selectedTag, setSelectedTag] = useState(null);
-
-  const tagCounts = useMemo(() => getTagCounts(words), [words]);
 
   const filteredWords = useMemo(() => {
     const normalizedQuery = searchQuery.trim().toLowerCase();
 
+    if (!normalizedQuery) {
+      return words;
+    }
+
     return words.filter((word) => {
-      if (selectedTag && !word.tags.includes(selectedTag)) {
-        return false;
-      }
-
-      if (!normalizedQuery) {
-        return true;
-      }
-
       const term = word.term.toLowerCase();
       const definition = word.definition.toLowerCase();
       const translation = (word.translation ?? "").toLowerCase();
@@ -50,7 +30,7 @@ function WordListPage() {
         tags.includes(normalizedQuery)
       );
     });
-  }, [searchQuery, selectedTag, words]);
+  }, [searchQuery, words]);
 
   function handleDelete(word) {
     const shouldDelete = window.confirm(
@@ -60,10 +40,6 @@ function WordListPage() {
     if (shouldDelete) {
       deleteWord(word.id);
     }
-  }
-
-  function toggleTagFilter(tag) {
-    setSelectedTag((currentTag) => (currentTag === tag ? null : tag));
   }
 
   return (
@@ -77,7 +53,7 @@ function WordListPage() {
             {t("wordList.title")}
           </h1>
           <p className="mt-4 text-slate-600">
-            {selectedTag || searchQuery.trim()
+            {searchQuery.trim()
               ? t("wordList.filteredCount", { count: filteredWords.length })
               : t("wordList.count", { count: words.length })}
           </p>
@@ -92,61 +68,17 @@ function WordListPage() {
       </div>
 
       {words.length > 0 ? (
-        <>
-          <label className="mb-6 block">
-            <span className="text-sm font-semibold text-slate-700">
-              {t("wordList.searchLabel")}
-            </span>
-            <input
-              className="mt-2 w-full rounded-2xl border border-slate-200 bg-white px-4 py-3 text-slate-900 outline-none transition focus:border-blue-500 focus:ring-4 focus:ring-blue-100"
-              onChange={(event) => setSearchQuery(event.target.value)}
-              placeholder={t("wordList.searchPlaceholder")}
-              value={searchQuery}
-            />
-          </label>
-
-          {tagCounts.length > 0 ? (
-            <div className="mb-6">
-              <span className="text-sm font-semibold text-slate-700">
-                {t("wordList.filterByTag")}
-              </span>
-              <div className="mt-2 flex flex-wrap gap-2">
-                <button
-                  className={[
-                    "rounded-full px-3 py-1.5 text-xs font-bold transition",
-                    selectedTag === null
-                      ? "bg-blue-700 text-white shadow-sm"
-                      : "bg-blue-100 text-blue-700 hover:bg-blue-200",
-                  ].join(" ")}
-                  onClick={() => setSelectedTag(null)}
-                  type="button"
-                >
-                  {t("wordList.allTags")} ({words.length})
-                </button>
-                {tagCounts.map(([tag, count]) => {
-                  const isActive = selectedTag === tag;
-
-                  return (
-                    <button
-                      aria-pressed={isActive}
-                      className={[
-                        "rounded-full px-3 py-1.5 text-xs font-bold transition",
-                        isActive
-                          ? "bg-blue-700 text-white shadow-sm"
-                          : "bg-blue-100 text-blue-700 hover:bg-blue-200",
-                      ].join(" ")}
-                      key={tag}
-                      onClick={() => toggleTagFilter(tag)}
-                      type="button"
-                    >
-                      {tag} ({count})
-                    </button>
-                  );
-                })}
-              </div>
-            </div>
-          ) : null}
-        </>
+        <label className="mb-6 block">
+          <span className="text-sm font-semibold text-slate-700">
+            {t("wordList.searchLabel")}
+          </span>
+          <input
+            className="mt-2 w-full rounded-2xl border border-slate-200 bg-white px-4 py-3 text-slate-900 outline-none transition focus:border-blue-500 focus:ring-4 focus:ring-blue-100"
+            onChange={(event) => setSearchQuery(event.target.value)}
+            placeholder={t("wordList.searchPlaceholder")}
+            value={searchQuery}
+          />
+        </label>
       ) : null}
 
       {words.length === 0 ? (
@@ -162,19 +94,8 @@ function WordListPage() {
             {t("wordList.noMatchesTitle")}
           </h2>
           <p className="mt-2 text-slate-600">
-            {selectedTag
-              ? t("wordList.noMatchesTag", { tag: selectedTag })
-              : t("wordList.noMatchesDescription")}
+            {t("wordList.noMatchesDescription")}
           </p>
-          {selectedTag ? (
-            <button
-              className="mt-4 rounded-full bg-blue-100 px-4 py-2 text-sm font-bold text-blue-700 transition hover:bg-blue-200"
-              onClick={() => setSelectedTag(null)}
-              type="button"
-            >
-              {t("wordList.clearTagFilter")}
-            </button>
-          ) : null}
         </div>
       ) : (
         <ul className="space-y-4">
@@ -198,6 +119,18 @@ function WordListPage() {
                       {t("common.translation")}: {t("common.notYet")}
                     </p>
                   )}
+
+                  {word.example ? (
+                    <div className="mt-3">
+                      <p className="review-word-field-label">{t("wordDetail.example")}</p>
+                      <p className="text-base leading-relaxed text-slate-700">{word.example}</p>
+                    </div>
+                  ) : null}
+
+                  <div className="mt-4">
+                    <WordMemoryPanel compact={false} word={word} />
+                  </div>
+
                   <p className="mt-3 text-sm leading-relaxed text-slate-600">
                     {word.definition}
                   </p>
@@ -205,26 +138,14 @@ function WordListPage() {
 
                 {word.tags.length > 0 ? (
                   <div className="flex flex-wrap gap-2 sm:justify-end">
-                    {word.tags.map((tag) => {
-                      const isActive = selectedTag === tag;
-
-                      return (
-                        <button
-                          aria-pressed={isActive}
-                          className={[
-                            "rounded-full px-3 py-1 text-xs font-bold transition",
-                            isActive
-                              ? "bg-blue-700 text-white shadow-sm"
-                              : "bg-blue-100 text-blue-700 hover:bg-blue-200",
-                          ].join(" ")}
-                          key={tag}
-                          onClick={() => toggleTagFilter(tag)}
-                          type="button"
-                        >
-                          {tag}
-                        </button>
-                      );
-                    })}
+                    {word.tags.map((tag) => (
+                      <span
+                        className="rounded-full bg-blue-100 px-3 py-1 text-xs font-bold text-blue-700"
+                        key={tag}
+                      >
+                        {tag}
+                      </span>
+                    ))}
                   </div>
                 ) : null}
               </div>

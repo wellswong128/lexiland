@@ -140,6 +140,8 @@ function FlashcardsPage() {
                 </Link>
               }
               key={word.id}
+              memoryPanelCompact={false}
+              showMemoryPanel
               t={t}
               word={word}
             />

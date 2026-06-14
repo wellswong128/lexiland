@@ -34,17 +34,17 @@ function ReviewWordListItem({
             </div>
           ) : null}
 
+          {showMemoryPanel ? (
+            <div className="mt-4">
+              <WordMemoryPanel compact={memoryPanelCompact} word={word} />
+            </div>
+          ) : null}
+
           {footer}
         </div>
 
         {actions ? <div className="flex flex-wrap gap-3 sm:justify-end">{actions}</div> : null}
       </div>
-
-      {showMemoryPanel ? (
-        <div className="mt-4">
-          <WordMemoryPanel compact={memoryPanelCompact} word={word} />
-        </div>
-      ) : null}
     </li>
   );
 }

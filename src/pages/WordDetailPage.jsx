@@ -171,6 +171,12 @@ function WordDetailPage() {
               <p className="text-base leading-relaxed text-slate-700">{word.example}</p>
             </div>
           ) : null}
+
+          {!isEditing ? (
+            <div className="mt-4">
+              <WordMemoryPanel word={word} />
+            </div>
+          ) : null}
         </div>
 
         {!isEditing ? (
@@ -392,8 +398,6 @@ function WordDetailPage() {
             </h2>
             <p className="mt-1 text-slate-600">{displayValue(word.notes)}</p>
           </div>
-
-          <WordMemoryPanel word={word} />
         </div>
       )}
 
