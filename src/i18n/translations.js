@@ -418,7 +418,7 @@ const zhHant = {
       eyebrow: "應用偏好",
       title: "設定",
       description:
-        "管理這個 MVP 的儲存方式。登入後使用 Supabase；否則瀏覽器會使用本機資料。",
+        "管理這個 MVP 的儲存方式。登入後使用雲端；否則瀏覽器會使用本機資料。",
       enterEmail: "請輸入電子郵件地址。",
       waitCooldown: "請等待 {{seconds}} 秒後再試。",
       checkEmail: "請到信箱查看 Supabase 登入連結。若沒收到，請檢查垃圾郵件，並確認 Supabase 已啟用 Email 登入與 SMTP。",
@@ -435,9 +435,9 @@ const zhHant = {
         "Supabase 目前不允許新用戶註冊。請在 Authentication → Providers → Email 開啟 Sign ups。",
       emailNotAuthorized:
         "Supabase 預設寄信服務可能無法寄送到此信箱。請在 Supabase 設定自訂 SMTP，或確認 Email 登入已啟用。",
-      supabaseAccount: "Supabase 帳號",
+      supabaseAccount: "雲端帳號",
       noSupabaseConfig:
-        "尚未設定 Supabase 環境變數，應用目前使用 localStorage。",
+        "尚未設定雲端同步，應用目前使用 localStorage。",
       checkingSession: "正在檢查登入狀態...",
       signedInAs: "已登入：{{email}}",
       signOut: "登出",
@@ -460,7 +460,7 @@ const zhHant = {
       resetData: "重設目前資料",
       syncLocalTitle: "上傳本機單字",
       syncLocalDescription:
-        "將此瀏覽器 localStorage 中的單字上傳到你的 Supabase 帳號。雲端已有的單字會略過。",
+        "將此瀏覽器 localStorage 中的單字上傳到你的雲端帳號。雲端已有的單字會略過。",
       syncLocalCount: "本機待上傳：{{count}} 個單字",
       syncLocalButton: "上傳本機單字到雲端",
       syncLocalUploading: "上傳中...",
@@ -1039,7 +1039,7 @@ export const translations = {
       eyebrow: "App Preferences",
       title: "Settings",
       description:
-        "Manage storage for this MVP. Signed-in users use Supabase; otherwise this browser keeps using local data.",
+        "Manage storage for this MVP. Signed-in users use the cloud; otherwise this browser keeps using local data.",
       enterEmail: "Please enter your email address.",
       waitCooldown: "Please wait {{seconds}} seconds before trying again.",
       checkEmail:
@@ -1057,9 +1057,9 @@ export const translations = {
         "Supabase is not allowing new sign-ups. Enable Sign ups under Authentication → Providers → Email.",
       emailNotAuthorized:
         "Supabase may not be able to send to this address with the default mail service. Configure custom SMTP or confirm Email auth is enabled.",
-      supabaseAccount: "Supabase Account",
+      supabaseAccount: "Cloud Account",
       noSupabaseConfig:
-        "Supabase environment variables are not configured, so the app is using localStorage.",
+        "Cloud storage is not configured, so the app is using localStorage.",
       checkingSession: "Checking session...",
       signedInAs: "Signed in as {{email}}",
       signOut: "Sign Out",
@@ -1082,7 +1082,7 @@ export const translations = {
       resetData: "Reset Current Data",
       syncLocalTitle: "Upload Local Words",
       syncLocalDescription:
-        "Upload words saved in this browser's localStorage to your Supabase account. Words already in the cloud are skipped.",
+        "Upload words saved in this browser's localStorage to your cloud account. Words already in the cloud are skipped.",
       syncLocalCount: "Local words ready to upload: {{count}}",
       syncLocalButton: "Upload Local Words to Cloud",
       syncLocalUploading: "Uploading...",

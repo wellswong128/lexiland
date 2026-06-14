@@ -226,7 +226,7 @@ function SettingsPage() {
             <div>
               <dt className="font-bold text-blue-700">{t("settings.mode")}</dt>
               <dd className="mt-1 text-slate-700">
-                {isUsingSupabase ? "Supabase" : "localStorage"}
+                {isUsingSupabase ? "Cloud" : "localStorage"}
               </dd>
             </div>
             <div>

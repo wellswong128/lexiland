@@ -99,7 +99,10 @@ function LanguageToggle({ className = "", showInlineOptions = false }) {
   }
 
   return (
-    <div className={["relative", className].filter(Boolean).join(" ")} ref={rootRef}>
+    <div
+      className={["relative inline-flex w-fit", className].filter(Boolean).join(" ")}
+      ref={rootRef}
+    >
       <button
         aria-expanded={isOpen}
         aria-haspopup="listbox"
@@ -114,7 +117,7 @@ function LanguageToggle({ className = "", showInlineOptions = false }) {
 
       {isOpen ? (
         <div
-          className="absolute right-0 top-[calc(100%+0.5rem)] z-[100] min-w-[8.5rem] overflow-hidden rounded-2xl border border-blue-100 bg-white py-1 shadow-xl shadow-blue-950/20"
+          className="absolute left-0 top-[calc(100%+0.5rem)] z-[100] min-w-[8.5rem] overflow-hidden rounded-2xl border border-blue-100 bg-white py-1 shadow-xl shadow-blue-950/20"
           role="listbox"
         >
           {LOCALE_OPTIONS.map((option) => {
