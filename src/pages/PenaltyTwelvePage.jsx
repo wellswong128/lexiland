@@ -10,6 +10,7 @@ import {
   shouldUseGamePlan,
 } from "../features/games/gameWordBank.js";
 import { useReviewSessionPlay } from "../features/games/useReviewSessionPlay.js";
+import { hasActiveReviewSession } from "../lib/reviewSessionStorage.js";
 import { useLocale } from "../features/locale/LocaleContext.jsx";
 import { useGameMistakeTracker } from "../features/review/useGameMistakeTracker.js";
 import { useWordsContext } from "../features/words/WordsContext.jsx";
@@ -1166,7 +1167,7 @@ function PenaltyTwelvePage() {
           priorityCount={priorityCount}
           totalPriorityCount={totalPriorityCount}
           usingFallback={usingFallback}
-          usingReviewSession={defaultBank.hasReviewSession && defaultBank.priorityCount > 0}
+          usingReviewSession={hasActiveReviewSession() && defaultBank.priorityCount > 0}
         />
       ) : null}
     </section>

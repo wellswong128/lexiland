@@ -87,7 +87,7 @@ function buildEntriesFromGamePlan(
 }
 
 export function shouldUseGamePlan(bank) {
-  return Boolean(bank?.hasReviewSession && bank.entries.length > 0);
+  return hasActiveReviewSession() && Boolean(bank?.entries.length);
 }
 
 export function buildGameWordBank(
@@ -233,7 +233,11 @@ export function getSequentialRoundEntries(entries, totalRounds) {
 }
 
 export function buildGameTranslationQuizQuestions(bank, totalRounds) {
-  if (shouldUseGamePlan(bank)) {
+  if (hasActiveReviewSession()) {
+    if (bank.entries.length === 0) {
+      return [];
+    }
+
     return buildTranslationQuizQuestionsFromEntries(
       getSequentialRoundEntries(bank.entries, totalRounds),
       bank.entries,

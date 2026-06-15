@@ -9,7 +9,7 @@ import {
   shouldUseGamePlan,
 } from "../features/games/gameWordBank.js";
 import { useReviewSessionPlay } from "../features/games/useReviewSessionPlay.js";
-import { loadReviewSession } from "../lib/reviewSessionStorage.js";
+import { hasActiveReviewSession, loadReviewSession } from "../lib/reviewSessionStorage.js";
 import { useLocale } from "../features/locale/LocaleContext.jsx";
 import { useGameMistakeTracker } from "../features/review/useGameMistakeTracker.js";
 import { useWordsContext } from "../features/words/WordsContext.jsx";
@@ -230,7 +230,8 @@ function BattleJetQuizPage() {
 
   const gameOptions = useMemo(() => ({ minWords: 4 }), []);
   const { beginPlaySession, defaultBank } = useReviewSessionPlay(words, gameOptions);
-  const reviewSessionStartedAt = loadReviewSession()?.startedAt ?? null;
+  const session = loadReviewSession();
+  const reviewSessionKey = `${session?.startedAt ?? "none"}:${session?.wordIds.length ?? 0}:${words.length}`;
   const cachedReviewQuestionsRef = useRef(null);
   const {
     entries,
@@ -285,7 +286,7 @@ function BattleJetQuizPage() {
 
   useEffect(() => {
     cachedReviewQuestionsRef.current = null;
-  }, [reviewSessionStartedAt]);
+  }, [reviewSessionKey]);
 
   const resetOptionState = useCallback(() => {
     setLocked(false);
@@ -950,7 +951,7 @@ function BattleJetQuizPage() {
           priorityCount={priorityCount}
           totalPriorityCount={totalPriorityCount}
           usingFallback={usingFallback}
-          usingReviewSession={defaultBank.hasReviewSession && defaultBank.priorityCount > 0}
+          usingReviewSession={hasActiveReviewSession() && defaultBank.priorityCount > 0}
         />
       ) : null}
     </section>

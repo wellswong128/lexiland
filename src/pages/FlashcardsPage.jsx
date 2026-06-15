@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { Link, useSearchParams } from "react-router-dom";
 import ExampleSentence from "../components/ExampleSentence.jsx";
 import ReviewWordListItem from "../components/ReviewWordListItem.jsx";
@@ -10,7 +10,7 @@ import {
   updateReviewResult,
 } from "../features/review/reviewHelpers.js";
 import { useWordsContext } from "../features/words/WordsContext.jsx";
-import { saveReviewSession } from "../lib/reviewSessionStorage.js";
+import { syncReviewSession } from "../lib/reviewSessionStorage.js";
 import { REVIEW_RESULTS } from "../features/words/wordTypes.js";
 
 function FlashcardReviewButtons({ onForgot, onRemembered, t }) {
@@ -39,10 +39,12 @@ function FlashcardsPage() {
   const { updateWord, words } = useWordsContext();
   const [searchParams] = useSearchParams();
   const mistakesOnly = searchParams.get("mode") === "mistakes";
-  const [{ isLimited, sessionWords, totalCount }] = useState(() =>
-    getReviewSessionWords(words, {
-      mistakesOnly: searchParams.get("mode") === "mistakes",
-    }),
+  const { isLimited, sessionWords, totalCount } = useMemo(
+    () =>
+      getReviewSessionWords(words, {
+        mistakesOnly,
+      }),
+    [mistakesOnly, words],
   );
   const [hasStarted, setHasStarted] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -58,13 +60,25 @@ function FlashcardsPage() {
   });
 
   function handleStartReview() {
-    saveReviewSession({
+    syncReviewSession({
       mistakesOnly,
       totalCount,
       wordIds: sessionWords.map((word) => word.id),
     });
     setHasStarted(true);
   }
+
+  useEffect(() => {
+    if (hasStarted || sessionWords.length === 0) {
+      return;
+    }
+
+    syncReviewSession({
+      mistakesOnly,
+      totalCount,
+      wordIds: sessionWords.map((word) => word.id),
+    });
+  }, [hasStarted, mistakesOnly, sessionWords, totalCount]);
 
   function handleReview(result) {
     updateWord(currentWord.id, updateReviewResult(currentWord, result));

@@ -4,6 +4,7 @@ import {
   hasActiveReviewSession,
   loadReviewSession,
 } from "../../lib/reviewSessionStorage.js";
+import { ensureReviewSessionWords } from "./ensureReviewSessionWords.js";
 import {
   buildGameWordBank,
   getSequentialRoundEntries,
@@ -11,17 +12,27 @@ import {
 } from "./gameWordBank.js";
 
 export function useReviewSessionPlay(words, options) {
-  const defaultBank = useMemo(() => buildGameWordBank(words, options), [options, words]);
+  useEffect(() => {
+    ensureReviewSessionWords(words);
+  }, [words]);
+
+  const defaultBank = useMemo(() => {
+    ensureReviewSessionWords(words);
+    return buildGameWordBank(words, options);
+  }, [options, words]);
   const playBankRef = useRef(null);
   const pickerIndexRef = useRef(0);
-  const reviewSessionStartedAt = loadReviewSession()?.startedAt ?? null;
+  const session = loadReviewSession();
+  const reviewSessionKey = `${session?.startedAt ?? "none"}:${session?.wordIds.length ?? 0}:${words.length}`;
 
   useEffect(() => {
     playBankRef.current = null;
     pickerIndexRef.current = 0;
-  }, [reviewSessionStartedAt]);
+  }, [reviewSessionKey]);
 
   const beginPlaySession = useCallback(() => {
+    ensureReviewSessionWords(words);
+
     if (!hasActiveReviewSession()) {
       playBankRef.current = null;
       pickerIndexRef.current = 0;

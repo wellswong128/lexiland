@@ -19,7 +19,17 @@ function getDefaultStorage() {
   return window.localStorage;
 }
 
-export function saveReviewSession(
+function isSameReviewWordSet(existingWordIds, nextWordIds) {
+  if (existingWordIds.length !== nextWordIds.length) {
+    return false;
+  }
+
+  const existingIdSet = new Set(existingWordIds);
+
+  return nextWordIds.every((wordId) => existingIdSet.has(wordId));
+}
+
+export function syncReviewSession(
   { mistakesOnly = false, totalCount = 0, wordIds = [] },
   storage = getDefaultStorage(),
 ) {
@@ -28,17 +38,33 @@ export function saveReviewSession(
   }
 
   const filteredWordIds = wordIds.filter(Boolean);
+  const existing = loadReviewSession(storage);
+  const sameSession =
+    existing &&
+    existing.mistakesOnly === mistakesOnly &&
+    isSameReviewWordSet(existing.wordIds, filteredWordIds);
+  const gamePlanWordIds =
+    sameSession && existing.gamePlanWordIds.length === filteredWordIds.length
+      ? existing.gamePlanWordIds
+      : shuffleWordIds(filteredWordIds);
 
-  storage.setItem(
-    REVIEW_SESSION_STORAGE_KEY,
-    JSON.stringify({
-      gamePlanWordIds: shuffleWordIds(filteredWordIds),
+  persistReviewSession(
+    {
+      gamePlanWordIds,
       mistakesOnly,
-      startedAt: new Date().toISOString(),
+      startedAt: sameSession ? existing.startedAt : new Date().toISOString(),
       totalCount,
       wordIds: filteredWordIds,
-    }),
+    },
+    storage,
   );
+}
+
+export function saveReviewSession(
+  { mistakesOnly = false, totalCount = 0, wordIds = [] },
+  storage = getDefaultStorage(),
+) {
+  syncReviewSession({ mistakesOnly, totalCount, wordIds }, storage);
 }
 
 function persistReviewSession(session, storage = getDefaultStorage()) {
