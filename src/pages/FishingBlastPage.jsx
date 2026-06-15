@@ -187,7 +187,7 @@ function FishingBlastPage() {
   const fisherRef = useRef(null);
   const fishRefs = useRef({});
 
-  const { entries, priorityCount, priorityWordIds, usingFallback } = useMemo(
+  const { entries, isPriorityLimited, priorityCount, priorityWordIds, totalPriorityCount, usingFallback } = useMemo(
     () => buildGameWordBank(words, { minWords: 4 }),
     [words],
   );
@@ -612,7 +612,9 @@ function FishingBlastPage() {
       {gameState === "playing" ? null : (
         <GameWordBankStatus
           className="game-page-footer mt-1 block text-center text-xs text-sky-200"
+          isPriorityLimited={isPriorityLimited}
           priorityCount={priorityCount}
+          totalPriorityCount={totalPriorityCount}
           usingFallback={usingFallback}
         />
       )}

@@ -1,4 +1,4 @@
-import { getDueWords } from "../review/reviewHelpers.js";
+import { getLimitedPriorityReviewWords } from "../review/reviewHelpers.js";
 
 export const GAME_FALLBACK_WORDS = [
   { word: "apple", meaning: "蘋果", type: "noun" },
@@ -57,12 +57,8 @@ export function toGameEntry(word, { normalizeWord = (term) => term.trim().toLowe
 }
 
 export function getPriorityWordIds(words, now = new Date()) {
-  const dueWordIds = new Set(getDueWords(words, now).map((word) => word.id));
-
   return new Set(
-    words
-      .filter((word) => word.mistake?.isMistake || dueWordIds.has(word.id))
-      .map((word) => word.id),
+    getLimitedPriorityReviewWords(words, now).sessionWords.map((word) => word.id),
   );
 }
 
@@ -83,15 +79,22 @@ export function buildGameWordBank(
   const entries = usingFallback
     ? GAME_FALLBACK_WORDS.map((entry) => ({ ...entry, wordId: null }))
     : savedEntries;
-  const priorityWordIds = usingFallback ? new Set() : getPriorityWordIds(words);
+  const priorityReview = usingFallback
+    ? { sessionWords: [], totalCount: 0, isLimited: false }
+    : getLimitedPriorityReviewWords(words);
+  const priorityWordIds = new Set(priorityReview.sessionWords.map((word) => word.id));
+  const totalPriorityCount = priorityReview.totalCount;
+  const isPriorityLimited = priorityReview.isLimited;
   const priorityCount = savedEntries.filter(
     (entry) => entry.wordId && priorityWordIds.has(entry.wordId),
   ).length;
 
   return {
     entries,
+    isPriorityLimited,
     priorityCount,
     priorityWordIds,
+    totalPriorityCount,
     usingFallback,
   };
 }

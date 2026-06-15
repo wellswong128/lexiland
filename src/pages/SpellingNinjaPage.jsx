@@ -92,7 +92,7 @@ function SpellingNinjaPage() {
   const { words } = useWordsContext();
   const { commitMistakes, lastCommittedTerms, recordWrong, resetTracker } =
     useGameMistakeTracker();
-  const { entries, priorityCount, priorityWordIds, usingFallback } = useMemo(
+  const { entries, isPriorityLimited, priorityCount, priorityWordIds, totalPriorityCount, usingFallback } = useMemo(
     () =>
       buildGameWordBank(words, {
         minLength: 3,
@@ -647,7 +647,9 @@ function SpellingNinjaPage() {
       {gameState === "playing" ? null : (
         <p className="game-page-footer mt-1 text-center text-xs text-slate-400">
           <GameWordBankStatus
+            isPriorityLimited={isPriorityLimited}
             priorityCount={priorityCount}
+            totalPriorityCount={totalPriorityCount}
             usingFallback={usingFallback}
           />
           {defeatedWords.length > 0

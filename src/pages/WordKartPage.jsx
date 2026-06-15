@@ -115,7 +115,7 @@ function WordKartPage() {
   const { commitMistakes, lastCommittedTerms, recordWrong, resetTracker } =
     useGameMistakeTracker();
 
-  const { entries, priorityCount, priorityWordIds, usingFallback } = useMemo(
+  const { entries, isPriorityLimited, priorityCount, priorityWordIds, totalPriorityCount, usingFallback } = useMemo(
     () => buildGameWordBank(words, { minWords: 4 }),
     [words],
   );
@@ -529,7 +529,9 @@ function WordKartPage() {
       {gameState === "playing" ? null : (
         <GameWordBankStatus
           className="game-page-footer mt-1 block text-center text-xs text-sky-100"
+          isPriorityLimited={isPriorityLimited}
           priorityCount={priorityCount}
+          totalPriorityCount={totalPriorityCount}
           usingFallback={usingFallback}
         />
       )}

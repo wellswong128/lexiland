@@ -226,7 +226,7 @@ function BattleJetQuizPage() {
   const timeoutIdsRef = useRef([]);
   const advanceAfterMessageRef = useRef(null);
 
-  const { entries, priorityCount, priorityWordIds, usingFallback } = useMemo(
+  const { entries, isPriorityLimited, priorityCount, priorityWordIds, totalPriorityCount, usingFallback } = useMemo(
     () => buildGameWordBank(words, { minWords: 4 }),
     [words],
   );
@@ -923,7 +923,9 @@ function BattleJetQuizPage() {
       {!isPlaying ? (
         <GameWordBankStatus
           className="game-page-footer mt-1 block shrink-0 text-center text-xs font-semibold text-[#4d6878] sm:text-xs"
+          isPriorityLimited={isPriorityLimited}
           priorityCount={priorityCount}
+          totalPriorityCount={totalPriorityCount}
           usingFallback={usingFallback}
         />
       ) : null}

@@ -43,6 +43,25 @@ export function getReviewSessionWords(words, { mistakesOnly = false, now = new D
   };
 }
 
+export function getPriorityReviewWords(words, now = new Date()) {
+  const dueWordIds = new Set(getDueWords(words, now).map((word) => word.id));
+
+  return words.filter(
+    (word) => word.mistake?.isMistake || dueWordIds.has(word.id),
+  );
+}
+
+export function getLimitedPriorityReviewWords(words, now = new Date()) {
+  const allWords = getPriorityReviewWords(words, now);
+
+  return {
+    allWords,
+    isLimited: allWords.length > REVIEW_SESSION_WORD_LIMIT,
+    sessionWords: allWords.slice(0, REVIEW_SESSION_WORD_LIMIT),
+    totalCount: allWords.length,
+  };
+}
+
 export function getNextReviewAt(level, now = new Date()) {
   const intervalLevel = Math.min(level, 5);
   const intervalDays = REVIEW_INTERVAL_DAYS_BY_LEVEL[intervalLevel];
