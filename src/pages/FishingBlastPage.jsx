@@ -5,10 +5,10 @@ import GameMistakeSummary from "../components/GameMistakeSummary.jsx";
 import GameWordBankStatus from "../components/GameWordBankStatus.jsx";
 import GameWordWithSpeak from "../components/GameWordWithSpeak.jsx";
 import {
-  buildGameWordBank,
   pickRandomEntry,
   shuffleArray,
 } from "../features/games/gameWordBank.js";
+import { useReviewSessionPlay } from "../features/games/useReviewSessionPlay.js";
 import { useLocale } from "../features/locale/LocaleContext.jsx";
 import { useGameMistakeTracker } from "../features/review/useGameMistakeTracker.js";
 import { useWordsContext } from "../features/words/WordsContext.jsx";
@@ -96,8 +96,10 @@ function playTone(freq, duration, type = "sine", volume = 0.035) {
   }
 }
 
-function createQuestion(entries, priorityWordIds) {
-  const question = pickRandomEntry(entries, priorityWordIds);
+function createQuestion(entries, priorityWordIds, pickQuestion) {
+  const question = pickQuestion
+    ? pickQuestion()
+    : pickRandomEntry(entries, priorityWordIds);
 
   if (!question) {
     return null;
@@ -187,9 +189,25 @@ function FishingBlastPage() {
   const fisherRef = useRef(null);
   const fishRefs = useRef({});
 
-  const { entries, isPriorityLimited, priorityCount, priorityWordIds, totalPriorityCount, usingFallback, usingReviewSession } = useMemo(
-    () => buildGameWordBank(words, { minWords: 4 }),
-    [words],
+  const gameOptions = useMemo(() => ({ minWords: 4 }), []);
+  const { beginPlaySession, defaultBank, getActivePlayBank, pickNextEntry } =
+    useReviewSessionPlay(words, gameOptions);
+  const {
+    entries,
+    isPriorityLimited,
+    priorityCount,
+    priorityWordIds,
+    totalPriorityCount,
+    usingFallback,
+    usingReviewSession,
+  } = defaultBank;
+
+  const pickQuestionForBank = useCallback(
+    (bank) =>
+      bank.usingReviewSession
+        ? () => pickNextEntry(bank)
+        : () => pickRandomEntry(bank.entries, bank.priorityWordIds),
+    [pickNextEntry],
   );
 
   const [gameState, setGameState] = useState("start");
@@ -210,6 +228,7 @@ function FishingBlastPage() {
 
   const startGame = useCallback(() => {
     resetTracker();
+    const bank = beginPlaySession();
     setScore(0);
     setCombo(0);
     setBestCombo(0);
@@ -223,9 +242,11 @@ function FishingBlastPage() {
     setStatus({ text: "", type: "" });
     setFishStates({});
     setFishingLine(null);
-    setCurrentRound(createQuestion(entries, priorityWordIds));
+    setCurrentRound(
+      createQuestion(bank.entries, bank.priorityWordIds, pickQuestionForBank(bank)),
+    );
     setGameState("playing");
-  }, [entries, priorityWordIds, resetTracker]);
+  }, [beginPlaySession, pickQuestionForBank, resetTracker]);
 
   const endGame = useCallback(() => {
     commitMistakes();
@@ -243,8 +264,11 @@ function FishingBlastPage() {
   const nextQuestion = useCallback(() => {
     resetOptionState();
     setStatus({ text: "", type: "" });
-    setCurrentRound(createQuestion(entries, priorityWordIds));
-  }, [entries, priorityWordIds, resetOptionState]);
+    const bank = getActivePlayBank();
+    setCurrentRound(
+      createQuestion(bank.entries, bank.priorityWordIds, pickQuestionForBank(bank)),
+    );
+  }, [getActivePlayBank, pickQuestionForBank, resetOptionState]);
 
   const drawFishingLine = useCallback((fishId) => {
     const gameArea = gameAreaRef.current;

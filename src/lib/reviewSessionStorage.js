@@ -1,5 +1,16 @@
 const REVIEW_SESSION_STORAGE_KEY = "lexiland.reviewSession.v1";
 
+function shuffleWordIds(wordIds) {
+  const nextIds = [...wordIds];
+
+  for (let index = nextIds.length - 1; index > 0; index -= 1) {
+    const swapIndex = Math.floor(Math.random() * (index + 1));
+    [nextIds[index], nextIds[swapIndex]] = [nextIds[swapIndex], nextIds[index]];
+  }
+
+  return nextIds;
+}
+
 function getDefaultStorage() {
   if (typeof window === "undefined") {
     return null;
@@ -27,6 +38,14 @@ export function saveReviewSession(
   );
 }
 
+function persistReviewSession(session, storage = getDefaultStorage()) {
+  if (!storage) {
+    return;
+  }
+
+  storage.setItem(REVIEW_SESSION_STORAGE_KEY, JSON.stringify(session));
+}
+
 export function loadReviewSession(storage = getDefaultStorage()) {
   if (!storage) {
     return null;
@@ -46,6 +65,9 @@ export function loadReviewSession(storage = getDefaultStorage()) {
     }
 
     return {
+      gamePlanWordIds: Array.isArray(parsedValue.gamePlanWordIds)
+        ? parsedValue.gamePlanWordIds.filter(Boolean)
+        : [],
       mistakesOnly: Boolean(parsedValue.mistakesOnly),
       startedAt: parsedValue.startedAt ?? null,
       totalCount: Number(parsedValue.totalCount) || parsedValue.wordIds.length,
@@ -64,6 +86,49 @@ export function getActiveReviewSessionWordIds(storage = getDefaultStorage()) {
   }
 
   return new Set(session.wordIds);
+}
+
+export function getReviewSessionEntryOrder(storage = getDefaultStorage()) {
+  const session = loadReviewSession(storage);
+
+  if (!session?.wordIds.length) {
+    return null;
+  }
+
+  if (session.gamePlanWordIds.length > 0) {
+    return session.gamePlanWordIds;
+  }
+
+  return session.wordIds;
+}
+
+export function ensureReviewGamePlan(storage = getDefaultStorage()) {
+  const session = loadReviewSession(storage);
+
+  if (!session?.wordIds.length) {
+    return null;
+  }
+
+  const activeWordIds = new Set(session.wordIds);
+  const currentPlanMatchesSession =
+    session.gamePlanWordIds.length === session.wordIds.length &&
+    session.gamePlanWordIds.every((wordId) => activeWordIds.has(wordId));
+
+  if (currentPlanMatchesSession) {
+    return session.gamePlanWordIds;
+  }
+
+  const gamePlanWordIds = shuffleWordIds(session.wordIds);
+
+  persistReviewSession(
+    {
+      ...session,
+      gamePlanWordIds,
+    },
+    storage,
+  );
+
+  return gamePlanWordIds;
 }
 
 export function clearReviewSession(storage = getDefaultStorage()) {

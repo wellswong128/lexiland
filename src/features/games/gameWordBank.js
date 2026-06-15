@@ -1,4 +1,4 @@
-import { getActiveReviewSessionWordIds } from "../../lib/reviewSessionStorage.js";
+import { getReviewSessionEntryOrder } from "../../lib/reviewSessionStorage.js";
 import { getLimitedPriorityReviewWords } from "../review/reviewHelpers.js";
 
 export const GAME_FALLBACK_WORDS = [
@@ -63,6 +63,18 @@ export function getPriorityWordIds(words, now = new Date()) {
   );
 }
 
+function orderEntriesByWordIds(entries, wordIds) {
+  if (!wordIds?.length) {
+    return entries;
+  }
+
+  const entriesById = new Map(
+    entries.filter((entry) => entry.wordId).map((entry) => [entry.wordId, entry]),
+  );
+
+  return wordIds.map((wordId) => entriesById.get(wordId)).filter(Boolean);
+}
+
 export function buildGameWordBank(
   words,
   {
@@ -71,10 +83,14 @@ export function buildGameWordBank(
     normalizeWord = (term) => term.trim().toLowerCase(),
   } = {},
 ) {
-  const reviewSessionWordIds = getActiveReviewSessionWordIds();
+  const reviewSessionWordIds = getReviewSessionEntryOrder();
+  const reviewSessionIdSet =
+    reviewSessionWordIds && reviewSessionWordIds.length > 0
+      ? new Set(reviewSessionWordIds)
+      : null;
   const sessionWords =
-    reviewSessionWordIds && reviewSessionWordIds.size > 0
-      ? words.filter((word) => reviewSessionWordIds.has(word.id))
+    reviewSessionIdSet && reviewSessionIdSet.size > 0
+      ? words.filter((word) => reviewSessionIdSet.has(word.id))
       : null;
   const sourceWords = sessionWords ?? words;
 
@@ -82,14 +98,17 @@ export function buildGameWordBank(
     .map((word) => toGameEntry(word, { normalizeWord }))
     .filter(Boolean)
     .filter((entry) => entry.word.length >= minLength);
+  const orderedEntries = sessionWords
+    ? orderEntriesByWordIds(savedEntries, reviewSessionWordIds)
+    : savedEntries;
 
-  const usingReviewSession = Boolean(sessionWords && savedEntries.length > 0);
+  const usingReviewSession = Boolean(sessionWords && orderedEntries.length > 0);
   const usingFallback = usingReviewSession
     ? false
-    : savedEntries.length < minWords;
+    : orderedEntries.length < minWords;
   const entries = usingFallback
     ? GAME_FALLBACK_WORDS.map((entry) => ({ ...entry, wordId: null }))
-    : savedEntries;
+    : orderedEntries;
 
   if (usingReviewSession) {
     const priorityWordIds = new Set(
@@ -185,17 +204,25 @@ export function pickFixedRoundEntries(entries, priorityWordIds, totalRounds) {
 }
 
 export function buildTranslationQuizQuestions(entries, priorityWordIds, totalRounds) {
-  return pickFixedRoundEntries(entries, priorityWordIds, totalRounds).map((item) => {
-    const wrongPool = entries
-      .filter((candidate) => candidate.meaning !== item.meaning)
-      .map((candidate) => candidate.meaning);
+  return pickFixedRoundEntries(entries, priorityWordIds, totalRounds).map((item) =>
+    buildTranslationQuizQuestion(item, entries),
+  );
+}
 
-    return {
-      en: item.word,
-      zh: item.meaning,
-      choices: shuffleArray([item.meaning, ...shuffleArray(wrongPool).slice(0, 3)]),
-    };
-  });
+export function buildTranslationQuizQuestionsFromEntries(roundEntries, entries) {
+  return roundEntries.map((item) => buildTranslationQuizQuestion(item, entries));
+}
+
+function buildTranslationQuizQuestion(item, entries) {
+  const wrongPool = entries
+    .filter((candidate) => candidate.meaning !== item.meaning)
+    .map((candidate) => candidate.meaning);
+
+  return {
+    en: item.word,
+    zh: item.meaning,
+    choices: shuffleArray([item.meaning, ...shuffleArray(wrongPool).slice(0, 3)]),
+  };
 }
 
 export function filterEntriesForNinjaLevel(entries, level) {

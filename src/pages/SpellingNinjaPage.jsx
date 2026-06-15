@@ -5,10 +5,10 @@ import GameMistakeSummary from "../components/GameMistakeSummary.jsx";
 import GameWordBankStatus from "../components/GameWordBankStatus.jsx";
 import SpeakButton from "../components/SpeakButton.jsx";
 import {
-  buildGameWordBank,
   normalizeGameWord,
   pickNinjaWord,
 } from "../features/games/gameWordBank.js";
+import { useReviewSessionPlay } from "../features/games/useReviewSessionPlay.js";
 import { useLocale } from "../features/locale/LocaleContext.jsx";
 import { useGameMistakeTracker } from "../features/review/useGameMistakeTracker.js";
 import { useWordsContext } from "../features/words/WordsContext.jsx";
@@ -77,8 +77,10 @@ function createLetters(word, level) {
   return shuffleArray([...mainLetters, ...distractors, ...bombs]);
 }
 
-function createRound(entries, priorityWordIds, level) {
-  const word = pickNinjaWord(entries, priorityWordIds, level);
+function createRound(entries, priorityWordIds, level, pickWord) {
+  const word = pickWord
+    ? pickWord({ level })
+    : pickNinjaWord(entries, priorityWordIds, level);
 
   return {
     word,
@@ -92,14 +94,32 @@ function SpellingNinjaPage() {
   const { words } = useWordsContext();
   const { commitMistakes, lastCommittedTerms, recordWrong, resetTracker } =
     useGameMistakeTracker();
-  const { entries, isPriorityLimited, priorityCount, priorityWordIds, totalPriorityCount, usingFallback, usingReviewSession } = useMemo(
-    () =>
-      buildGameWordBank(words, {
-        minLength: 3,
-        minWords: 3,
-        normalizeWord: normalizeGameWord,
-      }),
-    [words],
+  const gameOptions = useMemo(
+    () => ({
+      minLength: 3,
+      minWords: 3,
+      normalizeWord: normalizeGameWord,
+    }),
+    [],
+  );
+  const { beginPlaySession, defaultBank, getActivePlayBank, pickNextEntry } =
+    useReviewSessionPlay(words, gameOptions);
+  const {
+    entries,
+    isPriorityLimited,
+    priorityCount,
+    priorityWordIds,
+    totalPriorityCount,
+    usingFallback,
+    usingReviewSession,
+  } = defaultBank;
+
+  const pickWordForBank = useCallback(
+    (bank) =>
+      bank.usingReviewSession
+        ? (options) => pickNextEntry(bank, options)
+        : null,
+    [pickNextEntry],
   );
 
   const [gameState, setGameState] = useState("start");
@@ -123,7 +143,13 @@ function SpellingNinjaPage() {
 
   const startRound = useCallback(
     (nextLevel) => {
-      const nextRound = createRound(entries, priorityWordIds, nextLevel);
+      const bank = getActivePlayBank();
+      const nextRound = createRound(
+        bank.entries,
+        bank.priorityWordIds,
+        nextLevel,
+        pickWordForBank(bank),
+      );
 
       setRound(nextRound);
       setTimeLeft(Math.max(12, maxTime - Math.floor(nextLevel * 1.3)));
@@ -132,12 +158,18 @@ function SpellingNinjaPage() {
       setFlash("");
       setSlashKey((value) => value + 1);
     },
-    [entries, priorityWordIds],
+    [getActivePlayBank, pickWordForBank],
   );
 
   function startGame() {
     resetTracker();
-    const firstRound = createRound(entries, priorityWordIds, 1);
+    const bank = beginPlaySession();
+    const firstRound = createRound(
+      bank.entries,
+      bank.priorityWordIds,
+      1,
+      pickWordForBank(bank),
+    );
 
     setScore(0);
     setCombo(0);

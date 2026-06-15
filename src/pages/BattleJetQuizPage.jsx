@@ -5,9 +5,10 @@ import GameMistakeSummary from "../components/GameMistakeSummary.jsx";
 import GameWordBankStatus from "../components/GameWordBankStatus.jsx";
 import GameWordWithSpeak from "../components/GameWordWithSpeak.jsx";
 import {
-  buildGameWordBank,
   buildTranslationQuizQuestions,
+  buildTranslationQuizQuestionsFromEntries,
 } from "../features/games/gameWordBank.js";
+import { useReviewSessionPlay } from "../features/games/useReviewSessionPlay.js";
 import { useLocale } from "../features/locale/LocaleContext.jsx";
 import { useGameMistakeTracker } from "../features/review/useGameMistakeTracker.js";
 import { useWordsContext } from "../features/words/WordsContext.jsx";
@@ -226,10 +227,20 @@ function BattleJetQuizPage() {
   const timeoutIdsRef = useRef([]);
   const advanceAfterMessageRef = useRef(null);
 
-  const { entries, isPriorityLimited, priorityCount, priorityWordIds, totalPriorityCount, usingFallback, usingReviewSession } = useMemo(
-    () => buildGameWordBank(words, { minWords: 4 }),
-    [words],
+  const gameOptions = useMemo(() => ({ minWords: 4 }), []);
+  const { beginPlaySession, defaultBank, pickRoundEntries } = useReviewSessionPlay(
+    words,
+    gameOptions,
   );
+  const {
+    entries,
+    isPriorityLimited,
+    priorityCount,
+    priorityWordIds,
+    totalPriorityCount,
+    usingFallback,
+    usingReviewSession,
+  } = defaultBank;
 
   const [gameState, setGameState] = useState("start");
   const [questions, setQuestions] = useState([]);
@@ -475,11 +486,13 @@ function BattleJetQuizPage() {
     initAudio();
     resetTracker();
 
-    const nextQuestions = buildTranslationQuizQuestions(
-      entries,
-      priorityWordIds,
-      TOTAL_ROUNDS,
-    );
+    const bank = beginPlaySession();
+    const nextQuestions = bank.usingReviewSession
+      ? buildTranslationQuizQuestionsFromEntries(
+          pickRoundEntries(bank, TOTAL_ROUNDS),
+          bank.entries,
+        )
+      : buildTranslationQuizQuestions(bank.entries, bank.priorityWordIds, TOTAL_ROUNDS);
 
     setQuestions(nextQuestions);
     setHits(0);
@@ -487,7 +500,14 @@ function BattleJetQuizPage() {
     setCombo(0);
     setGameState("playing");
     loadQuestion(0);
-  }, [clearScheduled, entries, initAudio, loadQuestion, priorityWordIds, resetTracker]);
+  }, [
+    beginPlaySession,
+    clearScheduled,
+    initAudio,
+    loadQuestion,
+    pickRoundEntries,
+    resetTracker,
+  ]);
 
   const getComboMessage = useCallback(
     (nextCombo) => {

@@ -5,10 +5,10 @@ import GameMistakeSummary from "../components/GameMistakeSummary.jsx";
 import GameWordBankStatus from "../components/GameWordBankStatus.jsx";
 import GameWordWithSpeak from "../components/GameWordWithSpeak.jsx";
 import {
-  buildGameWordBank,
   pickFixedRoundEntries,
   shuffleArray,
 } from "../features/games/gameWordBank.js";
+import { useReviewSessionPlay } from "../features/games/useReviewSessionPlay.js";
 import { useLocale } from "../features/locale/LocaleContext.jsx";
 import { useGameMistakeTracker } from "../features/review/useGameMistakeTracker.js";
 import { useWordsContext } from "../features/words/WordsContext.jsx";
@@ -95,8 +95,11 @@ function makeChoicesForWord(entries, item) {
   return shuffleArray([item.meaning, ...shuffleArray(wrongPool).slice(0, 3)]);
 }
 
-function makeQuestions(entries, priorityWordIds) {
-  return pickFixedRoundEntries(entries, priorityWordIds, TOTAL_ROUNDS).map((item) => ({
+function makeQuestions(entries, priorityWordIds, roundEntries) {
+  const items =
+    roundEntries ?? pickFixedRoundEntries(entries, priorityWordIds, TOTAL_ROUNDS);
+
+  return items.map((item) => ({
     en: item.word,
     zh: item.meaning,
   }));
@@ -396,10 +399,20 @@ function PenaltyTwelvePage() {
   const timeoutIdsRef = useRef([]);
   const advanceAfterMessageRef = useRef(null);
 
-  const { entries, isPriorityLimited, priorityCount, priorityWordIds, totalPriorityCount, usingFallback, usingReviewSession } = useMemo(
-    () => buildGameWordBank(words, { minWords: 4 }),
-    [words],
+  const gameOptions = useMemo(() => ({ minWords: 4 }), []);
+  const { beginPlaySession, defaultBank, pickRoundEntries } = useReviewSessionPlay(
+    words,
+    gameOptions,
   );
+  const {
+    entries,
+    isPriorityLimited,
+    priorityCount,
+    priorityWordIds,
+    totalPriorityCount,
+    usingFallback,
+    usingReviewSession,
+  } = defaultBank;
 
   const [gameState, setGameState] = useState("start");
   const [questions, setQuestions] = useState([]);
@@ -557,7 +570,15 @@ function PenaltyTwelvePage() {
     initAudio();
     resetTracker();
 
-    const nextQuestions = makeQuestions(entries, priorityWordIds);
+    const bank = beginPlaySession();
+    const roundEntries = bank.usingReviewSession
+      ? pickRoundEntries(bank, TOTAL_ROUNDS)
+      : null;
+    const nextQuestions = makeQuestions(
+      bank.entries,
+      bank.priorityWordIds,
+      roundEntries,
+    );
 
     setQuestions(nextQuestions);
     setGoals(0);
@@ -566,7 +587,14 @@ function PenaltyTwelvePage() {
     setLocked(false);
     setGameState("playing");
     loadQuestion(0, nextQuestions);
-  }, [clearScheduled, entries, initAudio, loadQuestion, priorityWordIds, resetTracker]);
+  }, [
+    beginPlaySession,
+    clearScheduled,
+    initAudio,
+    loadQuestion,
+    pickRoundEntries,
+    resetTracker,
+  ]);
 
   const getComboMessage = useCallback(
     (nextCombo) => {
