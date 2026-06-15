@@ -1,5 +1,4 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
-import { Link } from "react-router-dom";
 import GameHomeButton from "../components/GameHomeButton.jsx";
 import GameMistakeSummary from "../components/GameMistakeSummary.jsx";
 import GameWordBankStatus from "../components/GameWordBankStatus.jsx";
@@ -936,9 +935,6 @@ function BattleJetQuizPage() {
               <button className="battle-jet-btn" onClick={startGame} type="button">
                 {t("games.playAgain")}
               </button>
-              <Link className="battle-jet-secondary-btn" to="/">
-                {t("common.home")}
-              </Link>
             </div>
           </div>
         ) : null}

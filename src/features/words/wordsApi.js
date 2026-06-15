@@ -63,6 +63,10 @@ function mapDbWordToWord(row) {
 }
 
 function mapWordToInsert(word, userId) {
+  return mapWordToDbRow(word, userId);
+}
+
+export function mapWordToDbRow(word, userId) {
   return {
     user_id: userId,
     term: word.term,

@@ -1,3 +1,11 @@
+import {
+  canUseWordbase,
+  contributeWordDetailsFromSuggestion,
+  fetchWordbaseEntry,
+  hasWordbaseDetails,
+  wordbaseEntryToSuggestion,
+} from "./wordbaseApi.js";
+
 export function createDemoSuggestion(term) {
   const normalizedTerm = term.trim();
 
@@ -64,16 +72,72 @@ export async function fetchCompleteWord(term, locale = "zh-Hant") {
   };
 }
 
-export async function fetchCompleteWordWithFallback(term, locale = "zh-Hant") {
+export async function fetchCompleteWordWithFallback(
+  term,
+  locale = "zh-Hant",
+  { user, skipWordbase = false } = {},
+) {
+  if (!skipWordbase) {
+    try {
+      if (canUseWordbase(user)) {
+        const entry = await fetchWordbaseEntry(term);
+
+        if (hasWordbaseDetails(entry)) {
+          return {
+            suggestion: wordbaseEntryToSuggestion(entry),
+            usedFallback: false,
+            fromWordbase: true,
+          };
+        }
+      }
+    } catch (wordbaseError) {
+      console.warn("Could not read word from wordbase.", wordbaseError);
+    }
+  }
+
   try {
-    return await fetchCompleteWord(term, locale);
+    const result = await fetchCompleteWord(term, locale);
+
+    if (!skipWordbase && user?.id && !result.usedFallback) {
+      void contributeWordDetailsFromSuggestion(result.suggestion, user.id).catch((syncError) => {
+        console.warn("Could not contribute word details to wordbase.", syncError);
+      });
+    }
+
+    return {
+      ...result,
+      fromWordbase: false,
+    };
   } catch (error) {
     return {
       suggestion: createDemoSuggestion(term),
       usedFallback: true,
       fallbackReason: error.message,
+      fromWordbase: false,
     };
   }
+}
+
+export async function completeWordsInBatch(
+  terms,
+  { locale = "zh-Hant", onProgress, user } = {},
+) {
+  const results = [];
+
+  for (let index = 0; index < terms.length; index += 1) {
+    const term = terms[index];
+    const result = await fetchCompleteWordWithFallback(term, locale, { user });
+
+    results.push({
+      ...suggestionToFormValues(result.suggestion),
+      usedFallback: result.usedFallback,
+      fromWordbase: Boolean(result.fromWordbase),
+    });
+
+    onProgress?.(index + 1, terms.length);
+  }
+
+  return results;
 }
 
 export async function fetchExtractedWords(imageDataUrl) {
@@ -91,22 +155,4 @@ export async function fetchExtractedWords(imageDataUrl) {
   }
 
   return data.words ?? [];
-}
-
-export async function completeWordsInBatch(terms, { locale = "zh-Hant", onProgress } = {}) {
-  const results = [];
-
-  for (let index = 0; index < terms.length; index += 1) {
-    const term = terms[index];
-    const result = await fetchCompleteWordWithFallback(term, locale);
-
-    results.push({
-      ...suggestionToFormValues(result.suggestion),
-      usedFallback: result.usedFallback,
-    });
-
-    onProgress?.(index + 1, terms.length);
-  }
-
-  return results;
 }

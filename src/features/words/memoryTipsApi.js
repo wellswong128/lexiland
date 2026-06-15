@@ -4,6 +4,12 @@ import {
   readStoredMemoryTips,
   writeStoredMemoryTips,
 } from "../../lib/wordAiMemoryStorage.js";
+import {
+  canUseWordbase,
+  contributeMemoryTipsToWordbase,
+  fetchWordbaseEntry,
+  hasWordbaseMemoryTips,
+} from "./wordbaseApi.js";
 
 export const MEMORY_TIPS_CACHE_KEY = "lexiland.memoryTipsCache.v1";
 
@@ -200,7 +206,7 @@ export async function fetchMemoryTips(word, locale) {
 export async function fetchMemoryTipsWithFallback(
   word,
   locale,
-  { forceRefresh = false } = {},
+  { forceRefresh = false, user } = {},
 ) {
   if (!forceRefresh) {
     const savedTips = readWordMemoryTips(word, locale);
@@ -212,16 +218,49 @@ export async function fetchMemoryTipsWithFallback(
         fromCache: true,
       };
     }
+
+    if (canUseWordbase(user)) {
+      try {
+        const entry = await fetchWordbaseEntry(word.term);
+
+        if (hasWordbaseMemoryTips(entry, locale)) {
+          const memoryTips = stripSavedAt(entry.memoryTipsByLocale[locale]);
+          const changes = persistWordMemoryTips(word, locale, memoryTips);
+
+          return {
+            memoryTips,
+            usedFallback: false,
+            fromCache: false,
+            fromWordbase: true,
+            changes,
+          };
+        }
+      } catch (wordbaseError) {
+        console.warn("Could not read memory tips from wordbase.", wordbaseError);
+      }
+    }
   }
 
   try {
     const result = await fetchMemoryTips(word, locale);
     const changes = persistWordMemoryTips(word, locale, result.memoryTips);
 
+    if (canUseWordbase(user) && !result.usedFallback) {
+      void contributeMemoryTipsToWordbase(
+        word,
+        locale,
+        result.memoryTips,
+        user.id,
+      ).catch((syncError) => {
+        console.warn("Could not contribute memory tips to wordbase.", syncError);
+      });
+    }
+
     return {
       ...result,
       changes,
       fromCache: false,
+      fromWordbase: false,
     };
   } catch (error) {
     const memoryTips = createDemoMemoryTips(word, locale);
@@ -233,6 +272,7 @@ export async function fetchMemoryTipsWithFallback(
       fallbackReason: error.message,
       changes,
       fromCache: false,
+      fromWordbase: false,
     };
   }
 }

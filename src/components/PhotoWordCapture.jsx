@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { useLocale } from "../features/locale/LocaleContext.jsx";
 import {
   completeWordsInBatch,
-  fetchCompleteWord,
+  fetchCompleteWordWithFallback,
   fetchExtractedWords,
   suggestionToFormValues,
 } from "../features/words/completeWordApi.js";
@@ -55,7 +55,7 @@ function PhotoWordCapture({ autoOpenCamera = false, onAutoOpenCameraConsumed }) 
   const initialState = useMemo(() => getInitialPhotoCaptureState(), []);
   const { locale, t } = useLocale();
   const navigate = useNavigate();
-  const { importWords, words } = useWordsContext();
+  const { importWords, words, user } = useWordsContext();
   const fileInputRef = useRef(null);
   const cameraInputRef = useRef(null);
   const hasShownRestoreMessageRef = useRef(false);
@@ -243,6 +243,7 @@ function PhotoWordCapture({ autoOpenCamera = false, onAutoOpenCameraConsumed }) 
 
       const completedWords = await completeWordsInBatch(selectedTerms, {
         locale,
+        user,
         onProgress: (current, total) => {
           setCompletionProgress({ current, total });
         },
@@ -301,7 +302,10 @@ function PhotoWordCapture({ autoOpenCamera = false, onAutoOpenCameraConsumed }) 
       setRetryingWordId(wordId);
       setError("");
 
-      const result = await fetchCompleteWord(word.term, locale);
+      const result = await fetchCompleteWordWithFallback(word.term, locale, {
+        user,
+        skipWordbase: true,
+      });
 
       setPreviewWords((currentWords) =>
         currentWords.map((item) =>
@@ -344,7 +348,10 @@ function PhotoWordCapture({ autoOpenCamera = false, onAutoOpenCameraConsumed }) 
         setRetryingWordId(word.id);
 
         try {
-          const result = await fetchCompleteWord(word.term, locale);
+          const result = await fetchCompleteWordWithFallback(word.term, locale, {
+        user,
+        skipWordbase: true,
+      });
 
           setPreviewWords((currentWords) =>
             currentWords.map((item) =>

@@ -8,7 +8,7 @@ import {
 
 function WordMemoryPanel({ autoLoad = false, compact = false, word }) {
   const { locale, t } = useLocale();
-  const { updateWord } = useWordsContext();
+  const { updateWord, user } = useWordsContext();
   const [memoryTips, setMemoryTips] = useState(
     () => readWordMemory(word, locale).memoryTips,
   );
@@ -38,6 +38,7 @@ function WordMemoryPanel({ autoLoad = false, compact = false, word }) {
 
       const result = await fetchWordMemoryWithCache(word, locale, {
         forceRefresh,
+        user,
       });
 
       if (result.changes) {

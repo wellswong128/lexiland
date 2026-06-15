@@ -4,6 +4,12 @@ import {
   readStoredMemoryImage,
   writeStoredMemoryImage,
 } from "../../lib/wordAiMemoryStorage.js";
+import {
+  canUseWordbase,
+  contributeMemoryImageToWordbase,
+  fetchWordbaseEntry,
+  hasWordbaseMemoryImage,
+} from "./wordbaseApi.js";
 
 export const WORD_IMAGE_CACHE_KEY = "lexiland.wordImageCache.v1";
 
@@ -132,7 +138,7 @@ export async function fetchWordImage(word) {
 
 export async function fetchWordImageWithCache(
   word,
-  { forceRefresh = false } = {},
+  { forceRefresh = false, user } = {},
 ) {
   if (!forceRefresh) {
     const savedImage = readWordMemoryImage(word);
@@ -143,14 +149,41 @@ export async function fetchWordImageWithCache(
         fromCache: true,
       };
     }
+
+    if (canUseWordbase(user)) {
+      try {
+        const entry = await fetchWordbaseEntry(word.term);
+
+        if (hasWordbaseMemoryImage(entry)) {
+          const memoryImage = stripSavedAt(entry.memoryImage);
+          const changes = persistWordMemoryImage(word, memoryImage);
+
+          return {
+            ...memoryImage,
+            changes,
+            fromCache: false,
+            fromWordbase: true,
+          };
+        }
+      } catch (wordbaseError) {
+        console.warn("Could not read memory image from wordbase.", wordbaseError);
+      }
+    }
   }
 
   const image = await fetchWordImage(word);
   const changes = persistWordMemoryImage(word, image);
 
+  if (canUseWordbase(user) && image.imageUrl) {
+    void contributeMemoryImageToWordbase(word, image, user.id).catch((syncError) => {
+      console.warn("Could not contribute memory image to wordbase.", syncError);
+    });
+  }
+
   return {
     ...image,
     changes,
     fromCache: false,
+    fromWordbase: false,
   };
 }
