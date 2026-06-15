@@ -30,6 +30,17 @@ function GoogleIcon() {
   );
 }
 
+function MicrosoftIcon() {
+  return (
+    <svg aria-hidden="true" className="size-5 shrink-0" viewBox="0 0 24 24">
+      <rect fill="#F25022" height="11" width="11" x="1" y="1" />
+      <rect fill="#7FBA00" height="11" width="11" x="12" y="1" />
+      <rect fill="#00A4EF" height="11" width="11" x="1" y="12" />
+      <rect fill="#FFB900" height="11" width="11" x="12" y="12" />
+    </svg>
+  );
+}
+
 function MailIcon() {
   return (
     <svg
@@ -226,6 +237,16 @@ function AuthPage() {
               >
                 <GoogleIcon />
                 {t("auth.continueGoogle")}
+              </button>
+
+              <button
+                className="flex w-full items-center justify-center gap-3 rounded-full bg-[#0078D4] px-5 py-3.5 text-sm font-bold text-white transition hover:bg-[#106EBE] disabled:opacity-60"
+                disabled={isSubmitting}
+                onClick={() => handleOAuth("azure")}
+                type="button"
+              >
+                <MicrosoftIcon />
+                {t("auth.continueMicrosoft")}
               </button>
 
               <button
