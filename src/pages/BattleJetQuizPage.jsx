@@ -5,10 +5,10 @@ import GameMistakeSummary from "../components/GameMistakeSummary.jsx";
 import GameWordBankStatus from "../components/GameWordBankStatus.jsx";
 import GameWordWithSpeak from "../components/GameWordWithSpeak.jsx";
 import {
-  buildTranslationQuizQuestions,
-  buildTranslationQuizQuestionsFromEntries,
+  buildGameTranslationQuizQuestions,
 } from "../features/games/gameWordBank.js";
 import { useReviewSessionPlay } from "../features/games/useReviewSessionPlay.js";
+import { loadReviewSession } from "../lib/reviewSessionStorage.js";
 import { useLocale } from "../features/locale/LocaleContext.jsx";
 import { useGameMistakeTracker } from "../features/review/useGameMistakeTracker.js";
 import { useWordsContext } from "../features/words/WordsContext.jsx";
@@ -228,10 +228,9 @@ function BattleJetQuizPage() {
   const advanceAfterMessageRef = useRef(null);
 
   const gameOptions = useMemo(() => ({ minWords: 4 }), []);
-  const { beginPlaySession, defaultBank, pickRoundEntries } = useReviewSessionPlay(
-    words,
-    gameOptions,
-  );
+  const { beginPlaySession, defaultBank } = useReviewSessionPlay(words, gameOptions);
+  const reviewSessionStartedAt = loadReviewSession()?.startedAt ?? null;
+  const cachedReviewQuestionsRef = useRef(null);
   const {
     entries,
     isPriorityLimited,
@@ -283,6 +282,10 @@ function BattleJetQuizPage() {
   }, []);
 
   useEffect(() => () => clearScheduled(), [clearScheduled]);
+
+  useEffect(() => {
+    cachedReviewQuestionsRef.current = null;
+  }, [reviewSessionStartedAt]);
 
   const resetOptionState = useCallback(() => {
     setLocked(false);
@@ -488,11 +491,13 @@ function BattleJetQuizPage() {
 
     const bank = beginPlaySession();
     const nextQuestions = bank.usingReviewSession
-      ? buildTranslationQuizQuestionsFromEntries(
-          pickRoundEntries(bank, TOTAL_ROUNDS),
-          bank.entries,
-        )
-      : buildTranslationQuizQuestions(bank.entries, bank.priorityWordIds, TOTAL_ROUNDS);
+      ? (cachedReviewQuestionsRef.current ??=
+          buildGameTranslationQuizQuestions(bank, TOTAL_ROUNDS))
+      : buildGameTranslationQuizQuestions(bank, TOTAL_ROUNDS);
+
+    if (!bank.usingReviewSession) {
+      cachedReviewQuestionsRef.current = null;
+    }
 
     setQuestions(nextQuestions);
     setHits(0);
@@ -500,14 +505,7 @@ function BattleJetQuizPage() {
     setCombo(0);
     setGameState("playing");
     loadQuestion(0);
-  }, [
-    beginPlaySession,
-    clearScheduled,
-    initAudio,
-    loadQuestion,
-    pickRoundEntries,
-    resetTracker,
-  ]);
+  }, [beginPlaySession, clearScheduled, initAudio, loadQuestion, resetTracker]);
 
   const getComboMessage = useCallback(
     (nextCombo) => {

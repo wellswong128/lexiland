@@ -217,6 +217,31 @@ export function buildTranslationQuizQuestionsFromEntries(roundEntries, entries) 
   return roundEntries.map((item) => buildTranslationQuizQuestion(item, entries));
 }
 
+export function getSequentialRoundEntries(entries, totalRounds) {
+  if (entries.length === 0 || totalRounds <= 0) {
+    return [];
+  }
+
+  const rounds = [];
+
+  for (let index = 0; index < totalRounds; index += 1) {
+    rounds.push(entries[index % entries.length]);
+  }
+
+  return rounds;
+}
+
+export function buildGameTranslationQuizQuestions(bank, totalRounds) {
+  if (bank.usingReviewSession) {
+    return buildTranslationQuizQuestionsFromEntries(
+      getSequentialRoundEntries(bank.entries, totalRounds),
+      bank.entries,
+    );
+  }
+
+  return buildTranslationQuizQuestions(bank.entries, bank.priorityWordIds, totalRounds);
+}
+
 function buildTranslationQuizQuestion(item, entries) {
   const wrongPool = entries
     .filter((candidate) => candidate.meaning !== item.meaning)

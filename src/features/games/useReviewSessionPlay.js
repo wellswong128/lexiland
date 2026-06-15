@@ -3,7 +3,7 @@ import {
   ensureReviewGamePlan,
   loadReviewSession,
 } from "../../lib/reviewSessionStorage.js";
-import { buildGameWordBank } from "./gameWordBank.js";
+import { buildGameWordBank, getSequentialRoundEntries } from "./gameWordBank.js";
 
 export function useReviewSessionPlay(words, options) {
   const defaultBank = useMemo(() => buildGameWordBank(words, options), [options, words]);
@@ -17,17 +17,19 @@ export function useReviewSessionPlay(words, options) {
   }, [reviewSessionStartedAt]);
 
   const beginPlaySession = useCallback(() => {
-    if (!defaultBank.usingReviewSession) {
+    const hasReviewSession = Boolean(loadReviewSession()?.wordIds.length);
+
+    if (!hasReviewSession) {
       playBankRef.current = null;
       pickerIndexRef.current = 0;
-      return defaultBank;
+      return buildGameWordBank(words, options);
     }
 
     ensureReviewGamePlan();
     playBankRef.current = buildGameWordBank(words, options);
     pickerIndexRef.current = 0;
     return playBankRef.current;
-  }, [defaultBank, options, words]);
+  }, [options, words]);
 
   const pickNextEntry = useCallback((bank) => {
     if (!bank.usingReviewSession || bank.entries.length === 0) {
@@ -45,13 +47,7 @@ export function useReviewSessionPlay(words, options) {
       return null;
     }
 
-    const rounds = [];
-
-    for (let index = 0; index < totalRounds; index += 1) {
-      rounds.push(bank.entries[index % bank.entries.length]);
-    }
-
-    return rounds;
+    return getSequentialRoundEntries(bank.entries, totalRounds);
   }, []);
 
   return {
