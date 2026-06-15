@@ -16,6 +16,8 @@ function addDays(date, days) {
   return nextDate.toISOString();
 }
 
+export const REVIEW_SESSION_WORD_LIMIT = 10;
+
 export function getDueWords(words, now = new Date()) {
   return words.filter((word) => {
     const nextReviewAt = word.review?.nextReviewAt;
@@ -26,6 +28,19 @@ export function getDueWords(words, now = new Date()) {
 
     return new Date(nextReviewAt) <= now;
   });
+}
+
+export function getReviewSessionWords(words, { mistakesOnly = false, now = new Date() } = {}) {
+  const allWords = mistakesOnly
+    ? words.filter((word) => word.mistake.isMistake)
+    : getDueWords(words, now);
+
+  return {
+    allWords,
+    isLimited: allWords.length > REVIEW_SESSION_WORD_LIMIT,
+    sessionWords: allWords.slice(0, REVIEW_SESSION_WORD_LIMIT),
+    totalCount: allWords.length,
+  };
 }
 
 export function getNextReviewAt(level, now = new Date()) {

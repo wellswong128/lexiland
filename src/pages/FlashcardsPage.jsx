@@ -5,7 +5,7 @@ import SpeakButton from "../components/SpeakButton.jsx";
 import WordMemoryPanel from "../components/WordMemoryPanel.jsx";
 import { useLocale } from "../features/locale/LocaleContext.jsx";
 import {
-  getDueWords,
+  getReviewSessionWords,
   updateReviewResult,
 } from "../features/review/reviewHelpers.js";
 import { useWordsContext } from "../features/words/WordsContext.jsx";
@@ -37,13 +37,11 @@ function FlashcardsPage() {
   const { updateWord, words } = useWordsContext();
   const [searchParams] = useSearchParams();
   const mistakesOnly = searchParams.get("mode") === "mistakes";
-  const [sessionWords] = useState(() => {
-    const reviewWords = mistakesOnly
-      ? words.filter((word) => word.mistake.isMistake)
-      : getDueWords(words);
-
-    return reviewWords;
-  });
+  const [{ isLimited, sessionWords, totalCount }] = useState(() =>
+    getReviewSessionWords(words, {
+      mistakesOnly: searchParams.get("mode") === "mistakes",
+    }),
+  );
   const [hasStarted, setHasStarted] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [showAnswer, setShowAnswer] = useState(false);
@@ -114,9 +112,14 @@ function FlashcardsPage() {
             </h1>
             <p className="mt-4 text-slate-600">
               {mistakesOnly
-                ? t("flashcards.listCountMistakes", { count: sessionWords.length })
-                : t("flashcards.listCount", { count: sessionWords.length })}
+                ? t("flashcards.listCountMistakes", { count: totalCount })
+                : t("flashcards.listCount", { count: totalCount })}
             </p>
+            {isLimited ? (
+              <p className="mt-2 text-sm font-semibold text-amber-800">
+                {t("flashcards.reviewFirstTenOnly")}
+              </p>
+            ) : null}
           </div>
 
           <button
