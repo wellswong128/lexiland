@@ -115,10 +115,7 @@ function SpellingNinjaPage() {
   } = defaultBank;
 
   const pickWordForBank = useCallback(
-    (bank) =>
-      bank.usingReviewSession
-        ? (options) => pickNextEntry(bank, options)
-        : null,
+    (bank) => (bank.usingReviewSession ? () => pickNextEntry(bank) : null),
     [pickNextEntry],
   );
 

@@ -1,4 +1,7 @@
-import { getReviewSessionEntryOrder } from "../../lib/reviewSessionStorage.js";
+import {
+  getReviewSessionEntryOrder,
+  loadReviewSession,
+} from "../../lib/reviewSessionStorage.js";
 import { getLimitedPriorityReviewWords } from "../review/reviewHelpers.js";
 
 export const GAME_FALLBACK_WORDS = [
@@ -83,7 +86,8 @@ export function buildGameWordBank(
     normalizeWord = (term) => term.trim().toLowerCase(),
   } = {},
 ) {
-  const reviewSessionWordIds = getReviewSessionEntryOrder();
+  const hasReviewSession = Boolean(loadReviewSession()?.wordIds.length);
+  const reviewSessionWordIds = hasReviewSession ? getReviewSessionEntryOrder() : null;
   const reviewSessionIdSet =
     reviewSessionWordIds && reviewSessionWordIds.length > 0
       ? new Set(reviewSessionWordIds)

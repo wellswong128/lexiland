@@ -27,13 +27,16 @@ export function saveReviewSession(
     return;
   }
 
+  const filteredWordIds = wordIds.filter(Boolean);
+
   storage.setItem(
     REVIEW_SESSION_STORAGE_KEY,
     JSON.stringify({
+      gamePlanWordIds: shuffleWordIds(filteredWordIds),
       mistakesOnly,
       startedAt: new Date().toISOString(),
       totalCount,
-      wordIds,
+      wordIds: filteredWordIds,
     }),
   );
 }
@@ -95,11 +98,7 @@ export function getReviewSessionEntryOrder(storage = getDefaultStorage()) {
     return null;
   }
 
-  if (session.gamePlanWordIds.length > 0) {
-    return session.gamePlanWordIds;
-  }
-
-  return session.wordIds;
+  return ensureReviewGamePlan(storage);
 }
 
 export function ensureReviewGamePlan(storage = getDefaultStorage()) {

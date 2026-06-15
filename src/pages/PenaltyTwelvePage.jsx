@@ -400,10 +400,8 @@ function PenaltyTwelvePage() {
   const advanceAfterMessageRef = useRef(null);
 
   const gameOptions = useMemo(() => ({ minWords: 4 }), []);
-  const { beginPlaySession, defaultBank, pickRoundEntries } = useReviewSessionPlay(
-    words,
-    gameOptions,
-  );
+  const { beginPlaySession, defaultBank, getActivePlayBank, pickRoundEntries } =
+    useReviewSessionPlay(words, gameOptions);
   const {
     entries,
     isPriorityLimited,
@@ -507,7 +505,7 @@ function PenaltyTwelvePage() {
       const question = questionList[index];
       if (question) {
         setCurrentChoices(
-          makeChoicesForWord(entries, {
+          makeChoicesForWord(getActivePlayBank().entries, {
             word: question.en,
             meaning: question.zh,
           }),
@@ -519,7 +517,7 @@ function PenaltyTwelvePage() {
       setCurrentIndex(index);
       resetOptionState();
     },
-    [entries, questions, resetAnimation, resetOptionState],
+    [getActivePlayBank, questions, resetAnimation, resetOptionState],
   );
 
   const getRank = useCallback(

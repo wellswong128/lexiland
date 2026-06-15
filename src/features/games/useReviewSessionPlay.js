@@ -23,36 +23,18 @@ export function useReviewSessionPlay(words, options) {
       return defaultBank;
     }
 
-    if (!playBankRef.current) {
-      ensureReviewGamePlan();
-      playBankRef.current = buildGameWordBank(words, options);
-    }
-
+    ensureReviewGamePlan();
+    playBankRef.current = buildGameWordBank(words, options);
     pickerIndexRef.current = 0;
     return playBankRef.current;
   }, [defaultBank, options, words]);
 
-  const pickNextEntry = useCallback((bank, { level } = {}) => {
-    if (!bank.usingReviewSession) {
+  const pickNextEntry = useCallback((bank) => {
+    if (!bank.usingReviewSession || bank.entries.length === 0) {
       return null;
     }
 
-    const pool =
-      typeof level === "number"
-        ? bank.entries.filter((entry) => {
-            if (level <= 2) {
-              return entry.word.length <= 6;
-            }
-
-            if (level <= 5) {
-              return entry.word.length <= 9;
-            }
-
-            return true;
-          })
-        : bank.entries;
-    const activePool = pool.length > 0 ? pool : bank.entries;
-    const entry = activePool[pickerIndexRef.current % activePool.length];
+    const entry = bank.entries[pickerIndexRef.current % bank.entries.length];
 
     pickerIndexRef.current += 1;
     return entry;
