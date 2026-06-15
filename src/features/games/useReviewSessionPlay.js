@@ -1,9 +1,14 @@
 import { useCallback, useEffect, useMemo, useRef } from "react";
 import {
   ensureReviewGamePlan,
+  hasActiveReviewSession,
   loadReviewSession,
 } from "../../lib/reviewSessionStorage.js";
-import { buildGameWordBank, getSequentialRoundEntries } from "./gameWordBank.js";
+import {
+  buildGameWordBank,
+  getSequentialRoundEntries,
+  shouldUseGamePlan,
+} from "./gameWordBank.js";
 
 export function useReviewSessionPlay(words, options) {
   const defaultBank = useMemo(() => buildGameWordBank(words, options), [options, words]);
@@ -17,9 +22,7 @@ export function useReviewSessionPlay(words, options) {
   }, [reviewSessionStartedAt]);
 
   const beginPlaySession = useCallback(() => {
-    const hasReviewSession = Boolean(loadReviewSession()?.wordIds.length);
-
-    if (!hasReviewSession) {
+    if (!hasActiveReviewSession()) {
       playBankRef.current = null;
       pickerIndexRef.current = 0;
       return buildGameWordBank(words, options);
@@ -32,7 +35,7 @@ export function useReviewSessionPlay(words, options) {
   }, [options, words]);
 
   const pickNextEntry = useCallback((bank) => {
-    if (!bank.usingReviewSession || bank.entries.length === 0) {
+    if (!shouldUseGamePlan(bank)) {
       return null;
     }
 
@@ -43,7 +46,7 @@ export function useReviewSessionPlay(words, options) {
   }, []);
 
   const pickRoundEntries = useCallback((bank, totalRounds) => {
-    if (!bank.usingReviewSession) {
+    if (!shouldUseGamePlan(bank)) {
       return null;
     }
 

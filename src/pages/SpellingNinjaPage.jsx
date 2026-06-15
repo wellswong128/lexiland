@@ -7,6 +7,7 @@ import SpeakButton from "../components/SpeakButton.jsx";
 import {
   normalizeGameWord,
   pickNinjaWord,
+  shouldUseGamePlan,
 } from "../features/games/gameWordBank.js";
 import { useReviewSessionPlay } from "../features/games/useReviewSessionPlay.js";
 import { useLocale } from "../features/locale/LocaleContext.jsx";
@@ -111,11 +112,10 @@ function SpellingNinjaPage() {
     priorityWordIds,
     totalPriorityCount,
     usingFallback,
-    usingReviewSession,
   } = defaultBank;
 
   const pickWordForBank = useCallback(
-    (bank) => (bank.usingReviewSession ? () => pickNextEntry(bank) : null),
+    (bank) => (shouldUseGamePlan(bank) ? () => pickNextEntry(bank) : null),
     [pickNextEntry],
   );
 
@@ -680,7 +680,7 @@ function SpellingNinjaPage() {
             priorityCount={priorityCount}
             totalPriorityCount={totalPriorityCount}
             usingFallback={usingFallback}
-            usingReviewSession={usingReviewSession}
+            usingReviewSession={defaultBank.hasReviewSession && defaultBank.priorityCount > 0}
           />
           {defeatedWords.length > 0
             ? ` ${t("games.ninja.resultCount", { count: defeatedWords.length })}`

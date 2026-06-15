@@ -91,6 +91,10 @@ export function getActiveReviewSessionWordIds(storage = getDefaultStorage()) {
   return new Set(session.wordIds);
 }
 
+export function hasActiveReviewSession(storage = getDefaultStorage()) {
+  return Boolean(loadReviewSession(storage)?.wordIds.length);
+}
+
 export function getReviewSessionEntryOrder(storage = getDefaultStorage()) {
   const session = loadReviewSession(storage);
 

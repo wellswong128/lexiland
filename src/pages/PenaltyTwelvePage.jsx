@@ -7,6 +7,7 @@ import GameWordWithSpeak from "../components/GameWordWithSpeak.jsx";
 import {
   pickFixedRoundEntries,
   shuffleArray,
+  shouldUseGamePlan,
 } from "../features/games/gameWordBank.js";
 import { useReviewSessionPlay } from "../features/games/useReviewSessionPlay.js";
 import { useLocale } from "../features/locale/LocaleContext.jsx";
@@ -409,7 +410,6 @@ function PenaltyTwelvePage() {
     priorityWordIds,
     totalPriorityCount,
     usingFallback,
-    usingReviewSession,
   } = defaultBank;
 
   const [gameState, setGameState] = useState("start");
@@ -569,7 +569,7 @@ function PenaltyTwelvePage() {
     resetTracker();
 
     const bank = beginPlaySession();
-    const roundEntries = bank.usingReviewSession
+    const roundEntries = shouldUseGamePlan(bank)
       ? pickRoundEntries(bank, TOTAL_ROUNDS)
       : null;
     const nextQuestions = makeQuestions(
@@ -1166,7 +1166,7 @@ function PenaltyTwelvePage() {
           priorityCount={priorityCount}
           totalPriorityCount={totalPriorityCount}
           usingFallback={usingFallback}
-          usingReviewSession={usingReviewSession}
+          usingReviewSession={defaultBank.hasReviewSession && defaultBank.priorityCount > 0}
         />
       ) : null}
     </section>

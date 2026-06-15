@@ -7,6 +7,7 @@ import GameWordWithSpeak from "../components/GameWordWithSpeak.jsx";
 import {
   pickRandomEntry,
   shuffleArray,
+  shouldUseGamePlan,
 } from "../features/games/gameWordBank.js";
 import { useReviewSessionPlay } from "../features/games/useReviewSessionPlay.js";
 import { useLocale } from "../features/locale/LocaleContext.jsx";
@@ -127,12 +128,11 @@ function WordKartPage() {
     priorityWordIds,
     totalPriorityCount,
     usingFallback,
-    usingReviewSession,
   } = defaultBank;
 
   const pickQuestionForBank = useCallback(
     (bank) =>
-      bank.usingReviewSession
+      shouldUseGamePlan(bank)
         ? () => pickNextEntry(bank)
         : () => pickRandomEntry(bank.entries, bank.priorityWordIds),
     [pickNextEntry],
@@ -561,7 +561,7 @@ function WordKartPage() {
           priorityCount={priorityCount}
           totalPriorityCount={totalPriorityCount}
           usingFallback={usingFallback}
-          usingReviewSession={usingReviewSession}
+          usingReviewSession={defaultBank.hasReviewSession && defaultBank.priorityCount > 0}
         />
       )}
     </section>

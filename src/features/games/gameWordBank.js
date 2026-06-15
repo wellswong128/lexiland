@@ -1,5 +1,6 @@
 import {
   getReviewSessionEntryOrder,
+  hasActiveReviewSession,
   loadReviewSession,
 } from "../../lib/reviewSessionStorage.js";
 import { getLimitedPriorityReviewWords } from "../review/reviewHelpers.js";
@@ -66,16 +67,27 @@ export function getPriorityWordIds(words, now = new Date()) {
   );
 }
 
-function orderEntriesByWordIds(entries, wordIds) {
-  if (!wordIds?.length) {
-    return entries;
+function buildEntriesFromGamePlan(
+  words,
+  gamePlanWordIds,
+  { minLength = 1, normalizeWord = (term) => term.trim().toLowerCase() } = {},
+) {
+  if (!gamePlanWordIds?.length) {
+    return [];
   }
 
-  const entriesById = new Map(
-    entries.filter((entry) => entry.wordId).map((entry) => [entry.wordId, entry]),
-  );
+  const wordsById = new Map(words.map((word) => [word.id, word]));
 
-  return wordIds.map((wordId) => entriesById.get(wordId)).filter(Boolean);
+  return gamePlanWordIds
+    .map((wordId) => wordsById.get(wordId))
+    .filter(Boolean)
+    .map((word) => toGameEntry(word, { normalizeWord }))
+    .filter(Boolean)
+    .filter((entry) => entry.word.length >= minLength);
+}
+
+export function shouldUseGamePlan(bank) {
+  return Boolean(bank?.hasReviewSession && bank.entries.length > 0);
 }
 
 export function buildGameWordBank(
@@ -86,49 +98,36 @@ export function buildGameWordBank(
     normalizeWord = (term) => term.trim().toLowerCase(),
   } = {},
 ) {
-  const hasReviewSession = Boolean(loadReviewSession()?.wordIds.length);
-  const reviewSessionWordIds = hasReviewSession ? getReviewSessionEntryOrder() : null;
-  const reviewSessionIdSet =
-    reviewSessionWordIds && reviewSessionWordIds.length > 0
-      ? new Set(reviewSessionWordIds)
-      : null;
-  const sessionWords =
-    reviewSessionIdSet && reviewSessionIdSet.size > 0
-      ? words.filter((word) => reviewSessionIdSet.has(word.id))
-      : null;
-  const sourceWords = sessionWords ?? words;
-
-  const savedEntries = sourceWords
-    .map((word) => toGameEntry(word, { normalizeWord }))
-    .filter(Boolean)
-    .filter((entry) => entry.word.length >= minLength);
-  const orderedEntries = sessionWords
-    ? orderEntriesByWordIds(savedEntries, reviewSessionWordIds)
-    : savedEntries;
-
-  const usingReviewSession = Boolean(sessionWords && orderedEntries.length > 0);
-  const usingFallback = usingReviewSession
-    ? false
-    : orderedEntries.length < minWords;
-  const entries = usingFallback
-    ? GAME_FALLBACK_WORDS.map((entry) => ({ ...entry, wordId: null }))
-    : orderedEntries;
-
-  if (usingReviewSession) {
-    const priorityWordIds = new Set(
-      savedEntries.map((entry) => entry.wordId).filter(Boolean),
-    );
+  if (hasActiveReviewSession()) {
+    const session = loadReviewSession();
+    const gamePlanWordIds = getReviewSessionEntryOrder() ?? [];
+    const entries = buildEntriesFromGamePlan(words, gamePlanWordIds, {
+      minLength,
+      normalizeWord,
+    });
+    const priorityWordIds = new Set(entries.map((entry) => entry.wordId).filter(Boolean));
 
     return {
       entries,
+      gamePlanWordIds,
+      hasReviewSession: true,
       isPriorityLimited: false,
-      priorityCount: savedEntries.length,
+      priorityCount: entries.length,
       priorityWordIds,
-      totalPriorityCount: savedEntries.length,
+      totalPriorityCount: session?.wordIds.length ?? entries.length,
       usingFallback: false,
-      usingReviewSession: true,
+      usingReviewSession: entries.length > 0,
     };
   }
+
+  const savedEntries = words
+    .map((word) => toGameEntry(word, { normalizeWord }))
+    .filter(Boolean)
+    .filter((entry) => entry.word.length >= minLength);
+  const usingFallback = savedEntries.length < minWords;
+  const entries = usingFallback
+    ? GAME_FALLBACK_WORDS.map((entry) => ({ ...entry, wordId: null }))
+    : savedEntries;
 
   const priorityReview = usingFallback
     ? { sessionWords: [], totalCount: 0, isLimited: false }
@@ -142,6 +141,8 @@ export function buildGameWordBank(
 
   return {
     entries,
+    gamePlanWordIds: null,
+    hasReviewSession: false,
     isPriorityLimited,
     priorityCount,
     priorityWordIds,
@@ -232,7 +233,7 @@ export function getSequentialRoundEntries(entries, totalRounds) {
 }
 
 export function buildGameTranslationQuizQuestions(bank, totalRounds) {
-  if (bank.usingReviewSession) {
+  if (shouldUseGamePlan(bank)) {
     return buildTranslationQuizQuestionsFromEntries(
       getSequentialRoundEntries(bank.entries, totalRounds),
       bank.entries,

@@ -6,6 +6,7 @@ import GameWordBankStatus from "../components/GameWordBankStatus.jsx";
 import GameWordWithSpeak from "../components/GameWordWithSpeak.jsx";
 import {
   buildGameTranslationQuizQuestions,
+  shouldUseGamePlan,
 } from "../features/games/gameWordBank.js";
 import { useReviewSessionPlay } from "../features/games/useReviewSessionPlay.js";
 import { loadReviewSession } from "../lib/reviewSessionStorage.js";
@@ -238,7 +239,6 @@ function BattleJetQuizPage() {
     priorityWordIds,
     totalPriorityCount,
     usingFallback,
-    usingReviewSession,
   } = defaultBank;
 
   const [gameState, setGameState] = useState("start");
@@ -490,13 +490,18 @@ function BattleJetQuizPage() {
     resetTracker();
 
     const bank = beginPlaySession();
-    const nextQuestions = bank.usingReviewSession
+    const useGamePlan = shouldUseGamePlan(bank);
+    const nextQuestions = useGamePlan
       ? (cachedReviewQuestionsRef.current ??=
           buildGameTranslationQuizQuestions(bank, TOTAL_ROUNDS))
       : buildGameTranslationQuizQuestions(bank, TOTAL_ROUNDS);
 
-    if (!bank.usingReviewSession) {
+    if (!useGamePlan) {
       cachedReviewQuestionsRef.current = null;
+    }
+
+    if (useGamePlan && nextQuestions.length === 0) {
+      return;
     }
 
     setQuestions(nextQuestions);
@@ -945,7 +950,7 @@ function BattleJetQuizPage() {
           priorityCount={priorityCount}
           totalPriorityCount={totalPriorityCount}
           usingFallback={usingFallback}
-          usingReviewSession={usingReviewSession}
+          usingReviewSession={defaultBank.hasReviewSession && defaultBank.priorityCount > 0}
         />
       ) : null}
     </section>
