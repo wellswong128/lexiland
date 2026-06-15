@@ -10,6 +10,7 @@ const WORD_COLUMNS = `
   pronunciation,
   part_of_speech,
   example,
+  example_translation,
   notes,
   tags,
   source,
@@ -37,6 +38,7 @@ function mapDbWordToWord(row) {
     pronunciation: row.pronunciation ?? "",
     partOfSpeech: row.part_of_speech ?? "",
     example: row.example ?? "",
+    exampleTranslation: row.example_translation ?? "",
     notes: row.notes ?? "",
     tags: row.tags ?? [],
     source: row.source,
@@ -69,6 +71,7 @@ function mapWordToInsert(word, userId) {
     pronunciation: word.pronunciation,
     part_of_speech: word.partOfSpeech,
     example: word.example,
+    example_translation: word.exampleTranslation,
     notes: word.notes,
     tags: word.tags,
     source: toSupabaseSource(word.source),
@@ -95,6 +98,9 @@ export function mapWordChangesToUpdate(changes) {
   if (Object.hasOwn(changes, "pronunciation")) update.pronunciation = changes.pronunciation;
   if (Object.hasOwn(changes, "partOfSpeech")) update.part_of_speech = changes.partOfSpeech;
   if (Object.hasOwn(changes, "example")) update.example = changes.example;
+  if (Object.hasOwn(changes, "exampleTranslation")) {
+    update.example_translation = changes.exampleTranslation;
+  }
   if (Object.hasOwn(changes, "notes")) update.notes = changes.notes;
   if (Object.hasOwn(changes, "tags")) update.tags = changes.tags;
   if (Object.hasOwn(changes, "source")) update.source = toSupabaseSource(changes.source);

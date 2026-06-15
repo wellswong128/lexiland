@@ -1,3 +1,4 @@
+import { getActiveReviewSessionWordIds } from "../../lib/reviewSessionStorage.js";
 import { getLimitedPriorityReviewWords } from "../review/reviewHelpers.js";
 
 export const GAME_FALLBACK_WORDS = [
@@ -70,15 +71,42 @@ export function buildGameWordBank(
     normalizeWord = (term) => term.trim().toLowerCase(),
   } = {},
 ) {
-  const savedEntries = words
+  const reviewSessionWordIds = getActiveReviewSessionWordIds();
+  const sessionWords =
+    reviewSessionWordIds && reviewSessionWordIds.size > 0
+      ? words.filter((word) => reviewSessionWordIds.has(word.id))
+      : null;
+  const sourceWords = sessionWords ?? words;
+
+  const savedEntries = sourceWords
     .map((word) => toGameEntry(word, { normalizeWord }))
     .filter(Boolean)
     .filter((entry) => entry.word.length >= minLength);
 
-  const usingFallback = savedEntries.length < minWords;
+  const usingReviewSession = Boolean(sessionWords && savedEntries.length > 0);
+  const usingFallback = usingReviewSession
+    ? false
+    : savedEntries.length < minWords;
   const entries = usingFallback
     ? GAME_FALLBACK_WORDS.map((entry) => ({ ...entry, wordId: null }))
     : savedEntries;
+
+  if (usingReviewSession) {
+    const priorityWordIds = new Set(
+      savedEntries.map((entry) => entry.wordId).filter(Boolean),
+    );
+
+    return {
+      entries,
+      isPriorityLimited: false,
+      priorityCount: savedEntries.length,
+      priorityWordIds,
+      totalPriorityCount: savedEntries.length,
+      usingFallback: false,
+      usingReviewSession: true,
+    };
+  }
+
   const priorityReview = usingFallback
     ? { sessionWords: [], totalCount: 0, isLimited: false }
     : getLimitedPriorityReviewWords(words);
@@ -96,6 +124,7 @@ export function buildGameWordBank(
     priorityWordIds,
     totalPriorityCount,
     usingFallback,
+    usingReviewSession: false,
   };
 }
 

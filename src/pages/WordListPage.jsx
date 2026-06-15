@@ -1,5 +1,6 @@
 import { useMemo, useState } from "react";
 import { Link } from "react-router-dom";
+import ExampleSentence from "../components/ExampleSentence.jsx";
 import SpeakButton from "../components/SpeakButton.jsx";
 import WordMemoryPanel from "../components/WordMemoryPanel.jsx";
 import { useLocale } from "../features/locale/LocaleContext.jsx";
@@ -121,10 +122,11 @@ function WordListPage() {
                   )}
 
                   {word.example ? (
-                    <div className="mt-3">
-                      <p className="review-word-field-label">{t("wordDetail.example")}</p>
-                      <p className="text-base leading-relaxed text-slate-700">{word.example}</p>
-                    </div>
+                    <ExampleSentence
+                      className="mt-3"
+                      example={word.example}
+                      exampleTranslation={word.exampleTranslation}
+                    />
                   ) : null}
 
                   <div className="mt-4">

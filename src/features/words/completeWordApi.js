@@ -8,6 +8,7 @@ export function createDemoSuggestion(term) {
     pronunciation: "",
     partOfSpeech: "word",
     example: `I am learning how to use "${normalizedTerm}" in a sentence.`,
+    exampleTranslation: "我正在學習如何在句子中使用這個字。",
     tags: ["demo", "ai-fallback"],
   };
 }
@@ -38,17 +39,18 @@ export function suggestionToFormValues(suggestion) {
     pronunciation: suggestion.pronunciation ?? "",
     partOfSpeech: suggestion.partOfSpeech ?? "",
     example: suggestion.example ?? "",
+    exampleTranslation: suggestion.exampleTranslation ?? "",
     tags: Array.isArray(suggestion.tags) ? suggestion.tags.join(", ") : "",
   };
 }
 
-export async function fetchCompleteWord(term) {
+export async function fetchCompleteWord(term, locale = "zh-Hant") {
   const response = await fetch("/api/complete-word", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
     },
-    body: JSON.stringify({ term }),
+    body: JSON.stringify({ term, locale }),
   });
   const data = await readJsonResponse(response);
 
@@ -62,9 +64,9 @@ export async function fetchCompleteWord(term) {
   };
 }
 
-export async function fetchCompleteWordWithFallback(term) {
+export async function fetchCompleteWordWithFallback(term, locale = "zh-Hant") {
   try {
-    return await fetchCompleteWord(term);
+    return await fetchCompleteWord(term, locale);
   } catch (error) {
     return {
       suggestion: createDemoSuggestion(term),
@@ -91,12 +93,12 @@ export async function fetchExtractedWords(imageDataUrl) {
   return data.words ?? [];
 }
 
-export async function completeWordsInBatch(terms, { onProgress } = {}) {
+export async function completeWordsInBatch(terms, { locale = "zh-Hant", onProgress } = {}) {
   const results = [];
 
   for (let index = 0; index < terms.length; index += 1) {
     const term = terms[index];
-    const result = await fetchCompleteWordWithFallback(term);
+    const result = await fetchCompleteWordWithFallback(term, locale);
 
     results.push({
       ...suggestionToFormValues(result.suggestion),

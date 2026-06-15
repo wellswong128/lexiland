@@ -56,6 +56,12 @@ function normalizeWordChanges(changes) {
     normalizedChanges.example = normalizeText(normalizedChanges.example);
   }
 
+  if (Object.hasOwn(normalizedChanges, "exampleTranslation")) {
+    normalizedChanges.exampleTranslation = normalizeText(
+      normalizedChanges.exampleTranslation,
+    );
+  }
+
   if (Object.hasOwn(normalizedChanges, "notes")) {
     normalizedChanges.notes = normalizeText(normalizedChanges.notes);
   }
@@ -385,6 +391,7 @@ export function useWords({ isAuthLoading = false, user = null } = {}, storage) {
             pronunciation: normalizeText(localWord.pronunciation),
             partOfSpeech: normalizeText(localWord.partOfSpeech),
             example: normalizeText(localWord.example),
+            exampleTranslation: normalizeText(localWord.exampleTranslation),
             notes: normalizeText(localWord.notes),
             tags: normalizeTags(localWord.tags),
             source,

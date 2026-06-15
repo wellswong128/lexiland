@@ -115,7 +115,7 @@ function WordKartPage() {
   const { commitMistakes, lastCommittedTerms, recordWrong, resetTracker } =
     useGameMistakeTracker();
 
-  const { entries, isPriorityLimited, priorityCount, priorityWordIds, totalPriorityCount, usingFallback } = useMemo(
+  const { entries, isPriorityLimited, priorityCount, priorityWordIds, totalPriorityCount, usingFallback, usingReviewSession } = useMemo(
     () => buildGameWordBank(words, { minWords: 4 }),
     [words],
   );
@@ -533,6 +533,7 @@ function WordKartPage() {
           priorityCount={priorityCount}
           totalPriorityCount={totalPriorityCount}
           usingFallback={usingFallback}
+          usingReviewSession={usingReviewSession}
         />
       )}
     </section>

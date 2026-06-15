@@ -1,5 +1,11 @@
 const AGNES_API_URL = "https://apihub.agnes-ai.com/v1/chat/completions";
 
+const LOCALE_LABELS = {
+  "zh-Hant": "Traditional Chinese",
+  "zh-Hans": "Simplified Chinese",
+  en: "English",
+};
+
 function sendJson(response, statusCode, payload) {
   response.statusCode = statusCode;
   response.setHeader("Content-Type", "application/json");
@@ -14,6 +20,7 @@ function normalizeSuggestion(value) {
     pronunciation: String(value?.pronunciation ?? "").trim(),
     partOfSpeech: String(value?.partOfSpeech ?? "").trim(),
     example: String(value?.example ?? "").trim(),
+    exampleTranslation: String(value?.exampleTranslation ?? "").trim(),
     tags: Array.isArray(value?.tags)
       ? value.tags.map((tag) => String(tag).trim()).filter(Boolean)
       : [],
@@ -55,6 +62,8 @@ export default async function handler(request, response) {
 
   const body = getRequestBody(request);
   const term = String(body.term ?? "").trim();
+  const locale = String(body.locale ?? "zh-Hant").trim();
+  const chineseLabel = LOCALE_LABELS[locale] || LOCALE_LABELS["zh-Hant"];
 
   if (!term) {
     sendJson(response, 400, { error: "Please provide an English word." });
@@ -81,9 +90,12 @@ export default async function handler(request, response) {
             content: `Create vocabulary data for this English word: ${term}
 
 Return only valid JSON with these fields:
-term, definition, translation, pronunciation, partOfSpeech, example, tags.
+term, definition, translation, pronunciation, partOfSpeech, example, exampleTranslation, tags.
 
-Use Traditional Chinese for translation. Keep the definition concise and learner-friendly. Tags should be an array of short English labels.`,
+Use ${chineseLabel} for translation and exampleTranslation.
+example must be a natural English sentence that uses the word.
+exampleTranslation must be the ${chineseLabel} translation of example.
+Keep the definition concise and learner-friendly. Tags should be an array of short English labels.`,
           },
         ],
         temperature: 0.2,

@@ -92,7 +92,7 @@ function SpellingNinjaPage() {
   const { words } = useWordsContext();
   const { commitMistakes, lastCommittedTerms, recordWrong, resetTracker } =
     useGameMistakeTracker();
-  const { entries, isPriorityLimited, priorityCount, priorityWordIds, totalPriorityCount, usingFallback } = useMemo(
+  const { entries, isPriorityLimited, priorityCount, priorityWordIds, totalPriorityCount, usingFallback, usingReviewSession } = useMemo(
     () =>
       buildGameWordBank(words, {
         minLength: 3,
@@ -651,6 +651,7 @@ function SpellingNinjaPage() {
             priorityCount={priorityCount}
             totalPriorityCount={totalPriorityCount}
             usingFallback={usingFallback}
+            usingReviewSession={usingReviewSession}
           />
           {defeatedWords.length > 0
             ? ` ${t("games.ninja.resultCount", { count: defeatedWords.length })}`

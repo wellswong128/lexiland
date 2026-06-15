@@ -53,7 +53,7 @@ function removeSavedTermsFromPreview(previewWords, savedWords) {
 
 function PhotoWordCapture({ autoOpenCamera = false, onAutoOpenCameraConsumed }) {
   const initialState = useMemo(() => getInitialPhotoCaptureState(), []);
-  const { t } = useLocale();
+  const { locale, t } = useLocale();
   const navigate = useNavigate();
   const { importWords, words } = useWordsContext();
   const fileInputRef = useRef(null);
@@ -242,6 +242,7 @@ function PhotoWordCapture({ autoOpenCamera = false, onAutoOpenCameraConsumed }) 
       setCompletionProgress({ current: 0, total: selectedTerms.length });
 
       const completedWords = await completeWordsInBatch(selectedTerms, {
+        locale,
         onProgress: (current, total) => {
           setCompletionProgress({ current, total });
         },
@@ -300,7 +301,7 @@ function PhotoWordCapture({ autoOpenCamera = false, onAutoOpenCameraConsumed }) 
       setRetryingWordId(wordId);
       setError("");
 
-      const result = await fetchCompleteWord(word.term);
+      const result = await fetchCompleteWord(word.term, locale);
 
       setPreviewWords((currentWords) =>
         currentWords.map((item) =>
@@ -343,7 +344,7 @@ function PhotoWordCapture({ autoOpenCamera = false, onAutoOpenCameraConsumed }) 
         setRetryingWordId(word.id);
 
         try {
-          const result = await fetchCompleteWord(word.term);
+          const result = await fetchCompleteWord(word.term, locale);
 
           setPreviewWords((currentWords) =>
             currentWords.map((item) =>
@@ -399,6 +400,7 @@ function PhotoWordCapture({ autoOpenCamera = false, onAutoOpenCameraConsumed }) 
         pronunciation: word.pronunciation,
         partOfSpeech: word.partOfSpeech,
         example: word.example,
+        exampleTranslation: word.exampleTranslation,
         tags: word.tags,
       }))
       .filter((word) => word.term.trim() && word.definition.trim());

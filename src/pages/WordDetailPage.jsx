@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
+import ExampleSentence from "../components/ExampleSentence.jsx";
 import SpeakButton from "../components/SpeakButton.jsx";
 import WordMemoryPanel from "../components/WordMemoryPanel.jsx";
 import { useLocale } from "../features/locale/LocaleContext.jsx";
@@ -18,13 +19,14 @@ function getFormValues(word) {
     pronunciation: word.pronunciation,
     partOfSpeech: word.partOfSpeech,
     example: word.example,
+    exampleTranslation: word.exampleTranslation,
     notes: word.notes,
     tags: Array.isArray(word.tags) ? word.tags.join(", ") : "",
   };
 }
 
 function WordDetailPage() {
-  const { dateLocale, t } = useLocale();
+  const { dateLocale, locale, t } = useLocale();
   const { wordId } = useParams();
   const { updateWord, words } = useWordsContext();
   const word = words.find((currentWord) => currentWord.id === wordId);
@@ -84,7 +86,7 @@ function WordDetailPage() {
       setAiMessage("");
       setIsAiLoading(true);
 
-      const { suggestion } = await fetchCompleteWord(term);
+      const { suggestion } = await fetchCompleteWord(term, locale);
 
       setFormValues((currentValues) => ({
         ...currentValues,
@@ -166,10 +168,11 @@ function WordDetailPage() {
           </div>
 
           {word.example ? (
-            <div className="mt-3">
-              <p className="review-word-field-label">{t("wordDetail.example")}</p>
-              <p className="text-base leading-relaxed text-slate-700">{word.example}</p>
-            </div>
+            <ExampleSentence
+              className="mt-3"
+              example={word.example}
+              exampleTranslation={word.exampleTranslation}
+            />
           ) : null}
 
           {!isEditing ? (
@@ -293,6 +296,18 @@ function WordDetailPage() {
               name="example"
               onChange={handleChange}
               value={formValues.example}
+            />
+          </label>
+
+          <label className="block">
+            <span className="text-sm font-semibold text-slate-700">
+              {t("addWord.exampleTranslation")}
+            </span>
+            <textarea
+              className="mt-2 min-h-24 w-full rounded-2xl border border-slate-200 bg-white px-4 py-3 text-slate-900 outline-none transition focus:border-blue-500 focus:ring-4 focus:ring-blue-100"
+              name="exampleTranslation"
+              onChange={handleChange}
+              value={formValues.exampleTranslation}
             />
           </label>
 

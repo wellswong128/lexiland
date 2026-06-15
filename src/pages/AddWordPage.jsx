@@ -16,6 +16,7 @@ const initialFormValues = {
   pronunciation: "",
   partOfSpeech: "",
   example: "",
+  exampleTranslation: "",
   tags: "",
 };
 
@@ -24,7 +25,7 @@ function getInitialTab(searchParams) {
 }
 
 function AddWordPage() {
-  const { t } = useLocale();
+  const { locale, t } = useLocale();
   const navigate = useNavigate();
   const [searchParams, setSearchParams] = useSearchParams();
   const { addWord } = useWordsContext();
@@ -73,7 +74,7 @@ function AddWordPage() {
       setAiMessage("");
       setIsAiLoading(true);
 
-      const { suggestion } = await fetchCompleteWord(term);
+      const { suggestion } = await fetchCompleteWord(term, locale);
 
       setFormValues((currentValues) => ({
         ...currentValues,
@@ -269,6 +270,19 @@ function AddWordPage() {
               onChange={handleChange}
               placeholder={t("addWord.placeholderExample")}
               value={formValues.example}
+            />
+          </label>
+
+          <label className="block">
+            <span className="text-sm font-semibold text-slate-700">
+              {t("addWord.exampleTranslation")}
+            </span>
+            <textarea
+              className="mt-2 min-h-24 w-full rounded-2xl border border-slate-200 bg-white px-4 py-3 text-slate-900 outline-none transition focus:border-blue-500 focus:ring-4 focus:ring-blue-100"
+              name="exampleTranslation"
+              onChange={handleChange}
+              placeholder={t("addWord.placeholderExampleTranslation")}
+              value={formValues.exampleTranslation}
             />
           </label>
 

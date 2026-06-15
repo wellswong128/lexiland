@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link, useSearchParams } from "react-router-dom";
+import ExampleSentence from "../components/ExampleSentence.jsx";
 import ReviewWordListItem from "../components/ReviewWordListItem.jsx";
 import SpeakButton from "../components/SpeakButton.jsx";
 import WordMemoryPanel from "../components/WordMemoryPanel.jsx";
@@ -9,6 +10,7 @@ import {
   updateReviewResult,
 } from "../features/review/reviewHelpers.js";
 import { useWordsContext } from "../features/words/WordsContext.jsx";
+import { saveReviewSession } from "../lib/reviewSessionStorage.js";
 import { REVIEW_RESULTS } from "../features/words/wordTypes.js";
 
 function FlashcardReviewButtons({ onForgot, onRemembered, t }) {
@@ -54,6 +56,15 @@ function FlashcardsPage() {
     current: Math.min(currentIndex + 1, sessionWords.length),
     total: sessionWords.length,
   });
+
+  function handleStartReview() {
+    saveReviewSession({
+      mistakesOnly,
+      totalCount,
+      wordIds: sessionWords.map((word) => word.id),
+    });
+    setHasStarted(true);
+  }
 
   function handleReview(result) {
     updateWord(currentWord.id, updateReviewResult(currentWord, result));
@@ -124,7 +135,7 @@ function FlashcardsPage() {
 
           <button
             className="inline-flex justify-center rounded-full bg-blue-700 px-5 py-3 text-sm font-bold text-white shadow-lg shadow-blue-900/20 transition hover:bg-blue-800"
-            onClick={() => setHasStarted(true)}
+            onClick={handleStartReview}
             type="button"
           >
             {t("flashcards.startReview")}
@@ -223,9 +234,12 @@ function FlashcardsPage() {
               t={t}
             />
             {currentWord.example ? (
-              <p className="mt-3 rounded-2xl bg-slate-50 p-4 text-slate-600">
-                {currentWord.example}
-              </p>
+              <ExampleSentence
+                className="mt-3 rounded-2xl bg-slate-50 p-4"
+                example={currentWord.example}
+                exampleTranslation={currentWord.exampleTranslation}
+                showLabel={false}
+              />
             ) : null}
             <div className="mt-4">
               <WordMemoryPanel autoLoad compact={false} word={currentWord} />

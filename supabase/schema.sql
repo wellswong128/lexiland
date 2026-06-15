@@ -56,6 +56,7 @@ create table if not exists public.words (
   pronunciation text not null default '',
   part_of_speech text not null default '',
   example text not null default '',
+  example_translation text not null default '',
   notes text not null default '',
   tags text[] not null default '{}',
   source text not null default 'manual',

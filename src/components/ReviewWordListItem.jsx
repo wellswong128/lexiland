@@ -1,3 +1,4 @@
+import ExampleSentence from "./ExampleSentence.jsx";
 import SpeakButton from "./SpeakButton.jsx";
 import WordMemoryPanel from "./WordMemoryPanel.jsx";
 
@@ -28,10 +29,11 @@ function ReviewWordListItem({
           </div>
 
           {word.example ? (
-            <div className="mt-3">
-              <p className="review-word-field-label">{t("wordDetail.example")}</p>
-              <p className="text-base leading-relaxed text-slate-700">{word.example}</p>
-            </div>
+            <ExampleSentence
+              className="mt-3"
+              example={word.example}
+              exampleTranslation={word.exampleTranslation}
+            />
           ) : null}
 
           {showMemoryPanel ? (
