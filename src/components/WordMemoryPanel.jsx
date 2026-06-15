@@ -6,7 +6,7 @@ import {
   readWordMemory,
 } from "../features/words/wordMemoryApi.js";
 
-function WordMemoryPanel({ compact = false, word }) {
+function WordMemoryPanel({ autoLoad = false, compact = false, word }) {
   const { locale, t } = useLocale();
   const { updateWord } = useWordsContext();
   const [memoryTips, setMemoryTips] = useState(
@@ -68,6 +68,22 @@ function WordMemoryPanel({ compact = false, word }) {
       setIsLoading(false);
     }
   }
+
+  useEffect(() => {
+    if (!autoLoad) {
+      return;
+    }
+
+    const saved = readWordMemory(word, locale);
+    const hasFullMemory = Boolean(saved.memoryTips && saved.memoryImage?.imageUrl);
+
+    if (hasFullMemory) {
+      return;
+    }
+
+    void handleGenerate();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [autoLoad, locale, word.id]);
 
   if (!word) {
     return null;

@@ -228,7 +228,7 @@ function FlashcardsPage() {
               </p>
             ) : null}
             <div className="mt-4">
-              <WordMemoryPanel compact word={currentWord} />
+              <WordMemoryPanel autoLoad compact={false} word={currentWord} />
             </div>
           </div>
         ) : (
