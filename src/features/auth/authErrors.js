@@ -29,6 +29,10 @@ export function getFriendlyAuthError(message, t) {
     return t("settings.emailNotAuthorized");
   }
 
+  if (lower.includes("error getting user email from external provider")) {
+    return t("settings.azureEmailError");
+  }
+
   if (
     lower.includes("redirect url is not configured") ||
     lower.includes("vite_auth_redirect_url")

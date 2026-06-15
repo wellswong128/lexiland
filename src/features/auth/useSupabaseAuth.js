@@ -19,16 +19,16 @@ export function useSupabaseAuth() {
       const hashParams = window.location.hash.startsWith("#")
         ? new URLSearchParams(window.location.hash.slice(1))
         : new URLSearchParams();
+      const searchParams = new URLSearchParams(window.location.search);
       const authCallbackError =
-        hashParams.get("error_description") || hashParams.get("error");
+        hashParams.get("error_description") ||
+        hashParams.get("error") ||
+        searchParams.get("error_description") ||
+        searchParams.get("error");
 
       if (authCallbackError) {
         setAuthError(decodeURIComponent(authCallbackError.replace(/\+/g, " ")));
-        window.history.replaceState(
-          {},
-          document.title,
-          `${window.location.pathname}${window.location.search}`,
-        );
+        window.history.replaceState({}, document.title, window.location.pathname);
       }
     }
 
@@ -122,11 +122,18 @@ export function useSupabaseAuth() {
       );
     }
 
+    const options = { redirectTo };
+
+    if (provider === "azure") {
+      options.scopes = "email";
+      options.queryParams = {
+        prompt: "select_account",
+      };
+    }
+
     const { error } = await supabase.auth.signInWithOAuth({
       provider,
-      options: {
-        redirectTo,
-      },
+      options,
     });
 
     if (error) {
