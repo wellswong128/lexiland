@@ -7,6 +7,7 @@ function ReviewWordListItem({
   footer = null,
   memoryPanelCompact = true,
   showMemoryPanel = false,
+  showTranslationOverlay = false,
   t,
   word,
 }) {
@@ -38,7 +39,11 @@ function ReviewWordListItem({
 
           {showMemoryPanel ? (
             <div className="mt-4">
-              <WordMemoryPanel compact={memoryPanelCompact} word={word} />
+              <WordMemoryPanel
+                compact={memoryPanelCompact}
+                showTranslationOverlay={showTranslationOverlay}
+                word={word}
+              />
             </div>
           ) : null}
 

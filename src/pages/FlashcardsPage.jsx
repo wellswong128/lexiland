@@ -2,6 +2,7 @@ import { useEffect, useMemo, useState } from "react";
 import { Link, useSearchParams } from "react-router-dom";
 import ReviewWordListItem from "../components/ReviewWordListItem.jsx";
 import SpeakButton, { speakText } from "../components/SpeakButton.jsx";
+import WordImageWithTranslationOverlay from "../components/WordImageWithTranslationOverlay.jsx";
 import WordMemoryPanel from "../components/WordMemoryPanel.jsx";
 import { useLocale } from "../features/locale/LocaleContext.jsx";
 import { createImageQuizQuestions } from "../features/review/imageQuizHelpers.js";
@@ -256,6 +257,7 @@ function FlashcardsPage() {
               key={word.id}
               memoryPanelCompact={false}
               showMemoryPanel
+              showTranslationOverlay
               t={t}
               word={word}
             />
@@ -349,17 +351,12 @@ function FlashcardsPage() {
                 onClick={() => handleImageAnswer(option.wordId)}
                 type="button"
               >
-                <img
+                <WordImageWithTranslationOverlay
                   alt={t("wordImage.alt", { term: currentWord.term })}
-                  className="aspect-square w-full object-cover"
-                  loading="lazy"
+                  imageClassName="aspect-square w-full object-cover"
                   src={option.imageUrl}
+                  translation={option.translation}
                 />
-                {option.translation ? (
-                  <span className="flashcard-image-translation-overlay review-word-translation">
-                    {option.translation}
-                  </span>
-                ) : null}
               </button>
             ))}
           </div>
@@ -390,7 +387,7 @@ function FlashcardsPage() {
             </p>
           ) : null}
           <div className="mt-4">
-            <WordMemoryPanel autoLoad compact={false} word={currentWord} />
+            <WordMemoryPanel autoLoad compact={false} showTranslationOverlay word={currentWord} />
           </div>
           <button
             className="mt-5 rounded-full bg-blue-700 px-5 py-3 text-sm font-bold text-white transition hover:bg-blue-800"

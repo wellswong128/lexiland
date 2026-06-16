@@ -1,4 +1,5 @@
 import { readWordMemoryImage } from "../words/wordImageApi.js";
+import { getQuizOptionLabel } from "./quizHelpers.js";
 
 function shuffleItems(items) {
   return [...items].sort(() => Math.random() - 0.5);
@@ -26,14 +27,14 @@ export function createImageQuizQuestions(sessionWords, allWords, optionCount = 4
       .map((candidate) => ({
         wordId: candidate.id,
         imageUrl: readWordMemoryImage(candidate).imageUrl,
-        translation: String(candidate.translation ?? "").trim(),
+        translation: getQuizOptionLabel(candidate),
       }));
 
     const options = shuffleItems([
       {
         wordId: word.id,
         imageUrl: correctImageUrl,
-        translation: String(word.translation ?? "").trim(),
+        translation: getQuizOptionLabel(word),
       },
       ...wrongOptions,
     ]);

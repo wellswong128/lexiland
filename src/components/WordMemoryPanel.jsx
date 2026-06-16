@@ -1,12 +1,19 @@
 import { useEffect, useState } from "react";
 import { useLocale } from "../features/locale/LocaleContext.jsx";
+import { getQuizOptionLabel } from "../features/review/quizHelpers.js";
 import { useWordsContext } from "../features/words/WordsContext.jsx";
 import {
   fetchWordMemoryWithCache,
   readWordMemory,
 } from "../features/words/wordMemoryApi.js";
+import WordImageWithTranslationOverlay from "./WordImageWithTranslationOverlay.jsx";
 
-function WordMemoryPanel({ autoLoad = false, compact = false, word }) {
+function WordMemoryPanel({
+  autoLoad = false,
+  compact = false,
+  showTranslationOverlay = false,
+  word,
+}) {
   const { locale, t } = useLocale();
   const { updateWord, user } = useWordsContext();
   const [memoryTips, setMemoryTips] = useState(
@@ -145,14 +152,24 @@ function WordMemoryPanel({ autoLoad = false, compact = false, word }) {
           {isExpanded ? (
             <>
               {memoryImage?.imageUrl ? (
-                <figure className="overflow-hidden rounded-2xl border border-sky-100 bg-white">
-                  <img
+                showTranslationOverlay ? (
+                  <WordImageWithTranslationOverlay
                     alt={t("wordImage.alt", { term: word.term })}
-                    className="mx-auto h-auto max-h-[600px] w-full max-w-[800px] object-contain"
-                    loading="lazy"
+                    className="relative overflow-hidden rounded-2xl border border-sky-100 bg-white"
+                    imageClassName="mx-auto h-auto max-h-[600px] w-full max-w-[800px] object-contain"
                     src={memoryImage.imageUrl}
+                    translation={getQuizOptionLabel(word)}
                   />
-                </figure>
+                ) : (
+                  <figure className="overflow-hidden rounded-2xl border border-sky-100 bg-white">
+                    <img
+                      alt={t("wordImage.alt", { term: word.term })}
+                      className="mx-auto h-auto max-h-[600px] w-full max-w-[800px] object-contain"
+                      loading="lazy"
+                      src={memoryImage.imageUrl}
+                    />
+                  </figure>
+                )
               ) : null}
 
               {memoryTips ? (
