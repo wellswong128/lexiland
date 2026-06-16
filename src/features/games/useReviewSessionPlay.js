@@ -46,11 +46,12 @@ export function useReviewSessionPlay(words, options) {
   }, [options, words]);
 
   const pickNextEntry = useCallback((bank) => {
-    if (!shouldUseGamePlan(bank)) {
+    const questionPool = bank?.questionEntries ?? bank?.entries ?? [];
+
+    if (questionPool.length === 0) {
       return null;
     }
 
-    const questionPool = bank.questionEntries ?? bank.entries;
     const entry = questionPool[pickerIndexRef.current % questionPool.length];
 
     pickerIndexRef.current += 1;

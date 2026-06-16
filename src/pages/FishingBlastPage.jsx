@@ -6,8 +6,6 @@ import GameWordBankStatus from "../components/GameWordBankStatus.jsx";
 import GameWordWithSpeak from "../components/GameWordWithSpeak.jsx";
 import {
   createMultipleChoiceQuestion,
-  pickRandomEntry,
-  shouldUseGamePlan,
 } from "../features/games/gameWordBank.js";
 import { useReviewSessionPlay } from "../features/games/useReviewSessionPlay.js";
 import { hasActiveReviewSession } from "../lib/reviewSessionStorage.js";
@@ -202,10 +200,7 @@ function FishingBlastPage() {
   } = defaultBank;
 
   const pickQuestionForBank = useCallback(
-    (bank) =>
-      shouldUseGamePlan(bank)
-        ? () => pickNextEntry(bank)
-        : () => pickRandomEntry(bank.entries, bank),
+    (bank) => () => pickNextEntry(bank),
     [pickNextEntry],
   );
 
@@ -637,6 +632,7 @@ function FishingBlastPage() {
       {gameState === "playing" ? null : (
         <GameWordBankStatus
           className="game-page-footer mt-1 block text-center text-xs text-sky-200"
+          gameplayWordCount={defaultBank.questionEntries?.length ?? 0}
           isPriorityLimited={isPriorityLimited}
           priorityCount={priorityCount}
           supplementedCount={supplementedCount}

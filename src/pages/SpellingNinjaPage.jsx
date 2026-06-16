@@ -7,7 +7,6 @@ import GameWordWithSpeak from "../components/GameWordWithSpeak.jsx";
 import {
   normalizeGameWord,
   pickNinjaWord,
-  shouldUseGamePlan,
 } from "../features/games/gameWordBank.js";
 import { useReviewSessionPlay } from "../features/games/useReviewSessionPlay.js";
 import { hasActiveReviewSession } from "../lib/reviewSessionStorage.js";
@@ -119,7 +118,7 @@ function SpellingNinjaPage() {
   } = defaultBank;
 
   const pickWordForBank = useCallback(
-    (bank) => (shouldUseGamePlan(bank) ? () => pickNextEntry(bank) : null),
+    (bank) => () => pickNextEntry(bank),
     [pickNextEntry],
   );
 
@@ -679,6 +678,7 @@ function SpellingNinjaPage() {
       {gameState === "playing" ? null : (
         <p className="game-page-footer mt-1 text-center text-xs text-slate-400">
           <GameWordBankStatus
+            gameplayWordCount={defaultBank.questionEntries?.length ?? 0}
             isPriorityLimited={isPriorityLimited}
             priorityCount={priorityCount}
             supplementedCount={supplementedCount}

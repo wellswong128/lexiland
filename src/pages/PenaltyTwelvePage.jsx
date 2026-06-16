@@ -1166,6 +1166,7 @@ function PenaltyTwelvePage() {
       {!isPlaying ? (
         <GameWordBankStatus
           className="game-page-footer mt-1 block shrink-0 text-center text-xs font-semibold text-[#4d6878] sm:text-xs"
+          gameplayWordCount={defaultBank.questionEntries?.length ?? 0}
           isPriorityLimited={isPriorityLimited}
           priorityCount={priorityCount}
           supplementedCount={supplementedCount}

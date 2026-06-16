@@ -2,6 +2,7 @@ import { useLocale } from "../features/locale/LocaleContext.jsx";
 
 function GameWordBankStatus({
   className = "",
+  gameplayWordCount = 0,
   isPriorityLimited = false,
   priorityCount = 0,
   supplementedCount = 0,
@@ -24,6 +25,9 @@ function GameWordBankStatus({
         : null}
       {!usingFallback && !usingReviewSession && usingMaintenanceMode
         ? ` ${t("games.maintenanceWordsHint", { count: totalMaintenanceCount })}`
+        : null}
+      {!usingFallback && gameplayWordCount > 0
+        ? ` ${t("games.gameplayWordsHint", { count: gameplayWordCount })}`
         : null}
       {!usingFallback && supplementedCount > 0
         ? ` ${t("games.supplementedWordsHint", {

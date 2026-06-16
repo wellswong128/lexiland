@@ -33,6 +33,7 @@ export const GAME_FALLBACK_WORDS = [
 ];
 
 export const PRIORITY_PICK_CHANCE = 0.75;
+export const GAMEPLAY_WORD_TARGET = 10;
 
 export function normalizeGameWord(term) {
   return String(term ?? "")
@@ -199,6 +200,50 @@ function buildChoiceEntries(savedEntries) {
   return savedEntries;
 }
 
+function buildGuaranteedQuestionEntries(words, seedWordIds, savedEntries, options = {}) {
+  const {
+    minLength = 1,
+    normalizeWord = (term) => term.trim().toLowerCase(),
+  } = options;
+  const target = Math.min(GAMEPLAY_WORD_TARGET, savedEntries.length);
+
+  if (target === 0) {
+    return [];
+  }
+
+  const validSeedIds = seedWordIds.filter((wordId) =>
+    savedEntries.some((entry) => entry.wordId === wordId),
+  );
+  const expandedIds = expandWordIdsForGamePool(words, validSeedIds, {
+    minCount: target,
+    minLength,
+    normalizeWord,
+    targetCount: target,
+  });
+  let questionEntries = buildQuestionEntriesFromIds(words, expandedIds, {
+    minLength,
+    normalizeWord,
+  });
+  const usedIds = new Set(questionEntries.map((entry) => entry.wordId).filter(Boolean));
+
+  if (questionEntries.length < target) {
+    for (const entry of savedEntries) {
+      if (questionEntries.length >= target) {
+        break;
+      }
+
+      if (!entry.wordId || usedIds.has(entry.wordId)) {
+        continue;
+      }
+
+      questionEntries.push(entry);
+      usedIds.add(entry.wordId);
+    }
+  }
+
+  return questionEntries.slice(0, target);
+}
+
 function buildQuestionEntriesFromIds(words, wordIds, options = {}) {
   if (!wordIds?.length) {
     return [];
@@ -252,26 +297,18 @@ export function buildGameWordBank(
   if (hasActiveReviewSession()) {
     const session = loadReviewSession();
     const sessionPriorityIds = session?.wordIds ?? [];
-    const {
-      expandedWordIds,
-      priorityWordIds,
-      sessionExpanded,
-      supplementedCount,
-    } = buildGameplayWordIds(words, sessionPriorityIds, {
-      minCount: minWords,
-      minLength,
-      normalizeWord,
-      targetCount: REVIEW_SESSION_WORD_LIMIT,
-    });
-    const gamePlanWordIds = sessionExpanded
-      ? expandedWordIds
-      : (getReviewSessionEntryOrder() ?? expandedWordIds);
-    const sessionQuestionEntries = buildQuestionEntriesFromIds(words, gamePlanWordIds, {
-      minLength,
-      normalizeWord,
-    });
-    const questionEntries =
-      sessionQuestionEntries.length > 0 ? sessionQuestionEntries : savedEntries;
+    const questionEntries = buildGuaranteedQuestionEntries(
+      words,
+      sessionPriorityIds,
+      savedEntries,
+      { minLength, normalizeWord },
+    );
+    const gamePlanWordIds = questionEntries
+      .map((entry) => entry.wordId)
+      .filter(Boolean);
+    const priorityWordIds = new Set(gamePlanWordIds);
+    const sessionExpanded = questionEntries.length > sessionPriorityIds.length;
+    const supplementedCount = Math.max(questionEntries.length - sessionPriorityIds.length, 0);
 
     return {
       entries,
@@ -301,63 +338,35 @@ export function buildGameWordBank(
     ? getLimitedMaintenanceReviewWords(words)
     : { sessionWords: [], totalCount: 0, isLimited: false };
   const prioritySeedIds = priorityReview.sessionWords.map((word) => word.id);
-  const gameplayPool = usingFallback
-    ? {
-        expandedWordIds: [],
-        priorityWordIds: new Set(),
-        sessionExpanded: false,
-        supplementedCount: 0,
-      }
-    : usingMaintenanceMode
-      ? {
-          expandedWordIds: maintenanceReview.sessionWords.map((word) => word.id),
-          priorityWordIds: new Set(),
-          sessionExpanded: false,
-          supplementedCount: 0,
-        }
-      : buildGameplayWordIds(words, prioritySeedIds, {
-          minCount: minWords,
-          minLength,
-          normalizeWord,
-          targetCount: REVIEW_SESSION_WORD_LIMIT,
-        });
-  const expandedQuestionEntries = buildQuestionEntriesFromIds(
-    words,
-    gameplayPool.expandedWordIds,
-    { minLength, normalizeWord },
-  );
-  const priorityWordIds = usingMaintenanceMode
-    ? new Set()
-    : gameplayPool.priorityWordIds;
-  const maintenanceWordIds = usingMaintenanceMode
-    ? new Set(gameplayPool.expandedWordIds)
-    : new Set();
+  const questionEntries = usingFallback
+    ? entries.slice(0, GAMEPLAY_WORD_TARGET)
+    : buildGuaranteedQuestionEntries(words, prioritySeedIds, savedEntries, {
+        minLength,
+        normalizeWord,
+      });
+  const gamePlanWordIds = questionEntries.map((entry) => entry.wordId).filter(Boolean);
+  const priorityWordIds = new Set(gamePlanWordIds);
+  const sessionExpanded = questionEntries.length > prioritySeedIds.length;
+  const supplementedCount = Math.max(questionEntries.length - prioritySeedIds.length, 0);
+  const maintenanceWordIds = usingMaintenanceMode ? priorityWordIds : new Set();
   const maintenanceScores = usingMaintenanceMode ? buildMaintenanceScores(words) : new Map();
   const totalPriorityCount = priorityReview.totalCount;
   const totalMaintenanceCount = maintenanceReview.totalCount;
   const isPriorityLimited = priorityReview.isLimited;
-  const priorityCount = savedEntries.filter(
-    (entry) => entry.wordId && priorityWordIds.has(entry.wordId),
-  ).length;
-  const questionEntries =
-    usingMaintenanceMode && expandedQuestionEntries.length > 0
-      ? expandedQuestionEntries
-      : !usingFallback && priorityReview.totalCount > 0 && expandedQuestionEntries.length > 0
-        ? expandedQuestionEntries
-        : entries;
+  const priorityCount = prioritySeedIds.length;
 
   return {
     entries,
     questionEntries,
-    gamePlanWordIds: null,
+    gamePlanWordIds,
     hasReviewSession: false,
     isPriorityLimited,
     maintenanceScores,
     maintenanceWordIds,
     priorityCount,
     priorityWordIds,
-    sessionExpanded: gameplayPool.sessionExpanded,
-    supplementedCount: gameplayPool.supplementedCount,
+    sessionExpanded,
+    supplementedCount,
     totalMaintenanceCount,
     totalPriorityCount,
     usingFallback,
@@ -377,6 +386,13 @@ export function pickRandomEntry(entries, priorityWordIdsOrBank, overrides = {}) 
 
   const bank = priorityWordIdsOrBank instanceof Set ? null : priorityWordIdsOrBank;
   const questionEntries = bank?.questionEntries ?? entries;
+  const usesDedicatedQuestionPool =
+    Boolean(bank?.questionEntries) && bank.questionEntries !== bank.entries;
+
+  if (usesDedicatedQuestionPool) {
+    return pickUniformRandom(questionEntries);
+  }
+
   const {
     priorityWordIds,
     maintenanceWordIds,
