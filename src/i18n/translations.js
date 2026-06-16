@@ -399,6 +399,11 @@ const zhHant = {
       preparingImages: "正在準備記憶圖 {{current}} / {{total}}",
       notEnoughImages: "記憶圖不足，請先為更多單字生成記憶圖後再試。",
       incorrect: "答錯了",
+      clearedFromMistakes: "已掌握，移出錯題本。",
+      nextReviewTomorrow: "下次複習：明天",
+      nextReviewInDays: "下次複習：{{days}} 天後",
+      completeDescriptionMistakes:
+        "本次修正 {{cleared}} 個錯字，錯題本剩餘 {{remaining}} 個。",
       nextWord: "下一個字",
       finishReview: "完成複習",
       answer: "答案",
@@ -1098,6 +1103,11 @@ export const translations = {
       notEnoughImages:
         "Not enough memory images yet. Generate images for more words and try again.",
       incorrect: "Incorrect",
+      clearedFromMistakes: "Mastered and removed from your mistake notebook.",
+      nextReviewTomorrow: "Next review: tomorrow",
+      nextReviewInDays: "Next review: in {{days}} days",
+      completeDescriptionMistakes:
+        "You cleared {{cleared}} mistake word(s) this session. {{remaining}} remain in your notebook.",
       nextWord: "Next Word",
       finishReview: "Finish Review",
       answer: "Answer",

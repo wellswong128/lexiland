@@ -7,6 +7,7 @@ import { useLocale } from "../features/locale/LocaleContext.jsx";
 import { createImageQuizQuestions } from "../features/review/imageQuizHelpers.js";
 import { prefetchSessionMemoryImages } from "../features/review/prefetchSessionMemoryImages.js";
 import {
+  getReviewIntervalDays,
   getReviewSessionWords,
   updateReviewResult,
 } from "../features/review/reviewHelpers.js";
@@ -33,6 +34,8 @@ function FlashcardsPage() {
   const [imageQuestions, setImageQuestions] = useState([]);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [feedback, setFeedback] = useState(null);
+  const [clearedReviewDays, setClearedReviewDays] = useState(1);
+  const [sessionClearedCount, setSessionClearedCount] = useState(0);
   const [isComplete, setIsComplete] = useState(false);
 
   const currentQuestion = imageQuestions[currentIndex];
@@ -77,6 +80,7 @@ function FlashcardsPage() {
       setImageQuestions(questions);
       setCurrentIndex(0);
       setFeedback(null);
+      setSessionClearedCount(0);
       setIsComplete(false);
       setHasStarted(true);
     } catch (error) {
@@ -123,7 +127,16 @@ function FlashcardsPage() {
     setCurrentIndex(0);
     setFeedback(null);
     setImageQuestions([]);
+    setSessionClearedCount(0);
     setPrepareError("");
+  }
+
+  function getNextReviewMessage(days) {
+    if (days <= 1) {
+      return t("flashcards.nextReviewTomorrow");
+    }
+
+    return t("flashcards.nextReviewInDays", { days });
   }
 
   function handleImageAnswer(answerWordId) {
@@ -133,15 +146,24 @@ function FlashcardsPage() {
 
     const isCorrect = answerWordId === currentQuestion.correctAnswer;
     const result = isCorrect ? REVIEW_RESULTS.REMEMBERED : REVIEW_RESULTS.FORGOT;
+    const hadMistake = currentQuestion.word.mistake?.isMistake;
 
     updateWord(currentQuestion.word.id, updateReviewResult(currentQuestion.word, result));
 
-    if (isCorrect) {
-      goToNextWord();
+    if (!isCorrect) {
+      setFeedback("incorrect");
       return;
     }
 
-    setFeedback("incorrect");
+    if (hadMistake) {
+      const nextLevel = currentQuestion.word.review.level + 1;
+      setClearedReviewDays(getReviewIntervalDays(nextLevel));
+      setSessionClearedCount((count) => count + 1);
+      setFeedback("cleared");
+      return;
+    }
+
+    goToNextWord();
   }
 
   if (sessionWords.length === 0) {
@@ -253,7 +275,12 @@ function FlashcardsPage() {
           {t("flashcards.completeTitle")}
         </h1>
         <p className="mx-auto mt-4 max-w-xl text-slate-600">
-          {t("flashcards.completeDescription", { count: imageQuestions.length })}
+          {mistakesOnly
+            ? t("flashcards.completeDescriptionMistakes", {
+                cleared: sessionClearedCount,
+                remaining: words.filter((word) => word.mistake.isMistake).length,
+              })
+            : t("flashcards.completeDescription", { count: imageQuestions.length })}
         </p>
         <button
           className="mt-8 inline-flex rounded-full bg-blue-700 px-5 py-3 text-sm font-bold text-white transition hover:bg-blue-800"
@@ -300,7 +327,7 @@ function FlashcardsPage() {
         ) : null}
       </div>
 
-      {feedback !== "incorrect" ? (
+      {feedback === null ? (
         <div className="mt-6">
           <p className="mb-4 text-center text-sm font-bold uppercase tracking-[0.14em] text-slate-500">
             {t("flashcards.chooseMemoryImage")}
@@ -327,6 +354,23 @@ function FlashcardsPage() {
               </button>
             ))}
           </div>
+        </div>
+      ) : feedback === "cleared" ? (
+        <div className="mt-6 rounded-2xl border border-green-200 bg-green-50/60 p-5">
+          <p className="font-bold text-green-700">{t("quiz.correct")}</p>
+          <p className="mt-2 text-slate-700">{t("flashcards.clearedFromMistakes")}</p>
+          <p className="mt-1 text-sm font-semibold text-green-800">
+            {getNextReviewMessage(clearedReviewDays)}
+          </p>
+          <button
+            className="mt-5 rounded-full bg-blue-700 px-5 py-3 text-sm font-bold text-white transition hover:bg-blue-800"
+            onClick={goToNextWord}
+            type="button"
+          >
+            {currentIndex >= imageQuestions.length - 1
+              ? t("flashcards.finishReview")
+              : t("flashcards.nextWord")}
+          </button>
         </div>
       ) : (
         <div className="mt-6 rounded-2xl border border-red-200 bg-red-50/60 p-5">

@@ -69,6 +69,10 @@ export function getNextReviewAt(level, now = new Date()) {
   return addDays(now, intervalDays);
 }
 
+export function getReviewIntervalDays(level) {
+  return REVIEW_INTERVAL_DAYS_BY_LEVEL[Math.min(level, 5)];
+}
+
 export function updateReviewResult(word, result, now = new Date()) {
   const remembered =
     result === REVIEW_RESULTS.REMEMBERED || result === REVIEW_RESULTS.CORRECT;
@@ -85,7 +89,10 @@ export function updateReviewResult(word, result, now = new Date()) {
       lastResult: result,
     },
     mistake: remembered
-      ? word.mistake
+      ? {
+          ...word.mistake,
+          isMistake: false,
+        }
       : {
           ...word.mistake,
           isMistake: true,
