@@ -5,8 +5,8 @@ import GameMistakeSummary from "../components/GameMistakeSummary.jsx";
 import GameWordBankStatus from "../components/GameWordBankStatus.jsx";
 import GameWordWithSpeak from "../components/GameWordWithSpeak.jsx";
 import {
+  createMultipleChoiceQuestion,
   pickRandomEntry,
-  shuffleArray,
   shouldUseGamePlan,
 } from "../features/games/gameWordBank.js";
 import { useReviewSessionPlay } from "../features/games/useReviewSessionPlay.js";
@@ -98,22 +98,17 @@ function playTone(freq, duration, type = "sine", volume = 0.035) {
   }
 }
 
-function createQuestion(entries, wordBank, pickQuestion) {
-  const question = pickQuestion
-    ? pickQuestion()
-    : pickRandomEntry(entries, wordBank);
+function createQuestion(bank, pickQuestion) {
+  const round = createMultipleChoiceQuestion(bank, pickQuestion);
 
-  if (!question) {
+  if (!round) {
     return null;
   }
 
-  const wrongChoices = shuffleArray(
-    entries.filter((item) => item.word !== question.word),
-  ).slice(0, 3);
   const positions =
     fishLayouts[Math.floor(Math.random() * fishLayouts.length)] ?? fishLayouts[0];
 
-  const choices = shuffleArray([question, ...wrongChoices]).map((item, index) => ({
+  const choices = round.choices.map((item, index) => ({
     ...item,
     id: getGameId(`fish-${index}`),
     x: positions[index].x,
@@ -121,7 +116,7 @@ function createQuestion(entries, wordBank, pickQuestion) {
     colorIndex: index % fishColors.length,
   }));
 
-  return { question, choices };
+  return { question: round.question, choices };
 }
 
 const FishButton = forwardRef(function FishButton(
@@ -246,9 +241,7 @@ function FishingBlastPage() {
     setStatus({ text: "", type: "" });
     setFishStates({});
     setFishingLine(null);
-    setCurrentRound(
-      createQuestion(bank.entries, bank, pickQuestionForBank(bank)),
-    );
+    setCurrentRound(createQuestion(bank, pickQuestionForBank(bank)));
     setGameState("playing");
   }, [beginPlaySession, pickQuestionForBank, resetTracker]);
 
@@ -269,9 +262,7 @@ function FishingBlastPage() {
     resetOptionState();
     setStatus({ text: "", type: "" });
     const bank = getActivePlayBank();
-    setCurrentRound(
-      createQuestion(bank.entries, bank, pickQuestionForBank(bank)),
-    );
+    setCurrentRound(createQuestion(bank, pickQuestionForBank(bank)));
   }, [getActivePlayBank, pickQuestionForBank, resetOptionState]);
 
   const drawFishingLine = useCallback((fishId) => {

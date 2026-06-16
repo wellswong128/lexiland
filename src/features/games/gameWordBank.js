@@ -226,6 +226,15 @@ export function buildGameWordBank(
     normalizeWord = (term) => term.trim().toLowerCase(),
   } = {},
 ) {
+  const savedEntries = words
+    .map((word) => toGameEntry(word, { normalizeWord }))
+    .filter(Boolean)
+    .filter((entry) => entry.word.length >= minLength);
+  const usingFallback = savedEntries.length < minWords;
+  const entries = usingFallback
+    ? GAME_FALLBACK_WORDS.map((entry) => ({ ...entry, wordId: null }))
+    : savedEntries;
+
   if (hasActiveReviewSession()) {
     const session = loadReviewSession();
     const sessionPriorityIds = session?.wordIds ?? [];
@@ -243,13 +252,16 @@ export function buildGameWordBank(
     const gamePlanWordIds = sessionExpanded
       ? expandedWordIds
       : (getReviewSessionEntryOrder() ?? expandedWordIds);
-    const entries = buildEntriesFromGamePlan(words, gamePlanWordIds, {
+    const sessionQuestionEntries = buildEntriesFromGamePlan(words, gamePlanWordIds, {
       minLength,
       normalizeWord,
     });
+    const questionEntries =
+      sessionQuestionEntries.length > 0 ? sessionQuestionEntries : entries;
 
     return {
       entries,
+      questionEntries,
       gamePlanWordIds,
       hasReviewSession: true,
       isPriorityLimited: false,
@@ -261,20 +273,11 @@ export function buildGameWordBank(
       supplementedCount,
       totalMaintenanceCount: 0,
       totalPriorityCount: session?.totalCount ?? sessionPriorityIds.length,
-      usingFallback: false,
+      usingFallback,
       usingMaintenanceMode: false,
-      usingReviewSession: entries.length > 0,
+      usingReviewSession: questionEntries.length > 0,
     };
   }
-
-  const savedEntries = words
-    .map((word) => toGameEntry(word, { normalizeWord }))
-    .filter(Boolean)
-    .filter((entry) => entry.word.length >= minLength);
-  const usingFallback = savedEntries.length < minWords;
-  const entries = usingFallback
-    ? GAME_FALLBACK_WORDS.map((entry) => ({ ...entry, wordId: null }))
-    : savedEntries;
 
   const priorityReview = usingFallback
     ? { sessionWords: [], totalCount: 0, isLimited: false }
@@ -320,6 +323,7 @@ export function buildGameWordBank(
 
   return {
     entries,
+    questionEntries: entries,
     gamePlanWordIds: null,
     hasReviewSession: false,
     isPriorityLimited,
@@ -346,6 +350,8 @@ export function pickRandomEntry(entries, priorityWordIdsOrBank, overrides = {}) 
     return null;
   }
 
+  const bank = priorityWordIdsOrBank instanceof Set ? null : priorityWordIdsOrBank;
+  const questionEntries = bank?.questionEntries ?? entries;
   const {
     priorityWordIds,
     maintenanceWordIds,
@@ -353,7 +359,7 @@ export function pickRandomEntry(entries, priorityWordIdsOrBank, overrides = {}) 
     usingMaintenanceMode,
     priorityChance,
   } = normalizePickOptions(priorityWordIdsOrBank, overrides);
-  const priorityEntries = entries.filter((entry) =>
+  const priorityEntries = questionEntries.filter((entry) =>
     isPriorityEntry(entry, priorityWordIds),
   );
 
@@ -362,16 +368,38 @@ export function pickRandomEntry(entries, priorityWordIdsOrBank, overrides = {}) 
   }
 
   if (usingMaintenanceMode) {
-    const focusEntries = entries.filter(
+    const focusEntries = questionEntries.filter(
       (entry) => entry.wordId && maintenanceWordIds.has(entry.wordId),
     );
     const pool =
-      focusEntries.length > 0 && Math.random() < priorityChance ? focusEntries : entries;
+      focusEntries.length > 0 && Math.random() < priorityChance ? focusEntries : questionEntries;
 
-    return pickWeightedRandom(pool, maintenanceScores) ?? pickUniformRandom(entries);
+    return pickWeightedRandom(pool, maintenanceScores) ?? pickUniformRandom(questionEntries);
   }
 
-  return pickUniformRandom(entries);
+  return pickUniformRandom(questionEntries);
+}
+
+export function createMultipleChoiceQuestion(
+  bank,
+  pickQuestion,
+  { choiceCount = 4 } = {},
+) {
+  const choiceEntries = bank?.entries ?? [];
+  const question = pickQuestion?.() ?? pickRandomEntry(choiceEntries, bank);
+
+  if (!question || choiceEntries.length === 0) {
+    return null;
+  }
+
+  const wrongChoices = shuffleArray(
+    choiceEntries.filter((item) => item.word !== question.word),
+  ).slice(0, choiceCount - 1);
+
+  return {
+    question,
+    choices: shuffleArray([question, ...wrongChoices]),
+  };
 }
 
 export function pickFixedRoundEntries(entries, priorityWordIdsOrBank, totalRounds) {
@@ -456,7 +484,7 @@ export function buildGameTranslationQuizQuestions(bank, totalRounds) {
     }
 
     return buildTranslationQuizQuestionsFromEntries(
-      getSequentialRoundEntries(bank.entries, totalRounds),
+      getSequentialRoundEntries(bank.questionEntries ?? bank.entries, totalRounds),
       bank.entries,
     );
   }

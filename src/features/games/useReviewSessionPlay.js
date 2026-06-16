@@ -50,7 +50,8 @@ export function useReviewSessionPlay(words, options) {
       return null;
     }
 
-    const entry = bank.entries[pickerIndexRef.current % bank.entries.length];
+    const questionPool = bank.questionEntries ?? bank.entries;
+    const entry = questionPool[pickerIndexRef.current % questionPool.length];
 
     pickerIndexRef.current += 1;
     return entry;
@@ -61,7 +62,7 @@ export function useReviewSessionPlay(words, options) {
       return null;
     }
 
-    return getSequentialRoundEntries(bank.entries, totalRounds);
+    return getSequentialRoundEntries(bank.questionEntries ?? bank.entries, totalRounds);
   }, []);
 
   return {

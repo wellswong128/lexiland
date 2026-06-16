@@ -5,6 +5,7 @@ import GameMistakeSummary from "../components/GameMistakeSummary.jsx";
 import GameWordBankStatus from "../components/GameWordBankStatus.jsx";
 import GameWordWithSpeak from "../components/GameWordWithSpeak.jsx";
 import {
+  createMultipleChoiceQuestion,
   pickRandomEntry,
   shuffleArray,
   shouldUseGamePlan,
@@ -53,22 +54,16 @@ function playTone(freq, duration, type = "sine", volume = 0.035) {
   }
 }
 
-function createQuestion(entries, wordBank, pickQuestion) {
-  const question = pickQuestion
-    ? pickQuestion()
-    : pickRandomEntry(entries, wordBank);
+function createQuestion(bank, pickQuestion) {
+  const round = createMultipleChoiceQuestion(bank, pickQuestion);
 
-  if (!question) {
+  if (!round) {
     return null;
   }
 
-  const wrongChoices = shuffleArray(
-    entries.filter((item) => item.word !== question.word),
-  ).slice(0, 3);
-
   return {
-    question,
-    choices: shuffleArray([question, ...wrongChoices]),
+    question: round.question,
+    choices: shuffleArray(round.choices),
     selectedLane: Math.floor(Math.random() * 4),
   };
 }
@@ -162,11 +157,7 @@ function WordKartPage() {
   const startGame = useCallback(() => {
     resetTracker();
     const bank = beginPlaySession();
-    const firstRound = createQuestion(
-      bank.entries,
-      bank,
-      pickQuestionForBank(bank),
-    );
+    const firstRound = createQuestion(bank, pickQuestionForBank(bank));
 
     setScore(0);
     setCombo(0);
@@ -200,11 +191,7 @@ function WordKartPage() {
 
   const nextQuestion = useCallback(() => {
     const bank = getActivePlayBank();
-    const nextRound = createQuestion(
-      bank.entries,
-      bank,
-      pickQuestionForBank(bank),
-    );
+    const nextRound = createQuestion(bank, pickQuestionForBank(bank));
 
     resetOptionState();
     setStatus({ text: "", type: "" });
