@@ -111,7 +111,7 @@ function SettingsPage() {
   const friendlyCurrentError = currentError
     ? getFriendlyAuthError(currentError, t)
     : "";
-  const installUrl = getAppInstallUrl("/install");
+  const installUrl = getAppInstallUrl();
 
   return (
     <section className="w-full max-w-4xl rounded-3xl border border-blue-200/70 bg-white/90 p-6 shadow-2xl shadow-blue-950/10 sm:p-10">

@@ -10,7 +10,7 @@ function InstallPage() {
   const { t } = useLocale();
   const isStandalone = useStandaloneDisplay();
   const { canInstall, isInstalled, promptInstall } = usePwaInstall();
-  const installUrl = getAppInstallUrl("/install");
+  const installUrl = getAppInstallUrl();
 
   return (
     <section className="install-page">

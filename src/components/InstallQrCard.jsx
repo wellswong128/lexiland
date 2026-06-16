@@ -36,7 +36,13 @@ function InstallQrCard({
 
       <p className="install-qr-description">{t("install.description")}</p>
 
-      <div className="install-qr-frame" aria-label={t("install.qrLabel")}>
+      <a
+        className="install-qr-frame install-qr-frame-link"
+        aria-label={t("install.openLink")}
+        href={installUrl}
+        rel="noopener noreferrer"
+        target="_blank"
+      >
         <QRCodeSVG
           bgColor="#ffffff"
           fgColor="#1f2a44"
@@ -45,9 +51,11 @@ function InstallQrCard({
           size={compact ? 168 : 220}
           value={installUrl}
         />
-      </div>
+      </a>
 
-      <p className="install-qr-url">{installUrl}</p>
+      <a className="install-qr-url" href={installUrl} rel="noopener noreferrer" target="_blank">
+        {installUrl}
+      </a>
 
       <button className="install-qr-copy" onClick={handleCopyLink} type="button">
         {copied ? t("install.linkCopied") : t("install.copyLink")}

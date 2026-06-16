@@ -1,28 +1,9 @@
+export const APP_INSTALL_URL = "https://learn.lexiland.cc/install";
+
 export function getAppBaseUrl() {
-  const configured =
-    import.meta.env.VITE_APP_URL?.trim() ||
-    import.meta.env.VITE_AUTH_REDIRECT_URL?.trim();
-
-  if (configured) {
-    return configured.replace(/\/$/, "");
-  }
-
-  if (typeof window !== "undefined") {
-    const { origin, hostname } = window.location;
-
-    if (hostname === "localhost" || hostname === "127.0.0.1") {
-      return "https://learn.lexiland.cc";
-    }
-
-    return origin;
-  }
-
-  return "https://learn.lexiland.cc";
+  return APP_INSTALL_URL.replace(/\/install$/, "");
 }
 
-export function getAppInstallUrl(path = "/install") {
-  const base = getAppBaseUrl();
-  const normalizedPath = path.startsWith("/") ? path : `/${path}`;
-
-  return base ? `${base}${normalizedPath}` : normalizedPath;
+export function getAppInstallUrl() {
+  return APP_INSTALL_URL;
 }
