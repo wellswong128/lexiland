@@ -101,7 +101,7 @@ function playTone(freq, duration, type = "sine", volume = 0.035) {
 function createQuestion(bank, pickQuestion) {
   const round = createMultipleChoiceQuestion(bank, pickQuestion);
 
-  if (!round) {
+  if (!round || round.choices.length < 4) {
     return null;
   }
 
@@ -228,6 +228,12 @@ function FishingBlastPage() {
   const startGame = useCallback(() => {
     resetTracker();
     const bank = beginPlaySession();
+    const firstRound = createQuestion(bank, pickQuestionForBank(bank));
+
+    if (!firstRound) {
+      return;
+    }
+
     setScore(0);
     setCombo(0);
     setBestCombo(0);
@@ -241,7 +247,7 @@ function FishingBlastPage() {
     setStatus({ text: "", type: "" });
     setFishStates({});
     setFishingLine(null);
-    setCurrentRound(createQuestion(bank, pickQuestionForBank(bank)));
+    setCurrentRound(firstRound);
     setGameState("playing");
   }, [beginPlaySession, pickQuestionForBank, resetTracker]);
 

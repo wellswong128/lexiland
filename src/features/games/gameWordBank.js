@@ -191,6 +191,46 @@ function buildGameplayWordIds(words, seedWordIds, options = {}) {
   };
 }
 
+function buildChoiceEntries(savedEntries, minWords = 4) {
+  if (savedEntries.length === 0) {
+    return GAME_FALLBACK_WORDS.map((entry) => ({ ...entry, wordId: null }));
+  }
+
+  if (savedEntries.length >= minWords) {
+    return savedEntries;
+  }
+
+  const merged = [...savedEntries];
+  const usedWords = new Set(savedEntries.map((entry) => entry.word));
+  const usedMeanings = new Set(savedEntries.map((entry) => entry.meaning));
+
+  for (const fallbackEntry of shuffleArray(GAME_FALLBACK_WORDS)) {
+    if (merged.length >= minWords) {
+      break;
+    }
+
+    if (usedWords.has(fallbackEntry.word) || usedMeanings.has(fallbackEntry.meaning)) {
+      continue;
+    }
+
+    merged.push({ ...fallbackEntry, wordId: null });
+    usedWords.add(fallbackEntry.word);
+    usedMeanings.add(fallbackEntry.meaning);
+  }
+
+  return merged.length >= minWords
+    ? merged
+    : GAME_FALLBACK_WORDS.map((entry) => ({ ...entry, wordId: null }));
+}
+
+function buildQuestionEntriesFromIds(words, wordIds, options = {}) {
+  if (!wordIds?.length) {
+    return [];
+  }
+
+  return buildEntriesFromGamePlan(words, wordIds, options);
+}
+
 function buildEntriesFromGamePlan(
   words,
   gamePlanWordIds,
@@ -230,10 +270,8 @@ export function buildGameWordBank(
     .map((word) => toGameEntry(word, { normalizeWord }))
     .filter(Boolean)
     .filter((entry) => entry.word.length >= minLength);
-  const usingFallback = savedEntries.length < minWords;
-  const entries = usingFallback
-    ? GAME_FALLBACK_WORDS.map((entry) => ({ ...entry, wordId: null }))
-    : savedEntries;
+  const usingFallback = savedEntries.length === 0;
+  const entries = buildChoiceEntries(savedEntries, minWords);
 
   if (hasActiveReviewSession()) {
     const session = loadReviewSession();
@@ -252,12 +290,12 @@ export function buildGameWordBank(
     const gamePlanWordIds = sessionExpanded
       ? expandedWordIds
       : (getReviewSessionEntryOrder() ?? expandedWordIds);
-    const sessionQuestionEntries = buildEntriesFromGamePlan(words, gamePlanWordIds, {
+    const sessionQuestionEntries = buildQuestionEntriesFromIds(words, gamePlanWordIds, {
       minLength,
       normalizeWord,
     });
     const questionEntries =
-      sessionQuestionEntries.length > 0 ? sessionQuestionEntries : entries;
+      sessionQuestionEntries.length > 0 ? sessionQuestionEntries : savedEntries;
 
     return {
       entries,
@@ -307,6 +345,11 @@ export function buildGameWordBank(
           normalizeWord,
           targetCount: REVIEW_SESSION_WORD_LIMIT,
         });
+  const expandedQuestionEntries = buildQuestionEntriesFromIds(
+    words,
+    gameplayPool.expandedWordIds,
+    { minLength, normalizeWord },
+  );
   const priorityWordIds = usingMaintenanceMode
     ? new Set()
     : gameplayPool.priorityWordIds;
@@ -320,10 +363,16 @@ export function buildGameWordBank(
   const priorityCount = savedEntries.filter(
     (entry) => entry.wordId && priorityWordIds.has(entry.wordId),
   ).length;
+  const questionEntries =
+    usingMaintenanceMode && expandedQuestionEntries.length > 0
+      ? expandedQuestionEntries
+      : !usingFallback && priorityReview.totalCount > 0 && expandedQuestionEntries.length > 0
+        ? expandedQuestionEntries
+        : entries;
 
   return {
     entries,
-    questionEntries: entries,
+    questionEntries,
     gamePlanWordIds: null,
     hasReviewSession: false,
     isPriorityLimited,
@@ -392,13 +441,36 @@ export function createMultipleChoiceQuestion(
     return null;
   }
 
-  const wrongChoices = shuffleArray(
-    choiceEntries.filter((item) => item.word !== question.word),
-  ).slice(0, choiceCount - 1);
+  const choices = [question];
+  const usedWords = new Set([question.word]);
+  const usedMeanings = new Set([question.meaning]);
+  const fallbackEntries = GAME_FALLBACK_WORDS.map((entry) => ({ ...entry, wordId: null }));
+  const candidates = shuffleArray([
+    ...choiceEntries.filter((item) => item.word !== question.word),
+    ...fallbackEntries,
+  ]);
+
+  for (const candidate of candidates) {
+    if (choices.length >= choiceCount) {
+      break;
+    }
+
+    if (usedWords.has(candidate.word) || usedMeanings.has(candidate.meaning)) {
+      continue;
+    }
+
+    choices.push(candidate);
+    usedWords.add(candidate.word);
+    usedMeanings.add(candidate.meaning);
+  }
+
+  if (choices.length < choiceCount) {
+    return null;
+  }
 
   return {
     question,
-    choices: shuffleArray([question, ...wrongChoices]),
+    choices: shuffleArray(choices),
   };
 }
 
