@@ -282,13 +282,22 @@ function FlashcardsPage() {
               })
             : t("flashcards.completeDescription", { count: imageQuestions.length })}
         </p>
-        <button
-          className="mt-8 inline-flex rounded-full bg-blue-700 px-5 py-3 text-sm font-bold text-white transition hover:bg-blue-800"
-          onClick={handleBackToReviewList}
-          type="button"
-        >
-          {t("flashcards.backToReview")}
-        </button>
+        {mistakesOnly ? (
+          <Link
+            className="mt-8 inline-flex rounded-full bg-blue-700 px-5 py-3 text-sm font-bold text-white transition hover:bg-blue-800"
+            to="/mistakes"
+          >
+            {t("flashcards.backToMistakes")}
+          </Link>
+        ) : (
+          <button
+            className="mt-8 inline-flex rounded-full bg-blue-700 px-5 py-3 text-sm font-bold text-white transition hover:bg-blue-800"
+            onClick={handleBackToReviewList}
+            type="button"
+          >
+            {t("flashcards.backToReview")}
+          </button>
+        )}
       </section>
     );
   }
