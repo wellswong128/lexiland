@@ -117,6 +117,15 @@ function FlashcardsPage() {
     setCurrentIndex((index) => index + 1);
   }
 
+  function handleBackToReviewList() {
+    setHasStarted(false);
+    setIsComplete(false);
+    setCurrentIndex(0);
+    setFeedback(null);
+    setImageQuestions([]);
+    setPrepareError("");
+  }
+
   function handleImageAnswer(answerWordId) {
     if (feedback || !currentQuestion) {
       return;
@@ -246,12 +255,13 @@ function FlashcardsPage() {
         <p className="mx-auto mt-4 max-w-xl text-slate-600">
           {t("flashcards.completeDescription", { count: imageQuestions.length })}
         </p>
-        <Link
+        <button
           className="mt-8 inline-flex rounded-full bg-blue-700 px-5 py-3 text-sm font-bold text-white transition hover:bg-blue-800"
-          to="/words"
+          onClick={handleBackToReviewList}
+          type="button"
         >
-          {t("flashcards.backToList")}
-        </Link>
+          {t("flashcards.backToReview")}
+        </button>
       </section>
     );
   }
