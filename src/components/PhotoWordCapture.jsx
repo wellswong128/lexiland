@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useRef, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import { useLocale } from "../features/locale/LocaleContext.jsx";
 import {
   completeWordsInBatch,
@@ -10,6 +10,7 @@ import {
 import { WORD_SOURCES, normalizeTerm } from "../features/words/wordTypes.js";
 import { useWordsContext } from "../features/words/WordsContext.jsx";
 import { compressImageFile } from "../lib/compressImage.js";
+import { goBackToPreviousPage } from "../lib/navigation.js";
 import {
   clearPhotoCaptureDraft,
   loadPhotoCaptureDraft,
@@ -54,6 +55,7 @@ function removeSavedTermsFromPreview(previewWords, savedWords) {
 function PhotoWordCapture({ autoOpenCamera = false, onAutoOpenCameraConsumed }) {
   const initialState = useMemo(() => getInitialPhotoCaptureState(), []);
   const { locale, t } = useLocale();
+  const location = useLocation();
   const navigate = useNavigate();
   const { importWords, words, user } = useWordsContext();
   const fileInputRef = useRef(null);
@@ -458,7 +460,7 @@ function PhotoWordCapture({ autoOpenCamera = false, onAutoOpenCameraConsumed }) 
           skipped: skippedCount,
         }),
       );
-      navigate("/words");
+      goBackToPreviousPage(navigate, location);
     } catch (saveError) {
       const savedWords = saveError.savedWords ?? [];
       const remainingPreviewWords =

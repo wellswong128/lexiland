@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
-import { Link, useLocation, useSearchParams } from "react-router-dom";
+import { Link, useSearchParams } from "react-router-dom";
 import ExampleSentence from "../components/ExampleSentence.jsx";
 import ReviewWordListItem from "../components/ReviewWordListItem.jsx";
 import SpeakButton from "../components/SpeakButton.jsx";
@@ -35,7 +35,6 @@ function FlashcardReviewButtons({ onForgot, onRemembered, t }) {
 }
 
 function FlashcardsPage() {
-  const location = useLocation();
   const { t } = useLocale();
   const { updateWord, words } = useWordsContext();
   const [searchParams] = useSearchParams();
@@ -164,7 +163,6 @@ function FlashcardsPage() {
                 <Link
                   className="rounded-full bg-blue-100 px-4 py-2 text-sm font-bold text-blue-700 transition hover:bg-blue-200"
                   to={`/words/${word.id}`}
-                  state={{ from: location.pathname + location.search }}
                 >
                   {t("common.details")}
                 </Link>

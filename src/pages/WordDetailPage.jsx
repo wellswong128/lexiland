@@ -10,6 +10,7 @@ import {
   suggestionToFormValues,
 } from "../features/words/completeWordApi.js";
 import { useWordsContext } from "../features/words/WordsContext.jsx";
+import { goBackToPreviousPage } from "../lib/navigation.js";
 
 function getFormValues(word) {
   return {
@@ -62,19 +63,7 @@ function WordDetailPage() {
   }, [word]);
 
   function handleGoBack() {
-    const from = location.state?.from;
-
-    if (typeof from === "string" && from.length > 0) {
-      navigate(from);
-      return;
-    }
-
-    if (window.history.length > 1) {
-      navigate(-1);
-      return;
-    }
-
-    navigate("/words");
+    goBackToPreviousPage(navigate, location);
   }
 
   function handleChange(event) {

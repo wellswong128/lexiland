@@ -1,5 +1,5 @@
 import { useMemo, useState } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 import ExampleSentence from "../components/ExampleSentence.jsx";
 import SpeakButton from "../components/SpeakButton.jsx";
 import WordMemoryPanel from "../components/WordMemoryPanel.jsx";
@@ -7,7 +7,6 @@ import { useLocale } from "../features/locale/LocaleContext.jsx";
 import { useWordsContext } from "../features/words/WordsContext.jsx";
 
 function WordListPage() {
-  const location = useLocation();
   const { t } = useLocale();
   const { deleteWord, words } = useWordsContext();
   const [searchQuery, setSearchQuery] = useState("");
@@ -157,7 +156,6 @@ function WordListPage() {
                 <Link
                   className="rounded-full bg-blue-100 px-4 py-2 text-sm font-bold text-blue-700 transition hover:bg-blue-200"
                   to={`/words/${word.id}`}
-                  state={{ from: location.pathname }}
                 >
                   {t("common.viewDetails")}
                 </Link>

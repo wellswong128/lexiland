@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useNavigate, useSearchParams } from "react-router-dom";
+import { useLocation, useNavigate, useSearchParams } from "react-router-dom";
 import PhotoWordCapture from "../components/PhotoWordCapture.jsx";
 import { useLocale } from "../features/locale/LocaleContext.jsx";
 import {
@@ -8,6 +8,7 @@ import {
   suggestionToFormValues,
 } from "../features/words/completeWordApi.js";
 import { useWordsContext } from "../features/words/WordsContext.jsx";
+import { goBackToPreviousPage } from "../lib/navigation.js";
 
 const initialFormValues = {
   term: "",
@@ -26,6 +27,7 @@ function getInitialTab(searchParams) {
 
 function AddWordPage() {
   const { locale, t } = useLocale();
+  const location = useLocation();
   const navigate = useNavigate();
   const [searchParams, setSearchParams] = useSearchParams();
   const { addWord } = useWordsContext();
@@ -105,7 +107,7 @@ function AddWordPage() {
       setIsSaving(true);
       await addWord(formValues);
       setError("");
-      navigate("/words");
+      goBackToPreviousPage(navigate, location);
     } catch (saveError) {
       setError(saveError.message);
     } finally {
