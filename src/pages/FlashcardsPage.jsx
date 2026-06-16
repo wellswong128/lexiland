@@ -1,10 +1,11 @@
 import { useEffect, useMemo, useState } from "react";
 import { Link, useSearchParams } from "react-router-dom";
-import ExampleSentence from "../components/ExampleSentence.jsx";
 import ReviewWordListItem from "../components/ReviewWordListItem.jsx";
-import SpeakButton from "../components/SpeakButton.jsx";
+import SpeakButton, { speakText } from "../components/SpeakButton.jsx";
 import WordMemoryPanel from "../components/WordMemoryPanel.jsx";
 import { useLocale } from "../features/locale/LocaleContext.jsx";
+import { createImageQuizQuestions } from "../features/review/imageQuizHelpers.js";
+import { prefetchSessionMemoryImages } from "../features/review/prefetchSessionMemoryImages.js";
 import {
   getReviewSessionWords,
   updateReviewResult,
@@ -13,30 +14,9 @@ import { useWordsContext } from "../features/words/WordsContext.jsx";
 import { syncReviewSession } from "../lib/reviewSessionStorage.js";
 import { REVIEW_RESULTS } from "../features/words/wordTypes.js";
 
-function FlashcardReviewButtons({ onForgot, onRemembered, t }) {
-  return (
-    <div className="mt-4 flex gap-3">
-      <button
-        className="flex-1 rounded-full bg-red-50 px-4 py-3 text-sm font-bold text-red-700 transition hover:bg-red-100"
-        onClick={onForgot}
-        type="button"
-      >
-        {t("flashcards.forgot")}
-      </button>
-      <button
-        className="flex-1 rounded-full bg-green-600 px-4 py-3 text-sm font-bold text-white transition hover:bg-green-700"
-        onClick={onRemembered}
-        type="button"
-      >
-        {t("flashcards.remembered")}
-      </button>
-    </div>
-  );
-}
-
 function FlashcardsPage() {
   const { t } = useLocale();
-  const { updateWord, words } = useWordsContext();
+  const { updateWord, user, words } = useWordsContext();
   const [searchParams] = useSearchParams();
   const mistakesOnly = searchParams.get("mode") === "mistakes";
   const { isLimited, sessionWords, totalCount } = useMemo(
@@ -47,25 +27,63 @@ function FlashcardsPage() {
     [mistakesOnly, words],
   );
   const [hasStarted, setHasStarted] = useState(false);
+  const [isPreparing, setIsPreparing] = useState(false);
+  const [prepareProgress, setPrepareProgress] = useState({ current: 0, total: 0 });
+  const [prepareError, setPrepareError] = useState("");
+  const [imageQuestions, setImageQuestions] = useState([]);
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [showAnswer, setShowAnswer] = useState(false);
+  const [feedback, setFeedback] = useState(null);
   const [isComplete, setIsComplete] = useState(false);
 
+  const currentQuestion = imageQuestions[currentIndex];
   const currentWord =
-    words.find((word) => word.id === sessionWords[currentIndex]?.id) ??
-    sessionWords[currentIndex];
+    words.find((word) => word.id === currentQuestion?.word.id) ?? currentQuestion?.word;
   const progressText = t("flashcards.progress", {
-    current: Math.min(currentIndex + 1, sessionWords.length),
-    total: sessionWords.length,
+    current: Math.min(currentIndex + 1, imageQuestions.length || sessionWords.length),
+    total: imageQuestions.length || sessionWords.length,
   });
 
   function handleStartReview() {
+    void startReview();
+  }
+
+  async function startReview() {
     syncReviewSession({
       mistakesOnly,
       totalCount,
       wordIds: sessionWords.map((word) => word.id),
     });
-    setHasStarted(true);
+
+    setPrepareError("");
+    setIsPreparing(true);
+    setPrepareProgress({ current: 0, total: sessionWords.length });
+
+    try {
+      await prefetchSessionMemoryImages(sessionWords, {
+        onProgress: (current, total) => {
+          setPrepareProgress({ current, total });
+        },
+        updateWord,
+        user,
+      });
+
+      const questions = createImageQuizQuestions(sessionWords, words);
+
+      if (questions.length === 0) {
+        setPrepareError(t("flashcards.notEnoughImages"));
+        return;
+      }
+
+      setImageQuestions(questions);
+      setCurrentIndex(0);
+      setFeedback(null);
+      setIsComplete(false);
+      setHasStarted(true);
+    } catch (error) {
+      setPrepareError(error.message);
+    } finally {
+      setIsPreparing(false);
+    }
   }
 
   useEffect(() => {
@@ -80,16 +98,41 @@ function FlashcardsPage() {
     });
   }, [hasStarted, mistakesOnly, sessionWords, totalCount]);
 
-  function handleReview(result) {
-    updateWord(currentWord.id, updateReviewResult(currentWord, result));
-    setShowAnswer(false);
+  useEffect(() => {
+    if (!hasStarted || isComplete || isPreparing || feedback || !currentWord?.term) {
+      return;
+    }
 
-    if (currentIndex >= sessionWords.length - 1) {
+    speakText(currentWord.term);
+  }, [currentIndex, currentWord?.term, feedback, hasStarted, isComplete, isPreparing]);
+
+  function goToNextWord() {
+    setFeedback(null);
+
+    if (currentIndex >= imageQuestions.length - 1) {
       setIsComplete(true);
       return;
     }
 
     setCurrentIndex((index) => index + 1);
+  }
+
+  function handleImageAnswer(answerWordId) {
+    if (feedback || !currentQuestion) {
+      return;
+    }
+
+    const isCorrect = answerWordId === currentQuestion.correctAnswer;
+    const result = isCorrect ? REVIEW_RESULTS.REMEMBERED : REVIEW_RESULTS.FORGOT;
+
+    updateWord(currentQuestion.word.id, updateReviewResult(currentQuestion.word, result));
+
+    if (isCorrect) {
+      goToNextWord();
+      return;
+    }
+
+    setFeedback("incorrect");
   }
 
   if (sessionWords.length === 0) {
@@ -148,13 +191,25 @@ function FlashcardsPage() {
           </div>
 
           <button
-            className="inline-flex justify-center rounded-full bg-blue-700 px-5 py-3 text-sm font-bold text-white shadow-lg shadow-blue-900/20 transition hover:bg-blue-800"
+            className="inline-flex justify-center rounded-full bg-blue-700 px-5 py-3 text-sm font-bold text-white shadow-lg shadow-blue-900/20 transition hover:bg-blue-800 disabled:bg-slate-300"
+            disabled={isPreparing}
             onClick={handleStartReview}
             type="button"
           >
-            {t("flashcards.startReview")}
+            {isPreparing
+              ? t("flashcards.preparingImages", {
+                  current: prepareProgress.current,
+                  total: prepareProgress.total,
+                })
+              : t("flashcards.startReview")}
           </button>
         </div>
+
+        {prepareError ? (
+          <p className="mb-6 rounded-2xl border border-red-200 bg-red-50 px-4 py-3 text-sm font-medium text-red-700">
+            {prepareError}
+          </p>
+        ) : null}
 
         <ul className="space-y-4">
           {sessionWords.map((word) => (
@@ -189,7 +244,7 @@ function FlashcardsPage() {
           {t("flashcards.completeTitle")}
         </h1>
         <p className="mx-auto mt-4 max-w-xl text-slate-600">
-          {t("flashcards.completeDescription", { count: sessionWords.length })}
+          {t("flashcards.completeDescription", { count: imageQuestions.length })}
         </p>
         <Link
           className="mt-8 inline-flex rounded-full bg-blue-700 px-5 py-3 text-sm font-bold text-white transition hover:bg-blue-800"
@@ -199,6 +254,10 @@ function FlashcardsPage() {
         </Link>
       </section>
     );
+  }
+
+  if (!currentQuestion || !currentWord) {
+    return null;
   }
 
   return (
@@ -231,47 +290,51 @@ function FlashcardsPage() {
         ) : null}
       </div>
 
-      <div className="mt-6 rounded-3xl border border-slate-200 bg-white p-6">
-        {showAnswer ? (
-          <div>
-            <p className="text-sm font-bold uppercase tracking-[0.14em] text-slate-500">
-              {t("flashcards.answer")}
+      {feedback !== "incorrect" ? (
+        <div className="mt-6">
+          <p className="mb-4 text-center text-sm font-bold uppercase tracking-[0.14em] text-slate-500">
+            {t("flashcards.chooseMemoryImage")}
+          </p>
+          <div className="grid grid-cols-2 gap-3">
+            {currentQuestion.options.map((option, optionIndex) => (
+              <button
+                className="overflow-hidden rounded-2xl border-2 border-slate-200 bg-white transition hover:border-blue-400 hover:shadow-md focus:outline-none focus-visible:ring-4 focus-visible:ring-blue-100"
+                key={`${option.wordId}-${optionIndex}`}
+                onClick={() => handleImageAnswer(option.wordId)}
+                type="button"
+              >
+                <img
+                  alt={t("wordImage.alt", { term: currentWord.term })}
+                  className="aspect-square w-full object-cover"
+                  loading="lazy"
+                  src={option.imageUrl}
+                />
+              </button>
+            ))}
+          </div>
+        </div>
+      ) : (
+        <div className="mt-6 rounded-2xl border border-red-200 bg-red-50/60 p-5">
+          <p className="font-bold text-red-700">{t("flashcards.incorrect")}</p>
+          {currentWord.translation ? (
+            <p className="mt-2 text-slate-700">
+              {t("quiz.correctAnswer", { answer: currentWord.translation })}
             </p>
-            {currentWord.translation ? (
-              <p className="mt-3 rounded-2xl border border-amber-200 bg-amber-50 px-4 py-4 text-center text-2xl font-bold leading-8 text-amber-950 shadow-sm sm:text-3xl">
-                {currentWord.translation}
-              </p>
-            ) : null}
-            <FlashcardReviewButtons
-              onForgot={() => handleReview(REVIEW_RESULTS.FORGOT)}
-              onRemembered={() => handleReview(REVIEW_RESULTS.REMEMBERED)}
-              t={t}
-            />
-            {currentWord.example ? (
-              <ExampleSentence
-                className="mt-3 rounded-2xl bg-slate-50 p-4"
-                example={currentWord.example}
-                exampleTranslation={currentWord.exampleTranslation}
-                showLabel={false}
-              />
-            ) : null}
-            <div className="mt-4">
-              <WordMemoryPanel autoLoad compact={false} word={currentWord} />
-            </div>
+          ) : null}
+          <div className="mt-4">
+            <WordMemoryPanel autoLoad compact={false} word={currentWord} />
           </div>
-        ) : (
-          <div className="text-center">
-            <p className="text-slate-600">{t("flashcards.recallPrompt")}</p>
-            <button
-              className="mt-5 rounded-full bg-blue-700 px-6 py-3 text-sm font-bold text-white transition hover:bg-blue-800"
-              onClick={() => setShowAnswer(true)}
-              type="button"
-            >
-              {t("flashcards.showAnswer")}
-            </button>
-          </div>
-        )}
-      </div>
+          <button
+            className="mt-5 rounded-full bg-blue-700 px-5 py-3 text-sm font-bold text-white transition hover:bg-blue-800"
+            onClick={goToNextWord}
+            type="button"
+          >
+            {currentIndex >= imageQuestions.length - 1
+              ? t("flashcards.finishReview")
+              : t("flashcards.nextWord")}
+          </button>
+        </div>
+      )}
     </section>
   );
 }

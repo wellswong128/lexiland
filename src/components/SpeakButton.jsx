@@ -53,4 +53,5 @@ function SpeakButton({ className = "", text }) {
   );
 }
 
+export { speakText };
 export default SpeakButton;
