@@ -30,7 +30,7 @@ const navSections = [
   },
   {
     labelKey: "nav.sectionApp",
-    items: [{ to: "/settings", labelKey: "nav.settings" }],
+    items: [{ to: "/install", labelKey: "nav.installApp" }, { to: "/settings", labelKey: "nav.settings" }],
   },
 ];
 

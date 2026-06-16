@@ -1,0 +1,185 @@
+.install-page {
+  width: 100%;
+  max-width: 430px;
+  min-height: 100%;
+  padding: 16px 16px 24px;
+}
+
+.install-page-card {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  border-radius: 28px;
+  border: 1px solid rgba(191, 219, 254, 0.85);
+  background: rgba(255, 255, 255, 0.94);
+  box-shadow: 0 12px 32px rgba(30, 58, 138, 0.1);
+  padding: 20px 18px 24px;
+}
+
+.install-qr-card {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.install-qr-card-compact .install-qr-description,
+.install-qr-card-compact .install-qr-steps {
+  display: none;
+}
+
+.install-qr-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.install-qr-eyebrow {
+  margin: 0 0 4px;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #2f77ff;
+}
+
+.install-qr-title {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 900;
+  line-height: 1.1;
+  color: #1f2a44;
+}
+
+.install-qr-description {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.6;
+  color: #64748b;
+}
+
+.install-qr-frame {
+  align-self: center;
+  padding: 14px;
+  border-radius: 24px;
+  background: #fff;
+  box-shadow: inset 0 0 0 1px rgba(148, 163, 184, 0.25);
+}
+
+.install-qr-url {
+  margin: 0;
+  text-align: center;
+  font-size: 13px;
+  line-height: 1.5;
+  word-break: break-all;
+  color: #475569;
+}
+
+.install-qr-copy {
+  align-self: center;
+  border: 0;
+  border-radius: 999px;
+  background: #eef3ff;
+  color: #1f57d6;
+  cursor: pointer;
+  font: inherit;
+  font-size: 14px;
+  font-weight: 800;
+  padding: 10px 18px;
+}
+
+.install-qr-copy:hover {
+  background: #dbeafe;
+}
+
+.install-qr-steps {
+  display: grid;
+  gap: 12px;
+}
+
+.install-qr-step {
+  border-radius: 18px;
+  background: #f8fbff;
+  padding: 14px 16px;
+}
+
+.install-qr-step h3 {
+  margin: 0 0 8px;
+  font-size: 15px;
+  font-weight: 800;
+  color: #1f2a44;
+}
+
+.install-qr-step ol {
+  margin: 0;
+  padding-left: 18px;
+  color: #475569;
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+.install-qr-step li + li {
+  margin-top: 6px;
+}
+
+.install-page-notice {
+  margin: 0;
+  border-radius: 16px;
+  background: #f8fafc;
+  padding: 12px 14px;
+  font-size: 14px;
+  line-height: 1.55;
+  color: #475569;
+}
+
+.install-page-notice-success {
+  background: #ecfdf5;
+  color: #047857;
+}
+
+.install-page-button {
+  border: 0;
+  border-radius: 999px;
+  background: linear-gradient(180deg, #3b82f6 0%, #2563eb 100%);
+  color: #fff;
+  cursor: pointer;
+  font: inherit;
+  font-size: 16px;
+  font-weight: 800;
+  padding: 14px 20px;
+  box-shadow: 0 10px 24px rgba(37, 99, 235, 0.24);
+}
+
+.install-page-button:hover {
+  filter: brightness(1.03);
+}
+
+.install-page-home-link {
+  align-self: center;
+  font-size: 14px;
+  font-weight: 800;
+  color: #2f77ff;
+  text-decoration: none;
+}
+
+.install-page-home-link:hover {
+  text-decoration: underline;
+}
+
+.install-settings-link {
+  display: inline-flex;
+  margin-top: 12px;
+  font-size: 14px;
+  font-weight: 800;
+  color: #2563eb;
+  text-decoration: none;
+}
+
+.install-settings-link:hover {
+  text-decoration: underline;
+}
+
+@media (min-width: 640px) {
+  .install-qr-steps {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}

@@ -1,11 +1,14 @@
 import { useMemo, useState } from "react";
 import { Link } from "react-router-dom";
+import InstallQrCard from "../components/InstallQrCard.jsx";
 import LanguageToggle from "../components/LanguageToggle.jsx";
 import { getFriendlyAuthError } from "../features/auth/authErrors.js";
 import { useLocale } from "../features/locale/LocaleContext.jsx";
 import { useWordsContext } from "../features/words/WordsContext.jsx";
 import { normalizeTerm, normalizeText } from "../features/words/wordTypes.js";
 import { loadWords, WORDS_STORAGE_KEY } from "../lib/storage.js";
+import { getAppInstallUrl } from "../lib/appUrl.js";
+import "../styles/install-page.css";
 
 function SettingsPage() {
   const { t } = useLocale();
@@ -108,6 +111,7 @@ function SettingsPage() {
   const friendlyCurrentError = currentError
     ? getFriendlyAuthError(currentError, t)
     : "";
+  const installUrl = getAppInstallUrl("/install");
 
   return (
     <section className="w-full max-w-4xl rounded-3xl border border-blue-200/70 bg-white/90 p-6 shadow-2xl shadow-blue-950/10 sm:p-10">
@@ -148,6 +152,19 @@ function SettingsPage() {
         <div className="mt-4">
           <LanguageToggle />
         </div>
+      </div>
+
+      <div className="mb-5 rounded-2xl bg-blue-50 p-5">
+        <h2 className="text-lg font-bold text-blue-950">{t("settings.installTitle")}</h2>
+        <p className="mt-2 text-sm leading-6 text-slate-600">
+          {t("settings.installDescription")}
+        </p>
+        <div className="mt-4">
+          <InstallQrCard compact installUrl={installUrl} showInstructions={false} showTitle={false} />
+        </div>
+        <Link className="install-settings-link" to="/install">
+          {t("settings.installOpenPage")}
+        </Link>
       </div>
 
       <div className="mb-5 rounded-2xl bg-blue-50 p-5">

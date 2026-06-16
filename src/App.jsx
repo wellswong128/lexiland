@@ -6,6 +6,7 @@ import AchievementsPage from "./pages/AchievementsPage.jsx";
 import AddWordPage from "./pages/AddWordPage.jsx";
 import FlashcardsPage from "./pages/FlashcardsPage.jsx";
 import HomePage from "./pages/HomePage.jsx";
+import InstallPage from "./pages/InstallPage.jsx";
 import MistakesPage from "./pages/MistakesPage.jsx";
 import NotFoundPage from "./pages/NotFoundPage.jsx";
 import QuizPage from "./pages/QuizPage.jsx";
@@ -42,6 +43,7 @@ function App() {
           <Route path="/mistakes" element={<MistakesPage />} />
           <Route path="/auth" element={<AuthPage />} />
           <Route path="/settings" element={<SettingsPage />} />
+          <Route path="/install" element={<InstallPage />} />
           <Route path="*" element={<NotFoundPage />} />
         </Routes>
         </AppLayout>
