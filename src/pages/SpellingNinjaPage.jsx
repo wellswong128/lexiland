@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import GameHomeButton from "../components/GameHomeButton.jsx";
 import GameMistakeSummary from "../components/GameMistakeSummary.jsx";
 import GameWordBankStatus from "../components/GameWordBankStatus.jsx";
-import SpeakButton from "../components/SpeakButton.jsx";
+import GameWordWithSpeak from "../components/GameWordWithSpeak.jsx";
 import {
   normalizeGameWord,
   pickNinjaWord,
@@ -526,12 +526,11 @@ function SpellingNinjaPage() {
               </div>
 
               <div className="spelling-ninja-word-panel relative z-10 mt-4 w-full sm:mt-5">
-                <div className="game-word-with-speak">
-                  <div className="game-word-with-speak-text text-xl font-black leading-tight text-yellow-300 sm:text-4xl">
-                    {round.word.meaning}
-                  </div>
-                  <SpeakButton className="game-word-speak-btn" text={round.word.word} />
-                </div>
+                <GameWordWithSpeak
+                  className="text-xl font-black leading-tight text-yellow-300 sm:text-4xl"
+                  speakAs={round.word.word}
+                  text={round.word.meaning}
+                />
                 <p className="mt-1.5 text-xs leading-relaxed text-slate-300 sm:text-xs">
                   {t("games.partOfSpeech", { type: round.word.type })} | {round.word.word.length} | {Math.min(round.targetIndex + 1, round.word.word.length)}/{round.word.word.length}
                 </p>
