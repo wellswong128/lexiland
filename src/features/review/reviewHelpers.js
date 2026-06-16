@@ -46,9 +46,70 @@ export function getReviewSessionWords(words, { mistakesOnly = false, now = new D
 export function getPriorityReviewWords(words, now = new Date()) {
   const dueWordIds = new Set(getDueWords(words, now).map((word) => word.id));
 
-  return words.filter(
-    (word) => word.mistake?.isMistake || dueWordIds.has(word.id),
+  return words
+    .filter((word) => word.mistake?.isMistake || dueWordIds.has(word.id))
+    .sort((left, right) => compareGamePriorityWords(left, right));
+}
+
+function compareGamePriorityWords(left, right) {
+  const leftIsMistake = Boolean(left.mistake?.isMistake);
+  const rightIsMistake = Boolean(right.mistake?.isMistake);
+
+  if (leftIsMistake !== rightIsMistake) {
+    return leftIsMistake ? -1 : 1;
+  }
+
+  if (leftIsMistake && rightIsMistake) {
+    const leftMistakeAt = left.mistake?.lastMistakeAt
+      ? new Date(left.mistake.lastMistakeAt).getTime()
+      : 0;
+    const rightMistakeAt = right.mistake?.lastMistakeAt
+      ? new Date(right.mistake.lastMistakeAt).getTime()
+      : 0;
+
+    return rightMistakeAt - leftMistakeAt;
+  }
+
+  const leftDueAt = left.review?.nextReviewAt
+    ? new Date(left.review.nextReviewAt).getTime()
+    : 0;
+  const rightDueAt = right.review?.nextReviewAt
+    ? new Date(right.review.nextReviewAt).getTime()
+    : 0;
+
+  return leftDueAt - rightDueAt;
+}
+
+export function getMaintenanceScore(word, now = new Date()) {
+  const nowMs = now.getTime();
+  const lastReviewedAt = word.review?.lastReviewedAt;
+  const daysSinceReview = lastReviewedAt
+    ? (nowMs - new Date(lastReviewedAt).getTime()) / 86_400_000
+    : 30;
+  const level = word.review?.level ?? 0;
+  const levelScore = Math.max(0, 5 - Math.min(level, 5)) * 3;
+  const createdAt = word.createdAt ? new Date(word.createdAt).getTime() : nowMs;
+  const daysSinceCreated = (nowMs - createdAt) / 86_400_000;
+  const recentAddScore = daysSinceCreated <= 14 && lastReviewedAt ? 5 : 0;
+
+  return daysSinceReview * 2 + levelScore + recentAddScore;
+}
+
+export function getMaintenanceReviewWords(words, now = new Date()) {
+  return [...words].sort(
+    (left, right) => getMaintenanceScore(right, now) - getMaintenanceScore(left, now),
   );
+}
+
+export function getLimitedMaintenanceReviewWords(words, now = new Date()) {
+  const allWords = getMaintenanceReviewWords(words, now);
+
+  return {
+    allWords,
+    isLimited: allWords.length > REVIEW_SESSION_WORD_LIMIT,
+    sessionWords: allWords.slice(0, REVIEW_SESSION_WORD_LIMIT),
+    totalCount: allWords.length,
+  };
 }
 
 export function getLimitedPriorityReviewWords(words, now = new Date()) {

@@ -98,10 +98,10 @@ function playTone(freq, duration, type = "sine", volume = 0.035) {
   }
 }
 
-function createQuestion(entries, priorityWordIds, pickQuestion) {
+function createQuestion(entries, wordBank, pickQuestion) {
   const question = pickQuestion
     ? pickQuestion()
-    : pickRandomEntry(entries, priorityWordIds);
+    : pickRandomEntry(entries, wordBank);
 
   if (!question) {
     return null;
@@ -199,15 +199,17 @@ function FishingBlastPage() {
     isPriorityLimited,
     priorityCount,
     priorityWordIds,
+    totalMaintenanceCount,
     totalPriorityCount,
     usingFallback,
+    usingMaintenanceMode,
   } = defaultBank;
 
   const pickQuestionForBank = useCallback(
     (bank) =>
       shouldUseGamePlan(bank)
         ? () => pickNextEntry(bank)
-        : () => pickRandomEntry(bank.entries, bank.priorityWordIds),
+        : () => pickRandomEntry(bank.entries, bank),
     [pickNextEntry],
   );
 
@@ -244,7 +246,7 @@ function FishingBlastPage() {
     setFishStates({});
     setFishingLine(null);
     setCurrentRound(
-      createQuestion(bank.entries, bank.priorityWordIds, pickQuestionForBank(bank)),
+      createQuestion(bank.entries, bank, pickQuestionForBank(bank)),
     );
     setGameState("playing");
   }, [beginPlaySession, pickQuestionForBank, resetTracker]);
@@ -267,7 +269,7 @@ function FishingBlastPage() {
     setStatus({ text: "", type: "" });
     const bank = getActivePlayBank();
     setCurrentRound(
-      createQuestion(bank.entries, bank.priorityWordIds, pickQuestionForBank(bank)),
+      createQuestion(bank.entries, bank, pickQuestionForBank(bank)),
     );
   }, [getActivePlayBank, pickQuestionForBank, resetOptionState]);
 
@@ -639,8 +641,10 @@ function FishingBlastPage() {
           className="game-page-footer mt-1 block text-center text-xs text-sky-200"
           isPriorityLimited={isPriorityLimited}
           priorityCount={priorityCount}
+          totalMaintenanceCount={totalMaintenanceCount}
           totalPriorityCount={totalPriorityCount}
           usingFallback={usingFallback}
+          usingMaintenanceMode={usingMaintenanceMode}
           usingReviewSession={hasActiveReviewSession() && defaultBank.priorityCount > 0}
         />
       )}

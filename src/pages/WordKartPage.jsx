@@ -53,10 +53,10 @@ function playTone(freq, duration, type = "sine", volume = 0.035) {
   }
 }
 
-function createQuestion(entries, priorityWordIds, pickQuestion) {
+function createQuestion(entries, wordBank, pickQuestion) {
   const question = pickQuestion
     ? pickQuestion()
-    : pickRandomEntry(entries, priorityWordIds);
+    : pickRandomEntry(entries, wordBank);
 
   if (!question) {
     return null;
@@ -127,15 +127,17 @@ function WordKartPage() {
     isPriorityLimited,
     priorityCount,
     priorityWordIds,
+    totalMaintenanceCount,
     totalPriorityCount,
     usingFallback,
+    usingMaintenanceMode,
   } = defaultBank;
 
   const pickQuestionForBank = useCallback(
     (bank) =>
       shouldUseGamePlan(bank)
         ? () => pickNextEntry(bank)
-        : () => pickRandomEntry(bank.entries, bank.priorityWordIds),
+        : () => pickRandomEntry(bank.entries, bank),
     [pickNextEntry],
   );
 
@@ -161,7 +163,7 @@ function WordKartPage() {
     const bank = beginPlaySession();
     const firstRound = createQuestion(
       bank.entries,
-      bank.priorityWordIds,
+      bank,
       pickQuestionForBank(bank),
     );
 
@@ -199,7 +201,7 @@ function WordKartPage() {
     const bank = getActivePlayBank();
     const nextRound = createQuestion(
       bank.entries,
-      bank.priorityWordIds,
+      bank,
       pickQuestionForBank(bank),
     );
 
@@ -560,8 +562,10 @@ function WordKartPage() {
           className="game-page-footer mt-1 block text-center text-xs text-sky-100"
           isPriorityLimited={isPriorityLimited}
           priorityCount={priorityCount}
+          totalMaintenanceCount={totalMaintenanceCount}
           totalPriorityCount={totalPriorityCount}
           usingFallback={usingFallback}
+          usingMaintenanceMode={usingMaintenanceMode}
           usingReviewSession={hasActiveReviewSession() && defaultBank.priorityCount > 0}
         />
       )}

@@ -237,8 +237,10 @@ function BattleJetQuizPage() {
     isPriorityLimited,
     priorityCount,
     priorityWordIds,
+    totalMaintenanceCount,
     totalPriorityCount,
     usingFallback,
+    usingMaintenanceMode,
   } = defaultBank;
 
   const [gameState, setGameState] = useState("start");
@@ -945,8 +947,10 @@ function BattleJetQuizPage() {
           className="game-page-footer mt-1 block shrink-0 text-center text-xs font-semibold text-[#4d6878] sm:text-xs"
           isPriorityLimited={isPriorityLimited}
           priorityCount={priorityCount}
+          totalMaintenanceCount={totalMaintenanceCount}
           totalPriorityCount={totalPriorityCount}
           usingFallback={usingFallback}
+          usingMaintenanceMode={usingMaintenanceMode}
           usingReviewSession={hasActiveReviewSession() && defaultBank.priorityCount > 0}
         />
       ) : null}

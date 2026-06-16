@@ -79,10 +79,10 @@ function createLetters(word, level) {
   return shuffleArray([...mainLetters, ...distractors, ...bombs]);
 }
 
-function createRound(entries, priorityWordIds, level, pickWord) {
+function createRound(entries, wordBank, level, pickWord) {
   const word = pickWord
     ? pickWord({ level })
-    : pickNinjaWord(entries, priorityWordIds, level);
+    : pickNinjaWord(entries, wordBank, level);
 
   return {
     word,
@@ -111,8 +111,10 @@ function SpellingNinjaPage() {
     isPriorityLimited,
     priorityCount,
     priorityWordIds,
+    totalMaintenanceCount,
     totalPriorityCount,
     usingFallback,
+    usingMaintenanceMode,
   } = defaultBank;
 
   const pickWordForBank = useCallback(
@@ -144,7 +146,7 @@ function SpellingNinjaPage() {
       const bank = getActivePlayBank();
       const nextRound = createRound(
         bank.entries,
-        bank.priorityWordIds,
+        bank,
         nextLevel,
         pickWordForBank(bank),
       );
@@ -164,7 +166,7 @@ function SpellingNinjaPage() {
     const bank = beginPlaySession();
     const firstRound = createRound(
       bank.entries,
-      bank.priorityWordIds,
+      bank,
       1,
       pickWordForBank(bank),
     );
@@ -679,8 +681,10 @@ function SpellingNinjaPage() {
           <GameWordBankStatus
             isPriorityLimited={isPriorityLimited}
             priorityCount={priorityCount}
+            totalMaintenanceCount={totalMaintenanceCount}
             totalPriorityCount={totalPriorityCount}
             usingFallback={usingFallback}
+            usingMaintenanceMode={usingMaintenanceMode}
             usingReviewSession={hasActiveReviewSession() && defaultBank.priorityCount > 0}
           />
           {defeatedWords.length > 0

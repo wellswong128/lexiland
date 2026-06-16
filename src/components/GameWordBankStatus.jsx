@@ -4,8 +4,10 @@ function GameWordBankStatus({
   className = "",
   isPriorityLimited = false,
   priorityCount = 0,
+  totalMaintenanceCount = 0,
   totalPriorityCount = 0,
   usingFallback = false,
+  usingMaintenanceMode = false,
   usingReviewSession = false,
 }) {
   const { t } = useLocale();
@@ -18,6 +20,9 @@ function GameWordBankStatus({
         : null}
       {!usingFallback && !usingReviewSession && totalPriorityCount > 0
         ? ` ${t("games.priorityWordsHint", { count: totalPriorityCount })}`
+        : null}
+      {!usingFallback && !usingReviewSession && usingMaintenanceMode
+        ? ` ${t("games.maintenanceWordsHint", { count: totalMaintenanceCount })}`
         : null}
       {!usingFallback && !usingReviewSession && isPriorityLimited
         ? ` ${t("flashcards.reviewFirstTenOnly")}`

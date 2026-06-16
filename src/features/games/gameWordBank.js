@@ -3,7 +3,11 @@ import {
   hasActiveReviewSession,
   loadReviewSession,
 } from "../../lib/reviewSessionStorage.js";
-import { getLimitedPriorityReviewWords } from "../review/reviewHelpers.js";
+import {
+  getLimitedMaintenanceReviewWords,
+  getLimitedPriorityReviewWords,
+  getMaintenanceScore,
+} from "../review/reviewHelpers.js";
 
 export const GAME_FALLBACK_WORDS = [
   { word: "apple", meaning: "蘋果", type: "noun" },
@@ -67,6 +71,62 @@ export function getPriorityWordIds(words, now = new Date()) {
   );
 }
 
+function normalizePickOptions(priorityWordIdsOrBank, overrides = {}) {
+  if (priorityWordIdsOrBank instanceof Set) {
+    return {
+      priorityWordIds: priorityWordIdsOrBank,
+      maintenanceWordIds: new Set(),
+      maintenanceScores: new Map(),
+      usingMaintenanceMode: false,
+      priorityChance: PRIORITY_PICK_CHANCE,
+      ...overrides,
+    };
+  }
+
+  const bank = priorityWordIdsOrBank ?? {};
+
+  return {
+    priorityWordIds: bank.priorityWordIds ?? new Set(),
+    maintenanceWordIds: bank.maintenanceWordIds ?? new Set(),
+    maintenanceScores: bank.maintenanceScores ?? new Map(),
+    usingMaintenanceMode: Boolean(bank.usingMaintenanceMode),
+    priorityChance: overrides.priorityChance ?? PRIORITY_PICK_CHANCE,
+    ...overrides,
+  };
+}
+
+function pickUniformRandom(entries) {
+  return entries[Math.floor(Math.random() * entries.length)] ?? entries[0] ?? null;
+}
+
+function pickWeightedRandom(entries, scoreByWordId) {
+  if (entries.length === 0) {
+    return null;
+  }
+
+  const weights = entries.map((entry) => {
+    const score = entry.wordId ? scoreByWordId.get(entry.wordId) ?? 1 : 1;
+
+    return Math.max(score, 1);
+  });
+  const totalWeight = weights.reduce((sum, weight) => sum + weight, 0);
+  let threshold = Math.random() * totalWeight;
+
+  for (let index = 0; index < entries.length; index += 1) {
+    threshold -= weights[index];
+
+    if (threshold <= 0) {
+      return entries[index];
+    }
+  }
+
+  return entries[entries.length - 1];
+}
+
+function buildMaintenanceScores(words, now = new Date()) {
+  return new Map(words.map((word) => [word.id, getMaintenanceScore(word, now)]));
+}
+
 function buildEntriesFromGamePlan(
   words,
   gamePlanWordIds,
@@ -112,10 +172,14 @@ export function buildGameWordBank(
       gamePlanWordIds,
       hasReviewSession: true,
       isPriorityLimited: false,
+      maintenanceScores: new Map(),
+      maintenanceWordIds: new Set(),
       priorityCount: entries.length,
       priorityWordIds,
+      totalMaintenanceCount: 0,
       totalPriorityCount: session?.wordIds.length ?? entries.length,
       usingFallback: false,
+      usingMaintenanceMode: false,
       usingReviewSession: entries.length > 0,
     };
   }
@@ -132,8 +196,15 @@ export function buildGameWordBank(
   const priorityReview = usingFallback
     ? { sessionWords: [], totalCount: 0, isLimited: false }
     : getLimitedPriorityReviewWords(words);
+  const usingMaintenanceMode = !usingFallback && priorityReview.totalCount === 0;
+  const maintenanceReview = usingMaintenanceMode
+    ? getLimitedMaintenanceReviewWords(words)
+    : { sessionWords: [], totalCount: 0, isLimited: false };
   const priorityWordIds = new Set(priorityReview.sessionWords.map((word) => word.id));
+  const maintenanceWordIds = new Set(maintenanceReview.sessionWords.map((word) => word.id));
+  const maintenanceScores = usingMaintenanceMode ? buildMaintenanceScores(words) : new Map();
   const totalPriorityCount = priorityReview.totalCount;
+  const totalMaintenanceCount = maintenanceReview.totalCount;
   const isPriorityLimited = priorityReview.isLimited;
   const priorityCount = savedEntries.filter(
     (entry) => entry.wordId && priorityWordIds.has(entry.wordId),
@@ -144,10 +215,14 @@ export function buildGameWordBank(
     gamePlanWordIds: null,
     hasReviewSession: false,
     isPriorityLimited,
+    maintenanceScores,
+    maintenanceWordIds,
     priorityCount,
     priorityWordIds,
+    totalMaintenanceCount,
     totalPriorityCount,
     usingFallback,
+    usingMaintenanceMode,
     usingReviewSession: false,
   };
 }
@@ -156,48 +231,80 @@ export function isPriorityEntry(entry, priorityWordIds) {
   return Boolean(entry.wordId && priorityWordIds.has(entry.wordId));
 }
 
-export function pickRandomEntry(
-  entries,
-  priorityWordIds,
-  { priorityChance = PRIORITY_PICK_CHANCE } = {},
-) {
+export function pickRandomEntry(entries, priorityWordIdsOrBank, overrides = {}) {
   if (entries.length === 0) {
     return null;
   }
 
+  const {
+    priorityWordIds,
+    maintenanceWordIds,
+    maintenanceScores,
+    usingMaintenanceMode,
+    priorityChance,
+  } = normalizePickOptions(priorityWordIdsOrBank, overrides);
   const priorityEntries = entries.filter((entry) =>
     isPriorityEntry(entry, priorityWordIds),
   );
-  const pool =
-    priorityEntries.length > 0 && Math.random() < priorityChance
-      ? priorityEntries
-      : entries;
 
-  return pool[Math.floor(Math.random() * pool.length)] ?? entries[0];
+  if (priorityEntries.length > 0 && Math.random() < priorityChance) {
+    return pickUniformRandom(priorityEntries);
+  }
+
+  if (usingMaintenanceMode) {
+    const focusEntries = entries.filter(
+      (entry) => entry.wordId && maintenanceWordIds.has(entry.wordId),
+    );
+    const pool =
+      focusEntries.length > 0 && Math.random() < priorityChance ? focusEntries : entries;
+
+    return pickWeightedRandom(pool, maintenanceScores) ?? pickUniformRandom(entries);
+  }
+
+  return pickUniformRandom(entries);
 }
 
-export function pickFixedRoundEntries(entries, priorityWordIds, totalRounds) {
+export function pickFixedRoundEntries(entries, priorityWordIdsOrBank, totalRounds) {
   if (entries.length === 0) {
     return [];
   }
 
-  const priorityEntries = shuffleArray(
-    entries.filter((entry) => isPriorityEntry(entry, priorityWordIds)),
+  const {
+    priorityWordIds,
+    maintenanceWordIds,
+    maintenanceScores,
+    usingMaintenanceMode,
+  } = normalizePickOptions(priorityWordIdsOrBank);
+  const focusWordIds =
+    priorityWordIds.size > 0
+      ? priorityWordIds
+      : usingMaintenanceMode
+        ? maintenanceWordIds
+        : new Set();
+  const focusEntries = shuffleArray(
+    entries.filter((entry) => entry.wordId && focusWordIds.has(entry.wordId)),
   );
   const normalEntries = shuffleArray(
-    entries.filter((entry) => !isPriorityEntry(entry, priorityWordIds)),
+    entries.filter((entry) => !entry.wordId || !focusWordIds.has(entry.wordId)),
   );
-  const minPriorityCount = Math.min(
-    priorityEntries.length,
-    Math.ceil(totalRounds / 2),
-  );
-  const picked = [...priorityEntries.slice(0, minPriorityCount)];
+  const minFocusCount = Math.min(focusEntries.length, Math.ceil(totalRounds / 2));
+  const picked = [...focusEntries.slice(0, minFocusCount)];
   const remainingPool = shuffleArray([
-    ...priorityEntries.slice(minPriorityCount),
+    ...focusEntries.slice(minFocusCount),
     ...normalEntries,
   ]);
 
   while (picked.length < totalRounds && remainingPool.length > 0) {
+    if (usingMaintenanceMode && priorityWordIds.size === 0) {
+      const nextEntry = pickWeightedRandom(remainingPool, maintenanceScores);
+
+      if (nextEntry) {
+        picked.push(nextEntry);
+        remainingPool.splice(remainingPool.indexOf(nextEntry), 1);
+        continue;
+      }
+    }
+
     picked.push(remainingPool.shift());
   }
 
@@ -244,7 +351,7 @@ export function buildGameTranslationQuizQuestions(bank, totalRounds) {
     );
   }
 
-  return buildTranslationQuizQuestions(bank.entries, bank.priorityWordIds, totalRounds);
+  return buildTranslationQuizQuestions(bank.entries, bank, totalRounds);
 }
 
 function buildTranslationQuizQuestion(item, entries) {
@@ -275,8 +382,8 @@ export function filterEntriesForNinjaLevel(entries, level) {
   return filteredEntries.length > 0 ? filteredEntries : entries;
 }
 
-export function pickNinjaWord(entries, priorityWordIds, level) {
+export function pickNinjaWord(entries, priorityWordIdsOrBank, level) {
   const availableEntries = filterEntriesForNinjaLevel(entries, level);
 
-  return pickRandomEntry(availableEntries, priorityWordIds) ?? entries[0] ?? null;
+  return pickRandomEntry(availableEntries, priorityWordIdsOrBank) ?? entries[0] ?? null;
 }

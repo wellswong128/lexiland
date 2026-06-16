@@ -97,9 +97,9 @@ function makeChoicesForWord(entries, item) {
   return shuffleArray([item.meaning, ...shuffleArray(wrongPool).slice(0, 3)]);
 }
 
-function makeQuestions(entries, priorityWordIds, roundEntries) {
+function makeQuestions(entries, wordBank, roundEntries) {
   const items =
-    roundEntries ?? pickFixedRoundEntries(entries, priorityWordIds, TOTAL_ROUNDS);
+    roundEntries ?? pickFixedRoundEntries(entries, wordBank, TOTAL_ROUNDS);
 
   return items.map((item) => ({
     en: item.word,
@@ -409,8 +409,10 @@ function PenaltyTwelvePage() {
     isPriorityLimited,
     priorityCount,
     priorityWordIds,
+    totalMaintenanceCount,
     totalPriorityCount,
     usingFallback,
+    usingMaintenanceMode,
   } = defaultBank;
 
   const [gameState, setGameState] = useState("start");
@@ -575,7 +577,7 @@ function PenaltyTwelvePage() {
       : null;
     const nextQuestions = makeQuestions(
       bank.entries,
-      bank.priorityWordIds,
+      bank,
       roundEntries,
     );
 
@@ -1165,8 +1167,10 @@ function PenaltyTwelvePage() {
           className="game-page-footer mt-1 block shrink-0 text-center text-xs font-semibold text-[#4d6878] sm:text-xs"
           isPriorityLimited={isPriorityLimited}
           priorityCount={priorityCount}
+          totalMaintenanceCount={totalMaintenanceCount}
           totalPriorityCount={totalPriorityCount}
           usingFallback={usingFallback}
+          usingMaintenanceMode={usingMaintenanceMode}
           usingReviewSession={hasActiveReviewSession() && defaultBank.priorityCount > 0}
         />
       ) : null}
