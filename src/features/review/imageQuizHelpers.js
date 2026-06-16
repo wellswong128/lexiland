@@ -26,10 +26,15 @@ export function createImageQuizQuestions(sessionWords, allWords, optionCount = 4
       .map((candidate) => ({
         wordId: candidate.id,
         imageUrl: readWordMemoryImage(candidate).imageUrl,
+        translation: String(candidate.translation ?? "").trim(),
       }));
 
     const options = shuffleItems([
-      { wordId: word.id, imageUrl: correctImageUrl },
+      {
+        wordId: word.id,
+        imageUrl: correctImageUrl,
+        translation: String(word.translation ?? "").trim(),
+      },
       ...wrongOptions,
     ]);
 

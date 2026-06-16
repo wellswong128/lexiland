@@ -308,7 +308,7 @@ function FlashcardsPage() {
           <div className="grid grid-cols-2 gap-3">
             {currentQuestion.options.map((option, optionIndex) => (
               <button
-                className="overflow-hidden rounded-2xl border-2 border-slate-200 bg-white transition hover:border-blue-400 hover:shadow-md focus:outline-none focus-visible:ring-4 focus-visible:ring-blue-100"
+                className="relative overflow-hidden rounded-2xl border-2 border-slate-200 bg-white transition hover:border-blue-400 hover:shadow-md focus:outline-none focus-visible:ring-4 focus-visible:ring-blue-100"
                 key={`${option.wordId}-${optionIndex}`}
                 onClick={() => handleImageAnswer(option.wordId)}
                 type="button"
@@ -319,6 +319,11 @@ function FlashcardsPage() {
                   loading="lazy"
                   src={option.imageUrl}
                 />
+                {option.translation ? (
+                  <span className="flashcard-image-translation-overlay review-word-translation">
+                    {option.translation}
+                  </span>
+                ) : null}
               </button>
             ))}
           </div>
