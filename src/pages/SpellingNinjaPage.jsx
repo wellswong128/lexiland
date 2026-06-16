@@ -111,6 +111,7 @@ function SpellingNinjaPage() {
     isPriorityLimited,
     priorityCount,
     priorityWordIds,
+    supplementedCount,
     totalMaintenanceCount,
     totalPriorityCount,
     usingFallback,
@@ -681,6 +682,7 @@ function SpellingNinjaPage() {
           <GameWordBankStatus
             isPriorityLimited={isPriorityLimited}
             priorityCount={priorityCount}
+            supplementedCount={supplementedCount}
             totalMaintenanceCount={totalMaintenanceCount}
             totalPriorityCount={totalPriorityCount}
             usingFallback={usingFallback}

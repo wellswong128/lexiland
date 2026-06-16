@@ -4,6 +4,7 @@ function GameWordBankStatus({
   className = "",
   isPriorityLimited = false,
   priorityCount = 0,
+  supplementedCount = 0,
   totalMaintenanceCount = 0,
   totalPriorityCount = 0,
   usingFallback = false,
@@ -23,6 +24,12 @@ function GameWordBankStatus({
         : null}
       {!usingFallback && !usingReviewSession && usingMaintenanceMode
         ? ` ${t("games.maintenanceWordsHint", { count: totalMaintenanceCount })}`
+        : null}
+      {!usingFallback && supplementedCount > 0
+        ? ` ${t("games.supplementedWordsHint", {
+            extra: supplementedCount,
+            priority: priorityCount || totalPriorityCount,
+          })}`
         : null}
       {!usingFallback && !usingReviewSession && isPriorityLimited
         ? ` ${t("flashcards.reviewFirstTenOnly")}`

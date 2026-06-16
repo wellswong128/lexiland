@@ -127,6 +127,7 @@ function WordKartPage() {
     isPriorityLimited,
     priorityCount,
     priorityWordIds,
+    supplementedCount,
     totalMaintenanceCount,
     totalPriorityCount,
     usingFallback,
@@ -562,6 +563,7 @@ function WordKartPage() {
           className="game-page-footer mt-1 block text-center text-xs text-sky-100"
           isPriorityLimited={isPriorityLimited}
           priorityCount={priorityCount}
+          supplementedCount={supplementedCount}
           totalMaintenanceCount={totalMaintenanceCount}
           totalPriorityCount={totalPriorityCount}
           usingFallback={usingFallback}

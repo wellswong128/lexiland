@@ -409,6 +409,7 @@ function PenaltyTwelvePage() {
     isPriorityLimited,
     priorityCount,
     priorityWordIds,
+    supplementedCount,
     totalMaintenanceCount,
     totalPriorityCount,
     usingFallback,
@@ -1167,6 +1168,7 @@ function PenaltyTwelvePage() {
           className="game-page-footer mt-1 block shrink-0 text-center text-xs font-semibold text-[#4d6878] sm:text-xs"
           isPriorityLimited={isPriorityLimited}
           priorityCount={priorityCount}
+          supplementedCount={supplementedCount}
           totalMaintenanceCount={totalMaintenanceCount}
           totalPriorityCount={totalPriorityCount}
           usingFallback={usingFallback}

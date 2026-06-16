@@ -199,6 +199,7 @@ function FishingBlastPage() {
     isPriorityLimited,
     priorityCount,
     priorityWordIds,
+    supplementedCount,
     totalMaintenanceCount,
     totalPriorityCount,
     usingFallback,
@@ -641,6 +642,7 @@ function FishingBlastPage() {
           className="game-page-footer mt-1 block text-center text-xs text-sky-200"
           isPriorityLimited={isPriorityLimited}
           priorityCount={priorityCount}
+          supplementedCount={supplementedCount}
           totalMaintenanceCount={totalMaintenanceCount}
           totalPriorityCount={totalPriorityCount}
           usingFallback={usingFallback}

@@ -6,7 +6,9 @@ import {
 import {
   getLimitedMaintenanceReviewWords,
   getLimitedPriorityReviewWords,
+  getMaintenanceReviewWords,
   getMaintenanceScore,
+  REVIEW_SESSION_WORD_LIMIT,
 } from "../review/reviewHelpers.js";
 
 export const GAME_FALLBACK_WORDS = [
@@ -127,6 +129,68 @@ function buildMaintenanceScores(words, now = new Date()) {
   return new Map(words.map((word) => [word.id, getMaintenanceScore(word, now)]));
 }
 
+export function expandWordIdsForGamePool(
+  words,
+  seedWordIds,
+  {
+    targetCount = REVIEW_SESSION_WORD_LIMIT,
+    minCount = 4,
+    minLength = 1,
+    normalizeWord = (term) => term.trim().toLowerCase(),
+    now = new Date(),
+  } = {},
+) {
+  const eligibleWords = words.filter((word) => {
+    const entry = toGameEntry(word, { normalizeWord });
+
+    return entry && entry.word.length >= minLength;
+  });
+  const goal = Math.min(Math.max(minCount, targetCount), eligibleWords.length);
+  const wordsById = new Map(eligibleWords.map((word) => [word.id, word]));
+  const selectedIds = [];
+  const selectedSet = new Set();
+
+  for (const wordId of seedWordIds) {
+    if (selectedSet.has(wordId) || !wordsById.has(wordId)) {
+      continue;
+    }
+
+    selectedIds.push(wordId);
+    selectedSet.add(wordId);
+  }
+
+  if (selectedIds.length >= goal) {
+    return selectedIds.slice(0, goal);
+  }
+
+  const supplementalWords = getMaintenanceReviewWords(
+    eligibleWords.filter((word) => !selectedSet.has(word.id)),
+    now,
+  );
+
+  for (const word of supplementalWords) {
+    if (selectedIds.length >= goal) {
+      break;
+    }
+
+    selectedIds.push(word.id);
+    selectedSet.add(word.id);
+  }
+
+  return selectedIds;
+}
+
+function buildGameplayWordIds(words, seedWordIds, options = {}) {
+  const expandedWordIds = expandWordIdsForGamePool(words, seedWordIds, options);
+
+  return {
+    expandedWordIds,
+    priorityWordIds: new Set(seedWordIds.filter(Boolean)),
+    sessionExpanded: expandedWordIds.length > seedWordIds.filter(Boolean).length,
+    supplementedCount: Math.max(expandedWordIds.length - seedWordIds.filter(Boolean).length, 0),
+  };
+}
+
 function buildEntriesFromGamePlan(
   words,
   gamePlanWordIds,
@@ -147,7 +211,11 @@ function buildEntriesFromGamePlan(
 }
 
 export function shouldUseGamePlan(bank) {
-  return hasActiveReviewSession() && Boolean(bank?.entries.length);
+  return (
+    hasActiveReviewSession() &&
+    Boolean(bank?.entries.length) &&
+    !bank?.sessionExpanded
+  );
 }
 
 export function buildGameWordBank(
@@ -160,12 +228,25 @@ export function buildGameWordBank(
 ) {
   if (hasActiveReviewSession()) {
     const session = loadReviewSession();
-    const gamePlanWordIds = getReviewSessionEntryOrder() ?? [];
+    const sessionPriorityIds = session?.wordIds ?? [];
+    const {
+      expandedWordIds,
+      priorityWordIds,
+      sessionExpanded,
+      supplementedCount,
+    } = buildGameplayWordIds(words, sessionPriorityIds, {
+      minCount: minWords,
+      minLength,
+      normalizeWord,
+      targetCount: REVIEW_SESSION_WORD_LIMIT,
+    });
+    const gamePlanWordIds = sessionExpanded
+      ? expandedWordIds
+      : (getReviewSessionEntryOrder() ?? expandedWordIds);
     const entries = buildEntriesFromGamePlan(words, gamePlanWordIds, {
       minLength,
       normalizeWord,
     });
-    const priorityWordIds = new Set(entries.map((entry) => entry.wordId).filter(Boolean));
 
     return {
       entries,
@@ -174,10 +255,12 @@ export function buildGameWordBank(
       isPriorityLimited: false,
       maintenanceScores: new Map(),
       maintenanceWordIds: new Set(),
-      priorityCount: entries.length,
+      priorityCount: sessionPriorityIds.length,
       priorityWordIds,
+      sessionExpanded,
+      supplementedCount,
       totalMaintenanceCount: 0,
-      totalPriorityCount: session?.wordIds.length ?? entries.length,
+      totalPriorityCount: session?.totalCount ?? sessionPriorityIds.length,
       usingFallback: false,
       usingMaintenanceMode: false,
       usingReviewSession: entries.length > 0,
@@ -200,8 +283,33 @@ export function buildGameWordBank(
   const maintenanceReview = usingMaintenanceMode
     ? getLimitedMaintenanceReviewWords(words)
     : { sessionWords: [], totalCount: 0, isLimited: false };
-  const priorityWordIds = new Set(priorityReview.sessionWords.map((word) => word.id));
-  const maintenanceWordIds = new Set(maintenanceReview.sessionWords.map((word) => word.id));
+  const prioritySeedIds = priorityReview.sessionWords.map((word) => word.id);
+  const gameplayPool = usingFallback
+    ? {
+        expandedWordIds: [],
+        priorityWordIds: new Set(),
+        sessionExpanded: false,
+        supplementedCount: 0,
+      }
+    : usingMaintenanceMode
+      ? {
+          expandedWordIds: maintenanceReview.sessionWords.map((word) => word.id),
+          priorityWordIds: new Set(),
+          sessionExpanded: false,
+          supplementedCount: 0,
+        }
+      : buildGameplayWordIds(words, prioritySeedIds, {
+          minCount: minWords,
+          minLength,
+          normalizeWord,
+          targetCount: REVIEW_SESSION_WORD_LIMIT,
+        });
+  const priorityWordIds = usingMaintenanceMode
+    ? new Set()
+    : gameplayPool.priorityWordIds;
+  const maintenanceWordIds = usingMaintenanceMode
+    ? new Set(gameplayPool.expandedWordIds)
+    : new Set();
   const maintenanceScores = usingMaintenanceMode ? buildMaintenanceScores(words) : new Map();
   const totalPriorityCount = priorityReview.totalCount;
   const totalMaintenanceCount = maintenanceReview.totalCount;
@@ -219,6 +327,8 @@ export function buildGameWordBank(
     maintenanceWordIds,
     priorityCount,
     priorityWordIds,
+    sessionExpanded: gameplayPool.sessionExpanded,
+    supplementedCount: gameplayPool.supplementedCount,
     totalMaintenanceCount,
     totalPriorityCount,
     usingFallback,
@@ -340,7 +450,7 @@ export function getSequentialRoundEntries(entries, totalRounds) {
 }
 
 export function buildGameTranslationQuizQuestions(bank, totalRounds) {
-  if (hasActiveReviewSession()) {
+  if (shouldUseGamePlan(bank)) {
     if (bank.entries.length === 0) {
       return [];
     }
