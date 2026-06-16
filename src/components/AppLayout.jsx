@@ -80,11 +80,11 @@ function AppLayout({ children }) {
               .join(" ")
       }
     >
-      {showFloatingMenu ? (
-        <LexiFloatingMenu isOpen={isMenuOpen} onOpenChange={setIsMenuOpen} />
-      ) : null}
       {showBottomNav ? (
         <BottomNav isMenuOpen={isMenuOpen} onMenuToggle={() => setIsMenuOpen((open) => !open)} />
+      ) : null}
+      {showFloatingMenu ? (
+        <LexiFloatingMenu isOpen={isMenuOpen} onOpenChange={setIsMenuOpen} />
       ) : null}
       <main
         className={

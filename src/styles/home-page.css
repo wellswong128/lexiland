@@ -692,10 +692,10 @@
 }
 
 .bottom-nav {
-  --bottom-nav-height: 56px;
+  --bottom-nav-height: var(--app-tabbar-height, 56px);
   position: fixed;
   inset: auto 0 0;
-  z-index: 55;
+  z-index: 60;
   width: 100%;
   border-top: 1px solid rgba(148, 163, 184, 0.28);
   background: rgba(255, 255, 255, 0.88);

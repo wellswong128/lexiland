@@ -80,6 +80,18 @@ function LexiFloatingMenu({ isOpen, onOpenChange }) {
           .filter(Boolean)
           .join(" ")}
       >
+        <div className="lexi-menu-header">
+          <p className="lexi-menu-title">{t("nav.menuTitle")}</p>
+          <button
+            aria-label={t("nav.closeMenu")}
+            className="lexi-menu-close"
+            onClick={closeMenu}
+            type="button"
+          >
+            ×
+          </button>
+        </div>
+
         <nav className="lexi-menu-nav">
           {navSections.map((section) => (
             <div className="lexi-menu-section" key={section.labelKey}>
