@@ -2148,12 +2148,10 @@ button:disabled {
 html.standalone-display .app-shell-standalone {
   min-height: 100dvh;
   padding-top: env(safe-area-inset-top, 0px);
-  padding-left: env(safe-area-inset-left, 0px);
-  padding-right: env(safe-area-inset-right, 0px);
 }
 
 html.standalone-display .bottom-nav {
-  width: min(410px, calc(100% - 20px));
+  background: rgba(255, 255, 255, 0.94);
 }
 
 .lexi-mascot {
