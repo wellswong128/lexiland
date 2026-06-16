@@ -191,36 +191,12 @@ function buildGameplayWordIds(words, seedWordIds, options = {}) {
   };
 }
 
-function buildChoiceEntries(savedEntries, minWords = 4) {
+function buildChoiceEntries(savedEntries) {
   if (savedEntries.length === 0) {
     return GAME_FALLBACK_WORDS.map((entry) => ({ ...entry, wordId: null }));
   }
 
-  if (savedEntries.length >= minWords) {
-    return savedEntries;
-  }
-
-  const merged = [...savedEntries];
-  const usedWords = new Set(savedEntries.map((entry) => entry.word));
-  const usedMeanings = new Set(savedEntries.map((entry) => entry.meaning));
-
-  for (const fallbackEntry of shuffleArray(GAME_FALLBACK_WORDS)) {
-    if (merged.length >= minWords) {
-      break;
-    }
-
-    if (usedWords.has(fallbackEntry.word) || usedMeanings.has(fallbackEntry.meaning)) {
-      continue;
-    }
-
-    merged.push({ ...fallbackEntry, wordId: null });
-    usedWords.add(fallbackEntry.word);
-    usedMeanings.add(fallbackEntry.meaning);
-  }
-
-  return merged.length >= minWords
-    ? merged
-    : GAME_FALLBACK_WORDS.map((entry) => ({ ...entry, wordId: null }));
+  return savedEntries;
 }
 
 function buildQuestionEntriesFromIds(words, wordIds, options = {}) {
@@ -271,7 +247,7 @@ export function buildGameWordBank(
     .filter(Boolean)
     .filter((entry) => entry.word.length >= minLength);
   const usingFallback = savedEntries.length === 0;
-  const entries = buildChoiceEntries(savedEntries, minWords);
+  const entries = buildChoiceEntries(savedEntries);
 
   if (hasActiveReviewSession()) {
     const session = loadReviewSession();
@@ -444,14 +420,17 @@ export function createMultipleChoiceQuestion(
   const choices = [question];
   const usedWords = new Set([question.word]);
   const usedMeanings = new Set([question.meaning]);
-  const fallbackEntries = GAME_FALLBACK_WORDS.map((entry) => ({ ...entry, wordId: null }));
-  const candidates = shuffleArray([
-    ...choiceEntries.filter((item) => item.word !== question.word),
-    ...fallbackEntries,
-  ]);
+  const libraryCandidates = shuffleArray(
+    choiceEntries.filter((item) => item.word !== question.word),
+  );
+  const fallbackCandidates = bank?.usingFallback
+    ? GAME_FALLBACK_WORDS.map((entry) => ({ ...entry, wordId: null }))
+    : [];
+  const candidates = [...libraryCandidates, ...fallbackCandidates];
+  const targetCount = Math.min(choiceCount, choiceEntries.length);
 
   for (const candidate of candidates) {
-    if (choices.length >= choiceCount) {
+    if (choices.length >= targetCount) {
       break;
     }
 
@@ -464,7 +443,7 @@ export function createMultipleChoiceQuestion(
     usedMeanings.add(candidate.meaning);
   }
 
-  if (choices.length < choiceCount) {
+  if (choices.length < 2) {
     return null;
   }
 

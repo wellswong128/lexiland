@@ -101,14 +101,14 @@ function playTone(freq, duration, type = "sine", volume = 0.035) {
 function createQuestion(bank, pickQuestion) {
   const round = createMultipleChoiceQuestion(bank, pickQuestion);
 
-  if (!round || round.choices.length < 4) {
+  if (!round || round.choices.length < 2) {
     return null;
   }
 
   const positions =
     fishLayouts[Math.floor(Math.random() * fishLayouts.length)] ?? fishLayouts[0];
 
-  const choices = round.choices.map((item, index) => ({
+  const choices = round.choices.slice(0, 4).map((item, index) => ({
     ...item,
     id: getGameId(`fish-${index}`),
     x: positions[index].x,
