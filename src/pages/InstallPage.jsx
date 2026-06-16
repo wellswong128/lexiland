@@ -1,27 +1,63 @@
 import { Link } from "react-router-dom";
-import InstallQrCard from "../components/InstallQrCard.jsx";
+import LexiMascot from "../components/LexiMascot.jsx";
 import { useLocale } from "../features/locale/LocaleContext.jsx";
 import { usePwaInstall } from "../hooks/usePwaInstall.js";
 import { useStandaloneDisplay } from "../hooks/useStandaloneDisplay.js";
-import { getAppInstallUrl } from "../lib/appUrl.js";
+import { getAppHomeUrl } from "../lib/appUrl.js";
 import "../styles/install-page.css";
 
 function InstallPage() {
   const { t } = useLocale();
   const isStandalone = useStandaloneDisplay();
   const { canInstall, isInstalled, promptInstall } = usePwaInstall();
-  const installUrl = getAppInstallUrl();
+  const homeUrl = getAppHomeUrl();
 
   return (
     <section className="install-page">
       <div className="install-page-card">
-        <InstallQrCard installUrl={installUrl} />
+        <div className="install-page-header">
+          <LexiMascot size="md" title={t("brand.mascotAlt")} />
+          <div>
+            <p className="install-qr-eyebrow">{t("install.eyebrow")}</p>
+            <h1 className="install-qr-title">{t("install.title")}</h1>
+          </div>
+        </div>
+
+        <p className="install-qr-description">{t("install.description")}</p>
+
+        <a
+          className="install-page-link"
+          href={homeUrl}
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          {homeUrl}
+        </a>
 
         {isStandalone || isInstalled ? (
           <p className="install-page-notice install-page-notice-success">
             {t("install.alreadyInstalled")}
           </p>
-        ) : null}
+        ) : (
+          <div className="install-qr-steps">
+            <div className="install-qr-step">
+              <h3>{t("install.iosTitle")}</h3>
+              <ol>
+                <li>{t("install.iosStep1")}</li>
+                <li>{t("install.iosStep2")}</li>
+                <li>{t("install.iosStep3")}</li>
+              </ol>
+            </div>
+            <div className="install-qr-step">
+              <h3>{t("install.androidTitle")}</h3>
+              <ol>
+                <li>{t("install.androidStep1")}</li>
+                <li>{t("install.androidStep2")}</li>
+                <li>{t("install.androidStep3")}</li>
+              </ol>
+            </div>
+          </div>
+        )}
 
         {canInstall ? (
           <button
@@ -33,10 +69,6 @@ function InstallPage() {
           >
             {t("install.installButton")}
           </button>
-        ) : null}
-
-        {!isStandalone && !canInstall ? (
-          <p className="install-page-notice">{t("install.scanHint")}</p>
         ) : null}
 
         <Link className="install-page-home-link" to="/">

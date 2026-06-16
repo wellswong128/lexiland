@@ -140,6 +140,31 @@
   margin-top: 6px;
 }
 
+.install-page-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.install-page-link {
+  display: block;
+  border-radius: 18px;
+  background: linear-gradient(180deg, #3b82f6 0%, #2563eb 100%);
+  box-shadow: 0 10px 24px rgba(37, 99, 235, 0.24);
+  color: #fff;
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 1.4;
+  padding: 16px 18px;
+  text-align: center;
+  text-decoration: none;
+  word-break: break-all;
+}
+
+.install-page-link:hover {
+  filter: brightness(1.03);
+}
+
 .install-page-notice {
   margin: 0;
   border-radius: 16px;
