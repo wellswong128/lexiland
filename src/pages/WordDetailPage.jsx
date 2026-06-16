@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Link, useParams } from "react-router-dom";
+import { Link, useLocation, useNavigate, useParams } from "react-router-dom";
 import ExampleSentence from "../components/ExampleSentence.jsx";
 import SpeakButton from "../components/SpeakButton.jsx";
 import WordMemoryPanel from "../components/WordMemoryPanel.jsx";
@@ -27,6 +27,8 @@ function getFormValues(word) {
 
 function WordDetailPage() {
   const { dateLocale, locale, t } = useLocale();
+  const location = useLocation();
+  const navigate = useNavigate();
   const { wordId } = useParams();
   const { updateWord, words } = useWordsContext();
   const word = words.find((currentWord) => currentWord.id === wordId);
@@ -35,6 +37,7 @@ function WordDetailPage() {
   const [error, setError] = useState("");
   const [aiMessage, setAiMessage] = useState("");
   const [isAiLoading, setIsAiLoading] = useState(false);
+  const [showSaveSuccess, setShowSaveSuccess] = useState(false);
 
   function formatDate(value) {
     if (!value) {
@@ -54,8 +57,25 @@ function WordDetailPage() {
       setIsEditing(false);
       setError("");
       setAiMessage("");
+      setShowSaveSuccess(false);
     }
   }, [word]);
+
+  function handleGoBack() {
+    const from = location.state?.from;
+
+    if (typeof from === "string" && from.length > 0) {
+      navigate(from);
+      return;
+    }
+
+    if (window.history.length > 1) {
+      navigate(-1);
+      return;
+    }
+
+    navigate("/words");
+  }
 
   function handleChange(event) {
     const { name, value } = event.target;
@@ -116,6 +136,7 @@ function WordDetailPage() {
     updateWord(word.id, formValues);
     setError("");
     setIsEditing(false);
+    setShowSaveSuccess(true);
   }
 
   if (!word) {
@@ -185,13 +206,29 @@ function WordDetailPage() {
         {!isEditing ? (
           <button
             className="rounded-full bg-blue-700 px-5 py-3 text-sm font-bold text-white transition hover:bg-blue-800"
-            onClick={() => setIsEditing(true)}
+            onClick={() => {
+              setShowSaveSuccess(false);
+              setIsEditing(true);
+            }}
             type="button"
           >
             {t("wordDetail.editWord")}
           </button>
         ) : null}
       </div>
+
+      {showSaveSuccess && !isEditing ? (
+        <div className="mt-6 rounded-2xl border border-green-200 bg-green-50 p-4">
+          <p className="text-sm font-medium text-green-700">{t("wordDetail.saveSuccess")}</p>
+          <button
+            className="mt-3 inline-flex rounded-full bg-blue-700 px-5 py-3 text-sm font-bold text-white transition hover:bg-blue-800"
+            onClick={handleGoBack}
+            type="button"
+          >
+            {t("wordDetail.backToPrevious")}
+          </button>
+        </div>
+      ) : null}
 
       {isEditing ? (
         <form className="mt-8 space-y-5" onSubmit={handleSubmit}>
@@ -496,12 +533,21 @@ function WordDetailPage() {
         </dl>
       </div>
 
-      <Link
-        className="mt-8 inline-flex rounded-full bg-blue-700 px-5 py-3 text-sm font-bold text-white transition hover:bg-blue-800"
-        to="/words"
-      >
-        {t("wordDetail.backToList")}
-      </Link>
+      <div className="mt-8 flex flex-wrap gap-3">
+        <button
+          className="inline-flex rounded-full bg-blue-700 px-5 py-3 text-sm font-bold text-white transition hover:bg-blue-800"
+          onClick={handleGoBack}
+          type="button"
+        >
+          {t("wordDetail.backToPrevious")}
+        </button>
+        <Link
+          className="inline-flex rounded-full bg-blue-100 px-5 py-3 text-sm font-bold text-blue-700 transition hover:bg-blue-200"
+          to="/words"
+        >
+          {t("wordDetail.backToList")}
+        </Link>
+      </div>
     </section>
   );
 }
