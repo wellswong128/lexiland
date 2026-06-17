@@ -1,73 +1,10 @@
+import { imageContainsReadableText } from "../lib/detectImageText.js";
+import { buildNegativePrompt, wrapNoTextPrompt } from "../lib/noTextImageRules.js";
+
 const AGNES_IMAGE_API_URL = "https://apihub.agnes-ai.com/v1/images/generations";
 const DEFAULT_IMAGE_MODEL = "agnes-image-2.1-flash";
 const FALLBACK_IMAGE_MODEL = "agnes-image-2.0-flash";
 const SUPPORTED_IMAGE_SIZE = "1024x768";
-
-const NO_TEXT_NEGATIVE_PROMPT = [
-  "text",
-  "words",
-  "letters",
-  "alphabet",
-  "writing",
-  "written language",
-  "readable characters",
-  "caption",
-  "subtitles",
-  "title",
-  "label",
-  "name tag",
-  "sign",
-  "signage",
-  "street sign",
-  "shop sign",
-  "billboard",
-  "poster",
-  "banner",
-  "logo",
-  "brand mark",
-  "watermark",
-  "speech bubble",
-  "thought bubble",
-  "comic bubble",
-  "typography",
-  "font",
-  "handwriting",
-  "calligraphy",
-  "graffiti",
-  "inscription",
-  "embroidery text",
-  "carved letters",
-  "numbers",
-  "digits",
-  "date stamp",
-  "clock face numbers",
-  "book page",
-  "newspaper",
-  "magazine",
-  "document",
-  "certificate",
-  "menu",
-  "screen text",
-  "UI text",
-  "phone screen text",
-  "computer screen text",
-  "keyboard letters",
-  "Chinese characters",
-  "Japanese characters",
-  "Korean characters",
-  "Arabic script",
-  "Cyrillic letters",
-  "Latin letters",
-  "punctuation as writing",
-  "subtitle bar",
-  "closed captions",
-].join(", ");
-
-const NO_TEXT_PROMPT_PREFIX =
-  "STRICT RULE: Generate a completely text-free illustration. The image must not contain any text, letters, numbers, symbols used as writing, captions, labels, signs, logos, watermarks, speech bubbles, or readable characters in any language.";
-
-const NO_TEXT_PROMPT_SUFFIX =
-  "Remember: absolutely no text anywhere in the image. Pure visual storytelling with objects, actions, scenery, colors, and expressions only.";
 
 function sendJson(response, statusCode, payload) {
   response.statusCode = statusCode;
@@ -128,6 +65,10 @@ function sanitizeMeaningField(value, maxLength = 220) {
   return truncateText(pickSafeMeaningSegments(text), maxLength);
 }
 
+function describeConceptWithoutRenderingWord(term) {
+  return `Illustrate the everyday meaning of one English vocabulary concept. The concept name is for guidance only and must never appear as visible text: ${term}.`;
+}
+
 function buildImagePrompt({ term, definition, translation, example }) {
   const meaningParts = [];
 
@@ -146,51 +87,53 @@ function buildImagePrompt({ term, definition, translation, example }) {
   const safeTranslation = sanitizeMeaningField(translation, 80);
 
   if (safeTranslation) {
-    meaningParts.push(`meaning hint: ${safeTranslation}`);
+    meaningParts.push(`meaning hint for the illustrator only: ${safeTranslation}`);
   }
 
   const meaningSummary =
     meaningParts.length > 0
       ? meaningParts.join("; ")
-      : `a clear everyday meaning of the English word "${term}"`;
+      : "a clear everyday visual meaning for a common English vocabulary concept";
 
-  return [
-    NO_TEXT_PROMPT_PREFIX,
-    "This is the highest priority constraint and overrides every other instruction.",
-    "Do not write, print, engrave, stitch, paint, or display any characters, words, numbers, or symbols that could be read.",
+  return wrapNoTextPrompt([
     "Cartoon illustration for a middle-school English vocabulary memory aid.",
-    `The English word being learned is "${term}".`,
-    "Depict the word meaning using objects, actions, facial expressions, and scenery only.",
+    describeConceptWithoutRenderingWord(term),
+    "Depict the meaning using objects, actions, facial expressions, and scenery only.",
     "Keep the scene wholesome, educational, and appropriate for children.",
     `Visual concept: ${meaningSummary}.`,
     "Bright, kid-friendly cartoon style, soft lighting, simple background.",
-    NO_TEXT_PROMPT_SUFFIX,
-    "Final check: the image must be 100% free of all text and readable symbols.",
-  ].join(" ");
+  ]);
 }
 
 function buildExampleFocusedPrompt(term, example) {
-  return [
-    NO_TEXT_PROMPT_PREFIX,
+  return wrapNoTextPrompt([
     "Cartoon illustration for an English vocabulary flashcard.",
-    `The English word being learned is "${term}".`,
+    describeConceptWithoutRenderingWord(term),
     `Illustrate this example scene visually without any text: ${truncateText(example, 160)}`,
     "Wholesome, kid-friendly, educational style.",
-    NO_TEXT_PROMPT_SUFFIX,
-  ].join(" ");
+  ]);
 }
 
 function buildGenericPrompt(term, definition) {
   const safeDefinition = sanitizeMeaningField(definition, 120);
   const hint = safeDefinition ? ` The meaning is: ${safeDefinition}.` : "";
 
-  return [
-    NO_TEXT_PROMPT_PREFIX,
+  return wrapNoTextPrompt([
     "Cartoon illustration for an English vocabulary flashcard.",
-    `Create a simple, wholesome visual that helps remember the English word "${term}".${hint}`,
+    describeConceptWithoutRenderingWord(term),
+    `Create a simple, wholesome visual that helps remember this vocabulary concept.${hint}`,
     "Use everyday objects or nature scenes only. Kid-friendly educational style.",
-    NO_TEXT_PROMPT_SUFFIX,
-  ].join(" ");
+  ]);
+}
+
+function buildUltraMinimalNoTextPrompt(term) {
+  return wrapNoTextPrompt([
+    "Ultra-simple cartoon scene with a plain background.",
+    describeConceptWithoutRenderingWord(term),
+    "Show one clear object or action only.",
+    "No books, screens, signs, papers, labels, packaging, clothing text, or objects that usually contain writing.",
+    "Flat colors, minimal detail, wholesome and kid-friendly.",
+  ]);
 }
 
 function buildImagePromptVariants({ term, definition, translation, example }) {
@@ -215,6 +158,7 @@ function buildImagePromptVariants({ term, definition, translation, example }) {
   }
 
   add(buildGenericPrompt(term, definition));
+  add(buildUltraMinimalNoTextPrompt(term));
 
   return variants;
 }
@@ -270,7 +214,7 @@ function buildGenerationAttempts() {
   return attempts;
 }
 
-async function requestImageGeneration({ apiKey, model, prompt, size }) {
+async function requestImageGeneration({ apiKey, model, prompt, size, blockedTerms = [] }) {
   const imageResponse = await fetch(AGNES_IMAGE_API_URL, {
     method: "POST",
     headers: {
@@ -283,7 +227,7 @@ async function requestImageGeneration({ apiKey, model, prompt, size }) {
       size,
       extra_body: {
         response_format: "url",
-        negative_prompt: `${NO_TEXT_NEGATIVE_PROMPT}, readable, subtitle, lettering, wordmark`,
+        negative_prompt: buildNegativePrompt(blockedTerms),
       },
     }),
   });
@@ -312,6 +256,12 @@ async function requestImageGeneration({ apiKey, model, prompt, size }) {
   }
 
   return { imageUrl, model, size };
+}
+
+async function acceptGeneratedImage({ apiKey, imageUrl }) {
+  const hasReadableText = await imageContainsReadableText({ apiKey, imageUrl });
+
+  return !hasReadableText;
 }
 
 export default async function handler(request, response) {
@@ -343,6 +293,7 @@ export default async function handler(request, response) {
     example: String(body.example ?? "").trim(),
   };
   const promptVariants = buildImagePromptVariants({ term, ...meaning });
+  const blockedTerms = [term, meaning.translation].filter(Boolean);
 
   const attempts = buildGenerationAttempts();
   const errors = [];
@@ -350,6 +301,7 @@ export default async function handler(request, response) {
   try {
     for (const prompt of promptVariants) {
       let hitContentPolicy = false;
+      let hitHardFailure = false;
 
       for (const attempt of attempts) {
         try {
@@ -358,7 +310,19 @@ export default async function handler(request, response) {
             model: attempt.model,
             prompt,
             size: attempt.size,
+            blockedTerms,
           });
+          const isTextFree = await acceptGeneratedImage({
+            apiKey,
+            imageUrl: result.imageUrl,
+          });
+
+          if (!isTextFree) {
+            errors.push(
+              `${attempt.model} @ ${attempt.size}: rejected because the image contained readable text`,
+            );
+            continue;
+          }
 
           sendJson(response, 200, {
             imageUrl: result.imageUrl,
@@ -374,10 +338,13 @@ export default async function handler(request, response) {
             hitContentPolicy = true;
             break;
           }
+
+          hitHardFailure = true;
+          break;
         }
       }
 
-      if (!hitContentPolicy) {
+      if (hitHardFailure && !hitContentPolicy) {
         break;
       }
     }
@@ -389,3 +356,11 @@ export default async function handler(request, response) {
     sendJson(response, 500, { error: error.message });
   }
 }
+
+export {
+  buildExampleFocusedPrompt,
+  buildGenericPrompt,
+  buildImagePrompt,
+  buildImagePromptVariants,
+  buildUltraMinimalNoTextPrompt,
+};
