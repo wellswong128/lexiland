@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useLocation, useNavigate, useSearchParams } from "react-router-dom";
 import PhotoWordCapture from "../components/PhotoWordCapture.jsx";
 import { useLocale } from "../features/locale/LocaleContext.jsx";
@@ -38,10 +38,20 @@ function AddWordPage() {
   const [error, setError] = useState("");
   const [isAiLoading, setIsAiLoading] = useState(false);
   const [isSaving, setIsSaving] = useState(false);
+  const [saveMessage, setSaveMessage] = useState("");
+  const termInputRef = useRef(null);
 
   useEffect(() => {
     setActiveTab(getInitialTab(searchParams));
   }, [searchParams]);
+
+  useEffect(() => {
+    if (activeTab !== "manual") {
+      return;
+    }
+
+    termInputRef.current?.focus();
+  }, [activeTab]);
 
   function handleAutoOpenCameraConsumed() {
     if (searchParams.get("scan") !== "camera") {
@@ -57,10 +67,36 @@ function AddWordPage() {
   function handleChange(event) {
     const { name, value } = event.target;
 
+    setSaveMessage("");
     setFormValues((currentValues) => ({
       ...currentValues,
       [name]: value,
     }));
+  }
+
+  function handleGoBack() {
+    goBackToPreviousPage(navigate, location);
+  }
+
+  function resetFormForNextWord() {
+    setFormValues(initialFormValues);
+    setAiMessage("");
+
+    requestAnimationFrame(() => {
+      termInputRef.current?.focus();
+    });
+  }
+
+  function handleTermKeyDown(event) {
+    if (event.key !== "Enter") {
+      return;
+    }
+
+    event.preventDefault();
+
+    if (!isAiLoading && !isSaving) {
+      handleAiFill();
+    }
   }
 
   async function handleAiFill() {
@@ -73,6 +109,7 @@ function AddWordPage() {
 
     try {
       setError("");
+      setSaveMessage("");
       setAiMessage("");
       setIsAiLoading(true);
 
@@ -107,7 +144,8 @@ function AddWordPage() {
       setIsSaving(true);
       await addWord(formValues);
       setError("");
-      goBackToPreviousPage(navigate, location);
+      setSaveMessage(t("addWord.saveSuccessNext"));
+      resetFormForNextWord();
     } catch (saveError) {
       setError(saveError.message);
     } finally {
@@ -165,6 +203,14 @@ function AddWordPage() {
 
       {activeTab === "manual" ? (
         <form className="space-y-5" onSubmit={handleSubmit}>
+          <button
+            className="inline-flex rounded-full bg-blue-100 px-5 py-2.5 text-sm font-bold text-blue-700 transition hover:bg-blue-200"
+            onClick={handleGoBack}
+            type="button"
+          >
+            {t("wordDetail.backToPrevious")}
+          </button>
+
           <div className="rounded-2xl border border-blue-100 bg-blue-50 p-4">
             <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
               <div>
@@ -193,33 +239,41 @@ function AddWordPage() {
             </p>
           ) : null}
 
-          <div className="grid gap-5 sm:grid-cols-2">
-            <label className="block">
-              <span className="text-sm font-semibold text-slate-700">
-                {t("addWord.englishWord")}
-              </span>
-              <input
-                className="mt-2 w-full rounded-2xl border border-slate-200 bg-white px-4 py-3 text-slate-900 outline-none transition focus:border-blue-500 focus:ring-4 focus:ring-blue-100"
-                name="term"
-                onChange={handleChange}
-                placeholder={t("addWord.placeholderTerm")}
-                value={formValues.term}
-              />
-            </label>
+          {saveMessage ? (
+            <p className="rounded-2xl border border-green-200 bg-green-50 px-4 py-3 text-sm font-medium text-green-700">
+              {saveMessage}
+            </p>
+          ) : null}
 
-            <label className="block">
-              <span className="text-sm font-semibold text-slate-700">
-                {t("addWord.partOfSpeech")}
-              </span>
-              <input
-                className="mt-2 w-full rounded-2xl border border-slate-200 bg-white px-4 py-3 text-slate-900 outline-none transition focus:border-blue-500 focus:ring-4 focus:ring-blue-100"
-                name="partOfSpeech"
-                onChange={handleChange}
-                placeholder={t("addWord.placeholderPos")}
-                value={formValues.partOfSpeech}
-              />
-            </label>
-          </div>
+          <label className="block">
+            <span className="text-sm font-semibold text-slate-700">
+              {t("addWord.englishWord")}
+            </span>
+            <input
+              ref={termInputRef}
+              autoFocus
+              className="mt-2 w-full rounded-2xl border border-slate-200 bg-white px-4 py-3 text-slate-900 outline-none transition focus:border-blue-500 focus:ring-4 focus:ring-blue-100"
+              name="term"
+              onChange={handleChange}
+              onKeyDown={handleTermKeyDown}
+              placeholder={t("addWord.placeholderTerm")}
+              value={formValues.term}
+            />
+            <span className="mt-2 block text-sm text-slate-500">{t("addWord.termEnterHint")}</span>
+          </label>
+
+          <label className="block">
+            <span className="text-sm font-semibold text-slate-700">
+              {t("addWord.partOfSpeech")}
+            </span>
+            <input
+              className="mt-2 w-full rounded-2xl border border-slate-200 bg-white px-4 py-3 text-slate-900 outline-none transition focus:border-blue-500 focus:ring-4 focus:ring-blue-100"
+              name="partOfSpeech"
+              onChange={handleChange}
+              placeholder={t("addWord.placeholderPos")}
+              value={formValues.partOfSpeech}
+            />
+          </label>
 
           <label className="block">
             <span className="text-sm font-semibold text-slate-700">
@@ -234,33 +288,31 @@ function AddWordPage() {
             />
           </label>
 
-          <div className="grid gap-5 sm:grid-cols-2">
-            <label className="block">
-              <span className="text-sm font-semibold text-slate-700">
-                {t("addWord.translation")}
-              </span>
-              <input
-                className="mt-2 w-full rounded-2xl border border-slate-200 bg-white px-4 py-3 text-slate-900 outline-none transition focus:border-blue-500 focus:ring-4 focus:ring-blue-100"
-                name="translation"
-                onChange={handleChange}
-                placeholder={t("addWord.placeholderTranslation")}
-                value={formValues.translation}
-              />
-            </label>
+          <label className="block">
+            <span className="text-sm font-semibold text-slate-700">
+              {t("addWord.translation")}
+            </span>
+            <input
+              className="mt-2 w-full rounded-2xl border border-slate-200 bg-white px-4 py-3 text-slate-900 outline-none transition focus:border-blue-500 focus:ring-4 focus:ring-blue-100"
+              name="translation"
+              onChange={handleChange}
+              placeholder={t("addWord.placeholderTranslation")}
+              value={formValues.translation}
+            />
+          </label>
 
-            <label className="block">
-              <span className="text-sm font-semibold text-slate-700">
-                {t("addWord.pronunciation")}
-              </span>
-              <input
-                className="mt-2 w-full rounded-2xl border border-slate-200 bg-white px-4 py-3 text-slate-900 outline-none transition focus:border-blue-500 focus:ring-4 focus:ring-blue-100"
-                name="pronunciation"
-                onChange={handleChange}
-                placeholder={t("addWord.placeholderPronunciation")}
-                value={formValues.pronunciation}
-              />
-            </label>
-          </div>
+          <label className="block">
+            <span className="text-sm font-semibold text-slate-700">
+              {t("addWord.pronunciation")}
+            </span>
+            <input
+              className="mt-2 w-full rounded-2xl border border-slate-200 bg-white px-4 py-3 text-slate-900 outline-none transition focus:border-blue-500 focus:ring-4 focus:ring-blue-100"
+              name="pronunciation"
+              onChange={handleChange}
+              placeholder={t("addWord.placeholderPronunciation")}
+              value={formValues.pronunciation}
+            />
+          </label>
 
           <label className="block">
             <span className="text-sm font-semibold text-slate-700">

@@ -47,7 +47,7 @@ const quickActionLinks = [
     key: "addWord",
     labelKey: "common.addWord",
     descKey: "home.addWordDesc",
-    to: "/words/new",
+    to: "/words/new?tab=manual",
     bg: "home-quick-bg-blue",
     iconClass: "home-qi2",
     emoji: "＋",
