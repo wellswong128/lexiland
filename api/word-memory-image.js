@@ -93,39 +93,136 @@ function truncateText(value, maxLength = 220) {
   return `${text.slice(0, maxLength - 1)}…`;
 }
 
-function buildImagePrompt({ definition, translation, example }) {
+const SENSITIVE_ENGLISH_PATTERN =
+  /\b(naked|nude|nudity|sexual|sex(?:ual)?(?:ly)?|erotic|porn(?:ography)?|genital|breast(?:s)?|orgasm|intercourse)\b/i;
+const SENSITIVE_CHINESE_PATTERN = /裸体|赤裸|裸露|色情|性交|淫/;
+
+function containsSensitiveMeaning(text) {
+  const value = String(text ?? "");
+
+  return SENSITIVE_ENGLISH_PATTERN.test(value) || SENSITIVE_CHINESE_PATTERN.test(value);
+}
+
+function pickSafeMeaningSegments(text) {
+  const segments = String(text ?? "")
+    .split(/[;；,，/|]+/)
+    .map((segment) => segment.trim())
+    .filter(Boolean);
+
+  const safeSegments = segments.filter((segment) => !containsSensitiveMeaning(segment));
+
+  return safeSegments.length > 0 ? safeSegments.join("; ") : "";
+}
+
+function sanitizeMeaningField(value, maxLength = 220) {
+  const text = String(value ?? "").trim();
+
+  if (!text) {
+    return "";
+  }
+
+  if (!containsSensitiveMeaning(text)) {
+    return truncateText(text, maxLength);
+  }
+
+  return truncateText(pickSafeMeaningSegments(text), maxLength);
+}
+
+function buildImagePrompt({ term, definition, translation, example }) {
   const meaningParts = [];
-
-  if (definition) {
-    meaningParts.push(truncateText(definition));
-  }
-
-  if (translation) {
-    meaningParts.push(`meaning concept: ${truncateText(translation, 80)}`);
-  }
 
   if (example) {
     meaningParts.push(
-      `visual scene idea inspired by this context, never render the sentence as written text: ${truncateText(example, 120)}`,
+      `scene from this learning example (show the scene visually, never as written text): ${truncateText(example, 120)}`,
     );
+  }
+
+  const safeDefinition = sanitizeMeaningField(definition);
+
+  if (safeDefinition) {
+    meaningParts.push(safeDefinition);
+  }
+
+  const safeTranslation = sanitizeMeaningField(translation, 80);
+
+  if (safeTranslation) {
+    meaningParts.push(`meaning hint: ${safeTranslation}`);
   }
 
   const meaningSummary =
     meaningParts.length > 0
       ? meaningParts.join("; ")
-      : "a clear visual concept for the word meaning";
+      : `a clear everyday meaning of the English word "${term}"`;
 
   return [
     NO_TEXT_PROMPT_PREFIX,
     "This is the highest priority constraint and overrides every other instruction.",
     "Do not write, print, engrave, stitch, paint, or display any characters, words, numbers, or symbols that could be read.",
-    "Cartoon illustration for a vocabulary memory aid.",
-    "Depict the meaning using objects, actions, facial expressions, and scenery only.",
+    "Cartoon illustration for a middle-school English vocabulary memory aid.",
+    `The English word being learned is "${term}".`,
+    "Depict the word meaning using objects, actions, facial expressions, and scenery only.",
+    "Keep the scene wholesome, educational, and appropriate for children.",
     `Visual concept: ${meaningSummary}.`,
     "Bright, kid-friendly cartoon style, soft lighting, simple background.",
     NO_TEXT_PROMPT_SUFFIX,
     "Final check: the image must be 100% free of all text and readable symbols.",
   ].join(" ");
+}
+
+function buildExampleFocusedPrompt(term, example) {
+  return [
+    NO_TEXT_PROMPT_PREFIX,
+    "Cartoon illustration for an English vocabulary flashcard.",
+    `The English word being learned is "${term}".`,
+    `Illustrate this example scene visually without any text: ${truncateText(example, 160)}`,
+    "Wholesome, kid-friendly, educational style.",
+    NO_TEXT_PROMPT_SUFFIX,
+  ].join(" ");
+}
+
+function buildGenericPrompt(term, definition) {
+  const safeDefinition = sanitizeMeaningField(definition, 120);
+  const hint = safeDefinition ? ` The meaning is: ${safeDefinition}.` : "";
+
+  return [
+    NO_TEXT_PROMPT_PREFIX,
+    "Cartoon illustration for an English vocabulary flashcard.",
+    `Create a simple, wholesome visual that helps remember the English word "${term}".${hint}`,
+    "Use everyday objects or nature scenes only. Kid-friendly educational style.",
+    NO_TEXT_PROMPT_SUFFIX,
+  ].join(" ");
+}
+
+function buildImagePromptVariants({ term, definition, translation, example }) {
+  const variants = [];
+  const seen = new Set();
+
+  function add(prompt) {
+    const key = prompt.trim();
+
+    if (!key || seen.has(key)) {
+      return;
+    }
+
+    seen.add(key);
+    variants.push(key);
+  }
+
+  add(buildImagePrompt({ term, definition, translation, example }));
+
+  if (example) {
+    add(buildExampleFocusedPrompt(term, example));
+  }
+
+  add(buildGenericPrompt(term, definition));
+
+  return variants;
+}
+
+function isContentPolicyError(message) {
+  return /無法生成該內容|请调整提示词|請調整提示詞|content.?policy|safety|moderation|inappropriate|not.?allowed|violat/i.test(
+    String(message ?? ""),
+  );
 }
 
 function parseImageApiError(errorText) {
@@ -245,30 +342,43 @@ export default async function handler(request, response) {
     translation: String(body.translation ?? "").trim(),
     example: String(body.example ?? "").trim(),
   };
-  const prompt = buildImagePrompt(meaning);
+  const promptVariants = buildImagePromptVariants({ term, ...meaning });
 
   const attempts = buildGenerationAttempts();
   const errors = [];
 
   try {
-    for (const attempt of attempts) {
-      try {
-        const result = await requestImageGeneration({
-          apiKey,
-          model: attempt.model,
-          prompt,
-          size: attempt.size,
-        });
+    for (const prompt of promptVariants) {
+      let hitContentPolicy = false;
 
-        sendJson(response, 200, {
-          imageUrl: result.imageUrl,
-          prompt,
-          model: result.model,
-          size: result.size,
-        });
-        return;
-      } catch (error) {
-        errors.push(`${attempt.model} @ ${attempt.size}: ${error.message}`);
+      for (const attempt of attempts) {
+        try {
+          const result = await requestImageGeneration({
+            apiKey,
+            model: attempt.model,
+            prompt,
+            size: attempt.size,
+          });
+
+          sendJson(response, 200, {
+            imageUrl: result.imageUrl,
+            prompt,
+            model: result.model,
+            size: result.size,
+          });
+          return;
+        } catch (error) {
+          errors.push(`${attempt.model} @ ${attempt.size}: ${error.message}`);
+
+          if (isContentPolicyError(error.message)) {
+            hitContentPolicy = true;
+            break;
+          }
+        }
+      }
+
+      if (!hitContentPolicy) {
+        break;
       }
     }
 
