@@ -126,7 +126,8 @@ export function useSupabaseAuth() {
 
     if (provider === "azure") {
       // GoTrue's Azure provider splits scopes by comma (not space).
-      options.scopes = "email,profile";
+      // openid is required for OIDC; email/profile/User.Read match Azure App Registration permissions.
+      options.scopes = "openid,email,profile,User.Read";
       options.queryParams = {
         prompt: "select_account",
       };

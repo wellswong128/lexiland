@@ -129,6 +129,27 @@ Important:
 
 Do not commit real `.env` files or service role keys.
 
+### Microsoft (Azure) OAuth for personal Outlook accounts
+
+If Microsoft sign-in fails with an email or profile error, configure both Azure and Supabase:
+
+**Azure App Registration**
+
+1. Create or open the app registration used by Supabase.
+2. Set **Supported account types** to personal Microsoft accounts only, or to both work/school and personal accounts.
+3. Add a **Web** redirect URI: `https://<your-project-ref>.supabase.co/auth/v1/callback`
+4. Under **API permissions → Microsoft Graph (delegated)**, add `openid`, `email`, `profile`, and `User.Read`, then grant admin consent if required.
+5. Confirm the signing-in account has a verified email address.
+
+**Supabase Dashboard**
+
+1. Go to **Authentication → Providers → Azure**.
+2. Enable Azure and paste the app **Client ID** and **Client Secret**.
+3. For personal Outlook accounts, set **URL** to `https://login.microsoftonline.com/consumers`.
+4. Under **Authentication → URL Configuration**, set **Site URL** to your production URL (for example `https://learn.lexiland.cc`) and add the same URL to **Redirect URLs**.
+
+The app requests `openid,email,profile,User.Read` scopes when users click **Continue with Microsoft**.
+
 ## Future AI Auto-Completion
 
 AI auto-completion is available on the Add Word page through a Vercel serverless function using Agnes AI.
