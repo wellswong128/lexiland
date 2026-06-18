@@ -113,13 +113,45 @@ Environment variables for the future Supabase version:
 ```bash
 VITE_SUPABASE_URL=your_supabase_project_url
 VITE_SUPABASE_ANON_KEY=your_supabase_anon_key
-VITE_AUTH_REDIRECT_URL=https://your-vercel-domain.vercel.app
+VITE_AUTH_REDIRECT_URL=https://learn.lexiland.cc
 ```
 
-For Supabase magic link login, also set these in the Supabase dashboard under Authentication -> URL Configuration:
+For Supabase magic link login, also set these in the Supabase dashboard under **Authentication → URL Configuration**:
 
-- Site URL: `https://your-vercel-domain.vercel.app`
-- Redirect URLs: add your Vercel URL and `http://localhost:5173` only if you need local testing.
+- **Site URL:** `https://learn.lexiland.cc`
+- **Redirect URLs:** `https://learn.lexiland.cc/**` and `http://localhost:5173/**`
+
+### Cloudflare Email Service SMTP (required for magic links)
+
+Supabase's built-in email service is limited. Use Cloudflare Email Service SMTP:
+
+| Supabase field | Value |
+|---|---|
+| Host | `smtp.mx.cloudflare.net` |
+| Port | `465` |
+| Username | `api_token` |
+| Password | Cloudflare API token with **Email Sending: Edit** |
+| Sender email | `no-reply@lexiland.cc` (must match a domain onboarded in Cloudflare **Email Sending**) |
+| Sender name | `力思樂園` |
+
+**Important:** `learn.lexiland.cc` is your app URL, but it is **not automatically authorized for sending**. Either:
+1. **Onboard `learn.lexiland.cc`** in Cloudflare → Email Service → Email Sending, then use `no-reply@learn.lexiland.cc`, or
+2. **Use the root domain** already onboarded (e.g. `no-reply@lexiland.cc`) in Supabase SMTP Sender email.
+
+Apply automatically (requires Supabase access token + project ref):
+
+```bash
+SUPABASE_ACCESS_TOKEN=your_token \
+SUPABASE_PROJECT_REF=your_project_ref \
+CLOUDFLARE_API_TOKEN=your_cloudflare_token \
+npm run configure:supabase-smtp
+```
+
+Also set in Vercel:
+
+```bash
+VITE_APP_URL=https://learn.lexiland.cc
+```
 
 Important:
 

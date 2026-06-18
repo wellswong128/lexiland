@@ -6,7 +6,10 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "configure:supabase-smtp": "node scripts/configure-supabase-smtp.mjs",
+    "wordbase:import": "bash scripts/wordbase_import/run.sh",
+    "wordbase:import:dry-run": "bash scripts/wordbase_import/run.sh --dry-run --limit-images 1"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.108.0",

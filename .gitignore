@@ -10,3 +10,9 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
+scripts/wordbase_import/.venv/
+scripts/wordbase_import/progress.json
+scripts/wordbase_import/progress.tmp
+scripts/wordbase_import/reports/
+scripts/wordbase_import/.session.json
+scripts/wordbase_import/__pycache__/

@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { Link } from "react-router-dom";
 import ExampleSentence from "../components/ExampleSentence.jsx";
 import SpeakButton from "../components/SpeakButton.jsx";
@@ -6,10 +6,13 @@ import WordMemoryPanel from "../components/WordMemoryPanel.jsx";
 import { useLocale } from "../features/locale/LocaleContext.jsx";
 import { useWordsContext } from "../features/words/WordsContext.jsx";
 
+const WORDS_PER_PAGE = 50;
+
 function WordListPage() {
   const { t } = useLocale();
   const { deleteWord, words } = useWordsContext();
   const [searchQuery, setSearchQuery] = useState("");
+  const [page, setPage] = useState(1);
 
   const filteredWords = useMemo(() => {
     const normalizedQuery = searchQuery.trim().toLowerCase();
@@ -32,6 +35,23 @@ function WordListPage() {
       );
     });
   }, [searchQuery, words]);
+
+  const totalPages = Math.max(1, Math.ceil(filteredWords.length / WORDS_PER_PAGE));
+
+  useEffect(() => {
+    setPage(1);
+  }, [searchQuery]);
+
+  useEffect(() => {
+    if (page > totalPages) {
+      setPage(totalPages);
+    }
+  }, [page, totalPages]);
+
+  const paginatedWords = useMemo(() => {
+    const start = (page - 1) * WORDS_PER_PAGE;
+    return filteredWords.slice(start, start + WORDS_PER_PAGE);
+  }, [filteredWords, page]);
 
   function handleDelete(word) {
     const shouldDelete = window.confirm(
@@ -99,8 +119,9 @@ function WordListPage() {
           </p>
         </div>
       ) : (
-        <ul className="space-y-4">
-          {filteredWords.map((word) => (
+        <>
+          <ul className="space-y-4">
+            {paginatedWords.map((word) => (
             <li
               className="rounded-2xl border border-slate-200 bg-white p-5"
               key={word.id}
@@ -168,8 +189,42 @@ function WordListPage() {
                 </button>
               </div>
             </li>
-          ))}
-        </ul>
+            ))}
+          </ul>
+
+          {totalPages > 1 ? (
+            <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+              <p className="text-sm font-medium text-slate-600">
+                {t("wordList.pageInfo", {
+                  page,
+                  totalPages,
+                  count: paginatedWords.length,
+                  total: filteredWords.length,
+                })}
+              </p>
+              <div className="flex flex-wrap gap-2">
+                <button
+                  className="rounded-full border border-blue-200 bg-white px-4 py-2 text-sm font-bold text-blue-700 transition hover:bg-blue-50 disabled:cursor-not-allowed disabled:opacity-50"
+                  disabled={page <= 1}
+                  onClick={() => setPage((currentPage) => Math.max(1, currentPage - 1))}
+                  type="button"
+                >
+                  {t("wordList.previousPage")}
+                </button>
+                <button
+                  className="rounded-full border border-blue-200 bg-white px-4 py-2 text-sm font-bold text-blue-700 transition hover:bg-blue-50 disabled:cursor-not-allowed disabled:opacity-50"
+                  disabled={page >= totalPages}
+                  onClick={() =>
+                    setPage((currentPage) => Math.min(totalPages, currentPage + 1))
+                  }
+                  type="button"
+                >
+                  {t("wordList.nextPage")}
+                </button>
+              </div>
+            </div>
+          ) : null}
+        </>
       )}
     </section>
   );

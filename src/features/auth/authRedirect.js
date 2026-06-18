@@ -25,13 +25,14 @@ function isLanHost(url) {
 }
 
 export function resolveAuthRedirectUrl({ strict = false } = {}) {
-  const configured = import.meta.env.VITE_AUTH_REDIRECT_URL?.trim();
+  const configuredAppUrl = import.meta.env.VITE_APP_URL?.trim();
+  const configuredAuthUrl = import.meta.env.VITE_AUTH_REDIRECT_URL?.trim();
+  const configured = configuredAppUrl || configuredAuthUrl;
   const runtimeOrigin =
     typeof window !== "undefined"
       ? normalizeUrl(window.location.origin)
       : "";
 
-  // Prefer the site the user is actually on to avoid env/allowlist mismatches.
   if (
     runtimeOrigin &&
     !isLocalhostUrl(runtimeOrigin) &&
@@ -45,13 +46,13 @@ export function resolveAuthRedirectUrl({ strict = false } = {}) {
   }
 
   if (!runtimeOrigin) {
-    return "";
+    return strict ? "https://learn.lexiland.cc" : "";
   }
 
   if (isLocalhostUrl(runtimeOrigin) || isLanHost(runtimeOrigin)) {
     if (strict) {
       throw new Error(
-        "Set VITE_AUTH_REDIRECT_URL to your deployed URL (for example https://your-app.vercel.app) before using email login on mobile.",
+        "Set VITE_APP_URL or VITE_AUTH_REDIRECT_URL to https://learn.lexiland.cc before using email login on mobile.",
       );
     }
   }

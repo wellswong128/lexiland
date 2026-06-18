@@ -30,8 +30,22 @@ export function getFriendlyAuthError(message, t) {
   }
 
   if (
+    lower.includes("error sending magic link") ||
+    lower.includes("error sending confirmation email") ||
+    lower.includes("error sending email") ||
+    lower.includes("smtp")
+  ) {
+    if (lower.includes("email sending not authorized")) {
+      return t("settings.magicLinkDomainNotAuthorized");
+    }
+
+    return t("settings.magicLinkEmailFailed");
+  }
+
+  if (
     lower.includes("error getting user email from external provider") ||
-    lower.includes("error getting user profile from external provider")
+    lower.includes("error getting user profile from external provider") ||
+    (lower.includes("microsoft") && lower.includes("email"))
   ) {
     return t("settings.azureEmailError");
   }

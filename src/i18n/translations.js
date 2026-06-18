@@ -227,6 +227,9 @@ const zhHant = {
       noMatchesDescription: "試試其他單字、定義或標籤關鍵字。",
       noMatchesTag: "沒有符合「{{tag}}」標籤的單字。",
       deleteConfirm: "要從清單中刪除「{{term}}」嗎？",
+      pageInfo: "第 {{page}} / {{totalPages}} 頁 · 本頁 {{count}} 個 · 共 {{total}} 個",
+      previousPage: "上一頁",
+      nextPage: "下一頁",
     },
     addWord: {
       eyebrow: "新單字",
@@ -487,8 +490,12 @@ const zhHant = {
         "Supabase 目前不允許新用戶註冊。請在 Authentication → Providers → Email 開啟 Sign ups。",
       emailNotAuthorized:
         "Supabase 預設寄信服務可能無法寄送到此信箱。請在 Supabase 設定自訂 SMTP，或確認 Email 登入已啟用。",
+      magicLinkEmailFailed:
+        "無法寄出登入連結。請在 Supabase → Authentication → Emails → SMTP Settings 確認：Host 為 smtp.mx.cloudflare.net、Port 465、Username 為 api_token、Password 為 Cloudflare API token（需 Email Sending: Edit 權限），Sender 使用已在 Cloudflare Email Sending onboard 的網域信箱。",
+      magicLinkDomainNotAuthorized:
+        "Cloudflare 尚未授權此寄件網域。請到 Cloudflare → Email Service → Email Sending onboard 你的網域，或在 Supabase SMTP 將 Sender 改為已 onboard 的網域（例如 no-reply@lexiland.cc，不要用 learn.lexiland.cc 除非該子網域也已 onboard）。",
       azureEmailError:
-        "Microsoft 登入失敗。請確認帳戶有已驗證的 email；在 Azure App Registration → API permissions 加入 email、openid、profile、User.Read 並授權；在 Supabase → Authentication → Providers → Azure 將 URL 設為 https://login.microsoftonline.com/consumers（個人 Outlook 帳戶）後再試。",
+        "Microsoft 登入失敗。請用 @outlook.com / @hotmail.com 等 Microsoft 帳戶（不是 Gmail），並確認帳戶有已驗證的 email。在 Azure App Registration → Manifest 的 optionalClaims.idToken 加入 email；API permissions 加入 email、openid、profile、User.Read 並授權；Supabase → Authentication → Providers → Azure 的 Tenant URL 設為 https://login.microsoftonline.com/consumers（個人帳戶）或 common（公司帳戶）；確認 Client Secret 未過期。",
       supabaseAccount: "雲端帳號",
       noSupabaseConfig:
         "尚未設定雲端同步，應用目前使用 localStorage。",
@@ -934,6 +941,9 @@ export const translations = {
       noMatchesDescription: "Try a different word, definition, or tag search.",
       noMatchesTag: 'No words match the tag "{{tag}}".',
       deleteConfirm: 'Delete "{{term}}" from your list?',
+      pageInfo: "Page {{page}} of {{totalPages}} · {{count}} on this page · {{total}} total",
+      previousPage: "Previous",
+      nextPage: "Next",
     },
     addWord: {
       eyebrow: "New Vocabulary",
@@ -1199,8 +1209,12 @@ export const translations = {
         "Supabase is not allowing new sign-ups. Enable Sign ups under Authentication → Providers → Email.",
       emailNotAuthorized:
         "Supabase may not be able to send to this address with the default mail service. Configure custom SMTP or confirm Email auth is enabled.",
+      magicLinkEmailFailed:
+        "Could not send the login link. In Supabase → Authentication → Emails → SMTP Settings, verify Host is smtp.mx.cloudflare.net, Port 465, Username is api_token, Password is your Cloudflare API token (Email Sending: Edit), and Sender uses a domain onboarded in Cloudflare Email Sending.",
+      magicLinkDomainNotAuthorized:
+        "Cloudflare has not authorized this sender domain. In Cloudflare → Email Service → Email Sending, onboard your domain, or change the Supabase SMTP Sender to an onboarded domain (for example no-reply@lexiland.cc). Do not use learn.lexiland.cc unless that subdomain is also onboarded.",
       azureEmailError:
-        "Microsoft sign-in failed. Confirm your account has a verified email; add email, openid, profile, and User.Read under Azure App Registration → API permissions and grant consent; set Supabase → Authentication → Providers → Azure URL to https://login.microsoftonline.com/consumers for personal Outlook accounts, then try again.",
+        "Microsoft sign-in failed. Use a Microsoft account (@outlook.com / @hotmail.com), not Gmail, and confirm the account has a verified email. In Azure App Registration → Manifest, add email to optionalClaims.idToken; add email, openid, profile, and User.Read under API permissions and grant consent; set Supabase → Authentication → Providers → Azure Tenant URL to https://login.microsoftonline.com/consumers (personal) or common (work/school); confirm the client secret is not expired.",
       supabaseAccount: "Cloud Account",
       noSupabaseConfig:
         "Cloud storage is not configured, so the app is using localStorage.",
