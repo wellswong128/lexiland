@@ -8,7 +8,6 @@
     "build": "vite build",
     "preview": "vite preview",
     "configure:supabase-smtp": "node scripts/configure-supabase-smtp.mjs",
-    "configure:supabase-azure": "node scripts/configure-supabase-azure.mjs",
     "wordbase:import": "bash scripts/wordbase_import/run.sh",
     "wordbase:import:dry-run": "bash scripts/wordbase_import/run.sh --dry-run --limit-images 1"
   },

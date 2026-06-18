@@ -122,20 +122,9 @@ export function useSupabaseAuth() {
       );
     }
 
-    const options = { redirectTo };
-
-    if (provider === "azure") {
-      // GoTrue's Azure provider splits scopes by comma (not space).
-      // openid is required for OIDC; email/profile/User.Read match Azure App Registration permissions.
-      options.scopes = "openid,email,profile,User.Read";
-      options.queryParams = {
-        prompt: "select_account",
-      };
-    }
-
     const { error } = await supabase.auth.signInWithOAuth({
       provider,
-      options,
+      options: { redirectTo },
     });
 
     if (error) {

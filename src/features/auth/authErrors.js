@@ -44,12 +44,9 @@ export function getFriendlyAuthError(message, t) {
 
   if (
     lower.includes("error getting user email from external provider") ||
-    lower.includes("error getting user profile from external provider") ||
-    lower.includes("aadsts") ||
-    lower.includes("personal account") ||
-    (lower.includes("microsoft") && lower.includes("email"))
+    lower.includes("error getting user profile from external provider")
   ) {
-    return t("settings.azureEmailError");
+    return t("settings.oauthEmailError");
   }
 
   if (

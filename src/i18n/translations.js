@@ -24,7 +24,6 @@ const zhHant = {
     termsNotice: "註冊代表你接受 LexiLand 的服務條款與隱私政策",
     continueApple: "以 Apple 帳戶繼續",
     continueGoogle: "以 Google 帳戶繼續",
-    continueMicrosoft: "以 Microsoft 帳戶繼續",
     signupEmail: "用電子郵件位址註冊",
     loginEmail: "用電子郵件位址登入",
     sendSignupLink: "寄送註冊連結",
@@ -494,8 +493,8 @@ const zhHant = {
         "無法寄出登入連結。請在 Supabase → Authentication → Emails → SMTP Settings 確認：Host 為 smtp.mx.cloudflare.net、Port 465、Username 為 api_token、Password 為 Cloudflare API token（需 Email Sending: Edit 權限），Sender 使用已在 Cloudflare Email Sending onboard 的網域信箱。",
       magicLinkDomainNotAuthorized:
         "Cloudflare 尚未授權此寄件網域。請到 Cloudflare → Email Service → Email Sending onboard 你的網域，或在 Supabase SMTP 將 Sender 改為已 onboard 的網域（例如 no-reply@lexiland.cc，不要用 learn.lexiland.cc 除非該子網域也已 onboard）。",
-      azureEmailError:
-        "Microsoft 登入失敗。請使用 @outlook.com、@hotmail.com 等 Microsoft 帳戶，或改用下方的電子郵件登入。",
+      oauthEmailError:
+        "第三方登入無法取得電子郵件。請改用下方的電子郵件登入。",
       supabaseAccount: "雲端帳號",
       noSupabaseConfig:
         "尚未設定雲端同步，應用目前使用 localStorage。",
@@ -737,7 +736,6 @@ export const translations = {
         "By signing up, you accept LexiLand's Terms of Service and Privacy Policy.",
       continueApple: "Continue with Apple",
       continueGoogle: "Continue with Google",
-      continueMicrosoft: "Continue with Microsoft",
       signupEmail: "Sign up with email",
       loginEmail: "Log in with email",
       sendSignupLink: "Send Sign-up Link",
@@ -1213,8 +1211,8 @@ export const translations = {
         "Could not send the login link. In Supabase → Authentication → Emails → SMTP Settings, verify Host is smtp.mx.cloudflare.net, Port 465, Username is api_token, Password is your Cloudflare API token (Email Sending: Edit), and Sender uses a domain onboarded in Cloudflare Email Sending.",
       magicLinkDomainNotAuthorized:
         "Cloudflare has not authorized this sender domain. In Cloudflare → Email Service → Email Sending, onboard your domain, or change the Supabase SMTP Sender to an onboarded domain (for example no-reply@lexiland.cc). Do not use learn.lexiland.cc unless that subdomain is also onboarded.",
-      azureEmailError:
-        "Microsoft sign-in failed. Use an @outlook.com or @hotmail.com account, or sign in with email below.",
+      oauthEmailError:
+        "Could not get an email from the sign-in provider. Use email sign-in below instead.",
       supabaseAccount: "Cloud Account",
       noSupabaseConfig:
         "Cloud storage is not configured, so the app is using localStorage.",
