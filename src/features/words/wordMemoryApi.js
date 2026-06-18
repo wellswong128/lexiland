@@ -6,6 +6,8 @@ import {
 } from "./wordImageApi.js";
 import {
   canUseWordbase,
+  contributeMemoryImageToWordbase,
+  contributeMemoryTipsToWordbase,
   fetchWordbaseEntry,
   hasWordbaseMemoryImage,
   hasWordbaseMemoryTips,
@@ -162,6 +164,21 @@ export async function fetchWordMemoryWithCache(
   }
 
   await Promise.all(tasks);
+
+  if (canUseWordbase(user) && !usedFallback && !imageError) {
+    try {
+      await Promise.all([
+        memoryTips
+          ? contributeMemoryTipsToWordbase(word, locale, memoryTips, user.id)
+          : Promise.resolve(),
+        memoryImage?.imageUrl
+          ? contributeMemoryImageToWordbase(word, memoryImage, user.id)
+          : Promise.resolve(),
+      ]);
+    } catch (wordbaseError) {
+      console.warn("Could not sync memory assist to wordbase.", wordbaseError);
+    }
+  }
 
   const changes = mergeChanges(...changeList);
 

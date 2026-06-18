@@ -36,8 +36,6 @@ function WordMemoryPanel({
     setNoticeType("success");
   }, [compact, locale, word.id, word.memoryImage, word.memoryTipsByLocale, word.updatedAt]);
 
-  const hasSavedMemory = Boolean(memoryTips && memoryImage?.imageUrl);
-
   async function handleGenerate({ forceRefresh = false } = {}) {
     try {
       setIsLoading(true);
@@ -111,14 +109,10 @@ function WordMemoryPanel({
         <button
           className="inline-flex shrink-0 justify-center rounded-full bg-indigo-700 px-5 py-3 text-sm font-bold text-white transition hover:bg-indigo-800 disabled:bg-slate-300"
           disabled={isLoading}
-          onClick={() => handleGenerate({ forceRefresh: hasSavedMemory })}
+          onClick={() => handleGenerate({ forceRefresh: true })}
           type="button"
         >
-          {isLoading
-            ? t("wordMemory.loading")
-            : hasSavedMemory
-              ? t("wordMemory.refresh")
-              : t("wordMemory.generate")}
+          {isLoading ? t("wordMemory.loading") : t("wordMemory.refresh")}
         </button>
       </div>
 
