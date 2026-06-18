@@ -1,10 +1,14 @@
 import { imageContainsReadableText } from "../lib/detectImageText.js";
+import { fetchWithTimeout } from "../lib/fetchWithTimeout.js";
 import { buildNegativePrompt, wrapNoTextPrompt } from "../lib/noTextImageRules.js";
 
 const AGNES_IMAGE_API_URL = "https://apihub.agnes-ai.com/v1/images/generations";
 const DEFAULT_IMAGE_MODEL = "agnes-image-2.1-flash";
 const FALLBACK_IMAGE_MODEL = "agnes-image-2.0-flash";
 const SUPPORTED_IMAGE_SIZE = "1024x768";
+const DEFAULT_GENERATION_TIMEOUT_MS = 45000;
+const DEFAULT_MAX_GENERATIONS = 3;
+const DEFAULT_MAX_TEXT_CHECKS = 2;
 
 function sendJson(response, statusCode, payload) {
   response.statusCode = statusCode;
@@ -214,23 +218,77 @@ function buildGenerationAttempts() {
   return attempts;
 }
 
-async function requestImageGeneration({ apiKey, model, prompt, size, blockedTerms = [] }) {
-  const imageResponse = await fetch(AGNES_IMAGE_API_URL, {
-    method: "POST",
-    headers: {
-      Authorization: `Bearer ${apiKey}`,
-      "Content-Type": "application/json",
+function buildGenerationPlan({ term, definition, translation, example }) {
+  const promptVariants = buildImagePromptVariants({ term, definition, translation, example });
+  const modelAttempts = buildGenerationAttempts();
+  const primaryPrompt = promptVariants[0];
+  const genericPrompt = promptVariants.find((prompt) => prompt !== primaryPrompt) ?? primaryPrompt;
+  const minimalPrompt = promptVariants.at(-1) ?? primaryPrompt;
+  const primaryModel = modelAttempts[0];
+  const fallbackModel = modelAttempts.at(-1) ?? primaryModel;
+
+  const plan = [
+    { prompt: primaryPrompt, model: primaryModel.model, size: primaryModel.size, checkText: true },
+    { prompt: genericPrompt, model: primaryModel.model, size: primaryModel.size, checkText: true },
+    {
+      prompt: minimalPrompt,
+      model: fallbackModel.model,
+      size: fallbackModel.size,
+      checkText: false,
     },
-    body: JSON.stringify({
-      model,
-      prompt,
-      size,
-      extra_body: {
-        response_format: "url",
-        negative_prompt: buildNegativePrompt(blockedTerms),
-      },
-    }),
+  ];
+
+  const seen = new Set();
+
+  return plan.filter((entry) => {
+    const key = `${entry.prompt}:${entry.model}:${entry.size}`;
+
+    if (seen.has(key)) {
+      return false;
+    }
+
+    seen.add(key);
+    return true;
   });
+}
+
+function getGenerationLimits() {
+  return {
+    maxGenerations: Number(process.env.AGNES_IMAGE_MAX_ATTEMPTS) || DEFAULT_MAX_GENERATIONS,
+    maxTextChecks: Number(process.env.AGNES_IMAGE_MAX_TEXT_CHECKS) || DEFAULT_MAX_TEXT_CHECKS,
+    generationTimeoutMs:
+      Number(process.env.AGNES_IMAGE_TIMEOUT_MS) || DEFAULT_GENERATION_TIMEOUT_MS,
+  };
+}
+
+async function requestImageGeneration({
+  apiKey,
+  model,
+  prompt,
+  size,
+  blockedTerms = [],
+  timeoutMs = DEFAULT_GENERATION_TIMEOUT_MS,
+}) {
+  const imageResponse = await fetchWithTimeout(
+    AGNES_IMAGE_API_URL,
+    {
+      method: "POST",
+      headers: {
+        Authorization: `Bearer ${apiKey}`,
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        model,
+        prompt,
+        size,
+        extra_body: {
+          response_format: "url",
+          negative_prompt: buildNegativePrompt(blockedTerms),
+        },
+      }),
+    },
+    timeoutMs,
+  );
 
   const responseText = await imageResponse.text();
   let data = null;
@@ -256,12 +314,6 @@ async function requestImageGeneration({ apiKey, model, prompt, size, blockedTerm
   }
 
   return { imageUrl, model, size };
-}
-
-async function acceptGeneratedImage({ apiKey, imageUrl }) {
-  const hasReadableText = await imageContainsReadableText({ apiKey, imageUrl });
-
-  return !hasReadableText;
 }
 
 export default async function handler(request, response) {
@@ -292,65 +344,71 @@ export default async function handler(request, response) {
     translation: String(body.translation ?? "").trim(),
     example: String(body.example ?? "").trim(),
   };
-  const promptVariants = buildImagePromptVariants({ term, ...meaning });
+  const generationPlan = buildGenerationPlan({ term, ...meaning });
   const blockedTerms = [term, meaning.translation].filter(Boolean);
+  const limits = getGenerationLimits();
 
-  const attempts = buildGenerationAttempts();
   const errors = [];
+  let generationCount = 0;
+  let textCheckCount = 0;
 
   try {
-    for (const prompt of promptVariants) {
-      let hitContentPolicy = false;
-      let hitHardFailure = false;
+    for (const step of generationPlan) {
+      if (generationCount >= limits.maxGenerations) {
+        break;
+      }
 
-      for (const attempt of attempts) {
-        try {
-          const result = await requestImageGeneration({
-            apiKey,
-            model: attempt.model,
-            prompt,
-            size: attempt.size,
-            blockedTerms,
-          });
-          const isTextFree = await acceptGeneratedImage({
+      try {
+        generationCount += 1;
+
+        const result = await requestImageGeneration({
+          apiKey,
+          model: step.model,
+          prompt: step.prompt,
+          size: step.size,
+          blockedTerms,
+          timeoutMs: limits.generationTimeoutMs,
+        });
+
+        const shouldCheckText =
+          step.checkText && textCheckCount < limits.maxTextChecks;
+
+        if (shouldCheckText) {
+          textCheckCount += 1;
+
+          const hasReadableText = await imageContainsReadableText({
             apiKey,
             imageUrl: result.imageUrl,
           });
 
-          if (!isTextFree) {
+          if (hasReadableText) {
             errors.push(
-              `${attempt.model} @ ${attempt.size}: rejected because the image contained readable text`,
+              `${step.model} @ ${step.size}: rejected because the image contained readable text`,
             );
             continue;
           }
-
-          sendJson(response, 200, {
-            imageUrl: result.imageUrl,
-            prompt,
-            model: result.model,
-            size: result.size,
-          });
-          return;
-        } catch (error) {
-          errors.push(`${attempt.model} @ ${attempt.size}: ${error.message}`);
-
-          if (isContentPolicyError(error.message)) {
-            hitContentPolicy = true;
-            break;
-          }
-
-          hitHardFailure = true;
-          break;
         }
-      }
 
-      if (hitHardFailure && !hitContentPolicy) {
-        break;
+        sendJson(response, 200, {
+          imageUrl: result.imageUrl,
+          prompt: step.prompt,
+          model: result.model,
+          size: result.size,
+        });
+        return;
+      } catch (error) {
+        errors.push(`${step.model} @ ${step.size}: ${error.message}`);
+
+        if (isContentPolicyError(error.message)) {
+          continue;
+        }
       }
     }
 
     sendJson(response, 502, {
-      error: errors.at(-1) || "Image generation failed.",
+      error:
+        errors.at(-1) ||
+        "Image generation failed. The image service may be busy, please try again shortly.",
     });
   } catch (error) {
     sendJson(response, 500, { error: error.message });
@@ -360,6 +418,7 @@ export default async function handler(request, response) {
 export {
   buildExampleFocusedPrompt,
   buildGenericPrompt,
+  buildGenerationPlan,
   buildImagePrompt,
   buildImagePromptVariants,
   buildUltraMinimalNoTextPrompt,

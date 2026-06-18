@@ -110,30 +110,44 @@ export function clearWordImageCache(storage = getDefaultStorage()) {
   storage.removeItem(WORD_IMAGE_CACHE_KEY);
 }
 
-export async function fetchWordImage(word) {
-  const response = await fetch("/api/word-memory-image", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({
-      term: word.term,
-      definition: word.definition,
-      translation: word.translation,
-      partOfSpeech: word.partOfSpeech,
-      example: word.example,
-    }),
-  });
-  const data = await readJsonResponse(response);
+export async function fetchWordImage(word, { timeoutMs = 90000 } = {}) {
+  const controller = new AbortController();
+  const timeoutId = setTimeout(() => controller.abort(), timeoutMs);
 
-  if (!response.ok) {
-    throw new Error(data.error || "Could not generate a memory image.");
+  try {
+    const response = await fetch("/api/word-memory-image", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        term: word.term,
+        definition: word.definition,
+        translation: word.translation,
+        partOfSpeech: word.partOfSpeech,
+        example: word.example,
+      }),
+      signal: controller.signal,
+    });
+    const data = await readJsonResponse(response);
+
+    if (!response.ok) {
+      throw new Error(data.error || "Could not generate a memory image.");
+    }
+
+    return {
+      imageUrl: data.imageUrl,
+      prompt: data.prompt ?? "",
+    };
+  } catch (error) {
+    if (error.name === "AbortError") {
+      throw new Error("Image generation timed out. Please try again.");
+    }
+
+    throw error;
+  } finally {
+    clearTimeout(timeoutId);
   }
-
-  return {
-    imageUrl: data.imageUrl,
-    prompt: data.prompt ?? "",
-  };
 }
 
 export async function fetchWordImageWithCache(
