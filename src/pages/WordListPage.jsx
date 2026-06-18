@@ -6,7 +6,7 @@ import WordMemoryPanel from "../components/WordMemoryPanel.jsx";
 import { useLocale } from "../features/locale/LocaleContext.jsx";
 import { useWordsContext } from "../features/words/WordsContext.jsx";
 
-const WORDS_PER_PAGE = 50;
+const WORDS_PER_PAGE = 20;
 
 function WordListPage() {
   const { t } = useLocale();
