@@ -123,6 +123,16 @@ function AuthPage() {
     setEmail("");
   }, [mode]);
 
+  useEffect(() => {
+    const lower = authError.toLowerCase();
+    if (
+      lower.includes("error getting user email from external provider") ||
+      lower.includes("error getting user profile from external provider")
+    ) {
+      setShowEmailForm(true);
+    }
+  }, [authError]);
+
   function switchMode(nextMode) {
     const nextParams = new URLSearchParams(searchParams);
     nextParams.set("mode", nextMode);

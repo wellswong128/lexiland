@@ -495,7 +495,7 @@ const zhHant = {
       magicLinkDomainNotAuthorized:
         "Cloudflare 尚未授權此寄件網域。請到 Cloudflare → Email Service → Email Sending onboard 你的網域，或在 Supabase SMTP 將 Sender 改為已 onboard 的網域（例如 no-reply@lexiland.cc，不要用 learn.lexiland.cc 除非該子網域也已 onboard）。",
       azureEmailError:
-        "Microsoft 登入失敗。請用 @outlook.com / @hotmail.com 等 Microsoft 帳戶（不是 Gmail），並確認帳戶有已驗證的 email。在 Azure App Registration → Manifest 的 optionalClaims.idToken 加入 email；API permissions 加入 email、openid、profile、User.Read 並授權；Supabase → Authentication → Providers → Azure 的 Tenant URL 設為 https://login.microsoftonline.com/consumers（個人帳戶）或 common（公司帳戶）；確認 Client Secret 未過期。",
+        "Microsoft 登入失敗。請使用 @outlook.com、@hotmail.com 等 Microsoft 帳戶，或改用下方的電子郵件登入。",
       supabaseAccount: "雲端帳號",
       noSupabaseConfig:
         "尚未設定雲端同步，應用目前使用 localStorage。",
@@ -1214,7 +1214,7 @@ export const translations = {
       magicLinkDomainNotAuthorized:
         "Cloudflare has not authorized this sender domain. In Cloudflare → Email Service → Email Sending, onboard your domain, or change the Supabase SMTP Sender to an onboarded domain (for example no-reply@lexiland.cc). Do not use learn.lexiland.cc unless that subdomain is also onboarded.",
       azureEmailError:
-        "Microsoft sign-in failed. Use a Microsoft account (@outlook.com / @hotmail.com), not Gmail, and confirm the account has a verified email. In Azure App Registration → Manifest, add email to optionalClaims.idToken; add email, openid, profile, and User.Read under API permissions and grant consent; set Supabase → Authentication → Providers → Azure Tenant URL to https://login.microsoftonline.com/consumers (personal) or common (work/school); confirm the client secret is not expired.",
+        "Microsoft sign-in failed. Use an @outlook.com or @hotmail.com account, or sign in with email below.",
       supabaseAccount: "Cloud Account",
       noSupabaseConfig:
         "Cloud storage is not configured, so the app is using localStorage.",

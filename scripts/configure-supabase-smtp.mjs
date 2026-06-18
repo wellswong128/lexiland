@@ -3,16 +3,18 @@
 /**
  * Configure Supabase Auth SMTP (Cloudflare Email Service) + site URLs.
  *
- * Usage:
- *   SUPABASE_ACCESS_TOKEN=xxx \
- *   SUPABASE_PROJECT_REF=xxx \
- *   CLOUDFLARE_API_TOKEN=xxx \
- *   SMTP_SENDER_EMAIL=no-reply@lexiland.cc \
- *   node scripts/configure-supabase-smtp.mjs
+ * Put secrets in .env.local (see .env.example), then run:
+ *   npm run configure:supabase-smtp
  */
 
+import { loadEnv, projectRefFromSupabaseUrl } from "./load-env.mjs";
+
+loadEnv();
+
 const accessToken = process.env.SUPABASE_ACCESS_TOKEN?.trim();
-const projectRef = process.env.SUPABASE_PROJECT_REF?.trim();
+const projectRef =
+  process.env.SUPABASE_PROJECT_REF?.trim() ||
+  projectRefFromSupabaseUrl(process.env.VITE_SUPABASE_URL);
 const cloudflareToken = process.env.CLOUDFLARE_API_TOKEN?.trim();
 const senderEmail = process.env.SMTP_SENDER_EMAIL?.trim() || "no-reply@lexiland.cc";
 const senderName = process.env.SMTP_SENDER_NAME?.trim() || "力思樂園";
@@ -24,16 +26,39 @@ const smtpHost = "smtp.mx.cloudflare.net";
 const smtpPort = 465;
 const smtpUser = "api_token";
 
-function requireEnv(name, value) {
+function requireEnv(name, value, hint) {
   if (!value) {
     console.error(`Missing required env var: ${name}`);
+    if (hint) {
+      console.error(hint);
+    }
     process.exit(1);
   }
 }
 
-requireEnv("SUPABASE_ACCESS_TOKEN", accessToken);
-requireEnv("SUPABASE_PROJECT_REF", projectRef);
-requireEnv("CLOUDFLARE_API_TOKEN", cloudflareToken);
+requireEnv(
+  "SUPABASE_ACCESS_TOKEN",
+  accessToken,
+  [
+    "Add it to .env.local in the project root.",
+    "Create one at https://supabase.com/dashboard/account/tokens",
+  ].join("\n"),
+);
+
+requireEnv(
+  "SUPABASE_PROJECT_REF",
+  projectRef,
+  [
+    "Add SUPABASE_PROJECT_REF=your_project_ref to .env.local,",
+    "or set VITE_SUPABASE_URL=https://your-project-ref.supabase.co",
+  ].join("\n"),
+);
+
+requireEnv(
+  "CLOUDFLARE_API_TOKEN",
+  cloudflareToken,
+  "Add CLOUDFLARE_API_TOKEN with Email Sending: Edit permission to .env.local.",
+);
 
 const redirectUrls = [
   siteUrl,
