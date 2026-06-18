@@ -125,7 +125,8 @@ export function useSupabaseAuth() {
     const options = { redirectTo };
 
     if (provider === "azure") {
-      options.scopes = "email";
+      // GoTrue's Azure provider splits scopes by comma (not space).
+      options.scopes = "email,profile";
       options.queryParams = {
         prompt: "select_account",
       };

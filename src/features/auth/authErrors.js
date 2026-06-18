@@ -29,7 +29,10 @@ export function getFriendlyAuthError(message, t) {
     return t("settings.emailNotAuthorized");
   }
 
-  if (lower.includes("error getting user email from external provider")) {
+  if (
+    lower.includes("error getting user email from external provider") ||
+    lower.includes("error getting user profile from external provider")
+  ) {
     return t("settings.azureEmailError");
   }
 

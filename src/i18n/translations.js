@@ -488,7 +488,7 @@ const zhHant = {
       emailNotAuthorized:
         "Supabase 預設寄信服務可能無法寄送到此信箱。請在 Supabase 設定自訂 SMTP，或確認 Email 登入已啟用。",
       azureEmailError:
-        "Microsoft 未回傳電子郵件。請確認帳戶有已驗證的 email，並在 Azure App Registration → API permissions 加入 email、openid、profile、User.Read 後再試。",
+        "Microsoft 登入失敗。請確認帳戶有已驗證的 email；在 Azure App Registration → API permissions 加入 email、openid、profile、User.Read 並授權；在 Supabase → Authentication → Providers → Azure 將 URL 設為 https://login.microsoftonline.com/consumers（個人 Outlook 帳戶）後再試。",
       supabaseAccount: "雲端帳號",
       noSupabaseConfig:
         "尚未設定雲端同步，應用目前使用 localStorage。",
@@ -1200,7 +1200,7 @@ export const translations = {
       emailNotAuthorized:
         "Supabase may not be able to send to this address with the default mail service. Configure custom SMTP or confirm Email auth is enabled.",
       azureEmailError:
-        "Microsoft did not return an email address. Confirm your account has a verified email, and add email, openid, profile, and User.Read under Azure App Registration → API permissions.",
+        "Microsoft sign-in failed. Confirm your account has a verified email; add email, openid, profile, and User.Read under Azure App Registration → API permissions and grant consent; set Supabase → Authentication → Providers → Azure URL to https://login.microsoftonline.com/consumers for personal Outlook accounts, then try again.",
       supabaseAccount: "Cloud Account",
       noSupabaseConfig:
         "Cloud storage is not configured, so the app is using localStorage.",
