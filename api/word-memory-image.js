@@ -1,6 +1,6 @@
 import { imageContainsReadableText } from "../lib/detectImageText.js";
 import { fetchWithTimeout } from "../lib/fetchWithTimeout.js";
-import { buildNegativePrompt, wrapNoTextPrompt } from "../lib/noTextImageRules.js";
+import { buildNegativePrompt, buildVisualImagePrompt } from "../lib/noTextImageRules.js";
 
 const AGNES_IMAGE_API_URL = "https://apihub.agnes-ai.com/v1/images/generations";
 const DEFAULT_IMAGE_MODEL = "agnes-image-2.1-flash";
@@ -69,78 +69,89 @@ function sanitizeMeaningField(value, maxLength = 220) {
   return truncateText(pickSafeMeaningSegments(text), maxLength);
 }
 
-function describeConceptWithoutRenderingWord(term) {
-  return `Illustrate the everyday meaning of one English vocabulary concept. The concept name is for guidance only and must never appear as visible text: ${term}.`;
-}
+function inferSceneFromExample(example) {
+  const value = String(example ?? "").toLowerCase();
 
-function buildImagePrompt({ term, definition, translation, example }) {
-  const meaningParts = [];
-
-  if (example) {
-    meaningParts.push(
-      `scene from this learning example (show the scene visually, never as written text): ${truncateText(example, 120)}`,
-    );
+  if (/join|together|group|anyone|people|friend|class|team|us\b/.test(value)) {
+    return "Several children together, with one more child joining the group in a friendly classroom scene";
   }
 
-  const safeDefinition = sanitizeMeaningField(definition);
+  if (/eat|food|kitchen|restaurant|drink|apple|banana|meal/.test(value)) {
+    return "A wholesome food-related everyday scene with clear objects";
+  }
+
+  if (/walk|run|park|street|travel|home|school/.test(value)) {
+    return "An outdoor or indoor everyday scene with people or nature";
+  }
+
+  if (/read|book|study|learn|homework/.test(value)) {
+    return "A study scene using objects only, with no readable pages or boards";
+  }
+
+  return null;
+}
+
+function buildVisualSceneDescription({ definition, example }) {
+  const safeDefinition = sanitizeMeaningField(definition, 140);
+  const inferredScene = inferSceneFromExample(example);
+
+  if (inferredScene) {
+    return inferredScene;
+  }
 
   if (safeDefinition) {
-    meaningParts.push(safeDefinition);
+    return `Show this idea visually: ${safeDefinition}`;
   }
 
-  const safeTranslation = sanitizeMeaningField(translation, 80);
+  return "A simple everyday scene with clear objects or actions";
+}
 
-  if (safeTranslation) {
-    meaningParts.push(`meaning hint for the illustrator only: ${safeTranslation}`);
-  }
-
-  const meaningSummary =
-    meaningParts.length > 0
-      ? meaningParts.join("; ")
-      : "a clear everyday visual meaning for a common English vocabulary concept";
-
-  return wrapNoTextPrompt([
-    "Cartoon illustration for a middle-school English vocabulary memory aid.",
-    describeConceptWithoutRenderingWord(term),
-    "Depict the meaning using objects, actions, facial expressions, and scenery only.",
-    "Keep the scene wholesome, educational, and appropriate for children.",
-    `Visual concept: ${meaningSummary}.`,
-    "Bright, kid-friendly cartoon style, soft lighting, simple background.",
+function buildImagePrompt({ definition, example }) {
+  return buildVisualImagePrompt([
+    buildVisualSceneDescription({ definition, example }),
+    "Depict people, objects, actions, facial expressions, and scenery only.",
+    "Keep the scene educational and appropriate for children.",
   ]);
 }
 
-function buildExampleFocusedPrompt(term, example) {
-  return wrapNoTextPrompt([
-    "Cartoon illustration for an English vocabulary flashcard.",
-    describeConceptWithoutRenderingWord(term),
-    `Illustrate this example scene visually without any text: ${truncateText(example, 160)}`,
-    "Wholesome, kid-friendly, educational style.",
+function buildExampleFocusedPrompt(example) {
+  const inferredScene = inferSceneFromExample(example);
+
+  if (!inferredScene) {
+    return "";
+  }
+
+  return buildVisualImagePrompt([
+    inferredScene,
+    "Focus on the action and setting only.",
   ]);
 }
 
-function buildGenericPrompt(term, definition) {
+function buildGenericPrompt(definition) {
   const safeDefinition = sanitizeMeaningField(definition, 120);
-  const hint = safeDefinition ? ` The meaning is: ${safeDefinition}.` : "";
+  const scene = safeDefinition
+    ? `Show this idea visually: ${safeDefinition}`
+    : "A simple wholesome everyday scene with one clear subject";
 
-  return wrapNoTextPrompt([
-    "Cartoon illustration for an English vocabulary flashcard.",
-    describeConceptWithoutRenderingWord(term),
-    `Create a simple, wholesome visual that helps remember this vocabulary concept.${hint}`,
-    "Use everyday objects or nature scenes only. Kid-friendly educational style.",
+  return buildVisualImagePrompt([
+    scene,
+    "Use everyday objects or nature elements only.",
   ]);
 }
 
-function buildUltraMinimalNoTextPrompt(term) {
-  return wrapNoTextPrompt([
-    "Ultra-simple cartoon scene with a plain background.",
-    describeConceptWithoutRenderingWord(term),
-    "Show one clear object or action only.",
-    "No books, screens, signs, papers, labels, packaging, clothing text, or objects that usually contain writing.",
-    "Flat colors, minimal detail, wholesome and kid-friendly.",
+function buildUltraMinimalNoTextPrompt(definition) {
+  const safeDefinition = sanitizeMeaningField(definition, 100);
+  const scene = safeDefinition
+    ? `One simple subject illustrating: ${safeDefinition}`
+    : "One simple wholesome object or action";
+
+  return buildVisualImagePrompt([
+    scene,
+    "Plain background, minimal detail, no props that usually contain writing.",
   ]);
 }
 
-function buildImagePromptVariants({ term, definition, translation, example }) {
+function buildImagePromptVariants({ definition, translation, example }) {
   const variants = [];
   const seen = new Set();
 
@@ -155,14 +166,16 @@ function buildImagePromptVariants({ term, definition, translation, example }) {
     variants.push(key);
   }
 
-  add(buildImagePrompt({ term, definition, translation, example }));
+  add(buildImagePrompt({ definition, example }));
 
-  if (example) {
-    add(buildExampleFocusedPrompt(term, example));
+  const examplePrompt = example ? buildExampleFocusedPrompt(example) : "";
+
+  if (examplePrompt) {
+    add(examplePrompt);
   }
 
-  add(buildGenericPrompt(term, definition));
-  add(buildUltraMinimalNoTextPrompt(term));
+  add(buildGenericPrompt(definition));
+  add(buildUltraMinimalNoTextPrompt(definition));
 
   return variants;
 }
@@ -218,8 +231,8 @@ function buildGenerationAttempts() {
   return attempts;
 }
 
-function buildGenerationPlan({ term, definition, translation, example }) {
-  const promptVariants = buildImagePromptVariants({ term, definition, translation, example });
+function buildGenerationPlan({ definition, translation, example }) {
+  const promptVariants = buildImagePromptVariants({ definition, translation, example });
   const modelAttempts = buildGenerationAttempts();
   const primaryPrompt = promptVariants[0];
   const genericPrompt = promptVariants.find((prompt) => prompt !== primaryPrompt) ?? primaryPrompt;
@@ -234,7 +247,7 @@ function buildGenerationPlan({ term, definition, translation, example }) {
       prompt: minimalPrompt,
       model: fallbackModel.model,
       size: fallbackModel.size,
-      checkText: false,
+      checkText: true,
     },
   ];
 
@@ -344,8 +357,8 @@ export default async function handler(request, response) {
     translation: String(body.translation ?? "").trim(),
     example: String(body.example ?? "").trim(),
   };
-  const generationPlan = buildGenerationPlan({ term, ...meaning });
-  const blockedTerms = [term, meaning.translation].filter(Boolean);
+  const generationPlan = buildGenerationPlan({ ...meaning });
+  const blockedTerms = [term, meaning.translation, meaning.definition].filter(Boolean);
   const limits = getGenerationLimits();
 
   const errors = [];
