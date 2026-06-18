@@ -7,7 +7,7 @@ const DEFAULT_IMAGE_MODEL = "agnes-image-2.1-flash";
 const FALLBACK_IMAGE_MODEL = "agnes-image-2.0-flash";
 const SUPPORTED_IMAGE_SIZE = "1024x768";
 const DEFAULT_GENERATION_TIMEOUT_MS = 45000;
-const DEFAULT_MAX_GENERATIONS = 3;
+const DEFAULT_MAX_GENERATIONS = 8;
 const DEFAULT_MAX_TEXT_CHECKS = 2;
 
 function sendJson(response, statusCode, payload) {
@@ -37,11 +37,46 @@ function truncateText(value, maxLength = 220) {
 const SENSITIVE_ENGLISH_PATTERN =
   /\b(naked|nude|nudity|sexual|sex(?:ual)?(?:ly)?|erotic|porn(?:ography)?|genital|breast(?:s)?|orgasm|intercourse)\b/i;
 const SENSITIVE_CHINESE_PATTERN = /裸体|赤裸|裸露|色情|性交|淫/;
+const POLICY_SENSITIVE_ENGLISH_PATTERN =
+  /\b(worship\w*|prayer|pray(?:ing|er|s)?|religious|religion|church|temple|mosque|synagogue|god\b|goddess|sin(?:ner|ful)?|hell\b|devil|demon|sacred|holy\b|bible|quran|crucifix|altar|sacrifice|martyr|bless(?:ed|ing)?|spiritual\w*|clergy|priest|nun|monk|sermon|gospel|afterlife|soul\b|heaven\b|divine)\b/i;
+const POLICY_SENSITIVE_CHINESE_PATTERN =
+  /宗教|祈祷|祷告|信仰|教堂|寺庙|上帝|神(?:灵|圣)?|虔诚|地狱|魔鬼|灵魂|神圣|圣经|牺牲|祭/;
+const POLICY_SENSITIVE_TERM_PATTERN =
+  /\b(worship|prayer|sacred|blessing|heaven|sin|hell|crucifix|gospel|clergy|sermon)\b/i;
 
 function containsSensitiveMeaning(text) {
   const value = String(text ?? "");
 
   return SENSITIVE_ENGLISH_PATTERN.test(value) || SENSITIVE_CHINESE_PATTERN.test(value);
+}
+
+function containsPolicySensitiveMeaning(...values) {
+  const combined = values.map((value) => String(value ?? "")).join(" ");
+
+  return (
+    POLICY_SENSITIVE_ENGLISH_PATTERN.test(combined) ||
+    POLICY_SENSITIVE_CHINESE_PATTERN.test(combined) ||
+    POLICY_SENSITIVE_TERM_PATTERN.test(combined)
+  );
+}
+
+function stripPolicySensitiveText(text) {
+  const englishPattern = new RegExp(POLICY_SENSITIVE_ENGLISH_PATTERN.source, "gi");
+  const chinesePattern = new RegExp(POLICY_SENSITIVE_CHINESE_PATTERN.source, "g");
+
+  return String(text ?? "")
+    .replace(englishPattern, " ")
+    .replace(chinesePattern, " ")
+    .replace(/\b(?:and|or|the|a|an)\b(?=\s*(?:[,.;]|$))/gi, " ")
+    .replace(/(?:^|[\s,;])(?:and|or)\s+(?=[,.;]|$)/gi, " ")
+    .replace(/\s+/g, " ")
+    .replace(/\s*,\s*,/g, ",")
+    .replace(/(?:,\s*)+$/g, "")
+    .trim();
+}
+
+function needsPolicySafeFallbacks({ term, definition, example, translation }) {
+  return containsPolicySensitiveMeaning(term, definition, example, translation);
 }
 
 function pickSafeMeaningSegments(text) {
@@ -56,7 +91,7 @@ function pickSafeMeaningSegments(text) {
 }
 
 function sanitizeMeaningField(value, maxLength = 220) {
-  const text = String(value ?? "").trim();
+  const text = stripPolicySensitiveText(String(value ?? "").trim());
 
   if (!text) {
     return "";
@@ -69,8 +104,43 @@ function sanitizeMeaningField(value, maxLength = 220) {
   return truncateText(pickSafeMeaningSegments(text), maxLength);
 }
 
+
+function inferSafeSceneFromMeaning({ term, definition, example, translation }) {
+  const combined = `${term} ${definition} ${example} ${translation}`.toLowerCase();
+
+  if (/devotion|loyal|dedication|commitment|faithful/.test(combined)) {
+    return "A child gently caring for a small potted plant every day, showing patience and dedication";
+  }
+
+  if (/faith|trust|believe|belief/.test(combined)) {
+    return "Two friends helping each other across a small bridge, showing trust and support";
+  }
+
+  if (/love|affection|care|caring|family|kindness/.test(combined)) {
+    return "A warm family scene with a child and parent sharing a quiet happy moment together";
+  }
+
+  if (/hope|wish|dream|aspir/.test(combined)) {
+    return "A child looking at a bright starry sky with a peaceful hopeful expression";
+  }
+
+  if (/peace|calm|quiet|serene/.test(combined)) {
+    return "A peaceful park scene with a child sitting on a bench watching birds in a tree";
+  }
+
+  if (/courage|brave|hero/.test(combined)) {
+    return "A child helping a friend who fell down, showing bravery and kindness";
+  }
+
+  return "A wholesome everyday scene with a child showing a positive feeling through actions and expressions";
+}
+
 function inferSceneFromExample(example) {
   const value = String(example ?? "").toLowerCase();
+
+  if (/work|job|task|study|practice|effort|dedicat/.test(value)) {
+    return "A child focused on homework or practicing a skill with quiet determination";
+  }
 
   if (/join|together|group|anyone|people|friend|class|team|us\b/.test(value)) {
     return "Several children together, with one more child joining the group in a friendly classroom scene";
@@ -151,7 +221,31 @@ function buildUltraMinimalNoTextPrompt(definition) {
   ]);
 }
 
-function buildImagePromptVariants({ definition, translation, example }) {
+function buildPolicySafePrompt({ term, definition, example, translation }) {
+  const safeScene = inferSafeSceneFromMeaning({ term, definition, example, translation });
+
+  return buildVisualImagePrompt([
+    safeScene,
+    "Use everyday settings only, with no religious symbols, rituals, or places of worship.",
+    "Show the feeling through actions, expressions, and objects only.",
+  ]);
+}
+
+function buildAbstractSafePrompt() {
+  return buildVisualImagePrompt([
+    "A simple wholesome cartoon scene with one child and one clear positive emotion shown through facial expression and body language.",
+    "Everyday setting only, with no religious symbols or props that usually contain writing.",
+  ]);
+}
+
+function buildUniversalFallbackPrompt() {
+  return buildVisualImagePrompt([
+    "A bright friendly cartoon illustration of a child in a sunny park with trees, flowers, and a blue sky.",
+    "Simple composition, minimal detail, no symbols or props that usually contain writing.",
+  ]);
+}
+
+function buildImagePromptVariants({ term, definition, translation, example }) {
   const variants = [];
   const seen = new Set();
 
@@ -166,6 +260,10 @@ function buildImagePromptVariants({ definition, translation, example }) {
     variants.push(key);
   }
 
+  if (needsPolicySafeFallbacks({ term, definition, example, translation })) {
+    add(buildPolicySafePrompt({ term, definition, example, translation }));
+  }
+
   add(buildImagePrompt({ definition, example }));
 
   const examplePrompt = example ? buildExampleFocusedPrompt(example) : "";
@@ -176,12 +274,14 @@ function buildImagePromptVariants({ definition, translation, example }) {
 
   add(buildGenericPrompt(definition));
   add(buildUltraMinimalNoTextPrompt(definition));
+  add(buildAbstractSafePrompt());
+  add(buildUniversalFallbackPrompt());
 
   return variants;
 }
 
 function isContentPolicyError(message) {
-  return /無法生成該內容|请调整提示词|請調整提示詞|content.?policy|safety|moderation|inappropriate|not.?allowed|violat/i.test(
+  return /無法生成該內容|无法生成该内容|请调整提示词|請調整提示詞|content.?policy|safety|moderation|inappropriate|not.?allowed|violat/i.test(
     String(message ?? ""),
   );
 }
@@ -231,38 +331,43 @@ function buildGenerationAttempts() {
   return attempts;
 }
 
-function buildGenerationPlan({ definition, translation, example }) {
-  const promptVariants = buildImagePromptVariants({ definition, translation, example });
+function buildGenerationPlan({ term, definition, translation, example }) {
+  const promptVariants = buildImagePromptVariants({ term, definition, translation, example });
   const modelAttempts = buildGenerationAttempts();
-  const primaryPrompt = promptVariants[0];
-  const genericPrompt = promptVariants.find((prompt) => prompt !== primaryPrompt) ?? primaryPrompt;
-  const minimalPrompt = promptVariants.at(-1) ?? primaryPrompt;
   const primaryModel = modelAttempts[0];
   const fallbackModel = modelAttempts.at(-1) ?? primaryModel;
-
-  const plan = [
-    { prompt: primaryPrompt, model: primaryModel.model, size: primaryModel.size, checkText: true },
-    { prompt: genericPrompt, model: primaryModel.model, size: primaryModel.size, checkText: true },
-    {
-      prompt: minimalPrompt,
-      model: fallbackModel.model,
-      size: fallbackModel.size,
-      checkText: true,
-    },
-  ];
-
+  const plan = [];
   const seen = new Set();
 
-  return plan.filter((entry) => {
-    const key = `${entry.prompt}:${entry.model}:${entry.size}`;
+  function addStep(prompt, model, size, checkText = true) {
+    const key = `${prompt}:${model}:${size}`;
 
-    if (seen.has(key)) {
-      return false;
+    if (!prompt || seen.has(key)) {
+      return;
     }
 
     seen.add(key);
-    return true;
-  });
+    plan.push({ prompt, model, size, checkText });
+  }
+
+  const policySafe = promptVariants[0];
+  const universal = promptVariants.at(-1);
+  const abstractSafe = promptVariants.at(-2);
+
+  // Try the safest prompts on both models early so low AGNES_IMAGE_MAX_ATTEMPTS
+  // budgets still reach the generic fallbacks.
+  addStep(policySafe, primaryModel.model, primaryModel.size);
+  addStep(universal, fallbackModel.model, fallbackModel.size, false);
+  addStep(abstractSafe, fallbackModel.model, fallbackModel.size, false);
+  addStep(universal, primaryModel.model, primaryModel.size, false);
+
+  for (const prompt of promptVariants.slice(1, -2)) {
+    addStep(prompt, primaryModel.model, primaryModel.size);
+  }
+
+  addStep(abstractSafe, primaryModel.model, primaryModel.size, false);
+
+  return plan;
 }
 
 function getGenerationLimits() {
@@ -357,8 +462,11 @@ export default async function handler(request, response) {
     translation: String(body.translation ?? "").trim(),
     example: String(body.example ?? "").trim(),
   };
-  const generationPlan = buildGenerationPlan({ ...meaning });
-  const blockedTerms = [term, meaning.translation, meaning.definition].filter(Boolean);
+  const generationPlan = buildGenerationPlan({ term, ...meaning });
+  const policySafe = needsPolicySafeFallbacks({ term, ...meaning });
+  const blockedTerms = policySafe
+    ? [meaning.translation].filter(Boolean)
+    : [term, meaning.translation, meaning.definition].filter(Boolean);
   const limits = getGenerationLimits();
 
   const errors = [];
@@ -429,10 +537,16 @@ export default async function handler(request, response) {
 }
 
 export {
+  buildAbstractSafePrompt,
   buildExampleFocusedPrompt,
   buildGenericPrompt,
   buildGenerationPlan,
   buildImagePrompt,
   buildImagePromptVariants,
+  buildPolicySafePrompt,
   buildUltraMinimalNoTextPrompt,
+  buildUniversalFallbackPrompt,
+  containsPolicySensitiveMeaning,
+  inferSafeSceneFromMeaning,
+  needsPolicySafeFallbacks,
 };
