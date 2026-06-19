@@ -14,6 +14,11 @@ from config import load_settings
 from text_locale import needs_translation_fix
 from wordbase_client import fetch_entry, upsert_details
 
+try:
+    import httpx
+except Exception:  # pragma: no cover - optional at import time
+    httpx = None
+
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(
@@ -127,19 +132,58 @@ def create_service_client(settings):
     return create_client(settings.supabase_url, service_role_key)
 
 
+def print_proxy_hint(error: Exception) -> None:
+    message = str(error)
+    lower_message = message.lower()
+    is_proxy_error = (
+        (httpx is not None and isinstance(error, httpx.ProxyError))
+        or "proxyerror" in lower_message
+        or "proxy" in lower_message
+    )
+
+    if not is_proxy_error:
+        return
+
+    print(
+        (
+            "Network proxy blocked Supabase requests. "
+            "Please check HTTP_PROXY / HTTPS_PROXY (and NO_PROXY) "
+            "or try a direct network."
+        ),
+        file=sys.stderr,
+    )
+
+
 def main() -> int:
     args = parse_args()
     settings = load_settings()
     locale = args.locale or settings.locale
 
-    auth = ImportAuth(settings)
     try:
-        session = auth.get_session(force_login=args.login)
+        auth = ImportAuth(
+            supabase_url=settings.supabase_url,
+            supabase_anon_key=settings.supabase_anon_key,
+            session_path=settings.session_path,
+            auth_redirect_url=settings.auth_redirect_url,
+            import_user_email=settings.import_user_email,
+            import_user_password=settings.import_user_password,
+            force_login=args.login,
+        )
     except (AuthError, ValueError) as error:
         print(f"Auth failed: {error}", file=sys.stderr)
+        print_proxy_hint(error)
+        return 1
+    except Exception as error:
+        print(f"Auth failed: {error}", file=sys.stderr)
+        print_proxy_hint(error)
         return 1
 
-    client = auth.create_authed_client(session)
+    client = auth.client
+    if client is None:
+        print("Auth failed: Supabase client is not connected.", file=sys.stderr)
+        return 1
+
+    contributor_id = auth.contributor_id
     api = LexiLandApiClient(
         settings.api_base_url,
         max_retries=settings.max_retries,
@@ -156,7 +200,7 @@ def main() -> int:
 
         for row in wordbase_rows:
             try:
-                fix_wordbase_row(api, client, session["user_id"], row, locale, args.dry_run)
+                fix_wordbase_row(api, client, contributor_id, row, locale, args.dry_run)
             except (ApiError, ValueError) as error:
                 print(f"[wordbase] {row['term']}: failed -> {error}", file=sys.stderr)
 
@@ -173,6 +217,10 @@ def main() -> int:
                     fix_user_word_row(api, words_client, row, locale, args.dry_run)
                 except (ApiError, ValueError) as error:
                     print(f"[words] {row['term']}: failed -> {error}", file=sys.stderr)
+    except Exception as error:
+        print(f"Run failed: {error}", file=sys.stderr)
+        print_proxy_hint(error)
+        return 1
     finally:
         api.close()
 

@@ -19,6 +19,11 @@ from progress_store import append_round_log, ensure_term_record, load_progress, 
 from terms import page_label_from_filename
 from wordbase_client import fetch_entry, upsert_details, upsert_memory_image, upsert_memory_tips
 
+try:
+    import httpx
+except Exception:  # pragma: no cover - optional at import time
+    httpx = None
+
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(
@@ -371,6 +376,28 @@ def run_completion_rounds(
     return round_number
 
 
+def print_proxy_hint(error: Exception) -> None:
+    message = str(error)
+    lower_message = message.lower()
+    is_proxy_error = (
+        (httpx is not None and isinstance(error, httpx.ProxyError))
+        or "proxyerror" in lower_message
+        or "proxy" in lower_message
+    )
+
+    if not is_proxy_error:
+        return
+
+    print(
+        (
+            "Network proxy blocked Supabase requests. "
+            "Please check HTTP_PROXY / HTTPS_PROXY (and NO_PROXY) "
+            "or try a direct network."
+        ),
+        file=sys.stderr,
+    )
+
+
 def main() -> int:
     args = parse_args()
     started = time.time()
@@ -457,6 +484,7 @@ def main() -> int:
 
     except AuthError as error:
         print(f"Auth error: {error}", file=sys.stderr)
+        print_proxy_hint(error)
         return 2
     except KeyboardInterrupt:
         print("\nInterrupted. Progress saved.")
@@ -464,6 +492,7 @@ def main() -> int:
         return 130
     except Exception as error:
         print(f"Fatal error: {error}", file=sys.stderr)
+        print_proxy_hint(error)
         save_progress(settings.progress_path, progress)
         return 1
     finally:
