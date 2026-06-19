@@ -1,8 +1,14 @@
 from __future__ import annotations
 
 import unittest
+import sys
+import types
 from types import SimpleNamespace
 from typing import Any
+
+supabase_stub = types.ModuleType("supabase")
+supabase_stub.Client = object
+sys.modules["supabase"] = supabase_stub
 
 from wordbase_client import WORDBASE_COLUMNS, upsert_memory_tips
 
