@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { useLocale } from "../features/locale/LocaleContext.jsx";
 import { useWordsContext } from "../features/words/WordsContext.jsx";
 import { getApiAuthHeaders } from "../lib/apiAuth.js";
@@ -27,6 +27,7 @@ function renderTipsSummary(memoryTipsByLocale) {
 }
 
 function AdminWordbaseLibraryPage() {
+  const pageTopRef = useRef(null);
   const { t, dateLocale } = useLocale();
   const { isAuthLoading, user } = useWordsContext();
   const role = getRoleFromUser(user);
@@ -146,6 +147,11 @@ function AdminWordbaseLibraryPage() {
       return;
     }
 
+    if (pageTopRef.current) {
+      pageTopRef.current.scrollIntoView({ behavior: "smooth", block: "start" });
+      return;
+    }
+
     window.scrollTo({ top: 0, behavior: "smooth" });
   }
 
@@ -171,7 +177,10 @@ function AdminWordbaseLibraryPage() {
   }
 
   return (
-    <section className="w-full max-w-6xl rounded-3xl border border-blue-200/70 bg-white/90 p-6 shadow-2xl shadow-blue-950/10 sm:p-10">
+    <section
+      className="w-full max-w-6xl rounded-3xl border border-blue-200/70 bg-white/90 p-6 shadow-2xl shadow-blue-950/10 sm:p-10"
+      ref={pageTopRef}
+    >
       <p className="mb-2 text-xs font-bold uppercase tracking-[0.16em] text-blue-700">
         {t("adminWordbaseLibrary.eyebrow")}
       </p>
