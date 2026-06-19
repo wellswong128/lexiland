@@ -62,6 +62,7 @@ const ROUTE_RULES = [
   { pattern: "/install", anyOf: [] },
   { pattern: "/auth", anyOf: [] },
   { pattern: "/achievements", anyOf: [PERMISSIONS.ANALYTICS_READ] },
+  { pattern: "/admin/users", anyOf: [PERMISSIONS.SETTINGS_MANAGE_USERS] },
   { pattern: "/words", anyOf: [PERMISSIONS.WORDS_READ] },
   { pattern: "/words/new", anyOf: [PERMISSIONS.WORDS_CREATE] },
   { pattern: "/words/:wordId", anyOf: [PERMISSIONS.WORDS_READ] },

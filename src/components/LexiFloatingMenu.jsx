@@ -1,8 +1,10 @@
 import { useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import { useLocale } from "../features/locale/LocaleContext.jsx";
+import { useWordsContext } from "../features/words/WordsContext.jsx";
+import { can, getRoleFromUser, PERMISSIONS } from "../lib/authorization.js";
 
-const navSections = [
+const baseNavSections = [
   {
     labelKey: "nav.sectionLearn",
     items: [
@@ -36,6 +38,19 @@ const navSections = [
 
 function LexiFloatingMenu({ isOpen, onOpenChange }) {
   const { t } = useLocale();
+  const { user } = useWordsContext();
+  const role = getRoleFromUser(user);
+  const canManageUsers = can(role, PERMISSIONS.SETTINGS_MANAGE_USERS);
+  const navSections = canManageUsers
+    ? baseNavSections.map((section) =>
+        section.labelKey === "nav.sectionApp"
+          ? {
+              ...section,
+              items: [...section.items, { to: "/admin/users", labelKey: "nav.manageRoles" }],
+            }
+          : section,
+      )
+    : baseNavSections;
 
   useEffect(() => {
     if (!isOpen) {

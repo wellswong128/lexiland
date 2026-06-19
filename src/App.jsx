@@ -3,6 +3,7 @@ import AppLayout from "./components/AppLayout.jsx";
 import { LocaleProvider } from "./features/locale/LocaleContext.jsx";
 import { useWordsContext, WordsProvider } from "./features/words/WordsContext.jsx";
 import AchievementsPage from "./pages/AchievementsPage.jsx";
+import AdminUserRolesPage from "./pages/AdminUserRolesPage.jsx";
 import AddWordPage from "./pages/AddWordPage.jsx";
 import FlashcardsPage from "./pages/FlashcardsPage.jsx";
 import HomePage from "./pages/HomePage.jsx";
@@ -57,6 +58,7 @@ function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/achievements" element={<ProtectedRoute><AchievementsPage /></ProtectedRoute>} />
+          <Route path="/admin/users" element={<ProtectedRoute><AdminUserRolesPage /></ProtectedRoute>} />
           <Route path="/words" element={<ProtectedRoute><WordListPage /></ProtectedRoute>} />
           <Route path="/words/new" element={<ProtectedRoute><AddWordPage /></ProtectedRoute>} />
           <Route path="/words/:wordId" element={<ProtectedRoute><WordDetailPage /></ProtectedRoute>} />

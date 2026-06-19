@@ -1,6 +1,6 @@
 import { createClient } from "@supabase/supabase-js";
 
-const ALLOWED_ROLES = new Set(["owner", "admin", "teacher", "student"]);
+const AI_ALLOWED_ROLES = new Set(["owner", "admin", "teacher", "student"]);
 
 class ApiAuthError extends Error {
   constructor(statusCode, message) {
@@ -51,11 +51,7 @@ function checkImportApiKey(request) {
   return Boolean(providedKey && providedKey === expectedKey);
 }
 
-export async function requireAiApiAccess(request) {
-  if (checkImportApiKey(request)) {
-    return { source: "import-key", role: "owner", user: null };
-  }
-
+async function readAuthenticatedUser(request) {
   const token = readBearerToken(request);
   if (!token) {
     throw new ApiAuthError(401, "Unauthorized. Please sign in.");
@@ -75,12 +71,30 @@ export async function requireAiApiAccess(request) {
     throw new ApiAuthError(401, "Unauthorized. Invalid or expired session.");
   }
 
-  const role = normalizeRole(data.user);
-  if (!ALLOWED_ROLES.has(role)) {
-    throw new ApiAuthError(403, "Forbidden. Your role cannot use this API.");
+  return { role: normalizeRole(data.user), user: data.user };
+}
+
+export async function requireRole(
+  request,
+  allowedRoles,
+  { allowImportKey = false } = {},
+) {
+  if (allowImportKey && checkImportApiKey(request)) {
+    return { source: "import-key", role: "owner", user: null };
   }
 
-  return { source: "bearer", role, user: data.user };
+  const auth = await readAuthenticatedUser(request);
+  if (!allowedRoles.includes(auth.role)) {
+    throw new ApiAuthError(403, "Forbidden. Your role cannot access this API.");
+  }
+
+  return { source: "bearer", role: auth.role, user: auth.user };
+}
+
+export async function requireAiApiAccess(request) {
+  return requireRole(request, Array.from(AI_ALLOWED_ROLES), {
+    allowImportKey: true,
+  });
 }
 
 export function sendAuthError(response, error) {

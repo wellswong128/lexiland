@@ -5,6 +5,7 @@ import LanguageToggle from "../components/LanguageToggle.jsx";
 import { getFriendlyAuthError } from "../features/auth/authErrors.js";
 import { useLocale } from "../features/locale/LocaleContext.jsx";
 import { useWordsContext } from "../features/words/WordsContext.jsx";
+import { can, getRoleFromUser, PERMISSIONS } from "../lib/authorization.js";
 import { normalizeTerm, normalizeText } from "../features/words/wordTypes.js";
 import { loadWords, WORDS_STORAGE_KEY } from "../lib/storage.js";
 import { getAppInstallUrl } from "../lib/appUrl.js";
@@ -29,6 +30,8 @@ function SettingsPage() {
   const [isSyncingLocal, setIsSyncingLocal] = useState(false);
   const [notice, setNotice] = useState("");
   const [noticeType, setNoticeType] = useState("success");
+  const role = getRoleFromUser(user);
+  const canManageUsers = can(role, PERMISSIONS.SETTINGS_MANAGE_USERS);
 
   async function handleSignOut() {
     try {
@@ -166,6 +169,18 @@ function SettingsPage() {
           {t("settings.installOpenPage")}
         </Link>
       </div>
+
+      {canManageUsers ? (
+        <div className="mb-5 rounded-2xl bg-blue-50 p-5">
+          <h2 className="text-lg font-bold text-blue-950">{t("settings.roleAdminTitle")}</h2>
+          <p className="mt-2 text-sm leading-6 text-slate-600">
+            {t("settings.roleAdminDescription")}
+          </p>
+          <Link className="install-settings-link" to="/admin/users">
+            {t("settings.roleAdminOpen")}
+          </Link>
+        </div>
+      ) : null}
 
       <div className="mb-5 rounded-2xl bg-blue-50 p-5">
         <h2 className="text-lg font-bold text-blue-950">{t("settings.supabaseAccount")}</h2>
