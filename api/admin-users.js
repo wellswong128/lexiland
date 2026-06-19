@@ -2,6 +2,20 @@ import { createClient } from "@supabase/supabase-js";
 import { requireRole, sendAuthError } from "./_authz.js";
 
 const ASSIGNABLE_ROLES = ["owner", "admin", "teacher", "student", "parent"];
+const URL_ENV_KEYS = [
+  "SUPABASE_URL",
+  "VITE_SUPABASE_URL",
+  "NEXT_PUBLIC_SUPABASE_URL",
+  "PUBLIC_SUPABASE_URL",
+];
+const SERVICE_KEY_ENV_KEYS = [
+  "SUPABASE_SERVICE_ROLE_KEY",
+  "SUPABASE_SECRET_KEY",
+  "SUPABASE_SERVICE_ROLE",
+  "SUPABASE_SERVICE_KEY",
+  "SERVICE_ROLE_KEY",
+  "VITE_SUPABASE_SERVICE_ROLE_KEY",
+];
 
 function sendJson(response, statusCode, payload) {
   response.statusCode = statusCode;
@@ -9,17 +23,33 @@ function sendJson(response, statusCode, payload) {
   response.end(JSON.stringify(payload));
 }
 
+function readFirstEnvValue(keys) {
+  for (const key of keys) {
+    const value = String(process.env[key] || "").trim();
+    if (value) {
+      return { key, value };
+    }
+  }
+
+  return { key: "", value: "" };
+}
+
 function getServiceClient() {
-  const supabaseUrl = process.env.SUPABASE_URL || process.env.VITE_SUPABASE_URL || "";
-  const serviceRoleKey =
-    process.env.SUPABASE_SERVICE_ROLE_KEY ||
-    process.env.SUPABASE_SERVICE_ROLE ||
-    process.env.SUPABASE_SECRET_KEY ||
-    "";
+  const { key: urlKey, value: supabaseUrl } = readFirstEnvValue(URL_ENV_KEYS);
+  const { key: serviceKeyName, value: serviceRoleKey } =
+    readFirstEnvValue(SERVICE_KEY_ENV_KEYS);
 
   if (!supabaseUrl || !serviceRoleKey) {
+    const visible = {
+      url: urlKey || "(missing)",
+      serviceKey: serviceKeyName || "(missing)",
+    };
     throw new Error(
-      "Supabase service role is not configured. Set SUPABASE_SERVICE_ROLE_KEY (or SUPABASE_SECRET_KEY).",
+      `Supabase admin env is missing. Expected one of URL keys ${URL_ENV_KEYS.join(
+        ", ",
+      )} and service key ${SERVICE_KEY_ENV_KEYS.join(
+        ", ",
+      )}. Detected: url=${visible.url}, serviceKey=${visible.serviceKey}.`,
     );
   }
 
