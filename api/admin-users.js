@@ -18,8 +18,18 @@ const SERVICE_KEY_ENV_KEYS = [
   "SUPABASE_SERVICE_KEY",
   "SERVICE_ROLE_KEY",
   "VITE_SUPABASE_SERVICE_ROLE_KEY",
+  "NEXT_PUBLIC_SUPABASE_SERVICE_ROLE_KEY",
+  "PUBLIC_SUPABASE_SERVICE_ROLE_KEY",
+  "NEXT_PUBLIC_SUPABASE_SECRET_KEY",
+  "PUBLIC_SUPABASE_SECRET_KEY",
 ];
-const ENV_FILES = [".env.local", ".env"];
+const NODE_ENV = String(process.env.NODE_ENV || "development").trim() || "development";
+const ENV_FILES = [
+  `.env.${NODE_ENV}.local`,
+  ".env.local",
+  `.env.${NODE_ENV}`,
+  ".env",
+];
 
 const PROJECT_ROOT = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 let localEnvLoaded = false;
