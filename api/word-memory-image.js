@@ -435,6 +435,95 @@ async function requestImageGeneration({
   return { imageUrl, model, size };
 }
 
+export async function generateWordMemoryImage({
+  term,
+  definition = "",
+  translation = "",
+  example = "",
+  apiKey,
+}) {
+  const cleanTerm = String(term ?? "").trim();
+  if (!cleanTerm) {
+    throw new Error("Please provide an English word.");
+  }
+
+  const cleanApiKey = String(apiKey ?? "").trim();
+  if (!cleanApiKey) {
+    throw new Error("AGNES_API_KEY is not configured on the server.");
+  }
+
+  const meaning = {
+    definition: String(definition ?? "").trim(),
+    translation: String(translation ?? "").trim(),
+    example: String(example ?? "").trim(),
+  };
+  const generationPlan = buildGenerationPlan({ term: cleanTerm, ...meaning });
+  const policySafe = needsPolicySafeFallbacks({ term: cleanTerm, ...meaning });
+  const blockedTerms = policySafe
+    ? [meaning.translation].filter(Boolean)
+    : [cleanTerm, meaning.translation, meaning.definition].filter(Boolean);
+  const limits = getGenerationLimits();
+
+  const errors = [];
+  let generationCount = 0;
+  let textCheckCount = 0;
+
+  for (const step of generationPlan) {
+    if (generationCount >= limits.maxGenerations) {
+      break;
+    }
+
+    try {
+      generationCount += 1;
+
+      const result = await requestImageGeneration({
+        apiKey: cleanApiKey,
+        model: step.model,
+        prompt: step.prompt,
+        size: step.size,
+        blockedTerms,
+        timeoutMs: limits.generationTimeoutMs,
+      });
+
+      const shouldCheckText = step.checkText && textCheckCount < limits.maxTextChecks;
+
+      if (shouldCheckText) {
+        textCheckCount += 1;
+
+        const hasReadableText = await imageContainsReadableText({
+          apiKey: cleanApiKey,
+          imageUrl: result.imageUrl,
+        });
+
+        if (hasReadableText) {
+          errors.push(
+            `${step.model} @ ${step.size}: rejected because the image contained readable text`,
+          );
+          continue;
+        }
+      }
+
+      return {
+        imageUrl: result.imageUrl,
+        prompt: step.prompt,
+        model: result.model,
+        size: result.size,
+      };
+    } catch (error) {
+      errors.push(`${step.model} @ ${step.size}: ${error.message}`);
+
+      if (isContentPolicyError(error.message)) {
+        continue;
+      }
+    }
+  }
+
+  throw new Error(
+    errors.at(-1) ||
+      "Image generation failed. The image service may be busy, please try again shortly.",
+  );
+}
+
 export default async function handler(request, response) {
   if (request.method !== "POST") {
     sendJson(response, 405, { error: "Method not allowed." });
@@ -460,87 +549,24 @@ export default async function handler(request, response) {
   const body = getRequestBody(request);
   const term = String(body.term ?? "").trim();
 
-  if (!term) {
-    sendJson(response, 400, { error: "Please provide an English word." });
-    return;
-  }
-
-  const meaning = {
-    definition: String(body.definition ?? "").trim(),
-    translation: String(body.translation ?? "").trim(),
-    example: String(body.example ?? "").trim(),
-  };
-  const generationPlan = buildGenerationPlan({ term, ...meaning });
-  const policySafe = needsPolicySafeFallbacks({ term, ...meaning });
-  const blockedTerms = policySafe
-    ? [meaning.translation].filter(Boolean)
-    : [term, meaning.translation, meaning.definition].filter(Boolean);
-  const limits = getGenerationLimits();
-
-  const errors = [];
-  let generationCount = 0;
-  let textCheckCount = 0;
-
   try {
-    for (const step of generationPlan) {
-      if (generationCount >= limits.maxGenerations) {
-        break;
-      }
+    const result = await generateWordMemoryImage({
+      term,
+      definition: body.definition,
+      translation: body.translation,
+      example: body.example,
+      apiKey,
+    });
 
-      try {
-        generationCount += 1;
-
-        const result = await requestImageGeneration({
-          apiKey,
-          model: step.model,
-          prompt: step.prompt,
-          size: step.size,
-          blockedTerms,
-          timeoutMs: limits.generationTimeoutMs,
-        });
-
-        const shouldCheckText =
-          step.checkText && textCheckCount < limits.maxTextChecks;
-
-        if (shouldCheckText) {
-          textCheckCount += 1;
-
-          const hasReadableText = await imageContainsReadableText({
-            apiKey,
-            imageUrl: result.imageUrl,
-          });
-
-          if (hasReadableText) {
-            errors.push(
-              `${step.model} @ ${step.size}: rejected because the image contained readable text`,
-            );
-            continue;
-          }
-        }
-
-        sendJson(response, 200, {
-          imageUrl: result.imageUrl,
-          prompt: step.prompt,
-          model: result.model,
-          size: result.size,
-        });
-        return;
-      } catch (error) {
-        errors.push(`${step.model} @ ${step.size}: ${error.message}`);
-
-        if (isContentPolicyError(error.message)) {
-          continue;
-        }
-      }
-    }
-
-    sendJson(response, 502, {
-      error:
-        errors.at(-1) ||
-        "Image generation failed. The image service may be busy, please try again shortly.",
+    sendJson(response, 200, {
+      imageUrl: result.imageUrl,
+      prompt: result.prompt,
+      model: result.model,
+      size: result.size,
     });
   } catch (error) {
-    sendJson(response, 500, { error: error.message });
+    const isInputError = /Please provide an English word\./i.test(String(error?.message ?? ""));
+    sendJson(response, isInputError ? 400 : 502, { error: error.message });
   }
 }
 

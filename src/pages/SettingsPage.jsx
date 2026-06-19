@@ -182,6 +182,9 @@ function SettingsPage() {
           <Link className="install-settings-link" to="/admin/wordbase">
             {t("settings.wordbaseAdminOpen")}
           </Link>
+          <Link className="install-settings-link" to="/admin/wordbase-library">
+            {t("settings.wordbaseLibraryAdminOpen")}
+          </Link>
         </div>
       ) : null}
 

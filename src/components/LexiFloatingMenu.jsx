@@ -50,6 +50,7 @@ function LexiFloatingMenu({ isOpen, onOpenChange }) {
                 ...section.items,
                 { to: "/admin/users", labelKey: "nav.manageRoles" },
                 { to: "/admin/wordbase", labelKey: "nav.manageWordbase" },
+                { to: "/admin/wordbase-library", labelKey: "nav.wordbaseLibrary" },
               ],
             }
           : section,

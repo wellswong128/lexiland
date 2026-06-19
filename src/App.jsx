@@ -5,6 +5,7 @@ import { useWordsContext, WordsProvider } from "./features/words/WordsContext.js
 import AchievementsPage from "./pages/AchievementsPage.jsx";
 import AdminUserRolesPage from "./pages/AdminUserRolesPage.jsx";
 import AdminWordbasePage from "./pages/AdminWordbasePage.jsx";
+import AdminWordbaseLibraryPage from "./pages/AdminWordbaseLibraryPage.jsx";
 import AddWordPage from "./pages/AddWordPage.jsx";
 import FlashcardsPage from "./pages/FlashcardsPage.jsx";
 import HomePage from "./pages/HomePage.jsx";
@@ -61,6 +62,7 @@ function App() {
           <Route path="/achievements" element={<ProtectedRoute><AchievementsPage /></ProtectedRoute>} />
           <Route path="/admin/users" element={<ProtectedRoute><AdminUserRolesPage /></ProtectedRoute>} />
           <Route path="/admin/wordbase" element={<ProtectedRoute><AdminWordbasePage /></ProtectedRoute>} />
+          <Route path="/admin/wordbase-library" element={<ProtectedRoute><AdminWordbaseLibraryPage /></ProtectedRoute>} />
           <Route path="/words" element={<ProtectedRoute><WordListPage /></ProtectedRoute>} />
           <Route path="/words/new" element={<ProtectedRoute><AddWordPage /></ProtectedRoute>} />
           <Route path="/words/:wordId" element={<ProtectedRoute><WordDetailPage /></ProtectedRoute>} />
