@@ -264,11 +264,13 @@ function AdminWordbaseLibraryPage() {
             <div className="mt-4">
               <p className="text-sm font-semibold text-slate-700">{t("adminWordbaseLibrary.memoryImage")}</p>
               {row.memoryImage?.imageUrl ? (
-                <img
-                  alt={`${row.term} memory`}
-                  className="mt-2 h-44 w-full rounded-xl border border-slate-200 object-cover sm:h-56"
-                  src={row.memoryImage.imageUrl}
-                />
+                <div className="mt-2 overflow-hidden rounded-xl border border-slate-200 bg-slate-50 p-2">
+                  <img
+                    alt={`${row.term} memory`}
+                    className="h-auto max-h-[28rem] w-full object-contain"
+                    src={row.memoryImage.imageUrl}
+                  />
+                </div>
               ) : (
                 <p className="mt-2 text-sm text-slate-500">{t("adminWordbaseLibrary.noMemoryImage")}</p>
               )}
