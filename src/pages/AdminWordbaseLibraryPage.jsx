@@ -141,6 +141,14 @@ function AdminWordbaseLibraryPage() {
     }
   }
 
+  function scrollToTop() {
+    if (typeof window === "undefined") {
+      return;
+    }
+
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }
+
   if (isAuthLoading || isLoading) {
     return (
       <section className="w-full max-w-6xl rounded-3xl border border-blue-200/70 bg-white/90 p-8 text-center shadow-2xl shadow-blue-950/10">
@@ -294,11 +302,14 @@ function AdminWordbaseLibraryPage() {
           className="rounded-full border border-blue-200 bg-white px-4 py-2 text-sm font-bold text-blue-700 transition hover:bg-blue-50 disabled:border-slate-200 disabled:text-slate-400"
           disabled={meta.page <= 1 || isRefreshing}
           onClick={() =>
-            void loadRows({
-              nextSearch: search,
-              nextPage: Math.max(1, meta.page - 1),
-              silent: true,
-            })
+            void (async () => {
+              await loadRows({
+                nextSearch: search,
+                nextPage: Math.max(1, meta.page - 1),
+                silent: true,
+              });
+              scrollToTop();
+            })()
           }
           type="button"
         >
@@ -308,11 +319,14 @@ function AdminWordbaseLibraryPage() {
           className="rounded-full border border-blue-200 bg-white px-4 py-2 text-sm font-bold text-blue-700 transition hover:bg-blue-50 disabled:border-slate-200 disabled:text-slate-400"
           disabled={meta.page >= meta.totalPages || isRefreshing}
           onClick={() =>
-            void loadRows({
-              nextSearch: search,
-              nextPage: Math.min(meta.totalPages, meta.page + 1),
-              silent: true,
-            })
+            void (async () => {
+              await loadRows({
+                nextSearch: search,
+                nextPage: Math.min(meta.totalPages, meta.page + 1),
+                silent: true,
+              });
+              scrollToTop();
+            })()
           }
           type="button"
         >
