@@ -46,7 +46,11 @@ function LexiFloatingMenu({ isOpen, onOpenChange }) {
         section.labelKey === "nav.sectionApp"
           ? {
               ...section,
-              items: [...section.items, { to: "/admin/users", labelKey: "nav.manageRoles" }],
+              items: [
+                ...section.items,
+                { to: "/admin/users", labelKey: "nav.manageRoles" },
+                { to: "/admin/wordbase", labelKey: "nav.manageWordbase" },
+              ],
             }
           : section,
       )

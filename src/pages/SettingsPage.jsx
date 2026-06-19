@@ -179,6 +179,9 @@ function SettingsPage() {
           <Link className="install-settings-link" to="/admin/users">
             {t("settings.roleAdminOpen")}
           </Link>
+          <Link className="install-settings-link" to="/admin/wordbase">
+            {t("settings.wordbaseAdminOpen")}
+          </Link>
         </div>
       ) : null}
 
