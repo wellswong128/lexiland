@@ -22,9 +22,14 @@ function ExampleSentence({
         <p className="min-w-0 flex-1 text-base leading-relaxed text-slate-700">{example}</p>
         <SpeakButton text={example} />
       </div>
-      {exampleTranslation ? (
-        <p className="review-word-translation mt-1">{exampleTranslation}</p>
-      ) : null}
+      <div className="mt-2">
+        <p className="review-word-field-label">{t("addWord.exampleTranslation")}</p>
+        {exampleTranslation ? (
+          <p className="review-word-translation mt-1">{exampleTranslation}</p>
+        ) : (
+          <p className="mt-1 text-sm font-semibold text-slate-400">{t("common.notYet")}</p>
+        )}
+      </div>
     </div>
   );
 }

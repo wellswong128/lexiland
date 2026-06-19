@@ -1,10 +1,11 @@
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { Link, useSearchParams } from "react-router-dom";
 import ReviewWordListItem from "../components/ReviewWordListItem.jsx";
 import SpeakButton, { speakText } from "../components/SpeakButton.jsx";
 import WordImageWithTranslationOverlay from "../components/WordImageWithTranslationOverlay.jsx";
 import WordMemoryPanel from "../components/WordMemoryPanel.jsx";
 import { useLocale } from "../features/locale/LocaleContext.jsx";
+import { enrichReviewWordExamples, needsExampleEnrichment } from "../features/review/enrichReviewWordExamples.js";
 import { createImageQuizQuestions } from "../features/review/imageQuizHelpers.js";
 import { prefetchSessionMemoryImages } from "../features/review/prefetchSessionMemoryImages.js";
 import {
@@ -17,8 +18,9 @@ import { syncReviewSession } from "../lib/reviewSessionStorage.js";
 import { REVIEW_RESULTS } from "../features/words/wordTypes.js";
 
 function FlashcardsPage() {
-  const { t } = useLocale();
+  const { locale, t } = useLocale();
   const { updateWord, user, words } = useWordsContext();
+  const enrichedExampleWordIdsRef = useRef(new Set());
   const [searchParams] = useSearchParams();
   const mistakesOnly = searchParams.get("mode") === "mistakes";
   const { isLimited, sessionWords, totalCount } = useMemo(
@@ -63,6 +65,12 @@ function FlashcardsPage() {
     setPrepareProgress({ current: 0, total: sessionWords.length });
 
     try {
+      await enrichReviewWordExamples(sessionWords, {
+        locale,
+        updateWord,
+        user,
+      });
+
       await prefetchSessionMemoryImages(sessionWords, {
         onProgress: (current, total) => {
           setPrepareProgress({ current, total });
@@ -102,6 +110,40 @@ function FlashcardsPage() {
       wordIds: sessionWords.map((word) => word.id),
     });
   }, [hasStarted, mistakesOnly, sessionWords, totalCount]);
+
+  useEffect(() => {
+    if (hasStarted || sessionWords.length === 0) {
+      return undefined;
+    }
+
+    const wordsToEnrich = sessionWords.filter(
+      (word) =>
+        needsExampleEnrichment(word) && !enrichedExampleWordIdsRef.current.has(word.id),
+    );
+
+    if (wordsToEnrich.length === 0) {
+      return undefined;
+    }
+
+    let cancelled = false;
+
+    void enrichReviewWordExamples(wordsToEnrich, {
+      allowAiFallback: false,
+      locale,
+      updateWord,
+      user,
+    }).finally(() => {
+      if (!cancelled) {
+        wordsToEnrich.forEach((word) => {
+          enrichedExampleWordIdsRef.current.add(word.id);
+        });
+      }
+    });
+
+    return () => {
+      cancelled = true;
+    };
+  }, [hasStarted, locale, sessionWords, updateWord, user]);
 
   useEffect(() => {
     if (!hasStarted || isComplete || isPreparing || feedback || !currentWord?.term) {
