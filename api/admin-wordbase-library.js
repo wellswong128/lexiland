@@ -160,6 +160,15 @@ function parseLimit(value, defaultValue = 50) {
   return Math.min(number, 120);
 }
 
+function parsePage(value, defaultValue = 1) {
+  const number = Number.parseInt(String(value ?? ""), 10);
+  if (!Number.isFinite(number) || number <= 0) {
+    return defaultValue;
+  }
+
+  return number;
+}
+
 async function lookupContributorEmails(serviceClient, rows) {
   const contributorIds = [...new Set(rows.map((row) => row.contributor_id).filter(Boolean))];
   const contributorEmailMap = {};
@@ -202,13 +211,16 @@ function mapWordbaseRow(row, contributorEmailMap = {}) {
 async function listRows(request, response) {
   const serviceClient = getServiceClient();
   const search = String(request.query?.search ?? "").trim();
-  const limit = parseLimit(request.query?.limit, 40);
+  const pageSize = parseLimit(request.query?.pageSize, 20);
+  const page = parsePage(request.query?.page, 1);
+  const from = (page - 1) * pageSize;
+  const to = from + pageSize - 1;
 
   let query = serviceClient
     .from("wordbase")
-    .select(WORD_COLUMNS.join(","))
+    .select(WORD_COLUMNS.join(","), { count: "exact" })
     .order("updated_at", { ascending: false })
-    .limit(limit);
+    .range(from, to);
 
   if (search) {
     query = query.or(
@@ -216,15 +228,23 @@ async function listRows(request, response) {
     );
   }
 
-  const { data, error } = await query;
+  const { data, error, count } = await query;
   if (error) {
     throw new Error(error.message || "Failed to load WordBase rows.");
   }
 
   const rows = data ?? [];
+  const total = Number(count ?? 0);
+  const totalPages = Math.max(1, Math.ceil(total / pageSize));
   const contributorEmailMap = await lookupContributorEmails(serviceClient, rows);
   sendJson(response, 200, {
     rows: rows.map((row) => mapWordbaseRow(row, contributorEmailMap)),
+    meta: {
+      page,
+      pageSize,
+      total,
+      totalPages,
+    },
   });
 }
 

@@ -35,6 +35,13 @@ function AdminWordbaseLibraryPage() {
   const [isLoading, setIsLoading] = useState(true);
   const [isRefreshing, setIsRefreshing] = useState(false);
   const [search, setSearch] = useState("");
+  const [page, setPage] = useState(1);
+  const [meta, setMeta] = useState({
+    page: 1,
+    pageSize: 20,
+    total: 0,
+    totalPages: 1,
+  });
   const [error, setError] = useState("");
   const [notice, setNotice] = useState("");
   const [updatingImageId, setUpdatingImageId] = useState("");
@@ -44,7 +51,7 @@ function AdminWordbaseLibraryPage() {
     [rows],
   );
 
-  async function loadRows({ nextSearch = search, silent = false } = {}) {
+  async function loadRows({ nextSearch = search, nextPage = page, silent = false } = {}) {
     if (!canManageWordbase) {
       setIsLoading(false);
       return;
@@ -59,7 +66,10 @@ function AdminWordbaseLibraryPage() {
     try {
       setError("");
       const authHeaders = await getApiAuthHeaders();
-      const query = new URLSearchParams({ limit: "50" });
+      const query = new URLSearchParams({
+        pageSize: "20",
+        page: String(nextPage),
+      });
       if (nextSearch.trim()) {
         query.set("search", nextSearch.trim());
       }
@@ -76,6 +86,15 @@ function AdminWordbaseLibraryPage() {
       }
 
       setRows(payload.rows ?? []);
+      setMeta(
+        payload.meta ?? {
+          page: nextPage,
+          pageSize: 20,
+          total: payload.rows?.length ?? 0,
+          totalPages: 1,
+        },
+      );
+      setPage(payload.meta?.page ?? nextPage);
     } catch (loadError) {
       setError(loadError.message);
     } finally {
@@ -156,14 +175,17 @@ function AdminWordbaseLibraryPage() {
       <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:items-center">
         <input
           className="w-full rounded-xl border border-slate-200 bg-white px-3 py-2 text-sm text-slate-800 sm:max-w-sm"
-          onChange={(event) => setSearch(event.target.value)}
+          onChange={(event) => {
+            setSearch(event.target.value);
+            setPage(1);
+          }}
           placeholder={t("adminWordbaseLibrary.searchPlaceholder")}
           value={search}
         />
         <button
           className="rounded-full bg-blue-700 px-5 py-2 text-sm font-bold text-white transition hover:bg-blue-800 disabled:bg-slate-300"
           disabled={isRefreshing}
-          onClick={() => void loadRows({ nextSearch: search, silent: true })}
+          onClick={() => void loadRows({ nextSearch: search, nextPage: page, silent: true })}
           type="button"
         >
           {isRefreshing ? t("adminWordbaseLibrary.refreshing") : t("adminWordbaseLibrary.refresh")}
@@ -182,7 +204,12 @@ function AdminWordbaseLibraryPage() {
       ) : null}
 
       <p className="mt-6 text-sm text-slate-500">
-        {t("adminWordbaseLibrary.rowCount", { count: sortedRows.length })}
+        {t("adminWordbaseLibrary.pageInfo", {
+          page: meta.page,
+          totalPages: meta.totalPages,
+          count: sortedRows.length,
+          total: meta.total,
+        })}
       </p>
 
       {sortedRows.length === 0 ? (
@@ -258,6 +285,37 @@ function AdminWordbaseLibraryPage() {
             </div>
           </article>
         ))}
+      </div>
+
+      <div className="mt-6 flex items-center justify-end gap-3">
+        <button
+          className="rounded-full border border-blue-200 bg-white px-4 py-2 text-sm font-bold text-blue-700 transition hover:bg-blue-50 disabled:border-slate-200 disabled:text-slate-400"
+          disabled={meta.page <= 1 || isRefreshing}
+          onClick={() =>
+            void loadRows({
+              nextSearch: search,
+              nextPage: Math.max(1, meta.page - 1),
+              silent: true,
+            })
+          }
+          type="button"
+        >
+          {t("adminWordbaseLibrary.previousPage")}
+        </button>
+        <button
+          className="rounded-full border border-blue-200 bg-white px-4 py-2 text-sm font-bold text-blue-700 transition hover:bg-blue-50 disabled:border-slate-200 disabled:text-slate-400"
+          disabled={meta.page >= meta.totalPages || isRefreshing}
+          onClick={() =>
+            void loadRows({
+              nextSearch: search,
+              nextPage: Math.min(meta.totalPages, meta.page + 1),
+              silent: true,
+            })
+          }
+          type="button"
+        >
+          {t("adminWordbaseLibrary.nextPage")}
+        </button>
       </div>
     </section>
   );
