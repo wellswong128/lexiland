@@ -232,16 +232,6 @@ function AdminWordbaseLibraryPage() {
                   {t("adminWordbaseLibrary.updatedAt")}: {formatDateTime(row.updatedAt, dateLocale)}
                 </p>
               </div>
-              <button
-                className="rounded-full bg-blue-700 px-4 py-2 text-sm font-bold text-white transition hover:bg-blue-800 disabled:bg-slate-300"
-                disabled={updatingImageId === row.id}
-                onClick={() => void regenerateImage(row)}
-                type="button"
-              >
-                {updatingImageId === row.id
-                  ? t("adminWordbaseLibrary.imageUpdating")
-                  : t("adminWordbaseLibrary.imageUpdate")}
-              </button>
             </div>
 
             <dl className="mt-4 grid gap-3 text-sm sm:grid-cols-2">
@@ -282,6 +272,16 @@ function AdminWordbaseLibraryPage() {
               ) : (
                 <p className="mt-2 text-sm text-slate-500">{t("adminWordbaseLibrary.noMemoryImage")}</p>
               )}
+              <button
+                className="mt-3 rounded-full bg-blue-700 px-4 py-2 text-sm font-bold text-white transition hover:bg-blue-800 disabled:bg-slate-300"
+                disabled={updatingImageId === row.id}
+                onClick={() => void regenerateImage(row)}
+                type="button"
+              >
+                {updatingImageId === row.id
+                  ? t("adminWordbaseLibrary.imageUpdating")
+                  : t("adminWordbaseLibrary.imageUpdate")}
+              </button>
             </div>
           </article>
         ))}
