@@ -81,15 +81,15 @@ function WordMemoryPanel({
     }
 
     const saved = readWordMemory(word, locale);
-    const hasFullMemory = Boolean(saved.memoryTips && saved.memoryImage?.imageUrl);
+    const hasAnyMemory = Boolean(saved.memoryTips || saved.memoryImage?.imageUrl);
 
-    if (hasFullMemory) {
+    if (hasAnyMemory) {
       return;
     }
 
     void handleGenerate();
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [autoLoad, locale, word.id]);
+  }, [autoLoad, locale, word.id, word.memoryImage, word.memoryTipsByLocale]);
 
   if (!word) {
     return null;
