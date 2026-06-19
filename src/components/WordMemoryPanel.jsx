@@ -112,7 +112,9 @@ function WordMemoryPanel({
           onClick={() => handleGenerate({ forceRefresh: true })}
           type="button"
         >
-          {isLoading ? t("wordMemory.loading") : t("wordMemory.refresh")}
+          {isLoading
+            ? t("wordMemory.loading")
+            : t(hasContent ? "wordMemory.refresh" : "wordMemory.generate")}
         </button>
       </div>
 
