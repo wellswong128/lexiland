@@ -50,16 +50,13 @@ def fetch_entry(client: Client, term: str) -> dict[str, Any] | None:
     if not term_key:
         return None
 
-    try:
-        response = (
-            client.table("wordbase")
-            .select(WORDBASE_COLUMNS)
-            .eq("term_key", term_key)
-            .limit(1)
-            .execute()
-        )
-    except Exception:
-        return None
+    response = (
+        client.table("wordbase")
+        .select(WORDBASE_COLUMNS)
+        .eq("term_key", term_key)
+        .limit(1)
+        .execute()
+    )
 
     row = _first_row(response)
     return map_wordbase_row(row) if row else None
