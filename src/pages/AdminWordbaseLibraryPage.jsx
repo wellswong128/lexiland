@@ -147,12 +147,51 @@ function AdminWordbaseLibraryPage() {
       return;
     }
 
-    if (pageTopRef.current) {
-      pageTopRef.current.scrollIntoView({ behavior: "smooth", block: "start" });
-      return;
+    const seen = new Set();
+    const pushTarget = (target, list) => {
+      if (!target || seen.has(target)) {
+        return;
+      }
+      seen.add(target);
+      list.push(target);
+    };
+
+    const targets = [];
+    pushTarget(document.scrollingElement, targets);
+    pushTarget(document.documentElement, targets);
+    pushTarget(document.body, targets);
+    pushTarget(document.getElementById("root"), targets);
+    pushTarget(document.querySelector("main"), targets);
+
+    let node = pageTopRef.current;
+    while (node && node.parentElement) {
+      node = node.parentElement;
+      const style = window.getComputedStyle(node);
+      const overflowY = style.overflowY;
+      const isScrollable =
+        (overflowY === "auto" || overflowY === "scroll" || overflowY === "overlay") &&
+        node.scrollHeight > node.clientHeight;
+
+      if (isScrollable) {
+        pushTarget(node, targets);
+      }
     }
 
-    window.scrollTo({ top: 0, behavior: "smooth" });
+    for (const target of targets) {
+      if (typeof target.scrollTo === "function") {
+        target.scrollTo({ top: 0, behavior: "auto" });
+      }
+
+      if ("scrollTop" in target) {
+        target.scrollTop = 0;
+      }
+    }
+
+    if (pageTopRef.current && typeof pageTopRef.current.scrollIntoView === "function") {
+      pageTopRef.current.scrollIntoView({ behavior: "auto", block: "start" });
+    }
+
+    window.scrollTo({ top: 0, behavior: "auto" });
   }
 
   if (isAuthLoading || isLoading) {
@@ -318,6 +357,7 @@ function AdminWordbaseLibraryPage() {
                 silent: true,
               });
               scrollToTop();
+              requestAnimationFrame(scrollToTop);
             })()
           }
           type="button"
@@ -335,6 +375,7 @@ function AdminWordbaseLibraryPage() {
                 silent: true,
               });
               scrollToTop();
+              requestAnimationFrame(scrollToTop);
             })()
           }
           type="button"
