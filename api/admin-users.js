@@ -1,4 +1,7 @@
 import { createClient } from "@supabase/supabase-js";
+import { existsSync, readFileSync } from "node:fs";
+import { dirname, resolve } from "node:path";
+import { fileURLToPath } from "node:url";
 import { requireRole, sendAuthError } from "./_authz.js";
 
 const ASSIGNABLE_ROLES = ["owner", "admin", "teacher", "student", "parent"];
@@ -16,6 +19,10 @@ const SERVICE_KEY_ENV_KEYS = [
   "SERVICE_ROLE_KEY",
   "VITE_SUPABASE_SERVICE_ROLE_KEY",
 ];
+const ENV_FILES = [".env.local", ".env"];
+
+const PROJECT_ROOT = resolve(dirname(fileURLToPath(import.meta.url)), "..");
+let localEnvLoaded = false;
 
 function sendJson(response, statusCode, payload) {
   response.statusCode = statusCode;
@@ -34,7 +41,68 @@ function readFirstEnvValue(keys) {
   return { key: "", value: "" };
 }
 
+function parseDotEnv(content) {
+  const parsed = {};
+  const lines = content.split(/\r?\n/u);
+
+  for (const line of lines) {
+    const trimmed = line.trim();
+    if (!trimmed || trimmed.startsWith("#")) {
+      continue;
+    }
+
+    const equalIndex = trimmed.indexOf("=");
+    if (equalIndex < 0) {
+      continue;
+    }
+
+    const rawKey = trimmed
+      .slice(0, equalIndex)
+      .trim()
+      .replace(/^export\s+/u, "");
+    if (!rawKey) {
+      continue;
+    }
+
+    let value = trimmed.slice(equalIndex + 1).trim();
+    if (
+      (value.startsWith('"') && value.endsWith('"')) ||
+      (value.startsWith("'") && value.endsWith("'"))
+    ) {
+      value = value.slice(1, -1);
+    }
+
+    parsed[rawKey] = value;
+  }
+
+  return parsed;
+}
+
+function loadLocalEnvIfNeeded() {
+  if (localEnvLoaded) {
+    return;
+  }
+
+  localEnvLoaded = true;
+
+  for (const relativePath of ENV_FILES) {
+    const absolutePath = resolve(PROJECT_ROOT, relativePath);
+    if (!existsSync(absolutePath)) {
+      continue;
+    }
+
+    const parsed = parseDotEnv(readFileSync(absolutePath, "utf8"));
+    for (const [key, value] of Object.entries(parsed)) {
+      if (typeof process.env[key] === "undefined" && value) {
+        process.env[key] = value;
+      }
+    }
+  }
+}
+
 function getServiceClient() {
+  loadLocalEnvIfNeeded();
+
   const { key: urlKey, value: supabaseUrl } = readFirstEnvValue(URL_ENV_KEYS);
   const { key: serviceKeyName, value: serviceRoleKey } =
     readFirstEnvValue(SERVICE_KEY_ENV_KEYS);
