@@ -37,6 +37,9 @@ class LexiLandApiClient:
         self.request_pause_seconds = request_pause_seconds
         self.image_request_pause_seconds = image_request_pause_seconds
         self.import_api_key = os.getenv("IMPORT_API_KEY", "").strip()
+        self.session_path = Path(
+            os.getenv("IMPORT_SESSION_PATH", str(Path.home() / ".lexiland" / "import-session.json"))
+        )
         self._client = httpx.Client(timeout=httpx.Timeout(120.0, connect=30.0))
 
     def close(self) -> None:
@@ -48,6 +51,17 @@ class LexiLandApiClient:
 
     def _backoff(self, attempt: int) -> float:
         return [0.0, 5.0, 15.0, 45.0][min(attempt, 3)]
+
+    def _read_bearer_token(self) -> str:
+        if not self.session_path.exists():
+            return ""
+
+        try:
+            payload = json.loads(self.session_path.read_text(encoding="utf-8"))
+        except Exception:
+            return ""
+
+        return str(payload.get("access_token", "")).strip()
 
     def _request_json(self, path: str, payload: dict, *, pause_after: float) -> dict:
         url = f"{self.base_url}{path}"
@@ -61,6 +75,9 @@ class LexiLandApiClient:
                 headers = {}
                 if self.import_api_key:
                     headers["x-lexiland-import-key"] = self.import_api_key
+                bearer_token = self._read_bearer_token()
+                if bearer_token:
+                    headers["Authorization"] = f"Bearer {bearer_token}"
                 response = self._client.post(url, json=payload, headers=headers)
             except httpx.RequestError as error:
                 last_error = ApiError(str(error), retryable=True)
@@ -82,6 +99,14 @@ class LexiLandApiClient:
 
             if response.status_code >= 400:
                 message = data.get("error") or f"Request failed ({response.status_code})"
+                if response.status_code == 401:
+                    has_auth = bool(headers.get("Authorization") or headers.get("x-lexiland-import-key"))
+                    if not has_auth:
+                        message = (
+                            f"{message} "
+                            "No API auth header was sent. "
+                            "Set IMPORT_API_KEY or ensure IMPORT_SESSION_PATH points to a valid session."
+                        )
                 retryable = response.status_code in RETRYABLE_STATUS
                 last_error = ApiError(message, status_code=response.status_code, retryable=retryable)
                 if retryable and attempt < self.max_retries - 1:
