@@ -3,6 +3,7 @@ import {
   hasValidChineseTranslationFields,
   resolveVocabularyLocale,
 } from "../lib/vocabularyLocale.js";
+import { requireAiApiAccess, sendAuthError } from "./_authz.js";
 
 const AGNES_API_URL = "https://apihub.agnes-ai.com/v1/chat/completions";
 
@@ -99,6 +100,13 @@ async function requestSuggestion(term, chineseLabel, apiKey, { strict = false } 
 export default async function handler(request, response) {
   if (request.method !== "POST") {
     sendJson(response, 405, { error: "Method not allowed." });
+    return;
+  }
+
+  try {
+    await requireAiApiAccess(request);
+  } catch (error) {
+    sendAuthError(response, error);
     return;
   }
 

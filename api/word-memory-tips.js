@@ -1,3 +1,4 @@
+import { requireAiApiAccess, sendAuthError } from "./_authz.js";
 const AGNES_API_URL = "https://apihub.agnes-ai.com/v1/chat/completions";
 
 const LOCALE_LABELS = {
@@ -71,6 +72,13 @@ Prioritize methods that fit this specific word. Avoid generic advice like "repea
 export default async function handler(request, response) {
   if (request.method !== "POST") {
     sendJson(response, 405, { error: "Method not allowed." });
+    return;
+  }
+
+  try {
+    await requireAiApiAccess(request);
+  } catch (error) {
+    sendAuthError(response, error);
     return;
   }
 

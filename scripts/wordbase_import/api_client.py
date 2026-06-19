@@ -3,6 +3,7 @@ from __future__ import annotations
 import base64
 import io
 import json
+import os
 import time
 from pathlib import Path
 
@@ -35,6 +36,7 @@ class LexiLandApiClient:
         self.max_retries = max_retries
         self.request_pause_seconds = request_pause_seconds
         self.image_request_pause_seconds = image_request_pause_seconds
+        self.import_api_key = os.getenv("IMPORT_API_KEY", "").strip()
         self._client = httpx.Client(timeout=httpx.Timeout(120.0, connect=30.0))
 
     def close(self) -> None:
@@ -56,7 +58,10 @@ class LexiLandApiClient:
                 self._sleep(self._backoff(attempt))
 
             try:
-                response = self._client.post(url, json=payload)
+                headers = {}
+                if self.import_api_key:
+                    headers["x-lexiland-import-key"] = self.import_api_key
+                response = self._client.post(url, json=payload, headers=headers)
             except httpx.RequestError as error:
                 last_error = ApiError(str(error), retryable=True)
                 continue

@@ -1,4 +1,5 @@
 import { readJsonResponse } from "./completeWordApi.js";
+import { getApiAuthHeaders } from "../../lib/apiAuth.js";
 import {
   buildWordMemoryTipsChanges,
   readStoredMemoryTips,
@@ -177,10 +178,12 @@ export function createDemoMemoryTips(word, locale = "zh-Hant") {
 }
 
 export async function fetchMemoryTips(word, locale) {
+  const authHeaders = await getApiAuthHeaders();
   const response = await fetch("/api/word-memory-tips", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
+      ...authHeaders,
     },
     body: JSON.stringify({
       term: word.term,

@@ -3,6 +3,7 @@ import LexiMascot from "../components/LexiMascot.jsx";
 import { useLocale } from "../features/locale/LocaleContext.jsx";
 import { getDueWords } from "../features/review/reviewHelpers.js";
 import { useWordsContext } from "../features/words/WordsContext.jsx";
+import { canRoute, getRoleFromUser } from "../lib/authorization.js";
 import { getLearningSnapshot } from "../lib/learningActivity.js";
 import { hasSupabaseConfig } from "../lib/supabaseClient.js";
 
@@ -165,6 +166,7 @@ function getPrimaryCta({ wordCount, dueCount, mistakeCount }) {
 function HomePage() {
   const { t } = useLocale();
   const { isAuthLoading, user, words } = useWordsContext();
+  const role = getRoleFromUser(user);
   const dueWords = getDueWords(words);
   const mistakeWords = words.filter((word) => word.mistake.isMistake);
   const wordCount = words.length;
@@ -186,6 +188,10 @@ function HomePage() {
     dueCount,
     mistakeCount,
   });
+  const canAccessPrimaryCta = canRoute(role, primaryCta.to);
+  const visibleQuickActions = quickActionLinks.filter((action) =>
+    canRoute(role, action.to),
+  );
 
   return (
     <div className="home-page">
@@ -232,12 +238,14 @@ function HomePage() {
 
       <div className="home-section">
 
-        <Link className="home-cta" to={primaryCta.to}>
-          ✨{" "}
-          {primaryCta.count != null
-            ? t(primaryCta.labelKey, { count: primaryCta.count })
-            : t(primaryCta.labelKey)}
-        </Link>
+        {canAccessPrimaryCta ? (
+          <Link className="home-cta" to={primaryCta.to}>
+            ✨{" "}
+            {primaryCta.count != null
+              ? t(primaryCta.labelKey, { count: primaryCta.count })
+              : t(primaryCta.labelKey)}
+          </Link>
+        ) : null}
 
         {dueCount > 0 && mistakeCount > 0 ? (
           <Link className="home-mini-pill" to="/mistakes">
@@ -287,7 +295,7 @@ function HomePage() {
 
         <h2 className="home-section-title">{t("home.quickActionsTitle")}</h2>
         <div className="home-quick-grid">
-          {quickActionLinks.map((action) => (
+          {visibleQuickActions.map((action) => (
             <Link
               className={[
                 "home-quick",

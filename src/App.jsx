@@ -1,7 +1,7 @@
-import { Route, Routes } from "react-router-dom";
+import { Navigate, Route, Routes, useLocation } from "react-router-dom";
 import AppLayout from "./components/AppLayout.jsx";
 import { LocaleProvider } from "./features/locale/LocaleContext.jsx";
-import { WordsProvider } from "./features/words/WordsContext.jsx";
+import { useWordsContext, WordsProvider } from "./features/words/WordsContext.jsx";
 import AchievementsPage from "./pages/AchievementsPage.jsx";
 import AddWordPage from "./pages/AddWordPage.jsx";
 import FlashcardsPage from "./pages/FlashcardsPage.jsx";
@@ -20,6 +20,34 @@ import PenaltyTwelvePage from "./pages/PenaltyTwelvePage.jsx";
 import WordKartPage from "./pages/WordKartPage.jsx";
 import WordDetailPage from "./pages/WordDetailPage.jsx";
 import WordListPage from "./pages/WordListPage.jsx";
+import { canRoute, getRoleFromUser } from "./lib/authorization.js";
+
+function ProtectedRoute({ children }) {
+  const location = useLocation();
+  const { isAuthLoading, user } = useWordsContext();
+  const role = getRoleFromUser(user);
+
+  if (isAuthLoading) {
+    return null;
+  }
+
+  if (canRoute(role, location.pathname)) {
+    return children;
+  }
+
+  if (!user) {
+    return (
+      <Navigate
+        replace
+        to={`/auth?mode=login&redirect=${encodeURIComponent(
+          `${location.pathname}${location.search}`,
+        )}`}
+      />
+    );
+  }
+
+  return <Navigate replace to="/" />;
+}
 
 function App() {
   return (
@@ -28,21 +56,21 @@ function App() {
         <AppLayout>
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path="/achievements" element={<AchievementsPage />} />
-          <Route path="/words" element={<WordListPage />} />
-          <Route path="/words/new" element={<AddWordPage />} />
-          <Route path="/words/:wordId" element={<WordDetailPage />} />
-          <Route path="/review/flashcards" element={<FlashcardsPage />} />
-          <Route path="/review/quiz" element={<QuizPage />} />
-          <Route path="/games/spelling-ninja" element={<SpellingNinjaPage />} />
-          <Route path="/games/fishing-blast" element={<FishingBlastPage />} />
-          <Route path="/games/word-kart" element={<WordKartPage />} />
-          <Route path="/games/grammar-arena" element={<GrammarArenaPage />} />
-          <Route path="/games/battle-jet" element={<BattleJetQuizPage />} />
-          <Route path="/games/penalty-twelve" element={<PenaltyTwelvePage />} />
-          <Route path="/mistakes" element={<MistakesPage />} />
+          <Route path="/achievements" element={<ProtectedRoute><AchievementsPage /></ProtectedRoute>} />
+          <Route path="/words" element={<ProtectedRoute><WordListPage /></ProtectedRoute>} />
+          <Route path="/words/new" element={<ProtectedRoute><AddWordPage /></ProtectedRoute>} />
+          <Route path="/words/:wordId" element={<ProtectedRoute><WordDetailPage /></ProtectedRoute>} />
+          <Route path="/review/flashcards" element={<ProtectedRoute><FlashcardsPage /></ProtectedRoute>} />
+          <Route path="/review/quiz" element={<ProtectedRoute><QuizPage /></ProtectedRoute>} />
+          <Route path="/games/spelling-ninja" element={<ProtectedRoute><SpellingNinjaPage /></ProtectedRoute>} />
+          <Route path="/games/fishing-blast" element={<ProtectedRoute><FishingBlastPage /></ProtectedRoute>} />
+          <Route path="/games/word-kart" element={<ProtectedRoute><WordKartPage /></ProtectedRoute>} />
+          <Route path="/games/grammar-arena" element={<ProtectedRoute><GrammarArenaPage /></ProtectedRoute>} />
+          <Route path="/games/battle-jet" element={<ProtectedRoute><BattleJetQuizPage /></ProtectedRoute>} />
+          <Route path="/games/penalty-twelve" element={<ProtectedRoute><PenaltyTwelvePage /></ProtectedRoute>} />
+          <Route path="/mistakes" element={<ProtectedRoute><MistakesPage /></ProtectedRoute>} />
           <Route path="/auth" element={<AuthPage />} />
-          <Route path="/settings" element={<SettingsPage />} />
+          <Route path="/settings" element={<ProtectedRoute><SettingsPage /></ProtectedRoute>} />
           <Route path="/install" element={<InstallPage />} />
           <Route path="*" element={<NotFoundPage />} />
         </Routes>

@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useLocale } from "../features/locale/LocaleContext.jsx";
 import { getQuizOptionLabel } from "../features/review/quizHelpers.js";
 import { useWordsContext } from "../features/words/WordsContext.jsx";
+import { can, getRoleFromUser, PERMISSIONS } from "../lib/authorization.js";
 import {
   fetchWordMemoryWithCache,
   readWordMemory,
@@ -16,6 +17,7 @@ function WordMemoryPanel({
 }) {
   const { locale, t } = useLocale();
   const { updateWord, user } = useWordsContext();
+  const canRegenerateMemory = can(getRoleFromUser(user), PERMISSIONS.MEMORY_REGEN);
   const [memoryTips, setMemoryTips] = useState(
     () => readWordMemory(word, locale).memoryTips,
   );
@@ -80,6 +82,10 @@ function WordMemoryPanel({
       return;
     }
 
+    if (!canRegenerateMemory) {
+      return;
+    }
+
     const saved = readWordMemory(word, locale);
     const hasAnyMemory = Boolean(saved.memoryTips || saved.memoryImage?.imageUrl);
 
@@ -89,7 +95,7 @@ function WordMemoryPanel({
 
     void handleGenerate();
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [autoLoad, locale, word.id, word.memoryImage, word.memoryTipsByLocale]);
+  }, [autoLoad, canRegenerateMemory, locale, word.id, word.memoryImage, word.memoryTipsByLocale]);
 
   if (!word) {
     return null;
@@ -106,16 +112,18 @@ function WordMemoryPanel({
             {t("wordMemory.description")}
           </p>
         </div>
-        <button
-          className="inline-flex shrink-0 justify-center rounded-full bg-indigo-700 px-5 py-3 text-sm font-bold text-white transition hover:bg-indigo-800 disabled:bg-slate-300"
-          disabled={isLoading}
-          onClick={() => handleGenerate({ forceRefresh: true })}
-          type="button"
-        >
-          {isLoading
-            ? t("wordMemory.loading")
-            : t(hasContent ? "wordMemory.refresh" : "wordMemory.generate")}
-        </button>
+        {canRegenerateMemory ? (
+          <button
+            className="inline-flex shrink-0 justify-center rounded-full bg-indigo-700 px-5 py-3 text-sm font-bold text-white transition hover:bg-indigo-800 disabled:bg-slate-300"
+            disabled={isLoading}
+            onClick={() => handleGenerate({ forceRefresh: true })}
+            type="button"
+          >
+            {isLoading
+              ? t("wordMemory.loading")
+              : t(hasContent ? "wordMemory.refresh" : "wordMemory.generate")}
+          </button>
+        ) : null}
       </div>
 
       {notice ? (

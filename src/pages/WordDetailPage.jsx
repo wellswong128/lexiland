@@ -11,6 +11,7 @@ import {
 } from "../features/words/completeWordApi.js";
 import { contributeWordDetailsFromSuggestion } from "../features/words/wordbaseApi.js";
 import { useWordsContext } from "../features/words/WordsContext.jsx";
+import { can, getRoleFromUser, PERMISSIONS } from "../lib/authorization.js";
 import { goBackToPreviousPage } from "../lib/navigation.js";
 
 function getFormValues(word) {
@@ -33,6 +34,8 @@ function WordDetailPage() {
   const navigate = useNavigate();
   const { wordId } = useParams();
   const { updateWord, words, user } = useWordsContext();
+  const role = getRoleFromUser(user);
+  const canUpdateWord = can(role, PERMISSIONS.WORDS_UPDATE);
   const word = words.find((currentWord) => currentWord.id === wordId);
   const [isEditing, setIsEditing] = useState(false);
   const [formValues, setFormValues] = useState(null);
@@ -200,7 +203,7 @@ function WordDetailPage() {
           ) : null}
         </div>
 
-        {!isEditing ? (
+        {!isEditing && canUpdateWord ? (
           <button
             className="rounded-full bg-blue-700 px-5 py-3 text-sm font-bold text-white transition hover:bg-blue-800"
             onClick={() => {
@@ -227,7 +230,7 @@ function WordDetailPage() {
         </div>
       ) : null}
 
-      {isEditing ? (
+      {isEditing && canUpdateWord ? (
         <form className="mt-8 space-y-5" onSubmit={handleSubmit}>
           <div className="rounded-2xl border border-blue-100 bg-blue-50 p-4">
             <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">

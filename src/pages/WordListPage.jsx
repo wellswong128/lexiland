@@ -5,12 +5,16 @@ import SpeakButton from "../components/SpeakButton.jsx";
 import WordMemoryPanel from "../components/WordMemoryPanel.jsx";
 import { useLocale } from "../features/locale/LocaleContext.jsx";
 import { useWordsContext } from "../features/words/WordsContext.jsx";
+import { can, getRoleFromUser, PERMISSIONS } from "../lib/authorization.js";
 
 const WORDS_PER_PAGE = 20;
 
 function WordListPage() {
   const { t } = useLocale();
-  const { deleteWord, words } = useWordsContext();
+  const { deleteWord, user, words } = useWordsContext();
+  const role = getRoleFromUser(user);
+  const canCreateWord = can(role, PERMISSIONS.WORDS_CREATE);
+  const canDeleteWord = can(role, PERMISSIONS.WORDS_DELETE);
   const [searchQuery, setSearchQuery] = useState("");
   const [page, setPage] = useState(1);
 
@@ -80,12 +84,14 @@ function WordListPage() {
           </p>
         </div>
 
-        <Link
-          className="inline-flex justify-center rounded-full bg-blue-700 px-5 py-3 text-sm font-bold text-white shadow-lg shadow-blue-900/20 transition hover:bg-blue-800"
-          to="/words/new"
-        >
-          {t("common.addWord")}
-        </Link>
+        {canCreateWord ? (
+          <Link
+            className="inline-flex justify-center rounded-full bg-blue-700 px-5 py-3 text-sm font-bold text-white shadow-lg shadow-blue-900/20 transition hover:bg-blue-800"
+            to="/words/new"
+          >
+            {t("common.addWord")}
+          </Link>
+        ) : null}
       </div>
 
       {words.length > 0 ? (
@@ -180,13 +186,15 @@ function WordListPage() {
                 >
                   {t("common.viewDetails")}
                 </Link>
-                <button
-                  className="rounded-full bg-red-50 px-4 py-2 text-sm font-bold text-red-700 transition hover:bg-red-100"
-                  onClick={() => handleDelete(word)}
-                  type="button"
-                >
-                  {t("common.delete")}
-                </button>
+                {canDeleteWord ? (
+                  <button
+                    className="rounded-full bg-red-50 px-4 py-2 text-sm font-bold text-red-700 transition hover:bg-red-100"
+                    onClick={() => handleDelete(word)}
+                    type="button"
+                  >
+                    {t("common.delete")}
+                  </button>
+                ) : null}
               </div>
             </li>
             ))}
