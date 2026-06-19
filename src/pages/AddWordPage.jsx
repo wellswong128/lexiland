@@ -7,6 +7,7 @@ import {
   fetchCompleteWord,
   suggestionToFormValues,
 } from "../features/words/completeWordApi.js";
+import { contributeWordDetailsFromSuggestion } from "../features/words/wordbaseApi.js";
 import { useWordsContext } from "../features/words/WordsContext.jsx";
 import { goBackToPreviousPage } from "../lib/navigation.js";
 
@@ -30,7 +31,7 @@ function AddWordPage() {
   const location = useLocation();
   const navigate = useNavigate();
   const [searchParams, setSearchParams] = useSearchParams();
-  const { addWord } = useWordsContext();
+  const { addWord, user } = useWordsContext();
   const [activeTab, setActiveTab] = useState(() => getInitialTab(searchParams));
   const autoOpenCamera = searchParams.get("scan") === "camera";
   const [formValues, setFormValues] = useState(initialFormValues);
@@ -119,6 +120,13 @@ function AddWordPage() {
         ...currentValues,
         ...suggestionToFormValues(suggestion),
       }));
+
+      if (user?.id) {
+        void contributeWordDetailsFromSuggestion(suggestion, user.id).catch((syncError) => {
+          console.warn("Could not contribute word details to wordbase.", syncError);
+        });
+      }
+
       setAiMessage(t("addWord.aiSuccess"));
     } catch (aiError) {
       setFormValues((currentValues) => ({

@@ -1,3 +1,7 @@
+import {
+  containsChinese,
+  pickChineseText,
+} from "../../../lib/vocabularyLocale.js";
 import { hasSupabaseConfig, supabase } from "../../lib/supabaseClient.js";
 import { normalizeTerm } from "./wordTypes.js";
 
@@ -89,7 +93,7 @@ export function wordbaseEntryToSuggestion(entry) {
 }
 
 export function hasWordbaseDetails(entry) {
-  return Boolean(entry?.definition?.trim());
+  return Boolean(entry?.definition?.trim() && containsChinese(entry?.translation));
 }
 
 export function hasWordbaseMemoryTips(entry, locale) {
@@ -134,11 +138,14 @@ function buildWordDetailsRow(suggestion, contributorId, existing = null) {
     term_key: termKey,
     term: suggestion.term.trim(),
     definition: suggestion.definition?.trim() || existing?.definition || "",
-    translation: suggestion.translation ?? existing?.translation ?? "",
+    translation: pickChineseText(suggestion.translation, existing?.translation),
     pronunciation: suggestion.pronunciation ?? existing?.pronunciation ?? "",
     part_of_speech: suggestion.partOfSpeech ?? existing?.partOfSpeech ?? "",
     example: suggestion.example ?? existing?.example ?? "",
-    example_translation: suggestion.exampleTranslation ?? existing?.exampleTranslation ?? "",
+    example_translation: pickChineseText(
+      suggestion.exampleTranslation,
+      existing?.exampleTranslation,
+    ),
     notes: existing?.notes ?? "",
     tags: Array.isArray(suggestion.tags)
       ? suggestion.tags

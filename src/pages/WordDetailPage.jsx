@@ -9,6 +9,7 @@ import {
   fetchCompleteWord,
   suggestionToFormValues,
 } from "../features/words/completeWordApi.js";
+import { contributeWordDetailsFromSuggestion } from "../features/words/wordbaseApi.js";
 import { useWordsContext } from "../features/words/WordsContext.jsx";
 import { goBackToPreviousPage } from "../lib/navigation.js";
 
@@ -31,7 +32,7 @@ function WordDetailPage() {
   const location = useLocation();
   const navigate = useNavigate();
   const { wordId } = useParams();
-  const { updateWord, words } = useWordsContext();
+  const { updateWord, words, user } = useWordsContext();
   const word = words.find((currentWord) => currentWord.id === wordId);
   const [isEditing, setIsEditing] = useState(false);
   const [formValues, setFormValues] = useState(null);
@@ -101,6 +102,13 @@ function WordDetailPage() {
         ...currentValues,
         ...suggestionToFormValues(suggestion),
       }));
+
+      if (user?.id) {
+        void contributeWordDetailsFromSuggestion(suggestion, user.id).catch((syncError) => {
+          console.warn("Could not contribute word details to wordbase.", syncError);
+        });
+      }
+
       setAiMessage(t("addWord.aiSuccess"));
     } catch (aiError) {
       setFormValues((currentValues) => ({

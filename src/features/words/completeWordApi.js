@@ -1,3 +1,4 @@
+import { resolveVocabularyLocale } from "../../../lib/vocabularyLocale.js";
 import {
   canUseWordbase,
   contributeWordDetailsFromSuggestion,
@@ -52,13 +53,14 @@ export function suggestionToFormValues(suggestion) {
   };
 }
 
-export async function fetchCompleteWord(term, locale = "zh-Hant") {
+export async function fetchCompleteWord(term, uiLocale = "zh-Hant") {
+  const vocabularyLocale = resolveVocabularyLocale(uiLocale);
   const response = await fetch("/api/complete-word", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
     },
-    body: JSON.stringify({ term, locale }),
+    body: JSON.stringify({ term, locale: vocabularyLocale, vocabularyLocale }),
   });
   const data = await readJsonResponse(response);
 

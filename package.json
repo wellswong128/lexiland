@@ -9,7 +9,9 @@
     "preview": "vite preview",
     "configure:supabase-smtp": "node scripts/configure-supabase-smtp.mjs",
     "wordbase:import": "bash scripts/wordbase_import/run.sh",
-    "wordbase:import:dry-run": "bash scripts/wordbase_import/run.sh --dry-run --limit-images 1"
+    "wordbase:import:dry-run": "bash scripts/wordbase_import/run.sh --dry-run --limit-images 1",
+    "wordbase:fix-translations": "bash scripts/wordbase_import/run-fix-translations.sh",
+    "wordbase:fix-translations:dry-run": "bash scripts/wordbase_import/run-fix-translations.sh --dry-run"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.108.0",

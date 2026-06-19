@@ -2,6 +2,8 @@ from __future__ import annotations
 
 from typing import Any
 
+from text_locale import contains_chinese
+
 DETAIL_FIELDS = (
     "definition",
     "translation",
@@ -66,6 +68,8 @@ def missing_parts(entry: dict[str, Any] | None, locale: str) -> list[str]:
         missing.append("definition")
     if not str(entry.get("translation", "")).strip():
         missing.append("translation")
+    elif not contains_chinese(entry.get("translation", "")):
+        missing.append("translation")
     if not str(entry.get("pronunciation", "")).strip():
         missing.append("pronunciation")
     if not str(entry.get("part_of_speech", "")).strip():
@@ -73,6 +77,8 @@ def missing_parts(entry: dict[str, Any] | None, locale: str) -> list[str]:
     if not str(entry.get("example", "")).strip():
         missing.append("example")
     if not str(entry.get("example_translation", "")).strip():
+        missing.append("example_translation")
+    elif not contains_chinese(entry.get("example_translation", "")):
         missing.append("example_translation")
 
     tags = entry.get("tags") or []
@@ -101,6 +107,13 @@ def missing_detail_fields(entry: dict[str, Any] | None) -> list[str]:
             tags = entry.get("tags") or []
             if not isinstance(tags, list) or not any(str(tag).strip() for tag in tags):
                 missing.append("tags")
+            continue
+
+        if field in {"translation", "example_translation"}:
+            if not str(entry.get(field, "")).strip():
+                missing.append(field)
+            elif not contains_chinese(entry.get(field, "")):
+                missing.append(field)
             continue
 
         if not str(entry.get(field, "")).strip():

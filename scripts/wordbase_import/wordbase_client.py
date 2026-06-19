@@ -7,6 +7,7 @@ from supabase import Client
 
 from completeness import map_wordbase_row
 from terms import normalize_term
+from text_locale import contains_chinese
 
 WORDBASE_COLUMNS = (
     "id, contributor_id, term_key, term, definition, translation, pronunciation, "
@@ -71,6 +72,17 @@ def _pick_text(new_value: str, existing_value: str) -> str:
     return str(existing_value or "").strip()
 
 
+def _pick_chinese_text(new_value: str, existing_value: str) -> str:
+    suggestion = str(new_value or "").strip()
+    existing = str(existing_value or "").strip()
+
+    if suggestion and contains_chinese(suggestion):
+        return suggestion
+    if existing and contains_chinese(existing):
+        return existing
+    return suggestion or existing
+
+
 def build_details_row(
     suggestion: dict[str, Any],
     contributor_id: str,
@@ -86,14 +98,14 @@ def build_details_row(
         "term_key": normalize_term(suggestion.get("term") or existing.get("term", "")),
         "term": _pick_text(suggestion.get("term"), existing.get("term", "")),
         "definition": _pick_text(suggestion.get("definition"), existing.get("definition", "")),
-        "translation": _pick_text(suggestion.get("translation"), existing.get("translation", "")),
+        "translation": _pick_chinese_text(suggestion.get("translation"), existing.get("translation", "")),
         "pronunciation": _pick_text(suggestion.get("pronunciation"), existing.get("pronunciation", "")),
         "part_of_speech": _pick_text(
             suggestion.get("part_of_speech"),
             existing.get("part_of_speech", ""),
         ),
         "example": _pick_text(suggestion.get("example"), existing.get("example", "")),
-        "example_translation": _pick_text(
+        "example_translation": _pick_chinese_text(
             suggestion.get("example_translation"),
             existing.get("example_translation", ""),
         ),

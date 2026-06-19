@@ -1,10 +1,10 @@
-const AGNES_API_URL = "https://apihub.agnes-ai.com/v1/chat/completions";
+import {
+  getVocabularyLocaleLabel,
+  hasValidChineseTranslationFields,
+  resolveVocabularyLocale,
+} from "../lib/vocabularyLocale.js";
 
-const LOCALE_LABELS = {
-  "zh-Hant": "Traditional Chinese",
-  "zh-Hans": "Simplified Chinese",
-  en: "English",
-};
+const AGNES_API_URL = "https://apihub.agnes-ai.com/v1/chat/completions";
 
 function sendJson(response, statusCode, payload) {
   response.statusCode = statusCode;
@@ -45,6 +45,57 @@ function getRequestBody(request) {
   return request.body ?? {};
 }
 
+function buildPrompt(term, chineseLabel, { strict = false } = {}) {
+  const strictRule = strict
+    ? `\nIMPORTANT: translation and exampleTranslation MUST be written in ${chineseLabel} using Chinese characters. Do NOT use English for those two fields.`
+    : "";
+
+  return `Create vocabulary data for this English word: ${term}
+
+Return only valid JSON with these fields:
+term, definition, translation, pronunciation, partOfSpeech, example, exampleTranslation, tags.
+
+Use ${chineseLabel} for translation and exampleTranslation.
+translation must be the ${chineseLabel} meaning of the word (not English).
+example must be a natural English sentence that uses the word.
+exampleTranslation must be the ${chineseLabel} translation of example.
+Keep the definition concise and learner-friendly. Tags should be an array of short English labels.${strictRule}`;
+}
+
+async function requestSuggestion(term, chineseLabel, apiKey, { strict = false } = {}) {
+  const aiResponse = await fetch(AGNES_API_URL, {
+    method: "POST",
+    headers: {
+      Authorization: `Bearer ${apiKey}`,
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      model: process.env.AGNES_MODEL || "agnes-2.0-flash",
+      messages: [
+        {
+          role: "system",
+          content:
+            "You help English learners create vocabulary cards. Return only valid JSON.",
+        },
+        {
+          role: "user",
+          content: buildPrompt(term, chineseLabel, { strict }),
+        },
+      ],
+      temperature: 0.2,
+    }),
+  });
+
+  if (!aiResponse.ok) {
+    const errorText = await aiResponse.text();
+    throw new Error(`AI request failed: ${errorText}`);
+  }
+
+  const data = await aiResponse.json();
+
+  return normalizeSuggestion(parseAgnesJson(data));
+}
+
 export default async function handler(request, response) {
   if (request.method !== "POST") {
     sendJson(response, 405, { error: "Method not allowed." });
@@ -62,8 +113,10 @@ export default async function handler(request, response) {
 
   const body = getRequestBody(request);
   const term = String(body.term ?? "").trim();
-  const locale = String(body.locale ?? "zh-Hant").trim();
-  const chineseLabel = LOCALE_LABELS[locale] || LOCALE_LABELS["zh-Hant"];
+  const vocabularyLocale = resolveVocabularyLocale(
+    String(body.vocabularyLocale ?? body.locale ?? "zh-Hant").trim(),
+  );
+  const chineseLabel = getVocabularyLocaleLabel(vocabularyLocale);
 
   if (!term) {
     sendJson(response, 400, { error: "Please provide an English word." });
@@ -71,51 +124,22 @@ export default async function handler(request, response) {
   }
 
   try {
-    const aiResponse = await fetch(AGNES_API_URL, {
-      method: "POST",
-      headers: {
-        Authorization: `Bearer ${apiKey}`,
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        model: process.env.AGNES_MODEL || "agnes-2.0-flash",
-        messages: [
-          {
-            role: "system",
-            content:
-              "You help English learners create vocabulary cards. Return only valid JSON.",
-          },
-          {
-            role: "user",
-            content: `Create vocabulary data for this English word: ${term}
+    let suggestion = await requestSuggestion(term, chineseLabel, apiKey);
 
-Return only valid JSON with these fields:
-term, definition, translation, pronunciation, partOfSpeech, example, exampleTranslation, tags.
-
-Use ${chineseLabel} for translation and exampleTranslation.
-example must be a natural English sentence that uses the word.
-exampleTranslation must be the ${chineseLabel} translation of example.
-Keep the definition concise and learner-friendly. Tags should be an array of short English labels.`,
-          },
-        ],
-        temperature: 0.2,
-      }),
-    });
-
-    if (!aiResponse.ok) {
-      const errorText = await aiResponse.text();
-      sendJson(response, aiResponse.status, {
-        error: `AI request failed: ${errorText}`,
-      });
-      return;
+    if (!hasValidChineseTranslationFields(suggestion)) {
+      suggestion = await requestSuggestion(term, chineseLabel, apiKey, { strict: true });
     }
-
-    const data = await aiResponse.json();
-    const suggestion = normalizeSuggestion(parseAgnesJson(data));
 
     if (!suggestion.term || !suggestion.definition) {
       sendJson(response, 502, {
         error: "AI response was missing term or definition.",
+      });
+      return;
+    }
+
+    if (!hasValidChineseTranslationFields(suggestion)) {
+      sendJson(response, 502, {
+        error: "AI response did not include Chinese translation fields.",
       });
       return;
     }
