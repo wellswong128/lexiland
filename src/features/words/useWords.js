@@ -165,6 +165,14 @@ async function importActiveGroupWordsIfEmpty(userId, existingWords) {
           example: normalizeText(sourceWord?.example),
           exampleTranslation: normalizeText(sourceWord?.exampleTranslation),
           tags: normalizeTags(sourceWord?.tags),
+          memoryTipsByLocale:
+            sourceWord?.memoryTipsByLocale && typeof sourceWord.memoryTipsByLocale === "object"
+              ? sourceWord.memoryTipsByLocale
+              : {},
+          memoryImage:
+            sourceWord?.memoryImage && typeof sourceWord.memoryImage === "object"
+              ? sourceWord.memoryImage
+              : null,
         },
         {
           source: WORD_SOURCES.IMPORT,

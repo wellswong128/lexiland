@@ -133,5 +133,13 @@ export function createWord(input, options = {}) {
     updatedAt: now,
     review: createInitialReview(now),
     mistake: createInitialMistake(),
+    memoryTipsByLocale:
+      input?.memoryTipsByLocale && typeof input.memoryTipsByLocale === "object"
+        ? input.memoryTipsByLocale
+        : {},
+    memoryImage:
+      input?.memoryImage && typeof input.memoryImage === "object"
+        ? input.memoryImage
+        : null,
   };
 }

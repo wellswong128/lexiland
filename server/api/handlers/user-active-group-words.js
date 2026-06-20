@@ -110,7 +110,7 @@ export default async function handler(request, response) {
     }
 
     const wordbaseSelect = includeWords
-      ? "term_key,term,definition,translation,pronunciation,part_of_speech,example,example_translation,tags"
+      ? "term_key,term,definition,translation,pronunciation,part_of_speech,example,example_translation,tags,memory_tips_by_locale,memory_image"
       : "term_key,term";
 
     const { data: wordbaseRows, error: wordbaseError } = await rlsClient
@@ -150,6 +150,14 @@ export default async function handler(request, response) {
         example: row.example ?? "",
         exampleTranslation: row.example_translation ?? "",
         tags: Array.isArray(row.tags) ? row.tags : [],
+        memoryTipsByLocale:
+          row.memory_tips_by_locale && typeof row.memory_tips_by_locale === "object"
+            ? row.memory_tips_by_locale
+            : {},
+        memoryImage:
+          row.memory_image && typeof row.memory_image === "object"
+            ? row.memory_image
+            : null,
       }));
     }
 
