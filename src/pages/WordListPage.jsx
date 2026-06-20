@@ -13,7 +13,8 @@ const WORDS_PER_PAGE = 20;
 
 function WordListPage() {
   const { locale, t } = useLocale();
-  const { deleteWord, user, words } = useWordsContext();
+  const { autoImportedNotice, clearAutoImportedNotice, deleteWord, user, words } =
+    useWordsContext();
   const { isLoadingScope, isScoped, scopedWords, activeGroup, scopeReason, scopeError } =
     useActiveGroupWordScope(words, user);
   const role = getRoleFromUser(user);
@@ -57,6 +58,20 @@ function WordListPage() {
     }
   }, [page, totalPages]);
 
+  useEffect(() => {
+    if (!autoImportedNotice) {
+      return undefined;
+    }
+
+    const timer = window.setTimeout(() => {
+      clearAutoImportedNotice();
+    }, 8000);
+
+    return () => {
+      window.clearTimeout(timer);
+    };
+  }, [autoImportedNotice, clearAutoImportedNotice]);
+
   const paginatedWords = useMemo(() => {
     const start = (page - 1) * WORDS_PER_PAGE;
     return filteredWords.slice(start, start + WORDS_PER_PAGE);
@@ -82,6 +97,25 @@ function WordListPage() {
     }
 
     return activeGroup.displayNameZhHant || activeGroup.displayNameEn || activeGroup.groupCode || "";
+  }
+
+  function getNoticeGroupLabel() {
+    if (!autoImportedNotice) {
+      return "";
+    }
+    if (locale === "en") {
+      return (
+        autoImportedNotice.groupNameEn ||
+        autoImportedNotice.groupNameZhHant ||
+        autoImportedNotice.groupCode
+      );
+    }
+
+    return (
+      autoImportedNotice.groupNameZhHant ||
+      autoImportedNotice.groupNameEn ||
+      autoImportedNotice.groupCode
+    );
   }
 
   return (
@@ -133,6 +167,15 @@ function WordListPage() {
       {scopeError ? (
         <p className="mb-4 rounded-2xl border border-red-200 bg-red-50 px-4 py-3 text-sm font-medium text-red-700">
           {scopeError}
+        </p>
+      ) : null}
+
+      {autoImportedNotice ? (
+        <p className="mb-4 rounded-2xl border border-green-200 bg-green-50 px-4 py-3 text-sm font-semibold text-green-700">
+          {t("wordList.autoImportedFromGroup", {
+            count: autoImportedNotice.count,
+            group: getNoticeGroupLabel(),
+          })}
         </p>
       ) : null}
 

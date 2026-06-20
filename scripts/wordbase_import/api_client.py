@@ -73,10 +73,10 @@ class LexiLandApiClient:
 
             try:
                 headers = {}
+                bearer_token = self._read_bearer_token()
                 if self.import_api_key:
                     headers["x-lexiland-import-key"] = self.import_api_key
-                bearer_token = self._read_bearer_token()
-                if bearer_token:
+                elif bearer_token:
                     headers["Authorization"] = f"Bearer {bearer_token}"
                 response = self._client.post(url, json=payload, headers=headers)
             except httpx.RequestError as error:
@@ -106,6 +106,13 @@ class LexiLandApiClient:
                             f"{message} "
                             "No API auth header was sent. "
                             "Set IMPORT_API_KEY or ensure IMPORT_SESSION_PATH points to a valid session."
+                        )
+                    elif headers.get("x-lexiland-import-key") and not headers.get("Authorization"):
+                        message = (
+                            f"{message} "
+                            "IMPORT_API_KEY was sent but rejected. "
+                            "Make sure IMPORT_API_KEY in local .env.local exactly matches Vercel "
+                            "Environment Variables and redeploy learn.lexiland.cc."
                         )
                 retryable = response.status_code in RETRYABLE_STATUS
                 last_error = ApiError(message, status_code=response.status_code, retryable=retryable)

@@ -10,6 +10,25 @@ function normalizeTerm(value) {
   return String(value ?? "").trim().toLowerCase();
 }
 
+function parseBoolean(value, fallback = false) {
+  if (typeof value === "boolean") {
+    return value;
+  }
+  if (typeof value !== "string") {
+    return fallback;
+  }
+
+  const normalized = value.trim().toLowerCase();
+  if (["1", "true", "yes", "on"].includes(normalized)) {
+    return true;
+  }
+  if (["0", "false", "no", "off"].includes(normalized)) {
+    return false;
+  }
+
+  return fallback;
+}
+
 export default async function handler(request, response) {
   if (request.method !== "GET") {
     sendJson(response, 405, { error: "Method not allowed." });
@@ -26,6 +45,7 @@ export default async function handler(request, response) {
 
   try {
     const rlsClient = createRlsClientForRequest(request);
+    const includeWords = parseBoolean(request.query?.includeWords, false);
     const userId = auth.user.id;
 
     const { data: preference, error: preferenceError } = await rlsClient
@@ -89,9 +109,13 @@ export default async function handler(request, response) {
       return;
     }
 
+    const wordbaseSelect = includeWords
+      ? "term_key,term,definition,translation,pronunciation,part_of_speech,example,example_translation,tags"
+      : "term_key,term";
+
     const { data: wordbaseRows, error: wordbaseError } = await rlsClient
       .from("wordbase")
-      .select("term_key,term")
+      .select(wordbaseSelect)
       .in("id", wordbaseIds);
 
     if (wordbaseError) {
@@ -104,7 +128,7 @@ export default async function handler(request, response) {
         .filter(Boolean),
     )];
 
-    sendJson(response, 200, {
+    const payload = {
       activeGroup: {
         id: group.id,
         groupCode: normalizeGroupCode(group.group_code),
@@ -114,7 +138,22 @@ export default async function handler(request, response) {
         displayNameZhHant: group.display_name_zh_hant ?? "",
       },
       mappedTerms,
-    });
+    };
+
+    if (includeWords) {
+      payload.mappedWords = (wordbaseRows ?? []).map((row) => ({
+        term: row.term ?? "",
+        definition: row.definition ?? "",
+        translation: row.translation ?? "",
+        pronunciation: row.pronunciation ?? "",
+        partOfSpeech: row.part_of_speech ?? "",
+        example: row.example ?? "",
+        exampleTranslation: row.example_translation ?? "",
+        tags: Array.isArray(row.tags) ? row.tags : [],
+      }));
+    }
+
+    sendJson(response, 200, payload);
   } catch (error) {
     sendJson(response, 500, { error: error.message || "Failed to load active-group words." });
   }

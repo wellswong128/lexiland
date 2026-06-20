@@ -74,6 +74,10 @@ async function readAuthenticatedUser(request) {
   return { role: normalizeRole(data.user), user: data.user };
 }
 
+function readImportApiKeyHeader(request) {
+  return String(request.headers?.["x-lexiland-import-key"] || "").trim();
+}
+
 export async function requireRole(
   request,
   allowedRoles,
@@ -81,6 +85,25 @@ export async function requireRole(
 ) {
   if (allowImportKey && checkImportApiKey(request)) {
     return { source: "import-key", role: "owner", user: null };
+  }
+
+  if (allowImportKey) {
+    const providedImportKey = readImportApiKeyHeader(request);
+    const expectedImportKey = String(process.env.IMPORT_API_KEY || "").trim();
+
+    if (providedImportKey && !expectedImportKey) {
+      throw new ApiAuthError(
+        401,
+        "Import API key is not configured on the server. Set IMPORT_API_KEY in Vercel and redeploy.",
+      );
+    }
+
+    if (providedImportKey && expectedImportKey && providedImportKey !== expectedImportKey) {
+      throw new ApiAuthError(
+        401,
+        "Invalid import API key. Use the same IMPORT_API_KEY value in .env.local and Vercel.",
+      );
+    }
   }
 
   const auth = await readAuthenticatedUser(request);

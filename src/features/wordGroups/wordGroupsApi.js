@@ -59,6 +59,26 @@ export async function fetchUserActiveGroup() {
   return parseJsonResponse(response);
 }
 
+export async function fetchUserActiveGroupWords(options = {}) {
+  const authHeaders = await getApiAuthHeaders();
+  const params = new URLSearchParams();
+  if (options.includeWords) {
+    params.set("includeWords", "1");
+  }
+  const queryString = params.toString();
+  const response = await fetch(
+    `/api/user-active-group-words${queryString ? `?${queryString}` : ""}`,
+    {
+      headers: {
+        "Content-Type": "application/json",
+        ...authHeaders,
+      },
+    },
+  );
+
+  return parseJsonResponse(response);
+}
+
 export async function setUserActiveGroup(groupCode) {
   const authHeaders = await getApiAuthHeaders();
   const response = await fetch("/api/user-active-group", {

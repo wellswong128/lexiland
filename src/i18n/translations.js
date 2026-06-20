@@ -232,6 +232,7 @@ const zhHant = {
       pageInfo: "第 {{page}} / {{totalPages}} 頁 · 本頁 {{count}} 個 · 共 {{total}} 個",
       previousPage: "上一頁",
       nextPage: "下一頁",
+      autoImportedFromGroup: "已從「{{group}}」自動匯入 {{count}} 個單字。",
     },
     addWord: {
       eyebrow: "新單字",
@@ -1052,6 +1053,7 @@ export const translations = {
       pageInfo: "Page {{page}} of {{totalPages}} · {{count}} on this page · {{total}} total",
       previousPage: "Previous",
       nextPage: "Next",
+      autoImportedFromGroup: "Auto-imported {{count}} words from {{group}}.",
     },
     addWord: {
       eyebrow: "New Vocabulary",

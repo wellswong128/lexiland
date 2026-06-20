@@ -28,6 +28,8 @@ import {
   mapWordChangesToUpdate,
   updateWordInSupabase,
 } from "./wordsApi.js";
+import { fetchUserActiveGroupWords } from "../wordGroups/wordGroupsApi.js";
+import { ACTIVE_GROUP_CHANGED_EVENT } from "../wordGroups/wordGroupScopeEvents.js";
 
 function normalizeWordChanges(changes) {
   const normalizedChanges = { ...changes };
@@ -130,15 +132,69 @@ function hasRemoteWordChanges(changes) {
   return Object.keys(mapWordChangesToUpdate(changes)).length > 0;
 }
 
+async function importActiveGroupWordsIfEmpty(userId, existingWords) {
+  if (existingWords.length > 0) {
+    return { activeGroup: null, importedWords: [] };
+  }
+
+  const payload = await fetchUserActiveGroupWords({ includeWords: true });
+  const mappedWords = Array.isArray(payload.mappedWords) ? payload.mappedWords : [];
+  if (!payload.activeGroup || mappedWords.length === 0) {
+    return { activeGroup: payload.activeGroup ?? null, importedWords: [] };
+  }
+
+  const existingTerms = new Set(existingWords.map((word) => normalizeTerm(word.term)));
+  const savedWords = [];
+
+  for (const sourceWord of mappedWords) {
+    const term = normalizeText(sourceWord?.term);
+    const definition = normalizeText(sourceWord?.definition);
+    const termKey = normalizeTerm(term);
+    if (!termKey || !definition || existingTerms.has(termKey)) {
+      continue;
+    }
+
+    try {
+      const draft = createWord(
+        {
+          term,
+          definition,
+          translation: normalizeText(sourceWord?.translation),
+          pronunciation: normalizeText(sourceWord?.pronunciation),
+          partOfSpeech: normalizeText(sourceWord?.partOfSpeech),
+          example: normalizeText(sourceWord?.example),
+          exampleTranslation: normalizeText(sourceWord?.exampleTranslation),
+          tags: normalizeTags(sourceWord?.tags),
+        },
+        {
+          source: WORD_SOURCES.IMPORT,
+        },
+      );
+      const saved = await insertWordInSupabase(draft, userId);
+      savedWords.push(saved);
+      existingTerms.add(termKey);
+    } catch {
+      // Skip invalid or duplicate terms and continue importing remaining words.
+    }
+  }
+
+  return {
+    activeGroup: payload.activeGroup ?? null,
+    importedWords: savedWords,
+  };
+}
+
 export function useWords({ isAuthLoading = false, user = null } = {}, storage) {
   const [words, setWords] = useState(() => hydrateWords(loadWords(storage), storage));
   const [isWordsLoading, setIsWordsLoading] = useState(hasSupabaseConfig);
   const [wordsError, setWordsError] = useState("");
+  const [autoImportedNotice, setAutoImportedNotice] = useState(null);
   const isUsingSupabase = hasSupabaseConfig && Boolean(user);
 
   useEffect(() => {
     if (!hasSupabaseConfig || !user) {
       setWords(hydrateWords(loadWords(storage), storage));
+      setAutoImportedNotice(null);
       setIsWordsLoading(false);
       return undefined;
     }
@@ -149,9 +205,26 @@ export function useWords({ isAuthLoading = false, user = null } = {}, storage) {
     setWordsError("");
 
     fetchWordsFromSupabase(user.id)
-      .then((remoteWords) => {
-        if (isMounted) {
-          setWords(hydrateWords(remoteWords, storage));
+      .then(async (remoteWords) => {
+        if (!isMounted) {
+          return;
+        }
+        const { importedWords, activeGroup } = await importActiveGroupWordsIfEmpty(
+          user.id,
+          remoteWords,
+        );
+        if (!isMounted) {
+          return;
+        }
+        const nextWords = importedWords.length > 0 ? [...importedWords, ...remoteWords] : remoteWords;
+        setWords(hydrateWords(nextWords, storage));
+        if (importedWords.length > 0 && activeGroup) {
+          setAutoImportedNotice({
+            count: importedWords.length,
+            groupCode: activeGroup.groupCode ?? "",
+            groupNameEn: activeGroup.displayNameEn ?? "",
+            groupNameZhHant: activeGroup.displayNameZhHant ?? "",
+          });
         }
       })
       .catch((error) => {
@@ -169,6 +242,53 @@ export function useWords({ isAuthLoading = false, user = null } = {}, storage) {
       isMounted = false;
     };
   }, [storage, user]);
+
+  useEffect(() => {
+    if (!isUsingSupabase || typeof window === "undefined") {
+      return undefined;
+    }
+
+    let isMounted = true;
+
+    const handleActiveGroupChanged = async () => {
+      if (words.length > 0) {
+        return;
+      }
+
+      setIsWordsLoading(true);
+      try {
+        const { importedWords, activeGroup } = await importActiveGroupWordsIfEmpty(
+          user.id,
+          words,
+        );
+        if (isMounted && importedWords.length > 0) {
+          setWords((currentWords) => hydrateWords([...importedWords, ...currentWords], storage));
+          if (activeGroup) {
+            setAutoImportedNotice({
+              count: importedWords.length,
+              groupCode: activeGroup.groupCode ?? "",
+              groupNameEn: activeGroup.displayNameEn ?? "",
+              groupNameZhHant: activeGroup.displayNameZhHant ?? "",
+            });
+          }
+        }
+      } catch (error) {
+        if (isMounted) {
+          setWordsError(error.message || "Failed to import active-group words.");
+        }
+      } finally {
+        if (isMounted) {
+          setIsWordsLoading(false);
+        }
+      }
+    };
+
+    window.addEventListener(ACTIVE_GROUP_CHANGED_EVENT, handleActiveGroupChanged);
+    return () => {
+      isMounted = false;
+      window.removeEventListener(ACTIVE_GROUP_CHANGED_EVENT, handleActiveGroupChanged);
+    };
+  }, [isUsingSupabase, storage, user, words]);
 
   useEffect(() => {
     if (!hasSupabaseConfig || !user) {
@@ -442,7 +562,12 @@ export function useWords({ isAuthLoading = false, user = null } = {}, storage) {
     clearWordImageCache(storage);
     clearAllStoredWordAiMemory(storage);
     setWords([]);
+    setAutoImportedNotice(null);
   }, [isUsingSupabase, storage, user]);
+
+  const clearAutoImportedNotice = useCallback(() => {
+    setAutoImportedNotice(null);
+  }, []);
 
   return {
     addWord,
@@ -451,6 +576,8 @@ export function useWords({ isAuthLoading = false, user = null } = {}, storage) {
     importWords,
     isUsingSupabase,
     isWordsLoading: isAuthLoading || isWordsLoading,
+    autoImportedNotice,
+    clearAutoImportedNotice,
     resetAllWords,
     syncLocalWordsToSupabase,
     words,

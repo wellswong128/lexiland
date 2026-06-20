@@ -8,6 +8,7 @@
     "build": "vite build",
     "preview": "vite preview",
     "configure:supabase-smtp": "node scripts/configure-supabase-smtp.mjs",
+    "setup:import-api-key": "node scripts/setup-import-api-key.mjs",
     "wordbase:import": "bash scripts/wordbase_import/run.sh",
     "wordbase:import:dry-run": "bash scripts/wordbase_import/run.sh --dry-run --limit-images 1",
     "wordbase:fix-translations": "bash scripts/wordbase_import/run-fix-translations.sh",
@@ -17,7 +18,10 @@
     "word-groups:import-maps": "node scripts/hk_word_groups/import_word_group_maps.mjs",
     "word-groups:import-maps:dry-run": "node scripts/hk_word_groups/import_word_group_maps.mjs --dry-run",
     "word-groups:scaffold-lists": "node scripts/hk_word_groups/scaffold_word_list_files.mjs",
-    "word-groups:scaffold-lists:dry-run": "node scripts/hk_word_groups/scaffold_word_list_files.mjs --dry-run"
+    "word-groups:scaffold-lists:dry-run": "node scripts/hk_word_groups/scaffold_word_list_files.mjs --dry-run",
+    "word-groups:enrich": "bash scripts/hk_word_groups/run-enrich.sh",
+    "word-groups:enrich:dry-run": "bash scripts/hk_word_groups/run-enrich.sh --dry-run",
+    "word-groups:enrich:p1-english": "bash scripts/hk_word_groups/run-enrich.sh --file data/hk_word_groups/primary/p1/english.json"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.108.0",
