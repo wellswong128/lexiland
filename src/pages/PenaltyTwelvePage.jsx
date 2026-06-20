@@ -10,6 +10,8 @@ import {
   shouldUseGamePlan,
 } from "../features/games/gameWordBank.js";
 import { useReviewSessionPlay } from "../features/games/useReviewSessionPlay.js";
+import WordGroupScopeEmptyState from "../features/wordGroups/WordGroupScopeEmptyState.jsx";
+import { useActiveGroupWordScope } from "../features/wordGroups/useActiveGroupWordScope.js";
 import { hasActiveReviewSession } from "../lib/reviewSessionStorage.js";
 import { useLocale } from "../features/locale/LocaleContext.jsx";
 import { useGameMistakeTracker } from "../features/review/useGameMistakeTracker.js";
@@ -385,7 +387,9 @@ function usePenaltyTwelveAudio() {
 
 function PenaltyTwelvePage() {
   const { t } = useLocale();
-  const { words } = useWordsContext();
+  const { user, words } = useWordsContext();
+  const { isLoadingScope, isScoped, scopedWords } = useActiveGroupWordScope(words, user);
+  const gameWords = isScoped ? scopedWords : words;
   const { commitMistakes, lastCommittedTerms, recordWrong, resetTracker } =
     useGameMistakeTracker();
   const {
@@ -403,7 +407,7 @@ function PenaltyTwelvePage() {
 
   const gameOptions = useMemo(() => ({ minWords: 4 }), []);
   const { beginPlaySession, defaultBank, getActivePlayBank, pickRoundEntries } =
-    useReviewSessionPlay(words, gameOptions);
+    useReviewSessionPlay(gameWords, gameOptions);
   const {
     entries,
     isPriorityLimited,
@@ -437,6 +441,22 @@ function PenaltyTwelvePage() {
   const [goalFrameShake, setGoalFrameShake] = useState(false);
   const [trailShow, setTrailShow] = useState(false);
   const [impact, setImpact] = useState(null);
+
+  if (isLoadingScope) {
+    return (
+      <section className="w-full max-w-5xl rounded-3xl border border-blue-200/70 bg-white/90 p-8 text-center shadow-2xl shadow-blue-950/10 sm:p-10">
+        <p className="text-sm font-medium text-slate-600">{t("wordGroupsScope.loading")}</p>
+      </section>
+    );
+  }
+
+  if (isScoped && (gameWords.length === 0 || usingFallback)) {
+    return (
+      <section className="w-full max-w-5xl rounded-3xl border border-blue-200/70 bg-white/90 p-6 shadow-2xl shadow-blue-950/10 sm:p-10">
+        <WordGroupScopeEmptyState compact />
+      </section>
+    );
+  }
 
   const currentQuestion = questions[currentIndex];
   const isPlaying = gameState === "playing";

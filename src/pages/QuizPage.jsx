@@ -1,8 +1,10 @@
-import { useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { Link } from "react-router-dom";
 import SpeakButton from "../components/SpeakButton.jsx";
 import WordMemoryPanel from "../components/WordMemoryPanel.jsx";
 import { useLocale } from "../features/locale/LocaleContext.jsx";
+import WordGroupScopeEmptyState from "../features/wordGroups/WordGroupScopeEmptyState.jsx";
+import { useActiveGroupWordScope } from "../features/wordGroups/useActiveGroupWordScope.js";
 import { createQuizQuestions } from "../features/review/quizHelpers.js";
 import { updateReviewResult } from "../features/review/reviewHelpers.js";
 import { useWordsContext } from "../features/words/WordsContext.jsx";
@@ -10,8 +12,10 @@ import { REVIEW_RESULTS } from "../features/words/wordTypes.js";
 
 function QuizPage() {
   const { t } = useLocale();
-  const { updateWord, words } = useWordsContext();
-  const [questions] = useState(() => createQuizQuestions(words));
+  const { updateWord, user, words } = useWordsContext();
+  const { isLoadingScope, isScoped, scopedWords } = useActiveGroupWordScope(words, user);
+  const reviewWords = isScoped ? scopedWords : words;
+  const questions = useMemo(() => createQuizQuestions(reviewWords), [reviewWords]);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [selectedAnswer, setSelectedAnswer] = useState("");
   const [feedback, setFeedback] = useState(null);
@@ -20,11 +24,19 @@ function QuizPage() {
 
   const currentQuestion = questions[currentIndex];
   const currentWord =
-    words.find((word) => word.id === currentQuestion?.word.id) ?? currentQuestion?.word;
+    reviewWords.find((word) => word.id === currentQuestion?.word.id) ?? currentQuestion?.word;
   const progressText = t("quiz.progress", {
     current: Math.min(currentIndex + 1, questions.length),
     total: questions.length,
   });
+
+  useEffect(() => {
+    setCurrentIndex(0);
+    setSelectedAnswer("");
+    setFeedback(null);
+    setScore(0);
+    setIsComplete(false);
+  }, [questions.length]);
 
   function handleAnswer(answer) {
     if (feedback) {
@@ -52,6 +64,22 @@ function QuizPage() {
     }
 
     setCurrentIndex((index) => index + 1);
+  }
+
+  if (isLoadingScope) {
+    return (
+      <section className="w-full max-w-3xl rounded-3xl border border-blue-200/70 bg-white/90 p-8 text-center shadow-2xl shadow-blue-950/10 sm:p-14">
+        <p className="text-sm font-medium text-slate-600">{t("wordGroupsScope.loading")}</p>
+      </section>
+    );
+  }
+
+  if (isScoped && reviewWords.length === 0) {
+    return (
+      <section className="w-full max-w-3xl rounded-3xl border border-blue-200/70 bg-white/90 p-8 shadow-2xl shadow-blue-950/10 sm:p-14">
+        <WordGroupScopeEmptyState />
+      </section>
+    );
   }
 
   if (questions.length === 0) {

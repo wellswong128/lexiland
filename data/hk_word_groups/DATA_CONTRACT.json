@@ -1,0 +1,83 @@
+{
+  "contract_version": "2026.06.20",
+  "status": "frozen",
+  "phase": 1,
+  "source_files": {
+    "taxonomy": "data/hk_word_groups/taxonomy.json",
+    "human_spec": "HK_WORD_GROUP_TAXONOMY_AND_GROUP_CODES.md"
+  },
+  "product_decisions": {
+    "target_users": "Hong Kong primary and secondary students",
+    "multi_pick_groups": true,
+    "single_active_group": true,
+    "strict_filtering_in_word_list_review_games": true,
+    "grade_dependent_subjects": true,
+    "teacher_assigned_groups": "phase_2_out_of_scope",
+    "all_groups_browse_mode": "optional_browse_page_only_not_in_review_or_games",
+    "ungrouped_fallback_group_code": "hk-personal-ungrouped",
+    "existing_manual_and_photo_import": "unchanged_not_blocked",
+    "default_locale": "zh-Hant"
+  },
+  "enums": {
+    "level": ["primary", "secondary"],
+    "grade": ["P1", "P2", "P3", "P4", "P5", "P6", "S1", "S2", "S3", "S4", "S5", "S6"],
+    "group_status": ["ungrouped", "suggested", "confirmed"],
+    "locale": ["zh-Hant"]
+  },
+  "identifiers": {
+    "group_code_pattern": "^hk-(primary|secondary)-(p[1-6]|s[1-6])-[a-z0-9-]+$",
+    "group_code_template": "hk-{level}-{grade_lower}-{subject_slug}",
+    "fallback_group_code": "hk-personal-ungrouped"
+  },
+  "validation_rules": {
+    "grade_subject_pair": "subject must appear in grade_subject_matrix[grade]; reject with HTTP 400",
+    "active_group_in_picks": "active_group_id must belong to user_group_picks",
+    "curriculum_pick_visibility": "fallback group is not selectable in grade/subject picker",
+    "group_code_immutable": "group_code is stable; display labels may change without breaking references"
+  },
+  "word_list_file": {
+    "path_pattern": "data/hk_word_groups/{level}/{grade_lower}/{subject_slug}.json",
+    "required_fields": [
+      "group_code",
+      "level",
+      "grade",
+      "subject",
+      "locale",
+      "version",
+      "words"
+    ],
+    "word_required_fields": ["term"],
+    "word_recommended_fields": [
+      "definition",
+      "translation",
+      "example",
+      "example_translation",
+      "tags"
+    ],
+    "field_aliases": {
+      "example_translation": ["exampleTranslation"]
+    }
+  },
+  "api_payload_shapes": {
+    "word_group": {
+      "group_code": "string",
+      "level": "primary|secondary",
+      "grade": "P1..S6",
+      "subject": "subject slug",
+      "display_name_en": "string",
+      "display_name_zh_hant": "string",
+      "is_active": "boolean"
+    },
+    "user_group_picks_put": {
+      "group_codes": ["string"]
+    },
+    "user_active_group_put": {
+      "group_code": "string"
+    }
+  },
+  "counts": {
+    "curriculum_groups": 66,
+    "fallback_groups": 1,
+    "total_groups": 67
+  }
+}

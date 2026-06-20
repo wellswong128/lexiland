@@ -4,6 +4,8 @@ import ExampleSentence from "../components/ExampleSentence.jsx";
 import SpeakButton from "../components/SpeakButton.jsx";
 import WordMemoryPanel from "../components/WordMemoryPanel.jsx";
 import { useLocale } from "../features/locale/LocaleContext.jsx";
+import WordGroupScopeEmptyState from "../features/wordGroups/WordGroupScopeEmptyState.jsx";
+import { useActiveGroupWordScope } from "../features/wordGroups/useActiveGroupWordScope.js";
 import { useWordsContext } from "../features/words/WordsContext.jsx";
 import { can, getRoleFromUser, PERMISSIONS } from "../lib/authorization.js";
 
@@ -12,6 +14,7 @@ const WORDS_PER_PAGE = 20;
 function WordListPage() {
   const { t } = useLocale();
   const { deleteWord, user, words } = useWordsContext();
+  const { isLoadingScope, isScoped, scopedWords } = useActiveGroupWordScope(words, user);
   const role = getRoleFromUser(user);
   const canCreateWord = can(role, PERMISSIONS.WORDS_CREATE);
   const canDeleteWord = can(role, PERMISSIONS.WORDS_DELETE);
@@ -20,12 +23,13 @@ function WordListPage() {
 
   const filteredWords = useMemo(() => {
     const normalizedQuery = searchQuery.trim().toLowerCase();
+    const sourceWords = isScoped ? scopedWords : words;
 
     if (!normalizedQuery) {
-      return words;
+      return sourceWords;
     }
 
-    return words.filter((word) => {
+    return sourceWords.filter((word) => {
       const term = word.term.toLowerCase();
       const definition = word.definition.toLowerCase();
       const translation = (word.translation ?? "").toLowerCase();
@@ -38,7 +42,7 @@ function WordListPage() {
         tags.includes(normalizedQuery)
       );
     });
-  }, [searchQuery, words]);
+  }, [isScoped, scopedWords, searchQuery, words]);
 
   const totalPages = Math.max(1, Math.ceil(filteredWords.length / WORDS_PER_PAGE));
 
@@ -80,7 +84,7 @@ function WordListPage() {
           <p className="mt-4 text-slate-600">
             {searchQuery.trim()
               ? t("wordList.filteredCount", { count: filteredWords.length })
-              : t("wordList.count", { count: words.length })}
+              : t("wordList.count", { count: (isScoped ? scopedWords : words).length })}
           </p>
         </div>
 
@@ -94,7 +98,7 @@ function WordListPage() {
         ) : null}
       </div>
 
-      {words.length > 0 ? (
+      {(isScoped ? scopedWords : words).length > 0 ? (
         <label className="mb-6 block">
           <span className="text-sm font-semibold text-slate-700">
             {t("wordList.searchLabel")}
@@ -108,7 +112,13 @@ function WordListPage() {
         </label>
       ) : null}
 
-      {words.length === 0 ? (
+      {isLoadingScope ? (
+        <div className="rounded-2xl border border-dashed border-blue-200 bg-blue-50/70 p-8 text-center">
+          <p className="text-sm text-slate-600">{t("wordGroupsScope.loading")}</p>
+        </div>
+      ) : isScoped && scopedWords.length === 0 ? (
+        <WordGroupScopeEmptyState />
+      ) : words.length === 0 ? (
         <div className="rounded-2xl border border-dashed border-blue-200 bg-blue-50/70 p-8 text-center">
           <h2 className="text-xl font-bold text-blue-950">
             {t("wordList.emptyTitle")}

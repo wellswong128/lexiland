@@ -1,0 +1,757 @@
+{
+  "version": "2026.06",
+  "status": "frozen",
+  "frozen_at": "2026-06-20",
+  "locale_default": "zh-Hant",
+  "group_code_pattern": "hk-{level}-{grade}-{subject}",
+  "levels": [
+    {
+      "id": "primary",
+      "grades": ["P1", "P2", "P3", "P4", "P5", "P6"]
+    },
+    {
+      "id": "secondary",
+      "grades": ["S1", "S2", "S3", "S4", "S5", "S6"]
+    }
+  ],
+  "subjects": [
+    {
+      "slug": "english",
+      "name_en": "English",
+      "name_zh_hant": "英文"
+    },
+    {
+      "slug": "mathematics",
+      "name_en": "Mathematics",
+      "name_zh_hant": "數學"
+    },
+    {
+      "slug": "general-studies",
+      "name_en": "General Studies",
+      "name_zh_hant": "常識"
+    },
+    {
+      "slug": "science",
+      "name_en": "Science",
+      "name_zh_hant": "科學"
+    },
+    {
+      "slug": "integrated-science",
+      "name_en": "Integrated Science",
+      "name_zh_hant": "綜合科學"
+    },
+    {
+      "slug": "chinese-history",
+      "name_en": "Chinese History",
+      "name_zh_hant": "中國歷史"
+    },
+    {
+      "slug": "history",
+      "name_en": "History",
+      "name_zh_hant": "歷史"
+    },
+    {
+      "slug": "geography",
+      "name_en": "Geography",
+      "name_zh_hant": "地理"
+    },
+    {
+      "slug": "physics",
+      "name_en": "Physics",
+      "name_zh_hant": "物理"
+    },
+    {
+      "slug": "chemistry",
+      "name_en": "Chemistry",
+      "name_zh_hant": "化學"
+    },
+    {
+      "slug": "biology",
+      "name_en": "Biology",
+      "name_zh_hant": "生物"
+    },
+    {
+      "slug": "economics",
+      "name_en": "Economics",
+      "name_zh_hant": "經濟"
+    },
+    {
+      "slug": "ict",
+      "name_en": "ICT",
+      "name_zh_hant": "資訊及通訊科技"
+    }
+  ],
+  "grade_subject_matrix": {
+    "P1": ["english", "mathematics", "general-studies"],
+    "P2": ["english", "mathematics", "general-studies"],
+    "P3": ["english", "mathematics", "general-studies"],
+    "P4": ["english", "mathematics", "general-studies", "science"],
+    "P5": ["english", "mathematics", "general-studies", "science"],
+    "P6": ["english", "mathematics", "general-studies", "science"],
+    "S1": [
+      "english",
+      "mathematics",
+      "integrated-science",
+      "chinese-history",
+      "history",
+      "geography"
+    ],
+    "S2": [
+      "english",
+      "mathematics",
+      "integrated-science",
+      "chinese-history",
+      "history",
+      "geography"
+    ],
+    "S3": [
+      "english",
+      "mathematics",
+      "integrated-science",
+      "chinese-history",
+      "history",
+      "geography"
+    ],
+    "S4": [
+      "english",
+      "mathematics",
+      "physics",
+      "chemistry",
+      "biology",
+      "economics",
+      "geography",
+      "history",
+      "ict"
+    ],
+    "S5": [
+      "english",
+      "mathematics",
+      "physics",
+      "chemistry",
+      "biology",
+      "economics",
+      "geography",
+      "history",
+      "ict"
+    ],
+    "S6": [
+      "english",
+      "mathematics",
+      "physics",
+      "chemistry",
+      "biology",
+      "economics",
+      "geography",
+      "history",
+      "ict"
+    ]
+  },
+  "fallback_groups": [
+    {
+      "group_code": "hk-personal-ungrouped",
+      "level": "personal",
+      "grade": null,
+      "subject": "ungrouped",
+      "display_name_en": "Personal / Ungrouped",
+      "display_name_zh_hant": "個人／未分組",
+      "is_curriculum_pick": false,
+      "purpose": "Backward compatibility for existing and user-imported words without confirmed group."
+    }
+  ],
+  "groups": [
+    {
+      "group_code": "hk-primary-p1-english",
+      "level": "primary",
+      "grade": "P1",
+      "subject": "english",
+      "display_name_en": "P1 English",
+      "display_name_zh_hant": "小一英文",
+      "word_list_file": "data/hk_word_groups/primary/p1/english.json"
+    },
+    {
+      "group_code": "hk-primary-p1-mathematics",
+      "level": "primary",
+      "grade": "P1",
+      "subject": "mathematics",
+      "display_name_en": "P1 Mathematics",
+      "display_name_zh_hant": "小一數學",
+      "word_list_file": "data/hk_word_groups/primary/p1/mathematics.json"
+    },
+    {
+      "group_code": "hk-primary-p1-general-studies",
+      "level": "primary",
+      "grade": "P1",
+      "subject": "general-studies",
+      "display_name_en": "P1 General Studies",
+      "display_name_zh_hant": "小一常識",
+      "word_list_file": "data/hk_word_groups/primary/p1/general-studies.json"
+    },
+    {
+      "group_code": "hk-primary-p2-english",
+      "level": "primary",
+      "grade": "P2",
+      "subject": "english",
+      "display_name_en": "P2 English",
+      "display_name_zh_hant": "小二英文",
+      "word_list_file": "data/hk_word_groups/primary/p2/english.json"
+    },
+    {
+      "group_code": "hk-primary-p2-mathematics",
+      "level": "primary",
+      "grade": "P2",
+      "subject": "mathematics",
+      "display_name_en": "P2 Mathematics",
+      "display_name_zh_hant": "小二數學",
+      "word_list_file": "data/hk_word_groups/primary/p2/mathematics.json"
+    },
+    {
+      "group_code": "hk-primary-p2-general-studies",
+      "level": "primary",
+      "grade": "P2",
+      "subject": "general-studies",
+      "display_name_en": "P2 General Studies",
+      "display_name_zh_hant": "小二常識",
+      "word_list_file": "data/hk_word_groups/primary/p2/general-studies.json"
+    },
+    {
+      "group_code": "hk-primary-p3-english",
+      "level": "primary",
+      "grade": "P3",
+      "subject": "english",
+      "display_name_en": "P3 English",
+      "display_name_zh_hant": "小三英文",
+      "word_list_file": "data/hk_word_groups/primary/p3/english.json"
+    },
+    {
+      "group_code": "hk-primary-p3-mathematics",
+      "level": "primary",
+      "grade": "P3",
+      "subject": "mathematics",
+      "display_name_en": "P3 Mathematics",
+      "display_name_zh_hant": "小三數學",
+      "word_list_file": "data/hk_word_groups/primary/p3/mathematics.json"
+    },
+    {
+      "group_code": "hk-primary-p3-general-studies",
+      "level": "primary",
+      "grade": "P3",
+      "subject": "general-studies",
+      "display_name_en": "P3 General Studies",
+      "display_name_zh_hant": "小三常識",
+      "word_list_file": "data/hk_word_groups/primary/p3/general-studies.json"
+    },
+    {
+      "group_code": "hk-primary-p4-english",
+      "level": "primary",
+      "grade": "P4",
+      "subject": "english",
+      "display_name_en": "P4 English",
+      "display_name_zh_hant": "小四英文",
+      "word_list_file": "data/hk_word_groups/primary/p4/english.json"
+    },
+    {
+      "group_code": "hk-primary-p4-mathematics",
+      "level": "primary",
+      "grade": "P4",
+      "subject": "mathematics",
+      "display_name_en": "P4 Mathematics",
+      "display_name_zh_hant": "小四數學",
+      "word_list_file": "data/hk_word_groups/primary/p4/mathematics.json"
+    },
+    {
+      "group_code": "hk-primary-p4-general-studies",
+      "level": "primary",
+      "grade": "P4",
+      "subject": "general-studies",
+      "display_name_en": "P4 General Studies",
+      "display_name_zh_hant": "小四常識",
+      "word_list_file": "data/hk_word_groups/primary/p4/general-studies.json"
+    },
+    {
+      "group_code": "hk-primary-p4-science",
+      "level": "primary",
+      "grade": "P4",
+      "subject": "science",
+      "display_name_en": "P4 Science",
+      "display_name_zh_hant": "小四科學",
+      "word_list_file": "data/hk_word_groups/primary/p4/science.json"
+    },
+    {
+      "group_code": "hk-primary-p5-english",
+      "level": "primary",
+      "grade": "P5",
+      "subject": "english",
+      "display_name_en": "P5 English",
+      "display_name_zh_hant": "小五英文",
+      "word_list_file": "data/hk_word_groups/primary/p5/english.json"
+    },
+    {
+      "group_code": "hk-primary-p5-mathematics",
+      "level": "primary",
+      "grade": "P5",
+      "subject": "mathematics",
+      "display_name_en": "P5 Mathematics",
+      "display_name_zh_hant": "小五數學",
+      "word_list_file": "data/hk_word_groups/primary/p5/mathematics.json"
+    },
+    {
+      "group_code": "hk-primary-p5-general-studies",
+      "level": "primary",
+      "grade": "P5",
+      "subject": "general-studies",
+      "display_name_en": "P5 General Studies",
+      "display_name_zh_hant": "小五常識",
+      "word_list_file": "data/hk_word_groups/primary/p5/general-studies.json"
+    },
+    {
+      "group_code": "hk-primary-p5-science",
+      "level": "primary",
+      "grade": "P5",
+      "subject": "science",
+      "display_name_en": "P5 Science",
+      "display_name_zh_hant": "小五科學",
+      "word_list_file": "data/hk_word_groups/primary/p5/science.json"
+    },
+    {
+      "group_code": "hk-primary-p6-english",
+      "level": "primary",
+      "grade": "P6",
+      "subject": "english",
+      "display_name_en": "P6 English",
+      "display_name_zh_hant": "小六英文",
+      "word_list_file": "data/hk_word_groups/primary/p6/english.json"
+    },
+    {
+      "group_code": "hk-primary-p6-mathematics",
+      "level": "primary",
+      "grade": "P6",
+      "subject": "mathematics",
+      "display_name_en": "P6 Mathematics",
+      "display_name_zh_hant": "小六數學",
+      "word_list_file": "data/hk_word_groups/primary/p6/mathematics.json"
+    },
+    {
+      "group_code": "hk-primary-p6-general-studies",
+      "level": "primary",
+      "grade": "P6",
+      "subject": "general-studies",
+      "display_name_en": "P6 General Studies",
+      "display_name_zh_hant": "小六常識",
+      "word_list_file": "data/hk_word_groups/primary/p6/general-studies.json"
+    },
+    {
+      "group_code": "hk-primary-p6-science",
+      "level": "primary",
+      "grade": "P6",
+      "subject": "science",
+      "display_name_en": "P6 Science",
+      "display_name_zh_hant": "小六科學",
+      "word_list_file": "data/hk_word_groups/primary/p6/science.json"
+    },
+    {
+      "group_code": "hk-secondary-s1-english",
+      "level": "secondary",
+      "grade": "S1",
+      "subject": "english",
+      "display_name_en": "S1 English",
+      "display_name_zh_hant": "中一英文",
+      "word_list_file": "data/hk_word_groups/secondary/s1/english.json"
+    },
+    {
+      "group_code": "hk-secondary-s1-mathematics",
+      "level": "secondary",
+      "grade": "S1",
+      "subject": "mathematics",
+      "display_name_en": "S1 Mathematics",
+      "display_name_zh_hant": "中一數學",
+      "word_list_file": "data/hk_word_groups/secondary/s1/mathematics.json"
+    },
+    {
+      "group_code": "hk-secondary-s1-integrated-science",
+      "level": "secondary",
+      "grade": "S1",
+      "subject": "integrated-science",
+      "display_name_en": "S1 Integrated Science",
+      "display_name_zh_hant": "中一綜合科學",
+      "word_list_file": "data/hk_word_groups/secondary/s1/integrated-science.json"
+    },
+    {
+      "group_code": "hk-secondary-s1-chinese-history",
+      "level": "secondary",
+      "grade": "S1",
+      "subject": "chinese-history",
+      "display_name_en": "S1 Chinese History",
+      "display_name_zh_hant": "中一中國歷史",
+      "word_list_file": "data/hk_word_groups/secondary/s1/chinese-history.json"
+    },
+    {
+      "group_code": "hk-secondary-s1-history",
+      "level": "secondary",
+      "grade": "S1",
+      "subject": "history",
+      "display_name_en": "S1 History",
+      "display_name_zh_hant": "中一歷史",
+      "word_list_file": "data/hk_word_groups/secondary/s1/history.json"
+    },
+    {
+      "group_code": "hk-secondary-s1-geography",
+      "level": "secondary",
+      "grade": "S1",
+      "subject": "geography",
+      "display_name_en": "S1 Geography",
+      "display_name_zh_hant": "中一地理",
+      "word_list_file": "data/hk_word_groups/secondary/s1/geography.json"
+    },
+    {
+      "group_code": "hk-secondary-s2-english",
+      "level": "secondary",
+      "grade": "S2",
+      "subject": "english",
+      "display_name_en": "S2 English",
+      "display_name_zh_hant": "中二英文",
+      "word_list_file": "data/hk_word_groups/secondary/s2/english.json"
+    },
+    {
+      "group_code": "hk-secondary-s2-mathematics",
+      "level": "secondary",
+      "grade": "S2",
+      "subject": "mathematics",
+      "display_name_en": "S2 Mathematics",
+      "display_name_zh_hant": "中二數學",
+      "word_list_file": "data/hk_word_groups/secondary/s2/mathematics.json"
+    },
+    {
+      "group_code": "hk-secondary-s2-integrated-science",
+      "level": "secondary",
+      "grade": "S2",
+      "subject": "integrated-science",
+      "display_name_en": "S2 Integrated Science",
+      "display_name_zh_hant": "中二綜合科學",
+      "word_list_file": "data/hk_word_groups/secondary/s2/integrated-science.json"
+    },
+    {
+      "group_code": "hk-secondary-s2-chinese-history",
+      "level": "secondary",
+      "grade": "S2",
+      "subject": "chinese-history",
+      "display_name_en": "S2 Chinese History",
+      "display_name_zh_hant": "中二中國歷史",
+      "word_list_file": "data/hk_word_groups/secondary/s2/chinese-history.json"
+    },
+    {
+      "group_code": "hk-secondary-s2-history",
+      "level": "secondary",
+      "grade": "S2",
+      "subject": "history",
+      "display_name_en": "S2 History",
+      "display_name_zh_hant": "中二歷史",
+      "word_list_file": "data/hk_word_groups/secondary/s2/history.json"
+    },
+    {
+      "group_code": "hk-secondary-s2-geography",
+      "level": "secondary",
+      "grade": "S2",
+      "subject": "geography",
+      "display_name_en": "S2 Geography",
+      "display_name_zh_hant": "中二地理",
+      "word_list_file": "data/hk_word_groups/secondary/s2/geography.json"
+    },
+    {
+      "group_code": "hk-secondary-s3-english",
+      "level": "secondary",
+      "grade": "S3",
+      "subject": "english",
+      "display_name_en": "S3 English",
+      "display_name_zh_hant": "中三英文",
+      "word_list_file": "data/hk_word_groups/secondary/s3/english.json"
+    },
+    {
+      "group_code": "hk-secondary-s3-mathematics",
+      "level": "secondary",
+      "grade": "S3",
+      "subject": "mathematics",
+      "display_name_en": "S3 Mathematics",
+      "display_name_zh_hant": "中三數學",
+      "word_list_file": "data/hk_word_groups/secondary/s3/mathematics.json"
+    },
+    {
+      "group_code": "hk-secondary-s3-integrated-science",
+      "level": "secondary",
+      "grade": "S3",
+      "subject": "integrated-science",
+      "display_name_en": "S3 Integrated Science",
+      "display_name_zh_hant": "中三綜合科學",
+      "word_list_file": "data/hk_word_groups/secondary/s3/integrated-science.json"
+    },
+    {
+      "group_code": "hk-secondary-s3-chinese-history",
+      "level": "secondary",
+      "grade": "S3",
+      "subject": "chinese-history",
+      "display_name_en": "S3 Chinese History",
+      "display_name_zh_hant": "中三中國歷史",
+      "word_list_file": "data/hk_word_groups/secondary/s3/chinese-history.json"
+    },
+    {
+      "group_code": "hk-secondary-s3-history",
+      "level": "secondary",
+      "grade": "S3",
+      "subject": "history",
+      "display_name_en": "S3 History",
+      "display_name_zh_hant": "中三歷史",
+      "word_list_file": "data/hk_word_groups/secondary/s3/history.json"
+    },
+    {
+      "group_code": "hk-secondary-s3-geography",
+      "level": "secondary",
+      "grade": "S3",
+      "subject": "geography",
+      "display_name_en": "S3 Geography",
+      "display_name_zh_hant": "中三地理",
+      "word_list_file": "data/hk_word_groups/secondary/s3/geography.json"
+    },
+    {
+      "group_code": "hk-secondary-s4-english",
+      "level": "secondary",
+      "grade": "S4",
+      "subject": "english",
+      "display_name_en": "S4 English",
+      "display_name_zh_hant": "中四英文",
+      "word_list_file": "data/hk_word_groups/secondary/s4/english.json"
+    },
+    {
+      "group_code": "hk-secondary-s4-mathematics",
+      "level": "secondary",
+      "grade": "S4",
+      "subject": "mathematics",
+      "display_name_en": "S4 Mathematics",
+      "display_name_zh_hant": "中四數學",
+      "word_list_file": "data/hk_word_groups/secondary/s4/mathematics.json"
+    },
+    {
+      "group_code": "hk-secondary-s4-physics",
+      "level": "secondary",
+      "grade": "S4",
+      "subject": "physics",
+      "display_name_en": "S4 Physics",
+      "display_name_zh_hant": "中四物理",
+      "word_list_file": "data/hk_word_groups/secondary/s4/physics.json"
+    },
+    {
+      "group_code": "hk-secondary-s4-chemistry",
+      "level": "secondary",
+      "grade": "S4",
+      "subject": "chemistry",
+      "display_name_en": "S4 Chemistry",
+      "display_name_zh_hant": "中四化學",
+      "word_list_file": "data/hk_word_groups/secondary/s4/chemistry.json"
+    },
+    {
+      "group_code": "hk-secondary-s4-biology",
+      "level": "secondary",
+      "grade": "S4",
+      "subject": "biology",
+      "display_name_en": "S4 Biology",
+      "display_name_zh_hant": "中四生物",
+      "word_list_file": "data/hk_word_groups/secondary/s4/biology.json"
+    },
+    {
+      "group_code": "hk-secondary-s4-economics",
+      "level": "secondary",
+      "grade": "S4",
+      "subject": "economics",
+      "display_name_en": "S4 Economics",
+      "display_name_zh_hant": "中四經濟",
+      "word_list_file": "data/hk_word_groups/secondary/s4/economics.json"
+    },
+    {
+      "group_code": "hk-secondary-s4-geography",
+      "level": "secondary",
+      "grade": "S4",
+      "subject": "geography",
+      "display_name_en": "S4 Geography",
+      "display_name_zh_hant": "中四地理",
+      "word_list_file": "data/hk_word_groups/secondary/s4/geography.json"
+    },
+    {
+      "group_code": "hk-secondary-s4-history",
+      "level": "secondary",
+      "grade": "S4",
+      "subject": "history",
+      "display_name_en": "S4 History",
+      "display_name_zh_hant": "中四歷史",
+      "word_list_file": "data/hk_word_groups/secondary/s4/history.json"
+    },
+    {
+      "group_code": "hk-secondary-s4-ict",
+      "level": "secondary",
+      "grade": "S4",
+      "subject": "ict",
+      "display_name_en": "S4 ICT",
+      "display_name_zh_hant": "中四資訊及通訊科技",
+      "word_list_file": "data/hk_word_groups/secondary/s4/ict.json"
+    },
+    {
+      "group_code": "hk-secondary-s5-english",
+      "level": "secondary",
+      "grade": "S5",
+      "subject": "english",
+      "display_name_en": "S5 English",
+      "display_name_zh_hant": "中五英文",
+      "word_list_file": "data/hk_word_groups/secondary/s5/english.json"
+    },
+    {
+      "group_code": "hk-secondary-s5-mathematics",
+      "level": "secondary",
+      "grade": "S5",
+      "subject": "mathematics",
+      "display_name_en": "S5 Mathematics",
+      "display_name_zh_hant": "中五數學",
+      "word_list_file": "data/hk_word_groups/secondary/s5/mathematics.json"
+    },
+    {
+      "group_code": "hk-secondary-s5-physics",
+      "level": "secondary",
+      "grade": "S5",
+      "subject": "physics",
+      "display_name_en": "S5 Physics",
+      "display_name_zh_hant": "中五物理",
+      "word_list_file": "data/hk_word_groups/secondary/s5/physics.json"
+    },
+    {
+      "group_code": "hk-secondary-s5-chemistry",
+      "level": "secondary",
+      "grade": "S5",
+      "subject": "chemistry",
+      "display_name_en": "S5 Chemistry",
+      "display_name_zh_hant": "中五化學",
+      "word_list_file": "data/hk_word_groups/secondary/s5/chemistry.json"
+    },
+    {
+      "group_code": "hk-secondary-s5-biology",
+      "level": "secondary",
+      "grade": "S5",
+      "subject": "biology",
+      "display_name_en": "S5 Biology",
+      "display_name_zh_hant": "中五生物",
+      "word_list_file": "data/hk_word_groups/secondary/s5/biology.json"
+    },
+    {
+      "group_code": "hk-secondary-s5-economics",
+      "level": "secondary",
+      "grade": "S5",
+      "subject": "economics",
+      "display_name_en": "S5 Economics",
+      "display_name_zh_hant": "中五經濟",
+      "word_list_file": "data/hk_word_groups/secondary/s5/economics.json"
+    },
+    {
+      "group_code": "hk-secondary-s5-geography",
+      "level": "secondary",
+      "grade": "S5",
+      "subject": "geography",
+      "display_name_en": "S5 Geography",
+      "display_name_zh_hant": "中五地理",
+      "word_list_file": "data/hk_word_groups/secondary/s5/geography.json"
+    },
+    {
+      "group_code": "hk-secondary-s5-history",
+      "level": "secondary",
+      "grade": "S5",
+      "subject": "history",
+      "display_name_en": "S5 History",
+      "display_name_zh_hant": "中五歷史",
+      "word_list_file": "data/hk_word_groups/secondary/s5/history.json"
+    },
+    {
+      "group_code": "hk-secondary-s5-ict",
+      "level": "secondary",
+      "grade": "S5",
+      "subject": "ict",
+      "display_name_en": "S5 ICT",
+      "display_name_zh_hant": "中五資訊及通訊科技",
+      "word_list_file": "data/hk_word_groups/secondary/s5/ict.json"
+    },
+    {
+      "group_code": "hk-secondary-s6-english",
+      "level": "secondary",
+      "grade": "S6",
+      "subject": "english",
+      "display_name_en": "S6 English",
+      "display_name_zh_hant": "中六英文",
+      "word_list_file": "data/hk_word_groups/secondary/s6/english.json"
+    },
+    {
+      "group_code": "hk-secondary-s6-mathematics",
+      "level": "secondary",
+      "grade": "S6",
+      "subject": "mathematics",
+      "display_name_en": "S6 Mathematics",
+      "display_name_zh_hant": "中六數學",
+      "word_list_file": "data/hk_word_groups/secondary/s6/mathematics.json"
+    },
+    {
+      "group_code": "hk-secondary-s6-physics",
+      "level": "secondary",
+      "grade": "S6",
+      "subject": "physics",
+      "display_name_en": "S6 Physics",
+      "display_name_zh_hant": "中六物理",
+      "word_list_file": "data/hk_word_groups/secondary/s6/physics.json"
+    },
+    {
+      "group_code": "hk-secondary-s6-chemistry",
+      "level": "secondary",
+      "grade": "S6",
+      "subject": "chemistry",
+      "display_name_en": "S6 Chemistry",
+      "display_name_zh_hant": "中六化學",
+      "word_list_file": "data/hk_word_groups/secondary/s6/chemistry.json"
+    },
+    {
+      "group_code": "hk-secondary-s6-biology",
+      "level": "secondary",
+      "grade": "S6",
+      "subject": "biology",
+      "display_name_en": "S6 Biology",
+      "display_name_zh_hant": "中六生物",
+      "word_list_file": "data/hk_word_groups/secondary/s6/biology.json"
+    },
+    {
+      "group_code": "hk-secondary-s6-economics",
+      "level": "secondary",
+      "grade": "S6",
+      "subject": "economics",
+      "display_name_en": "S6 Economics",
+      "display_name_zh_hant": "中六經濟",
+      "word_list_file": "data/hk_word_groups/secondary/s6/economics.json"
+    },
+    {
+      "group_code": "hk-secondary-s6-geography",
+      "level": "secondary",
+      "grade": "S6",
+      "subject": "geography",
+      "display_name_en": "S6 Geography",
+      "display_name_zh_hant": "中六地理",
+      "word_list_file": "data/hk_word_groups/secondary/s6/geography.json"
+    },
+    {
+      "group_code": "hk-secondary-s6-history",
+      "level": "secondary",
+      "grade": "S6",
+      "subject": "history",
+      "display_name_en": "S6 History",
+      "display_name_zh_hant": "中六歷史",
+      "word_list_file": "data/hk_word_groups/secondary/s6/history.json"
+    },
+    {
+      "group_code": "hk-secondary-s6-ict",
+      "level": "secondary",
+      "grade": "S6",
+      "subject": "ict",
+      "display_name_en": "S6 ICT",
+      "display_name_zh_hant": "中六資訊及通訊科技",
+      "word_list_file": "data/hk_word_groups/secondary/s6/ict.json"
+    }
+  ]
+}

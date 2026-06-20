@@ -8,6 +8,8 @@ import { useLocale } from "../features/locale/LocaleContext.jsx";
 import { enrichReviewWordExamples, needsExampleEnrichment } from "../features/review/enrichReviewWordExamples.js";
 import { createImageQuizQuestions } from "../features/review/imageQuizHelpers.js";
 import { prefetchSessionMemoryImages } from "../features/review/prefetchSessionMemoryImages.js";
+import WordGroupScopeEmptyState from "../features/wordGroups/WordGroupScopeEmptyState.jsx";
+import { useActiveGroupWordScope } from "../features/wordGroups/useActiveGroupWordScope.js";
 import {
   getReviewIntervalDays,
   getReviewSessionWords,
@@ -20,15 +22,17 @@ import { REVIEW_RESULTS } from "../features/words/wordTypes.js";
 function FlashcardsPage() {
   const { locale, t } = useLocale();
   const { updateWord, user, words } = useWordsContext();
+  const { isLoadingScope, isScoped, scopedWords } = useActiveGroupWordScope(words, user);
+  const reviewWords = isScoped ? scopedWords : words;
   const enrichedExampleWordIdsRef = useRef(new Set());
   const [searchParams] = useSearchParams();
   const mistakesOnly = searchParams.get("mode") === "mistakes";
   const { isLimited, sessionWords, totalCount } = useMemo(
     () =>
-      getReviewSessionWords(words, {
+      getReviewSessionWords(reviewWords, {
         mistakesOnly,
       }),
-    [mistakesOnly, words],
+    [mistakesOnly, reviewWords],
   );
   const [hasStarted, setHasStarted] = useState(false);
   const [isPreparing, setIsPreparing] = useState(false);
@@ -43,7 +47,7 @@ function FlashcardsPage() {
 
   const currentQuestion = imageQuestions[currentIndex];
   const currentWord =
-    words.find((word) => word.id === currentQuestion?.word.id) ?? currentQuestion?.word;
+    reviewWords.find((word) => word.id === currentQuestion?.word.id) ?? currentQuestion?.word;
   const progressText = t("flashcards.progress", {
     current: Math.min(currentIndex + 1, imageQuestions.length || sessionWords.length),
     total: imageQuestions.length || sessionWords.length,
@@ -209,6 +213,22 @@ function FlashcardsPage() {
     goToNextWord();
   }
 
+  if (isLoadingScope) {
+    return (
+      <section className="w-full max-w-3xl rounded-3xl border border-blue-200/70 bg-white/90 p-8 text-center shadow-2xl shadow-blue-950/10 sm:p-14">
+        <p className="text-sm font-medium text-slate-600">{t("wordGroupsScope.loading")}</p>
+      </section>
+    );
+  }
+
+  if (isScoped && reviewWords.length === 0) {
+    return (
+      <section className="w-full max-w-3xl rounded-3xl border border-blue-200/70 bg-white/90 p-8 shadow-2xl shadow-blue-950/10 sm:p-14">
+        <WordGroupScopeEmptyState />
+      </section>
+    );
+  }
+
   if (sessionWords.length === 0) {
     return (
       <section className="w-full max-w-3xl rounded-3xl border border-blue-200/70 bg-white/90 p-8 text-center shadow-2xl shadow-blue-950/10 sm:p-14">
@@ -322,7 +342,7 @@ function FlashcardsPage() {
           {mistakesOnly
             ? t("flashcards.completeDescriptionMistakes", {
                 cleared: sessionClearedCount,
-                remaining: words.filter((word) => word.mistake.isMistake).length,
+                remaining: reviewWords.filter((word) => word.mistake.isMistake).length,
               })
             : t("flashcards.completeDescription", { count: imageQuestions.length })}
         </p>

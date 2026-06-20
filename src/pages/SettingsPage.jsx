@@ -8,6 +8,7 @@ import { useWordsContext } from "../features/words/WordsContext.jsx";
 import { can, getRoleFromUser, PERMISSIONS } from "../lib/authorization.js";
 import { normalizeTerm, normalizeText } from "../features/words/wordTypes.js";
 import { loadWords, WORDS_STORAGE_KEY } from "../lib/storage.js";
+import WordGroupSettingsSection from "../features/wordGroups/WordGroupSettingsSection.jsx";
 import { getAppInstallUrl } from "../lib/appUrl.js";
 import "../styles/install-page.css";
 
@@ -156,6 +157,8 @@ function SettingsPage() {
           <LanguageToggle />
         </div>
       </div>
+
+      <WordGroupSettingsSection hasSupabaseConfig={hasSupabaseConfig} user={user} />
 
       <div className="mb-5 rounded-2xl bg-blue-50 p-5">
         <h2 className="text-lg font-bold text-blue-950">{t("settings.installTitle")}</h2>
