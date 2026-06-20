@@ -4,6 +4,11 @@ import { normalizeTerm } from "../words/wordTypes.js";
 import { getApiAuthHeaders } from "../../lib/apiAuth.js";
 import { ACTIVE_GROUP_CHANGED_EVENT } from "./wordGroupScopeEvents.js";
 import {
+  clearCachedActiveGroupScope,
+  loadCachedActiveGroupScope,
+  saveCachedActiveGroupScope,
+} from "./activeGroupScopeCache.js";
+import {
   loadWordScopeMode,
   saveWordScopeMode,
   WORD_SCOPE_MODE_CHANGED_EVENT,
@@ -27,22 +32,36 @@ async function fetchActiveGroupWords() {
 }
 
 export function useActiveGroupWordScope(words, user) {
-  const [state, setState] = useState({
-    activeGroup: null,
-    mappedTerms: [],
-    isLoading: false,
-    error: "",
-  });
-  const [scopeMode, setScopeMode] = useState(() => loadWordScopeMode(user?.id));
-
   const shouldScopeByGroup = hasSupabaseConfig && Boolean(user);
+  const initialScopeMode = loadWordScopeMode(user?.id);
+  const initialCachedScope = loadCachedActiveGroupScope(user?.id);
+
+  const [state, setState] = useState(() => ({
+    activeGroup: initialCachedScope?.activeGroup ?? null,
+    mappedTerms: initialCachedScope?.mappedTerms ?? [],
+    isLoading:
+      shouldScopeByGroup &&
+      initialScopeMode === WORD_SCOPE_MODES.GROUP &&
+      !initialCachedScope?.activeGroup,
+    error: "",
+  }));
+  const [scopeMode, setScopeMode] = useState(() => initialScopeMode);
+
+  const wantsGroupScope =
+    shouldScopeByGroup && scopeMode === WORD_SCOPE_MODES.GROUP;
   const isUsingCustomWords =
     shouldScopeByGroup && Boolean(state.activeGroup) && scopeMode === WORD_SCOPE_MODES.CUSTOM;
   const isGroupScopeActive =
-    shouldScopeByGroup && Boolean(state.activeGroup) && scopeMode === WORD_SCOPE_MODES.GROUP;
+    wantsGroupScope && (Boolean(state.activeGroup) || state.isLoading);
 
   useEffect(() => {
     setScopeMode(loadWordScopeMode(user?.id));
+    const cachedScope = loadCachedActiveGroupScope(user?.id);
+    setState((current) => ({
+      ...current,
+      activeGroup: cachedScope?.activeGroup ?? current.activeGroup,
+      mappedTerms: cachedScope?.mappedTerms ?? current.mappedTerms,
+    }));
   }, [user?.id]);
 
   useEffect(() => {
@@ -79,13 +98,24 @@ export function useActiveGroupWordScope(words, user) {
 
     try {
       const payload = await fetchActiveGroupWords();
+      const activeGroup = payload.activeGroup ?? null;
+      const mappedTerms = Array.isArray(payload.mappedTerms) ? payload.mappedTerms : [];
+
+      if (user?.id) {
+        saveCachedActiveGroupScope(user.id, { activeGroup, mappedTerms });
+      }
+
       setState({
-        activeGroup: payload.activeGroup ?? null,
-        mappedTerms: Array.isArray(payload.mappedTerms) ? payload.mappedTerms : [],
+        activeGroup,
+        mappedTerms,
         isLoading: false,
         error: "",
       });
     } catch (error) {
+      if (user?.id) {
+        clearCachedActiveGroupScope(user.id);
+      }
+
       setState({
         activeGroup: null,
         mappedTerms: [],
@@ -93,7 +123,7 @@ export function useActiveGroupWordScope(words, user) {
         error: error.message || "Failed to load active-group words.",
       });
     }
-  }, [shouldScopeByGroup]);
+  }, [shouldScopeByGroup, user?.id]);
 
   useEffect(() => {
     void loadScope();
