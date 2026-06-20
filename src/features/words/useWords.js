@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { hasSupabaseConfig } from "../../lib/supabaseClient.js";
 import { clearLearningActivity } from "../../lib/learningActivity.js";
 import {
@@ -30,6 +30,8 @@ import {
 } from "./wordsApi.js";
 import { fetchUserActiveGroupWords } from "../wordGroups/wordGroupsApi.js";
 import { ACTIVE_GROUP_CHANGED_EVENT } from "../wordGroups/wordGroupScopeEvents.js";
+import { syncActiveGroupWordMemory } from "../wordGroups/syncActiveGroupWordMemory.js";
+import { WORD_SCOPE_MODE_CHANGED_EVENT } from "../wordGroups/wordScopeMode.js";
 
 function normalizeWordChanges(changes) {
   const normalizedChanges = { ...changes };
@@ -198,6 +200,10 @@ export function useWords({ isAuthLoading = false, user = null } = {}, storage) {
   const [wordsError, setWordsError] = useState("");
   const [autoImportedNotice, setAutoImportedNotice] = useState(null);
   const isUsingSupabase = hasSupabaseConfig && Boolean(user);
+  const wordsRef = useRef(words);
+  const updateWordRef = useRef(null);
+
+  wordsRef.current = words;
 
   useEffect(() => {
     if (!hasSupabaseConfig || !user) {
@@ -393,6 +399,8 @@ export function useWords({ isAuthLoading = false, user = null } = {}, storage) {
     [isUsingSupabase, words],
   );
 
+  updateWordRef.current = updateWord;
+
   const deleteWord = useCallback(
     async (wordId) => {
       const currentWords = words;
@@ -576,6 +584,48 @@ export function useWords({ isAuthLoading = false, user = null } = {}, storage) {
   const clearAutoImportedNotice = useCallback(() => {
     setAutoImportedNotice(null);
   }, []);
+
+  const runActiveGroupMemorySync = useCallback(async () => {
+    if (!isUsingSupabase || !user?.id || !updateWordRef.current) {
+      return;
+    }
+
+    try {
+      await syncActiveGroupWordMemory(
+        wordsRef.current,
+        (wordId, changes) => updateWordRef.current(wordId, changes),
+        user.id,
+      );
+    } catch (error) {
+      console.warn("Could not sync active-group memory from wordbase.", error);
+    }
+  }, [isUsingSupabase, user?.id]);
+
+  useEffect(() => {
+    if (!isUsingSupabase || isWordsLoading || !user?.id) {
+      return undefined;
+    }
+
+    void runActiveGroupMemorySync();
+  }, [isUsingSupabase, isWordsLoading, runActiveGroupMemorySync, user?.id]);
+
+  useEffect(() => {
+    if (!isUsingSupabase || typeof window === "undefined") {
+      return undefined;
+    }
+
+    const handleGroupMemorySync = () => {
+      void runActiveGroupMemorySync();
+    };
+
+    window.addEventListener(ACTIVE_GROUP_CHANGED_EVENT, handleGroupMemorySync);
+    window.addEventListener(WORD_SCOPE_MODE_CHANGED_EVENT, handleGroupMemorySync);
+
+    return () => {
+      window.removeEventListener(ACTIVE_GROUP_CHANGED_EVENT, handleGroupMemorySync);
+      window.removeEventListener(WORD_SCOPE_MODE_CHANGED_EVENT, handleGroupMemorySync);
+    };
+  }, [isUsingSupabase, runActiveGroupMemorySync]);
 
   return {
     addWord,

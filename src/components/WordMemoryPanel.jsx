@@ -77,15 +77,7 @@ function WordMemoryPanel({
     }
   }
 
-  useEffect(() => {
-    if (!autoLoad) {
-      return;
-    }
-
-    if (!canRegenerateMemory) {
-      return;
-    }
-
+  async function loadMissingMemoryFromWordbase() {
     const saved = readWordMemory(word, locale);
     const hasCompleteMemory = Boolean(saved.memoryTips && saved.memoryImage?.imageUrl);
 
@@ -93,9 +85,36 @@ function WordMemoryPanel({
       return;
     }
 
-    void handleGenerate();
+    try {
+      setIsLoading(true);
+      setNotice("");
+
+      const result = await fetchWordMemoryWithCache(word, locale, {
+        forceRefresh: false,
+        user,
+      });
+
+      if (result.changes) {
+        await updateWord(word.id, result.changes);
+      }
+
+      setMemoryTips(result.memoryTips);
+      setMemoryImage(result.memoryImage);
+    } catch (error) {
+      console.warn("Could not load memory assist from wordbase.", error);
+    } finally {
+      setIsLoading(false);
+    }
+  }
+
+  useEffect(() => {
+    if (!autoLoad || !user) {
+      return;
+    }
+
+    void loadMissingMemoryFromWordbase();
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [autoLoad, canRegenerateMemory, locale, word.id, word.memoryImage, word.memoryTipsByLocale]);
+  }, [autoLoad, locale, user, word.id, word.memoryImage, word.memoryTipsByLocale]);
 
   if (!word) {
     return null;
