@@ -7,5 +7,306 @@
   "version": "2026.06",
   "display_name_en": "S6 Biology",
   "display_name_zh_hant": "中六生物",
-  "words": []
+  "words": [
+    {
+      "term": "Homeostasis",
+      "definition": "The maintenance of a stable internal environment within an organism despite changes in external conditions.",
+      "translation": "內環境恆定性",
+      "example": "The body uses negative feedback mechanisms to maintain homeostasis of blood glucose levels.",
+      "example_translation": "身體利用負反饋機制來維持血糖水平的內環境恆定性。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "topic: cell physiology",
+        "key concept"
+      ]
+    },
+    {
+      "term": "Negative Feedback",
+      "definition": "A regulatory mechanism where the output of a system reduces or inhibits the original stimulus, helping to maintain stability.",
+      "translation": "負反饋",
+      "example": "Insulin secretion is triggered by high blood sugar, which is an example of negative feedback.",
+      "example_translation": "胰島素的分泌是由高血糖觸發的，這是負反饋的一個例子。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "topic: control and coordination",
+        "mechanism"
+      ]
+    },
+    {
+      "term": "Action Potential",
+      "definition": "A rapid rise and fall in voltage across a cellular membrane, essential for nerve impulse transmission.",
+      "translation": "動作電位",
+      "example": "The action potential travels along the axon of a neuron to transmit signals.",
+      "example_translation": "動作電位沿著神經元的軸突傳播以傳遞信號。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "topic: nervous system",
+        "physiology"
+      ]
+    },
+    {
+      "term": "Synaptic Transmission",
+      "definition": "The process by which a neuron communicates with another cell across a synapse using neurotransmitters.",
+      "translation": "突觸傳導",
+      "example": "Calcium ions trigger the release of neurotransmitters during synaptic transmission.",
+      "example_translation": "鈣離子在突觸傳導期間觸發神經遞質的釋放。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "topic: nervous system",
+        "process"
+      ]
+    },
+    {
+      "term": "Neurotransmitter",
+      "definition": "A chemical substance released at the end of a nerve fiber that transmits impulses to other neurons or muscles.",
+      "translation": "神經遞質",
+      "example": "Acetylcholine is a common neurotransmitter found in the neuromuscular junction.",
+      "example_translation": "乙醯膽鹼是神經肌肉接頭中常見的神經遞質。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "topic: nervous system",
+        "vocabulary"
+      ]
+    },
+    {
+      "term": "Osmoregulation",
+      "definition": "The active regulation of the osmotic pressure of an organism's body fluids to maintain homeostasis.",
+      "translation": "滲透調節",
+      "example": "The kidneys play a crucial role in osmoregulation by controlling water balance.",
+      "example_translation": "腎臟通過控制水分平衡在滲透調節中發揮關鍵作用。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "topic: excretion",
+        "physiology"
+      ]
+    },
+    {
+      "term": "Glomerular Filtration",
+      "definition": "The first step in urine formation where blood plasma is filtered through the glomerulus into Bowman's capsule.",
+      "translation": "腎小球濾過",
+      "example": "High blood pressure can increase the rate of glomerular filtration.",
+      "example_translation": "高血壓可以增加腎小球濾過的速率。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "topic: excretion",
+        "process"
+      ]
+    },
+    {
+      "term": "Antidiuretic Hormone (ADH)",
+      "definition": "A hormone produced by the hypothalamus that increases water reabsorption in the kidneys.",
+      "translation": "抗利尿激素",
+      "example": "When the body is dehydrated, ADH levels rise to conserve water.",
+      "example_translation": "當身體脫水時，抗利尿激素水平上升以保留水分。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "topic: excretion",
+        "hormone"
+      ]
+    },
+    {
+      "term": "Transpiration",
+      "definition": "The loss of water vapor from the aerial parts of plants, mainly through stomata.",
+      "translation": "蒸騰作用",
+      "example": "Transpiration creates a pull that helps draw water up from the roots.",
+      "example_translation": "蒸騰作用產生的拉力有助於將水分從根部向上抽取。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "topic: transport in plants",
+        "process"
+      ]
+    },
+    {
+      "term": "Xylem",
+      "definition": "Specialized tissue in vascular plants that transports water and dissolved minerals from roots to leaves.",
+      "translation": "木質部",
+      "example": "The xylem vessels are dead cells that form continuous tubes for water transport.",
+      "example_translation": "木質部導管是死細胞，形成連續的水輸送管道。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "topic: transport in plants",
+        "structure"
+      ]
+    },
+    {
+      "term": "Phloem",
+      "definition": "Living tissue in vascular plants that transports sugars and other organic compounds from leaves to other parts.",
+      "translation": "韌皮部",
+      "example": "Food substances move through the phloem via companion cells.",
+      "example_translation": "食物物質通過伴胞在韌皮部中移動。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "topic: transport in plants",
+        "structure"
+      ]
+    },
+    {
+      "term": "Mass Flow Hypothesis",
+      "definition": "The theory explaining how sap moves through the phloem from sources to sinks due to pressure differences.",
+      "translation": "質量流動學說",
+      "example": "The mass flow hypothesis suggests that sugar loading decreases water potential in the phloem.",
+      "example_translation": "質量流動學說認為，糖分的載入會降低韌皮部的水勢。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "topic: transport in plants",
+        "theory"
+      ]
+    },
+    {
+      "term": "Genetic Engineering",
+      "definition": "The direct manipulation of an organism's genes using biotechnology to introduce new traits.",
+      "translation": "基因工程",
+      "example": "Bacteria are often used as hosts in genetic engineering to produce human insulin.",
+      "example_translation": "細菌通常被用作基因工程中的宿主以生產人類胰島素。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "topic: biotechnology",
+        "application"
+      ]
+    },
+    {
+      "term": "Recombinant DNA",
+      "definition": "DNA molecules formed by laboratory methods of genetic recombination to bring together genetic material from multiple sources.",
+      "translation": "重組DNA",
+      "example": "Scientists insert the gene for human growth hormone into recombinant DNA plasmids.",
+      "example_translation": "科學家將人類生長激素的基因插入重組DNA質粒中。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "topic: biotechnology",
+        "molecule"
+      ]
+    },
+    {
+      "term": "Polymerase Chain Reaction (PCR)",
+      "definition": "A technique used to amplify a single copy or a few copies of a segment of DNA across several orders of magnitude.",
+      "translation": "聚合酶鏈式反應",
+      "example": "PCR is widely used in forensic science to analyze small DNA samples.",
+      "example_translation": "聚合酶鏈式反應廣泛用於法醫科學中以分析少量DNA樣本。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "topic: biotechnology",
+        "technique"
+      ]
+    },
+    {
+      "term": "Natural Selection",
+      "definition": "The process where organisms better adapted to their environment tend to survive and produce more offspring.",
+      "translation": "自然選擇",
+      "example": "Natural selection drives the evolution of antibiotic resistance in bacteria.",
+      "example_translation": "自然選擇推動了細菌抗生素耐藥性的進化。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "topic: evolution",
+        "mechanism"
+      ]
+    },
+    {
+      "term": "Speciation",
+      "definition": "The evolutionary process by which populations evolve to become distinct species.",
+      "translation": "物種形成",
+      "example": "Geographic isolation can lead to allopatric speciation over time.",
+      "example_translation": "地理隔離會導致異域種化隨時間發生。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "topic: evolution",
+        "concept"
+      ]
+    },
+    {
+      "term": "Biodiversity",
+      "definition": "The variety of life in the world or in a particular habitat or ecosystem.",
+      "translation": "生物多樣性",
+      "example": "Conservation efforts aim to protect biodiversity by preserving habitats.",
+      "example_translation": "保護工作旨在通過保護棲息地來保護生物多樣性。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "topic: ecology",
+        "key term"
+      ]
+    },
+    {
+      "term": "Carrying Capacity",
+      "definition": "The maximum population size of a biological species that can be sustained by that specific environment.",
+      "translation": "環境承載力",
+      "example": "As resources become scarce, the population growth slows down approaching carrying capacity.",
+      "example_translation": "隨著資源變得稀缺，人口增長減慢並接近環境承載力。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "topic: ecology",
+        "population dynamics"
+      ]
+    },
+    {
+      "term": "Succession",
+      "definition": "The process by which the structure of a biological community evolves over time, such as after a disturbance.",
+      "translation": "演替",
+      "example": "Primary succession occurs on bare rock where no soil exists initially.",
+      "example_translation": "初級演替發生在最初沒有土壤的裸露岩石上。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "topic: ecology",
+        "process"
+      ]
+    }
+  ]
 }

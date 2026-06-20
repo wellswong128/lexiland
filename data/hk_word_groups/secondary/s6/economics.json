@@ -7,5 +7,326 @@
   "version": "2026.06",
   "display_name_en": "S6 Economics",
   "display_name_zh_hant": "中六經濟",
-  "words": []
+  "words": [
+    {
+      "term": "Opportunity Cost",
+      "definition": "The value of the next best alternative that is forgone when making a choice.",
+      "translation": "機會成本",
+      "example": "Studying for the exam has an opportunity cost of missing out on social activities.",
+      "example_translation": "為了考試複習所付出的機會成本是錯過了社交活動。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "microeconomics",
+        "scarcity",
+        "decision-making"
+      ]
+    },
+    {
+      "term": "Marginal Benefit",
+      "definition": "The additional satisfaction or utility gained from consuming one more unit of a good or service.",
+      "translation": "邊際效益",
+      "example": "A consumer will continue buying coffee until the marginal benefit equals the marginal cost.",
+      "example_translation": "消費者會繼續購買咖啡，直到邊際效益等於邊際成本為止。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "microeconomics",
+        "utility",
+        "rational-choice"
+      ]
+    },
+    {
+      "term": "Diminishing Marginal Utility",
+      "definition": "The principle that as consumption increases, the marginal utility derived from each additional unit declines.",
+      "translation": "邊際效用遞減法則",
+      "example": "The first slice of pizza gives more pleasure than the fifth slice due to diminishing marginal utility.",
+      "example_translation": "由於邊際效用遞減，第一片披薩帶來的愉悅感多於第五片。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "microeconomics",
+        "consumer-behavior",
+        "utility-theory"
+      ]
+    },
+    {
+      "term": "Price Elasticity of Demand",
+      "definition": "A measure of how much the quantity demanded of a good responds to a change in its price.",
+      "translation": "需求價格彈性",
+      "example": "Luxury goods often have high price elasticity of demand because consumers can easily delay purchase.",
+      "example_translation": "奢侈品通常具有較高的需求價格彈性，因為消費者可以輕易推遲購買。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "microeconomics",
+        "elasticity",
+        "demand-analysis"
+      ]
+    },
+    {
+      "term": "Inferior Good",
+      "definition": "A good for which demand decreases when consumer income rises, such as instant noodles.",
+      "translation": "劣等貨品",
+      "example": "As incomes rise in Hong Kong, the demand for inferior goods like cheap public transport meals may fall.",
+      "example_translation": "隨著香港收入上升，對劣等貨品（如廉價公共運輸餐食）的需求可能會下降。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "microeconomics",
+        "income-effect",
+        "consumer-goods"
+      ]
+    },
+    {
+      "term": "Substitute Goods",
+      "definition": "Goods that can replace each other in consumption; if the price of one rises, demand for the other increases.",
+      "translation": "替代品",
+      "example": "Bus and MTR are substitute goods; if bus fares rise, more people may switch to the MTR.",
+      "example_translation": "巴士和港鐵是替代品；如果巴士車費上漲，更多人可能會轉乘港鐵。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "microeconomics",
+        "cross-elasticity",
+        "market-substitutes"
+      ]
+    },
+    {
+      "term": "Fixed Costs",
+      "definition": "Business costs that do not change with the level of output, such as rent and insurance.",
+      "translation": "固定成本",
+      "example": "Even if the factory produces zero units, the owner still has to pay fixed costs like rent.",
+      "example_translation": "即使工廠零產量，業主仍需支付租金等固定成本。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "microeconomics",
+        "costs-of-production",
+        "short-run"
+      ]
+    },
+    {
+      "term": "Economies of Scale",
+      "definition": "Cost advantages that enterprises obtain due to their scale of operation, with cost per unit of output generally decreasing with increasing scale.",
+      "translation": "規模經濟",
+      "example": "Large supermarkets enjoy economies of scale by buying in bulk at lower prices.",
+      "example_translation": "大型超市透過批量採購以較低價格獲得規模經濟優勢。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "microeconomics",
+        "long-run-costs",
+        "efficiency"
+      ]
+    },
+    {
+      "term": "Perfect Competition",
+      "definition": "A market structure characterized by many buyers and sellers, identical products, and free entry and exit.",
+      "translation": "完全競爭",
+      "example": "Agricultural markets are often cited as examples close to perfect competition.",
+      "example_translation": "農業市場常被視為接近完全競爭的例子。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "microeconomics",
+        "market-structure",
+        "theoretical-models"
+      ]
+    },
+    {
+      "term": "Monopoly Power",
+      "definition": "The ability of a single seller to influence the market price by restricting output.",
+      "translation": "壟斷權力",
+      "example": "A monopoly power allows the firm to set prices above marginal cost.",
+      "example_translation": "壟斷權力允許企業將價格設定在邊際成本之上。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "microeconomics",
+        "market-failure",
+        "market-power"
+      ]
+    },
+    {
+      "term": "Oligopoly",
+      "definition": "A market structure dominated by a small number of large firms, often leading to interdependence.",
+      "translation": "寡頭壟斷",
+      "example": "The telecommunications industry in Hong Kong is an oligopoly with few major providers.",
+      "example_translation": "香港的電訊行業是一個寡頭壟斷市場，主要供應商寥寥無幾。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "microeconomics",
+        "market-structure",
+        "game-theory"
+      ]
+    },
+    {
+      "term": "Externalities",
+      "definition": "Costs or benefits caused by a producer's activity that affect other parties without being reflected in the cost of the product.",
+      "translation": "外部性",
+      "example": "Air pollution from factories is a negative externality affecting public health.",
+      "example_translation": "工廠產生的空氣污染是一種影響公眾健康的負外部性。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "microeconomics",
+        "market-failure",
+        "social-cost"
+      ]
+    },
+    {
+      "term": "Public Goods",
+      "definition": "Goods that are non-excludable and non-rivalrous, meaning one person's use does not reduce availability to others.",
+      "translation": "公共物品",
+      "example": "National defense is a classic example of a public good provided by the government.",
+      "example_translation": "國防是由政府提供的公共物品的經典例子。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "microeconomics",
+        "government-role",
+        "non-rivalry"
+      ]
+    },
+    {
+      "term": "Gross Domestic Product (GDP)",
+      "definition": "The total monetary or market value of all the finished goods and services produced within a country's borders in a specific time period.",
+      "translation": "國內生產總值",
+      "example": "Hong Kong's GDP growth indicates the overall expansion of its economy.",
+      "example_translation": "香港的國內生產總值增長顯示其經濟的整體擴張。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "macroeconomics",
+        "national-income",
+        "economic-growth"
+      ]
+    },
+    {
+      "term": "Inflation",
+      "definition": "A sustained increase in the general price level of goods and services in an economy over a period of time.",
+      "translation": "通脹",
+      "example": "High inflation reduces the purchasing power of consumers' money.",
+      "example_translation": "高通脹會降低消費者的貨幣購買力。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "macroeconomics",
+        "price-level",
+        "monetary-policy"
+      ]
+    },
+    {
+      "term": "Unemployment Rate",
+      "definition": "The percentage of the total labor force that is unemployed but actively seeking employment.",
+      "translation": "失業率",
+      "example": "Structural unemployment occurs when workers' skills do not match job requirements.",
+      "example_translation": "當工人的技能不符合工作要求時，會發生結構性失業。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "macroeconomics",
+        "labor-market",
+        "cyclical-unemployment"
+      ]
+    },
+    {
+      "term": "Fiscal Policy",
+      "definition": "The use of government spending and tax policies to influence economic conditions.",
+      "translation": "財政政策",
+      "example": "During a recession, the government may use expansionary fiscal policy to boost demand.",
+      "example_translation": "在經濟衰退期間，政府可能會使用擴張性財政政策來刺激需求。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "macroeconomics",
+        "government-intervention",
+        "stabilization"
+      ]
+    },
+    {
+      "term": "Monetary Policy",
+      "definition": "The process by which the monetary authority of a country controls the supply of money, often targeting an inflation rate.",
+      "translation": "貨幣政策",
+      "example": "Raising interest rates is a contractionary monetary policy tool used to curb inflation.",
+      "example_translation": "提高利率是用於抑制通脹的緊縮性貨幣政策工具。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "macroeconomics",
+        "central-bank",
+        "interest-rates"
+      ]
+    },
+    {
+      "term": "Balance of Payments",
+      "definition": "A record of all economic transactions between residents of the country and the rest of the world.",
+      "translation": "國際收支結算",
+      "example": "A trade deficit means imports exceed exports, affecting the current account of the balance of payments.",
+      "example_translation": "貿易逆差意味著進口超過出口，影響國際收支結算中的經常帳。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "macroeconomics",
+        "international-trade",
+        "current-account"
+      ]
+    },
+    {
+      "term": "Comparative Advantage",
+      "definition": "The ability of an economy to produce a particular good or service at a lower opportunity cost than its trading partners.",
+      "translation": "比較優勢",
+      "example": "Countries specialize in goods where they have a comparative advantage to maximize global efficiency.",
+      "example_translation": "各國專門生產其具有比較優勢的商品，以最大化全球效率。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "macroeconomics",
+        "trade-theory",
+        "specialization"
+      ]
+    }
+  ]
 }

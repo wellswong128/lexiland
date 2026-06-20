@@ -4,6 +4,8 @@ import ExampleSentence from "../components/ExampleSentence.jsx";
 import SpeakButton from "../components/SpeakButton.jsx";
 import WordMemoryPanel from "../components/WordMemoryPanel.jsx";
 import { useLocale } from "../features/locale/LocaleContext.jsx";
+import WordScopeModeSwitch from "../features/wordGroups/WordScopeModeSwitch.jsx";
+import { getActiveGroupLabel } from "../features/wordGroups/getActiveGroupLabel.js";
 import WordGroupScopeEmptyState from "../features/wordGroups/WordGroupScopeEmptyState.jsx";
 import { useActiveGroupWordScope } from "../features/wordGroups/useActiveGroupWordScope.js";
 import { useWordsContext } from "../features/words/WordsContext.jsx";
@@ -52,8 +54,15 @@ function WordListPage() {
   const { locale, t } = useLocale();
   const { autoImportedNotice, clearAutoImportedNotice, deleteWord, user, words } =
     useWordsContext();
-  const { isLoadingScope, isScoped, scopedWords, activeGroup, scopeReason, scopeError } =
-    useActiveGroupWordScope(words, user);
+  const {
+    isLoadingScope,
+    isGroupScopeActive,
+    isUsingCustomWords,
+    scopedWords,
+    activeGroup,
+    scopeReason,
+    scopeError,
+  } = useActiveGroupWordScope(words, user);
   const role = getRoleFromUser(user);
   const canCreateWord = can(role, PERMISSIONS.WORDS_CREATE);
   const canDeleteWord = can(role, PERMISSIONS.WORDS_DELETE);
@@ -62,7 +71,7 @@ function WordListPage() {
 
   const filteredWords = useMemo(() => {
     const normalizedQuery = searchQuery.trim().toLowerCase();
-    const sourceWords = isScoped ? scopedWords : words;
+    const sourceWords = isGroupScopeActive ? scopedWords : words;
 
     if (!normalizedQuery) {
       return sourceWords;
@@ -81,7 +90,7 @@ function WordListPage() {
         tags.includes(normalizedQuery)
       );
     });
-  }, [isScoped, scopedWords, searchQuery, words]);
+  }, [isGroupScopeActive, scopedWords, searchQuery, words]);
 
   const totalPages = Math.max(1, Math.ceil(filteredWords.length / WORDS_PER_PAGE));
 
@@ -124,18 +133,6 @@ function WordListPage() {
     }
   }
 
-  function getActiveGroupLabel() {
-    if (!activeGroup) {
-      return "";
-    }
-
-    if (locale === "en") {
-      return activeGroup.displayNameEn || activeGroup.groupCode || "";
-    }
-
-    return activeGroup.displayNameZhHant || activeGroup.displayNameEn || activeGroup.groupCode || "";
-  }
-
   function getNoticeGroupLabel() {
     if (!autoImportedNotice) {
       return "";
@@ -168,13 +165,20 @@ function WordListPage() {
           <p className="mt-4 text-slate-600">
             {searchQuery.trim()
               ? t("wordList.filteredCount", { count: filteredWords.length })
-              : t("wordList.count", { count: (isScoped ? scopedWords : words).length })}
+              : t("wordList.count", { count: (isGroupScopeActive ? scopedWords : words).length })}
           </p>
-          {isScoped && activeGroup ? (
+          {isUsingCustomWords ? (
             <p className="mt-2 text-sm font-semibold text-blue-700">
-              {t("wordGroupsScope.activeGroupLabel", { group: getActiveGroupLabel() })}
+              {t("wordGroupsScope.customWordsLabel")}
+            </p>
+          ) : isGroupScopeActive && activeGroup ? (
+            <p className="mt-2 text-sm font-semibold text-blue-700">
+              {t("wordGroupsScope.activeGroupLabel", {
+                group: getActiveGroupLabel(activeGroup, locale),
+              })}
             </p>
           ) : null}
+          <WordScopeModeSwitch className="mt-3" compact />
         </div>
 
         {canCreateWord ? (
@@ -187,7 +191,7 @@ function WordListPage() {
         ) : null}
       </div>
 
-      {(isScoped ? scopedWords : words).length > 0 ? (
+      {(isGroupScopeActive ? scopedWords : words).length > 0 ? (
         <label className="mb-6 block">
           <span className="text-sm font-semibold text-slate-700">
             {t("wordList.searchLabel")}
@@ -220,7 +224,7 @@ function WordListPage() {
         <div className="rounded-2xl border border-dashed border-blue-200 bg-blue-50/70 p-8 text-center">
           <p className="text-sm text-slate-600">{t("wordGroupsScope.loading")}</p>
         </div>
-      ) : isScoped && scopedWords.length === 0 ? (
+      ) : isGroupScopeActive && scopedWords.length === 0 ? (
         <WordGroupScopeEmptyState activeGroup={activeGroup} scopeReason={scopeReason} />
       ) : words.length === 0 ? (
         <div className="rounded-2xl border border-dashed border-blue-200 bg-blue-50/70 p-8 text-center">

@@ -1,12 +1,26 @@
 import { Link } from "react-router-dom";
 import ReviewWordListItem from "../components/ReviewWordListItem.jsx";
 import { useLocale } from "../features/locale/LocaleContext.jsx";
+import { getActiveGroupLabel } from "../features/wordGroups/getActiveGroupLabel.js";
+import WordScopeModeSwitch from "../features/wordGroups/WordScopeModeSwitch.jsx";
+import WordGroupScopeEmptyState from "../features/wordGroups/WordGroupScopeEmptyState.jsx";
+import { useActiveGroupWordScope } from "../features/wordGroups/useActiveGroupWordScope.js";
 import { useWordsContext } from "../features/words/WordsContext.jsx";
 
 function MistakesPage() {
-  const { dateLocale, t } = useLocale();
-  const { updateWord, words } = useWordsContext();
-  const mistakeWords = words.filter((word) => word.mistake.isMistake);
+  const { dateLocale, locale, t } = useLocale();
+  const { updateWord, user, words } = useWordsContext();
+  const {
+    activeGroup,
+    isGroupScopeActive,
+    isLoadingScope,
+    isUsingCustomWords,
+    scopeReason,
+    scopedWords,
+  } = useActiveGroupWordScope(words, user);
+  const sourceWords = isGroupScopeActive ? scopedWords : words;
+  const mistakeWords = sourceWords.filter((word) => word.mistake.isMistake);
+  const activeGroupLabel = getActiveGroupLabel(activeGroup, locale);
 
   function formatDate(value) {
     if (!value) {
@@ -36,6 +50,16 @@ function MistakesPage() {
           <h1 className="text-4xl font-bold text-blue-950 sm:text-5xl">
             {t("mistakes.title")}
           </h1>
+          {isUsingCustomWords ? (
+            <p className="mt-3 text-sm font-semibold text-blue-800">
+              {t("wordGroupsScope.customWordsLabel")}
+            </p>
+          ) : activeGroupLabel ? (
+            <p className="mt-3 text-sm font-semibold text-blue-800">
+              {t("wordGroupsScope.activeGroupLabel", { group: activeGroupLabel })}
+            </p>
+          ) : null}
+          <WordScopeModeSwitch className="mt-3" compact />
           <p className="mt-4 text-slate-600">
             {t("mistakes.count", { count: mistakeWords.length })}
           </p>
@@ -49,7 +73,16 @@ function MistakesPage() {
         </Link>
       </div>
 
-      {mistakeWords.length === 0 ? (
+      {isLoadingScope ? (
+        <div className="rounded-2xl border border-dashed border-blue-200 bg-blue-50/70 p-8 text-center">
+          <p className="text-slate-600">{t("wordGroupsScope.loading")}</p>
+        </div>
+      ) : isGroupScopeActive && sourceWords.length === 0 ? (
+        <WordGroupScopeEmptyState
+          activeGroup={activeGroup}
+          scopeReason={scopeReason}
+        />
+      ) : mistakeWords.length === 0 ? (
         <div className="rounded-2xl border border-dashed border-blue-200 bg-blue-50/70 p-8 text-center">
           <h2 className="text-xl font-bold text-blue-950">
             {t("mistakes.emptyTitle")}

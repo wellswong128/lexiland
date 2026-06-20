@@ -563,6 +563,9 @@ const zhHant = {
     wordGroupsScope: {
       loading: "正在載入組別篩選...",
       activeGroupLabel: "目前組別：{{group}}",
+      customWordsLabel: "目前使用自訂單字",
+      useCustomWords: "切換至自訂單字",
+      useGroupWords: "切換至 {{group}}",
       emptyTitle: "目前組別沒有可用單字",
       emptyDescription:
         "請先在設定選擇並啟用組別，或先把單字映射到目前組別，之後再開始學習、複習或遊戲。",
@@ -1390,6 +1393,9 @@ export const translations = {
     wordGroupsScope: {
       loading: "Loading group filter...",
       activeGroupLabel: "Active group: {{group}}",
+      customWordsLabel: "Using custom words",
+      useCustomWords: "Switch to custom words",
+      useGroupWords: "Switch to {{group}}",
       emptyTitle: "No words are available for the active group",
       emptyDescription:
         "Choose and activate a group in Settings, or map words to the active group before learning, review, and games.",

@@ -7,5 +7,306 @@
   "version": "2026.06",
   "display_name_en": "S4 Chemistry",
   "display_name_zh_hant": "中四化學",
-  "words": []
+  "words": [
+    {
+      "term": "Mole",
+      "definition": "The SI unit for amount of substance, defined as containing exactly 6.022 x 10^23 elementary entities.",
+      "translation": "摩爾",
+      "example": "One mole of carbon atoms has a mass of 12 grams.",
+      "example_translation": "一摩爾碳原子的質量為12克。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "chemistry",
+        "stoichiometry",
+        "basic concept"
+      ]
+    },
+    {
+      "term": "Avogadro's Constant",
+      "definition": "The number of particles in one mole of a substance, approximately 6.022 x 10^23 mol^-1.",
+      "translation": "阿伏伽羅常數",
+      "example": "We use Avogadro's constant to convert between moles and number of particles.",
+      "example_translation": "我們使用阿伏伽羅常數在摩爾和粒子數之間進行轉換。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "chemistry",
+        "stoichiometry",
+        "constant"
+      ]
+    },
+    {
+      "term": "Relative Atomic Mass",
+      "definition": "The average mass of atoms of an element compared to one-twelfth the mass of a carbon-12 atom.",
+      "translation": "相對原子質量",
+      "example": "The relative atomic mass of oxygen is approximately 16.",
+      "example_translation": "氧的相對原子質量約為16。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "chemistry",
+        "atomic structure",
+        "measurement"
+      ]
+    },
+    {
+      "term": "Empirical Formula",
+      "definition": "The simplest whole-number ratio of atoms of each element in a compound.",
+      "translation": "實驗式",
+      "example": "The empirical formula of glucose is CH2O.",
+      "example_translation": "葡萄糖的實驗式是CH2O。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "chemistry",
+        "stoichiometry",
+        "formulae"
+      ]
+    },
+    {
+      "term": "Molecular Formula",
+      "definition": "The actual number of atoms of each element in a molecule of the compound.",
+      "translation": "分子式",
+      "example": "The molecular formula of glucose is C6H12O6.",
+      "example_translation": "葡萄糖的分子式是C6H12O6。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "chemistry",
+        "stoichiometry",
+        "formulae"
+      ]
+    },
+    {
+      "term": "Limiting Reactant",
+      "definition": "The reactant that is completely consumed in a chemical reaction, limiting the amount of product formed.",
+      "translation": "限量反應物",
+      "example": "Identify the limiting reactant to calculate the maximum yield.",
+      "example_translation": "確定限量反應物以計算最大產量。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "chemistry",
+        "stoichiometry",
+        "reaction calculation"
+      ]
+    },
+    {
+      "term": "Percentage Yield",
+      "definition": "The ratio of the actual yield to the theoretical yield, expressed as a percentage.",
+      "translation": "百分產率",
+      "example": "A low percentage yield indicates waste or side reactions.",
+      "example_translation": "低的百分產率表明有浪費或副反應。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "chemistry",
+        "stoichiometry",
+        "evaluation"
+      ]
+    },
+    {
+      "term": "Isotope",
+      "definition": "Atoms of the same element with the same number of protons but different numbers of neutrons.",
+      "translation": "同位素",
+      "example": "Carbon-12 and Carbon-14 are isotopes of carbon.",
+      "example_translation": "碳-12和碳-14是碳的同位素。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "chemistry",
+        "atomic structure",
+        "periodic table"
+      ]
+    },
+    {
+      "term": "Ionization Energy",
+      "definition": "The energy required to remove one mole of electrons from one mole of gaseous atoms.",
+      "translation": "電離能",
+      "example": "Ionization energy generally increases across a period in the periodic table.",
+      "example_translation": "電離能通常在元素週期表中橫向增加。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "chemistry",
+        "atomic structure",
+        "periodicity"
+      ]
+    },
+    {
+      "term": "Electronegativity",
+      "definition": "The tendency of an atom to attract a shared pair of electrons in a chemical bond.",
+      "translation": "電負性",
+      "example": "Fluorine has the highest electronegativity of all elements.",
+      "example_translation": "氟是所有元素中電負性最高的。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "chemistry",
+        "bonding",
+        "periodicity"
+      ]
+    },
+    {
+      "term": "Ionic Bond",
+      "definition": "The electrostatic attraction between oppositely charged ions formed by electron transfer.",
+      "translation": "離子鍵",
+      "example": "Sodium chloride is held together by ionic bonds.",
+      "example_translation": "氯化鈉由離子鍵結合在一起。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "chemistry",
+        "bonding",
+        "types of bond"
+      ]
+    },
+    {
+      "term": "Covalent Bond",
+      "definition": "A chemical bond formed by the sharing of electron pairs between atoms.",
+      "translation": "共價鍵",
+      "example": "Water molecules contain covalent bonds between hydrogen and oxygen.",
+      "example_translation": "水分子中含有氫和氧之間的共價鍵。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "chemistry",
+        "bonding",
+        "types of bond"
+      ]
+    },
+    {
+      "term": "Metallic Bond",
+      "definition": "The attraction between positive metal ions and a sea of delocalized electrons.",
+      "translation": "金屬鍵",
+      "example": "Metallic bonding explains the conductivity of metals.",
+      "example_translation": "金屬鍵解釋了金屬的導電性。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "chemistry",
+        "bonding",
+        "properties"
+      ]
+    },
+    {
+      "term": "Lattice Energy",
+      "definition": "The energy released when one mole of an ionic solid is formed from its gaseous ions.",
+      "translation": "晶格能",
+      "example": "Higher lattice energy results in a higher melting point.",
+      "example_translation": "較高的晶格能導致較高的熔點。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "chemistry",
+        "bonding",
+        "energetics"
+      ]
+    },
+    {
+      "term": "Exothermic Reaction",
+      "definition": "A chemical reaction that releases energy, usually in the form of heat, to the surroundings.",
+      "translation": "放熱反應",
+      "example": "Combustion is a common exothermic reaction.",
+      "example_translation": "燃燒是一種常見的放熱反應。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "chemistry",
+        "energetics",
+        "reaction types"
+      ]
+    },
+    {
+      "term": "Endothermic Reaction",
+      "definition": "A chemical reaction that absorbs energy from the surroundings.",
+      "translation": "吸熱反應",
+      "example": "Photosynthesis is an endothermic process.",
+      "example_translation": "光合作用是一個吸熱過程。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "chemistry",
+        "energetics",
+        "reaction types"
+      ]
+    },
+    {
+      "term": "Activation Energy",
+      "definition": "The minimum energy required for reactants to collide and undergo a chemical reaction.",
+      "translation": "活化能",
+      "example": "Catalysts lower the activation energy of a reaction.",
+      "example_translation": "催化劑降低反應的活化能。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "chemistry",
+        "kinetics",
+        "energy profile"
+      ]
+    },
+    {
+      "term": "Catalyst",
+      "definition": "A substance that increases the rate of a chemical reaction without being consumed in the process.",
+      "translation": "催化劑",
+      "example": "Enzymes act as biological catalysts in the body.",
+      "example_translation": "酶在體內作為生物催化劑起作用。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "chemistry",
+        "kinetics",
+        "factors affecting rate"
+      ]
+    },
+    {
+      "term": "Equilibrium Constant",
+      "definition": "A value that expresses the relationship between the concentrations of products and reactants at equilibrium.",
+      "translation": "平衡常數",
+      "example": "A large Kc value indicates that the equilibrium favors the products.",
+      "example_translation": "大的Kc值表明平衡偏向產物。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "chemistry",
+        "equilibrium",
+        "calculations"
+      ]
+    },
+    {
+      "term": "Le Chatelier's Principle",
+      "definition": "If a dynamic equilibrium is disturbed by changing conditions, the position of equilibrium shifts to counteract the change.",
+      "translation": "勒夏特列原理",
+      "example": "Increasing pressure shifts the equilibrium towards the side with fewer gas moles.",
+      "example_translation": "增加壓力會使平衡向氣體摩爾數較少的一側移動。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "chemistry",
+        "equilibrium",
+        "theory"
+      ]
+    }
+  ]
 }

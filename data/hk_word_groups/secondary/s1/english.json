@@ -7,5 +7,306 @@
   "version": "2026.06",
   "display_name_en": "S1 English",
   "display_name_zh_hant": "中一英文",
-  "words": []
+  "words": [
+    {
+      "term": "assignment",
+      "definition": "A piece of work given to students as part of their studies.",
+      "translation": "作業",
+      "example": "I need to finish my history assignment before Friday.",
+      "example_translation": "我需要在星期五前完成我的歷史作業。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "english",
+        "school-life",
+        "nouns"
+      ]
+    },
+    {
+      "term": "curriculum",
+      "definition": "The subjects comprising a course of study in a school.",
+      "translation": "課程",
+      "example": "The new science curriculum includes more practical experiments.",
+      "example_translation": "新的科學課程包括更多的實驗操作。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "english",
+        "academic",
+        "nouns"
+      ]
+    },
+    {
+      "term": "deadline",
+      "definition": "The latest time or date by which something should be completed.",
+      "translation": "截止期限",
+      "example": "The deadline for the project is next Monday.",
+      "example_translation": "這個項目的截止期限是下星期一。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "english",
+        "time-management",
+        "nouns"
+      ]
+    },
+    {
+      "term": "collaborate",
+      "definition": "To work jointly with others on an activity or project.",
+      "translation": "合作",
+      "example": "We need to collaborate effectively to solve this problem.",
+      "example_translation": "我們需要有效合作來解決這個問題。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "english",
+        "skills",
+        "verbs"
+      ]
+    },
+    {
+      "term": "perspective",
+      "definition": "A particular attitude toward or way of regarding something; a point of view.",
+      "translation": "觀點",
+      "example": "Try to see the issue from a different perspective.",
+      "example_translation": "試著從不同的觀點來看這個問題。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "english",
+        "critical-thinking",
+        "nouns"
+      ]
+    },
+    {
+      "term": "analyze",
+      "definition": "To examine something methodically and in detail.",
+      "translation": "分析",
+      "example": "Students will analyze the data collected from the survey.",
+      "example_translation": "學生將分析從調查中收集的數據。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "english",
+        "skills",
+        "verbs"
+      ]
+    },
+    {
+      "term": "vocabulary",
+      "definition": "The body of words used in a particular language or by a particular person.",
+      "translation": "詞彙",
+      "example": "Reading books helps expand your vocabulary.",
+      "example_translation": "閱讀書籍有助於擴展你的詞彙量。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "english",
+        "language-learning",
+        "nouns"
+      ]
+    },
+    {
+      "term": "argument",
+      "definition": "A reason or set of reasons given with the aim of persuading others that an action or idea is right or wrong.",
+      "translation": "論點",
+      "example": "She presented a strong argument for recycling.",
+      "example_translation": "她為回收提出了有力的論點。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "english",
+        "writing",
+        "nouns"
+      ]
+    },
+    {
+      "term": "evaluate",
+      "definition": "To form an idea of the amount, number, or value of something; to assess.",
+      "translation": "評估",
+      "example": "Teachers evaluate our progress through regular tests.",
+      "example_translation": "老師通過定期測驗來評估我們的進步。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "english",
+        "assessment",
+        "verbs"
+      ]
+    },
+    {
+      "term": "consequence",
+      "definition": "A result or effect of an action or condition.",
+      "translation": "後果",
+      "example": "Lateness has serious consequences in the workplace.",
+      "example_translation": "遲到在工作場所會有嚴重的後果。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "english",
+        "cause-effect",
+        "nouns"
+      ]
+    },
+    {
+      "term": "initiative",
+      "definition": "An act or strategy intended to resolve a difficulty or improve a situation.",
+      "translation": "主動精神；新方案",
+      "example": "The school launched an initiative to promote reading.",
+      "example_translation": "學校推出了一個推廣閱讀的新方案。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "english",
+        "school-policy",
+        "nouns"
+      ]
+    },
+    {
+      "term": "demonstrate",
+      "definition": "To clearly show the existence or truth of something by giving proof or evidence.",
+      "translation": "展示；證明",
+      "example": "Please demonstrate how to use the microscope.",
+      "example_translation": "請展示如何使用顯微鏡。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "english",
+        "science",
+        "verbs"
+      ]
+    },
+    {
+      "term": "interpret",
+      "definition": "To explain the meaning of information, words, or actions.",
+      "translation": "解釋；詮釋",
+      "example": "It is difficult to interpret the results of the experiment.",
+      "example_translation": "很難解釋實驗的結果。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "english",
+        "skills",
+        "verbs"
+      ]
+    },
+    {
+      "term": "resource",
+      "definition": "A stock or supply of money, materials, staff, and other assets that can be drawn on by an organization.",
+      "translation": "資源",
+      "example": "The library is a valuable resource for students.",
+      "example_translation": "圖書館是學生的寶貴資源。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "english",
+        "school-facilities",
+        "nouns"
+      ]
+    },
+    {
+      "term": "critique",
+      "definition": "A detailed analysis and assessment of something, especially a literary, philosophical, or political theory.",
+      "translation": "評論；批判性分析",
+      "example": "Write a short critique of the article.",
+      "example_translation": "寫一篇關於該文章的簡短評論。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "english",
+        "writing",
+        "nouns"
+      ]
+    },
+    {
+      "term": "facilitate",
+      "definition": "To make an action or process easier.",
+      "translation": "促進；使便利",
+      "example": "Good communication facilitates learning.",
+      "example_translation": "良好的溝通促進學習。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "english",
+        "skills",
+        "verbs"
+      ]
+    },
+    {
+      "term": "hypothesis",
+      "definition": "A proposed explanation made on the basis of limited evidence as a starting point for further investigation.",
+      "translation": "假設",
+      "example": "We need to test our hypothesis through experiments.",
+      "example_translation": "我們需要通過實驗來測試我們的假設。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "english",
+        "science",
+        "nouns"
+      ]
+    },
+    {
+      "term": "summarize",
+      "definition": "To give a brief statement of the main points of something.",
+      "translation": "總結",
+      "example": "Can you summarize the main ideas of the chapter?",
+      "example_translation": "你能總結這一章的主要觀點嗎？",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "english",
+        "reading",
+        "verbs"
+      ]
+    },
+    {
+      "term": "plagiarism",
+      "definition": "The practice of taking someone else's work or ideas and passing them off as one's own.",
+      "translation": "抄襲",
+      "example": "Plagiarism is a serious academic offense.",
+      "example_translation": "抄襲是一種嚴重的學術違規行為。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "english",
+        "ethics",
+        "nouns"
+      ]
+    },
+    {
+      "term": "peer review",
+      "definition": "The evaluation of work by one or more people with similar competencies as the producers of the work.",
+      "translation": "同儕互評",
+      "example": "We will do a peer review of each other's essays.",
+      "example_translation": "我們將互相評閱對方的文章。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "english",
+        "collaboration",
+        "collocations"
+      ]
+    }
+  ]
 }

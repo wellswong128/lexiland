@@ -7,5 +7,306 @@
   "version": "2026.06",
   "display_name_en": "P6 English",
   "display_name_zh_hant": "小六英文",
-  "words": []
+  "words": [
+    {
+      "term": "environment",
+      "definition": "The natural world, including air, water, and land.",
+      "translation": "環境",
+      "example": "We must protect the environment.",
+      "example_translation": "我們必須保護環境。",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "english",
+        "nature",
+        "noun"
+      ]
+    },
+    {
+      "term": "recycle",
+      "definition": "To process used materials into new products.",
+      "translation": "回收",
+      "example": "Please recycle paper and plastic bottles.",
+      "example_translation": "請回收紙張和塑膠瓶。",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "english",
+        "environment",
+        "verb"
+      ]
+    },
+    {
+      "term": "pollution",
+      "definition": "Harmful substances in the air, water, or land.",
+      "translation": "污染",
+      "example": "Air pollution is a big problem in cities.",
+      "example_translation": "空氣污染是城市裡的大問題。",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "english",
+        "environment",
+        "noun"
+      ]
+    },
+    {
+      "term": "conserve",
+      "definition": "To save or protect something from being wasted.",
+      "translation": "節約；保護",
+      "example": "We should conserve water by turning off the tap.",
+      "example_translation": "我們應該關掉水龍頭來節約用水。",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "english",
+        "action",
+        "verb"
+      ]
+    },
+    {
+      "term": "sustainable",
+      "definition": "Able to continue without harming the environment.",
+      "translation": "可持續的",
+      "example": "Using solar energy is a sustainable choice.",
+      "example_translation": "使用太陽能是一個可持續的選擇。",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "english",
+        "adjective",
+        "science"
+      ]
+    },
+    {
+      "term": "biodiversity",
+      "definition": "The variety of plants and animals in a specific area.",
+      "translation": "生物多樣性",
+      "example": "Hong Kong has rich biodiversity in its country parks.",
+      "example_translation": "香港郊野公園擁有豐富的生物多樣性。",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "english",
+        "science",
+        "noun"
+      ]
+    },
+    {
+      "term": "carbon footprint",
+      "definition": "The amount of carbon dioxide released into the atmosphere.",
+      "translation": "碳足跡",
+      "example": "Walking to school reduces your carbon footprint.",
+      "example_translation": "步行上學可以減少你的碳足跡。",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "english",
+        "collocation",
+        "environment"
+      ]
+    },
+    {
+      "term": "emission",
+      "definition": "Something that is produced and discharged, like gas.",
+      "translation": "排放物",
+      "example": "Car emissions contribute to smog.",
+      "example_translation": "汽車排放物會導致煙霧。",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "english",
+        "science",
+        "noun"
+      ]
+    },
+    {
+      "term": "renewable",
+      "definition": "Energy that does not run out, like wind or sun.",
+      "translation": "可再生的",
+      "example": "Wind power is a renewable source of energy.",
+      "example_translation": "風力是一種可再生的能源。",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "english",
+        "adjective",
+        "science"
+      ]
+    },
+    {
+      "term": "habitat",
+      "definition": "The natural home of an animal or plant.",
+      "translation": "棲息地",
+      "example": "Deforestation destroys the habitat of many birds.",
+      "example_translation": "砍伐森林破壞了許多鳥類的棲息地。",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "english",
+        "biology",
+        "noun"
+      ]
+    },
+    {
+      "term": "extinct",
+      "definition": "No longer existing; having died out completely.",
+      "translation": "滅絕的",
+      "example": "Dinosaurs are extinct.",
+      "example_translation": "恐龍已經滅絕了。",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "english",
+        "adjective",
+        "history"
+      ]
+    },
+    {
+      "term": "ecosystem",
+      "definition": "A community of living things interacting with their environment.",
+      "translation": "生態系統",
+      "example": "Coral reefs are delicate ecosystems.",
+      "example_translation": "珊瑚礁是脆弱的生態系統。",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "english",
+        "science",
+        "noun"
+      ]
+    },
+    {
+      "term": "waste",
+      "definition": "Materials that are thrown away because they are no longer needed.",
+      "translation": "廢物",
+      "example": "We should separate our waste for recycling.",
+      "example_translation": "我們應該將廢物分類以便回收。",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "english",
+        "daily life",
+        "noun"
+      ]
+    },
+    {
+      "term": "reduce",
+      "definition": "To make something smaller or less in amount.",
+      "translation": "減少",
+      "example": "Try to reduce the use of single-use plastics.",
+      "example_translation": "盡量減少使用一次性塑膠製品。",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "english",
+        "action",
+        "verb"
+      ]
+    },
+    {
+      "term": "reuse",
+      "definition": "To use something again instead of throwing it away.",
+      "translation": "重複使用",
+      "example": "You can reuse glass jars for storage.",
+      "example_translation": "你可以重複使用玻璃罐來儲存物品。",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "english",
+        "action",
+        "verb"
+      ]
+    },
+    {
+      "term": "global warming",
+      "definition": "The gradual increase in the Earth's average temperature.",
+      "translation": "全球暖化",
+      "example": "Global warming causes ice caps to melt.",
+      "example_translation": "全球暖化導致冰蓋融化。",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "english",
+        "collocation",
+        "science"
+      ]
+    },
+    {
+      "term": "conservation",
+      "definition": "The protection of natural resources and wildlife.",
+      "translation": "保護；保存",
+      "example": "Wildlife conservation is very important.",
+      "example_translation": "野生動物保護非常重要。",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "english",
+        "noun",
+        "nature"
+      ]
+    },
+    {
+      "term": "organic",
+      "definition": "Grown without artificial chemicals or fertilizers.",
+      "translation": "有機的",
+      "example": "Organic vegetables are healthier to eat.",
+      "example_translation": "有機蔬菜吃起來更健康。",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "english",
+        "adjective",
+        "food"
+      ]
+    },
+    {
+      "term": "landfill",
+      "definition": "A place where waste is buried in the ground.",
+      "translation": "堆填區",
+      "example": "Hong Kong has limited space for landfills.",
+      "example_translation": "香港沒有太多空間用於堆填區。",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "english",
+        "noun",
+        "environment"
+      ]
+    },
+    {
+      "term": "greenhouse effect",
+      "definition": "The trapping of heat in the Earth's atmosphere.",
+      "translation": "溫室效應",
+      "example": "The greenhouse effect keeps the Earth warm.",
+      "example_translation": "溫室效應使地球保持溫暖。",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "english",
+        "collocation",
+        "science"
+      ]
+    }
+  ]
 }

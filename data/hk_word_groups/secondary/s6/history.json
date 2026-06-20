@@ -7,5 +7,306 @@
   "version": "2026.06",
   "display_name_en": "S6 History",
   "display_name_zh_hant": "中六歷史",
-  "words": []
+  "words": [
+    {
+      "term": "Cold War",
+      "definition": "A period of geopolitical tension between the Soviet Union and the United States after World War II.",
+      "translation": "冷戰",
+      "example": "The Cold War influenced many conflicts in Southeast Asia during the 20th century.",
+      "example_translation": "冷戰影響了二十世紀東南亞的許多衝突。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "history",
+        "topic:geopolitics",
+        "era:20th_century"
+      ]
+    },
+    {
+      "term": "Decolonization",
+      "definition": "The process by which colonies become independent of the colonizing country.",
+      "translation": "去殖民化",
+      "example": "Decolonization led to the independence of many Asian and African nations in the mid-20th century.",
+      "example_translation": "去殖民化導致許多亞洲和非洲國家在二十世紀中葉獨立。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "history",
+        "topic:imperialism",
+        "skill:cause_effect"
+      ]
+    },
+    {
+      "term": "Non-Aligned Movement",
+      "definition": "A group of states that were not formally aligned with or against any major power bloc.",
+      "translation": "不結盟運動",
+      "example": "Many newly independent countries joined the Non-Aligned Movement to maintain their sovereignty.",
+      "example_translation": "許多新獨立的國家加入不結盟運動以維護其主權。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "history",
+        "topic:international_relations",
+        "era:cold_war"
+      ]
+    },
+    {
+      "term": "Proxy War",
+      "definition": "A war instigated by a major power that does not itself become involved in the conflict.",
+      "translation": "代理人戰爭",
+      "example": "The Vietnam War is often cited as a significant proxy war during the Cold War era.",
+      "example_translation": "越南戰爭常被視為冷戰時期一場重要的代理人戰爭。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "history",
+        "topic:military_history",
+        "skill:analysis"
+      ]
+    },
+    {
+      "term": "Iron Curtain",
+      "definition": "The political, military, and ideological barrier erected by the Soviet Union after World War II.",
+      "translation": "鐵幕",
+      "example": "Winston Churchill famously described the 'Iron Curtain' descending across Europe in 1946.",
+      "example_translation": "溫斯頓·邱吉爾於1946年著名地描述了降臨歐洲的「鐵幕」。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "history",
+        "topic:cold_war",
+        "key_figure"
+      ]
+    },
+    {
+      "term": "Containment Policy",
+      "definition": "A geopolitical strategic foreign policy pursued by the United States to stop the spread of communism.",
+      "translation": "遏制政策",
+      "example": "The US adopted a containment policy to prevent the expansion of communist influence in Asia.",
+      "example_translation": "美國採取遏制政策以防止共產主義在亞洲的擴張。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "history",
+        "topic:us_foreign_policy",
+        "era:cold_war"
+      ]
+    },
+    {
+      "term": "Sino-Soviet Split",
+      "definition": "The gradual deterioration of relations between the People's Republic of China and the Union of Soviet Socialist Republics.",
+      "translation": "中蘇分裂",
+      "example": "The Sino-Soviet Split altered the dynamics of the Cold War by dividing the communist bloc.",
+      "example_translation": "中蘇分裂通過分裂共產主義陣營改變了冷戰的動態。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "history",
+        "topic:international_relations",
+        "skill:comparison"
+      ]
+    },
+    {
+      "term": "Nationalism",
+      "definition": "Identification with one's own nation and support for its interests, especially to the exclusion or detriment of the interests of other nations.",
+      "translation": "民族主義",
+      "example": "Rising nationalism played a key role in the independence movements across Africa and Asia.",
+      "example_translation": "日益增長的民族主義在非洲和亞洲的獨立運動中發揮了關鍵作用。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "history",
+        "topic:social_movements",
+        "concept"
+      ]
+    },
+    {
+      "term": "Bretton Woods System",
+      "definition": "The framework of international economic policy that emerged after World War II.",
+      "translation": "布雷頓森林體系",
+      "example": "The Bretton Woods System established the US dollar as the world's primary reserve currency.",
+      "example_translation": "布雷頓森林體系確立了美元作為世界主要儲備貨幣的地位。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "history",
+        "topic:economics",
+        "era:post_wwii"
+      ]
+    },
+    {
+      "term": "Marshall Plan",
+      "definition": "An American initiative passed to aid Western Europe, in which the United States gave over $12 billion in economic assistance.",
+      "translation": "馬歇爾計劃",
+      "example": "The Marshall Plan helped rebuild European economies and prevented the spread of communism.",
+      "example_translation": "馬歇爾計劃幫助重建歐洲經濟並防止了共產主義的蔓延。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "history",
+        "topic:economic_history",
+        "key_event"
+      ]
+    },
+    {
+      "term": "Détente",
+      "definition": "The easing of hostility or strained relations, especially between countries.",
+      "translation": "緩和",
+      "example": "During the period of détente, the US and USSR signed several arms control treaties.",
+      "example_translation": "在緩和時期，美國和蘇聯簽署了幾項軍控條約。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "history",
+        "topic:diplomacy",
+        "era:cold_war"
+      ]
+    },
+    {
+      "term": "Berlin Wall",
+      "definition": "A guarded concrete barrier that physically and ideologically divided Berlin from 1961 to 1989.",
+      "translation": "柏林牆",
+      "example": "The fall of the Berlin Wall symbolized the end of the Cold War division in Europe.",
+      "example_translation": "柏林墙的倒塌象徵著歐洲冷戰分裂的結束。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "history",
+        "topic:geopolitics",
+        "symbolism"
+      ]
+    },
+    {
+      "term": "Superpower",
+      "definition": "A state with a high degree of influence, military strength, and economic power on a global scale.",
+      "translation": "超級大國",
+      "example": "During the Cold War, the US and the Soviet Union were considered the two main superpowers.",
+      "example_translation": "在冷戰期間，美國和蘇聯被認為是兩個主要的超級大國。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "history",
+        "topic:international_relations",
+        "concept"
+      ]
+    },
+    {
+      "term": "Ideology",
+      "definition": "A system of ideas and ideals, especially one that forms the basis of economic or political theory.",
+      "translation": "意識形態",
+      "example": "The conflict between capitalism and communism was largely driven by opposing ideologies.",
+      "example_translation": "資本主義與共產主義之間的衝突在很大程度上是由對立的意識形態驅動的。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "history",
+        "topic:political_science",
+        "concept"
+      ]
+    },
+    {
+      "term": "Arms Race",
+      "definition": "A competition between nations for superiority in the quantity and quality of armed forces and weapons.",
+      "translation": "軍備競賽",
+      "example": "The nuclear arms race increased tensions between the US and the Soviet Union.",
+      "example_translation": "核軍備競賽增加了美國和蘇聯之間的緊張關係。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "history",
+        "topic:military_history",
+        "skill:analysis"
+      ]
+    },
+    {
+      "term": "United Nations",
+      "definition": "An international organization founded in 1945 to promote international cooperation and peace.",
+      "translation": "聯合國",
+      "example": "The United Nations played a crucial role in mediating conflicts during the Cold War.",
+      "example_translation": "聯合國在冷戰期間調解衝突方面發揮了至關重要的作用。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "history",
+        "topic:international_organizations",
+        "era:post_wwii"
+      ]
+    },
+    {
+      "term": "Satellite State",
+      "definition": "A country that is formally independent but under heavy political, economic, and military influence from another country.",
+      "translation": "衛星國",
+      "example": "Eastern European countries were often referred to as satellite states of the Soviet Union.",
+      "example_translation": "東歐國家經常被稱為蘇聯的衛星國。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "history",
+        "topic:geopolitics",
+        "concept"
+      ]
+    },
+    {
+      "term": "Cuban Missile Crisis",
+      "definition": "A 13-day confrontation between the US and the Soviet Union concerning Soviet ballistic missiles deployed in Cuba.",
+      "translation": "古巴導彈危機",
+      "example": "The Cuban Missile Crisis brought the world to the brink of nuclear war.",
+      "example_translation": "古巴導彈危機將世界推向了核戰爭的边缘。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "history",
+        "topic:key_events",
+        "era:cold_war"
+      ]
+    },
+    {
+      "term": "Soft Power",
+      "definition": "The ability to attract and co-opt rather than coerce, using culture, political values, and foreign policies.",
+      "translation": "軟實力",
+      "example": "Hollywood movies and American music are examples of US soft power abroad.",
+      "example_translation": "好萊塢電影和美國音樂是美國海外軟實力的例子。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "history",
+        "topic:international_relations",
+        "skill:evaluation"
+      ]
+    },
+    {
+      "term": "Historiography",
+      "definition": "The study of the methods used by historians in research and writing about the past.",
+      "translation": "史學理論",
+      "example": "Understanding historiography helps students analyze how historical narratives change over time.",
+      "example_translation": "理解史學理論有助於學生分析歷史敘事如何隨時間變化。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "history",
+        "topic:methodology",
+        "skill:critical_thinking"
+      ]
+    }
+  ]
 }

@@ -1,6 +1,9 @@
 import { Link } from "react-router-dom";
 import LexiMascot from "../components/LexiMascot.jsx";
 import { useLocale } from "../features/locale/LocaleContext.jsx";
+import WordScopeModeSwitch from "../features/wordGroups/WordScopeModeSwitch.jsx";
+import { getActiveGroupLabel } from "../features/wordGroups/getActiveGroupLabel.js";
+import { useActiveGroupWordScope } from "../features/wordGroups/useActiveGroupWordScope.js";
 import { getDueWords } from "../features/review/reviewHelpers.js";
 import { useWordsContext } from "../features/words/WordsContext.jsx";
 import { canRoute, getRoleFromUser } from "../lib/authorization.js";
@@ -164,18 +167,22 @@ function getPrimaryCta({ wordCount, dueCount, mistakeCount }) {
 }
 
 function HomePage() {
-  const { t } = useLocale();
+  const { locale, t } = useLocale();
   const { isAuthLoading, user, words } = useWordsContext();
+  const { activeGroup, isGroupScopeActive, isUsingCustomWords, scopedWords } =
+    useActiveGroupWordScope(words, user);
+  const learningWords = isGroupScopeActive ? scopedWords : words;
   const role = getRoleFromUser(user);
-  const dueWords = getDueWords(words);
-  const mistakeWords = words.filter((word) => word.mistake.isMistake);
-  const wordCount = words.length;
+  const dueWords = getDueWords(learningWords);
+  const mistakeWords = learningWords.filter((word) => word.mistake.isMistake);
+  const wordCount = learningWords.length;
   const dueCount = dueWords.length;
   const mistakeCount = mistakeWords.length;
   const isEmpty = wordCount === 0;
   const showSyncPrompt = hasSupabaseConfig && !isAuthLoading && !user;
-  const { lastActivity, streak, todayReviewed } = getLearningSnapshot(words);
+  const { lastActivity, streak, todayReviewed } = getLearningSnapshot(learningWords);
   const showContinue = Boolean(lastActivity?.path) && !isEmpty;
+  const activeGroupLabel = getActiveGroupLabel(activeGroup, locale);
 
   const values = {
     words: wordCount,
@@ -204,6 +211,16 @@ function HomePage() {
             <h1>⭐ {t("home.eyebrow")}</h1>
             <div className="home-brand-title">{t("brand.displayName")}</div>
             <div className="home-brand-sub">{t("brand.tagline")}</div>
+            {isUsingCustomWords ? (
+              <p className="home-active-group home-active-group-static">
+                {t("wordGroupsScope.customWordsLabel")}
+              </p>
+            ) : activeGroupLabel ? (
+              <Link className="home-active-group" to="/settings">
+                {t("wordGroupsScope.activeGroupLabel", { group: activeGroupLabel })}
+              </Link>
+            ) : null}
+            <WordScopeModeSwitch className="home-scope-switch" compact />
             {!isEmpty && dueCount > 0 ? (
               <p className="home-brand-due">
                 <span className="review-word-translation">

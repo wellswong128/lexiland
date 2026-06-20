@@ -7,5 +7,306 @@
   "version": "2026.06",
   "display_name_en": "P1 Mathematics",
   "display_name_zh_hant": "小一數學",
-  "words": []
+  "words": [
+    {
+      "term": "count",
+      "definition": "To say numbers in order to find out how many there are.",
+      "translation": "數數",
+      "example": "Can you count the apples?",
+      "example_translation": "你能數蘋果嗎？",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "mathematics",
+        "number-sense",
+        "verb"
+      ]
+    },
+    {
+      "term": "add",
+      "definition": "To put two or more numbers together to get a total.",
+      "translation": "加",
+      "example": "If I add 2 and 3, I get 5.",
+      "example_translation": "如果我將2和3相加，我會得到5。",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "mathematics",
+        "operation",
+        "verb"
+      ]
+    },
+    {
+      "term": "subtract",
+      "definition": "To take one number away from another.",
+      "translation": "減",
+      "example": "Subtract 2 from 5.",
+      "example_translation": "從5中減去2。",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "mathematics",
+        "operation",
+        "verb"
+      ]
+    },
+    {
+      "term": "equal",
+      "definition": "Being the same in amount or value.",
+      "translation": "等於",
+      "example": "2 plus 2 equals 4.",
+      "example_translation": "2加2等於4。",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "mathematics",
+        "symbol",
+        "concept"
+      ]
+    },
+    {
+      "term": "more",
+      "definition": "A larger amount of something.",
+      "translation": "更多",
+      "example": "I have more stickers than you.",
+      "example_translation": "我比你有更多的貼紙。",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "mathematics",
+        "comparison",
+        "adjective"
+      ]
+    },
+    {
+      "term": "less",
+      "definition": "A smaller amount of something.",
+      "translation": "較少",
+      "example": "There are less cookies left.",
+      "example_translation": "剩下的餅乾較少了。",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "mathematics",
+        "comparison",
+        "adjective"
+      ]
+    },
+    {
+      "term": "shape",
+      "definition": "The form of an object, such as a circle or square.",
+      "translation": "形狀",
+      "example": "Look at the round shape of the ball.",
+      "example_translation": "看看球圓形的形狀。",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "mathematics",
+        "geometry",
+        "noun"
+      ]
+    },
+    {
+      "term": "circle",
+      "definition": "A round shape with no corners.",
+      "translation": "圓形",
+      "example": "Draw a big circle on the paper.",
+      "example_translation": "在紙上畫一個大圓圈。",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "mathematics",
+        "geometry",
+        "noun"
+      ]
+    },
+    {
+      "term": "square",
+      "definition": "A shape with four equal sides and four corners.",
+      "translation": "正方形",
+      "example": "The window is a square.",
+      "example_translation": "這個窗戶是正方形的。",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "mathematics",
+        "geometry",
+        "noun"
+      ]
+    },
+    {
+      "term": "triangle",
+      "definition": "A shape with three sides and three corners.",
+      "translation": "三角形",
+      "example": "Cut the paper into a triangle.",
+      "example_translation": "把紙剪成三角形。",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "mathematics",
+        "geometry",
+        "noun"
+      ]
+    },
+    {
+      "term": "rectangle",
+      "definition": "A shape with four sides and four corners, like a door.",
+      "translation": "長方形",
+      "example": "The book is a rectangle.",
+      "example_translation": "這本書是長方形的。",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "mathematics",
+        "geometry",
+        "noun"
+      ]
+    },
+    {
+      "term": "first",
+      "definition": "Coming before all others in time or order.",
+      "translation": "第一",
+      "example": "Who is first in line?",
+      "example_translation": "誰排在隊伍的第一位？",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "mathematics",
+        "ordinal-number",
+        "adjective"
+      ]
+    },
+    {
+      "term": "last",
+      "definition": "Coming after all others in time or order.",
+      "translation": "最後",
+      "example": "He was the last one to finish.",
+      "example_translation": "他是最後一個完成的人。",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "mathematics",
+        "ordinal-number",
+        "adjective"
+      ]
+    },
+    {
+      "term": "big",
+      "definition": "Large in size or amount.",
+      "translation": "大",
+      "example": "An elephant is big.",
+      "example_translation": "大象很大。",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "mathematics",
+        "measurement",
+        "adjective"
+      ]
+    },
+    {
+      "term": "small",
+      "definition": "Little in size or amount.",
+      "translation": "小",
+      "example": "A mouse is small.",
+      "example_translation": "老鼠很小。",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "mathematics",
+        "measurement",
+        "adjective"
+      ]
+    },
+    {
+      "term": "long",
+      "definition": "Measuring a great distance from end to end.",
+      "translation": "長",
+      "example": "The snake is very long.",
+      "example_translation": "這條蛇很長。",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "mathematics",
+        "measurement",
+        "adjective"
+      ]
+    },
+    {
+      "term": "short",
+      "definition": "Measuring a small distance from end to end.",
+      "translation": "短",
+      "example": "The pencil is short.",
+      "example_translation": "這支鉛筆很短。",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "mathematics",
+        "measurement",
+        "adjective"
+      ]
+    },
+    {
+      "term": "heavy",
+      "definition": "Weighing a lot; difficult to lift.",
+      "translation": "重",
+      "example": "The rock is heavy.",
+      "example_translation": "這塊石頭很重。",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "mathematics",
+        "measurement",
+        "adjective"
+      ]
+    },
+    {
+      "term": "light",
+      "definition": "Weighing little; easy to lift.",
+      "translation": "輕",
+      "example": "The feather is light.",
+      "example_translation": "這根羽毛很輕。",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "mathematics",
+        "measurement",
+        "adjective"
+      ]
+    },
+    {
+      "term": "pattern",
+      "definition": "A repeated design or sequence of shapes or colors.",
+      "translation": "模式",
+      "example": "Can you see the color pattern?",
+      "example_translation": "你能看到顏色的模式嗎？",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "mathematics",
+        "logic",
+        "noun"
+      ]
+    }
+  ]
 }

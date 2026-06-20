@@ -7,5 +7,326 @@
   "version": "2026.06",
   "display_name_en": "S5 Geography",
   "display_name_zh_hant": "中五地理",
-  "words": []
+  "words": [
+    {
+      "term": "Urbanization",
+      "definition": "The process by which an increasing percentage of a population lives in cities and towns.",
+      "translation": "城市化",
+      "example": "Hong Kong has experienced rapid urbanization since the 1950s.",
+      "example_translation": "自20世紀50年代以來，香港經歷了快速的城市化。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "geography",
+        "human geography",
+        "urban",
+        "noun"
+      ]
+    },
+    {
+      "term": "Suburbanization",
+      "definition": "The process of people moving from city centers to the outskirts or suburbs.",
+      "translation": "郊区化",
+      "example": "Many residents in Central have moved to Tuen Mun due to suburbanization.",
+      "example_translation": "由於郊區化，許多中環居民搬到了屯門。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "geography",
+        "human geography",
+        "urban",
+        "noun"
+      ]
+    },
+    {
+      "term": "Gentrification",
+      "definition": "The process of renovating and improving a house or district so that it conforms to middle-class taste.",
+      "translation": "士紳化",
+      "example": "Gentrification in Sheung Wan has led to rising property prices.",
+      "example_translation": "上環的士紳化導致物業價格上漲。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "geography",
+        "human geography",
+        "urban change",
+        "noun"
+      ]
+    },
+    {
+      "term": "Urban Sprawl",
+      "definition": "The uncontrolled expansion of urban areas into surrounding rural lands.",
+      "translation": "城市蔓延",
+      "example": "Urban sprawl in the New Territories consumes valuable agricultural land.",
+      "example_translation": "新界的城市蔓延侵佔了寶貴的農地。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "geography",
+        "human geography",
+        "urban problems",
+        "noun phrase"
+      ]
+    },
+    {
+      "term": "Traffic Congestion",
+      "definition": "A condition on road networks where traffic speeds fall well below the free-flow speed.",
+      "translation": "交通擠塞",
+      "example": "Traffic congestion is a major problem in Hong Kong during rush hours.",
+      "example_translation": "交通擠塞是香港在繁忙時間的主要問題。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "geography",
+        "human geography",
+        "transport",
+        "noun phrase"
+      ]
+    },
+    {
+      "term": "Air Pollution",
+      "definition": "The presence of substances in the atmosphere that are harmful to the health of humans and other living beings.",
+      "translation": "空氣污染",
+      "example": "Vehicle emissions contribute significantly to air pollution in urban areas.",
+      "example_translation": "車輛排放對城市地區的空氣污染有顯著貢獻。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "geography",
+        "environmental issues",
+        "atmosphere",
+        "noun phrase"
+      ]
+    },
+    {
+      "term": "Land Reclamation",
+      "definition": "The process of creating new land from oceans, seas, river beds, or lake beds.",
+      "translation": "填海",
+      "example": "Hong Kong International Airport was built on reclaimed land.",
+      "example_translation": "香港國際機場建於填海地上。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "geography",
+        "physical geography",
+        "human modification",
+        "noun"
+      ]
+    },
+    {
+      "term": "Coastal Erosion",
+      "definition": "The wearing away of land and the removal of beach or dune sediments by wave action, tidal currents, or other processes.",
+      "translation": "海岸侵蝕",
+      "example": "Coastal erosion threatens many villages along the Hong Kong shoreline.",
+      "example_translation": "海岸侵蝕威脅著香港海岸線沿線的許多村莊。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "geography",
+        "physical geography",
+        "coasts",
+        "noun phrase"
+      ]
+    },
+    {
+      "term": "Deforestation",
+      "definition": "The action of clearing a wide area of trees.",
+      "translation": "砍伐森林",
+      "example": "Deforestation can lead to increased soil erosion and loss of biodiversity.",
+      "example_translation": "砍伐森林會導致土壤侵蝕增加和生物多樣性喪失。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "geography",
+        "environmental issues",
+        "vegetation",
+        "noun"
+      ]
+    },
+    {
+      "term": "Sustainable Development",
+      "definition": "Development that meets the needs of the present without compromising the ability of future generations to meet their own needs.",
+      "translation": "可持續發展",
+      "example": "The government promotes sustainable development through green building initiatives.",
+      "example_translation": "政府透過綠色建築計劃促進可持續發展。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "geography",
+        "environmental issues",
+        "policy",
+        "noun phrase"
+      ]
+    },
+    {
+      "term": "Climate Change",
+      "definition": "A change in the state of the climate, including variability in average weather conditions and extremes.",
+      "translation": "氣候變化",
+      "example": "Climate change is causing more frequent extreme weather events in Hong Kong.",
+      "example_translation": "氣候變化正在導致香港更頻繁地出現極端天氣事件。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "geography",
+        "environmental issues",
+        "atmosphere",
+        "noun phrase"
+      ]
+    },
+    {
+      "term": "Greenhouse Effect",
+      "definition": "The trapping of the sun's warmth in a planet's lower atmosphere, producing a warmer environment.",
+      "translation": "溫室效應",
+      "example": "The greenhouse effect is natural but is intensified by human activities.",
+      "example_translation": "溫室效應是自然的，但被人類活動加劇。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "geography",
+        "environmental issues",
+        "atmosphere",
+        "noun"
+      ]
+    },
+    {
+      "term": "Industrial Location",
+      "definition": "The place where industries are situated, influenced by factors like labor, transport, and raw materials.",
+      "translation": "工業佈局",
+      "example": "The industrial location of Kwun Tong was historically determined by its port access.",
+      "example_translation": "觀塘的工業佈局歷史上是由其港口通道決定的。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "geography",
+        "human geography",
+        "industry",
+        "noun phrase"
+      ]
+    },
+    {
+      "term": "Service Sector",
+      "definition": "The part of the economy consisting of businesses that provide services rather than goods.",
+      "translation": "服務業",
+      "example": "Hong Kong's economy is dominated by the service sector.",
+      "example_translation": "香港的經濟以服務業為主導。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "geography",
+        "human geography",
+        "economy",
+        "noun"
+      ]
+    },
+    {
+      "term": "Population Density",
+      "definition": "The number of people living per unit area, usually per square kilometer.",
+      "translation": "人口密度",
+      "example": "Wan Chai has one of the highest population densities in Hong Kong.",
+      "example_translation": "灣仔擁有香港最高的人口密度之一。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "geography",
+        "human geography",
+        "demography",
+        "noun phrase"
+      ]
+    },
+    {
+      "term": "Migration",
+      "definition": "The movement of people from one place to another with the intention of settling, permanently or temporarily.",
+      "translation": "遷移",
+      "example": "Internal migration within Hong Kong often involves moving from older districts to newer ones.",
+      "example_translation": "香港內部的遷移通常涉及從舊區搬遷到新區。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "geography",
+        "human geography",
+        "demography",
+        "noun"
+      ]
+    },
+    {
+      "term": "Urban Heat Island",
+      "definition": "An urban area that is significantly warmer than its surrounding rural areas due to human activities.",
+      "translation": "城市熱島",
+      "example": "Central experiences the urban heat island effect more intensely at night.",
+      "example_translation": "中環在夜間經歷更強烈的城市熱島效應。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "geography",
+        "human geography",
+        "climate",
+        "noun phrase"
+      ]
+    },
+    {
+      "term": "Recycling",
+      "definition": "The process of converting waste materials into new materials and objects.",
+      "translation": "回收",
+      "example": "Effective recycling programs help reduce the volume of waste sent to landfills.",
+      "example_translation": "有效的回收計劃有助於減少送往堆填區的廢物量。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "geography",
+        "environmental issues",
+        "waste management",
+        "noun"
+      ]
+    },
+    {
+      "term": "Topography",
+      "definition": "The arrangement of the natural and artificial physical features of an area.",
+      "translation": "地形",
+      "example": "The steep topography of Hong Kong limits the available flat land for construction.",
+      "example_translation": "香港陡峭的地形限制了可用於建設的平地。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "geography",
+        "physical geography",
+        "landforms",
+        "noun"
+      ]
+    },
+    {
+      "term": "Zoning",
+      "definition": "The act of dividing land into zones for different uses, such as residential, commercial, or industrial.",
+      "translation": "分區",
+      "example": "Strict zoning regulations in Hong Kong control land use and building heights.",
+      "example_translation": "香港嚴格的分區規管控制土地利用和建築物高度。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "geography",
+        "human geography",
+        "urban planning",
+        "noun"
+      ]
+    }
+  ]
 }

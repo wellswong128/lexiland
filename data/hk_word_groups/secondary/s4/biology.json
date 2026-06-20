@@ -7,5 +7,306 @@
   "version": "2026.06",
   "display_name_en": "S4 Biology",
   "display_name_zh_hant": "中四生物",
-  "words": []
+  "words": [
+    {
+      "term": "enzyme",
+      "definition": "A biological catalyst that speeds up chemical reactions in living organisms without being used up.",
+      "translation": "酶",
+      "example": "Amylase is an enzyme found in saliva that breaks down starch.",
+      "example_translation": "澱粉酶是唾液中存在的一種酶，能分解澱粉。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "metabolism",
+        "biology_term"
+      ]
+    },
+    {
+      "term": "substrate",
+      "definition": "The specific molecule upon which an enzyme acts during a biochemical reaction.",
+      "translation": "基質",
+      "example": "In this reaction, glucose is the substrate for cellular respiration.",
+      "example_translation": "在這個反應中，葡萄糖是有氧呼吸的基質。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "metabolism",
+        "biology_term"
+      ]
+    },
+    {
+      "term": "active site",
+      "definition": "The region on an enzyme where the substrate binds and the reaction takes place.",
+      "translation": "活性位點",
+      "example": "The shape of the active site determines which substrate can bind to the enzyme.",
+      "example_translation": "活性位點的形狀決定了哪種基質可以與酶結合。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "enzymes",
+        "structure"
+      ]
+    },
+    {
+      "term": "diffusion",
+      "definition": "The net movement of particles from an area of higher concentration to an area of lower concentration.",
+      "translation": "擴散",
+      "example": "Oxygen diffuses from the alveoli into the blood capillaries.",
+      "example_translation": "氧氣從肺泡擴散到血液毛細管中。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "transport",
+        "cell_biology"
+      ]
+    },
+    {
+      "term": "osmosis",
+      "definition": "The movement of water molecules across a partially permeable membrane from a dilute solution to a concentrated one.",
+      "translation": "滲透作用",
+      "example": "Root hair cells absorb water from the soil by osmosis.",
+      "example_translation": "根毛細胞通過滲透作用從土壤中吸收水分。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "transport",
+        "plant_biology"
+      ]
+    },
+    {
+      "term": "mitosis",
+      "definition": "A type of cell division that results in two daughter cells each having the same number and kind of chromosomes as the parent nucleus.",
+      "translation": "有絲分裂",
+      "example": "Mitosis is essential for growth and repair of tissues in multicellular organisms.",
+      "example_translation": "有絲分裂對於多細胞生物組織的生長和修復至關重要。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "cell_division",
+        "genetics"
+      ]
+    },
+    {
+      "term": "meiosis",
+      "definition": "A type of cell division that reduces the chromosome number by half, creating four haploid cells.",
+      "translation": "減數分裂",
+      "example": "Meiosis occurs in the testes and ovaries to produce gametes.",
+      "example_translation": "減數分裂發生在睾丸和卵巢中以產生配子。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "cell_division",
+        "reproduction"
+      ]
+    },
+    {
+      "term": "allele",
+      "definition": "One of two or more alternative forms of a gene that arise by mutation and are found at the same place on a chromosome.",
+      "translation": "等位基因",
+      "example": "The allele for brown eyes is dominant over the allele for blue eyes.",
+      "example_translation": "棕色眼睛的等位基因對藍色眼睛的等位基因是顯性的。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "genetics",
+        "inheritance"
+      ]
+    },
+    {
+      "term": "phenotype",
+      "definition": "The observable physical properties of an organism, such as its appearance or behavior.",
+      "translation": "表現型",
+      "example": "The phenotype of the pea plant includes its height and flower color.",
+      "example_translation": "豌豆植物的表現型包括其高度和花色。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "genetics",
+        "inheritance"
+      ]
+    },
+    {
+      "term": "genotype",
+      "definition": "The genetic makeup of an organism, describing the combination of alleles it possesses.",
+      "translation": "基因型",
+      "example": "A heterozygous genotype consists of two different alleles for a trait.",
+      "example_translation": "雜合基因型由兩個不同的等位基因組成。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "genetics",
+        "inheritance"
+      ]
+    },
+    {
+      "term": "homeostasis",
+      "definition": "The state of steady internal, physical, and chemical conditions maintained by living systems.",
+      "translation": "內環境恆定",
+      "example": "The human body maintains homeostasis through mechanisms like sweating and shivering.",
+      "example_translation": "人體通過出汗和顫抖等機制維持內環境恆定。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "regulation",
+        "physiology"
+      ]
+    },
+    {
+      "term": "negative feedback",
+      "definition": "A control mechanism in which a change in a physiological variable triggers a response that counteracts the initial change.",
+      "translation": "負反饋",
+      "example": "Insulin secretion is regulated by negative feedback when blood sugar levels rise.",
+      "example_translation": "當血糖水平上升時，胰島素的分泌受負反饋調節。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "regulation",
+        "endocrine_system"
+      ]
+    },
+    {
+      "term": "photosynthesis",
+      "definition": "The process by which green plants use sunlight to synthesize foods from carbon dioxide and water.",
+      "translation": "光合作用",
+      "example": "Chlorophyll captures light energy for photosynthesis in the chloroplasts.",
+      "example_translation": "葉綠素在葉綠體中捕捉光能用於光合作用。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "plant_physiology",
+        "energy"
+      ]
+    },
+    {
+      "term": "chloroplast",
+      "definition": "An organelle found in plant and algal cells where photosynthesis occurs.",
+      "translation": "葉綠體",
+      "example": "The thylakoid membranes inside the chloroplast contain chlorophyll.",
+      "example_translation": "葉綠體內的類囊體膜含有葉綠素。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "cell_structure",
+        "plant_biology"
+      ]
+    },
+    {
+      "term": "respiration",
+      "definition": "The metabolic process in which cells break down glucose to release energy.",
+      "translation": "呼吸作用",
+      "example": "Aerobic respiration requires oxygen to produce ATP efficiently.",
+      "example_translation": "有氧呼吸需要氧氣才能有效產生ATP。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "metabolism",
+        "energy"
+      ]
+    },
+    {
+      "term": "ATP",
+      "definition": "Adenosine triphosphate, the primary energy carrier in all living organisms.",
+      "translation": "三磷酸腺苷",
+      "example": "Muscle contraction uses energy stored in ATP molecules.",
+      "example_translation": "肌肉收縮使用儲存在ATP分子中的能量。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "energy",
+        "biochemistry"
+      ]
+    },
+    {
+      "term": "excretion",
+      "definition": "The removal of waste products of metabolism and other non-useful materials from an organism.",
+      "translation": "排泄",
+      "example": "The kidneys play a key role in excreting urea from the blood.",
+      "example_translation": "腎臟在從血液中排泄尿素方面發揮關鍵作用。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "excretory_system",
+        "physiology"
+      ]
+    },
+    {
+      "term": "nephron",
+      "definition": "The microscopic structural and functional unit of the kidney.",
+      "translation": "腎元",
+      "example": "Each nephron filters blood to remove waste and excess water.",
+      "example_translation": "每個腎元過濾血液以去除廢物和多余水分。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "excretory_system",
+        "anatomy"
+      ]
+    },
+    {
+      "term": "stimulus",
+      "definition": "A detectable change in the internal or external environment that evokes a response.",
+      "translation": "刺激",
+      "example": "Light is a stimulus that causes the pupil to constrict.",
+      "example_translation": "光是導致瞳孔收縮的刺激。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "nervous_system",
+        "response"
+      ]
+    },
+    {
+      "term": "reflex arc",
+      "definition": "The neural pathway that controls a reflex action, involving sensory and motor neurons.",
+      "translation": "反射弧",
+      "example": "The knee-jerk reaction is controlled by a simple reflex arc.",
+      "example_translation": "膝跳反射由簡單的反射弧控制。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "nervous_system",
+        "physiology"
+      ]
+    }
+  ]
 }

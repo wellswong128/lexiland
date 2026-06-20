@@ -7,5 +7,306 @@
   "version": "2026.06",
   "display_name_en": "S1 Geography",
   "display_name_zh_hant": "中一地理",
-  "words": []
+  "words": [
+    {
+      "term": "latitude",
+      "definition": "The distance north or south of the equator, measured in degrees.",
+      "translation": "緯度",
+      "example": "Hong Kong is located at a latitude of approximately 22 degrees North.",
+      "example_translation": "香港位於大約北緯22度的位置。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "geography",
+        "coordinates",
+        "map skills"
+      ]
+    },
+    {
+      "term": "longitude",
+      "definition": "The distance east or west of the Prime Meridian, measured in degrees.",
+      "translation": "經度",
+      "example": "We use longitude to determine time zones around the world.",
+      "example_translation": "我們使用經度來確定世界各地的時區。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "geography",
+        "coordinates",
+        "map skills"
+      ]
+    },
+    {
+      "term": "equator",
+      "definition": "An imaginary line around the middle of the Earth, dividing it into the Northern and Southern Hemispheres.",
+      "translation": "赤道",
+      "example": "Countries near the equator usually have hot weather all year round.",
+      "example_translation": "靠近赤道的國家通常全年天氣炎熱。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "geography",
+        "hemispheres",
+        "climate basics"
+      ]
+    },
+    {
+      "term": "topography",
+      "definition": "The arrangement of the natural and artificial physical features of an area.",
+      "translation": "地形",
+      "example": "The topography of Hong Kong includes many hills and valleys.",
+      "example_translation": "香港的地形包括許多山丘和山谷。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "geography",
+        "landforms",
+        "physical geography"
+      ]
+    },
+    {
+      "term": "coastline",
+      "definition": "The line where land meets the sea.",
+      "translation": "海岸線",
+      "example": "Hong Kong has a long and irregular coastline with many bays.",
+      "example_translation": "香港擁有漫長且不規則的海岸線，有許多海灣。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "geography",
+        "physical features",
+        "hk geography"
+      ]
+    },
+    {
+      "term": "urbanization",
+      "definition": "The process by which towns and cities are formed and become larger as more people begin living and working in central areas.",
+      "translation": "城市化",
+      "example": "Rapid urbanization in Hong Kong has led to high population density.",
+      "example_translation": "香港的快速城市化導致人口密度高。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "geography",
+        "human geography",
+        "population"
+      ]
+    },
+    {
+      "term": "monsoon",
+      "definition": "A seasonal wind that brings heavy rain to South and Southeast Asia.",
+      "translation": "季風",
+      "example": "The summer monsoon brings warm and wet air to Hong Kong.",
+      "example_translation": "夏季季風為香港帶來溫暖潮濕的空氣。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "geography",
+        "weather",
+        "climate"
+      ]
+    },
+    {
+      "term": "precipitation",
+      "definition": "Rain, snow, sleet, or hail that falls to the ground.",
+      "translation": "降水",
+      "example": "Annual precipitation in Hong Kong is quite high due to the rainy season.",
+      "example_translation": "由於雨季，香港的年降水量相當高。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "geography",
+        "water cycle",
+        "climate"
+      ]
+    },
+    {
+      "term": "relief map",
+      "definition": "A map that shows the height and shape of land features using shading or color.",
+      "translation": "地形圖",
+      "example": "Students used a relief map to identify the highest peak in Hong Kong.",
+      "example_translation": "學生使用地形圖來識別香港的最高山峰。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "geography",
+        "map types",
+        "skills"
+      ]
+    },
+    {
+      "term": "scale",
+      "definition": "The ratio between a distance on a map and the corresponding distance on the ground.",
+      "translation": "比例尺",
+      "example": "Always check the scale before measuring distances on a map.",
+      "example_translation": "在測量地圖上的距離之前，請務必檢查比例尺。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "geography",
+        "map skills",
+        "tools"
+      ]
+    },
+    {
+      "term": "grid reference",
+      "definition": "A system used to locate places on a map using numbers and letters.",
+      "translation": "方格坐標",
+      "example": "We can find the exact location of the temple using its grid reference.",
+      "example_translation": "我們可以通過方格坐標找到寺廟的確切位置。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "geography",
+        "map skills",
+        "navigation"
+      ]
+    },
+    {
+      "term": "deforestation",
+      "definition": "The action of clearing a wide area of trees.",
+      "translation": "砍伐森林",
+      "example": "Deforestation can lead to soil erosion and loss of animal habitats.",
+      "example_translation": "砍伐森林會導致土壤侵蝕和動物棲息地喪失。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "geography",
+        "environmental issues",
+        "human impact"
+      ]
+    },
+    {
+      "term": "sustainable",
+      "definition": "Able to continue over a period of time without depleting natural resources.",
+      "translation": "可持續的",
+      "example": "Using renewable energy is a sustainable way to power our homes.",
+      "example_translation": "使用可再生能源是為我們的房屋供電的可持續方式。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "geography",
+        "environment",
+        "key concept"
+      ]
+    },
+    {
+      "term": "population density",
+      "definition": "The number of people living per unit area, such as per square kilometer.",
+      "translation": "人口密度",
+      "example": "Central District has a very high population density compared to rural areas.",
+      "example_translation": "與郊區相比，中環的人口密度非常高。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "geography",
+        "demography",
+        "hk geography"
+      ]
+    },
+    {
+      "term": "landform",
+      "definition": "A natural feature of the earth's surface, such as a mountain, valley, or plain.",
+      "translation": "地貌",
+      "example": "Victoria Peak is a famous landform in Hong Kong offering great views.",
+      "example_translation": "太平山是香港著名的地貌，提供絕佳的視野。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "geography",
+        "physical geography",
+        "vocabulary"
+      ]
+    },
+    {
+      "term": "climate change",
+      "definition": "Long-term shifts in temperatures and weather patterns.",
+      "translation": "氣候變化",
+      "example": "Climate change may cause more frequent extreme weather events like typhoons.",
+      "example_translation": "氣候變化可能會導致更頻繁的極端天氣事件，如颱風。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "geography",
+        "global issues",
+        "environment"
+      ]
+    },
+    {
+      "term": "river basin",
+      "definition": "The area of land drained by a river and its tributaries.",
+      "translation": "流域",
+      "example": "The Pearl River Basin is important for agriculture in southern China.",
+      "example_translation": "珠江流域對中國南部的農業很重要。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "geography",
+        "hydrology",
+        "physical geography"
+      ]
+    },
+    {
+      "term": "erosion",
+      "definition": "The process of eroding or being eroded by wind, water, or other natural agents.",
+      "translation": "侵蝕",
+      "example": "Coastal erosion can wear away cliffs and beaches over time.",
+      "example_translation": "海岸侵蝕會隨時間推移沖刷懸崖和海灘。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "geography",
+        "geomorphology",
+        "processes"
+      ]
+    },
+    {
+      "term": "resource",
+      "definition": "A stock or supply of materials, such as water, minerals, or forests, that can be used.",
+      "translation": "資源",
+      "example": "Fresh water is a limited resource that we must conserve.",
+      "example_translation": "淡水是一種有限的資源，我們必須節約使用。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "geography",
+        "environment",
+        "key concept"
+      ]
+    },
+    {
+      "term": "hemisphere",
+      "definition": "Each half of the earth, divided by the equator or the prime meridian.",
+      "translation": "半球",
+      "example": "Hong Kong is located in the Northern Hemisphere and the Eastern Hemisphere.",
+      "example_translation": "香港位於北半球和東半球。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "geography",
+        "coordinates",
+        "basic geography"
+      ]
+    }
+  ]
 }

@@ -7,5 +7,326 @@
   "version": "2026.06",
   "display_name_en": "S6 ICT",
   "display_name_zh_hant": "中六資訊及通訊科技",
-  "words": []
+  "words": [
+    {
+      "term": "Artificial Intelligence",
+      "definition": "The simulation of human intelligence processes by computer systems.",
+      "translation": "人工智能",
+      "example": "AI can help students learn at their own pace.",
+      "example_translation": "人工智能可以幫助學生以自己的節奏學習。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "ai",
+        "emerging tech",
+        "noun"
+      ]
+    },
+    {
+      "term": "Big Data",
+      "definition": "Extremely large datasets that may be analyzed computationally to reveal patterns and trends.",
+      "translation": "大數據",
+      "example": "Companies use big data to understand customer behavior.",
+      "example_translation": "公司使用大數據來了解客戶行為。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "data science",
+        "noun",
+        "analytics"
+      ]
+    },
+    {
+      "term": "Cloud Computing",
+      "definition": "The delivery of computing services including servers, storage, and databases over the Internet.",
+      "translation": "雲端運算",
+      "example": "We store our project files on cloud computing platforms.",
+      "example_translation": "我們將專案檔案儲存在雲端運算平台上。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "infrastructure",
+        "storage",
+        "noun"
+      ]
+    },
+    {
+      "term": "Cybersecurity",
+      "definition": "The practice of protecting systems, networks, and programs from digital attacks.",
+      "translation": "網絡安全",
+      "example": "Strong passwords are essential for good cybersecurity.",
+      "example_translation": "強密碼對於良好的網絡安全至關重要。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "security",
+        "protection",
+        "noun"
+      ]
+    },
+    {
+      "term": "Encryption",
+      "definition": "The process of converting information or data into a code to prevent unauthorized access.",
+      "translation": "加密",
+      "example": "Email encryption keeps private messages secure.",
+      "example_translation": "電子郵件加密可確保私人訊息的安全。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "security",
+        "data privacy",
+        "verb/noun"
+      ]
+    },
+    {
+      "term": "Internet of Things",
+      "definition": "A network of physical objects embedded with sensors and software to connect and exchange data.",
+      "translation": "物聯網",
+      "example": "Smart home devices are part of the Internet of Things.",
+      "example_translation": "智能家居設備是物聯網的一部分。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "iot",
+        "smart devices",
+        "noun"
+      ]
+    },
+    {
+      "term": "Malware",
+      "definition": "Software that is specifically designed to disrupt, damage, or gain unauthorized access to a computer system.",
+      "translation": "惡意軟件",
+      "example": "Antivirus software helps detect and remove malware.",
+      "example_translation": "防毒軟件有助於檢測和清除惡意軟件。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "security",
+        "threats",
+        "noun"
+      ]
+    },
+    {
+      "term": "Blockchain",
+      "definition": "A decentralized, distributed ledger technology that records transactions across many computers.",
+      "translation": "區塊鏈",
+      "example": "Blockchain ensures transparency in cryptocurrency transactions.",
+      "example_translation": "區塊鏈確保了加密貨幣交易的透明度。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "distributed ledger",
+        "finance",
+        "noun"
+      ]
+    },
+    {
+      "term": "Virtual Reality",
+      "definition": "An artificial environment created with computer hardware and software for immersive experiences.",
+      "translation": "虛擬實境",
+      "example": "VR headsets allow users to explore virtual worlds.",
+      "example_translation": "VR頭戴裝置讓用戶能夠探索虛擬世界。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "immersive tech",
+        "simulation",
+        "noun"
+      ]
+    },
+    {
+      "term": "Algorithm",
+      "definition": "A set of rules or calculations used by a computer to solve a problem or perform a task.",
+      "translation": "算法",
+      "example": "Search engines use complex algorithms to rank results.",
+      "example_translation": "搜索引擎使用複雜的算法來排列結果。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "programming",
+        "logic",
+        "noun"
+      ]
+    },
+    {
+      "term": "Debugging",
+      "definition": "The process of identifying and removing errors from computer hardware or software.",
+      "translation": "除錯",
+      "example": "Debugging is a crucial skill for every programmer.",
+      "example_translation": "除錯是每位程式設計師的關鍵技能。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "programming",
+        "problem solving",
+        "verb/noun"
+      ]
+    },
+    {
+      "term": "Bandwidth",
+      "definition": "The maximum rate of data transfer across a given path in a network.",
+      "translation": "頻寬",
+      "example": "High bandwidth allows for faster video streaming.",
+      "example_translation": "高頻寬允許更快的視頻串流。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "networking",
+        "performance",
+        "noun"
+      ]
+    },
+    {
+      "term": "Firewall",
+      "definition": "A network security system that monitors and controls incoming and outgoing network traffic.",
+      "translation": "防火牆",
+      "example": "A firewall blocks unauthorized access to your private network.",
+      "example_translation": "防火牆會阻止未經授權訪問您的私人網絡。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "security",
+        "network",
+        "noun"
+      ]
+    },
+    {
+      "term": "Latency",
+      "definition": "The delay before a transfer of data begins following an instruction for its transfer.",
+      "translation": "延遲",
+      "example": "Low latency is important for online gaming.",
+      "example_translation": "低延遲對於線上遊戲很重要。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "networking",
+        "performance",
+        "noun"
+      ]
+    },
+    {
+      "term": "Phishing",
+      "definition": "A cybercrime involving attempting to acquire sensitive data by fraudulent means, usually via email.",
+      "translation": "釣魚攻擊",
+      "example": "Be careful of phishing emails asking for your password.",
+      "example_translation": "小心要求您提供密碼的釣魚郵件。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "security",
+        "fraud",
+        "noun"
+      ]
+    },
+    {
+      "term": "Open Source",
+      "definition": "Software with source code that anyone can inspect, modify, and enhance.",
+      "translation": "開源",
+      "example": "Linux is a popular open-source operating system.",
+      "example_translation": "Linux 是一個流行的開源操作系統。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "software",
+        "development",
+        "adjective"
+      ]
+    },
+    {
+      "term": "User Interface",
+      "definition": "The space where interactions between humans and machines occur, such as screens and buttons.",
+      "translation": "用戶界面",
+      "example": "A clean user interface makes apps easier to use.",
+      "example_translation": "清晰的用戶界面使應用程式更易於使用。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "design",
+        "ux",
+        "noun"
+      ]
+    },
+    {
+      "term": "Database Management",
+      "definition": "The process of organizing and maintaining data in a database for efficient retrieval and storage.",
+      "translation": "數據庫管理",
+      "example": "SQL is commonly used for database management.",
+      "example_translation": "SQL 常用於數據庫管理。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "data",
+        "systems",
+        "noun phrase"
+      ]
+    },
+    {
+      "term": "Two-Factor Authentication",
+      "definition": "A security process that requires two different forms of identification to access resources.",
+      "translation": "雙重驗證",
+      "example": "Enable two-factor authentication for better account security.",
+      "example_translation": "啟用雙重驗證以提高帳戶安全性。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "security",
+        "access control",
+        "noun phrase"
+      ]
+    },
+    {
+      "term": "Scalability",
+      "definition": "The ability of a system to handle a growing amount of work or its potential to be enlarged.",
+      "translation": "擴展性",
+      "example": "Cloud services offer high scalability for businesses.",
+      "example_translation": "雲端服務為企業提供高度的擴展性。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "system design",
+        "performance",
+        "noun"
+      ]
+    }
+  ]
 }

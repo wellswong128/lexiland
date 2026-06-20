@@ -7,5 +7,306 @@
   "version": "2026.06",
   "display_name_en": "P3 General Studies",
   "display_name_zh_hant": "小三常識",
-  "words": []
+  "words": [
+    {
+      "term": "community",
+      "definition": "A group of people living in the same place or having a particular characteristic in common.",
+      "translation": "社區",
+      "example": "We live in a friendly community.",
+      "example_translation": "我們住在一个友好的社区。",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "general-studies",
+        "society",
+        "noun"
+      ]
+    },
+    {
+      "term": "environment",
+      "definition": "The natural world, including air, water, and land, where animals and plants live.",
+      "translation": "環境",
+      "example": "We should protect our environment.",
+      "example_translation": "我們應該保護我們的環境。",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "general-studies",
+        "nature",
+        "noun"
+      ]
+    },
+    {
+      "term": "recycle",
+      "definition": "To process used materials into new objects so they can be used again.",
+      "translation": "回收",
+      "example": "Please recycle paper and plastic bottles.",
+      "example_translation": "請回收紙張和塑膠瓶。",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "general-studies",
+        "action",
+        "verb"
+      ]
+    },
+    {
+      "term": "pollution",
+      "definition": "Harmful substances that make air, water, or land dirty.",
+      "translation": "污染",
+      "example": "Car exhaust causes air pollution.",
+      "example_translation": "汽車廢氣造成空氣污染。",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "general-studies",
+        "problem",
+        "noun"
+      ]
+    },
+    {
+      "term": "conserve",
+      "definition": "To protect something from harm or loss; to use resources carefully.",
+      "translation": "節約；保護",
+      "example": "We must conserve water every day.",
+      "example_translation": "我們每天必須節約用水。",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "general-studies",
+        "action",
+        "verb"
+      ]
+    },
+    {
+      "term": "heritage",
+      "definition": "Important buildings, traditions, or objects from the past that are worth keeping.",
+      "translation": "遺產",
+      "example": "The old village is part of our cultural heritage.",
+      "example_translation": "這個古老村落是我們文化遺產的一部分。",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "general-studies",
+        "culture",
+        "noun"
+      ]
+    },
+    {
+      "term": "tradition",
+      "definition": "A custom or belief passed down from generation to generation.",
+      "translation": "傳統",
+      "example": "Eating mooncakes is a Mid-Autumn Festival tradition.",
+      "example_translation": "吃月餅是中秋節的傳統。",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "general-studies",
+        "culture",
+        "noun"
+      ]
+    },
+    {
+      "term": "festival",
+      "definition": "A day or period of celebration, often for religious or cultural reasons.",
+      "translation": "節日",
+      "example": "Children love the Christmas festival.",
+      "example_translation": "孩子們喜歡聖誕節。",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "general-studies",
+        "event",
+        "noun"
+      ]
+    },
+    {
+      "term": "respect",
+      "definition": "To admire someone or treat them kindly and politely.",
+      "translation": "尊重",
+      "example": "We should respect our elders.",
+      "example_translation": "我們應該尊重長輩。",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "general-studies",
+        "value",
+        "verb"
+      ]
+    },
+    {
+      "term": "responsibility",
+      "definition": "The duty to take care of something or someone.",
+      "translation": "責任",
+      "example": "It is my responsibility to clean my room.",
+      "example_translation": "打掃我的房間是我的責任。",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "general-studies",
+        "character",
+        "noun"
+      ]
+    },
+    {
+      "term": "cooperate",
+      "definition": "To work together with others to achieve a common goal.",
+      "translation": "合作",
+      "example": "Students cooperate to finish the project.",
+      "example_translation": "學生們合作完成項目。",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "general-studies",
+        "skill",
+        "verb"
+      ]
+    },
+    {
+      "term": "volunteer",
+      "definition": "A person who offers to help without being paid.",
+      "translation": "志願者",
+      "example": "She is a volunteer at the animal shelter.",
+      "example_translation": "她是動物收容所的志願者。",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "general-studies",
+        "role",
+        "noun"
+      ]
+    },
+    {
+      "term": "sustainable",
+      "definition": "Able to continue over a long period without harming the environment.",
+      "translation": "可持續的",
+      "example": "Using solar energy is a sustainable choice.",
+      "example_translation": "使用太陽能是一個可持續的選擇。",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "general-studies",
+        "adjective",
+        "environment"
+      ]
+    },
+    {
+      "term": "diverse",
+      "definition": "Showing a great deal of variety; very different.",
+      "translation": "多樣的",
+      "example": "Hong Kong has a diverse population.",
+      "example_translation": "香港擁有多元化的人口。",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "general-studies",
+        "adjective",
+        "society"
+      ]
+    },
+    {
+      "term": "landmark",
+      "definition": "An object or feature of a landscape that is easily recognized and seen from far away.",
+      "translation": "地標",
+      "example": "The Clock Tower is a famous landmark in Tsim Sha Tsui.",
+      "example_translation": "鐘樓是尖沙咀著名的地標。",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "general-studies",
+        "place",
+        "noun"
+      ]
+    },
+    {
+      "term": "observe",
+      "definition": "To watch something carefully, especially to learn about it.",
+      "translation": "觀察",
+      "example": "We observe the stars at night.",
+      "example_translation": "我們在晚上觀察星星。",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "general-studies",
+        "skill",
+        "verb"
+      ]
+    },
+    {
+      "term": "resource",
+      "definition": "A supply of material or money that can be used.",
+      "translation": "資源",
+      "example": "Water is a precious resource.",
+      "example_translation": "水是一種寶貴的資源。",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "general-studies",
+        "noun",
+        "environment"
+      ]
+    },
+    {
+      "term": "empathy",
+      "definition": "The ability to understand and share the feelings of another person.",
+      "translation": "同理心",
+      "example": "Show empathy when your friend is sad.",
+      "example_translation": "當你的朋友傷心時，要展現同理心。",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "general-studies",
+        "value",
+        "noun"
+      ]
+    },
+    {
+      "term": "preserve",
+      "definition": "To keep something safe from harm or decay.",
+      "translation": "保存；保護",
+      "example": "We preserve old books in the library.",
+      "example_translation": "我們在圖書館保存舊書。",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "general-studies",
+        "action",
+        "verb"
+      ]
+    },
+    {
+      "term": "citizen",
+      "definition": "A legally recognized subject or national of a state or commonwealth.",
+      "translation": "市民；公民",
+      "example": "Every citizen has rights and duties.",
+      "example_translation": "每個市民都有權利和義務。",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "general-studies",
+        "society",
+        "noun"
+      ]
+    }
+  ]
 }

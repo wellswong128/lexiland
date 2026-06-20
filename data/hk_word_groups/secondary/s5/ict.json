@@ -7,5 +7,306 @@
   "version": "2026.06",
   "display_name_en": "S5 ICT",
   "display_name_zh_hant": "中五資訊及通訊科技",
-  "words": []
+  "words": [
+    {
+      "term": "algorithm",
+      "definition": "A step-by-step procedure or formula for solving a problem.",
+      "translation": "演算法",
+      "example": "The programmer designed an efficient algorithm to sort the data.",
+      "example_translation": "程式設計師設計了一個高效的演算法來排序數據。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "programming",
+        "logic"
+      ]
+    },
+    {
+      "term": "bandwidth",
+      "definition": "The maximum rate of data transfer across a given path.",
+      "translation": "頻寬",
+      "example": "High bandwidth allows for faster video streaming.",
+      "example_translation": "高頻寬允許更快的視頻串流。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "networking",
+        "internet"
+      ]
+    },
+    {
+      "term": "compile",
+      "definition": "To convert source code written in a programming language into machine code.",
+      "translation": "編譯",
+      "example": "You need to compile the code before running the program.",
+      "example_translation": "在運行程式之前，你需要編譯代碼。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "programming",
+        "development"
+      ]
+    },
+    {
+      "term": "database",
+      "definition": "An organized collection of structured information or data.",
+      "translation": "資料庫",
+      "example": "The school uses a database to store student records.",
+      "example_translation": "學校使用資料庫來存儲學生記錄。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "data management",
+        "storage"
+      ]
+    },
+    {
+      "term": "debug",
+      "definition": "To identify and remove errors from computer hardware or software.",
+      "translation": "除錯",
+      "example": "It took hours to debug the application.",
+      "example_translation": "除錯該應用程式花了幾個小時。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "programming",
+        "troubleshooting"
+      ]
+    },
+    {
+      "term": "encryption",
+      "definition": "The process of converting information or data into a code to prevent unauthorized access.",
+      "translation": "加密",
+      "example": "Encryption protects sensitive data during transmission.",
+      "example_translation": "加密保護傳輸過程中的敏感數據。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "security",
+        "privacy"
+      ]
+    },
+    {
+      "term": "firewall",
+      "definition": "A network security system that monitors and controls incoming and outgoing network traffic.",
+      "translation": "防火牆",
+      "example": "We installed a firewall to protect our server.",
+      "example_translation": "我們安裝了防火牆來保護我們的伺服器。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "security",
+        "networking"
+      ]
+    },
+    {
+      "term": "hardware",
+      "definition": "The physical parts of a computer system, such as the monitor, keyboard, and processor.",
+      "translation": "硬體",
+      "example": "Upgrading the hardware can improve computer performance.",
+      "example_translation": "升級硬體可以提高電腦性能。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "components",
+        "physical"
+      ]
+    },
+    {
+      "term": "interface",
+      "definition": "A point where two systems, subjects, organizations, etc., meet and interact.",
+      "translation": "介面",
+      "example": "The user interface is designed to be intuitive and easy to use.",
+      "example_translation": "用戶介面設計得直觀且易用。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "ui/ux",
+        "interaction"
+      ]
+    },
+    {
+      "term": "latency",
+      "definition": "The delay before a transfer of data begins following an instruction for its transfer.",
+      "translation": "延遲",
+      "example": "Low latency is crucial for online gaming.",
+      "example_translation": "低延遲對於線上遊戲至關重要。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "networking",
+        "performance"
+      ]
+    },
+    {
+      "term": "malware",
+      "definition": "Malicious software designed to cause damage to a computer, server, client, or computer network.",
+      "translation": "惡意軟件",
+      "example": "Always scan files for malware before opening them.",
+      "example_translation": "打開文件前，始終掃描惡意軟件。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "security",
+        "threats"
+      ]
+    },
+    {
+      "term": "protocol",
+      "definition": "A set of rules governing the exchange or transmission of data between devices.",
+      "translation": "協議",
+      "example": "HTTP is a common protocol used for web browsing.",
+      "example_translation": "HTTP 是用於網頁瀏覽的常見協議。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "networking",
+        "standards"
+      ]
+    },
+    {
+      "term": "query",
+      "definition": "A request for data or information from a database.",
+      "translation": "查詢",
+      "example": "Write a SQL query to retrieve customer names.",
+      "example_translation": "編寫一個 SQL 查詢以檢索客戶姓名。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "database",
+        "sql"
+      ]
+    },
+    {
+      "term": "repository",
+      "definition": "A central location in which data is stored and managed, often used in version control.",
+      "translation": "倉庫",
+      "example": "Push your code changes to the remote repository.",
+      "example_translation": "將代碼更改推送到遠程倉庫。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "version control",
+        "git"
+      ]
+    },
+    {
+      "term": "server",
+      "definition": "A computer or system that provides resources, data, services, or programs to other computers.",
+      "translation": "伺服器",
+      "example": "The website is hosted on a powerful server.",
+      "example_translation": "該網站託管在一台強大的伺服器上。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "networking",
+        "infrastructure"
+      ]
+    },
+    {
+      "term": "syntax",
+      "definition": "The set of rules that defines the combinations of symbols that are considered to be correctly structured documents or fragments in a language.",
+      "translation": "語法",
+      "example": "Check the syntax of your code to avoid errors.",
+      "example_translation": "檢查代碼的語法以避免錯誤。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "programming",
+        "rules"
+      ]
+    },
+    {
+      "term": "variable",
+      "definition": "A storage location paired with an associated symbolic name that contains some known or unknown quantity of information.",
+      "translation": "變量",
+      "example": "Declare a variable to store the user's age.",
+      "example_translation": "聲明一個變量來存儲用戶的年齡。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "programming",
+        "data types"
+      ]
+    },
+    {
+      "term": "virtualization",
+      "definition": "The creation of a virtual rather than a physical version of something, such as an operating system.",
+      "translation": "虛擬化",
+      "example": "Virtualization allows multiple OS to run on one physical machine.",
+      "example_translation": "虛擬化允許在一台物理機器上運行多個操作系統。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "systems",
+        "efficiency"
+      ]
+    },
+    {
+      "term": "wireless",
+      "definition": "Operating without wires or cables, typically using radio waves.",
+      "translation": "無線",
+      "example": "Connect to the wireless network for internet access.",
+      "example_translation": "連接到無線網絡以訪問互聯網。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "networking",
+        "connectivity"
+      ]
+    },
+    {
+      "term": "pixel",
+      "definition": "The smallest controllable element of a picture represented on the screen.",
+      "translation": "像素",
+      "example": "Higher resolution means more pixels per inch.",
+      "example_translation": "更高的分辨率意味著每英寸有更多的像素。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "graphics",
+        "display"
+      ]
+    }
+  ]
 }

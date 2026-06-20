@@ -7,5 +7,306 @@
   "version": "2026.06",
   "display_name_en": "S5 Mathematics",
   "display_name_zh_hant": "中五數學",
-  "words": []
+  "words": [
+    {
+      "term": "differentiation",
+      "definition": "The process of finding the derivative of a function.",
+      "translation": "微分",
+      "example": "We use differentiation to find the gradient of a curve.",
+      "example_translation": "我們使用微分來求曲線的斜率。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "mathematics",
+        "calculus",
+        "derivatives"
+      ]
+    },
+    {
+      "term": "integration",
+      "definition": "The process of finding the integral of a function, often used to calculate area under a curve.",
+      "translation": "積分",
+      "example": "Integration is the reverse operation of differentiation.",
+      "example_translation": "積分是微分的逆運算。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "mathematics",
+        "calculus",
+        "area"
+      ]
+    },
+    {
+      "term": "quadratic equation",
+      "definition": "An equation of the form ax² + bx + c = 0, where a ≠ 0.",
+      "translation": "二次方程",
+      "example": "We can solve quadratic equations using the quadratic formula.",
+      "example_translation": "我們可以利用二次公式來解二次方程。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "mathematics",
+        "algebra",
+        "equations"
+      ]
+    },
+    {
+      "term": "logarithm",
+      "definition": "The power to which a base number must be raised to produce a given number.",
+      "translation": "對數",
+      "example": "Logarithms help us solve exponential equations.",
+      "example_translation": "對數幫助我們解指數方程。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "mathematics",
+        "functions",
+        "exponents"
+      ]
+    },
+    {
+      "term": "trigonometric ratio",
+      "definition": "The ratio of two sides of a right-angled triangle, such as sine, cosine, or tangent.",
+      "translation": "三角比",
+      "example": "SOHCAHTOA helps remember the trigonometric ratios.",
+      "example_translation": "SOHCAHTOA 有助於記住三角比。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "mathematics",
+        "trigonometry",
+        "geometry"
+      ]
+    },
+    {
+      "term": "vector",
+      "definition": "A quantity having direction and magnitude, often represented by an arrow.",
+      "translation": "向量",
+      "example": "Vectors can be added using the head-to-tail method.",
+      "example_translation": "向量可以使用頭尾法相加。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "mathematics",
+        "vectors",
+        "geometry"
+      ]
+    },
+    {
+      "term": "probability",
+      "definition": "A measure of the likelihood that an event will occur.",
+      "translation": "概率",
+      "example": "The probability of rolling a six on a die is 1/6.",
+      "example_translation": "擲出骰子點數為六的概率是 1/6。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "mathematics",
+        "statistics",
+        "chance"
+      ]
+    },
+    {
+      "term": "standard deviation",
+      "definition": "A measure of the amount of variation or dispersion in a set of values.",
+      "translation": "標準差",
+      "example": "A low standard deviation means the data points are close to the mean.",
+      "example_translation": "標準差較低表示數據點接近平均值。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "mathematics",
+        "statistics",
+        "data analysis"
+      ]
+    },
+    {
+      "term": "composite function",
+      "definition": "A function formed by applying one function to the results of another.",
+      "translation": "複合函數",
+      "example": "In a composite function fg(x), we first apply g then f.",
+      "example_translation": "在複合函數 fg(x) 中，我們先應用 g，然後應用 f。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "mathematics",
+        "functions",
+        "algebra"
+      ]
+    },
+    {
+      "term": "inverse function",
+      "definition": "A function that reverses the effect of another function.",
+      "translation": "反函數",
+      "example": "The inverse of f(x) is denoted as f⁻¹(x).",
+      "example_translation": "f(x) 的反函數記作 f⁻¹(x)。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "mathematics",
+        "functions",
+        "algebra"
+      ]
+    },
+    {
+      "term": "gradient",
+      "definition": "The steepness of a line, calculated as the change in y divided by the change in x.",
+      "translation": "斜率",
+      "example": "The gradient of a horizontal line is zero.",
+      "example_translation": "水平線的斜率為零。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "mathematics",
+        "coordinate geometry",
+        "lines"
+      ]
+    },
+    {
+      "term": "binomial expansion",
+      "definition": "The process of expanding expressions like (a+b)^n into a sum involving terms.",
+      "translation": "二項式展開",
+      "example": "We use Pascal's Triangle to find coefficients in binomial expansion.",
+      "example_translation": "我們利用巴斯卡三角形來找出二項式展開中的係數。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "mathematics",
+        "algebra",
+        "series"
+      ]
+    },
+    {
+      "term": "conic section",
+      "definition": "A curve obtained as the intersection of the surface of a cone with a plane, e.g., circle, ellipse, parabola.",
+      "translation": "圓錐曲線",
+      "example": "A parabola is a type of conic section.",
+      "example_translation": "拋物線是一種圓錐曲線。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "mathematics",
+        "coordinate geometry",
+        "curves"
+      ]
+    },
+    {
+      "term": "modulus",
+      "definition": "The absolute value of a number or the magnitude of a vector.",
+      "translation": "模",
+      "example": "The modulus of -5 is 5.",
+      "example_translation": "-5 的模是 5。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "mathematics",
+        "number theory",
+        "vectors"
+      ]
+    },
+    {
+      "term": "arithmetic progression",
+      "definition": "A sequence of numbers where the difference between consecutive terms is constant.",
+      "translation": "等差數列",
+      "example": "2, 5, 8, 11 is an arithmetic progression with a common difference of 3.",
+      "example_translation": "2, 5, 8, 11 是一個公差為 3 的等差數列。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "mathematics",
+        "sequences",
+        "series"
+      ]
+    },
+    {
+      "term": "geometric progression",
+      "definition": "A sequence of numbers where each term after the first is found by multiplying the previous one by a fixed, non-zero number.",
+      "translation": "等比數列",
+      "example": "3, 6, 12, 24 is a geometric progression with a common ratio of 2.",
+      "example_translation": "3, 6, 12, 24 是一個公比为 2 的等比數列。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "mathematics",
+        "sequences",
+        "series"
+      ]
+    },
+    {
+      "term": "sine rule",
+      "definition": "A formula relating the lengths of sides of a triangle to the sines of its angles.",
+      "translation": "正弦定理",
+      "example": "Use the sine rule to find missing sides in non-right-angled triangles.",
+      "example_translation": "使用正弦定理來求非直角三角形中的未知邊長。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "mathematics",
+        "trigonometry",
+        "triangles"
+      ]
+    },
+    {
+      "term": "cosine rule",
+      "definition": "A formula relating the lengths of the sides of a triangle to the cosine of one of its angles.",
+      "translation": "餘弦定理",
+      "example": "The cosine rule is useful when you know two sides and the included angle.",
+      "example_translation": "當你已知兩邊及其夾角時，餘弦定理很有用。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "mathematics",
+        "trigonometry",
+        "triangles"
+      ]
+    },
+    {
+      "term": "domain",
+      "definition": "The set of all possible input values (x-values) for a function.",
+      "translation": "定義域",
+      "example": "The domain of f(x) = 1/x is all real numbers except zero.",
+      "example_translation": "f(x) = 1/x 的定義域是所有不為零的實數。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "mathematics",
+        "functions",
+        "algebra"
+      ]
+    },
+    {
+      "term": "range",
+      "definition": "The set of all possible output values (y-values) of a function.",
+      "translation": "值域",
+      "example": "Determine the range of the quadratic function.",
+      "example_translation": "確定該二次函數的值域。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "mathematics",
+        "functions",
+        "algebra"
+      ]
+    }
+  ]
 }

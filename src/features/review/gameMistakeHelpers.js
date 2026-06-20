@@ -44,26 +44,7 @@ export function getTermsEligibleForMistakeBook(wrongCounts, words, threshold = G
 export function commitGameMistakes({
   wrongCounts,
   words,
-  updateWord,
-  now = getCurrentIsoDate(),
   threshold = GAME_MISTAKE_THRESHOLD,
 }) {
-  const addedTerms = [];
-
-  for (const [term, count] of Object.entries(wrongCounts)) {
-    if (count < threshold) {
-      continue;
-    }
-
-    const word = findWordInLibrary(words, term);
-
-    if (!word) {
-      continue;
-    }
-
-    updateWord(word.id, buildGameMistakeUpdate(word, now));
-    addedTerms.push(word.term);
-  }
-
-  return addedTerms;
+  return getTermsEligibleForMistakeBook(wrongCounts, words, threshold);
 }

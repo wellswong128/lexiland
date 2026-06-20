@@ -7,5 +7,326 @@
   "version": "2026.06",
   "display_name_en": "S6 Mathematics",
   "display_name_zh_hant": "中六數學",
-  "words": []
+  "words": [
+    {
+      "term": "differentiation",
+      "definition": "The process of finding the derivative of a function.",
+      "translation": "微分",
+      "example": "We use differentiation to find the gradient of a curve.",
+      "example_translation": "我們使用微分來找出曲線的斜率。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "calculus",
+        "derivatives",
+        "gradient"
+      ]
+    },
+    {
+      "term": "integration",
+      "definition": "The process of finding the integral of a function, often used to calculate area.",
+      "translation": "積分",
+      "example": "Integration is the reverse operation of differentiation.",
+      "example_translation": "積分是微分的逆運算。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "calculus",
+        "area",
+        "anti-derivative"
+      ]
+    },
+    {
+      "term": "binomial expansion",
+      "definition": "A method to expand expressions of the form (a + b)^n.",
+      "translation": "二項式展開",
+      "example": "Use the binomial theorem to expand (2x - 1)^3.",
+      "example_translation": "使用二項式定理展開 (2x - 1)^3。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "algebra",
+        "series",
+        "theorem"
+      ]
+    },
+    {
+      "term": "partial fractions",
+      "definition": "Breaking down a complex rational expression into simpler fractions.",
+      "translation": "部分分數",
+      "example": "We decompose the fraction into partial fractions to integrate it easily.",
+      "example_translation": "我們將分數分解為部分分數，以便輕鬆進行積分。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "algebra",
+        "calculus",
+        "rational functions"
+      ]
+    },
+    {
+      "term": "parametric equations",
+      "definition": "Equations where x and y are defined in terms of a third variable, t.",
+      "translation": "參數方程",
+      "example": "The parametric equations describe the path of a particle over time.",
+      "example_translation": "這些參數方程描述了粒子隨時間移動的路徑。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "coordinate geometry",
+        "motion",
+        "variables"
+      ]
+    },
+    {
+      "term": "normal distribution",
+      "definition": "A continuous probability distribution that is symmetric about the mean.",
+      "translation": "常態分佈",
+      "example": "Many natural phenomena follow a normal distribution.",
+      "example_translation": "許多自然現象都遵循常態分佈。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "statistics",
+        "probability",
+        "bell curve"
+      ]
+    },
+    {
+      "term": "hypothesis testing",
+      "definition": "A statistical method used to make decisions about a population based on sample data.",
+      "translation": "假設檢定",
+      "example": "In hypothesis testing, we compare the p-value to the significance level.",
+      "example_translation": "在假設檢定中，我們將 p 值與顯著性水平進行比較。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "statistics",
+        "inference",
+        "p-value"
+      ]
+    },
+    {
+      "term": "correlation coefficient",
+      "definition": "A measure of the strength and direction of the linear relationship between two variables.",
+      "translation": "相關係數",
+      "example": "A correlation coefficient close to 1 indicates a strong positive correlation.",
+      "example_translation": "接近 1 的相關係數表示強正相關。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "statistics",
+        "linear regression",
+        "data analysis"
+      ]
+    },
+    {
+      "term": "vector product",
+      "definition": "Also known as the cross product, resulting in a vector perpendicular to two given vectors.",
+      "translation": "向量積",
+      "example": "The vector product is used to find the area of a parallelogram.",
+      "example_translation": "向量積用於計算平行四邊形的面積。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "vectors",
+        "geometry",
+        "3d space"
+      ]
+    },
+    {
+      "term": "scalar product",
+      "definition": "Also known as the dot product, resulting in a scalar value representing projection.",
+      "translation": "標量積",
+      "example": "If the scalar product of two non-zero vectors is zero, they are perpendicular.",
+      "example_translation": "如果兩個非零向量的標量積為零，則它們互相垂直。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "vectors",
+        "orthogonality",
+        "projection"
+      ]
+    },
+    {
+      "term": "complex numbers",
+      "definition": "Numbers consisting of a real part and an imaginary part, typically written as a + bi.",
+      "translation": "複數",
+      "example": "We solve quadratic equations with negative discriminants using complex numbers.",
+      "example_translation": "我們使用複數來求解判別式為負的二次方程。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "algebra",
+        "imaginary unit",
+        "quadratic equations"
+      ]
+    },
+    {
+      "term": "modulus",
+      "definition": "The absolute value of a number or the magnitude of a complex number/vector.",
+      "translation": "模",
+      "example": "Find the modulus of the complex number 3 + 4i.",
+      "example_translation": "求複數 3 + 4i 的模。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "complex numbers",
+        "magnitude",
+        "absolute value"
+      ]
+    },
+    {
+      "term": "amplitude",
+      "definition": "The maximum displacement or distance moved by a point on a vibrating body or wave.",
+      "translation": "振幅",
+      "example": "The amplitude of the sine wave is 5.",
+      "example_translation": "正弦波的振幅是 5。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "trigonometry",
+        "waves",
+        "functions"
+      ]
+    },
+    {
+      "term": "periodicity",
+      "definition": "The property of a function repeating its values at regular intervals.",
+      "translation": "週期性",
+      "example": "Trigonometric functions exhibit periodicity.",
+      "example_translation": "三角函數具有週期性。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "trigonometry",
+        "functions",
+        "cycles"
+      ]
+    },
+    {
+      "term": "inverse trigonometric functions",
+      "definition": "Functions that reverse the operation of trigonometric functions, such as arcsin.",
+      "translation": "反三角函數",
+      "example": "Use inverse trigonometric functions to find angles from ratios.",
+      "example_translation": "使用反三角函數從比率求出角度。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "trigonometry",
+        "arcsin",
+        "angles"
+      ]
+    },
+    {
+      "term": "limit",
+      "definition": "The value that a function approaches as the input approaches some value.",
+      "translation": "極限",
+      "example": "Calculate the limit of f(x) as x approaches infinity.",
+      "example_translation": "計算當 x 趨近於無窮大時 f(x) 的極限。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "calculus",
+        "continuity",
+        "asymptotes"
+      ]
+    },
+    {
+      "term": "continuity",
+      "definition": "A property of a function where small changes in input result in small changes in output.",
+      "translation": "連續性",
+      "example": "Polynomial functions are continuous everywhere.",
+      "example_translation": "多項式函數在整個定義域上都是連續的。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "calculus",
+        "graphs",
+        "properties"
+      ]
+    },
+    {
+      "term": "stationary point",
+      "definition": "A point on a curve where the derivative is zero, indicating a local maximum or minimum.",
+      "translation": "靜止點",
+      "example": "Find the stationary points by setting the first derivative to zero.",
+      "example_translation": "通過將一階導數設為零來找出靜止點。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "calculus",
+        "optimization",
+        "derivatives"
+      ]
+    },
+    {
+      "term": "standard deviation",
+      "definition": "A measure of the amount of variation or dispersion of a set of values.",
+      "translation": "標準差",
+      "example": "A low standard deviation indicates that the values tend to be close to the mean.",
+      "example_translation": "標準差較低表示數值傾向於接近平均值。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "statistics",
+        "dispersion",
+        "mean"
+      ]
+    },
+    {
+      "term": "conditional probability",
+      "definition": "The probability of an event occurring given that another event has already occurred.",
+      "translation": "條件概率",
+      "example": "Conditional probability is calculated using the formula P(A|B) = P(A and B) / P(B).",
+      "example_translation": "條件概率使用公式 P(A|B) = P(A 且 B) / P(B) 計算。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "probability",
+        "events",
+        "bayes' theorem"
+      ]
+    }
+  ]
 }

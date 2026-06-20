@@ -7,5 +7,326 @@
   "version": "2026.06",
   "display_name_en": "S4 Geography",
   "display_name_zh_hant": "中四地理",
-  "words": []
+  "words": [
+    {
+      "term": "Urbanization",
+      "definition": "The process by which an increasing percentage of a population lives in cities and towns.",
+      "translation": "城市化",
+      "example": "Hong Kong has experienced rapid urbanization since the 1950s.",
+      "example_translation": "香港自20世紀50年代以來經歷了快速的城市化。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "geography",
+        "human geography",
+        "urban",
+        "noun"
+      ]
+    },
+    {
+      "term": "Suburbanization",
+      "definition": "The population movement from central urban areas to suburbs, often resulting in urban sprawl.",
+      "translation": "郊区化",
+      "example": "Many residents in Kowloon are moving to suburban areas like Tuen Mun.",
+      "example_translation": "許多九龍居民正搬遷至屯門等郊區。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "geography",
+        "human geography",
+        "urban",
+        "noun"
+      ]
+    },
+    {
+      "term": "Gentrification",
+      "definition": "The process of renovating and improving a house or district so that it conforms to middle-class taste.",
+      "translation": "中產階級化",
+      "example": "Gentrification in Sheung Wan has led to rising property prices.",
+      "example_translation": "上環的中產階級化導致物業價格上漲。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "geography",
+        "human geography",
+        "urban change",
+        "noun"
+      ]
+    },
+    {
+      "term": "Urban Sprawl",
+      "definition": "The uncontrolled expansion of urban areas into surrounding rural lands.",
+      "translation": "城市蔓延",
+      "example": "Urban sprawl consumes valuable agricultural land in the New Territories.",
+      "example_translation": "城市蔓延侵佔了新界珍貴的農地。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "geography",
+        "human geography",
+        "urban issues",
+        "noun phrase"
+      ]
+    },
+    {
+      "term": "Traffic Congestion",
+      "definition": "A condition on road networks where traffic speeds fall well below free-flowing speeds.",
+      "translation": "交通擠塞",
+      "example": "Traffic congestion is a major problem in Central during rush hour.",
+      "example_translation": "在繁忙時間，中環的交通擠塞是一個主要問題。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "geography",
+        "human geography",
+        "transport",
+        "noun phrase"
+      ]
+    },
+    {
+      "term": "Air Pollution",
+      "definition": "The presence of substances in the atmosphere that are harmful to the health of humans and other living beings.",
+      "translation": "空氣污染",
+      "example": "Vehicle emissions contribute significantly to air pollution in Hong Kong.",
+      "example_translation": "車輛排放對香港的空氣污染有顯著貢獻。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "geography",
+        "physical geography",
+        "environment",
+        "noun phrase"
+      ]
+    },
+    {
+      "term": "Land Reclamation",
+      "definition": "The process of creating new land from oceans, seas, river beds, or lake beds.",
+      "translation": "填海",
+      "example": "Hong Kong International Airport was built on reclaimed land.",
+      "example_translation": "香港國際機場建於填海地上。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "geography",
+        "human geography",
+        "land use",
+        "noun"
+      ]
+    },
+    {
+      "term": "High Density Housing",
+      "definition": "Residential buildings designed to accommodate a large number of people in a small area.",
+      "translation": "高密度住宅",
+      "example": "Most public housing estates in Hong Kong are examples of high density housing.",
+      "example_translation": "香港大多數公共屋邨都是高密度住宅的例子。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "geography",
+        "human geography",
+        "urban planning",
+        "noun phrase"
+      ]
+    },
+    {
+      "term": "Green Belt",
+      "definition": "An area of open land around a city where building is restricted to prevent urban sprawl.",
+      "translation": "綠化帶",
+      "example": "The Green Belt policy helps preserve the natural landscape near Hong Kong.",
+      "example_translation": "綠化帶政策有助於保護香港附近的自然景觀。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "geography",
+        "human geography",
+        "urban planning",
+        "noun"
+      ]
+    },
+    {
+      "term": "Monsoon",
+      "definition": "A seasonal wind that brings heavy rainfall, particularly in South and Southeast Asia.",
+      "translation": "季風",
+      "example": "The summer monsoon brings hot and humid weather to Hong Kong.",
+      "example_translation": "夏季季風為香港帶來炎熱潮濕的天氣。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "geography",
+        "physical geography",
+        "climate",
+        "noun"
+      ]
+    },
+    {
+      "term": "Typhoon",
+      "definition": "A storm with violent winds and heavy rain that occurs in the western Pacific Ocean.",
+      "translation": "颱風",
+      "example": "Hong Kong often issues Typhoon Signal No. 8 during severe storms.",
+      "example_translation": "香港在嚴重風暴期間經常懸掛八號颱風信號。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "geography",
+        "physical geography",
+        "climate hazards",
+        "noun"
+      ]
+    },
+    {
+      "term": "Topography",
+      "definition": "The arrangement of the natural and artificial physical features of an area.",
+      "translation": "地形",
+      "example": "The rugged topography of Hong Kong limits the amount of flat land available.",
+      "example_translation": "香港崎嶇的地形限制了可用平坦土地的面積。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "geography",
+        "physical geography",
+        "geomorphology",
+        "noun"
+      ]
+    },
+    {
+      "term": "Erosion",
+      "definition": "The process of eroding or being eroded by wind, water, or other natural agents.",
+      "translation": "侵蝕",
+      "example": "Coastal erosion is threatening some beaches in Hong Kong.",
+      "example_translation": "海岸侵蝕正在威脅香港的一些海灘。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "geography",
+        "physical geography",
+        "geomorphology",
+        "noun"
+      ]
+    },
+    {
+      "term": "Deforestation",
+      "definition": "The action of clearing a wide area of trees.",
+      "translation": "森林砍伐",
+      "example": "Deforestation can lead to soil erosion and loss of biodiversity.",
+      "example_translation": "森林砍伐會導致土壤侵蝕和生物多樣性喪失。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "geography",
+        "physical geography",
+        "environment",
+        "noun"
+      ]
+    },
+    {
+      "term": "Sustainable Development",
+      "definition": "Economic development that is conducted without depletion of natural resources.",
+      "translation": "可持續發展",
+      "example": "Hong Kong aims to balance economic growth with sustainable development.",
+      "example_translation": "香港旨在平衡經濟增長與可持續發展。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "geography",
+        "human geography",
+        "environment",
+        "noun phrase"
+      ]
+    },
+    {
+      "term": "Waste Management",
+      "definition": "The activity and industry of managing waste materials through collection, transport, treatment, and disposal.",
+      "translation": "廢物管理",
+      "example": "Effective waste management is crucial for keeping Hong Kong clean.",
+      "example_translation": "有效的廢物管理對於保持香港清潔至關重要。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "geography",
+        "human geography",
+        "environment",
+        "noun phrase"
+      ]
+    },
+    {
+      "term": "Floodplain",
+      "definition": "An area of low-lying ground adjacent to a river, formed mainly of river sediments and subject to flooding.",
+      "translation": "氾濫平原",
+      "example": "Building on floodplains increases the risk of damage during heavy rains.",
+      "example_translation": "在氾濫平原上建築增加了暴雨期間受損的風險。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "geography",
+        "physical geography",
+        "hydrology",
+        "noun"
+      ]
+    },
+    {
+      "term": "Microclimate",
+      "definition": "The climate of a very small or restricted area, especially when different from the surrounding climate.",
+      "translation": "微氣候",
+      "example": "The urban heat island effect creates a distinct microclimate in city centers.",
+      "example_translation": "城市熱島效應在市中心創造了獨特的微氣候。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "geography",
+        "physical geography",
+        "climate",
+        "noun"
+      ]
+    },
+    {
+      "term": "Infrastructure",
+      "definition": "The basic physical and organizational structures needed for the operation of a society.",
+      "translation": "基礎設施",
+      "example": "Hong Kong has world-class infrastructure, including MTR and bridges.",
+      "example_translation": "香港擁有世界級的基礎設施，包括港鐵和橋樑。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "geography",
+        "human geography",
+        "urban",
+        "noun"
+      ]
+    },
+    {
+      "term": "Relocation",
+      "definition": "The action of moving to a new place and establishing oneself there.",
+      "translation": "搬遷",
+      "example": "Residents affected by land reclamation may need to undergo relocation.",
+      "example_translation": "受填海影響的居民可能需要進行搬遷。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "geography",
+        "human geography",
+        "urban change",
+        "noun"
+      ]
+    }
+  ]
 }

@@ -7,5 +7,326 @@
   "version": "2026.06",
   "display_name_en": "S6 English",
   "display_name_zh_hant": "中六英文",
-  "words": []
+  "words": [
+    {
+      "term": "ambiguous",
+      "definition": "Open to more than one interpretation; having a double meaning.",
+      "translation": "模稜兩可的",
+      "example": "The politician's statement was deliberately ambiguous to avoid controversy.",
+      "example_translation": "該政治家的聲明故意模稜兩可，以避免爭議。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "english",
+        "adjective",
+        "reading_comprehension",
+        "formal_writing"
+      ]
+    },
+    {
+      "term": "mitigate",
+      "definition": "Make less severe, serious, or painful.",
+      "translation": "減輕；緩和",
+      "example": "The government introduced new policies to mitigate the effects of inflation.",
+      "example_translation": "政府引入了新政策以減輕通脹的影響。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "english",
+        "verb",
+        "issue_discussion",
+        "academic_vocabulary"
+      ]
+    },
+    {
+      "term": "procrastination",
+      "definition": "The action of delaying or postponing something.",
+      "translation": "拖延",
+      "example": "Procrastination is a common challenge for students during exam season.",
+      "example_translation": "拖延是學生在考試期間常見的挑戰。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "english",
+        "noun",
+        "education",
+        "psychology"
+      ]
+    },
+    {
+      "term": "ubiquitous",
+      "definition": "Present, appearing, or found everywhere.",
+      "translation": "無處不在的",
+      "example": "Smartphones have become ubiquitous in modern society.",
+      "example_translation": "智能手機在現代社會已變得無處不在。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "english",
+        "adjective",
+        "technology",
+        "society"
+      ]
+    },
+    {
+      "term": "detrimental",
+      "definition": "Tending to cause harm.",
+      "translation": "有害的",
+      "example": "Smoking has a detrimental effect on lung health.",
+      "example_translation": "吸煙對肺部健康有有害影響。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "english",
+        "adjective",
+        "health",
+        "argumentative_writing"
+      ]
+    },
+    {
+      "term": "resilience",
+      "definition": "The capacity to recover quickly from difficulties; toughness.",
+      "translation": "韌性；恢復力",
+      "example": "Building resilience helps students cope with academic pressure.",
+      "example_translation": "建立韌性有助於學生應對學業壓力。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "english",
+        "noun",
+        "character_traits",
+        "mental_health"
+      ]
+    },
+    {
+      "term": "paradigm shift",
+      "definition": "A fundamental change in approach or underlying assumptions.",
+      "translation": "範式轉移；根本性的轉變",
+      "example": "The internet caused a paradigm shift in how we access information.",
+      "example_translation": "互聯網導致了我們獲取信息方式的根本性轉變。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "english",
+        "collocation",
+        "technology",
+        "social_change"
+      ]
+    },
+    {
+      "term": "scrutinize",
+      "definition": "Examine or inspect closely and thoroughly.",
+      "translation": "仔細檢查；審視",
+      "example": "Journalists scrutinize the actions of public officials.",
+      "example_translation": "記者仔細檢查公職人員的行為。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "english",
+        "verb",
+        "media_literacy",
+        "critical_thinking"
+      ]
+    },
+    {
+      "term": "ephemeral",
+      "definition": "Lasting for a very short time.",
+      "translation": "短暫的；朝生暮死的",
+      "example": "Fame in the social media age can be quite ephemeral.",
+      "example_translation": "在社交媒體時代，名氣往往相當短暫。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "english",
+        "adjective",
+        "literature",
+        "advanced_vocabulary"
+      ]
+    },
+    {
+      "term": "alleviate",
+      "definition": "Make (suffering, deficiency, or a problem) less severe.",
+      "translation": "緩解；減輕",
+      "example": "Medication can help alleviate the symptoms of the flu.",
+      "example_translation": "藥物可以幫助緩解流感症狀。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "english",
+        "verb",
+        "health",
+        "problem_solving"
+      ]
+    },
+    {
+      "term": "cynical",
+      "definition": "Believing that people are motivated by self-interest; distrustful of human sincerity.",
+      "translation": "憤世嫉俗的；玩世不恭的",
+      "example": "Some people hold a cynical view of political promises.",
+      "example_translation": "有些人對政治承諾持憤世嫉俗的態度。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "english",
+        "adjective",
+        "attitude",
+        "social_issues"
+      ]
+    },
+    {
+      "term": "plagiarism",
+      "definition": "The practice of taking someone else's work or ideas and passing them off as one's own.",
+      "translation": "抄襲",
+      "example": "Plagiarism is a serious offense in academic institutions.",
+      "example_translation": "抄襲在學術機構中是嚴重的過失行為。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "english",
+        "noun",
+        "academic_integrity",
+        "school_rules"
+      ]
+    },
+    {
+      "term": "nuance",
+      "definition": "A subtle difference in or shade of meaning, expression, or sound.",
+      "translation": "細微差別；微妙之處",
+      "example": "It is important to understand the nuances of cultural etiquette.",
+      "example_translation": "理解文化禮儀的細微差別很重要。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "english",
+        "noun",
+        "communication",
+        "culture"
+      ]
+    },
+    {
+      "term": "advocate",
+      "definition": "Publicly recommend or support a particular cause or policy.",
+      "translation": "提倡；主張",
+      "example": "She advocates for greater environmental protection laws.",
+      "example_translation": "她提倡制定更嚴格的环境保護法律。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "english",
+        "verb",
+        "activism",
+        "opinion_essay"
+      ]
+    },
+    {
+      "term": "conundrum",
+      "definition": "A confusing and difficult problem or question.",
+      "translation": "難題；謎題",
+      "example": "The ethical conundrum faced by doctors is complex.",
+      "example_translation": "醫生面臨的道德難題很複雜。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "english",
+        "noun",
+        "ethics",
+        "critical_thinking"
+      ]
+    },
+    {
+      "term": "pragmatic",
+      "definition": "Dealing with things sensibly and realistically in a way that is based on practical rather than theoretical considerations.",
+      "translation": "務實的；實際的",
+      "example": "We need a pragmatic solution to the housing crisis.",
+      "example_translation": "我們需要一個務實的解決方案來應對住房危機。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "english",
+        "adjective",
+        "problem_solving",
+        "politics"
+      ]
+    },
+    {
+      "term": "bias",
+      "definition": "Prejudice in favor of or against one thing, person, or group compared with another, usually in a way considered to be unfair.",
+      "translation": "偏見；偏向",
+      "example": "News reports should strive to eliminate personal bias.",
+      "example_translation": "新聞報道應努力消除個人偏見。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "english",
+        "noun",
+        "media_literacy",
+        "fairness"
+      ]
+    },
+    {
+      "term": "collaborate",
+      "definition": "Work jointly with others or together, especially in an intellectual endeavor.",
+      "translation": "合作；協作",
+      "example": "Students often collaborate on group projects to share ideas.",
+      "example_translation": "學生經常在小組項目中合作以分享想法。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "english",
+        "verb",
+        "teamwork",
+        "education"
+      ]
+    },
+    {
+      "term": "inevitable",
+      "definition": "Certain to happen; unavoidable.",
+      "translation": "不可避免的",
+      "example": "Change is inevitable in the fast-paced world of technology.",
+      "example_translation": "在快節奏的科技世界中，變化是不可避免的。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "english",
+        "adjective",
+        "future_trends",
+        "general_knowledge"
+      ]
+    },
+    {
+      "term": "perspective",
+      "definition": "A particular attitude toward or way of regarding something; a point of view.",
+      "translation": "觀點；視角",
+      "example": "Traveling broadens your perspective on different cultures.",
+      "example_translation": "旅行能拓寬你對不同文化的視野。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "english",
+        "noun",
+        "personal_growth",
+        "travel"
+      ]
+    }
+  ]
 }

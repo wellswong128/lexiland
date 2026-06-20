@@ -7,5 +7,310 @@
   "version": "2026.06",
   "display_name_en": "P2 General Studies",
   "display_name_zh_hant": "小二常識",
-  "words": []
+  "words": [
+    {
+      "term": "community",
+      "definition": "A group of people living in the same place or having a particular characteristic in common.",
+      "translation": "社區",
+      "example": "We live in a happy community.",
+      "example_translation": "我們住在一個快樂的社區裡。",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "social-studies",
+        "noun"
+      ]
+    },
+    {
+      "term": "neighbor",
+      "definition": "A person who lives near you.",
+      "translation": "鄰居",
+      "example": "My neighbor is very kind.",
+      "example_translation": "我的鄰居很親切。",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "social-studies",
+        "noun"
+      ]
+    },
+    {
+      "term": "respect",
+      "definition": "To show care and politeness towards others.",
+      "translation": "尊重",
+      "example": "We should respect our teachers.",
+      "example_translation": "我們應該尊重我們的老師。",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "values",
+        "verb"
+      ]
+    },
+    {
+      "term": "environment",
+      "definition": "The natural world around us, including air, water, and land.",
+      "translation": "環境",
+      "example": "We must protect the environment.",
+      "example_translation": "我們必須保護環境。",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "science",
+        "nature",
+        "noun"
+      ]
+    },
+    {
+      "term": "recycle",
+      "definition": "To process used materials into new products to reduce waste.",
+      "translation": "回收",
+      "example": "Please recycle paper and plastic bottles.",
+      "example_translation": "請回收紙張和塑膠瓶。",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "environment",
+        "verb"
+      ]
+    },
+    {
+      "term": "safety",
+      "definition": "The condition of being protected from harm or danger.",
+      "translation": "安全",
+      "example": "Wear a helmet for safety when riding a bike.",
+      "example_translation": "騎自行車時戴頭盔以確保安全。",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "health",
+        "noun"
+      ]
+    },
+    {
+      "term": "traffic lights",
+      "definition": "Signals at road crossings that show red, amber, and green lights.",
+      "translation": "交通燈",
+      "example": "Stop when the traffic light is red.",
+      "example_translation": "當交通燈變紅時停下。",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "road-safety",
+        "noun"
+      ]
+    },
+    {
+      "term": "crosswalk",
+      "definition": "A marked path on the road for pedestrians to cross safely.",
+      "translation": "斑馬線",
+      "example": "Use the crosswalk to cross the street.",
+      "example_translation": "使用斑馬線過馬路。",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "road-safety",
+        "noun"
+      ]
+    },
+    {
+      "term": "pollution",
+      "definition": "Harmful substances in the air, water, or land that make it dirty.",
+      "translation": "污染",
+      "example": "Car exhaust causes air pollution.",
+      "example_translation": "汽車尾氣造成空氣污染。",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "environment",
+        "noun"
+      ]
+    },
+    {
+      "term": "conserve",
+      "definition": "To use resources carefully so they are not wasted.",
+      "translation": "節約",
+      "example": "We should conserve water by turning off the tap.",
+      "example_translation": "我們應該關掉水龍頭來節約用水。",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "environment",
+        "verb"
+      ]
+    },
+    {
+      "term": "heritage",
+      "definition": "Traditions, buildings, or objects passed down from the past.",
+      "translation": "遺產",
+      "example": "Hong Kong has many cultural heritages.",
+      "example_translation": "香港有很多文化遺產。",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "culture",
+        "history",
+        "noun"
+      ]
+    },
+    {
+      "term": "festival",
+      "definition": "A day or period of celebration, often religious or cultural.",
+      "translation": "節日",
+      "example": "We eat mooncakes during the Mid-Autumn Festival.",
+      "example_translation": "我們在中秋節吃月餅。",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "culture",
+        "noun"
+      ]
+    },
+    {
+      "term": "tradition",
+      "definition": "A custom or belief passed down from generation to generation.",
+      "translation": "傳統",
+      "example": "It is a tradition to give red packets during Chinese New Year.",
+      "example_translation": "過年發紅包是一個傳統。",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "culture",
+        "noun"
+      ]
+    },
+    {
+      "term": "volunteer",
+      "definition": "A person who offers to help without being paid.",
+      "translation": "義工",
+      "example": "She works as a volunteer at the animal shelter.",
+      "example_translation": "她在動物收容所做義工。",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "community",
+        "service",
+        "noun"
+      ]
+    },
+    {
+      "term": "cooperate",
+      "definition": "To work together with others to achieve a goal.",
+      "translation": "合作",
+      "example": "Students cooperate to finish the group project.",
+      "example_translation": "學生們合作完成小組項目。",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "social-skills",
+        "verb"
+      ]
+    },
+    {
+      "term": "hygiene",
+      "definition": "Conditions or practices that help to maintain health and prevent disease.",
+      "translation": "衛生",
+      "example": "Good personal hygiene includes washing hands regularly.",
+      "example_translation": "良好的個人衛生包括定期洗手。",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "health",
+        "noun"
+      ]
+    },
+    {
+      "term": "exercise",
+      "definition": "Physical activity that is done to stay healthy and strong.",
+      "translation": "運動",
+      "example": "Exercise helps us keep fit.",
+      "example_translation": "運動幫助我們保持健康。",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "health",
+        "verb"
+      ]
+    },
+    {
+      "term": "balanced diet",
+      "definition": "Eating a variety of foods in the right proportions to stay healthy.",
+      "translation": "均衡飲食",
+      "example": "A balanced diet includes fruits, vegetables, and proteins.",
+      "example_translation": "均衡飲食包括水果、蔬菜和蛋白質。",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "health",
+        "noun"
+      ]
+    },
+    {
+      "term": "emergency",
+      "definition": "A serious, unexpected, and often dangerous situation requiring immediate action.",
+      "translation": "緊急情況",
+      "example": "Call 999 in case of an emergency.",
+      "example_translation": "如遇緊急情況，請撥打999。",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "safety",
+        "noun"
+      ]
+    },
+    {
+      "term": "public transport",
+      "definition": "Buses, trains, and trams available for anyone to use.",
+      "translation": "公共交通工具",
+      "example": "We take the MTR to school.",
+      "example_translation": "我們乘搭地鐵上學。",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "community",
+        "transport",
+        "noun"
+      ]
+    }
+  ]
 }

@@ -7,5 +7,326 @@
   "version": "2026.06",
   "display_name_en": "P4 English",
   "display_name_zh_hant": "小四英文",
-  "words": []
+  "words": [
+    {
+      "term": "adventure",
+      "definition": "An exciting or unusual experience.",
+      "translation": "冒險",
+      "example": "We went on an adventure in the forest.",
+      "example_translation": "我們去森林裡進行了一次冒險。",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "english",
+        "noun",
+        "travel",
+        "emotion"
+      ]
+    },
+    {
+      "term": "brave",
+      "definition": "Ready to face and endure danger or pain.",
+      "translation": "勇敢的",
+      "example": "The brave firefighter saved the cat.",
+      "example_translation": "勇敢的消防員救了那隻貓。",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "english",
+        "adjective",
+        "character trait",
+        "people"
+      ]
+    },
+    {
+      "term": "collect",
+      "definition": "To gather things together.",
+      "translation": "收集",
+      "example": "I like to collect stamps from different countries.",
+      "example_translation": "我喜欢收集来自不同国家的邮票。",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "english",
+        "verb",
+        "hobby",
+        "action"
+      ]
+    },
+    {
+      "term": "discover",
+      "definition": "To find something for the first time.",
+      "translation": "發現",
+      "example": "Scientists discover new species every year.",
+      "example_translation": "科學家每年都會發現新的物種。",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "english",
+        "verb",
+        "science",
+        "exploration"
+      ]
+    },
+    {
+      "term": "environment",
+      "definition": "The natural world around us.",
+      "translation": "環境",
+      "example": "We must protect our environment.",
+      "example_translation": "我們必須保護我們的環境。",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "english",
+        "noun",
+        "nature",
+        "science"
+      ]
+    },
+    {
+      "term": "favourite",
+      "definition": "Liked better than all others of the same kind.",
+      "translation": "最喜歡的",
+      "example": "My favourite colour is blue.",
+      "example_translation": "我最喜歡的顏色是藍色。",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "english",
+        "adjective",
+        "personal preference",
+        "daily life"
+      ]
+    },
+    {
+      "term": "generous",
+      "definition": "Willing to give more than is necessary.",
+      "translation": "慷慨的",
+      "example": "She is very generous with her time.",
+      "example_translation": "她在時間上非常慷慨。",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "english",
+        "adjective",
+        "character trait",
+        "social skills"
+      ]
+    },
+    {
+      "term": "honest",
+      "definition": "Free of deceit; truthful and sincere.",
+      "translation": "誠實的",
+      "example": "It is important to be honest with your friends.",
+      "example_translation": "對朋友誠實很重要。",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "english",
+        "adjective",
+        "character trait",
+        "values"
+      ]
+    },
+    {
+      "term": "imagine",
+      "definition": "To form a picture of something in your mind.",
+      "translation": "想像",
+      "example": "Can you imagine living on the moon?",
+      "example_translation": "你能想像住在月球上嗎？",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "english",
+        "verb",
+        "creativity",
+        "thinking skill"
+      ]
+    },
+    {
+      "term": "journey",
+      "definition": "An act of travelling from one place to another.",
+      "translation": "旅程",
+      "example": "The journey to school takes ten minutes.",
+      "example_translation": "上學的旅程需要十分鐘。",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "english",
+        "noun",
+        "travel",
+        "time"
+      ]
+    },
+    {
+      "term": "knowledge",
+      "definition": "Facts, information, and skills acquired through experience or education.",
+      "translation": "知識",
+      "example": "Reading gives us new knowledge.",
+      "example_translation": "閱讀給我們帶來新的知識。",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "english",
+        "noun",
+        "education",
+        "learning"
+      ]
+    },
+    {
+      "term": "liberty",
+      "definition": "The state of being free within society from oppressive restrictions.",
+      "translation": "自由",
+      "example": "We enjoy the liberty to choose our hobbies.",
+      "example_translation": "我們享有選擇愛好的自由。",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "english",
+        "noun",
+        "society",
+        "rights"
+      ]
+    },
+    {
+      "term": "mystery",
+      "definition": "Something that is difficult or impossible to understand or explain.",
+      "translation": "謎",
+      "example": "The old house was a complete mystery to us.",
+      "example_translation": "那座老房子對我們來說完全是一個謎。",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "english",
+        "noun",
+        "storytelling",
+        "emotion"
+      ]
+    },
+    {
+      "term": "navigate",
+      "definition": "To plan and direct the course of a ship, aircraft, or other form of transport.",
+      "translation": "導航",
+      "example": "We used a map to navigate the city.",
+      "example_translation": "我們用地圖來導航這座城市。",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "english",
+        "verb",
+        "direction",
+        "skills"
+      ]
+    },
+    {
+      "term": "observe",
+      "definition": "To notice or perceive something and register it as being significant.",
+      "translation": "觀察",
+      "example": "Students observe the plants growing in the garden.",
+      "example_translation": "學生們觀察花園裡植物的生長。",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "english",
+        "verb",
+        "science",
+        "action"
+      ]
+    },
+    {
+      "term": "pollution",
+      "definition": "The presence of harmful materials in the environment.",
+      "translation": "污染",
+      "example": "Air pollution is bad for our health.",
+      "example_translation": "空氣污染對我們的健康有害。",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "english",
+        "noun",
+        "environment",
+        "health"
+      ]
+    },
+    {
+      "term": "quality",
+      "definition": "The standard of something as measured against other things.",
+      "translation": "品質",
+      "example": "This book is of high quality.",
+      "example_translation": "這本書的品質很高。",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "english",
+        "noun",
+        "evaluation",
+        "objects"
+      ]
+    },
+    {
+      "term": "respect",
+      "definition": "A feeling of deep admiration for someone or something elicited by their abilities, qualities, or achievements.",
+      "translation": "尊重",
+      "example": "We should show respect to our teachers.",
+      "example_translation": "我們應該向老師表示尊重。",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "english",
+        "noun",
+        "social skills",
+        "values"
+      ]
+    },
+    {
+      "term": "tradition",
+      "definition": "The transmission of customs or beliefs from generation to generation.",
+      "translation": "傳統",
+      "example": "Eating dumplings is a Chinese tradition.",
+      "example_translation": "吃餃子是中國的傳統。",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "english",
+        "noun",
+        "culture",
+        "festivals"
+      ]
+    },
+    {
+      "term": "valuable",
+      "definition": "Worth a great deal of money; extremely useful or important.",
+      "translation": "珍貴的",
+      "example": "Time is a valuable resource.",
+      "example_translation": "時間是一種珍貴的資源。",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "english",
+        "adjective",
+        "values",
+        "abstract concept"
+      ]
+    }
+  ]
 }

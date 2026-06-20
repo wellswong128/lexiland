@@ -7,5 +7,306 @@
   "version": "2026.06",
   "display_name_en": "S1 History",
   "display_name_zh_hant": "中一歷史",
-  "words": []
+  "words": [
+    {
+      "term": "chronology",
+      "definition": "The arrangement of events in the order they happened in time.",
+      "translation": "年代學",
+      "example": "Students must learn the chronology of the Qing Dynasty.",
+      "example_translation": "學生必須學習清朝的年代順序。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "skill",
+        "timeline"
+      ]
+    },
+    {
+      "term": "primary source",
+      "definition": "An original document or physical object created during the time under study.",
+      "translation": "一手資料",
+      "example": "A diary from 1941 is a valuable primary source.",
+      "example_translation": "一本1941年的日記是有價值的一手資料。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "concept",
+        "research"
+      ]
+    },
+    {
+      "term": "secondary source",
+      "definition": "A work that interprets or analyzes primary sources, such as a textbook.",
+      "translation": "二手資料",
+      "example": "History textbooks are usually secondary sources.",
+      "example_translation": "歷史教科書通常是二手資料。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "concept",
+        "research"
+      ]
+    },
+    {
+      "term": "cause",
+      "definition": "Something that makes something else happen; the reason for an event.",
+      "translation": "原因",
+      "example": "We need to identify the causes of the Opium War.",
+      "example_translation": "我們需要找出鴉片戰爭的原因。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "concept",
+        "analysis"
+      ]
+    },
+    {
+      "term": "consequence",
+      "definition": "A result or effect of an action or condition.",
+      "translation": "後果",
+      "example": "One consequence of industrialization was urban growth.",
+      "example_translation": "工業化的一個後果是城市增長。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "concept",
+        "analysis"
+      ]
+    },
+    {
+      "term": "empire",
+      "definition": "A large group of states or countries under a single supreme authority.",
+      "translation": "帝國",
+      "example": "The British Empire had colonies around the world.",
+      "example_translation": "大英帝国有世界各地的殖民地。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "noun",
+        "politics"
+      ]
+    },
+    {
+      "term": "dynasty",
+      "definition": "A line of hereditary rulers of a country.",
+      "translation": "朝代",
+      "example": "The Tang Dynasty is known for its poetry and art.",
+      "example_translation": "唐朝以其詩歌和藝術而聞名。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "noun",
+        "chinese history"
+      ]
+    },
+    {
+      "term": "revolution",
+      "definition": "A forcible overthrow of a government or social order in favor of a new system.",
+      "translation": "革命",
+      "example": "The Xinhai Revolution ended imperial rule in China.",
+      "example_translation": "辛亥革命結束了中國的帝制統治。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "noun",
+        "political change"
+      ]
+    },
+    {
+      "term": "colonial",
+      "definition": "Relating to a colony or the control of one territory by another.",
+      "translation": "殖民的",
+      "example": "Hong Kong was a British colonial territory until 1997.",
+      "example_translation": "香港在1997年之前是英國的殖民地。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "adjective",
+        "hk history"
+      ]
+    },
+    {
+      "term": "independence",
+      "definition": "The state of being free from outside control.",
+      "translation": "獨立",
+      "example": "Many Asian countries gained independence after World War II.",
+      "example_translation": "二戰後，許多亞洲國家獲得了獨立。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "noun",
+        "global history"
+      ]
+    },
+    {
+      "term": "treaty",
+      "definition": "A formally concluded and ratified agreement between countries.",
+      "translation": "條約",
+      "example": "The Treaty of Nanking opened five ports to trade.",
+      "example_translation": "《南京條約》開放了五個通商口岸。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "noun",
+        "diplomacy"
+      ]
+    },
+    {
+      "term": "reform",
+      "definition": "Making changes in something, typically a social, political, or economic system, to improve it.",
+      "translation": "改革",
+      "example": "The Hundred Days' Reform attempted to modernize China.",
+      "example_translation": "百日維新試圖使中國現代化。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "noun",
+        "political change"
+      ]
+    },
+    {
+      "term": "tradition",
+      "definition": "The transmission of customs or beliefs from generation to generation.",
+      "translation": "傳統",
+      "example": "Lunar New Year is an important cultural tradition in Hong Kong.",
+      "example_translation": "農曆新年是香港重要的文化傳統。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "noun",
+        "culture"
+      ]
+    },
+    {
+      "term": "heritage",
+      "definition": "Valued objects and qualities such as historic buildings and cultural traditions that have been passed down from previous generations.",
+      "translation": "遺產",
+      "example": "Students visited the heritage sites in Central District.",
+      "example_translation": "學生們參觀了中環的歷史遺跡。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "noun",
+        "culture"
+      ]
+    },
+    {
+      "term": "analyze",
+      "definition": "To examine something methodically and in detail.",
+      "translation": "分析",
+      "example": "You must analyze the impact of the war on civilians.",
+      "example_translation": "你必須分析戰爭對平民的影響。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "verb",
+        "skill"
+      ]
+    },
+    {
+      "term": "evaluate",
+      "definition": "To form an idea of the amount, number, or value of something; to assess.",
+      "translation": "評估",
+      "example": "Evaluate the success of the Self-Strengthening Movement.",
+      "example_translation": "評估洋務運動的成功與否。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "verb",
+        "skill"
+      ]
+    },
+    {
+      "term": "significant",
+      "definition": "Sufficiently great or important to be worthy of attention.",
+      "translation": "重要的",
+      "example": "The signing of the treaty was a significant event.",
+      "example_translation": "簽署條約是一個重要事件。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "adjective",
+        "general"
+      ]
+    },
+    {
+      "term": "conflict",
+      "definition": "A serious disagreement or argument, typically a protracted one.",
+      "translation": "衝突",
+      "example": "Social conflict often arises from inequality.",
+      "example_translation": "社會不平等經常引發社會衝突。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "noun",
+        "social studies"
+      ]
+    },
+    {
+      "term": "perspective",
+      "definition": "A particular attitude toward or way of regarding something; a point of view.",
+      "translation": "觀點",
+      "example": "History can be viewed from different perspectives.",
+      "example_translation": "歷史可以從不同的觀點來看待。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "noun",
+        "critical thinking"
+      ]
+    },
+    {
+      "term": "impact",
+      "definition": "A marked effect or influence.",
+      "translation": "影響",
+      "example": "The Industrial Revolution had a huge impact on daily life.",
+      "example_translation": "工業革命對日常生活產生了巨大的影響。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "noun",
+        "analysis"
+      ]
+    }
+  ]
 }

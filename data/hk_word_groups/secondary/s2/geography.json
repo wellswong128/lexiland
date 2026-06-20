@@ -7,5 +7,326 @@
   "version": "2026.06",
   "display_name_en": "S2 Geography",
   "display_name_zh_hant": "中二地理",
-  "words": []
+  "words": [
+    {
+      "term": "Urbanization",
+      "definition": "The process by which an increasing percentage of a population lives in cities and towns.",
+      "translation": "城市化",
+      "example": "Hong Kong has experienced rapid urbanization since the 1950s.",
+      "example_translation": "自20世紀50年代以來，香港經歷了快速的城市化。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "geography",
+        "human geography",
+        "urban",
+        "population"
+      ]
+    },
+    {
+      "term": "Suburbanization",
+      "definition": "The process of people moving from city centers to residential areas on the outskirts.",
+      "translation": "郊區化",
+      "example": "Many families choose suburbanization to enjoy a quieter environment.",
+      "example_translation": "許多家庭選擇郊區化以享受更安靜的環境。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "geography",
+        "human geography",
+        "urban",
+        "migration"
+      ]
+    },
+    {
+      "term": "Gentrification",
+      "definition": "The process of renovating and improving a house or district so that it conforms to middle-class taste.",
+      "translation": "中產階級化",
+      "example": "Gentrification often leads to rising property prices in old neighborhoods.",
+      "example_translation": "中產階級化往往導致舊社區的房地產價格上漲。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "geography",
+        "human geography",
+        "urban change",
+        "social"
+      ]
+    },
+    {
+      "term": "Rural-urban migration",
+      "definition": "The movement of people from rural areas to urban areas in search of better jobs and services.",
+      "translation": "鄉鎮人口遷移",
+      "example": "Rural-urban migration puts pressure on city infrastructure.",
+      "example_translation": "鄉鎮人口遷移給城市基礎設施帶來壓力。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "geography",
+        "human geography",
+        "population",
+        "movement"
+      ]
+    },
+    {
+      "term": "Infrastructure",
+      "definition": "Basic physical and organizational structures needed for the operation of a society, such as roads and bridges.",
+      "translation": "基礎設施",
+      "example": "Good infrastructure is essential for economic development.",
+      "example_translation": "良好的基礎設施對經濟發展至關重要。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "geography",
+        "human geography",
+        "development",
+        "planning"
+      ]
+    },
+    {
+      "term": "Congestion",
+      "definition": "The state of being blocked or too full, especially referring to traffic in cities.",
+      "translation": "擠塞",
+      "example": "Traffic congestion is a major problem in Central during rush hour.",
+      "example_translation": "交通擠塞是中午時段在中環的主要問題。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "geography",
+        "human geography",
+        "transport",
+        "urban issues"
+      ]
+    },
+    {
+      "term": "Land use",
+      "definition": "The management and modification of natural environment or wilderness into built environment such as fields, pastures, and settlements.",
+      "translation": "土地用途",
+      "example": "Zoning laws determine the land use in different districts.",
+      "example_translation": "分區法規決定了不同區域的土地用途。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "geography",
+        "human geography",
+        "planning",
+        "resources"
+      ]
+    },
+    {
+      "term": "Sustainable development",
+      "definition": "Development that meets the needs of the present without compromising the ability of future generations to meet their own needs.",
+      "translation": "可持續發展",
+      "example": "Sustainable development aims to balance economic growth with environmental protection.",
+      "example_translation": "可持續發展旨在平衡經濟增長與環境保護。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "geography",
+        "human geography",
+        "environment",
+        "policy"
+      ]
+    },
+    {
+      "term": "Carbon footprint",
+      "definition": "The total amount of greenhouse gases produced to directly and indirectly support human activities.",
+      "translation": "碳足跡",
+      "example": "Using public transport helps reduce your personal carbon footprint.",
+      "example_translation": "使用公共交通工具有助於減少個人的碳足跡。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "geography",
+        "environmental geography",
+        "climate change",
+        "ecology"
+      ]
+    },
+    {
+      "term": "Deforestation",
+      "definition": "The action of clearing a wide area of trees, typically for agricultural purposes.",
+      "translation": "砍伐森林",
+      "example": "Deforestation contributes significantly to global warming.",
+      "example_translation": "砍伐森林對全球變暖有顯著貢獻。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "geography",
+        "environmental geography",
+        "biomes",
+        "human impact"
+      ]
+    },
+    {
+      "term": "Erosion",
+      "definition": "The gradual wearing away of rock, soil, or land by wind, water, or ice.",
+      "translation": "侵蝕",
+      "example": "Coastal erosion can destroy beaches and cliffs over time.",
+      "example_translation": "海岸侵蝕會隨時間破壞海灘和懸崖。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "geography",
+        "physical geography",
+        "geomorphology",
+        "processes"
+      ]
+    },
+    {
+      "term": "Weathering",
+      "definition": "The breaking down of rocks, soil, and minerals through contact with the Earth's atmosphere, water, and biological organisms.",
+      "translation": "風化",
+      "example": "Chemical weathering changes the composition of rocks.",
+      "example_translation": "化學風化會改變岩石的成分。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "geography",
+        "physical geography",
+        "geomorphology",
+        "processes"
+      ]
+    },
+    {
+      "term": "Mass wasting",
+      "definition": "The downslope movement of rock and soil under the direct influence of gravity.",
+      "translation": "塊體運動",
+      "example": "Heavy rain can trigger mass wasting events like landslides.",
+      "example_translation": "大雨可能引發山崩等塊體運動事件。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "geography",
+        "physical geography",
+        "geomorphology",
+        "hazards"
+      ]
+    },
+    {
+      "term": "Tectonic plates",
+      "definition": "Large, irregularly shaped slabs of solid rock that make up the Earth's lithosphere.",
+      "translation": "板塊",
+      "example": "The movement of tectonic plates causes earthquakes and volcanic activity.",
+      "example_translation": "板塊的移動會引起地震和火山活動。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "geography",
+        "physical geography",
+        "earth structure",
+        "hazards"
+      ]
+    },
+    {
+      "term": "Convection current",
+      "definition": "The circular movement caused by the heating and cooling of fluid, driving plate tectonics.",
+      "translation": "對流循環",
+      "example": "Mantle convection currents drive the motion of tectonic plates.",
+      "example_translation": "地幔對流循環驅動板塊的運動。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "geography",
+        "physical geography",
+        "earth structure",
+        "internal processes"
+      ]
+    },
+    {
+      "term": "Climate zone",
+      "definition": "A large area with similar climate patterns, such as tropical, temperate, or polar regions.",
+      "translation": "氣候帶",
+      "example": "Hong Kong is located in the subtropical climate zone.",
+      "example_translation": "香港位於亞熱帶氣候帶。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "geography",
+        "physical geography",
+        "climate",
+        "biomes"
+      ]
+    },
+    {
+      "term": "Precipitation",
+      "definition": "Moisture, such as rain, snow, sleet, or hail, that falls to the Earth's surface.",
+      "translation": "降水",
+      "example": "Typhoons bring heavy precipitation to the region in summer.",
+      "example_translation": "颱風在夏季為該地區帶來大量降水。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "geography",
+        "physical geography",
+        "hydrological cycle",
+        "weather"
+      ]
+    },
+    {
+      "term": "Evapotranspiration",
+      "definition": "The sum of evaporation from the land surface plus transpiration from plants.",
+      "translation": "蒸散",
+      "example": "High temperatures increase the rate of evapotranspiration.",
+      "example_translation": "高溫會增加蒸散的速率。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "geography",
+        "physical geography",
+        "hydrological cycle",
+        "water"
+      ]
+    },
+    {
+      "term": "Catchment area",
+      "definition": "An area of land where precipitation collects and drains off into a common outlet, such as a river.",
+      "translation": "集水區",
+      "example": "The Shing Mun Reservoir serves as a vital catchment area for water supply.",
+      "example_translation": "城門水塘作為供水的重要集水區。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "geography",
+        "physical geography",
+        "hydrology",
+        "water resources"
+      ]
+    },
+    {
+      "term": "Greenhouse effect",
+      "definition": "The trapping of the sun's warmth in a planet's lower atmosphere, due to the greater transparency of the atmosphere to visible radiation from the sun.",
+      "translation": "溫室效應",
+      "example": "The enhanced greenhouse effect is causing global temperatures to rise.",
+      "example_translation": "增強的溫室效應導致全球氣溫上升。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "geography",
+        "physical geography",
+        "climate change",
+        "atmosphere"
+      ]
+    }
+  ]
 }

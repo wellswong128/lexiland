@@ -7,5 +7,326 @@
   "version": "2026.06",
   "display_name_en": "S5 Physics",
   "display_name_zh_hant": "中五物理",
-  "words": []
+  "words": [
+    {
+      "term": "Simple Harmonic Motion",
+      "definition": "A type of periodic motion where the restoring force is directly proportional to the displacement and acts in the direction opposite to that of displacement.",
+      "translation": "簡諧運動",
+      "example": "The motion of a pendulum swinging with small angles is an example of simple harmonic motion.",
+      "example_translation": "小角度擺動的单摆运动是简谐运动的一个例子。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "mechanics",
+        "oscillations",
+        "noun phrase"
+      ]
+    },
+    {
+      "term": "Damping",
+      "definition": "The reduction in amplitude of an oscillation due to energy loss from friction or other resistive forces.",
+      "translation": "阻尼",
+      "example": "Heavy damping causes the oscillator to return to equilibrium without oscillating.",
+      "example_translation": "重度阻尼会使振荡器在不振荡的情况下返回平衡位置。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "mechanics",
+        "oscillations",
+        "noun"
+      ]
+    },
+    {
+      "term": "Resonance",
+      "definition": "The phenomenon where a system vibrates with greater amplitude at some frequencies than at others, specifically when driven at its natural frequency.",
+      "translation": "共振",
+      "example": "Bridge collapse can occur due to resonance if wind forces match the bridge's natural frequency.",
+      "example_translation": "如果风力频率与桥梁的固有频率匹配，共振可能导致桥梁坍塌。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "mechanics",
+        "oscillations",
+        "noun"
+      ]
+    },
+    {
+      "term": "Electric Field Strength",
+      "definition": "The force per unit positive charge exerted on a test charge placed at a point in the field.",
+      "translation": "电场强度",
+      "example": "The electric field strength decreases as the distance from a point charge increases.",
+      "example_translation": "点电荷周围的电场强度随距离增加而减小。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "electromagnetism",
+        "electric fields",
+        "noun phrase"
+      ]
+    },
+    {
+      "term": "Capacitance",
+      "definition": "The ability of a system to store an electric charge, defined as the ratio of the change in electric charge to the corresponding change in its electric potential.",
+      "translation": "电容",
+      "example": "A capacitor stores energy in an electric field between its plates.",
+      "example_translation": "电容器在其极板间的电场中储存能量。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "electromagnetism",
+        "electric circuits",
+        "noun"
+      ]
+    },
+    {
+      "term": "Dielectric",
+      "definition": "An electrical insulator that can be polarized by an applied electric field, often used to increase capacitance.",
+      "translation": "电介质",
+      "example": "Inserting a dielectric material between capacitor plates increases the capacitance.",
+      "example_translation": "在电容器极板间插入电介质材料会增加电容。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "electromagnetism",
+        "capacitors",
+        "noun"
+      ]
+    },
+    {
+      "term": "Magnetic Flux Density",
+      "definition": "A measure of the strength and direction of a magnetic field, often denoted by B.",
+      "translation": "磁通密度",
+      "example": "The magnetic flux density is higher near the poles of a magnet.",
+      "example_translation": "磁铁两极附近的磁通密度较高。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "electromagnetism",
+        "magnetism",
+        "noun phrase"
+      ]
+    },
+    {
+      "term": "Lorentz Force",
+      "definition": "The combination of electric and magnetic force on a point charge due to electromagnetic fields.",
+      "translation": "洛伦兹力",
+      "example": "A charged particle moving in a magnetic field experiences a Lorentz force perpendicular to its velocity.",
+      "example_translation": "在磁场中运动的带电粒子会受到垂直于其速度的洛伦兹力。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "electromagnetism",
+        "magnetism",
+        "noun"
+      ]
+    },
+    {
+      "term": "Inductance",
+      "definition": "The tendency of an electrical conductor to oppose a change in the electric current flowing through it.",
+      "translation": "电感",
+      "example": "Self-inductance occurs when a changing current in a coil induces an EMF in the same coil.",
+      "example_translation": "当线圈中的电流变化时，在同一线圈中感应出电动势的现象称为自感。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "electromagnetism",
+        "circuits",
+        "noun"
+      ]
+    },
+    {
+      "term": "Electromagnetic Induction",
+      "definition": "The production of an electromotive force across an electrical conductor in a changing magnetic field.",
+      "translation": "电磁感应",
+      "example": "Faraday's law describes how electromagnetic induction generates voltage.",
+      "example_translation": "法拉第定律描述了电磁感应如何产生电压。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "electromagnetism",
+        "fields",
+        "noun phrase"
+      ]
+    },
+    {
+      "term": "Alternating Current (AC)",
+      "definition": "An electric current which periodically reverses direction and changes its magnitude continuously with time.",
+      "translation": "交流电",
+      "example": "Household electricity in Hong Kong is supplied as alternating current at 50 Hz.",
+      "example_translation": "香港的家用电力是以50赫兹的交流电形式提供的。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "electromagnetism",
+        "circuits",
+        "noun phrase"
+      ]
+    },
+    {
+      "term": "RMS Value",
+      "definition": "The root mean square value, representing the equivalent DC value that would deliver the same power to a resistor.",
+      "translation": "均方根值",
+      "example": "The RMS voltage is used to calculate the average power in AC circuits.",
+      "example_translation": "均方根电压用于计算交流电路中的平均功率。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "electromagnetism",
+        "calculations",
+        "noun phrase"
+      ]
+    },
+    {
+      "term": "Photoelectric Effect",
+      "definition": "The emission of electrons when electromagnetic radiation, such as light, hits a material.",
+      "translation": "光电效应",
+      "example": "Einstein explained the photoelectric effect by proposing that light consists of photons.",
+      "example_translation": "爱因斯坦通过提出光由光子组成来解释光电效应。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "modern physics",
+        "quantum",
+        "noun phrase"
+      ]
+    },
+    {
+      "term": "Photon",
+      "definition": "A discrete packet (or quantum) of electromagnetic energy.",
+      "translation": "光子",
+      "example": "The energy of a photon is proportional to its frequency.",
+      "example_translation": "光子的能量与其频率成正比。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "modern physics",
+        "quantum",
+        "noun"
+      ]
+    },
+    {
+      "term": "Wave-Particle Duality",
+      "definition": "The concept that every particle or quantic entity exhibits the properties of both particles and waves.",
+      "translation": "波粒二象性",
+      "example": "Electrons demonstrate wave-particle duality through diffraction experiments.",
+      "example_translation": "电子通过衍射实验展示了波粒二象性。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "modern physics",
+        "quantum",
+        "noun phrase"
+      ]
+    },
+    {
+      "term": "Half-life",
+      "definition": "The time required for half of the radioactive nuclei in a sample to decay.",
+      "translation": "半衰期",
+      "example": "Carbon-14 has a half-life of approximately 5,730 years.",
+      "example_translation": "碳-14的半衰期约为5730年。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "modern physics",
+        "radioactivity",
+        "noun"
+      ]
+    },
+    {
+      "term": "Ionizing Radiation",
+      "definition": "Radiation with enough energy to remove tightly bound electrons from atoms, thus creating ions.",
+      "translation": "电离辐射",
+      "example": "Alpha and beta particles are forms of ionizing radiation.",
+      "example_translation": "阿尔法粒子和贝塔粒子是电离辐射的形式。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "modern physics",
+        "safety",
+        "adjective noun"
+      ]
+    },
+    {
+      "term": "Nuclear Fission",
+      "definition": "A nuclear reaction in which the nucleus of an atom splits into two or more smaller, lighter nuclei.",
+      "translation": "核裂变",
+      "example": "Nuclear fission releases a large amount of energy used in power plants.",
+      "example_translation": "核裂变释放大量能量，用于发电厂。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "modern physics",
+        "nuclear",
+        "noun phrase"
+      ]
+    },
+    {
+      "term": "Refraction",
+      "definition": "The bending of light as it passes from one transparent substance into another.",
+      "translation": "折射",
+      "example": "Refraction causes a straw in a glass of water to appear bent.",
+      "example_translation": "折射使水中的吸管看起来弯曲。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "waves",
+        "optics",
+        "noun"
+      ]
+    },
+    {
+      "term": "Total Internal Reflection",
+      "definition": "The complete reflection of a ray of light within a medium, such as water or glass, from the surrounding surfaces back into the medium.",
+      "translation": "全内反射",
+      "example": "Optical fibers use total internal reflection to transmit data over long distances.",
+      "example_translation": "光纤利用全内反射在长距离传输数据。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "waves",
+        "optics",
+        "noun phrase"
+      ]
+    }
+  ]
 }

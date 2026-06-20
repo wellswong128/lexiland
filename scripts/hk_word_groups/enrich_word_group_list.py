@@ -30,6 +30,7 @@ from wordbase_client import (  # noqa: E402
 )
 
 DEFAULT_WORD_LIST = REPO_ROOT / "data/hk_word_groups/primary/p1/english.json"
+TAXONOMY_PATH = REPO_ROOT / "data/hk_word_groups/taxonomy.json"
 PROGRESS_DIR = SCRIPT_DIR / "progress"
 
 
@@ -43,8 +44,13 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--file",
         type=Path,
-        default=DEFAULT_WORD_LIST,
-        help="Word list JSON path (default: P1 English starter list)",
+        default=None,
+        help="Word list JSON path (default: P1 English when neither --all nor --file is set)",
+    )
+    parser.add_argument(
+        "--all",
+        action="store_true",
+        help="Enrich every word list file listed in taxonomy.json.",
     )
     parser.add_argument("--dry-run", action="store_true", help="Preview without writes or AI calls.")
     parser.add_argument("--limit", type=int, default=0, help="Process only the first N words.")
@@ -68,6 +74,25 @@ def utc_now() -> str:
 def load_word_list(path: Path) -> dict:
     with path.open(encoding="utf-8") as handle:
         return json.load(handle)
+
+
+def load_taxonomy_word_list_files() -> list[Path]:
+    taxonomy = load_word_list(TAXONOMY_PATH)
+    groups = taxonomy.get("groups") or []
+    files: list[Path] = []
+    seen: set[str] = set()
+
+    for group in groups:
+        relative_path = str(group.get("word_list_file") or "").strip()
+        if not relative_path or relative_path in seen:
+            continue
+        seen.add(relative_path)
+        files.append(REPO_ROOT / relative_path)
+
+    if not files:
+        raise ValueError("No word_list_file entries found in taxonomy.json.")
+
+    return files
 
 
 def word_json_to_suggestion(word: dict) -> dict:
@@ -283,17 +308,24 @@ def process_word(
     print(f"  [{term}] incomplete — still missing: {', '.join(missing)}")
 
 
-def main() -> int:
-    args = parse_args()
-    payload = load_word_list(args.file)
+def enrich_word_list_file(
+    args: argparse.Namespace,
+    *,
+    file_path: Path,
+    settings,
+    api: LexiLandApiClient,
+    contributor_id: str,
+    client,
+) -> dict:
+    payload = load_word_list(file_path)
     group_code = str(payload.get("group_code", "")).strip().lower()
     locale = str(payload.get("locale", "zh-Hant")).strip() or "zh-Hant"
     words = payload.get("words") or []
 
     if not group_code:
-        raise ValueError("Word list JSON must include group_code.")
+        raise ValueError(f"Word list JSON must include group_code: {file_path}")
     if not isinstance(words, list) or not words:
-        raise ValueError("Word list JSON must include a non-empty words array.")
+        raise ValueError(f"Word list JSON must include a non-empty words array: {file_path}")
 
     if args.term:
         words = [word for word in words if normalize_term(word.get("term")) == normalize_term(args.term)]
@@ -302,6 +334,64 @@ def main() -> int:
 
     if args.limit > 0:
         words = words[: args.limit]
+
+    group_id = "" if args.dry_run else resolve_group_id(client, group_code)
+    progress = load_progress(group_code)
+
+    print("\nHK word group enrich")
+    print(f"  file: {file_path}")
+    print(f"  group: {group_code}")
+    print(f"  locale: {locale}")
+    print(f"  words: {len(words)}")
+
+    for index, word in enumerate(words, start=1):
+        print(f"[{index}/{len(words)}]")
+        try:
+            process_word(
+                word=word,
+                locale=locale,
+                group_id=group_id,
+                contributor_id=contributor_id,
+                api=api,
+                client=client,
+                args=args,
+                progress=progress,
+            )
+        except Exception as error:
+            term_key = normalize_term(word.get("term"))
+            record = progress.setdefault("terms", {}).setdefault(term_key, {})
+            record["status"] = "failed"
+            record["errors"] = {**record.get("errors", {}), "last": str(error)}
+            print(f"  [{word.get('term', '')}] failed: {error}")
+        finally:
+            if not args.dry_run:
+                save_progress(group_code, progress)
+                time.sleep(0.2)
+
+    completed = sum(1 for item in progress.get("terms", {}).values() if item.get("status") == "complete")
+    print("\nEnrich summary")
+    print(f"  processed: {len(words)}")
+    print(f"  complete: {completed}")
+    if not args.dry_run:
+        print(f"  progress: {progress_path(group_code)}")
+
+    return {
+        "group_code": group_code,
+        "processed": len(words),
+        "complete": completed,
+        "failed": len(words) - completed,
+    }
+
+
+def main() -> int:
+    args = parse_args()
+
+    if args.all and args.file:
+        raise ValueError("Use either --all or --file, not both.")
+    if args.all:
+        file_paths = load_taxonomy_word_list_files()
+    else:
+        file_paths = [args.file or DEFAULT_WORD_LIST]
 
     settings = load_settings()
     api = LexiLandApiClient(
@@ -313,14 +403,9 @@ def main() -> int:
 
     contributor_id = "" if args.dry_run else resolve_contributor_id(args.contributor_id, settings)
     client = None if args.dry_run else load_service_client()
-    group_id = "" if args.dry_run else resolve_group_id(client, group_code)
-    progress = load_progress(group_code)
 
-    print("HK word group enrich")
-    print(f"  file: {args.file}")
-    print(f"  group: {group_code}")
-    print(f"  locale: {locale}")
-    print(f"  words: {len(words)}")
+    print("HK word group enrich batch" if args.all else "HK word group enrich")
+    print(f"  files: {len(file_paths)}")
     print(f"  api: {settings.api_base_url}")
     print(f"  mode: {'dry-run' if args.dry_run else 'write'}")
     import_key = os.getenv("IMPORT_API_KEY", "").strip()
@@ -334,39 +419,41 @@ def main() -> int:
     if not args.dry_run:
         print(f"  contributor: {contributor_id}")
 
+    batch_summary = {
+        "files": len(file_paths),
+        "processed_words": 0,
+        "complete_words": 0,
+        "failed_groups": 0,
+    }
+
     try:
-        for index, word in enumerate(words, start=1):
-            print(f"[{index}/{len(words)}]")
+        for file_index, file_path in enumerate(file_paths, start=1):
+            if args.all:
+                print(f"\n=== File {file_index}/{len(file_paths)} ===")
             try:
-                process_word(
-                    word=word,
-                    locale=locale,
-                    group_id=group_id,
-                    contributor_id=contributor_id,
+                result = enrich_word_list_file(
+                    args,
+                    file_path=file_path,
+                    settings=settings,
                     api=api,
+                    contributor_id=contributor_id,
                     client=client,
-                    args=args,
-                    progress=progress,
                 )
+                batch_summary["processed_words"] += result["processed"]
+                batch_summary["complete_words"] += result["complete"]
             except Exception as error:
-                term_key = normalize_term(word.get("term"))
-                record = progress.setdefault("terms", {}).setdefault(term_key, {})
-                record["status"] = "failed"
-                record["errors"] = {**record.get("errors", {}), "last": str(error)}
-                print(f"  [{word.get('term', '')}] failed: {error}")
-            finally:
-                if not args.dry_run:
-                    save_progress(group_code, progress)
-                    time.sleep(0.2)
+                batch_summary["failed_groups"] += 1
+                print(f"File failed ({file_path}): {error}")
     finally:
         api.close()
 
-    completed = sum(1 for item in progress.get("terms", {}).values() if item.get("status") == "complete")
-    print("\nEnrich summary")
-    print(f"  processed: {len(words)}")
-    print(f"  complete: {completed}")
-    if not args.dry_run:
-        print(f"  progress: {progress_path(group_code)}")
+    if args.all:
+        print("\nBatch enrich summary")
+        print(f"  files: {batch_summary['files']}")
+        print(f"  failed groups: {batch_summary['failed_groups']}")
+        print(f"  processed words: {batch_summary['processed_words']}")
+        print(f"  complete words: {batch_summary['complete_words']}")
+
     return 0
 
 

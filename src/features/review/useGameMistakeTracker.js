@@ -1,23 +1,51 @@
 import { useCallback, useRef, useState } from "react";
-import { normalizeTerm } from "../words/wordTypes.js";
+import { REVIEW_RESULTS, normalizeTerm } from "../words/wordTypes.js";
 import { useWordsContext } from "../words/WordsContext.jsx";
-import { commitGameMistakes } from "./gameMistakeHelpers.js";
+import {
+  commitGameMistakes,
+  findWordInLibrary,
+} from "./gameMistakeHelpers.js";
+import { updateReviewResult } from "./reviewHelpers.js";
 
 export function useGameMistakeTracker() {
   const wrongCountsRef = useRef({});
   const { updateWord, words } = useWordsContext();
   const [lastCommittedTerms, setLastCommittedTerms] = useState([]);
 
-  const recordWrong = useCallback((term) => {
-    const normalizedTerm = normalizeTerm(term);
+  const persistReviewResult = useCallback(
+    (term, result) => {
+      const word = findWordInLibrary(words, term);
 
-    if (!normalizedTerm) {
-      return;
-    }
+      if (!word) {
+        return;
+      }
 
-    wrongCountsRef.current[normalizedTerm] =
-      (wrongCountsRef.current[normalizedTerm] || 0) + 1;
-  }, []);
+      updateWord(word.id, updateReviewResult(word, result));
+    },
+    [updateWord, words],
+  );
+
+  const recordCorrect = useCallback(
+    (term) => {
+      persistReviewResult(term, REVIEW_RESULTS.CORRECT);
+    },
+    [persistReviewResult],
+  );
+
+  const recordWrong = useCallback(
+    (term) => {
+      const normalizedTerm = normalizeTerm(term);
+
+      if (!normalizedTerm) {
+        return;
+      }
+
+      wrongCountsRef.current[normalizedTerm] =
+        (wrongCountsRef.current[normalizedTerm] || 0) + 1;
+      persistReviewResult(term, REVIEW_RESULTS.INCORRECT);
+    },
+    [persistReviewResult],
+  );
 
   const resetTracker = useCallback(() => {
     wrongCountsRef.current = {};
@@ -28,18 +56,18 @@ export function useGameMistakeTracker() {
     const addedTerms = commitGameMistakes({
       wrongCounts: wrongCountsRef.current,
       words,
-      updateWord,
     });
 
     wrongCountsRef.current = {};
     setLastCommittedTerms(addedTerms);
 
     return addedTerms;
-  }, [updateWord, words]);
+  }, [words]);
 
   return {
     commitMistakes,
     lastCommittedTerms,
+    recordCorrect,
     recordWrong,
     resetTracker,
   };

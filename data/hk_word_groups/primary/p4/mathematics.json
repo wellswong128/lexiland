@@ -7,5 +7,307 @@
   "version": "2026.06",
   "display_name_en": "P4 Mathematics",
   "display_name_zh_hant": "小四數學",
-  "words": []
+  "words": [
+    {
+      "term": "addition",
+      "definition": "The process of adding two or more numbers together.",
+      "translation": "加法",
+      "example": "Addition helps us find the total number of apples.",
+      "example_translation": "加法幫助我們找出蘋果的總數。",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "mathematics",
+        "operations",
+        "basic-math"
+      ]
+    },
+    {
+      "term": "subtraction",
+      "definition": "The process of taking one number away from another.",
+      "translation": "減法",
+      "example": "Subtraction is used when we want to know how many are left.",
+      "example_translation": "當我們想知道還剩下多少時，會使用減法。",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "mathematics",
+        "operations",
+        "basic-math"
+      ]
+    },
+    {
+      "term": "multiplication",
+      "definition": "A quick way to add the same number many times.",
+      "translation": "乘法",
+      "example": "Multiplication is like repeated addition.",
+      "example_translation": "乘法就像重複的加法。",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "mathematics",
+        "operations",
+        "basic-math"
+      ]
+    },
+    {
+      "term": "division",
+      "definition": "Sharing a number into equal parts or groups.",
+      "translation": "除法",
+      "example": "Division helps us share candies equally among friends.",
+      "example_translation": "除法幫助我們將糖果平均分給朋友。",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "mathematics",
+        "operations",
+        "basic-math"
+      ]
+    },
+    {
+      "term": "sum",
+      "definition": "The result you get when you add numbers together.",
+      "translation": "和",
+      "example": "The sum of 5 and 3 is 8.",
+      "example_translation": "5 和 3 的和是 8。",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "mathematics",
+        "vocabulary",
+        "addition"
+      ]
+    },
+    {
+      "term": "difference",
+      "definition": "The result you get when you subtract one number from another.",
+      "translation": "差",
+      "example": "Find the difference between 10 and 4.",
+      "example_translation": "找出 10 和 4 之間的差。",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "mathematics",
+        "vocabulary",
+        "subtraction"
+      ]
+    },
+    {
+      "term": "product",
+      "definition": "The answer you get when you multiply numbers.",
+      "translation": "積",
+      "example": "The product of 2 and 5 is 10.",
+      "example_translation": "2 和 5 的積是 10。",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "mathematics",
+        "vocabulary",
+        "multiplication"
+      ]
+    },
+    {
+      "term": "quotient",
+      "definition": "The answer you get when you divide one number by another.",
+      "translation": "商",
+      "example": "The quotient of 20 divided by 4 is 5.",
+      "example_translation": "20 除以 4 的商是 5。",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "mathematics",
+        "vocabulary",
+        "division"
+      ]
+    },
+    {
+      "term": "factor",
+      "definition": "A number that divides another number exactly without leaving a remainder.",
+      "translation": "因數",
+      "example": "3 is a factor of 12 because 3 times 4 equals 12.",
+      "example_translation": "3 是 12 的因數，因為 3 乘以 4 等於 12。",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "mathematics",
+        "number-theory",
+        "factors"
+      ]
+    },
+    {
+      "term": "multiple",
+      "definition": "A number that can be divided by another number a whole number of times.",
+      "translation": "倍數",
+      "example": "10, 20, and 30 are multiples of 10.",
+      "example_translation": "10、20 和 30 都是 10 的倍數。",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "mathematics",
+        "number-theory",
+        "multiples"
+      ]
+    },
+    {
+      "term": "even number",
+      "definition": "A number that can be divided by 2 with no remainder.",
+      "translation": "偶數",
+      "example": "2, 4, and 6 are even numbers.",
+      "example_translation": "2、4 和 6 都是偶數。",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "mathematics",
+        "number-properties",
+        "integers"
+      ]
+    },
+    {
+      "term": "odd number",
+      "definition": "A number that cannot be divided by 2 evenly; it has a remainder of 1.",
+      "translation": "奇數",
+      "example": "1, 3, and 5 are odd numbers.",
+      "example_translation": "1、3 和 5 都是奇數。",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "mathematics",
+        "number-properties",
+        "integers"
+      ]
+    },
+    {
+      "term": "place value",
+      "definition": "The value of a digit depending on its position in a number.",
+      "translation": "位值",
+      "example": "In 35, the place value of 3 is thirty.",
+      "example_translation": "在 35 中，3 的位值是三十。",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "mathematics",
+        "numbers",
+        "digits"
+      ]
+    },
+    {
+      "term": "rounding",
+      "definition": "Making a number simpler but keeping its value close to the original.",
+      "translation": "四捨五入",
+      "example": "We round 47 to the nearest ten to get 50.",
+      "example_translation": "我們將 47 四捨五入到最接近的十位數，得到 50。",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "mathematics",
+        "estimation",
+        "numbers"
+      ]
+    },
+    {
+      "term": "perimeter",
+      "definition": "The total distance around the outside of a shape.",
+      "translation": "周長",
+      "example": "To find the perimeter, add up all the sides.",
+      "example_translation": "要找出周長，請將所有邊長加起來。",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "mathematics",
+        "geometry",
+        "measurement"
+      ]
+    },
+    {
+      "term": "area",
+      "definition": "The amount of space inside a flat shape.",
+      "translation": "面積",
+      "example": "We measure area in square centimeters.",
+      "example_translation": "我們用平方厘米來測量面積。",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "mathematics",
+        "geometry",
+        "measurement"
+      ]
+    },
+    {
+      "term": "fraction",
+      "definition": "A part of a whole, written as one number over another.",
+      "translation": "分數",
+      "example": "One half is written as 1/2.",
+      "example_translation": "二分之一寫成 1/2。",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "mathematics",
+        "numbers",
+        "parts"
+      ]
+    },
+    {
+      "term": "decimal",
+      "definition": "A way to write numbers that are less than one or have parts of a whole.",
+      "translation": "小數",
+      "example": "0.5 is the same as one half.",
+      "example_translation": "0.5 與二分之一相同。",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "mathematics",
+        "numbers",
+        "place-value"
+      ]
+    },
+    {
+      "term": "symmetry",
+      "definition": "When one side of a shape is a mirror image of the other side.",
+      "translation": "對稱",
+      "example": "A butterfly has symmetry along its center line.",
+      "example_translation": "蝴蝶沿著中心線具有對稱性。",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "mathematics",
+        "geometry",
+        "shapes"
+      ]
+    },
+    {
+      "term": "equation",
+      "definition": "A mathematical statement that shows two expressions are equal, usually containing a letter for an unknown number.",
+      "translation": "方程式",
+      "example": "If x + 5 = 12, what is x?",
+      "example_translation": "如果 x + 5 = 12，那麼 x 是多少？",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "mathematics",
+        "algebra",
+        "problem solving",
+        "unknown"
+      ]
+    }
+  ]
 }

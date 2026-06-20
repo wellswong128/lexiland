@@ -7,5 +7,306 @@
   "version": "2026.06",
   "display_name_en": "S1 Integrated Science",
   "display_name_zh_hant": "中一綜合科學",
-  "words": []
+  "words": [
+    {
+      "term": "hypothesis",
+      "definition": "A possible explanation for a phenomenon that can be tested through experiments.",
+      "translation": "假說",
+      "example": "The students formed a hypothesis about how temperature affects plant growth.",
+      "example_translation": "學生們就溫度如何影響植物生長形成了一個假說。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "integrated-science",
+        "scientific-method",
+        "noun"
+      ]
+    },
+    {
+      "term": "variable",
+      "definition": "Any factor in an experiment that can change.",
+      "translation": "變量",
+      "example": "In this experiment, the amount of water is the independent variable.",
+      "example_translation": "在這個實驗中，水量是自變量。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "integrated-science",
+        "experiment",
+        "noun"
+      ]
+    },
+    {
+      "term": "observe",
+      "definition": "To watch or notice something carefully, often using the senses.",
+      "translation": "觀察",
+      "example": "We need to observe the color change in the solution.",
+      "example_translation": "我們需要觀察溶液中顏色的變化。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "integrated-science",
+        "skill",
+        "verb"
+      ]
+    },
+    {
+      "term": "mixture",
+      "definition": "A substance made by mixing other substances together without chemical bonding.",
+      "translation": "混合物",
+      "example": "Sand and water form a mixture.",
+      "example_translation": "沙和水形成一種混合物。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "integrated-science",
+        "matter",
+        "noun"
+      ]
+    },
+    {
+      "term": "solution",
+      "definition": "A homogeneous mixture where one substance is dissolved in another.",
+      "translation": "溶液",
+      "example": "Salt water is a common solution.",
+      "example_translation": "鹽水是常見的溶液。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "integrated-science",
+        "matter",
+        "noun"
+      ]
+    },
+    {
+      "term": "dissolve",
+      "definition": "To become incorporated into a liquid so that it forms a solution.",
+      "translation": "溶解",
+      "example": "Sugar will dissolve quickly in hot water.",
+      "example_translation": "糖在熱水中會很快溶解。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "integrated-science",
+        "matter",
+        "verb"
+      ]
+    },
+    {
+      "term": "evaporation",
+      "definition": "The process of turning from liquid into vapor.",
+      "translation": "蒸發",
+      "example": "Evaporation removes water from the surface of the lake.",
+      "example_translation": "蒸發作用將水從湖面移除。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "integrated-science",
+        "states-of-matter",
+        "noun"
+      ]
+    },
+    {
+      "term": "condensation",
+      "definition": "The change of state from gas to liquid.",
+      "translation": "凝結",
+      "example": "Condensation forms on the outside of a cold glass.",
+      "example_translation": "凝結會出現在冷玻璃的外側。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "integrated-science",
+        "states-of-matter",
+        "noun"
+      ]
+    },
+    {
+      "term": "density",
+      "definition": "The mass per unit volume of a substance.",
+      "translation": "密度",
+      "example": "Oil has a lower density than water, so it floats.",
+      "example_translation": "油的密度比水低，所以它會浮起來。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "integrated-science",
+        "physics",
+        "noun"
+      ]
+    },
+    {
+      "term": "conduct",
+      "definition": "To allow heat or electricity to pass through.",
+      "translation": "傳導",
+      "example": "Metals are good conductors of heat.",
+      "example_translation": "金屬是良好的熱傳導體。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "integrated-science",
+        "energy",
+        "verb"
+      ]
+    },
+    {
+      "term": "insulator",
+      "definition": "A material that does not allow heat or electricity to pass through easily.",
+      "translation": "絕緣體",
+      "example": "Plastic is used as an insulator for electrical wires.",
+      "example_translation": "塑膠被用作電線的絕緣體。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "integrated-science",
+        "energy",
+        "noun"
+      ]
+    },
+    {
+      "term": "ecosystem",
+      "definition": "A community of living organisms interacting with their physical environment.",
+      "translation": "生態系統",
+      "example": "A pond is a small ecosystem containing fish and plants.",
+      "example_translation": "池塘是一個包含魚類和植物的小型生態系統。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "integrated-science",
+        "biology",
+        "noun"
+      ]
+    },
+    {
+      "term": "producer",
+      "definition": "An organism, usually a plant, that makes its own food via photosynthesis.",
+      "translation": "生產者",
+      "example": "Grass is a producer in the food chain.",
+      "example_translation": "草是食物鏈中的生產者。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "integrated-science",
+        "ecology",
+        "noun"
+      ]
+    },
+    {
+      "term": "consumer",
+      "definition": "An organism that obtains energy by eating other organisms.",
+      "translation": "消費者",
+      "example": "Rabbits are primary consumers that eat plants.",
+      "example_translation": "兔子是吃植物的初級消費者。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "integrated-science",
+        "ecology",
+        "noun"
+      ]
+    },
+    {
+      "term": "decomposer",
+      "definition": "An organism that breaks down dead organic material.",
+      "translation": "分解者",
+      "example": "Fungi act as decomposers in the forest.",
+      "example_translation": "真菌在森林中扮演分解者的角色。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "integrated-science",
+        "ecology",
+        "noun"
+      ]
+    },
+    {
+      "term": "photosynthesis",
+      "definition": "The process by which green plants use sunlight to synthesize nutrients from carbon dioxide and water.",
+      "translation": "光合作用",
+      "example": "Plants perform photosynthesis to produce oxygen.",
+      "example_translation": "植物進行光合作用以產生氧氣。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "integrated-science",
+        "biology",
+        "noun"
+      ]
+    },
+    {
+      "term": "respiration",
+      "definition": "The metabolic process where cells break down glucose to release energy.",
+      "translation": "呼吸作用",
+      "example": "Both plants and animals undergo respiration.",
+      "example_translation": "植物和動物都進行呼吸作用。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "integrated-science",
+        "biology",
+        "noun"
+      ]
+    },
+    {
+      "term": "magnify",
+      "definition": "To make something appear larger, typically using a lens.",
+      "translation": "放大",
+      "example": "Use the microscope to magnify the cell structure.",
+      "example_translation": "使用顯微鏡來放大細胞結構。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "integrated-science",
+        "tools",
+        "verb"
+      ]
+    },
+    {
+      "term": "safety goggles",
+      "definition": "Protective eyewear worn during science experiments to prevent injury.",
+      "translation": "安全護目鏡",
+      "example": "Always wear safety goggles when handling chemicals.",
+      "example_translation": "處理化學品時務必佩戴安全護目鏡。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "integrated-science",
+        "lab-safety",
+        "noun"
+      ]
+    },
+    {
+      "term": "accurate",
+      "definition": "Correct in all details; exact.",
+      "translation": "準確的",
+      "example": "It is important to take accurate measurements in experiments.",
+      "example_translation": "在實驗中進行準確的測量很重要。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "integrated-science",
+        "skills",
+        "adjective"
+      ]
+    }
+  ]
 }

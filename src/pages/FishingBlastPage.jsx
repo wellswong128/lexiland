@@ -180,9 +180,9 @@ function SceneDecorations() {
 function FishingBlastPage() {
   const { t } = useLocale();
   const { user, words } = useWordsContext();
-  const { isLoadingScope, isScoped, scopedWords } = useActiveGroupWordScope(words, user);
-  const gameWords = isScoped ? scopedWords : words;
-  const { commitMistakes, lastCommittedTerms, recordWrong, resetTracker } =
+  const { isLoadingScope, isGroupScopeActive, scopedWords } = useActiveGroupWordScope(words, user);
+  const gameWords = isGroupScopeActive ? scopedWords : words;
+  const { commitMistakes, lastCommittedTerms, recordCorrect, recordWrong, resetTracker } =
     useGameMistakeTracker();
   const gameAreaRef = useRef(null);
   const fisherRef = useRef(null);
@@ -232,7 +232,7 @@ function FishingBlastPage() {
     );
   }
 
-  if (isScoped && (gameWords.length === 0 || usingFallback)) {
+  if (isGroupScopeActive && (gameWords.length === 0 || usingFallback)) {
     return (
       <section className="w-full max-w-4xl rounded-3xl border border-blue-200/70 bg-white/90 p-6 shadow-2xl shadow-blue-950/10 sm:p-10">
         <WordGroupScopeEmptyState compact />
@@ -321,6 +321,7 @@ function FishingBlastPage() {
       const isCorrect = choice?.word === currentRound.question.word;
 
       if (isCorrect) {
+        recordCorrect(currentRound.question.word);
         setFishStates((current) => ({ ...current, [fishId]: "caught" }));
         setCombo((value) => {
           const nextCombo = value + 1;
@@ -378,7 +379,7 @@ function FishingBlastPage() {
         });
       }, 900);
     },
-    [currentRound, drawFishingLine, endGame, locked, nextQuestion, recordWrong, t, timeLeft],
+    [currentRound, drawFishingLine, endGame, locked, nextQuestion, recordCorrect, recordWrong, t, timeLeft],
   );
 
   useEffect(() => {

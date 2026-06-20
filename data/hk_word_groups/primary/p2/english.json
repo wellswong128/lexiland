@@ -7,5 +7,326 @@
   "version": "2026.06",
   "display_name_en": "P2 English",
   "display_name_zh_hant": "小二英文",
-  "words": []
+  "words": [
+    {
+      "term": "library",
+      "definition": "A place where many books are kept for people to read or borrow.",
+      "translation": "圖書館",
+      "example": "We read books in the library.",
+      "example_translation": "我們在圖書館裡看書。",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "english",
+        "school",
+        "place",
+        "noun"
+      ]
+    },
+    {
+      "term": "paint",
+      "definition": "To put colour on paper or a wall using a brush.",
+      "translation": "塗鴉；上色",
+      "example": "I paint a picture of my family.",
+      "example_translation": "我畫了一幅我家人的畫。",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "english",
+        "art",
+        "verb",
+        "action"
+      ]
+    },
+    {
+      "term": "delicious",
+      "definition": "Tasting very good.",
+      "translation": "美味的",
+      "example": "The apple pie is delicious.",
+      "example_translation": "蘋果派很好吃。",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "english",
+        "food",
+        "adjective",
+        "taste"
+      ]
+    },
+    {
+      "term": "weather",
+      "definition": "The state of the sky, such as sunny, rainy, or cloudy.",
+      "translation": "天氣",
+      "example": "The weather is sunny today.",
+      "example_translation": "今天的天氣是晴朗的。",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "english",
+        "nature",
+        "noun",
+        "daily life"
+      ]
+    },
+    {
+      "term": "excited",
+      "definition": "Feeling very happy and eager about something.",
+      "translation": "興奮的",
+      "example": "I am excited about the school trip.",
+      "example_translation": "我對學校旅行感到很興奮。",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "english",
+        "emotion",
+        "adjective",
+        "feelings"
+      ]
+    },
+    {
+      "term": "borrow",
+      "definition": "To take something from someone for a short time and give it back.",
+      "translation": "借入",
+      "example": "Can I borrow your pencil?",
+      "example_translation": "我可以借你的鉛筆嗎？",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "english",
+        "school",
+        "verb",
+        "social skills"
+      ]
+    },
+    {
+      "term": "squirrel",
+      "definition": "A small animal with a big bushy tail that lives in trees.",
+      "translation": "松鼠",
+      "example": "The squirrel eats nuts.",
+      "example_translation": "松鼠吃堅果。",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "english",
+        "animals",
+        "noun",
+        "nature"
+      ]
+    },
+    {
+      "term": "carefully",
+      "definition": "Doing something with great attention to avoid mistakes or danger.",
+      "translation": "小心地",
+      "example": "Please walk carefully on the wet floor.",
+      "example_translation": "請在潮濕的地板上小心行走。",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "english",
+        "safety",
+        "adverb",
+        "instruction"
+      ]
+    },
+    {
+      "term": "uniform",
+      "definition": "Special clothes worn by students at school.",
+      "translation": "校服",
+      "example": "I wear my uniform every day.",
+      "example_translation": "我每天穿我的校服。",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "english",
+        "school",
+        "clothing",
+        "noun"
+      ]
+    },
+    {
+      "term": "whisper",
+      "definition": "To speak very softly so that others cannot hear easily.",
+      "translation": "低聲說；耳語",
+      "example": "Do not whisper during the test.",
+      "example_translation": "考試期間不要低聲說話。",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "english",
+        "classroom rules",
+        "verb",
+        "communication"
+      ]
+    },
+    {
+      "term": "vegetables",
+      "definition": "Plants like carrots, broccoli, and spinach that we eat.",
+      "translation": "蔬菜",
+      "example": "Eating vegetables keeps us healthy.",
+      "example_translation": "吃蔬菜讓我們保持健康。",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "english",
+        "health",
+        "food",
+        "noun"
+      ]
+    },
+    {
+      "term": "brave",
+      "definition": "Not afraid when something is difficult or scary.",
+      "translation": "勇敢的",
+      "example": "The brave dog saved the cat.",
+      "example_translation": "那隻勇敢的狗救了貓。",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "english",
+        "character trait",
+        "adjective",
+        "storytelling"
+      ]
+    },
+    {
+      "term": "schedule",
+      "definition": "A plan that shows what time things will happen.",
+      "translation": "日程表",
+      "example": "Check the class schedule for homework time.",
+      "example_translation": "查看課程表以確定作業時間。",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "english",
+        "school",
+        "noun",
+        "time management"
+      ]
+    },
+    {
+      "term": "muddy",
+      "definition": "Covered with wet dirt or mud.",
+      "translation": "沾滿泥的",
+      "example": "My shoes are muddy after playing outside.",
+      "example_translation": "在外面玩之後，我的鞋子沾滿了泥。",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "english",
+        "weather",
+        "adjective",
+        "outdoor play"
+      ]
+    },
+    {
+      "term": "share",
+      "definition": "To give some of your things to other people.",
+      "translation": "分享",
+      "example": "It is nice to share toys with friends.",
+      "example_translation": "和朋友分享玩具是很好的。",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "english",
+        "social skills",
+        "verb",
+        "values"
+      ]
+    },
+    {
+      "term": "thunder",
+      "definition": "A loud noise heard in the sky during a storm.",
+      "translation": "雷聲",
+      "example": "I heard thunder after seeing lightning.",
+      "example_translation": "我看到閃電後聽到了雷聲。",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "english",
+        "nature",
+        "noun",
+        "weather"
+      ]
+    },
+    {
+      "term": "patient",
+      "definition": "Able to wait or deal with problems without getting angry.",
+      "translation": "耐心的",
+      "example": "Be patient while waiting for your turn.",
+      "example_translation": "輪到你之前要有耐心。",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "english",
+        "character trait",
+        "adjective",
+        "classroom behavior"
+      ]
+    },
+    {
+      "term": "scissors",
+      "definition": "A tool used for cutting paper or fabric, with two blades.",
+      "translation": "剪刀",
+      "example": "Use scissors to cut the paper.",
+      "example_translation": "用剪刀剪紙。",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "english",
+        "stationery",
+        "noun",
+        "tools"
+      ]
+    },
+    {
+      "term": "journey",
+      "definition": "The act of traveling from one place to another.",
+      "translation": "旅程",
+      "example": "The bus journey took twenty minutes.",
+      "example_translation": "巴士旅程花了二十分鐘。",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "english",
+        "travel",
+        "noun",
+        "transportation"
+      ]
+    },
+    {
+      "term": "tidy up",
+      "definition": "To make a room or area clean and organized.",
+      "translation": "整理",
+      "example": "Please tidy up your desk before leaving.",
+      "example_translation": "離開前請整理好你的課桌。",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "english",
+        "classroom rules",
+        "phrasal verb",
+        "responsibility"
+      ]
+    }
+  ]
 }

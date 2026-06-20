@@ -7,5 +7,326 @@
   "version": "2026.06",
   "display_name_en": "S5 Chemistry",
   "display_name_zh_hant": "中五化學",
-  "words": []
+  "words": [
+    {
+      "term": "Enthalpy change",
+      "definition": "The amount of heat energy absorbed or released during a chemical reaction at constant pressure.",
+      "translation": "焓變",
+      "example": "The enthalpy change of combustion is always negative.",
+      "example_translation": "燃燒的焓變總是負值。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "thermodynamics",
+        "energy",
+        "noun"
+      ]
+    },
+    {
+      "term": "Exothermic",
+      "definition": "A reaction that releases heat energy to the surroundings, causing the temperature to rise.",
+      "translation": "放熱的",
+      "example": "Neutralization reactions are typically exothermic processes.",
+      "example_translation": "中和反應通常是放熱過程。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "thermodynamics",
+        "adjective",
+        "reaction type"
+      ]
+    },
+    {
+      "term": "Endothermic",
+      "definition": "A reaction that absorbs heat energy from the surroundings, causing the temperature to fall.",
+      "translation": "吸熱的",
+      "example": "The decomposition of calcium carbonate is an endothermic reaction.",
+      "example_translation": "碳酸鈣的分解是一個吸熱反應。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "thermodynamics",
+        "adjective",
+        "reaction type"
+      ]
+    },
+    {
+      "term": "Le Chatelier's Principle",
+      "definition": "A principle stating that if a dynamic equilibrium is disturbed, the system adjusts to counteract the disturbance.",
+      "translation": "勒夏特列原理",
+      "example": "According to Le Chatelier's principle, increasing pressure shifts the equilibrium towards fewer gas moles.",
+      "example_translation": "根據勒夏特列原理，增加壓力會使平衡向氣體摩爾數較少的一方移動。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "equilibrium",
+        "principle",
+        "noun"
+      ]
+    },
+    {
+      "term": "Dynamic Equilibrium",
+      "definition": "A state in a reversible reaction where the forward and reverse reaction rates are equal.",
+      "translation": "動態平衡",
+      "example": "In a closed container, the system reaches dynamic equilibrium when concentrations remain constant.",
+      "example_translation": "在密閉容器中，當濃度保持不變時，系統達到動態平衡。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "equilibrium",
+        "concept",
+        "noun"
+      ]
+    },
+    {
+      "term": "Activation Energy",
+      "definition": "The minimum amount of energy required for reactants to collide effectively and start a reaction.",
+      "translation": "活化能",
+      "example": "Catalysts lower the activation energy, speeding up the reaction rate.",
+      "example_translation": "催化劑降低活化能，從而加快反應速率。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "kinetics",
+        "energy",
+        "noun"
+      ]
+    },
+    {
+      "term": "Catalyst",
+      "definition": "A substance that increases the rate of a chemical reaction without being consumed in the process.",
+      "translation": "催化劑",
+      "example": "Iron is used as a catalyst in the Haber process for ammonia production.",
+      "example_translation": "鐵被用作哈伯法生產氨的催化劑。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "kinetics",
+        "substance",
+        "noun"
+      ]
+    },
+    {
+      "term": "Homogeneous Catalysis",
+      "definition": "Catalysis where the catalyst and reactants are in the same phase (e.g., all liquid).",
+      "translation": "均相催化",
+      "example": "Acid-catalyzed ester hydrolysis is an example of homogeneous catalysis.",
+      "example_translation": "酸催化酯水解是均相催化的例子。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "kinetics",
+        "type",
+        "noun"
+      ]
+    },
+    {
+      "term": "Heterogeneous Catalysis",
+      "definition": "Catalysis where the catalyst and reactants are in different phases (e.g., solid catalyst, gas reactants).",
+      "translation": "非均相催化",
+      "example": "The contact process uses solid vanadium(V) oxide to catalyze gaseous sulfur dioxide.",
+      "example_translation": "接觸法使用固體五氧化二釩來催化氣態二氧化硫。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "kinetics",
+        "type",
+        "noun"
+      ]
+    },
+    {
+      "term": "pH Scale",
+      "definition": "A logarithmic scale used to specify the acidity or basicity of an aqueous solution.",
+      "translation": "pH 標度",
+      "example": "A solution with a pH of 7 is neutral, while pH < 7 indicates acidity.",
+      "example_translation": "pH 為 7 的溶液是中性的，而 pH < 7 表示酸性。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "acids and bases",
+        "measurement",
+        "noun"
+      ]
+    },
+    {
+      "term": "Strong Acid",
+      "definition": "An acid that completely dissociates into ions when dissolved in water.",
+      "translation": "強酸",
+      "example": "Hydrochloric acid is a strong acid because it fully ionizes in solution.",
+      "example_translation": "鹽酸是一種強酸，因為它在溶液中完全電離。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "acids and bases",
+        "classification",
+        "noun"
+      ]
+    },
+    {
+      "term": "Weak Base",
+      "definition": "A base that partially dissociates in water, establishing an equilibrium between ions and molecules.",
+      "translation": "弱鹼",
+      "example": "Ammonia is a weak base commonly found in household cleaners.",
+      "example_translation": "氨氣是一種常見的家用清潔劑中的弱鹼。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "acids and bases",
+        "classification",
+        "noun"
+      ]
+    },
+    {
+      "term": "Buffer Solution",
+      "definition": "A solution that resists changes in pH when small amounts of acid or base are added.",
+      "translation": "緩衝溶液",
+      "example": "Blood contains a buffer solution to maintain a stable pH around 7.4.",
+      "example_translation": "血液中含有緩衝溶液，以維持約 7.4 的稳定 pH 值。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "acids and bases",
+        "application",
+        "noun"
+      ]
+    },
+    {
+      "term": "Salt Hydrolysis",
+      "definition": "The reaction of salt ions with water to produce acidic or basic solutions.",
+      "translation": "鹽類水解",
+      "example": "Sodium acetate undergoes salt hydrolysis to form a slightly basic solution.",
+      "example_translation": "乙酸鈉發生鹽類水解，形成略呈鹼性的溶液。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "acids and bases",
+        "process",
+        "noun"
+      ]
+    },
+    {
+      "term": "Electrolysis",
+      "definition": "The process of using electricity to decompose an electrolyte into its constituent elements.",
+      "translation": "電解",
+      "example": "Electrolysis of molten sodium chloride produces sodium metal and chlorine gas.",
+      "example_translation": "熔融氯化鈉的電解產生金屬鈉和氯氣。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "electrochemistry",
+        "process",
+        "noun"
+      ]
+    },
+    {
+      "term": "Anode",
+      "definition": "The positive electrode in an electrolytic cell where oxidation occurs.",
+      "translation": "陽極",
+      "example": "Chloride ions are oxidized at the anode to form chlorine gas.",
+      "example_translation": "氯離子在陽極被氧化形成氯氣。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "electrochemistry",
+        "component",
+        "noun"
+      ]
+    },
+    {
+      "term": "Cathode",
+      "definition": "The negative electrode in an electrolytic cell where reduction occurs.",
+      "translation": "陰極",
+      "example": "Hydrogen ions gain electrons at the cathode to form hydrogen gas.",
+      "example_translation": "氫離子在陰極獲得電子形成氫氣。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "electrochemistry",
+        "component",
+        "noun"
+      ]
+    },
+    {
+      "term": "Standard Electrode Potential",
+      "definition": "The voltage difference between a half-cell and a standard hydrogen electrode under standard conditions.",
+      "translation": "標準電極電勢",
+      "example": "We use standard electrode potential values to predict the direction of redox reactions.",
+      "example_translation": "我們使用標準電極電勢值來預測氧化還原反應的方向。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "electrochemistry",
+        "measurement",
+        "noun"
+      ]
+    },
+    {
+      "term": "Transition Metal",
+      "definition": "Elements in groups 3-12 that often form colored compounds and act as catalysts.",
+      "translation": "過渡金屬",
+      "example": "Iron is a transition metal essential for hemoglobin in blood.",
+      "example_translation": "鐵是一種對血液中血紅蛋白至關重要的過渡金屬。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "periodic table",
+        "element group",
+        "noun"
+      ]
+    },
+    {
+      "term": "Ligand",
+      "definition": "An ion or molecule that binds to a central metal atom to form a coordination complex.",
+      "translation": "配體",
+      "example": "Water molecules often act as ligands in hydrated metal ions.",
+      "example_translation": "水分子經常作為配體存在於水合金屬離子中。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "coordination chemistry",
+        "component",
+        "noun"
+      ]
+    }
+  ]
 }

@@ -7,5 +7,306 @@
   "version": "2026.06",
   "display_name_en": "S5 Biology",
   "display_name_zh_hant": "中五生物",
-  "words": []
+  "words": [
+    {
+      "term": "Enzyme",
+      "definition": "A biological catalyst that speeds up chemical reactions in living organisms without being used up.",
+      "translation": "酶",
+      "example": "Amylase is an enzyme that breaks down starch into sugars.",
+      "example_translation": "澱粉酶是一種將澱粉分解成糖的酶。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "enzymes",
+        "noun"
+      ]
+    },
+    {
+      "term": "Photosynthesis",
+      "definition": "The process by which green plants use sunlight to synthesize nutrients from carbon dioxide and water.",
+      "translation": "光合作用",
+      "example": "Chlorophyll absorbs light energy for photosynthesis.",
+      "example_translation": "葉綠素吸收光能進行光合作用。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "plants",
+        "noun"
+      ]
+    },
+    {
+      "term": "Osmosis",
+      "definition": "The movement of water molecules across a semi-permeable membrane from a region of low solute concentration to high solute concentration.",
+      "translation": "滲透作用",
+      "example": "Root hair cells absorb water from the soil by osmosis.",
+      "example_translation": "根毛細胞通過滲透作用從土壤中吸收水分。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "cells",
+        "noun"
+      ]
+    },
+    {
+      "term": "Diffusion",
+      "definition": "The net movement of particles from an area of higher concentration to an area of lower concentration.",
+      "translation": "擴散作用",
+      "example": "Oxygen diffuses from the alveoli into the blood capillaries.",
+      "example_translation": "氧氣從肺泡擴散到血液毛細管中。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "respiration",
+        "noun"
+      ]
+    },
+    {
+      "term": "Mitochondria",
+      "definition": "Organelles found in eukaryotic cells that generate most of the cell's supply of adenosine triphosphate (ATP), used as chemical energy.",
+      "translation": "粒線體",
+      "example": "Muscle cells contain many mitochondria to produce energy for contraction.",
+      "example_translation": "肌肉細胞含有許多粒線體以產生收縮所需的能量。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "cell structure",
+        "noun"
+      ]
+    },
+    {
+      "term": "Homeostasis",
+      "definition": "The state of steady internal, physical, and chemical conditions maintained by living systems.",
+      "translation": "內環境恆定",
+      "example": "The body maintains homeostasis of temperature through sweating or shivering.",
+      "example_translation": "身體通過出汗或顫抖來維持體溫的內環境恆定。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "regulation",
+        "noun"
+      ]
+    },
+    {
+      "term": "Antibody",
+      "definition": "A Y-shaped protein produced by plasma cells that is used by the immune system to neutralize pathogens such as bacteria and viruses.",
+      "translation": "抗體",
+      "example": "Vaccination stimulates the production of specific antibodies.",
+      "example_translation": "疫苗接種會刺激產生特定的抗體。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "immunity",
+        "noun"
+      ]
+    },
+    {
+      "term": "Genotype",
+      "definition": "The genetic constitution of an individual organism, often represented by letters indicating alleles.",
+      "translation": "基因型",
+      "example": "The genotype BB results in a black coat color in mice.",
+      "example_translation": "基因型BB導致小鼠的黑色皮毛顏色。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "genetics",
+        "noun"
+      ]
+    },
+    {
+      "term": "Phenotype",
+      "definition": "The set of observable characteristics or traits of an organism, resulting from the interaction of its genotype with the environment.",
+      "translation": "表現型",
+      "example": "Blue eyes are a common phenotype in humans.",
+      "example_translation": "藍眼睛是人類常見的表現型。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "genetics",
+        "noun"
+      ]
+    },
+    {
+      "term": "Transpiration",
+      "definition": "The process of water movement through a plant and its evaporation from aerial parts, such as leaves.",
+      "translation": "蒸騰作用",
+      "example": "Transpiration helps pull water up from the roots to the leaves.",
+      "example_translation": "蒸騰作用有助於將水分從根部拉到葉片。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "plants",
+        "noun"
+      ]
+    },
+    {
+      "term": "Catalyst",
+      "definition": "A substance that increases the rate of a chemical reaction without itself undergoing any permanent chemical change.",
+      "translation": "催化劑",
+      "example": "Enzymes act as biological catalysts in metabolic reactions.",
+      "example_translation": "酶在代謝反應中作為生物催化劑起作用。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "chemistry",
+        "noun"
+      ]
+    },
+    {
+      "term": "Membrane",
+      "definition": "A thin layer of tissue that covers a surface, lines a cavity, or divides a space or organ.",
+      "translation": "膜",
+      "example": "The cell membrane controls what enters and exits the cell.",
+      "example_translation": "細胞膜控制物質進入和離開細胞。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "cell structure",
+        "noun"
+      ]
+    },
+    {
+      "term": "Respiration",
+      "definition": "The metabolic process in which cells break down glucose to release energy, usually involving oxygen.",
+      "translation": "呼吸作用",
+      "example": "Aerobic respiration produces more energy than anaerobic respiration.",
+      "example_translation": "有氧呼吸比無氧呼吸產生更多的能量。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "energy",
+        "noun"
+      ]
+    },
+    {
+      "term": "Allele",
+      "definition": "One of two or more alternative forms of a gene that arise by mutation and are found at the same place on a chromosome.",
+      "translation": "等位基因",
+      "example": "Dominant alleles mask the effect of recessive alleles.",
+      "example_translation": "顯性等位基因會掩蓋隱性等位基因的影響。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "genetics",
+        "noun"
+      ]
+    },
+    {
+      "term": "Chromosome",
+      "definition": "A thread-like structure of nucleic acids and protein found in the nucleus of most living cells, carrying genetic information in the form of genes.",
+      "translation": "染色體",
+      "example": "Humans typically have 23 pairs of chromosomes.",
+      "example_translation": "人類通常有23對染色體。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "genetics",
+        "noun"
+      ]
+    },
+    {
+      "term": "Digestion",
+      "definition": "The breakdown of large insoluble food molecules into small water-soluble food molecules so that they can be absorbed into the watery blood plasma.",
+      "translation": "消化",
+      "example": "Mechanical digestion occurs in the mouth through chewing.",
+      "example_translation": "機械性消化通過咀嚼在口腔中發生。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "nutrition",
+        "noun"
+      ]
+    },
+    {
+      "term": "Excretion",
+      "definition": "The process of eliminating waste products of metabolism and other non-useful materials from an organism.",
+      "translation": "排泄",
+      "example": "The kidneys play a key role in excreting urea from the blood.",
+      "example_translation": "腎臟在從血液中排泄尿素方面發揮關鍵作用。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "waste removal",
+        "noun"
+      ]
+    },
+    {
+      "term": "Hormone",
+      "definition": "A regulatory substance produced in an organism and transported in tissue fluids such as blood to stimulate specific cells or tissues into action.",
+      "translation": "荷爾蒙",
+      "example": "Insulin is a hormone that regulates blood sugar levels.",
+      "example_translation": "胰島素是一種調節血糖水平的荷爾蒙。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "endocrine system",
+        "noun"
+      ]
+    },
+    {
+      "term": "Vaccine",
+      "definition": "A substance used to stimulate the production of antibodies and provide immunity against one or several diseases.",
+      "translation": "疫苗",
+      "example": "Regular vaccination helps prevent the spread of infectious diseases.",
+      "example_translation": "定期接種疫苗有助於防止傳染病的傳播。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "immunity",
+        "noun"
+      ]
+    },
+    {
+      "term": "Evolution",
+      "definition": "The gradual development of something, especially from a simple to a more complex form; in biology, change in the heritable characteristics of biological populations over successive generations.",
+      "translation": "進化",
+      "example": "Natural selection is a key mechanism of evolution.",
+      "example_translation": "自然選擇是進化的關鍵機制。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "ecology",
+        "noun"
+      ]
+    }
+  ]
 }

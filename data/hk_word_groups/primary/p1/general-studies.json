@@ -7,5 +7,326 @@
   "version": "2026.06",
   "display_name_en": "P1 General Studies",
   "display_name_zh_hant": "小一常識",
-  "words": []
+  "words": [
+    {
+      "term": "family",
+      "definition": "A group of people related by blood or marriage, such as parents and children.",
+      "translation": "家庭",
+      "example": "I love my family very much.",
+      "example_translation": "我非常愛我的家人。",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "general-studies",
+        "social",
+        "people",
+        "home"
+      ]
+    },
+    {
+      "term": "school",
+      "definition": "A place where children go to learn and study.",
+      "translation": "學校",
+      "example": "We go to school from Monday to Friday.",
+      "example_translation": "我們從星期一到星期五去上學。",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "general-studies",
+        "place",
+        "education",
+        "daily-life"
+      ]
+    },
+    {
+      "term": "teacher",
+      "definition": "A person who helps students learn new things in school.",
+      "translation": "老師",
+      "example": "My teacher is very kind.",
+      "example_translation": "我的老師很親切。",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "general-studies",
+        "people",
+        "school",
+        "job"
+      ]
+    },
+    {
+      "term": "friend",
+      "definition": "A person you like and play with, but who is not part of your family.",
+      "translation": "朋友",
+      "example": "She is my best friend.",
+      "example_translation": "她是我最好的朋友。",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "general-studies",
+        "social",
+        "relationships",
+        "play"
+      ]
+    },
+    {
+      "term": "healthy",
+      "definition": "In good condition; not sick.",
+      "translation": "健康的",
+      "example": "Eating vegetables makes you healthy.",
+      "example_translation": "吃蔬菜讓你保持健康。",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "general-studies",
+        "health",
+        "adjective",
+        "lifestyle"
+      ]
+    },
+    {
+      "term": "exercise",
+      "definition": "Physical activity that makes your body strong and fit.",
+      "translation": "運動",
+      "example": "We exercise every day at recess.",
+      "example_translation": "我們每天在課間休息時做運動。",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "general-studies",
+        "health",
+        "action",
+        "body"
+      ]
+    },
+    {
+      "term": "recycle",
+      "definition": "To process used materials into new products to help the environment.",
+      "translation": "回收",
+      "example": "Please recycle your paper bottles.",
+      "example_translation": "請回收你的紙瓶。",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "general-studies",
+        "environment",
+        "action",
+        "responsibility"
+      ]
+    },
+    {
+      "term": "polite",
+      "definition": "Having good manners; saying please and thank you.",
+      "translation": "有禮貌的",
+      "example": "Be polite to your classmates.",
+      "example_translation": "對你的同學要有禮貌。",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "general-studies",
+        "behavior",
+        "social",
+        "moral"
+      ]
+    },
+    {
+      "term": "listen",
+      "definition": "To pay attention to sounds or what someone is saying.",
+      "translation": "聆聽",
+      "example": "Listen carefully when the teacher speaks.",
+      "example_translation": "當老師說話時要仔細聆聽。",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "general-studies",
+        "skill",
+        "classroom",
+        "action"
+      ]
+    },
+    {
+      "term": "share",
+      "definition": "To give some of your things to others so everyone can use them.",
+      "translation": "分享",
+      "example": "It is nice to share toys with friends.",
+      "example_translation": "和朋友分享玩具是很好的。",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "general-studies",
+        "social",
+        "value",
+        "action"
+      ]
+    },
+    {
+      "term": "safety",
+      "definition": "The state of being protected from harm or danger.",
+      "translation": "安全",
+      "example": "Hold the handrail for safety on the stairs.",
+      "example_translation": "在樓梯上扶著扶手以確保安全。",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "general-studies",
+        "health",
+        "rule",
+        "concept"
+      ]
+    },
+    {
+      "term": "community",
+      "definition": "A group of people living in the same area or having a particular characteristic in common.",
+      "translation": "社區",
+      "example": "Our community has a nice park.",
+      "example_translation": "我們的社區有一個漂亮的公園。",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "general-studies",
+        "social",
+        "place",
+        "group"
+      ]
+    },
+    {
+      "term": "respect",
+      "definition": "To treat others with care and kindness because they are important.",
+      "translation": "尊重",
+      "example": "We respect our elders and teachers.",
+      "example_translation": "我們尊重長輩和老師。",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "general-studies",
+        "value",
+        "behavior",
+        "social"
+      ]
+    },
+    {
+      "term": "weather",
+      "definition": "The condition of the air outside, such as sunny, rainy, or windy.",
+      "translation": "天氣",
+      "example": "Check the weather before you go out.",
+      "example_translation": "出門前請查看天氣。",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "general-studies",
+        "nature",
+        "science",
+        "daily-life"
+      ]
+    },
+    {
+      "term": "transport",
+      "definition": "Vehicles used to carry people or goods from one place to another.",
+      "translation": "交通工具",
+      "example": "We take the bus to school.",
+      "example_translation": "我們坐巴士去學校。",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "general-studies",
+        "travel",
+        "object",
+        "city"
+      ]
+    },
+    {
+      "term": "hygiene",
+      "definition": "Conditions or practices that help to maintain health and prevent disease, like washing hands.",
+      "translation": "衛生",
+      "example": "Good hygiene means washing your hands often.",
+      "example_translation": "良好的衛生習慣意味著經常洗手。",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "general-studies",
+        "health",
+        "practice",
+        "body"
+      ]
+    },
+    {
+      "term": "observe",
+      "definition": "To watch something carefully to notice details.",
+      "translation": "觀察",
+      "example": "Observe the plants growing in the garden.",
+      "example_translation": "觀察花園裡生長的植物。",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "general-studies",
+        "skill",
+        "science",
+        "action"
+      ]
+    },
+    {
+      "term": "responsible",
+      "definition": "Being trustworthy and doing what you are supposed to do.",
+      "translation": "負責任的",
+      "example": "A responsible student finishes homework on time.",
+      "example_translation": "負責任的學生按時完成功課。",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "general-studies",
+        "value",
+        "behavior",
+        "school"
+      ]
+    },
+    {
+      "term": "environment",
+      "definition": "The natural world, including land, water, and air, around us.",
+      "translation": "環境",
+      "example": "We should protect the environment.",
+      "example_translation": "我們應該保護環境。",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "general-studies",
+        "nature",
+        "science",
+        "global"
+      ]
+    },
+    {
+      "term": "cooperate",
+      "definition": "To work together with others to achieve a common goal.",
+      "translation": "合作",
+      "example": "We cooperate to clean the classroom.",
+      "example_translation": "我們合作清潔教室。",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "general-studies",
+        "social",
+        "skill",
+        "teamwork"
+      ]
+    }
+  ]
 }

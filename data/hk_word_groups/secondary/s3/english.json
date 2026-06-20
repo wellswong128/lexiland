@@ -7,5 +7,326 @@
   "version": "2026.06",
   "display_name_en": "S3 English",
   "display_name_zh_hant": "中三英文",
-  "words": []
+  "words": [
+    {
+      "term": "analyze",
+      "definition": "To examine something in detail to understand its nature or structure.",
+      "translation": "分析",
+      "example": "Students need to analyze the main arguments in the article.",
+      "example_translation": "學生需要分析文章中的主要論點。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "verb",
+        "academic skill",
+        "reading"
+      ]
+    },
+    {
+      "term": "consequence",
+      "definition": "A result or effect of an action or condition.",
+      "translation": "後果；結果",
+      "example": "Pollution has serious consequences for our health.",
+      "example_translation": "污染對我們的健康有嚴重的後果。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "noun",
+        "environment",
+        "cause and effect"
+      ]
+    },
+    {
+      "term": "perspective",
+      "definition": "A particular attitude toward or way of regarding something; a point of view.",
+      "translation": "觀點；視角",
+      "example": "Try to see the problem from a different perspective.",
+      "example_translation": "試著從不同的角度來看這個問題。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "noun",
+        "critical thinking",
+        "writing"
+      ]
+    },
+    {
+      "term": "significant",
+      "definition": "Sufficiently great or important to be worthy of attention.",
+      "translation": "重要的；顯著的",
+      "example": "There has been a significant increase in online learning.",
+      "example_translation": "線上學習有了顯著的增長。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "adjective",
+        "general academic",
+        "data description"
+      ]
+    },
+    {
+      "term": "evaluate",
+      "definition": "To form an idea of the amount, number, or value of something; to assess.",
+      "translation": "評估；評價",
+      "example": "We will evaluate your project based on creativity and effort.",
+      "example_translation": "我們將根據創意和努力來評估你的項目。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "verb",
+        "assessment",
+        "school life"
+      ]
+    },
+    {
+      "term": "sustainable",
+      "definition": "Able to be maintained at a certain rate or level; conserving an ecological balance.",
+      "translation": "可持續的",
+      "example": "Using renewable energy is a sustainable practice.",
+      "example_translation": "使用可再生能源是一種可持續的做法。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "adjective",
+        "environment",
+        "science"
+      ]
+    },
+    {
+      "term": "collaborate",
+      "definition": "To work jointly with others or together especially in an intellectual endeavor.",
+      "translation": "合作",
+      "example": "The team will collaborate to complete the science experiment.",
+      "example_translation": "團隊將合作完成科學實驗。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "verb",
+        "group work",
+        "social skills"
+      ]
+    },
+    {
+      "term": "ambiguous",
+      "definition": "Open to more than one interpretation; having a double meaning.",
+      "translation": "模稜兩可的；含糊不清的",
+      "example": "The instructions were ambiguous, so I asked for clarification.",
+      "example_translation": "指示很含糊，所以我要求澄清。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "adjective",
+        "communication",
+        "problem solving"
+      ]
+    },
+    {
+      "term": "implement",
+      "definition": "To put a decision, plan, agreement, etc., into effect.",
+      "translation": "實施；執行",
+      "example": "The school decided to implement a new recycling policy.",
+      "example_translation": "學校決定實施新的回收政策。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "verb",
+        "school policy",
+        "action"
+      ]
+    },
+    {
+      "term": "demonstrate",
+      "definition": "To clearly show the existence or truth of something by giving proof or evidence.",
+      "translation": "示範；證明",
+      "example": "Please demonstrate how to use the microscope correctly.",
+      "example_translation": "請示範如何正確使用顯微鏡。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "verb",
+        "science lab",
+        "instruction"
+      ]
+    },
+    {
+      "term": "relevant",
+      "definition": "Closely connected or appropriate to what is being done or considered.",
+      "translation": "相關的；切題的",
+      "example": "Make sure your examples are relevant to the topic.",
+      "example_translation": "確保你的例子與主題相關。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "adjective",
+        "writing",
+        "focus"
+      ]
+    },
+    {
+      "term": "hypothesis",
+      "definition": "A proposed explanation made on the basis of limited evidence as a starting point for further investigation.",
+      "translation": "假設",
+      "example": "Our hypothesis was that plants grow faster with more sunlight.",
+      "example_translation": "我們的假設是植物在更多陽光下生長得更快。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "noun",
+        "science",
+        "research method"
+      ]
+    },
+    {
+      "term": "critique",
+      "definition": "An analysis and assessment of a text, film, or other creative work.",
+      "translation": "評論；批判性分析",
+      "example": "Write a short critique of the character's development in the novel.",
+      "example_translation": "寫一篇關於小說中角色發展的簡短評論。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "noun/verb",
+        "literature",
+        "analysis"
+      ]
+    },
+    {
+      "term": "diverse",
+      "definition": "Differing from one another; showing a great deal of variety.",
+      "translation": "多樣化的",
+      "example": "Hong Kong is a diverse city with many cultures.",
+      "example_translation": "香港是一個文化多樣化的城市。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "adjective",
+        "society",
+        "culture"
+      ]
+    },
+    {
+      "term": "justify",
+      "definition": "To show or prove to be right or reasonable.",
+      "translation": "證明…有理；為…辯護",
+      "example": "You must justify your opinion with facts.",
+      "example_translation": "你必須用事實來證明你的觀點是合理的。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "verb",
+        "argumentation",
+        "logic"
+      ]
+    },
+    {
+      "term": "initiative",
+      "definition": "The power or opportunity to act or to take charge before others do.",
+      "translation": "主動性；倡議",
+      "example": "She showed great initiative by organizing the charity event.",
+      "example_translation": "她通過組織慈善活動展現了極大的主動性。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "noun",
+        "leadership",
+        "character"
+      ]
+    },
+    {
+      "term": "interpret",
+      "definition": "To explain the meaning of information, words, or actions.",
+      "translation": "解釋；口譯",
+      "example": "How do you interpret the data shown in the graph?",
+      "example_translation": "你如何解釋圖表中顯示的數據？",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "verb",
+        "data handling",
+        "comprehension"
+      ]
+    },
+    {
+      "term": "ethical",
+      "definition": "Relating to moral principles or the branch of knowledge dealing with these.",
+      "translation": "倫理的；道德的",
+      "example": "We discussed the ethical issues surrounding artificial intelligence.",
+      "example_translation": "我們討論了圍繞人工智慧的倫理問題。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "adjective",
+        "technology",
+        "moral education"
+      ]
+    },
+    {
+      "term": "summarize",
+      "definition": "To give a brief statement of the main points of something.",
+      "translation": "總結；概述",
+      "example": "Please summarize the news report in three sentences.",
+      "example_translation": "請用三句話總結這則新聞報道。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "verb",
+        "reading comprehension",
+        "writing"
+      ]
+    },
+    {
+      "term": "resilient",
+      "definition": "Able to withstand or recover quickly from difficult conditions.",
+      "translation": "有韌性的；能迅速恢復的",
+      "example": "Children are often more resilient than adults think.",
+      "example_translation": "兒童往往比成年人想像的更有韌性。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "adjective",
+        "psychology",
+        "personal growth"
+      ]
+    }
+  ]
 }

@@ -7,5 +7,306 @@
   "version": "2026.06",
   "display_name_en": "P2 Mathematics",
   "display_name_zh_hant": "小二數學",
-  "words": []
+  "words": [
+    {
+      "term": "addition",
+      "definition": "Putting two or more numbers together to find the total.",
+      "translation": "加法",
+      "example": "We use addition to find the sum.",
+      "example_translation": "我們使用加法來找出總和。",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "mathematics",
+        "operations",
+        "basic-math"
+      ]
+    },
+    {
+      "term": "subtraction",
+      "definition": "Taking one number away from another to find the difference.",
+      "translation": "減法",
+      "example": "Subtraction helps us find how many are left.",
+      "example_translation": "減法幫助我們找出還剩下多少。",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "mathematics",
+        "operations",
+        "basic-math"
+      ]
+    },
+    {
+      "term": "sum",
+      "definition": "The result when you add numbers together.",
+      "translation": "總和",
+      "example": "The sum of 2 and 3 is 5.",
+      "example_translation": "2 和 3 的總和是 5。",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "mathematics",
+        "vocabulary",
+        "addition"
+      ]
+    },
+    {
+      "term": "difference",
+      "definition": "The result when you subtract one number from another.",
+      "translation": "差",
+      "example": "Find the difference between 10 and 4.",
+      "example_translation": "找出 10 和 4 之間的差。",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "mathematics",
+        "vocabulary",
+        "subtraction"
+      ]
+    },
+    {
+      "term": "multiply",
+      "definition": "To add a number to itself a certain number of times.",
+      "translation": "乘以",
+      "example": "Multiply 3 by 4 to get 12.",
+      "example_translation": "將 3 乘以 4 得到 12。",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "mathematics",
+        "operations",
+        "multiplication"
+      ]
+    },
+    {
+      "term": "divide",
+      "definition": "To split a number into equal parts.",
+      "translation": "除以",
+      "example": "Divide 8 by 2 to get 4.",
+      "example_translation": "將 8 除以 2 得到 4。",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "mathematics",
+        "operations",
+        "division"
+      ]
+    },
+    {
+      "term": "equal sign",
+      "definition": "The symbol (=) that shows two sides are the same value.",
+      "translation": "等號",
+      "example": "Use the equal sign in 2 + 2 = 4.",
+      "example_translation": "在 2 + 2 = 4 中使用等號。",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "mathematics",
+        "symbols",
+        "equations"
+      ]
+    },
+    {
+      "term": "greater than",
+      "definition": "A symbol (>) used to show one number is bigger than another.",
+      "translation": "大於",
+      "example": "5 is greater than 3.",
+      "example_translation": "5 大於 3。",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "mathematics",
+        "comparison",
+        "symbols"
+      ]
+    },
+    {
+      "term": "less than",
+      "definition": "A symbol (<) used to show one number is smaller than another.",
+      "translation": "小於",
+      "example": "2 is less than 9.",
+      "example_translation": "2 小於 9。",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "mathematics",
+        "comparison",
+        "symbols"
+      ]
+    },
+    {
+      "term": "odd number",
+      "definition": "A number that cannot be divided exactly by 2.",
+      "translation": "奇數",
+      "example": "1, 3, and 5 are odd numbers.",
+      "example_translation": "1、3 和 5 都是奇數。",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "mathematics",
+        "number-properties",
+        "patterns"
+      ]
+    },
+    {
+      "term": "even number",
+      "definition": "A number that can be divided exactly by 2.",
+      "translation": "偶數",
+      "example": "2, 4, and 6 are even numbers.",
+      "example_translation": "2、4 和 6 都是偶數。",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "mathematics",
+        "number-properties",
+        "patterns"
+      ]
+    },
+    {
+      "term": "place value",
+      "definition": "The value of a digit based on its position in a number.",
+      "translation": "位值",
+      "example": "In 25, the 2 is in the tens place.",
+      "example_translation": "在 25 中，2 在十位上。",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "mathematics",
+        "numbers",
+        "understanding"
+      ]
+    },
+    {
+      "term": "tens",
+      "definition": "A group of ten ones.",
+      "translation": "十",
+      "example": "There are three tens in 30.",
+      "example_translation": "30 中有三個十。",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "mathematics",
+        "numbers",
+        "place-value"
+      ]
+    },
+    {
+      "term": "ones",
+      "definition": "Single units in a number.",
+      "translation": "一",
+      "example": "The number 7 has seven ones.",
+      "example_translation": "數字 7 有七個一。",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "mathematics",
+        "numbers",
+        "place-value"
+      ]
+    },
+    {
+      "term": "rectangle",
+      "definition": "A shape with four straight sides and four right angles.",
+      "translation": "長方形",
+      "example": "A book cover is often a rectangle.",
+      "example_translation": "書的封面通常是長方形。",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "mathematics",
+        "geometry",
+        "shapes"
+      ]
+    },
+    {
+      "term": "square",
+      "definition": "A shape with four equal sides and four right angles.",
+      "translation": "正方形",
+      "example": "A chessboard square is a perfect square.",
+      "example_translation": "棋盤上的格子是一個完美的正方形。",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "mathematics",
+        "geometry",
+        "shapes"
+      ]
+    },
+    {
+      "term": "triangle",
+      "definition": "A shape with three straight sides and three corners.",
+      "translation": "三角形",
+      "example": "A slice of pizza looks like a triangle.",
+      "example_translation": "一片披薩看起來像三角形。",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "mathematics",
+        "geometry",
+        "shapes"
+      ]
+    },
+    {
+      "term": "circle",
+      "definition": "A round shape with no corners or straight sides.",
+      "translation": "圓形",
+      "example": "The clock face is a circle.",
+      "example_translation": "時鐘的臉盤是一個圓形。",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "mathematics",
+        "geometry",
+        "shapes"
+      ]
+    },
+    {
+      "term": "measure",
+      "definition": "To find out how long, heavy, or big something is.",
+      "translation": "測量",
+      "example": "We measure the table with a ruler.",
+      "example_translation": "我們用尺測量桌子。",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "mathematics",
+        "measurement",
+        "tools"
+      ]
+    },
+    {
+      "term": "centimetre",
+      "definition": "A unit of length used to measure small objects.",
+      "translation": "厘米",
+      "example": "The pencil is 15 centimetres long.",
+      "example_translation": "這支鉛筆長 15 厘米。",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "mathematics",
+        "measurement",
+        "units"
+      ]
+    }
+  ]
 }

@@ -7,5 +7,326 @@
   "version": "2026.06",
   "display_name_en": "S4 English",
   "display_name_zh_hant": "中四英文",
-  "words": []
+  "words": [
+    {
+      "term": "analyze",
+      "definition": "To examine something in detail to understand its nature or structure.",
+      "translation": "分析",
+      "example": "Students need to analyze the main arguments in the article.",
+      "example_translation": "學生需要分析文章中的主要論點。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "english",
+        "verb",
+        "academic skill",
+        "reading comprehension"
+      ]
+    },
+    {
+      "term": "consequence",
+      "definition": "A result or effect of an action or condition.",
+      "translation": "後果；結果",
+      "example": "Pollution has serious consequences for the environment.",
+      "example_translation": "污染對環境有嚴重的後果。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "english",
+        "noun",
+        "environment",
+        "cause and effect"
+      ]
+    },
+    {
+      "term": "significant",
+      "definition": "Important, notable, or large enough to have an impact.",
+      "translation": "重要的；顯著的",
+      "example": "There was a significant increase in online learning during the pandemic.",
+      "example_translation": "在疫情期間，線上學習有了顯著增加。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "english",
+        "adjective",
+        "general academic",
+        "data description"
+      ]
+    },
+    {
+      "term": "perspective",
+      "definition": "A particular attitude toward or way of regarding something; a point of view.",
+      "translation": "觀點；視角",
+      "example": "Try to see the issue from a different perspective.",
+      "example_translation": "試著從不同的角度來看這個問題。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "english",
+        "noun",
+        "critical thinking",
+        "discussion"
+      ]
+    },
+    {
+      "term": "evaluate",
+      "definition": "To judge or determine the significance, worth, or quality of something.",
+      "translation": "評估；評價",
+      "example": "We will evaluate your presentation based on clarity and confidence.",
+      "example_translation": "我們將根據清晰度和自信來評估你的簡報。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "english",
+        "verb",
+        "assessment",
+        "public speaking"
+      ]
+    },
+    {
+      "term": "sustainable",
+      "definition": "Able to be maintained at a certain rate or level; conserving an ecological balance.",
+      "translation": "可持續的",
+      "example": "The school promotes sustainable practices like recycling and reducing waste.",
+      "example_translation": "學校推廣可持續的做法，例如回收和減少浪費。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "english",
+        "adjective",
+        "environment",
+        "social issues"
+      ]
+    },
+    {
+      "term": "argument",
+      "definition": "A reason or set of reasons given with the aim of persuading others that an action or idea is right or wrong.",
+      "translation": "論點；爭論",
+      "example": "Make sure your argument is supported by evidence.",
+      "example_translation": "確保你的論點有證據支持。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "english",
+        "noun",
+        "writing",
+        "logic"
+      ]
+    },
+    {
+      "term": "collaborate",
+      "definition": "To work jointly with others or together especially in an intellectual endeavor.",
+      "translation": "合作",
+      "example": "The students collaborated to complete the group project.",
+      "example_translation": "學生們合作完成了小組項目。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "english",
+        "verb",
+        "group work",
+        "soft skills"
+      ]
+    },
+    {
+      "term": "ambiguous",
+      "definition": "Open to more than one interpretation; having a double meaning or unclear.",
+      "translation": "模稜兩可的；含糊不清的",
+      "example": "The instructions were ambiguous, causing confusion among the students.",
+      "example_translation": "指示含糊不清，導致學生們感到困惑。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "english",
+        "adjective",
+        "vocabulary building",
+        "clarity"
+      ]
+    },
+    {
+      "term": "hypothesis",
+      "definition": "A proposed explanation made on the basis of limited evidence as a starting point for further investigation.",
+      "translation": "假設",
+      "example": "Formulate a hypothesis before conducting the science experiment.",
+      "example_translation": "在進行科學實驗之前，先提出一個假設。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "english",
+        "noun",
+        "science",
+        "research method"
+      ]
+    },
+    {
+      "term": "impact",
+      "definition": "A marked effect or influence.",
+      "translation": "影響；衝擊",
+      "example": "Social media has a huge impact on teenagers' daily lives.",
+      "example_translation": "社交媒體對青少年的日常生活有巨大的影響。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "english",
+        "noun",
+        "technology",
+        "society"
+      ]
+    },
+    {
+      "term": "demonstrate",
+      "definition": "To clearly show the existence or truth of something by giving proof or evidence.",
+      "translation": "展示；證明",
+      "example": "Please demonstrate how to solve this equation on the board.",
+      "example_translation": "請在黑板上演示如何解這個方程式。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "english",
+        "verb",
+        "mathematics",
+        "presentation"
+      ]
+    },
+    {
+      "term": "essential",
+      "definition": "Absolutely necessary; extremely important.",
+      "translation": "必要的；本質的",
+      "example": "Reading is essential for improving vocabulary.",
+      "example_translation": "閱讀對於提高詞彙量是必不可少的。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "english",
+        "adjective",
+        "study skills",
+        "general"
+      ]
+    },
+    {
+      "term": "bias",
+      "definition": "Prejudice in favor of or against one thing, person, or group compared with another, usually in a way considered to be unfair.",
+      "translation": "偏見；偏向",
+      "example": "Journalists should try to remain objective and avoid bias in their reporting.",
+      "example_translation": "記者應力求客觀，避免在報導中出現偏見。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "english",
+        "noun",
+        "media literacy",
+        "ethics"
+      ]
+    },
+    {
+      "term": "interpret",
+      "definition": "To explain the meaning of information, words, or actions.",
+      "translation": "解釋；口譯",
+      "example": "It is difficult to interpret the data without proper context.",
+      "example_translation": "沒有適當的背景，很難解釋這些數據。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "english",
+        "verb",
+        "data analysis",
+        "communication"
+      ]
+    },
+    {
+      "term": "challenge",
+      "definition": "A call to take part in a contest or competition; a task that tests someone's abilities.",
+      "translation": "挑戰",
+      "example": "Learning a new language can be a significant challenge.",
+      "example_translation": "學習一門新語言可能是一個重大的挑戰。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "english",
+        "noun",
+        "education",
+        "personal growth"
+      ]
+    },
+    {
+      "term": "phenomenon",
+      "definition": "A fact or situation that is observed to exist or happen, especially one whose cause or explanation is in question.",
+      "translation": "現象",
+      "example": "Global warming is a complex natural phenomenon.",
+      "example_translation": "全球暖化是一種複雜的自然現象。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "english",
+        "noun",
+        "science",
+        "geography"
+      ]
+    },
+    {
+      "term": "advocate",
+      "definition": "To publicly recommend or support a particular cause or policy.",
+      "translation": "提倡；主張",
+      "example": "Many organizations advocate for better mental health awareness.",
+      "example_translation": "許多組織提倡提高對心理健康的認識。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "english",
+        "verb",
+        "social issues",
+        "activism"
+      ]
+    },
+    {
+      "term": "comprehensive",
+      "definition": "Including or dealing with all or nearly all elements or aspects of something.",
+      "translation": "全面的；綜合的",
+      "example": "The textbook provides a comprehensive overview of world history.",
+      "example_translation": "這本教科書提供了世界歷史的全面概述。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "english",
+        "adjective",
+        "academic writing",
+        "description"
+      ]
+    },
+    {
+      "term": "critique",
+      "definition": "An evaluation or analysis of something, often pointing out both strengths and weaknesses.",
+      "translation": "評論；批判性分析",
+      "example": "Write a critique of the author's use of symbolism in the novel.",
+      "example_translation": "寫一篇評論，分析作者在小說中運用象徵手法的情況。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "english",
+        "noun",
+        "literature",
+        "critical thinking"
+      ]
+    }
+  ]
 }

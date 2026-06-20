@@ -7,5 +7,306 @@
   "version": "2026.06",
   "display_name_en": "P6 Mathematics",
   "display_name_zh_hant": "小六數學",
-  "words": []
+  "words": [
+    {
+      "term": "fraction",
+      "definition": "A number that represents part of a whole.",
+      "translation": "分數",
+      "example": "One half is written as 1/2.",
+      "example_translation": "二分之一寫成 1/2。",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "number",
+        "part-whole"
+      ]
+    },
+    {
+      "term": "decimal",
+      "definition": "A number system based on ten, using a dot to separate the whole number from the parts.",
+      "translation": "小數",
+      "example": "0.5 is the decimal form of one half.",
+      "example_translation": "0.5 是二分之一的十進制形式。",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "number",
+        "place-value"
+      ]
+    },
+    {
+      "term": "percentage",
+      "definition": "A number expressed as a fraction of 100.",
+      "translation": "百分數",
+      "example": "50% means 50 out of 100.",
+      "example_translation": "50% 意味著一百份中的五十份。",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "number",
+        "ratio"
+      ]
+    },
+    {
+      "term": "average",
+      "definition": "The result obtained by adding several amounts together and then dividing by the number of amounts.",
+      "translation": "平均數",
+      "example": "The average of 2, 4, and 6 is 4.",
+      "example_translation": "2、4 和 6 的平均數是 4。",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "statistics",
+        "data-handling"
+      ]
+    },
+    {
+      "term": "area",
+      "definition": "The amount of space inside a two-dimensional shape.",
+      "translation": "面積",
+      "example": "We measure area in square centimeters.",
+      "example_translation": "我們用平方厘米來測量面積。",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "geometry",
+        "measurement"
+      ]
+    },
+    {
+      "term": "perimeter",
+      "definition": "The total distance around the edge of a shape.",
+      "translation": "周長",
+      "example": "Add all sides to find the perimeter.",
+      "example_translation": "將所有邊相加以找出周長。",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "geometry",
+        "measurement"
+      ]
+    },
+    {
+      "term": "volume",
+      "definition": "The amount of space occupied by a three-dimensional object.",
+      "translation": "體積",
+      "example": "Volume is measured in cubic units.",
+      "example_translation": "體積以立方單位測量。",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "geometry",
+        "measurement"
+      ]
+    },
+    {
+      "term": "equation",
+      "definition": "A mathematical statement that shows two expressions are equal.",
+      "translation": "方程式",
+      "example": "x + 5 = 10 is an equation.",
+      "example_translation": "x + 5 = 10 是一個方程式。",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "algebra",
+        "problem-solving"
+      ]
+    },
+    {
+      "term": "variable",
+      "definition": "A letter or symbol used to represent an unknown number.",
+      "translation": "變數",
+      "example": "In 'y = 2x', x is the variable.",
+      "example_translation": "在 'y = 2x' 中，x 是變數。",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "algebra",
+        "symbols"
+      ]
+    },
+    {
+      "term": "coordinate",
+      "definition": "A pair of numbers that tells us the position of a point on a grid.",
+      "translation": "坐標",
+      "example": "The coordinate (3, 4) is three right and four up.",
+      "example_translation": "坐標 (3, 4) 表示向右三格，向上四格。",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "geometry",
+        "graphing"
+      ]
+    },
+    {
+      "term": "symmetry",
+      "definition": "When one half of a shape is a mirror image of the other half.",
+      "translation": "對稱",
+      "example": "A square has lines of symmetry.",
+      "example_translation": "正方形有對稱軸。",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "geometry",
+        "properties"
+      ]
+    },
+    {
+      "term": "angle",
+      "definition": "The amount of turn between two straight lines or shapes.",
+      "translation": "角",
+      "example": "A right angle is 90 degrees.",
+      "example_translation": "直角是 90 度。",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "geometry",
+        "measurement"
+      ]
+    },
+    {
+      "term": "radius",
+      "definition": "The distance from the center of a circle to its edge.",
+      "translation": "半徑",
+      "example": "The radius is half of the diameter.",
+      "example_translation": "半徑是直徑的一半。",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "geometry",
+        "circles"
+      ]
+    },
+    {
+      "term": "diameter",
+      "definition": "The distance across a circle through its center.",
+      "translation": "直徑",
+      "example": "The diameter is twice the radius.",
+      "example_translation": "直徑是半徑的兩倍。",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "geometry",
+        "circles"
+      ]
+    },
+    {
+      "term": "prime number",
+      "definition": "A number greater than 1 that has only two factors: 1 and itself.",
+      "translation": "質數",
+      "example": "7 is a prime number.",
+      "example_translation": "7 是一個質數。",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "number",
+        "factors"
+      ]
+    },
+    {
+      "term": "factor",
+      "definition": "A number that divides another number exactly without leaving a remainder.",
+      "translation": "因數",
+      "example": "3 is a factor of 12.",
+      "example_translation": "3 是 12 的因數。",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "number",
+        "division"
+      ]
+    },
+    {
+      "term": "multiple",
+      "definition": "A number that can be divided by another number a certain number of times.",
+      "translation": "倍數",
+      "example": "15 is a multiple of 5.",
+      "example_translation": "15 是 5 的倍數。",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "number",
+        "multiplication"
+      ]
+    },
+    {
+      "term": "ratio",
+      "definition": "A comparison of two amounts showing how much bigger one is than the other.",
+      "translation": "比",
+      "example": "The ratio of boys to girls is 2:3.",
+      "example_translation": "男生與女生的比例是 2:3。",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "number",
+        "comparison"
+      ]
+    },
+    {
+      "term": "probability",
+      "definition": "How likely it is that an event will happen.",
+      "translation": "機率",
+      "example": "It is impossible to roll a 7 on a standard die.",
+      "example_translation": "在標準骰子上擲出 7 是不可能的。",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "statistics",
+        "chance"
+      ]
+    },
+    {
+      "term": "graph",
+      "definition": "A drawing that shows the relationship between different sets of data.",
+      "translation": "圖表",
+      "example": "We drew a bar graph to show our results.",
+      "example_translation": "我們畫了一個條形圖來顯示我們的結果。",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "statistics",
+        "data-representation"
+      ]
+    }
+  ]
 }

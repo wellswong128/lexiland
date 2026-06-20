@@ -1,17 +1,6 @@
 import { Link } from "react-router-dom";
 import { useLocale } from "../locale/LocaleContext.jsx";
-
-function getGroupLabel(group, locale) {
-  if (!group) {
-    return "";
-  }
-
-  if (locale === "en") {
-    return group.displayNameEn || group.groupCode || "";
-  }
-
-  return group.displayNameZhHant || group.displayNameEn || group.groupCode || "";
-}
+import { getActiveGroupLabel } from "./getActiveGroupLabel.js";
 
 function WordGroupScopeEmptyState({
   compact = false,
@@ -19,7 +8,7 @@ function WordGroupScopeEmptyState({
   activeGroup = null,
 }) {
   const { locale, t } = useLocale();
-  const groupLabel = getGroupLabel(activeGroup, locale);
+  const groupLabel = getActiveGroupLabel(activeGroup, locale);
 
   let description = t("wordGroupsScope.emptyDescription");
   if (scopeReason === "no-active-group") {

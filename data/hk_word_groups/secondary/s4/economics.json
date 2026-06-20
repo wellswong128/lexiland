@@ -7,5 +7,326 @@
   "version": "2026.06",
   "display_name_en": "S4 Economics",
   "display_name_zh_hant": "中四經濟",
-  "words": []
+  "words": [
+    {
+      "term": "opportunity cost",
+      "definition": "The value of the next best alternative that is given up when making a choice.",
+      "translation": "機會成本",
+      "example": "The opportunity cost of studying economics is the leisure time you lose.",
+      "example_translation": "學習經濟學的機會成本是你失去的休閒時間。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "microeconomics",
+        "basic-concepts",
+        "decision-making"
+      ]
+    },
+    {
+      "term": "scarcity",
+      "definition": "The basic economic problem where resources are limited while human wants are unlimited.",
+      "translation": "資源匱乏",
+      "example": "Scarcity forces individuals and governments to make choices about resource allocation.",
+      "example_translation": "資源匱乏迫使個人和政府就資源分配做出選擇。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "microeconomics",
+        "fundamental-problem",
+        "resources"
+      ]
+    },
+    {
+      "term": "marginal benefit",
+      "definition": "The additional satisfaction or utility gained from consuming one more unit of a good or service.",
+      "translation": "邊際效益",
+      "example": "Consumers will continue buying coffee until the marginal benefit equals the marginal cost.",
+      "example_translation": "消費者會繼續購買咖啡，直到邊際效益等於邊際成本為止。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "microeconomics",
+        "utility",
+        "consumer-behavior"
+      ]
+    },
+    {
+      "term": "diminishing returns",
+      "definition": "A principle stating that adding more of one factor of production, while holding others constant, will eventually yield lower per-unit incremental returns.",
+      "translation": "報酬遞減法則",
+      "example": "Adding too many workers to a small kitchen leads to diminishing returns in food preparation.",
+      "example_translation": "在狹小的廚房裡加入太多工人會導致食物製作的報酬遞減。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "microeconomics",
+        "production",
+        "short-run"
+      ]
+    },
+    {
+      "term": "elasticity of demand",
+      "definition": "A measure of how much the quantity demanded of a good responds to a change in its price.",
+      "translation": "需求價格彈性",
+      "example": "Luxury goods often have high elasticity of demand because consumers can easily avoid buying them.",
+      "example_translation": "奢侈品通常具有很高的需求價格彈性，因為消費者可以輕易避免購買。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "microeconomics",
+        "price-sensitivity",
+        "demand"
+      ]
+    },
+    {
+      "term": "substitute goods",
+      "definition": "Goods that can be used in place of each other; if the price of one rises, demand for the other increases.",
+      "translation": "替代品",
+      "example": "Coca-Cola and Pepsi are substitute goods for many soft drink consumers.",
+      "example_translation": "可口可樂和百事可樂對許多軟飲料消費者來說是替代品。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "microeconomics",
+        "demand",
+        "relationships"
+      ]
+    },
+    {
+      "term": "complementary goods",
+      "definition": "Goods that are consumed together; if the price of one rises, demand for the other falls.",
+      "translation": "互補品",
+      "example": "Printers and ink cartridges are complementary goods.",
+      "example_translation": "印表機和墨水匣是互補品。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "microeconomics",
+        "demand",
+        "relationships"
+      ]
+    },
+    {
+      "term": "fixed costs",
+      "definition": "Business costs that do not change with the level of output, such as rent or salaries.",
+      "translation": "固定成本",
+      "example": "Even if the factory produces nothing, the owner still has to pay fixed costs like rent.",
+      "example_translation": "即使工廠沒有生產任何產品，業主仍必須支付租金等固定成本。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "microeconomics",
+        "costs",
+        "production"
+      ]
+    },
+    {
+      "term": "average total cost",
+      "definition": "The total cost of production divided by the number of units produced.",
+      "translation": "平均總成本",
+      "example": "To maximize profit, firms often try to minimize their average total cost.",
+      "example_translation": "為了最大化利潤，企業通常試圖將其平均總成本最小化。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "microeconomics",
+        "costs",
+        "efficiency"
+      ]
+    },
+    {
+      "term": "economies of scale",
+      "definition": "Cost advantages that enterprises obtain due to their scale of operation, with cost per unit of output generally decreasing with increasing scale.",
+      "translation": "規模經濟",
+      "example": "Large supermarkets benefit from economies of scale by buying goods in bulk at lower prices.",
+      "example_translation": "大型超市透過批量以較低價格購買商品而享有規模經濟的好處。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "microeconomics",
+        "long-run",
+        "costs"
+      ]
+    },
+    {
+      "term": "perfect competition",
+      "definition": "A market structure characterized by many buyers and sellers, identical products, and free entry and exit.",
+      "translation": "完全競爭",
+      "example": "In perfect competition, no single firm can influence the market price.",
+      "example_translation": "在完全競爭市場中，沒有任何一家企業能夠影響市場價格。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "microeconomics",
+        "market-structure",
+        "theory"
+      ]
+    },
+    {
+      "term": "monopoly",
+      "definition": "A market structure where a single seller dominates the entire market for a product or service.",
+      "translation": "壟斷",
+      "example": "Utilities like water supply are often natural monopolies regulated by the government.",
+      "example_translation": "供水等公用事業通常是受政府監管的自然壟斷。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "microeconomics",
+        "market-structure",
+        "power"
+      ]
+    },
+    {
+      "term": "oligopoly",
+      "definition": "A market structure dominated by a small number of large firms, leading to interdependence.",
+      "translation": "寡頭壟斷",
+      "example": "The mobile phone industry in Hong Kong is an example of an oligopoly.",
+      "example_translation": "香港的流動電話行業是寡頭壟斷的一個例子。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "microeconomics",
+        "market-structure",
+        "competition"
+      ]
+    },
+    {
+      "term": "barriers to entry",
+      "definition": "Obstacles that make it difficult for new firms to enter a market, such as high startup costs or patents.",
+      "translation": "進入壁壘",
+      "example": "High capital requirements act as a significant barrier to entry for new airlines.",
+      "example_translation": "高昂的資本要求是新航空公司面臨的重大進入壁壘。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "microeconomics",
+        "market-structure",
+        "competition"
+      ]
+    },
+    {
+      "term": "Gross Domestic Product (GDP)",
+      "definition": "The total monetary value of all final goods and services produced within a country's borders in a specific time period.",
+      "translation": "國內生產總值",
+      "example": "Hong Kong's GDP growth rate is a key indicator of its economic health.",
+      "example_translation": "香港的經濟增長率是其經濟健康狀況的關鍵指標。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "macroeconomics",
+        "growth",
+        "indicators"
+      ]
+    },
+    {
+      "term": "inflation",
+      "definition": "A sustained increase in the general price level of goods and services in an economy over time.",
+      "translation": "通脹",
+      "example": "High inflation reduces the purchasing power of consumers' money.",
+      "example_translation": "高通脹會降低消費者貨幣的購買力。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "macroeconomics",
+        "prices",
+        "stability"
+      ]
+    },
+    {
+      "term": "unemployment rate",
+      "definition": "The percentage of the total labor force that is unemployed but actively seeking employment.",
+      "translation": "失業率",
+      "example": "The government aims to keep the unemployment rate low to ensure social stability.",
+      "example_translation": "政府旨在將失業率保持在低位，以確保社會穩定。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "macroeconomics",
+        "labor-market",
+        "policy"
+      ]
+    },
+    {
+      "term": "fiscal policy",
+      "definition": "The use of government spending and tax policies to influence economic conditions.",
+      "translation": "財政政策",
+      "example": "During a recession, the government may use expansionary fiscal policy to boost demand.",
+      "example_translation": "在經濟衰退期間，政府可能會使用擴張性財政政策來刺激需求。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "macroeconomics",
+        "government",
+        "intervention"
+      ]
+    },
+    {
+      "term": "monetary policy",
+      "definition": "The process by which the monetary authority of a country controls the supply of money, often targeting an interest rate.",
+      "translation": "貨幣政策",
+      "example": "The Monetary Authority raises interest rates to combat high inflation.",
+      "example_translation": "金管局通過提高利率來對抗高通脹。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "macroeconomics",
+        "central-bank",
+        "interest-rates"
+      ]
+    },
+    {
+      "term": "balance of payments",
+      "definition": "A record of all economic transactions between residents of a country and the rest of the world.",
+      "translation": "國際收支結算",
+      "example": "A trade deficit means a country imports more goods than it exports, affecting its balance of payments.",
+      "example_translation": "貿易逆差意味著一個國家進口的貨物多於出口的貨物，這會影響其國際收支結算。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "macroeconomics",
+        "international-trade",
+        "accounts"
+      ]
+    }
+  ]
 }

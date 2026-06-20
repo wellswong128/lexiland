@@ -7,5 +7,306 @@
   "version": "2026.06",
   "display_name_en": "S3 History",
   "display_name_zh_hant": "中三歷史",
-  "words": []
+  "words": [
+    {
+      "term": "revolution",
+      "definition": "A forcible overthrow of a government or social order in favor of a new system.",
+      "translation": "革命",
+      "example": "The French Revolution began in 1789.",
+      "example_translation": "法國大革命始於1789年。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "noun",
+        "modern_history"
+      ]
+    },
+    {
+      "term": "independence",
+      "definition": "The state of being free from outside control or influence.",
+      "translation": "獨立",
+      "example": "India gained independence from Britain in 1947.",
+      "example_translation": "印度於1947年從英國獲得獨立。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "noun",
+        "post_war"
+      ]
+    },
+    {
+      "term": "treaty",
+      "definition": "A formally concluded and ratified agreement between countries.",
+      "translation": "條約",
+      "example": "The Treaty of Versailles ended World War I.",
+      "example_translation": "凡爾賽條約結束了第一次世界大戰。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "noun",
+        "diplomacy"
+      ]
+    },
+    {
+      "term": "colonialism",
+      "definition": "The policy or practice of acquiring full or partial political control over another country.",
+      "translation": "殖民主義",
+      "example": "Colonialism had a significant impact on Southeast Asia.",
+      "example_translation": "殖民主義對東南亞產生了重大影響。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "noun",
+        "global_history"
+      ]
+    },
+    {
+      "term": "democracy",
+      "definition": "A system of government by the whole population, typically through elected representatives.",
+      "translation": "民主",
+      "example": "Many countries strive to establish a stable democracy.",
+      "example_translation": "許多國家努力建立穩定的民主制度。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "noun",
+        "political_systems"
+      ]
+    },
+    {
+      "term": "propaganda",
+      "definition": "Information, especially of a biased or misleading nature, used to promote a political cause.",
+      "translation": "宣傳",
+      "example": "Both sides used propaganda during the Cold War.",
+      "example_translation": "冷戰期間雙方都使用了宣傳手段。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "noun",
+        "cold_war"
+      ]
+    },
+    {
+      "term": "alliance",
+      "definition": "A union or association formed for mutual benefit, especially between countries or organizations.",
+      "translation": "聯盟",
+      "example": "NATO was a military alliance formed after World War II.",
+      "example_translation": "北約是二戰後成立的軍事聯盟。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "noun",
+        "international_relations"
+      ]
+    },
+    {
+      "term": "conflict",
+      "definition": "A serious disagreement or argument, typically a protracted one.",
+      "translation": "衝突",
+      "example": "The Arab-Israeli conflict has lasted for decades.",
+      "example_translation": "阿以衝突已持續數十年。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "noun",
+        "middle_east"
+      ]
+    },
+    {
+      "term": "sovereignty",
+      "definition": "The authority of a state to govern itself or another state.",
+      "translation": "主權",
+      "example": "National sovereignty is a key principle in international law.",
+      "example_translation": "國家主權是國際法的一項關鍵原則。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "noun",
+        "politics"
+      ]
+    },
+    {
+      "term": "ideology",
+      "definition": "A system of ideas and ideals, especially one that forms the basis of economic or political theory.",
+      "translation": "意識形態",
+      "example": "Capitalism and communism are opposing ideologies.",
+      "example_translation": "資本主義和共產主義是對立的意識形態。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "noun",
+        "political_theory"
+      ]
+    },
+    {
+      "term": "emigrate",
+      "definition": "To leave one's own country in order to settle permanently in another.",
+      "translation": "移民（出國）",
+      "example": "Many people emigrated from Europe to America in the 19th century.",
+      "example_translation": "許多人在19世紀從歐洲移民到美國。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "verb",
+        "migration"
+      ]
+    },
+    {
+      "term": "annex",
+      "definition": "To take possession of (a territory), typically by force.",
+      "translation": "吞併",
+      "example": "Germany annexed Austria in 1938.",
+      "example_translation": "德國於1938年吞併了奧地利。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "verb",
+        "ww2"
+      ]
+    },
+    {
+      "term": "negotiate",
+      "definition": "To try to reach an agreement by discussion with others.",
+      "translation": "談判",
+      "example": "The two leaders met to negotiate a peace deal.",
+      "example_translation": "兩位領導人會面以談判達成和平協議。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "verb",
+        "diplomacy"
+      ]
+    },
+    {
+      "term": "oppressed",
+      "definition": "Subjected to harsh and authoritarian treatment or control.",
+      "translation": "受壓迫的",
+      "example": "The minority group felt oppressed by the government.",
+      "example_translation": "少數族裔感到受到政府的壓迫。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "adjective",
+        "social_issues"
+      ]
+    },
+    {
+      "term": "authoritarian",
+      "definition": "Favoring or enforcing strict obedience to authority at the expense of personal freedom.",
+      "translation": "專制的",
+      "example": "The country was ruled by an authoritarian regime.",
+      "example_translation": "該國由一個專制政權統治。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "adjective",
+        "government"
+      ]
+    },
+    {
+      "term": "economic",
+      "definition": "Relating to economics or the economy.",
+      "translation": "經濟的",
+      "example": "The economic crisis affected many nations globally.",
+      "example_translation": "經濟危機影響了全球許多國家。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "adjective",
+        "economics"
+      ]
+    },
+    {
+      "term": "civil war",
+      "definition": "A war between citizens of the same country.",
+      "translation": "內戰",
+      "example": "The American Civil War took place from 1861 to 1865.",
+      "example_translation": "美國內戰發生於1861年至1865年。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "noun_phrase",
+        "military_history"
+      ]
+    },
+    {
+      "term": "human rights",
+      "definition": "The basic rights and freedoms to which all humans are entitled.",
+      "translation": "人權",
+      "example": "The UN promotes the protection of human rights worldwide.",
+      "example_translation": "聯合國致力於在全球範圍內保護人權。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "noun_phrase",
+        "ethics"
+      ]
+    },
+    {
+      "term": "Cold War",
+      "definition": "A period of tension between the Soviet Union and the United States after World War II.",
+      "translation": "冷戰",
+      "example": "The Cold War influenced global politics for decades.",
+      "example_translation": "冷戰在數十年間影響了全球政治。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "noun_phrase",
+        "20th_century"
+      ]
+    },
+    {
+      "term": "World War II",
+      "definition": "A global war lasting from 1939 to 1945, involving most of the world's nations.",
+      "translation": "第二次世界大戰",
+      "example": "World War II resulted in significant changes to the map of Europe.",
+      "example_translation": "第二次世界大戰導致歐洲地圖發生了重大變化。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "noun_phrase",
+        "major_events"
+      ]
+    }
+  ]
 }

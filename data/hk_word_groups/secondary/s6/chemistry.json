@@ -7,5 +7,326 @@
   "version": "2026.06",
   "display_name_en": "S6 Chemistry",
   "display_name_zh_hant": "中六化學",
-  "words": []
+  "words": [
+    {
+      "term": "Enthalpy change",
+      "definition": "The heat energy absorbed or released during a chemical reaction at constant pressure.",
+      "translation": "焓變",
+      "example": "The enthalpy change of combustion is always negative.",
+      "example_translation": "燃燒的焓變總是負值。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "chemistry",
+        "thermodynamics",
+        "energy",
+        "noun"
+      ]
+    },
+    {
+      "term": "Equilibrium constant",
+      "definition": "A value that expresses the ratio of product concentrations to reactant concentrations at equilibrium.",
+      "translation": "平衡常數",
+      "example": "We calculate the equilibrium constant using the concentrations at steady state.",
+      "example_translation": "我們使用穩定狀態下的濃度來計算平衡常數。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "chemistry",
+        "equilibrium",
+        "calculation",
+        "noun"
+      ]
+    },
+    {
+      "term": "Le Chatelier's principle",
+      "definition": "A rule stating that if a dynamic equilibrium is disturbed, the system shifts to counteract the disturbance.",
+      "translation": "勒夏特列原理",
+      "example": "According to Le Chatelier's principle, increasing pressure favors the side with fewer gas moles.",
+      "example_translation": "根據勒夏特列原理，增加壓力有利於氣體摩爾數較少的一側。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "chemistry",
+        "equilibrium",
+        "theory",
+        "proper noun"
+      ]
+    },
+    {
+      "term": "Activation energy",
+      "definition": "The minimum amount of energy required for reactants to collide effectively and start a reaction.",
+      "translation": "活化能",
+      "example": "Catalysts lower the activation energy, speeding up the reaction rate.",
+      "example_translation": "催化劑降低活化能，從而加快反應速率。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "chemistry",
+        "kinetics",
+        "energy",
+        "noun"
+      ]
+    },
+    {
+      "term": "Rate constant",
+      "definition": "A proportionality factor in the rate equation that relates reaction rate to reactant concentrations.",
+      "translation": "速率常數",
+      "example": "The rate constant depends on temperature but not on concentration.",
+      "example_translation": "速率常數取決於溫度，但不取決於濃度。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "chemistry",
+        "kinetics",
+        "formula",
+        "noun"
+      ]
+    },
+    {
+      "term": "Buffer solution",
+      "definition": "A solution that resists changes in pH when small amounts of acid or base are added.",
+      "translation": "緩衝溶液",
+      "example": "An acidic buffer solution typically consists of a weak acid and its salt.",
+      "example_translation": "酸性緩衝溶液通常由弱酸及其鹽組成。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "chemistry",
+        "acids and bases",
+        "ph",
+        "noun"
+      ]
+    },
+    {
+      "term": "Solubility product",
+      "definition": "The equilibrium constant for a solid substance dissolving in an aqueous solution.",
+      "translation": "溶度積",
+      "example": "If the ion product exceeds the solubility product, precipitation occurs.",
+      "example_translation": "如果離子積超過溶度積，就會發生沉澱。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "chemistry",
+        "equilibrium",
+        "solubility",
+        "noun"
+      ]
+    },
+    {
+      "term": "Standard electrode potential",
+      "definition": "The voltage of a half-cell measured under standard conditions relative to the standard hydrogen electrode.",
+      "translation": "標準電極電勢",
+      "example": "A more positive standard electrode potential indicates a stronger oxidizing agent.",
+      "example_translation": "更正的標準電極電勢表示更強的氧化劑。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "chemistry",
+        "electrochemistry",
+        "redox",
+        "noun"
+      ]
+    },
+    {
+      "term": "Electrolysis",
+      "definition": "The process of using electricity to decompose an electrolyte into its constituent elements.",
+      "translation": "電解",
+      "example": "During electrolysis of molten sodium chloride, sodium metal forms at the cathode.",
+      "example_translation": "在熔融氯化鈉的電解過程中，金屬鈉在陰極形成。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "chemistry",
+        "electrochemistry",
+        "process",
+        "noun"
+      ]
+    },
+    {
+      "term": "Transition metal",
+      "definition": "An element whose atom has a partially filled d sub-shell or which can give rise to cations with an incomplete d sub-shell.",
+      "translation": "過渡金屬",
+      "example": "Transition metals often form colored compounds and act as catalysts.",
+      "example_translation": "過渡金屬經常形成有色化合物並作為催化劑。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "chemistry",
+        "periodic table",
+        "properties",
+        "noun"
+      ]
+    },
+    {
+      "term": "Ligand",
+      "definition": "An ion or molecule that binds to a central metal atom to form a coordination complex.",
+      "translation": "配體",
+      "example": "Water and ammonia are common monodentate ligands.",
+      "example_translation": "水和氨是常見的單齒配體。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "chemistry",
+        "coordination chemistry",
+        "structure",
+        "noun"
+      ]
+    },
+    {
+      "term": "Isomerism",
+      "definition": "The phenomenon where molecules have the same molecular formula but different arrangements of atoms.",
+      "translation": "異構現象",
+      "example": "Geometric isomerism occurs in alkenes due to restricted rotation around the double bond.",
+      "example_translation": "由於雙鍵周圍旋轉受限，順反異構現象發生在烯烴中。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "chemistry",
+        "organic chemistry",
+        "structure",
+        "noun"
+      ]
+    },
+    {
+      "term": "Nucleophilic substitution",
+      "definition": "A reaction where a nucleophile replaces a leaving group in a molecule.",
+      "translation": "親核取代反應",
+      "example": "Primary haloalkanes typically undergo SN2 nucleophilic substitution.",
+      "example_translation": "一級鹵代烷通常進行SN2親核取代。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "chemistry",
+        "organic mechanisms",
+        "haloalkanes",
+        "noun"
+      ]
+    },
+    {
+      "term": "Distillation",
+      "definition": "A separation technique based on differences in boiling points of liquids.",
+      "translation": "蒸餾",
+      "example": "Fractional distillation is used to separate crude oil into fractions.",
+      "example_translation": "分餾用於將原油分離成不同的餾分。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "chemistry",
+        "practical skills",
+        "separation",
+        "noun"
+      ]
+    },
+    {
+      "term": "Chromatography",
+      "definition": "A laboratory technique for separating components of a mixture based on their differential migration.",
+      "translation": "色譜法",
+      "example": "Paper chromatography can identify pigments in plant leaves.",
+      "example_translation": "紙層析法可以識別植物葉片中的色素。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "chemistry",
+        "practical skills",
+        "analysis",
+        "noun"
+      ]
+    },
+    {
+      "term": "Exothermic",
+      "definition": "Describing a reaction that releases heat energy to the surroundings.",
+      "translation": "放熱的",
+      "example": "Combustion reactions are highly exothermic processes.",
+      "example_translation": "燃燒反應是高度放熱的過程。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "chemistry",
+        "thermodynamics",
+        "adjective",
+        "property"
+      ]
+    },
+    {
+      "term": "Endothermic",
+      "definition": "Describing a reaction that absorbs heat energy from the surroundings.",
+      "translation": "吸熱的",
+      "example": "The decomposition of calcium carbonate is an endothermic reaction.",
+      "example_translation": "碳酸鈣的分解是一個吸熱反應。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "chemistry",
+        "thermodynamics",
+        "adjective",
+        "property"
+      ]
+    },
+    {
+      "term": "Precipitate",
+      "definition": "An insoluble solid that emerges from a liquid solution during a chemical reaction.",
+      "translation": "沉澱物",
+      "example": "Mixing silver nitrate and sodium chloride produces a white precipitate.",
+      "example_translation": "混合硝酸銀和氯化鈉會產生白色沉澱物。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "chemistry",
+        "reactions",
+        "observation",
+        "noun"
+      ]
+    },
+    {
+      "term": "Oxidation number",
+      "definition": "The charge an atom would have if the compound was composed of ions.",
+      "translation": "氧化數",
+      "example": "In KMnO4, the oxidation number of manganese is +7.",
+      "example_translation": "在高錳酸鉀中，錳的氧化數為+7。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "chemistry",
+        "redox",
+        "nomenclature",
+        "noun"
+      ]
+    },
+    {
+      "term": "Hydrolysis",
+      "definition": "A chemical reaction in which water is used to break down bonds in a molecule.",
+      "translation": "水解",
+      "example": "Esters undergo hydrolysis in the presence of an acid or base catalyst.",
+      "example_translation": "酯在酸或鹼催化劑存在下發生水解。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "chemistry",
+        "organic reactions",
+        "mechanism",
+        "noun"
+      ]
+    }
+  ]
 }

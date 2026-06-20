@@ -7,5 +7,326 @@
   "version": "2026.06",
   "display_name_en": "S5 History",
   "display_name_zh_hant": "中五歷史",
-  "words": []
+  "words": [
+    {
+      "term": "imperialism",
+      "definition": "A policy of extending a country's power and influence through diplomacy or military force.",
+      "translation": "帝國主義",
+      "example": "The 19th century was marked by intense European imperialism in Asia.",
+      "example_translation": "十九世紀以歐洲在亞洲的強烈帝國主義為特徵。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "s5 history",
+        "global history",
+        "noun"
+      ]
+    },
+    {
+      "term": "nationalism",
+      "definition": "Identification with one's own nation and support for its interests, especially to the exclusion or detriment of the interests of other nations.",
+      "translation": "民族主義",
+      "example": "Rising nationalism contributed to the outbreak of World War I.",
+      "example_translation": "日益增長的民族主義導致了第一次世界大戰的爆發。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "s5 history",
+        "political concepts",
+        "noun"
+      ]
+    },
+    {
+      "term": "treaty port",
+      "definition": "A Chinese port opened to foreign trade and residence under unequal treaties imposed by Western powers and Japan.",
+      "translation": "通商口岸",
+      "example": "Shanghai became a major treaty port after the Treaty of Nanking.",
+      "example_translation": "《南京條約》後，上海成為主要的通商口岸。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "s5 history",
+        "modern china",
+        "noun phrase"
+      ]
+    },
+    {
+      "term": "unequal treaty",
+      "definition": "A treaty imposed on one party by threats of war, not on the principles of equality.",
+      "translation": "不平等條約",
+      "example": "The Boxer Protocol was considered one of the most humiliating unequal treaties.",
+      "example_translation": "《辛丑條約》被認為是最屈辱的不平等條約之一。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "s5 history",
+        "modern china",
+        "noun phrase"
+      ]
+    },
+    {
+      "term": "revolution",
+      "definition": "A forcible overthrow of a government or social order in favour of a new system.",
+      "translation": "革命",
+      "example": "The 1911 Revolution ended the Qing Dynasty's rule over China.",
+      "example_translation": "辛亥革命結束了清朝對中國的統治。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "s5 history",
+        "modern china",
+        "noun"
+      ]
+    },
+    {
+      "term": "warlord",
+      "definition": "A military leader who controls a territory and exercises authority independently of a central government.",
+      "translation": "軍閥",
+      "example": "China experienced a period of fragmentation known as the Warlord Era.",
+      "example_translation": "中國經歷了一段稱為軍閥割據時期的分裂狀態。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "s5 history",
+        "modern china",
+        "noun"
+      ]
+    },
+    {
+      "term": "fascism",
+      "definition": "A political ideology characterized by dictatorial power, forcible suppression of opposition, and strong regimentation of society.",
+      "translation": "法西斯主義",
+      "example": "Mussolini established a fascist regime in Italy during the 1920s.",
+      "example_translation": "墨索里尼在二十世紀二十年代於意大利建立了法西斯政權。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "s5 history",
+        "world war ii",
+        "noun"
+      ]
+    },
+    {
+      "term": "appeasement",
+      "definition": "The policy of making political concessions to an aggressive power in order to avoid conflict.",
+      "translation": "綏靖政策",
+      "example": "The policy of appeasement failed to prevent Hitler's expansion into Europe.",
+      "example_translation": "綏靖政策未能阻止希特勒向歐洲擴張。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "s5 history",
+        "world war ii",
+        "noun"
+      ]
+    },
+    {
+      "term": "genocide",
+      "definition": "The deliberate and systematic destruction of a racial, political, or cultural group.",
+      "translation": "種族滅絕",
+      "example": "The Holocaust was a tragic example of genocide during World War II.",
+      "example_translation": "納粹大屠殺是二戰期間種族滅絕的悲慘例子。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "s5 history",
+        "world war ii",
+        "noun"
+      ]
+    },
+    {
+      "term": "Cold War",
+      "definition": "A state of political hostility and tension between countries, especially the US and the USSR, without direct large-scale fighting.",
+      "translation": "冷戰",
+      "example": "The Cold War influenced global politics from 1947 to 1991.",
+      "example_translation": "冷戰從1947年到1991年影響了全球政治。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "s5 history",
+        "contemporary history",
+        "noun phrase"
+      ]
+    },
+    {
+      "term": "decide",
+      "definition": "To make a choice or reach a conclusion after thinking about a problem.",
+      "translation": "決定",
+      "example": "Historians often debate what factors decided the outcome of the war.",
+      "example_translation": "歷史學家經常辯論是什麼因素決定了戰爭的結果。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "s5 history",
+        "skill: analysis",
+        "verb"
+      ]
+    },
+    {
+      "term": "interpret",
+      "definition": "To explain the meaning of information, events, or documents.",
+      "translation": "詮釋",
+      "example": "Different sources may interpret the same historical event in various ways.",
+      "example_translation": "不同的資料可能以不同方式詮釋同一歷史事件。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "s5 history",
+        "skill: source analysis",
+        "verb"
+      ]
+    },
+    {
+      "term": "significant",
+      "definition": "Important, notable, or having a major effect.",
+      "translation": "重要的",
+      "example": "The signing of the treaty was a significant moment in diplomatic history.",
+      "example_translation": "簽署條約是外交歷史上的一個重要時刻。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "s5 history",
+        "adjective",
+        "general"
+      ]
+    },
+    {
+      "term": "conflict",
+      "definition": "A serious disagreement or argument, typically a protracted one; a war or battle.",
+      "translation": "衝突",
+      "example": "The Sino-Japanese conflict escalated into full-scale war.",
+      "example_translation": "中日衝突升級為全面戰爭。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "s5 history",
+        "modern china",
+        "noun"
+      ]
+    },
+    {
+      "term": "alliance",
+      "definition": "An association, esp. between nations or political groups formed for mutual benefit.",
+      "translation": "聯盟",
+      "example": "The Allied Powers defeated the Axis Powers in World War II.",
+      "example_translation": "同盟國在第二次世界大戰中擊敗了軸心國。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "s5 history",
+        "world war ii",
+        "noun"
+      ]
+    },
+    {
+      "term": "propaganda",
+      "definition": "Information, especially of a biased or misleading nature, used to promote a political cause or point of view.",
+      "translation": "宣傳",
+      "example": "Both sides used propaganda to gain public support during the war.",
+      "example_translation": "雙方在戰爭期間都利用宣傳來爭取公眾支持。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "s5 history",
+        "world war ii",
+        "noun"
+      ]
+    },
+    {
+      "term": "sovereignty",
+      "definition": "The authority of a state to govern itself or another state.",
+      "translation": "主權",
+      "example": "The restoration of sovereignty over Hong Kong occurred in 1997.",
+      "example_translation": "香港主權的恢復發生在1997年。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "s5 history",
+        "contemporary history",
+        "noun"
+      ]
+    },
+    {
+      "term": "diplomatic relations",
+      "definition": "The official interactions and agreements between governments of different countries.",
+      "translation": "外交關係",
+      "example": "Normalizing diplomatic relations between the two countries took decades.",
+      "example_translation": "兩國恢復正常外交關係花了幾十年的時間。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "s5 history",
+        "contemporary history",
+        "noun phrase"
+      ]
+    },
+    {
+      "term": "ideology",
+      "definition": "A system of ideas and ideals, especially one that forms the basis of economic or political theory and policy.",
+      "translation": "意識形態",
+      "example": "The clash of ideologies shaped the geopolitical landscape of the 20th century.",
+      "example_translation": "意識形態的衝突塑造了二十世紀的地緣政治格局。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "s5 history",
+        "cold war",
+        "noun"
+      ]
+    },
+    {
+      "term": "reunification",
+      "definition": "The action of joining together again, especially referring to political entities.",
+      "translation": "統一",
+      "example": "German reunification marked the end of the division between East and West Germany.",
+      "example_translation": "德國統一標誌著東德和西德分裂的結束。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "s5 history",
+        "contemporary history",
+        "noun"
+      ]
+    }
+  ]
 }

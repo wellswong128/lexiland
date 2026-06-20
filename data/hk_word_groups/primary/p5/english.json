@@ -7,5 +7,306 @@
   "version": "2026.06",
   "display_name_en": "P5 English",
   "display_name_zh_hant": "小五英文",
-  "words": []
+  "words": [
+    {
+      "term": "environment",
+      "definition": "The natural world, including air, water, and land.",
+      "translation": "環境",
+      "example": "We should protect the environment.",
+      "example_translation": "我們應該保護環境。",
+      "tags": [
+        "hk",
+        "primary",
+        "p5",
+        "english",
+        "nature",
+        "noun"
+      ]
+    },
+    {
+      "term": "recycle",
+      "definition": "To process used materials into new products.",
+      "translation": "回收",
+      "example": "Please recycle paper and plastic bottles.",
+      "example_translation": "請回收紙張和塑膠瓶。",
+      "tags": [
+        "hk",
+        "primary",
+        "p5",
+        "english",
+        "environment",
+        "verb"
+      ]
+    },
+    {
+      "term": "pollution",
+      "definition": "Harmful substances in the air, water, or land.",
+      "translation": "污染",
+      "example": "Air pollution is bad for our health.",
+      "example_translation": "空氣污染對我們的健康有害。",
+      "tags": [
+        "hk",
+        "primary",
+        "p5",
+        "english",
+        "environment",
+        "noun"
+      ]
+    },
+    {
+      "term": "conserve",
+      "definition": "To save or protect something from being wasted.",
+      "translation": "節約；保護",
+      "example": "We must conserve water every day.",
+      "example_translation": "我們每天必須節約用水。",
+      "tags": [
+        "hk",
+        "primary",
+        "p5",
+        "english",
+        "environment",
+        "verb"
+      ]
+    },
+    {
+      "term": "habitat",
+      "definition": "The natural home of an animal or plant.",
+      "translation": "棲息地",
+      "example": "Forests are the habitat of many birds.",
+      "example_translation": "森林是許多鳥類的棲息地。",
+      "tags": [
+        "hk",
+        "primary",
+        "p5",
+        "english",
+        "nature",
+        "noun"
+      ]
+    },
+    {
+      "term": "endangered",
+      "definition": "At risk of dying out completely.",
+      "translation": "瀕臨滅絕的",
+      "example": "Pandas are endangered animals.",
+      "example_translation": "熊貓是瀕臨滅絕的動物。",
+      "tags": [
+        "hk",
+        "primary",
+        "p5",
+        "english",
+        "animals",
+        "adjective"
+      ]
+    },
+    {
+      "term": "ecosystem",
+      "definition": "A community of living things and their environment.",
+      "translation": "生態系統",
+      "example": "Coral reefs are a delicate ecosystem.",
+      "example_translation": "珊瑚礁是一個脆弱的生態系統。",
+      "tags": [
+        "hk",
+        "primary",
+        "p5",
+        "english",
+        "science",
+        "noun"
+      ]
+    },
+    {
+      "term": "sustainable",
+      "definition": "Able to continue without harming the environment.",
+      "translation": "可持續的",
+      "example": "Using solar power is a sustainable choice.",
+      "example_translation": "使用太陽能是一種可持續的選擇。",
+      "tags": [
+        "hk",
+        "primary",
+        "p5",
+        "english",
+        "environment",
+        "adjective"
+      ]
+    },
+    {
+      "term": "waste",
+      "definition": "Materials that are thrown away because they are not needed.",
+      "translation": "廢物",
+      "example": "Do not waste food on your plate.",
+      "example_translation": "不要浪費盤中的食物。",
+      "tags": [
+        "hk",
+        "primary",
+        "p5",
+        "english",
+        "daily life",
+        "noun/verb"
+      ]
+    },
+    {
+      "term": "reduce",
+      "definition": "To make something smaller or less in amount.",
+      "translation": "減少",
+      "example": "We can reduce plastic use by bringing our own bags.",
+      "example_translation": "我們可以通過自帶袋子來減少塑膠使用。",
+      "tags": [
+        "hk",
+        "primary",
+        "p5",
+        "english",
+        "environment",
+        "verb"
+      ]
+    },
+    {
+      "term": "renewable",
+      "definition": "Energy that does not run out, like wind or sun.",
+      "translation": "可再生的",
+      "example": "Wind energy is a renewable resource.",
+      "example_translation": "風能是一種可再生資源。",
+      "tags": [
+        "hk",
+        "primary",
+        "p5",
+        "english",
+        "science",
+        "adjective"
+      ]
+    },
+    {
+      "term": "biodiversity",
+      "definition": "The variety of different plants and animals in an area.",
+      "translation": "生物多樣性",
+      "example": "Hong Kong has rich biodiversity in its country parks.",
+      "example_translation": "香港郊野公園擁有豐富的生物多樣性。",
+      "tags": [
+        "hk",
+        "primary",
+        "p5",
+        "english",
+        "nature",
+        "noun"
+      ]
+    },
+    {
+      "term": "protect",
+      "definition": "To keep someone or something safe from harm.",
+      "translation": "保護",
+      "example": "Wear a helmet to protect your head.",
+      "example_translation": "戴上頭盔以保護你的頭部。",
+      "tags": [
+        "hk",
+        "primary",
+        "p5",
+        "english",
+        "safety",
+        "verb"
+      ]
+    },
+    {
+      "term": "climate",
+      "definition": "The usual weather conditions in a place.",
+      "translation": "氣候",
+      "example": "Hong Kong has a warm and humid climate.",
+      "example_translation": "香港擁有溫暖潮濕的氣候。",
+      "tags": [
+        "hk",
+        "primary",
+        "p5",
+        "english",
+        "geography",
+        "noun"
+      ]
+    },
+    {
+      "term": "global warming",
+      "definition": "The slow increase in the Earth's average temperature.",
+      "translation": "全球暖化",
+      "example": "Global warming causes ice caps to melt.",
+      "example_translation": "全球暖化導致冰蓋融化。",
+      "tags": [
+        "hk",
+        "primary",
+        "p5",
+        "english",
+        "environment",
+        "noun phrase"
+      ]
+    },
+    {
+      "term": "compost",
+      "definition": "Decayed organic material used as plant fertilizer.",
+      "translation": "堆肥",
+      "example": "We put fruit peels in the compost bin.",
+      "example_translation": "我們將果皮放入堆肥桶中。",
+      "tags": [
+        "hk",
+        "primary",
+        "p5",
+        "english",
+        "garden",
+        "noun"
+      ]
+    },
+    {
+      "term": "emission",
+      "definition": "Something that is produced and discharged, like gas.",
+      "translation": "排放物",
+      "example": "Cars produce harmful emissions.",
+      "example_translation": "汽車會產生有害的排放物。",
+      "tags": [
+        "hk",
+        "primary",
+        "p5",
+        "english",
+        "environment",
+        "noun"
+      ]
+    },
+    {
+      "term": "awareness",
+      "definition": "Knowledge or perception of a situation or fact.",
+      "translation": "意識",
+      "example": "We need to raise awareness about recycling.",
+      "example_translation": "我們需要提高對回收的意識。",
+      "tags": [
+        "hk",
+        "primary",
+        "p5",
+        "english",
+        "social skills",
+        "noun"
+      ]
+    },
+    {
+      "term": "consequence",
+      "definition": "A result of a particular action or event.",
+      "translation": "後果",
+      "example": "Littering has serious consequences for nature.",
+      "example_translation": "亂拋垃圾對自然有嚴重的後果。",
+      "tags": [
+        "hk",
+        "primary",
+        "p5",
+        "english",
+        "logic",
+        "noun"
+      ]
+    },
+    {
+      "term": "initiative",
+      "definition": "An action or strategy intended to solve a problem.",
+      "translation": "倡議；主動精神",
+      "example": "The school started a green initiative.",
+      "example_translation": "學校啟動了一個綠色倡議。",
+      "tags": [
+        "hk",
+        "primary",
+        "p5",
+        "english",
+        "school",
+        "noun"
+      ]
+    }
+  ]
 }

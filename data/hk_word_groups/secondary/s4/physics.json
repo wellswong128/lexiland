@@ -7,5 +7,326 @@
   "version": "2026.06",
   "display_name_en": "S4 Physics",
   "display_name_zh_hant": "中四物理",
-  "words": []
+  "words": [
+    {
+      "term": "Inertia",
+      "definition": "The tendency of an object to resist changes in its state of motion.",
+      "translation": "慣性",
+      "example": "Passengers lurch forward when the bus brakes suddenly due to inertia.",
+      "example_translation": "由於慣性，當巴士突然煞車時，乘客會向前傾倒。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "physics",
+        "mechanics",
+        "newton's laws",
+        "noun"
+      ]
+    },
+    {
+      "term": "Momentum",
+      "definition": "The product of an object's mass and velocity, representing the quantity of motion.",
+      "translation": "動量",
+      "example": "A heavy truck has more momentum than a small car moving at the same speed.",
+      "example_translation": "在相同速度下，重型卡車的動量大於小型汽車。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "physics",
+        "mechanics",
+        "conservation",
+        "noun"
+      ]
+    },
+    {
+      "term": "Elastic Collision",
+      "definition": "A collision where both total momentum and total kinetic energy are conserved.",
+      "translation": "彈性碰撞",
+      "example": "Billiard balls undergoing an elastic collision bounce off each other without losing energy.",
+      "example_translation": "進行彈性碰撞的撞球會互相彈開而不會損失能量。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "physics",
+        "mechanics",
+        "energy",
+        "noun phrase"
+      ]
+    },
+    {
+      "term": "Gravitational Potential Energy",
+      "definition": "The energy stored in an object due to its position in a gravitational field.",
+      "translation": "重力勢能",
+      "example": "Water held behind a dam possesses high gravitational potential energy.",
+      "example_translation": "水壩後方儲存的水具有高重力勢能。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "physics",
+        "energy",
+        "mechanics",
+        "noun phrase"
+      ]
+    },
+    {
+      "term": "Work Done",
+      "definition": "The energy transferred when a force moves an object over a distance.",
+      "translation": "功",
+      "example": "No work is done on a wall if you push against it but it does not move.",
+      "example_translation": "如果你推牆但牆沒有移動，則對牆沒有做功。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "physics",
+        "energy",
+        "mechanics",
+        "noun phrase"
+      ]
+    },
+    {
+      "term": "Power",
+      "definition": "The rate at which work is done or energy is transferred.",
+      "translation": "功率",
+      "example": "A powerful engine can do the same amount of work in less time than a weak one.",
+      "example_translation": "強勁的引擎能在較短時間內完成與弱引擎相同的功。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "physics",
+        "energy",
+        "mechanics",
+        "noun"
+      ]
+    },
+    {
+      "term": "Simple Harmonic Motion",
+      "definition": "Periodic motion where the restoring force is directly proportional to the displacement.",
+      "translation": "簡諧運動",
+      "example": "A pendulum swinging with small angles exhibits simple harmonic motion.",
+      "example_translation": "以小角度擺動的單擺呈現簡諧運動。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "physics",
+        "waves",
+        "oscillations",
+        "noun phrase"
+      ]
+    },
+    {
+      "term": "Damping",
+      "definition": "The gradual reduction of oscillation amplitude due to energy loss.",
+      "translation": "阻尼",
+      "example": "Shock absorbers in cars provide damping to smooth out the ride.",
+      "example_translation": "汽車的避震器提供阻尼以平滑行車體驗。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "physics",
+        "waves",
+        "oscillations",
+        "noun"
+      ]
+    },
+    {
+      "term": "Resonance",
+      "definition": "A phenomenon where an object vibrates with greater amplitude at specific frequencies.",
+      "translation": "共振",
+      "example": "The singer shattered the glass by hitting the note that matched its natural frequency, causing resonance.",
+      "example_translation": "歌手通過唱出與玻璃固有頻率匹配的音符導致共振，從而擊碎了玻璃。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "physics",
+        "waves",
+        "oscillations",
+        "noun"
+      ]
+    },
+    {
+      "term": "Longitudinal Wave",
+      "definition": "A wave where particle displacement is parallel to the direction of wave propagation.",
+      "translation": "縱波",
+      "example": "Sound waves traveling through air are longitudinal waves.",
+      "example_translation": "在空氣中傳播的聲波是縱波。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "physics",
+        "waves",
+        "sound",
+        "noun phrase"
+      ]
+    },
+    {
+      "term": "Transverse Wave",
+      "definition": "A wave where particle displacement is perpendicular to the direction of wave propagation.",
+      "translation": "橫波",
+      "example": "Light waves and waves on a string are examples of transverse waves.",
+      "example_translation": "光波和弦上的波是橫波的例子。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "physics",
+        "waves",
+        "light",
+        "noun phrase"
+      ]
+    },
+    {
+      "term": "Refraction",
+      "definition": "The bending of light as it passes from one medium to another with a different density.",
+      "translation": "折射",
+      "example": "A straw appears bent in a glass of water due to refraction.",
+      "example_translation": "由於折射，水中的吸管看起來是彎曲的。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "physics",
+        "optics",
+        "light",
+        "noun"
+      ]
+    },
+    {
+      "term": "Total Internal Reflection",
+      "definition": "The complete reflection of light back into the medium when it hits the boundary at an angle greater than the critical angle.",
+      "translation": "全內反射",
+      "example": "Optical fibers use total internal reflection to transmit data over long distances.",
+      "example_translation": "光纖利用全內反射來長距離傳輸數據。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "physics",
+        "optics",
+        "light",
+        "noun phrase"
+      ]
+    },
+    {
+      "term": "Converging Lens",
+      "definition": "A lens that is thicker in the middle and brings parallel light rays to a focus.",
+      "translation": "凸透鏡",
+      "example": "A magnifying glass is a converging lens used to produce enlarged images.",
+      "example_translation": "放大鏡是一種用於產生放大影像的凸透鏡。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "physics",
+        "optics",
+        "lenses",
+        "noun phrase"
+      ]
+    },
+    {
+      "term": "Electrostatic Force",
+      "definition": "The force of attraction or repulsion between charged particles.",
+      "translation": "靜電力",
+      "example": "Rubbing a balloon on hair creates an electrostatic force that makes hair stand up.",
+      "example_translation": "在頭髮上摩擦氣球會產生靜電力，使頭髮豎起。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "physics",
+        "electricity",
+        "forces",
+        "noun phrase"
+      ]
+    },
+    {
+      "term": "Electric Current",
+      "definition": "The rate of flow of electric charge past a point in a circuit.",
+      "translation": "電流",
+      "example": "Amperes are the units used to measure electric current.",
+      "example_translation": "安培是用來測量電流的單位。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "physics",
+        "electricity",
+        "circuits",
+        "noun"
+      ]
+    },
+    {
+      "term": "Potential Difference",
+      "definition": "The work done per unit charge to move charge between two points in a circuit.",
+      "translation": "電勢差",
+      "example": "Voltage is another common term for potential difference.",
+      "example_translation": "電壓是電勢差的另一個常見稱呼。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "physics",
+        "electricity",
+        "circuits",
+        "noun phrase"
+      ]
+    },
+    {
+      "term": "Series Circuit",
+      "definition": "A circuit where components are connected end-to-end, so the same current flows through all of them.",
+      "translation": "串聯電路",
+      "example": "In a series circuit, if one bulb burns out, all bulbs go off.",
+      "example_translation": "在串聯電路中，如果一個燈泡燒壞，所有燈泡都會熄滅。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "physics",
+        "electricity",
+        "circuits",
+        "noun phrase"
+      ]
+    },
+    {
+      "term": "Parallel Circuit",
+      "definition": "A circuit where components are connected across the same two points, allowing multiple paths for current.",
+      "translation": "並聯電路",
+      "example": "Household wiring uses parallel circuits so appliances can operate independently.",
+      "example_translation": "家庭配線使用並聯電路，以便電器可以獨立運作。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "physics",
+        "electricity",
+        "circuits",
+        "noun phrase"
+      ]
+    },
+    {
+      "term": "Electromagnetism",
+      "definition": "The branch of physics dealing with the relationship between electricity and magnetism.",
+      "translation": "電磁學",
+      "example": "Electric motors rely on principles of electromagnetism to convert electrical energy into motion.",
+      "example_translation": "電動機依賴電磁學原理將電能轉換為機械能。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "physics",
+        "magnetism",
+        "electricity",
+        "noun"
+      ]
+    }
+  ]
 }

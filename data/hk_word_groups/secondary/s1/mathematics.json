@@ -7,5 +7,306 @@
   "version": "2026.06",
   "display_name_en": "S1 Mathematics",
   "display_name_zh_hant": "中一數學",
-  "words": []
+  "words": [
+    {
+      "term": "variable",
+      "definition": "A letter or symbol that represents an unknown number.",
+      "translation": "變數",
+      "example": "In the equation x + 5 = 10, x is the variable.",
+      "example_translation": "在方程式 x + 5 = 10 中，x 是變數。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "algebra",
+        "basic-concepts"
+      ]
+    },
+    {
+      "term": "coefficient",
+      "definition": "The number multiplied by a variable in an algebraic term.",
+      "translation": "係數",
+      "example": "In 3y, the coefficient of y is 3.",
+      "example_translation": "在 3y 中，y 的係數是 3。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "algebra",
+        "terms"
+      ]
+    },
+    {
+      "term": "equation",
+      "definition": "A mathematical statement showing that two expressions are equal.",
+      "translation": "方程式",
+      "example": "2x = 8 is a simple linear equation.",
+      "example_translation": "2x = 8 是一個簡單的線性方程式。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "algebra",
+        "foundations"
+      ]
+    },
+    {
+      "term": "inequality",
+      "definition": "A statement comparing two values that are not equal, using symbols like <, >, ≤, or ≥.",
+      "translation": "不等式",
+      "example": "x > 5 means x is greater than 5.",
+      "example_translation": "x > 5 表示 x 大於 5。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "algebra",
+        "comparison"
+      ]
+    },
+    {
+      "term": "expression",
+      "definition": "A combination of numbers, variables, and operations without an equals sign.",
+      "translation": "表達式",
+      "example": "3a + 2b is an algebraic expression.",
+      "example_translation": "3a + 2b 是一個代數表達式。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "algebra",
+        "structure"
+      ]
+    },
+    {
+      "term": "simplify",
+      "definition": "To make an expression shorter or easier to understand by combining like terms.",
+      "translation": "化簡",
+      "example": "Simplify 2x + 3x to get 5x.",
+      "example_translation": "將 2x + 3x 化簡得到 5x。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "algebra",
+        "operations"
+      ]
+    },
+    {
+      "term": "substitute",
+      "definition": "To replace a variable with a specific number value.",
+      "translation": "代入",
+      "example": "Substitute x = 2 into the expression x + 5.",
+      "example_translation": "將 x = 2 代入表達式 x + 5。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "algebra",
+        "evaluation"
+      ]
+    },
+    {
+      "term": "coordinate plane",
+      "definition": "A flat surface formed by two number lines intersecting at right angles.",
+      "translation": "坐標平面",
+      "example": "Plot the point (3, 4) on the coordinate plane.",
+      "example_translation": "在坐標平面上繪製點 (3, 4)。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "geometry",
+        "graphing"
+      ]
+    },
+    {
+      "term": "origin",
+      "definition": "The point (0, 0) where the x-axis and y-axis cross.",
+      "translation": "原點",
+      "example": "The origin is the starting point of the axes.",
+      "example_translation": "原點是坐標軸的起始點。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "geometry",
+        "coordinates"
+      ]
+    },
+    {
+      "term": "quadrant",
+      "definition": "One of the four regions created by the intersection of the x and y axes.",
+      "translation": "象限",
+      "example": "Points with positive x and y values are in the first quadrant.",
+      "example_translation": "具有正 x 和正 y 值的點位於第一象限。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "geometry",
+        "graphing"
+      ]
+    },
+    {
+      "term": "slope",
+      "definition": "A measure of the steepness of a line.",
+      "translation": "斜率",
+      "example": "Calculate the slope between two points on a graph.",
+      "example_translation": "計算圖上兩點之間的斜率。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "algebra",
+        "linear-functions"
+      ]
+    },
+    {
+      "term": "perimeter",
+      "definition": "The total distance around the outside of a 2D shape.",
+      "translation": "周長",
+      "example": "Find the perimeter of a rectangle with length 5 and width 3.",
+      "example_translation": "求長為 5、寬為 3 的矩形的周長。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "geometry",
+        "measurement"
+      ]
+    },
+    {
+      "term": "area",
+      "definition": "The amount of space inside a 2D shape.",
+      "translation": "面積",
+      "example": "The area of a square is side squared.",
+      "example_translation": "正方形的面積是邊長的平方。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "geometry",
+        "measurement"
+      ]
+    },
+    {
+      "term": "volume",
+      "definition": "The amount of 3D space an object occupies.",
+      "translation": "體積",
+      "example": "Calculate the volume of a cube with side length 2.",
+      "example_translation": "計算邊長為 2 的立方體的體積。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "geometry",
+        "measurement"
+      ]
+    },
+    {
+      "term": "integer",
+      "definition": "A whole number that can be positive, negative, or zero.",
+      "translation": "整數",
+      "example": "-5, 0, and 7 are all integers.",
+      "example_translation": "-5、0 和 7 都是整數。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "number-systems",
+        "basics"
+      ]
+    },
+    {
+      "term": "rational number",
+      "definition": "A number that can be written as a fraction of two integers.",
+      "translation": "有理數",
+      "example": "0.5 is a rational number because it equals 1/2.",
+      "example_translation": "0.5 是有理數，因為它等於 1/2。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "number-systems",
+        "classification"
+      ]
+    },
+    {
+      "term": "estimate",
+      "definition": "To find an approximate value or answer.",
+      "translation": "估算",
+      "example": "Estimate the sum of 49 and 51 to be 100.",
+      "example_translation": "將 49 和 51 的和估算為 100。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "arithmetic",
+        "problem-solving"
+      ]
+    },
+    {
+      "term": "factor",
+      "definition": "A number that divides another number exactly without leaving a remainder.",
+      "translation": "因數",
+      "example": "2 and 3 are factors of 6.",
+      "example_translation": "2 和 3 是 6 的因數。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "number-theory",
+        "factors-multiples"
+      ]
+    },
+    {
+      "term": "multiple",
+      "definition": "The product of a number and an integer.",
+      "translation": "倍數",
+      "example": "10, 20, and 30 are multiples of 10.",
+      "example_translation": "10、20 和 30 都是 10 的倍數。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "number-theory",
+        "factors-multiples"
+      ]
+    },
+    {
+      "term": "median",
+      "definition": "The middle value in a sorted list of numbers.",
+      "translation": "中位數",
+      "example": "The median of 1, 3, 5 is 3.",
+      "example_translation": "1、3、5 的中位數是 3。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "statistics",
+        "data-analysis"
+      ]
+    }
+  ]
 }

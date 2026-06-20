@@ -7,5 +7,326 @@
   "version": "2026.06",
   "display_name_en": "S6 Physics",
   "display_name_zh_hant": "中六物理",
-  "words": []
+  "words": [
+    {
+      "term": "Simple Harmonic Motion",
+      "definition": "A type of periodic motion where the restoring force is directly proportional to the displacement and acts in the direction opposite to that of displacement.",
+      "translation": "簡諧運動",
+      "example": "The motion of a pendulum with small amplitude approximates simple harmonic motion.",
+      "example_translation": "小振幅的單擺運動近似於簡諧運動。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "mechanics",
+        "oscillations",
+        "noun"
+      ]
+    },
+    {
+      "term": "Damping",
+      "definition": "The effect of reducing or preventing oscillation in a system, usually due to friction or other resistances.",
+      "translation": "阻尼",
+      "example": "Heavy damping causes the oscillator to return to equilibrium without oscillating.",
+      "example_translation": "強阻尼使振盪器無振盪地返回平衡位置。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "mechanics",
+        "oscillations",
+        "noun"
+      ]
+    },
+    {
+      "term": "Resonance",
+      "definition": "The phenomenon where a system vibrates with greater amplitude at some frequencies than at others.",
+      "translation": "共振",
+      "example": "Bridge collapse can occur due to resonance if wind forces match the bridge's natural frequency.",
+      "example_translation": "如果風力與橋樑的自然頻率相匹配，可能會因共振導致橋樑倒塌。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "mechanics",
+        "oscillations",
+        "noun"
+      ]
+    },
+    {
+      "term": "Electric Field Strength",
+      "definition": "The force per unit positive charge exerted on a test charge placed at a point in the field.",
+      "translation": "電場強度",
+      "example": "Electric field strength is measured in newtons per coulomb (N/C).",
+      "example_translation": "電場強度以牛頓每庫侖 (N/C) 為單位測量。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "electromagnetism",
+        "electric fields",
+        "noun"
+      ]
+    },
+    {
+      "term": "Capacitance",
+      "definition": "The ability of a body to store an electrical charge, defined as the ratio of the change in electric charge to the corresponding change in its electric potential.",
+      "translation": "電容",
+      "example": "The capacitance of a parallel plate capacitor depends on the area of the plates and the distance between them.",
+      "example_translation": "平行板電容器的電容取決於極板的面積和它們之間的距離。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "electromagnetism",
+        "capacitors",
+        "noun"
+      ]
+    },
+    {
+      "term": "Discharging",
+      "definition": "The process by which a capacitor loses its stored electrical energy through a connected circuit.",
+      "translation": "放電",
+      "example": "During discharging, the current decreases exponentially over time.",
+      "example_translation": "在放電過程中，電流隨時間呈指數遞減。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "electromagnetism",
+        "capacitors",
+        "verb"
+      ]
+    },
+    {
+      "term": "Magnetic Flux Density",
+      "definition": "A measure of the strength of a magnetic field, defined as the force per unit current per unit length on a wire placed perpendicular to the field.",
+      "translation": "磁通量密度",
+      "example": "The unit of magnetic flux density is the tesla (T).",
+      "example_translation": "磁通量密度的單位是特斯拉 (T)。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "electromagnetism",
+        "magnetism",
+        "noun"
+      ]
+    },
+    {
+      "term": "Lorentz Force",
+      "definition": "The combination of electric and magnetic force on a point charge due to electromagnetic fields.",
+      "translation": "洛倫茲力",
+      "example": "A charged particle moving in a magnetic field experiences a Lorentz force perpendicular to its velocity.",
+      "example_translation": "在磁場中運動的帶電粒子會受到垂直於其速度的洛倫茲力。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "electromagnetism",
+        "magnetism",
+        "noun"
+      ]
+    },
+    {
+      "term": "Induction",
+      "definition": "The production of an electromotive force across an electrical conductor in a changing magnetic field.",
+      "translation": "感應",
+      "example": "Faraday's law describes how electromagnetic induction works.",
+      "example_translation": "法拉第定律描述了電磁感應的工作原理。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "electromagnetism",
+        "induction",
+        "noun"
+      ]
+    },
+    {
+      "term": "Alternating Current",
+      "definition": "An electric current which periodically reverses direction and changes its magnitude continuously with time.",
+      "translation": "交流電",
+      "example": "Household electricity in Hong Kong is supplied as alternating current at 50 Hz.",
+      "example_translation": "香港的家用電力是以 50 Hz 的交流電供應。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "electromagnetism",
+        "ac circuits",
+        "noun"
+      ]
+    },
+    {
+      "term": "RMS Value",
+      "definition": "The root mean square value, which is the equivalent direct current value that would produce the same heating effect in a resistor.",
+      "translation": "均方根值",
+      "example": "The RMS voltage is used to calculate power in AC circuits.",
+      "example_translation": "均方根電壓用於計算交流電路中的功率。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "electromagnetism",
+        "ac circuits",
+        "noun"
+      ]
+    },
+    {
+      "term": "Transformer",
+      "definition": "A device that transfers electrical energy between two or more circuits through electromagnetic induction, typically used to increase or decrease voltage.",
+      "translation": "變壓器",
+      "example": "Step-up transformers increase voltage for long-distance power transmission.",
+      "example_translation": "升壓變壓器增加電壓以進行長距離電力傳輸。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "electromagnetism",
+        "transformers",
+        "noun"
+      ]
+    },
+    {
+      "term": "Photoelectric Effect",
+      "definition": "The emission of electrons when electromagnetic radiation, such as light, hits a material.",
+      "translation": "光電效應",
+      "example": "Einstein explained the photoelectric effect by proposing that light consists of photons.",
+      "example_translation": "愛因斯坦通過提出光由光子組成來解釋光電效應。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "modern physics",
+        "quantum",
+        "noun"
+      ]
+    },
+    {
+      "term": "Photon",
+      "definition": "A discrete packet (or quantum) of electromagnetic energy.",
+      "translation": "光子",
+      "example": "The energy of a photon is proportional to its frequency.",
+      "example_translation": "光子的能量與其頻率成正比。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "modern physics",
+        "quantum",
+        "noun"
+      ]
+    },
+    {
+      "term": "Wave-Particle Duality",
+      "definition": "The concept that every particle or quantum entity may be described as either a particle or a wave.",
+      "translation": "波粒二象性",
+      "example": "Light exhibits wave-particle duality, showing interference patterns and acting as particles in the photoelectric effect.",
+      "example_translation": "光顯示出波粒二象性，在干涉圖案中表現出波動性，並在光電效應中表現出粒子性。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "modern physics",
+        "quantum",
+        "noun"
+      ]
+    },
+    {
+      "term": "Half-life",
+      "definition": "The time required for a quantity to reduce to half of its initial value, commonly used in radioactive decay.",
+      "translation": "半衰期",
+      "example": "Carbon-14 has a half-life of approximately 5,730 years.",
+      "example_translation": "碳-14 的半衰期約為 5,730 年。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "modern physics",
+        "radioactivity",
+        "noun"
+      ]
+    },
+    {
+      "term": "Alpha Decay",
+      "definition": "A type of radioactive decay in which an atomic nucleus emits an alpha particle, thereby transforming into a different atomic nucleus.",
+      "translation": "α衰變",
+      "example": "In alpha decay, the mass number decreases by 4 and the atomic number decreases by 2.",
+      "example_translation": "在 α 衰變中，質量數減少 4，原子序數減少 2。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "modern physics",
+        "radioactivity",
+        "noun"
+      ]
+    },
+    {
+      "term": "Beta Decay",
+      "definition": "A type of radioactive decay in which a beta particle (fast energetic electron or positron) is emitted from an atomic nucleus.",
+      "translation": "β衰變",
+      "example": "Beta minus decay involves the transformation of a neutron into a proton.",
+      "example_translation": "β 衰變涉及中子轉化為質子。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "modern physics",
+        "radioactivity",
+        "noun"
+      ]
+    },
+    {
+      "term": "Nuclear Fission",
+      "definition": "A nuclear reaction in which the nucleus of an atom splits into two or smaller nuclei, often releasing a large amount of energy.",
+      "translation": "核分裂",
+      "example": "Nuclear fission is the principle behind nuclear power plants.",
+      "example_translation": "核分裂是核電廠背後的原理。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "modern physics",
+        "nuclear",
+        "noun"
+      ]
+    },
+    {
+      "term": "Critical Mass",
+      "definition": "The minimum amount of fissile material needed to sustain a nuclear chain reaction.",
+      "translation": "臨界質量",
+      "example": "If the mass of uranium exceeds the critical mass, a self-sustaining chain reaction occurs.",
+      "example_translation": "如果鈾的质量超過臨界質量，就會發生自持鏈式反應。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "modern physics",
+        "nuclear",
+        "noun"
+      ]
+    }
+  ]
 }

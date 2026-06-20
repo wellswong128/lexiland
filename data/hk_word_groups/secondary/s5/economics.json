@@ -7,5 +7,326 @@
   "version": "2026.06",
   "display_name_en": "S5 Economics",
   "display_name_zh_hant": "中五經濟",
-  "words": []
+  "words": [
+    {
+      "term": "opportunity cost",
+      "definition": "The value of the next best alternative that is forgone when making a choice.",
+      "translation": "機會成本",
+      "example": "The opportunity cost of studying economics is the leisure time you give up.",
+      "example_translation": "學習經濟學的機會成本是你放棄的休閒時間。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "microeconomics",
+        "basic-concepts",
+        "noun"
+      ]
+    },
+    {
+      "term": "marginal benefit",
+      "definition": "The additional satisfaction or utility gained from consuming one more unit of a good or service.",
+      "translation": "邊際效益",
+      "example": "Consumers will continue buying coffee until the marginal benefit equals the price.",
+      "example_translation": "消費者會繼續購買咖啡，直到邊際效益等於價格為止。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "microeconomics",
+        "consumer-behavior",
+        "noun"
+      ]
+    },
+    {
+      "term": "diminishing returns",
+      "definition": "A principle stating that adding more of one factor of production, while holding others constant, will at some point yield lower per-unit returns.",
+      "translation": "報酬遞減法則",
+      "example": "In the short run, firms often face diminishing returns as they add more workers to fixed machinery.",
+      "example_translation": "在短期內，當企業向固定機械添加更多工人時，經常面臨報酬遞減。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "microeconomics",
+        "production",
+        "noun"
+      ]
+    },
+    {
+      "term": "price elasticity of demand",
+      "definition": "A measure of how much the quantity demanded of a good responds to a change in its price.",
+      "translation": "需求價格彈性",
+      "example": "Luxury goods usually have high price elasticity of demand because consumers can easily delay purchase.",
+      "example_translation": "奢侈品通常具有高需求價格彈性，因為消費者可以輕易推遲購買。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "microeconomics",
+        "elasticity",
+        "noun"
+      ]
+    },
+    {
+      "term": "substitute goods",
+      "definition": "Goods that can be used in place of each other; if the price of one rises, demand for the other increases.",
+      "translation": "替代品",
+      "example": "Coca-Cola and Pepsi are substitute goods for many soft drink consumers.",
+      "example_translation": "可口可樂和百事可樂對許多軟飲料消費者來說是替代品。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "microeconomics",
+        "demand",
+        "noun"
+      ]
+    },
+    {
+      "term": "complementary goods",
+      "definition": "Goods that are consumed together; if the price of one falls, demand for the other typically rises.",
+      "translation": "互補品",
+      "example": "Printers and ink cartridges are complementary goods.",
+      "example_translation": "印表機和墨水匣是互補品。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "microeconomics",
+        "demand",
+        "noun"
+      ]
+    },
+    {
+      "term": "externalities",
+      "definition": "Costs or benefits affecting a third party who did not choose to incur that cost or benefit.",
+      "translation": "外部性",
+      "example": "Air pollution from factories is a negative externality imposed on local residents.",
+      "example_translation": "工廠產生的空氣污染是對當地居民施加的負外部性。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "microeconomics",
+        "market-failure",
+        "noun"
+      ]
+    },
+    {
+      "term": "public goods",
+      "definition": "Goods that are non-excludable and non-rivalrous, meaning individuals cannot be prevented from using them and one person's use does not reduce availability to others.",
+      "translation": "公共物品",
+      "example": "National defense is a classic example of a public good provided by the government.",
+      "example_translation": "國防是由政府提供的公共物品的經典例子。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "microeconomics",
+        "government-intervention",
+        "noun"
+      ]
+    },
+    {
+      "term": "monopoly power",
+      "definition": "The ability of a single seller to influence the market price of a good or service.",
+      "translation": "壟斷權力",
+      "example": "A firm with significant monopoly power can set prices above competitive levels.",
+      "example_translation": "擁有顯著壟斷權力的企業可以將價格設定在競爭水平之上。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "microeconomics",
+        "market-structure",
+        "noun"
+      ]
+    },
+    {
+      "term": "oligopoly",
+      "definition": "A market structure dominated by a small number of large firms, often leading to interdependent decision-making.",
+      "translation": "寡頭壟斷市場",
+      "example": "The telecommunications industry in Hong Kong is an example of an oligopoly.",
+      "example_translation": "香港的電訊行業是寡頭壟斷市場的一個例子。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "microeconomics",
+        "market-structure",
+        "noun"
+      ]
+    },
+    {
+      "term": "Gross Domestic Product (GDP)",
+      "definition": "The total monetary value of all final goods and services produced within a country's borders in a specific time period.",
+      "translation": "本地生產總值",
+      "example": "Hong Kong's GDP growth rate is a key indicator of its economic health.",
+      "example_translation": "香港的本地生產總值增長率是其經濟健康狀況的關鍵指標。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "macroeconomics",
+        "national-income",
+        "noun"
+      ]
+    },
+    {
+      "term": "inflation",
+      "definition": "A sustained increase in the general price level of goods and services in an economy over time.",
+      "translation": "通脹",
+      "example": "High inflation reduces the purchasing power of consumers' wages.",
+      "example_translation": "高通脹會降低消費者工資的購買力。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "macroeconomics",
+        "price-level",
+        "noun"
+      ]
+    },
+    {
+      "term": "unemployment rate",
+      "definition": "The percentage of the total labor force that is unemployed but actively seeking employment.",
+      "translation": "失業率",
+      "example": "The government aims to keep the unemployment rate below 3% through job creation schemes.",
+      "example_translation": "政府透過創就業計劃，力求將失業率保持在3%以下。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "macroeconomics",
+        "labor-market",
+        "noun"
+      ]
+    },
+    {
+      "term": "fiscal policy",
+      "definition": "The use of government spending and tax policies to influence economic conditions.",
+      "translation": "財政政策",
+      "example": "During a recession, expansionary fiscal policy involves increasing government spending.",
+      "example_translation": "在經濟衰退期間，擴張性財政政策涉及增加政府開支。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "macroeconomics",
+        "policy-tools",
+        "noun"
+      ]
+    },
+    {
+      "term": "monetary policy",
+      "definition": "The process by which the central bank manages the money supply and interest rates to achieve macroeconomic objectives.",
+      "translation": "貨幣政策",
+      "example": "The Monetary Authority of Hong Kong manages the currency board system to maintain stability.",
+      "example_translation": "香港金融管理局管理聯繫匯率制度以維持穩定。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "macroeconomics",
+        "policy-tools",
+        "noun"
+      ]
+    },
+    {
+      "term": "balance of payments",
+      "definition": "A record of all economic transactions between residents of a country and the rest of the world.",
+      "translation": "國際收支結算",
+      "example": "A current account deficit means a country imports more goods and services than it exports.",
+      "example_translation": "經常帳赤字意味著該國進口的貨物和服務多於出口。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "macroeconomics",
+        "international-trade",
+        "noun"
+      ]
+    },
+    {
+      "term": "exchange rate",
+      "definition": "The value of one currency for the purpose of conversion to another.",
+      "translation": "匯率",
+      "example": "A stronger Hong Kong dollar makes imports cheaper but exports more expensive.",
+      "example_translation": "較強的港元使進口貨物更便宜，但出口貨物更昂貴。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "macroeconomics",
+        "foreign-exchange",
+        "noun"
+      ]
+    },
+    {
+      "term": "aggregate demand",
+      "definition": "The total demand for goods and services in an economy at a given time and price level.",
+      "translation": "總需求",
+      "example": "Factors such as consumer confidence and investment affect aggregate demand.",
+      "example_translation": "消費者信心和投资等因素會影響總需求。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "macroeconomics",
+        "keynesian-theory",
+        "noun"
+      ]
+    },
+    {
+      "term": "supply-side policy",
+      "definition": "Government policies designed to increase the productive capacity of the economy.",
+      "translation": "供應面政策",
+      "example": "Investing in education is a supply-side policy that improves labor productivity.",
+      "example_translation": "投資教育是改善勞工生產力的供應面政策。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "macroeconomics",
+        "policy-tools",
+        "noun"
+      ]
+    },
+    {
+      "term": "cyclical unemployment",
+      "definition": "Unemployment caused by the downturns in the business cycle, also known as deficiency of aggregate demand.",
+      "translation": "週期性失業",
+      "example": "During the 2008 financial crisis, cyclical unemployment rose sharply worldwide.",
+      "example_translation": "在2008年金融危機期間，全球週期性失業率急劇上升。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "macroeconomics",
+        "unemployment-types",
+        "noun"
+      ]
+    }
+  ]
 }

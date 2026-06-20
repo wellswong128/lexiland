@@ -7,5 +7,326 @@
   "version": "2026.06",
   "display_name_en": "S2 English",
   "display_name_zh_hant": "中二英文",
-  "words": []
+  "words": [
+    {
+      "term": "analyze",
+      "definition": "To examine something in detail to understand its nature or structure.",
+      "translation": "分析",
+      "example": "Students need to analyze the main arguments in the article.",
+      "example_translation": "學生需要分析文章中的主要論點。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "verb",
+        "academic skill",
+        "reading"
+      ]
+    },
+    {
+      "term": "consequence",
+      "definition": "A result or effect of an action or condition.",
+      "translation": "後果",
+      "example": "Smoking can have serious consequences on your health.",
+      "example_translation": "吸煙會對你的健康產生嚴重的後果。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "noun",
+        "health",
+        "cause and effect"
+      ]
+    },
+    {
+      "term": "environmental",
+      "definition": "Relating to the natural world and the impact of human activity on it.",
+      "translation": "環境的",
+      "example": "We should take steps to protect the environment.",
+      "example_translation": "我們應該採取措施保護環境。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "adjective",
+        "science",
+        "sustainability"
+      ]
+    },
+    {
+      "term": "perspective",
+      "definition": "A particular attitude toward or way of regarding something; a point of view.",
+      "translation": "觀點",
+      "example": "Try to see the problem from a different perspective.",
+      "example_translation": "試著從不同的角度來看這個問題。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "noun",
+        "critical thinking",
+        "writing"
+      ]
+    },
+    {
+      "term": "significant",
+      "definition": "Sufficiently great or important to be worthy of attention.",
+      "translation": "重要的；顯著的",
+      "example": "There has been a significant increase in online learning.",
+      "example_translation": "線上學習有了顯著的增長。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "adjective",
+        "general academic",
+        "data"
+      ]
+    },
+    {
+      "term": "collaborate",
+      "definition": "To work jointly with others on an activity or project.",
+      "translation": "合作",
+      "example": "The team will collaborate to complete the science project.",
+      "example_translation": "團隊將合作完成科學項目。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "verb",
+        "social skill",
+        "group work"
+      ]
+    },
+    {
+      "term": "sustainable",
+      "definition": "Able to be maintained at a certain rate or level; conserving an ecological balance.",
+      "translation": "可持續的",
+      "example": "Using renewable energy is a sustainable practice.",
+      "example_translation": "使用可再生能源是一種可持續的做法。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "adjective",
+        "environment",
+        "geography"
+      ]
+    },
+    {
+      "term": "evaluate",
+      "definition": "To form an idea of the amount, number, or value of something; to assess.",
+      "translation": "評估",
+      "example": "Teachers evaluate students based on their class participation.",
+      "example_translation": "老師根據學生的課堂參與度來評估他們。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "verb",
+        "assessment",
+        "school life"
+      ]
+    },
+    {
+      "term": "beneficial",
+      "definition": "Favorable or advantageous; resulting in good.",
+      "translation": "有益的",
+      "example": "Regular exercise is beneficial to mental health.",
+      "example_translation": "定期運動對心理健康有益。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "adjective",
+        "health",
+        "lifestyle"
+      ]
+    },
+    {
+      "term": "demonstrate",
+      "definition": "To clearly show the existence or truth of something by giving proof or evidence.",
+      "translation": "展示；證明",
+      "example": "The experiment demonstrates how gravity works.",
+      "example_translation": "這個實驗展示了重力是如何運作的。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "verb",
+        "science",
+        "explanation"
+      ]
+    },
+    {
+      "term": "community",
+      "definition": "A group of people living in the same place or having a particular characteristic in common.",
+      "translation": "社區",
+      "example": "Volunteering helps strengthen the local community.",
+      "example_translation": "志願服務有助於加強當地社區。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "noun",
+        "social studies",
+        "civics"
+      ]
+    },
+    {
+      "term": "interpret",
+      "definition": "To explain the meaning of information, words, or actions.",
+      "translation": "解釋；詮釋",
+      "example": "It is difficult to interpret the poet's message accurately.",
+      "example_translation": "準確詮釋詩人的訊息很困難。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "verb",
+        "literature",
+        "communication"
+      ]
+    },
+    {
+      "term": "challenge",
+      "definition": "A call to take part in a contest or competition; a task that tests someone's abilities.",
+      "translation": "挑戰",
+      "example": "Learning a new language can be a fun challenge.",
+      "example_translation": "學習一種新語言可以是一個有趣的挑戰。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "noun",
+        "personal growth",
+        "education"
+      ]
+    },
+    {
+      "term": "responsible",
+      "definition": "Having an obligation to do something, or having control over or care for someone, taken on as one's duty.",
+      "translation": "負責的",
+      "example": "We are all responsible for keeping our classroom clean.",
+      "example_translation": "我們都有責任保持教室整潔。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "adjective",
+        "moral education",
+        "behavior"
+      ]
+    },
+    {
+      "term": "opportunity",
+      "definition": "A set of circumstances that makes it possible to do something.",
+      "translation": "機會",
+      "example": "Studying abroad is a great opportunity to broaden your horizons.",
+      "example_translation": "出國留學是開闊視野的好機會。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "noun",
+        "future planning",
+        "education"
+      ]
+    },
+    {
+      "term": "influence",
+      "definition": "The capacity to have an effect on the character, development, or behavior of someone or something.",
+      "translation": "影響",
+      "example": "Peers can have a strong influence on teenagers' choices.",
+      "example_translation": "同齡人對青少年的選擇有強烈的影響。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "noun",
+        "psychology",
+        "social relations"
+      ]
+    },
+    {
+      "term": "advocate",
+      "definition": "To publicly recommend or support a particular cause or policy.",
+      "translation": "提倡；主張",
+      "example": "Many students advocate for less homework.",
+      "example_translation": "許多學生提倡減少家庭作業。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "verb",
+        "social issues",
+        "expression"
+      ]
+    },
+    {
+      "term": "diverse",
+      "definition": "Showing a great deal of variety; very different.",
+      "translation": "多樣的",
+      "example": "Hong Kong has a diverse cultural heritage.",
+      "example_translation": "香港擁有豐富多元的文化遺產。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "adjective",
+        "culture",
+        "society"
+      ]
+    },
+    {
+      "term": "prioritize",
+      "definition": "To designate or treat (something) as more important than other things.",
+      "translation": "優先考慮",
+      "example": "You should prioritize your study time before exams.",
+      "example_translation": "在考試前，你應該優先安排學習時間。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "verb",
+        "time management",
+        "study skills"
+      ]
+    },
+    {
+      "term": "empathy",
+      "definition": "The ability to understand and share the feelings of another.",
+      "translation": "同理心",
+      "example": "Showing empathy is important in building friendships.",
+      "example_translation": "展現同理心對於建立友誼很重要。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "noun",
+        "emotional intelligence",
+        "relationships"
+      ]
+    }
+  ]
 }

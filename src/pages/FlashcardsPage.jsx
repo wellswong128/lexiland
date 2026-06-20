@@ -22,8 +22,8 @@ import { REVIEW_RESULTS } from "../features/words/wordTypes.js";
 function FlashcardsPage() {
   const { locale, t } = useLocale();
   const { updateWord, user, words } = useWordsContext();
-  const { isLoadingScope, isScoped, scopedWords } = useActiveGroupWordScope(words, user);
-  const reviewWords = isScoped ? scopedWords : words;
+  const { isLoadingScope, isGroupScopeActive, scopedWords } = useActiveGroupWordScope(words, user);
+  const reviewWords = isGroupScopeActive ? scopedWords : words;
   const enrichedExampleWordIdsRef = useRef(new Set());
   const [searchParams] = useSearchParams();
   const mistakesOnly = searchParams.get("mode") === "mistakes";
@@ -221,7 +221,7 @@ function FlashcardsPage() {
     );
   }
 
-  if (isScoped && reviewWords.length === 0) {
+  if (isGroupScopeActive && reviewWords.length === 0) {
     return (
       <section className="w-full max-w-3xl rounded-3xl border border-blue-200/70 bg-white/90 p-8 shadow-2xl shadow-blue-950/10 sm:p-14">
         <WordGroupScopeEmptyState />

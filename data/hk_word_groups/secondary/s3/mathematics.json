@@ -7,5 +7,306 @@
   "version": "2026.06",
   "display_name_en": "S3 Mathematics",
   "display_name_zh_hant": "中三數學",
-  "words": []
+  "words": [
+    {
+      "term": "quadratic equation",
+      "definition": "An equation of the form ax² + bx + c = 0, where a ≠ 0.",
+      "translation": "二次方程",
+      "example": "We solved the quadratic equation using the factorization method.",
+      "example_translation": "我們使用因式分解法解了這個二次方程。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "algebra",
+        "equations"
+      ]
+    },
+    {
+      "term": "simultaneous equations",
+      "definition": "A set of two or more equations with the same variables that are solved together.",
+      "translation": "聯立方程",
+      "example": "Use the substitution method to find the values in these simultaneous equations.",
+      "example_translation": "使用代入法找出這些聯立方程中的數值。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "algebra",
+        "systems"
+      ]
+    },
+    {
+      "term": "probability",
+      "definition": "The measure of the likelihood that an event will occur.",
+      "translation": "概率",
+      "example": "Calculate the probability of rolling a six on a fair die.",
+      "example_translation": "計算在公平的骰子上擲出六點的機率。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "statistics",
+        "data"
+      ]
+    },
+    {
+      "term": "standard deviation",
+      "definition": "A number that expresses how far from the mean each number in a set of numbers is.",
+      "translation": "標準差",
+      "example": "A small standard deviation indicates that the data points are close to the mean.",
+      "example_translation": "較小的標準差表示數據點接近平均值。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "statistics",
+        "dispersion"
+      ]
+    },
+    {
+      "term": "circle theorem",
+      "definition": "A rule regarding angles and lines related to circles, such as angles at the center.",
+      "translation": "圓的定理",
+      "example": "Apply the circle theorem to find the unknown angle x.",
+      "example_translation": "應用圓的定理來找出未知角度 x。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "geometry",
+        "circles"
+      ]
+    },
+    {
+      "term": "trigonometric ratio",
+      "definition": "The ratio of the lengths of two sides of a right-angled triangle (sine, cosine, tangent).",
+      "translation": "三角比",
+      "example": "Use the sine ratio to calculate the height of the building.",
+      "example_translation": "使用正弦比來計算建築物的高度。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "geometry",
+        "trigonometry"
+      ]
+    },
+    {
+      "term": "index law",
+      "definition": "Rules for simplifying expressions involving exponents or indices.",
+      "translation": "指數律",
+      "example": "Simplify the expression using the index laws.",
+      "example_translation": "使用指數律簡化該表達式。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "algebra",
+        "exponents"
+      ]
+    },
+    {
+      "term": "direct proportion",
+      "definition": "A relationship where one quantity increases at the same rate as another.",
+      "translation": "正比例",
+      "example": "y is directly proportional to x, so y = kx.",
+      "example_translation": "y 與 x 成正比例，因此 y = kx。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "functions",
+        "relationships"
+      ]
+    },
+    {
+      "term": "inverse proportion",
+      "definition": "A relationship where one quantity decreases as the other increases.",
+      "translation": "反比例",
+      "example": "If x and y are in inverse proportion, their product is constant.",
+      "example_translation": "如果 x 和 y 成反比例，它們的乘積是常數。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "functions",
+        "relationships"
+      ]
+    },
+    {
+      "term": "frequency polygon",
+      "definition": "A line graph that shows the shape of a frequency distribution.",
+      "translation": "頻數多邊形",
+      "example": "Draw a frequency polygon to represent the test scores.",
+      "example_translation": "畫一個頻數多邊形來代表考試成績。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "statistics",
+        "graphs"
+      ]
+    },
+    {
+      "term": "cumulative frequency",
+      "definition": "The running total of frequencies in a data set.",
+      "translation": "累積頻數",
+      "example": "Plot the cumulative frequency curve to estimate the median.",
+      "example_translation": "繪製累積頻數曲線以估算中位數。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "statistics",
+        "data"
+      ]
+    },
+    {
+      "term": "quadrilateral",
+      "definition": "A polygon with four sides and four vertices.",
+      "translation": "四邊形",
+      "example": "Identify the properties of this specific quadrilateral.",
+      "example_translation": "識別這個特定四邊形的性質。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "geometry",
+        "shapes"
+      ]
+    },
+    {
+      "term": "congruent triangles",
+      "definition": "Triangles that have the same size and shape.",
+      "translation": "全等三角形",
+      "example": "Prove that the two triangles are congruent using the SAS rule.",
+      "example_translation": "使用 SAS 規則證明這兩個三角形是全等的。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "geometry",
+        "proof"
+      ]
+    },
+    {
+      "term": "similar figures",
+      "definition": "Figures that have the same shape but different sizes.",
+      "translation": "相似圖形",
+      "example": "Find the scale factor between these similar rectangles.",
+      "example_translation": "找出這兩個相似長方形之間的縮放因子。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "geometry",
+        "scaling"
+      ]
+    },
+    {
+      "term": "gradient",
+      "definition": "The steepness of a line, calculated as rise over run.",
+      "translation": "斜率",
+      "example": "Calculate the gradient of the line passing through these two points.",
+      "example_translation": "計算穿過這兩點的直線的斜率。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "algebra",
+        "coordinates"
+      ]
+    },
+    {
+      "term": "midpoint",
+      "definition": "The point exactly halfway between two endpoints on a line segment.",
+      "translation": "中點",
+      "example": "Find the coordinates of the midpoint of the line segment AB.",
+      "example_translation": "找出線段 AB 中點的坐標。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "coordinate geometry",
+        "lines"
+      ]
+    },
+    {
+      "term": "box-and-whisker plot",
+      "definition": "A diagram used to show the distribution of data based on a five-number summary.",
+      "translation": "箱形圖",
+      "example": "Interpret the interquartile range from the box-and-whisker plot.",
+      "example_translation": "從箱形圖中解釋四分位距。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "statistics",
+        "data visualization"
+      ]
+    },
+    {
+      "term": "permutation",
+      "definition": "The arrangement of objects in a specific order.",
+      "translation": "排列",
+      "example": "Calculate the number of permutations for selecting 3 items from 5.",
+      "example_translation": "計算從 5 個項目中選出 3 個項目的排列數。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "combinatorics",
+        "counting"
+      ]
+    },
+    {
+      "term": "combination",
+      "definition": "A selection of items where the order does not matter.",
+      "translation": "組合",
+      "example": "Use combinations to solve problems involving groups without order.",
+      "example_translation": "使用組合解決不涉及順序的分組問題。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "combinatorics",
+        "counting"
+      ]
+    },
+    {
+      "term": "sector area",
+      "definition": "The area enclosed by two radii and an arc of a circle.",
+      "translation": "扇形面積",
+      "example": "Calculate the area of the sector given the radius and central angle.",
+      "example_translation": "給定半徑和中心角，計算扇形的面積。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "geometry",
+        "circles"
+      ]
+    }
+  ]
 }

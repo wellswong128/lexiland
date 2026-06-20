@@ -95,9 +95,9 @@ function createRound(entries, wordBank, level, pickWord) {
 function SpellingNinjaPage() {
   const { t } = useLocale();
   const { user, words } = useWordsContext();
-  const { isLoadingScope, isScoped, scopedWords } = useActiveGroupWordScope(words, user);
-  const gameWords = isScoped ? scopedWords : words;
-  const { commitMistakes, lastCommittedTerms, recordWrong, resetTracker } =
+  const { isLoadingScope, isGroupScopeActive, scopedWords } = useActiveGroupWordScope(words, user);
+  const gameWords = isGroupScopeActive ? scopedWords : words;
+  const { commitMistakes, lastCommittedTerms, recordCorrect, recordWrong, resetTracker } =
     useGameMistakeTracker();
   const gameOptions = useMemo(
     () => ({
@@ -153,7 +153,7 @@ function SpellingNinjaPage() {
     );
   }
 
-  if (isScoped && (gameWords.length === 0 || usingFallback)) {
+  if (isGroupScopeActive && (gameWords.length === 0 || usingFallback)) {
     return (
       <section className="w-full max-w-4xl rounded-3xl border border-blue-200/70 bg-white/90 p-6 shadow-2xl shadow-blue-950/10 sm:p-10">
         <WordGroupScopeEmptyState compact />
@@ -257,6 +257,7 @@ function SpellingNinjaPage() {
   const completeWord = useCallback(() => {
     if (!round?.word) return;
 
+    recordCorrect(round.word.word);
     setRoundLocked(true);
     setCorrectWords((count) => count + 1);
     setDefeatedWords((currentWords) => [...currentWords, round.word]);
@@ -282,7 +283,7 @@ function SpellingNinjaPage() {
         return nextLevel;
       });
     }, 900);
-  }, [feverActive, round, startRound, t, timeLeft]);
+  }, [feverActive, recordCorrect, round, startRound, t, timeLeft]);
 
   const handleTimeout = useCallback(() => {
     if (!round || roundLocked) return;

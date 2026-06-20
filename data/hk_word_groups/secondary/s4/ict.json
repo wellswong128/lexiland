@@ -7,5 +7,326 @@
   "version": "2026.06",
   "display_name_en": "S4 ICT",
   "display_name_zh_hant": "中四資訊及通訊科技",
-  "words": []
+  "words": [
+    {
+      "term": "Algorithm",
+      "definition": "A step-by-step procedure or formula for solving a problem.",
+      "translation": "算法",
+      "example": "The programmer designed an algorithm to sort the data efficiently.",
+      "example_translation": "程式設計師設計了一個演算法來有效地排序數據。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "ict",
+        "programming",
+        "logic",
+        "core-concept"
+      ]
+    },
+    {
+      "term": "Bandwidth",
+      "definition": "The maximum rate of data transfer across a given path.",
+      "translation": "頻寬",
+      "example": "High bandwidth allows for faster video streaming.",
+      "example_translation": "高頻寬允許更快的影片串流。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "ict",
+        "networking",
+        "internet",
+        "hardware"
+      ]
+    },
+    {
+      "term": "Boolean",
+      "definition": "Relating to or denoting a system of algebraic notation in which all values are reduced to true or false.",
+      "translation": "布林值",
+      "example": "The condition checks if the variable is Boolean true.",
+      "example_translation": "該條件檢查變數是否為布林真值。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "ict",
+        "programming",
+        "logic",
+        "data-type"
+      ]
+    },
+    {
+      "term": "Cache",
+      "definition": "A hardware or software component that stores data so that future requests for that data can be served faster.",
+      "translation": "快取記憶體",
+      "example": "Clearing the browser cache can help fix loading issues.",
+      "example_translation": "清除瀏覽器快取可以幫助解決載入問題。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "ict",
+        "web",
+        "performance",
+        "storage"
+      ]
+    },
+    {
+      "term": "Database",
+      "definition": "An organized collection of structured information or data, typically stored electronically.",
+      "translation": "資料庫",
+      "example": "We use a SQL database to store student records.",
+      "example_translation": "我們使用 SQL 資料庫來儲存學生記錄。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "ict",
+        "data-management",
+        "storage",
+        "sql"
+      ]
+    },
+    {
+      "term": "Encryption",
+      "definition": "The process of converting information or data into a code to prevent unauthorized access.",
+      "translation": "加密",
+      "example": "SSL encryption secures data transmitted over the internet.",
+      "example_translation": "SSL 加密確保透過網際網路傳輸的資料安全。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "ict",
+        "security",
+        "privacy",
+        "networking"
+      ]
+    },
+    {
+      "term": "Firewall",
+      "definition": "A network security device that monitors and controls incoming and outgoing network traffic.",
+      "translation": "防火牆",
+      "example": "The company installed a firewall to protect its servers.",
+      "example_translation": "公司安裝了防火牆以保護其伺服器。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "ict",
+        "security",
+        "networking",
+        "hardware"
+      ]
+    },
+    {
+      "term": "HTML",
+      "definition": "Standard markup language for documents designed to be displayed in a web browser.",
+      "translation": "超文本標記語言",
+      "example": "She learned how to structure a webpage using HTML tags.",
+      "example_translation": "她學習如何使用 HTML 標籤來構建網頁結構。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "ict",
+        "web-development",
+        "coding",
+        "markup"
+      ]
+    },
+    {
+      "term": "IP Address",
+      "definition": "A numerical label assigned to each device connected to a computer network.",
+      "translation": "IP 位址",
+      "example": "Each device on the local network has a unique IP address.",
+      "example_translation": "區域網路上的每個裝置都有唯一的 IP 位址。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "ict",
+        "networking",
+        "internet",
+        "infrastructure"
+      ]
+    },
+    {
+      "term": "Latency",
+      "definition": "The delay before a transfer of data begins following an instruction for its transfer.",
+      "translation": "延遲",
+      "example": "Low latency is crucial for online gaming.",
+      "example_translation": "低延遲對於線上遊戲至關重要。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "ict",
+        "networking",
+        "performance",
+        "gaming"
+      ]
+    },
+    {
+      "term": "Malware",
+      "definition": "Software that is specifically designed to disrupt, damage, or gain unauthorized access to a computer system.",
+      "translation": "惡意軟體",
+      "example": "Run an antivirus scan to detect any malware on your device.",
+      "example_translation": "執行防毒軟體掃描以檢測裝置上是否有惡意軟體。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "ict",
+        "security",
+        "threats",
+        "software"
+      ]
+    },
+    {
+      "term": "Pixel",
+      "definition": "The smallest controllable element of a picture represented on the screen.",
+      "translation": "像素",
+      "example": "Higher resolution means more pixels per inch.",
+      "example_translation": "解析度越高，每英寸的像素就越多。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "ict",
+        "graphics",
+        "display",
+        "multimedia"
+      ]
+    },
+    {
+      "term": "RAM",
+      "definition": "Random Access Memory; a form of computer memory that can be read and changed in any order.",
+      "translation": "隨機存取記憶體",
+      "example": "Upgrading RAM improves the speed of multitasking.",
+      "example_translation": "升級 RAM 可以提高多工處理的速度。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "ict",
+        "hardware",
+        "memory",
+        "performance"
+      ]
+    },
+    {
+      "term": "Router",
+      "definition": "A networking device that forwards data packets between computer networks.",
+      "translation": "路由器",
+      "example": "Connect your computer to the router via Wi-Fi.",
+      "example_translation": "透過 Wi-Fi 將電腦連線到路由器。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "ict",
+        "networking",
+        "hardware",
+        "infrastructure"
+      ]
+    },
+    {
+      "term": "SQL",
+      "definition": "Structured Query Language; a standard language for storing, manipulating, and retrieving data in databases.",
+      "translation": "結構化查詢語言",
+      "example": "We used SQL to query the customer database.",
+      "example_translation": "我們使用 SQL 來查詢客戶資料庫。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "ict",
+        "database",
+        "querying",
+        "coding"
+      ]
+    },
+    {
+      "term": "URL",
+      "definition": "Uniform Resource Locator; the address of a given unique resource on the Web.",
+      "translation": "統一資源定位器",
+      "example": "Copy the URL from the browser's address bar.",
+      "example_translation": "從瀏覽器的地址列複製 URL。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "ict",
+        "web",
+        "internet",
+        "navigation"
+      ]
+    },
+    {
+      "term": "Variable",
+      "definition": "A storage location paired with an associated symbolic name that contains some known or unknown quantity of information.",
+      "translation": "變數",
+      "example": "Declare a variable to store the user's input.",
+      "example_translation": "宣告一個變數來儲存使用者的輸入。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "ict",
+        "programming",
+        "coding",
+        "logic"
+      ]
+    },
+    {
+      "term": "Wi-Fi",
+      "definition": "A technology that allows electronic devices to exchange data wirelessly.",
+      "translation": "無線網路",
+      "example": "Please connect to the school Wi-Fi network.",
+      "example_translation": "請連線到學校的無線網路。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "ict",
+        "networking",
+        "wireless",
+        "connectivity"
+      ]
+    },
+    {
+      "term": "Cloud Computing",
+      "definition": "The delivery of computing services including servers, storage, databases, and software over the Internet.",
+      "translation": "雲端運算",
+      "example": "Many schools now use cloud computing for file sharing.",
+      "example_translation": "許多學校現在使用雲端運算進行檔案分享。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "ict",
+        "technology",
+        "storage",
+        "modern-it"
+      ]
+    },
+    {
+      "term": "Debugging",
+      "definition": "The process of identifying and removing errors from computer hardware or software.",
+      "translation": "除錯",
+      "example": "He spent hours debugging the code to find the syntax error.",
+      "example_translation": "他花了幾個小時除錯程式碼以尋找語法錯誤。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "ict",
+        "programming",
+        "problem-solving",
+        "development"
+      ]
+    }
+  ]
 }

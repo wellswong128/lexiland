@@ -7,5 +7,306 @@
   "version": "2026.06",
   "display_name_en": "P3 English",
   "display_name_zh_hant": "小三英文",
-  "words": []
+  "words": [
+    {
+      "term": "adventure",
+      "definition": "An exciting or unusual experience.",
+      "translation": "冒險",
+      "example": "We went on an adventure in the forest.",
+      "example_translation": "我們去森林裡進行了一次冒險。",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "noun",
+        "travel"
+      ]
+    },
+    {
+      "term": "brave",
+      "definition": "Ready to face and endure danger or pain.",
+      "translation": "勇敢的",
+      "example": "The brave firefighter saved the cat.",
+      "example_translation": "勇敢的消防員救了那隻貓。",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "adjective",
+        "personality"
+      ]
+    },
+    {
+      "term": "celebrate",
+      "definition": "To acknowledge a significant or happy day with a social event.",
+      "translation": "慶祝",
+      "example": "We celebrate Christmas with family.",
+      "example_translation": "我們和家人一起慶祝聖誕節。",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "verb",
+        "festivals"
+      ]
+    },
+    {
+      "term": "delicious",
+      "definition": "Highly pleasant to the taste.",
+      "translation": "美味的",
+      "example": "My mom made a delicious cake.",
+      "example_translation": "我媽媽做了一個美味的蛋糕。",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "adjective",
+        "food"
+      ]
+    },
+    {
+      "term": "environment",
+      "definition": "The natural world, including air, water, and land.",
+      "translation": "環境",
+      "example": "We must protect our environment.",
+      "example_translation": "我們必須保護我們的環境。",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "noun",
+        "science"
+      ]
+    },
+    {
+      "term": "favourite",
+      "definition": "Liked best of all possible people or things.",
+      "translation": "最喜歡的",
+      "example": "Blue is my favourite colour.",
+      "example_translation": "藍色是我最喜歡的顏色。",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "adjective",
+        "daily life"
+      ]
+    },
+    {
+      "term": "garden",
+      "definition": "A piece of ground used for growing flowers, fruit, or vegetables.",
+      "translation": "花園",
+      "example": "Grandpa grows tomatoes in the garden.",
+      "example_translation": "爺爺在花園裡種番茄。",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "noun",
+        "nature"
+      ]
+    },
+    {
+      "term": "honest",
+      "definition": "Free of deceit and untruthfulness; sincere.",
+      "translation": "誠實的",
+      "example": "It is important to be honest.",
+      "example_translation": "誠實是很重要的。",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "adjective",
+        "values"
+      ]
+    },
+    {
+      "term": "imagine",
+      "definition": "Form a mental image or concept of.",
+      "translation": "想像",
+      "example": "Can you imagine life without phones?",
+      "example_translation": "你能想像沒有手機的生活嗎？",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "verb",
+        "creativity"
+      ]
+    },
+    {
+      "term": "journey",
+      "definition": "An act of travelling from one place to another.",
+      "translation": "旅程",
+      "example": "The journey to school takes ten minutes.",
+      "example_translation": "上學的旅程需要十分鐘。",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "noun",
+        "transport"
+      ]
+    },
+    {
+      "term": "knowledge",
+      "definition": "Facts, information, and skills acquired through experience or education.",
+      "translation": "知識",
+      "example": "Reading gives us new knowledge.",
+      "example_translation": "閱讀給我們新的知識。",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "noun",
+        "education"
+      ]
+    },
+    {
+      "term": "listen",
+      "definition": "Give attention to sound.",
+      "translation": "聆聽",
+      "example": "Please listen to the teacher carefully.",
+      "example_translation": "請仔細聆聽老師的講解。",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "verb",
+        "classroom"
+      ]
+    },
+    {
+      "term": "mystery",
+      "definition": "Something that is difficult or impossible to understand or explain.",
+      "translation": "謎",
+      "example": "The old house was a mystery to us.",
+      "example_translation": "那座老房子對我們來說是個謎。",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "noun",
+        "storytelling"
+      ]
+    },
+    {
+      "term": "nervous",
+      "definition": "Easily agitated or excited; worried.",
+      "translation": "緊張的",
+      "example": "I felt nervous before the exam.",
+      "example_translation": "考試前我感到很緊張。",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "adjective",
+        "emotions"
+      ]
+    },
+    {
+      "term": "opportunity",
+      "definition": "A set of circumstances that makes it possible to do something.",
+      "translation": "機會",
+      "example": "This is a great opportunity to learn.",
+      "example_translation": "這是一個學習的好機會。",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "noun",
+        "life skills"
+      ]
+    },
+    {
+      "term": "pollute",
+      "definition": "Make the physical environment contaminated with toxic substances.",
+      "translation": "污染",
+      "example": "Cars can pollute the air.",
+      "example_translation": "汽車會污染空氣。",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "verb",
+        "environment"
+      ]
+    },
+    {
+      "term": "quiet",
+      "definition": "Making little or no noise.",
+      "translation": "安靜的",
+      "example": "The library is a quiet place.",
+      "example_translation": "圖書館是一個安靜的地方。",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "adjective",
+        "places"
+      ]
+    },
+    {
+      "term": "respect",
+      "definition": "A feeling of deep admiration for someone or something elicited by their abilities, qualities, or achievements.",
+      "translation": "尊重",
+      "example": "We should respect our elders.",
+      "example_translation": "我們應該尊重長輩。",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "verb",
+        "values"
+      ]
+    },
+    {
+      "term": "together",
+      "definition": "With each other; in company with one another.",
+      "translation": "一起",
+      "example": "Let's play together at recess.",
+      "example_translation": "讓我們在課間一起玩耍吧。",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "adverb",
+        "social"
+      ]
+    },
+    {
+      "term": "weather",
+      "definition": "The state of the atmosphere at a place and time regarding heat, dryness, sunshine, wind, rain, etc.",
+      "translation": "天氣",
+      "example": "The weather is sunny today.",
+      "example_translation": "今天的天氣是晴朗的。",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "noun",
+        "nature"
+      ]
+    }
+  ]
 }

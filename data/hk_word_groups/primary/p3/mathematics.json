@@ -7,5 +7,306 @@
   "version": "2026.06",
   "display_name_en": "P3 Mathematics",
   "display_name_zh_hant": "小三數學",
-  "words": []
+  "words": [
+    {
+      "term": "addition",
+      "definition": "The process of adding two or more numbers together to find the total.",
+      "translation": "加法",
+      "example": "Addition helps us find the sum of numbers.",
+      "example_translation": "加法幫助我們找出數字的總和。",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "mathematics",
+        "operations",
+        "arithmetic"
+      ]
+    },
+    {
+      "term": "subtraction",
+      "definition": "The process of taking one number away from another to find the difference.",
+      "translation": "減法",
+      "example": "Subtraction is used when we need to find out how many are left.",
+      "example_translation": "當我們需要知道還剩下多少時，會使用減法。",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "mathematics",
+        "operations",
+        "arithmetic"
+      ]
+    },
+    {
+      "term": "multiplication",
+      "definition": "A quick way to add the same number many times.",
+      "translation": "乘法",
+      "example": "Multiplication is like repeated addition.",
+      "example_translation": "乘法就像重複的加法。",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "mathematics",
+        "operations",
+        "arithmetic"
+      ]
+    },
+    {
+      "term": "division",
+      "definition": "Splitting a number into equal groups or parts.",
+      "translation": "除法",
+      "example": "Division helps us share items equally among friends.",
+      "example_translation": "除法幫助我們將物品平均分給朋友。",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "mathematics",
+        "operations",
+        "arithmetic"
+      ]
+    },
+    {
+      "term": "sum",
+      "definition": "The result you get when you add numbers together.",
+      "translation": "總和",
+      "example": "The sum of 5 and 3 is 8.",
+      "example_translation": "5 和 3 的總和是 8。",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "mathematics",
+        "vocabulary",
+        "addition"
+      ]
+    },
+    {
+      "term": "difference",
+      "definition": "The amount left after subtracting one number from another.",
+      "translation": "差",
+      "example": "Find the difference between 10 and 4.",
+      "example_translation": "找出 10 和 4 之間的差。",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "mathematics",
+        "vocabulary",
+        "subtraction"
+      ]
+    },
+    {
+      "term": "product",
+      "definition": "The answer you get when you multiply numbers.",
+      "translation": "積",
+      "example": "The product of 2 and 5 is 10.",
+      "example_translation": "2 和 5 的積是 10。",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "mathematics",
+        "vocabulary",
+        "multiplication"
+      ]
+    },
+    {
+      "term": "quotient",
+      "definition": "The result of dividing one number by another.",
+      "translation": "商",
+      "example": "The quotient of 20 divided by 4 is 5.",
+      "example_translation": "20 除以 4 的商是 5。",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "mathematics",
+        "vocabulary",
+        "division"
+      ]
+    },
+    {
+      "term": "place value",
+      "definition": "The value of a digit depending on its position in a number.",
+      "translation": "位值",
+      "example": "In 345, the place value of 4 is 40.",
+      "example_translation": "在 345 中，4 的位值是 40。",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "mathematics",
+        "numbers",
+        "base-ten"
+      ]
+    },
+    {
+      "term": "rounding",
+      "definition": "Making a number simpler but keeping its value close to the original.",
+      "translation": "四捨五入",
+      "example": "We use rounding to estimate answers quickly.",
+      "example_translation": "我們使用四捨五入來快速估算答案。",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "mathematics",
+        "estimation",
+        "numbers"
+      ]
+    },
+    {
+      "term": "fraction",
+      "definition": "A part of a whole, written as one number over another.",
+      "translation": "分數",
+      "example": "One half is a fraction that means 1 out of 2 equal parts.",
+      "example_translation": "二分之一是一個分數，意思是兩等份中的一份。",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "mathematics",
+        "geometry",
+        "number-sense"
+      ]
+    },
+    {
+      "term": "numerator",
+      "definition": "The top number in a fraction, showing how many parts we have.",
+      "translation": "分子",
+      "example": "In 3/4, 3 is the numerator.",
+      "example_translation": "在 3/4 中，3 是分子。",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "mathematics",
+        "fractions",
+        "vocabulary"
+      ]
+    },
+    {
+      "term": "denominator",
+      "definition": "The bottom number in a fraction, showing how many equal parts make a whole.",
+      "translation": "分母",
+      "example": "In 3/4, 4 is the denominator.",
+      "example_translation": "在 3/4 中，4 是分母。",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "mathematics",
+        "fractions",
+        "vocabulary"
+      ]
+    },
+    {
+      "term": "perimeter",
+      "definition": "The total distance around the outside of a shape.",
+      "translation": "周長",
+      "example": "To find the perimeter, add up all the sides.",
+      "example_translation": "要找出周長，請將所有邊長加起來。",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "mathematics",
+        "geometry",
+        "measurement"
+      ]
+    },
+    {
+      "term": "area",
+      "definition": "The amount of space inside a flat shape.",
+      "translation": "面積",
+      "example": "Area is measured in square units.",
+      "example_translation": "面積以平方單位測量。",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "mathematics",
+        "geometry",
+        "measurement"
+      ]
+    },
+    {
+      "term": "symmetry",
+      "definition": "When one side of a shape is a mirror image of the other side.",
+      "translation": "對稱",
+      "example": "A butterfly has symmetry.",
+      "example_translation": "蝴蝶具有對稱性。",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "mathematics",
+        "geometry",
+        "shapes"
+      ]
+    },
+    {
+      "term": "estimate",
+      "definition": "A rough calculation or guess of a number or amount.",
+      "translation": "估算",
+      "example": "Can you estimate how many candies are in the jar?",
+      "example_translation": "你能估算罐子裡有多少糖果嗎？",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "mathematics",
+        "problem-solving",
+        "numbers"
+      ]
+    },
+    {
+      "term": "pattern",
+      "definition": "A sequence of numbers or shapes that repeats in a regular way.",
+      "translation": "規律",
+      "example": "Look at the pattern: 2, 4, 6, 8...",
+      "example_translation": "看這個規律：2, 4, 6, 8...",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "mathematics",
+        "logic",
+        "sequences"
+      ]
+    },
+    {
+      "term": "equation",
+      "definition": "A math sentence that shows two amounts are equal.",
+      "translation": "方程式",
+      "example": "An equation uses an equals sign (=).",
+      "example_translation": "方程式使用等號（=）。",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "mathematics",
+        "algebra",
+        "basics"
+      ]
+    },
+    {
+      "term": "variable",
+      "definition": "A letter or symbol that stands for an unknown number.",
+      "translation": "變數",
+      "example": "In x + 5 = 10, x is the variable.",
+      "example_translation": "在 x + 5 = 10 中，x 是變數。",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "mathematics",
+        "algebra",
+        "basics"
+      ]
+    }
+  ]
 }

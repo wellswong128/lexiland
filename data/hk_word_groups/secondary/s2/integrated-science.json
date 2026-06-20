@@ -7,5 +7,326 @@
   "version": "2026.06",
   "display_name_en": "S2 Integrated Science",
   "display_name_zh_hant": "中二綜合科學",
-  "words": []
+  "words": [
+    {
+      "term": "Photosynthesis",
+      "definition": "The process by which green plants use sunlight to make their own food from carbon dioxide and water.",
+      "translation": "光合作用",
+      "example": "Plants perform photosynthesis to produce glucose and oxygen.",
+      "example_translation": "植物進行光合作用以產生葡萄糖和氧氣。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "integrated-science",
+        "biology",
+        "energy",
+        "plants"
+      ]
+    },
+    {
+      "term": "Respiration",
+      "definition": "The chemical reaction in cells that releases energy from food, usually involving oxygen.",
+      "translation": "呼吸作用",
+      "example": "Cells need respiration to release energy for movement and growth.",
+      "example_translation": "細胞需要呼吸作用來釋放能量以供移動和生長。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "integrated-science",
+        "biology",
+        "energy",
+        "cells"
+      ]
+    },
+    {
+      "term": "Ecosystem",
+      "definition": "A community of living organisms interacting with each other and their non-living environment.",
+      "translation": "生態系統",
+      "example": "A pond is a small ecosystem containing fish, plants, and insects.",
+      "example_translation": "池塘是一個包含魚、植物和昆蟲的小型生態系統。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "integrated-science",
+        "biology",
+        "environment",
+        "interactions"
+      ]
+    },
+    {
+      "term": "Food chain",
+      "definition": "A linear sequence showing how energy and nutrients move from one organism to another.",
+      "translation": "食物鏈",
+      "example": "Grass is eaten by the rabbit, which is then eaten by the fox.",
+      "example_translation": "草被兔子吃掉，然後兔子被狐狸吃掉。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "integrated-science",
+        "biology",
+        "ecology",
+        "energy flow"
+      ]
+    },
+    {
+      "term": "Decomposer",
+      "definition": "An organism, such as bacteria or fungi, that breaks down dead plant and animal matter.",
+      "translation": "分解者",
+      "example": "Fungi act as decomposers to recycle nutrients back into the soil.",
+      "example_translation": "真菌作為分解者將營養物質循環回土壤中。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "integrated-science",
+        "biology",
+        "ecology",
+        "nutrient cycle"
+      ]
+    },
+    {
+      "term": "Conduction",
+      "definition": "The transfer of heat through a material without the material itself moving.",
+      "translation": "傳導",
+      "example": "Metal spoons get hot quickly because metal is a good conductor of heat.",
+      "example_translation": "金屬湯匙很快變熱，因為金屬是良好的熱導體。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "integrated-science",
+        "physics",
+        "heat",
+        "energy transfer"
+      ]
+    },
+    {
+      "term": "Insulator",
+      "definition": "A material that does not allow heat or electricity to pass through it easily.",
+      "translation": "絕緣體",
+      "example": "Wood is a good insulator, so we use it for cooking handles.",
+      "example_translation": "木材是良好的絕緣體，所以我們用它做鍋柄。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "integrated-science",
+        "physics",
+        "heat",
+        "materials"
+      ]
+    },
+    {
+      "term": "Convection",
+      "definition": "The transfer of heat through fluids (liquids or gases) caused by the movement of particles.",
+      "translation": "對流",
+      "example": "Hot air rises and cold air sinks, creating convection currents.",
+      "example_translation": "熱空氣上升，冷空氣下降，形成對流循環。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "integrated-science",
+        "physics",
+        "heat",
+        "fluids"
+      ]
+    },
+    {
+      "term": "Density",
+      "definition": "The amount of mass per unit volume of a substance.",
+      "translation": "密度",
+      "example": "Oil floats on water because oil has a lower density than water.",
+      "example_translation": "油浮在水面上，因為油的密度比水低。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "integrated-science",
+        "physics",
+        "matter",
+        "properties"
+      ]
+    },
+    {
+      "term": "Force",
+      "definition": "A push or pull acting upon an object, resulting from its interaction with another object.",
+      "translation": "力",
+      "example": "Friction is a force that opposes motion between two surfaces.",
+      "example_translation": "摩擦力是一種 opposing 兩個表面之間運動的力。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "integrated-science",
+        "physics",
+        "mechanics",
+        "motion"
+      ]
+    },
+    {
+      "term": "Friction",
+      "definition": "The resistance that one surface or object encounters when moving over another.",
+      "translation": "摩擦力",
+      "example": "Brakes use friction to slow down the bicycle wheels.",
+      "example_translation": "剎車利用摩擦力來減慢自行車輪子的速度。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "integrated-science",
+        "physics",
+        "forces",
+        "motion"
+      ]
+    },
+    {
+      "term": "Gravity",
+      "definition": "The force that attracts a body toward the center of the earth, or toward any other physical body having mass.",
+      "translation": "重力",
+      "example": "Gravity keeps us grounded and causes objects to fall downwards.",
+      "example_translation": "重力使我們穩固在地面上，並導致物體向下掉落。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "integrated-science",
+        "physics",
+        "forces",
+        "earth science"
+      ]
+    },
+    {
+      "term": "Mixture",
+      "definition": "A substance made by mixing other substances together but not chemically combined.",
+      "translation": "混合物",
+      "example": "Sand and water form a mixture that can be separated by filtration.",
+      "example_translation": "沙和水形成一種可以通過過濾分離的混合物。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "integrated-science",
+        "chemistry",
+        "matter",
+        "separation"
+      ]
+    },
+    {
+      "term": "Solution",
+      "definition": "A homogeneous mixture composed of two or more substances, where one dissolves in the other.",
+      "translation": "溶液",
+      "example": "Salt water is a solution where salt is dissolved in water.",
+      "example_translation": "鹽水是鹽溶解在水中的溶液。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "integrated-science",
+        "chemistry",
+        "matter",
+        "solubility"
+      ]
+    },
+    {
+      "term": "Solvent",
+      "definition": "The substance in a solution that dissolves the solute.",
+      "translation": "溶劑",
+      "example": "In sugar water, water acts as the solvent.",
+      "example_translation": "在糖水中，水充當溶劑。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "integrated-science",
+        "chemistry",
+        "solutions",
+        "mixtures"
+      ]
+    },
+    {
+      "term": "Solute",
+      "definition": "The substance that is dissolved in a solvent to form a solution.",
+      "translation": "溶質",
+      "example": "Sugar is the solute when it dissolves in tea.",
+      "example_translation": "當糖溶解在茶中時，糖是溶質。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "integrated-science",
+        "chemistry",
+        "solutions",
+        "mixtures"
+      ]
+    },
+    {
+      "term": "Periodic Table",
+      "definition": "A tabular arrangement of chemical elements ordered by their atomic number and properties.",
+      "translation": "元素週期表",
+      "example": "We use the periodic table to find information about different elements.",
+      "example_translation": "我們使用元素週期表來查找不同元素的資訊。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "integrated-science",
+        "chemistry",
+        "elements",
+        "classification"
+      ]
+    },
+    {
+      "term": "Atom",
+      "definition": "The smallest unit of ordinary matter that forms a chemical element.",
+      "translation": "原子",
+      "example": "Water molecules are made up of hydrogen and oxygen atoms.",
+      "example_translation": "水分子由氫原子和氧原子組成。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "integrated-science",
+        "chemistry",
+        "structure",
+        "matter"
+      ]
+    },
+    {
+      "term": "Compound",
+      "definition": "A substance formed when two or more chemical elements are chemically bonded together.",
+      "translation": "化合物",
+      "example": "Carbon dioxide is a compound made of carbon and oxygen.",
+      "example_translation": "二氧化碳是由碳和氧組成的化合物。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "integrated-science",
+        "chemistry",
+        "bonding",
+        "matter"
+      ]
+    },
+    {
+      "term": "Experiment",
+      "definition": "A scientific procedure undertaken to make a discovery, test a hypothesis, or demonstrate a known fact.",
+      "translation": "實驗",
+      "example": "We conducted an experiment to test how temperature affects reaction rate.",
+      "example_translation": "我們進行了一個實驗來測試溫度如何影響反應速率。",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "integrated-science",
+        "science skills",
+        "method",
+        "investigation"
+      ]
+    }
+  ]
 }

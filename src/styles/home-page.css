@@ -123,6 +123,35 @@
   margin-top: 8px;
 }
 
+.home-active-group {
+  display: inline-flex;
+  margin-top: 10px;
+  max-width: 100%;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.92);
+  border: 2px solid rgba(59, 130, 246, 0.28);
+  padding: 8px 14px;
+  color: #1d4ed8;
+  font-size: 13px;
+  font-weight: 800;
+  line-height: 1.3;
+  text-decoration: none;
+  box-shadow: 0 8px 20px rgba(59, 130, 246, 0.12);
+}
+
+.home-active-group:hover {
+  background: #eff6ff;
+}
+
+.home-active-group-static {
+  cursor: default;
+  text-decoration: none;
+}
+
+.home-scope-switch {
+  margin-top: 8px;
+}
+
 .home-brand-sub2 {
   margin-top: 4px;
   color: #6d7c9d;
