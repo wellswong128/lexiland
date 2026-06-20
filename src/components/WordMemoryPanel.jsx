@@ -87,9 +87,9 @@ function WordMemoryPanel({
     }
 
     const saved = readWordMemory(word, locale);
-    const hasAnyMemory = Boolean(saved.memoryTips || saved.memoryImage?.imageUrl);
+    const hasCompleteMemory = Boolean(saved.memoryTips && saved.memoryImage?.imageUrl);
 
-    if (hasAnyMemory) {
+    if (hasCompleteMemory) {
       return;
     }
 

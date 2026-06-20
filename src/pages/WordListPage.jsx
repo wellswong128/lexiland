@@ -234,7 +234,7 @@ function WordListPage() {
                   ) : null}
 
                   <div className="mt-4">
-                    <WordMemoryPanel compact={false} word={word} />
+                    <WordMemoryPanel autoLoad compact={false} word={word} />
                   </div>
 
                   <p className="mt-3 text-sm leading-relaxed text-slate-600">
