@@ -1,8 +1,34 @@
 import { Link } from "react-router-dom";
 import { useLocale } from "../locale/LocaleContext.jsx";
 
-function WordGroupScopeEmptyState({ compact = false }) {
-  const { t } = useLocale();
+function getGroupLabel(group, locale) {
+  if (!group) {
+    return "";
+  }
+
+  if (locale === "en") {
+    return group.displayNameEn || group.groupCode || "";
+  }
+
+  return group.displayNameZhHant || group.displayNameEn || group.groupCode || "";
+}
+
+function WordGroupScopeEmptyState({
+  compact = false,
+  scopeReason = "",
+  activeGroup = null,
+}) {
+  const { locale, t } = useLocale();
+  const groupLabel = getGroupLabel(activeGroup, locale);
+
+  let description = t("wordGroupsScope.emptyDescription");
+  if (scopeReason === "no-active-group") {
+    description = t("wordGroupsScope.emptyNoActive");
+  } else if (scopeReason === "active-group-empty") {
+    description = t("wordGroupsScope.emptyNoMappings", { group: groupLabel });
+  } else if (scopeReason === "no-matches") {
+    description = t("wordGroupsScope.emptyNoMatches", { group: groupLabel });
+  }
 
   return (
     <div
@@ -12,9 +38,10 @@ function WordGroupScopeEmptyState({ compact = false }) {
       ].join(" ")}
     >
       <h2 className="text-xl font-bold text-blue-950">{t("wordGroupsScope.emptyTitle")}</h2>
-      <p className="mx-auto mt-2 max-w-xl text-slate-600">
-        {t("wordGroupsScope.emptyDescription")}
-      </p>
+      {groupLabel ? (
+        <p className="mt-2 text-sm font-semibold text-blue-800">{groupLabel}</p>
+      ) : null}
+      <p className="mx-auto mt-2 max-w-xl text-slate-600">{description}</p>
       <div className="mt-5 flex flex-wrap justify-center gap-3">
         <Link
           className="rounded-full bg-blue-700 px-5 py-3 text-sm font-bold text-white transition hover:bg-blue-800"

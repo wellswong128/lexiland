@@ -561,9 +561,15 @@ const zhHant = {
     },
     wordGroupsScope: {
       loading: "正在載入組別篩選...",
+      activeGroupLabel: "目前組別：{{group}}",
       emptyTitle: "目前組別沒有可用單字",
       emptyDescription:
         "請先在設定選擇並啟用組別，或先把單字映射到目前組別，之後再開始學習、複習或遊戲。",
+      emptyNoActive: "請先在設定選擇並儲存組別，然後設定目前使用組別。",
+      emptyNoMappings:
+        "「{{group}}」尚未建立任何詞彙映射。管理員請編輯對應的 word list JSON，然後執行 npm run word-groups:import-maps。",
+      emptyNoMatches:
+        "「{{group}}」已有詞彙映射，但你的單字庫中沒有匹配的單字。請新增或匯入此組別的單字。",
       openSettings: "前往設定組別",
       addWord: "新增單字",
     },
@@ -1381,9 +1387,15 @@ export const translations = {
     },
     wordGroupsScope: {
       loading: "Loading group filter...",
+      activeGroupLabel: "Active group: {{group}}",
       emptyTitle: "No words are available for the active group",
       emptyDescription:
         "Choose and activate a group in Settings, or map words to the active group before learning, review, and games.",
+      emptyNoActive: "Pick and save your groups in Settings, then choose an active group.",
+      emptyNoMappings:
+        '"{{group}}" has no mapped vocabulary yet. Edit the group word list JSON, then run npm run word-groups:import-maps.',
+      emptyNoMatches:
+        '"{{group}}" has mapped vocabulary, but none of those words are in your personal word list yet.',
       openSettings: "Open Group Settings",
       addWord: "Add Word",
     },

@@ -7,6 +7,7 @@ import {
   saveUserGroupPicks,
   setUserActiveGroup,
 } from "./wordGroupsApi.js";
+import { notifyActiveGroupChanged } from "./wordGroupScopeEvents.js";
 
 const GRADE_OPTIONS = ["P1", "P2", "P3", "P4", "P5", "P6", "S1", "S2", "S3", "S4", "S5", "S6"];
 
@@ -110,6 +111,7 @@ function WordGroupSettingsSection({ user, hasSupabaseConfig }) {
       setPickedGroupCodes(nextPickedCodes);
       setActiveGroupCode(nextActiveCode);
       setNotice(t("settings.wordGroups.saveSuccess"));
+      notifyActiveGroupChanged();
     } catch (saveError) {
       setError(saveError.message || t("settings.wordGroups.saveError"));
     } finally {
@@ -130,6 +132,7 @@ function WordGroupSettingsSection({ user, hasSupabaseConfig }) {
       const payload = await setUserActiveGroup(nextGroupCode);
       setActiveGroupCode(payload.activeGroupCode || nextGroupCode);
       setNotice(t("settings.wordGroups.activeUpdated"));
+      notifyActiveGroupChanged();
     } catch (switchError) {
       setError(switchError.message || t("settings.wordGroups.activeError"));
     } finally {

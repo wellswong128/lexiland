@@ -12,9 +12,10 @@ import { can, getRoleFromUser, PERMISSIONS } from "../lib/authorization.js";
 const WORDS_PER_PAGE = 20;
 
 function WordListPage() {
-  const { t } = useLocale();
+  const { locale, t } = useLocale();
   const { deleteWord, user, words } = useWordsContext();
-  const { isLoadingScope, isScoped, scopedWords } = useActiveGroupWordScope(words, user);
+  const { isLoadingScope, isScoped, scopedWords, activeGroup, scopeReason, scopeError } =
+    useActiveGroupWordScope(words, user);
   const role = getRoleFromUser(user);
   const canCreateWord = can(role, PERMISSIONS.WORDS_CREATE);
   const canDeleteWord = can(role, PERMISSIONS.WORDS_DELETE);
@@ -71,6 +72,18 @@ function WordListPage() {
     }
   }
 
+  function getActiveGroupLabel() {
+    if (!activeGroup) {
+      return "";
+    }
+
+    if (locale === "en") {
+      return activeGroup.displayNameEn || activeGroup.groupCode || "";
+    }
+
+    return activeGroup.displayNameZhHant || activeGroup.displayNameEn || activeGroup.groupCode || "";
+  }
+
   return (
     <section className="w-full max-w-4xl rounded-3xl border border-blue-200/70 bg-white/90 p-6 shadow-2xl shadow-blue-950/10 sm:p-10">
       <div className="mb-8 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
@@ -86,6 +99,11 @@ function WordListPage() {
               ? t("wordList.filteredCount", { count: filteredWords.length })
               : t("wordList.count", { count: (isScoped ? scopedWords : words).length })}
           </p>
+          {isScoped && activeGroup ? (
+            <p className="mt-2 text-sm font-semibold text-blue-700">
+              {t("wordGroupsScope.activeGroupLabel", { group: getActiveGroupLabel() })}
+            </p>
+          ) : null}
         </div>
 
         {canCreateWord ? (
@@ -112,12 +130,18 @@ function WordListPage() {
         </label>
       ) : null}
 
+      {scopeError ? (
+        <p className="mb-4 rounded-2xl border border-red-200 bg-red-50 px-4 py-3 text-sm font-medium text-red-700">
+          {scopeError}
+        </p>
+      ) : null}
+
       {isLoadingScope ? (
         <div className="rounded-2xl border border-dashed border-blue-200 bg-blue-50/70 p-8 text-center">
           <p className="text-sm text-slate-600">{t("wordGroupsScope.loading")}</p>
         </div>
       ) : isScoped && scopedWords.length === 0 ? (
-        <WordGroupScopeEmptyState />
+        <WordGroupScopeEmptyState activeGroup={activeGroup} scopeReason={scopeReason} />
       ) : words.length === 0 ? (
         <div className="rounded-2xl border border-dashed border-blue-200 bg-blue-50/70 p-8 text-center">
           <h2 className="text-xl font-bold text-blue-950">

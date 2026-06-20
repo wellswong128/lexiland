@@ -15,7 +15,7 @@
  *   npm run word-groups:import-maps
  *   npm run word-groups:import-maps -- --group-code hk-primary-p1-english
  *   npm run word-groups:import-maps -- --file data/hk_word_groups/primary/p1/english.json
- *   npm run word-groups:import-maps -- --strict
+ *   npm run word-groups:import-maps -- --group-code hk-primary-p1-english --terms absorb,answer,allow
  */
 
 import { existsSync, readFileSync } from "node:fs";
@@ -44,6 +44,7 @@ function parseArgs(argv) {
     strict: false,
     groupCode: "",
     filePath: "",
+    terms: "",
   };
 
   for (let index = 0; index < argv.length; index += 1) {
@@ -78,6 +79,17 @@ function parseArgs(argv) {
 
     if (arg.startsWith("--file=")) {
       options.filePath = arg.slice("--file=".length);
+      continue;
+    }
+
+    if (arg === "--terms") {
+      options.terms = argv[index + 1] ?? "";
+      index += 1;
+      continue;
+    }
+
+    if (arg.startsWith("--terms=")) {
+      options.terms = arg.slice("--terms=".length);
     }
   }
 
@@ -271,11 +283,14 @@ async function upsertMappings(serviceClient, rows) {
   return upserted;
 }
 
+function parseTermsList(raw) {
+  return [...new Set(String(raw ?? "").split(/[,;\s]+/u).map(normalizeTerm).filter(Boolean))];
+}
+
 async function main() {
   const options = parseArgs(process.argv.slice(2));
   const taxonomy = loadTaxonomy();
   const contract = existsSync(CONTRACT_PATH) ? loadJson(CONTRACT_PATH) : null;
-  const selectedGroups = selectGroups(taxonomy, options);
 
   console.log("HK word group map import");
   console.log(`  taxonomy: ${TAXONOMY_PATH}`);
@@ -284,7 +299,6 @@ async function main() {
       `  contract required fields: ${contract.word_list_file.required_fields.join(", ")}`,
     );
   }
-  console.log(`  groups selected: ${selectedGroups.length}`);
   console.log(`  mode: ${options.dryRun ? "dry-run" : "write"}${options.strict ? " (strict)" : ""}`);
 
   const summary = {
@@ -299,7 +313,30 @@ async function main() {
 
   const pendingImports = [];
 
-  for (const group of selectedGroups) {
+  if (options.terms) {
+    if (!options.groupCode) {
+      throw new Error("--terms requires --group-code.");
+    }
+
+    const terms = parseTermsList(options.terms);
+    if (terms.length === 0) {
+      throw new Error("--terms did not include any valid terms.");
+    }
+
+    pendingImports.push({
+      groupCode: normalizeLower(options.groupCode),
+      filePath: "(cli --terms)",
+      terms,
+      uniqueTermCount: terms.length,
+    });
+    summary.filesProcessed += 1;
+    summary.termsSeen += terms.length;
+    console.log(`  cli terms: ${terms.length} term(s) -> ${options.groupCode}`);
+  } else {
+    const selectedGroups = selectGroups(taxonomy, options);
+    console.log(`  groups selected: ${selectedGroups.length}`);
+
+    for (const group of selectedGroups) {
     const filePath = group.absolute_path;
     const groupCode = normalizeLower(group.group_code);
 
@@ -331,6 +368,7 @@ async function main() {
         process.exit(1);
       }
     }
+  }
   }
 
   if (pendingImports.length === 0) {

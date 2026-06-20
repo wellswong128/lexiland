@@ -1,7 +1,8 @@
-import { useEffect, useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
 import { hasSupabaseConfig } from "../../lib/supabaseClient.js";
 import { normalizeTerm } from "../words/wordTypes.js";
 import { getApiAuthHeaders } from "../../lib/apiAuth.js";
+import { ACTIVE_GROUP_CHANGED_EVENT } from "./wordGroupScopeEvents.js";
 
 async function fetchActiveGroupWords() {
   const authHeaders = await getApiAuthHeaders();
@@ -29,7 +30,7 @@ export function useActiveGroupWordScope(words, user) {
 
   const shouldScopeByGroup = hasSupabaseConfig && Boolean(user);
 
-  useEffect(() => {
+  const loadScope = useCallback(async () => {
     if (!shouldScopeByGroup) {
       setState({
         activeGroup: null,
@@ -40,44 +41,48 @@ export function useActiveGroupWordScope(words, user) {
       return;
     }
 
-    let cancelled = false;
-
     setState((current) => ({
       ...current,
       isLoading: true,
       error: "",
     }));
 
-    void fetchActiveGroupWords()
-      .then((payload) => {
-        if (cancelled) {
-          return;
-        }
-
-        setState({
-          activeGroup: payload.activeGroup ?? null,
-          mappedTerms: Array.isArray(payload.mappedTerms) ? payload.mappedTerms : [],
-          isLoading: false,
-          error: "",
-        });
-      })
-      .catch((error) => {
-        if (cancelled) {
-          return;
-        }
-
-        setState({
-          activeGroup: null,
-          mappedTerms: [],
-          isLoading: false,
-          error: error.message || "Failed to load active-group words.",
-        });
+    try {
+      const payload = await fetchActiveGroupWords();
+      setState({
+        activeGroup: payload.activeGroup ?? null,
+        mappedTerms: Array.isArray(payload.mappedTerms) ? payload.mappedTerms : [],
+        isLoading: false,
+        error: "",
       });
+    } catch (error) {
+      setState({
+        activeGroup: null,
+        mappedTerms: [],
+        isLoading: false,
+        error: error.message || "Failed to load active-group words.",
+      });
+    }
+  }, [shouldScopeByGroup]);
 
-    return () => {
-      cancelled = true;
+  useEffect(() => {
+    void loadScope();
+  }, [loadScope]);
+
+  useEffect(() => {
+    if (!shouldScopeByGroup || typeof window === "undefined") {
+      return undefined;
+    }
+
+    const handleActiveGroupChanged = () => {
+      void loadScope();
     };
-  }, [shouldScopeByGroup, user?.id]);
+
+    window.addEventListener(ACTIVE_GROUP_CHANGED_EVENT, handleActiveGroupChanged);
+    return () => {
+      window.removeEventListener(ACTIVE_GROUP_CHANGED_EVENT, handleActiveGroupChanged);
+    };
+  }, [loadScope, shouldScopeByGroup]);
 
   const mappedSet = useMemo(
     () => new Set(state.mappedTerms.map((value) => normalizeTerm(value)).filter(Boolean)),
