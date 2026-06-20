@@ -56,5 +56,35 @@ export default defineConfig(({ mode }) => {
 
   return {
     plugins: [react(), tailwindcss(), localApiPlugin()],
+    build: {
+      rolldownOptions: {
+        output: {
+          manualChunks(id) {
+            if (!id.includes("node_modules")) {
+              if (id.includes("/src/i18n/translations.js")) {
+                return "i18n";
+              }
+              return;
+            }
+
+            if (id.includes("react-dom") || id.includes("/react/")) {
+              return "vendor-react";
+            }
+
+            if (id.includes("react-router")) {
+              return "vendor-router";
+            }
+
+            if (id.includes("@supabase")) {
+              return "vendor-supabase";
+            }
+
+            if (id.includes("qrcode")) {
+              return "vendor-qrcode";
+            }
+          },
+        },
+      },
+    },
   };
 });
