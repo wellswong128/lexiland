@@ -10,6 +10,43 @@ import { useWordsContext } from "../features/words/WordsContext.jsx";
 import { can, getRoleFromUser, PERMISSIONS } from "../lib/authorization.js";
 
 const WORDS_PER_PAGE = 20;
+const HIDDEN_WORD_LIST_TAGS = new Set([
+  "hk",
+  "primary",
+  "secondary",
+  "p1",
+  "p2",
+  "p3",
+  "p4",
+  "p5",
+  "p6",
+  "s1",
+  "s2",
+  "s3",
+  "s4",
+  "s5",
+  "s6",
+  "economics",
+  "physics",
+  "general-studies",
+  "biology",
+  "mathematics",
+  "english",
+  "ict",
+  "history",
+  "integrated-science",
+  "science",
+  "chinese",
+  "chinese-history",
+  "geography",
+  "chemistry",
+]);
+
+function getVisibleWordTags(tags = []) {
+  return tags.filter(
+    (tag) => !HIDDEN_WORD_LIST_TAGS.has(String(tag ?? "").trim().toLowerCase()),
+  );
+}
 
 function WordListPage() {
   const { locale, t } = useLocale();
@@ -35,7 +72,7 @@ function WordListPage() {
       const term = word.term.toLowerCase();
       const definition = word.definition.toLowerCase();
       const translation = (word.translation ?? "").toLowerCase();
-      const tags = word.tags.join(" ").toLowerCase();
+      const tags = getVisibleWordTags(word.tags).join(" ").toLowerCase();
 
       return (
         term.includes(normalizedQuery) ||
@@ -204,12 +241,15 @@ function WordListPage() {
       ) : (
         <>
           <ul className="space-y-4">
-            {paginatedWords.map((word) => (
-            <li
-              className="rounded-2xl border border-slate-200 bg-white p-5"
-              key={word.id}
-            >
-              <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
+            {paginatedWords.map((word) => {
+              const visibleTags = getVisibleWordTags(word.tags);
+
+              return (
+                <li
+                  className="rounded-2xl border border-slate-200 bg-white p-5"
+                  key={word.id}
+                >
+                  <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
                 <div>
                   <div className="flex flex-wrap items-center gap-3">
                     <h2 className="text-2xl font-bold text-blue-950">
@@ -242,9 +282,9 @@ function WordListPage() {
                   </p>
                 </div>
 
-                {word.tags.length > 0 ? (
+                {visibleTags.length > 0 ? (
                   <div className="flex flex-wrap gap-2 sm:justify-end">
-                    {word.tags.map((tag) => (
+                    {visibleTags.map((tag) => (
                       <span
                         className="rounded-full bg-blue-100 px-3 py-1 text-xs font-bold text-blue-700"
                         key={tag}
@@ -274,7 +314,8 @@ function WordListPage() {
                 ) : null}
               </div>
             </li>
-            ))}
+              );
+            })}
           </ul>
 
           {totalPages > 1 ? (
