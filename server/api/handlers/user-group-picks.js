@@ -129,48 +129,18 @@ async function handlePut(request, response, auth) {
 
   const nextGroupIds = foundGroups.map((row) => row.id);
 
-  const { error: deleteError } = await rlsClient
-    .from("user_group_picks")
-    .delete()
-    .eq("user_id", userId);
-  if (deleteError) {
-    throw new Error(deleteError.message || "Failed to update picked groups.");
+  const { data: replacementRows, error: replacementError } = await rlsClient.rpc(
+    "replace_user_group_picks",
+    { target_group_ids: nextGroupIds },
+  );
+  if (replacementError) {
+    throw new Error(replacementError.message || "Failed to update picked groups.");
   }
 
-  if (foundGroups.length > 0) {
-    const nowIso = new Date().toISOString();
-    const rows = foundGroups.map((row) => ({
-      user_id: userId,
-      group_id: row.id,
-      picked_at: nowIso,
-    }));
-
-    const { error: insertError } = await rlsClient.from("user_group_picks").insert(rows);
-    if (insertError) {
-      throw new Error(insertError.message || "Failed to save picked groups.");
-    }
-  }
-
-  const nextActiveGroupId = nextGroupIds.includes(currentActiveId)
-    ? currentActiveId
-    : nextGroupIds[0] ?? "";
-
-  if (!nextActiveGroupId) {
-    const { error: deletePreferenceError } = await rlsClient
-      .from("user_group_preferences")
-      .delete()
-      .eq("user_id", userId);
-    if (deletePreferenceError) {
-      throw new Error(deletePreferenceError.message || "Failed to clear active group.");
-    }
-  } else {
-    const { error: upsertPreferenceError } = await rlsClient
-      .from("user_group_preferences")
-      .upsert({ user_id: userId, active_group_id: nextActiveGroupId });
-    if (upsertPreferenceError) {
-      throw new Error(upsertPreferenceError.message || "Failed to update active group.");
-    }
-  }
+  const nextActiveGroupId =
+    replacementRows?.[0]?.active_group_id ??
+    (nextGroupIds.includes(currentActiveId) ? currentActiveId : nextGroupIds[0]) ??
+    "";
 
   const nextActiveGroup = foundGroups.find((row) => row.id === nextActiveGroupId) ?? null;
 

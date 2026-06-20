@@ -27,7 +27,6 @@ as $$
   select lower(
     coalesce(
       auth.jwt() -> 'app_metadata' ->> 'role',
-      auth.jwt() -> 'user_metadata' ->> 'role',
       'student'
     )
   );
@@ -169,6 +168,85 @@ create trigger user_group_preferences_validate_pick
 before insert or update on public.user_group_preferences
 for each row
 execute function public.validate_active_group_is_picked();
+
+create or replace function public.replace_user_group_picks(target_group_ids uuid[])
+returns table(active_group_id uuid)
+language plpgsql
+security invoker
+set search_path = public
+as $$
+declare
+  current_user_id uuid := auth.uid();
+  requested_group_ids uuid[] := '{}'::uuid[];
+  valid_group_ids uuid[] := '{}'::uuid[];
+  current_active_group_id uuid;
+  next_active_group_id uuid;
+begin
+  if current_user_id is null then
+    raise exception 'Authentication required to update group picks'
+      using errcode = '28000';
+  end if;
+
+  select coalesce(array_agg(group_id order by first_position), '{}'::uuid[])
+  into requested_group_ids
+  from (
+    select group_id, min(position) as first_position
+    from unnest(coalesce(target_group_ids, '{}'::uuid[])) with ordinality as requested(group_id, position)
+    where group_id is not null
+    group by group_id
+  ) deduped;
+
+  if array_length(requested_group_ids, 1) is not null then
+    select coalesce(array_agg(word_groups.id order by array_position(requested_group_ids, word_groups.id)), '{}'::uuid[])
+    into valid_group_ids
+    from public.word_groups
+    where id = any(requested_group_ids)
+      and is_active = true;
+
+    if coalesce(array_length(valid_group_ids, 1), 0) <> coalesce(array_length(requested_group_ids, 1), 0) then
+      raise exception 'All picked groups must be active word groups'
+        using errcode = '23514';
+    end if;
+  end if;
+
+  select user_group_preferences.active_group_id
+  into current_active_group_id
+  from public.user_group_preferences
+  where user_id = current_user_id;
+
+  delete from public.user_group_picks
+  where user_id = current_user_id;
+
+  if array_length(valid_group_ids, 1) is not null then
+    insert into public.user_group_picks (user_id, group_id, picked_at)
+    select current_user_id, group_id, now()
+    from unnest(valid_group_ids) as selected(group_id);
+  end if;
+
+  if current_active_group_id = any(valid_group_ids) then
+    next_active_group_id := current_active_group_id;
+  elsif array_length(valid_group_ids, 1) is not null then
+    next_active_group_id := valid_group_ids[1];
+  else
+    next_active_group_id := null;
+  end if;
+
+  if next_active_group_id is null then
+    delete from public.user_group_preferences
+    where user_id = current_user_id;
+  else
+    insert into public.user_group_preferences (user_id, active_group_id)
+    values (current_user_id, next_active_group_id)
+    on conflict (user_id) do update
+      set active_group_id = excluded.active_group_id;
+  end if;
+
+  active_group_id := next_active_group_id;
+  return next;
+end;
+$$;
+
+grant execute on function public.replace_user_group_picks(uuid[]) to authenticated;
 
 -- ---------------------------
 -- RLS and RBAC policies
