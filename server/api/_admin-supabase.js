@@ -29,7 +29,7 @@ const ENV_FILES = [
   `.env.${NODE_ENV}`,
   ".env",
 ];
-const PROJECT_ROOT = resolve(dirname(fileURLToPath(import.meta.url)), "..");
+const PROJECT_ROOT = resolve(dirname(fileURLToPath(import.meta.url)), "../..");
 
 let localEnvLoaded = false;
 

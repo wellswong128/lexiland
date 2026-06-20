@@ -1,5 +1,5 @@
-import { requireAiApiAccess, sendAuthError } from "./_authz.js";
-import { generateCompleteWordSuggestion } from "./_complete-word-suggestion.js";
+import { requireAiApiAccess, sendAuthError } from "../_authz.js";
+import { generateCompleteWordSuggestion } from "../_complete-word-suggestion.js";
 
 function sendJson(response, statusCode, payload) {
   response.statusCode = statusCode;

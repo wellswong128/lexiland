@@ -1,10 +1,10 @@
-import { sendAuthError } from "./_authz.js";
+import { sendAuthError } from "../_authz.js";
 import {
   createRlsClientForRequest,
   mapGroupRow,
   requireUserGroupAccess,
   sendJson,
-} from "./_user-groups.js";
+} from "../_user-groups.js";
 
 const GROUP_COLUMNS = [
   "id",

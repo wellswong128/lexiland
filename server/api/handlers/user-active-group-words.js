@@ -1,10 +1,10 @@
-import { sendAuthError } from "./_authz.js";
+import { sendAuthError } from "../_authz.js";
 import {
   createRlsClientForRequest,
   normalizeGroupCode,
   requireUserGroupAccess,
   sendJson,
-} from "./_user-groups.js";
+} from "../_user-groups.js";
 
 function normalizeTerm(value) {
   return String(value ?? "").trim().toLowerCase();

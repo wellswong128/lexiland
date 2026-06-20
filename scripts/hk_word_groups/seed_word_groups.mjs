@@ -15,7 +15,7 @@
 import { readFileSync } from "node:fs";
 import { dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
-import { getAdminServiceClient } from "../../api/_admin-supabase.js";
+import { getAdminServiceClient } from "../../server/api/_admin-supabase.js";
 
 const SCRIPT_DIR = dirname(fileURLToPath(import.meta.url));
 const PROJECT_ROOT = resolve(SCRIPT_DIR, "../..");

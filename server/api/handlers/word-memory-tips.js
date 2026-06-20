@@ -1,4 +1,4 @@
-import { requireAiApiAccess, sendAuthError } from "./_authz.js";
+import { requireAiApiAccess, sendAuthError } from "../_authz.js";
 const AGNES_API_URL = "https://apihub.agnes-ai.com/v1/chat/completions";
 
 const LOCALE_LABELS = {

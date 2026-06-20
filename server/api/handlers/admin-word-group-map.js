@@ -1,5 +1,5 @@
-import { requireRole, sendAuthError } from "./_authz.js";
-import { getAdminServiceClient, getRequestBody, sendJson } from "./_admin-supabase.js";
+import { requireRole, sendAuthError } from "../_authz.js";
+import { getAdminServiceClient, getRequestBody, sendJson } from "../_admin-supabase.js";
 
 function normalizeText(value) {
   return String(value ?? "").trim();

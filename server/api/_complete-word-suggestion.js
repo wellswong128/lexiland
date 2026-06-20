@@ -2,7 +2,7 @@ import {
   getVocabularyLocaleLabel,
   hasValidChineseTranslationFields,
   resolveVocabularyLocale,
-} from "../lib/vocabularyLocale.js";
+} from "../../lib/vocabularyLocale.js";
 
 const AGNES_API_URL = "https://apihub.agnes-ai.com/v1/chat/completions";
 

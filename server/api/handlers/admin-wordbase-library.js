@@ -2,8 +2,8 @@ import { createClient } from "@supabase/supabase-js";
 import { existsSync, readFileSync } from "node:fs";
 import { dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
-import { requireRole, sendAuthError } from "./_authz.js";
-import { generateCompleteWordSuggestion } from "./_complete-word-suggestion.js";
+import { requireRole, sendAuthError } from "../_authz.js";
+import { generateWordMemoryImage } from "./word-memory-image.js";
 
 const URL_ENV_KEYS = [
   "SUPABASE_URL",
@@ -30,29 +30,19 @@ const ENV_FILES = [
   `.env.${NODE_ENV}`,
   ".env",
 ];
-const PROJECT_ROOT = resolve(dirname(fileURLToPath(import.meta.url)), "..");
+const PROJECT_ROOT = resolve(dirname(fileURLToPath(import.meta.url)), "../../..");
 const WORD_COLUMNS = [
   "id",
-  "term_key",
   "term",
   "definition",
   "translation",
-  "pronunciation",
-  "part_of_speech",
   "example",
   "example_translation",
-  "source",
+  "memory_tips_by_locale",
+  "memory_image",
+  "contributor_id",
   "updated_at",
 ];
-const MISSING_FIELD_CONFIG = [
-  { key: "definition", column: "definition" },
-  { key: "translation", column: "translation" },
-  { key: "pronunciation", column: "pronunciation" },
-  { key: "partOfSpeech", column: "part_of_speech" },
-  { key: "example", column: "example" },
-  { key: "exampleTranslation", column: "example_translation" },
-];
-
 let localEnvLoaded = false;
 
 function sendJson(response, statusCode, payload) {
@@ -161,174 +151,162 @@ function getServiceClient() {
   });
 }
 
-function normalizeTerm(value) {
-  return String(value ?? "").trim().toLowerCase();
-}
-
-function missingFieldsForRow(row) {
-  return MISSING_FIELD_CONFIG.filter(({ column }) => !String(row?.[column] ?? "").trim()).map(
-    ({ key }) => key,
-  );
-}
-
-function mapWordbaseRow(row) {
-  return {
-    id: row.id,
-    termKey: row.term_key,
-    term: row.term,
-    definition: row.definition ?? "",
-    translation: row.translation ?? "",
-    pronunciation: row.pronunciation ?? "",
-    partOfSpeech: row.part_of_speech ?? "",
-    example: row.example ?? "",
-    exampleTranslation: row.example_translation ?? "",
-    source: row.source ?? "",
-    updatedAt: row.updated_at ?? "",
-    missingFields: missingFieldsForRow(row),
-  };
-}
-
-function parseBoolean(value, defaultValue = false) {
-  if (typeof value === "boolean") {
-    return value;
-  }
-
-  const lower = String(value ?? "").trim().toLowerCase();
-  if (!lower) {
-    return defaultValue;
-  }
-
-  return ["1", "true", "yes", "y"].includes(lower);
-}
-
 function parseLimit(value, defaultValue = 50) {
   const number = Number.parseInt(String(value ?? ""), 10);
   if (!Number.isFinite(number) || number <= 0) {
     return defaultValue;
   }
 
-  return Math.min(number, 200);
+  return Math.min(number, 120);
 }
 
-async function listWordbaseRows(request, response) {
+function parsePage(value, defaultValue = 1) {
+  const number = Number.parseInt(String(value ?? ""), 10);
+  if (!Number.isFinite(number) || number <= 0) {
+    return defaultValue;
+  }
+
+  return number;
+}
+
+async function lookupContributorEmails(serviceClient, rows) {
+  const contributorIds = [...new Set(rows.map((row) => row.contributor_id).filter(Boolean))];
+  const contributorEmailMap = {};
+
+  await Promise.all(
+    contributorIds.map(async (contributorId) => {
+      try {
+        const { data, error } = await serviceClient.auth.admin.getUserById(contributorId);
+        if (!error && data?.user?.email) {
+          contributorEmailMap[contributorId] = data.user.email;
+        }
+      } catch {
+        contributorEmailMap[contributorId] = "";
+      }
+    }),
+  );
+
+  return contributorEmailMap;
+}
+
+function mapWordbaseRow(row, contributorEmailMap = {}) {
+  return {
+    id: row.id,
+    term: row.term ?? "",
+    definition: row.definition ?? "",
+    translation: row.translation ?? "",
+    example: row.example ?? "",
+    exampleTranslation: row.example_translation ?? "",
+    memoryTipsByLocale:
+      row.memory_tips_by_locale && typeof row.memory_tips_by_locale === "object"
+        ? row.memory_tips_by_locale
+        : {},
+    memoryImage: row.memory_image ?? null,
+    contributorId: row.contributor_id ?? "",
+    contributorEmail: contributorEmailMap[row.contributor_id] ?? "",
+    updatedAt: row.updated_at ?? "",
+  };
+}
+
+async function listRows(request, response) {
   const serviceClient = getServiceClient();
   const search = String(request.query?.search ?? "").trim();
-  const limit = parseLimit(request.query?.limit, 50);
-  const missingOnly = parseBoolean(request.query?.missingOnly, true);
+  const pageSize = parseLimit(request.query?.pageSize, 20);
+  const page = parsePage(request.query?.page, 1);
+  const from = (page - 1) * pageSize;
+  const to = from + pageSize - 1;
 
   let query = serviceClient
     .from("wordbase")
-    .select(WORD_COLUMNS.join(","))
+    .select(WORD_COLUMNS.join(","), { count: "exact" })
     .order("updated_at", { ascending: false })
-    .limit(limit);
+    .range(from, to);
 
   if (search) {
-    query = query.or(`term.ilike.%${search}%,term_key.ilike.%${normalizeTerm(search)}%`);
+    query = query.or(
+      `term.ilike.%${search}%,definition.ilike.%${search}%,translation.ilike.%${search}%`,
+    );
   }
 
-  const { data, error } = await query;
+  const { data, error, count } = await query;
   if (error) {
-    throw new Error(error.message || "Failed to load wordbase rows.");
+    throw new Error(error.message || "Failed to load WordBase rows.");
   }
 
-  const rows = (data ?? []).map(mapWordbaseRow);
-  const filteredRows = missingOnly
-    ? rows.filter((row) => row.missingFields.length > 0)
-    : rows;
-
+  const rows = data ?? [];
+  const total = Number(count ?? 0);
+  const totalPages = Math.max(1, Math.ceil(total / pageSize));
+  const contributorEmailMap = await lookupContributorEmails(serviceClient, rows);
   sendJson(response, 200, {
-    rows: filteredRows,
+    rows: rows.map((row) => mapWordbaseRow(row, contributorEmailMap)),
     meta: {
-      limit,
-      missingOnly,
-      total: filteredRows.length,
+      page,
+      pageSize,
+      total,
+      totalPages,
     },
   });
 }
 
-function buildAiPatch(existingRow, suggestion) {
-  const patch = {};
-
-  if (!String(existingRow.definition ?? "").trim() && suggestion.definition) {
-    patch.definition = suggestion.definition;
-  }
-  if (!String(existingRow.translation ?? "").trim() && suggestion.translation) {
-    patch.translation = suggestion.translation;
-  }
-  if (!String(existingRow.pronunciation ?? "").trim() && suggestion.pronunciation) {
-    patch.pronunciation = suggestion.pronunciation;
-  }
-  if (!String(existingRow.part_of_speech ?? "").trim() && suggestion.partOfSpeech) {
-    patch.part_of_speech = suggestion.partOfSpeech;
-  }
-  if (!String(existingRow.example ?? "").trim() && suggestion.example) {
-    patch.example = suggestion.example;
-  }
-  if (!String(existingRow.example_translation ?? "").trim() && suggestion.exampleTranslation) {
-    patch.example_translation = suggestion.exampleTranslation;
-  }
-
-  if (Object.keys(patch).length > 0) {
-    patch.source = "ai";
-  }
-
-  return patch;
-}
-
-async function refillWordbaseRow(request, response) {
+async function regenerateMemoryImage(request, response) {
+  const serviceClient = getServiceClient();
   const body = typeof request.body === "string" ? JSON.parse(request.body || "{}") : request.body ?? {};
   const wordbaseId = String(body.wordbaseId ?? "").trim();
-  const term = String(body.term ?? "").trim();
-  const locale = String(body.locale ?? "zh-Hant").trim();
 
-  if (!wordbaseId && !term) {
-    sendJson(response, 400, { error: "wordbaseId or term is required." });
+  if (!wordbaseId) {
+    sendJson(response, 400, { error: "wordbaseId is required." });
     return;
   }
 
-  const serviceClient = getServiceClient();
-  let lookupQuery = serviceClient.from("wordbase").select(WORD_COLUMNS.join(",")).limit(1);
-  if (wordbaseId) {
-    lookupQuery = lookupQuery.eq("id", wordbaseId);
-  } else {
-    lookupQuery = lookupQuery.eq("term_key", normalizeTerm(term));
+  const { data: row, error: rowError } = await serviceClient
+    .from("wordbase")
+    .select(WORD_COLUMNS.join(","))
+    .eq("id", wordbaseId)
+    .maybeSingle();
+
+  if (rowError) {
+    throw new Error(rowError.message || "Could not load WordBase row.");
   }
 
-  const { data: row, error: rowError } = await lookupQuery.maybeSingle();
-  if (rowError) {
-    throw new Error(rowError.message || "Could not read wordbase row.");
-  }
   if (!row) {
     sendJson(response, 404, { error: "WordBase row not found." });
     return;
   }
 
-  const suggestion = await generateCompleteWordSuggestion(row.term, locale);
-  const patch = buildAiPatch(row, suggestion);
+  const apiKey = String(process.env.AGNES_API_KEY || "").trim();
+  const image = await generateWordMemoryImage({
+    term: row.term,
+    definition: row.definition,
+    translation: row.translation,
+    example: row.example,
+    apiKey,
+  });
 
-  if (Object.keys(patch).length === 0) {
-    sendJson(response, 200, {
-      updated: false,
-      row: mapWordbaseRow(row),
-      message: "No missing fields to fill.",
-    });
-    return;
-  }
+  const memoryImage = {
+    imageUrl: image.imageUrl,
+    prompt: image.prompt ?? "",
+    model: image.model ?? "",
+    size: image.size ?? "",
+    savedAt: new Date().toISOString(),
+  };
 
   const { data: updatedRow, error: updateError } = await serviceClient
     .from("wordbase")
-    .update(patch)
+    .update({
+      memory_image: memoryImage,
+      source: "ai",
+    })
     .eq("id", row.id)
     .select(WORD_COLUMNS.join(","))
     .single();
 
   if (updateError) {
-    throw new Error(updateError.message || "Could not update WordBase row.");
+    throw new Error(updateError.message || "Could not update WordBase memory image.");
   }
 
+  const contributorEmailMap = await lookupContributorEmails(serviceClient, [updatedRow]);
   sendJson(response, 200, {
-    updated: true,
-    row: mapWordbaseRow(updatedRow),
+    row: mapWordbaseRow(updatedRow, contributorEmailMap),
   });
 }
 
@@ -337,12 +315,12 @@ export default async function handler(request, response) {
     await requireRole(request, ["owner", "admin"]);
 
     if (request.method === "GET") {
-      await listWordbaseRows(request, response);
+      await listRows(request, response);
       return;
     }
 
     if (request.method === "POST") {
-      await refillWordbaseRow(request, response);
+      await regenerateMemoryImage(request, response);
       return;
     }
 

@@ -2,7 +2,7 @@ import { createClient } from "@supabase/supabase-js";
 import { existsSync, readFileSync } from "node:fs";
 import { dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
-import { requireRole, sendAuthError } from "./_authz.js";
+import { requireRole, sendAuthError } from "../_authz.js";
 
 const ASSIGNABLE_ROLES = ["owner", "admin", "teacher", "student", "parent"];
 const URL_ENV_KEYS = [
@@ -31,7 +31,7 @@ const ENV_FILES = [
   ".env",
 ];
 
-const PROJECT_ROOT = resolve(dirname(fileURLToPath(import.meta.url)), "..");
+const PROJECT_ROOT = resolve(dirname(fileURLToPath(import.meta.url)), "../../..");
 let localEnvLoaded = false;
 
 function sendJson(response, statusCode, payload) {

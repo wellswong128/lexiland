@@ -1,7 +1,7 @@
-import { imageContainsReadableText } from "../lib/detectImageText.js";
-import { fetchWithTimeout } from "../lib/fetchWithTimeout.js";
-import { buildNegativePrompt, buildVisualImagePrompt } from "../lib/noTextImageRules.js";
-import { requireAiApiAccess, sendAuthError } from "./_authz.js";
+import { imageContainsReadableText } from "../../../lib/detectImageText.js";
+import { fetchWithTimeout } from "../../../lib/fetchWithTimeout.js";
+import { buildNegativePrompt, buildVisualImagePrompt } from "../../../lib/noTextImageRules.js";
+import { requireAiApiAccess, sendAuthError } from "../_authz.js";
 
 const AGNES_IMAGE_API_URL = "https://apihub.agnes-ai.com/v1/images/generations";
 const DEFAULT_IMAGE_MODEL = "agnes-image-2.1-flash";

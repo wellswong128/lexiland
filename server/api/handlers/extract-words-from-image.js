@@ -1,5 +1,5 @@
-import { splitIntoSingleWordTerms } from "../lib/normalizeWordTerms.js";
-import { requireAiApiAccess, sendAuthError } from "./_authz.js";
+import { splitIntoSingleWordTerms } from "../../../lib/normalizeWordTerms.js";
+import { requireAiApiAccess, sendAuthError } from "../_authz.js";
 
 const AGNES_API_URL = "https://apihub.agnes-ai.com/v1/chat/completions";
 const MAX_IMAGE_CHARS = 4_500_000;
