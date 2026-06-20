@@ -442,22 +442,6 @@ function PenaltyTwelvePage() {
   const [trailShow, setTrailShow] = useState(false);
   const [impact, setImpact] = useState(null);
 
-  if (isLoadingScope) {
-    return (
-      <section className="w-full max-w-5xl rounded-3xl border border-blue-200/70 bg-white/90 p-8 text-center shadow-2xl shadow-blue-950/10 sm:p-10">
-        <p className="text-sm font-medium text-slate-600">{t("wordGroupsScope.loading")}</p>
-      </section>
-    );
-  }
-
-  if (isScoped && (gameWords.length === 0 || usingFallback)) {
-    return (
-      <section className="w-full max-w-5xl rounded-3xl border border-blue-200/70 bg-white/90 p-6 shadow-2xl shadow-blue-950/10 sm:p-10">
-        <WordGroupScopeEmptyState compact />
-      </section>
-    );
-  }
-
   const currentQuestion = questions[currentIndex];
   const isPlaying = gameState === "playing";
 
@@ -953,6 +937,22 @@ function PenaltyTwelvePage() {
       schedule,
     ],
   );
+
+  if (isLoadingScope) {
+    return (
+      <section className="w-full max-w-5xl rounded-3xl border border-blue-200/70 bg-white/90 p-8 text-center shadow-2xl shadow-blue-950/10 sm:p-10">
+        <p className="text-sm font-medium text-slate-600">{t("wordGroupsScope.loading")}</p>
+      </section>
+    );
+  }
+
+  if (isScoped && (gameWords.length === 0 || usingFallback)) {
+    return (
+      <section className="w-full max-w-5xl rounded-3xl border border-blue-200/70 bg-white/90 p-6 shadow-2xl shadow-blue-950/10 sm:p-10">
+        <WordGroupScopeEmptyState compact />
+      </section>
+    );
+  }
 
   return (
     <section

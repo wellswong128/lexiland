@@ -141,11 +141,7 @@ function getServiceClient() {
 }
 
 function mapUser(user) {
-  const role =
-    user?.app_metadata?.role ??
-    user?.user_metadata?.role ??
-    user?.role ??
-    "student";
+  const role = user?.app_metadata?.role ?? "student";
 
   return {
     id: user.id,
@@ -200,11 +196,7 @@ async function updateUserRole(request, response, actorRole) {
     return;
   }
 
-  const targetRole =
-    userData.user?.app_metadata?.role ??
-    userData.user?.user_metadata?.role ??
-    userData.user?.role ??
-    "student";
+  const targetRole = userData.user?.app_metadata?.role ?? "student";
 
   if (actorRole !== "owner" && String(targetRole).toLowerCase() === "owner") {
     sendJson(response, 403, { error: "Only owner can modify owner accounts." });
