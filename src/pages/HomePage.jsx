@@ -133,6 +133,17 @@ const moreGames = [
 ];
 
 const STARTER_QUIZ_WORD_TARGET = 2;
+const STARTER_PHOTO_PATH = "/words/new?tab=photo&scan=camera";
+const STARTER_MANUAL_PATH = "/words/new?tab=manual";
+const STARTER_QUIZ_PATH = "/review/quiz";
+
+function getRouteOrSignupRedirect(role, targetPath) {
+  if (canRoute(role, targetPath)) {
+    return targetPath;
+  }
+
+  return `/auth?mode=signup&redirect=${encodeURIComponent(targetPath)}`;
+}
 
 function getPrimaryCta({ wordCount, dueCount, mistakeCount }) {
   if (dueCount > 0) {
@@ -198,6 +209,10 @@ function HomePage() {
   const canStartStarterQuiz = wordCount >= STARTER_QUIZ_WORD_TARGET;
   const showStarterOnboarding =
     !isHomeLoading && (wordCount < STARTER_QUIZ_WORD_TARGET || !lastActivity);
+  const starterPrimaryPath = canStartStarterQuiz ? STARTER_QUIZ_PATH : STARTER_PHOTO_PATH;
+  const starterPrimaryTo = getRouteOrSignupRedirect(role, starterPrimaryPath);
+  const starterManualTo = getRouteOrSignupRedirect(role, STARTER_MANUAL_PATH);
+  const showStarterAuthHint = !canRoute(role, starterPrimaryPath);
   const activeGroupLabel = getActiveGroupLabel(activeGroup, locale);
 
   const values = {
@@ -339,16 +354,19 @@ function HomePage() {
             <div className="home-starter-actions">
               <Link
                 className="home-starter-primary"
-                to={canStartStarterQuiz ? "/review/quiz" : "/words/new?tab=photo&scan=camera"}
+                to={starterPrimaryTo}
               >
                 {canStartStarterQuiz ? t("home.starterQuizCta") : t("home.starterPhotoCta")}
               </Link>
               {!canStartStarterQuiz ? (
-                <Link className="home-starter-secondary" to="/words/new?tab=manual">
+                <Link className="home-starter-secondary" to={starterManualTo}>
                   {t("home.starterManualCta")}
                 </Link>
               ) : null}
             </div>
+            {showStarterAuthHint ? (
+              <p className="home-starter-auth-hint">{t("home.starterAuthHint")}</p>
+            ) : null}
           </section>
         ) : null}
 

@@ -395,6 +395,15 @@
   color: #2563eb;
 }
 
+.home-starter-auth-hint {
+  margin: 10px 0 0;
+  text-align: center;
+  color: #64748b;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
 .home-starter-primary:hover,
 .home-starter-secondary:hover {
   transform: translateY(-1px);
