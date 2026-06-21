@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useState } from "react";
 import { Link } from "react-router-dom";
 import { useLocale } from "../locale/LocaleContext.jsx";
+import { getActiveGroupLabel } from "./getActiveGroupLabel.js";
 import {
   fetchUserGroupPicks,
   fetchWordGroups,
@@ -11,16 +12,8 @@ import { notifyActiveGroupChanged } from "./wordGroupScopeEvents.js";
 
 const GRADE_OPTIONS = ["P1", "P2", "P3", "P4", "P5", "P6", "S1", "S2", "S3", "S4", "S5", "S6"];
 
-function compareGrades(a, b) {
-  return GRADE_OPTIONS.indexOf(a.grade) - GRADE_OPTIONS.indexOf(b.grade);
-}
-
 function getGroupLabel(group, locale) {
-  if (locale === "en") {
-    return group.displayNameEn || group.groupCode;
-  }
-
-  return group.displayNameZhHant || group.displayNameEn || group.groupCode;
+  return getActiveGroupLabel(group, locale);
 }
 
 function WordGroupSettingsSection({ user, hasSupabaseConfig }) {
@@ -28,25 +21,29 @@ function WordGroupSettingsSection({ user, hasSupabaseConfig }) {
   const [availableGroups, setAvailableGroups] = useState([]);
   const [pickedGroupCodes, setPickedGroupCodes] = useState([]);
   const [activeGroupCode, setActiveGroupCode] = useState("");
-  const [browseGrade, setBrowseGrade] = useState("P1");
+  const [selectedGrade, setSelectedGrade] = useState("");
   const [isLoading, setIsLoading] = useState(true);
-  const [isSavingPicks, setIsSavingPicks] = useState(false);
   const [isSwitchingActive, setIsSwitchingActive] = useState(false);
   const [error, setError] = useState("");
   const [notice, setNotice] = useState("");
 
-  const pickedGroups = useMemo(() => {
-    const codeSet = new Set(pickedGroupCodes);
-    return availableGroups.filter((group) => codeSet.has(group.groupCode)).sort(compareGrades);
-  }, [availableGroups, pickedGroupCodes]);
+  const activeGroup = useMemo(
+    () => availableGroups.find((group) => group.groupCode === activeGroupCode) ?? null,
+    [activeGroupCode, availableGroups],
+  );
 
-  const browseGroups = useMemo(
+  const gradeGroups = useMemo(
     () =>
       availableGroups
-        .filter((group) => group.grade === browseGrade)
+        .filter((group) => group.grade === selectedGrade)
         .sort((a, b) => a.subject.localeCompare(b.subject)),
-    [availableGroups, browseGrade],
+    [availableGroups, selectedGrade],
   );
+
+  const gradesWithGroups = useMemo(() => {
+    const gradeSet = new Set(availableGroups.map((group) => group.grade));
+    return GRADE_OPTIONS.filter((grade) => gradeSet.has(grade));
+  }, [availableGroups]);
 
   async function loadGroupState() {
     if (!user || !hasSupabaseConfig) {
@@ -66,17 +63,14 @@ function WordGroupSettingsSection({ user, hasSupabaseConfig }) {
       const groups = groupsPayload.groups ?? [];
       const nextPickedCodes = (picksPayload.groups ?? []).map((group) => group.groupCode);
       const nextActiveCode = picksPayload.activeGroupCode || "";
+      const nextActiveGroup = groups.find((group) => group.groupCode === nextActiveCode);
+      const gradeSet = new Set(groups.map((group) => group.grade));
+      const firstGradeWithGroups = GRADE_OPTIONS.find((grade) => gradeSet.has(grade)) || "P1";
 
       setAvailableGroups(groups);
       setPickedGroupCodes(nextPickedCodes);
       setActiveGroupCode(nextActiveCode);
-
-      if (nextPickedCodes.length > 0) {
-        const firstPicked = groups.find((group) => group.groupCode === nextPickedCodes[0]);
-        if (firstPicked?.grade) {
-          setBrowseGrade(firstPicked.grade);
-        }
-      }
+      setSelectedGrade(nextActiveGroup?.grade || firstGradeWithGroups);
     } catch (loadError) {
       setError(loadError.message || t("settings.wordGroups.loadError"));
     } finally {
@@ -88,39 +82,14 @@ function WordGroupSettingsSection({ user, hasSupabaseConfig }) {
     void loadGroupState();
   }, [user, hasSupabaseConfig]);
 
-  function togglePick(groupCode) {
-    setPickedGroupCodes((current) => {
-      if (current.includes(groupCode)) {
-        return current.filter((code) => code !== groupCode);
-      }
-
-      return [...current, groupCode];
-    });
-  }
-
-  async function handleSavePicks() {
-    try {
-      setIsSavingPicks(true);
-      setError("");
-      setNotice("");
-
-      const payload = await saveUserGroupPicks(pickedGroupCodes);
-      const nextPickedCodes = (payload.groups ?? []).map((group) => group.groupCode);
-      const nextActiveCode = payload.activeGroupCode || "";
-
-      setPickedGroupCodes(nextPickedCodes);
-      setActiveGroupCode(nextActiveCode);
-      setNotice(t("settings.wordGroups.saveSuccess"));
-      notifyActiveGroupChanged();
-    } catch (saveError) {
-      setError(saveError.message || t("settings.wordGroups.saveError"));
-    } finally {
-      setIsSavingPicks(false);
+  useEffect(() => {
+    if (!selectedGrade && gradesWithGroups.length > 0) {
+      setSelectedGrade(activeGroup?.grade || gradesWithGroups[0]);
     }
-  }
+  }, [activeGroup?.grade, gradesWithGroups, selectedGrade]);
 
-  async function handleActiveGroupChange(nextGroupCode) {
-    if (!nextGroupCode || nextGroupCode === activeGroupCode) {
+  async function handleSelectGroup(group) {
+    if (!group?.groupCode || group.groupCode === activeGroupCode || isSwitchingActive) {
       return;
     }
 
@@ -129,8 +98,17 @@ function WordGroupSettingsSection({ user, hasSupabaseConfig }) {
       setError("");
       setNotice("");
 
-      const payload = await setUserActiveGroup(nextGroupCode);
-      setActiveGroupCode(payload.activeGroupCode || nextGroupCode);
+      let nextPickedCodes = pickedGroupCodes;
+      if (!pickedGroupCodes.includes(group.groupCode)) {
+        nextPickedCodes = [...pickedGroupCodes, group.groupCode];
+        const pickPayload = await saveUserGroupPicks(nextPickedCodes);
+        nextPickedCodes = (pickPayload.groups ?? []).map((item) => item.groupCode);
+        setPickedGroupCodes(nextPickedCodes);
+      }
+
+      const payload = await setUserActiveGroup(group.groupCode);
+      setActiveGroupCode(payload.activeGroupCode || group.groupCode);
+      setSelectedGrade(group.grade);
       setNotice(t("settings.wordGroups.activeUpdated"));
       notifyActiveGroupChanged();
     } catch (switchError) {
@@ -182,111 +160,106 @@ function WordGroupSettingsSection({ user, hasSupabaseConfig }) {
           {availableGroups.length === 0 ? (
             <p className="mt-4 text-sm text-slate-600">{t("settings.wordGroups.emptyCatalog")}</p>
           ) : (
-            <>
-              <div className="mt-5 rounded-2xl border border-blue-200 bg-white p-4">
-                <label className="block text-sm font-bold text-blue-950" htmlFor="browse-grade">
-                  {t("settings.wordGroups.browseGrade")}
-                </label>
-                <select
-                  className="mt-2 w-full rounded-xl border border-blue-200 bg-white px-3 py-2 text-sm text-slate-700"
-                  id="browse-grade"
-                  onChange={(event) => setBrowseGrade(event.target.value)}
-                  value={browseGrade}
-                >
-                  {GRADE_OPTIONS.map((grade) => (
-                    <option key={grade} value={grade}>
-                      {grade}
-                    </option>
-                  ))}
-                </select>
+            <div className="mt-5 space-y-5 rounded-2xl border border-blue-200 bg-white p-4">
+              {activeGroup ? (
+                <div className="rounded-2xl border border-blue-200 bg-blue-50/80 px-4 py-3">
+                  <p className="text-xs font-bold uppercase tracking-[0.14em] text-blue-700">
+                    {t("settings.wordGroups.currentActive")}
+                  </p>
+                  <p className="mt-1 text-base font-bold text-blue-950">
+                    {getGroupLabel(activeGroup, locale)}
+                  </p>
+                </div>
+              ) : null}
 
-                <div className="mt-4 space-y-2">
-                  {browseGroups.length === 0 ? (
-                    <p className="text-sm text-slate-600">
-                      {t("settings.wordGroups.noGroupsForGrade")}
-                    </p>
-                  ) : (
-                    browseGroups.map((group) => {
-                      const checked = pickedGroupCodes.includes(group.groupCode);
+              <div>
+                <p className="text-sm font-bold text-blue-950">
+                  {t("settings.wordGroups.browseGrade")}
+                </p>
+                <div className="mt-3 grid grid-cols-4 gap-2 sm:grid-cols-6">
+                  {GRADE_OPTIONS.map((grade) => {
+                    const hasGroups = gradesWithGroups.includes(grade);
+                    const isSelected = selectedGrade === grade;
+                    const isActiveGrade = activeGroup?.grade === grade;
+
+                    return (
+                      <button
+                        className={[
+                          "rounded-2xl border px-2 py-3 text-sm font-bold transition",
+                          !hasGroups
+                            ? "cursor-not-allowed border-slate-200 bg-slate-50 text-slate-300"
+                            : isSelected
+                              ? "border-blue-700 bg-blue-700 text-white shadow-md shadow-blue-900/10"
+                              : "border-blue-100 bg-white text-blue-900 hover:border-blue-300 hover:bg-blue-50",
+                        ].join(" ")}
+                        disabled={!hasGroups || isSwitchingActive}
+                        key={grade}
+                        onClick={() => setSelectedGrade(grade)}
+                        type="button"
+                      >
+                        {grade}
+                        {isActiveGrade ? (
+                          <span className="mt-1 block text-[10px] font-semibold opacity-80">
+                            ●
+                          </span>
+                        ) : null}
+                      </button>
+                    );
+                  })}
+                </div>
+              </div>
+
+              <div>
+                <p className="text-sm font-bold text-blue-950">
+                  {t("settings.wordGroups.chooseSubject")}
+                  {selectedGrade ? ` · ${selectedGrade}` : ""}
+                </p>
+
+                {gradeGroups.length === 0 ? (
+                  <p className="mt-3 text-sm text-slate-600">
+                    {t("settings.wordGroups.noGroupsForGrade")}
+                  </p>
+                ) : (
+                  <div className="mt-3 grid gap-2">
+                    {gradeGroups.map((group) => {
+                      const isActive = group.groupCode === activeGroupCode;
+
                       return (
-                        <label
-                          className="flex cursor-pointer items-start gap-3 rounded-xl border border-blue-100 px-3 py-2"
+                        <button
+                          className={[
+                            "flex w-full items-center justify-between rounded-2xl border px-4 py-3 text-left transition",
+                            isActive
+                              ? "border-green-500 bg-green-50 text-green-950"
+                              : "border-blue-100 bg-white text-slate-700 hover:border-blue-300 hover:bg-blue-50",
+                            isSwitchingActive ? "opacity-70" : "",
+                          ].join(" ")}
+                          disabled={isSwitchingActive}
                           key={group.groupCode}
+                          onClick={() => {
+                            void handleSelectGroup(group);
+                          }}
+                          type="button"
                         >
-                          <input
-                            checked={checked}
-                            className="mt-1"
-                            onChange={() => togglePick(group.groupCode)}
-                            type="checkbox"
-                          />
-                          <span className="text-sm text-slate-700">
-                            {getGroupLabel(group, locale)}
+                          <span>
+                            <span className="block text-sm font-bold">
+                              {getGroupLabel(group, locale)}
+                            </span>
                             <span className="mt-1 block text-xs text-slate-500">
                               {group.groupCode}
                             </span>
                           </span>
-                        </label>
+                          {isActive ? (
+                            <span className="rounded-full bg-green-600 px-2.5 py-1 text-xs font-bold text-white">
+                              ✓
+                            </span>
+                          ) : null}
+                        </button>
                       );
-                    })
-                  )}
-                </div>
-
-                <button
-                  className="mt-4 rounded-full bg-blue-700 px-5 py-3 text-sm font-bold text-white transition hover:bg-blue-800 disabled:bg-slate-300"
-                  disabled={isSavingPicks}
-                  onClick={handleSavePicks}
-                  type="button"
-                >
-                  {isSavingPicks
-                    ? t("settings.wordGroups.savingPicks")
-                    : t("settings.wordGroups.savePicks")}
-                </button>
-              </div>
-
-              <div className="mt-5 rounded-2xl border border-blue-200 bg-white p-4">
-                <h3 className="text-base font-bold text-blue-950">
-                  {t("settings.wordGroups.pickedTitle")}
-                </h3>
-                {pickedGroups.length === 0 ? (
-                  <p className="mt-2 text-sm text-slate-600">
-                    {t("settings.wordGroups.noPicksYet")}
-                  </p>
-                ) : (
-                  <>
-                    <ul className="mt-3 space-y-2">
-                      {pickedGroups.map((group) => (
-                        <li
-                          className="rounded-xl border border-blue-100 px-3 py-2 text-sm text-slate-700"
-                          key={group.groupCode}
-                        >
-                          {getGroupLabel(group, locale)}
-                        </li>
-                      ))}
-                    </ul>
-
-                    <label className="mt-4 block text-sm font-bold text-blue-950" htmlFor="active-group">
-                      {t("settings.wordGroups.activeGroup")}
-                    </label>
-                    <select
-                      className="mt-2 w-full rounded-xl border border-blue-200 bg-white px-3 py-2 text-sm text-slate-700"
-                      disabled={isSwitchingActive}
-                      id="active-group"
-                      onChange={(event) => {
-                        void handleActiveGroupChange(event.target.value);
-                      }}
-                      value={activeGroupCode}
-                    >
-                      <option value="">{t("settings.wordGroups.selectActive")}</option>
-                      {pickedGroups.map((group) => (
-                        <option key={group.groupCode} value={group.groupCode}>
-                          {getGroupLabel(group, locale)}
-                        </option>
-                      ))}
-                    </select>
-                  </>
+                    })}
+                  </div>
                 )}
               </div>
-            </>
+            </div>
           )}
         </>
       )}
