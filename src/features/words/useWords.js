@@ -25,10 +25,15 @@ import {
   deleteWordFromSupabase,
   fetchWordsFromSupabase,
   insertWordInSupabase,
+  insertWordsInSupabase,
   mapWordChangesToUpdate,
   updateWordInSupabase,
 } from "./wordsApi.js";
-import { fetchUserActiveGroupWords } from "../wordGroups/wordGroupsApi.js";
+import {
+  fetchUserActiveGroupWords,
+  invalidateUserActiveGroupWordsCache,
+} from "../wordGroups/wordGroupsApi.js";
+import { saveCachedActiveGroupScope } from "../wordGroups/activeGroupScopeCache.js";
 import { ACTIVE_GROUP_CHANGED_EVENT } from "../wordGroups/wordGroupScopeEvents.js";
 import { syncActiveGroupWordMemory } from "../wordGroups/syncActiveGroupWordMemory.js";
 import { WORD_SCOPE_MODE_CHANGED_EVENT, loadWordScopeMode, WORD_SCOPE_MODES } from "../wordGroups/wordScopeMode.js";
@@ -134,15 +139,27 @@ function hasRemoteWordChanges(changes) {
   return Object.keys(mapWordChangesToUpdate(changes)).length > 0;
 }
 
-async function importMissingActiveGroupWords(userId, existingWords) {
-  const payload = await fetchUserActiveGroupWords({ includeWords: true });
+async function importMissingActiveGroupWords(userId, existingWords, preloadedPayload = null) {
+  const payload =
+    preloadedPayload ?? (await fetchUserActiveGroupWords({ includeWords: true }));
   const mappedWords = Array.isArray(payload.mappedWords) ? payload.mappedWords : [];
   if (!payload.activeGroup || mappedWords.length === 0) {
-    return { activeGroup: payload.activeGroup ?? null, importedWords: [] };
+    return {
+      activeGroup: payload.activeGroup ?? null,
+      importedWords: [],
+      mappedWords,
+    };
+  }
+
+  if (userId) {
+    saveCachedActiveGroupScope(userId, {
+      activeGroup: payload.activeGroup,
+      mappedTerms: Array.isArray(payload.mappedTerms) ? payload.mappedTerms : [],
+    });
   }
 
   const existingTerms = new Set(existingWords.map((word) => normalizeTerm(word.term)));
-  const savedWords = [];
+  const drafts = [];
 
   for (const sourceWord of mappedWords) {
     const term = normalizeText(sourceWord?.term);
@@ -152,8 +169,8 @@ async function importMissingActiveGroupWords(userId, existingWords) {
       continue;
     }
 
-    try {
-      const draft = createWord(
+    drafts.push(
+      createWord(
         {
           term,
           definition,
@@ -175,18 +192,17 @@ async function importMissingActiveGroupWords(userId, existingWords) {
         {
           source: WORD_SOURCES.IMPORT,
         },
-      );
-      const saved = await insertWordInSupabase(draft, userId);
-      savedWords.push(saved);
-      existingTerms.add(termKey);
-    } catch {
-      // Skip invalid or duplicate terms and continue importing remaining words.
-    }
+      ),
+    );
+    existingTerms.add(termKey);
   }
+
+  const savedWords = drafts.length > 0 ? await insertWordsInSupabase(drafts, userId) : [];
 
   return {
     activeGroup: payload.activeGroup ?? null,
     importedWords: savedWords,
+    mappedWords,
   };
 }
 
@@ -207,6 +223,7 @@ export function useWords({ isAuthLoading = false, user = null } = {}, storage) {
   const isUsingSupabase = hasSupabaseConfig && Boolean(user);
   const wordsRef = useRef(words);
   const updateWordRef = useRef(null);
+  const lastMappedWordsRef = useRef(null);
 
   wordsRef.current = words;
 
@@ -223,15 +240,21 @@ export function useWords({ isAuthLoading = false, user = null } = {}, storage) {
     setIsWordsLoading(true);
     setWordsError("");
 
-    fetchWordsFromSupabase(user.id)
-      .then(async (remoteWords) => {
+    Promise.all([
+      fetchWordsFromSupabase(user.id),
+      fetchUserActiveGroupWords({ includeWords: true }),
+    ])
+      .then(async ([remoteWords, groupPayload]) => {
         if (!isMounted) {
           return;
         }
-        const { importedWords, activeGroup } = await importMissingActiveGroupWords(
+
+        const { importedWords, activeGroup, mappedWords } = await importMissingActiveGroupWords(
           user.id,
           remoteWords,
+          groupPayload,
         );
+        lastMappedWordsRef.current = mappedWords;
         if (!isMounted) {
           return;
         }
@@ -553,10 +576,14 @@ export function useWords({ isAuthLoading = false, user = null } = {}, storage) {
     }
 
     try {
+      const preloadedMappedWords = lastMappedWordsRef.current;
+      lastMappedWordsRef.current = null;
+
       await syncActiveGroupWordMemory(
         wordsRef.current,
         (wordId, changes) => updateWordRef.current(wordId, changes),
         user.id,
+        preloadedMappedWords,
       );
     } catch (error) {
       console.warn("Could not sync active-group memory from wordbase.", error);
@@ -569,10 +596,12 @@ export function useWords({ isAuthLoading = false, user = null } = {}, storage) {
     }
 
     try {
-      const { importedWords, activeGroup } = await importMissingActiveGroupWords(
+      invalidateUserActiveGroupWordsCache();
+      const { importedWords, activeGroup, mappedWords } = await importMissingActiveGroupWords(
         user.id,
         wordsRef.current,
       );
+      lastMappedWordsRef.current = mappedWords;
 
       if (importedWords.length > 0) {
         const nextWords = hydrateWords([...importedWords, ...wordsRef.current], storage);
@@ -590,6 +619,7 @@ export function useWords({ isAuthLoading = false, user = null } = {}, storage) {
         wordsRef.current,
         (wordId, changes) => updateWordRef.current(wordId, changes),
         user.id,
+        mappedWords,
       );
     } catch (error) {
       console.warn("Could not sync active-group words from wordbase.", error);

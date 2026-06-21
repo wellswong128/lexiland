@@ -67,14 +67,26 @@ export default async function handler(request, response) {
       return;
     }
 
-    const { data: group, error: groupError } = await rlsClient
-      .from("word_groups")
-      .select("id,group_code,grade,subject,display_name_en,display_name_zh_hant")
-      .eq("id", activeGroupId)
-      .maybeSingle();
+    const [
+      { data: group, error: groupError },
+      { data: mappings, error: mappingError },
+    ] = await Promise.all([
+      rlsClient
+        .from("word_groups")
+        .select("id,group_code,grade,subject,display_name_en,display_name_zh_hant")
+        .eq("id", activeGroupId)
+        .maybeSingle(),
+      rlsClient
+        .from("wordbase_group_map")
+        .select("wordbase_id")
+        .eq("group_id", activeGroupId),
+    ]);
 
     if (groupError) {
       throw new Error(groupError.message || "Failed to load active group details.");
+    }
+    if (mappingError) {
+      throw new Error(mappingError.message || "Failed to load group mappings.");
     }
     if (!group) {
       sendJson(response, 200, {
@@ -82,15 +94,6 @@ export default async function handler(request, response) {
         mappedTerms: [],
       });
       return;
-    }
-
-    const { data: mappings, error: mappingError } = await rlsClient
-      .from("wordbase_group_map")
-      .select("wordbase_id")
-      .eq("group_id", activeGroupId);
-
-    if (mappingError) {
-      throw new Error(mappingError.message || "Failed to load group mappings.");
     }
 
     const wordbaseIds = [...new Set((mappings ?? []).map((row) => row.wordbase_id).filter(Boolean))];

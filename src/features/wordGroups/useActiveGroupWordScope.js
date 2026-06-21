@@ -1,7 +1,6 @@
 import { useCallback, useEffect, useMemo, useState } from "react";
 import { hasSupabaseConfig } from "../../lib/supabaseClient.js";
 import { normalizeTerm } from "../words/wordTypes.js";
-import { getApiAuthHeaders } from "../../lib/apiAuth.js";
 import { ACTIVE_GROUP_CHANGED_EVENT } from "./wordGroupScopeEvents.js";
 import {
   clearCachedActiveGroupScope,
@@ -9,27 +8,15 @@ import {
   saveCachedActiveGroupScope,
 } from "./activeGroupScopeCache.js";
 import {
+  fetchUserActiveGroupWords,
+  invalidateUserActiveGroupWordsCache,
+} from "./wordGroupsApi.js";
+import {
   loadWordScopeMode,
   saveWordScopeMode,
   WORD_SCOPE_MODE_CHANGED_EVENT,
   WORD_SCOPE_MODES,
 } from "./wordScopeMode.js";
-
-async function fetchActiveGroupWords() {
-  const authHeaders = await getApiAuthHeaders();
-  const response = await fetch("/api/user-active-group-words", {
-    headers: {
-      "Content-Type": "application/json",
-      ...authHeaders,
-    },
-  });
-  const payload = await response.json();
-  if (!response.ok) {
-    throw new Error(payload.error || "Failed to load active-group words.");
-  }
-
-  return payload;
-}
 
 export function useActiveGroupWordScope(words, user) {
   const shouldScopeByGroup = hasSupabaseConfig && Boolean(user);
@@ -79,7 +66,7 @@ export function useActiveGroupWordScope(words, user) {
     };
   }, [user?.id]);
 
-  const loadScope = useCallback(async () => {
+  const loadScope = useCallback(async ({ forceRefresh = false } = {}) => {
     if (!shouldScopeByGroup) {
       setState({
         activeGroup: null,
@@ -90,14 +77,17 @@ export function useActiveGroupWordScope(words, user) {
       return;
     }
 
-    setState((current) => ({
-      ...current,
-      isLoading: true,
-      error: "",
-    }));
+    setState((current) => {
+      const hasCachedData = Boolean(current.activeGroup) || current.mappedTerms.length > 0;
+      return {
+        ...current,
+        isLoading: !hasCachedData,
+        error: "",
+      };
+    });
 
     try {
-      const payload = await fetchActiveGroupWords();
+      const payload = await fetchUserActiveGroupWords({ forceRefresh });
       const activeGroup = payload.activeGroup ?? null;
       const mappedTerms = Array.isArray(payload.mappedTerms) ? payload.mappedTerms : [];
 
@@ -135,9 +125,10 @@ export function useActiveGroupWordScope(words, user) {
     }
 
     const handleActiveGroupChanged = () => {
+      invalidateUserActiveGroupWordsCache();
       saveWordScopeMode(user?.id, WORD_SCOPE_MODES.GROUP);
       setScopeMode(WORD_SCOPE_MODES.GROUP);
-      void loadScope();
+      void loadScope({ forceRefresh: true });
     };
 
     window.addEventListener(ACTIVE_GROUP_CHANGED_EVENT, handleActiveGroupChanged);

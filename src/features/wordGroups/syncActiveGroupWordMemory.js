@@ -52,7 +52,12 @@ export function buildWordMemoryChangesFromMapped(word, mappedWord) {
   return dirty ? changes : null;
 }
 
-export async function syncActiveGroupWordMemory(userWords, updateWord, userId) {
+export async function syncActiveGroupWordMemory(
+  userWords,
+  updateWord,
+  userId,
+  preloadedMappedWords = null,
+) {
   if (!userId || !Array.isArray(userWords) || userWords.length === 0) {
     return 0;
   }
@@ -61,13 +66,21 @@ export async function syncActiveGroupWordMemory(userWords, updateWord, userId) {
     return 0;
   }
 
-  const payload = await fetchUserActiveGroupWords({ includeWords: true });
-  if (!payload.activeGroup || !Array.isArray(payload.mappedWords) || payload.mappedWords.length === 0) {
+  let mappedWords = preloadedMappedWords;
+  if (!Array.isArray(mappedWords)) {
+    const payload = await fetchUserActiveGroupWords({ includeWords: true });
+    if (!payload.activeGroup) {
+      return 0;
+    }
+    mappedWords = payload.mappedWords;
+  }
+
+  if (!Array.isArray(mappedWords) || mappedWords.length === 0) {
     return 0;
   }
 
   const mappedByTerm = new Map(
-    payload.mappedWords
+    mappedWords
       .map((mappedWord) => [normalizeTerm(mappedWord.term), mappedWord])
       .filter(([termKey]) => Boolean(termKey)),
   );
