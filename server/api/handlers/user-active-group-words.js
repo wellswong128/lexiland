@@ -29,6 +29,33 @@ function parseBoolean(value, fallback = false) {
   return fallback;
 }
 
+function flattenMappedWordbaseRows(rows) {
+  if (!Array.isArray(rows) || rows.length === 0) {
+    return [];
+  }
+
+  const wordbaseRows = [];
+  for (const row of rows) {
+    const mappedWordbase = row?.wordbase;
+    if (!mappedWordbase) {
+      continue;
+    }
+
+    if (Array.isArray(mappedWordbase)) {
+      for (const mappedRow of mappedWordbase) {
+        if (mappedRow) {
+          wordbaseRows.push(mappedRow);
+        }
+      }
+      continue;
+    }
+
+    wordbaseRows.push(mappedWordbase);
+  }
+
+  return wordbaseRows;
+}
+
 export default async function handler(request, response) {
   if (request.method !== "GET") {
     sendJson(response, 405, { error: "Method not allowed." });
@@ -67,9 +94,13 @@ export default async function handler(request, response) {
       return;
     }
 
+    const wordbaseSelect = includeWords
+      ? "term_key,term,definition,translation,pronunciation,part_of_speech,example,example_translation,tags,memory_tips_by_locale,memory_image"
+      : "term_key,term";
+
     const [
       { data: group, error: groupError },
-      { data: mappings, error: mappingError },
+      { data: mappedWordbaseRows, error: mappingError },
     ] = await Promise.all([
       rlsClient
         .from("word_groups")
@@ -78,7 +109,7 @@ export default async function handler(request, response) {
         .maybeSingle(),
       rlsClient
         .from("wordbase_group_map")
-        .select("wordbase_id")
+        .select(`wordbase:wordbase_id(${wordbaseSelect})`)
         .eq("group_id", activeGroupId),
     ]);
 
@@ -96,8 +127,8 @@ export default async function handler(request, response) {
       return;
     }
 
-    const wordbaseIds = [...new Set((mappings ?? []).map((row) => row.wordbase_id).filter(Boolean))];
-    if (wordbaseIds.length === 0) {
+    const wordbaseRows = flattenMappedWordbaseRows(mappedWordbaseRows);
+    if (wordbaseRows.length === 0) {
       sendJson(response, 200, {
         activeGroup: {
           id: group.id,
@@ -110,19 +141,6 @@ export default async function handler(request, response) {
         mappedTerms: [],
       });
       return;
-    }
-
-    const wordbaseSelect = includeWords
-      ? "term_key,term,definition,translation,pronunciation,part_of_speech,example,example_translation,tags,memory_tips_by_locale,memory_image"
-      : "term_key,term";
-
-    const { data: wordbaseRows, error: wordbaseError } = await rlsClient
-      .from("wordbase")
-      .select(wordbaseSelect)
-      .in("id", wordbaseIds);
-
-    if (wordbaseError) {
-      throw new Error(wordbaseError.message || "Failed to load mapped words.");
     }
 
     const mappedTerms = [...new Set(
