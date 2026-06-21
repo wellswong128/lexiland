@@ -168,9 +168,18 @@ function getPrimaryCta({ wordCount, dueCount, mistakeCount }) {
 
 function HomePage() {
   const { locale, t } = useLocale();
-  const { isAuthLoading, user, words } = useWordsContext();
-  const { activeGroup, isGroupScopeActive, isUsingCustomWords, scopedWords } =
-    useActiveGroupWordScope(words, user);
+  const { isAuthLoading, isWordsLoading, user, words } = useWordsContext();
+  const {
+    activeGroup,
+    isGroupScopeActive,
+    isUsingCustomWords,
+    scopedWords,
+    isLoadingScope,
+  } = useActiveGroupWordScope(words, user);
+  const isHomeLoading =
+    isAuthLoading ||
+    isWordsLoading ||
+    (hasSupabaseConfig && Boolean(user) && isLoadingScope);
   const learningWords = isGroupScopeActive ? scopedWords : words;
   const role = getRoleFromUser(user);
   const dueWords = getDueWords(learningWords);
@@ -211,51 +220,64 @@ function HomePage() {
             <h1>⭐ {t("home.eyebrow")}</h1>
             <div className="home-brand-title">{t("brand.displayName")}</div>
             <div className="home-brand-sub">{t("brand.tagline")}</div>
-            {isUsingCustomWords ? (
-              <p className="home-active-group home-active-group-static">
-                {t("wordGroupsScope.customWordsLabel")}
-              </p>
-            ) : activeGroupLabel ? (
-              <Link className="home-active-group" to="/settings">
-                {t("wordGroupsScope.activeGroupLabel", { group: activeGroupLabel })}
-              </Link>
+            {!isHomeLoading ? (
+              isUsingCustomWords ? (
+                <p className="home-active-group home-active-group-static">
+                  {t("wordGroupsScope.customWordsLabel")}
+                </p>
+              ) : activeGroupLabel ? (
+                <Link className="home-active-group" to="/settings">
+                  {t("wordGroupsScope.activeGroupLabel", { group: activeGroupLabel })}
+                </Link>
+              ) : null
             ) : null}
-            <WordScopeModeSwitch className="home-scope-switch" compact />
-            {!isEmpty && dueCount > 0 ? (
-              <p className="home-brand-due">
-                <span className="review-word-translation">
-                  {t("home.heroDue", { count: dueCount })}
-                </span>
-              </p>
+            {!isHomeLoading ? (
+              <>
+                <WordScopeModeSwitch className="home-scope-switch" compact />
+                {!isEmpty && dueCount > 0 ? (
+                  <p className="home-brand-due">
+                    <span className="review-word-translation">
+                      {t("home.heroDue", { count: dueCount })}
+                    </span>
+                  </p>
+                ) : null}
+              </>
             ) : null}
           </div>
         </div>
 
-        <div className="home-stats">
-          <div className="home-card">
-            <div className="home-stat-title">{t("home.todayReviewedLabel")}</div>
-            <div className="home-stat-row">
-              <span className="home-stat-value">{todayReviewed}</span>
-              <span aria-hidden="true" className="home-stat-emoji">
-                📒
-              </span>
+        {!isHomeLoading ? (
+          <div className="home-stats">
+            <div className="home-card">
+              <div className="home-stat-title">{t("home.todayReviewedLabel")}</div>
+              <div className="home-stat-row">
+                <span className="home-stat-value">{todayReviewed}</span>
+                <span aria-hidden="true" className="home-stat-emoji">
+                  📒
+                </span>
+              </div>
+            </div>
+            <div className="home-card">
+              <div className="home-stat-title">{t("home.streakLabel")}</div>
+              <div className="home-stat-row">
+                <span className="home-stat-value">{streak}</span>
+                <span aria-hidden="true" className="home-stat-emoji">
+                  🔥
+                </span>
+              </div>
             </div>
           </div>
-          <div className="home-card">
-            <div className="home-stat-title">{t("home.streakLabel")}</div>
-            <div className="home-stat-row">
-              <span className="home-stat-value">{streak}</span>
-              <span aria-hidden="true" className="home-stat-emoji">
-                🔥
-              </span>
-            </div>
-          </div>
-        </div>
+        ) : null}
       </section>
 
       <div className="home-section">
+        {isHomeLoading ? (
+          <p aria-busy="true" className="home-loading-banner">
+            {t("home.loading")}
+          </p>
+        ) : null}
 
-        {canAccessPrimaryCta ? (
+        {!isHomeLoading && canAccessPrimaryCta ? (
           <Link className="home-cta" to={primaryCta.to}>
             ✨{" "}
             {primaryCta.count != null
@@ -264,13 +286,13 @@ function HomePage() {
           </Link>
         ) : null}
 
-        {dueCount > 0 && mistakeCount > 0 ? (
+        {!isHomeLoading && dueCount > 0 && mistakeCount > 0 ? (
           <Link className="home-mini-pill" to="/mistakes">
             {t("home.secondaryMistakesPill", { count: mistakeCount })}
           </Link>
         ) : null}
 
-        {showContinue ? (
+        {!isHomeLoading && showContinue ? (
           <Link className="home-continue" to={lastActivity.path}>
             <div className="home-continue-left">
               <div aria-hidden="true" className="home-iconbox">
@@ -289,7 +311,7 @@ function HomePage() {
           </Link>
         ) : null}
 
-        {showSyncPrompt ? (
+        {!isHomeLoading && showSyncPrompt ? (
           <div className="home-sync-banner">
             <p>{t("home.syncPrompt")}</p>
             <Link className="home-sync-action" to="/auth?mode=login&redirect=/">
@@ -298,8 +320,11 @@ function HomePage() {
           </div>
         ) : null}
 
-        {isEmpty ? <p className="home-empty-banner">{t("home.emptyGuidance")}</p> : null}
+        {!isHomeLoading && isEmpty ? (
+          <p className="home-empty-banner">{t("home.emptyGuidance")}</p>
+        ) : null}
 
+        {!isHomeLoading ? (
         <div className="home-three">
           {statCards.map((card) => (
             <Link className={`home-small home-${card.tone}`} key={card.key} to={card.to}>
@@ -309,7 +334,10 @@ function HomePage() {
             </Link>
           ))}
         </div>
+        ) : null}
 
+        {!isHomeLoading ? (
+        <>
         <h2 className="home-section-title">{t("home.quickActionsTitle")}</h2>
         <div className="home-quick-grid">
           {visibleQuickActions.map((action) => (
@@ -383,6 +411,8 @@ function HomePage() {
             ))}
           </div>
         </section>
+        </>
+        ) : null}
       </div>
     </div>
   );

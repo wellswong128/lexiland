@@ -709,6 +709,20 @@
   color: #92400e;
 }
 
+.home-loading-banner {
+  margin-bottom: 14px;
+  border-radius: 20px;
+  border: 1px dashed #bfdbfe;
+  background: #eff6ff;
+  box-shadow: var(--home-shadow);
+  padding: 20px 16px;
+  text-align: center;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.55;
+  color: #475569;
+}
+
 .home-games-muted {
   opacity: 0.58;
 }
