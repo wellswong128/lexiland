@@ -193,7 +193,7 @@ export function useActiveGroupWordScope(words, user) {
     isGroupScopeActive,
     isScoped: shouldScopeByGroup,
     isUsingCustomWords,
-    isLoadingScope: state.isLoading,
+    isLoadingScope: wantsGroupScope && state.isLoading,
     scopeError: state.error,
     scopeMode,
     scopeReason,
