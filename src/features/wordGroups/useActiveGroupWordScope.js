@@ -38,8 +38,9 @@ export function useActiveGroupWordScope(words, user) {
     shouldScopeByGroup && scopeMode === WORD_SCOPE_MODES.GROUP;
   const isUsingCustomWords =
     shouldScopeByGroup && Boolean(state.activeGroup) && scopeMode === WORD_SCOPE_MODES.CUSTOM;
+  const hasScopeLoadError = Boolean(state.error);
   const isGroupScopeActive =
-    wantsGroupScope && (Boolean(state.activeGroup) || state.isLoading);
+    wantsGroupScope && (Boolean(state.activeGroup) || state.isLoading || hasScopeLoadError);
 
   useEffect(() => {
     setScopeMode(loadWordScopeMode(user?.id));
@@ -71,7 +72,7 @@ export function useActiveGroupWordScope(words, user) {
       setState({
         activeGroup: null,
         mappedTerms: [],
-        isLoading: false,
+        isLoading: true,
         error: "",
       });
       return;
@@ -81,7 +82,7 @@ export function useActiveGroupWordScope(words, user) {
       const hasCachedData = Boolean(current.activeGroup) || current.mappedTerms.length > 0;
       return {
         ...current,
-        isLoading: !hasCachedData,
+        isLoading: forceRefresh || !hasCachedData,
         error: "",
       };
     });
@@ -102,15 +103,20 @@ export function useActiveGroupWordScope(words, user) {
         error: "",
       });
     } catch (error) {
-      if (user?.id) {
-        clearCachedActiveGroupScope(user.id);
-      }
+      setState((current) => {
+        const cachedScope = loadCachedActiveGroupScope(user?.id);
+        const activeGroup = current.activeGroup ?? cachedScope?.activeGroup ?? null;
+        const mappedTerms =
+          current.mappedTerms.length > 0
+            ? current.mappedTerms
+            : cachedScope?.mappedTerms ?? [];
 
-      setState({
-        activeGroup: null,
-        mappedTerms: [],
-        isLoading: false,
-        error: error.message || "Failed to load active-group words.",
+        return {
+          activeGroup,
+          mappedTerms,
+          isLoading: false,
+          error: error.message || "Failed to load active-group words.",
+        };
       });
     }
   }, [shouldScopeByGroup, user?.id]);
@@ -126,8 +132,15 @@ export function useActiveGroupWordScope(words, user) {
 
     const handleActiveGroupChanged = () => {
       invalidateUserActiveGroupWordsCache();
+      clearCachedActiveGroupScope(user?.id);
       saveWordScopeMode(user?.id, WORD_SCOPE_MODES.GROUP);
       setScopeMode(WORD_SCOPE_MODES.GROUP);
+      setState({
+        activeGroup: null,
+        mappedTerms: [],
+        isLoading: false,
+        error: "",
+      });
       void loadScope({ forceRefresh: true });
     };
 
@@ -180,7 +193,7 @@ export function useActiveGroupWordScope(words, user) {
     isGroupScopeActive,
     isScoped: shouldScopeByGroup,
     isUsingCustomWords,
-    isLoadingScope: state.isLoading,
+    isLoadingScope: wantsGroupScope && state.isLoading,
     scopeError: state.error,
     scopeMode,
     scopeReason,

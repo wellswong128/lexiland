@@ -83,7 +83,7 @@ function FlashcardsPage() {
         user,
       });
 
-      const questions = createImageQuizQuestions(sessionWords, words);
+      const questions = createImageQuizQuestions(sessionWords, reviewWords);
 
       if (questions.length === 0) {
         setPrepareError(t("flashcards.notEnoughImages"));

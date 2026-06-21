@@ -33,8 +33,7 @@ function readBearerToken(request) {
 }
 
 function normalizeRole(user) {
-  const candidate =
-    user?.app_metadata?.role ?? user?.user_metadata?.role ?? user?.role ?? "student";
+  const candidate = user?.app_metadata?.role ?? "student";
   const role = String(candidate || "").trim().toLowerCase();
   return role || "student";
 }
