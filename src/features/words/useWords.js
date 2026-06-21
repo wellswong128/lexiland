@@ -31,7 +31,7 @@ import {
 import { fetchUserActiveGroupWords } from "../wordGroups/wordGroupsApi.js";
 import { ACTIVE_GROUP_CHANGED_EVENT } from "../wordGroups/wordGroupScopeEvents.js";
 import { syncActiveGroupWordMemory } from "../wordGroups/syncActiveGroupWordMemory.js";
-import { WORD_SCOPE_MODE_CHANGED_EVENT } from "../wordGroups/wordScopeMode.js";
+import { WORD_SCOPE_MODE_CHANGED_EVENT, loadWordScopeMode, WORD_SCOPE_MODES } from "../wordGroups/wordScopeMode.js";
 
 function normalizeWordChanges(changes) {
   const normalizedChanges = { ...changes };
@@ -134,11 +134,7 @@ function hasRemoteWordChanges(changes) {
   return Object.keys(mapWordChangesToUpdate(changes)).length > 0;
 }
 
-async function importActiveGroupWordsIfEmpty(userId, existingWords) {
-  if (existingWords.length > 0) {
-    return { activeGroup: null, importedWords: [] };
-  }
-
+async function importMissingActiveGroupWords(userId, existingWords) {
   const payload = await fetchUserActiveGroupWords({ includeWords: true });
   const mappedWords = Array.isArray(payload.mappedWords) ? payload.mappedWords : [];
   if (!payload.activeGroup || mappedWords.length === 0) {
@@ -194,6 +190,15 @@ async function importActiveGroupWordsIfEmpty(userId, existingWords) {
   };
 }
 
+function buildAutoImportedNotice(activeGroup) {
+  return {
+    count: 0,
+    groupCode: activeGroup.groupCode ?? "",
+    groupNameEn: activeGroup.displayNameEn ?? "",
+    groupNameZhHant: activeGroup.displayNameZhHant ?? "",
+  };
+}
+
 export function useWords({ isAuthLoading = false, user = null } = {}, storage) {
   const [words, setWords] = useState(() => hydrateWords(loadWords(storage), storage));
   const [isWordsLoading, setIsWordsLoading] = useState(hasSupabaseConfig);
@@ -223,7 +228,7 @@ export function useWords({ isAuthLoading = false, user = null } = {}, storage) {
         if (!isMounted) {
           return;
         }
-        const { importedWords, activeGroup } = await importActiveGroupWordsIfEmpty(
+        const { importedWords, activeGroup } = await importMissingActiveGroupWords(
           user.id,
           remoteWords,
         );
@@ -256,53 +261,6 @@ export function useWords({ isAuthLoading = false, user = null } = {}, storage) {
       isMounted = false;
     };
   }, [storage, user]);
-
-  useEffect(() => {
-    if (!isUsingSupabase || typeof window === "undefined") {
-      return undefined;
-    }
-
-    let isMounted = true;
-
-    const handleActiveGroupChanged = async () => {
-      if (words.length > 0) {
-        return;
-      }
-
-      setIsWordsLoading(true);
-      try {
-        const { importedWords, activeGroup } = await importActiveGroupWordsIfEmpty(
-          user.id,
-          words,
-        );
-        if (isMounted && importedWords.length > 0) {
-          setWords((currentWords) => hydrateWords([...importedWords, ...currentWords], storage));
-          if (activeGroup) {
-            setAutoImportedNotice({
-              count: importedWords.length,
-              groupCode: activeGroup.groupCode ?? "",
-              groupNameEn: activeGroup.displayNameEn ?? "",
-              groupNameZhHant: activeGroup.displayNameZhHant ?? "",
-            });
-          }
-        }
-      } catch (error) {
-        if (isMounted) {
-          setWordsError(error.message || "Failed to import active-group words.");
-        }
-      } finally {
-        if (isMounted) {
-          setIsWordsLoading(false);
-        }
-      }
-    };
-
-    window.addEventListener(ACTIVE_GROUP_CHANGED_EVENT, handleActiveGroupChanged);
-    return () => {
-      isMounted = false;
-      window.removeEventListener(ACTIVE_GROUP_CHANGED_EVENT, handleActiveGroupChanged);
-    };
-  }, [isUsingSupabase, storage, user, words]);
 
   useEffect(() => {
     if (!hasSupabaseConfig || !user) {
@@ -590,6 +548,10 @@ export function useWords({ isAuthLoading = false, user = null } = {}, storage) {
       return;
     }
 
+    if (loadWordScopeMode(user.id) !== WORD_SCOPE_MODES.GROUP) {
+      return;
+    }
+
     try {
       await syncActiveGroupWordMemory(
         wordsRef.current,
@@ -600,6 +562,39 @@ export function useWords({ isAuthLoading = false, user = null } = {}, storage) {
       console.warn("Could not sync active-group memory from wordbase.", error);
     }
   }, [isUsingSupabase, user?.id]);
+
+  const runActiveGroupSync = useCallback(async () => {
+    if (!isUsingSupabase || !user?.id || !updateWordRef.current) {
+      return;
+    }
+
+    try {
+      const { importedWords, activeGroup } = await importMissingActiveGroupWords(
+        user.id,
+        wordsRef.current,
+      );
+
+      if (importedWords.length > 0) {
+        const nextWords = hydrateWords([...importedWords, ...wordsRef.current], storage);
+        wordsRef.current = nextWords;
+        setWords(nextWords);
+        if (activeGroup) {
+          setAutoImportedNotice({
+            ...buildAutoImportedNotice(activeGroup),
+            count: importedWords.length,
+          });
+        }
+      }
+
+      await syncActiveGroupWordMemory(
+        wordsRef.current,
+        (wordId, changes) => updateWordRef.current(wordId, changes),
+        user.id,
+      );
+    } catch (error) {
+      console.warn("Could not sync active-group words from wordbase.", error);
+    }
+  }, [isUsingSupabase, storage, user?.id]);
 
   useEffect(() => {
     if (!isUsingSupabase || isWordsLoading || !user?.id) {
@@ -614,18 +609,26 @@ export function useWords({ isAuthLoading = false, user = null } = {}, storage) {
       return undefined;
     }
 
-    const handleGroupMemorySync = () => {
-      void runActiveGroupMemorySync();
+    const handleGroupSync = () => {
+      if (loadWordScopeMode(user?.id) !== WORD_SCOPE_MODES.GROUP) {
+        return;
+      }
+
+      void runActiveGroupSync();
     };
 
-    window.addEventListener(ACTIVE_GROUP_CHANGED_EVENT, handleGroupMemorySync);
-    window.addEventListener(WORD_SCOPE_MODE_CHANGED_EVENT, handleGroupMemorySync);
+    const handleActiveGroupChanged = () => {
+      void runActiveGroupSync();
+    };
+
+    window.addEventListener(ACTIVE_GROUP_CHANGED_EVENT, handleActiveGroupChanged);
+    window.addEventListener(WORD_SCOPE_MODE_CHANGED_EVENT, handleGroupSync);
 
     return () => {
-      window.removeEventListener(ACTIVE_GROUP_CHANGED_EVENT, handleGroupMemorySync);
-      window.removeEventListener(WORD_SCOPE_MODE_CHANGED_EVENT, handleGroupMemorySync);
+      window.removeEventListener(ACTIVE_GROUP_CHANGED_EVENT, handleActiveGroupChanged);
+      window.removeEventListener(WORD_SCOPE_MODE_CHANGED_EVENT, handleGroupSync);
     };
-  }, [isUsingSupabase, runActiveGroupMemorySync]);
+  }, [isUsingSupabase, runActiveGroupSync, user?.id]);
 
   return {
     addWord,
