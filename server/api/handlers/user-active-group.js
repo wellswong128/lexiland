@@ -85,6 +85,8 @@ async function handlePut(request, response, auth) {
     return;
   }
 
+  const addToPicks = body.addToPicks === true;
+
   const { data: pick, error: pickError } = await rlsClient
     .from("user_group_picks")
     .select("group_id")
@@ -96,10 +98,22 @@ async function handlePut(request, response, auth) {
     throw new Error(pickError.message || "Failed to validate picked group.");
   }
   if (!pick) {
-    sendJson(response, 400, {
-      error: "active group must belong to picked groups.",
+    if (!addToPicks) {
+      sendJson(response, 400, {
+        error: "active group must belong to picked groups.",
+      });
+      return;
+    }
+
+    const { error: insertPickError } = await rlsClient.from("user_group_picks").insert({
+      user_id: userId,
+      group_id: group.id,
+      picked_at: new Date().toISOString(),
     });
-    return;
+
+    if (insertPickError) {
+      throw new Error(insertPickError.message || "Failed to add picked group.");
+    }
   }
 
   const { error: upsertError } = await rlsClient
