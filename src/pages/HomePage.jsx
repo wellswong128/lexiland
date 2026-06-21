@@ -132,6 +132,8 @@ const moreGames = [
   },
 ];
 
+const STARTER_QUIZ_WORD_TARGET = 2;
+
 function getPrimaryCta({ wordCount, dueCount, mistakeCount }) {
   if (dueCount > 0) {
     return {
@@ -191,6 +193,11 @@ function HomePage() {
   const showSyncPrompt = hasSupabaseConfig && !isAuthLoading && !user;
   const { lastActivity, streak, todayReviewed } = getLearningSnapshot(learningWords);
   const showContinue = Boolean(lastActivity?.path) && !isEmpty;
+  const starterWordsReady = Math.min(wordCount, STARTER_QUIZ_WORD_TARGET);
+  const starterWordsRemaining = Math.max(STARTER_QUIZ_WORD_TARGET - wordCount, 0);
+  const canStartStarterQuiz = wordCount >= STARTER_QUIZ_WORD_TARGET;
+  const showStarterOnboarding =
+    !isHomeLoading && (wordCount < STARTER_QUIZ_WORD_TARGET || !lastActivity);
   const activeGroupLabel = getActiveGroupLabel(activeGroup, locale);
 
   const values = {
@@ -284,6 +291,65 @@ function HomePage() {
               ? t(primaryCta.labelKey, { count: primaryCta.count })
               : t(primaryCta.labelKey)}
           </Link>
+        ) : null}
+
+        {showStarterOnboarding ? (
+          <section className="home-starter" aria-labelledby="home-starter-title">
+            <div className="home-starter-copy">
+              <p className="home-starter-badge">{t("home.starterBadge")}</p>
+              <h2 id="home-starter-title">{t("home.starterTitle")}</h2>
+              <p>
+                {canStartStarterQuiz
+                  ? t("home.starterReadyDescription")
+                  : t("home.starterDescription", { count: starterWordsRemaining })}
+              </p>
+            </div>
+
+            <div className="home-starter-progress">
+              <span>{t("home.starterProgress", {
+                count: starterWordsReady,
+                target: STARTER_QUIZ_WORD_TARGET,
+              })}</span>
+            </div>
+
+            <ol className="home-starter-steps">
+              <li className={wordCount > 0 ? "home-starter-step-done" : ""}>
+                <span className="home-starter-step-number">1</span>
+                <div>
+                  <h3>{t("home.starterStepPhotoTitle")}</h3>
+                  <p>{t("home.starterStepPhotoDesc")}</p>
+                </div>
+              </li>
+              <li className={wordCount > 0 ? "home-starter-step-done" : ""}>
+                <span className="home-starter-step-number">2</span>
+                <div>
+                  <h3>{t("home.starterStepCardsTitle")}</h3>
+                  <p>{t("home.starterStepCardsDesc")}</p>
+                </div>
+              </li>
+              <li className={canStartStarterQuiz ? "home-starter-step-ready" : ""}>
+                <span className="home-starter-step-number">3</span>
+                <div>
+                  <h3>{t("home.starterStepQuizTitle")}</h3>
+                  <p>{t("home.starterStepQuizDesc")}</p>
+                </div>
+              </li>
+            </ol>
+
+            <div className="home-starter-actions">
+              <Link
+                className="home-starter-primary"
+                to={canStartStarterQuiz ? "/review/quiz" : "/words/new?tab=photo&scan=camera"}
+              >
+                {canStartStarterQuiz ? t("home.starterQuizCta") : t("home.starterPhotoCta")}
+              </Link>
+              {!canStartStarterQuiz ? (
+                <Link className="home-starter-secondary" to="/words/new?tab=manual">
+                  {t("home.starterManualCta")}
+                </Link>
+              ) : null}
+            </div>
+          </section>
         ) : null}
 
         {!isHomeLoading && dueCount > 0 && mistakeCount > 0 ? (
