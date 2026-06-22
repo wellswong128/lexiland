@@ -571,6 +571,33 @@ function buildTranslationQuizQuestion(item, entries) {
   };
 }
 
+export function buildTrueFalseTranslationQuestion(item, entries) {
+  const wrongPool = entries.filter((candidate) => candidate.meaning !== item.meaning);
+
+  if (wrongPool.length === 0) {
+    return {
+      en: item.word,
+      zh: item.meaning,
+      isCorrectTranslation: true,
+      sourceEntry: item,
+      wordId: item.wordId,
+    };
+  }
+
+  const isMatch = Math.random() < 0.5;
+  const wrongMeaning =
+    wrongPool[Math.floor(Math.random() * wrongPool.length)]?.meaning ?? item.meaning;
+  const zh = isMatch ? item.meaning : wrongMeaning;
+
+  return {
+    en: item.word,
+    zh,
+    isCorrectTranslation: zh === item.meaning,
+    sourceEntry: item,
+    wordId: item.wordId,
+  };
+}
+
 export function filterEntriesForNinjaLevel(entries, level) {
   const filteredEntries = entries.filter((entry) => {
     if (level <= 2) {

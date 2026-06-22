@@ -134,6 +134,14 @@ const moreGames = [
     art: "🏎️",
   },
   {
+    key: "speedRacing",
+    labelKey: "nav.speedRacing",
+    descKey: "home.speedRacingDesc",
+    to: "/games/speed-racing",
+    tone: "home-red",
+    art: "🏁",
+  },
+  {
     key: "battleJet",
     labelKey: "nav.battleJet",
     descKey: "home.battleJetDesc",

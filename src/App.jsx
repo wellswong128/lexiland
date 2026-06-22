@@ -24,6 +24,7 @@ const NotFoundPage = lazy(() => import("./pages/NotFoundPage.jsx"));
 const PenaltyTwelvePage = lazy(() => import("./pages/PenaltyTwelvePage.jsx"));
 const QuizPage = lazy(() => import("./pages/QuizPage.jsx"));
 const SettingsPage = lazy(() => import("./pages/SettingsPage.jsx"));
+const SpeedRacingPage = lazy(() => import("./pages/SpeedRacingPage.jsx"));
 const SpellingNinjaPage = lazy(() => import("./pages/SpellingNinjaPage.jsx"));
 const WordDetailPage = lazy(() => import("./pages/WordDetailPage.jsx"));
 const WordKartPage = lazy(() => import("./pages/WordKartPage.jsx"));
@@ -85,6 +86,7 @@ function AppRoutes() {
         <Route path="/games/grammar-arena" element={<ProtectedRoute><GrammarArenaPage /></ProtectedRoute>} />
         <Route path="/games/battle-jet" element={<ProtectedRoute><BattleJetQuizPage /></ProtectedRoute>} />
         <Route path="/games/penalty-twelve" element={<ProtectedRoute><PenaltyTwelvePage /></ProtectedRoute>} />
+        <Route path="/games/speed-racing" element={<ProtectedRoute><SpeedRacingPage /></ProtectedRoute>} />
         <Route path="/mistakes" element={<ProtectedRoute><MistakesPage /></ProtectedRoute>} />
         <Route path="/auth" element={<AuthPage />} />
         <Route path="/auth/callback" element={<AuthCallbackPage />} />

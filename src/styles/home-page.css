@@ -1184,6 +1184,10 @@
   background: linear-gradient(135deg, #fb923c, #ef4444);
 }
 
+.home-red {
+  background: linear-gradient(135deg, #ef4444, #dc2626);
+}
+
 .home-sky {
   background: linear-gradient(135deg, #38bdf8, #2563eb);
 }

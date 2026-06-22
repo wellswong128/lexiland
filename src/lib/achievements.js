@@ -8,6 +8,7 @@ export const GAME_PATHS = [
   "/games/word-kart",
   "/games/battle-jet",
   "/games/penalty-twelve",
+  "/games/speed-racing",
 ];
 
 export const ACHIEVEMENT_CATEGORIES = {

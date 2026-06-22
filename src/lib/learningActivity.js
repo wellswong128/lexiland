@@ -281,6 +281,11 @@ export const PAGE_ACTIVITIES = {
     labelKey: "nav.penaltyTwelve",
     icon: "⚽",
   },
+  "/games/speed-racing": {
+    kind: "game",
+    labelKey: "nav.speedRacing",
+    icon: "🏁",
+  },
   "/review/quiz": {
     kind: "quiz",
     labelKey: "home.startQuiz",

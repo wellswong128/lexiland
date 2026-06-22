@@ -80,6 +80,7 @@ const ROUTE_RULES = [
   { pattern: "/games/grammar-arena", anyOf: [PERMISSIONS.GAMES_PLAY] },
   { pattern: "/games/battle-jet", anyOf: [PERMISSIONS.GAMES_PLAY] },
   { pattern: "/games/penalty-twelve", anyOf: [PERMISSIONS.GAMES_PLAY] },
+  { pattern: "/games/speed-racing", anyOf: [PERMISSIONS.GAMES_PLAY] },
   { pattern: "/settings", anyOf: [PERMISSIONS.SETTINGS_UPDATE_SELF] },
 ];
 

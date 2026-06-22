@@ -27,6 +27,7 @@ const baseNavSections = [
       { to: "/games/fishing-blast", labelKey: "nav.fishBlast" },
       { to: "/games/word-kart", labelKey: "nav.wordKart" },
       { to: "/games/battle-jet", labelKey: "nav.battleJet" },
+      { to: "/games/speed-racing", labelKey: "nav.speedRacing" },
       { to: "/games/penalty-twelve", labelKey: "nav.penaltyTwelve" },
     ],
   },
