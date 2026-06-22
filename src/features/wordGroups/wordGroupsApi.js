@@ -1,4 +1,5 @@
 import { getApiAuthHeaders } from "../../lib/apiAuth.js";
+import { resolveApiUrl } from "../../lib/apiBase.js";
 
 const CACHE_TTL_MS = 60_000;
 
@@ -33,7 +34,7 @@ async function fetchUserActiveGroupWordsFromNetwork(includeWords) {
   }
   const queryString = params.toString();
   const response = await fetch(
-    `/api/user-active-group-words${queryString ? `?${queryString}` : ""}`,
+    resolveApiUrl(`/api/user-active-group-words${queryString ? `?${queryString}` : ""}`),
     {
       headers: {
         "Content-Type": "application/json",
@@ -107,7 +108,7 @@ export async function fetchUserActiveGroupWords(options = {}) {
 
 export async function fetchWordGroups() {
   const authHeaders = await getApiAuthHeaders();
-  const response = await fetch("/api/word-groups", {
+  const response = await fetch(resolveApiUrl("/api/word-groups"), {
     headers: {
       "Content-Type": "application/json",
       ...authHeaders,
@@ -119,7 +120,7 @@ export async function fetchWordGroups() {
 
 export async function fetchUserGroupPicks() {
   const authHeaders = await getApiAuthHeaders();
-  const response = await fetch("/api/user-group-picks", {
+  const response = await fetch(resolveApiUrl("/api/user-group-picks"), {
     headers: {
       "Content-Type": "application/json",
       ...authHeaders,
@@ -131,7 +132,7 @@ export async function fetchUserGroupPicks() {
 
 export async function saveUserGroupPicks(groupCodes) {
   const authHeaders = await getApiAuthHeaders();
-  const response = await fetch("/api/user-group-picks", {
+  const response = await fetch(resolveApiUrl("/api/user-group-picks"), {
     method: "PUT",
     headers: {
       "Content-Type": "application/json",
@@ -145,7 +146,7 @@ export async function saveUserGroupPicks(groupCodes) {
 
 export async function fetchUserActiveGroup() {
   const authHeaders = await getApiAuthHeaders();
-  const response = await fetch("/api/user-active-group", {
+  const response = await fetch(resolveApiUrl("/api/user-active-group"), {
     headers: {
       "Content-Type": "application/json",
       ...authHeaders,
@@ -157,7 +158,7 @@ export async function fetchUserActiveGroup() {
 
 export async function setUserActiveGroup(groupCode) {
   const authHeaders = await getApiAuthHeaders();
-  const response = await fetch("/api/user-active-group", {
+  const response = await fetch(resolveApiUrl("/api/user-active-group"), {
     method: "PUT",
     headers: {
       "Content-Type": "application/json",

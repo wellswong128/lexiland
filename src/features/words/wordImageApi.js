@@ -1,5 +1,6 @@
 import { readJsonResponse } from "./completeWordApi.js";
 import { getApiAuthHeaders } from "../../lib/apiAuth.js";
+import { resolveApiUrl } from "../../lib/apiBase.js";
 import {
   buildWordMemoryImageChanges,
   readStoredMemoryImage,
@@ -117,7 +118,7 @@ export async function fetchWordImage(word, { timeoutMs = 90000 } = {}) {
   const authHeaders = await getApiAuthHeaders();
 
   try {
-    const response = await fetch("/api/word-memory-image", {
+    const response = await fetch(resolveApiUrl("/api/word-memory-image"), {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

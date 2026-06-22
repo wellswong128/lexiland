@@ -3,6 +3,7 @@ import { useLocale } from "../features/locale/LocaleContext.jsx";
 import { useWordsContext } from "../features/words/WordsContext.jsx";
 import { can, getRoleFromUser, PERMISSIONS } from "../lib/authorization.js";
 import { getApiAuthHeaders } from "../lib/apiAuth.js";
+import { resolveApiUrl } from "../lib/apiBase.js";
 
 const ROLE_OPTIONS = ["owner", "admin", "teacher", "student", "parent"];
 
@@ -48,7 +49,7 @@ function AdminUserRolesPage() {
         setIsLoading(true);
         setError("");
         const authHeaders = await getApiAuthHeaders();
-        const response = await fetch("/api/admin-users", {
+        const response = await fetch(resolveApiUrl("/api/admin-users"), {
           method: "GET",
           headers: {
             "Content-Type": "application/json",
@@ -99,7 +100,7 @@ function AdminUserRolesPage() {
       setError("");
       setNotice("");
       const authHeaders = await getApiAuthHeaders();
-      const response = await fetch("/api/admin-users", {
+      const response = await fetch(resolveApiUrl("/api/admin-users"), {
         method: "PATCH",
         headers: {
           "Content-Type": "application/json",

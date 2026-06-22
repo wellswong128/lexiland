@@ -1,3 +1,4 @@
+import { applyApiCors } from "../server/api/_cors.js";
 import { routeRequest } from "../server/api/router.js";
 
 function readPathFromUrl(requestUrl) {
@@ -39,5 +40,9 @@ function readPath(request) {
 }
 
 export default async function handler(request, response) {
+  if (applyApiCors(request, response)) {
+    return;
+  }
+
   await routeRequest(readPath(request), request, response);
 }

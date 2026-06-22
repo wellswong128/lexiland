@@ -68,7 +68,7 @@ function PwaStatusPanel({ showInstallActions = true }) {
         <StatusRow
           label={t("pwa.statusServiceWorker")}
           tone={
-            serviceWorkerState === "active"
+            serviceWorkerState === "active" || serviceWorkerState === "native"
               ? "success"
               : serviceWorkerState === "unsupported" || serviceWorkerState === "error"
                 ? "warning"

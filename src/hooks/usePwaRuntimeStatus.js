@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { getIsStandaloneDisplay, getPwaPlatform, getServiceWorkerSupport } from "../lib/pwaPlatform.js";
+import { isCapacitorNative } from "../lib/platform.js";
 import {
   getNeedsRefresh,
   getOfflineReady,
@@ -58,6 +59,11 @@ export function usePwaRuntimeStatus() {
   }, []);
 
   useEffect(() => {
+    if (isCapacitorNative()) {
+      setServiceWorkerState("native");
+      return undefined;
+    }
+
     if (!getServiceWorkerSupport()) {
       setServiceWorkerState("unsupported");
       return undefined;

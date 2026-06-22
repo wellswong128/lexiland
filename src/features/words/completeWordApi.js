@@ -1,5 +1,6 @@
 import { resolveVocabularyLocale } from "../../../lib/vocabularyLocale.js";
 import { getApiAuthHeaders } from "../../lib/apiAuth.js";
+import { resolveApiUrl } from "../../lib/apiBase.js";
 import {
   canUseWordbase,
   contributeWordDetailsFromSuggestion,
@@ -57,7 +58,7 @@ export function suggestionToFormValues(suggestion) {
 export async function fetchCompleteWord(term, uiLocale = "zh-Hant") {
   const vocabularyLocale = resolveVocabularyLocale(uiLocale);
   const authHeaders = await getApiAuthHeaders();
-  const response = await fetch("/api/complete-word", {
+  const response = await fetch(resolveApiUrl("/api/complete-word"), {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -147,7 +148,7 @@ export async function completeWordsInBatch(
 
 export async function fetchExtractedWords(imageDataUrl) {
   const authHeaders = await getApiAuthHeaders();
-  const response = await fetch("/api/extract-words-from-image", {
+  const response = await fetch(resolveApiUrl("/api/extract-words-from-image"), {
     method: "POST",
     headers: {
       "Content-Type": "application/json",

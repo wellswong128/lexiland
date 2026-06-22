@@ -1,6 +1,12 @@
+import { Capacitor } from "@capacitor/core";
+
 export function getPwaPlatform() {
   if (typeof navigator === "undefined") {
     return "unknown";
+  }
+
+  if (Capacitor.isNativePlatform()) {
+    return Capacitor.getPlatform() === "ios" ? "ios" : "android";
   }
 
   const userAgent = navigator.userAgent || "";
@@ -19,6 +25,10 @@ export function getPwaPlatform() {
 export function getIsStandaloneDisplay() {
   if (typeof window === "undefined") {
     return false;
+  }
+
+  if (Capacitor.isNativePlatform()) {
+    return true;
   }
 
   return (

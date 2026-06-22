@@ -2,6 +2,7 @@ import { useEffect, useMemo, useState } from "react";
 import { useLocale } from "../features/locale/LocaleContext.jsx";
 import { useWordsContext } from "../features/words/WordsContext.jsx";
 import { getApiAuthHeaders } from "../lib/apiAuth.js";
+import { resolveApiUrl } from "../lib/apiBase.js";
 import { can, getRoleFromUser, PERMISSIONS } from "../lib/authorization.js";
 
 const FIELD_LABELS = {
@@ -62,7 +63,7 @@ function AdminWordbasePage() {
         query.set("search", nextSearch.trim());
       }
 
-      const response = await fetch(`/api/admin-wordbase?${query.toString()}`, {
+      const response = await fetch(resolveApiUrl(`/api/admin-wordbase?${query.toString()}`), {
         headers: {
           "Content-Type": "application/json",
           ...authHeaders,
@@ -96,7 +97,7 @@ function AdminWordbasePage() {
       setError("");
       setNotice("");
       const authHeaders = await getApiAuthHeaders();
-      const response = await fetch("/api/admin-wordbase", {
+      const response = await fetch(resolveApiUrl("/api/admin-wordbase"), {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

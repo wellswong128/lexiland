@@ -2,6 +2,7 @@ import { defineConfig, loadEnv } from "vite";
 import react from "@vitejs/plugin-react";
 import tailwindcss from "@tailwindcss/vite";
 import { VitePWA } from "vite-plugin-pwa";
+import { applyApiCors } from "./server/api/_cors.js";
 import { routeRequest } from "./server/api/router.js";
 
 function readRequestBody(request) {
@@ -34,6 +35,10 @@ function localApiPlugin() {
         }
 
         try {
+          if (applyApiCors(request, response)) {
+            return;
+          }
+
           request.body = await readRequestBody(request);
           request.query = { ...(request.query || {}), path: path.split("/") };
           await routeRequest(path, request, response);

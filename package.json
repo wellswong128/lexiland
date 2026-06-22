@@ -6,6 +6,10 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "build:cap": "vite build",
+    "cap:sync": "npm run build:cap && npx cap sync",
+    "cap:ios": "npm run cap:sync && npx cap open ios",
+    "cap:android": "npm run cap:sync && npx cap open android",
     "preview": "vite preview",
     "configure:supabase-smtp": "node scripts/configure-supabase-smtp.mjs",
     "setup:import-api-key": "node scripts/setup-import-api-key.mjs",
@@ -28,6 +32,10 @@
     "word-groups:enrich:all:dry-run": "bash scripts/hk_word_groups/run-enrich.sh --all --dry-run"
   },
   "dependencies": {
+    "@capacitor/android": "^8.4.1",
+    "@capacitor/cli": "^8.4.1",
+    "@capacitor/core": "^8.4.1",
+    "@capacitor/ios": "^8.4.1",
     "@supabase/supabase-js": "^2.108.0",
     "qrcode.react": "^4.2.0",
     "react": "^19.2.7",

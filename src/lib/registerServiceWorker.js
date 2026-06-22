@@ -1,7 +1,8 @@
 import { markNeedsRefresh, markOfflineReady, setUpdateServiceWorker } from "./pwaRuntimeState.js";
+import { isCapacitorNative } from "./platform.js";
 
 export function registerServiceWorker() {
-  if (!import.meta.env.PROD || !("serviceWorker" in navigator)) {
+  if (!import.meta.env.PROD || !("serviceWorker" in navigator) || isCapacitorNative()) {
     return;
   }
 
