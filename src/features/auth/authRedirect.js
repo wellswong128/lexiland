@@ -6,6 +6,26 @@ function normalizeUrl(url) {
   return url.trim().replace(/\/$/, "");
 }
 
+function normalizeNativeAuthRedirectUrl(url) {
+  const normalized = normalizeUrl(url);
+
+  if (!normalized) {
+    return "";
+  }
+
+  try {
+    const parsedUrl = new URL(normalized);
+    if (parsedUrl.pathname === "" || parsedUrl.pathname === "/") {
+      return `${normalized}/auth/callback`;
+    }
+  } catch {
+    // Custom schemes such as com.lexiland.app://auth/callback still parse in URL,
+    // but keep this fallback so a malformed env value does not break login setup.
+  }
+
+  return normalized;
+}
+
 export function isLocalhostUrl(url) {
   try {
     const { hostname, protocol } = new URL(url);
@@ -69,7 +89,7 @@ export function getNativeAuthRedirectUrl() {
   const envUrl = import.meta.env.VITE_NATIVE_AUTH_REDIRECT_URL?.trim();
 
   if (envUrl) {
-    return normalizeUrl(envUrl);
+    return normalizeNativeAuthRedirectUrl(envUrl);
   }
 
   if (typeof window !== "undefined" && Capacitor.isNativePlatform()) {
