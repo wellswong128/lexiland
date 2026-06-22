@@ -183,13 +183,12 @@ function getHookTip(hook, originX, originY) {
 }
 
 function hitTestFish(tipX, tipY, fish) {
-  const pad = 8;
-  return (
-    tipX >= fish.x - pad &&
-    tipX <= fish.x + fish.w + pad &&
-    tipY >= fish.y - pad &&
-    tipY <= fish.y + fish.h + pad
-  );
+  const centerX = fish.x + fish.w / 2;
+  const centerY = fish.y + fish.h / 2;
+  const hitRadius = Math.max(fish.w, fish.h) * 0.55 + 14;
+  const dx = tipX - centerX;
+  const dy = tipY - centerY;
+  return dx * dx + dy * dy <= hitRadius * hitRadius;
 }
 
 function drawFish(ctx, fish, time) {
@@ -313,25 +312,55 @@ function drawScene(ctx, width, height, state, time) {
   const originX = width / 2;
   const originY = height - sandHeight - 4;
   const hook = state.hook;
-  const tip = getHookTip(hook, originX, originY);
+  const drawLength =
+    hook.state === "swinging" ? hook.maxLength : Math.max(hook.length, hook.maxLength * 0.08);
+  const tip = getHookTip({ ...hook, length: drawLength }, originX, originY);
 
-  ctx.strokeStyle = "#cbd5e1";
-  ctx.lineWidth = 2;
+  if (hook.state === "swinging") {
+    ctx.strokeStyle = "rgba(255, 255, 255, 0.12)";
+    ctx.lineWidth = 1.5;
+    ctx.setLineDash([6, 8]);
+    ctx.beginPath();
+    ctx.moveTo(originX, originY);
+    ctx.lineTo(tip.x, tip.y);
+    ctx.stroke();
+    ctx.setLineDash([]);
+  }
+
+  ctx.strokeStyle = "#f8fafc";
+  ctx.lineWidth = 3;
+  ctx.shadowColor = "rgba(56, 189, 248, 0.65)";
+  ctx.shadowBlur = 8;
   ctx.beginPath();
   ctx.moveTo(originX, originY);
   ctx.lineTo(tip.x, tip.y);
   ctx.stroke();
+  ctx.shadowBlur = 0;
 
+  const baseGrad = ctx.createLinearGradient(originX - 16, originY, originX + 16, originY);
+  baseGrad.addColorStop(0, "#475569");
+  baseGrad.addColorStop(1, "#94a3b8");
+  ctx.fillStyle = baseGrad;
+  ctx.fillRect(originX - 18, originY - 6, 36, 12);
   ctx.fillStyle = "#64748b";
   ctx.beginPath();
-  ctx.arc(originX, originY, 6, 0, Math.PI * 2);
+  ctx.arc(originX, originY, 8, 0, Math.PI * 2);
   ctx.fill();
 
-  ctx.strokeStyle = "#94a3b8";
+  ctx.strokeStyle = "#fde047";
+  ctx.fillStyle = "#fbbf24";
   ctx.lineWidth = 3;
   ctx.beginPath();
-  ctx.arc(tip.x, tip.y, 7, Math.PI * 0.2, Math.PI * 1.1);
+  ctx.moveTo(tip.x, tip.y);
+  ctx.lineTo(tip.x - 6, tip.y + 10);
+  ctx.lineTo(tip.x + 6, tip.y + 10);
+  ctx.closePath();
+  ctx.fill();
   ctx.stroke();
+  ctx.beginPath();
+  ctx.arc(tip.x, tip.y + 2, 5, 0, Math.PI * 2);
+  ctx.fillStyle = "#fef08a";
+  ctx.fill();
 
   if (hook.caughtFish) {
     drawFish(ctx, { ...hook.caughtFish, x: tip.x - hook.caughtFish.w / 2, y: tip.y - hook.caughtFish.h / 2 }, time);
@@ -798,12 +827,12 @@ function DeepSeaFishingPage() {
           }
         }
 
-        if (game.phase === "playing") {
-          game.swingTime += dt;
-          if (game.hook.state === "swinging") {
-            game.hook.angle = Math.sin(game.swingTime * SWING_SPEED) * MAX_SWING_ANGLE;
-          }
+        game.swingTime += dt;
+        if (game.hook.state === "swinging") {
+          game.hook.angle = Math.sin(game.swingTime * SWING_SPEED) * MAX_SWING_ANGLE;
+        }
 
+        if (game.phase === "playing") {
           for (const fish of game.fishes) {
             if (!fish.caught) {
               fish.x += fish.vx * dt;
@@ -896,7 +925,16 @@ function DeepSeaFishingPage() {
       ctx,
       width,
       height,
-      { fishes: [], hook: { angle: 0, length: 0, caughtFish: null } },
+      {
+        fishes: [],
+        hook: {
+          angle: 0,
+          length: 0,
+          maxLength: height * HOOK_MAX_LENGTH_RATIO,
+          state: "swinging",
+          caughtFish: null,
+        },
+      },
       performance.now() / 1000,
     );
   }, [gameState, resizeCanvas]);
