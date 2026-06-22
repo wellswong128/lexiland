@@ -279,54 +279,108 @@ function drawFish(ctx, fish, time) {
 
 function drawScene(ctx, width, height, state, time) {
   const waterGrad = ctx.createLinearGradient(0, 0, 0, height);
-  waterGrad.addColorStop(0, "#0c4a6e");
-  waterGrad.addColorStop(0.35, "#0369a1");
-  waterGrad.addColorStop(1, "#0e7490");
+  waterGrad.addColorStop(0, "#083f7c");
+  waterGrad.addColorStop(0.22, "#075985");
+  waterGrad.addColorStop(0.58, "#07517c");
+  waterGrad.addColorStop(1, "#031a3e");
   ctx.fillStyle = waterGrad;
   ctx.fillRect(0, 0, width, height);
 
-  ctx.strokeStyle = "rgba(255,255,255,0.25)";
-  ctx.lineWidth = 2;
-  for (let wave = 0; wave < 4; wave += 1) {
+  const surfaceGlow = ctx.createRadialGradient(width / 2, -height * 0.08, 0, width / 2, 0, width * 0.72);
+  surfaceGlow.addColorStop(0, "rgba(217, 249, 255, 0.72)");
+  surfaceGlow.addColorStop(0.24, "rgba(103, 232, 249, 0.26)");
+  surfaceGlow.addColorStop(1, "rgba(103, 232, 249, 0)");
+  ctx.fillStyle = surfaceGlow;
+  ctx.fillRect(0, 0, width, height * 0.45);
+
+  ctx.save();
+  ctx.globalCompositeOperation = "screen";
+  for (const ray of [
+    { x: width * 0.36, spread: width * 0.2, alpha: 0.12 },
+    { x: width * 0.5, spread: width * 0.24, alpha: 0.16 },
+    { x: width * 0.64, spread: width * 0.18, alpha: 0.1 },
+  ]) {
+    const rayGrad = ctx.createLinearGradient(ray.x, 0, ray.x, height * 0.78);
+    rayGrad.addColorStop(0, `rgba(224, 242, 254, ${ray.alpha})`);
+    rayGrad.addColorStop(1, "rgba(224, 242, 254, 0)");
+    ctx.fillStyle = rayGrad;
     ctx.beginPath();
-    for (let x = 0; x <= width; x += 8) {
-      const y = 18 + wave * 6 + Math.sin(x * 0.02 + time * 2 + wave) * 4;
+    ctx.moveTo(ray.x - ray.spread * 0.18, 0);
+    ctx.lineTo(ray.x + ray.spread * 0.18, 0);
+    ctx.lineTo(ray.x + ray.spread, height * 0.78);
+    ctx.lineTo(ray.x - ray.spread, height * 0.78);
+    ctx.closePath();
+    ctx.fill();
+  }
+  ctx.restore();
+
+  ctx.strokeStyle = "rgba(255,255,255,0.32)";
+  ctx.lineWidth = 1.8;
+  for (let wave = 0; wave < 6; wave += 1) {
+    ctx.beginPath();
+    for (let x = 0; x <= width; x += 7) {
+      const y = 14 + wave * 5 + Math.sin(x * 0.024 + time * 2.2 + wave) * 3.5;
       if (x === 0) ctx.moveTo(x, y);
       else ctx.lineTo(x, y);
     }
     ctx.stroke();
   }
 
-  for (let i = 0; i < 6; i += 1) {
-    const bx = ((i * 137 + time * 30) % (width + 40)) - 20;
-    const by = height - 20 - (i % 3) * 18 - Math.sin(time + i) * 6;
-    ctx.fillStyle = `rgba(255,255,255,${0.08 + (i % 3) * 0.04})`;
+  for (let i = 0; i < 76; i += 1) {
+    const bx = (i * 73 + Math.sin(time * 0.45 + i) * 22) % width;
+    const by = ((i * 47 - time * (18 + (i % 5) * 5)) % (height + 80)) - 40;
+    const size = 1.4 + (i % 5) * 0.85;
+    ctx.strokeStyle = `rgba(224, 242, 254, ${0.12 + (i % 4) * 0.045})`;
+    ctx.lineWidth = 1;
     ctx.beginPath();
-    ctx.arc(bx, by, 4 + (i % 3) * 2, 0, Math.PI * 2);
-    ctx.fill();
+    ctx.arc(bx, by, size, 0, Math.PI * 2);
+    ctx.stroke();
   }
 
-  const sandHeight = height * 0.1;
+  const sandHeight = Math.max(66, height * 0.12);
   const sandGrad = ctx.createLinearGradient(0, height - sandHeight, 0, height);
-  sandGrad.addColorStop(0, "#ca8a04");
-  sandGrad.addColorStop(1, "#a16207");
+  sandGrad.addColorStop(0, "rgba(251, 191, 36, 0)");
+  sandGrad.addColorStop(0.32, "#d99a46");
+  sandGrad.addColorStop(1, "#9a5f28");
   ctx.fillStyle = sandGrad;
   ctx.fillRect(0, height - sandHeight, width, sandHeight);
 
-  for (const weed of [
-    { x: width * 0.08, h: 52 },
-    { x: width * 0.14, h: 68 },
-    { x: width * 0.86, h: 58 },
-    { x: width * 0.92, h: 72 },
+  for (const coral of [
+    { x: width * 0.06, h: 54, color: "#a855f7" },
+    { x: width * 0.12, h: 78, color: "#22c55e" },
+    { x: width * 0.2, h: 48, color: "#fb7185" },
+    { x: width * 0.78, h: 50, color: "#f97316" },
+    { x: width * 0.86, h: 86, color: "#16a34a" },
+    { x: width * 0.94, h: 62, color: "#d946ef" },
   ]) {
-    ctx.strokeStyle = "#15803d";
-    ctx.lineWidth = 5;
+    const sway = Math.sin(time * 1.5 + coral.x) * 7;
+    ctx.strokeStyle = coral.color;
+    ctx.lineWidth = Math.max(4, width * 0.008);
     ctx.lineCap = "round";
+    for (let branch = -1; branch <= 1; branch += 1) {
+      ctx.beginPath();
+      ctx.moveTo(coral.x + branch * 8, height - 8);
+      ctx.quadraticCurveTo(
+        coral.x + sway + branch * 12,
+        height - sandHeight * 0.42 - coral.h * 0.45,
+        coral.x + sway * 0.4 + branch * 18,
+        height - sandHeight * 0.42 - coral.h,
+      );
+      ctx.stroke();
+    }
+  }
+
+  for (const rock of [
+    { x: width * 0.06, y: height - 22, r: 24, color: "#4338ca" },
+    { x: width * 0.92, y: height - 24, r: 28, color: "#334155" },
+    { x: width * 0.23, y: height - 18, r: 18, color: "#0f766e" },
+  ]) {
+    ctx.fillStyle = rock.color;
+    ctx.globalAlpha = 0.82;
     ctx.beginPath();
-    ctx.moveTo(weed.x, height - sandHeight);
-    const sway = Math.sin(time * 2 + weed.x) * 8;
-    ctx.quadraticCurveTo(weed.x + sway, height - sandHeight - weed.h * 0.5, weed.x + sway * 0.5, height - sandHeight - weed.h);
-    ctx.stroke();
+    ctx.ellipse(rock.x, rock.y, rock.r * 1.35, rock.r, 0, 0, Math.PI * 2);
+    ctx.fill();
+    ctx.globalAlpha = 1;
   }
 
   for (const fish of state.fishes) {
@@ -336,7 +390,7 @@ function drawScene(ctx, width, height, state, time) {
   }
 
   const originX = width / 2;
-  const originY = height - sandHeight - 4;
+  const originY = height - 32;
   const hook = state.hook;
   const swingLength = hook.maxLength * HOOK_SWING_LENGTH_RATIO;
   const drawLength =
@@ -345,9 +399,19 @@ function drawScene(ctx, width, height, state, time) {
       : Math.max(hook.length, hook.state === "firing" ? 0 : swingLength * 0.35);
   const tip = getHookTip({ ...hook, length: drawLength }, originX, originY);
 
+  ctx.save();
+  ctx.strokeStyle = "rgba(224, 242, 254, 0.3)";
+  ctx.lineWidth = 1.5;
+  ctx.setLineDash([6, 8]);
+  ctx.beginPath();
+  ctx.moveTo(originX, 34);
+  ctx.lineTo(originX, originY - 6);
+  ctx.stroke();
+  ctx.restore();
+
   if (hook.state === "swinging") {
-    ctx.strokeStyle = "rgba(255, 255, 255, 0.18)";
-    ctx.lineWidth = 1.5;
+    ctx.strokeStyle = "rgba(254, 240, 138, 0.28)";
+    ctx.lineWidth = 2;
     ctx.setLineDash([5, 7]);
     ctx.beginPath();
     ctx.moveTo(originX, originY);
@@ -367,23 +431,27 @@ function drawScene(ctx, width, height, state, time) {
   }
 
   ctx.strokeStyle = "#f8fafc";
-  ctx.lineWidth = 3;
-  ctx.shadowColor = "rgba(56, 189, 248, 0.65)";
-  ctx.shadowBlur = 8;
+  ctx.lineWidth = 4;
+  ctx.shadowColor = "rgba(253, 224, 71, 0.68)";
+  ctx.shadowBlur = 10;
   ctx.beginPath();
   ctx.moveTo(originX, originY);
   ctx.lineTo(tip.x, tip.y);
   ctx.stroke();
   ctx.shadowBlur = 0;
 
-  const baseGrad = ctx.createLinearGradient(originX - 16, originY, originX + 16, originY);
-  baseGrad.addColorStop(0, "#475569");
-  baseGrad.addColorStop(1, "#94a3b8");
+  const baseGrad = ctx.createLinearGradient(originX - 22, originY, originX + 22, originY);
+  baseGrad.addColorStop(0, "#0f4c81");
+  baseGrad.addColorStop(0.5, "#bae6fd");
+  baseGrad.addColorStop(1, "#0f4c81");
   ctx.fillStyle = baseGrad;
-  ctx.fillRect(originX - 18, originY - 6, 36, 12);
-  ctx.fillStyle = "#64748b";
+  ctx.strokeStyle = "rgba(186, 230, 253, 0.7)";
+  ctx.lineWidth = 1;
+  ctx.fillRect(originX - 28, originY - 9, 56, 18);
+  ctx.strokeRect(originX - 28, originY - 9, 56, 18);
+  ctx.fillStyle = "#67e8f9";
   ctx.beginPath();
-  ctx.arc(originX, originY, 8, 0, Math.PI * 2);
+  ctx.arc(originX, originY, 7, 0, Math.PI * 2);
   ctx.fill();
 
   ctx.strokeStyle = "#fde047";
@@ -865,7 +933,7 @@ function DeepSeaFishingPage() {
       const width = canvas.width / (window.devicePixelRatio || 1);
       const height = canvas.height / (window.devicePixelRatio || 1);
       const originX = width / 2;
-      const originY = height - height * 0.1 - 4;
+      const originY = height - 32;
 
       if (gameState === "playing") {
         if (!game.lastGrouperTick) {
@@ -1059,7 +1127,7 @@ function DeepSeaFishingPage() {
 
   return (
     <section className="game-page-shell dsf-app flex flex-col text-slate-50">
-      <header className="game-page-header relative z-50 mb-1.5 flex shrink-0 items-center justify-between gap-2">
+      <header className="game-page-header dsf-header relative z-50 flex shrink-0 items-center justify-between gap-2">
         <GameHomeButton fixed />
         <div className="pointer-events-none flex-1 text-center">
           <h1 className="font-black text-sky-100 drop-shadow">
@@ -1072,7 +1140,7 @@ function DeepSeaFishingPage() {
 
       {gameState !== "rules" && gameState !== "over" ? (
         <>
-          <div className="mb-1.5 grid grid-cols-3 gap-1.5">
+          <div className="dsf-stats-row grid grid-cols-3 gap-2">
             {[
               [t("games.score"), score, "text-yellow-300"],
               [t("games.time"), timeLeft, "text-amber-100"],
@@ -1084,7 +1152,7 @@ function DeepSeaFishingPage() {
               </div>
             ))}
           </div>
-          <div className="mb-2 h-2 overflow-hidden rounded-full border border-sky-300/20 bg-sky-950/40">
+          <div className="dsf-timer-track h-2 overflow-hidden rounded-full">
             <div
               className="dsf-timer-bar h-full rounded-full transition-all"
               style={{
@@ -1101,7 +1169,7 @@ function DeepSeaFishingPage() {
         </>
       ) : null}
 
-      <div className="dsf-card relative z-0 min-h-0 flex-1 overflow-hidden p-1.5 sm:p-2">
+      <div className="dsf-card relative z-0 min-h-0 flex-1 overflow-hidden">
         <div className="dsf-stage" ref={containerRef}>
           <canvas
             className="dsf-canvas"
