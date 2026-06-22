@@ -26,48 +26,52 @@ const fishColors = [
 
 const fishLayouts = [
   [
-    { x: 22, y: 32 },
-    { x: 73, y: 34 },
-    { x: 33, y: 69 },
-    { x: 78, y: 72 },
+    { x: 23, y: 52 },
+    { x: 62, y: 35 },
+    { x: 82, y: 62 },
+    { x: 42, y: 76 },
   ],
   [
-    { x: 28, y: 36 },
-    { x: 70, y: 29 },
-    { x: 24, y: 74 },
-    { x: 68, y: 70 },
+    { x: 28, y: 66 },
+    { x: 70, y: 42 },
+    { x: 82, y: 78 },
+    { x: 48, y: 55 },
   ],
   [
-    { x: 18, y: 52 },
-    { x: 50, y: 32 },
-    { x: 82, y: 50 },
-    { x: 52, y: 75 },
+    { x: 18, y: 44 },
+    { x: 52, y: 38 },
+    { x: 78, y: 55 },
+    { x: 38, y: 72 },
   ],
 ];
 
 const demoFish = [
-  { text: "蘋果", x: 22, y: 38, colorIndex: 0 },
-  { text: "學校", x: 72, y: 34, colorIndex: 1 },
-  { text: "朋友", x: 35, y: 70, colorIndex: 2 },
-  { text: "未來", x: 78, y: 72, colorIndex: 3 },
+  { text: "蘋果", x: 23, y: 55, colorIndex: 0 },
+  { text: "學校", x: 62, y: 35, colorIndex: 1 },
+  { text: "朋友", x: 82, y: 62, colorIndex: 2 },
+  { text: "未來", x: 42, y: 76, colorIndex: 3 },
+  { text: "海洋", x: 72, y: 80, colorIndex: 4 },
+  { text: "星星", x: 51, y: 54, colorIndex: 5 },
 ];
 
-const bubbleSeeds = Array.from({ length: 10 }, (_, index) => ({
+const bubbleSeeds = Array.from({ length: 18 }, (_, index) => ({
   id: `bubble-${index}`,
   size: 8 + (index % 4) * 4,
-  x: 8 + index * 9,
+  x: 5 + ((index * 11) % 90),
   speed: 5 + (index % 5),
   delay: index * 0.4,
 }));
 
 const seaweedSeeds = [
-  { left: 6, height: 52 },
-  { left: 12, height: 68 },
-  { left: 84, height: 58 },
-  { left: 91, height: 72 },
+  { left: 5, height: 68 },
+  { left: 10, height: 92 },
+  { left: 16, height: 58 },
+  { left: 78, height: 70 },
+  { left: 86, height: 96 },
+  { left: 93, height: 76 },
 ];
 
-const maxTime = 60;
+const maxTime = 150;
 
 function getGameId(prefix) {
   const randomId =
@@ -150,6 +154,12 @@ const FishButton = forwardRef(function FishButton(
 function SceneDecorations() {
   return (
     <>
+      <div className="fishing-blast-light-rays" />
+      <div className="fishing-blast-center-guide" />
+      <div className="fishing-blast-deco-fish fishing-blast-deco-shark" />
+      <div className="fishing-blast-deco-fish fishing-blast-deco-angler" />
+      <div className="fishing-blast-reef fishing-blast-reef-left" />
+      <div className="fishing-blast-reef fishing-blast-reef-right" />
       {bubbleSeeds.map((bubble) => (
         <div
           className="fishing-blast-bubble"
@@ -407,34 +417,26 @@ function FishingBlastPage() {
 
   return (
     <section className="game-page-shell fishing-blast-app flex flex-col text-slate-50">
-      <header className="game-page-header relative z-50 mb-1.5 flex shrink-0 items-center justify-between gap-2">
+      <header className="game-page-header fishing-blast-header relative z-50 flex shrink-0 items-center justify-between gap-2">
         <GameHomeButton fixed />
-        {gameState === "start" ? (
-          <div className="flex-1" aria-hidden="true" />
-        ) : (
-          <>
-            <div className="pointer-events-none flex-1 text-center">
-              <h1 className="font-black text-sky-100 drop-shadow">
-                {t("games.fishingBlast.title")}
-              </h1>
-              <p className="text-sky-200">
-                {t("games.fishingBlast.subtitle")}
-              </p>
-            </div>
-            <div className="min-w-[4.5rem]" />
-          </>
-        )}
+        <div className="pointer-events-none flex-1 text-center">
+          <h1 className="font-black text-sky-100 drop-shadow">
+            {t("games.fishingBlast.title")}
+          </h1>
+          <p className="text-sky-100">
+            {t("games.fishingBlast.subtitle")}
+          </p>
+        </div>
+        <div className="min-w-[4.5rem]" />
       </header>
 
       {gameState === "playing" ? (
         <>
-          <div className="mb-1.5 grid grid-cols-5 gap-1.5">
+          <div className="fishing-blast-stats-row grid grid-cols-3 gap-2">
             {[
               [t("games.score"), score, "text-yellow-300"],
-              [t("games.combo"), combo, "text-green-300"],
               [t("games.time"), timeLeft, "text-amber-100"],
               [t("games.round"), round, "text-purple-200"],
-              [t("games.streak"), streak, "text-sky-200"],
             ].map(([label, value, color]) => (
               <div className="fishing-blast-stat" key={label}>
                 <p className="text-xs font-bold uppercase text-sky-200 sm:text-xs">
@@ -444,7 +446,7 @@ function FishingBlastPage() {
               </div>
             ))}
           </div>
-          <div className="mb-2 h-2 overflow-hidden rounded-full border border-sky-300/20 bg-sky-950/40">
+          <div className="fishing-blast-timer-track h-2 overflow-hidden rounded-full">
             <div
               className="fishing-blast-timer-bar h-full rounded-full transition-all"
               style={{
@@ -461,18 +463,11 @@ function FishingBlastPage() {
         </>
       ) : null}
 
-      <div className="fishing-blast-card relative z-0 min-h-0 flex-1 overflow-x-hidden overflow-y-auto p-1.5 sm:overflow-hidden sm:p-2">
+      <div className="fishing-blast-card relative z-0 min-h-0 flex-1 overflow-x-hidden overflow-y-auto sm:overflow-hidden">
         {gameState === "start" ? (
           <div className="fishing-blast-start-layout flex h-full min-h-0 flex-col text-center">
             <div className="fishing-blast-game-area relative min-h-0 flex-1" ref={gameAreaRef}>
-              <div className="fishing-blast-sun" />
-              <div className="fishing-blast-cloud" />
               <div className="fishing-blast-waterline" />
-              <div className="fishing-blast-fisher" ref={fisherRef}>
-                <div className="fishing-blast-person" />
-                <div className="fishing-blast-rod" />
-                <div className="fishing-blast-boat" />
-              </div>
               <SceneDecorations />
               <div className="fishing-blast-prompt-panel">
                 <p className="fishing-blast-prompt-label">{t("games.demoMode")}</p>
@@ -488,13 +483,15 @@ function FishingBlastPage() {
                   />
                 ))}
               </div>
+              <div className="fishing-blast-fisher" ref={fisherRef}>
+                <div className="fishing-blast-rod" />
+                <div className="fishing-blast-boat" />
+              </div>
               <div className="fishing-blast-sand" />
-            </div>
-            <div className="mt-2 shrink-0">
-              <p className="text-sm text-sky-100">
-                {t("games.fishingBlast.startHint")}
-              </p>
-              <div className="mt-3 flex flex-wrap justify-center gap-2">
+              <div className="fishing-blast-action-dock">
+                <p className="text-sm text-sky-100">
+                  {t("games.fishingBlast.startHint")}
+                </p>
                 <button
                   className="fishing-blast-primary-btn"
                   onClick={startGame}
@@ -512,8 +509,6 @@ function FishingBlastPage() {
             className="fishing-blast-game-area relative h-full min-h-0"
             ref={gameAreaRef}
           >
-            <div className="fishing-blast-sun" />
-            <div className="fishing-blast-cloud" />
             <div className="fishing-blast-waterline" />
             <div className="fishing-blast-prompt-panel">
               <p className="fishing-blast-prompt-label">{t("games.fishingBlast.prompt")}</p>
@@ -534,11 +529,6 @@ function FishingBlastPage() {
               >
                 {status.text}
               </p>
-            </div>
-            <div className="fishing-blast-fisher" ref={fisherRef}>
-              <div className="fishing-blast-person" />
-              <div className="fishing-blast-rod" />
-              <div className="fishing-blast-boat" />
             </div>
             <SceneDecorations />
             {fishingLine ? (
@@ -570,15 +560,20 @@ function FishingBlastPage() {
                 />
               ))}
             </div>
+            <div className="fishing-blast-fisher" ref={fisherRef}>
+              <div className="fishing-blast-rod" />
+              <div className="fishing-blast-boat" />
+            </div>
             <div className="fishing-blast-sand" />
+            <div className="fishing-blast-action-dock fishing-blast-action-dock-passive">
+              {t("games.fishingBlast.startHint")}
+            </div>
           </div>
         ) : null}
 
         {gameState === "over" ? (
           <div className="flex h-full flex-col overflow-y-auto text-center">
             <div className="fishing-blast-game-area relative min-h-[14rem] shrink-0">
-              <div className="fishing-blast-sun" />
-              <div className="fishing-blast-cloud" />
               <div className="fishing-blast-waterline" />
               <div className="fishing-blast-prompt-panel">
                 <p className="fishing-blast-prompt-label">{t("games.gameOver")}</p>
@@ -588,7 +583,6 @@ function FishingBlastPage() {
                 </p>
               </div>
               <div className="fishing-blast-fisher" ref={fisherRef}>
-                <div className="fishing-blast-person" />
                 <div className="fishing-blast-rod" />
                 <div className="fishing-blast-boat" />
               </div>
