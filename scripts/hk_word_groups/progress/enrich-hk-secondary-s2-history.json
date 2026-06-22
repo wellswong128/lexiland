@@ -1,0 +1,170 @@
+{
+  "group_code": "hk-secondary-s2-history",
+  "terms": {
+    "dynasty": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-21T00:41:46Z"
+    },
+    "emperor": {
+      "status": "incomplete",
+      "missing": [
+        "pronunciation",
+        "part_of_speech"
+      ],
+      "errors": {},
+      "completed_at": null
+    },
+    "revolution": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-21T00:41:47Z"
+    },
+    "treaty": {
+      "status": "incomplete",
+      "missing": [
+        "pronunciation",
+        "part_of_speech"
+      ],
+      "errors": {},
+      "completed_at": null
+    },
+    "imperialism": {
+      "status": "incomplete",
+      "missing": [
+        "pronunciation",
+        "part_of_speech"
+      ],
+      "errors": {},
+      "completed_at": null
+    },
+    "nationalism": {
+      "status": "incomplete",
+      "missing": [
+        "pronunciation",
+        "part_of_speech"
+      ],
+      "errors": {},
+      "completed_at": null
+    },
+    "reform": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-21T00:41:51Z"
+    },
+    "warlord": {
+      "status": "incomplete",
+      "missing": [
+        "pronunciation",
+        "part_of_speech"
+      ],
+      "errors": {},
+      "completed_at": null
+    },
+    "propaganda": {
+      "status": "incomplete",
+      "missing": [
+        "pronunciation",
+        "part_of_speech"
+      ],
+      "errors": {},
+      "completed_at": null
+    },
+    "occupation": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-21T00:41:53Z"
+    },
+    "resistance": {
+      "status": "incomplete",
+      "missing": [
+        "pronunciation",
+        "part_of_speech"
+      ],
+      "errors": {},
+      "completed_at": null
+    },
+    "industrialization": {
+      "status": "incomplete",
+      "missing": [
+        "pronunciation",
+        "part_of_speech"
+      ],
+      "errors": {},
+      "completed_at": null
+    },
+    "meiji restoration": {
+      "status": "incomplete",
+      "missing": [
+        "pronunciation",
+        "part_of_speech"
+      ],
+      "errors": {},
+      "completed_at": null
+    },
+    "constitution": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-21T00:41:57Z"
+    },
+    "ideology": {
+      "status": "incomplete",
+      "missing": [
+        "pronunciation",
+        "part_of_speech"
+      ],
+      "errors": {},
+      "completed_at": null
+    },
+    "annexation": {
+      "status": "incomplete",
+      "missing": [
+        "pronunciation",
+        "part_of_speech"
+      ],
+      "errors": {},
+      "completed_at": null
+    },
+    "diplomacy": {
+      "status": "incomplete",
+      "missing": [
+        "pronunciation",
+        "part_of_speech"
+      ],
+      "errors": {},
+      "completed_at": null
+    },
+    "sovereignty": {
+      "status": "incomplete",
+      "missing": [
+        "pronunciation",
+        "part_of_speech"
+      ],
+      "errors": {},
+      "completed_at": null
+    },
+    "civil war": {
+      "status": "incomplete",
+      "missing": [
+        "pronunciation",
+        "part_of_speech"
+      ],
+      "errors": {},
+      "completed_at": null
+    },
+    "legacy": {
+      "status": "incomplete",
+      "missing": [
+        "pronunciation",
+        "part_of_speech"
+      ],
+      "errors": {},
+      "completed_at": null
+    }
+  }
+}

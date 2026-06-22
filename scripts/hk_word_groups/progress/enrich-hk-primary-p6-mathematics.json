@@ -1,0 +1,175 @@
+{
+  "group_code": "hk-primary-p6-mathematics",
+  "terms": {
+    "fraction": {
+      "status": "incomplete",
+      "missing": [
+        "pronunciation",
+        "part_of_speech"
+      ],
+      "errors": {},
+      "completed_at": null
+    },
+    "decimal": {
+      "status": "incomplete",
+      "missing": [
+        "pronunciation",
+        "part_of_speech"
+      ],
+      "errors": {},
+      "completed_at": null
+    },
+    "percentage": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-21T00:34:55Z"
+    },
+    "average": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-21T00:34:56Z"
+    },
+    "area": {
+      "status": "incomplete",
+      "missing": [
+        "pronunciation",
+        "part_of_speech"
+      ],
+      "errors": {},
+      "completed_at": null
+    },
+    "perimeter": {
+      "status": "incomplete",
+      "missing": [
+        "pronunciation",
+        "part_of_speech"
+      ],
+      "errors": {},
+      "completed_at": null
+    },
+    "volume": {
+      "status": "incomplete",
+      "missing": [
+        "pronunciation",
+        "part_of_speech"
+      ],
+      "errors": {},
+      "completed_at": null
+    },
+    "equation": {
+      "status": "incomplete",
+      "missing": [
+        "pronunciation",
+        "part_of_speech"
+      ],
+      "errors": {},
+      "completed_at": null
+    },
+    "variable": {
+      "status": "incomplete",
+      "missing": [
+        "pronunciation",
+        "part_of_speech"
+      ],
+      "errors": {},
+      "completed_at": null
+    },
+    "coordinate": {
+      "status": "incomplete",
+      "missing": [
+        "pronunciation",
+        "part_of_speech"
+      ],
+      "errors": {},
+      "completed_at": null
+    },
+    "symmetry": {
+      "status": "incomplete",
+      "missing": [
+        "pronunciation",
+        "part_of_speech"
+      ],
+      "errors": {},
+      "completed_at": null
+    },
+    "angle": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-21T00:35:03Z"
+    },
+    "radius": {
+      "status": "incomplete",
+      "missing": [
+        "pronunciation",
+        "part_of_speech"
+      ],
+      "errors": {},
+      "completed_at": null
+    },
+    "diameter": {
+      "status": "incomplete",
+      "missing": [
+        "pronunciation",
+        "part_of_speech"
+      ],
+      "errors": {},
+      "completed_at": null
+    },
+    "prime number": {
+      "status": "incomplete",
+      "missing": [
+        "pronunciation",
+        "part_of_speech"
+      ],
+      "errors": {},
+      "completed_at": null
+    },
+    "factor": {
+      "status": "incomplete",
+      "missing": [
+        "pronunciation",
+        "part_of_speech"
+      ],
+      "errors": {},
+      "completed_at": null
+    },
+    "multiple": {
+      "status": "incomplete",
+      "missing": [
+        "pronunciation",
+        "part_of_speech"
+      ],
+      "errors": {},
+      "completed_at": null
+    },
+    "ratio": {
+      "status": "incomplete",
+      "missing": [
+        "pronunciation",
+        "part_of_speech"
+      ],
+      "errors": {
+        "last": "AI request failed: {\"error\":{\"message\":\"upstream error: do request failed (request id: 2026062015191362423939791bVCjAu)\",\"type\":\"AgnesAI_error\",\"param\":\"\",\"code\":\"do_request_failed\"}}"
+      },
+      "completed_at": null
+    },
+    "probability": {
+      "status": "incomplete",
+      "missing": [
+        "pronunciation",
+        "part_of_speech"
+      ],
+      "errors": {},
+      "completed_at": null
+    },
+    "graph": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-21T00:37:25Z"
+    }
+  }
+}

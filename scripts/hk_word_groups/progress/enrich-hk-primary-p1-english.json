@@ -1,0 +1,905 @@
+{
+  "group_code": "hk-primary-p1-english",
+  "terms": {
+    "hello": {
+      "status": "incomplete",
+      "missing": [
+        "pronunciation",
+        "part_of_speech"
+      ],
+      "errors": {
+        "last": "Unauthorized. Please sign in."
+      },
+      "completed_at": null
+    },
+    "goodbye": {
+      "status": "incomplete",
+      "missing": [
+        "pronunciation",
+        "part_of_speech"
+      ],
+      "errors": {
+        "last": "Expected ',' or '}' after property value in JSON at position 42 (line 2 column 41)"
+      },
+      "completed_at": null
+    },
+    "please": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-21T00:26:39Z"
+    },
+    "thank": {
+      "status": "incomplete",
+      "missing": [
+        "pronunciation",
+        "part_of_speech"
+      ],
+      "errors": {
+        "last": "Unauthorized. Please sign in."
+      },
+      "completed_at": null
+    },
+    "sorry": {
+      "status": "incomplete",
+      "missing": [
+        "pronunciation",
+        "part_of_speech"
+      ],
+      "errors": {
+        "last": "Unauthorized. Please sign in."
+      },
+      "completed_at": null
+    },
+    "yes": {
+      "status": "incomplete",
+      "missing": [
+        "pronunciation",
+        "part_of_speech"
+      ],
+      "errors": {
+        "last": "Unauthorized. Please sign in."
+      },
+      "completed_at": null
+    },
+    "no": {
+      "status": "incomplete",
+      "missing": [
+        "pronunciation",
+        "part_of_speech"
+      ],
+      "errors": {
+        "last": "Unauthorized. Please sign in."
+      },
+      "completed_at": null
+    },
+    "i": {
+      "status": "incomplete",
+      "missing": [
+        "pronunciation",
+        "part_of_speech"
+      ],
+      "errors": {
+        "last": "Unauthorized. Please sign in."
+      },
+      "completed_at": null
+    },
+    "you": {
+      "status": "incomplete",
+      "missing": [
+        "pronunciation",
+        "part_of_speech"
+      ],
+      "errors": {
+        "last": "Unauthorized. Please sign in."
+      },
+      "completed_at": null
+    },
+    "my": {
+      "status": "incomplete",
+      "missing": [
+        "pronunciation",
+        "part_of_speech"
+      ],
+      "errors": {
+        "last": "Unauthorized. Please sign in."
+      },
+      "completed_at": null
+    },
+    "name": {
+      "status": "incomplete",
+      "missing": [
+        "pronunciation",
+        "part_of_speech"
+      ],
+      "errors": {},
+      "completed_at": null
+    },
+    "boy": {
+      "status": "incomplete",
+      "missing": [
+        "pronunciation",
+        "part_of_speech"
+      ],
+      "errors": {},
+      "completed_at": null
+    },
+    "girl": {
+      "status": "incomplete",
+      "missing": [
+        "pronunciation",
+        "part_of_speech"
+      ],
+      "errors": {},
+      "completed_at": null
+    },
+    "friend": {
+      "status": "incomplete",
+      "missing": [
+        "pronunciation",
+        "part_of_speech"
+      ],
+      "errors": {},
+      "completed_at": null
+    },
+    "teacher": {
+      "status": "incomplete",
+      "missing": [
+        "pronunciation",
+        "part_of_speech"
+      ],
+      "errors": {},
+      "completed_at": null
+    },
+    "father": {
+      "status": "incomplete",
+      "missing": [
+        "pronunciation",
+        "part_of_speech"
+      ],
+      "errors": {},
+      "completed_at": null
+    },
+    "mother": {
+      "status": "incomplete",
+      "missing": [
+        "pronunciation",
+        "part_of_speech"
+      ],
+      "errors": {},
+      "completed_at": null
+    },
+    "brother": {
+      "status": "incomplete",
+      "missing": [
+        "pronunciation",
+        "part_of_speech"
+      ],
+      "errors": {},
+      "completed_at": null
+    },
+    "sister": {
+      "status": "incomplete",
+      "missing": [
+        "pronunciation",
+        "part_of_speech"
+      ],
+      "errors": {},
+      "completed_at": null
+    },
+    "baby": {
+      "status": "incomplete",
+      "missing": [
+        "pronunciation",
+        "part_of_speech"
+      ],
+      "errors": {},
+      "completed_at": null
+    },
+    "one": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-21T00:26:55Z"
+    },
+    "two": {
+      "status": "incomplete",
+      "missing": [
+        "pronunciation",
+        "part_of_speech"
+      ],
+      "errors": {},
+      "completed_at": null
+    },
+    "three": {
+      "status": "incomplete",
+      "missing": [
+        "pronunciation",
+        "part_of_speech"
+      ],
+      "errors": {},
+      "completed_at": null
+    },
+    "four": {
+      "status": "incomplete",
+      "missing": [
+        "pronunciation",
+        "part_of_speech"
+      ],
+      "errors": {},
+      "completed_at": null
+    },
+    "five": {
+      "status": "incomplete",
+      "missing": [
+        "pronunciation",
+        "part_of_speech"
+      ],
+      "errors": {},
+      "completed_at": null
+    },
+    "six": {
+      "status": "incomplete",
+      "missing": [
+        "pronunciation",
+        "part_of_speech"
+      ],
+      "errors": {},
+      "completed_at": null
+    },
+    "seven": {
+      "status": "incomplete",
+      "missing": [
+        "pronunciation",
+        "part_of_speech"
+      ],
+      "errors": {},
+      "completed_at": null
+    },
+    "eight": {
+      "status": "incomplete",
+      "missing": [
+        "pronunciation",
+        "part_of_speech"
+      ],
+      "errors": {},
+      "completed_at": null
+    },
+    "nine": {
+      "status": "incomplete",
+      "missing": [
+        "pronunciation",
+        "part_of_speech"
+      ],
+      "errors": {},
+      "completed_at": null
+    },
+    "ten": {
+      "status": "incomplete",
+      "missing": [
+        "pronunciation",
+        "part_of_speech"
+      ],
+      "errors": {},
+      "completed_at": null
+    },
+    "red": {
+      "status": "incomplete",
+      "missing": [
+        "pronunciation",
+        "part_of_speech"
+      ],
+      "errors": {},
+      "completed_at": null
+    },
+    "blue": {
+      "status": "incomplete",
+      "missing": [
+        "pronunciation",
+        "part_of_speech"
+      ],
+      "errors": {},
+      "completed_at": null
+    },
+    "green": {
+      "status": "incomplete",
+      "missing": [
+        "pronunciation",
+        "part_of_speech"
+      ],
+      "errors": {},
+      "completed_at": null
+    },
+    "yellow": {
+      "status": "incomplete",
+      "missing": [
+        "pronunciation",
+        "part_of_speech"
+      ],
+      "errors": {},
+      "completed_at": null
+    },
+    "black": {
+      "status": "incomplete",
+      "missing": [
+        "pronunciation",
+        "part_of_speech"
+      ],
+      "errors": {},
+      "completed_at": null
+    },
+    "white": {
+      "status": "incomplete",
+      "missing": [
+        "pronunciation",
+        "part_of_speech"
+      ],
+      "errors": {},
+      "completed_at": null
+    },
+    "book": {
+      "status": "incomplete",
+      "missing": [
+        "pronunciation",
+        "part_of_speech"
+      ],
+      "errors": {},
+      "completed_at": null
+    },
+    "pen": {
+      "status": "incomplete",
+      "missing": [
+        "pronunciation",
+        "part_of_speech"
+      ],
+      "errors": {},
+      "completed_at": null
+    },
+    "pencil": {
+      "status": "incomplete",
+      "missing": [
+        "pronunciation",
+        "part_of_speech"
+      ],
+      "errors": {},
+      "completed_at": null
+    },
+    "bag": {
+      "status": "incomplete",
+      "missing": [
+        "pronunciation",
+        "part_of_speech"
+      ],
+      "errors": {},
+      "completed_at": null
+    },
+    "desk": {
+      "status": "incomplete",
+      "missing": [
+        "pronunciation",
+        "part_of_speech"
+      ],
+      "errors": {},
+      "completed_at": null
+    },
+    "chair": {
+      "status": "incomplete",
+      "missing": [
+        "pronunciation",
+        "part_of_speech"
+      ],
+      "errors": {},
+      "completed_at": null
+    },
+    "door": {
+      "status": "incomplete",
+      "missing": [
+        "pronunciation",
+        "part_of_speech"
+      ],
+      "errors": {},
+      "completed_at": null
+    },
+    "window": {
+      "status": "incomplete",
+      "missing": [
+        "pronunciation",
+        "part_of_speech"
+      ],
+      "errors": {},
+      "completed_at": null
+    },
+    "ruler": {
+      "status": "incomplete",
+      "missing": [
+        "pronunciation",
+        "part_of_speech"
+      ],
+      "errors": {},
+      "completed_at": null
+    },
+    "rubber": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-21T00:27:18Z"
+    },
+    "head": {
+      "status": "incomplete",
+      "missing": [
+        "pronunciation",
+        "part_of_speech"
+      ],
+      "errors": {},
+      "completed_at": null
+    },
+    "eye": {
+      "status": "incomplete",
+      "missing": [
+        "pronunciation",
+        "part_of_speech"
+      ],
+      "errors": {},
+      "completed_at": null
+    },
+    "ear": {
+      "status": "incomplete",
+      "missing": [
+        "pronunciation",
+        "part_of_speech"
+      ],
+      "errors": {},
+      "completed_at": null
+    },
+    "nose": {
+      "status": "incomplete",
+      "missing": [
+        "pronunciation",
+        "part_of_speech"
+      ],
+      "errors": {},
+      "completed_at": null
+    },
+    "mouth": {
+      "status": "incomplete",
+      "missing": [
+        "pronunciation",
+        "part_of_speech"
+      ],
+      "errors": {},
+      "completed_at": null
+    },
+    "hand": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-21T00:27:23Z"
+    },
+    "arm": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-21T00:27:24Z"
+    },
+    "leg": {
+      "status": "incomplete",
+      "missing": [
+        "pronunciation",
+        "part_of_speech"
+      ],
+      "errors": {},
+      "completed_at": null
+    },
+    "foot": {
+      "status": "incomplete",
+      "missing": [
+        "pronunciation",
+        "part_of_speech"
+      ],
+      "errors": {},
+      "completed_at": null
+    },
+    "cat": {
+      "status": "incomplete",
+      "missing": [
+        "pronunciation",
+        "part_of_speech"
+      ],
+      "errors": {},
+      "completed_at": null
+    },
+    "dog": {
+      "status": "incomplete",
+      "missing": [
+        "pronunciation",
+        "part_of_speech"
+      ],
+      "errors": {},
+      "completed_at": null
+    },
+    "bird": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-21T00:27:28Z"
+    },
+    "fish": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-21T00:27:29Z"
+    },
+    "pig": {
+      "status": "incomplete",
+      "missing": [
+        "pronunciation",
+        "part_of_speech"
+      ],
+      "errors": {},
+      "completed_at": null
+    },
+    "cow": {
+      "status": "incomplete",
+      "missing": [
+        "pronunciation",
+        "part_of_speech"
+      ],
+      "errors": {},
+      "completed_at": null
+    },
+    "duck": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-21T00:27:32Z"
+    },
+    "hen": {
+      "status": "incomplete",
+      "missing": [
+        "pronunciation",
+        "part_of_speech"
+      ],
+      "errors": {},
+      "completed_at": null
+    },
+    "apple": {
+      "status": "incomplete",
+      "missing": [
+        "pronunciation",
+        "part_of_speech"
+      ],
+      "errors": {},
+      "completed_at": null
+    },
+    "banana": {
+      "status": "incomplete",
+      "missing": [
+        "pronunciation",
+        "part_of_speech"
+      ],
+      "errors": {},
+      "completed_at": null
+    },
+    "orange": {
+      "status": "incomplete",
+      "missing": [
+        "pronunciation",
+        "part_of_speech"
+      ],
+      "errors": {},
+      "completed_at": null
+    },
+    "egg": {
+      "status": "incomplete",
+      "missing": [
+        "pronunciation",
+        "part_of_speech"
+      ],
+      "errors": {},
+      "completed_at": null
+    },
+    "milk": {
+      "status": "incomplete",
+      "missing": [
+        "pronunciation",
+        "part_of_speech"
+      ],
+      "errors": {},
+      "completed_at": null
+    },
+    "bread": {
+      "status": "incomplete",
+      "missing": [
+        "pronunciation",
+        "part_of_speech"
+      ],
+      "errors": {},
+      "completed_at": null
+    },
+    "rice": {
+      "status": "incomplete",
+      "missing": [
+        "pronunciation",
+        "part_of_speech"
+      ],
+      "errors": {},
+      "completed_at": null
+    },
+    "water": {
+      "status": "incomplete",
+      "missing": [
+        "pronunciation",
+        "part_of_speech"
+      ],
+      "errors": {},
+      "completed_at": null
+    },
+    "school": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-21T00:27:41Z"
+    },
+    "home": {
+      "status": "incomplete",
+      "missing": [
+        "pronunciation",
+        "part_of_speech"
+      ],
+      "errors": {},
+      "completed_at": null
+    },
+    "room": {
+      "status": "incomplete",
+      "missing": [
+        "pronunciation",
+        "part_of_speech"
+      ],
+      "errors": {},
+      "completed_at": null
+    },
+    "run": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-21T00:27:43Z"
+    },
+    "jump": {
+      "status": "incomplete",
+      "missing": [
+        "pronunciation",
+        "part_of_speech"
+      ],
+      "errors": {},
+      "completed_at": null
+    },
+    "walk": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-21T00:27:45Z"
+    },
+    "sit": {
+      "status": "incomplete",
+      "missing": [
+        "pronunciation",
+        "part_of_speech"
+      ],
+      "errors": {},
+      "completed_at": null
+    },
+    "stand": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-21T00:27:47Z"
+    },
+    "read": {
+      "status": "incomplete",
+      "missing": [
+        "pronunciation",
+        "part_of_speech"
+      ],
+      "errors": {},
+      "completed_at": null
+    },
+    "write": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-21T00:27:49Z"
+    },
+    "draw": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-21T00:27:50Z"
+    },
+    "sing": {
+      "status": "incomplete",
+      "missing": [
+        "pronunciation",
+        "part_of_speech"
+      ],
+      "errors": {},
+      "completed_at": null
+    },
+    "dance": {
+      "status": "incomplete",
+      "missing": [
+        "pronunciation",
+        "part_of_speech"
+      ],
+      "errors": {},
+      "completed_at": null
+    },
+    "play": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-21T00:27:52Z"
+    },
+    "eat": {
+      "status": "incomplete",
+      "missing": [
+        "pronunciation",
+        "part_of_speech"
+      ],
+      "errors": {},
+      "completed_at": null
+    },
+    "drink": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-21T00:27:54Z"
+    },
+    "sleep": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-21T00:27:55Z"
+    },
+    "look": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-21T00:27:56Z"
+    },
+    "listen": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-21T00:27:57Z"
+    },
+    "speak": {
+      "status": "incomplete",
+      "missing": [
+        "pronunciation",
+        "part_of_speech"
+      ],
+      "errors": {},
+      "completed_at": null
+    },
+    "big": {
+      "status": "incomplete",
+      "missing": [
+        "pronunciation",
+        "part_of_speech"
+      ],
+      "errors": {},
+      "completed_at": null
+    },
+    "small": {
+      "status": "incomplete",
+      "missing": [
+        "pronunciation",
+        "part_of_speech"
+      ],
+      "errors": {},
+      "completed_at": null
+    },
+    "long": {
+      "status": "incomplete",
+      "missing": [
+        "pronunciation",
+        "part_of_speech"
+      ],
+      "errors": {},
+      "completed_at": null
+    },
+    "short": {
+      "status": "incomplete",
+      "missing": [
+        "pronunciation",
+        "part_of_speech"
+      ],
+      "errors": {},
+      "completed_at": null
+    },
+    "happy": {
+      "status": "incomplete",
+      "missing": [
+        "pronunciation",
+        "part_of_speech"
+      ],
+      "errors": {},
+      "completed_at": null
+    },
+    "sad": {
+      "status": "incomplete",
+      "missing": [
+        "pronunciation",
+        "part_of_speech"
+      ],
+      "errors": {},
+      "completed_at": null
+    },
+    "good": {
+      "status": "incomplete",
+      "missing": [
+        "pronunciation",
+        "part_of_speech"
+      ],
+      "errors": {},
+      "completed_at": null
+    },
+    "new": {
+      "status": "incomplete",
+      "missing": [
+        "pronunciation",
+        "part_of_speech"
+      ],
+      "errors": {},
+      "completed_at": null
+    },
+    "old": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-21T00:28:06Z"
+    },
+    "hot": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-21T00:28:07Z"
+    },
+    "cold": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-21T00:28:08Z"
+    },
+    "like": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-21T00:28:08Z"
+    },
+    "can": {
+      "status": "incomplete",
+      "missing": [
+        "pronunciation",
+        "part_of_speech"
+      ],
+      "errors": {},
+      "completed_at": null
+    },
+    "go": {
+      "status": "incomplete",
+      "missing": [
+        "pronunciation",
+        "part_of_speech"
+      ],
+      "errors": {},
+      "completed_at": null
+    },
+    "come": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-21T00:28:11Z"
+    }
+  }
+}

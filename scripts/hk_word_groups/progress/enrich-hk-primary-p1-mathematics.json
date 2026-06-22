@@ -1,0 +1,151 @@
+{
+  "group_code": "hk-primary-p1-mathematics",
+  "terms": {
+    "count": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-21T00:28:12Z"
+    },
+    "add": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-21T00:28:13Z"
+    },
+    "subtract": {
+      "status": "incomplete",
+      "missing": [
+        "pronunciation",
+        "part_of_speech"
+      ],
+      "errors": {},
+      "completed_at": null
+    },
+    "equal": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-21T00:28:15Z"
+    },
+    "more": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-21T00:28:16Z"
+    },
+    "less": {
+      "status": "incomplete",
+      "missing": [
+        "pronunciation",
+        "part_of_speech"
+      ],
+      "errors": {},
+      "completed_at": null
+    },
+    "shape": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-21T00:28:17Z"
+    },
+    "circle": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-21T00:28:18Z"
+    },
+    "square": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-21T00:28:19Z"
+    },
+    "triangle": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-21T00:28:20Z"
+    },
+    "rectangle": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-21T00:28:21Z"
+    },
+    "first": {
+      "status": "incomplete",
+      "missing": [
+        "pronunciation",
+        "part_of_speech"
+      ],
+      "errors": {
+        "last": "AI request failed: {\"error\":{\"message\":\"upstream error: do request failed (request id: 202606201347148969908B9S1FNOp)\",\"type\":\"AgnesAI_error\",\"param\":\"\",\"code\":\"do_request_failed\"}}"
+      },
+      "completed_at": null
+    },
+    "last": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-21T00:28:23Z"
+    },
+    "big": {
+      "status": "incomplete",
+      "missing": [
+        "pronunciation",
+        "part_of_speech"
+      ],
+      "errors": {},
+      "completed_at": null
+    },
+    "small": {
+      "status": "incomplete",
+      "missing": [
+        "pronunciation",
+        "part_of_speech"
+      ],
+      "errors": {},
+      "completed_at": null
+    },
+    "long": {
+      "status": "incomplete",
+      "missing": [
+        "pronunciation",
+        "part_of_speech"
+      ],
+      "errors": {},
+      "completed_at": null
+    },
+    "short": {
+      "status": "incomplete",
+      "missing": [
+        "pronunciation",
+        "part_of_speech"
+      ],
+      "errors": {},
+      "completed_at": null
+    },
+    "heavy": {
+      "status": "incomplete",
+      "missing": [
+        "pronunciation",
+        "part_of_speech"
+      ],
+      "errors": {},
+      "completed_at": null
+    },
+    "light": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-21T00:28:28Z"
+    },
+    "pattern": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-21T00:28:29Z"
+    }
+  }
+}

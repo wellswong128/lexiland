@@ -1,0 +1,158 @@
+{
+  "group_code": "hk-primary-p5-english",
+  "terms": {
+    "environment": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-21T00:31:48Z"
+    },
+    "recycle": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-21T00:31:49Z"
+    },
+    "pollution": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-21T00:31:50Z"
+    },
+    "conserve": {
+      "status": "incomplete",
+      "missing": [
+        "pronunciation",
+        "part_of_speech"
+      ],
+      "errors": {},
+      "completed_at": null
+    },
+    "habitat": {
+      "status": "incomplete",
+      "missing": [
+        "pronunciation",
+        "part_of_speech"
+      ],
+      "errors": {},
+      "completed_at": null
+    },
+    "endangered": {
+      "status": "incomplete",
+      "missing": [
+        "pronunciation",
+        "part_of_speech"
+      ],
+      "errors": {},
+      "completed_at": null
+    },
+    "ecosystem": {
+      "status": "incomplete",
+      "missing": [
+        "pronunciation",
+        "part_of_speech"
+      ],
+      "errors": {},
+      "completed_at": null
+    },
+    "sustainable": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-21T00:31:55Z"
+    },
+    "waste": {
+      "status": "incomplete",
+      "missing": [
+        "pronunciation",
+        "part_of_speech"
+      ],
+      "errors": {},
+      "completed_at": null
+    },
+    "reduce": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-21T00:31:56Z"
+    },
+    "renewable": {
+      "status": "incomplete",
+      "missing": [
+        "pronunciation",
+        "part_of_speech"
+      ],
+      "errors": {},
+      "completed_at": null
+    },
+    "biodiversity": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-21T00:31:58Z"
+    },
+    "protect": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-21T00:31:59Z"
+    },
+    "climate": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-21T00:32:00Z"
+    },
+    "global warming": {
+      "status": "incomplete",
+      "missing": [
+        "pronunciation",
+        "part_of_speech"
+      ],
+      "errors": {},
+      "completed_at": null
+    },
+    "compost": {
+      "status": "incomplete",
+      "missing": [
+        "pronunciation",
+        "part_of_speech"
+      ],
+      "errors": {},
+      "completed_at": null
+    },
+    "emission": {
+      "status": "incomplete",
+      "missing": [
+        "pronunciation",
+        "part_of_speech"
+      ],
+      "errors": {},
+      "completed_at": null
+    },
+    "awareness": {
+      "status": "incomplete",
+      "missing": [
+        "pronunciation",
+        "part_of_speech"
+      ],
+      "errors": {},
+      "completed_at": null
+    },
+    "consequence": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-21T00:32:04Z"
+    },
+    "initiative": {
+      "status": "incomplete",
+      "missing": [
+        "pronunciation",
+        "part_of_speech"
+      ],
+      "errors": {},
+      "completed_at": null
+    }
+  }
+}

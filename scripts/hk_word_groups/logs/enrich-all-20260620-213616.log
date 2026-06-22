@@ -1,0 +1,5 @@
+npm warn Unknown env config "devdir". This will stop working in the next major version of npm.
+
+> lexiland@0.0.0 word-groups:enrich:all
+> bash scripts/hk_word_groups/run-enrich.sh --all
+
