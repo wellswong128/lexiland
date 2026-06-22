@@ -16,6 +16,11 @@ import { hasActiveReviewSession } from "../lib/reviewSessionStorage.js";
 import { useLocale } from "../features/locale/LocaleContext.jsx";
 import { useGameMistakeTracker } from "../features/review/useGameMistakeTracker.js";
 import { useWordsContext } from "../features/words/WordsContext.jsx";
+import blueFishUrl from "../assets/blue-fish.png";
+import orangeFishUrl from "../assets/orange-fish.png";
+import deepSeaBackgroundUrl from "../assets/deep-sea-bg.png";
+import dolphinFishUrl from "../assets/dolphin-fish.png";
+import anglerFishUrl from "../assets/angler-fish.png";
 
 const GAME_SECONDS = 160;
 const ROUND_DELAY_MS = 2000;
@@ -39,8 +44,8 @@ const FISH_SPECIES = {
     questions: 1,
     speedMin: 70,
     speedMax: 110,
-    w: 48,
-    h: 28,
+    w: 72,
+    h: 42,
     colors: ["#fdba74", "#fb923c"],
     weight: 40,
   },
@@ -50,8 +55,8 @@ const FISH_SPECIES = {
     questions: 2,
     speedMin: 60,
     speedMax: 95,
-    w: 56,
-    h: 32,
+    w: 86,
+    h: 52,
     colors: ["#c4b5fd", "#7c3aed"],
     lure: true,
     weight: 25,
@@ -62,8 +67,8 @@ const FISH_SPECIES = {
     questions: 3,
     speedMin: 90,
     speedMax: 130,
-    w: 64,
-    h: 36,
+    w: 96,
+    h: 54,
     colors: ["#93c5fd", "#2563eb"],
     weight: 20,
   },
@@ -73,8 +78,8 @@ const FISH_SPECIES = {
     questions: 4,
     speedMin: 100,
     speedMax: 145,
-    w: 72,
-    h: 38,
+    w: 110,
+    h: 62,
     colors: ["#94a3b8", "#475569"],
     weight: 15,
   },
@@ -84,8 +89,8 @@ const FISH_SPECIES = {
     questions: 5,
     speedMin: 55,
     speedMax: 85,
-    w: 80,
-    h: 44,
+    w: 126,
+    h: 72,
     colors: ["#fde047", "#ca8a04"],
     boss: true,
     weight: 0,
@@ -191,7 +196,7 @@ function getHookTip(hook, originX, originY) {
 function hitTestFish(tipX, tipY, fish) {
   const centerX = fish.x + fish.w / 2;
   const centerY = fish.y + fish.h / 2;
-  const hitRadius = Math.max(fish.w, fish.h) * 0.55 + 14;
+  const hitRadius = Math.max(fish.w, fish.h) * 0.5 + 16;
   const dx = tipX - centerX;
   const dy = tipY - centerY;
   return dx * dx + dy * dy <= hitRadius * hitRadius;
@@ -217,11 +222,20 @@ function findFishAlongHook(originX, originY, angle, startLength, endLength, fish
   return null;
 }
 
-function drawFish(ctx, fish, time) {
+function drawCoverImage(ctx, image, width, height) {
+  const scale = Math.max(width / image.width, height / image.height);
+  const drawWidth = image.width * scale;
+  const drawHeight = image.height * scale;
+  const x = (width - drawWidth) / 2;
+  const y = (height - drawHeight) / 2;
+  ctx.drawImage(image, x, y, drawWidth, drawHeight);
+}
+
+function drawFish(ctx, fish, time, assets) {
   const { species, x, y, w, h, vx } = fish;
-  const [colorA, colorB] = species.colors;
   const facingRight = vx > 0;
   const wiggle = Math.sin(time * 4 + fish.wiggle) * 3;
+  const sprite = assets?.fish?.[species.key];
 
   ctx.save();
   ctx.translate(x + w / 2, y + h / 2 + wiggle);
@@ -229,106 +243,120 @@ function drawFish(ctx, fish, time) {
     ctx.scale(-1, 1);
   }
 
-  const bodyGrad = ctx.createLinearGradient(-w / 2, 0, w / 2, 0);
-  bodyGrad.addColorStop(0, colorA);
-  bodyGrad.addColorStop(1, colorB);
+  if (sprite?.complete && sprite.naturalWidth) {
+    ctx.drawImage(sprite, -w / 2, -h / 2, w, h);
+  } else {
+    const [colorA, colorB] = species.colors;
+    const bodyGrad = ctx.createLinearGradient(-w / 2, 0, w / 2, 0);
+    bodyGrad.addColorStop(0, colorA);
+    bodyGrad.addColorStop(1, colorB);
 
-  ctx.fillStyle = bodyGrad;
-  ctx.beginPath();
-  ctx.ellipse(0, 0, w * 0.38, h * 0.42, 0, 0, Math.PI * 2);
-  ctx.fill();
-
-  ctx.beginPath();
-  ctx.moveTo(-w * 0.38, 0);
-  ctx.lineTo(-w * 0.58, -h * 0.35);
-  ctx.lineTo(-w * 0.58, h * 0.35);
-  ctx.closePath();
-  ctx.fill();
-
-  ctx.fillStyle = "#fff";
-  ctx.beginPath();
-  ctx.arc(w * 0.18, -h * 0.1, h * 0.12, 0, Math.PI * 2);
-  ctx.fill();
-  ctx.fillStyle = "#0f172a";
-  ctx.beginPath();
-  ctx.arc(w * 0.2, -h * 0.1, h * 0.06, 0, Math.PI * 2);
-  ctx.fill();
-
-  if (species.lure) {
-    ctx.strokeStyle = "#fef08a";
-    ctx.lineWidth = 2;
+    ctx.fillStyle = bodyGrad;
     ctx.beginPath();
-    ctx.moveTo(w * 0.3, h * 0.15);
-    ctx.quadraticCurveTo(w * 0.5, h * 0.45, w * 0.35, h * 0.55);
-    ctx.stroke();
-    ctx.fillStyle = "#fef08a";
-    ctx.beginPath();
-    ctx.arc(w * 0.35, h * 0.58, 4, 0, Math.PI * 2);
+    ctx.ellipse(0, 0, w * 0.38, h * 0.42, 0, 0, Math.PI * 2);
     ctx.fill();
-  }
 
-  if (species.boss) {
-    ctx.fillStyle = "#fbbf24";
-    ctx.font = "bold 14px Nunito, sans-serif";
-    ctx.textAlign = "center";
-    ctx.fillText("★", 0, -h * 0.55);
+    ctx.beginPath();
+    ctx.moveTo(-w * 0.38, 0);
+    ctx.lineTo(-w * 0.58, -h * 0.35);
+    ctx.lineTo(-w * 0.58, h * 0.35);
+    ctx.closePath();
+    ctx.fill();
+
+    ctx.fillStyle = "#fff";
+    ctx.beginPath();
+    ctx.arc(w * 0.18, -h * 0.1, h * 0.12, 0, Math.PI * 2);
+    ctx.fill();
+    ctx.fillStyle = "#0f172a";
+    ctx.beginPath();
+    ctx.arc(w * 0.2, -h * 0.1, h * 0.06, 0, Math.PI * 2);
+    ctx.fill();
+
+    if (species.lure) {
+      ctx.strokeStyle = "#fef08a";
+      ctx.lineWidth = 2;
+      ctx.beginPath();
+      ctx.moveTo(w * 0.3, h * 0.15);
+      ctx.quadraticCurveTo(w * 0.5, h * 0.45, w * 0.35, h * 0.55);
+      ctx.stroke();
+      ctx.fillStyle = "#fef08a";
+      ctx.beginPath();
+      ctx.arc(w * 0.35, h * 0.58, 4, 0, Math.PI * 2);
+      ctx.fill();
+    }
+
+    if (species.boss) {
+      ctx.fillStyle = "#fbbf24";
+      ctx.font = "bold 14px Nunito, sans-serif";
+      ctx.textAlign = "center";
+      ctx.fillText("★", 0, -h * 0.55);
+    }
   }
 
   ctx.restore();
 }
 
-function drawScene(ctx, width, height, state, time) {
-  const waterGrad = ctx.createLinearGradient(0, 0, 0, height);
-  waterGrad.addColorStop(0, "#083f7c");
-  waterGrad.addColorStop(0.22, "#075985");
-  waterGrad.addColorStop(0.58, "#07517c");
-  waterGrad.addColorStop(1, "#031a3e");
-  ctx.fillStyle = waterGrad;
-  ctx.fillRect(0, 0, width, height);
+function drawScene(ctx, width, height, state, time, assets) {
+  const background = assets?.background;
+  const hasBackground = background?.complete && background.naturalWidth;
 
-  const surfaceGlow = ctx.createRadialGradient(width / 2, -height * 0.08, 0, width / 2, 0, width * 0.72);
-  surfaceGlow.addColorStop(0, "rgba(217, 249, 255, 0.72)");
-  surfaceGlow.addColorStop(0.24, "rgba(103, 232, 249, 0.26)");
-  surfaceGlow.addColorStop(1, "rgba(103, 232, 249, 0)");
-  ctx.fillStyle = surfaceGlow;
-  ctx.fillRect(0, 0, width, height * 0.45);
-
-  ctx.save();
-  ctx.globalCompositeOperation = "screen";
-  for (const ray of [
-    { x: width * 0.36, spread: width * 0.2, alpha: 0.12 },
-    { x: width * 0.5, spread: width * 0.24, alpha: 0.16 },
-    { x: width * 0.64, spread: width * 0.18, alpha: 0.1 },
-  ]) {
-    const rayGrad = ctx.createLinearGradient(ray.x, 0, ray.x, height * 0.78);
-    rayGrad.addColorStop(0, `rgba(224, 242, 254, ${ray.alpha})`);
-    rayGrad.addColorStop(1, "rgba(224, 242, 254, 0)");
-    ctx.fillStyle = rayGrad;
-    ctx.beginPath();
-    ctx.moveTo(ray.x - ray.spread * 0.18, 0);
-    ctx.lineTo(ray.x + ray.spread * 0.18, 0);
-    ctx.lineTo(ray.x + ray.spread, height * 0.78);
-    ctx.lineTo(ray.x - ray.spread, height * 0.78);
-    ctx.closePath();
-    ctx.fill();
+  if (hasBackground) {
+    drawCoverImage(ctx, background, width, height);
+  } else {
+    const waterGrad = ctx.createLinearGradient(0, 0, 0, height);
+    waterGrad.addColorStop(0, "#083f7c");
+    waterGrad.addColorStop(0.22, "#075985");
+    waterGrad.addColorStop(0.58, "#07517c");
+    waterGrad.addColorStop(1, "#031a3e");
+    ctx.fillStyle = waterGrad;
+    ctx.fillRect(0, 0, width, height);
   }
-  ctx.restore();
 
-  ctx.strokeStyle = "rgba(255,255,255,0.32)";
-  ctx.lineWidth = 1.8;
-  for (let wave = 0; wave < 6; wave += 1) {
-    ctx.beginPath();
-    for (let x = 0; x <= width; x += 7) {
-      const y = 14 + wave * 5 + Math.sin(x * 0.024 + time * 2.2 + wave) * 3.5;
-      if (x === 0) ctx.moveTo(x, y);
-      else ctx.lineTo(x, y);
+  if (!hasBackground) {
+    const surfaceGlow = ctx.createRadialGradient(width / 2, -height * 0.08, 0, width / 2, 0, width * 0.72);
+    surfaceGlow.addColorStop(0, "rgba(217, 249, 255, 0.72)");
+    surfaceGlow.addColorStop(0.24, "rgba(103, 232, 249, 0.26)");
+    surfaceGlow.addColorStop(1, "rgba(103, 232, 249, 0)");
+    ctx.fillStyle = surfaceGlow;
+    ctx.fillRect(0, 0, width, height * 0.45);
+
+    ctx.save();
+    ctx.globalCompositeOperation = "screen";
+    for (const ray of [
+      { x: width * 0.36, spread: width * 0.2, alpha: 0.12 },
+      { x: width * 0.5, spread: width * 0.24, alpha: 0.16 },
+      { x: width * 0.64, spread: width * 0.18, alpha: 0.1 },
+    ]) {
+      const rayGrad = ctx.createLinearGradient(ray.x, 0, ray.x, height * 0.78);
+      rayGrad.addColorStop(0, `rgba(224, 242, 254, ${ray.alpha})`);
+      rayGrad.addColorStop(1, "rgba(224, 242, 254, 0)");
+      ctx.fillStyle = rayGrad;
+      ctx.beginPath();
+      ctx.moveTo(ray.x - ray.spread * 0.18, 0);
+      ctx.lineTo(ray.x + ray.spread * 0.18, 0);
+      ctx.lineTo(ray.x + ray.spread, height * 0.78);
+      ctx.lineTo(ray.x - ray.spread, height * 0.78);
+      ctx.closePath();
+      ctx.fill();
     }
-    ctx.stroke();
+    ctx.restore();
+
+    ctx.strokeStyle = "rgba(255,255,255,0.32)";
+    ctx.lineWidth = 1.8;
+    for (let wave = 0; wave < 6; wave += 1) {
+      ctx.beginPath();
+      for (let x = 0; x <= width; x += 7) {
+        const y = 14 + wave * 5 + Math.sin(x * 0.024 + time * 2.2 + wave) * 3.5;
+        if (x === 0) ctx.moveTo(x, y);
+        else ctx.lineTo(x, y);
+      }
+      ctx.stroke();
+    }
   }
 
-  for (let i = 0; i < 76; i += 1) {
+  for (let i = 0; i < 70; i += 1) {
     const bx = (i * 73 + Math.sin(time * 0.45 + i) * 22) % width;
-    const by = ((i * 47 - time * (18 + (i % 5) * 5)) % (height + 80)) - 40;
+    const by = ((i * 47 - time * (18 + (i % 5) * 5)) % (height + 90)) - 50;
     const size = 1.4 + (i % 5) * 0.85;
     ctx.strokeStyle = `rgba(224, 242, 254, ${0.12 + (i % 4) * 0.045})`;
     ctx.lineWidth = 1;
@@ -337,55 +365,9 @@ function drawScene(ctx, width, height, state, time) {
     ctx.stroke();
   }
 
-  const sandHeight = Math.max(66, height * 0.12);
-  const sandGrad = ctx.createLinearGradient(0, height - sandHeight, 0, height);
-  sandGrad.addColorStop(0, "rgba(251, 191, 36, 0)");
-  sandGrad.addColorStop(0.32, "#d99a46");
-  sandGrad.addColorStop(1, "#9a5f28");
-  ctx.fillStyle = sandGrad;
-  ctx.fillRect(0, height - sandHeight, width, sandHeight);
-
-  for (const coral of [
-    { x: width * 0.06, h: 54, color: "#a855f7" },
-    { x: width * 0.12, h: 78, color: "#22c55e" },
-    { x: width * 0.2, h: 48, color: "#fb7185" },
-    { x: width * 0.78, h: 50, color: "#f97316" },
-    { x: width * 0.86, h: 86, color: "#16a34a" },
-    { x: width * 0.94, h: 62, color: "#d946ef" },
-  ]) {
-    const sway = Math.sin(time * 1.5 + coral.x) * 7;
-    ctx.strokeStyle = coral.color;
-    ctx.lineWidth = Math.max(4, width * 0.008);
-    ctx.lineCap = "round";
-    for (let branch = -1; branch <= 1; branch += 1) {
-      ctx.beginPath();
-      ctx.moveTo(coral.x + branch * 8, height - 8);
-      ctx.quadraticCurveTo(
-        coral.x + sway + branch * 12,
-        height - sandHeight * 0.42 - coral.h * 0.45,
-        coral.x + sway * 0.4 + branch * 18,
-        height - sandHeight * 0.42 - coral.h,
-      );
-      ctx.stroke();
-    }
-  }
-
-  for (const rock of [
-    { x: width * 0.06, y: height - 22, r: 24, color: "#4338ca" },
-    { x: width * 0.92, y: height - 24, r: 28, color: "#334155" },
-    { x: width * 0.23, y: height - 18, r: 18, color: "#0f766e" },
-  ]) {
-    ctx.fillStyle = rock.color;
-    ctx.globalAlpha = 0.82;
-    ctx.beginPath();
-    ctx.ellipse(rock.x, rock.y, rock.r * 1.35, rock.r, 0, 0, Math.PI * 2);
-    ctx.fill();
-    ctx.globalAlpha = 1;
-  }
-
   for (const fish of state.fishes) {
     if (!fish.caught) {
-      drawFish(ctx, fish, time);
+      drawFish(ctx, fish, time, assets);
     }
   }
 
@@ -470,7 +452,12 @@ function drawScene(ctx, width, height, state, time) {
   ctx.fill();
 
   if (hook.caughtFish) {
-    drawFish(ctx, { ...hook.caughtFish, x: tip.x - hook.caughtFish.w / 2, y: tip.y - hook.caughtFish.h / 2 }, time);
+    drawFish(
+      ctx,
+      { ...hook.caughtFish, x: tip.x - hook.caughtFish.w / 2, y: tip.y - hook.caughtFish.h / 2 },
+      time,
+      assets,
+    );
   }
 }
 
@@ -636,6 +623,7 @@ function DeepSeaFishingPage() {
   const gameRef = useRef(null);
   const lastFrameRef = useRef(0);
   const grouperDueRef = useRef(GROUPER_INTERVAL_MS);
+  const imageAssetsRef = useRef(null);
 
   const [gameState, setGameState] = useState("rules");
   const [score, setScore] = useState(0);
@@ -651,6 +639,47 @@ function DeepSeaFishingPage() {
   const [quizLocked, setQuizLocked] = useState(false);
   const [grouperAlert, setGrouperAlert] = useState(false);
   const [reviewItems, setReviewItems] = useState([]);
+  const [assetsReady, setAssetsReady] = useState(false);
+
+  useEffect(() => {
+    if (imageAssetsRef.current) return;
+
+    const makeImage = (src) => {
+      const image = new Image();
+      image.src = src;
+      return image;
+    };
+
+    const assets = {
+      background: makeImage(deepSeaBackgroundUrl),
+      fish: {
+        small: makeImage(orangeFishUrl),
+        angler: makeImage(anglerFishUrl),
+        dolphin: makeImage(dolphinFishUrl),
+        shark: makeImage(blueFishUrl),
+        grouper: makeImage(orangeFishUrl),
+      },
+    };
+
+    imageAssetsRef.current = assets;
+    const allImages = [assets.background, ...Object.values(assets.fish)];
+    let loaded = 0;
+    const markLoaded = () => {
+      loaded += 1;
+      if (loaded >= allImages.length) {
+        setAssetsReady((value) => !value);
+      }
+    };
+
+    allImages.forEach((image) => {
+      if (image.complete) {
+        markLoaded();
+      } else {
+        image.onload = markLoaded;
+        image.onerror = markLoaded;
+      }
+    });
+  }, []);
 
   const initGameRef = useCallback(() => {
     const canvas = canvasRef.current;
@@ -1030,7 +1059,7 @@ function DeepSeaFishingPage() {
 
       const ctx = canvas.getContext("2d");
       if (ctx) {
-        drawScene(ctx, width, height, game, now / 1000);
+        drawScene(ctx, width, height, game, now / 1000, imageAssetsRef.current);
       }
 
       rafRef.current = requestAnimationFrame(gameLoop);
@@ -1068,8 +1097,9 @@ function DeepSeaFishingPage() {
         },
       },
       performance.now() / 1000,
+      imageAssetsRef.current,
     );
-  }, [gameState, resizeCanvas]);
+  }, [assetsReady, gameState, resizeCanvas]);
 
   useEffect(() => {
     if (gameState === "playing" || gameState === "quiz") {
