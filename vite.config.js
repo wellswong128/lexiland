@@ -1,6 +1,7 @@
 import { defineConfig, loadEnv } from "vite";
 import react from "@vitejs/plugin-react";
 import tailwindcss from "@tailwindcss/vite";
+import { VitePWA } from "vite-plugin-pwa";
 import { routeRequest } from "./server/api/router.js";
 
 function readRequestBody(request) {
@@ -55,7 +56,53 @@ export default defineConfig(({ mode }) => {
   process.env.AGNES_IMAGE_SIZE ||= env.AGNES_IMAGE_SIZE;
 
   return {
-    plugins: [react(), tailwindcss(), localApiPlugin()],
+    plugins: [
+      react(),
+      tailwindcss(),
+      localApiPlugin(),
+      VitePWA({
+        registerType: "autoUpdate",
+        includeAssets: [
+          "apple-touch-icon.png",
+          "pwa-192.png",
+          "pwa-512.png",
+          "lexi-mascot.svg",
+        ],
+        manifest: false,
+        workbox: {
+          globPatterns: ["**/*.{js,css,html,ico,png,svg,webp,woff2,webmanifest}"],
+          navigateFallback: "/index.html",
+          navigateFallbackDenylist: [/^\/api\//],
+          runtimeCaching: [
+            {
+              urlPattern: /^https:\/\/fonts\.googleapis\.com\/.*/i,
+              handler: "CacheFirst",
+              options: {
+                cacheName: "lexiland-google-fonts-stylesheets",
+                expiration: {
+                  maxEntries: 10,
+                  maxAgeSeconds: 60 * 60 * 24 * 365,
+                },
+              },
+            },
+            {
+              urlPattern: /^https:\/\/fonts\.gstatic\.com\/.*/i,
+              handler: "CacheFirst",
+              options: {
+                cacheName: "lexiland-google-fonts-webfonts",
+                expiration: {
+                  maxEntries: 20,
+                  maxAgeSeconds: 60 * 60 * 24 * 365,
+                },
+              },
+            },
+          ],
+        },
+        devOptions: {
+          enabled: false,
+        },
+      }),
+    ],
     build: {
       rolldownOptions: {
         output: {

@@ -1,16 +1,16 @@
 import { useEffect, useState } from "react";
+import { getIsStandaloneDisplay } from "../lib/pwaPlatform.js";
 
 export function usePwaInstall() {
   const [deferredPrompt, setDeferredPrompt] = useState(null);
-  const [isInstalled, setIsInstalled] = useState(false);
+  const [isInstalled, setIsInstalled] = useState(getIsStandaloneDisplay);
 
   useEffect(() => {
-    const standalone =
-      window.matchMedia("(display-mode: standalone)").matches ||
-      window.matchMedia("(display-mode: fullscreen)").matches ||
-      window.navigator.standalone === true;
+    function syncInstalledState() {
+      setIsInstalled(getIsStandaloneDisplay());
+    }
 
-    setIsInstalled(standalone);
+    syncInstalledState();
 
     function handleBeforeInstallPrompt(event) {
       event.preventDefault();

@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import LexiMascot from "../components/LexiMascot.jsx";
 import { useLocale } from "../features/locale/LocaleContext.jsx";
+import PwaStatusPanel from "../components/PwaStatusPanel.jsx";
 import { usePwaInstall } from "../hooks/usePwaInstall.js";
 import { useStandaloneDisplay } from "../hooks/useStandaloneDisplay.js";
 import { getAppHomeUrl } from "../lib/appUrl.js";
@@ -70,6 +71,19 @@ function InstallPage() {
             {t("install.installButton")}
           </button>
         ) : null}
+
+        <PwaStatusPanel showInstallActions={false} />
+
+        <div className="install-test-checklist">
+          <h2>{t("install.testChecklistTitle")}</h2>
+          <p>{t("install.testChecklistDescription")}</p>
+          <ul>
+            <li>{t("install.testCheckIos")}</li>
+            <li>{t("install.testCheckAndroid")}</li>
+            <li>{t("install.testCheckOffline")}</li>
+            <li>{t("install.testCheckUpdate")}</li>
+          </ul>
+        </div>
 
         <Link className="install-page-home-link" to="/">
           {t("install.openApp")}

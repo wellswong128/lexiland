@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import BottomNav from "./BottomNav.jsx";
 import LexiFloatingMenu from "./LexiFloatingMenu.jsx";
+import OfflineBanner from "./OfflineBanner.jsx";
 import {
   getActivityForLocation,
   recordLearningActivity,
@@ -87,6 +88,7 @@ function AppLayout({ children }) {
       {showFloatingMenu ? (
         <LexiFloatingMenu isOpen={isMenuOpen} onOpenChange={setIsMenuOpen} />
       ) : null}
+      {!isGamePage && !isAuthPage ? <OfflineBanner /> : null}
       <main
         className={
           isGamePage

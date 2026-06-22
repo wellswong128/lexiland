@@ -222,6 +222,132 @@
   text-decoration: underline;
 }
 
+.pwa-status-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  border-radius: 20px;
+  background: #f8fbff;
+  padding: 14px;
+}
+
+.pwa-status-title {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 900;
+  color: #1f2a44;
+}
+
+.pwa-status-description {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #64748b;
+}
+
+.pwa-status-grid {
+  display: grid;
+  gap: 8px;
+}
+
+.pwa-status-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  border-radius: 14px;
+  background: #fff;
+  padding: 10px 12px;
+  font-size: 14px;
+  color: #475569;
+}
+
+.pwa-status-row strong {
+  color: #0f172a;
+  font-weight: 900;
+}
+
+.pwa-status-row-success strong {
+  color: #15803d;
+}
+
+.pwa-status-row-warning strong {
+  color: #b45309;
+}
+
+.pwa-status-note {
+  margin: 0;
+  border-radius: 14px;
+  padding: 10px 12px;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.45;
+}
+
+.pwa-status-note-info {
+  background: #eff6ff;
+  color: #1d4ed8;
+}
+
+.pwa-status-note-warning {
+  background: #fff7ed;
+  color: #c2410c;
+}
+
+.install-test-checklist {
+  border-radius: 20px;
+  background: #f8fafc;
+  padding: 14px;
+}
+
+.install-test-checklist h2 {
+  margin: 0 0 6px;
+  font-size: 18px;
+  font-weight: 900;
+  color: #1f2a44;
+}
+
+.install-test-checklist p {
+  margin: 0 0 10px;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #64748b;
+}
+
+.install-test-checklist ul {
+  margin: 0;
+  padding-left: 18px;
+  color: #334155;
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+.install-test-checklist li + li {
+  margin-top: 6px;
+}
+
+.offline-banner {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  z-index: 70;
+  width: min(430px, 100%);
+  transform: translateX(-50%);
+  padding: calc(8px + env(safe-area-inset-top, 0px)) 12px 8px;
+  background: rgba(254, 243, 199, 0.96);
+  border-bottom: 1px solid rgba(245, 158, 11, 0.35);
+  backdrop-filter: blur(12px);
+}
+
+.offline-banner p {
+  margin: 0;
+  text-align: center;
+  font-size: 13px;
+  font-weight: 800;
+  line-height: 1.4;
+  color: #92400e;
+}
+
 @media (min-width: 640px) {
   .install-qr-steps {
     grid-template-columns: repeat(2, minmax(0, 1fr));
