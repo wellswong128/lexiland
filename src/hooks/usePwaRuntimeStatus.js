@@ -1,12 +1,17 @@
 import { useEffect, useState } from "react";
 import { getIsStandaloneDisplay, getPwaPlatform, getServiceWorkerSupport } from "../lib/pwaPlatform.js";
+import {
+  getNeedsRefresh,
+  getOfflineReady,
+  probeOfflineReady,
+} from "../lib/pwaRuntimeState.js";
 
 export function usePwaRuntimeStatus() {
   const [isOnline, setIsOnline] = useState(
     typeof navigator !== "undefined" ? navigator.onLine : true,
   );
-  const [offlineReady, setOfflineReady] = useState(false);
-  const [needsRefresh, setNeedsRefresh] = useState(false);
+  const [offlineReady, setOfflineReady] = useState(getOfflineReady);
+  const [needsRefresh, setNeedsRefresh] = useState(getNeedsRefresh);
   const [serviceWorkerState, setServiceWorkerState] = useState("checking");
 
   useEffect(() => {
@@ -30,6 +35,12 @@ export function usePwaRuntimeStatus() {
     window.addEventListener("offline", handleOffline);
     window.addEventListener("lexiland:offline-ready", handleOfflineReady);
     window.addEventListener("lexiland:sw-needs-refresh", handleNeedsRefresh);
+
+    void probeOfflineReady().then((ready) => {
+      if (ready) {
+        setOfflineReady(true);
+      }
+    });
 
     return () => {
       window.removeEventListener("online", handleOnline);

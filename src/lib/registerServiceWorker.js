@@ -1,3 +1,5 @@
+import { markNeedsRefresh, markOfflineReady } from "./pwaRuntimeState.js";
+
 export function registerServiceWorker() {
   if (!import.meta.env.PROD || !("serviceWorker" in navigator)) {
     return;
@@ -8,9 +10,11 @@ export function registerServiceWorker() {
       registerSW({
         immediate: true,
         onNeedRefresh() {
+          markNeedsRefresh();
           window.dispatchEvent(new CustomEvent("lexiland:sw-needs-refresh"));
         },
         onOfflineReady() {
+          markOfflineReady();
           window.dispatchEvent(new CustomEvent("lexiland:offline-ready"));
         },
         onRegistered(registration) {
