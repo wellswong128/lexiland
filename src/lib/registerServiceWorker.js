@@ -1,4 +1,4 @@
-import { markNeedsRefresh, markOfflineReady } from "./pwaRuntimeState.js";
+import { markNeedsRefresh, markOfflineReady, setUpdateServiceWorker } from "./pwaRuntimeState.js";
 
 export function registerServiceWorker() {
   if (!import.meta.env.PROD || !("serviceWorker" in navigator)) {
@@ -7,7 +7,7 @@ export function registerServiceWorker() {
 
   import("virtual:pwa-register")
     .then(({ registerSW }) => {
-      registerSW({
+      const updateSW = registerSW({
         immediate: true,
         onNeedRefresh() {
           markNeedsRefresh();
@@ -37,6 +37,8 @@ export function registerServiceWorker() {
           );
         },
       });
+
+      setUpdateServiceWorker(updateSW);
     })
     .catch((error) => {
       console.warn("Could not load service worker registration.", error);

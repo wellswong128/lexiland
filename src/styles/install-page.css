@@ -327,16 +327,30 @@
 }
 
 .offline-banner {
+  width: 100%;
+  padding: calc(8px + env(safe-area-inset-top, 0px)) 12px 8px;
+  background: rgba(254, 243, 199, 0.96);
+  border-bottom: 1px solid rgba(245, 158, 11, 0.35);
+  backdrop-filter: blur(12px);
+}
+
+.top-status-banners {
   position: fixed;
   top: 0;
   left: 50%;
   z-index: 70;
   width: min(430px, 100%);
   transform: translateX(-50%);
-  padding: calc(8px + env(safe-area-inset-top, 0px)) 12px 8px;
-  background: rgba(254, 243, 199, 0.96);
-  border-bottom: 1px solid rgba(245, 158, 11, 0.35);
-  backdrop-filter: blur(12px);
+  display: flex;
+  flex-direction: column;
+}
+
+.top-status-banners .offline-banner {
+  padding: 8px 12px;
+}
+
+.top-status-banners .offline-banner:first-child {
+  padding-top: calc(8px + env(safe-area-inset-top, 0px));
 }
 
 .offline-banner p {
@@ -346,6 +360,71 @@
   font-weight: 800;
   line-height: 1.4;
   color: #92400e;
+}
+
+.update-banner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  padding: 10px 12px;
+  background: rgba(219, 234, 254, 0.98);
+  border-bottom: 1px solid rgba(59, 130, 246, 0.35);
+  backdrop-filter: blur(12px);
+}
+
+.top-status-banners .update-banner:only-child {
+  padding-top: calc(10px + env(safe-area-inset-top, 0px));
+}
+
+.update-banner-text {
+  margin: 0;
+  text-align: center;
+  font-size: 13px;
+  font-weight: 800;
+  line-height: 1.4;
+  color: #1e40af;
+}
+
+.update-banner-button {
+  border: none;
+  border-radius: 999px;
+  padding: 8px 16px;
+  background: #2563eb;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 900;
+  line-height: 1.2;
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+}
+
+.update-banner-button:hover:not(:disabled) {
+  background: #1d4ed8;
+}
+
+.update-banner-button:disabled {
+  opacity: 0.7;
+  cursor: wait;
+}
+
+.pwa-status-update-action {
+  margin-top: 12px;
+  width: 100%;
+  border: none;
+  border-radius: 999px;
+  padding: 12px 16px;
+  background: #2563eb;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.pwa-status-update-action:disabled {
+  opacity: 0.7;
+  cursor: wait;
 }
 
 @media (min-width: 640px) {

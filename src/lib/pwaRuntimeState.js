@@ -1,7 +1,9 @@
 const OFFLINE_READY_STORAGE_KEY = "lexiland.pwa.offlineReady";
+const NEEDS_REFRESH_STORAGE_KEY = "lexiland.pwa.needsRefresh";
 
 let offlineReady = readStoredOfflineReady();
-let needsRefresh = false;
+let needsRefresh = readStoredNeedsRefresh();
+let updateServiceWorker = null;
 
 function readStoredOfflineReady() {
   if (typeof localStorage === "undefined") {
@@ -41,12 +43,84 @@ export function getOfflineReady() {
   return offlineReady;
 }
 
+function readStoredNeedsRefresh() {
+  if (typeof localStorage === "undefined") {
+    return false;
+  }
+
+  try {
+    return localStorage.getItem(NEEDS_REFRESH_STORAGE_KEY) === "1";
+  } catch {
+    return false;
+  }
+}
+
+function persistNeedsRefresh(value) {
+  needsRefresh = value;
+
+  if (typeof localStorage === "undefined") {
+    return;
+  }
+
+  try {
+    if (value) {
+      localStorage.setItem(NEEDS_REFRESH_STORAGE_KEY, "1");
+    } else {
+      localStorage.removeItem(NEEDS_REFRESH_STORAGE_KEY);
+    }
+  } catch {
+    // Ignore private browsing / storage quota errors.
+  }
+}
+
 export function markNeedsRefresh() {
-  needsRefresh = true;
+  persistNeedsRefresh(true);
+}
+
+export function clearNeedsRefresh() {
+  persistNeedsRefresh(false);
 }
 
 export function getNeedsRefresh() {
   return needsRefresh;
+}
+
+export function setUpdateServiceWorker(updateFn) {
+  updateServiceWorker = updateFn;
+}
+
+export async function applyServiceWorkerUpdate() {
+  clearNeedsRefresh();
+
+  if (typeof updateServiceWorker === "function") {
+    await updateServiceWorker(true);
+    return;
+  }
+
+  window.location.reload();
+}
+
+export async function probeNeedsRefresh() {
+  if (needsRefresh) {
+    return true;
+  }
+
+  if (!("serviceWorker" in navigator)) {
+    return false;
+  }
+
+  try {
+    const registration = await navigator.serviceWorker.getRegistration();
+
+    if (registration?.waiting) {
+      markNeedsRefresh();
+      return true;
+    }
+  } catch {
+    return false;
+  }
+
+  return false;
 }
 
 export async function probeOfflineReady() {

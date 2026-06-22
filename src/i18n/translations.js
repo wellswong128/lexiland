@@ -785,7 +785,10 @@ const zhHant = {
       offlineBannerReady: "目前離線。已快取的頁面仍可使用，AI 功能需要網路。",
       offlineBannerLimited: "目前離線。請先連線完成首次載入，之後才可離線使用。",
       offlineNote: "離線時可複習本機字卡與已快取頁面；拍照掃描與 AI 需要網路。",
-      refreshHint: "有新版本可用。關閉後重新開啟 App，或重新整理頁面以更新。",
+      refreshHint: "有新版本可用。更新後即可使用最新功能。",
+      updateBannerMessage: "有新版本可用",
+      updateButton: "點此更新",
+      updateButtonLoading: "更新中...",
       platform: {
         ios: "iOS",
         android: "Android",
@@ -1752,7 +1755,10 @@ export const translations = {
       offlineBannerReady: "You are offline. Cached pages still work; AI features need a connection.",
       offlineBannerLimited: "You are offline. Connect once to finish the first load for offline use.",
       offlineNote: "Offline mode supports local words and cached pages; photo scan and AI need network.",
-      refreshHint: "A new version is available. Reopen the app or refresh to update.",
+      refreshHint: "A new version is available. Update to get the latest features.",
+      updateBannerMessage: "A new version is available",
+      updateButton: "Update now",
+      updateButtonLoading: "Updating...",
       platform: {
         ios: "iOS",
         android: "Android",

@@ -1,7 +1,9 @@
 import { Link } from "react-router-dom";
+import { useState } from "react";
 import { useLocale } from "../features/locale/LocaleContext.jsx";
 import { usePwaInstall } from "../hooks/usePwaInstall.js";
 import { usePwaRuntimeStatus } from "../hooks/usePwaRuntimeStatus.js";
+import { applyServiceWorkerUpdate } from "../lib/pwaRuntimeState.js";
 
 function StatusRow({ label, value, tone = "default" }) {
   return (
@@ -15,6 +17,7 @@ function StatusRow({ label, value, tone = "default" }) {
 function PwaStatusPanel({ showInstallActions = true }) {
   const { t } = useLocale();
   const { canInstall, isInstalled, promptInstall } = usePwaInstall();
+  const [isUpdating, setIsUpdating] = useState(false);
   const {
     isOnline,
     needsRefresh,
@@ -28,6 +31,20 @@ function PwaStatusPanel({ showInstallActions = true }) {
   const serviceWorkerLabel = serviceWorkerSupported
     ? t(`pwa.serviceWorker.${serviceWorkerState}`)
     : t("pwa.serviceWorker.unsupported");
+
+  async function handleUpdate() {
+    if (isUpdating) {
+      return;
+    }
+
+    setIsUpdating(true);
+
+    try {
+      await applyServiceWorkerUpdate();
+    } catch {
+      setIsUpdating(false);
+    }
+  }
 
   return (
     <section aria-labelledby="pwa-status-title" className="pwa-status-panel">
@@ -69,7 +86,19 @@ function PwaStatusPanel({ showInstallActions = true }) {
       </div>
 
       {needsRefresh ? (
-        <p className="pwa-status-note pwa-status-note-info">{t("pwa.refreshHint")}</p>
+        <>
+          <p className="pwa-status-note pwa-status-note-info">{t("pwa.refreshHint")}</p>
+          <button
+            className="pwa-status-update-action"
+            disabled={isUpdating}
+            onClick={() => {
+              void handleUpdate();
+            }}
+            type="button"
+          >
+            {isUpdating ? t("pwa.updateButtonLoading") : t("pwa.updateButton")}
+          </button>
+        </>
       ) : null}
 
       {!isOnline ? (

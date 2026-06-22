@@ -3,12 +3,14 @@ import { useLocation } from "react-router-dom";
 import BottomNav from "./BottomNav.jsx";
 import LexiFloatingMenu from "./LexiFloatingMenu.jsx";
 import OfflineBanner from "./OfflineBanner.jsx";
+import UpdateBanner from "./UpdateBanner.jsx";
 import {
   getActivityForLocation,
   recordLearningActivity,
 } from "../lib/learningActivity.js";
 import { useGameViewport } from "../hooks/useGameViewport.js";
 import { useStandaloneDisplay } from "../hooks/useStandaloneDisplay.js";
+import "../styles/install-page.css";
 
 function AppLayout({ children }) {
   const location = useLocation();
@@ -88,7 +90,12 @@ function AppLayout({ children }) {
       {showFloatingMenu ? (
         <LexiFloatingMenu isOpen={isMenuOpen} onOpenChange={setIsMenuOpen} />
       ) : null}
-      {!isGamePage && !isAuthPage ? <OfflineBanner /> : null}
+      {!isGamePage && !isAuthPage ? (
+        <div className="top-status-banners">
+          <OfflineBanner />
+          <UpdateBanner />
+        </div>
+      ) : null}
       <main
         className={
           isGamePage

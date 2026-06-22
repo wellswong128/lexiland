@@ -3,6 +3,7 @@ import { getIsStandaloneDisplay, getPwaPlatform, getServiceWorkerSupport } from 
 import {
   getNeedsRefresh,
   getOfflineReady,
+  probeNeedsRefresh,
   probeOfflineReady,
 } from "../lib/pwaRuntimeState.js";
 
@@ -39,6 +40,12 @@ export function usePwaRuntimeStatus() {
     void probeOfflineReady().then((ready) => {
       if (ready) {
         setOfflineReady(true);
+      }
+    });
+
+    void probeNeedsRefresh().then((pendingUpdate) => {
+      if (pendingUpdate) {
+        setNeedsRefresh(true);
       }
     });
 
