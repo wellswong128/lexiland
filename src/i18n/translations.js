@@ -4,7 +4,7 @@ const zhHant = {
   brand: {
     name: "力思樂園 LexiLand",
     displayName: "LexiLand",
-    tagline: "用遊戲背單字，每天10分鐘，考前不再臨時抱佛腳。",
+    tagline: "影一影課本，即刻變溫習卡。玩遊戲複習，默書更有底。",
     mascotName: "樂思 Lexi",
     mascotAlt: "LexiLand 吉祥物樂思",
   },
@@ -68,7 +68,7 @@ const zhHant = {
     bottomNav: {
       label: "主要導覽",
       home: "首頁",
-      photoScan: "拍照掃描",
+      photoScan: "拍照加字",
       achievements: "成就",
       learningRecord: "學習紀錄",
       favorites: "收藏",
@@ -94,7 +94,7 @@ const zhHant = {
     },
     home: {
       eyebrow: "英文單字學習樂園",
-      description: "用遊戲背單字，每天10分鐘，考前不再臨時抱佛腳。",
+      description: "影一影課本，即刻變溫習卡。玩遊戲複習，默書更有底。",
       savedWords: "已儲存單字",
       savedWordsShort: "單字",
       savedWordsDesc: "已學單字",
@@ -108,7 +108,7 @@ const zhHant = {
       startQuiz: "開始測驗",
       quickActions: "快速開始",
       quickActionsTitle: "✨ 快速開始 ✨",
-      photoDesc: "抽出單字，立刻學習",
+      photoDesc: "課本一影，即刻變字卡",
       addWordDesc: "手動加入生字",
       wordListDesc: "查看所有單字",
       flashcardsDesc: "用字卡加深記憶",
@@ -120,21 +120,29 @@ const zhHant = {
       moreGamesTitle: "🎉 更多遊戲 ✦",
       ctaReviewDue: "開始複習（{{count}} 個）",
       ctaReviewMistakes: "複習錯題（{{count}} 個）",
-      ctaAddFirst: "拍照加入第一個單字",
+      ctaAddFirst: "影一影課本，開始加字",
       ctaKeepLearning: "繼續複習字卡",
-      starterBadge: "1 分鐘入門",
-      starterTitle: "影一影課本，立即變成測驗",
+      starterBadge: "招牌功能",
+      starterTitle: "影一影課本，即刻變溫習卡",
       starterDescription:
-        "還差 {{count}} 個單字就可以開始第一次測驗。先拍照，AI 會幫你變成字卡。",
-      starterReadyDescription: "已經有足夠單字，可以立即玩一次小測，看看剛剛記住多少。",
-      starterProgress: "已準備 {{count}} / {{target}} 個測驗單字",
-      starterStepPhotoTitle: "拍照加字",
-      starterStepPhotoDesc: "拍課本、默書紙或筆記。",
-      starterStepCardsTitle: "自動生成字卡",
-      starterStepCardsDesc: "AI 補中文、例句和可複習資料。",
-      starterStepQuizTitle: "立即玩一次 Quiz",
-      starterStepQuizDesc: "有 2 個字就可以開始測驗。",
-      starterPhotoCta: "開始拍照加字",
+        "拍一下課本或默書紙，AI 自動抽字、補全中文例句，一鍵變成可溫習的字卡。",
+      starterReadyDescription: "字卡已準備好，立即溫習或玩測驗，看看記住了多少。",
+      starterProgress: "已加入 {{count}} / {{target}} 個字",
+      starterStepPhotoTitle: "影一影課本",
+      starterStepPhotoDesc: "拍課本、默書紙或筆記上的生字。",
+      starterStepCardsTitle: "即刻變溫習卡",
+      starterStepCardsDesc: "AI 補中文、例句，批量預覽後一次儲存。",
+      starterStepQuizTitle: "馬上開始複習",
+      starterStepQuizDesc: "用字卡或測驗鞏固記憶。",
+      starterPhotoCta: "立即拍照加字",
+      flagshipBadge: "招牌功能",
+      flagshipTitle: "影一影課本，即刻變溫習卡",
+      flagshipDescription:
+        "拍課本、默書紙或筆記，AI 自動抽字、補全，批量預覽後一次加入字庫。",
+      flagshipStepExtract: "自動抽字",
+      flagshipStepComplete: "AI 補全",
+      flagshipStepPreview: "批量預覽",
+      flagshipCta: "開始拍照加字",
       starterQuizCta: "立即開始 Quiz",
       starterManualCta: "手動加字",
       starterAuthHint: "登入後會直接返回這一步，繼續完成第一個測驗。",
@@ -149,7 +157,7 @@ const zhHant = {
       dailyTaskClearMistakes: "清掉 {{target}} 個錯字",
       dailyTaskClearMistakesDesc: "從錯題本清除，或答對錯題字",
       dailyTaskProgress: "{{current}} / {{target}}",
-      emptyGuidance: "還沒有單字。拍照或手動新增幾個字，就可以開始玩遊戲和複習。",
+      emptyGuidance: "還沒有單字。影一影課本，即刻變溫習卡。",
       emptyGamesHint: "先加幾個單字，遊戲會更有趣。",
       syncPrompt: "登入後可同步單字到雲端，換裝置也不會丟失。",
       syncAction: "登入同步",
@@ -192,8 +200,8 @@ const zhHant = {
           desc: "加入第一個單字到單字庫",
         },
         firstPhotoWord: {
-          title: "拍照學字",
-          desc: "用拍照方式加入第一個單字",
+          title: "影一影課本",
+          desc: "用招牌拍照功能加入第一個單字",
         },
         words10: {
           title: "單字小苗",
@@ -294,10 +302,15 @@ const zhHant = {
       placeholderExample: "She is resilient after every setback.",
       placeholderTags: "advanced, personality",
       tabManual: "手動輸入",
-      tabPhoto: "拍照選詞",
+      tabPhoto: "拍照加字",
+      photoTitle: "影一影課本，即刻變溫習卡",
+      photoDescription:
+        "拍一下就能抽字、AI 補全、批量預覽，一次加入多個生字。",
+      photoEyebrow: "招牌功能",
       photo: {
-        uploadTitle: "拍照或上傳圖片",
-        uploadDescription: "拍課本、單字表或筆記，AI 會辨識圖片中的英文單字供你選擇。",
+        uploadTitle: "影一影課本，即刻變溫習卡",
+        uploadDescription:
+          "拍課本、默書紙或筆記。系統會壓縮圖片、抽取英文單字，再由 AI 補全成溫習卡。",
         takePhoto: "拍照",
         choosePhoto: "從相簿選擇",
         extracting: "正在辨識圖片中的單字...",
@@ -845,9 +858,9 @@ const zhHant = {
 
 const zhHans = toSimplifiedLocale(zhHant);
 zhHans.brand.tagline =
-  "帮助中学生用游戏化练习背单字，每天10分钟，提升默书与考试表现。";
+  "影一拍课本，即刻变温习卡。玩游戏复习，默书更有底。";
 zhHans.home.description =
-  "帮助中学生用游戏化练习背单字，每天10分钟，提升默书与考试表现。";
+  "影一拍课本，即刻变温习卡。玩游戏复习，默书更有底。";
 
 export const translations = {
   "zh-Hant": zhHant,
@@ -856,7 +869,7 @@ export const translations = {
     brand: {
       name: "LexiLand",
       displayName: "LexiLand",
-      tagline: "10 minutes a day on LexiLand helps secondary school students learn vocabulary and feel more confident in exams.",
+      tagline: "Snap your textbook and turn it into flashcards instantly. Review with games and feel ready for dictation.",
       mascotName: "Lexi",
       mascotAlt: "LexiLand mascot Lexi",
     },
@@ -921,7 +934,7 @@ export const translations = {
     bottomNav: {
       label: "Main navigation",
       home: "Home",
-      photoScan: "Photo Scan",
+      photoScan: "Photo Add",
       achievements: "Achievements",
       learningRecord: "Records",
       favorites: "Saved",
@@ -948,7 +961,7 @@ export const translations = {
     home: {
       eyebrow: "English Learning Playground",
       description:
-        "10 minutes a day on LexiLand helps secondary school students learn vocabulary and feel more confident in exams.",
+        "Snap your textbook and turn it into flashcards instantly. Review with games and feel ready for dictation.",
       savedWords: "Saved Words",
       savedWordsShort: "Words",
       savedWordsDesc: "Words learned",
@@ -962,7 +975,7 @@ export const translations = {
       startQuiz: "Start Quiz",
       quickActions: "Quick Start",
       quickActionsTitle: "✨ Quick Start ✨",
-      photoDesc: "Snap words and learn fast",
+      photoDesc: "Snap a page, get flashcards",
       addWordDesc: "Add words manually",
       wordListDesc: "Browse all saved words",
       flashcardsDesc: "Review with flashcards",
@@ -974,22 +987,30 @@ export const translations = {
       moreGamesTitle: "🎉 More Games ✦",
       ctaReviewDue: "Start Review ({{count}})",
       ctaReviewMistakes: "Review Mistakes ({{count}})",
-      ctaAddFirst: "Add Your First Word with a Photo",
+      ctaAddFirst: "Snap your textbook to start",
       ctaKeepLearning: "Continue Flashcards",
-      starterBadge: "1-minute start",
-      starterTitle: "Snap a page and turn it into a quiz",
+      starterBadge: "Signature feature",
+      starterTitle: "Snap your textbook, get flashcards instantly",
       starterDescription:
-        "Add {{count}} more words to unlock your first quiz. Start with a photo and AI will turn them into flashcards.",
+        "Take a photo of your textbook or dictation sheet. AI extracts words, fills translations and examples, and turns them into review-ready cards.",
       starterReadyDescription:
-        "You have enough words now. Start a quick quiz and see what you remember.",
-      starterProgress: "{{count}} / {{target}} quiz words ready",
-      starterStepPhotoTitle: "Take a photo",
-      starterStepPhotoDesc: "Snap a textbook, dictation sheet, or notes.",
-      starterStepCardsTitle: "Auto-create flashcards",
-      starterStepCardsDesc: "AI fills translations, examples, and review data.",
-      starterStepQuizTitle: "Play one quiz",
-      starterStepQuizDesc: "Start once you have 2 words.",
+        "Your flashcards are ready. Review them now or play a quick quiz.",
+      starterProgress: "{{count}} / {{target}} words added",
+      starterStepPhotoTitle: "Snap your textbook",
+      starterStepPhotoDesc: "Capture words from textbooks, dictation sheets, or notes.",
+      starterStepCardsTitle: "Instant flashcards",
+      starterStepCardsDesc: "AI fills translations and examples. Preview in bulk, then save.",
+      starterStepQuizTitle: "Start reviewing",
+      starterStepQuizDesc: "Use flashcards or a quiz to lock in what you learned.",
       starterPhotoCta: "Start with Photo",
+      flagshipBadge: "Signature feature",
+      flagshipTitle: "Snap your textbook, get flashcards instantly",
+      flagshipDescription:
+        "Capture words from any study page. AI extracts, completes, and lets you preview everything before saving.",
+      flagshipStepExtract: "Extract words",
+      flagshipStepComplete: "AI complete",
+      flagshipStepPreview: "Bulk preview",
+      flagshipCta: "Start with Photo",
       starterQuizCta: "Start Quiz Now",
       starterManualCta: "Add Manually",
       starterAuthHint: "After signing in, you will return here to finish your first quiz.",
@@ -1004,7 +1025,7 @@ export const translations = {
       dailyTaskClearMistakes: "Clear {{target}} mistakes",
       dailyTaskClearMistakesDesc: "Remove mistakes or answer mistake words correctly",
       dailyTaskProgress: "{{current}} / {{target}}",
-      emptyGuidance: "No words yet. Add a few by photo or manually to start playing and reviewing.",
+      emptyGuidance: "No words yet. Snap your textbook and turn it into flashcards instantly.",
       emptyGamesHint: "Add some words first to make the games more fun.",
       syncPrompt: "Sign in to sync words to the cloud and keep them across devices.",
       syncAction: "Sign In to Sync",
@@ -1047,8 +1068,8 @@ export const translations = {
           desc: "Add your first word to the library",
         },
         firstPhotoWord: {
-          title: "Photo Learner",
-          desc: "Add your first word with a photo",
+          title: "Textbook Snap",
+          desc: "Add your first word with the signature photo feature",
         },
         words10: {
           title: "Word Sprout",
@@ -1150,11 +1171,15 @@ export const translations = {
       placeholderExample: "She is resilient after every setback.",
       placeholderTags: "advanced, personality",
       tabManual: "Manual Entry",
-      tabPhoto: "Photo Scan",
+      tabPhoto: "Photo Add",
+      photoTitle: "Snap your textbook, get flashcards instantly",
+      photoDescription:
+        "Snap a page to extract words, let AI complete them, preview in bulk, and save multiple words at once.",
+      photoEyebrow: "Signature feature",
       photo: {
-        uploadTitle: "Take or Upload a Photo",
+        uploadTitle: "Snap your textbook, get flashcards instantly",
         uploadDescription:
-          "Capture a textbook page, word list, or notes. AI will detect English words for you to choose.",
+          "Capture a textbook page, dictation sheet, or notes. We compress the image, extract English words, and AI turns them into flashcards.",
         takePhoto: "Take Photo",
         choosePhoto: "Choose from Gallery",
         extracting: "Detecting words in the image...",

@@ -165,29 +165,17 @@ function AddWordPage() {
     <section className="w-full max-w-3xl rounded-3xl border border-blue-200/70 bg-white/90 p-6 shadow-2xl shadow-blue-950/10 sm:p-10">
       <div className="mb-8 text-center">
         <p className="mb-3 text-xs font-bold uppercase tracking-[0.16em] text-blue-700">
-          {t("addWord.eyebrow")}
+          {activeTab === "photo" ? t("addWord.photoEyebrow") : t("addWord.eyebrow")}
         </p>
         <h1 className="text-4xl font-bold text-blue-950 sm:text-5xl">
-          {t("addWord.title")}
+          {activeTab === "photo" ? t("addWord.photoTitle") : t("addWord.title")}
         </h1>
         <p className="mx-auto mt-4 max-w-xl text-slate-600">
-          {t("addWord.description")}
+          {activeTab === "photo" ? t("addWord.photoDescription") : t("addWord.description")}
         </p>
       </div>
 
       <div className="mb-6 grid grid-cols-2 gap-2 rounded-2xl border border-blue-100 bg-blue-50 p-1">
-        <button
-          className={[
-            "rounded-xl px-4 py-3 text-sm font-bold transition",
-            activeTab === "manual"
-              ? "bg-white text-blue-700 shadow-sm"
-              : "text-slate-600 hover:text-blue-700",
-          ].join(" ")}
-          onClick={() => setActiveTab("manual")}
-          type="button"
-        >
-          {t("addWord.tabManual")}
-        </button>
         <button
           className={[
             "rounded-xl px-4 py-3 text-sm font-bold transition",
@@ -199,6 +187,18 @@ function AddWordPage() {
           type="button"
         >
           {t("addWord.tabPhoto")}
+        </button>
+        <button
+          className={[
+            "rounded-xl px-4 py-3 text-sm font-bold transition",
+            activeTab === "manual"
+              ? "bg-white text-blue-700 shadow-sm"
+              : "text-slate-600 hover:text-blue-700",
+          ].join(" ")}
+          onClick={() => setActiveTab("manual")}
+          type="button"
+        >
+          {t("addWord.tabManual")}
         </button>
       </div>
 

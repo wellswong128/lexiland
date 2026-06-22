@@ -8,6 +8,7 @@ const navItems = [
     labelKey: "bottomNav.photoScan",
     to: "/words/new?tab=photo&scan=camera",
     emoji: "📷",
+    featured: true,
   },
   { key: "achievements", labelKey: "bottomNav.achievements", to: "/achievements", emoji: "🏆" },
   { key: "menu", labelKey: "bottomNav.menu", emoji: "☰", action: "menu" },
@@ -44,7 +45,13 @@ function BottomNav({ isMenuOpen = false, onMenuToggle }) {
             <NavLink
               aria-label={t(item.labelKey)}
               className={({ isActive }) =>
-                ["bottom-nav-link", isActive ? "bottom-nav-link-active" : ""].filter(Boolean).join(" ")
+                [
+                  "bottom-nav-link",
+                  item.featured ? "bottom-nav-link-featured" : "",
+                  isActive ? "bottom-nav-link-active" : "",
+                ]
+                  .filter(Boolean)
+                  .join(" ")
               }
               end={item.end}
               key={item.key}

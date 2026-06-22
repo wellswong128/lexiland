@@ -47,6 +47,7 @@ const quickActionLinks = [
     bg: "home-quick-bg-green",
     iconClass: "home-qi1",
     emoji: "📷",
+    featured: true,
   },
   {
     key: "addWord",
@@ -83,7 +84,6 @@ const quickActionLinks = [
     bg: "home-quick-bg-amber",
     iconClass: "home-qi5",
     emoji: "🏆",
-    single: true,
   },
 ];
 
@@ -219,6 +219,9 @@ function HomePage() {
   const starterManualTo = getRouteOrSignupRedirect(role, STARTER_MANUAL_PATH);
   const showStarterAuthHint = !canRoute(role, starterPrimaryPath);
   const showDailyTasks = !isHomeLoading && wordCount > 0 && !showStarterOnboarding;
+  const photoFlagshipTo = getRouteOrSignupRedirect(role, STARTER_PHOTO_PATH);
+  const showPhotoFlagship =
+    !isHomeLoading && !showStarterOnboarding && canRoute(role, STARTER_PHOTO_PATH);
   const activeGroupLabel = getActiveGroupLabel(activeGroup, locale);
 
   const dailyTaskLabelKeys = {
@@ -388,6 +391,38 @@ function HomePage() {
           </section>
         ) : null}
 
+        {showPhotoFlagship ? (
+          <section className="home-flagship" aria-labelledby="home-flagship-title">
+            <div className="home-flagship-copy">
+              <p className="home-flagship-badge">{t("home.flagshipBadge")}</p>
+              <h2 id="home-flagship-title">{t("home.flagshipTitle")}</h2>
+              <p>{t("home.flagshipDescription")}</p>
+            </div>
+
+            <ol className="home-flagship-steps" aria-label={t("home.flagshipTitle")}>
+              <li>
+                <span aria-hidden="true">1</span>
+                {t("home.flagshipStepExtract")}
+              </li>
+              <li>
+                <span aria-hidden="true">2</span>
+                {t("home.flagshipStepComplete")}
+              </li>
+              <li>
+                <span aria-hidden="true">3</span>
+                {t("home.flagshipStepPreview")}
+              </li>
+            </ol>
+
+            <Link className="home-flagship-cta" to={photoFlagshipTo}>
+              <span aria-hidden="true" className="home-flagship-cta-icon">
+                📷
+              </span>
+              {t("home.flagshipCta")}
+            </Link>
+          </section>
+        ) : null}
+
         {showDailyTasks ? (
           <section className="home-daily" aria-labelledby="home-daily-title">
             <div className="home-daily-header">
@@ -507,6 +542,7 @@ function HomePage() {
               className={[
                 "home-quick",
                 action.bg,
+                action.featured ? "home-quick-featured" : "",
                 action.single ? "home-quick-single" : "",
               ]
                 .filter(Boolean)
