@@ -4,6 +4,7 @@ import GameHomeButton from "../components/GameHomeButton.jsx";
 import GameMistakeSummary from "../components/GameMistakeSummary.jsx";
 import GameWordBankStatus from "../components/GameWordBankStatus.jsx";
 import GameWordWithSpeak from "../components/GameWordWithSpeak.jsx";
+import { speakText } from "../components/SpeakButton.jsx";
 import {
   createMultipleChoiceQuestion,
   shuffleArray,
@@ -466,6 +467,18 @@ function QuizOverlay({
   onPick,
   t,
 }) {
+  useEffect(() => {
+    if (!quiz?.question?.word?.trim()) {
+      return undefined;
+    }
+
+    const timerId = window.setTimeout(() => {
+      speakText(quiz.question.word);
+    }, 120);
+
+    return () => window.clearTimeout(timerId);
+  }, [quiz?.question?.word, questionIndex]);
+
   if (!quiz) return null;
 
   const englishBubble = BUBBLE_LAYOUT[0];
@@ -484,7 +497,13 @@ function QuizOverlay({
         className={["dsf-bubble", "dsf-bubble-english", bubbleStates.english ?? ""].filter(Boolean).join(" ")}
         style={{ left: `${englishBubble.x}%`, top: `${englishBubble.y}%` }}
       >
-        <GameWordWithSpeak as="span" className="dsf-bubble-word" text={quiz.question.word} />
+        <GameWordWithSpeak
+          as="span"
+          autoSpeak={false}
+          className="dsf-bubble-word"
+          key={`${questionIndex}-${quiz.question.word}`}
+          text={quiz.question.word}
+        />
         <span className="dsf-bubble-label">{t("games.deepSeaFishing.englishWord")}</span>
       </div>
 

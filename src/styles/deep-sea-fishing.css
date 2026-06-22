@@ -256,7 +256,14 @@
   min-width: 6.5rem;
   min-height: 6.5rem;
   border-color: rgba(253, 224, 71, 0.75);
-  pointer-events: none;
+  pointer-events: auto;
+}
+
+.dsf-bubble-english .game-word-speak-btn {
+  width: 1.75rem;
+  height: 1.75rem;
+  min-width: 1.75rem;
+  min-height: 1.75rem;
 }
 
 .dsf-bubble-choice {
