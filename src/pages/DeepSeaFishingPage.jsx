@@ -20,11 +20,16 @@ const GAME_SECONDS = 100;
 const ROUND_DELAY_MS = 2000;
 const FISH_PER_ROUND = 5;
 const GROUPER_INTERVAL_MS = 30000;
-const HOOK_FIRE_MS = 200;
-const HOOK_RETRACT_MS = 350;
+const HOOK_FIRE_MS = 160;
+const HOOK_RETRACT_MS = 320;
 const SWING_SPEED = 1.8;
 const MAX_SWING_ANGLE = Math.PI * 0.42;
 const HOOK_MAX_LENGTH_RATIO = 0.78;
+const HOOK_SWING_LENGTH_RATIO = 0.14;
+
+function easeOutCubic(value) {
+  return 1 - (1 - value) ** 3;
+}
 
 const FISH_SPECIES = {
   small: {
@@ -191,6 +196,26 @@ function hitTestFish(tipX, tipY, fish) {
   return dx * dx + dy * dy <= hitRadius * hitRadius;
 }
 
+function findFishAlongHook(originX, originY, angle, startLength, endLength, fishes) {
+  const samples = 8;
+  const from = Math.min(startLength, endLength);
+  const to = Math.max(startLength, endLength);
+
+  for (let step = 0; step <= samples; step += 1) {
+    const length = from + ((to - from) * step) / samples;
+    const tipX = originX + Math.sin(angle) * length;
+    const tipY = originY - Math.cos(angle) * length;
+
+    for (const fish of fishes) {
+      if (!fish.caught && hitTestFish(tipX, tipY, fish)) {
+        return fish;
+      }
+    }
+  }
+
+  return null;
+}
+
 function drawFish(ctx, fish, time) {
   const { species, x, y, w, h, vx } = fish;
   const [colorA, colorB] = species.colors;
@@ -312,19 +337,32 @@ function drawScene(ctx, width, height, state, time) {
   const originX = width / 2;
   const originY = height - sandHeight - 4;
   const hook = state.hook;
+  const swingLength = hook.maxLength * HOOK_SWING_LENGTH_RATIO;
   const drawLength =
-    hook.state === "swinging" ? hook.maxLength : Math.max(hook.length, hook.maxLength * 0.08);
+    hook.state === "swinging"
+      ? swingLength
+      : Math.max(hook.length, hook.state === "firing" ? 0 : swingLength * 0.35);
   const tip = getHookTip({ ...hook, length: drawLength }, originX, originY);
 
   if (hook.state === "swinging") {
-    ctx.strokeStyle = "rgba(255, 255, 255, 0.12)";
+    ctx.strokeStyle = "rgba(255, 255, 255, 0.18)";
     ctx.lineWidth = 1.5;
-    ctx.setLineDash([6, 8]);
+    ctx.setLineDash([5, 7]);
     ctx.beginPath();
     ctx.moveTo(originX, originY);
-    ctx.lineTo(tip.x, tip.y);
+    ctx.lineTo(
+      originX + Math.sin(hook.angle) * hook.maxLength,
+      originY - Math.cos(hook.angle) * hook.maxLength,
+    );
     ctx.stroke();
     ctx.setLineDash([]);
+  }
+
+  if (hook.launchFlash && hook.launchFlash > 0) {
+    ctx.fillStyle = `rgba(253, 224, 71, ${hook.launchFlash})`;
+    ctx.beginPath();
+    ctx.arc(originX, originY, 16 + (1 - hook.launchFlash) * 10, 0, Math.PI * 2);
+    ctx.fill();
   }
 
   ctx.strokeStyle = "#f8fafc";
@@ -746,7 +784,10 @@ function DeepSeaFishingPage() {
     game.hook.fireAngle = game.hook.angle;
     game.hook.fireStart = performance.now();
     game.hook.length = 0;
+    game.hook.prevLength = 0;
+    game.hook.launchFlash = 1;
     playTone(280, 0.05, "square", 0.025);
+    window.setTimeout(() => playTone(420, 0.04, "triangle", 0.03), 40);
   }, []);
 
   const startRound = useCallback((includeGrouper = false) => {
@@ -850,23 +891,27 @@ function DeepSeaFishingPage() {
         }
 
         if (game.hook.state === "firing") {
-          const progress = Math.min(1, (now - game.hook.fireStart) / HOOK_FIRE_MS);
+          const rawProgress = Math.min(1, (now - game.hook.fireStart) / HOOK_FIRE_MS);
+          const progress = easeOutCubic(rawProgress);
+          const prevLength = game.hook.prevLength ?? 0;
           game.hook.length = game.hook.maxLength * progress;
           game.hook.angle = game.hook.fireAngle;
+          game.hook.launchFlash = Math.max(0, 1 - rawProgress * 4);
 
-          const tip = getHookTip(game.hook, originX, originY);
-          let hitFish = null;
+          const hitFish = findFishAlongHook(
+            originX,
+            originY,
+            game.hook.fireAngle,
+            prevLength,
+            game.hook.length,
+            game.fishes,
+          );
+          game.hook.prevLength = game.hook.length;
 
-          for (const fish of game.fishes) {
-            if (!fish.caught && hitTestFish(tip.x, tip.y, fish)) {
-              hitFish = fish;
-              break;
-            }
-          }
-
-          if (hitFish || progress >= 1) {
+          if (hitFish || rawProgress >= 1) {
             game.hook.state = "retracting";
             game.hook.retractStart = now;
+            game.hook.launchFlash = 0;
 
             if (hitFish) {
               hitFish.caught = true;
@@ -878,7 +923,7 @@ function DeepSeaFishingPage() {
 
         if (game.hook.state === "retracting") {
           const progress = Math.min(1, (now - game.hook.retractStart) / HOOK_RETRACT_MS);
-          game.hook.length = game.hook.maxLength * (1 - progress);
+          game.hook.length = game.hook.maxLength * (1 - easeOutCubic(progress));
           game.hook.angle = game.hook.fireAngle;
 
           if (progress >= 1) {
