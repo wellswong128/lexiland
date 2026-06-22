@@ -115,9 +115,38 @@ export async function requireRole(
 }
 
 export async function requireAiApiAccess(request) {
-  return requireRole(request, Array.from(AI_ALLOWED_ROLES), {
-    allowImportKey: true,
-  });
+  const providedImportKey = readImportApiKeyHeader(request);
+  const expectedImportKey = String(process.env.IMPORT_API_KEY || "").trim();
+
+  if (providedImportKey && !expectedImportKey) {
+    throw new ApiAuthError(
+      401,
+      "Import API key is not configured on the server. Set IMPORT_API_KEY in Vercel and redeploy.",
+    );
+  }
+
+  if (providedImportKey && expectedImportKey && providedImportKey !== expectedImportKey) {
+    throw new ApiAuthError(
+      401,
+      "Invalid import API key. Use the same IMPORT_API_KEY value in .env.local and Vercel.",
+    );
+  }
+
+  if (checkImportApiKey(request)) {
+    return { source: "import-key", role: "owner", user: null };
+  }
+
+  const token = readBearerToken(request);
+  if (!token) {
+    return { source: "guest", role: "guest", user: null };
+  }
+
+  const auth = await readAuthenticatedUser(request);
+  if (!AI_ALLOWED_ROLES.has(auth.role)) {
+    throw new ApiAuthError(403, "Forbidden. Your role cannot access this API.");
+  }
+
+  return { source: "bearer", role: auth.role, user: auth.user };
 }
 
 export function sendAuthError(response, error) {
