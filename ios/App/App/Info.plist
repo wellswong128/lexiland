@@ -51,5 +51,17 @@
 	<string>力思樂園需要相機權限，以便拍攝課本並建立溫習卡。</string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>力思樂園需要相簿權限，以便選擇課本照片並建立溫習卡。</string>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleURLName</key>
+			<string>com.lexiland.app.auth</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>com.lexiland.app</string>
+				<string>com.wellswong.lexiland</string>
+			</array>
+		</dict>
+	</array>
 </dict>
 </plist>

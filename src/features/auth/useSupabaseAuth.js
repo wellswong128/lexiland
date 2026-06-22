@@ -1,6 +1,8 @@
 import { useCallback, useEffect, useState } from "react";
+import { Capacitor } from "@capacitor/core";
 import { resolveAuthRedirectUrl } from "./authRedirect.js";
 import { hasSupabaseConfig, supabase } from "../../lib/supabaseClient.js";
+import { openNativeOAuthUrl } from "../../lib/initCapacitorAuth.js";
 
 export function useSupabaseAuth() {
   const [session, setSession] = useState(null);
@@ -122,14 +124,21 @@ export function useSupabaseAuth() {
       );
     }
 
-    const { error } = await supabase.auth.signInWithOAuth({
+    const { data, error } = await supabase.auth.signInWithOAuth({
       provider,
-      options: { redirectTo },
+      options: {
+        redirectTo,
+        skipBrowserRedirect: Capacitor.isNativePlatform(),
+      },
     });
 
     if (error) {
       setAuthError(error.message);
       throw error;
+    }
+
+    if (Capacitor.isNativePlatform() && data?.url) {
+      await openNativeOAuthUrl(data.url);
     }
   }, []);
 

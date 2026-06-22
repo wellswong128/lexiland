@@ -50,6 +50,41 @@ npx cap open ios
 - [ ] Save words → **字卡** review works offline after first load
 - [ ] Settings → PWA status shows **原生 App** (Service Worker disabled)
 
+## 7. Native login (Google / Email) — Supabase setup
+
+Capacitor login uses a **custom URL scheme**, not only `capacitor://localhost`.
+
+1. In Xcode, note your **Bundle Identifier** (e.g. `com.wellswong.lexiland`)
+2. Create `.env.local` before `npm run cap:sync`:
+
+```bash
+VITE_CAPACITOR_APP_ID=com.wellswong.lexiland
+VITE_NATIVE_AUTH_REDIRECT_URL=com.wellswong.lexiland://auth/callback
+VITE_SUPABASE_URL=your-project-url
+VITE_SUPABASE_ANON_KEY=your-anon-key
+```
+
+3. In **Supabase → Authentication → URL Configuration → Redirect URLs**, add **all** of:
+
+```text
+capacitor://localhost
+capacitor://localhost/**
+https://localhost
+https://localhost/**
+com.wellswong.lexiland://auth/callback
+com.wellswong.lexiland://**
+```
+
+(Replace `com.wellswong.lexiland` with your Bundle Identifier.)
+
+4. Rebuild and sync:
+
+```bash
+npm run cap:sync
+```
+
+5. Run again from Xcode. Google login opens in-app browser and should return to the app.
+
 ## Notes
 
 - API calls go to `https://learn.lexiland.cc/api/*` from the WebView

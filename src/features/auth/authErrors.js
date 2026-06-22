@@ -1,4 +1,5 @@
-import { resolveAuthRedirectUrl } from "./authRedirect.js";
+import { Capacitor } from "@capacitor/core";
+import { resolveAuthRedirectUrl, getSupabaseRedirectUrlHints } from "./authRedirect.js";
 import { getFriendlyNetworkError } from "../../lib/networkErrors.js";
 
 export function getFriendlyAuthError(message, t) {
@@ -18,6 +19,14 @@ export function getFriendlyAuthError(message, t) {
     lower.includes("url configuration") ||
     lower.includes("invalid url")
   ) {
+    if (Capacitor.isNativePlatform()) {
+      const hints = getSupabaseRedirectUrlHints();
+      return t("settings.redirectUrlErrorNative", {
+        url: resolveAuthRedirectUrl() || hints[0],
+        hints: hints.join("\n"),
+      });
+    }
+
     return t("settings.redirectUrlError", {
       url: resolveAuthRedirectUrl() || t("settings.notConfigured"),
     });

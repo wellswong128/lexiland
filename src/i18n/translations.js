@@ -581,6 +581,8 @@ const zhHant = {
         "寄信次數已達上限，請稍等幾分鐘後再要求登入連結。",
       redirectUrlError:
         "登入導向網址未獲 Supabase 允許。請在 Supabase → Authentication → URL Configuration 加入：{{url}}",
+      redirectUrlErrorNative:
+        "登入導向網址未獲 Supabase 允許。請在 Supabase → Redirect URLs 全部加入：\n{{hints}}\n\n目前 App 使用的是：{{url}}",
       redirectNotConfigured:
         "登入導向網址尚未設定。請在 Vercel 設定 VITE_AUTH_REDIRECT_URL，並加入 Supabase Redirect URLs。",
       signupsDisabled:
@@ -1551,6 +1553,8 @@ export const translations = {
         "Email rate limit exceeded. Please wait a few minutes before requesting another login link.",
       redirectUrlError:
         "The login redirect URL is not allowed by Supabase. Add this URL under Authentication → URL Configuration: {{url}}",
+      redirectUrlErrorNative:
+        "The login redirect URL is not allowed by Supabase. Add all of these under Redirect URLs:\n{{hints}}\n\nThis app is using: {{url}}",
       redirectNotConfigured:
         "Login redirect URL is not configured. Set VITE_AUTH_REDIRECT_URL in Vercel and add it to Supabase Redirect URLs.",
       signupsDisabled:
