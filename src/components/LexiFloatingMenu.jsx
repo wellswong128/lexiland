@@ -32,7 +32,12 @@ const baseNavSections = [
   },
   {
     labelKey: "nav.sectionApp",
-    items: [{ to: "/install", labelKey: "nav.installApp" }, { to: "/settings", labelKey: "nav.settings" }],
+    items: [
+      { to: "/learning-report", labelKey: "bottomNav.learningRecord" },
+      { to: "/achievements", labelKey: "bottomNav.achievements" },
+      { to: "/install", labelKey: "nav.installApp" },
+      { to: "/settings", labelKey: "nav.settings" },
+    ],
   },
 ];
 

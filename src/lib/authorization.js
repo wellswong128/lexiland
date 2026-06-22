@@ -64,6 +64,7 @@ const ROUTE_RULES = [
   { pattern: "/install", anyOf: [] },
   { pattern: "/auth", anyOf: [] },
   { pattern: "/achievements", anyOf: [PERMISSIONS.ANALYTICS_READ] },
+  { pattern: "/learning-report", anyOf: [PERMISSIONS.ANALYTICS_READ] },
   { pattern: "/admin/users", anyOf: [PERMISSIONS.SETTINGS_MANAGE_USERS] },
   { pattern: "/admin/wordbase", anyOf: [PERMISSIONS.SETTINGS_MANAGE_USERS] },
   { pattern: "/admin/wordbase-library", anyOf: [PERMISSIONS.SETTINGS_MANAGE_USERS] },

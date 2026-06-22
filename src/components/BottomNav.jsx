@@ -10,7 +10,12 @@ const navItems = [
     emoji: "📷",
     featured: true,
   },
-  { key: "achievements", labelKey: "bottomNav.achievements", to: "/achievements", emoji: "🏆" },
+  {
+    key: "learningReport",
+    labelKey: "bottomNav.learningRecord",
+    to: "/learning-report",
+    emoji: "📊",
+  },
   { key: "menu", labelKey: "bottomNav.menu", emoji: "☰", action: "menu" },
 ];
 

@@ -118,6 +118,9 @@ function AchievementsPage() {
             <p className="achievements-all-done">{t("achievements.allUnlocked")}</p>
           )}
         </div>
+        <Link className="achievements-secondary-link" to="/learning-report">
+          {t("bottomNav.learningRecord")}
+        </Link>
       </header>
 
       <div className="achievements-sections">

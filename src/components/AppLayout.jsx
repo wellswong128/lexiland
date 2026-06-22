@@ -16,7 +16,8 @@ function AppLayout({ children }) {
   const isAuthPage = location.pathname.startsWith("/auth");
   const isHomePage = location.pathname === "/";
   const isAchievementsPage = location.pathname === "/achievements";
-  const isMobileShellPage = isHomePage || isAchievementsPage;
+  const isLearningReportPage = location.pathname === "/learning-report";
+  const isMobileShellPage = isHomePage || isAchievementsPage || isLearningReportPage;
   const useMobileAppWidth = isMobileShellPage || (isStandalone && !isGamePage && !isAuthPage);
   const useFlushPagePadding = isMobileShellPage;
   const showFloatingMenu = !isGamePage && !isAuthPage;

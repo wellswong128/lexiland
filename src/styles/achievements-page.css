@@ -56,6 +56,22 @@
   padding: 16px 18px;
 }
 
+.achievements-secondary-link {
+  display: inline-flex;
+  margin-top: 12px;
+  border-radius: 999px;
+  background: #eff6ff;
+  color: #2563eb;
+  font-size: 14px;
+  font-weight: 800;
+  padding: 10px 16px;
+  text-decoration: none;
+}
+
+.achievements-secondary-link:hover {
+  background: #dbeafe;
+}
+
 .achievements-streak-label {
   margin: 0;
   font-size: 14px;
