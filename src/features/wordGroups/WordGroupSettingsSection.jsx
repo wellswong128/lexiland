@@ -2,6 +2,7 @@ import { useEffect, useMemo, useState } from "react";
 import { Link } from "react-router-dom";
 import { useLocale } from "../locale/LocaleContext.jsx";
 import { getActiveGroupLabel } from "./getActiveGroupLabel.js";
+import { getFriendlyNetworkError } from "../../lib/networkErrors.js";
 import {
   fetchUserGroupPicks,
   fetchWordGroups,
@@ -72,7 +73,13 @@ function WordGroupSettingsSection({ user, hasSupabaseConfig }) {
       setActiveGroupCode(nextActiveCode);
       setSelectedGrade(nextActiveGroup?.grade || firstGradeWithGroups);
     } catch (loadError) {
-      setError(loadError.message || t("settings.wordGroups.loadError"));
+      setError(
+        getFriendlyNetworkError(
+          loadError.message,
+          t,
+          "settings.wordGroups.offlineError",
+        ) || t("settings.wordGroups.loadError"),
+      );
     } finally {
       setIsLoading(false);
     }
@@ -112,7 +119,13 @@ function WordGroupSettingsSection({ user, hasSupabaseConfig }) {
       setNotice(t("settings.wordGroups.activeUpdated"));
       notifyActiveGroupChanged();
     } catch (switchError) {
-      setError(switchError.message || t("settings.wordGroups.activeError"));
+      setError(
+        getFriendlyNetworkError(
+          switchError.message,
+          t,
+          "settings.wordGroups.offlineActiveError",
+        ) || t("settings.wordGroups.activeError"),
+      );
     } finally {
       setIsSwitchingActive(false);
     }

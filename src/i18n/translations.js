@@ -16,6 +16,10 @@ const zhHant = {
     traditional: "繁體",
     english: "英文",
   },
+  errors: {
+    offlineCloudLoad:
+      "目前離線，無法載入雲端資料。本機字卡仍可正常使用，連線後會自動更新。",
+  },
   auth: {
     signupHeadline: "最好的學習方式。",
     signupSubheadline: "免費註冊。",
@@ -639,6 +643,7 @@ const zhHant = {
         signInRequired: "請先登入，才能同步組別設定到雲端。",
         loading: "載入組別中...",
         loadError: "無法載入組別。",
+        offlineError: "目前離線，無法載入組別。連線後再試。",
         saveError: "無法儲存組別。",
         saveSuccess: "組別已儲存。",
         savePicks: "儲存已選組別",
@@ -654,6 +659,7 @@ const zhHant = {
         selectActive: "請選擇",
         activeUpdated: "已切換目前使用組別。",
         activeError: "無法切換目前使用組別。",
+        offlineActiveError: "目前離線，無法切換組別。連線後再試。",
       },
     },
     wordGroupsScope: {
@@ -969,6 +975,10 @@ export const translations = {
       simplified: "Simplified",
       traditional: "Traditional",
       english: "English",
+    },
+    errors: {
+      offlineCloudLoad:
+        "You are offline and cloud data could not be loaded. Local words still work; reconnect to sync.",
     },
     auth: {
       signupHeadline: "The best way to learn.",
@@ -1600,6 +1610,7 @@ export const translations = {
         signInRequired: "Sign in to sync your group selections to the cloud.",
         loading: "Loading groups...",
         loadError: "Could not load groups.",
+        offlineError: "You are offline. Groups could not be loaded — try again when connected.",
         saveError: "Could not save groups.",
         saveSuccess: "Groups saved.",
         savePicks: "Save Selected Groups",
@@ -1615,6 +1626,7 @@ export const translations = {
         selectActive: "Select one",
         activeUpdated: "Active group updated.",
         activeError: "Could not update active group.",
+        offlineActiveError: "You are offline. Could not switch groups — try again when connected.",
       },
     },
     wordGroupsScope: {

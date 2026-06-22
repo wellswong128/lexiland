@@ -1,6 +1,12 @@
 import { resolveAuthRedirectUrl } from "./authRedirect.js";
+import { getFriendlyNetworkError } from "../../lib/networkErrors.js";
 
 export function getFriendlyAuthError(message, t) {
+  const offlineFriendly = getFriendlyNetworkError(message, t, "errors.offlineCloudLoad");
+  if (offlineFriendly !== message) {
+    return offlineFriendly;
+  }
+
   const lower = message.toLowerCase();
 
   if (lower.includes("rate limit")) {
