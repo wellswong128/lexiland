@@ -1,9 +1,10 @@
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { Link, useNavigate, useSearchParams } from "react-router-dom";
 import LexiMascot from "../components/LexiMascot.jsx";
 import { getFriendlyAuthError } from "../features/auth/authErrors.js";
 import { useLocale } from "../features/locale/LocaleContext.jsx";
 import { useWordsContext } from "../features/words/WordsContext.jsx";
+import { canRoute, ROLES } from "../lib/authorization.js";
 
 const EMAIL_COOLDOWN_SECONDS = 60;
 
@@ -80,6 +81,13 @@ function AuthPage() {
   const mode = searchParams.get("mode") === "login" ? "login" : "signup";
   const redirectTo = searchParams.get("redirect") || "/";
   const isSignup = mode === "signup";
+  const continueWithoutAccountTo = useMemo(() => {
+    if (canRoute(ROLES.GUEST, redirectTo)) {
+      return redirectTo;
+    }
+
+    return "/";
+  }, [redirectTo]);
 
   const [showEmailForm, setShowEmailForm] = useState(false);
   const [email, setEmail] = useState("");
@@ -296,7 +304,7 @@ function AuthPage() {
 
       <Link
         className="mt-6 text-sm font-semibold text-slate-500 transition hover:text-blue-700"
-        to="/"
+        to={continueWithoutAccountTo}
       >
         {t("auth.continueWithoutAccount")}
       </Link>
