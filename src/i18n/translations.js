@@ -460,7 +460,15 @@ const zhHant = {
       word: "單字",
       chooseMemoryImage: "選擇正確的記憶圖",
       preparingImages: "正在準備記憶圖 {{current}} / {{total}}",
-      notEnoughImages: "記憶圖不足，請先為更多單字生成記憶圖後再試。",
+      notEnoughImages: "記憶圖不足，無法開始圖片字卡複習。",
+      imageReviewNotReadyDescription:
+        "字卡複習需要至少 2 個單字有記憶圖。你可以先為生字生成記憶圖，或改用測驗複習。",
+      imageReviewNotReadyMistakesDescription:
+        "字卡複習需要至少 2 個單字有記憶圖。你可以先生成記憶圖、改用測驗，或回到錯題本逐字複習。",
+      prepareGenerateImagesCta: "前往生成記憶圖",
+      prepareTryQuizCta: "改用測驗複習",
+      prepareRetryCta: "重試",
+      prepareAddWordsCta: "拍照加新字",
       incorrect: "答錯了",
       clearedFromMistakes: "已掌握，移出錯題本。",
       nextReviewTomorrow: "下次複習：明天",
@@ -1342,8 +1350,15 @@ export const translations = {
       word: "Word",
       chooseMemoryImage: "Choose the correct memory image",
       preparingImages: "Preparing memory images {{current}} / {{total}}",
-      notEnoughImages:
-        "Not enough memory images yet. Generate images for more words and try again.",
+      notEnoughImages: "Not enough memory images to start image flashcards.",
+      imageReviewNotReadyDescription:
+        "Image flashcards need at least 2 words with memory images. Generate images for your words or use a text quiz instead.",
+      imageReviewNotReadyMistakesDescription:
+        "Image flashcards need at least 2 words with memory images. Generate images, use a text quiz, or go back to your mistake notebook.",
+      prepareGenerateImagesCta: "Generate Memory Images",
+      prepareTryQuizCta: "Use Text Quiz Instead",
+      prepareRetryCta: "Try Again",
+      prepareAddWordsCta: "Add Words with Photo",
       incorrect: "Incorrect",
       clearedFromMistakes: "Mastered and removed from your mistake notebook.",
       nextReviewTomorrow: "Next review: tomorrow",

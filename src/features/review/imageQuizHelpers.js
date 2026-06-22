@@ -9,6 +9,17 @@ export function wordHasMemoryImage(word) {
   return Boolean(readWordMemoryImage(word)?.imageUrl);
 }
 
+export function getImageReviewReadiness(sessionWords, allWords) {
+  const poolCount = allWords.filter(wordHasMemoryImage).length;
+  const eligibleCount = sessionWords.filter(wordHasMemoryImage).length;
+
+  return {
+    canStart: eligibleCount > 0 && poolCount >= 2,
+    poolCount,
+    eligibleCount,
+  };
+}
+
 export function createImageQuizQuestions(sessionWords, allWords, optionCount = 4) {
   const imagePool = allWords.filter(wordHasMemoryImage);
   const eligibleSessionWords = sessionWords.filter(wordHasMemoryImage);

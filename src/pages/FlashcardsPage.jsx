@@ -6,8 +6,11 @@ import WordImageWithTranslationOverlay from "../components/WordImageWithTranslat
 import WordMemoryPanel from "../components/WordMemoryPanel.jsx";
 import { useLocale } from "../features/locale/LocaleContext.jsx";
 import { enrichReviewWordExamples, needsExampleEnrichment } from "../features/review/enrichReviewWordExamples.js";
-import { createImageQuizQuestions } from "../features/review/imageQuizHelpers.js";
-import { prefetchSessionMemoryImages } from "../features/review/prefetchSessionMemoryImages.js";
+import {
+  getImageReviewReadiness,
+  wordHasMemoryImage,
+} from "../features/review/imageQuizHelpers.js";
+import { prefetchImageReviewPool } from "../features/review/prefetchImageReviewPool.js";
 import WordGroupScopeEmptyState from "../features/wordGroups/WordGroupScopeEmptyState.jsx";
 import { useActiveGroupWordScope } from "../features/wordGroups/useActiveGroupWordScope.js";
 import {
@@ -19,6 +22,74 @@ import { useWordsContext } from "../features/words/WordsContext.jsx";
 import { syncReviewSession } from "../lib/reviewSessionStorage.js";
 import { maybeRecordDailyMistakeClear } from "../lib/learningActivity.js";
 import { REVIEW_RESULTS } from "../features/words/wordTypes.js";
+
+function FlashcardsPrepareErrorActions({
+  canQuiz,
+  mistakesOnly,
+  onRetry,
+  sessionWords,
+  t,
+}) {
+  const wordNeedingImage =
+    sessionWords.find((word) => !wordHasMemoryImage(word)) ?? sessionWords[0];
+  const generateImageTo = wordNeedingImage ? `/words/${wordNeedingImage.id}` : "/words";
+
+  return (
+    <div className="mb-6 flex flex-wrap justify-center gap-3">
+      {wordNeedingImage ? (
+        <Link
+          className="rounded-full bg-blue-700 px-5 py-3 text-sm font-bold text-white transition hover:bg-blue-800"
+          to={generateImageTo}
+        >
+          {t("flashcards.prepareGenerateImagesCta")}
+        </Link>
+      ) : null}
+      {canQuiz ? (
+        <Link
+          className="rounded-full bg-blue-700 px-5 py-3 text-sm font-bold text-white transition hover:bg-blue-800"
+          to="/review/quiz"
+        >
+          {t("flashcards.prepareTryQuizCta")}
+        </Link>
+      ) : (
+        <Link
+          className="rounded-full bg-green-700 px-5 py-3 text-sm font-bold text-white transition hover:bg-green-800"
+          to="/words/new?tab=photo"
+        >
+          {t("flashcards.prepareAddWordsCta")}
+        </Link>
+      )}
+      {mistakesOnly ? (
+        <Link
+          className="rounded-full bg-blue-100 px-5 py-3 text-sm font-bold text-blue-700 transition hover:bg-blue-200"
+          to="/mistakes"
+        >
+          {t("flashcards.noDueBackMistakesCta")}
+        </Link>
+      ) : (
+        <Link
+          className="rounded-full bg-blue-100 px-5 py-3 text-sm font-bold text-blue-700 transition hover:bg-blue-200"
+          to="/words"
+        >
+          {t("flashcards.noDueWordListCta")}
+        </Link>
+      )}
+      <button
+        className="rounded-full border border-blue-200 bg-white px-5 py-3 text-sm font-bold text-blue-700 transition hover:bg-blue-50"
+        onClick={onRetry}
+        type="button"
+      >
+        {t("flashcards.prepareRetryCta")}
+      </button>
+      <Link
+        className="rounded-full border border-blue-200 bg-white px-5 py-3 text-sm font-bold text-blue-700 transition hover:bg-blue-50"
+        to="/"
+      >
+        {t("flashcards.noDueHomeCta")}
+      </Link>
+    </div>
+  );
+}
 
 function FlashcardsPage() {
   const { locale, t } = useLocale();
@@ -35,10 +106,16 @@ function FlashcardsPage() {
       }),
     [mistakesOnly, reviewWords],
   );
+  const imageReviewReadiness = useMemo(
+    () => getImageReviewReadiness(sessionWords, words),
+    [sessionWords, words],
+  );
+  const canQuiz = reviewWords.length >= 2;
   const [hasStarted, setHasStarted] = useState(false);
   const [isPreparing, setIsPreparing] = useState(false);
   const [prepareProgress, setPrepareProgress] = useState({ current: 0, total: 0 });
   const [prepareError, setPrepareError] = useState("");
+  const [prepareErrorCode, setPrepareErrorCode] = useState("");
   const [imageQuestions, setImageQuestions] = useState([]);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [feedback, setFeedback] = useState(null);
@@ -66,6 +143,7 @@ function FlashcardsPage() {
     });
 
     setPrepareError("");
+    setPrepareErrorCode("");
     setIsPreparing(true);
     setPrepareProgress({ current: 0, total: sessionWords.length });
 
@@ -76,7 +154,7 @@ function FlashcardsPage() {
         user,
       });
 
-      await prefetchSessionMemoryImages(sessionWords, {
+      const { questions } = await prefetchImageReviewPool(sessionWords, words, {
         onProgress: (current, total) => {
           setPrepareProgress({ current, total });
         },
@@ -84,10 +162,9 @@ function FlashcardsPage() {
         user,
       });
 
-      const questions = createImageQuizQuestions(sessionWords, words);
-
       if (questions.length === 0) {
         setPrepareError(t("flashcards.notEnoughImages"));
+        setPrepareErrorCode("notEnoughImages");
         return;
       }
 
@@ -233,7 +310,6 @@ function FlashcardsPage() {
 
   if (sessionWords.length === 0) {
     const hasWords = reviewWords.length > 0;
-    const canQuiz = reviewWords.length >= 2;
 
     const emptyTitle = mistakesOnly
       ? t("flashcards.noDueTitle")
@@ -364,6 +440,22 @@ function FlashcardsPage() {
                 {t("flashcards.reviewFirstTenOnly")}
               </p>
             ) : null}
+            {!imageReviewReadiness.canStart && !prepareError ? (
+              <div className="mt-3 space-y-3">
+                <p className="text-sm font-semibold text-amber-800">
+                  {mistakesOnly
+                    ? t("flashcards.imageReviewNotReadyMistakesDescription")
+                    : t("flashcards.imageReviewNotReadyDescription")}
+                </p>
+                <FlashcardsPrepareErrorActions
+                  canQuiz={canQuiz}
+                  mistakesOnly={mistakesOnly}
+                  onRetry={handleStartReview}
+                  sessionWords={sessionWords}
+                  t={t}
+                />
+              </div>
+            ) : null}
           </div>
 
           <button
@@ -382,9 +474,22 @@ function FlashcardsPage() {
         </div>
 
         {prepareError ? (
-          <p className="mb-6 rounded-2xl border border-red-200 bg-red-50 px-4 py-3 text-sm font-medium text-red-700">
-            {prepareError}
-          </p>
+          <div className="mb-6">
+            <p className="rounded-2xl border border-red-200 bg-red-50 px-4 py-3 text-sm font-medium text-red-700">
+              {prepareError}
+            </p>
+            {prepareErrorCode === "notEnoughImages" ? (
+              <div className="mt-4">
+                <FlashcardsPrepareErrorActions
+                  canQuiz={canQuiz}
+                  mistakesOnly={mistakesOnly}
+                  onRetry={handleStartReview}
+                  sessionWords={sessionWords}
+                  t={t}
+                />
+              </div>
+            ) : null}
+          </div>
         ) : null}
 
         <ul className="space-y-4">
