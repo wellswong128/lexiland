@@ -17,6 +17,7 @@ import {
 } from "../features/review/reviewHelpers.js";
 import { useWordsContext } from "../features/words/WordsContext.jsx";
 import { syncReviewSession } from "../lib/reviewSessionStorage.js";
+import { maybeRecordDailyMistakeClear } from "../lib/learningActivity.js";
 import { REVIEW_RESULTS } from "../features/words/wordTypes.js";
 
 function FlashcardsPage() {
@@ -195,6 +196,7 @@ function FlashcardsPage() {
     const result = isCorrect ? REVIEW_RESULTS.REMEMBERED : REVIEW_RESULTS.FORGOT;
     const hadMistake = currentQuestion.word.mistake?.isMistake;
 
+    maybeRecordDailyMistakeClear(currentQuestion.word, result);
     updateWord(currentQuestion.word.id, updateReviewResult(currentQuestion.word, result));
 
     if (!isCorrect) {

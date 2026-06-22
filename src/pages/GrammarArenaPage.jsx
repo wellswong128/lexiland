@@ -2,6 +2,7 @@ import { useCallback, useEffect, useMemo, useState } from "react";
 import { Link } from "react-router-dom";
 import GameHomeButton from "../components/GameHomeButton.jsx";
 import { useLocale } from "../features/locale/LocaleContext.jsx";
+import { recordDailyGameCompleted } from "../lib/learningActivity.js";
 
 const grammarBank = [
   {
@@ -294,6 +295,7 @@ function GrammarArenaPage() {
 
   const endGame = useCallback(
     (reason) => {
+      recordDailyGameCompleted();
       setGameState("over");
       setLocked(true);
       setEndReason(reason);

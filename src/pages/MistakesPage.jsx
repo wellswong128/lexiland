@@ -6,6 +6,7 @@ import WordScopeModeSwitch from "../features/wordGroups/WordScopeModeSwitch.jsx"
 import WordGroupScopeEmptyState from "../features/wordGroups/WordGroupScopeEmptyState.jsx";
 import { useActiveGroupWordScope } from "../features/wordGroups/useActiveGroupWordScope.js";
 import { useWordsContext } from "../features/words/WordsContext.jsx";
+import { recordDailyMistakeCleared } from "../lib/learningActivity.js";
 
 function MistakesPage() {
   const { dateLocale, locale, t } = useLocale();
@@ -31,6 +32,7 @@ function MistakesPage() {
   }
 
   function handleClearMistake(word) {
+    recordDailyMistakeCleared();
     updateWord(word.id, {
       mistake: {
         ...word.mistake,

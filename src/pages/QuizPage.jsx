@@ -8,6 +8,7 @@ import { useActiveGroupWordScope } from "../features/wordGroups/useActiveGroupWo
 import { createQuizQuestions } from "../features/review/quizHelpers.js";
 import { updateReviewResult } from "../features/review/reviewHelpers.js";
 import { useWordsContext } from "../features/words/WordsContext.jsx";
+import { maybeRecordDailyMistakeClear } from "../lib/learningActivity.js";
 import { REVIEW_RESULTS } from "../features/words/wordTypes.js";
 
 function QuizPage() {
@@ -51,6 +52,7 @@ function QuizPage() {
     setSelectedAnswer(answer);
     setFeedback(isCorrect ? "correct" : "incorrect");
     setScore((currentScore) => currentScore + (isCorrect ? 1 : 0));
+    maybeRecordDailyMistakeClear(currentQuestion.word, result);
     updateWord(currentQuestion.word.id, updateReviewResult(currentQuestion.word, result));
   }
 

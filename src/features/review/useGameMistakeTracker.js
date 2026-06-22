@@ -2,6 +2,10 @@ import { useCallback, useRef, useState } from "react";
 import { REVIEW_RESULTS, normalizeTerm } from "../words/wordTypes.js";
 import { useWordsContext } from "../words/WordsContext.jsx";
 import {
+  maybeRecordDailyMistakeClear,
+  recordDailyGameCompleted,
+} from "../../lib/learningActivity.js";
+import {
   commitGameMistakes,
   findWordInLibrary,
 } from "./gameMistakeHelpers.js";
@@ -20,6 +24,7 @@ export function useGameMistakeTracker() {
         return;
       }
 
+      maybeRecordDailyMistakeClear(word, result);
       updateWord(word.id, updateReviewResult(word, result));
     },
     [updateWord, words],
@@ -60,6 +65,7 @@ export function useGameMistakeTracker() {
 
     wrongCountsRef.current = {};
     setLastCommittedTerms(addedTerms);
+    recordDailyGameCompleted();
 
     return addedTerms;
   }, [words]);

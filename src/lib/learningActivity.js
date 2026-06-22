@@ -1,10 +1,19 @@
+import { REVIEW_RESULTS } from "../features/words/wordTypes.js";
+
 export const LEARNING_ACTIVITY_KEY = "lexiland.learningActivity.v1";
+
+export const DAILY_TASK_TARGETS = {
+  reviewWords: 5,
+  gamesPlayed: 1,
+  mistakesCleared: 3,
+};
 
 const defaultActivity = {
   currentStreak: 0,
   lastActiveDate: null,
   lastActivity: null,
   visitedPaths: [],
+  dailyStats: {},
 };
 
 function getDefaultStorage() {
@@ -53,6 +62,10 @@ export function loadLearningActivity(storage = getDefaultStorage()) {
       ...defaultActivity,
       ...parsedValue,
       visitedPaths: Array.isArray(parsedValue.visitedPaths) ? parsedValue.visitedPaths : [],
+      dailyStats:
+        parsedValue.dailyStats && typeof parsedValue.dailyStats === "object"
+          ? parsedValue.dailyStats
+          : {},
     };
   } catch (error) {
     console.warn("Could not parse stored learning activity.", error);
@@ -125,6 +138,112 @@ export function getTodayReviewedCount(words, now = new Date()) {
   }).length;
 }
 
+function getTodayDailyStats(activity, dateKey = getLocalDateKey()) {
+  const todayStats = activity.dailyStats?.[dateKey];
+
+  if (!todayStats || typeof todayStats !== "object") {
+    return {
+      gamesPlayed: 0,
+      mistakesCleared: 0,
+    };
+  }
+
+  return {
+    gamesPlayed: Math.max(Number(todayStats.gamesPlayed) || 0, 0),
+    mistakesCleared: Math.max(Number(todayStats.mistakesCleared) || 0, 0),
+  };
+}
+
+function incrementTodayDailyStat(statKey, amount = 1, storage = getDefaultStorage()) {
+  if (!storage || amount <= 0) {
+    return loadLearningActivity(storage);
+  }
+
+  const dateKey = getLocalDateKey();
+  const activity = loadLearningActivity(storage);
+  const todayStats = getTodayDailyStats(activity, dateKey);
+  const nextTodayStats = {
+    ...todayStats,
+    [statKey]: todayStats[statKey] + amount,
+  };
+
+  const nextActivity = {
+    ...activity,
+    dailyStats: {
+      ...(activity.dailyStats || {}),
+      [dateKey]: nextTodayStats,
+    },
+  };
+
+  saveLearningActivity(nextActivity, storage);
+
+  return nextActivity;
+}
+
+export function recordDailyGameCompleted(storage = getDefaultStorage()) {
+  return incrementTodayDailyStat("gamesPlayed", 1, storage);
+}
+
+export function recordDailyMistakeCleared(amount = 1, storage = getDefaultStorage()) {
+  return incrementTodayDailyStat("mistakesCleared", amount, storage);
+}
+
+export function maybeRecordDailyMistakeClear(word, result, storage = getDefaultStorage()) {
+  const remembered =
+    result === REVIEW_RESULTS.REMEMBERED || result === REVIEW_RESULTS.CORRECT;
+
+  if (word?.mistake?.isMistake && remembered) {
+    recordDailyMistakeCleared(1, storage);
+  }
+}
+
+export function getDailyTasks(words, storage = getDefaultStorage()) {
+  const activity = loadLearningActivity(storage);
+  const todayStats = getTodayDailyStats(activity);
+  const reviewCurrent = getTodayReviewedCount(words);
+  const reviewTarget = DAILY_TASK_TARGETS.reviewWords;
+  const gamesTarget = DAILY_TASK_TARGETS.gamesPlayed;
+  const mistakesTarget = DAILY_TASK_TARGETS.mistakesCleared;
+  const gamesCurrent = Math.min(todayStats.gamesPlayed, gamesTarget);
+  const mistakesCurrent = Math.min(todayStats.mistakesCleared, mistakesTarget);
+
+  const tasks = [
+    {
+      id: "reviewWords",
+      current: Math.min(reviewCurrent, reviewTarget),
+      target: reviewTarget,
+      done: reviewCurrent >= reviewTarget,
+      to: "/review/flashcards",
+      emoji: "📒",
+    },
+    {
+      id: "playGame",
+      current: gamesCurrent,
+      target: gamesTarget,
+      done: todayStats.gamesPlayed >= gamesTarget,
+      to: "/games/spelling-ninja",
+      emoji: "🎮",
+    },
+    {
+      id: "clearMistakes",
+      current: mistakesCurrent,
+      target: mistakesTarget,
+      done: todayStats.mistakesCleared >= mistakesTarget,
+      to: "/mistakes",
+      emoji: "📕",
+    },
+  ];
+
+  const completedCount = tasks.filter((task) => task.done).length;
+
+  return {
+    tasks,
+    completedCount,
+    totalCount: tasks.length,
+    allDone: completedCount === tasks.length,
+  };
+}
+
 export function getLearningSnapshot(words, storage = getDefaultStorage()) {
   const activity = loadLearningActivity(storage);
 
@@ -132,6 +251,7 @@ export function getLearningSnapshot(words, storage = getDefaultStorage()) {
     streak: activity.currentStreak || 0,
     todayReviewed: getTodayReviewedCount(words),
     lastActivity: activity.lastActivity,
+    dailyTasks: getDailyTasks(words, storage),
   };
 }
 

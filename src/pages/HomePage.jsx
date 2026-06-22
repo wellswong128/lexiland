@@ -1,4 +1,5 @@
-import { Link } from "react-router-dom";
+import { useMemo } from "react";
+import { Link, useLocation } from "react-router-dom";
 import LexiMascot from "../components/LexiMascot.jsx";
 import { useLocale } from "../features/locale/LocaleContext.jsx";
 import WordScopeModeSwitch from "../features/wordGroups/WordScopeModeSwitch.jsx";
@@ -181,6 +182,7 @@ function getPrimaryCta({ wordCount, dueCount, mistakeCount }) {
 
 function HomePage() {
   const { locale, t } = useLocale();
+  const location = useLocation();
   const { isAuthLoading, isWordsLoading, user, words } = useWordsContext();
   const {
     activeGroup,
@@ -202,7 +204,10 @@ function HomePage() {
   const mistakeCount = mistakeWords.length;
   const isEmpty = wordCount === 0;
   const showSyncPrompt = hasSupabaseConfig && !isAuthLoading && !user;
-  const { lastActivity, streak, todayReviewed } = getLearningSnapshot(learningWords);
+  const { lastActivity, streak, todayReviewed, dailyTasks } = useMemo(
+    () => getLearningSnapshot(learningWords),
+    [learningWords, location.key],
+  );
   const showContinue = Boolean(lastActivity?.path) && !isEmpty;
   const starterWordsReady = Math.min(wordCount, STARTER_QUIZ_WORD_TARGET);
   const starterWordsRemaining = Math.max(STARTER_QUIZ_WORD_TARGET - wordCount, 0);
@@ -213,7 +218,20 @@ function HomePage() {
   const starterPrimaryTo = getRouteOrSignupRedirect(role, starterPrimaryPath);
   const starterManualTo = getRouteOrSignupRedirect(role, STARTER_MANUAL_PATH);
   const showStarterAuthHint = !canRoute(role, starterPrimaryPath);
+  const showDailyTasks = !isHomeLoading && wordCount > 0 && !showStarterOnboarding;
   const activeGroupLabel = getActiveGroupLabel(activeGroup, locale);
+
+  const dailyTaskLabelKeys = {
+    reviewWords: "home.dailyTaskReviewWords",
+    playGame: "home.dailyTaskPlayGame",
+    clearMistakes: "home.dailyTaskClearMistakes",
+  };
+
+  const dailyTaskDescKeys = {
+    reviewWords: "home.dailyTaskReviewWordsDesc",
+    playGame: "home.dailyTaskPlayGameDesc",
+    clearMistakes: "home.dailyTaskClearMistakesDesc",
+  };
 
   const values = {
     words: wordCount,
@@ -367,6 +385,66 @@ function HomePage() {
             {showStarterAuthHint ? (
               <p className="home-starter-auth-hint">{t("home.starterAuthHint")}</p>
             ) : null}
+          </section>
+        ) : null}
+
+        {showDailyTasks ? (
+          <section className="home-daily" aria-labelledby="home-daily-title">
+            <div className="home-daily-header">
+              <div>
+                <p className="home-daily-badge">{t("home.dailyTasksBadge")}</p>
+                <h2 id="home-daily-title">{t("home.dailyTasksTitle")}</h2>
+              </div>
+              <p className="home-daily-summary">
+                {t("home.dailyTasksSummary", {
+                  completed: dailyTasks.completedCount,
+                  total: dailyTasks.totalCount,
+                })}
+              </p>
+            </div>
+
+            {dailyTasks.allDone ? (
+              <p className="home-daily-complete">{t("home.dailyTasksAllDone")}</p>
+            ) : null}
+
+            <ul className="home-daily-list">
+              {dailyTasks.tasks.map((task) => {
+                const taskTo = getRouteOrSignupRedirect(role, task.to);
+
+                return (
+                  <li className={task.done ? "home-daily-item home-daily-item-done" : "home-daily-item"} key={task.id}>
+                    <Link className="home-daily-link" to={taskTo}>
+                      <span aria-hidden="true" className="home-daily-icon">
+                        {task.done ? "✓" : task.emoji}
+                      </span>
+                      <div className="home-daily-copy">
+                        <h3>
+                          {t(dailyTaskLabelKeys[task.id], { target: task.target })}
+                        </h3>
+                        <p>{t(dailyTaskDescKeys[task.id])}</p>
+                        <div className="home-daily-progress">
+                          <div
+                            className="home-daily-progress-bar"
+                            style={{
+                              width: `${Math.round((task.current / task.target) * 100)}%`,
+                            }}
+                          />
+                        </div>
+                        <span className="home-daily-count">
+                          {t("home.dailyTaskProgress", {
+                            current: task.current,
+                            target: task.target,
+                          })}
+                        </span>
+                      </div>
+                      <span aria-hidden="true" className="home-daily-go">
+                        ›
+                      </span>
+                    </Link>
+                  </li>
+                );
+              })}
+            </ul>
           </section>
         ) : null}
 
