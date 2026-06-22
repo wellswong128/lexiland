@@ -266,6 +266,11 @@ export const PAGE_ACTIVITIES = {
     labelKey: "nav.fishBlast",
     icon: "🐟",
   },
+  "/games/deep-sea-fishing": {
+    kind: "game",
+    labelKey: "nav.deepSeaFishing",
+    icon: "🎣",
+  },
   "/games/word-kart": {
     kind: "game",
     labelKey: "nav.wordKart",

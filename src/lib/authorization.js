@@ -76,6 +76,7 @@ const ROUTE_RULES = [
   { pattern: "/mistakes", anyOf: [PERMISSIONS.MISTAKES_MANAGE] },
   { pattern: "/games/spelling-ninja", anyOf: [PERMISSIONS.GAMES_PLAY] },
   { pattern: "/games/fishing-blast", anyOf: [PERMISSIONS.GAMES_PLAY] },
+  { pattern: "/games/deep-sea-fishing", anyOf: [PERMISSIONS.GAMES_PLAY] },
   { pattern: "/games/word-kart", anyOf: [PERMISSIONS.GAMES_PLAY] },
   { pattern: "/games/grammar-arena", anyOf: [PERMISSIONS.GAMES_PLAY] },
   { pattern: "/games/battle-jet", anyOf: [PERMISSIONS.GAMES_PLAY] },

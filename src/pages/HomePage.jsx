@@ -115,6 +115,14 @@ const featuredGames = [
     art: "⚽",
   },
   {
+    key: "deepSeaFishing",
+    labelKey: "nav.deepSeaFishing",
+    descKey: "home.deepSeaFishingDesc",
+    to: "/games/deep-sea-fishing",
+    tone: "home-sky",
+    art: "🐡",
+  },
+  {
     key: "fishBlast",
     labelKey: "nav.fishBlast",
     descKey: "home.fishBlastDesc",

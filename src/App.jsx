@@ -15,6 +15,7 @@ const AuthPage = lazy(() => import("./pages/AuthPage.jsx"));
 const AuthCallbackPage = lazy(() => import("./pages/AuthCallbackPage.jsx"));
 const BattleJetQuizPage = lazy(() => import("./pages/BattleJetQuizPage.jsx"));
 const FishingBlastPage = lazy(() => import("./pages/FishingBlastPage.jsx"));
+const DeepSeaFishingPage = lazy(() => import("./pages/DeepSeaFishingPage.jsx"));
 const FlashcardsPage = lazy(() => import("./pages/FlashcardsPage.jsx"));
 const GrammarArenaPage = lazy(() => import("./pages/GrammarArenaPage.jsx"));
 const HomePage = lazy(() => import("./pages/HomePage.jsx"));
@@ -82,6 +83,7 @@ function AppRoutes() {
         <Route path="/review/quiz" element={<ProtectedRoute><QuizPage /></ProtectedRoute>} />
         <Route path="/games/spelling-ninja" element={<ProtectedRoute><SpellingNinjaPage /></ProtectedRoute>} />
         <Route path="/games/fishing-blast" element={<ProtectedRoute><FishingBlastPage /></ProtectedRoute>} />
+        <Route path="/games/deep-sea-fishing" element={<ProtectedRoute><DeepSeaFishingPage /></ProtectedRoute>} />
         <Route path="/games/word-kart" element={<ProtectedRoute><WordKartPage /></ProtectedRoute>} />
         <Route path="/games/grammar-arena" element={<ProtectedRoute><GrammarArenaPage /></ProtectedRoute>} />
         <Route path="/games/battle-jet" element={<ProtectedRoute><BattleJetQuizPage /></ProtectedRoute>} />

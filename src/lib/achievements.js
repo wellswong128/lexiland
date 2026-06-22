@@ -5,6 +5,7 @@ import { getLearningSnapshot, getTodayReviewedCount, loadLearningActivity } from
 export const GAME_PATHS = [
   "/games/spelling-ninja",
   "/games/fishing-blast",
+  "/games/deep-sea-fishing",
   "/games/word-kart",
   "/games/battle-jet",
   "/games/penalty-twelve",

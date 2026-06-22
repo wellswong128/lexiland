@@ -1,0 +1,1119 @@
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import { Link } from "react-router-dom";
+import GameHomeButton from "../components/GameHomeButton.jsx";
+import GameMistakeSummary from "../components/GameMistakeSummary.jsx";
+import GameWordBankStatus from "../components/GameWordBankStatus.jsx";
+import GameWordWithSpeak from "../components/GameWordWithSpeak.jsx";
+import {
+  createMultipleChoiceQuestion,
+  shuffleArray,
+} from "../features/games/gameWordBank.js";
+import { useReviewSessionPlay } from "../features/games/useReviewSessionPlay.js";
+import WordGroupScopeEmptyState from "../features/wordGroups/WordGroupScopeEmptyState.jsx";
+import { useActiveGroupWordScope } from "../features/wordGroups/useActiveGroupWordScope.js";
+import { hasActiveReviewSession } from "../lib/reviewSessionStorage.js";
+import { useLocale } from "../features/locale/LocaleContext.jsx";
+import { useGameMistakeTracker } from "../features/review/useGameMistakeTracker.js";
+import { useWordsContext } from "../features/words/WordsContext.jsx";
+
+const GAME_SECONDS = 100;
+const ROUND_DELAY_MS = 2000;
+const FISH_PER_ROUND = 5;
+const GROUPER_INTERVAL_MS = 30000;
+const HOOK_FIRE_MS = 200;
+const HOOK_RETRACT_MS = 350;
+const SWING_SPEED = 1.8;
+const MAX_SWING_ANGLE = Math.PI * 0.42;
+const HOOK_MAX_LENGTH_RATIO = 0.78;
+
+const FISH_SPECIES = {
+  small: {
+    key: "small",
+    points: 10,
+    questions: 1,
+    speedMin: 70,
+    speedMax: 110,
+    w: 48,
+    h: 28,
+    colors: ["#fdba74", "#fb923c"],
+    weight: 40,
+  },
+  angler: {
+    key: "angler",
+    points: 20,
+    questions: 2,
+    speedMin: 60,
+    speedMax: 95,
+    w: 56,
+    h: 32,
+    colors: ["#c4b5fd", "#7c3aed"],
+    lure: true,
+    weight: 25,
+  },
+  dolphin: {
+    key: "dolphin",
+    points: 30,
+    questions: 3,
+    speedMin: 90,
+    speedMax: 130,
+    w: 64,
+    h: 36,
+    colors: ["#93c5fd", "#2563eb"],
+    weight: 20,
+  },
+  shark: {
+    key: "shark",
+    points: 35,
+    questions: 4,
+    speedMin: 100,
+    speedMax: 145,
+    w: 72,
+    h: 38,
+    colors: ["#94a3b8", "#475569"],
+    weight: 15,
+  },
+  grouper: {
+    key: "grouper",
+    points: 100,
+    questions: 5,
+    speedMin: 55,
+    speedMax: 85,
+    w: 80,
+    h: 44,
+    colors: ["#fde047", "#ca8a04"],
+    boss: true,
+    weight: 0,
+  },
+};
+
+const BUBBLE_LAYOUT = [
+  { x: 50, y: 28 },
+  { x: 22, y: 48 },
+  { x: 78, y: 48 },
+  { x: 35, y: 68 },
+  { x: 65, y: 68 },
+];
+
+let fishIdCounter = 0;
+
+function nextFishId() {
+  fishIdCounter += 1;
+  return `fish-${fishIdCounter}`;
+}
+
+function playTone(freq, duration, type = "sine", volume = 0.035) {
+  try {
+    const AudioContext = window.AudioContext || window.webkitAudioContext;
+    const ctx = new AudioContext();
+    const osc = ctx.createOscillator();
+    const gain = ctx.createGain();
+
+    osc.type = type;
+    osc.frequency.value = freq;
+    gain.gain.value = volume;
+    osc.connect(gain);
+    gain.connect(ctx.destination);
+    osc.start();
+    gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + duration);
+    osc.stop(ctx.currentTime + duration);
+  } catch {
+    // Audio is optional.
+  }
+}
+
+function pickRandomSpecies() {
+  const pool = Object.values(FISH_SPECIES).filter((item) => !item.boss);
+  const totalWeight = pool.reduce((sum, item) => sum + item.weight, 0);
+  let roll = Math.random() * totalWeight;
+
+  for (const species of pool) {
+    roll -= species.weight;
+    if (roll <= 0) {
+      return species;
+    }
+  }
+
+  return pool[0];
+}
+
+function createFish(species, canvasWidth, canvasHeight, fromLeft) {
+  const speed =
+    species.speedMin + Math.random() * (species.speedMax - species.speedMin);
+  const yMin = canvasHeight * 0.14;
+  const yMax = canvasHeight * 0.72;
+  const y = yMin + Math.random() * (yMax - yMin);
+  const direction = fromLeft ? 1 : -1;
+  const x = fromLeft ? -species.w - 10 : canvasWidth + species.w + 10;
+
+  return {
+    id: nextFishId(),
+    species,
+    x,
+    y,
+    vx: speed * direction,
+    w: species.w,
+    h: species.h,
+    caught: false,
+    wiggle: Math.random() * Math.PI * 2,
+  };
+}
+
+function spawnRoundFish(canvasWidth, canvasHeight, count, includeGrouper = false) {
+  const fishes = [];
+
+  if (includeGrouper) {
+    fishes.push(createFish(FISH_SPECIES.grouper, canvasWidth, canvasHeight, Math.random() > 0.5));
+  }
+
+  while (fishes.length < count) {
+    const species = pickRandomSpecies();
+    fishes.push(
+      createFish(species, canvasWidth, canvasHeight, Math.random() > 0.5),
+    );
+  }
+
+  return fishes;
+}
+
+function getHookTip(hook, originX, originY) {
+  return {
+    x: originX + Math.sin(hook.angle) * hook.length,
+    y: originY - Math.cos(hook.angle) * hook.length,
+  };
+}
+
+function hitTestFish(tipX, tipY, fish) {
+  const pad = 8;
+  return (
+    tipX >= fish.x - pad &&
+    tipX <= fish.x + fish.w + pad &&
+    tipY >= fish.y - pad &&
+    tipY <= fish.y + fish.h + pad
+  );
+}
+
+function drawFish(ctx, fish, time) {
+  const { species, x, y, w, h, vx } = fish;
+  const [colorA, colorB] = species.colors;
+  const facingRight = vx > 0;
+  const wiggle = Math.sin(time * 4 + fish.wiggle) * 3;
+
+  ctx.save();
+  ctx.translate(x + w / 2, y + h / 2 + wiggle);
+  if (!facingRight) {
+    ctx.scale(-1, 1);
+  }
+
+  const bodyGrad = ctx.createLinearGradient(-w / 2, 0, w / 2, 0);
+  bodyGrad.addColorStop(0, colorA);
+  bodyGrad.addColorStop(1, colorB);
+
+  ctx.fillStyle = bodyGrad;
+  ctx.beginPath();
+  ctx.ellipse(0, 0, w * 0.38, h * 0.42, 0, 0, Math.PI * 2);
+  ctx.fill();
+
+  ctx.beginPath();
+  ctx.moveTo(-w * 0.38, 0);
+  ctx.lineTo(-w * 0.58, -h * 0.35);
+  ctx.lineTo(-w * 0.58, h * 0.35);
+  ctx.closePath();
+  ctx.fill();
+
+  ctx.fillStyle = "#fff";
+  ctx.beginPath();
+  ctx.arc(w * 0.18, -h * 0.1, h * 0.12, 0, Math.PI * 2);
+  ctx.fill();
+  ctx.fillStyle = "#0f172a";
+  ctx.beginPath();
+  ctx.arc(w * 0.2, -h * 0.1, h * 0.06, 0, Math.PI * 2);
+  ctx.fill();
+
+  if (species.lure) {
+    ctx.strokeStyle = "#fef08a";
+    ctx.lineWidth = 2;
+    ctx.beginPath();
+    ctx.moveTo(w * 0.3, h * 0.15);
+    ctx.quadraticCurveTo(w * 0.5, h * 0.45, w * 0.35, h * 0.55);
+    ctx.stroke();
+    ctx.fillStyle = "#fef08a";
+    ctx.beginPath();
+    ctx.arc(w * 0.35, h * 0.58, 4, 0, Math.PI * 2);
+    ctx.fill();
+  }
+
+  if (species.boss) {
+    ctx.fillStyle = "#fbbf24";
+    ctx.font = "bold 14px Nunito, sans-serif";
+    ctx.textAlign = "center";
+    ctx.fillText("★", 0, -h * 0.55);
+  }
+
+  ctx.restore();
+}
+
+function drawScene(ctx, width, height, state, time) {
+  const waterGrad = ctx.createLinearGradient(0, 0, 0, height);
+  waterGrad.addColorStop(0, "#0c4a6e");
+  waterGrad.addColorStop(0.35, "#0369a1");
+  waterGrad.addColorStop(1, "#0e7490");
+  ctx.fillStyle = waterGrad;
+  ctx.fillRect(0, 0, width, height);
+
+  ctx.strokeStyle = "rgba(255,255,255,0.25)";
+  ctx.lineWidth = 2;
+  for (let wave = 0; wave < 4; wave += 1) {
+    ctx.beginPath();
+    for (let x = 0; x <= width; x += 8) {
+      const y = 18 + wave * 6 + Math.sin(x * 0.02 + time * 2 + wave) * 4;
+      if (x === 0) ctx.moveTo(x, y);
+      else ctx.lineTo(x, y);
+    }
+    ctx.stroke();
+  }
+
+  for (let i = 0; i < 6; i += 1) {
+    const bx = ((i * 137 + time * 30) % (width + 40)) - 20;
+    const by = height - 20 - (i % 3) * 18 - Math.sin(time + i) * 6;
+    ctx.fillStyle = `rgba(255,255,255,${0.08 + (i % 3) * 0.04})`;
+    ctx.beginPath();
+    ctx.arc(bx, by, 4 + (i % 3) * 2, 0, Math.PI * 2);
+    ctx.fill();
+  }
+
+  const sandHeight = height * 0.1;
+  const sandGrad = ctx.createLinearGradient(0, height - sandHeight, 0, height);
+  sandGrad.addColorStop(0, "#ca8a04");
+  sandGrad.addColorStop(1, "#a16207");
+  ctx.fillStyle = sandGrad;
+  ctx.fillRect(0, height - sandHeight, width, sandHeight);
+
+  for (const weed of [
+    { x: width * 0.08, h: 52 },
+    { x: width * 0.14, h: 68 },
+    { x: width * 0.86, h: 58 },
+    { x: width * 0.92, h: 72 },
+  ]) {
+    ctx.strokeStyle = "#15803d";
+    ctx.lineWidth = 5;
+    ctx.lineCap = "round";
+    ctx.beginPath();
+    ctx.moveTo(weed.x, height - sandHeight);
+    const sway = Math.sin(time * 2 + weed.x) * 8;
+    ctx.quadraticCurveTo(weed.x + sway, height - sandHeight - weed.h * 0.5, weed.x + sway * 0.5, height - sandHeight - weed.h);
+    ctx.stroke();
+  }
+
+  for (const fish of state.fishes) {
+    if (!fish.caught) {
+      drawFish(ctx, fish, time);
+    }
+  }
+
+  const originX = width / 2;
+  const originY = height - sandHeight - 4;
+  const hook = state.hook;
+  const tip = getHookTip(hook, originX, originY);
+
+  ctx.strokeStyle = "#cbd5e1";
+  ctx.lineWidth = 2;
+  ctx.beginPath();
+  ctx.moveTo(originX, originY);
+  ctx.lineTo(tip.x, tip.y);
+  ctx.stroke();
+
+  ctx.fillStyle = "#64748b";
+  ctx.beginPath();
+  ctx.arc(originX, originY, 6, 0, Math.PI * 2);
+  ctx.fill();
+
+  ctx.strokeStyle = "#94a3b8";
+  ctx.lineWidth = 3;
+  ctx.beginPath();
+  ctx.arc(tip.x, tip.y, 7, Math.PI * 0.2, Math.PI * 1.1);
+  ctx.stroke();
+
+  if (hook.caughtFish) {
+    drawFish(ctx, { ...hook.caughtFish, x: tip.x - hook.caughtFish.w / 2, y: tip.y - hook.caughtFish.h / 2 }, time);
+  }
+}
+
+function RulesPanel({ onClose, t }) {
+  const rows = [
+    { key: "small", art: "🐟" },
+    { key: "angler", art: "🐠" },
+    { key: "dolphin", art: "🐬" },
+    { key: "shark", art: "🦈" },
+    { key: "grouper", art: "👑" },
+  ];
+
+  return (
+    <div className="dsf-rules-overlay">
+      <div className="dsf-rules-card">
+        <button className="dsf-rules-close" onClick={onClose} type="button" aria-label={t("games.deepSeaFishing.closeRules")}>
+          ✕
+        </button>
+        <h2 className="dsf-rules-title">{t("games.deepSeaFishing.title")}</h2>
+        <p className="dsf-rules-subtitle">{t("games.deepSeaFishing.rulesIntro")}</p>
+        <table className="dsf-rules-table">
+          <thead>
+            <tr>
+              <th>{t("games.deepSeaFishing.fishColumn")}</th>
+              <th>{t("games.score")}</th>
+              <th>{t("games.deepSeaFishing.questionsColumn")}</th>
+            </tr>
+          </thead>
+          <tbody>
+            {rows.map(({ key, art }) => (
+              <tr key={key}>
+                <td>
+                  <span className="dsf-rules-fish-icon">{art}</span>
+                  {t(`games.deepSeaFishing.fish.${key}`)}
+                </td>
+                <td>{FISH_SPECIES[key].points}</td>
+                <td>{FISH_SPECIES[key].questions}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+        <ul className="dsf-rules-list">
+          <li>{t("games.deepSeaFishing.ruleHook")}</li>
+          <li>{t("games.deepSeaFishing.ruleQuiz")}</li>
+          <li>{t("games.deepSeaFishing.rulePenalty")}</li>
+          <li>{t("games.deepSeaFishing.ruleGrouper")}</li>
+          <li>{t("games.deepSeaFishing.ruleTimer", { seconds: GAME_SECONDS })}</li>
+        </ul>
+        <p className="dsf-rules-hint">{t("games.deepSeaFishing.rulesHint")}</p>
+      </div>
+    </div>
+  );
+}
+
+function QuizOverlay({
+  quiz,
+  questionIndex,
+  totalQuestions,
+  feedback,
+  bubbleStates,
+  locked,
+  onPick,
+  t,
+}) {
+  if (!quiz) return null;
+
+  const englishBubble = BUBBLE_LAYOUT[0];
+  const choiceBubbles = BUBBLE_LAYOUT.slice(1, 1 + quiz.choices.length);
+
+  return (
+    <div className="dsf-quiz-overlay">
+      <p className="dsf-quiz-progress">
+        {t("games.deepSeaFishing.quizProgress", {
+          current: questionIndex + 1,
+          total: totalQuestions,
+        })}
+      </p>
+
+      <div
+        className={["dsf-bubble", "dsf-bubble-english", bubbleStates.english ?? ""].filter(Boolean).join(" ")}
+        style={{ left: `${englishBubble.x}%`, top: `${englishBubble.y}%` }}
+      >
+        <GameWordWithSpeak as="span" className="dsf-bubble-word" text={quiz.question.word} />
+        <span className="dsf-bubble-label">{t("games.deepSeaFishing.englishWord")}</span>
+      </div>
+
+      {quiz.choices.map((choice, index) => {
+        const layout = choiceBubbles[index] ?? choiceBubbles[choiceBubbles.length - 1];
+        const state = bubbleStates[choice.word] ?? "";
+
+        return (
+          <button
+            className={["dsf-bubble", "dsf-bubble-choice", state].filter(Boolean).join(" ")}
+            disabled={locked}
+            key={choice.word}
+            onClick={() => onPick(choice.word)}
+            style={{ left: `${layout.x}%`, top: `${layout.y}%` }}
+            type="button"
+          >
+            <span className="dsf-bubble-word">{choice.meaning}</span>
+          </button>
+        );
+      })}
+
+      {feedback ? (
+        <p className={["dsf-quiz-feedback", feedback.type].filter(Boolean).join(" ")}>
+          {feedback.text}
+        </p>
+      ) : (
+        <p className="dsf-quiz-prompt">{t("games.deepSeaFishing.quizPrompt")}</p>
+      )}
+    </div>
+  );
+}
+
+function DeepSeaFishingPage() {
+  const { t } = useLocale();
+  const { user, words } = useWordsContext();
+  const { isLoadingScope, isGroupScopeActive, scopedWords } = useActiveGroupWordScope(words, user);
+  const gameWords = isGroupScopeActive ? scopedWords : words;
+  const { commitMistakes, lastCommittedTerms, recordCorrect, recordWrong, resetTracker } =
+    useGameMistakeTracker();
+
+  const gameOptions = useMemo(() => ({ minWords: 4 }), []);
+  const { beginPlaySession, defaultBank, getActivePlayBank, pickNextEntry } =
+    useReviewSessionPlay(gameWords, gameOptions);
+  const {
+    isPriorityLimited,
+    priorityCount,
+    supplementedCount,
+    totalMaintenanceCount,
+    totalPriorityCount,
+    usingFallback,
+    usingMaintenanceMode,
+  } = defaultBank;
+
+  const pickQuestionForBank = useCallback(
+    (bank) => () => pickNextEntry(bank),
+    [pickNextEntry],
+  );
+
+  const canvasRef = useRef(null);
+  const containerRef = useRef(null);
+  const rafRef = useRef(0);
+  const gameRef = useRef(null);
+  const lastFrameRef = useRef(0);
+  const grouperDueRef = useRef(GROUPER_INTERVAL_MS);
+
+  const [gameState, setGameState] = useState("rules");
+  const [score, setScore] = useState(0);
+  const [timeLeft, setTimeLeft] = useState(GAME_SECONDS);
+  const [round, setRound] = useState(0);
+  const [statusText, setStatusText] = useState("");
+  const [caughtCount, setCaughtCount] = useState(0);
+  const [quiz, setQuiz] = useState(null);
+  const [quizMeta, setQuizMeta] = useState(null);
+  const [questionIndex, setQuestionIndex] = useState(0);
+  const [quizFeedback, setQuizFeedback] = useState(null);
+  const [bubbleStates, setBubbleStates] = useState({});
+  const [quizLocked, setQuizLocked] = useState(false);
+  const [grouperAlert, setGrouperAlert] = useState(false);
+  const [reviewItems, setReviewItems] = useState([]);
+
+  const initGameRef = useCallback(() => {
+    const canvas = canvasRef.current;
+    const width = canvas?.width ?? 800;
+    const height = canvas?.height ?? 500;
+
+    gameRef.current = {
+      phase: "roundWait",
+      roundWaitUntil: performance.now() + ROUND_DELAY_MS,
+      fishes: [],
+      hook: {
+        angle: 0,
+        fireAngle: 0,
+        length: 0,
+        maxLength: height * HOOK_MAX_LENGTH_RATIO,
+        state: "swinging",
+        caughtFish: null,
+        fireStart: 0,
+        retractStart: 0,
+      },
+      swingTime: 0,
+      pendingGrouper: false,
+      caughtFish: null,
+      quizQuestions: [],
+      quizIndex: 0,
+      quizAllCorrect: true,
+    };
+    grouperDueRef.current = GROUPER_INTERVAL_MS;
+    lastFrameRef.current = performance.now();
+  }, []);
+
+  const resizeCanvas = useCallback(() => {
+    const container = containerRef.current;
+    const canvas = canvasRef.current;
+    if (!container || !canvas) return;
+
+    const rect = container.getBoundingClientRect();
+    const dpr = window.devicePixelRatio || 1;
+    canvas.width = Math.floor(rect.width * dpr);
+    canvas.height = Math.floor(rect.height * dpr);
+    canvas.style.width = `${rect.width}px`;
+    canvas.style.height = `${rect.height}px`;
+
+    const ctx = canvas.getContext("2d");
+    if (ctx) {
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    }
+
+    if (gameRef.current) {
+      gameRef.current.hook.maxLength = rect.height * HOOK_MAX_LENGTH_RATIO;
+    }
+  }, []);
+
+  const buildQuizQuestion = useCallback(() => {
+    const bank = getActivePlayBank();
+    const roundData = createMultipleChoiceQuestion(bank, pickQuestionForBank(bank));
+
+    if (!roundData || roundData.choices.length < 2) {
+      return null;
+    }
+
+    return {
+      question: roundData.question,
+      choices: shuffleArray(roundData.choices),
+    };
+  }, [getActivePlayBank, pickQuestionForBank]);
+
+  const startQuizForFish = useCallback(
+    (fish) => {
+      const questions = [];
+      const needed = fish.species.questions;
+
+      for (let i = 0; i < needed; i += 1) {
+        const q = buildQuizQuestion();
+        if (q) questions.push(q);
+      }
+
+      if (questions.length === 0) {
+        setGameState("playing");
+        if (gameRef.current) {
+          gameRef.current.phase = "playing";
+          gameRef.current.hook.state = "swinging";
+          gameRef.current.hook.length = 0;
+          gameRef.current.hook.caughtFish = null;
+        }
+        return;
+      }
+
+      setQuiz(questions[0]);
+      setQuizMeta({ fish, questions, allCorrect: true });
+      setQuestionIndex(0);
+      setQuizFeedback(null);
+      setBubbleStates({});
+      setQuizLocked(false);
+      setGameState("quiz");
+
+      if (gameRef.current) {
+        gameRef.current.phase = "quiz";
+        gameRef.current.quizQuestions = questions;
+        gameRef.current.quizIndex = 0;
+        gameRef.current.quizAllCorrect = true;
+        gameRef.current.caughtFish = fish;
+      }
+    },
+    [buildQuizQuestion],
+  );
+
+  const finishQuiz = useCallback(
+    (allCorrect, fish) => {
+      if (allCorrect) {
+        setScore((value) => value + fish.species.points);
+        setCaughtCount((value) => value + 1);
+        playTone(660, 0.08, "triangle", 0.04);
+        window.setTimeout(() => playTone(900, 0.1, "triangle", 0.04), 90);
+      } else {
+        playTone(170, 0.16, "sawtooth", 0.035);
+      }
+
+      setQuiz(null);
+      setQuizMeta(null);
+      setQuizFeedback(null);
+      setBubbleStates({});
+      setGameState("playing");
+      setStatusText(allCorrect ? t("games.deepSeaFishing.catchSuccess", { points: fish.species.points }) : t("games.deepSeaFishing.catchFailed"));
+
+      if (gameRef.current) {
+        gameRef.current.phase = "playing";
+        gameRef.current.hook.state = "swinging";
+        gameRef.current.hook.length = 0;
+        gameRef.current.hook.caughtFish = null;
+        gameRef.current.caughtFish = null;
+      }
+
+      window.setTimeout(() => setStatusText(""), 1800);
+    },
+    [t],
+  );
+
+  const handleQuizPick = useCallback(
+    (pickedWord) => {
+      if (quizLocked || !quiz || !quizMeta) return;
+
+      setQuizLocked(true);
+      const isCorrect = pickedWord === quiz.question.word;
+      const correctChoice = quiz.choices.find((item) => item.word === quiz.question.word);
+
+      if (isCorrect) {
+        recordCorrect(quiz.question.word);
+        setQuizFeedback({ text: t("games.deepSeaFishing.youAreRight"), type: "good" });
+        playTone(520, 0.07, "triangle", 0.04);
+
+        const nextStates = { english: "stay" };
+        quiz.choices.forEach((choice) => {
+          nextStates[choice.word] = choice.word === pickedWord ? "stay" : "pop";
+        });
+        setBubbleStates(nextStates);
+
+        window.setTimeout(() => {
+          const nextIndex = questionIndex + 1;
+
+          if (nextIndex >= quizMeta.questions.length) {
+            finishQuiz(quizMeta.allCorrect, quizMeta.fish);
+            return;
+          }
+
+          setQuestionIndex(nextIndex);
+          setQuiz(quizMeta.questions[nextIndex]);
+          setQuizFeedback(null);
+          setBubbleStates({});
+          setQuizLocked(false);
+
+          if (gameRef.current) {
+            gameRef.current.quizIndex = nextIndex;
+          }
+        }, 900);
+        return;
+      }
+
+      recordWrong(quiz.question.word);
+      setQuizMeta((current) => (current ? { ...current, allCorrect: false } : current));
+      if (gameRef.current) {
+        gameRef.current.quizAllCorrect = false;
+      }
+
+      setReviewItems((current) => {
+        if (current.some((item) => item.word === quiz.question.word)) {
+          return current;
+        }
+        return [...current, quiz.question];
+      });
+
+      setQuizFeedback({
+        text: t("games.deepSeaFishing.youAreWrong", { answer: correctChoice?.meaning ?? "" }),
+        type: "bad",
+      });
+      playTone(170, 0.16, "sawtooth", 0.035);
+
+      const popStates = { english: "pop" };
+      quiz.choices.forEach((choice) => {
+        popStates[choice.word] = "pop";
+      });
+      setBubbleStates(popStates);
+
+      window.setTimeout(() => {
+        finishQuiz(false, quizMeta.fish);
+      }, 1100);
+    },
+    [finishQuiz, questionIndex, quiz, quizLocked, quizMeta, recordCorrect, recordWrong, t],
+  );
+
+  const fireHook = useCallback(() => {
+    const game = gameRef.current;
+    if (!game || game.phase !== "playing" || game.hook.state !== "swinging") {
+      return;
+    }
+
+    game.hook.state = "firing";
+    game.hook.fireAngle = game.hook.angle;
+    game.hook.fireStart = performance.now();
+    game.hook.length = 0;
+    playTone(280, 0.05, "square", 0.025);
+  }, []);
+
+  const startRound = useCallback((includeGrouper = false) => {
+    const game = gameRef.current;
+    const canvas = canvasRef.current;
+    if (!game || !canvas) return;
+
+    const width = canvas.width / (window.devicePixelRatio || 1);
+    const height = canvas.height / (window.devicePixelRatio || 1);
+    game.fishes = spawnRoundFish(width, height, FISH_PER_ROUND, includeGrouper);
+    game.phase = "playing";
+    setRound((value) => value + 1);
+
+    if (includeGrouper) {
+      setGrouperAlert(true);
+      window.setTimeout(() => setGrouperAlert(false), 2500);
+    }
+  }, []);
+
+  const endGame = useCallback(() => {
+    commitMistakes();
+    setGameState("over");
+    if (gameRef.current) {
+      gameRef.current.phase = "over";
+    }
+    cancelAnimationFrame(rafRef.current);
+  }, [commitMistakes]);
+
+  const startGame = useCallback(() => {
+    resetTracker();
+    beginPlaySession();
+    setScore(0);
+    setTimeLeft(GAME_SECONDS);
+    setRound(0);
+    setCaughtCount(0);
+    setReviewItems([]);
+    setStatusText("");
+    setQuiz(null);
+    setQuizMeta(null);
+    setGrouperAlert(false);
+    initGameRef();
+    resizeCanvas();
+    setGameState("playing");
+  }, [beginPlaySession, initGameRef, resetTracker, resizeCanvas]);
+
+  const gameLoop = useCallback(
+    (now) => {
+      const game = gameRef.current;
+      const canvas = canvasRef.current;
+      if (!game || !canvas || gameState === "over" || gameState === "rules") {
+        return;
+      }
+
+      const dt = Math.min((now - lastFrameRef.current) / 1000, 0.05);
+      lastFrameRef.current = now;
+      const width = canvas.width / (window.devicePixelRatio || 1);
+      const height = canvas.height / (window.devicePixelRatio || 1);
+      const originX = width / 2;
+      const originY = height - height * 0.1 - 4;
+
+      if (gameState === "playing") {
+        if (!game.lastGrouperTick) {
+          game.lastGrouperTick = now;
+        }
+        const grouperDelta = now - game.lastGrouperTick;
+        game.lastGrouperTick = now;
+        grouperDueRef.current -= grouperDelta;
+
+        if (grouperDueRef.current <= 0) {
+          grouperDueRef.current = GROUPER_INTERVAL_MS;
+          game.pendingGrouper = true;
+        }
+
+        if (game.phase === "roundWait") {
+          if (now >= game.roundWaitUntil) {
+            startRound(game.pendingGrouper);
+            game.pendingGrouper = false;
+          }
+        }
+
+        if (game.phase === "playing") {
+          game.swingTime += dt;
+          if (game.hook.state === "swinging") {
+            game.hook.angle = Math.sin(game.swingTime * SWING_SPEED) * MAX_SWING_ANGLE;
+          }
+
+          for (const fish of game.fishes) {
+            if (!fish.caught) {
+              fish.x += fish.vx * dt;
+            }
+          }
+
+          game.fishes = game.fishes.filter(
+            (fish) => fish.x > -fish.w - 40 && fish.x < width + fish.w + 40,
+          );
+
+          if (game.fishes.length === 0) {
+            game.phase = "roundWait";
+            game.roundWaitUntil = now + ROUND_DELAY_MS;
+          }
+        }
+
+        if (game.hook.state === "firing") {
+          const progress = Math.min(1, (now - game.hook.fireStart) / HOOK_FIRE_MS);
+          game.hook.length = game.hook.maxLength * progress;
+          game.hook.angle = game.hook.fireAngle;
+
+          const tip = getHookTip(game.hook, originX, originY);
+          let hitFish = null;
+
+          for (const fish of game.fishes) {
+            if (!fish.caught && hitTestFish(tip.x, tip.y, fish)) {
+              hitFish = fish;
+              break;
+            }
+          }
+
+          if (hitFish || progress >= 1) {
+            game.hook.state = "retracting";
+            game.hook.retractStart = now;
+
+            if (hitFish) {
+              hitFish.caught = true;
+              game.hook.caughtFish = { ...hitFish };
+              game.fishes = game.fishes.filter((fish) => fish.id !== hitFish.id);
+            }
+          }
+        }
+
+        if (game.hook.state === "retracting") {
+          const progress = Math.min(1, (now - game.hook.retractStart) / HOOK_RETRACT_MS);
+          game.hook.length = game.hook.maxLength * (1 - progress);
+          game.hook.angle = game.hook.fireAngle;
+
+          if (progress >= 1) {
+            game.hook.length = 0;
+            if (game.hook.caughtFish) {
+              const caught = game.hook.caughtFish;
+              game.hook.caughtFish = null;
+              game.hook.state = "swinging";
+              game.phase = "quiz";
+              startQuizForFish(caught);
+            } else {
+              game.hook.state = "swinging";
+            }
+          }
+        }
+      }
+
+      const ctx = canvas.getContext("2d");
+      if (ctx) {
+        drawScene(ctx, width, height, game, now / 1000);
+      }
+
+      rafRef.current = requestAnimationFrame(gameLoop);
+    },
+    [gameState, startQuizForFish, startRound],
+  );
+
+  useEffect(() => {
+    resizeCanvas();
+    window.addEventListener("resize", resizeCanvas);
+    return () => window.removeEventListener("resize", resizeCanvas);
+  }, [resizeCanvas]);
+
+  useEffect(() => {
+    if (gameState !== "rules") return;
+
+    const canvas = canvasRef.current;
+    const ctx = canvas?.getContext("2d");
+    if (!ctx || !canvas) return;
+
+    const width = canvas.width / (window.devicePixelRatio || 1);
+    const height = canvas.height / (window.devicePixelRatio || 1);
+    drawScene(
+      ctx,
+      width,
+      height,
+      { fishes: [], hook: { angle: 0, length: 0, caughtFish: null } },
+      performance.now() / 1000,
+    );
+  }, [gameState, resizeCanvas]);
+
+  useEffect(() => {
+    if (gameState === "playing" || gameState === "quiz") {
+      lastFrameRef.current = performance.now();
+      rafRef.current = requestAnimationFrame(gameLoop);
+      return () => cancelAnimationFrame(rafRef.current);
+    }
+    return undefined;
+  }, [gameLoop, gameState]);
+
+  useEffect(() => {
+    if (gameState !== "playing" && gameState !== "quiz") return undefined;
+
+    const timerId = window.setInterval(() => {
+      setTimeLeft((value) => {
+        if (value <= 1) {
+          window.clearInterval(timerId);
+          endGame();
+          return 0;
+        }
+        return value - 1;
+      });
+    }, 1000);
+
+    return () => window.clearInterval(timerId);
+  }, [endGame, gameState]);
+
+  const handleCanvasClick = useCallback(() => {
+    if (gameState === "playing") {
+      fireHook();
+    }
+  }, [fireHook, gameState]);
+
+  const closeRules = useCallback(() => {
+    startGame();
+  }, [startGame]);
+
+  if (isLoadingScope) {
+    return (
+      <section className="w-full max-w-4xl rounded-3xl border border-blue-200/70 bg-white/90 p-8 text-center shadow-2xl shadow-blue-950/10 sm:p-10">
+        <p className="text-sm font-medium text-slate-600">{t("wordGroupsScope.loading")}</p>
+      </section>
+    );
+  }
+
+  if (isGroupScopeActive && (gameWords.length === 0 || usingFallback)) {
+    return (
+      <section className="w-full max-w-4xl rounded-3xl border border-blue-200/70 bg-white/90 p-6 shadow-2xl shadow-blue-950/10 sm:p-10">
+        <WordGroupScopeEmptyState compact />
+      </section>
+    );
+  }
+
+  const timerPercent = Math.max(0, (timeLeft / GAME_SECONDS) * 100);
+
+  return (
+    <section className="game-page-shell dsf-app flex flex-col text-slate-50">
+      <header className="game-page-header relative z-50 mb-1.5 flex shrink-0 items-center justify-between gap-2">
+        <GameHomeButton fixed />
+        <div className="pointer-events-none flex-1 text-center">
+          <h1 className="font-black text-sky-100 drop-shadow">
+            {t("games.deepSeaFishing.title")}
+          </h1>
+          <p className="text-sky-200">{t("games.deepSeaFishing.subtitle")}</p>
+        </div>
+        <div className="min-w-[4.5rem]" />
+      </header>
+
+      {gameState !== "rules" && gameState !== "over" ? (
+        <>
+          <div className="mb-1.5 grid grid-cols-3 gap-1.5">
+            {[
+              [t("games.score"), score, "text-yellow-300"],
+              [t("games.time"), timeLeft, "text-amber-100"],
+              [t("games.round"), round, "text-purple-200"],
+            ].map(([label, value, color]) => (
+              <div className="dsf-stat" key={label}>
+                <p className="text-xs font-bold uppercase text-sky-200">{label}</p>
+                <p className={`text-sm font-black sm:text-xl ${color}`}>{value}</p>
+              </div>
+            ))}
+          </div>
+          <div className="mb-2 h-2 overflow-hidden rounded-full border border-sky-300/20 bg-sky-950/40">
+            <div
+              className="dsf-timer-bar h-full rounded-full transition-all"
+              style={{
+                width: `${timerPercent}%`,
+                background:
+                  timerPercent < 22
+                    ? "linear-gradient(90deg, #ef4444, #fb923c)"
+                    : timerPercent < 50
+                      ? "linear-gradient(90deg, #f97316, #fde047)"
+                      : "linear-gradient(90deg, #22c55e, #fde047)",
+              }}
+            />
+          </div>
+        </>
+      ) : null}
+
+      <div className="dsf-card relative z-0 min-h-0 flex-1 overflow-hidden p-1.5 sm:p-2">
+        <div className="dsf-stage" ref={containerRef}>
+          <canvas
+            className="dsf-canvas"
+            onClick={handleCanvasClick}
+            onKeyDown={(event) => {
+              if (event.key === " " || event.key === "Enter") {
+                event.preventDefault();
+                handleCanvasClick();
+              }
+            }}
+            ref={canvasRef}
+            role="button"
+            tabIndex={0}
+          />
+
+          {gameState === "playing" && statusText ? (
+            <p className="dsf-status-toast">{statusText}</p>
+          ) : null}
+
+          {grouperAlert ? (
+            <p className="dsf-grouper-alert">{t("games.deepSeaFishing.grouperAlert")}</p>
+          ) : null}
+
+          {gameState === "playing" ? (
+            <p className="dsf-fire-hint">{t("games.deepSeaFishing.fireHint")}</p>
+          ) : null}
+
+          {gameState === "quiz" ? (
+            <QuizOverlay
+              bubbleStates={bubbleStates}
+              feedback={quizFeedback}
+              locked={quizLocked}
+              onPick={handleQuizPick}
+              questionIndex={questionIndex}
+              quiz={quiz}
+              t={t}
+              totalQuestions={quizMeta?.questions.length ?? 1}
+            />
+          ) : null}
+
+          {gameState === "rules" ? <RulesPanel onClose={closeRules} t={t} /> : null}
+
+          {gameState === "over" ? (
+            <div className="dsf-over-panel">
+              <h2 className="dsf-over-title">{t("games.gameOver")}</h2>
+              <p className="dsf-over-score">{score}</p>
+              <p className="dsf-over-sub">
+                {t("games.deepSeaFishing.resultCount", { count: caughtCount })}
+              </p>
+
+              <div className="dsf-over-grid">
+                {[
+                  [t("games.score"), score],
+                  [t("games.deepSeaFishing.caught"), caughtCount],
+                  [t("games.time"), `${GAME_SECONDS - timeLeft}s`],
+                ].map(([label, value]) => (
+                  <div className="dsf-summary-card" key={label}>
+                    <p className="text-xs font-bold uppercase text-sky-200">{label}</p>
+                    <p className="text-2xl font-black text-yellow-300">{value}</p>
+                  </div>
+                ))}
+              </div>
+
+              <div className="dsf-review-box">
+                <h3 className="font-black text-sky-100">{t("games.wordsToReview")}</h3>
+                {reviewItems.length === 0 ? (
+                  <p className="mt-1 text-sm text-sky-200">{t("games.perfectNoMistakes")}</p>
+                ) : (
+                  <ul className="mt-2 grid max-h-24 gap-1.5 overflow-y-auto">
+                    {reviewItems.map((item) => (
+                      <li
+                        className="rounded-xl border border-sky-300/15 bg-sky-950/40 px-3 py-2 text-sm"
+                        key={item.word}
+                      >
+                        <span className="font-black text-yellow-300">{item.word}</span>
+                        <span className="mx-2 text-sky-400">→</span>
+                        <span className="text-sky-100">{item.meaning}</span>
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </div>
+
+              <GameMistakeSummary className="mt-3 text-left" terms={lastCommittedTerms} />
+
+              <div className="mt-3 flex flex-wrap justify-center gap-2">
+                <button className="dsf-primary-btn" onClick={startGame} type="button">
+                  {t("games.playAgain")}
+                </button>
+                <Link className="dsf-secondary-btn" to="/">
+                  {t("common.home")}
+                </Link>
+              </div>
+            </div>
+          ) : null}
+        </div>
+      </div>
+
+      {gameState === "rules" || gameState === "over" ? (
+        <GameWordBankStatus
+          className="game-page-footer mt-1 block text-center text-xs text-sky-200"
+          gameplayWordCount={defaultBank.questionEntries?.length ?? 0}
+          isPriorityLimited={isPriorityLimited}
+          priorityCount={priorityCount}
+          supplementedCount={supplementedCount}
+          totalMaintenanceCount={totalMaintenanceCount}
+          totalPriorityCount={totalPriorityCount}
+          usingFallback={usingFallback}
+          usingMaintenanceMode={usingMaintenanceMode}
+          usingReviewSession={hasActiveReviewSession() && defaultBank.priorityCount > 0}
+        />
+      ) : null}
+    </section>
+  );
+}
+
+export default DeepSeaFishingPage;
