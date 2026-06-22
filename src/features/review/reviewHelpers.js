@@ -1,4 +1,4 @@
-import { REVIEW_RESULTS } from "../words/wordTypes.js";
+import { createInitialMistake, createInitialReview, REVIEW_RESULTS } from "../words/wordTypes.js";
 
 export const REVIEW_INTERVAL_DAYS_BY_LEVEL = {
   0: 1,
@@ -137,28 +137,36 @@ export function getReviewIntervalDays(level) {
 export function updateReviewResult(word, result, now = new Date()) {
   const remembered =
     result === REVIEW_RESULTS.REMEMBERED || result === REVIEW_RESULTS.CORRECT;
-  const nextLevel = remembered ? word.review.level + 1 : 0;
+  const review = {
+    ...createInitialReview(now.toISOString()),
+    ...word.review,
+  };
+  const mistake = {
+    ...createInitialMistake(),
+    ...word.mistake,
+  };
+  const nextLevel = remembered ? review.level + 1 : 0;
 
   return {
     review: {
-      ...word.review,
+      ...review,
       level: nextLevel,
       nextReviewAt: getNextReviewAt(nextLevel, now),
       lastReviewedAt: now.toISOString(),
-      correctCount: word.review.correctCount + (remembered ? 1 : 0),
-      incorrectCount: word.review.incorrectCount + (remembered ? 0 : 1),
+      correctCount: review.correctCount + (remembered ? 1 : 0),
+      incorrectCount: review.incorrectCount + (remembered ? 0 : 1),
       lastResult: result,
     },
     mistake: remembered
       ? {
-          ...word.mistake,
+          ...mistake,
           isMistake: false,
         }
       : {
-          ...word.mistake,
+          ...mistake,
           isMistake: true,
           lastMistakeAt: now.toISOString(),
-          mistakeCount: word.mistake.mistakeCount + 1,
+          mistakeCount: mistake.mistakeCount + 1,
         },
   };
 }
