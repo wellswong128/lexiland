@@ -161,6 +161,19 @@ function SettingsPage() {
       <WordGroupSettingsSection hasSupabaseConfig={hasSupabaseConfig} user={user} />
 
       <div className="mb-5 rounded-2xl bg-blue-50 p-5">
+        <h2 className="text-lg font-bold text-blue-950">{t("settings.learningReportTitle")}</h2>
+        <p className="mt-2 text-sm leading-6 text-slate-600">
+          {t("settings.learningReportDescription")}
+        </p>
+        <Link className="install-settings-link" to="/learning-report">
+          {t("settings.learningReportOpen")}
+        </Link>
+        <Link className="install-settings-link" to="/achievements">
+          {t("settings.achievementsOpen")}
+        </Link>
+      </div>
+
+      <div className="mb-5 rounded-2xl bg-blue-50 p-5">
         <h2 className="text-lg font-bold text-blue-950">{t("settings.installTitle")}</h2>
         <p className="mt-2 text-sm leading-6 text-slate-600">
           {t("settings.installDescription")}

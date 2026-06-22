@@ -9,6 +9,7 @@ import { getDueWords } from "../features/review/reviewHelpers.js";
 import { useWordsContext } from "../features/words/WordsContext.jsx";
 import { canRoute, getRoleFromUser } from "../lib/authorization.js";
 import { getLearningSnapshot } from "../lib/learningActivity.js";
+import { getLearningReport } from "../lib/learningReport.js";
 import { hasSupabaseConfig } from "../lib/supabaseClient.js";
 
 const statCards = [
@@ -75,6 +76,15 @@ const quickActionLinks = [
     bg: "home-quick-bg-teal",
     iconClass: "home-qi4",
     emoji: "🧩",
+  },
+  {
+    key: "learningReport",
+    labelKey: "bottomNav.learningRecord",
+    descKey: "home.learningReportDesc",
+    to: "/learning-report",
+    bg: "home-quick-bg-purple",
+    iconClass: "home-qi-report",
+    emoji: "📊",
   },
   {
     key: "quiz",
@@ -216,6 +226,10 @@ function HomePage() {
     () => getLearningSnapshot(learningWords),
     [learningWords, location.key],
   );
+  const learningReport = useMemo(
+    () => getLearningReport(learningWords),
+    [learningWords, location.key],
+  );
   const showContinue = Boolean(lastActivity?.path) && !isEmpty;
   const starterWordsReady = Math.min(wordCount, STARTER_QUIZ_WORD_TARGET);
   const starterWordsRemaining = Math.max(STARTER_QUIZ_WORD_TARGET - wordCount, 0);
@@ -227,6 +241,8 @@ function HomePage() {
   const starterManualTo = getRouteOrSignupRedirect(role, STARTER_MANUAL_PATH);
   const showStarterAuthHint = !canRoute(role, starterPrimaryPath);
   const showDailyTasks = !isHomeLoading && wordCount > 0 && !showStarterOnboarding;
+  const showLearningReport = !isHomeLoading && canRoute(role, "/learning-report");
+  const learningReportTo = getRouteOrSignupRedirect(role, "/learning-report");
   const photoFlagshipTo = getRouteOrSignupRedirect(role, STARTER_PHOTO_PATH);
   const showPhotoFlagship =
     !isHomeLoading && !showStarterOnboarding && canRoute(role, STARTER_PHOTO_PATH);
@@ -489,6 +505,28 @@ function HomePage() {
               })}
             </ul>
           </section>
+        ) : null}
+
+        {showLearningReport ? (
+          <Link className="home-report" to={learningReportTo}>
+            <div className="home-report-copy">
+              <p className="home-report-badge">{t("learningReport.eyebrow")}</p>
+              <h2 className="home-report-title">{t("home.learningReportTitle")}</h2>
+              <p className="home-report-desc">{t("home.learningReportDesc")}</p>
+              {wordCount > 0 ? (
+                <p className="home-report-teaser">
+                  {t("home.learningReportTeaser", {
+                    games: learningReport.gamesCompletedThisWeek,
+                    streak: learningReport.streakDays,
+                    words: learningReport.wordsAddedThisWeek,
+                  })}
+                </p>
+              ) : null}
+            </div>
+            <span aria-hidden="true" className="home-report-go">
+              {t("home.learningReportCta")} ›
+            </span>
+          </Link>
         ) : null}
 
         {!isHomeLoading && dueCount > 0 && mistakeCount > 0 ? (
