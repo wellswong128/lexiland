@@ -16,7 +16,7 @@ import { useLocale } from "../features/locale/LocaleContext.jsx";
 import { useGameMistakeTracker } from "../features/review/useGameMistakeTracker.js";
 import { useWordsContext } from "../features/words/WordsContext.jsx";
 
-const GAME_SECONDS = 100;
+const GAME_SECONDS = 160;
 const ROUND_DELAY_MS = 2000;
 const FISH_PER_ROUND = 5;
 const GROUPER_INTERVAL_MS = 30000;
