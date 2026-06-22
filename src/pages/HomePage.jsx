@@ -173,10 +173,18 @@ function getPrimaryCta({ wordCount, dueCount, mistakeCount }) {
     };
   }
 
+  if (wordCount >= 2) {
+    return {
+      key: "playQuiz",
+      labelKey: "home.ctaPlayQuiz",
+      to: "/review/quiz",
+    };
+  }
+
   return {
-    key: "keepLearning",
-    labelKey: "home.ctaKeepLearning",
-    to: "/review/flashcards",
+    key: "addMore",
+    labelKey: "home.ctaAddMorePhoto",
+    to: "/words/new?tab=photo",
   };
 }
 

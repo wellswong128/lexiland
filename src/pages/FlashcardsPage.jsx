@@ -232,32 +232,112 @@ function FlashcardsPage() {
   }
 
   if (sessionWords.length === 0) {
+    const hasWords = reviewWords.length > 0;
+    const canQuiz = reviewWords.length >= 2;
+
+    const emptyTitle = mistakesOnly
+      ? t("flashcards.noDueTitle")
+      : hasWords
+        ? t("flashcards.noDueCaughtUpTitle")
+        : t("flashcards.noDueTitle");
+
+    const emptyDescription = mistakesOnly
+      ? t("flashcards.noDueMistakes")
+      : hasWords
+        ? t("flashcards.noDueCaughtUpDescription")
+        : t("flashcards.noDueEmptyDescription");
+
     return (
       <section className="w-full max-w-3xl rounded-3xl border border-blue-200/70 bg-white/90 p-8 text-center shadow-2xl shadow-blue-950/10 sm:p-14">
         <p className="mb-3 text-xs font-bold uppercase tracking-[0.16em] text-blue-700">
           {t("flashcards.eyebrow")}
         </p>
-        <h1 className="text-4xl font-bold text-blue-950 sm:text-5xl">
-          {t("flashcards.noDueTitle")}
-        </h1>
-        <p className="mx-auto mt-4 max-w-xl text-slate-600">
-          {mistakesOnly
-            ? t("flashcards.noDueMistakes")
-            : t("flashcards.noDueDefault")}
-        </p>
+        <h1 className="text-4xl font-bold text-blue-950 sm:text-5xl">{emptyTitle}</h1>
+        <p className="mx-auto mt-4 max-w-xl text-slate-600">{emptyDescription}</p>
         <div className="mt-8 flex flex-wrap justify-center gap-3">
-          <Link
-            className="rounded-full bg-blue-700 px-5 py-3 text-sm font-bold text-white transition hover:bg-blue-800"
-            to="/words/new"
-          >
-            {t("common.addWord")}
-          </Link>
-          <Link
-            className="rounded-full bg-blue-100 px-5 py-3 text-sm font-bold text-blue-700 transition hover:bg-blue-200"
-            to="/words"
-          >
-            {t("common.wordList")}
-          </Link>
+          {mistakesOnly ? (
+            <>
+              <Link
+                className="rounded-full bg-blue-700 px-5 py-3 text-sm font-bold text-white transition hover:bg-blue-800"
+                to="/mistakes"
+              >
+                {t("flashcards.noDueBackMistakesCta")}
+              </Link>
+              <Link
+                className="rounded-full bg-blue-100 px-5 py-3 text-sm font-bold text-blue-700 transition hover:bg-blue-200"
+                to="/review/flashcards"
+              >
+                {t("flashcards.noDueBackFlashcardsCta")}
+              </Link>
+              <Link
+                className="rounded-full border border-blue-200 bg-white px-5 py-3 text-sm font-bold text-blue-700 transition hover:bg-blue-50"
+                to="/"
+              >
+                {t("flashcards.noDueHomeCta")}
+              </Link>
+            </>
+          ) : hasWords ? (
+            <>
+              {canQuiz ? (
+                <Link
+                  className="rounded-full bg-blue-700 px-5 py-3 text-sm font-bold text-white transition hover:bg-blue-800"
+                  to="/review/quiz"
+                >
+                  {t("flashcards.noDueQuizCta")}
+                </Link>
+              ) : null}
+              <Link
+                className={[
+                  "rounded-full px-5 py-3 text-sm font-bold transition",
+                  canQuiz
+                    ? "bg-blue-100 text-blue-700 hover:bg-blue-200"
+                    : "bg-blue-700 text-white hover:bg-blue-800",
+                ].join(" ")}
+                to="/games/spelling-ninja"
+              >
+                {t("flashcards.noDueGameCta")}
+              </Link>
+              <Link
+                className="rounded-full bg-green-700 px-5 py-3 text-sm font-bold text-white transition hover:bg-green-800"
+                to="/words/new?tab=photo"
+              >
+                {t("flashcards.noDuePhotoCta")}
+              </Link>
+              <Link
+                className="rounded-full border border-blue-200 bg-white px-5 py-3 text-sm font-bold text-blue-700 transition hover:bg-blue-50"
+                to="/"
+              >
+                {t("flashcards.noDueHomeCta")}
+              </Link>
+              <Link
+                className="rounded-full bg-blue-100 px-5 py-3 text-sm font-bold text-blue-700 transition hover:bg-blue-200"
+                to="/words"
+              >
+                {t("flashcards.noDueWordListCta")}
+              </Link>
+            </>
+          ) : (
+            <>
+              <Link
+                className="rounded-full bg-green-700 px-5 py-3 text-sm font-bold text-white transition hover:bg-green-800"
+                to="/words/new?tab=photo"
+              >
+                {t("flashcards.noDuePhotoCta")}
+              </Link>
+              <Link
+                className="rounded-full bg-blue-700 px-5 py-3 text-sm font-bold text-white transition hover:bg-blue-800"
+                to="/words/new?tab=manual"
+              >
+                {t("common.addWord")}
+              </Link>
+              <Link
+                className="rounded-full border border-blue-200 bg-white px-5 py-3 text-sm font-bold text-blue-700 transition hover:bg-blue-50"
+                to="/"
+              >
+                {t("flashcards.noDueHomeCta")}
+              </Link>
+            </>
+          )}
         </div>
       </section>
     );
