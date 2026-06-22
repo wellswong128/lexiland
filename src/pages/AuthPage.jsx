@@ -1,7 +1,9 @@
 import { useEffect, useMemo, useState } from "react";
-import { Link, useNavigate, useSearchParams } from "react-router-dom";
+import { Link, useLocation, useNavigate, useSearchParams } from "react-router-dom";
+import { Capacitor } from "@capacitor/core";
 import LexiMascot from "../components/LexiMascot.jsx";
 import { getFriendlyAuthError } from "../features/auth/authErrors.js";
+import { resolveAuthRedirectUrl } from "../features/auth/authRedirect.js";
 import { useLocale } from "../features/locale/LocaleContext.jsx";
 import { useWordsContext } from "../features/words/WordsContext.jsx";
 import { canRoute, ROLES } from "../lib/authorization.js";
@@ -68,9 +70,11 @@ function AuthHero() {
 function AuthPage() {
   const { t } = useLocale();
   const navigate = useNavigate();
+  const location = useLocation();
   const [searchParams, setSearchParams] = useSearchParams();
   const {
     authError,
+    clearAuthError,
     hasSupabaseConfig,
     isAuthLoading,
     signInWithEmail,
@@ -115,13 +119,33 @@ function AuthPage() {
   }, [emailCooldown]);
 
   useEffect(() => {
+    clearAuthError();
+
+    if (window.location.hash) {
+      window.history.replaceState({}, document.title, window.location.pathname + window.location.search);
+    }
+  }, [clearAuthError]);
+
+  useEffect(() => {
+    if (!location.state?.authError) {
+      return;
+    }
+
+    setNoticeType("error");
+    setNotice(getFriendlyAuthError(String(location.state.authError), t));
+    navigate(`${location.pathname}${location.search}`, { replace: true, state: null });
+  }, [location.pathname, location.search, location.state, navigate, t]);
+
+  useEffect(() => {
     setShowEmailForm(false);
     setNotice("");
     setEmail("");
   }, [mode]);
 
+  const nativeRedirectUrl = Capacitor.isNativePlatform() ? resolveAuthRedirectUrl() : "";
+
   useEffect(() => {
-    const lower = authError.toLowerCase();
+    const lower = (authError || "").toLowerCase();
     if (
       lower.includes("error getting user email from external provider") ||
       lower.includes("error getting user profile from external provider")
@@ -227,8 +251,14 @@ function AuthPage() {
       ) : null}
 
       {friendlyAuthError && friendlyAuthError !== notice ? (
-        <p className="mt-6 w-full rounded-2xl border border-red-200 bg-red-50 px-4 py-3 text-sm font-medium text-red-700">
+        <p className="mt-6 w-full rounded-2xl border border-red-200 bg-red-50 px-4 py-3 text-sm font-medium text-red-700 whitespace-pre-line">
           {friendlyAuthError}
+        </p>
+      ) : null}
+
+      {nativeRedirectUrl ? (
+        <p className="mt-4 w-full rounded-2xl border border-blue-100 bg-blue-50 px-4 py-3 text-xs leading-5 text-blue-900">
+          {t("auth.nativeRedirectDebug", { url: nativeRedirectUrl })}
         </p>
       ) : null}
 

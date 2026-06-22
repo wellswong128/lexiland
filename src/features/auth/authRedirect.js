@@ -1,4 +1,6 @@
+import { App } from "@capacitor/app";
 import { Capacitor } from "@capacitor/core";
+import { APP_HOME_URL } from "../../lib/appUrl.js";
 
 function normalizeUrl(url) {
   return url.trim().replace(/\/$/, "");
@@ -31,11 +33,47 @@ function isLanHost(url) {
   }
 }
 
+export function getNativeHttpsAuthCallbackUrl() {
+  return `${APP_HOME_URL}/auth/callback`;
+}
+
+let cachedNativeAppId = null;
+let nativeAppIdPromise = null;
+
+export async function preloadNativeAppId() {
+  if (!Capacitor.isNativePlatform()) {
+    return null;
+  }
+
+  if (cachedNativeAppId) {
+    return cachedNativeAppId;
+  }
+
+  if (!nativeAppIdPromise) {
+    nativeAppIdPromise = App.getInfo()
+      .then((info) => {
+        cachedNativeAppId = info.id || null;
+        return cachedNativeAppId;
+      })
+      .catch(() => null);
+  }
+
+  return nativeAppIdPromise;
+}
+
+export function getNativeAppIdSync() {
+  return cachedNativeAppId;
+}
+
 export function getNativeAuthRedirectUrl() {
   const envUrl = import.meta.env.VITE_NATIVE_AUTH_REDIRECT_URL?.trim();
 
   if (envUrl) {
     return normalizeUrl(envUrl);
+  }
+
+  if (typeof window !== "undefined" && Capacitor.isNativePlatform()) {
+    return `${normalizeUrl(window.location.origin)}/auth/callback`;
   }
 
   const appId = import.meta.env.VITE_CAPACITOR_APP_ID?.trim();
@@ -44,26 +82,34 @@ export function getNativeAuthRedirectUrl() {
     return `${appId}://auth/callback`;
   }
 
-  if (typeof window !== "undefined") {
-    return normalizeUrl(window.location.origin);
+  return getNativeHttpsAuthCallbackUrl();
+}
+
+export async function resolveAuthRedirectUrlAsync({ strict = false } = {}) {
+  if (Capacitor.isNativePlatform()) {
+    await preloadNativeAppId();
+    return getNativeAuthRedirectUrl();
   }
 
-  return "capacitor://localhost";
+  return resolveAuthRedirectUrl({ strict });
 }
 
 export function getSupabaseRedirectUrlHints() {
   const hints = new Set([
-    "capacitor://localhost",
+    "capacitor://localhost/auth/callback",
     "capacitor://localhost/**",
-    "https://localhost",
+    "capacitor://**",
+    "https://localhost/auth/callback",
     "https://localhost/**",
+    `${APP_HOME_URL}/auth/callback`,
+    `${APP_HOME_URL}/**`,
   ]);
 
   const nativeRedirect = getNativeAuthRedirectUrl();
   hints.add(nativeRedirect);
   hints.add(`${nativeRedirect}/**`);
 
-  const appId = import.meta.env.VITE_CAPACITOR_APP_ID?.trim();
+  const appId = getNativeAppIdSync() || import.meta.env.VITE_CAPACITOR_APP_ID?.trim();
   if (appId) {
     hints.add(`${appId}://auth/callback`);
     hints.add(`${appId}://**`);
@@ -92,13 +138,13 @@ export function resolveAuthRedirectUrl({ strict = false } = {}) {
   }
 
   if (!runtimeOrigin) {
-    return strict ? "https://learn.lexiland.cc" : "";
+    return strict ? APP_HOME_URL : "";
   }
 
   if (isLocalhostUrl(runtimeOrigin) || isLanHost(runtimeOrigin)) {
     if (strict) {
       throw new Error(
-        "Set VITE_APP_URL or VITE_AUTH_REDIRECT_URL to https://learn.lexiland.cc before using email login on mobile.",
+        `Set VITE_APP_URL or VITE_AUTH_REDIRECT_URL to ${APP_HOME_URL} before using email login on mobile.`,
       );
     }
   }

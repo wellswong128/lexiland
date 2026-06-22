@@ -40,6 +40,9 @@ const zhHant = {
     emailSentSignup: "請到信箱查看註冊連結。若沒收到，請檢查垃圾郵件。",
     emailSentLogin: "請到信箱查看登入連結。若沒收到，請檢查垃圾郵件。",
     continueWithoutAccount: "先不登入，繼續使用",
+    completingLogin: "正在完成登入，請稍候…",
+    nativeRedirectDebug:
+      "原生 App 登入回調：{{url}}（請在 Supabase Redirect URLs 加入此網址，以及 capacitor://** 通配）",
     settingsPrompt: "登入後可同步單字到雲端，並在多裝置使用。",
   },
     nav: {
@@ -1007,6 +1010,9 @@ export const translations = {
       emailSentSignup: "Check your email for the sign-up link. If it does not arrive, check spam.",
       emailSentLogin: "Check your email for the login link. If it does not arrive, check spam.",
       continueWithoutAccount: "Continue without signing in",
+      completingLogin: "Completing sign-in, please wait…",
+      nativeRedirectDebug:
+        "Native app auth callback: {{url}} (add this URL and capacitor://** to Supabase Redirect URLs)",
       settingsPrompt: "Sign in to sync words to the cloud and use them across devices.",
     },
     nav: {

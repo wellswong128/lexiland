@@ -12,6 +12,7 @@ const AdminWordbasePage = lazy(() => import("./pages/AdminWordbasePage.jsx"));
 const AdminWordbaseLibraryPage = lazy(() => import("./pages/AdminWordbaseLibraryPage.jsx"));
 const AddWordPage = lazy(() => import("./pages/AddWordPage.jsx"));
 const AuthPage = lazy(() => import("./pages/AuthPage.jsx"));
+const AuthCallbackPage = lazy(() => import("./pages/AuthCallbackPage.jsx"));
 const BattleJetQuizPage = lazy(() => import("./pages/BattleJetQuizPage.jsx"));
 const FishingBlastPage = lazy(() => import("./pages/FishingBlastPage.jsx"));
 const FlashcardsPage = lazy(() => import("./pages/FlashcardsPage.jsx"));
@@ -86,6 +87,7 @@ function AppRoutes() {
         <Route path="/games/penalty-twelve" element={<ProtectedRoute><PenaltyTwelvePage /></ProtectedRoute>} />
         <Route path="/mistakes" element={<ProtectedRoute><MistakesPage /></ProtectedRoute>} />
         <Route path="/auth" element={<AuthPage />} />
+        <Route path="/auth/callback" element={<AuthCallbackPage />} />
         <Route path="/settings" element={<ProtectedRoute><SettingsPage /></ProtectedRoute>} />
         <Route path="/install" element={<InstallPage />} />
         <Route path="*" element={<NotFoundPage />} />

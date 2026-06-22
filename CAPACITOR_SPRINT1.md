@@ -67,15 +67,14 @@ VITE_SUPABASE_ANON_KEY=your-anon-key
 3. In **Supabase → Authentication → URL Configuration → Redirect URLs**, add **all** of:
 
 ```text
-capacitor://localhost
-capacitor://localhost/**
-https://localhost
+capacitor://localhost/auth/callback
+capacitor://**
+https://localhost/auth/callback
 https://localhost/**
-com.wellswong.lexiland://auth/callback
-com.wellswong.lexiland://**
+https://learn.lexiland.cc/**
 ```
 
-(Replace `com.wellswong.lexiland` with your Bundle Identifier.)
+Important: `https://learn.lexiland.cc/` alone does **not** cover sub-paths. Use `https://learn.lexiland.cc/**`.
 
 4. Rebuild and sync:
 

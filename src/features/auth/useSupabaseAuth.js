@@ -1,8 +1,7 @@
 import { useCallback, useEffect, useState } from "react";
 import { Capacitor } from "@capacitor/core";
-import { resolveAuthRedirectUrl } from "./authRedirect.js";
+import { resolveAuthRedirectUrlAsync } from "./authRedirect.js";
 import { hasSupabaseConfig, supabase } from "../../lib/supabaseClient.js";
-import { openNativeOAuthUrl } from "../../lib/initCapacitorAuth.js";
 
 export function useSupabaseAuth() {
   const [session, setSession] = useState(null);
@@ -87,7 +86,7 @@ export function useSupabaseAuth() {
 
     setAuthError("");
 
-    const emailRedirectTo = resolveAuthRedirectUrl({ strict: true });
+    const emailRedirectTo = await resolveAuthRedirectUrlAsync({ strict: true });
 
     if (!emailRedirectTo) {
       throw new Error(
@@ -116,7 +115,7 @@ export function useSupabaseAuth() {
 
     setAuthError("");
 
-    const redirectTo = resolveAuthRedirectUrl({ strict: true });
+    const redirectTo = await resolveAuthRedirectUrlAsync({ strict: true });
 
     if (!redirectTo) {
       throw new Error(
@@ -138,7 +137,8 @@ export function useSupabaseAuth() {
     }
 
     if (Capacitor.isNativePlatform() && data?.url) {
-      await openNativeOAuthUrl(data.url);
+      window.location.assign(data.url);
+      return;
     }
   }, []);
 
@@ -157,8 +157,13 @@ export function useSupabaseAuth() {
     }
   }, []);
 
+  const clearAuthError = useCallback(() => {
+    setAuthError("");
+  }, []);
+
   return {
     authError,
+    clearAuthError,
     hasSupabaseConfig,
     isAuthLoading,
     session,
