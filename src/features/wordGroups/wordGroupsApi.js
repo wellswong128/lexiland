@@ -155,15 +155,20 @@ export async function fetchUserActiveGroup() {
   return parseJsonResponse(response);
 }
 
-export async function setUserActiveGroup(groupCode) {
+export async function setUserActiveGroup(groupCode, options = {}) {
   const authHeaders = await getApiAuthHeaders();
+  const body = { groupCode };
+  if (options.addToPicks) {
+    body.addToPicks = true;
+  }
+
   const response = await fetch("/api/user-active-group", {
     method: "PUT",
     headers: {
       "Content-Type": "application/json",
       ...authHeaders,
     },
-    body: JSON.stringify({ groupCode }),
+    body: JSON.stringify(body),
   });
 
   const payload = await parseJsonResponse(response);

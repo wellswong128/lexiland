@@ -647,8 +647,20 @@ export function useWords({ isAuthLoading = false, user = null } = {}, storage) {
       void runActiveGroupSync();
     };
 
+    const scheduleActiveGroupSync = () => {
+      const run = () => {
+        void runActiveGroupSync();
+      };
+
+      if (typeof window.requestIdleCallback === "function") {
+        window.requestIdleCallback(run, { timeout: 2000 });
+      } else {
+        window.setTimeout(run, 0);
+      }
+    };
+
     const handleActiveGroupChanged = () => {
-      void runActiveGroupSync();
+      scheduleActiveGroupSync();
     };
 
     window.addEventListener(ACTIVE_GROUP_CHANGED_EVENT, handleActiveGroupChanged);

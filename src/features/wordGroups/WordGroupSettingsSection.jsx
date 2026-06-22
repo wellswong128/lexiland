@@ -5,7 +5,6 @@ import { getActiveGroupLabel } from "./getActiveGroupLabel.js";
 import {
   fetchUserGroupPicks,
   fetchWordGroups,
-  saveUserGroupPicks,
   setUserActiveGroup,
 } from "./wordGroupsApi.js";
 import { notifyActiveGroupChanged } from "./wordGroupScopeEvents.js";
@@ -23,7 +22,7 @@ function WordGroupSettingsSection({ user, hasSupabaseConfig }) {
   const [activeGroupCode, setActiveGroupCode] = useState("");
   const [selectedGrade, setSelectedGrade] = useState("");
   const [isLoading, setIsLoading] = useState(true);
-  const [isSwitchingActive, setIsSwitchingActive] = useState(false);
+  const [switchingGroupCode, setSwitchingGroupCode] = useState("");
   const [error, setError] = useState("");
   const [notice, setNotice] = useState("");
 
@@ -89,32 +88,36 @@ function WordGroupSettingsSection({ user, hasSupabaseConfig }) {
   }, [activeGroup?.grade, gradesWithGroups, selectedGrade]);
 
   async function handleSelectGroup(group) {
-    if (!group?.groupCode || group.groupCode === activeGroupCode || isSwitchingActive) {
+    if (!group?.groupCode || group.groupCode === activeGroupCode || switchingGroupCode) {
       return;
     }
 
+    const previousActiveGroupCode = activeGroupCode;
+    const previousPickedGroupCodes = pickedGroupCodes;
+    const previousSelectedGrade = selectedGrade;
+    const isNewPick = !pickedGroupCodes.includes(group.groupCode);
+
+    setSwitchingGroupCode(group.groupCode);
+    setError("");
+    setNotice("");
+    setActiveGroupCode(group.groupCode);
+    setSelectedGrade(group.grade);
+    if (isNewPick) {
+      setPickedGroupCodes([...pickedGroupCodes, group.groupCode]);
+    }
+
     try {
-      setIsSwitchingActive(true);
-      setError("");
-      setNotice("");
-
-      let nextPickedCodes = pickedGroupCodes;
-      if (!pickedGroupCodes.includes(group.groupCode)) {
-        nextPickedCodes = [...pickedGroupCodes, group.groupCode];
-        const pickPayload = await saveUserGroupPicks(nextPickedCodes);
-        nextPickedCodes = (pickPayload.groups ?? []).map((item) => item.groupCode);
-        setPickedGroupCodes(nextPickedCodes);
-      }
-
-      const payload = await setUserActiveGroup(group.groupCode);
+      const payload = await setUserActiveGroup(group.groupCode, { addToPicks: isNewPick });
       setActiveGroupCode(payload.activeGroupCode || group.groupCode);
-      setSelectedGrade(group.grade);
       setNotice(t("settings.wordGroups.activeUpdated"));
       notifyActiveGroupChanged();
     } catch (switchError) {
+      setActiveGroupCode(previousActiveGroupCode);
+      setPickedGroupCodes(previousPickedGroupCodes);
+      setSelectedGrade(previousSelectedGrade);
       setError(switchError.message || t("settings.wordGroups.activeError"));
     } finally {
-      setIsSwitchingActive(false);
+      setSwitchingGroupCode("");
     }
   }
 
@@ -192,7 +195,7 @@ function WordGroupSettingsSection({ user, hasSupabaseConfig }) {
                               ? "border-blue-700 bg-blue-700 text-white shadow-md shadow-blue-900/10"
                               : "border-blue-100 bg-white text-blue-900 hover:border-blue-300 hover:bg-blue-50",
                         ].join(" ")}
-                        disabled={!hasGroups || isSwitchingActive}
+                        disabled={!hasGroups || Boolean(switchingGroupCode)}
                         key={grade}
                         onClick={() => setSelectedGrade(grade)}
                         type="button"
@@ -223,6 +226,7 @@ function WordGroupSettingsSection({ user, hasSupabaseConfig }) {
                   <div className="mt-3 grid gap-2">
                     {gradeGroups.map((group) => {
                       const isActive = group.groupCode === activeGroupCode;
+                      const isSwitching = group.groupCode === switchingGroupCode;
 
                       return (
                         <button
@@ -231,9 +235,9 @@ function WordGroupSettingsSection({ user, hasSupabaseConfig }) {
                             isActive
                               ? "border-green-500 bg-green-50 text-green-950"
                               : "border-blue-100 bg-white text-slate-700 hover:border-blue-300 hover:bg-blue-50",
-                            isSwitchingActive ? "opacity-70" : "",
+                            isSwitching ? "opacity-70" : "",
                           ].join(" ")}
-                          disabled={isSwitchingActive}
+                          disabled={Boolean(switchingGroupCode)}
                           key={group.groupCode}
                           onClick={() => {
                             void handleSelectGroup(group);
@@ -248,7 +252,11 @@ function WordGroupSettingsSection({ user, hasSupabaseConfig }) {
                               {group.groupCode}
                             </span>
                           </span>
-                          {isActive ? (
+                          {isSwitching ? (
+                            <span className="rounded-full bg-blue-100 px-2.5 py-1 text-xs font-bold text-blue-700">
+                              …
+                            </span>
+                          ) : isActive ? (
                             <span className="rounded-full bg-green-600 px-2.5 py-1 text-xs font-bold text-white">
                               ✓
                             </span>
