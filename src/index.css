@@ -4010,14 +4010,12 @@ html.standalone-display .bottom-nav {
 .speed-racing-scene {
   overflow: hidden;
   border-radius: 16px;
-  background: linear-gradient(180deg, #7dd3fc 0%, #bae6fd 12%, #475569 14%, #1e293b 100%);
+  background: var(--speed-racing-bg, linear-gradient(180deg, #7dd3fc 0%, #bae6fd 12%, #475569 14%, #1e293b 100%))
+    center / cover no-repeat;
 }
 
 .speed-racing-scenery {
-  position: absolute;
-  inset: 0;
-  z-index: 1;
-  pointer-events: none;
+  display: none;
 }
 
 .speed-racing-building {
@@ -4061,25 +4059,13 @@ html.standalone-display .bottom-nav {
   width: min(420px, 72%);
   height: 88%;
   transform: translateX(-50%);
-  background: linear-gradient(180deg, #64748b, #334155);
-  clip-path: polygon(18% 0, 82% 0, 100% 100%, 0 100%);
-  overflow: hidden;
+  background: transparent;
+  clip-path: none;
+  overflow: visible;
 }
 
 .speed-racing-center-line {
-  position: absolute;
-  top: -40px;
-  bottom: -40px;
-  left: 50%;
-  width: 6px;
-  transform: translateX(-50%);
-  background: repeating-linear-gradient(
-    180deg,
-    transparent 0 24px,
-    rgba(255, 255, 255, 0.85) 24px 48px,
-    transparent 48px 72px
-  );
-  animation: speedRacingLineScroll 0.7s linear infinite;
+  display: none;
 }
 
 .speed-racing-lane-mark {
@@ -4126,12 +4112,11 @@ html.standalone-display .bottom-nav {
   z-index: 10;
   width: min(520px, calc(100% - 80px));
   transform: translateX(-50%);
-  border: 1px solid rgba(224, 242, 254, 0.28);
+  border: none;
   border-radius: 16px;
-  background: rgba(15, 23, 42, 0.82);
-  padding: 10px 14px;
+  background: var(--speed-racing-question-bg, rgba(15, 23, 42, 0.82)) center / 100% 100% no-repeat;
+  padding: 18px 20px 14px;
   text-align: center;
-  backdrop-filter: blur(8px);
 }
 
 .speed-racing-word-label {
@@ -4236,7 +4221,7 @@ html.standalone-display .bottom-nav {
   left: 0;
   right: 0;
   z-index: 6;
-  height: 56px;
+  height: 84px;
   pointer-events: none;
 }
 
@@ -4244,8 +4229,7 @@ html.standalone-display .bottom-nav {
   position: absolute;
   bottom: 0;
   left: var(--car-x, 50%);
-  width: 44px;
-  height: 52px;
+  width: 72px;
   transform: translateX(-50%);
   transition: left 0.18s ease-out;
 }
@@ -4254,35 +4238,12 @@ html.standalone-display .bottom-nav {
   animation: speedRacingCarExit 1.1s ease-in forwards;
 }
 
-.speed-racing-car-body {
-  position: absolute;
-  bottom: 8px;
-  left: 4px;
-  width: 36px;
-  height: 28px;
-  border-radius: 8px 8px 4px 4px;
-  background: linear-gradient(180deg, #ef4444, #b91c1c);
-  box-shadow: inset 0 -4px 0 rgba(0, 0, 0, 0.2);
-}
-
-.speed-racing-car-roof {
-  position: absolute;
-  bottom: 28px;
-  left: 10px;
-  width: 24px;
-  height: 16px;
-  border-radius: 6px 6px 0 0;
-  background: linear-gradient(180deg, #fca5a5, #ef4444);
-}
-
-.speed-racing-car-windshield {
-  position: absolute;
-  bottom: 30px;
-  left: 14px;
-  width: 16px;
-  height: 10px;
-  border-radius: 3px 3px 0 0;
-  background: rgba(186, 230, 253, 0.85);
+.speed-racing-car-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  transform: scaleY(-1);
+  filter: drop-shadow(0 6px 10px rgba(2, 6, 23, 0.35));
 }
 
 .speed-racing-rules-modal {

@@ -10,6 +10,9 @@ import { useLocale } from "../features/locale/LocaleContext.jsx";
 import { useGameMistakeTracker } from "../features/review/useGameMistakeTracker.js";
 import { useWordsContext } from "../features/words/WordsContext.jsx";
 import { hasActiveReviewSession } from "../lib/reviewSessionStorage.js";
+import speedRacingBgUrl from "../assets/speed-racing-bg.png";
+import speedRacingCarUrl from "../assets/speed-racing-car.png";
+import speedRacingQuestionPanelUrl from "../assets/speed-racing-question-panel.png";
 
 const HIGH_SCORE_KEY = "lexiland.speedRacing.highScore.v1";
 const ROUND_SECONDS = 5;
@@ -98,9 +101,7 @@ function Car({ lane, phase = "idle" }) {
       className={["speed-racing-car", phase].filter(Boolean).join(" ")}
       style={{ "--car-x": `${lanePercent}%` }}
     >
-      <div className="speed-racing-car-body" />
-      <div className="speed-racing-car-roof" />
-      <div className="speed-racing-car-windshield" />
+      <img alt="" className="speed-racing-car-image" src={speedRacingCarUrl} />
     </div>
   );
 }
@@ -316,7 +317,13 @@ function SpeedRacingPage() {
       </header>
 
       <div className="speed-racing-card relative z-0 min-h-0 flex-1 overflow-hidden p-2 sm:p-3">
-        <div className="speed-racing-scene relative h-full min-h-0">
+        <div
+          className="speed-racing-scene relative h-full min-h-0"
+          style={{
+            "--speed-racing-bg": `url(${speedRacingBgUrl})`,
+            "--speed-racing-question-bg": `url(${speedRacingQuestionPanelUrl})`,
+          }}
+        >
           <div className="speed-racing-scenery">
             {Array.from({ length: 6 }, (_, index) => (
               <Building index={index} key={`left-${index}`} side="left" />
