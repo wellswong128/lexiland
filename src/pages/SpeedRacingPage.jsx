@@ -177,6 +177,164 @@ function playTone(freq, duration, type = "sine", volume = 0.035) {
   }
 }
 
+function useSpeedRacingEngineSound(gamePhase, carPhase) {
+  const audioCtxRef = useRef(null);
+  const engineRef = useRef(null);
+
+  const initAudio = useCallback(() => {
+    if (!audioCtxRef.current) {
+      const AudioContextClass = window.AudioContext || window.webkitAudioContext;
+      if (AudioContextClass) {
+        audioCtxRef.current = new AudioContextClass();
+      }
+    }
+
+    if (audioCtxRef.current?.state === "suspended") {
+      audioCtxRef.current.resume();
+    }
+  }, []);
+
+  const stopEngine = useCallback(() => {
+    const engine = engineRef.current;
+    const audioCtx = audioCtxRef.current;
+    if (!engine || !audioCtx) {
+      return;
+    }
+
+    engineRef.current = null;
+    const now = audioCtx.currentTime;
+    engine.masterGain.gain.cancelScheduledValues(now);
+    engine.masterGain.gain.setValueAtTime(Math.max(engine.masterGain.gain.value, 0.0001), now);
+    engine.masterGain.gain.exponentialRampToValueAtTime(0.0001, now + 0.22);
+
+    window.setTimeout(() => {
+      try {
+        engine.noise.stop();
+        engine.baseOsc.stop();
+        engine.harmOsc.stop();
+      } catch {
+        // Nodes may already be stopped.
+      }
+    }, 240);
+  }, []);
+
+  const startEngine = useCallback(() => {
+    initAudio();
+    const audioCtx = audioCtxRef.current;
+    if (!audioCtx || engineRef.current) {
+      return;
+    }
+
+    const bufferSize = Math.floor(audioCtx.sampleRate * 2);
+    const buffer = audioCtx.createBuffer(1, bufferSize, audioCtx.sampleRate);
+    const data = buffer.getChannelData(0);
+
+    for (let index = 0; index < bufferSize; index += 1) {
+      data[index] = Math.random() * 2 - 1;
+    }
+
+    const noise = audioCtx.createBufferSource();
+    noise.buffer = buffer;
+    noise.loop = true;
+
+    const noiseFilter = audioCtx.createBiquadFilter();
+    noiseFilter.type = "bandpass";
+    noiseFilter.frequency.value = 280;
+    noiseFilter.Q.value = 0.7;
+
+    const noiseGain = audioCtx.createGain();
+    noiseGain.gain.value = 0.09;
+
+    const baseOsc = audioCtx.createOscillator();
+    baseOsc.type = "sawtooth";
+    baseOsc.frequency.value = 68;
+
+    const baseGain = audioCtx.createGain();
+    baseGain.gain.value = 0.045;
+
+    const harmOsc = audioCtx.createOscillator();
+    harmOsc.type = "square";
+    harmOsc.frequency.value = 136;
+
+    const harmGain = audioCtx.createGain();
+    harmGain.gain.value = 0.018;
+
+    const masterGain = audioCtx.createGain();
+    masterGain.gain.value = 0.0001;
+
+    noise.connect(noiseFilter);
+    noiseFilter.connect(noiseGain);
+    noiseGain.connect(masterGain);
+    baseOsc.connect(baseGain);
+    baseGain.connect(masterGain);
+    harmOsc.connect(harmGain);
+    harmGain.connect(masterGain);
+    masterGain.connect(audioCtx.destination);
+
+    noise.start();
+    baseOsc.start();
+    harmOsc.start();
+
+    engineRef.current = {
+      baseOsc,
+      harmOsc,
+      masterGain,
+      noiseFilter,
+    };
+
+    const now = audioCtx.currentTime;
+    masterGain.gain.exponentialRampToValueAtTime(0.14, now + 0.35);
+  }, [initAudio]);
+
+  const setEngineMode = useCallback((mode) => {
+    const engine = engineRef.current;
+    const audioCtx = audioCtxRef.current;
+    if (!engine || !audioCtx) {
+      return;
+    }
+
+    const now = audioCtx.currentTime;
+    const boost = mode === "boost";
+
+    engine.baseOsc.frequency.cancelScheduledValues(now);
+    engine.harmOsc.frequency.cancelScheduledValues(now);
+    engine.noiseFilter.frequency.cancelScheduledValues(now);
+    engine.masterGain.gain.cancelScheduledValues(now);
+
+    engine.baseOsc.frequency.setValueAtTime(engine.baseOsc.frequency.value, now);
+    engine.harmOsc.frequency.setValueAtTime(engine.harmOsc.frequency.value, now);
+    engine.noiseFilter.frequency.setValueAtTime(engine.noiseFilter.frequency.value, now);
+    engine.masterGain.gain.setValueAtTime(Math.max(engine.masterGain.gain.value, 0.0001), now);
+
+    engine.baseOsc.frequency.exponentialRampToValueAtTime(boost ? 118 : 68, now + 0.28);
+    engine.harmOsc.frequency.exponentialRampToValueAtTime(boost ? 236 : 136, now + 0.28);
+    engine.noiseFilter.frequency.exponentialRampToValueAtTime(boost ? 520 : 280, now + 0.28);
+    engine.masterGain.gain.exponentialRampToValueAtTime(boost ? 0.2 : 0.14, now + 0.18);
+  }, []);
+
+  useEffect(() => {
+    if (gamePhase === "playing") {
+      startEngine();
+      return () => stopEngine();
+    }
+
+    stopEngine();
+    return undefined;
+  }, [gamePhase, startEngine, stopEngine]);
+
+  useEffect(() => {
+    if (gamePhase !== "playing") {
+      return;
+    }
+
+    setEngineMode(carPhase === "exit" ? "boost" : "cruise");
+  }, [carPhase, gamePhase, setEngineMode]);
+
+  useEffect(() => () => stopEngine(), [stopEngine]);
+
+  return { initAudio };
+}
+
 function createQuestion(bank, pickQuestion) {
   const item = pickQuestion?.() ?? null;
 
@@ -265,15 +423,17 @@ function SpeedRacingPage() {
 
   const resolveRef = useRef(null);
   const sceneRef = useRef(null);
+  const { initAudio } = useSpeedRacingEngineSound(gamePhase, carPhase);
 
   const startCountdown = useCallback(() => {
+    initAudio();
     resetTracker();
     beginPlaySession();
     setScore(0);
     setRound(1);
     setCountdown(COUNTDOWN_SECONDS);
     setGamePhase("countdown");
-  }, [beginPlaySession, resetTracker]);
+  }, [beginPlaySession, initAudio, resetTracker]);
 
   const loadNextQuestion = useCallback(() => {
     const bank = getActivePlayBank();
