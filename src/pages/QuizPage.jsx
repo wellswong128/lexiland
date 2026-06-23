@@ -5,7 +5,7 @@ import WordMemoryPanel from "../components/WordMemoryPanel.jsx";
 import { useLocale } from "../features/locale/LocaleContext.jsx";
 import WordGroupScopeEmptyState from "../features/wordGroups/WordGroupScopeEmptyState.jsx";
 import { useActiveGroupWordScope } from "../features/wordGroups/useActiveGroupWordScope.js";
-import { createQuizQuestions } from "../features/review/quizHelpers.js";
+import { createQuizQuestions, getQuizOptionLabel } from "../features/review/quizHelpers.js";
 import { updateReviewResult } from "../features/review/reviewHelpers.js";
 import { useWordsContext } from "../features/words/WordsContext.jsx";
 import { maybeRecordDailyMistakeClear } from "../lib/learningActivity.js";
@@ -16,7 +16,14 @@ function QuizPage() {
   const { updateWord, user, words } = useWordsContext();
   const { isLoadingScope, isGroupScopeActive, scopedWords } = useActiveGroupWordScope(words, user);
   const reviewWords = isGroupScopeActive ? scopedWords : words;
-  const questions = useMemo(() => createQuizQuestions(reviewWords), [reviewWords]);
+  const questionSourceKey = useMemo(
+    () =>
+      reviewWords
+        .map((word) => [word.id, word.term, getQuizOptionLabel(word)].join(":"))
+        .join("|"),
+    [reviewWords],
+  );
+  const [questions, setQuestions] = useState(() => createQuizQuestions(reviewWords));
   const [currentIndex, setCurrentIndex] = useState(0);
   const [selectedAnswer, setSelectedAnswer] = useState("");
   const [feedback, setFeedback] = useState(null);
@@ -32,12 +39,13 @@ function QuizPage() {
   });
 
   useEffect(() => {
+    setQuestions(createQuizQuestions(reviewWords));
     setCurrentIndex(0);
     setSelectedAnswer("");
     setFeedback(null);
     setScore(0);
     setIsComplete(false);
-  }, [questions.length]);
+  }, [questionSourceKey]);
 
   function handleAnswer(answer) {
     if (feedback) {
