@@ -50,6 +50,7 @@ const FISH_SPECIES = {
     h: 42,
     colors: ["#fdba74", "#fb923c"],
     weight: 40,
+    spriteFacing: "right",
   },
   angler: {
     key: "angler",
@@ -62,6 +63,7 @@ const FISH_SPECIES = {
     colors: ["#c4b5fd", "#7c3aed"],
     lure: true,
     weight: 25,
+    spriteFacing: "left",
   },
   dolphin: {
     key: "dolphin",
@@ -73,6 +75,7 @@ const FISH_SPECIES = {
     h: 54,
     colors: ["#93c5fd", "#2563eb"],
     weight: 20,
+    spriteFacing: "left",
   },
   shark: {
     key: "shark",
@@ -84,6 +87,7 @@ const FISH_SPECIES = {
     h: 62,
     colors: ["#94a3b8", "#475569"],
     weight: 15,
+    spriteFacing: "left",
   },
   grouper: {
     key: "grouper",
@@ -96,6 +100,7 @@ const FISH_SPECIES = {
     colors: ["#fde047", "#ca8a04"],
     boss: true,
     weight: 0,
+    spriteFacing: "left",
   },
 };
 
@@ -235,13 +240,16 @@ function drawCoverImage(ctx, image, width, height) {
 
 function drawFish(ctx, fish, time, assets) {
   const { species, x, y, w, h, vx } = fish;
-  const facingRight = vx > 0;
+  const movingRight = vx > 0;
+  const spriteFacesRight = species.spriteFacing !== "left";
+  const shouldFlip =
+    (spriteFacesRight && !movingRight) || (!spriteFacesRight && movingRight);
   const wiggle = Math.sin(time * 4 + fish.wiggle) * 3;
   const sprite = assets?.fish?.[species.key];
 
   ctx.save();
   ctx.translate(x + w / 2, y + h / 2 + wiggle);
-  if (!facingRight) {
+  if (shouldFlip) {
     ctx.scale(-1, 1);
   }
 
