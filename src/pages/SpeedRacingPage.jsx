@@ -26,8 +26,8 @@ const BG_LANE = {
   vanishY: 12,
   carY: 91,
   centerX: 50,
-  roadLeftAtBottom: 22,
-  roadRightAtBottom: 78,
+  roadLeftAtBottom: 0,
+  roadRightAtBottom: 100,
 };
 
 const SCENE_CAR_Y = 92;
@@ -74,37 +74,38 @@ function imageXToSceneX(imageXPercent, containerWidth, metrics) {
   return (sceneX / containerWidth) * 100;
 }
 
-function getImageLaneX(lane, imageYPercent) {
+function getImageRoadEdgeX(edge, imageYPercent) {
   const progress = Math.max(
     0,
     Math.min(1, (imageYPercent - BG_LANE.vanishY) / (BG_LANE.carY - BG_LANE.vanishY)),
   );
-  const leftEdge =
-    BG_LANE.centerX + (BG_LANE.roadLeftAtBottom - BG_LANE.centerX) * progress;
-  const rightEdge =
-    BG_LANE.centerX + (BG_LANE.roadRightAtBottom - BG_LANE.centerX) * progress;
-
-  if (lane === LANE_CENTER) {
-    return BG_LANE.centerX;
-  }
-
-  if (lane === LANE_LEFT) {
-    return (leftEdge + BG_LANE.centerX) / 2;
-  }
-
-  return (BG_LANE.centerX + rightEdge) / 2;
+  const xAtBottom = edge === "left" ? BG_LANE.roadLeftAtBottom : BG_LANE.roadRightAtBottom;
+  return BG_LANE.centerX + (xAtBottom - BG_LANE.centerX) * progress;
 }
 
 function getLaneSceneX(lane, sceneYPercent, containerWidth, containerHeight, imageWidth, imageHeight) {
+  if (lane === LANE_CENTER) {
+    return 50;
+  }
+
   const metrics = getCoverMetrics(containerWidth, containerHeight, imageWidth, imageHeight);
   const imageY = sceneYToImageY(sceneYPercent, containerHeight, metrics);
-  const imageX = getImageLaneX(lane, imageY);
-  return imageXToSceneX(imageX, containerWidth, metrics);
+  const centerX = imageXToSceneX(BG_LANE.centerX, containerWidth, metrics);
+  const edgeX = imageXToSceneX(
+    getImageRoadEdgeX(lane === LANE_LEFT ? "left" : "right", imageY),
+    containerWidth,
+    metrics,
+  );
+  const visibleEdgeX = Math.max(0, Math.min(100, edgeX));
+
+  return lane === LANE_LEFT
+    ? (visibleEdgeX + centerX) / 2
+    : (centerX + visibleEdgeX) / 2;
 }
 
 function getFallbackLaneX(lane) {
-  if (lane === LANE_LEFT) return 36;
-  if (lane === LANE_RIGHT) return 64;
+  if (lane === LANE_LEFT) return 25;
+  if (lane === LANE_RIGHT) return 75;
   return 50;
 }
 
