@@ -4070,17 +4070,25 @@ html.standalone-display .bottom-nav {
 
 .speed-racing-lane-mark {
   position: absolute;
+  top: 18%;
   z-index: 3;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: min(36%, 140px);
-  height: min(22%, 120px);
+  width: 36%;
+  height: 36%;
   border-radius: 16px;
   border: 3px solid rgba(255, 255, 255, 0.35);
   background: rgba(15, 23, 42, 0.45);
   backdrop-filter: blur(4px);
-  transform: translate(-50%, -50%);
+}
+
+.speed-racing-lane-mark.left {
+  left: 6%;
+}
+
+.speed-racing-lane-mark.right {
+  right: 6%;
 }
 
 .speed-racing-lane-icon {

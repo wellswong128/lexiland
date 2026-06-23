@@ -24,22 +24,31 @@ const LANE_RIGHT = 2;
 
 const VANISH_Y_PERCENT = 12;
 const CAR_Y_PERCENT = 92;
-const LANE_MARK_Y_PERCENT = 38;
+const ROAD_LEFT_AT_BOTTOM = 27;
+const ROAD_RIGHT_AT_BOTTOM = 73;
 
-const LANE_X_AT_BOTTOM = {
-  [LANE_LEFT]: 37,
-  [LANE_CENTER]: 50,
-  [LANE_RIGHT]: 63,
-};
-
-function getLaneXPercent(lane, yPercentFromTop = CAR_Y_PERCENT) {
-  const laneBottomX = LANE_X_AT_BOTTOM[lane] ?? 50;
+function getPerspectiveX(xAtBottom, yPercentFromTop = CAR_Y_PERCENT) {
   const progress = Math.max(
     0,
     Math.min(1, (yPercentFromTop - VANISH_Y_PERCENT) / (CAR_Y_PERCENT - VANISH_Y_PERCENT)),
   );
 
-  return 50 + (laneBottomX - 50) * progress;
+  return 50 + (xAtBottom - 50) * progress;
+}
+
+function getLaneXPercent(lane, yPercentFromTop = CAR_Y_PERCENT) {
+  if (lane === LANE_CENTER) {
+    return 50;
+  }
+
+  const leftEdge = getPerspectiveX(ROAD_LEFT_AT_BOTTOM, yPercentFromTop);
+  const rightEdge = getPerspectiveX(ROAD_RIGHT_AT_BOTTOM, yPercentFromTop);
+
+  if (lane === LANE_LEFT) {
+    return (leftEdge + 50) / 2;
+  }
+
+  return (50 + rightEdge) / 2;
 }
 
 function getLaneExitDrift(lane) {
@@ -361,26 +370,13 @@ function SpeedRacingPage() {
           </div>
 
           <div className="speed-racing-road">
+            <div className="speed-racing-lane-mark left">
+              <span className="speed-racing-lane-icon">✓</span>
+            </div>
             <div className="speed-racing-center-line" />
-          </div>
-
-          <div
-            className="speed-racing-lane-mark left"
-            style={{
-              left: `${getLaneXPercent(LANE_LEFT, LANE_MARK_Y_PERCENT)}%`,
-              top: `${LANE_MARK_Y_PERCENT}%`,
-            }}
-          >
-            <span className="speed-racing-lane-icon">✓</span>
-          </div>
-          <div
-            className="speed-racing-lane-mark right"
-            style={{
-              left: `${getLaneXPercent(LANE_RIGHT, LANE_MARK_Y_PERCENT)}%`,
-              top: `${LANE_MARK_Y_PERCENT}%`,
-            }}
-          >
-            <span className="speed-racing-lane-icon">✗</span>
+            <div className="speed-racing-lane-mark right">
+              <span className="speed-racing-lane-icon">✗</span>
+            </div>
           </div>
 
           {gamePhase === "rules" ? (
