@@ -68,6 +68,7 @@ function WordListPage() {
   const canDeleteWord = can(role, PERMISSIONS.WORDS_DELETE);
   const [searchQuery, setSearchQuery] = useState("");
   const [page, setPage] = useState(1);
+  const [memoryAssistWordIds, setMemoryAssistWordIds] = useState(() => new Set());
 
   const filteredWords = useMemo(() => {
     const normalizedQuery = searchQuery.trim().toLowerCase();
@@ -122,6 +123,30 @@ function WordListPage() {
     const start = (page - 1) * WORDS_PER_PAGE;
     return filteredWords.slice(start, start + WORDS_PER_PAGE);
   }, [filteredWords, page]);
+
+  function showMemoryAssist(wordId) {
+    setMemoryAssistWordIds((current) => {
+      if (current.has(wordId)) {
+        return current;
+      }
+
+      const next = new Set(current);
+      next.add(wordId);
+      return next;
+    });
+  }
+
+  function hideMemoryAssist(wordId) {
+    setMemoryAssistWordIds((current) => {
+      if (!current.has(wordId)) {
+        return current;
+      }
+
+      const next = new Set(current);
+      next.delete(wordId);
+      return next;
+    });
+  }
 
   function handleDelete(word) {
     const shouldDelete = window.confirm(
@@ -245,15 +270,11 @@ function WordListPage() {
       ) : (
         <>
           <ul className="space-y-4">
-            {paginatedWords.map((word) => {
-              const visibleTags = getVisibleWordTags(word.tags);
-
-              return (
-                <li
-                  className="rounded-2xl border border-slate-200 bg-white p-5"
-                  key={word.id}
-                >
-                  <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
+            {paginatedWords.map((word) => (
+              <li
+                className="rounded-2xl border border-slate-200 bg-white p-5"
+                key={word.id}
+              >
                 <div>
                   <div className="flex flex-wrap items-center gap-3">
                     <h2 className="text-2xl font-bold text-blue-950">
@@ -278,48 +299,48 @@ function WordListPage() {
                   ) : null}
 
                   <div className="mt-4">
-                    <WordMemoryPanel autoLoad compact={false} word={word} />
+                    {memoryAssistWordIds.has(word.id) ? (
+                      <>
+                        <WordMemoryPanel autoLoad compact={false} word={word} />
+                        <button
+                          className="mt-2 text-sm font-bold text-indigo-700 transition hover:text-indigo-900"
+                          onClick={() => hideMemoryAssist(word.id)}
+                          type="button"
+                        >
+                          {t("wordMemory.hide")}
+                        </button>
+                      </>
+                    ) : (
+                      <button
+                        className="text-sm font-bold text-indigo-700 transition hover:text-indigo-900"
+                        onClick={() => showMemoryAssist(word.id)}
+                        type="button"
+                      >
+                        {t("wordMemory.show")}
+                      </button>
+                    )}
                   </div>
-
-                  <p className="mt-3 text-sm leading-relaxed text-slate-600">
-                    {word.definition}
-                  </p>
                 </div>
 
-                {visibleTags.length > 0 ? (
-                  <div className="flex flex-wrap gap-2 sm:justify-end">
-                    {visibleTags.map((tag) => (
-                      <span
-                        className="rounded-full bg-blue-100 px-3 py-1 text-xs font-bold text-blue-700"
-                        key={tag}
-                      >
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-                ) : null}
-              </div>
-
-              <div className="mt-5 flex flex-wrap gap-3">
-                <Link
-                  className="rounded-full bg-blue-100 px-4 py-2 text-sm font-bold text-blue-700 transition hover:bg-blue-200"
-                  to={`/words/${word.id}`}
-                >
-                  {t("common.viewDetails")}
-                </Link>
-                {canDeleteWord ? (
-                  <button
-                    className="rounded-full bg-red-50 px-4 py-2 text-sm font-bold text-red-700 transition hover:bg-red-100"
-                    onClick={() => handleDelete(word)}
-                    type="button"
+                <div className="mt-5 flex flex-wrap gap-3">
+                  <Link
+                    className="rounded-full bg-blue-100 px-4 py-2 text-sm font-bold text-blue-700 transition hover:bg-blue-200"
+                    to={`/words/${word.id}`}
                   >
-                    {t("common.delete")}
-                  </button>
-                ) : null}
-              </div>
-            </li>
-              );
-            })}
+                    {t("common.viewDetails")}
+                  </Link>
+                  {canDeleteWord ? (
+                    <button
+                      className="rounded-full bg-red-50 px-4 py-2 text-sm font-bold text-red-700 transition hover:bg-red-100"
+                      onClick={() => handleDelete(word)}
+                      type="button"
+                    >
+                      {t("common.delete")}
+                    </button>
+                  ) : null}
+                </div>
+              </li>
+            ))}
           </ul>
 
           {totalPages > 1 ? (
