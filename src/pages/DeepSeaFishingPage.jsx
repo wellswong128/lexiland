@@ -16,11 +16,13 @@ import { hasActiveReviewSession } from "../lib/reviewSessionStorage.js";
 import { useLocale } from "../features/locale/LocaleContext.jsx";
 import { useGameMistakeTracker } from "../features/review/useGameMistakeTracker.js";
 import { useWordsContext } from "../features/words/WordsContext.jsx";
-import blueFishUrl from "../assets/blue-fish.png";
-import orangeFishUrl from "../assets/orange-fish.png";
 import deepSeaBackgroundUrl from "../assets/deep-sea-bg.png";
+import smallFishUrl from "../assets/small-fish.png";
+import orangeFishUrl from "../assets/orange-fish.png";
 import dolphinFishUrl from "../assets/dolphin-fish.png";
+import grouperFishUrl from "../assets/grouper-fish.png";
 import anglerFishUrl from "../assets/angler-fish.png";
+import harpoonUrl from "../assets/harpoon.png";
 
 const GAME_SECONDS = 160;
 const ROUND_DELAY_MS = 2000;
@@ -412,44 +414,55 @@ function drawScene(ctx, width, height, state, time, assets) {
     ctx.fill();
   }
 
-  ctx.strokeStyle = "#f8fafc";
-  ctx.lineWidth = 4;
-  ctx.shadowColor = "rgba(253, 224, 71, 0.68)";
-  ctx.shadowBlur = 10;
-  ctx.beginPath();
-  ctx.moveTo(originX, originY);
-  ctx.lineTo(tip.x, tip.y);
-  ctx.stroke();
-  ctx.shadowBlur = 0;
+  const harpoon = assets?.harpoon;
+  if (harpoon?.complete && harpoon.naturalWidth) {
+    const scale = drawLength / harpoon.naturalHeight;
+    const drawW = harpoon.naturalWidth * scale;
+    ctx.save();
+    ctx.translate(originX, originY);
+    ctx.rotate(hook.angle);
+    ctx.drawImage(harpoon, -drawW / 2, -drawLength, drawW, drawLength);
+    ctx.restore();
+  } else {
+    ctx.strokeStyle = "#f8fafc";
+    ctx.lineWidth = 4;
+    ctx.shadowColor = "rgba(253, 224, 71, 0.68)";
+    ctx.shadowBlur = 10;
+    ctx.beginPath();
+    ctx.moveTo(originX, originY);
+    ctx.lineTo(tip.x, tip.y);
+    ctx.stroke();
+    ctx.shadowBlur = 0;
 
-  const baseGrad = ctx.createLinearGradient(originX - 22, originY, originX + 22, originY);
-  baseGrad.addColorStop(0, "#0f4c81");
-  baseGrad.addColorStop(0.5, "#bae6fd");
-  baseGrad.addColorStop(1, "#0f4c81");
-  ctx.fillStyle = baseGrad;
-  ctx.strokeStyle = "rgba(186, 230, 253, 0.7)";
-  ctx.lineWidth = 1;
-  ctx.fillRect(originX - 28, originY - 9, 56, 18);
-  ctx.strokeRect(originX - 28, originY - 9, 56, 18);
-  ctx.fillStyle = "#67e8f9";
-  ctx.beginPath();
-  ctx.arc(originX, originY, 7, 0, Math.PI * 2);
-  ctx.fill();
+    const baseGrad = ctx.createLinearGradient(originX - 22, originY, originX + 22, originY);
+    baseGrad.addColorStop(0, "#0f4c81");
+    baseGrad.addColorStop(0.5, "#bae6fd");
+    baseGrad.addColorStop(1, "#0f4c81");
+    ctx.fillStyle = baseGrad;
+    ctx.strokeStyle = "rgba(186, 230, 253, 0.7)";
+    ctx.lineWidth = 1;
+    ctx.fillRect(originX - 28, originY - 9, 56, 18);
+    ctx.strokeRect(originX - 28, originY - 9, 56, 18);
+    ctx.fillStyle = "#67e8f9";
+    ctx.beginPath();
+    ctx.arc(originX, originY, 7, 0, Math.PI * 2);
+    ctx.fill();
 
-  ctx.strokeStyle = "#fde047";
-  ctx.fillStyle = "#fbbf24";
-  ctx.lineWidth = 3;
-  ctx.beginPath();
-  ctx.moveTo(tip.x, tip.y);
-  ctx.lineTo(tip.x - 6, tip.y + 10);
-  ctx.lineTo(tip.x + 6, tip.y + 10);
-  ctx.closePath();
-  ctx.fill();
-  ctx.stroke();
-  ctx.beginPath();
-  ctx.arc(tip.x, tip.y + 2, 5, 0, Math.PI * 2);
-  ctx.fillStyle = "#fef08a";
-  ctx.fill();
+    ctx.strokeStyle = "#fde047";
+    ctx.fillStyle = "#fbbf24";
+    ctx.lineWidth = 3;
+    ctx.beginPath();
+    ctx.moveTo(tip.x, tip.y);
+    ctx.lineTo(tip.x - 6, tip.y + 10);
+    ctx.lineTo(tip.x + 6, tip.y + 10);
+    ctx.closePath();
+    ctx.fill();
+    ctx.stroke();
+    ctx.beginPath();
+    ctx.arc(tip.x, tip.y + 2, 5, 0, Math.PI * 2);
+    ctx.fillStyle = "#fef08a";
+    ctx.fill();
+  }
 
   if (hook.caughtFish) {
     drawFish(
@@ -652,17 +665,18 @@ function DeepSeaFishingPage() {
 
     const assets = {
       background: makeImage(deepSeaBackgroundUrl),
+      harpoon: makeImage(harpoonUrl),
       fish: {
-        small: makeImage(orangeFishUrl),
+        small: makeImage(smallFishUrl),
         angler: makeImage(anglerFishUrl),
         dolphin: makeImage(dolphinFishUrl),
-        shark: makeImage(blueFishUrl),
-        grouper: makeImage(orangeFishUrl),
+        shark: makeImage(orangeFishUrl),
+        grouper: makeImage(grouperFishUrl),
       },
     };
 
     imageAssetsRef.current = assets;
-    const allImages = [assets.background, ...Object.values(assets.fish)];
+    const allImages = [assets.background, assets.harpoon, ...Object.values(assets.fish)];
     let loaded = 0;
     const markLoaded = () => {
       loaded += 1;
