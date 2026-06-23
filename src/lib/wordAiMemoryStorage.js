@@ -118,8 +118,13 @@ export function clearAllStoredWordAiMemory(storage = getDefaultStorage()) {
   storage.removeItem(WORD_AI_MEMORY_STORAGE_KEY);
 }
 
-export function hydrateWordAiMemory(word, storage = getDefaultStorage()) {
-  const entry = getWordEntry(word.id, storage);
+const emptyMemoryEntry = {
+  memoryTipsByLocale: {},
+  memoryImage: null,
+};
+
+export function hydrateWordAiMemory(word, storage = getDefaultStorage(), store = null) {
+  const entry = store ? (store[word.id] ?? emptyMemoryEntry) : getWordEntry(word.id, storage);
 
   return {
     ...word,
@@ -129,6 +134,16 @@ export function hydrateWordAiMemory(word, storage = getDefaultStorage()) {
     },
     memoryImage: word.memoryImage ?? entry.memoryImage ?? null,
   };
+}
+
+export function hydrateWordsAiMemory(words, storage = getDefaultStorage()) {
+  if (!Array.isArray(words) || words.length === 0) {
+    return [];
+  }
+
+  const store = loadStore(storage);
+
+  return words.map((word) => hydrateWordAiMemory(word, storage, store));
 }
 
 export function buildWordMemoryTipsChanges(word, locale, memoryTips) {

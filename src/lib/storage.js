@@ -61,6 +61,44 @@ export function saveWords(words, storage = getDefaultStorage()) {
   storage.setItem(WORDS_STORAGE_KEY, JSON.stringify(words));
 }
 
+function getUserWordsStorageKey(userId) {
+  return `lexiland.words.${userId}.v1`;
+}
+
+export function loadWordsForUser(userId, storage = getDefaultStorage()) {
+  if (!storage || !userId) {
+    return [];
+  }
+
+  const rawValue = storage.getItem(getUserWordsStorageKey(userId));
+
+  if (!rawValue) {
+    return [];
+  }
+
+  try {
+    const parsedValue = JSON.parse(rawValue);
+
+    if (!Array.isArray(parsedValue)) {
+      console.warn("Stored LexiLand user words are not an array. Using empty list.");
+      return [];
+    }
+
+    return parsedValue;
+  } catch (error) {
+    console.warn("Could not parse stored LexiLand user words. Using empty list.", error);
+    return [];
+  }
+}
+
+export function saveWordsForUser(userId, words, storage = getDefaultStorage()) {
+  if (!storage || !userId) {
+    return;
+  }
+
+  storage.setItem(getUserWordsStorageKey(userId), JSON.stringify(words));
+}
+
 export function resetWords(storage = getDefaultStorage()) {
   if (!storage) {
     return;
@@ -68,6 +106,14 @@ export function resetWords(storage = getDefaultStorage()) {
 
   storage.removeItem(WORDS_STORAGE_KEY);
   storage.removeItem(LEGACY_WORDS_STORAGE_KEY);
+}
+
+export function resetWordsForUser(userId, storage = getDefaultStorage()) {
+  if (!storage || !userId) {
+    return;
+  }
+
+  storage.removeItem(getUserWordsStorageKey(userId));
 }
 
 export function loadPhotoCaptureDraft(storage = getDefaultStorage()) {

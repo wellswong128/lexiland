@@ -1,7 +1,7 @@
 import { supabase } from "../../lib/supabaseClient.js";
 import { toSupabaseSource } from "./wordTypes.js";
 
-const WORD_COLUMNS = `
+const WORD_LIST_COLUMNS = `
   id,
   user_id,
   term,
@@ -23,10 +23,14 @@ const WORD_COLUMNS = `
   is_mistake,
   last_mistake_at,
   mistake_count,
-  memory_tips_by_locale,
-  memory_image,
   created_at,
   updated_at
+`;
+
+const WORD_COLUMNS = `
+  ${WORD_LIST_COLUMNS.trim()},
+  memory_tips_by_locale,
+  memory_image
 `;
 
 function mapDbWordToWord(row) {
@@ -141,12 +145,13 @@ function ensureSupabase() {
   }
 }
 
-export async function fetchWordsFromSupabase(userId) {
+export async function fetchWordsFromSupabase(userId, { includeMemory = false } = {}) {
   ensureSupabase();
 
+  const columns = includeMemory ? WORD_COLUMNS : WORD_LIST_COLUMNS;
   const { data, error } = await supabase
     .from("words")
-    .select(WORD_COLUMNS)
+    .select(columns)
     .eq("user_id", userId)
     .order("created_at", { ascending: false });
 

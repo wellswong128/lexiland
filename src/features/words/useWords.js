@@ -4,11 +4,18 @@ import { clearLearningActivity } from "../../lib/learningActivity.js";
 import {
   clearAllStoredWordAiMemory,
   clearStoredWordAiMemory,
-  hydrateWordAiMemory,
+  hydrateWordsAiMemory,
 } from "../../lib/wordAiMemoryStorage.js";
 import { clearMemoryTipsCache } from "./memoryTipsApi.js";
 import { clearWordImageCache } from "./wordImageApi.js";
-import { loadWords, resetWords, saveWords } from "../../lib/storage.js";
+import {
+  loadWords,
+  loadWordsForUser,
+  resetWords,
+  resetWordsForUser,
+  saveWords,
+  saveWordsForUser,
+} from "../../lib/storage.js";
 import {
   createInitialMistake,
   createInitialReview,
@@ -114,7 +121,31 @@ function applyWordChanges(word, changes) {
 }
 
 function hydrateWords(words, storage) {
-  return words.map((word) => hydrateWordAiMemory(word, storage));
+  return hydrateWordsAiMemory(words, storage);
+}
+
+function mergeWordsPreservingMemory(remoteWords, existingWords) {
+  if (!Array.isArray(existingWords) || existingWords.length === 0) {
+    return remoteWords;
+  }
+
+  const existingById = new Map(existingWords.map((word) => [word.id, word]));
+
+  return remoteWords.map((word) => {
+    const existing = existingById.get(word.id);
+    if (!existing) {
+      return word;
+    }
+
+    return {
+      ...word,
+      memoryTipsByLocale: {
+        ...(existing.memoryTipsByLocale ?? {}),
+        ...(word.memoryTipsByLocale ?? {}),
+      },
+      memoryImage: word.memoryImage ?? existing.memoryImage ?? null,
+    };
+  });
 }
 
 function splitWordChanges(changes) {
@@ -236,38 +267,83 @@ export function useWords({ isAuthLoading = false, user = null } = {}, storage) {
     }
 
     let isMounted = true;
+    const cachedWords = loadWordsForUser(user.id, storage);
+    const hasCachedWords = cachedWords.length > 0;
 
-    setIsWordsLoading(true);
+    if (hasCachedWords) {
+      setWords(hydrateWords(cachedWords, storage));
+      setIsWordsLoading(false);
+    } else {
+      setIsWordsLoading(true);
+    }
+
     setWordsError("");
 
-    Promise.all([
-      fetchWordsFromSupabase(user.id),
-      fetchUserActiveGroupWords({ includeWords: true }),
-    ])
-      .then(async ([remoteWords, groupPayload]) => {
+    fetchWordsFromSupabase(user.id)
+      .then((remoteWords) => {
+        if (!isMounted) {
+          return undefined;
+        }
+
+        const mergedRemoteWords = mergeWordsPreservingMemory(remoteWords, wordsRef.current);
+        setWords(hydrateWords(mergedRemoteWords, storage));
+
+        return new Promise((resolve) => {
+          window.setTimeout(resolve, 0);
+        });
+      })
+      .then(() => {
         if (!isMounted) {
           return;
         }
 
-        const { importedWords, activeGroup, mappedWords } = await importMissingActiveGroupWords(
-          user.id,
-          remoteWords,
-          groupPayload,
-        );
-        lastMappedWordsRef.current = mappedWords;
-        if (!isMounted) {
-          return;
-        }
-        const nextWords = importedWords.length > 0 ? [...importedWords, ...remoteWords] : remoteWords;
-        setWords(hydrateWords(nextWords, storage));
-        if (importedWords.length > 0 && activeGroup) {
-          setAutoImportedNotice({
-            count: importedWords.length,
-            groupCode: activeGroup.groupCode ?? "",
-            groupNameEn: activeGroup.displayNameEn ?? "",
-            groupNameZhHant: activeGroup.displayNameZhHant ?? "",
+        return fetchUserActiveGroupWords({ includeWords: true })
+          .then(async (groupPayload) => {
+            if (!isMounted) {
+              return;
+            }
+
+            const { importedWords, activeGroup, mappedWords } = await importMissingActiveGroupWords(
+              user.id,
+              wordsRef.current,
+              groupPayload,
+            );
+            lastMappedWordsRef.current = mappedWords;
+
+            if (!isMounted) {
+              return;
+            }
+
+            if (importedWords.length > 0) {
+              const nextWords = hydrateWords(
+                [...importedWords, ...wordsRef.current],
+                storage,
+              );
+              wordsRef.current = nextWords;
+              setWords(nextWords);
+
+              if (activeGroup) {
+                setAutoImportedNotice({
+                  count: importedWords.length,
+                  groupCode: activeGroup.groupCode ?? "",
+                  groupNameEn: activeGroup.displayNameEn ?? "",
+                  groupNameZhHant: activeGroup.displayNameZhHant ?? "",
+                });
+              }
+            }
+
+            if (updateWordRef.current && loadWordScopeMode(user.id) === WORD_SCOPE_MODES.GROUP) {
+              await syncActiveGroupWordMemory(
+                wordsRef.current,
+                (wordId, changes) => updateWordRef.current(wordId, changes),
+                user.id,
+                mappedWords,
+              );
+            }
+          })
+          .catch((error) => {
+            console.warn("Could not sync active-group words in background.", error);
           });
-        }
       })
       .catch((error) => {
         if (isMounted) {
@@ -286,6 +362,11 @@ export function useWords({ isAuthLoading = false, user = null } = {}, storage) {
   }, [storage, user]);
 
   useEffect(() => {
+    if (hasSupabaseConfig && user?.id) {
+      saveWordsForUser(user.id, words, storage);
+      return;
+    }
+
     if (!hasSupabaseConfig || !user) {
       saveWords(words, storage);
     }
@@ -552,6 +633,10 @@ export function useWords({ isAuthLoading = false, user = null } = {}, storage) {
       }
     } else {
       resetWords(storage);
+    }
+
+    if (user?.id) {
+      resetWordsForUser(user.id, storage);
     }
 
     clearLearningActivity(storage);

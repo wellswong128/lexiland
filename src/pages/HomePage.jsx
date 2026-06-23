@@ -228,7 +228,7 @@ function HomePage() {
   const isHomeLoading =
     isAuthLoading ||
     isWordsLoading ||
-    (hasSupabaseConfig && Boolean(user) && isLoadingScope);
+    (hasSupabaseConfig && Boolean(user) && isGroupScopeActive && isLoadingScope);
   const learningWords = isGroupScopeActive ? scopedWords : words;
   const role = getRoleFromUser(user);
   const dueWords = getDueWords(learningWords);
