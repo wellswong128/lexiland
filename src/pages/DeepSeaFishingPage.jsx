@@ -450,11 +450,11 @@ function drawScene(ctx, width, height, state, time, assets) {
     ctx.fillStyle = baseGrad;
     ctx.strokeStyle = "rgba(186, 230, 253, 0.7)";
     ctx.lineWidth = 1;
-    ctx.fillRect(originX - 28, originY - 9, 56, 18);
-    ctx.strokeRect(originX - 28, originY - 9, 56, 18);
+    ctx.fillRect(originX - 34, originY - 11, 68, 22);
+    ctx.strokeRect(originX - 34, originY - 11, 68, 22);
     ctx.fillStyle = "#67e8f9";
     ctx.beginPath();
-    ctx.arc(originX, originY, 7, 0, Math.PI * 2);
+    ctx.arc(originX, originY, 8, 0, Math.PI * 2);
     ctx.fill();
 
     ctx.strokeStyle = "#fde047";
