@@ -33,7 +33,8 @@ const HOOK_RETRACT_MS = 320;
 const SWING_SPEED = 1.8;
 const MAX_SWING_ANGLE = Math.PI * 0.42;
 const HOOK_MAX_LENGTH_RATIO = 0.78;
-const HOOK_SWING_LENGTH_RATIO = 0.14;
+const HOOK_SWING_LENGTH_RATIO = 0.21;
+const HARPOON_WIDTH_SCALE = 1.4;
 
 function easeOutCubic(value) {
   return 1 - (1 - value) ** 3;
@@ -425,7 +426,7 @@ function drawScene(ctx, width, height, state, time, assets) {
   const harpoon = assets?.harpoon;
   if (harpoon?.complete && harpoon.naturalWidth) {
     const scale = drawLength / harpoon.naturalHeight;
-    const drawW = harpoon.naturalWidth * scale;
+    const drawW = harpoon.naturalWidth * scale * HARPOON_WIDTH_SCALE;
     ctx.save();
     ctx.translate(originX, originY);
     ctx.rotate(hook.angle);
@@ -433,9 +434,9 @@ function drawScene(ctx, width, height, state, time, assets) {
     ctx.restore();
   } else {
     ctx.strokeStyle = "#f8fafc";
-    ctx.lineWidth = 4;
+    ctx.lineWidth = 5;
     ctx.shadowColor = "rgba(253, 224, 71, 0.68)";
-    ctx.shadowBlur = 10;
+    ctx.shadowBlur = 12;
     ctx.beginPath();
     ctx.moveTo(originX, originY);
     ctx.lineTo(tip.x, tip.y);
