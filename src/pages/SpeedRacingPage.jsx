@@ -454,6 +454,7 @@ function SpeedRacingPage() {
 
     setRoundLocked(true);
     const { isCorrect, noChoice } = judgeAnswer(carLane, currentQuestion);
+    const useChosenLane = isCorrect && !noChoice;
 
     if (noChoice) {
       setFeedback({ text: t("games.speedRacing.noChoice"), type: "neutral" });
@@ -485,6 +486,10 @@ function SpeedRacingPage() {
       });
       setBorderFlash("flash-bad");
       playTone(160, 0.16, "sawtooth", 0.035);
+    }
+
+    if (!useChosenLane) {
+      setCarLane(LANE_CENTER);
     }
 
     setCarPhase("exit");
