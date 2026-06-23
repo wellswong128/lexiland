@@ -22,37 +22,122 @@ const LANE_LEFT = 0;
 const LANE_CENTER = 1;
 const LANE_RIGHT = 2;
 
-const VANISH_Y_PERCENT = 12;
-const CAR_Y_PERCENT = 92;
-const ROAD_LEFT_AT_BOTTOM = 27;
-const ROAD_RIGHT_AT_BOTTOM = 73;
+const BG_LANE = {
+  vanishY: 12,
+  carY: 91,
+  centerX: 50,
+  roadLeftAtBottom: 22,
+  roadRightAtBottom: 78,
+};
 
-function getPerspectiveX(xAtBottom, yPercentFromTop = CAR_Y_PERCENT) {
+const SCENE_CAR_Y = 92;
+const SCENE_VANISH_Y = 14;
+
+function getCoverMetrics(containerWidth, containerHeight, imageWidth, imageHeight) {
+  const containerAR = containerWidth / containerHeight;
+  const imageAR = imageWidth / imageHeight;
+
+  if (containerAR > imageAR) {
+    const renderWidth = containerWidth;
+    const renderHeight = containerWidth / imageAR;
+    return {
+      renderWidth,
+      renderHeight,
+      offsetX: 0,
+      offsetY: (containerHeight - renderHeight) / 2,
+      imageWidth,
+      imageHeight,
+    };
+  }
+
+  const renderHeight = containerHeight;
+  const renderWidth = containerHeight * imageAR;
+  return {
+    renderWidth,
+    renderHeight,
+    offsetX: (containerWidth - renderWidth) / 2,
+    offsetY: 0,
+    imageWidth,
+    imageHeight,
+  };
+}
+
+function sceneYToImageY(sceneYPercent, containerHeight, metrics) {
+  const sceneY = (sceneYPercent / 100) * containerHeight;
+  const imageY = ((sceneY - metrics.offsetY) / metrics.renderHeight) * metrics.imageHeight;
+  return (imageY / metrics.imageHeight) * 100;
+}
+
+function imageXToSceneX(imageXPercent, containerWidth, metrics) {
+  const imageX = (imageXPercent / 100) * metrics.imageWidth;
+  const sceneX = metrics.offsetX + (imageX / metrics.imageWidth) * metrics.renderWidth;
+  return (sceneX / containerWidth) * 100;
+}
+
+function getImageLaneX(lane, imageYPercent) {
   const progress = Math.max(
     0,
-    Math.min(1, (yPercentFromTop - VANISH_Y_PERCENT) / (CAR_Y_PERCENT - VANISH_Y_PERCENT)),
+    Math.min(1, (imageYPercent - BG_LANE.vanishY) / (BG_LANE.carY - BG_LANE.vanishY)),
   );
+  const leftEdge =
+    BG_LANE.centerX + (BG_LANE.roadLeftAtBottom - BG_LANE.centerX) * progress;
+  const rightEdge =
+    BG_LANE.centerX + (BG_LANE.roadRightAtBottom - BG_LANE.centerX) * progress;
 
-  return 50 + (xAtBottom - 50) * progress;
-}
-
-function getLaneXPercent(lane, yPercentFromTop = CAR_Y_PERCENT) {
   if (lane === LANE_CENTER) {
-    return 50;
+    return BG_LANE.centerX;
   }
-
-  const leftEdge = getPerspectiveX(ROAD_LEFT_AT_BOTTOM, yPercentFromTop);
-  const rightEdge = getPerspectiveX(ROAD_RIGHT_AT_BOTTOM, yPercentFromTop);
 
   if (lane === LANE_LEFT) {
-    return (leftEdge + 50) / 2;
+    return (leftEdge + BG_LANE.centerX) / 2;
   }
 
-  return (50 + rightEdge) / 2;
+  return (BG_LANE.centerX + rightEdge) / 2;
 }
 
-function getLaneExitDrift(lane) {
-  return `${50 - getLaneXPercent(lane)}%`;
+function getLaneSceneX(lane, sceneYPercent, containerWidth, containerHeight, imageWidth, imageHeight) {
+  const metrics = getCoverMetrics(containerWidth, containerHeight, imageWidth, imageHeight);
+  const imageY = sceneYToImageY(sceneYPercent, containerHeight, metrics);
+  const imageX = getImageLaneX(lane, imageY);
+  return imageXToSceneX(imageX, containerWidth, metrics);
+}
+
+function getFallbackLaneX(lane) {
+  if (lane === LANE_LEFT) return 36;
+  if (lane === LANE_RIGHT) return 64;
+  return 50;
+}
+
+function getCarLaneStyle(lane, bgSize, sceneSize) {
+  if (!bgSize || !sceneSize?.width || !sceneSize?.height) {
+    const x = getFallbackLaneX(lane);
+    return {
+      "--car-x": `${x}%`,
+      "--lane-exit-drift": `${50 - x}%`,
+    };
+  }
+
+  const x = getLaneSceneX(
+    lane,
+    SCENE_CAR_Y,
+    sceneSize.width,
+    sceneSize.height,
+    bgSize.w,
+    bgSize.h,
+  );
+  const exitX = getLaneSceneX(
+    lane,
+    SCENE_VANISH_Y,
+    sceneSize.width,
+    sceneSize.height,
+    bgSize.w,
+    bgSize.h,
+  );
+
+  return {
+    "--car-x": `${x}%`,
+    "--lane-exit-drift": `${exitX - x}%`,
+  };
 }
 
 function loadHighScore() {
@@ -126,16 +211,11 @@ function Building({ side, index }) {
   );
 }
 
-function Car({ lane, phase = "idle" }) {
-  const laneX = getLaneXPercent(lane);
-
+function Car({ lane, phase = "idle", laneStyle }) {
   return (
     <div
       className={["speed-racing-car", phase].filter(Boolean).join(" ")}
-      style={{
-        "--car-x": `${laneX}%`,
-        "--lane-exit-drift": getLaneExitDrift(lane),
-      }}
+      style={laneStyle}
     >
       <img alt="" className="speed-racing-car-image" src={speedRacingCarUrl} />
     </div>
@@ -179,8 +259,11 @@ function SpeedRacingPage() {
   const [feedback, setFeedback] = useState({ text: "", type: "" });
   const [borderFlash, setBorderFlash] = useState("");
   const [roundLocked, setRoundLocked] = useState(false);
+  const [bgSize, setBgSize] = useState(null);
+  const [sceneSize, setSceneSize] = useState(null);
 
   const resolveRef = useRef(null);
+  const sceneRef = useRef(null);
 
   const startCountdown = useCallback(() => {
     resetTracker();
@@ -251,6 +334,34 @@ function SpeedRacingPage() {
   }, [carLane, currentQuestion, loadNextQuestion, recordCorrect, recordWrong, roundLocked, t]);
 
   resolveRef.current = resolveRound;
+
+  const carLaneStyle = useMemo(
+    () => getCarLaneStyle(carLane, bgSize, sceneSize),
+    [bgSize, carLane, sceneSize],
+  );
+
+  useEffect(() => {
+    const image = new Image();
+    image.src = speedRacingBgUrl;
+    image.onload = () => {
+      setBgSize({ w: image.naturalWidth, h: image.naturalHeight });
+    };
+  }, []);
+
+  useEffect(() => {
+    const node = sceneRef.current;
+    if (!node) return undefined;
+
+    const updateSceneSize = () => {
+      const { width, height } = node.getBoundingClientRect();
+      setSceneSize({ width, height });
+    };
+
+    updateSceneSize();
+    const observer = new ResizeObserver(updateSceneSize);
+    observer.observe(node);
+    return () => observer.disconnect();
+  }, []);
 
   const moveCar = useCallback(
     (direction) => {
@@ -354,6 +465,7 @@ function SpeedRacingPage() {
 
       <div className="speed-racing-card relative z-0 min-h-0 flex-1 overflow-hidden p-2 sm:p-3">
         <div
+          ref={sceneRef}
           className="speed-racing-scene relative h-full min-h-0"
           style={{
             "--speed-racing-bg": `url(${speedRacingBgUrl})`,
@@ -452,7 +564,7 @@ function SpeedRacingPage() {
               </button>
 
               <div className="speed-racing-car-wrap">
-                <Car lane={carLane} phase={carPhase} />
+                <Car lane={carLane} laneStyle={carLaneStyle} phase={carPhase} />
               </div>
             </>
           ) : null}
