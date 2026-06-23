@@ -255,6 +255,8 @@ export function useWords({ isAuthLoading = false, user = null } = {}, storage) {
   const wordsRef = useRef(words);
   const updateWordRef = useRef(null);
   const lastMappedWordsRef = useRef(null);
+  const allowCacheSaveRef = useRef(false);
+  const cacheSaveTimerRef = useRef(null);
 
   wordsRef.current = words;
 
@@ -263,12 +265,15 @@ export function useWords({ isAuthLoading = false, user = null } = {}, storage) {
       setWords(hydrateWords(loadWords(storage), storage));
       setAutoImportedNotice(null);
       setIsWordsLoading(false);
+      allowCacheSaveRef.current = false;
       return undefined;
     }
 
     let isMounted = true;
+    allowCacheSaveRef.current = false;
     const cachedWords = loadWordsForUser(user.id, storage);
     const hasCachedWords = cachedWords.length > 0;
+    const groupPayloadPromise = fetchUserActiveGroupWords({ includeWords: true });
 
     if (hasCachedWords) {
       setWords(hydrateWords(cachedWords, storage));
@@ -282,22 +287,15 @@ export function useWords({ isAuthLoading = false, user = null } = {}, storage) {
     fetchWordsFromSupabase(user.id)
       .then((remoteWords) => {
         if (!isMounted) {
-          return undefined;
+          return;
         }
 
         const mergedRemoteWords = mergeWordsPreservingMemory(remoteWords, wordsRef.current);
         setWords(hydrateWords(mergedRemoteWords, storage));
+        setIsWordsLoading(false);
+        allowCacheSaveRef.current = true;
 
-        return new Promise((resolve) => {
-          window.setTimeout(resolve, 0);
-        });
-      })
-      .then(() => {
-        if (!isMounted) {
-          return;
-        }
-
-        return fetchUserActiveGroupWords({ includeWords: true })
+        void groupPayloadPromise
           .then(async (groupPayload) => {
             if (!isMounted) {
               return;
@@ -315,10 +313,7 @@ export function useWords({ isAuthLoading = false, user = null } = {}, storage) {
             }
 
             if (importedWords.length > 0) {
-              const nextWords = hydrateWords(
-                [...importedWords, ...wordsRef.current],
-                storage,
-              );
+              const nextWords = hydrateWords([...importedWords, ...wordsRef.current], storage);
               wordsRef.current = nextWords;
               setWords(nextWords);
 
@@ -330,15 +325,6 @@ export function useWords({ isAuthLoading = false, user = null } = {}, storage) {
                   groupNameZhHant: activeGroup.displayNameZhHant ?? "",
                 });
               }
-            }
-
-            if (updateWordRef.current && loadWordScopeMode(user.id) === WORD_SCOPE_MODES.GROUP) {
-              await syncActiveGroupWordMemory(
-                wordsRef.current,
-                (wordId, changes) => updateWordRef.current(wordId, changes),
-                user.id,
-                mappedWords,
-              );
             }
           })
           .catch((error) => {
@@ -353,23 +339,52 @@ export function useWords({ isAuthLoading = false, user = null } = {}, storage) {
       .finally(() => {
         if (isMounted) {
           setIsWordsLoading(false);
+          allowCacheSaveRef.current = true;
         }
       });
 
     return () => {
       isMounted = false;
+      allowCacheSaveRef.current = false;
     };
   }, [storage, user]);
 
   useEffect(() => {
+    if (cacheSaveTimerRef.current) {
+      window.clearTimeout(cacheSaveTimerRef.current);
+      cacheSaveTimerRef.current = null;
+    }
+
     if (hasSupabaseConfig && user?.id) {
-      saveWordsForUser(user.id, words, storage);
-      return;
+      if (!allowCacheSaveRef.current) {
+        return undefined;
+      }
+
+      const scheduleSave = () => {
+        saveWordsForUser(user.id, words, storage);
+      };
+
+      cacheSaveTimerRef.current = window.setTimeout(() => {
+        if (typeof window.requestIdleCallback === "function") {
+          window.requestIdleCallback(scheduleSave, { timeout: 3000 });
+        } else {
+          scheduleSave();
+        }
+      }, 1500);
+
+      return () => {
+        if (cacheSaveTimerRef.current) {
+          window.clearTimeout(cacheSaveTimerRef.current);
+          cacheSaveTimerRef.current = null;
+        }
+      };
     }
 
     if (!hasSupabaseConfig || !user) {
       saveWords(words, storage);
     }
+
+    return undefined;
   }, [storage, user, words]);
 
   const addWord = useCallback(

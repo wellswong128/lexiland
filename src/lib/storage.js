@@ -84,7 +84,7 @@ export function loadWordsForUser(userId, storage = getDefaultStorage()) {
       return [];
     }
 
-    return parsedValue;
+    return toWordsCacheSnapshot(parsedValue);
   } catch (error) {
     console.warn("Could not parse stored LexiLand user words. Using empty list.", error);
     return [];
@@ -96,7 +96,23 @@ export function saveWordsForUser(userId, words, storage = getDefaultStorage()) {
     return;
   }
 
-  storage.setItem(getUserWordsStorageKey(userId), JSON.stringify(words));
+  storage.setItem(getUserWordsStorageKey(userId), JSON.stringify(toWordsCacheSnapshot(words)));
+}
+
+export function toWordsCacheSnapshot(words) {
+  if (!Array.isArray(words)) {
+    return [];
+  }
+
+  return words.map((word) => {
+    const {
+      memoryTipsByLocale: _memoryTipsByLocale,
+      memoryImage: _memoryImage,
+      ...rest
+    } = word;
+
+    return rest;
+  });
 }
 
 export function resetWords(storage = getDefaultStorage()) {

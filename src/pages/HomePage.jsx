@@ -217,18 +217,14 @@ function getPrimaryCta({ wordCount, dueCount, mistakeCount }) {
 function HomePage() {
   const { locale, t } = useLocale();
   const location = useLocation();
-  const { isAuthLoading, isWordsLoading, user, words } = useWordsContext();
+  const { isWordsLoading, user, words } = useWordsContext();
   const {
     activeGroup,
     isGroupScopeActive,
     isUsingCustomWords,
     scopedWords,
-    isLoadingScope,
   } = useActiveGroupWordScope(words, user);
-  const isHomeLoading =
-    isAuthLoading ||
-    isWordsLoading ||
-    (hasSupabaseConfig && Boolean(user) && isGroupScopeActive && isLoadingScope);
+  const isHomeLoading = isWordsLoading;
   const learningWords = isGroupScopeActive ? scopedWords : words;
   const role = getRoleFromUser(user);
   const dueWords = getDueWords(learningWords);
@@ -237,7 +233,7 @@ function HomePage() {
   const dueCount = dueWords.length;
   const mistakeCount = mistakeWords.length;
   const isEmpty = wordCount === 0;
-  const showSyncPrompt = hasSupabaseConfig && !isAuthLoading && !user;
+  const showSyncPrompt = hasSupabaseConfig && !isWordsLoading && !user;
   const { lastActivity, streak, todayReviewed, dailyTasks } = useMemo(
     () => getLearningSnapshot(learningWords),
     [learningWords, location.key],
