@@ -22,6 +22,30 @@ const LANE_LEFT = 0;
 const LANE_CENTER = 1;
 const LANE_RIGHT = 2;
 
+const VANISH_Y_PERCENT = 12;
+const CAR_Y_PERCENT = 92;
+const LANE_MARK_Y_PERCENT = 38;
+
+const LANE_X_AT_BOTTOM = {
+  [LANE_LEFT]: 37,
+  [LANE_CENTER]: 50,
+  [LANE_RIGHT]: 63,
+};
+
+function getLaneXPercent(lane, yPercentFromTop = CAR_Y_PERCENT) {
+  const laneBottomX = LANE_X_AT_BOTTOM[lane] ?? 50;
+  const progress = Math.max(
+    0,
+    Math.min(1, (yPercentFromTop - VANISH_Y_PERCENT) / (CAR_Y_PERCENT - VANISH_Y_PERCENT)),
+  );
+
+  return 50 + (laneBottomX - 50) * progress;
+}
+
+function getLaneExitDrift(lane) {
+  return `${50 - getLaneXPercent(lane)}%`;
+}
+
 function loadHighScore() {
   try {
     return Number(window.localStorage.getItem(HIGH_SCORE_KEY)) || 0;
@@ -94,12 +118,15 @@ function Building({ side, index }) {
 }
 
 function Car({ lane, phase = "idle" }) {
-  const lanePercent = lane === LANE_LEFT ? 28 : lane === LANE_RIGHT ? 72 : 50;
+  const laneX = getLaneXPercent(lane);
 
   return (
     <div
       className={["speed-racing-car", phase].filter(Boolean).join(" ")}
-      style={{ "--car-x": `${lanePercent}%` }}
+      style={{
+        "--car-x": `${laneX}%`,
+        "--lane-exit-drift": getLaneExitDrift(lane),
+      }}
     >
       <img alt="" className="speed-racing-car-image" src={speedRacingCarUrl} />
     </div>
@@ -334,13 +361,26 @@ function SpeedRacingPage() {
           </div>
 
           <div className="speed-racing-road">
-            <div className="speed-racing-lane-mark left">
-              <span className="speed-racing-lane-icon">✓</span>
-            </div>
             <div className="speed-racing-center-line" />
-            <div className="speed-racing-lane-mark right">
-              <span className="speed-racing-lane-icon">✗</span>
-            </div>
+          </div>
+
+          <div
+            className="speed-racing-lane-mark left"
+            style={{
+              left: `${getLaneXPercent(LANE_LEFT, LANE_MARK_Y_PERCENT)}%`,
+              top: `${LANE_MARK_Y_PERCENT}%`,
+            }}
+          >
+            <span className="speed-racing-lane-icon">✓</span>
+          </div>
+          <div
+            className="speed-racing-lane-mark right"
+            style={{
+              left: `${getLaneXPercent(LANE_RIGHT, LANE_MARK_Y_PERCENT)}%`,
+              top: `${LANE_MARK_Y_PERCENT}%`,
+            }}
+          >
+            <span className="speed-racing-lane-icon">✗</span>
           </div>
 
           {gamePhase === "rules" ? (
