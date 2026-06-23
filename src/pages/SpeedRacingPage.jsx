@@ -114,7 +114,7 @@ function getCarLaneStyle(lane, bgSize, sceneSize) {
     const x = getFallbackLaneX(lane);
     return {
       "--car-x": `${x}%`,
-      "--lane-exit-drift": `${50 - x}%`,
+      "--lane-exit-drift": "0px",
     };
   }
 
@@ -137,7 +137,7 @@ function getCarLaneStyle(lane, bgSize, sceneSize) {
 
   return {
     "--car-x": `${x}%`,
-    "--lane-exit-drift": `${exitX - x}%`,
+    "--lane-exit-drift": `${((exitX - x) / 100) * sceneSize.width}px`,
   };
 }
 
