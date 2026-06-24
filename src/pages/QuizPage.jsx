@@ -16,13 +16,22 @@ function QuizPage() {
   const { updateWord, user, words } = useWordsContext();
   const { isLoadingScope, isGroupScopeActive, scopedWords } = useActiveGroupWordScope(words, user);
   const reviewWords = isGroupScopeActive ? scopedWords : words;
-  const questions = useMemo(() => createQuizQuestions(reviewWords), [reviewWords]);
+  const reviewWordIdsKey = useMemo(
+    () => reviewWords.map((word) => word.id).sort().join("|"),
+    [reviewWords],
+  );
+  const reviewWordsRef = useRef(reviewWords);
+  reviewWordsRef.current = reviewWords;
+  const initializedQuizKeyRef = useRef(reviewWordIdsKey);
+  const [questions, setQuestions] = useState(() => createQuizQuestions(reviewWords));
   const [currentIndex, setCurrentIndex] = useState(0);
   const [selectedAnswer, setSelectedAnswer] = useState("");
   const [feedback, setFeedback] = useState(null);
   const [score, setScore] = useState(0);
   const [isComplete, setIsComplete] = useState(false);
-  const advanceTimerRef = useRef(null);
+  const questionsLengthRef = useRef(0);
+
+  questionsLengthRef.current = questions.length;
 
   const currentQuestion = questions[currentIndex];
   const currentWord =
@@ -33,20 +42,18 @@ function QuizPage() {
   });
 
   useEffect(() => {
+    if (initializedQuizKeyRef.current === reviewWordIdsKey) {
+      return;
+    }
+
+    initializedQuizKeyRef.current = reviewWordIdsKey;
+    setQuestions(createQuizQuestions(reviewWordsRef.current));
     setCurrentIndex(0);
     setSelectedAnswer("");
     setFeedback(null);
     setScore(0);
     setIsComplete(false);
-  }, [questions.length]);
-
-  useEffect(() => {
-    return () => {
-      if (advanceTimerRef.current) {
-        window.clearTimeout(advanceTimerRef.current);
-      }
-    };
-  }, []);
+  }, [reviewWordIdsKey]);
 
   useEffect(() => {
     if (isComplete || feedback || !currentQuestion?.word?.term) {
@@ -72,13 +79,7 @@ function QuizPage() {
     updateWord(currentQuestion.word.id, updateReviewResult(currentQuestion.word, result));
 
     if (isCorrect) {
-      setFeedback("correct");
-      if (advanceTimerRef.current) {
-        window.clearTimeout(advanceTimerRef.current);
-      }
-      advanceTimerRef.current = window.setTimeout(() => {
-        handleNextQuestion();
-      }, 500);
+      handleNextQuestion();
       return;
     }
 
@@ -86,20 +87,17 @@ function QuizPage() {
   }
 
   function handleNextQuestion() {
-    if (advanceTimerRef.current) {
-      window.clearTimeout(advanceTimerRef.current);
-      advanceTimerRef.current = null;
-    }
-
     setSelectedAnswer("");
     setFeedback(null);
 
-    if (currentIndex >= questions.length - 1) {
-      setIsComplete(true);
-      return;
-    }
+    setCurrentIndex((index) => {
+      if (index >= questionsLengthRef.current - 1) {
+        setIsComplete(true);
+        return index;
+      }
 
-    setCurrentIndex((index) => index + 1);
+      return index + 1;
+    });
   }
 
   if (isLoadingScope) {
@@ -205,7 +203,7 @@ function QuizPage() {
         {currentQuestion.options.map((option, optionIndex) => {
           const isSelected = selectedAnswer === option.wordId;
           const isCorrectAnswer = option.wordId === currentQuestion.correctAnswer;
-          const showCorrect = feedback && isCorrectAnswer;
+          const showCorrect = feedback === "incorrect" && isCorrectAnswer;
           const showIncorrect = feedback === "incorrect" && isSelected;
 
           return (
