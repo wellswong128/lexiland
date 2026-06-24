@@ -14,7 +14,6 @@ import { prefetchImageReviewPool } from "../features/review/prefetchImageReviewP
 import WordGroupScopeEmptyState from "../features/wordGroups/WordGroupScopeEmptyState.jsx";
 import { useActiveGroupWordScope } from "../features/wordGroups/useActiveGroupWordScope.js";
 import {
-  getReviewIntervalDays,
   getReviewSessionWords,
   updateReviewResult,
 } from "../features/review/reviewHelpers.js";
@@ -118,8 +117,8 @@ function FlashcardsPage() {
   const [prepareErrorCode, setPrepareErrorCode] = useState("");
   const [imageQuestions, setImageQuestions] = useState([]);
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [selectedAnswer, setSelectedAnswer] = useState("");
   const [feedback, setFeedback] = useState(null);
-  const [clearedReviewDays, setClearedReviewDays] = useState(1);
   const [sessionClearedCount, setSessionClearedCount] = useState(0);
   const [isComplete, setIsComplete] = useState(false);
 
@@ -170,6 +169,7 @@ function FlashcardsPage() {
 
       setImageQuestions(questions);
       setCurrentIndex(0);
+      setSelectedAnswer("");
       setFeedback(null);
       setSessionClearedCount(0);
       setIsComplete(false);
@@ -236,6 +236,7 @@ function FlashcardsPage() {
   }, [currentIndex, currentWord?.term, feedback, hasStarted, isComplete, isPreparing]);
 
   function goToNextWord() {
+    setSelectedAnswer("");
     setFeedback(null);
 
     if (currentIndex >= imageQuestions.length - 1) {
@@ -250,18 +251,11 @@ function FlashcardsPage() {
     setHasStarted(false);
     setIsComplete(false);
     setCurrentIndex(0);
+    setSelectedAnswer("");
     setFeedback(null);
     setImageQuestions([]);
     setSessionClearedCount(0);
     setPrepareError("");
-  }
-
-  function getNextReviewMessage(days) {
-    if (days <= 1) {
-      return t("flashcards.nextReviewTomorrow");
-    }
-
-    return t("flashcards.nextReviewInDays", { days });
   }
 
   function handleImageAnswer(answerWordId) {
@@ -277,16 +271,13 @@ function FlashcardsPage() {
     updateWord(currentQuestion.word.id, updateReviewResult(currentQuestion.word, result));
 
     if (!isCorrect) {
+      setSelectedAnswer(answerWordId);
       setFeedback("incorrect");
       return;
     }
 
     if (hadMistake) {
-      const nextLevel = currentQuestion.word.review.level + 1;
-      setClearedReviewDays(getReviewIntervalDays(nextLevel));
       setSessionClearedCount((count) => count + 1);
-      setFeedback("cleared");
-      return;
     }
 
     goToNextWord();
@@ -587,47 +578,49 @@ function FlashcardsPage() {
         ) : null}
       </div>
 
-      {feedback === null ? (
+      {feedback === null || feedback === "incorrect" ? (
         <div className="mt-6">
           <p className="mb-4 text-center text-sm font-bold uppercase tracking-[0.14em] text-slate-500">
             {t("flashcards.chooseMemoryImage")}
           </p>
           <div className="grid grid-cols-2 gap-3">
-            {currentQuestion.options.map((option, optionIndex) => (
-              <button
-                className="relative overflow-hidden rounded-2xl border-2 border-slate-200 bg-white transition hover:border-blue-400 hover:shadow-md focus:outline-none focus-visible:ring-4 focus-visible:ring-blue-100"
-                key={`${option.wordId}-${optionIndex}`}
-                onClick={() => handleImageAnswer(option.wordId)}
-                type="button"
-              >
-                <WordImageWithTranslationOverlay
-                  alt={t("wordImage.alt", { term: currentWord.term })}
-                  imageClassName="aspect-square w-full object-cover"
-                  src={option.imageUrl}
-                  translation={option.translation}
-                />
-              </button>
-            ))}
+            {currentQuestion.options.map((option, optionIndex) => {
+              const isSelected = selectedAnswer === option.wordId;
+              const isCorrectAnswer = option.wordId === currentQuestion.correctAnswer;
+              const showCorrect = feedback === "incorrect" && isCorrectAnswer;
+              const showIncorrect = feedback === "incorrect" && isSelected;
+
+              return (
+                <button
+                  className={[
+                    "relative overflow-hidden rounded-2xl border-2 bg-white transition focus:outline-none focus-visible:ring-4 focus-visible:ring-blue-100",
+                    showCorrect
+                      ? "border-green-400 ring-4 ring-green-100"
+                      : "",
+                    showIncorrect ? "border-red-400 ring-4 ring-red-100" : "",
+                    !showCorrect && !showIncorrect
+                      ? "border-slate-200 hover:border-blue-400 hover:shadow-md"
+                      : "",
+                  ].join(" ")}
+                  disabled={Boolean(feedback)}
+                  key={`${option.wordId}-${optionIndex}`}
+                  onClick={() => handleImageAnswer(option.wordId)}
+                  type="button"
+                >
+                  <WordImageWithTranslationOverlay
+                    alt={t("wordImage.alt", { term: currentWord.term })}
+                    imageClassName="aspect-square w-full object-cover"
+                    src={option.imageUrl}
+                    translation={option.translation}
+                  />
+                </button>
+              );
+            })}
           </div>
         </div>
-      ) : feedback === "cleared" ? (
-        <div className="mt-6 rounded-2xl border border-green-200 bg-green-50/60 p-5">
-          <p className="font-bold text-green-700">{t("quiz.correct")}</p>
-          <p className="mt-2 text-slate-700">{t("flashcards.clearedFromMistakes")}</p>
-          <p className="mt-1 text-sm font-semibold text-green-800">
-            {getNextReviewMessage(clearedReviewDays)}
-          </p>
-          <button
-            className="mt-5 rounded-full bg-blue-700 px-5 py-3 text-sm font-bold text-white transition hover:bg-blue-800"
-            onClick={goToNextWord}
-            type="button"
-          >
-            {currentIndex >= imageQuestions.length - 1
-              ? t("flashcards.finishReview")
-              : t("flashcards.nextWord")}
-          </button>
-        </div>
-      ) : (
+      ) : null}
+
+      {feedback === "incorrect" ? (
         <div className="mt-6 rounded-2xl border border-red-200 bg-red-50/60 p-5">
           <p className="font-bold text-red-700">{t("flashcards.incorrect")}</p>
           {currentWord.translation ? (
@@ -648,7 +641,7 @@ function FlashcardsPage() {
               : t("flashcards.nextWord")}
           </button>
         </div>
-      )}
+      ) : null}
     </section>
   );
 }
