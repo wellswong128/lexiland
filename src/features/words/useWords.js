@@ -257,6 +257,7 @@ export function useWords({ isAuthLoading = false, user = null } = {}, storage) {
   const lastMappedWordsRef = useRef(null);
   const allowCacheSaveRef = useRef(false);
   const cacheSaveTimerRef = useRef(null);
+  const cacheSaveIdleCallbackRef = useRef(null);
 
   wordsRef.current = words;
 
@@ -334,12 +335,15 @@ export function useWords({ isAuthLoading = false, user = null } = {}, storage) {
       .catch((error) => {
         if (isMounted) {
           setWordsError(error.message);
+          if (!hasCachedWords) {
+            wordsRef.current = [];
+            setWords([]);
+          }
         }
       })
       .finally(() => {
         if (isMounted) {
           setIsWordsLoading(false);
-          allowCacheSaveRef.current = true;
         }
       });
 
@@ -350,10 +354,21 @@ export function useWords({ isAuthLoading = false, user = null } = {}, storage) {
   }, [storage, user]);
 
   useEffect(() => {
-    if (cacheSaveTimerRef.current) {
-      window.clearTimeout(cacheSaveTimerRef.current);
-      cacheSaveTimerRef.current = null;
-    }
+    const cancelPendingCacheSave = () => {
+      if (cacheSaveTimerRef.current) {
+        window.clearTimeout(cacheSaveTimerRef.current);
+        cacheSaveTimerRef.current = null;
+      }
+
+      if (cacheSaveIdleCallbackRef.current != null) {
+        if (typeof window.cancelIdleCallback === "function") {
+          window.cancelIdleCallback(cacheSaveIdleCallbackRef.current);
+        }
+        cacheSaveIdleCallbackRef.current = null;
+      }
+    };
+
+    cancelPendingCacheSave();
 
     if (hasSupabaseConfig && user?.id) {
       if (!allowCacheSaveRef.current) {
@@ -361,23 +376,25 @@ export function useWords({ isAuthLoading = false, user = null } = {}, storage) {
       }
 
       const scheduleSave = () => {
+        cacheSaveIdleCallbackRef.current = null;
+        if (!allowCacheSaveRef.current) {
+          return;
+        }
         saveWordsForUser(user.id, words, storage);
       };
 
       cacheSaveTimerRef.current = window.setTimeout(() => {
+        cacheSaveTimerRef.current = null;
         if (typeof window.requestIdleCallback === "function") {
-          window.requestIdleCallback(scheduleSave, { timeout: 3000 });
+          cacheSaveIdleCallbackRef.current = window.requestIdleCallback(scheduleSave, {
+            timeout: 3000,
+          });
         } else {
           scheduleSave();
         }
       }, 1500);
 
-      return () => {
-        if (cacheSaveTimerRef.current) {
-          window.clearTimeout(cacheSaveTimerRef.current);
-          cacheSaveTimerRef.current = null;
-        }
-      };
+      return cancelPendingCacheSave;
     }
 
     if (!hasSupabaseConfig || !user) {

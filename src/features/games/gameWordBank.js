@@ -126,6 +126,12 @@ function pickWeightedRandom(entries, scoreByWordId) {
   return entries[entries.length - 1];
 }
 
+export function getPlayableQuestionEntries(bank, fallbackEntries = []) {
+  return Array.isArray(bank?.questionEntries) && bank.questionEntries.length > 0
+    ? bank.questionEntries
+    : fallbackEntries;
+}
+
 function buildMaintenanceScores(words, now = new Date()) {
   return new Map(words.map((word) => [word.id, getMaintenanceScore(word, now)]));
 }
@@ -275,6 +281,7 @@ export function shouldUseGamePlan(bank) {
   return (
     hasActiveReviewSession() &&
     Boolean(bank?.entries.length) &&
+    Boolean(bank?.questionEntries?.length) &&
     !bank?.sessionExpanded
   );
 }
@@ -385,9 +392,9 @@ export function pickRandomEntry(entries, priorityWordIdsOrBank, overrides = {}) 
   }
 
   const bank = priorityWordIdsOrBank instanceof Set ? null : priorityWordIdsOrBank;
-  const questionEntries = bank?.questionEntries ?? entries;
+  const questionEntries = getPlayableQuestionEntries(bank, entries);
   const usesDedicatedQuestionPool =
-    Boolean(bank?.questionEntries) && bank.questionEntries !== bank.entries;
+    Boolean(bank?.questionEntries?.length) && bank.questionEntries !== bank.entries;
 
   if (usesDedicatedQuestionPool) {
     return pickUniformRandom(questionEntries);

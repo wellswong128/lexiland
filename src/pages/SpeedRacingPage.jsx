@@ -279,6 +279,7 @@ function useSpeedRacingEngineSound(gamePhase, carPhase) {
       baseOsc,
       harmOsc,
       masterGain,
+      noise,
       noiseFilter,
     };
 

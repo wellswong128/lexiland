@@ -7,6 +7,7 @@ import {
 import { ensureReviewSessionWords } from "./ensureReviewSessionWords.js";
 import {
   buildGameWordBank,
+  getPlayableQuestionEntries,
   getSequentialRoundEntries,
   shouldUseGamePlan,
 } from "./gameWordBank.js";
@@ -46,7 +47,7 @@ export function useReviewSessionPlay(words, options) {
   }, [options, words]);
 
   const pickNextEntry = useCallback((bank) => {
-    const questionPool = bank?.questionEntries ?? bank?.entries ?? [];
+    const questionPool = getPlayableQuestionEntries(bank, bank?.entries ?? []);
 
     if (questionPool.length === 0) {
       return null;
