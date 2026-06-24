@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useLocale } from "../features/locale/LocaleContext.jsx";
 import { getQuizOptionLabel } from "../features/review/quizHelpers.js";
 import { useWordsContext } from "../features/words/WordsContext.jsx";
@@ -28,6 +28,7 @@ function WordMemoryPanel({
   const [isLoading, setIsLoading] = useState(false);
   const [notice, setNotice] = useState("");
   const [noticeType, setNoticeType] = useState("success");
+  const autoLoadRequestRef = useRef(0);
 
   useEffect(() => {
     const saved = readWordMemory(word, locale);
@@ -79,11 +80,13 @@ function WordMemoryPanel({
 
   async function loadMissingMemoryFromWordbase() {
     const saved = readWordMemory(word, locale);
-    const hasCompleteMemory = Boolean(saved.memoryTips && saved.memoryImage?.imageUrl);
 
-    if (hasCompleteMemory) {
+    if (saved.memoryTips || saved.memoryImage?.imageUrl) {
       return;
     }
+
+    const requestId = autoLoadRequestRef.current + 1;
+    autoLoadRequestRef.current = requestId;
 
     try {
       setIsLoading(true);
@@ -94,6 +97,10 @@ function WordMemoryPanel({
         user,
       });
 
+      if (autoLoadRequestRef.current !== requestId) {
+        return;
+      }
+
       if (result.changes) {
         await updateWord(word.id, result.changes);
       }
@@ -101,20 +108,33 @@ function WordMemoryPanel({
       setMemoryTips(result.memoryTips);
       setMemoryImage(result.memoryImage);
     } catch (error) {
-      console.warn("Could not load memory assist from wordbase.", error);
+      if (autoLoadRequestRef.current === requestId) {
+        console.warn("Could not load memory assist from wordbase.", error);
+      }
     } finally {
-      setIsLoading(false);
+      if (autoLoadRequestRef.current === requestId) {
+        setIsLoading(false);
+      }
     }
   }
 
   useEffect(() => {
     if (!autoLoad || !user) {
-      return;
+      return undefined;
+    }
+
+    const saved = readWordMemory(word, locale);
+    if (saved.memoryTips || saved.memoryImage?.imageUrl) {
+      return undefined;
     }
 
     void loadMissingMemoryFromWordbase();
+
+    return () => {
+      autoLoadRequestRef.current += 1;
+    };
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [autoLoad, locale, user, word.id, word.memoryImage, word.memoryTipsByLocale]);
+  }, [autoLoad, locale, user, word.id]);
 
   if (!word) {
     return null;

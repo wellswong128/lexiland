@@ -660,7 +660,7 @@ function FlashcardsPage() {
             </p>
           ) : null}
           <div className="mt-4">
-            <WordMemoryPanel autoLoad compact={false} showTranslationOverlay word={currentWord} />
+            <WordMemoryPanel compact={false} showTranslationOverlay word={currentWord} />
           </div>
           <button
             className="mt-5 rounded-full bg-blue-700 px-5 py-3 text-sm font-bold text-white transition hover:bg-blue-800"
