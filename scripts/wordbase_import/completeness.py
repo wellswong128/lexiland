@@ -98,6 +98,14 @@ def is_complete(entry: dict[str, Any] | None, locale: str) -> bool:
     return not missing_parts(entry, locale)
 
 
+def has_wordbase_definition(entry: dict[str, Any] | None) -> bool:
+    return bool(str((entry or {}).get("definition", "")).strip())
+
+
+def wordbase_entry_exists(entry: dict[str, Any] | None) -> bool:
+    return entry is not None
+
+
 def missing_detail_fields(entry: dict[str, Any] | None) -> list[str]:
     entry = entry or {}
     missing: list[str] = []

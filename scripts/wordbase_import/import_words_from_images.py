@@ -1,4 +1,10 @@
 #!/usr/bin/env python3
+"""Bulk Wordbase import from page images (CLI only).
+
+Wordbase existence filtering at extract time happens ONLY in this script
+(filter_terms_against_wordbase). The web app photo flow uses the same
+/api/extract-words-from-image endpoint but does not skip terms based on Wordbase.
+"""
 from __future__ import annotations
 
 import argparse
@@ -13,11 +19,15 @@ sys.path.insert(0, str(SCRIPT_DIR))
 
 from api_client import ApiError, LexiLandApiClient, image_to_data_url, list_image_files
 from auth import AuthError, ImportAuth
-from completeness import missing_detail_fields, missing_parts
+from completeness import (
+    missing_detail_fields,
+    missing_parts,
+    wordbase_entry_exists,
+)
 from config import load_settings
-from progress_store import append_round_log, ensure_term_record, load_progress, save_progress
-from terms import page_label_from_filename
-from wordbase_client import fetch_entry, upsert_details, upsert_memory_image, upsert_memory_tips
+from progress_store import ProgressIOError, append_round_log, ensure_term_record, load_progress, save_progress
+from terms import normalize_term, page_label_from_filename
+from wordbase_client import fetch_entries, fetch_entry, upsert_details, upsert_memory_image, upsert_memory_tips
 
 try:
     import httpx
@@ -53,6 +63,23 @@ def parse_args() -> argparse.Namespace:
         default=None,
         help="Seconds to wait between completion rounds.",
     )
+    parser.add_argument(
+        "--skip-wordbase-extract-check",
+        action="store_true",
+        help="Bulk import only: do not skip terms already complete in Wordbase during extract.",
+    )
+    parser.add_argument(
+        "--progress-file",
+        type=Path,
+        default=None,
+        help="Progress JSON path (default: scripts/wordbase_import/progress.json). Use a separate file per parallel import.",
+    )
+    parser.add_argument(
+        "--report-dir",
+        type=Path,
+        default=None,
+        help="Report output directory (default: scripts/wordbase_import/reports/). Use a separate dir per parallel import.",
+    )
     return parser.parse_args()
 
 
@@ -60,14 +87,73 @@ def utc_now() -> str:
     return datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
 
 
+def mark_term_exists_in_wordbase(record: dict) -> None:
+    record["status"] = "complete"
+    record["missing"] = []
+    record["completed_at"] = record.get("completed_at") or utc_now()
+    record["skipped_reason"] = "exists_in_wordbase"
+    record["wordbase_exists"] = True
+
+
+def filter_terms_against_wordbase(
+    *,
+    raw_terms: list[str],
+    locale: str,
+    import_auth: ImportAuth | None,
+    progress: dict,
+    filename: str,
+    dry_run: bool,
+    skip_wordbase_check: bool,
+) -> tuple[list[str], list[str]]:
+    if skip_wordbase_check or dry_run or import_auth is None:
+        for term in raw_terms:
+            ensure_term_record(progress, term, filename)
+        return raw_terms, []
+
+    unique_terms: list[str] = []
+    seen: set[str] = set()
+    for term in raw_terms:
+        term_key = normalize_term(term)
+        if not term_key or term_key in seen:
+            continue
+        seen.add(term_key)
+        unique_terms.append(term_key)
+
+    entries = import_auth.run(lambda: fetch_entries(import_auth.client, unique_terms))
+
+    terms_to_process: list[str] = []
+    skipped_terms: list[str] = []
+
+    for term in unique_terms:
+        entry = entries.get(term)
+        record = ensure_term_record(progress, term, filename)
+
+        if wordbase_entry_exists(entry):
+            mark_term_exists_in_wordbase(record)
+            skipped_terms.append(term)
+            continue
+
+        record["status"] = "pending"
+        record["missing"] = missing_parts(None, locale)
+        record.pop("skipped_reason", None)
+        record.pop("wordbase_exists", None)
+
+        terms_to_process.append(term)
+
+    return terms_to_process, skipped_terms
+
+
 def extract_images(
     *,
     api: LexiLandApiClient,
+    import_auth: ImportAuth | None,
+    locale: str,
     progress: dict,
     image_dir: Path,
     limit_images: int,
     resume: bool,
     dry_run: bool,
+    skip_wordbase_extract_check: bool,
 ) -> list[str]:
     files = list_image_files(image_dir)
     if limit_images > 0:
@@ -91,23 +177,52 @@ def extract_images(
             },
         )
 
-        if resume and image_record.get("status") == "extracted" and image_record.get("terms"):
-            terms = image_record["terms"]
-            print(f"[extract] {filename}: reuse {len(terms)} terms")
+        if resume and image_record.get("status") == "extracted" and image_record.get("wordbase_checked"):
+            raw_terms = image_record.get("extracted_terms") or image_record.get("terms") or []
+            terms = image_record.get("terms") or []
+            skipped_terms = image_record.get("skipped_terms") or []
+            print(
+                f"[extract] {filename}: reuse {len(raw_terms)} extracted, "
+                f"{len(terms)} to process, {len(skipped_terms)} already in wordbase"
+            )
         else:
-            print(f"[extract] {filename} ({image_record.get('page_label', '')})")
-            try:
-                data_url = image_to_data_url(path)
-                terms = api.extract_words(data_url)
-                image_record["status"] = "extracted"
-                image_record["terms"] = terms
-                image_record["error"] = None
-                print(f"  extracted {len(terms)} terms")
-            except Exception as error:
-                image_record["status"] = "extract_failed"
-                image_record["error"] = str(error)
-                print(f"  extract failed: {error}")
-                continue
+            raw_terms: list[str] = []
+            if resume and image_record.get("status") == "extracted" and image_record.get("terms"):
+                raw_terms = image_record.get("extracted_terms") or image_record.get("terms") or []
+                print(f"[extract] {filename}: reuse {len(raw_terms)} extracted terms, checking wordbase")
+            else:
+                print(f"[extract] {filename} ({image_record.get('page_label', '')})")
+                try:
+                    data_url = image_to_data_url(path)
+                    raw_terms = api.extract_words(data_url)
+                    image_record["status"] = "extracted"
+                    image_record["error"] = None
+                    print(f"  extracted {len(raw_terms)} terms")
+                except Exception as error:
+                    image_record["status"] = "extract_failed"
+                    image_record["error"] = str(error)
+                    print(f"  extract failed: {error}")
+                    continue
+
+            terms, skipped_terms = filter_terms_against_wordbase(
+                raw_terms=raw_terms,
+                locale=locale,
+                import_auth=import_auth,
+                progress=progress,
+                filename=filename,
+                dry_run=dry_run,
+                skip_wordbase_check=skip_wordbase_extract_check,
+            )
+            image_record["extracted_terms"] = raw_terms
+            image_record["terms"] = terms
+            image_record["skipped_terms"] = skipped_terms
+            image_record["wordbase_checked"] = (
+                not dry_run and import_auth is not None and not skip_wordbase_extract_check
+            )
+            print(
+                f"  wordbase: {len(skipped_terms)} already complete, "
+                f"{len(terms)} need processing"
+            )
 
         for term in terms:
             all_terms.add(term)
@@ -140,6 +255,11 @@ def process_term(
     entry = None
     if not dry_run and import_auth is not None:
         entry = import_auth.run(lambda: fetch_entry(import_auth.client, term))
+        if wordbase_entry_exists(entry):
+            mark_term_exists_in_wordbase(record)
+            print(f"  [{term}] exists in wordbase, skip")
+            return record
+
     missing = missing_parts(entry, locale)
 
     if not missing:
@@ -152,11 +272,13 @@ def process_term(
     record["status"] = "incomplete"
 
     try:
-        if any(field in missing for field in missing_detail_fields(entry)):
-            print(f"  [{term}] complete-word ({', '.join(missing_detail_fields(entry))})")
+        detail_fields_missing = missing_detail_fields(entry)
+        if detail_fields_missing:
             if dry_run:
+                print(f"  [{term}] complete-word ({', '.join(detail_fields_missing)})")
                 print("    dry-run: would call /api/complete-word and upsert details")
             else:
+                print(f"  [{term}] complete-word ({', '.join(detail_fields_missing)})")
                 suggestion = api.complete_word(term, locale)
                 if not suggestion.get("definition"):
                     raise ApiError("Complete-word response missing definition.")
@@ -407,7 +529,12 @@ def main() -> int:
         max_rounds=args.max_rounds,
         max_term_attempts=args.max_term_attempts,
         round_pause_seconds=args.round_pause,
+        progress_path=args.progress_file,
+        report_dir=args.report_dir,
     )
+
+    print(f"Progress file: {settings.progress_path}")
+    print(f"Report dir:    {settings.report_dir}")
 
     progress = load_progress(settings.progress_path)
     api = LexiLandApiClient(
@@ -439,11 +566,14 @@ def main() -> int:
 
         terms = extract_images(
             api=api,
+            import_auth=import_auth,
+            locale=settings.locale,
             progress=progress,
             image_dir=settings.image_dir,
             limit_images=args.limit_images,
             resume=args.resume or settings.progress_path.exists(),
             dry_run=args.dry_run,
+            skip_wordbase_extract_check=args.skip_wordbase_extract_check,
         )
         save_progress(settings.progress_path, progress)
 
@@ -490,6 +620,9 @@ def main() -> int:
         print("\nInterrupted. Progress saved.")
         save_progress(settings.progress_path, progress)
         return 130
+    except ProgressIOError as error:
+        print(f"Progress error: {error}", file=sys.stderr)
+        return 1
     except Exception as error:
         print(f"Fatal error: {error}", file=sys.stderr)
         print_proxy_hint(error)

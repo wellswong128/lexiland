@@ -6,14 +6,26 @@ This guide explains how to use `scripts/wordbase_import/import_words_from_images
 
 The script runs in two phases:
 
-1. **Extract** — reads images from a folder and calls LexiLand `/api/extract-words` to pull English terms from each page.
-2. **Complete** — for each term, fills missing Wordbase fields until the entry is complete:
-   - definition, translation, pronunciation, part_of_speech
-   - example, example_translation, tags
-   - memory_tips, memory_image
+1. **Extract** — reads images from a folder, calls LexiLand `/api/extract-words-from-image` to pull English terms from each page, then **checks each term against Wordbase** by `term_key`:
+   - **Already exists** in Wordbase → marked `exists_in_wordbase`, skipped (no definition, memory tips, or memory image calls)
+   - **Not in Wordbase** → queued for the Complete phase
+2. **Complete** — for each queued term (new to Wordbase only):
+   - Calls `/api/complete-word` for definition and details
+   - Then generates memory tips and memory image
 
 Progress is saved to `scripts/wordbase_import/progress.json`.  
 Reports are written to `scripts/wordbase_import/reports/`.
+
+## Bulk import vs web app
+
+| | Bulk import (`import_words_from_images.py`) | Web app (photo scan) |
+|---|-----|-----|
+| Extract API | `/api/extract-words-from-image` | Same endpoint |
+| Wordbase check at extract | **Yes** — skips terms that **exist** in Wordbase (`exists_in_wordbase`) | **No** — all detected terms are shown |
+| Dedup at extract | Against Wordbase `term_key` | Against the user's **personal word list** only |
+| Goal | Fill shared Wordbase efficiently | Let users pick words to save |
+
+The Wordbase lookup during extract runs **only in the Python bulk import script**, after the shared extract API returns. The API and web UI never filter terms by Wordbase at extract time.
 
 ## Setup
 
@@ -66,6 +78,8 @@ This folder contains 79 `.JPG` files (`IMG_8632.JPG` onward).
 
 ## Basic Usage
 
+Dry run skips Wordbase lookups during extract (all extracted terms are queued). Use a real run (without `--dry-run`) to filter against Wordbase at extract time.
+
 ### Dry run (no database writes)
 
 ```bash
@@ -111,6 +125,35 @@ On first run, the script prompts for Supabase login. The session is saved to `~/
 | `--max-rounds N` | Max completion rounds (default: 20; `0` = unlimited) |
 | `--max-term-attempts N` | Max attempts per term (default: 50) |
 | `--round-pause SECONDS` | Pause between rounds (default: 60) |
+| `--skip-wordbase-extract-check` | Bulk import only: queue every extracted term even if already complete in Wordbase |
+| `--progress-file PATH` | Separate progress JSON (required for parallel imports) |
+| `--report-dir PATH` | Separate report directory (recommended for parallel imports) |
+
+## Running two imports in parallel
+
+Do **not** share the default `progress.json` between imports. Two processes writing the same file caused the error:
+
+`progress.tmp -> progress.json: No such file or directory`
+
+Give each import its own progress and report paths:
+
+```bash
+# Terminal 1 — first half of images
+./scripts/wordbase_import/run.sh \
+  --image-dir "/Users/mac/racer/book/eng_reading_comprehension" \
+  --progress-file scripts/wordbase_import/progress-batch-a.json \
+  --report-dir scripts/wordbase_import/reports/batch-a
+
+# Terminal 2 — second half (different folder or --limit-images split)
+./scripts/wordbase_import/run.sh \
+  --image-dir "/Users/mac/racer/book/other_pages" \
+  --progress-file scripts/wordbase_import/progress-batch-b.json \
+  --report-dir scripts/wordbase_import/reports/batch-b
+```
+
+Or set env vars: `IMPORT_PROGRESS_PATH`, `IMPORT_REPORT_DIR`.
+
+Progress saves now use a file lock and per-process temp files, but **separate progress files are still required** so each import tracks its own terms correctly.
 
 ## Recommended Workflow
 

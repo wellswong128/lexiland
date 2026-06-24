@@ -84,6 +84,7 @@ function PhotoWordCapture({ autoOpenCamera = false, onAutoOpenCameraConsumed }) 
   );
 
   const selectableTerms = useMemo(
+    // Web users: hide only words already in their personal list, not Wordbase entries.
     () => detectedWords.filter((term) => !existingTerms.has(term)),
     [detectedWords, existingTerms],
   );

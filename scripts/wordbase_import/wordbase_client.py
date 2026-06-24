@@ -46,23 +46,47 @@ def _first_row(response: Any) -> dict[str, Any] | None:
 
 
 def fetch_entry(client: Client, term: str) -> dict[str, Any] | None:
+    entries = fetch_entries(client, [term])
     term_key = normalize_term(term)
-    if not term_key:
-        return None
+    return entries.get(term_key) if term_key else None
 
-    try:
-        response = (
-            client.table("wordbase")
-            .select(WORDBASE_COLUMNS)
-            .eq("term_key", term_key)
-            .limit(1)
-            .execute()
-        )
-    except Exception:
-        return None
 
-    row = _first_row(response)
-    return map_wordbase_row(row) if row else None
+def fetch_entries(client: Client, terms: list[str]) -> dict[str, dict[str, Any] | None]:
+    term_keys: list[str] = []
+    seen: set[str] = set()
+
+    for term in terms:
+        term_key = normalize_term(term)
+        if not term_key or term_key in seen:
+            continue
+        seen.add(term_key)
+        term_keys.append(term_key)
+
+    if not term_keys:
+        return {}
+
+    entries: dict[str, dict[str, Any] | None] = {term_key: None for term_key in term_keys}
+    batch_size = 100
+
+    for index in range(0, len(term_keys), batch_size):
+        batch = term_keys[index : index + batch_size]
+        try:
+            response = (
+                client.table("wordbase")
+                .select(WORDBASE_COLUMNS)
+                .in_("term_key", batch)
+                .execute()
+            )
+        except Exception:
+            continue
+
+        rows = getattr(response, "data", None) or []
+        for row in rows:
+            term_key = normalize_term(row.get("term_key") or row.get("term"))
+            if term_key in entries:
+                entries[term_key] = map_wordbase_row(row)
+
+    return entries
 
 
 def _pick_text(new_value: str, existing_value: str) -> str:

@@ -147,6 +147,7 @@ export async function completeWordsInBatch(
 }
 
 export async function fetchExtractedWords(imageDataUrl) {
+  // Returns all detected terms. No Wordbase lookup — that is bulk-import-only.
   const authHeaders = await getApiAuthHeaders();
   const response = await fetch(resolveApiUrl("/api/extract-words-from-image"), {
     method: "POST",

@@ -50,6 +50,8 @@ def load_settings(
     max_rounds: int | None = None,
     max_term_attempts: int | None = None,
     round_pause_seconds: float | None = None,
+    progress_path: Path | None = None,
+    report_dir: Path | None = None,
 ) -> Settings:
     load_dotenv(REPO_ROOT / ".env")
     load_dotenv(REPO_ROOT / ".env.local", override=True)
@@ -66,8 +68,8 @@ def load_settings(
         image_dir=image_dir or Path(os.getenv("IMAGE_DIR", str(DEFAULT_IMAGE_DIR))),
         locale=os.getenv("IMPORT_LOCALE", "zh-Hant"),
         session_path=Path(os.getenv("IMPORT_SESSION_PATH", str(DEFAULT_SESSION_PATH))),
-        progress_path=Path(os.getenv("IMPORT_PROGRESS_PATH", str(DEFAULT_PROGRESS_PATH))),
-        report_dir=Path(os.getenv("IMPORT_REPORT_DIR", str(DEFAULT_REPORT_DIR))),
+        progress_path=progress_path or Path(os.getenv("IMPORT_PROGRESS_PATH", str(DEFAULT_PROGRESS_PATH))),
+        report_dir=report_dir or Path(os.getenv("IMPORT_REPORT_DIR", str(DEFAULT_REPORT_DIR))),
         import_user_email=os.getenv("IMPORT_USER_EMAIL", "").strip(),
         auth_redirect_url=(
             os.getenv("VITE_AUTH_REDIRECT_URL")

@@ -1,6 +1,6 @@
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { Link } from "react-router-dom";
-import SpeakButton from "../components/SpeakButton.jsx";
+import SpeakButton, { speakText } from "../components/SpeakButton.jsx";
 import WordMemoryPanel from "../components/WordMemoryPanel.jsx";
 import { useLocale } from "../features/locale/LocaleContext.jsx";
 import WordGroupScopeEmptyState from "../features/wordGroups/WordGroupScopeEmptyState.jsx";
@@ -22,6 +22,7 @@ function QuizPage() {
   const [feedback, setFeedback] = useState(null);
   const [score, setScore] = useState(0);
   const [isComplete, setIsComplete] = useState(false);
+  const advanceTimerRef = useRef(null);
 
   const currentQuestion = questions[currentIndex];
   const currentWord =
@@ -39,6 +40,22 @@ function QuizPage() {
     setIsComplete(false);
   }, [questions.length]);
 
+  useEffect(() => {
+    return () => {
+      if (advanceTimerRef.current) {
+        window.clearTimeout(advanceTimerRef.current);
+      }
+    };
+  }, []);
+
+  useEffect(() => {
+    if (isComplete || feedback || !currentQuestion?.word?.term) {
+      return;
+    }
+
+    speakText(currentQuestion.word.term);
+  }, [currentIndex, currentQuestion?.word?.term, feedback, isComplete]);
+
   function handleAnswer(answer) {
     if (feedback) {
       return;
@@ -50,13 +67,30 @@ function QuizPage() {
       : REVIEW_RESULTS.INCORRECT;
 
     setSelectedAnswer(answer);
-    setFeedback(isCorrect ? "correct" : "incorrect");
     setScore((currentScore) => currentScore + (isCorrect ? 1 : 0));
     maybeRecordDailyMistakeClear(currentQuestion.word, result);
     updateWord(currentQuestion.word.id, updateReviewResult(currentQuestion.word, result));
+
+    if (isCorrect) {
+      setFeedback("correct");
+      if (advanceTimerRef.current) {
+        window.clearTimeout(advanceTimerRef.current);
+      }
+      advanceTimerRef.current = window.setTimeout(() => {
+        handleNextQuestion();
+      }, 500);
+      return;
+    }
+
+    setFeedback("incorrect");
   }
 
   function handleNextQuestion() {
+    if (advanceTimerRef.current) {
+      window.clearTimeout(advanceTimerRef.current);
+      advanceTimerRef.current = null;
+    }
+
     setSelectedAnswer("");
     setFeedback(null);
 
@@ -197,24 +231,14 @@ function QuizPage() {
         })}
       </div>
 
-      {feedback ? (
+      {feedback === "incorrect" ? (
         <div className="mt-6 rounded-2xl border border-slate-200 bg-white p-5">
-          <p
-            className={
-              feedback === "correct"
-                ? "font-bold text-green-700"
-                : "font-bold text-red-700"
-            }
-          >
-            {feedback === "correct" ? t("quiz.correct") : t("quiz.incorrect")}
+          <p className="font-bold text-red-700">{t("quiz.incorrect")}</p>
+          <p className="mt-2 text-slate-600">
+            {t("quiz.correctAnswer", {
+              answer: currentQuestion.correctLabel,
+            })}
           </p>
-          {feedback === "incorrect" ? (
-            <p className="mt-2 text-slate-600">
-              {t("quiz.correctAnswer", {
-                answer: currentQuestion.correctLabel,
-              })}
-            </p>
-          ) : null}
           <div className="mt-4">
             <WordMemoryPanel compact word={currentWord} />
           </div>

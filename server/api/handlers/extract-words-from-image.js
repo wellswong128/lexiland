@@ -35,6 +35,8 @@ function normalizeExtractedWords(words) {
   return splitIntoSingleWordTerms(words).map((term) => ({ term }));
 }
 
+// Wordbase filtering at extract time is bulk-import-only (scripts/wordbase_import/).
+// Web photo scan returns every detected term; users choose what to save to their list.
 export default async function handler(request, response) {
   if (request.method !== "POST") {
     sendJson(response, 405, { error: "Method not allowed." });
