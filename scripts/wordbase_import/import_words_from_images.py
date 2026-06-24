@@ -20,9 +20,9 @@ sys.path.insert(0, str(SCRIPT_DIR))
 from api_client import ApiError, LexiLandApiClient, image_to_data_url, list_image_files
 from auth import AuthError, ImportAuth
 from completeness import (
+    is_complete,
     missing_detail_fields,
     missing_parts,
-    wordbase_entry_exists,
 )
 from config import load_settings
 from progress_store import ProgressIOError, append_round_log, ensure_term_record, load_progress, save_progress
@@ -128,13 +128,13 @@ def filter_terms_against_wordbase(
         entry = entries.get(term)
         record = ensure_term_record(progress, term, filename)
 
-        if wordbase_entry_exists(entry):
+        if is_complete(entry, locale):
             mark_term_exists_in_wordbase(record)
             skipped_terms.append(term)
             continue
 
         record["status"] = "pending"
-        record["missing"] = missing_parts(None, locale)
+        record["missing"] = missing_parts(entry, locale)
         record.pop("skipped_reason", None)
         record.pop("wordbase_exists", None)
 
@@ -255,7 +255,7 @@ def process_term(
     entry = None
     if not dry_run and import_auth is not None:
         entry = import_auth.run(lambda: fetch_entry(import_auth.client, term))
-        if wordbase_entry_exists(entry):
+        if is_complete(entry, locale):
             mark_term_exists_in_wordbase(record)
             print(f"  [{term}] exists in wordbase, skip")
             return record
