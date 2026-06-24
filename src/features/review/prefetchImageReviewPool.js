@@ -1,4 +1,4 @@
-import { createImageQuizQuestions } from "./imageQuizHelpers.js";
+import { createImageQuizQuestions, wordHasMemoryImage } from "./imageQuizHelpers.js";
 import { fetchWordImageWithCache } from "../words/wordImageApi.js";
 
 const EXTRA_PREFETCH_LIMIT = 12;
@@ -25,6 +25,19 @@ function buildPrefetchQueue(sessionWords, allWords) {
   return queue;
 }
 
+async function fetchWordImageIntoPool(word, workingWords, { updateWord, user } = {}) {
+  const result = await fetchWordImageWithCache(word, { user });
+
+  if (!result.changes) {
+    return workingWords;
+  }
+
+  const nextWords = applyWordChanges(workingWords, word.id, result.changes);
+  await updateWord(word.id, result.changes);
+
+  return nextWords;
+}
+
 export async function prefetchImageReviewPool(
   sessionWords,
   allWords,
@@ -33,18 +46,30 @@ export async function prefetchImageReviewPool(
   let workingWords = allWords;
   const queue = buildPrefetchQueue(sessionWords, allWords);
 
-  for (let index = 0; index < queue.length; index += 1) {
-    const word = queue[index];
-    const result = await fetchWordImageWithCache(word, { user });
+  for (let index = 0; index < sessionWords.length; index += 1) {
+    const word = sessionWords[index];
+    workingWords = await fetchWordImageIntoPool(word, workingWords, { updateWord, user });
+    onProgress?.(index + 1, sessionWords.length);
+  }
 
-    if (result.changes) {
-      workingWords = applyWordChanges(workingWords, word.id, result.changes);
-      await updateWord(word.id, result.changes);
+  let questions = createImageQuizQuestions(sessionWords, workingWords);
+
+  if (questions.length > 0) {
+    return { questions, words: workingWords };
+  }
+
+  for (let index = sessionWords.length; index < queue.length; index += 1) {
+    const word = queue[index];
+    const currentWord = workingWords.find((item) => item.id === word.id) ?? word;
+
+    if (wordHasMemoryImage(currentWord)) {
+      continue;
     }
 
+    workingWords = await fetchWordImageIntoPool(word, workingWords, { updateWord, user });
     onProgress?.(index + 1, queue.length);
 
-    const questions = createImageQuizQuestions(sessionWords, workingWords);
+    questions = createImageQuizQuestions(sessionWords, workingWords);
 
     if (questions.length > 0) {
       return { questions, words: workingWords };

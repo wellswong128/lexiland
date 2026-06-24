@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { Link, useSearchParams } from "react-router-dom";
 import ReviewWordListItem from "../components/ReviewWordListItem.jsx";
-import SpeakButton, { speakText } from "../components/SpeakButton.jsx";
+import SpeakButton, { primeSpeechSynthesis, speakText } from "../components/SpeakButton.jsx";
 import WordImageWithTranslationOverlay from "../components/WordImageWithTranslationOverlay.jsx";
 import WordMemoryPanel from "../components/WordMemoryPanel.jsx";
 import { useLocale } from "../features/locale/LocaleContext.jsx";
@@ -121,6 +121,12 @@ function FlashcardsPage() {
   const [feedback, setFeedback] = useState(null);
   const [sessionClearedCount, setSessionClearedCount] = useState(0);
   const [isComplete, setIsComplete] = useState(false);
+  const imageQuestionsRef = useRef([]);
+  const imageQuestionsLengthRef = useRef(0);
+  const lastSpokenRef = useRef({ index: -1, term: "" });
+
+  imageQuestionsRef.current = imageQuestions;
+  imageQuestionsLengthRef.current = imageQuestions.length;
 
   const currentQuestion = imageQuestions[currentIndex];
   const currentWord =
@@ -130,7 +136,23 @@ function FlashcardsPage() {
     total: imageQuestions.length || sessionWords.length,
   });
 
+  function speakWordAtIndex(index) {
+    const term = imageQuestionsRef.current[index]?.word?.term?.trim();
+
+    if (!term) {
+      return;
+    }
+
+    if (lastSpokenRef.current.index === index && lastSpokenRef.current.term === term) {
+      return;
+    }
+
+    lastSpokenRef.current = { index, term };
+    speakText(term);
+  }
+
   function handleStartReview() {
+    primeSpeechSynthesis();
     void startReview();
   }
 
@@ -174,6 +196,7 @@ function FlashcardsPage() {
       setSessionClearedCount(0);
       setIsComplete(false);
       setHasStarted(true);
+      lastSpokenRef.current = { index: -1, term: "" };
     } catch (error) {
       setPrepareError(error.message);
     } finally {
@@ -228,23 +251,31 @@ function FlashcardsPage() {
   }, [hasStarted, locale, sessionWords, updateWord, user]);
 
   useEffect(() => {
-    if (!hasStarted || isComplete || isPreparing || feedback || !currentWord?.term) {
-      return;
+    if (!hasStarted || isComplete || isPreparing || feedback) {
+      return undefined;
     }
 
-    speakText(currentWord.term);
-  }, [currentIndex, currentWord?.term, feedback, hasStarted, isComplete, isPreparing]);
+    const timerId = window.setTimeout(() => {
+      speakWordAtIndex(currentIndex);
+    }, 120);
+
+    return () => window.clearTimeout(timerId);
+  }, [currentIndex, feedback, hasStarted, isComplete, isPreparing]);
 
   function goToNextWord() {
     setSelectedAnswer("");
     setFeedback(null);
 
-    if (currentIndex >= imageQuestions.length - 1) {
-      setIsComplete(true);
-      return;
-    }
+    setCurrentIndex((index) => {
+      if (index >= imageQuestionsLengthRef.current - 1) {
+        setIsComplete(true);
+        return index;
+      }
 
-    setCurrentIndex((index) => index + 1);
+      speakWordAtIndex(index + 1);
+
+      return index + 1;
+    });
   }
 
   function handleBackToReviewList() {
@@ -299,7 +330,7 @@ function FlashcardsPage() {
     );
   }
 
-  if (sessionWords.length === 0) {
+  if (!hasStarted && sessionWords.length === 0) {
     const hasWords = reviewWords.length > 0;
 
     const emptyTitle = mistakesOnly

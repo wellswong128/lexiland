@@ -11,11 +11,22 @@ function speakText(text) {
 
   window.speechSynthesis.cancel();
 
-  const utterance = new SpeechSynthesisUtterance(text);
-  utterance.lang = "en-US";
-  utterance.rate = 0.85;
+  window.setTimeout(() => {
+    window.speechSynthesis.resume();
+    const utterance = new SpeechSynthesisUtterance(text.trim());
+    utterance.lang = "en-US";
+    utterance.rate = 0.85;
+    window.speechSynthesis.speak(utterance);
+  }, 120);
+}
 
-  window.speechSynthesis.speak(utterance);
+function primeSpeechSynthesis() {
+  if (!canSpeak()) {
+    return;
+  }
+
+  window.speechSynthesis.getVoices();
+  window.speechSynthesis.resume();
 }
 
 function SpeakButton({ className = "", text }) {
@@ -53,5 +64,5 @@ function SpeakButton({ className = "", text }) {
   );
 }
 
-export { speakText };
+export { primeSpeechSynthesis, speakText };
 export default SpeakButton;
