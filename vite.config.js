@@ -1,9 +1,50 @@
+import { execSync } from "node:child_process";
+import { readFileSync } from "node:fs";
 import { defineConfig, loadEnv } from "vite";
 import react from "@vitejs/plugin-react";
 import tailwindcss from "@tailwindcss/vite";
 import { VitePWA } from "vite-plugin-pwa";
 import { applyApiCors } from "./server/api/_cors.js";
 import { routeRequest } from "./server/api/router.js";
+
+function resolveAppVersion(env = process.env) {
+  const fromEnv = env.VERCEL_GIT_COMMIT_SHA?.slice(0, 7);
+
+  if (fromEnv) {
+    return fromEnv;
+  }
+
+  try {
+    return execSync("git rev-parse --short HEAD", { encoding: "utf8" }).trim();
+  } catch {
+    try {
+      const pkg = JSON.parse(readFileSync("package.json", "utf8"));
+      return pkg.version && pkg.version !== "0.0.0" ? pkg.version : "dev";
+    } catch {
+      return "dev";
+    }
+  }
+}
+
+function appVersionPlugin(appVersion) {
+  return {
+    name: "lexiland-app-version",
+    configureServer(server) {
+      server.middlewares.use("/version.json", (_request, response) => {
+        response.setHeader("Content-Type", "application/json");
+        response.setHeader("Cache-Control", "no-cache");
+        response.end(JSON.stringify({ version: appVersion }));
+      });
+    },
+    generateBundle() {
+      this.emitFile({
+        type: "asset",
+        fileName: "version.json",
+        source: `${JSON.stringify({ version: appVersion }, null, 2)}\n`,
+      });
+    },
+  };
+}
 
 function readRequestBody(request) {
   return new Promise((resolve, reject) => {
@@ -54,6 +95,7 @@ function localApiPlugin() {
 
 export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, process.cwd(), "");
+  const appVersion = resolveAppVersion(env);
 
   process.env.AGNES_API_KEY ||= env.AGNES_API_KEY;
   process.env.AGNES_MODEL ||= env.AGNES_MODEL;
@@ -61,10 +103,14 @@ export default defineConfig(({ mode }) => {
   process.env.AGNES_IMAGE_SIZE ||= env.AGNES_IMAGE_SIZE;
 
   return {
+    define: {
+      __APP_VERSION__: JSON.stringify(appVersion),
+    },
     plugins: [
       react(),
       tailwindcss(),
       localApiPlugin(),
+      appVersionPlugin(appVersion),
       VitePWA({
         registerType: "autoUpdate",
         includeAssets: [
@@ -76,6 +122,7 @@ export default defineConfig(({ mode }) => {
         manifest: false,
         workbox: {
           globPatterns: ["**/*.{js,css,html,ico,png,svg,webp,woff2,webmanifest}"],
+          globIgnores: ["**/version.json"],
           navigateFallback: "/index.html",
           navigateFallbackDenylist: [/^\/api\//],
           runtimeCaching: [

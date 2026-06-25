@@ -19,7 +19,9 @@ function PwaStatusPanel({ showInstallActions = true }) {
   const { canInstall, isInstalled, promptInstall } = usePwaInstall();
   const [isUpdating, setIsUpdating] = useState(false);
   const {
+    currentVersion,
     isOnline,
+    latestVersion,
     needsRefresh,
     offlineReady,
     platform,
@@ -31,6 +33,9 @@ function PwaStatusPanel({ showInstallActions = true }) {
   const serviceWorkerLabel = serviceWorkerSupported
     ? t(`pwa.serviceWorker.${serviceWorkerState}`)
     : t("pwa.serviceWorker.unsupported");
+  const refreshHint = latestVersion
+    ? t("pwa.refreshHintWithVersion", { version: latestVersion })
+    : t("pwa.refreshHint");
 
   async function handleUpdate() {
     if (isUpdating) {
@@ -83,11 +88,14 @@ function PwaStatusPanel({ showInstallActions = true }) {
           tone={offlineReady ? "success" : "default"}
           value={offlineReady ? t("pwa.yes") : t("pwa.no")}
         />
+        {currentVersion && currentVersion !== "dev" ? (
+          <StatusRow label={t("pwa.statusCurrentVersion")} value={currentVersion} />
+        ) : null}
       </div>
 
       {needsRefresh ? (
         <>
-          <p className="pwa-status-note pwa-status-note-info">{t("pwa.refreshHint")}</p>
+          <p className="pwa-status-note pwa-status-note-info">{refreshHint}</p>
           <button
             className="pwa-status-update-action"
             disabled={isUpdating}

@@ -1,9 +1,11 @@
 import { useEffect, useState } from "react";
+import { fetchLatestAppVersion, getAppVersion, hasRemoteVersionUpdate } from "../lib/appVersion.js";
 import { getIsStandaloneDisplay, getPwaPlatform, getServiceWorkerSupport } from "../lib/pwaPlatform.js";
 import { isCapacitorNative } from "../lib/platform.js";
 import {
   getNeedsRefresh,
   getOfflineReady,
+  markNeedsRefresh,
   probeNeedsRefresh,
   probeOfflineReady,
 } from "../lib/pwaRuntimeState.js";
@@ -14,7 +16,9 @@ export function usePwaRuntimeStatus() {
   );
   const [offlineReady, setOfflineReady] = useState(getOfflineReady);
   const [needsRefresh, setNeedsRefresh] = useState(getNeedsRefresh);
+  const [latestVersion, setLatestVersion] = useState(null);
   const [serviceWorkerState, setServiceWorkerState] = useState("checking");
+  const currentVersion = getAppVersion();
 
   useEffect(() => {
     function handleOnline() {
@@ -57,6 +61,57 @@ export function usePwaRuntimeStatus() {
       window.removeEventListener("lexiland:sw-needs-refresh", handleNeedsRefresh);
     };
   }, []);
+
+  useEffect(() => {
+    if (!isOnline || isCapacitorNative()) {
+      return undefined;
+    }
+
+    let cancelled = false;
+
+    async function syncLatestVersion() {
+      const remoteVersion = await fetchLatestAppVersion();
+
+      if (cancelled || !remoteVersion) {
+        return;
+      }
+
+      if (hasRemoteVersionUpdate(remoteVersion)) {
+        setLatestVersion(remoteVersion);
+        markNeedsRefresh();
+        setNeedsRefresh(true);
+        window.dispatchEvent(new CustomEvent("lexiland:sw-needs-refresh"));
+      }
+    }
+
+    void syncLatestVersion();
+
+    return () => {
+      cancelled = true;
+    };
+  }, [isOnline]);
+
+  useEffect(() => {
+    if (!needsRefresh || !isOnline || isCapacitorNative()) {
+      return undefined;
+    }
+
+    let cancelled = false;
+
+    async function loadLatestVersion() {
+      const remoteVersion = await fetchLatestAppVersion();
+
+      if (!cancelled && remoteVersion && hasRemoteVersionUpdate(remoteVersion)) {
+        setLatestVersion(remoteVersion);
+      }
+    }
+
+    void loadLatestVersion();
+
+    return () => {
+      cancelled = true;
+    };
+  }, [isOnline, needsRefresh]);
 
   useEffect(() => {
     if (isCapacitorNative()) {
@@ -118,8 +173,10 @@ export function usePwaRuntimeStatus() {
   }, []);
 
   return {
+    currentVersion,
     isInstalled: getIsStandaloneDisplay(),
     isOnline,
+    latestVersion,
     needsRefresh,
     offlineReady,
     platform: getPwaPlatform(),
