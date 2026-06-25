@@ -45,6 +45,57 @@ def _first_row(response: Any) -> dict[str, Any] | None:
     return None
 
 
+def fetch_entry_resolved(
+    client: Client,
+    term: str,
+    *,
+    alternate_term: str | None = None,
+) -> dict[str, Any] | None:
+    entry = fetch_entry(client, term)
+    if entry is not None:
+        return entry
+
+    alternate = str(alternate_term or "").strip()
+    if alternate and normalize_term(alternate) != normalize_term(term):
+        return fetch_entry(client, alternate)
+
+    return None
+
+
+def merge_suggestion_into_entry(
+    entry: dict[str, Any] | None,
+    suggestion: dict[str, Any],
+) -> dict[str, Any]:
+    merged = dict(entry or {})
+    scalar_fields = (
+        ("term", "term"),
+        ("definition", "definition"),
+        ("translation", "translation"),
+        ("pronunciation", "pronunciation"),
+        ("part_of_speech", "part_of_speech"),
+        ("example", "example"),
+        ("example_translation", "example_translation"),
+    )
+
+    for row_field, suggestion_field in scalar_fields:
+        if str(merged.get(row_field, "")).strip():
+            continue
+
+        value = suggestion.get(suggestion_field)
+        if value is not None and str(value).strip():
+            merged[row_field] = str(value).strip()
+
+    tags = merged.get("tags") or []
+    if not isinstance(tags, list) or not any(str(tag).strip() for tag in tags):
+        suggestion_tags = suggestion.get("tags") or []
+        if isinstance(suggestion_tags, list):
+            cleaned_tags = [str(tag).strip() for tag in suggestion_tags if str(tag).strip()]
+            if cleaned_tags:
+                merged["tags"] = cleaned_tags
+
+    return merged
+
+
 def fetch_entry(client: Client, term: str) -> dict[str, Any] | None:
     entries = fetch_entries(client, [term])
     term_key = normalize_term(term)

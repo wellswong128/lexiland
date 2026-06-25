@@ -20,14 +20,22 @@ sys.path.insert(0, str(SCRIPT_DIR))
 from api_client import ApiError, LexiLandApiClient, image_to_data_url, list_image_files
 from auth import AuthError, ImportAuth
 from completeness import (
+    is_complete,
     missing_detail_fields,
     missing_parts,
-    wordbase_entry_exists,
 )
 from config import load_settings
 from progress_store import ProgressIOError, append_round_log, ensure_term_record, load_progress, save_progress
 from terms import normalize_term, page_label_from_filename
-from wordbase_client import fetch_entries, fetch_entry, upsert_details, upsert_memory_image, upsert_memory_tips
+from wordbase_client import (
+    fetch_entries,
+    fetch_entry,
+    fetch_entry_resolved,
+    merge_suggestion_into_entry,
+    upsert_details,
+    upsert_memory_image,
+    upsert_memory_tips,
+)
 
 try:
     import httpx
@@ -128,7 +136,7 @@ def filter_terms_against_wordbase(
         entry = entries.get(term)
         record = ensure_term_record(progress, term, filename)
 
-        if wordbase_entry_exists(entry):
+        if is_complete(entry, locale):
             mark_term_exists_in_wordbase(record)
             skipped_terms.append(term)
             continue
@@ -255,10 +263,6 @@ def process_term(
     entry = None
     if not dry_run and import_auth is not None:
         entry = import_auth.run(lambda: fetch_entry(import_auth.client, term))
-        if wordbase_entry_exists(entry):
-            mark_term_exists_in_wordbase(record)
-            print(f"  [{term}] exists in wordbase, skip")
-            return record
 
     missing = missing_parts(entry, locale)
 
@@ -271,9 +275,13 @@ def process_term(
     record["missing"] = missing
     record["status"] = "incomplete"
 
+    current_step = "unknown"
+    suggestion: dict | None = None
+
     try:
         detail_fields_missing = missing_detail_fields(entry)
         if detail_fields_missing:
+            current_step = "complete"
             if dry_run:
                 print(f"  [{term}] complete-word ({', '.join(detail_fields_missing)})")
                 print("    dry-run: would call /api/complete-word and upsert details")
@@ -283,27 +291,38 @@ def process_term(
                 if not suggestion.get("definition"):
                     raise ApiError("Complete-word response missing definition.")
                 assert import_auth is not None
-                entry = import_auth.run(lambda: fetch_entry(import_auth.client, term))
+                existing = import_auth.run(lambda: fetch_entry(import_auth.client, term))
                 contributor_id = import_auth.contributor_id
                 import_auth.run(
                     lambda: upsert_details(
                         import_auth.client,
                         suggestion,
                         contributor_id,
-                        entry,
+                        existing,
                     )
                 )
-                entry = import_auth.run(lambda: fetch_entry(import_auth.client, term))
+                entry = import_auth.run(
+                    lambda: fetch_entry_resolved(
+                        import_auth.client,
+                        term,
+                        alternate_term=suggestion.get("term"),
+                    )
+                )
+                entry = merge_suggestion_into_entry(entry, suggestion)
+                if not str((entry or {}).get("definition", "")).strip():
+                    raise ApiError("Complete-word upsert did not persist definition.")
 
         missing = missing_parts(entry, locale)
         if "memory_tips" in missing:
-            if not str((entry or {}).get("definition", "")).strip():
+            current_step = "memory_tips"
+            word_context = entry or merge_suggestion_into_entry(None, suggestion or {"term": term})
+            if not str(word_context.get("definition", "")).strip():
                 raise ApiError("Cannot generate memory tips without definition.")
             print(f"  [{term}] memory-tips")
             if dry_run:
                 print("    dry-run: would call /api/word-memory-tips and upsert tips")
             else:
-                tips = api.memory_tips(entry or {"term": term}, locale)
+                tips = api.memory_tips(word_context, locale)
                 if not tips.get("tips"):
                     raise ApiError("Memory tips response was empty.")
                 assert import_auth is not None
@@ -311,51 +330,57 @@ def process_term(
                 import_auth.run(
                     lambda: upsert_memory_tips(
                         import_auth.client,
-                        entry or {"term": term},
+                        word_context,
                         locale,
                         tips,
                         contributor_id,
                         entry,
                     )
                 )
-                entry = import_auth.run(lambda: fetch_entry(import_auth.client, term))
+                entry = import_auth.run(
+                    lambda: fetch_entry_resolved(
+                        import_auth.client,
+                        term,
+                        alternate_term=word_context.get("term"),
+                    )
+                ) or word_context
 
         missing = missing_parts(entry, locale)
         if "memory_image" in missing:
-            if not str((entry or {}).get("definition", "")).strip():
+            current_step = "memory_image"
+            word_context = entry or merge_suggestion_into_entry(None, suggestion or {"term": term})
+            if not str(word_context.get("definition", "")).strip():
                 raise ApiError("Cannot generate memory image without definition.")
             print(f"  [{term}] memory-image")
             if dry_run:
                 print("    dry-run: would call /api/word-memory-image and upsert image")
             else:
-                image = api.memory_image(entry or {"term": term})
+                image = api.memory_image(word_context)
                 assert import_auth is not None
                 contributor_id = import_auth.contributor_id
                 import_auth.run(
                     lambda: upsert_memory_image(
                         import_auth.client,
-                        entry or {"term": term},
+                        word_context,
                         image,
                         contributor_id,
                         entry,
                     )
                 )
-                entry = import_auth.run(lambda: fetch_entry(import_auth.client, term))
+                entry = import_auth.run(
+                    lambda: fetch_entry_resolved(
+                        import_auth.client,
+                        term,
+                        alternate_term=word_context.get("term"),
+                    )
+                ) or word_context
 
     except AuthError as error:
         record["last_errors"] = {**record.get("last_errors", {}), "auth": str(error)}
         raise
     except Exception as error:
-        step = "unknown"
-        current_missing = missing_parts(entry, locale)
-        if any(field in current_missing for field in missing_detail_fields(entry)):
-            step = "complete"
-        elif "memory_tips" in current_missing:
-            step = "memory_tips"
-        elif "memory_image" in current_missing:
-            step = "memory_image"
-        record["last_errors"] = {**record.get("last_errors", {}), step: str(error)}
-        print(f"    failed ({step}): {error}")
+        record["last_errors"] = {**record.get("last_errors", {}), current_step: str(error)}
+        print(f"    failed ({current_step}): {error}")
         return record
 
     missing = missing_parts(entry, locale)

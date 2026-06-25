@@ -36,16 +36,10 @@ function AppLayout({ children }) {
   useGameViewport(isGamePage);
 
   useEffect(() => {
-    if (!isGamePage) {
-      return undefined;
-    }
-
     window.scrollTo(0, 0);
     document.documentElement.scrollTop = 0;
     document.body.scrollTop = 0;
-
-    return undefined;
-  }, [isGamePage, location.pathname]);
+  }, [location.pathname, location.search]);
 
   useEffect(() => {
     const root = document.documentElement;
