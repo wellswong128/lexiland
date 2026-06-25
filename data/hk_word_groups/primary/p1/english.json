@@ -7,6 +7,15 @@
   "version": "2026.06",
   "display_name_en": "P1 English",
   "display_name_zh_hant": "小一英文",
+  "source": {
+    "type": "curriculum_style_public_references",
+    "references": [
+      "EDB English Language Education Curriculum Guide (Primary 1-6) (2025)",
+      "EDB primary English language skills development resources for Key Stage 1",
+      "EDB English vocabulary wordlist preamble and theme-based vocabulary guidance"
+    ],
+    "note": "No fixed official Hong Kong P1 vocabulary list is prescribed; this list is theme-based for lower-primary English enrichment import. Term-only entries are completed during import."
+  },
   "words": [
     {
       "term": "hello",
@@ -14,7 +23,13 @@
       "translation": "你好",
       "example": "Hello, I am Tom.",
       "example_translation": "你好，我是 Tom。",
-      "tags": ["hk", "primary", "p1", "english", "greeting"]
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "greeting"
+      ]
     },
     {
       "term": "goodbye",
@@ -22,7 +37,13 @@
       "translation": "再見",
       "example": "Goodbye, see you tomorrow.",
       "example_translation": "再見，明天見。",
-      "tags": ["hk", "primary", "p1", "english", "greeting"]
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "greeting"
+      ]
     },
     {
       "term": "please",
@@ -30,7 +51,13 @@
       "translation": "請",
       "example": "Please sit down.",
       "example_translation": "請坐下。",
-      "tags": ["hk", "primary", "p1", "english", "courtesy"]
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "courtesy"
+      ]
     },
     {
       "term": "thank",
@@ -38,7 +65,13 @@
       "translation": "感謝",
       "example": "Thank you, teacher.",
       "example_translation": "謝謝你，老師。",
-      "tags": ["hk", "primary", "p1", "english", "courtesy"]
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "courtesy"
+      ]
     },
     {
       "term": "sorry",
@@ -46,7 +79,13 @@
       "translation": "對不起",
       "example": "I am sorry.",
       "example_translation": "對不起。",
-      "tags": ["hk", "primary", "p1", "english", "courtesy"]
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "courtesy"
+      ]
     },
     {
       "term": "yes",
@@ -54,7 +93,13 @@
       "translation": "是",
       "example": "Yes, I can.",
       "example_translation": "是，我可以。",
-      "tags": ["hk", "primary", "p1", "english", "basic"]
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "basic"
+      ]
     },
     {
       "term": "no",
@@ -62,7 +107,13 @@
       "translation": "不",
       "example": "No, thank you.",
       "example_translation": "不用了，謝謝。",
-      "tags": ["hk", "primary", "p1", "english", "basic"]
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "basic"
+      ]
     },
     {
       "term": "I",
@@ -70,7 +121,13 @@
       "translation": "我",
       "example": "I am a boy.",
       "example_translation": "我是一個男孩。",
-      "tags": ["hk", "primary", "p1", "english", "pronoun"]
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "pronoun"
+      ]
     },
     {
       "term": "you",
@@ -78,7 +135,13 @@
       "translation": "你",
       "example": "You are my friend.",
       "example_translation": "你是我的朋友。",
-      "tags": ["hk", "primary", "p1", "english", "pronoun"]
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "pronoun"
+      ]
     },
     {
       "term": "my",
@@ -86,7 +149,13 @@
       "translation": "我的",
       "example": "This is my bag.",
       "example_translation": "這是我的書包。",
-      "tags": ["hk", "primary", "p1", "english", "pronoun"]
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "pronoun"
+      ]
     },
     {
       "term": "name",
@@ -94,7 +163,13 @@
       "translation": "名字",
       "example": "My name is Amy.",
       "example_translation": "我的名字是 Amy。",
-      "tags": ["hk", "primary", "p1", "english", "personal"]
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "personal"
+      ]
     },
     {
       "term": "boy",
@@ -102,7 +177,13 @@
       "translation": "男孩",
       "example": "He is a boy.",
       "example_translation": "他是一個男孩。",
-      "tags": ["hk", "primary", "p1", "english", "people"]
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "people"
+      ]
     },
     {
       "term": "girl",
@@ -110,7 +191,13 @@
       "translation": "女孩",
       "example": "She is a girl.",
       "example_translation": "她是一個女孩。",
-      "tags": ["hk", "primary", "p1", "english", "people"]
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "people"
+      ]
     },
     {
       "term": "friend",
@@ -118,7 +205,13 @@
       "translation": "朋友",
       "example": "Tom is my friend.",
       "example_translation": "Tom 是我的朋友。",
-      "tags": ["hk", "primary", "p1", "english", "people"]
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "people"
+      ]
     },
     {
       "term": "teacher",
@@ -126,7 +219,13 @@
       "translation": "老師",
       "example": "My teacher is kind.",
       "example_translation": "我的老師很親切。",
-      "tags": ["hk", "primary", "p1", "english", "school"]
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "school"
+      ]
     },
     {
       "term": "father",
@@ -134,7 +233,13 @@
       "translation": "爸爸",
       "example": "My father is tall.",
       "example_translation": "我的爸爸很高。",
-      "tags": ["hk", "primary", "p1", "english", "family"]
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "family"
+      ]
     },
     {
       "term": "mother",
@@ -142,7 +247,13 @@
       "translation": "媽媽",
       "example": "My mother cooks dinner.",
       "example_translation": "我的媽媽做晚餐。",
-      "tags": ["hk", "primary", "p1", "english", "family"]
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "family"
+      ]
     },
     {
       "term": "brother",
@@ -150,7 +261,13 @@
       "translation": "哥哥／弟弟",
       "example": "I have one brother.",
       "example_translation": "我有一個兄弟。",
-      "tags": ["hk", "primary", "p1", "english", "family"]
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "family"
+      ]
     },
     {
       "term": "sister",
@@ -158,7 +275,13 @@
       "translation": "姐姐／妹妹",
       "example": "My sister is six.",
       "example_translation": "我的妹妹六歲。",
-      "tags": ["hk", "primary", "p1", "english", "family"]
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "family"
+      ]
     },
     {
       "term": "baby",
@@ -166,7 +289,13 @@
       "translation": "嬰兒",
       "example": "The baby is sleeping.",
       "example_translation": "嬰兒在睡覺。",
-      "tags": ["hk", "primary", "p1", "english", "family"]
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "family"
+      ]
     },
     {
       "term": "one",
@@ -174,7 +303,13 @@
       "translation": "一",
       "example": "I have one cat.",
       "example_translation": "我有一隻貓。",
-      "tags": ["hk", "primary", "p1", "english", "number"]
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "number"
+      ]
     },
     {
       "term": "two",
@@ -182,7 +317,13 @@
       "translation": "二",
       "example": "I see two birds.",
       "example_translation": "我看見兩隻鳥。",
-      "tags": ["hk", "primary", "p1", "english", "number"]
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "number"
+      ]
     },
     {
       "term": "three",
@@ -190,7 +331,13 @@
       "translation": "三",
       "example": "There are three pens.",
       "example_translation": "有三枝筆。",
-      "tags": ["hk", "primary", "p1", "english", "number"]
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "number"
+      ]
     },
     {
       "term": "four",
@@ -198,7 +345,13 @@
       "translation": "四",
       "example": "Four boys are playing.",
       "example_translation": "四個男孩在玩耍。",
-      "tags": ["hk", "primary", "p1", "english", "number"]
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "number"
+      ]
     },
     {
       "term": "five",
@@ -206,7 +359,13 @@
       "translation": "五",
       "example": "I can count to five.",
       "example_translation": "我會數到五。",
-      "tags": ["hk", "primary", "p1", "english", "number"]
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "number"
+      ]
     },
     {
       "term": "six",
@@ -214,7 +373,13 @@
       "translation": "六",
       "example": "She is six years old.",
       "example_translation": "她六歲。",
-      "tags": ["hk", "primary", "p1", "english", "number"]
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "number"
+      ]
     },
     {
       "term": "seven",
@@ -222,7 +387,13 @@
       "translation": "七",
       "example": "There are seven days in a week.",
       "example_translation": "一個星期有七天。",
-      "tags": ["hk", "primary", "p1", "english", "number"]
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "number"
+      ]
     },
     {
       "term": "eight",
@@ -230,7 +401,13 @@
       "translation": "八",
       "example": "I have eight books.",
       "example_translation": "我有八本書。",
-      "tags": ["hk", "primary", "p1", "english", "number"]
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "number"
+      ]
     },
     {
       "term": "nine",
@@ -238,7 +415,13 @@
       "translation": "九",
       "example": "Nine girls are singing.",
       "example_translation": "九個女孩在唱歌。",
-      "tags": ["hk", "primary", "p1", "english", "number"]
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "number"
+      ]
     },
     {
       "term": "ten",
@@ -246,7 +429,13 @@
       "translation": "十",
       "example": "I can count to ten.",
       "example_translation": "我會數到十。",
-      "tags": ["hk", "primary", "p1", "english", "number"]
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "number"
+      ]
     },
     {
       "term": "red",
@@ -254,7 +443,13 @@
       "translation": "紅色",
       "example": "The bag is red.",
       "example_translation": "書包是紅色的。",
-      "tags": ["hk", "primary", "p1", "english", "colour"]
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "colour"
+      ]
     },
     {
       "term": "blue",
@@ -262,7 +457,13 @@
       "translation": "藍色",
       "example": "My pen is blue.",
       "example_translation": "我的筆是藍色的。",
-      "tags": ["hk", "primary", "p1", "english", "colour"]
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "colour"
+      ]
     },
     {
       "term": "green",
@@ -270,7 +471,13 @@
       "translation": "綠色",
       "example": "The tree is green.",
       "example_translation": "樹是綠色的。",
-      "tags": ["hk", "primary", "p1", "english", "colour"]
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "colour"
+      ]
     },
     {
       "term": "yellow",
@@ -278,7 +485,13 @@
       "translation": "黃色",
       "example": "The rubber is yellow.",
       "example_translation": "橡皮擦是黃色的。",
-      "tags": ["hk", "primary", "p1", "english", "colour"]
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "colour"
+      ]
     },
     {
       "term": "black",
@@ -286,7 +499,13 @@
       "translation": "黑色",
       "example": "My shoes are black.",
       "example_translation": "我的鞋是黑色的。",
-      "tags": ["hk", "primary", "p1", "english", "colour"]
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "colour"
+      ]
     },
     {
       "term": "white",
@@ -294,7 +513,13 @@
       "translation": "白色",
       "example": "The board is white.",
       "example_translation": "白板是白色的。",
-      "tags": ["hk", "primary", "p1", "english", "colour"]
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "colour"
+      ]
     },
     {
       "term": "book",
@@ -302,7 +527,13 @@
       "translation": "書",
       "example": "This is my English book.",
       "example_translation": "這是我的英文書。",
-      "tags": ["hk", "primary", "p1", "english", "classroom"]
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "classroom"
+      ]
     },
     {
       "term": "pen",
@@ -310,7 +541,13 @@
       "translation": "原子筆",
       "example": "I write with a pen.",
       "example_translation": "我用原子筆寫字。",
-      "tags": ["hk", "primary", "p1", "english", "classroom"]
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "classroom"
+      ]
     },
     {
       "term": "pencil",
@@ -318,7 +555,13 @@
       "translation": "鉛筆",
       "example": "Draw a cat with a pencil.",
       "example_translation": "用鉛筆畫一隻貓。",
-      "tags": ["hk", "primary", "p1", "english", "classroom"]
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "classroom"
+      ]
     },
     {
       "term": "bag",
@@ -326,7 +569,13 @@
       "translation": "書包",
       "example": "My bag is heavy.",
       "example_translation": "我的書包很重。",
-      "tags": ["hk", "primary", "p1", "english", "classroom"]
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "classroom"
+      ]
     },
     {
       "term": "desk",
@@ -334,7 +583,13 @@
       "translation": "書桌",
       "example": "The book is on the desk.",
       "example_translation": "書在書桌上。",
-      "tags": ["hk", "primary", "p1", "english", "classroom"]
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "classroom"
+      ]
     },
     {
       "term": "chair",
@@ -342,7 +597,13 @@
       "translation": "椅子",
       "example": "Please sit on the chair.",
       "example_translation": "請坐在椅子上。",
-      "tags": ["hk", "primary", "p1", "english", "classroom"]
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "classroom"
+      ]
     },
     {
       "term": "door",
@@ -350,7 +611,13 @@
       "translation": "門",
       "example": "Close the door, please.",
       "example_translation": "請關門。",
-      "tags": ["hk", "primary", "p1", "english", "classroom"]
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "classroom"
+      ]
     },
     {
       "term": "window",
@@ -358,7 +625,13 @@
       "translation": "窗",
       "example": "Look out of the window.",
       "example_translation": "向窗外看。",
-      "tags": ["hk", "primary", "p1", "english", "classroom"]
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "classroom"
+      ]
     },
     {
       "term": "ruler",
@@ -366,7 +639,13 @@
       "translation": "間尺",
       "example": "I draw a line with a ruler.",
       "example_translation": "我用間尺畫一條線。",
-      "tags": ["hk", "primary", "p1", "english", "classroom"]
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "classroom"
+      ]
     },
     {
       "term": "rubber",
@@ -374,7 +653,13 @@
       "translation": "橡皮擦",
       "example": "Use a rubber to erase it.",
       "example_translation": "用橡皮擦把它擦掉。",
-      "tags": ["hk", "primary", "p1", "english", "classroom"]
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "classroom"
+      ]
     },
     {
       "term": "head",
@@ -382,7 +667,13 @@
       "translation": "頭",
       "example": "Touch your head.",
       "example_translation": "摸摸你的頭。",
-      "tags": ["hk", "primary", "p1", "english", "body"]
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "body"
+      ]
     },
     {
       "term": "eye",
@@ -390,7 +681,13 @@
       "translation": "眼睛",
       "example": "I have two eyes.",
       "example_translation": "我有兩隻眼睛。",
-      "tags": ["hk", "primary", "p1", "english", "body"]
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "body"
+      ]
     },
     {
       "term": "ear",
@@ -398,7 +695,13 @@
       "translation": "耳朵",
       "example": "The rabbit has long ears.",
       "example_translation": "兔子有長耳朵。",
-      "tags": ["hk", "primary", "p1", "english", "body"]
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "body"
+      ]
     },
     {
       "term": "nose",
@@ -406,7 +709,13 @@
       "translation": "鼻子",
       "example": "Touch your nose.",
       "example_translation": "摸摸你的鼻子。",
-      "tags": ["hk", "primary", "p1", "english", "body"]
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "body"
+      ]
     },
     {
       "term": "mouth",
@@ -414,7 +723,13 @@
       "translation": "嘴巴",
       "example": "Open your mouth.",
       "example_translation": "張開你的嘴巴。",
-      "tags": ["hk", "primary", "p1", "english", "body"]
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "body"
+      ]
     },
     {
       "term": "hand",
@@ -422,7 +737,13 @@
       "translation": "手",
       "example": "Wash your hands.",
       "example_translation": "洗洗手。",
-      "tags": ["hk", "primary", "p1", "english", "body"]
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "body"
+      ]
     },
     {
       "term": "arm",
@@ -430,7 +751,13 @@
       "translation": "手臂",
       "example": "Raise your arm.",
       "example_translation": "舉起你的手臂。",
-      "tags": ["hk", "primary", "p1", "english", "body"]
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "body"
+      ]
     },
     {
       "term": "leg",
@@ -438,7 +765,13 @@
       "translation": "腿",
       "example": "The boy has two legs.",
       "example_translation": "男孩有兩條腿。",
-      "tags": ["hk", "primary", "p1", "english", "body"]
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "body"
+      ]
     },
     {
       "term": "foot",
@@ -446,7 +779,13 @@
       "translation": "腳",
       "example": "My foot is small.",
       "example_translation": "我的腳很小。",
-      "tags": ["hk", "primary", "p1", "english", "body"]
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "body"
+      ]
     },
     {
       "term": "cat",
@@ -454,7 +793,13 @@
       "translation": "貓",
       "example": "The cat is cute.",
       "example_translation": "這隻貓很可愛。",
-      "tags": ["hk", "primary", "p1", "english", "animal"]
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "animal"
+      ]
     },
     {
       "term": "dog",
@@ -462,7 +807,13 @@
       "translation": "狗",
       "example": "The dog can run fast.",
       "example_translation": "這隻狗跑得很快。",
-      "tags": ["hk", "primary", "p1", "english", "animal"]
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "animal"
+      ]
     },
     {
       "term": "bird",
@@ -470,7 +821,13 @@
       "translation": "鳥",
       "example": "The bird can fly.",
       "example_translation": "鳥會飛。",
-      "tags": ["hk", "primary", "p1", "english", "animal"]
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "animal"
+      ]
     },
     {
       "term": "fish",
@@ -478,7 +835,13 @@
       "translation": "魚",
       "example": "The fish is in the water.",
       "example_translation": "魚在水裡。",
-      "tags": ["hk", "primary", "p1", "english", "animal"]
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "animal"
+      ]
     },
     {
       "term": "pig",
@@ -486,7 +849,13 @@
       "translation": "豬",
       "example": "The pig is pink.",
       "example_translation": "豬是粉紅色的。",
-      "tags": ["hk", "primary", "p1", "english", "animal"]
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "animal"
+      ]
     },
     {
       "term": "cow",
@@ -494,7 +863,13 @@
       "translation": "牛",
       "example": "The cow eats grass.",
       "example_translation": "牛吃草。",
-      "tags": ["hk", "primary", "p1", "english", "animal"]
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "animal"
+      ]
     },
     {
       "term": "duck",
@@ -502,7 +877,13 @@
       "translation": "鴨",
       "example": "The duck is in the pond.",
       "example_translation": "鴨在池塘裡。",
-      "tags": ["hk", "primary", "p1", "english", "animal"]
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "animal"
+      ]
     },
     {
       "term": "hen",
@@ -510,7 +891,13 @@
       "translation": "母雞",
       "example": "The hen lays eggs.",
       "example_translation": "母雞會生蛋。",
-      "tags": ["hk", "primary", "p1", "english", "animal"]
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "animal"
+      ]
     },
     {
       "term": "apple",
@@ -518,7 +905,13 @@
       "translation": "蘋果",
       "example": "I eat an apple.",
       "example_translation": "我吃一個蘋果。",
-      "tags": ["hk", "primary", "p1", "english", "food"]
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "food"
+      ]
     },
     {
       "term": "banana",
@@ -526,7 +919,13 @@
       "translation": "香蕉",
       "example": "The monkey likes bananas.",
       "example_translation": "猴子喜歡香蕉。",
-      "tags": ["hk", "primary", "p1", "english", "food"]
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "food"
+      ]
     },
     {
       "term": "orange",
@@ -534,7 +933,13 @@
       "translation": "橙",
       "example": "I like oranges.",
       "example_translation": "我喜歡橙。",
-      "tags": ["hk", "primary", "p1", "english", "food"]
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "food"
+      ]
     },
     {
       "term": "egg",
@@ -542,7 +947,13 @@
       "translation": "雞蛋",
       "example": "I eat an egg for breakfast.",
       "example_translation": "我早餐吃一隻雞蛋。",
-      "tags": ["hk", "primary", "p1", "english", "food"]
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "food"
+      ]
     },
     {
       "term": "milk",
@@ -550,7 +961,13 @@
       "translation": "牛奶",
       "example": "I drink milk every day.",
       "example_translation": "我每天喝牛奶。",
-      "tags": ["hk", "primary", "p1", "english", "food"]
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "food"
+      ]
     },
     {
       "term": "bread",
@@ -558,7 +975,13 @@
       "translation": "麵包",
       "example": "I eat bread for breakfast.",
       "example_translation": "我早餐吃麵包。",
-      "tags": ["hk", "primary", "p1", "english", "food"]
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "food"
+      ]
     },
     {
       "term": "rice",
@@ -566,7 +989,13 @@
       "translation": "飯",
       "example": "We eat rice for dinner.",
       "example_translation": "我們晚餐吃飯。",
-      "tags": ["hk", "primary", "p1", "english", "food"]
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "food"
+      ]
     },
     {
       "term": "water",
@@ -574,7 +1003,13 @@
       "translation": "水",
       "example": "Drink some water, please.",
       "example_translation": "請喝點水。",
-      "tags": ["hk", "primary", "p1", "english", "food"]
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "food"
+      ]
     },
     {
       "term": "school",
@@ -582,7 +1017,13 @@
       "translation": "學校",
       "example": "I go to school every day.",
       "example_translation": "我每天上學。",
-      "tags": ["hk", "primary", "p1", "english", "place"]
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "place"
+      ]
     },
     {
       "term": "home",
@@ -590,7 +1031,13 @@
       "translation": "家",
       "example": "I go home after school.",
       "example_translation": "我放學後回家。",
-      "tags": ["hk", "primary", "p1", "english", "place"]
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "place"
+      ]
     },
     {
       "term": "room",
@@ -598,7 +1045,13 @@
       "translation": "房間",
       "example": "This is my room.",
       "example_translation": "這是我的房間。",
-      "tags": ["hk", "primary", "p1", "english", "place"]
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "place"
+      ]
     },
     {
       "term": "run",
@@ -606,7 +1059,13 @@
       "translation": "跑",
       "example": "The dog can run fast.",
       "example_translation": "狗跑得很快。",
-      "tags": ["hk", "primary", "p1", "english", "action"]
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "action"
+      ]
     },
     {
       "term": "jump",
@@ -614,7 +1073,13 @@
       "translation": "跳",
       "example": "The rabbit can jump.",
       "example_translation": "兔子會跳。",
-      "tags": ["hk", "primary", "p1", "english", "action"]
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "action"
+      ]
     },
     {
       "term": "walk",
@@ -622,7 +1087,13 @@
       "translation": "走",
       "example": "We walk to school.",
       "example_translation": "我們走路去學校。",
-      "tags": ["hk", "primary", "p1", "english", "action"]
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "action"
+      ]
     },
     {
       "term": "sit",
@@ -630,7 +1101,13 @@
       "translation": "坐",
       "example": "Please sit down.",
       "example_translation": "請坐下。",
-      "tags": ["hk", "primary", "p1", "english", "action"]
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "action"
+      ]
     },
     {
       "term": "stand",
@@ -638,7 +1115,13 @@
       "translation": "站",
       "example": "Please stand up.",
       "example_translation": "請站起來。",
-      "tags": ["hk", "primary", "p1", "english", "action"]
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "action"
+      ]
     },
     {
       "term": "read",
@@ -646,7 +1129,13 @@
       "translation": "閱讀",
       "example": "I read a book.",
       "example_translation": "我讀一本書。",
-      "tags": ["hk", "primary", "p1", "english", "action"]
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "action"
+      ]
     },
     {
       "term": "write",
@@ -654,7 +1143,13 @@
       "translation": "寫",
       "example": "I write my name.",
       "example_translation": "我寫我的名字。",
-      "tags": ["hk", "primary", "p1", "english", "action"]
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "action"
+      ]
     },
     {
       "term": "draw",
@@ -662,7 +1157,13 @@
       "translation": "畫",
       "example": "I draw a cat.",
       "example_translation": "我畫一隻貓。",
-      "tags": ["hk", "primary", "p1", "english", "action"]
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "action"
+      ]
     },
     {
       "term": "sing",
@@ -670,7 +1171,13 @@
       "translation": "唱歌",
       "example": "We sing a song.",
       "example_translation": "我們唱一首歌。",
-      "tags": ["hk", "primary", "p1", "english", "action"]
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "action"
+      ]
     },
     {
       "term": "dance",
@@ -678,7 +1185,13 @@
       "translation": "跳舞",
       "example": "The girls dance happily.",
       "example_translation": "女孩們開心地跳舞。",
-      "tags": ["hk", "primary", "p1", "english", "action"]
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "action"
+      ]
     },
     {
       "term": "play",
@@ -686,7 +1199,13 @@
       "translation": "玩耍",
       "example": "The children play in the playground.",
       "example_translation": "小朋友在遊樂場玩耍。",
-      "tags": ["hk", "primary", "p1", "english", "action"]
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "action"
+      ]
     },
     {
       "term": "eat",
@@ -694,7 +1213,13 @@
       "translation": "吃",
       "example": "I eat an apple.",
       "example_translation": "我吃一個蘋果。",
-      "tags": ["hk", "primary", "p1", "english", "action"]
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "action"
+      ]
     },
     {
       "term": "drink",
@@ -702,7 +1227,13 @@
       "translation": "喝",
       "example": "I drink water.",
       "example_translation": "我喝水。",
-      "tags": ["hk", "primary", "p1", "english", "action"]
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "action"
+      ]
     },
     {
       "term": "sleep",
@@ -710,7 +1241,13 @@
       "translation": "睡覺",
       "example": "The baby is sleeping.",
       "example_translation": "嬰兒在睡覺。",
-      "tags": ["hk", "primary", "p1", "english", "action"]
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "action"
+      ]
     },
     {
       "term": "look",
@@ -718,7 +1255,13 @@
       "translation": "看",
       "example": "Look at the board.",
       "example_translation": "看白板。",
-      "tags": ["hk", "primary", "p1", "english", "action"]
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "action"
+      ]
     },
     {
       "term": "listen",
@@ -726,7 +1269,13 @@
       "translation": "聽",
       "example": "Listen to the teacher.",
       "example_translation": "聽老師說。",
-      "tags": ["hk", "primary", "p1", "english", "action"]
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "action"
+      ]
     },
     {
       "term": "speak",
@@ -734,7 +1283,13 @@
       "translation": "說",
       "example": "Speak English in class.",
       "example_translation": "在課堂上說英文。",
-      "tags": ["hk", "primary", "p1", "english", "action"]
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "action"
+      ]
     },
     {
       "term": "big",
@@ -742,7 +1297,13 @@
       "translation": "大",
       "example": "The bag is big.",
       "example_translation": "書包很大。",
-      "tags": ["hk", "primary", "p1", "english", "adjective"]
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "adjective"
+      ]
     },
     {
       "term": "small",
@@ -750,7 +1311,13 @@
       "translation": "小",
       "example": "The cat is small.",
       "example_translation": "貓很小。",
-      "tags": ["hk", "primary", "p1", "english", "adjective"]
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "adjective"
+      ]
     },
     {
       "term": "long",
@@ -758,7 +1325,13 @@
       "translation": "長",
       "example": "The ruler is long.",
       "example_translation": "間尺很長。",
-      "tags": ["hk", "primary", "p1", "english", "adjective"]
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "adjective"
+      ]
     },
     {
       "term": "short",
@@ -766,7 +1339,13 @@
       "translation": "短",
       "example": "The pencil is short.",
       "example_translation": "鉛筆很短。",
-      "tags": ["hk", "primary", "p1", "english", "adjective"]
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "adjective"
+      ]
     },
     {
       "term": "happy",
@@ -774,7 +1353,13 @@
       "translation": "開心",
       "example": "I am happy today.",
       "example_translation": "我今天很開心。",
-      "tags": ["hk", "primary", "p1", "english", "adjective"]
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "adjective"
+      ]
     },
     {
       "term": "sad",
@@ -782,7 +1367,13 @@
       "translation": "傷心",
       "example": "The boy is sad.",
       "example_translation": "男孩很傷心。",
-      "tags": ["hk", "primary", "p1", "english", "adjective"]
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "adjective"
+      ]
     },
     {
       "term": "good",
@@ -790,7 +1381,13 @@
       "translation": "好",
       "example": "Good job!",
       "example_translation": "做得好！",
-      "tags": ["hk", "primary", "p1", "english", "adjective"]
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "adjective"
+      ]
     },
     {
       "term": "new",
@@ -798,7 +1395,13 @@
       "translation": "新",
       "example": "This is my new bag.",
       "example_translation": "這是我的新書包。",
-      "tags": ["hk", "primary", "p1", "english", "adjective"]
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "adjective"
+      ]
     },
     {
       "term": "old",
@@ -806,7 +1409,13 @@
       "translation": "舊／老",
       "example": "My grandpa is old.",
       "example_translation": "我的爺爺年紀大。",
-      "tags": ["hk", "primary", "p1", "english", "adjective"]
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "adjective"
+      ]
     },
     {
       "term": "hot",
@@ -814,7 +1423,13 @@
       "translation": "熱",
       "example": "The soup is hot.",
       "example_translation": "湯很熱。",
-      "tags": ["hk", "primary", "p1", "english", "adjective"]
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "adjective"
+      ]
     },
     {
       "term": "cold",
@@ -822,7 +1437,13 @@
       "translation": "冷",
       "example": "The water is cold.",
       "example_translation": "水很冷。",
-      "tags": ["hk", "primary", "p1", "english", "adjective"]
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "adjective"
+      ]
     },
     {
       "term": "like",
@@ -830,7 +1451,13 @@
       "translation": "喜歡",
       "example": "I like cats.",
       "example_translation": "我喜歡貓。",
-      "tags": ["hk", "primary", "p1", "english", "verb"]
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "verb"
+      ]
     },
     {
       "term": "can",
@@ -838,7 +1465,13 @@
       "translation": "能夠",
       "example": "I can read.",
       "example_translation": "我會閱讀。",
-      "tags": ["hk", "primary", "p1", "english", "verb"]
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "verb"
+      ]
     },
     {
       "term": "go",
@@ -846,7 +1479,13 @@
       "translation": "去",
       "example": "I go to school.",
       "example_translation": "我去上學。",
-      "tags": ["hk", "primary", "p1", "english", "verb"]
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "verb"
+      ]
     },
     {
       "term": "come",
@@ -854,7 +1493,4479 @@
       "translation": "來",
       "example": "Come here, please.",
       "example_translation": "請過來。",
-      "tags": ["hk", "primary", "p1", "english", "verb"]
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "verb"
+      ]
+    },
+    {
+      "term": "hi",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "greetings-and-courtesy"
+      ]
+    },
+    {
+      "term": "bye",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "greetings-and-courtesy"
+      ]
+    },
+    {
+      "term": "thanks",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "greetings-and-courtesy"
+      ]
+    },
+    {
+      "term": "excuse me",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "greetings-and-courtesy"
+      ]
+    },
+    {
+      "term": "welcome",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "greetings-and-courtesy"
+      ]
+    },
+    {
+      "term": "good morning",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "greetings-and-courtesy"
+      ]
+    },
+    {
+      "term": "good afternoon",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "greetings-and-courtesy"
+      ]
+    },
+    {
+      "term": "good night",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "greetings-and-courtesy"
+      ]
+    },
+    {
+      "term": "see you",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "greetings-and-courtesy"
+      ]
+    },
+    {
+      "term": "okay",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "greetings-and-courtesy"
+      ]
+    },
+    {
+      "term": "fine",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "greetings-and-courtesy"
+      ]
+    },
+    {
+      "term": "nice",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "greetings-and-courtesy"
+      ]
+    },
+    {
+      "term": "meet",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "greetings-and-courtesy"
+      ]
+    },
+    {
+      "term": "classmate",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "greetings-and-courtesy"
+      ]
+    },
+    {
+      "term": "your",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "greetings-and-courtesy"
+      ]
+    },
+    {
+      "term": "he",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "greetings-and-courtesy"
+      ]
+    },
+    {
+      "term": "she",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "greetings-and-courtesy"
+      ]
+    },
+    {
+      "term": "we",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "greetings-and-courtesy"
+      ]
+    },
+    {
+      "term": "they",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "greetings-and-courtesy"
+      ]
+    },
+    {
+      "term": "me",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "greetings-and-courtesy"
+      ]
+    },
+    {
+      "term": "him",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "greetings-and-courtesy"
+      ]
+    },
+    {
+      "term": "her",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "greetings-and-courtesy"
+      ]
+    },
+    {
+      "term": "us",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "greetings-and-courtesy"
+      ]
+    },
+    {
+      "term": "them",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "greetings-and-courtesy"
+      ]
+    },
+    {
+      "term": "class",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "classroom-language"
+      ]
+    },
+    {
+      "term": "classroom",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "classroom-language"
+      ]
+    },
+    {
+      "term": "student",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "classroom-language"
+      ]
+    },
+    {
+      "term": "pupil",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "classroom-language"
+      ]
+    },
+    {
+      "term": "board",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "classroom-language"
+      ]
+    },
+    {
+      "term": "storybook",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "classroom-language"
+      ]
+    },
+    {
+      "term": "notebook",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "classroom-language"
+      ]
+    },
+    {
+      "term": "paper",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "classroom-language"
+      ]
+    },
+    {
+      "term": "eraser",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "classroom-language"
+      ]
+    },
+    {
+      "term": "school bag",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "classroom-language"
+      ]
+    },
+    {
+      "term": "crayon",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "classroom-language"
+      ]
+    },
+    {
+      "term": "glue",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "classroom-language"
+      ]
+    },
+    {
+      "term": "scissors",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "classroom-language"
+      ]
+    },
+    {
+      "term": "folder",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "classroom-language"
+      ]
+    },
+    {
+      "term": "card",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "classroom-language"
+      ]
+    },
+    {
+      "term": "picture",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "classroom-language"
+      ]
+    },
+    {
+      "term": "word",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "classroom-language"
+      ]
+    },
+    {
+      "term": "letter",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "classroom-language"
+      ]
+    },
+    {
+      "term": "sound",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "classroom-language"
+      ]
+    },
+    {
+      "term": "song",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "classroom-language"
+      ]
+    },
+    {
+      "term": "story",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "classroom-language"
+      ]
+    },
+    {
+      "term": "game",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "classroom-language"
+      ]
+    },
+    {
+      "term": "colour",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "classroom-language"
+      ]
+    },
+    {
+      "term": "say",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "classroom-language"
+      ]
+    },
+    {
+      "term": "point",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "classroom-language"
+      ]
+    },
+    {
+      "term": "circle",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "classroom-language"
+      ]
+    },
+    {
+      "term": "match",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "classroom-language"
+      ]
+    },
+    {
+      "term": "count",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "classroom-language"
+      ]
+    },
+    {
+      "term": "open",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "classroom-language"
+      ]
+    },
+    {
+      "term": "close",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "classroom-language"
+      ]
+    },
+    {
+      "term": "line up",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "classroom-language"
+      ]
+    },
+    {
+      "term": "stop",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "classroom-language"
+      ]
+    },
+    {
+      "term": "start",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "classroom-language"
+      ]
+    },
+    {
+      "term": "raise",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "classroom-language"
+      ]
+    },
+    {
+      "term": "answer",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "classroom-language"
+      ]
+    },
+    {
+      "term": "ask",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "classroom-language"
+      ]
+    },
+    {
+      "term": "share",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "classroom-language"
+      ]
+    },
+    {
+      "term": "help",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "classroom-language"
+      ]
+    },
+    {
+      "term": "tidy",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "classroom-language"
+      ]
+    },
+    {
+      "term": "clean",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "classroom-language"
+      ]
+    },
+    {
+      "term": "zero",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "numbers-colours-shapes"
+      ]
+    },
+    {
+      "term": "first",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "numbers-colours-shapes"
+      ]
+    },
+    {
+      "term": "second",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "numbers-colours-shapes"
+      ]
+    },
+    {
+      "term": "third",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "numbers-colours-shapes"
+      ]
+    },
+    {
+      "term": "purple",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "numbers-colours-shapes"
+      ]
+    },
+    {
+      "term": "pink",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "numbers-colours-shapes"
+      ]
+    },
+    {
+      "term": "brown",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "numbers-colours-shapes"
+      ]
+    },
+    {
+      "term": "grey",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "numbers-colours-shapes"
+      ]
+    },
+    {
+      "term": "gold",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "numbers-colours-shapes"
+      ]
+    },
+    {
+      "term": "silver",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "numbers-colours-shapes"
+      ]
+    },
+    {
+      "term": "bright",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "numbers-colours-shapes"
+      ]
+    },
+    {
+      "term": "dark",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "numbers-colours-shapes"
+      ]
+    },
+    {
+      "term": "light",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "numbers-colours-shapes"
+      ]
+    },
+    {
+      "term": "square",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "numbers-colours-shapes"
+      ]
+    },
+    {
+      "term": "triangle",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "numbers-colours-shapes"
+      ]
+    },
+    {
+      "term": "rectangle",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "numbers-colours-shapes"
+      ]
+    },
+    {
+      "term": "star",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "numbers-colours-shapes"
+      ]
+    },
+    {
+      "term": "heart",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "numbers-colours-shapes"
+      ]
+    },
+    {
+      "term": "line",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "numbers-colours-shapes"
+      ]
+    },
+    {
+      "term": "shape",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "numbers-colours-shapes"
+      ]
+    },
+    {
+      "term": "tall",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "numbers-colours-shapes"
+      ]
+    },
+    {
+      "term": "round",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "numbers-colours-shapes"
+      ]
+    },
+    {
+      "term": "same",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "numbers-colours-shapes"
+      ]
+    },
+    {
+      "term": "different",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "numbers-colours-shapes"
+      ]
+    },
+    {
+      "term": "many",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "numbers-colours-shapes"
+      ]
+    },
+    {
+      "term": "few",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "numbers-colours-shapes"
+      ]
+    },
+    {
+      "term": "more",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "numbers-colours-shapes"
+      ]
+    },
+    {
+      "term": "less",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "numbers-colours-shapes"
+      ]
+    },
+    {
+      "term": "all",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "numbers-colours-shapes"
+      ]
+    },
+    {
+      "term": "some",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "numbers-colours-shapes"
+      ]
+    },
+    {
+      "term": "family",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "family-and-people"
+      ]
+    },
+    {
+      "term": "dad",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "family-and-people"
+      ]
+    },
+    {
+      "term": "mum",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "family-and-people"
+      ]
+    },
+    {
+      "term": "parent",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "family-and-people"
+      ]
+    },
+    {
+      "term": "grandfather",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "family-and-people"
+      ]
+    },
+    {
+      "term": "grandmother",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "family-and-people"
+      ]
+    },
+    {
+      "term": "grandpa",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "family-and-people"
+      ]
+    },
+    {
+      "term": "grandma",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "family-and-people"
+      ]
+    },
+    {
+      "term": "uncle",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "family-and-people"
+      ]
+    },
+    {
+      "term": "aunt",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "family-and-people"
+      ]
+    },
+    {
+      "term": "cousin",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "family-and-people"
+      ]
+    },
+    {
+      "term": "man",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "family-and-people"
+      ]
+    },
+    {
+      "term": "woman",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "family-and-people"
+      ]
+    },
+    {
+      "term": "child",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "family-and-people"
+      ]
+    },
+    {
+      "term": "children",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "family-and-people"
+      ]
+    },
+    {
+      "term": "neighbour",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "family-and-people"
+      ]
+    },
+    {
+      "term": "people",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "family-and-people"
+      ]
+    },
+    {
+      "term": "person",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "family-and-people"
+      ]
+    },
+    {
+      "term": "house",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "family-and-people"
+      ]
+    },
+    {
+      "term": "flat",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "family-and-people"
+      ]
+    },
+    {
+      "term": "bedroom",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "family-and-people"
+      ]
+    },
+    {
+      "term": "kitchen",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "family-and-people"
+      ]
+    },
+    {
+      "term": "bathroom",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "family-and-people"
+      ]
+    },
+    {
+      "term": "living room",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "family-and-people"
+      ]
+    },
+    {
+      "term": "bed",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "family-and-people"
+      ]
+    },
+    {
+      "term": "table",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "family-and-people"
+      ]
+    },
+    {
+      "term": "sofa",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "family-and-people"
+      ]
+    },
+    {
+      "term": "lamp",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "family-and-people"
+      ]
+    },
+    {
+      "term": "toy",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "family-and-people"
+      ]
+    },
+    {
+      "term": "photo",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "family-and-people"
+      ]
+    },
+    {
+      "term": "pet",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "family-and-people"
+      ]
+    },
+    {
+      "term": "love",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "family-and-people"
+      ]
+    },
+    {
+      "term": "hug",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "family-and-people"
+      ]
+    },
+    {
+      "term": "kind",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "family-and-people"
+      ]
+    },
+    {
+      "term": "polite",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "family-and-people"
+      ]
+    },
+    {
+      "term": "angry",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "family-and-people"
+      ]
+    },
+    {
+      "term": "tired",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "family-and-people"
+      ]
+    },
+    {
+      "term": "hungry",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "family-and-people"
+      ]
+    },
+    {
+      "term": "thirsty",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "family-and-people"
+      ]
+    },
+    {
+      "term": "scared",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "family-and-people"
+      ]
+    },
+    {
+      "term": "proud",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "family-and-people"
+      ]
+    },
+    {
+      "term": "body",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "body-and-health"
+      ]
+    },
+    {
+      "term": "hair",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "body-and-health"
+      ]
+    },
+    {
+      "term": "face",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "body-and-health"
+      ]
+    },
+    {
+      "term": "tooth",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "body-and-health"
+      ]
+    },
+    {
+      "term": "teeth",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "body-and-health"
+      ]
+    },
+    {
+      "term": "tongue",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "body-and-health"
+      ]
+    },
+    {
+      "term": "neck",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "body-and-health"
+      ]
+    },
+    {
+      "term": "finger",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "body-and-health"
+      ]
+    },
+    {
+      "term": "feet",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "body-and-health"
+      ]
+    },
+    {
+      "term": "toe",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "body-and-health"
+      ]
+    },
+    {
+      "term": "back",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "body-and-health"
+      ]
+    },
+    {
+      "term": "skin",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "body-and-health"
+      ]
+    },
+    {
+      "term": "wash",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "body-and-health"
+      ]
+    },
+    {
+      "term": "brush",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "body-and-health"
+      ]
+    },
+    {
+      "term": "rest",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "body-and-health"
+      ]
+    },
+    {
+      "term": "smile",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "body-and-health"
+      ]
+    },
+    {
+      "term": "cry",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "body-and-health"
+      ]
+    },
+    {
+      "term": "laugh",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "body-and-health"
+      ]
+    },
+    {
+      "term": "hurt",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "body-and-health"
+      ]
+    },
+    {
+      "term": "sick",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "body-and-health"
+      ]
+    },
+    {
+      "term": "well",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "body-and-health"
+      ]
+    },
+    {
+      "term": "healthy",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "body-and-health"
+      ]
+    },
+    {
+      "term": "dirty",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "body-and-health"
+      ]
+    },
+    {
+      "term": "warm",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "body-and-health"
+      ]
+    },
+    {
+      "term": "cool",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "body-and-health"
+      ]
+    },
+    {
+      "term": "mask",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "body-and-health"
+      ]
+    },
+    {
+      "term": "soap",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "body-and-health"
+      ]
+    },
+    {
+      "term": "towel",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "body-and-health"
+      ]
+    },
+    {
+      "term": "doctor",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "body-and-health"
+      ]
+    },
+    {
+      "term": "medicine",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "body-and-health"
+      ]
+    },
+    {
+      "term": "food",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "food-and-drinks"
+      ]
+    },
+    {
+      "term": "breakfast",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "food-and-drinks"
+      ]
+    },
+    {
+      "term": "lunch",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "food-and-drinks"
+      ]
+    },
+    {
+      "term": "dinner",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "food-and-drinks"
+      ]
+    },
+    {
+      "term": "snack",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "food-and-drinks"
+      ]
+    },
+    {
+      "term": "noodles",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "food-and-drinks"
+      ]
+    },
+    {
+      "term": "cake",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "food-and-drinks"
+      ]
+    },
+    {
+      "term": "biscuit",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "food-and-drinks"
+      ]
+    },
+    {
+      "term": "cookie",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "food-and-drinks"
+      ]
+    },
+    {
+      "term": "chicken",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "food-and-drinks"
+      ]
+    },
+    {
+      "term": "meat",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "food-and-drinks"
+      ]
+    },
+    {
+      "term": "vegetable",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "food-and-drinks"
+      ]
+    },
+    {
+      "term": "carrot",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "food-and-drinks"
+      ]
+    },
+    {
+      "term": "potato",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "food-and-drinks"
+      ]
+    },
+    {
+      "term": "corn",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "food-and-drinks"
+      ]
+    },
+    {
+      "term": "fruit",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "food-and-drinks"
+      ]
+    },
+    {
+      "term": "pear",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "food-and-drinks"
+      ]
+    },
+    {
+      "term": "grape",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "food-and-drinks"
+      ]
+    },
+    {
+      "term": "watermelon",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "food-and-drinks"
+      ]
+    },
+    {
+      "term": "strawberry",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "food-and-drinks"
+      ]
+    },
+    {
+      "term": "juice",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "food-and-drinks"
+      ]
+    },
+    {
+      "term": "tea",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "food-and-drinks"
+      ]
+    },
+    {
+      "term": "soup",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "food-and-drinks"
+      ]
+    },
+    {
+      "term": "ice cream",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "food-and-drinks"
+      ]
+    },
+    {
+      "term": "sweet",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "food-and-drinks"
+      ]
+    },
+    {
+      "term": "candy",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "food-and-drinks"
+      ]
+    },
+    {
+      "term": "yummy",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "food-and-drinks"
+      ]
+    },
+    {
+      "term": "delicious",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "food-and-drinks"
+      ]
+    },
+    {
+      "term": "plate",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "food-and-drinks"
+      ]
+    },
+    {
+      "term": "bowl",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "food-and-drinks"
+      ]
+    },
+    {
+      "term": "cup",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "food-and-drinks"
+      ]
+    },
+    {
+      "term": "spoon",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "food-and-drinks"
+      ]
+    },
+    {
+      "term": "fork",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "food-and-drinks"
+      ]
+    },
+    {
+      "term": "chopsticks",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "food-and-drinks"
+      ]
+    },
+    {
+      "term": "buy",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "food-and-drinks"
+      ]
+    },
+    {
+      "term": "want",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "food-and-drinks"
+      ]
+    },
+    {
+      "term": "dislike",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "food-and-drinks"
+      ]
+    },
+    {
+      "term": "animal",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "animals-and-nature"
+      ]
+    },
+    {
+      "term": "rabbit",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "animals-and-nature"
+      ]
+    },
+    {
+      "term": "hamster",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "animals-and-nature"
+      ]
+    },
+    {
+      "term": "turtle",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "animals-and-nature"
+      ]
+    },
+    {
+      "term": "frog",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "animals-and-nature"
+      ]
+    },
+    {
+      "term": "sheep",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "animals-and-nature"
+      ]
+    },
+    {
+      "term": "horse",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "animals-and-nature"
+      ]
+    },
+    {
+      "term": "goat",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "animals-and-nature"
+      ]
+    },
+    {
+      "term": "monkey",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "animals-and-nature"
+      ]
+    },
+    {
+      "term": "elephant",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "animals-and-nature"
+      ]
+    },
+    {
+      "term": "tiger",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "animals-and-nature"
+      ]
+    },
+    {
+      "term": "lion",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "animals-and-nature"
+      ]
+    },
+    {
+      "term": "zebra",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "animals-and-nature"
+      ]
+    },
+    {
+      "term": "giraffe",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "animals-and-nature"
+      ]
+    },
+    {
+      "term": "bear",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "animals-and-nature"
+      ]
+    },
+    {
+      "term": "panda",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "animals-and-nature"
+      ]
+    },
+    {
+      "term": "mouse",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "animals-and-nature"
+      ]
+    },
+    {
+      "term": "butterfly",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "animals-and-nature"
+      ]
+    },
+    {
+      "term": "bee",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "animals-and-nature"
+      ]
+    },
+    {
+      "term": "ant",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "animals-and-nature"
+      ]
+    },
+    {
+      "term": "flower",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "animals-and-nature"
+      ]
+    },
+    {
+      "term": "tree",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "animals-and-nature"
+      ]
+    },
+    {
+      "term": "grass",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "animals-and-nature"
+      ]
+    },
+    {
+      "term": "leaf",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "animals-and-nature"
+      ]
+    },
+    {
+      "term": "sky",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "animals-and-nature"
+      ]
+    },
+    {
+      "term": "sun",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "animals-and-nature"
+      ]
+    },
+    {
+      "term": "moon",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "animals-and-nature"
+      ]
+    },
+    {
+      "term": "cloud",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "animals-and-nature"
+      ]
+    },
+    {
+      "term": "rain",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "animals-and-nature"
+      ]
+    },
+    {
+      "term": "wind",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "animals-and-nature"
+      ]
+    },
+    {
+      "term": "rainbow",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "animals-and-nature"
+      ]
+    },
+    {
+      "term": "sea",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "animals-and-nature"
+      ]
+    },
+    {
+      "term": "river",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "animals-and-nature"
+      ]
+    },
+    {
+      "term": "hill",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "animals-and-nature"
+      ]
+    },
+    {
+      "term": "park",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "animals-and-nature"
+      ]
+    },
+    {
+      "term": "garden",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "animals-and-nature"
+      ]
+    },
+    {
+      "term": "farm",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "animals-and-nature"
+      ]
+    },
+    {
+      "term": "zoo",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "animals-and-nature"
+      ]
+    },
+    {
+      "term": "forest",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "animals-and-nature"
+      ]
+    },
+    {
+      "term": "grow",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "animals-and-nature"
+      ]
+    },
+    {
+      "term": "fly",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "animals-and-nature"
+      ]
+    },
+    {
+      "term": "swim",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "animals-and-nature"
+      ]
+    },
+    {
+      "term": "climb",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "animals-and-nature"
+      ]
+    },
+    {
+      "term": "hop",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "animals-and-nature"
+      ]
+    },
+    {
+      "term": "bark",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "animals-and-nature"
+      ]
+    },
+    {
+      "term": "meow",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "animals-and-nature"
+      ]
+    },
+    {
+      "term": "place",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "places-and-community"
+      ]
+    },
+    {
+      "term": "playground",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "places-and-community"
+      ]
+    },
+    {
+      "term": "library",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "places-and-community"
+      ]
+    },
+    {
+      "term": "shop",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "places-and-community"
+      ]
+    },
+    {
+      "term": "market",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "places-and-community"
+      ]
+    },
+    {
+      "term": "restaurant",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "places-and-community"
+      ]
+    },
+    {
+      "term": "clinic",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "places-and-community"
+      ]
+    },
+    {
+      "term": "hospital",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "places-and-community"
+      ]
+    },
+    {
+      "term": "station",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "places-and-community"
+      ]
+    },
+    {
+      "term": "bus stop",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "places-and-community"
+      ]
+    },
+    {
+      "term": "street",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "places-and-community"
+      ]
+    },
+    {
+      "term": "road",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "places-and-community"
+      ]
+    },
+    {
+      "term": "crossing",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "places-and-community"
+      ]
+    },
+    {
+      "term": "toilet",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "places-and-community"
+      ]
+    },
+    {
+      "term": "beach",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "places-and-community"
+      ]
+    },
+    {
+      "term": "museum",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "places-and-community"
+      ]
+    },
+    {
+      "term": "cinema",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "places-and-community"
+      ]
+    },
+    {
+      "term": "post office",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "places-and-community"
+      ]
+    },
+    {
+      "term": "police station",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "places-and-community"
+      ]
+    },
+    {
+      "term": "fire station",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "places-and-community"
+      ]
+    },
+    {
+      "term": "hong kong",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "places-and-community"
+      ]
+    },
+    {
+      "term": "city",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "places-and-community"
+      ]
+    },
+    {
+      "term": "town",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "places-and-community"
+      ]
+    },
+    {
+      "term": "village",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "places-and-community"
+      ]
+    },
+    {
+      "term": "mtr",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "places-and-community"
+      ]
+    },
+    {
+      "term": "bus",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "places-and-community"
+      ]
+    },
+    {
+      "term": "taxi",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "places-and-community"
+      ]
+    },
+    {
+      "term": "car",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "places-and-community"
+      ]
+    },
+    {
+      "term": "train",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "places-and-community"
+      ]
+    },
+    {
+      "term": "boat",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "places-and-community"
+      ]
+    },
+    {
+      "term": "ride",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "places-and-community"
+      ]
+    },
+    {
+      "term": "drive",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "places-and-community"
+      ]
+    },
+    {
+      "term": "visit",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "places-and-community"
+      ]
+    },
+    {
+      "term": "near",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "places-and-community"
+      ]
+    },
+    {
+      "term": "far",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "places-and-community"
+      ]
+    },
+    {
+      "term": "left",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "places-and-community"
+      ]
+    },
+    {
+      "term": "right",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "places-and-community"
+      ]
+    },
+    {
+      "term": "up",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "places-and-community"
+      ]
+    },
+    {
+      "term": "down",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "places-and-community"
+      ]
+    },
+    {
+      "term": "in",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "places-and-community"
+      ]
+    },
+    {
+      "term": "on",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "places-and-community"
+      ]
+    },
+    {
+      "term": "under",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "places-and-community"
+      ]
+    },
+    {
+      "term": "next to",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "places-and-community"
+      ]
+    },
+    {
+      "term": "behind",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "places-and-community"
+      ]
+    },
+    {
+      "term": "between",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "places-and-community"
+      ]
+    },
+    {
+      "term": "wake",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "daily-life-and-actions"
+      ]
+    },
+    {
+      "term": "get up",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "daily-life-and-actions"
+      ]
+    },
+    {
+      "term": "skip",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "daily-life-and-actions"
+      ]
+    },
+    {
+      "term": "paint",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "daily-life-and-actions"
+      ]
+    },
+    {
+      "term": "make",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "daily-life-and-actions"
+      ]
+    },
+    {
+      "term": "cut",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "daily-life-and-actions"
+      ]
+    },
+    {
+      "term": "stick",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "daily-life-and-actions"
+      ]
+    },
+    {
+      "term": "cook",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "daily-life-and-actions"
+      ]
+    },
+    {
+      "term": "push",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "daily-life-and-actions"
+      ]
+    },
+    {
+      "term": "pull",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "daily-life-and-actions"
+      ]
+    },
+    {
+      "term": "give",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "daily-life-and-actions"
+      ]
+    },
+    {
+      "term": "take",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "daily-life-and-actions"
+      ]
+    },
+    {
+      "term": "bring",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "daily-life-and-actions"
+      ]
+    },
+    {
+      "term": "show",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "daily-life-and-actions"
+      ]
+    },
+    {
+      "term": "find",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "daily-life-and-actions"
+      ]
+    },
+    {
+      "term": "hide",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "daily-life-and-actions"
+      ]
+    },
+    {
+      "term": "see",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "daily-life-and-actions"
+      ]
+    },
+    {
+      "term": "hear",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "daily-life-and-actions"
+      ]
+    },
+    {
+      "term": "touch",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "daily-life-and-actions"
+      ]
+    },
+    {
+      "term": "smell",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "daily-life-and-actions"
+      ]
+    },
+    {
+      "term": "taste",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "daily-life-and-actions"
+      ]
+    },
+    {
+      "term": "wear",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "daily-life-and-actions"
+      ]
+    },
+    {
+      "term": "put on",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "daily-life-and-actions"
+      ]
+    },
+    {
+      "term": "take off",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "daily-life-and-actions"
+      ]
+    },
+    {
+      "term": "sell",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "daily-life-and-actions"
+      ]
+    },
+    {
+      "term": "wait",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "daily-life-and-actions"
+      ]
+    },
+    {
+      "term": "watch",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "daily-life-and-actions"
+      ]
+    },
+    {
+      "term": "dream",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "daily-life-and-actions"
+      ]
+    },
+    {
+      "term": "learn",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "daily-life-and-actions"
+      ]
+    },
+    {
+      "term": "try",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "daily-life-and-actions"
+      ]
+    },
+    {
+      "term": "win",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "daily-life-and-actions"
+      ]
+    },
+    {
+      "term": "lose",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "daily-life-and-actions"
+      ]
+    },
+    {
+      "term": "day",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "time-weather-and-days"
+      ]
+    },
+    {
+      "term": "today",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "time-weather-and-days"
+      ]
+    },
+    {
+      "term": "tomorrow",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "time-weather-and-days"
+      ]
+    },
+    {
+      "term": "yesterday",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "time-weather-and-days"
+      ]
+    },
+    {
+      "term": "morning",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "time-weather-and-days"
+      ]
+    },
+    {
+      "term": "afternoon",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "time-weather-and-days"
+      ]
+    },
+    {
+      "term": "evening",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "time-weather-and-days"
+      ]
+    },
+    {
+      "term": "night",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "time-weather-and-days"
+      ]
+    },
+    {
+      "term": "week",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "time-weather-and-days"
+      ]
+    },
+    {
+      "term": "monday",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "time-weather-and-days"
+      ]
+    },
+    {
+      "term": "tuesday",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "time-weather-and-days"
+      ]
+    },
+    {
+      "term": "wednesday",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "time-weather-and-days"
+      ]
+    },
+    {
+      "term": "thursday",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "time-weather-and-days"
+      ]
+    },
+    {
+      "term": "friday",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "time-weather-and-days"
+      ]
+    },
+    {
+      "term": "saturday",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "time-weather-and-days"
+      ]
+    },
+    {
+      "term": "sunday",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "time-weather-and-days"
+      ]
+    },
+    {
+      "term": "birthday",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "time-weather-and-days"
+      ]
+    },
+    {
+      "term": "holiday",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "time-weather-and-days"
+      ]
+    },
+    {
+      "term": "time",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "time-weather-and-days"
+      ]
+    },
+    {
+      "term": "clock",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "time-weather-and-days"
+      ]
+    },
+    {
+      "term": "hour",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "time-weather-and-days"
+      ]
+    },
+    {
+      "term": "minute",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "time-weather-and-days"
+      ]
+    },
+    {
+      "term": "early",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "time-weather-and-days"
+      ]
+    },
+    {
+      "term": "late",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "time-weather-and-days"
+      ]
+    },
+    {
+      "term": "now",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "time-weather-and-days"
+      ]
+    },
+    {
+      "term": "then",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "time-weather-and-days"
+      ]
+    },
+    {
+      "term": "before",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "time-weather-and-days"
+      ]
+    },
+    {
+      "term": "after",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "time-weather-and-days"
+      ]
+    },
+    {
+      "term": "weather",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "time-weather-and-days"
+      ]
+    },
+    {
+      "term": "sunny",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "time-weather-and-days"
+      ]
+    },
+    {
+      "term": "rainy",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "time-weather-and-days"
+      ]
+    },
+    {
+      "term": "cloudy",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "time-weather-and-days"
+      ]
+    },
+    {
+      "term": "windy",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "time-weather-and-days"
+      ]
+    },
+    {
+      "term": "wet",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "time-weather-and-days"
+      ]
+    },
+    {
+      "term": "dry",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "time-weather-and-days"
+      ]
+    },
+    {
+      "term": "spring",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "time-weather-and-days"
+      ]
+    },
+    {
+      "term": "summer",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "time-weather-and-days"
+      ]
+    },
+    {
+      "term": "autumn",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "time-weather-and-days"
+      ]
+    },
+    {
+      "term": "winter",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "time-weather-and-days"
+      ]
+    },
+    {
+      "term": "umbrella",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "time-weather-and-days"
+      ]
+    },
+    {
+      "term": "raincoat",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "time-weather-and-days"
+      ]
+    },
+    {
+      "term": "fairy tale",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "stories-and-values"
+      ]
+    },
+    {
+      "term": "rhyme",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "stories-and-values"
+      ]
+    },
+    {
+      "term": "page",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "stories-and-values"
+      ]
+    },
+    {
+      "term": "cover",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "stories-and-values"
+      ]
+    },
+    {
+      "term": "title",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "stories-and-values"
+      ]
+    },
+    {
+      "term": "character",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "stories-and-values"
+      ]
+    },
+    {
+      "term": "beginning",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "stories-and-values"
+      ]
+    },
+    {
+      "term": "middle",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "stories-and-values"
+      ]
+    },
+    {
+      "term": "end",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "stories-and-values"
+      ]
+    },
+    {
+      "term": "bad",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "stories-and-values"
+      ]
+    },
+    {
+      "term": "funny",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "stories-and-values"
+      ]
+    },
+    {
+      "term": "brave",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "stories-and-values"
+      ]
+    },
+    {
+      "term": "honest",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "stories-and-values"
+      ]
+    },
+    {
+      "term": "helpful",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "stories-and-values"
+      ]
+    },
+    {
+      "term": "careful",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "stories-and-values"
+      ]
+    },
+    {
+      "term": "safe",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "stories-and-values"
+      ]
+    },
+    {
+      "term": "dangerous",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "stories-and-values"
+      ]
+    },
+    {
+      "term": "take turns",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "stories-and-values"
+      ]
+    },
+    {
+      "term": "friendship",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "stories-and-values"
+      ]
+    },
+    {
+      "term": "team",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "stories-and-values"
+      ]
+    },
+    {
+      "term": "rule",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "stories-and-values"
+      ]
+    },
+    {
+      "term": "promise",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "stories-and-values"
+      ]
+    },
+    {
+      "term": "gift",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "stories-and-values"
+      ]
+    },
+    {
+      "term": "present",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "stories-and-values"
+      ]
+    },
+    {
+      "term": "party",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "stories-and-values"
+      ]
+    },
+    {
+      "term": "balloon",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "stories-and-values"
+      ]
+    },
+    {
+      "term": "surprise",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "stories-and-values"
+      ]
+    },
+    {
+      "term": "magic",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "stories-and-values"
+      ]
+    },
+    {
+      "term": "king",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "stories-and-values"
+      ]
+    },
+    {
+      "term": "queen",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "stories-and-values"
+      ]
+    },
+    {
+      "term": "prince",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "stories-and-values"
+      ]
+    },
+    {
+      "term": "princess",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "stories-and-values"
+      ]
+    },
+    {
+      "term": "dragon",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "stories-and-values"
+      ]
+    },
+    {
+      "term": "monster",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "stories-and-values"
+      ]
+    },
+    {
+      "term": "giant",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "stories-and-values"
+      ]
+    },
+    {
+      "term": "little",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "stories-and-values"
+      ]
+    },
+    {
+      "term": "beautiful",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "stories-and-values"
+      ]
+    },
+    {
+      "term": "ugly",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "stories-and-values"
+      ]
+    },
+    {
+      "term": "fast",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "stories-and-values"
+      ]
+    },
+    {
+      "term": "slow",
+      "tags": [
+        "hk",
+        "primary",
+        "p1",
+        "english",
+        "curriculum-style",
+        "stories-and-values"
+      ]
     }
   ]
 }

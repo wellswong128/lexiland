@@ -7,6 +7,15 @@
   "version": "2026.06",
   "display_name_en": "S3 English",
   "display_name_zh_hant": "中三英文",
+  "source": {
+    "type": "curriculum_style_public_references",
+    "references": [
+      "EDB English Language Education KLA Curriculum Guide / Junior Secondary Supplement 2018",
+      "EDB vocabulary-building and Language across the Curriculum resources for junior secondary",
+      "Public junior secondary English curriculum handbook examples for S3 themes"
+    ],
+    "note": "No fixed official Hong Kong S3 vocabulary list is prescribed; this list is theme-based for S3 English enrichment import. Term-only entries are completed during import."
+  },
   "words": [
     {
       "term": "analyze",
@@ -326,6 +335,5814 @@
         "adjective",
         "psychology",
         "personal growth"
+      ]
+    },
+    {
+      "term": "athlete",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "sports-communication"
+      ]
+    },
+    {
+      "term": "athletics",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "sports-communication"
+      ]
+    },
+    {
+      "term": "tournament",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "sports-communication"
+      ]
+    },
+    {
+      "term": "championship",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "sports-communication"
+      ]
+    },
+    {
+      "term": "competition",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "sports-communication"
+      ]
+    },
+    {
+      "term": "competitor",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "sports-communication"
+      ]
+    },
+    {
+      "term": "coach",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "sports-communication"
+      ]
+    },
+    {
+      "term": "referee",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "sports-communication"
+      ]
+    },
+    {
+      "term": "umpire",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "sports-communication"
+      ]
+    },
+    {
+      "term": "spectator",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "sports-communication"
+      ]
+    },
+    {
+      "term": "stadium",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "sports-communication"
+      ]
+    },
+    {
+      "term": "arena",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "sports-communication"
+      ]
+    },
+    {
+      "term": "league",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "sports-communication"
+      ]
+    },
+    {
+      "term": "team",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "sports-communication"
+      ]
+    },
+    {
+      "term": "squad",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "sports-communication"
+      ]
+    },
+    {
+      "term": "captain",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "sports-communication"
+      ]
+    },
+    {
+      "term": "teammate",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "sports-communication"
+      ]
+    },
+    {
+      "term": "opponent",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "sports-communication"
+      ]
+    },
+    {
+      "term": "rival",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "sports-communication"
+      ]
+    },
+    {
+      "term": "victory",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "sports-communication"
+      ]
+    },
+    {
+      "term": "defeat",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "sports-communication"
+      ]
+    },
+    {
+      "term": "draw",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "sports-communication"
+      ]
+    },
+    {
+      "term": "score",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "sports-communication"
+      ]
+    },
+    {
+      "term": "scoring",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "sports-communication"
+      ]
+    },
+    {
+      "term": "medal",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "sports-communication"
+      ]
+    },
+    {
+      "term": "trophy",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "sports-communication"
+      ]
+    },
+    {
+      "term": "record",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "sports-communication"
+      ]
+    },
+    {
+      "term": "performance",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "sports-communication"
+      ]
+    },
+    {
+      "term": "training",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "sports-communication"
+      ]
+    },
+    {
+      "term": "endurance",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "sports-communication"
+      ]
+    },
+    {
+      "term": "stamina",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "sports-communication"
+      ]
+    },
+    {
+      "term": "strength",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "sports-communication"
+      ]
+    },
+    {
+      "term": "agility",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "sports-communication"
+      ]
+    },
+    {
+      "term": "flexibility",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "sports-communication"
+      ]
+    },
+    {
+      "term": "coordination",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "sports-communication"
+      ]
+    },
+    {
+      "term": "speed",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "sports-communication"
+      ]
+    },
+    {
+      "term": "accuracy",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "sports-communication"
+      ]
+    },
+    {
+      "term": "strategy",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "sports-communication"
+      ]
+    },
+    {
+      "term": "tactic",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "sports-communication"
+      ]
+    },
+    {
+      "term": "technique",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "sports-communication"
+      ]
+    },
+    {
+      "term": "discipline",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "sports-communication"
+      ]
+    },
+    {
+      "term": "commitment",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "sports-communication"
+      ]
+    },
+    {
+      "term": "motivation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "sports-communication"
+      ]
+    },
+    {
+      "term": "sportsmanship",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "sports-communication"
+      ]
+    },
+    {
+      "term": "fair",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "sports-communication"
+      ]
+    },
+    {
+      "term": "play",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "sports-communication"
+      ]
+    },
+    {
+      "term": "injury",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "sports-communication"
+      ]
+    },
+    {
+      "term": "recovery",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "sports-communication"
+      ]
+    },
+    {
+      "term": "warm-up",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "sports-communication"
+      ]
+    },
+    {
+      "term": "cooldown",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "sports-communication"
+      ]
+    },
+    {
+      "term": "equipment",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "sports-communication"
+      ]
+    },
+    {
+      "term": "uniform",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "sports-communication"
+      ]
+    },
+    {
+      "term": "interview",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "sports-communication"
+      ]
+    },
+    {
+      "term": "profile",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "sports-communication"
+      ]
+    },
+    {
+      "term": "feature",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "sports-communication"
+      ]
+    },
+    {
+      "term": "article",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "sports-communication"
+      ]
+    },
+    {
+      "term": "headline",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "sports-communication"
+      ]
+    },
+    {
+      "term": "report",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "sports-communication"
+      ]
+    },
+    {
+      "term": "commentary",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "sports-communication"
+      ]
+    },
+    {
+      "term": "broadcast",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "sports-communication"
+      ]
+    },
+    {
+      "term": "journalist",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "sports-communication"
+      ]
+    },
+    {
+      "term": "audience",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "sports-communication"
+      ]
+    },
+    {
+      "term": "fan",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "sports-communication"
+      ]
+    },
+    {
+      "term": "sponsor",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "sports-communication"
+      ]
+    },
+    {
+      "term": "professional",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "sports-communication"
+      ]
+    },
+    {
+      "term": "amateur",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "sports-communication"
+      ]
+    },
+    {
+      "term": "participation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "sports-communication"
+      ]
+    },
+    {
+      "term": "involvement",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "sports-communication"
+      ]
+    },
+    {
+      "term": "achievement",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "sports-communication"
+      ]
+    },
+    {
+      "term": "challenge",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "sports-communication"
+      ]
+    },
+    {
+      "term": "improvement",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "sports-communication"
+      ]
+    },
+    {
+      "term": "lifestyle",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "sports-communication"
+      ]
+    },
+    {
+      "term": "fitness",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "sports-communication"
+      ]
+    },
+    {
+      "term": "nutrition",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "sports-communication"
+      ]
+    },
+    {
+      "term": "hydration",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "sports-communication"
+      ]
+    },
+    {
+      "term": "routine",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "sports-communication"
+      ]
+    },
+    {
+      "term": "perseverance",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "sports-communication"
+      ]
+    },
+    {
+      "term": "pressure",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "sports-communication"
+      ]
+    },
+    {
+      "term": "confident",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "sports-communication"
+      ]
+    },
+    {
+      "term": "determined",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "sports-communication"
+      ]
+    },
+    {
+      "term": "outstanding",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "sports-communication"
+      ]
+    },
+    {
+      "term": "remarkable",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "sports-communication"
+      ]
+    },
+    {
+      "term": "controversial",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "sports-communication"
+      ]
+    },
+    {
+      "term": "film",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "short-films-and-media"
+      ]
+    },
+    {
+      "term": "short",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "short-films-and-media"
+      ]
+    },
+    {
+      "term": "cinema",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "short-films-and-media"
+      ]
+    },
+    {
+      "term": "cinematic",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "short-films-and-media"
+      ]
+    },
+    {
+      "term": "director",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "short-films-and-media"
+      ]
+    },
+    {
+      "term": "producer",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "short-films-and-media"
+      ]
+    },
+    {
+      "term": "actor",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "short-films-and-media"
+      ]
+    },
+    {
+      "term": "actress",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "short-films-and-media"
+      ]
+    },
+    {
+      "term": "character",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "short-films-and-media"
+      ]
+    },
+    {
+      "term": "scene",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "short-films-and-media"
+      ]
+    },
+    {
+      "term": "sequence",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "short-films-and-media"
+      ]
+    },
+    {
+      "term": "shot",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "short-films-and-media"
+      ]
+    },
+    {
+      "term": "frame",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "short-films-and-media"
+      ]
+    },
+    {
+      "term": "camera",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "short-films-and-media"
+      ]
+    },
+    {
+      "term": "angle",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "short-films-and-media"
+      ]
+    },
+    {
+      "term": "close-up",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "short-films-and-media"
+      ]
+    },
+    {
+      "term": "soundtrack",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "short-films-and-media"
+      ]
+    },
+    {
+      "term": "dialogue",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "short-films-and-media"
+      ]
+    },
+    {
+      "term": "script",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "short-films-and-media"
+      ]
+    },
+    {
+      "term": "screenplay",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "short-films-and-media"
+      ]
+    },
+    {
+      "term": "storyboard",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "short-films-and-media"
+      ]
+    },
+    {
+      "term": "genre",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "short-films-and-media"
+      ]
+    },
+    {
+      "term": "theme",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "short-films-and-media"
+      ]
+    },
+    {
+      "term": "plot",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "short-films-and-media"
+      ]
+    },
+    {
+      "term": "conflict",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "short-films-and-media"
+      ]
+    },
+    {
+      "term": "climax",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "short-films-and-media"
+      ]
+    },
+    {
+      "term": "resolution",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "short-films-and-media"
+      ]
+    },
+    {
+      "term": "editing",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "short-films-and-media"
+      ]
+    },
+    {
+      "term": "transition",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "short-films-and-media"
+      ]
+    },
+    {
+      "term": "lighting",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "short-films-and-media"
+      ]
+    },
+    {
+      "term": "setting",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "short-films-and-media"
+      ]
+    },
+    {
+      "term": "costume",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "short-films-and-media"
+      ]
+    },
+    {
+      "term": "prop",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "short-films-and-media"
+      ]
+    },
+    {
+      "term": "special",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "short-films-and-media"
+      ]
+    },
+    {
+      "term": "effects",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "short-films-and-media"
+      ]
+    },
+    {
+      "term": "animation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "short-films-and-media"
+      ]
+    },
+    {
+      "term": "documentary",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "short-films-and-media"
+      ]
+    },
+    {
+      "term": "trailer",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "short-films-and-media"
+      ]
+    },
+    {
+      "term": "review",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "short-films-and-media"
+      ]
+    },
+    {
+      "term": "interpretation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "short-films-and-media"
+      ]
+    },
+    {
+      "term": "symbolism",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "short-films-and-media"
+      ]
+    },
+    {
+      "term": "imagery",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "short-films-and-media"
+      ]
+    },
+    {
+      "term": "mood",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "short-films-and-media"
+      ]
+    },
+    {
+      "term": "atmosphere",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "short-films-and-media"
+      ]
+    },
+    {
+      "term": "suspense",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "short-films-and-media"
+      ]
+    },
+    {
+      "term": "tension",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "short-films-and-media"
+      ]
+    },
+    {
+      "term": "viewpoint",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "short-films-and-media"
+      ]
+    },
+    {
+      "term": "narrator",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "short-films-and-media"
+      ]
+    },
+    {
+      "term": "visual",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "short-films-and-media"
+      ]
+    },
+    {
+      "term": "audio",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "short-films-and-media"
+      ]
+    },
+    {
+      "term": "message",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "short-films-and-media"
+      ]
+    },
+    {
+      "term": "screening",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "short-films-and-media"
+      ]
+    },
+    {
+      "term": "festival",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "short-films-and-media"
+      ]
+    },
+    {
+      "term": "analysis",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "short-films-and-media"
+      ]
+    },
+    {
+      "term": "compare",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "short-films-and-media"
+      ]
+    },
+    {
+      "term": "contrast",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "short-films-and-media"
+      ]
+    },
+    {
+      "term": "reflective",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "short-films-and-media"
+      ]
+    },
+    {
+      "term": "presentation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "short-films-and-media"
+      ]
+    },
+    {
+      "term": "dystopia",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "dystopian-and-fiction"
+      ]
+    },
+    {
+      "term": "utopia",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "dystopian-and-fiction"
+      ]
+    },
+    {
+      "term": "dystopian",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "dystopian-and-fiction"
+      ]
+    },
+    {
+      "term": "utopian",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "dystopian-and-fiction"
+      ]
+    },
+    {
+      "term": "society",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "dystopian-and-fiction"
+      ]
+    },
+    {
+      "term": "survival",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "dystopian-and-fiction"
+      ]
+    },
+    {
+      "term": "maze",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "dystopian-and-fiction"
+      ]
+    },
+    {
+      "term": "runner",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "dystopian-and-fiction"
+      ]
+    },
+    {
+      "term": "community",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "dystopian-and-fiction"
+      ]
+    },
+    {
+      "term": "control",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "dystopian-and-fiction"
+      ]
+    },
+    {
+      "term": "authority",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "dystopian-and-fiction"
+      ]
+    },
+    {
+      "term": "government",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "dystopian-and-fiction"
+      ]
+    },
+    {
+      "term": "freedom",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "dystopian-and-fiction"
+      ]
+    },
+    {
+      "term": "oppression",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "dystopian-and-fiction"
+      ]
+    },
+    {
+      "term": "rebellion",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "dystopian-and-fiction"
+      ]
+    },
+    {
+      "term": "resistance",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "dystopian-and-fiction"
+      ]
+    },
+    {
+      "term": "rule",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "dystopian-and-fiction"
+      ]
+    },
+    {
+      "term": "system",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "dystopian-and-fiction"
+      ]
+    },
+    {
+      "term": "law",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "dystopian-and-fiction"
+      ]
+    },
+    {
+      "term": "order",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "dystopian-and-fiction"
+      ]
+    },
+    {
+      "term": "identity",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "dystopian-and-fiction"
+      ]
+    },
+    {
+      "term": "memory",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "dystopian-and-fiction"
+      ]
+    },
+    {
+      "term": "courage",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "dystopian-and-fiction"
+      ]
+    },
+    {
+      "term": "loyalty",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "dystopian-and-fiction"
+      ]
+    },
+    {
+      "term": "betrayal",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "dystopian-and-fiction"
+      ]
+    },
+    {
+      "term": "sacrifice",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "dystopian-and-fiction"
+      ]
+    },
+    {
+      "term": "trust",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "dystopian-and-fiction"
+      ]
+    },
+    {
+      "term": "danger",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "dystopian-and-fiction"
+      ]
+    },
+    {
+      "term": "escape",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "dystopian-and-fiction"
+      ]
+    },
+    {
+      "term": "journey",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "dystopian-and-fiction"
+      ]
+    },
+    {
+      "term": "obstacle",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "dystopian-and-fiction"
+      ]
+    },
+    {
+      "term": "trial",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "dystopian-and-fiction"
+      ]
+    },
+    {
+      "term": "fear",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "dystopian-and-fiction"
+      ]
+    },
+    {
+      "term": "hope",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "dystopian-and-fiction"
+      ]
+    },
+    {
+      "term": "justice",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "dystopian-and-fiction"
+      ]
+    },
+    {
+      "term": "equality",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "dystopian-and-fiction"
+      ]
+    },
+    {
+      "term": "inequality",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "dystopian-and-fiction"
+      ]
+    },
+    {
+      "term": "power",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "dystopian-and-fiction"
+      ]
+    },
+    {
+      "term": "protagonist",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "dystopian-and-fiction"
+      ]
+    },
+    {
+      "term": "antagonist",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "dystopian-and-fiction"
+      ]
+    },
+    {
+      "term": "hero",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "dystopian-and-fiction"
+      ]
+    },
+    {
+      "term": "villain",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "dystopian-and-fiction"
+      ]
+    },
+    {
+      "term": "leader",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "dystopian-and-fiction"
+      ]
+    },
+    {
+      "term": "follower",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "dystopian-and-fiction"
+      ]
+    },
+    {
+      "term": "citizen",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "dystopian-and-fiction"
+      ]
+    },
+    {
+      "term": "technology",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "dystopian-and-fiction"
+      ]
+    },
+    {
+      "term": "surveillance",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "dystopian-and-fiction"
+      ]
+    },
+    {
+      "term": "experiment",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "dystopian-and-fiction"
+      ]
+    },
+    {
+      "term": "environment",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "dystopian-and-fiction"
+      ]
+    },
+    {
+      "term": "resource",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "dystopian-and-fiction"
+      ]
+    },
+    {
+      "term": "scarcity",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "dystopian-and-fiction"
+      ]
+    },
+    {
+      "term": "boundary",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "dystopian-and-fiction"
+      ]
+    },
+    {
+      "term": "punishment",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "dystopian-and-fiction"
+      ]
+    },
+    {
+      "term": "choice",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "dystopian-and-fiction"
+      ]
+    },
+    {
+      "term": "moral",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "dystopian-and-fiction"
+      ]
+    },
+    {
+      "term": "humanity",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "dystopian-and-fiction"
+      ]
+    },
+    {
+      "term": "compassion",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "dystopian-and-fiction"
+      ]
+    },
+    {
+      "term": "resilience",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "dystopian-and-fiction"
+      ]
+    },
+    {
+      "term": "adaptation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "dystopian-and-fiction"
+      ]
+    },
+    {
+      "term": "transformation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "dystopian-and-fiction"
+      ]
+    },
+    {
+      "term": "discovery",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "dystopian-and-fiction"
+      ]
+    },
+    {
+      "term": "secret",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "dystopian-and-fiction"
+      ]
+    },
+    {
+      "term": "mystery",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "dystopian-and-fiction"
+      ]
+    },
+    {
+      "term": "alliance",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "dystopian-and-fiction"
+      ]
+    },
+    {
+      "term": "isolation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "dystopian-and-fiction"
+      ]
+    },
+    {
+      "term": "conformity",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "dystopian-and-fiction"
+      ]
+    },
+    {
+      "term": "individuality",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "dystopian-and-fiction"
+      ]
+    },
+    {
+      "term": "persuade",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "persuasive-speaking-and-debate"
+      ]
+    },
+    {
+      "term": "persuasion",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "persuasive-speaking-and-debate"
+      ]
+    },
+    {
+      "term": "persuasive",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "persuasive-speaking-and-debate"
+      ]
+    },
+    {
+      "term": "argument",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "persuasive-speaking-and-debate"
+      ]
+    },
+    {
+      "term": "claim",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "persuasive-speaking-and-debate"
+      ]
+    },
+    {
+      "term": "evidence",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "persuasive-speaking-and-debate"
+      ]
+    },
+    {
+      "term": "reason",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "persuasive-speaking-and-debate"
+      ]
+    },
+    {
+      "term": "counterargument",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "persuasive-speaking-and-debate"
+      ]
+    },
+    {
+      "term": "rebuttal",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "persuasive-speaking-and-debate"
+      ]
+    },
+    {
+      "term": "stance",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "persuasive-speaking-and-debate"
+      ]
+    },
+    {
+      "term": "opinion",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "persuasive-speaking-and-debate"
+      ]
+    },
+    {
+      "term": "fact",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "persuasive-speaking-and-debate"
+      ]
+    },
+    {
+      "term": "bias",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "persuasive-speaking-and-debate"
+      ]
+    },
+    {
+      "term": "assumption",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "persuasive-speaking-and-debate"
+      ]
+    },
+    {
+      "term": "logical",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "persuasive-speaking-and-debate"
+      ]
+    },
+    {
+      "term": "emotional",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "persuasive-speaking-and-debate"
+      ]
+    },
+    {
+      "term": "appeal",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "persuasive-speaking-and-debate"
+      ]
+    },
+    {
+      "term": "purpose",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "persuasive-speaking-and-debate"
+      ]
+    },
+    {
+      "term": "tone",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "persuasive-speaking-and-debate"
+      ]
+    },
+    {
+      "term": "register",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "persuasive-speaking-and-debate"
+      ]
+    },
+    {
+      "term": "rhetorical",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "persuasive-speaking-and-debate"
+      ]
+    },
+    {
+      "term": "question",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "persuasive-speaking-and-debate"
+      ]
+    },
+    {
+      "term": "repetition",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "persuasive-speaking-and-debate"
+      ]
+    },
+    {
+      "term": "emphasis",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "persuasive-speaking-and-debate"
+      ]
+    },
+    {
+      "term": "slogan",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "persuasive-speaking-and-debate"
+      ]
+    },
+    {
+      "term": "proposal",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "persuasive-speaking-and-debate"
+      ]
+    },
+    {
+      "term": "motion",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "persuasive-speaking-and-debate"
+      ]
+    },
+    {
+      "term": "debate",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "persuasive-speaking-and-debate"
+      ]
+    },
+    {
+      "term": "speaker",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "persuasive-speaking-and-debate"
+      ]
+    },
+    {
+      "term": "chairperson",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "persuasive-speaking-and-debate"
+      ]
+    },
+    {
+      "term": "supporter",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "persuasive-speaking-and-debate"
+      ]
+    },
+    {
+      "term": "agree",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "persuasive-speaking-and-debate"
+      ]
+    },
+    {
+      "term": "disagree",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "persuasive-speaking-and-debate"
+      ]
+    },
+    {
+      "term": "concede",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "persuasive-speaking-and-debate"
+      ]
+    },
+    {
+      "term": "clarify",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "persuasive-speaking-and-debate"
+      ]
+    },
+    {
+      "term": "conclude",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "persuasive-speaking-and-debate"
+      ]
+    },
+    {
+      "term": "introduction",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "persuasive-speaking-and-debate"
+      ]
+    },
+    {
+      "term": "conclusion",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "persuasive-speaking-and-debate"
+      ]
+    },
+    {
+      "term": "structure",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "persuasive-speaking-and-debate"
+      ]
+    },
+    {
+      "term": "coherence",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "persuasive-speaking-and-debate"
+      ]
+    },
+    {
+      "term": "convincing",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "persuasive-speaking-and-debate"
+      ]
+    },
+    {
+      "term": "credible",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "persuasive-speaking-and-debate"
+      ]
+    },
+    {
+      "term": "valid",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "persuasive-speaking-and-debate"
+      ]
+    },
+    {
+      "term": "weak",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "persuasive-speaking-and-debate"
+      ]
+    },
+    {
+      "term": "strong",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "persuasive-speaking-and-debate"
+      ]
+    },
+    {
+      "term": "balanced",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "persuasive-speaking-and-debate"
+      ]
+    },
+    {
+      "term": "objective",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "persuasive-speaking-and-debate"
+      ]
+    },
+    {
+      "term": "subjective",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "persuasive-speaking-and-debate"
+      ]
+    },
+    {
+      "term": "recommendation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "persuasive-speaking-and-debate"
+      ]
+    },
+    {
+      "term": "solution",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "persuasive-speaking-and-debate"
+      ]
+    },
+    {
+      "term": "impact",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "persuasive-speaking-and-debate"
+      ]
+    },
+    {
+      "term": "benefit",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "persuasive-speaking-and-debate"
+      ]
+    },
+    {
+      "term": "drawback",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "persuasive-speaking-and-debate"
+      ]
+    },
+    {
+      "term": "advantage",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "persuasive-speaking-and-debate"
+      ]
+    },
+    {
+      "term": "disadvantage",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "persuasive-speaking-and-debate"
+      ]
+    },
+    {
+      "term": "priority",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "persuasive-speaking-and-debate"
+      ]
+    },
+    {
+      "term": "policy",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "persuasive-speaking-and-debate"
+      ]
+    },
+    {
+      "term": "campaign",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "persuasive-speaking-and-debate"
+      ]
+    },
+    {
+      "term": "advocacy",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "persuasive-speaking-and-debate"
+      ]
+    },
+    {
+      "term": "awareness",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "persuasive-speaking-and-debate"
+      ]
+    },
+    {
+      "term": "newspaper",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "feature-articles-and-journalism"
+      ]
+    },
+    {
+      "term": "magazine",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "feature-articles-and-journalism"
+      ]
+    },
+    {
+      "term": "subheading",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "feature-articles-and-journalism"
+      ]
+    },
+    {
+      "term": "byline",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "feature-articles-and-journalism"
+      ]
+    },
+    {
+      "term": "lead",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "feature-articles-and-journalism"
+      ]
+    },
+    {
+      "term": "paragraph",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "feature-articles-and-journalism"
+      ]
+    },
+    {
+      "term": "caption",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "feature-articles-and-journalism"
+      ]
+    },
+    {
+      "term": "quotation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "feature-articles-and-journalism"
+      ]
+    },
+    {
+      "term": "source",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "feature-articles-and-journalism"
+      ]
+    },
+    {
+      "term": "background",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "feature-articles-and-journalism"
+      ]
+    },
+    {
+      "term": "human",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "feature-articles-and-journalism"
+      ]
+    },
+    {
+      "term": "interest",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "feature-articles-and-journalism"
+      ]
+    },
+    {
+      "term": "issue",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "feature-articles-and-journalism"
+      ]
+    },
+    {
+      "term": "event",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "feature-articles-and-journalism"
+      ]
+    },
+    {
+      "term": "trend",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "feature-articles-and-journalism"
+      ]
+    },
+    {
+      "term": "eyewitness",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "feature-articles-and-journalism"
+      ]
+    },
+    {
+      "term": "reporter",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "feature-articles-and-journalism"
+      ]
+    },
+    {
+      "term": "editor",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "feature-articles-and-journalism"
+      ]
+    },
+    {
+      "term": "publish",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "feature-articles-and-journalism"
+      ]
+    },
+    {
+      "term": "publication",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "feature-articles-and-journalism"
+      ]
+    },
+    {
+      "term": "circulation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "feature-articles-and-journalism"
+      ]
+    },
+    {
+      "term": "online",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "feature-articles-and-journalism"
+      ]
+    },
+    {
+      "term": "platform",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "feature-articles-and-journalism"
+      ]
+    },
+    {
+      "term": "credibility",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "feature-articles-and-journalism"
+      ]
+    },
+    {
+      "term": "objectivity",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "feature-articles-and-journalism"
+      ]
+    },
+    {
+      "term": "fact-check",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "feature-articles-and-journalism"
+      ]
+    },
+    {
+      "term": "verify",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "feature-articles-and-journalism"
+      ]
+    },
+    {
+      "term": "context",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "feature-articles-and-journalism"
+      ]
+    },
+    {
+      "term": "summary",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "feature-articles-and-journalism"
+      ]
+    },
+    {
+      "term": "detail",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "feature-articles-and-journalism"
+      ]
+    },
+    {
+      "term": "anecdote",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "feature-articles-and-journalism"
+      ]
+    },
+    {
+      "term": "narrative",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "feature-articles-and-journalism"
+      ]
+    },
+    {
+      "term": "hook",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "feature-articles-and-journalism"
+      ]
+    },
+    {
+      "term": "layout",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "feature-articles-and-journalism"
+      ]
+    },
+    {
+      "term": "photograph",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "feature-articles-and-journalism"
+      ]
+    },
+    {
+      "term": "infographic",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "feature-articles-and-journalism"
+      ]
+    },
+    {
+      "term": "statistics",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "feature-articles-and-journalism"
+      ]
+    },
+    {
+      "term": "data",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "feature-articles-and-journalism"
+      ]
+    },
+    {
+      "term": "survey",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "feature-articles-and-journalism"
+      ]
+    },
+    {
+      "term": "column",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "feature-articles-and-journalism"
+      ]
+    },
+    {
+      "term": "editorial",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "feature-articles-and-journalism"
+      ]
+    },
+    {
+      "term": "deadline",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "feature-articles-and-journalism"
+      ]
+    },
+    {
+      "term": "draft",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "feature-articles-and-journalism"
+      ]
+    },
+    {
+      "term": "revise",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "feature-articles-and-journalism"
+      ]
+    },
+    {
+      "term": "proofread",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "feature-articles-and-journalism"
+      ]
+    },
+    {
+      "term": "global",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "global-citizenship-and-social-issues"
+      ]
+    },
+    {
+      "term": "citizenship",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "global-citizenship-and-social-issues"
+      ]
+    },
+    {
+      "term": "responsibility",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "global-citizenship-and-social-issues"
+      ]
+    },
+    {
+      "term": "rights",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "global-citizenship-and-social-issues"
+      ]
+    },
+    {
+      "term": "duty",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "global-citizenship-and-social-issues"
+      ]
+    },
+    {
+      "term": "culture",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "global-citizenship-and-social-issues"
+      ]
+    },
+    {
+      "term": "cultural",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "global-citizenship-and-social-issues"
+      ]
+    },
+    {
+      "term": "diversity",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "global-citizenship-and-social-issues"
+      ]
+    },
+    {
+      "term": "inclusion",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "global-citizenship-and-social-issues"
+      ]
+    },
+    {
+      "term": "equity",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "global-citizenship-and-social-issues"
+      ]
+    },
+    {
+      "term": "discrimination",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "global-citizenship-and-social-issues"
+      ]
+    },
+    {
+      "term": "prejudice",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "global-citizenship-and-social-issues"
+      ]
+    },
+    {
+      "term": "stereotype",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "global-citizenship-and-social-issues"
+      ]
+    },
+    {
+      "term": "tolerance",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "global-citizenship-and-social-issues"
+      ]
+    },
+    {
+      "term": "respect",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "global-citizenship-and-social-issues"
+      ]
+    },
+    {
+      "term": "empathy",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "global-citizenship-and-social-issues"
+      ]
+    },
+    {
+      "term": "poverty",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "global-citizenship-and-social-issues"
+      ]
+    },
+    {
+      "term": "homelessness",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "global-citizenship-and-social-issues"
+      ]
+    },
+    {
+      "term": "ageing",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "global-citizenship-and-social-issues"
+      ]
+    },
+    {
+      "term": "population",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "global-citizenship-and-social-issues"
+      ]
+    },
+    {
+      "term": "migration",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "global-citizenship-and-social-issues"
+      ]
+    },
+    {
+      "term": "refugee",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "global-citizenship-and-social-issues"
+      ]
+    },
+    {
+      "term": "peace",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "global-citizenship-and-social-issues"
+      ]
+    },
+    {
+      "term": "cooperation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "global-citizenship-and-social-issues"
+      ]
+    },
+    {
+      "term": "charity",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "global-citizenship-and-social-issues"
+      ]
+    },
+    {
+      "term": "volunteer",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "global-citizenship-and-social-issues"
+      ]
+    },
+    {
+      "term": "service",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "global-citizenship-and-social-issues"
+      ]
+    },
+    {
+      "term": "sustainability",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "global-citizenship-and-social-issues"
+      ]
+    },
+    {
+      "term": "climate",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "global-citizenship-and-social-issues"
+      ]
+    },
+    {
+      "term": "change",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "global-citizenship-and-social-issues"
+      ]
+    },
+    {
+      "term": "plastic",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "global-citizenship-and-social-issues"
+      ]
+    },
+    {
+      "term": "waste",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "global-citizenship-and-social-issues"
+      ]
+    },
+    {
+      "term": "pollution",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "global-citizenship-and-social-issues"
+      ]
+    },
+    {
+      "term": "conservation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "global-citizenship-and-social-issues"
+      ]
+    },
+    {
+      "term": "consumerism",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "global-citizenship-and-social-issues"
+      ]
+    },
+    {
+      "term": "addiction",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "global-citizenship-and-social-issues"
+      ]
+    },
+    {
+      "term": "cyberbullying",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "global-citizenship-and-social-issues"
+      ]
+    },
+    {
+      "term": "privacy",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "global-citizenship-and-social-issues"
+      ]
+    },
+    {
+      "term": "security",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "global-citizenship-and-social-issues"
+      ]
+    },
+    {
+      "term": "misinformation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "global-citizenship-and-social-issues"
+      ]
+    },
+    {
+      "term": "health",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "global-citizenship-and-social-issues"
+      ]
+    },
+    {
+      "term": "wellbeing",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "global-citizenship-and-social-issues"
+      ]
+    },
+    {
+      "term": "mental",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "global-citizenship-and-social-issues"
+      ]
+    },
+    {
+      "term": "stress",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "global-citizenship-and-social-issues"
+      ]
+    },
+    {
+      "term": "anxiety",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "global-citizenship-and-social-issues"
+      ]
+    },
+    {
+      "term": "relationship",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "global-citizenship-and-social-issues"
+      ]
+    },
+    {
+      "term": "peer",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "global-citizenship-and-social-issues"
+      ]
+    },
+    {
+      "term": "belonging",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "global-citizenship-and-social-issues"
+      ]
+    },
+    {
+      "term": "local",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "global-citizenship-and-social-issues"
+      ]
+    },
+    {
+      "term": "international",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "global-citizenship-and-social-issues"
+      ]
+    },
+    {
+      "term": "action",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "global-citizenship-and-social-issues"
+      ]
+    },
+    {
+      "term": "science",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "science-innovation-and-lac"
+      ]
+    },
+    {
+      "term": "innovation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "science-innovation-and-lac"
+      ]
+    },
+    {
+      "term": "innovative",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "science-innovation-and-lac"
+      ]
+    },
+    {
+      "term": "invention",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "science-innovation-and-lac"
+      ]
+    },
+    {
+      "term": "inventor",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "science-innovation-and-lac"
+      ]
+    },
+    {
+      "term": "technological",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "science-innovation-and-lac"
+      ]
+    },
+    {
+      "term": "artificial",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "science-innovation-and-lac"
+      ]
+    },
+    {
+      "term": "intelligence",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "science-innovation-and-lac"
+      ]
+    },
+    {
+      "term": "robot",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "science-innovation-and-lac"
+      ]
+    },
+    {
+      "term": "robotics",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "science-innovation-and-lac"
+      ]
+    },
+    {
+      "term": "automation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "science-innovation-and-lac"
+      ]
+    },
+    {
+      "term": "algorithm",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "science-innovation-and-lac"
+      ]
+    },
+    {
+      "term": "observation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "science-innovation-and-lac"
+      ]
+    },
+    {
+      "term": "accurate",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "science-innovation-and-lac"
+      ]
+    },
+    {
+      "term": "measurement",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "science-innovation-and-lac"
+      ]
+    },
+    {
+      "term": "variable",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "science-innovation-and-lac"
+      ]
+    },
+    {
+      "term": "result",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "science-innovation-and-lac"
+      ]
+    },
+    {
+      "term": "research",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "science-innovation-and-lac"
+      ]
+    },
+    {
+      "term": "development",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "science-innovation-and-lac"
+      ]
+    },
+    {
+      "term": "renewable",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "science-innovation-and-lac"
+      ]
+    },
+    {
+      "term": "energy",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "science-innovation-and-lac"
+      ]
+    },
+    {
+      "term": "ecosystem",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "science-innovation-and-lac"
+      ]
+    },
+    {
+      "term": "biodiversity",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "science-innovation-and-lac"
+      ]
+    },
+    {
+      "term": "genetics",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "science-innovation-and-lac"
+      ]
+    },
+    {
+      "term": "medicine",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "science-innovation-and-lac"
+      ]
+    },
+    {
+      "term": "disease",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "science-innovation-and-lac"
+      ]
+    },
+    {
+      "term": "treatment",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "science-innovation-and-lac"
+      ]
+    },
+    {
+      "term": "prevention",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "science-innovation-and-lac"
+      ]
+    },
+    {
+      "term": "hygiene",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "science-innovation-and-lac"
+      ]
+    },
+    {
+      "term": "bacteria",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "science-innovation-and-lac"
+      ]
+    },
+    {
+      "term": "virus",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "science-innovation-and-lac"
+      ]
+    },
+    {
+      "term": "vaccine",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "science-innovation-and-lac"
+      ]
+    },
+    {
+      "term": "material",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "science-innovation-and-lac"
+      ]
+    },
+    {
+      "term": "chemical",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "science-innovation-and-lac"
+      ]
+    },
+    {
+      "term": "reaction",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "science-innovation-and-lac"
+      ]
+    },
+    {
+      "term": "force",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "science-innovation-and-lac"
+      ]
+    },
+    {
+      "term": "electricity",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "science-innovation-and-lac"
+      ]
+    },
+    {
+      "term": "device",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "science-innovation-and-lac"
+      ]
+    },
+    {
+      "term": "application",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "science-innovation-and-lac"
+      ]
+    },
+    {
+      "term": "prototype",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "science-innovation-and-lac"
+      ]
+    },
+    {
+      "term": "design",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "science-innovation-and-lac"
+      ]
+    },
+    {
+      "term": "engineer",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "science-innovation-and-lac"
+      ]
+    },
+    {
+      "term": "engineering",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "science-innovation-and-lac"
+      ]
+    },
+    {
+      "term": "risk",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "science-innovation-and-lac"
+      ]
+    },
+    {
+      "term": "limitation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "science-innovation-and-lac"
+      ]
+    },
+    {
+      "term": "efficiency",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "science-innovation-and-lac"
+      ]
+    },
+    {
+      "term": "productivity",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "science-innovation-and-lac"
+      ]
+    },
+    {
+      "term": "future",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "science-innovation-and-lac"
+      ]
+    },
+    {
+      "term": "prediction",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "science-innovation-and-lac"
+      ]
+    },
+    {
+      "term": "infer",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "academic-reading-writing"
+      ]
+    },
+    {
+      "term": "synthesize",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "academic-reading-writing"
+      ]
+    },
+    {
+      "term": "paraphrase",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "academic-reading-writing"
+      ]
+    },
+    {
+      "term": "classify",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "academic-reading-writing"
+      ]
+    },
+    {
+      "term": "identify",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "academic-reading-writing"
+      ]
+    },
+    {
+      "term": "define",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "academic-reading-writing"
+      ]
+    },
+    {
+      "term": "explain",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "academic-reading-writing"
+      ]
+    },
+    {
+      "term": "describe",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "academic-reading-writing"
+      ]
+    },
+    {
+      "term": "elaborate",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "academic-reading-writing"
+      ]
+    },
+    {
+      "term": "illustrate",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "academic-reading-writing"
+      ]
+    },
+    {
+      "term": "support",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "academic-reading-writing"
+      ]
+    },
+    {
+      "term": "organize",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "academic-reading-writing"
+      ]
+    },
+    {
+      "term": "cause",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "academic-reading-writing"
+      ]
+    },
+    {
+      "term": "effect",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "academic-reading-writing"
+      ]
+    },
+    {
+      "term": "problem",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "academic-reading-writing"
+      ]
+    },
+    {
+      "term": "reference",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "academic-reading-writing"
+      ]
+    },
+    {
+      "term": "citation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "academic-reading-writing"
+      ]
+    },
+    {
+      "term": "reliability",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "academic-reading-writing"
+      ]
+    },
+    {
+      "term": "relevance",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "academic-reading-writing"
+      ]
+    },
+    {
+      "term": "implication",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "academic-reading-writing"
+      ]
+    },
+    {
+      "term": "thesis",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "academic-reading-writing"
+      ]
+    },
+    {
+      "term": "topic",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "academic-reading-writing"
+      ]
+    },
+    {
+      "term": "sentence",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "academic-reading-writing"
+      ]
+    },
+    {
+      "term": "supporting",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "academic-reading-writing"
+      ]
+    },
+    {
+      "term": "cohesive",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "academic-reading-writing"
+      ]
+    },
+    {
+      "term": "formal",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "academic-reading-writing"
+      ]
+    },
+    {
+      "term": "informal",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "academic-reading-writing"
+      ]
+    },
+    {
+      "term": "academic",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "academic-reading-writing"
+      ]
+    },
+    {
+      "term": "vocabulary",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "academic-reading-writing"
+      ]
+    },
+    {
+      "term": "collocation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "academic-reading-writing"
+      ]
+    },
+    {
+      "term": "synonym",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "academic-reading-writing"
+      ]
+    },
+    {
+      "term": "antonym",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "academic-reading-writing"
+      ]
+    },
+    {
+      "term": "prefix",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "academic-reading-writing"
+      ]
+    },
+    {
+      "term": "suffix",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "academic-reading-writing"
+      ]
+    },
+    {
+      "term": "root",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "academic-reading-writing"
+      ]
+    },
+    {
+      "term": "word",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "academic-reading-writing"
+      ]
+    },
+    {
+      "term": "family",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "academic-reading-writing"
+      ]
+    },
+    {
+      "term": "connotation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "academic-reading-writing"
+      ]
+    },
+    {
+      "term": "denotation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "academic-reading-writing"
+      ]
+    },
+    {
+      "term": "idiom",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "academic-reading-writing"
+      ]
+    },
+    {
+      "term": "phrase",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "academic-reading-writing"
+      ]
+    },
+    {
+      "term": "expression",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "academic-reading-writing"
+      ]
+    },
+    {
+      "term": "dictionary",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "academic-reading-writing"
+      ]
+    },
+    {
+      "term": "thesaurus",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "academic-reading-writing"
+      ]
+    },
+    {
+      "term": "glossary",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "academic-reading-writing"
+      ]
+    },
+    {
+      "term": "music",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "music-and-arts"
+      ]
+    },
+    {
+      "term": "musician",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "music-and-arts"
+      ]
+    },
+    {
+      "term": "instrument",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "music-and-arts"
+      ]
+    },
+    {
+      "term": "rhythm",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "music-and-arts"
+      ]
+    },
+    {
+      "term": "melody",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "music-and-arts"
+      ]
+    },
+    {
+      "term": "harmony",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "music-and-arts"
+      ]
+    },
+    {
+      "term": "lyrics",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "music-and-arts"
+      ]
+    },
+    {
+      "term": "concert",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "music-and-arts"
+      ]
+    },
+    {
+      "term": "band",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "music-and-arts"
+      ]
+    },
+    {
+      "term": "orchestra",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "music-and-arts"
+      ]
+    },
+    {
+      "term": "choir",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "music-and-arts"
+      ]
+    },
+    {
+      "term": "composer",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "music-and-arts"
+      ]
+    },
+    {
+      "term": "composition",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "music-and-arts"
+      ]
+    },
+    {
+      "term": "critic",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "music-and-arts"
+      ]
+    },
+    {
+      "term": "positive",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "music-and-arts"
+      ]
+    },
+    {
+      "term": "negative",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "music-and-arts"
+      ]
+    },
+    {
+      "term": "project",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "music-and-arts"
+      ]
+    },
+    {
+      "term": "creativity",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "music-and-arts"
+      ]
+    },
+    {
+      "term": "artistic",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "music-and-arts"
+      ]
+    },
+    {
+      "term": "style",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "music-and-arts"
+      ]
+    },
+    {
+      "term": "traditional",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "music-and-arts"
+      ]
+    },
+    {
+      "term": "modern",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "music-and-arts"
+      ]
+    },
+    {
+      "term": "classical",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "music-and-arts"
+      ]
+    },
+    {
+      "term": "pop",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "music-and-arts"
+      ]
+    },
+    {
+      "term": "jazz",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "music-and-arts"
+      ]
+    },
+    {
+      "term": "rock",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "music-and-arts"
+      ]
+    },
+    {
+      "term": "dramatic",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "music-and-arts"
+      ]
+    },
+    {
+      "term": "inspiring",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "music-and-arts"
+      ]
+    },
+    {
+      "term": "energetic",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "music-and-arts"
+      ]
+    },
+    {
+      "term": "relaxing",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "music-and-arts"
+      ]
+    },
+    {
+      "term": "memorable",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "music-and-arts"
+      ]
+    },
+    {
+      "term": "impressive",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "music-and-arts"
+      ]
+    },
+    {
+      "term": "entertaining",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "music-and-arts"
+      ]
+    },
+    {
+      "term": "meaningful",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "music-and-arts"
+      ]
+    },
+    {
+      "term": "goal",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "school-life-and-future-pathways"
+      ]
+    },
+    {
+      "term": "ambition",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "school-life-and-future-pathways"
+      ]
+    },
+    {
+      "term": "career",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "school-life-and-future-pathways"
+      ]
+    },
+    {
+      "term": "pathway",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "school-life-and-future-pathways"
+      ]
+    },
+    {
+      "term": "subject",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "school-life-and-future-pathways"
+      ]
+    },
+    {
+      "term": "selection",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "school-life-and-future-pathways"
+      ]
+    },
+    {
+      "term": "independence",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "school-life-and-future-pathways"
+      ]
+    },
+    {
+      "term": "self-directed",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "school-life-and-future-pathways"
+      ]
+    },
+    {
+      "term": "learning",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "school-life-and-future-pathways"
+      ]
+    },
+    {
+      "term": "portfolio",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "school-life-and-future-pathways"
+      ]
+    },
+    {
+      "term": "reflection",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "school-life-and-future-pathways"
+      ]
+    },
+    {
+      "term": "feedback",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "school-life-and-future-pathways"
+      ]
+    },
+    {
+      "term": "target",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "school-life-and-future-pathways"
+      ]
+    },
+    {
+      "term": "progress",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "school-life-and-future-pathways"
+      ]
+    },
+    {
+      "term": "weakness",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "school-life-and-future-pathways"
+      ]
+    },
+    {
+      "term": "opportunity",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "school-life-and-future-pathways"
+      ]
+    },
+    {
+      "term": "time",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "school-life-and-future-pathways"
+      ]
+    },
+    {
+      "term": "management",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "school-life-and-future-pathways"
+      ]
+    },
+    {
+      "term": "schedule",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "school-life-and-future-pathways"
+      ]
+    },
+    {
+      "term": "teamwork",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "school-life-and-future-pathways"
+      ]
+    },
+    {
+      "term": "collaboration",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "school-life-and-future-pathways"
+      ]
+    },
+    {
+      "term": "leadership",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "school-life-and-future-pathways"
+      ]
+    },
+    {
+      "term": "communication",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "school-life-and-future-pathways"
+      ]
+    },
+    {
+      "term": "confidence",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "school-life-and-future-pathways"
+      ]
+    },
+    {
+      "term": "assignment",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "school-life-and-future-pathways"
+      ]
+    },
+    {
+      "term": "assessment",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "school-life-and-future-pathways"
+      ]
+    },
+    {
+      "term": "criteria",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "school-life-and-future-pathways"
+      ]
+    },
+    {
+      "term": "plagiarism",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "school-life-and-future-pathways"
+      ]
+    },
+    {
+      "term": "originality",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "school-life-and-future-pathways"
+      ]
+    },
+    {
+      "term": "digital",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "school-life-and-future-pathways"
+      ]
+    },
+    {
+      "term": "literacy",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "school-life-and-future-pathways"
+      ]
+    },
+    {
+      "term": "journal",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "school-life-and-future-pathways"
+      ]
+    },
+    {
+      "term": "log",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "school-life-and-future-pathways"
+      ]
+    },
+    {
+      "term": "revision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "school-life-and-future-pathways"
+      ]
+    },
+    {
+      "term": "examination",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "school-life-and-future-pathways"
+      ]
+    },
+    {
+      "term": "preparation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "english",
+        "curriculum-style",
+        "school-life-and-future-pathways"
       ]
     }
   ]

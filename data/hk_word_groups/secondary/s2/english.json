@@ -7,6 +7,15 @@
   "version": "2026.06",
   "display_name_en": "S2 English",
   "display_name_zh_hant": "中二英文",
+  "source": {
+    "type": "curriculum_style_public_references",
+    "references": [
+      "EDB English Language Education KLA Curriculum Guide / Junior Secondary Supplement 2018",
+      "EDB Language across the Curriculum junior secondary professional development resources",
+      "Public junior secondary English curriculum handbook examples for S2 themes"
+    ],
+    "note": "No fixed official Hong Kong S2 vocabulary list is prescribed; this list is theme-based for S2 English enrichment import. Term-only entries are completed during import."
+  },
   "words": [
     {
       "term": "analyze",
@@ -326,6 +335,5935 @@
         "noun",
         "emotional intelligence",
         "relationships"
+      ]
+    },
+    {
+      "term": "narrative",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "narrative-writing"
+      ]
+    },
+    {
+      "term": "narrator",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "narrative-writing"
+      ]
+    },
+    {
+      "term": "plot",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "narrative-writing"
+      ]
+    },
+    {
+      "term": "character",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "narrative-writing"
+      ]
+    },
+    {
+      "term": "setting",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "narrative-writing"
+      ]
+    },
+    {
+      "term": "conflict",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "narrative-writing"
+      ]
+    },
+    {
+      "term": "climax",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "narrative-writing"
+      ]
+    },
+    {
+      "term": "resolution",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "narrative-writing"
+      ]
+    },
+    {
+      "term": "twist",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "narrative-writing"
+      ]
+    },
+    {
+      "term": "suspense",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "narrative-writing"
+      ]
+    },
+    {
+      "term": "dialogue",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "narrative-writing"
+      ]
+    },
+    {
+      "term": "description",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "narrative-writing"
+      ]
+    },
+    {
+      "term": "viewpoint",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "narrative-writing"
+      ]
+    },
+    {
+      "term": "flashback",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "narrative-writing"
+      ]
+    },
+    {
+      "term": "foreshadowing",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "narrative-writing"
+      ]
+    },
+    {
+      "term": "atmosphere",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "narrative-writing"
+      ]
+    },
+    {
+      "term": "tension",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "narrative-writing"
+      ]
+    },
+    {
+      "term": "motive",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "narrative-writing"
+      ]
+    },
+    {
+      "term": "reaction",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "narrative-writing"
+      ]
+    },
+    {
+      "term": "emotion",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "narrative-writing"
+      ]
+    },
+    {
+      "term": "gesture",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "narrative-writing"
+      ]
+    },
+    {
+      "term": "expression",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "narrative-writing"
+      ]
+    },
+    {
+      "term": "personality",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "narrative-writing"
+      ]
+    },
+    {
+      "term": "protagonist",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "narrative-writing"
+      ]
+    },
+    {
+      "term": "antagonist",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "narrative-writing"
+      ]
+    },
+    {
+      "term": "hero",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "narrative-writing"
+      ]
+    },
+    {
+      "term": "villain",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "narrative-writing"
+      ]
+    },
+    {
+      "term": "incident",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "narrative-writing"
+      ]
+    },
+    {
+      "term": "episode",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "narrative-writing"
+      ]
+    },
+    {
+      "term": "sequence",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "narrative-writing"
+      ]
+    },
+    {
+      "term": "paragraph",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "narrative-writing"
+      ]
+    },
+    {
+      "term": "scene",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "narrative-writing"
+      ]
+    },
+    {
+      "term": "chapter",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "narrative-writing"
+      ]
+    },
+    {
+      "term": "theme",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "narrative-writing"
+      ]
+    },
+    {
+      "term": "symbolism",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "narrative-writing"
+      ]
+    },
+    {
+      "term": "imagery",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "narrative-writing"
+      ]
+    },
+    {
+      "term": "metaphor",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "narrative-writing"
+      ]
+    },
+    {
+      "term": "simile",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "narrative-writing"
+      ]
+    },
+    {
+      "term": "personification",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "narrative-writing"
+      ]
+    },
+    {
+      "term": "alliteration",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "narrative-writing"
+      ]
+    },
+    {
+      "term": "tone",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "narrative-writing"
+      ]
+    },
+    {
+      "term": "mood",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "narrative-writing"
+      ]
+    },
+    {
+      "term": "pacing",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "narrative-writing"
+      ]
+    },
+    {
+      "term": "draft",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "narrative-writing"
+      ]
+    },
+    {
+      "term": "revise",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "narrative-writing"
+      ]
+    },
+    {
+      "term": "edit",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "narrative-writing"
+      ]
+    },
+    {
+      "term": "publish",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "narrative-writing"
+      ]
+    },
+    {
+      "term": "audience",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "narrative-writing"
+      ]
+    },
+    {
+      "term": "purpose",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "narrative-writing"
+      ]
+    },
+    {
+      "term": "coherence",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "narrative-writing"
+      ]
+    },
+    {
+      "term": "cohesion",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "narrative-writing"
+      ]
+    },
+    {
+      "term": "transition",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "narrative-writing"
+      ]
+    },
+    {
+      "term": "quotation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "narrative-writing"
+      ]
+    },
+    {
+      "term": "manuscript",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "narrative-writing"
+      ]
+    },
+    {
+      "term": "fiction",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "narrative-writing"
+      ]
+    },
+    {
+      "term": "realistic",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "narrative-writing"
+      ]
+    },
+    {
+      "term": "mysterious",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "narrative-writing"
+      ]
+    },
+    {
+      "term": "dramatic",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "narrative-writing"
+      ]
+    },
+    {
+      "term": "humorous",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "narrative-writing"
+      ]
+    },
+    {
+      "term": "tragic",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "narrative-writing"
+      ]
+    },
+    {
+      "term": "adventurous",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "narrative-writing"
+      ]
+    },
+    {
+      "term": "imaginative",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "narrative-writing"
+      ]
+    },
+    {
+      "term": "creative",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "narrative-writing"
+      ]
+    },
+    {
+      "term": "original",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "narrative-writing"
+      ]
+    },
+    {
+      "term": "compelling",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "narrative-writing"
+      ]
+    },
+    {
+      "term": "believable",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "narrative-writing"
+      ]
+    },
+    {
+      "term": "vivid",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "narrative-writing"
+      ]
+    },
+    {
+      "term": "descriptive",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "narrative-writing"
+      ]
+    },
+    {
+      "term": "reflective",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "narrative-writing"
+      ]
+    },
+    {
+      "term": "chronological",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "narrative-writing"
+      ]
+    },
+    {
+      "term": "poem",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "poetry-and-language-arts"
+      ]
+    },
+    {
+      "term": "poetry",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "poetry-and-language-arts"
+      ]
+    },
+    {
+      "term": "poet",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "poetry-and-language-arts"
+      ]
+    },
+    {
+      "term": "stanza",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "poetry-and-language-arts"
+      ]
+    },
+    {
+      "term": "verse",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "poetry-and-language-arts"
+      ]
+    },
+    {
+      "term": "line",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "poetry-and-language-arts"
+      ]
+    },
+    {
+      "term": "rhyme",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "poetry-and-language-arts"
+      ]
+    },
+    {
+      "term": "rhythm",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "poetry-and-language-arts"
+      ]
+    },
+    {
+      "term": "ballad",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "poetry-and-language-arts"
+      ]
+    },
+    {
+      "term": "limerick",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "poetry-and-language-arts"
+      ]
+    },
+    {
+      "term": "haiku",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "poetry-and-language-arts"
+      ]
+    },
+    {
+      "term": "sonnet",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "poetry-and-language-arts"
+      ]
+    },
+    {
+      "term": "symbol",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "poetry-and-language-arts"
+      ]
+    },
+    {
+      "term": "speaker",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "poetry-and-language-arts"
+      ]
+    },
+    {
+      "term": "voice",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "poetry-and-language-arts"
+      ]
+    },
+    {
+      "term": "repetition",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "poetry-and-language-arts"
+      ]
+    },
+    {
+      "term": "refrain",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "poetry-and-language-arts"
+      ]
+    },
+    {
+      "term": "figurative",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "poetry-and-language-arts"
+      ]
+    },
+    {
+      "term": "literal",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "poetry-and-language-arts"
+      ]
+    },
+    {
+      "term": "meaning",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "poetry-and-language-arts"
+      ]
+    },
+    {
+      "term": "interpretation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "poetry-and-language-arts"
+      ]
+    },
+    {
+      "term": "performance",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "poetry-and-language-arts"
+      ]
+    },
+    {
+      "term": "recitation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "poetry-and-language-arts"
+      ]
+    },
+    {
+      "term": "monologue",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "poetry-and-language-arts"
+      ]
+    },
+    {
+      "term": "chorus",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "poetry-and-language-arts"
+      ]
+    },
+    {
+      "term": "contrast",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "poetry-and-language-arts"
+      ]
+    },
+    {
+      "term": "comparison",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "poetry-and-language-arts"
+      ]
+    },
+    {
+      "term": "sound",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "poetry-and-language-arts"
+      ]
+    },
+    {
+      "term": "pattern",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "poetry-and-language-arts"
+      ]
+    },
+    {
+      "term": "syllable",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "poetry-and-language-arts"
+      ]
+    },
+    {
+      "term": "stress",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "poetry-and-language-arts"
+      ]
+    },
+    {
+      "term": "pause",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "poetry-and-language-arts"
+      ]
+    },
+    {
+      "term": "appreciation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "poetry-and-language-arts"
+      ]
+    },
+    {
+      "term": "anthology",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "poetry-and-language-arts"
+      ]
+    },
+    {
+      "term": "literary",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "poetry-and-language-arts"
+      ]
+    },
+    {
+      "term": "literature",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "poetry-and-language-arts"
+      ]
+    },
+    {
+      "term": "prose",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "poetry-and-language-arts"
+      ]
+    },
+    {
+      "term": "drama",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "poetry-and-language-arts"
+      ]
+    },
+    {
+      "term": "theatre",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "poetry-and-language-arts"
+      ]
+    },
+    {
+      "term": "script",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "poetry-and-language-arts"
+      ]
+    },
+    {
+      "term": "stage",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "poetry-and-language-arts"
+      ]
+    },
+    {
+      "term": "perform",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "poetry-and-language-arts"
+      ]
+    },
+    {
+      "term": "actor",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "poetry-and-language-arts"
+      ]
+    },
+    {
+      "term": "costume",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "poetry-and-language-arts"
+      ]
+    },
+    {
+      "term": "prop",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "poetry-and-language-arts"
+      ]
+    },
+    {
+      "term": "narration",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "poetry-and-language-arts"
+      ]
+    },
+    {
+      "term": "advertisement",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "advertising-and-media"
+      ]
+    },
+    {
+      "term": "advertising",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "advertising-and-media"
+      ]
+    },
+    {
+      "term": "campaign",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "advertising-and-media"
+      ]
+    },
+    {
+      "term": "product",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "advertising-and-media"
+      ]
+    },
+    {
+      "term": "brand",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "advertising-and-media"
+      ]
+    },
+    {
+      "term": "slogan",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "advertising-and-media"
+      ]
+    },
+    {
+      "term": "logo",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "advertising-and-media"
+      ]
+    },
+    {
+      "term": "target",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "advertising-and-media"
+      ]
+    },
+    {
+      "term": "consumer",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "advertising-and-media"
+      ]
+    },
+    {
+      "term": "customer",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "advertising-and-media"
+      ]
+    },
+    {
+      "term": "market",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "advertising-and-media"
+      ]
+    },
+    {
+      "term": "marketing",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "advertising-and-media"
+      ]
+    },
+    {
+      "term": "persuasive",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "advertising-and-media"
+      ]
+    },
+    {
+      "term": "appeal",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "advertising-and-media"
+      ]
+    },
+    {
+      "term": "endorsement",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "advertising-and-media"
+      ]
+    },
+    {
+      "term": "promotion",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "advertising-and-media"
+      ]
+    },
+    {
+      "term": "discount",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "advertising-and-media"
+      ]
+    },
+    {
+      "term": "packaging",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "advertising-and-media"
+      ]
+    },
+    {
+      "term": "design",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "advertising-and-media"
+      ]
+    },
+    {
+      "term": "feature",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "advertising-and-media"
+      ]
+    },
+    {
+      "term": "benefit",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "advertising-and-media"
+      ]
+    },
+    {
+      "term": "quality",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "advertising-and-media"
+      ]
+    },
+    {
+      "term": "value",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "advertising-and-media"
+      ]
+    },
+    {
+      "term": "price",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "advertising-and-media"
+      ]
+    },
+    {
+      "term": "guarantee",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "advertising-and-media"
+      ]
+    },
+    {
+      "term": "testimonial",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "advertising-and-media"
+      ]
+    },
+    {
+      "term": "poster",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "advertising-and-media"
+      ]
+    },
+    {
+      "term": "brochure",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "advertising-and-media"
+      ]
+    },
+    {
+      "term": "leaflet",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "advertising-and-media"
+      ]
+    },
+    {
+      "term": "billboard",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "advertising-and-media"
+      ]
+    },
+    {
+      "term": "commercial",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "advertising-and-media"
+      ]
+    },
+    {
+      "term": "jingle",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "advertising-and-media"
+      ]
+    },
+    {
+      "term": "image",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "advertising-and-media"
+      ]
+    },
+    {
+      "term": "layout",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "advertising-and-media"
+      ]
+    },
+    {
+      "term": "headline",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "advertising-and-media"
+      ]
+    },
+    {
+      "term": "caption",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "advertising-and-media"
+      ]
+    },
+    {
+      "term": "font",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "advertising-and-media"
+      ]
+    },
+    {
+      "term": "colour",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "advertising-and-media"
+      ]
+    },
+    {
+      "term": "visual",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "advertising-and-media"
+      ]
+    },
+    {
+      "term": "audio",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "advertising-and-media"
+      ]
+    },
+    {
+      "term": "editing",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "advertising-and-media"
+      ]
+    },
+    {
+      "term": "camera",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "advertising-and-media"
+      ]
+    },
+    {
+      "term": "angle",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "advertising-and-media"
+      ]
+    },
+    {
+      "term": "message",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "advertising-and-media"
+      ]
+    },
+    {
+      "term": "persuade",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "advertising-and-media"
+      ]
+    },
+    {
+      "term": "inform",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "advertising-and-media"
+      ]
+    },
+    {
+      "term": "entertain",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "advertising-and-media"
+      ]
+    },
+    {
+      "term": "awareness",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "advertising-and-media"
+      ]
+    },
+    {
+      "term": "launch",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "advertising-and-media"
+      ]
+    },
+    {
+      "term": "proposal",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "advertising-and-media"
+      ]
+    },
+    {
+      "term": "strategy",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "advertising-and-media"
+      ]
+    },
+    {
+      "term": "survey",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "advertising-and-media"
+      ]
+    },
+    {
+      "term": "feedback",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "advertising-and-media"
+      ]
+    },
+    {
+      "term": "competitor",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "advertising-and-media"
+      ]
+    },
+    {
+      "term": "demand",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "advertising-and-media"
+      ]
+    },
+    {
+      "term": "trend",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "advertising-and-media"
+      ]
+    },
+    {
+      "term": "popular",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "advertising-and-media"
+      ]
+    },
+    {
+      "term": "viral",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "advertising-and-media"
+      ]
+    },
+    {
+      "term": "social",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "advertising-and-media"
+      ]
+    },
+    {
+      "term": "media",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "advertising-and-media"
+      ]
+    },
+    {
+      "term": "platform",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "advertising-and-media"
+      ]
+    },
+    {
+      "term": "website",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "advertising-and-media"
+      ]
+    },
+    {
+      "term": "blog",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "advertising-and-media"
+      ]
+    },
+    {
+      "term": "vlog",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "advertising-and-media"
+      ]
+    },
+    {
+      "term": "podcast",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "advertising-and-media"
+      ]
+    },
+    {
+      "term": "channel",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "advertising-and-media"
+      ]
+    },
+    {
+      "term": "stream",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "advertising-and-media"
+      ]
+    },
+    {
+      "term": "post",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "advertising-and-media"
+      ]
+    },
+    {
+      "term": "share",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "advertising-and-media"
+      ]
+    },
+    {
+      "term": "comment",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "advertising-and-media"
+      ]
+    },
+    {
+      "term": "subscribe",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "advertising-and-media"
+      ]
+    },
+    {
+      "term": "privacy",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "advertising-and-media"
+      ]
+    },
+    {
+      "term": "security",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "advertising-and-media"
+      ]
+    },
+    {
+      "term": "scam",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "advertising-and-media"
+      ]
+    },
+    {
+      "term": "suspicious",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "advertising-and-media"
+      ]
+    },
+    {
+      "term": "reliable",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "advertising-and-media"
+      ]
+    },
+    {
+      "term": "source",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "advertising-and-media"
+      ]
+    },
+    {
+      "term": "digital",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "advertising-and-media"
+      ]
+    },
+    {
+      "term": "online",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "advertising-and-media"
+      ]
+    },
+    {
+      "term": "offline",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "advertising-and-media"
+      ]
+    },
+    {
+      "term": "communication",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "advertising-and-media"
+      ]
+    },
+    {
+      "term": "technology",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "advertising-and-media"
+      ]
+    },
+    {
+      "term": "device",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "advertising-and-media"
+      ]
+    },
+    {
+      "term": "app",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "advertising-and-media"
+      ]
+    },
+    {
+      "term": "notification",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "advertising-and-media"
+      ]
+    },
+    {
+      "term": "account",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "advertising-and-media"
+      ]
+    },
+    {
+      "term": "password",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "advertising-and-media"
+      ]
+    },
+    {
+      "term": "novel",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "novels-and-social-issues"
+      ]
+    },
+    {
+      "term": "author",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "novels-and-social-issues"
+      ]
+    },
+    {
+      "term": "reader",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "novels-and-social-issues"
+      ]
+    },
+    {
+      "term": "issue",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "novels-and-social-issues"
+      ]
+    },
+    {
+      "term": "society",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "novels-and-social-issues"
+      ]
+    },
+    {
+      "term": "identity",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "novels-and-social-issues"
+      ]
+    },
+    {
+      "term": "friendship",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "novels-and-social-issues"
+      ]
+    },
+    {
+      "term": "family",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "novels-and-social-issues"
+      ]
+    },
+    {
+      "term": "relationship",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "novels-and-social-issues"
+      ]
+    },
+    {
+      "term": "bullying",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "novels-and-social-issues"
+      ]
+    },
+    {
+      "term": "prejudice",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "novels-and-social-issues"
+      ]
+    },
+    {
+      "term": "stereotype",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "novels-and-social-issues"
+      ]
+    },
+    {
+      "term": "discrimination",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "novels-and-social-issues"
+      ]
+    },
+    {
+      "term": "equality",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "novels-and-social-issues"
+      ]
+    },
+    {
+      "term": "fairness",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "novels-and-social-issues"
+      ]
+    },
+    {
+      "term": "justice",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "novels-and-social-issues"
+      ]
+    },
+    {
+      "term": "poverty",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "novels-and-social-issues"
+      ]
+    },
+    {
+      "term": "wealth",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "novels-and-social-issues"
+      ]
+    },
+    {
+      "term": "responsibility",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "novels-and-social-issues"
+      ]
+    },
+    {
+      "term": "respect",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "novels-and-social-issues"
+      ]
+    },
+    {
+      "term": "tolerance",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "novels-and-social-issues"
+      ]
+    },
+    {
+      "term": "compassion",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "novels-and-social-issues"
+      ]
+    },
+    {
+      "term": "courage",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "novels-and-social-issues"
+      ]
+    },
+    {
+      "term": "honesty",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "novels-and-social-issues"
+      ]
+    },
+    {
+      "term": "loyalty",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "novels-and-social-issues"
+      ]
+    },
+    {
+      "term": "trust",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "novels-and-social-issues"
+      ]
+    },
+    {
+      "term": "betrayal",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "novels-and-social-issues"
+      ]
+    },
+    {
+      "term": "forgiveness",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "novels-and-social-issues"
+      ]
+    },
+    {
+      "term": "choice",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "novels-and-social-issues"
+      ]
+    },
+    {
+      "term": "pressure",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "novels-and-social-issues"
+      ]
+    },
+    {
+      "term": "peer",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "novels-and-social-issues"
+      ]
+    },
+    {
+      "term": "misunderstanding",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "novels-and-social-issues"
+      ]
+    },
+    {
+      "term": "cooperation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "novels-and-social-issues"
+      ]
+    },
+    {
+      "term": "support",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "novels-and-social-issues"
+      ]
+    },
+    {
+      "term": "volunteer",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "novels-and-social-issues"
+      ]
+    },
+    {
+      "term": "charity",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "novels-and-social-issues"
+      ]
+    },
+    {
+      "term": "service",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "novels-and-social-issues"
+      ]
+    },
+    {
+      "term": "citizen",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "novels-and-social-issues"
+      ]
+    },
+    {
+      "term": "civic",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "novels-and-social-issues"
+      ]
+    },
+    {
+      "term": "public",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "novels-and-social-issues"
+      ]
+    },
+    {
+      "term": "private",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "novels-and-social-issues"
+      ]
+    },
+    {
+      "term": "local",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "novels-and-social-issues"
+      ]
+    },
+    {
+      "term": "global",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "novels-and-social-issues"
+      ]
+    },
+    {
+      "term": "culture",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "novels-and-social-issues"
+      ]
+    },
+    {
+      "term": "tradition",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "novels-and-social-issues"
+      ]
+    },
+    {
+      "term": "heritage",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "novels-and-social-issues"
+      ]
+    },
+    {
+      "term": "diversity",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "novels-and-social-issues"
+      ]
+    },
+    {
+      "term": "inclusion",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "novels-and-social-issues"
+      ]
+    },
+    {
+      "term": "belonging",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "novels-and-social-issues"
+      ]
+    },
+    {
+      "term": "loneliness",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "novels-and-social-issues"
+      ]
+    },
+    {
+      "term": "isolation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "novels-and-social-issues"
+      ]
+    },
+    {
+      "term": "mental",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "novels-and-social-issues"
+      ]
+    },
+    {
+      "term": "health",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "novels-and-social-issues"
+      ]
+    },
+    {
+      "term": "anxiety",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "novels-and-social-issues"
+      ]
+    },
+    {
+      "term": "confidence",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "novels-and-social-issues"
+      ]
+    },
+    {
+      "term": "self-esteem",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "novels-and-social-issues"
+      ]
+    },
+    {
+      "term": "resilience",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "novels-and-social-issues"
+      ]
+    },
+    {
+      "term": "wellbeing",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "novels-and-social-issues"
+      ]
+    },
+    {
+      "term": "habit",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "novels-and-social-issues"
+      ]
+    },
+    {
+      "term": "lifestyle",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "novels-and-social-issues"
+      ]
+    },
+    {
+      "term": "addiction",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "novels-and-social-issues"
+      ]
+    },
+    {
+      "term": "risk",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "novels-and-social-issues"
+      ]
+    },
+    {
+      "term": "safety",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "novels-and-social-issues"
+      ]
+    },
+    {
+      "term": "rule",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "novels-and-social-issues"
+      ]
+    },
+    {
+      "term": "law",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "novels-and-social-issues"
+      ]
+    },
+    {
+      "term": "crime",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "novels-and-social-issues"
+      ]
+    },
+    {
+      "term": "victim",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "novels-and-social-issues"
+      ]
+    },
+    {
+      "term": "witness",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "novels-and-social-issues"
+      ]
+    },
+    {
+      "term": "evidence",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "novels-and-social-issues"
+      ]
+    },
+    {
+      "term": "skim",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "reading-skills"
+      ]
+    },
+    {
+      "term": "scan",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "reading-skills"
+      ]
+    },
+    {
+      "term": "infer",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "reading-skills"
+      ]
+    },
+    {
+      "term": "predict",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "reading-skills"
+      ]
+    },
+    {
+      "term": "summarize",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "reading-skills"
+      ]
+    },
+    {
+      "term": "paraphrase",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "reading-skills"
+      ]
+    },
+    {
+      "term": "quote",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "reading-skills"
+      ]
+    },
+    {
+      "term": "identify",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "reading-skills"
+      ]
+    },
+    {
+      "term": "locate",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "reading-skills"
+      ]
+    },
+    {
+      "term": "compare",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "reading-skills"
+      ]
+    },
+    {
+      "term": "classify",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "reading-skills"
+      ]
+    },
+    {
+      "term": "justify",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "reading-skills"
+      ]
+    },
+    {
+      "term": "explain",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "reading-skills"
+      ]
+    },
+    {
+      "term": "describe",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "reading-skills"
+      ]
+    },
+    {
+      "term": "cause",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "reading-skills"
+      ]
+    },
+    {
+      "term": "effect",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "reading-skills"
+      ]
+    },
+    {
+      "term": "opinion",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "reading-skills"
+      ]
+    },
+    {
+      "term": "fact",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "reading-skills"
+      ]
+    },
+    {
+      "term": "assumption",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "reading-skills"
+      ]
+    },
+    {
+      "term": "bias",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "reading-skills"
+      ]
+    },
+    {
+      "term": "reliability",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "reading-skills"
+      ]
+    },
+    {
+      "term": "relevance",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "reading-skills"
+      ]
+    },
+    {
+      "term": "reference",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "reading-skills"
+      ]
+    },
+    {
+      "term": "context",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "reading-skills"
+      ]
+    },
+    {
+      "term": "clue",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "reading-skills"
+      ]
+    },
+    {
+      "term": "main",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "reading-skills"
+      ]
+    },
+    {
+      "term": "idea",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "reading-skills"
+      ]
+    },
+    {
+      "term": "supporting",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "reading-skills"
+      ]
+    },
+    {
+      "term": "detail",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "reading-skills"
+      ]
+    },
+    {
+      "term": "conclusion",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "reading-skills"
+      ]
+    },
+    {
+      "term": "introduction",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "reading-skills"
+      ]
+    },
+    {
+      "term": "heading",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "reading-skills"
+      ]
+    },
+    {
+      "term": "subheading",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "reading-skills"
+      ]
+    },
+    {
+      "term": "graph",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "reading-skills"
+      ]
+    },
+    {
+      "term": "chart",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "reading-skills"
+      ]
+    },
+    {
+      "term": "table",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "reading-skills"
+      ]
+    },
+    {
+      "term": "diagram",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "reading-skills"
+      ]
+    },
+    {
+      "term": "index",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "reading-skills"
+      ]
+    },
+    {
+      "term": "glossary",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "reading-skills"
+      ]
+    },
+    {
+      "term": "dictionary",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "reading-skills"
+      ]
+    },
+    {
+      "term": "thesaurus",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "reading-skills"
+      ]
+    },
+    {
+      "term": "synonym",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "reading-skills"
+      ]
+    },
+    {
+      "term": "antonym",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "reading-skills"
+      ]
+    },
+    {
+      "term": "prefix",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "reading-skills"
+      ]
+    },
+    {
+      "term": "suffix",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "reading-skills"
+      ]
+    },
+    {
+      "term": "root",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "reading-skills"
+      ]
+    },
+    {
+      "term": "collocation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "reading-skills"
+      ]
+    },
+    {
+      "term": "idiom",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "reading-skills"
+      ]
+    },
+    {
+      "term": "phrase",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "reading-skills"
+      ]
+    },
+    {
+      "term": "comprehension",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "reading-skills"
+      ]
+    },
+    {
+      "term": "response",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "reading-skills"
+      ]
+    },
+    {
+      "term": "argument",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "reading-skills"
+      ]
+    },
+    {
+      "term": "claim",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "reading-skills"
+      ]
+    },
+    {
+      "term": "reason",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "reading-skills"
+      ]
+    },
+    {
+      "term": "example",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "reading-skills"
+      ]
+    },
+    {
+      "term": "entry",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "writing-and-communication"
+      ]
+    },
+    {
+      "term": "letter",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "writing-and-communication"
+      ]
+    },
+    {
+      "term": "email",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "writing-and-communication"
+      ]
+    },
+    {
+      "term": "report",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "writing-and-communication"
+      ]
+    },
+    {
+      "term": "article",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "writing-and-communication"
+      ]
+    },
+    {
+      "term": "review",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "writing-and-communication"
+      ]
+    },
+    {
+      "term": "speech",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "writing-and-communication"
+      ]
+    },
+    {
+      "term": "presentation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "writing-and-communication"
+      ]
+    },
+    {
+      "term": "debate",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "writing-and-communication"
+      ]
+    },
+    {
+      "term": "discussion",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "writing-and-communication"
+      ]
+    },
+    {
+      "term": "interview",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "writing-and-communication"
+      ]
+    },
+    {
+      "term": "questionnaire",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "writing-and-communication"
+      ]
+    },
+    {
+      "term": "announcement",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "writing-and-communication"
+      ]
+    },
+    {
+      "term": "notice",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "writing-and-communication"
+      ]
+    },
+    {
+      "term": "diary",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "writing-and-communication"
+      ]
+    },
+    {
+      "term": "journal",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "writing-and-communication"
+      ]
+    },
+    {
+      "term": "recount",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "writing-and-communication"
+      ]
+    },
+    {
+      "term": "advice",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "writing-and-communication"
+      ]
+    },
+    {
+      "term": "recommendation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "writing-and-communication"
+      ]
+    },
+    {
+      "term": "suggestion",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "writing-and-communication"
+      ]
+    },
+    {
+      "term": "complaint",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "writing-and-communication"
+      ]
+    },
+    {
+      "term": "request",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "writing-and-communication"
+      ]
+    },
+    {
+      "term": "apology",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "writing-and-communication"
+      ]
+    },
+    {
+      "term": "invitation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "writing-and-communication"
+      ]
+    },
+    {
+      "term": "reply",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "writing-and-communication"
+      ]
+    },
+    {
+      "term": "greeting",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "writing-and-communication"
+      ]
+    },
+    {
+      "term": "closing",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "writing-and-communication"
+      ]
+    },
+    {
+      "term": "formal",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "writing-and-communication"
+      ]
+    },
+    {
+      "term": "informal",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "writing-and-communication"
+      ]
+    },
+    {
+      "term": "register",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "writing-and-communication"
+      ]
+    },
+    {
+      "term": "topic",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "writing-and-communication"
+      ]
+    },
+    {
+      "term": "sentence",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "writing-and-communication"
+      ]
+    },
+    {
+      "term": "concluding",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "writing-and-communication"
+      ]
+    },
+    {
+      "term": "connectives",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "writing-and-communication"
+      ]
+    },
+    {
+      "term": "moreover",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "writing-and-communication"
+      ]
+    },
+    {
+      "term": "however",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "writing-and-communication"
+      ]
+    },
+    {
+      "term": "therefore",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "writing-and-communication"
+      ]
+    },
+    {
+      "term": "although",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "writing-and-communication"
+      ]
+    },
+    {
+      "term": "because",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "writing-and-communication"
+      ]
+    },
+    {
+      "term": "since",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "writing-and-communication"
+      ]
+    },
+    {
+      "term": "unless",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "writing-and-communication"
+      ]
+    },
+    {
+      "term": "meanwhile",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "writing-and-communication"
+      ]
+    },
+    {
+      "term": "firstly",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "writing-and-communication"
+      ]
+    },
+    {
+      "term": "finally",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "writing-and-communication"
+      ]
+    },
+    {
+      "term": "advantage",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "writing-and-communication"
+      ]
+    },
+    {
+      "term": "disadvantage",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "writing-and-communication"
+      ]
+    },
+    {
+      "term": "solution",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "writing-and-communication"
+      ]
+    },
+    {
+      "term": "problem",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "writing-and-communication"
+      ]
+    },
+    {
+      "term": "process",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "writing-and-communication"
+      ]
+    },
+    {
+      "term": "outline",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "writing-and-communication"
+      ]
+    },
+    {
+      "term": "proofread",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "writing-and-communication"
+      ]
+    },
+    {
+      "term": "plagiarism",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "writing-and-communication"
+      ]
+    },
+    {
+      "term": "originality",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "writing-and-communication"
+      ]
+    },
+    {
+      "term": "citation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "writing-and-communication"
+      ]
+    },
+    {
+      "term": "environment",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "environment-and-science"
+      ]
+    },
+    {
+      "term": "sustainability",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "environment-and-science"
+      ]
+    },
+    {
+      "term": "pollution",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "environment-and-science"
+      ]
+    },
+    {
+      "term": "recycle",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "environment-and-science"
+      ]
+    },
+    {
+      "term": "recycling",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "environment-and-science"
+      ]
+    },
+    {
+      "term": "waste",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "environment-and-science"
+      ]
+    },
+    {
+      "term": "resource",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "environment-and-science"
+      ]
+    },
+    {
+      "term": "energy",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "environment-and-science"
+      ]
+    },
+    {
+      "term": "electricity",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "environment-and-science"
+      ]
+    },
+    {
+      "term": "climate",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "environment-and-science"
+      ]
+    },
+    {
+      "term": "weather",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "environment-and-science"
+      ]
+    },
+    {
+      "term": "warming",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "environment-and-science"
+      ]
+    },
+    {
+      "term": "conservation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "environment-and-science"
+      ]
+    },
+    {
+      "term": "habitat",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "environment-and-science"
+      ]
+    },
+    {
+      "term": "species",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "environment-and-science"
+      ]
+    },
+    {
+      "term": "wildlife",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "environment-and-science"
+      ]
+    },
+    {
+      "term": "ecosystem",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "environment-and-science"
+      ]
+    },
+    {
+      "term": "rainforest",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "environment-and-science"
+      ]
+    },
+    {
+      "term": "ocean",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "environment-and-science"
+      ]
+    },
+    {
+      "term": "river",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "environment-and-science"
+      ]
+    },
+    {
+      "term": "mountain",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "environment-and-science"
+      ]
+    },
+    {
+      "term": "disaster",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "environment-and-science"
+      ]
+    },
+    {
+      "term": "typhoon",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "environment-and-science"
+      ]
+    },
+    {
+      "term": "flood",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "environment-and-science"
+      ]
+    },
+    {
+      "term": "drought",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "environment-and-science"
+      ]
+    },
+    {
+      "term": "earthquake",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "environment-and-science"
+      ]
+    },
+    {
+      "term": "volcano",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "environment-and-science"
+      ]
+    },
+    {
+      "term": "erosion",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "environment-and-science"
+      ]
+    },
+    {
+      "term": "temperature",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "environment-and-science"
+      ]
+    },
+    {
+      "term": "greenhouse",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "environment-and-science"
+      ]
+    },
+    {
+      "term": "carbon",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "environment-and-science"
+      ]
+    },
+    {
+      "term": "footprint",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "environment-and-science"
+      ]
+    },
+    {
+      "term": "renewable",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "environment-and-science"
+      ]
+    },
+    {
+      "term": "solar",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "environment-and-science"
+      ]
+    },
+    {
+      "term": "wind",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "environment-and-science"
+      ]
+    },
+    {
+      "term": "biodiversity",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "environment-and-science"
+      ]
+    },
+    {
+      "term": "endangered",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "environment-and-science"
+      ]
+    },
+    {
+      "term": "protect",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "environment-and-science"
+      ]
+    },
+    {
+      "term": "reduce",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "environment-and-science"
+      ]
+    },
+    {
+      "term": "reuse",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "environment-and-science"
+      ]
+    },
+    {
+      "term": "experiment",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "environment-and-science"
+      ]
+    },
+    {
+      "term": "observe",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "environment-and-science"
+      ]
+    },
+    {
+      "term": "observation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "environment-and-science"
+      ]
+    },
+    {
+      "term": "result",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "environment-and-science"
+      ]
+    },
+    {
+      "term": "data",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "environment-and-science"
+      ]
+    },
+    {
+      "term": "hypothesis",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "environment-and-science"
+      ]
+    },
+    {
+      "term": "accurate",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "environment-and-science"
+      ]
+    },
+    {
+      "term": "measure",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "environment-and-science"
+      ]
+    },
+    {
+      "term": "chemical",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "environment-and-science"
+      ]
+    },
+    {
+      "term": "material",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "environment-and-science"
+      ]
+    },
+    {
+      "term": "substance",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "environment-and-science"
+      ]
+    },
+    {
+      "term": "property",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "environment-and-science"
+      ]
+    },
+    {
+      "term": "force",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "environment-and-science"
+      ]
+    },
+    {
+      "term": "motion",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "environment-and-science"
+      ]
+    },
+    {
+      "term": "gravity",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "environment-and-science"
+      ]
+    },
+    {
+      "term": "nutrition",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "environment-and-science"
+      ]
+    },
+    {
+      "term": "disease",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "environment-and-science"
+      ]
+    },
+    {
+      "term": "healthy",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "environment-and-science"
+      ]
+    },
+    {
+      "term": "harmful",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "environment-and-science"
+      ]
+    },
+    {
+      "term": "prevention",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "environment-and-science"
+      ]
+    },
+    {
+      "term": "hygiene",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "environment-and-science"
+      ]
+    },
+    {
+      "term": "bacteria",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "environment-and-science"
+      ]
+    },
+    {
+      "term": "virus",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "environment-and-science"
+      ]
+    },
+    {
+      "term": "symptom",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "environment-and-science"
+      ]
+    },
+    {
+      "term": "treatment",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "environment-and-science"
+      ]
+    },
+    {
+      "term": "medicine",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "environment-and-science"
+      ]
+    },
+    {
+      "term": "exercise",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "environment-and-science"
+      ]
+    },
+    {
+      "term": "balance",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "environment-and-science"
+      ]
+    },
+    {
+      "term": "diet",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "environment-and-science"
+      ]
+    },
+    {
+      "term": "geography",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "geography-history-lac"
+      ]
+    },
+    {
+      "term": "history",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "geography-history-lac"
+      ]
+    },
+    {
+      "term": "historical",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "geography-history-lac"
+      ]
+    },
+    {
+      "term": "timeline",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "geography-history-lac"
+      ]
+    },
+    {
+      "term": "century",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "geography-history-lac"
+      ]
+    },
+    {
+      "term": "dynasty",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "geography-history-lac"
+      ]
+    },
+    {
+      "term": "empire",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "geography-history-lac"
+      ]
+    },
+    {
+      "term": "colony",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "geography-history-lac"
+      ]
+    },
+    {
+      "term": "revolution",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "geography-history-lac"
+      ]
+    },
+    {
+      "term": "migration",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "geography-history-lac"
+      ]
+    },
+    {
+      "term": "population",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "geography-history-lac"
+      ]
+    },
+    {
+      "term": "urban",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "geography-history-lac"
+      ]
+    },
+    {
+      "term": "rural",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "geography-history-lac"
+      ]
+    },
+    {
+      "term": "settlement",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "geography-history-lac"
+      ]
+    },
+    {
+      "term": "transport",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "geography-history-lac"
+      ]
+    },
+    {
+      "term": "trade",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "geography-history-lac"
+      ]
+    },
+    {
+      "term": "economy",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "geography-history-lac"
+      ]
+    },
+    {
+      "term": "industry",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "geography-history-lac"
+      ]
+    },
+    {
+      "term": "agriculture",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "geography-history-lac"
+      ]
+    },
+    {
+      "term": "map",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "geography-history-lac"
+      ]
+    },
+    {
+      "term": "scale",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "geography-history-lac"
+      ]
+    },
+    {
+      "term": "region",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "geography-history-lac"
+      ]
+    },
+    {
+      "term": "border",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "geography-history-lac"
+      ]
+    },
+    {
+      "term": "continent",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "geography-history-lac"
+      ]
+    },
+    {
+      "term": "tourism",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "geography-history-lac"
+      ]
+    },
+    {
+      "term": "monument",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "geography-history-lac"
+      ]
+    },
+    {
+      "term": "museum",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "geography-history-lac"
+      ]
+    },
+    {
+      "term": "artefact",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "geography-history-lac"
+      ]
+    },
+    {
+      "term": "primary",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "geography-history-lac"
+      ]
+    },
+    {
+      "term": "secondary",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "geography-history-lac"
+      ]
+    },
+    {
+      "term": "reform",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "geography-history-lac"
+      ]
+    },
+    {
+      "term": "government",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "geography-history-lac"
+      ]
+    },
+    {
+      "term": "policy",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "geography-history-lac"
+      ]
+    },
+    {
+      "term": "rights",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "geography-history-lac"
+      ]
+    },
+    {
+      "term": "development",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "geography-history-lac"
+      ]
+    },
+    {
+      "term": "globalization",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "geography-history-lac"
+      ]
+    },
+    {
+      "term": "assignment",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "school-and-learning"
+      ]
+    },
+    {
+      "term": "curriculum",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "school-and-learning"
+      ]
+    },
+    {
+      "term": "deadline",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "school-and-learning"
+      ]
+    },
+    {
+      "term": "project",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "school-and-learning"
+      ]
+    },
+    {
+      "term": "research",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "school-and-learning"
+      ]
+    },
+    {
+      "term": "independent",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "school-and-learning"
+      ]
+    },
+    {
+      "term": "autonomous",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "school-and-learning"
+      ]
+    },
+    {
+      "term": "priority",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "school-and-learning"
+      ]
+    },
+    {
+      "term": "organize",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "school-and-learning"
+      ]
+    },
+    {
+      "term": "schedule",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "school-and-learning"
+      ]
+    },
+    {
+      "term": "timetable",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "school-and-learning"
+      ]
+    },
+    {
+      "term": "goal",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "school-and-learning"
+      ]
+    },
+    {
+      "term": "achievement",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "school-and-learning"
+      ]
+    },
+    {
+      "term": "improvement",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "school-and-learning"
+      ]
+    },
+    {
+      "term": "progress",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "school-and-learning"
+      ]
+    },
+    {
+      "term": "method",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "school-and-learning"
+      ]
+    },
+    {
+      "term": "technique",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "school-and-learning"
+      ]
+    },
+    {
+      "term": "participate",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "school-and-learning"
+      ]
+    },
+    {
+      "term": "contribute",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "school-and-learning"
+      ]
+    },
+    {
+      "term": "leadership",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "school-and-learning"
+      ]
+    },
+    {
+      "term": "teamwork",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "school-and-learning"
+      ]
+    },
+    {
+      "term": "committee",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "school-and-learning"
+      ]
+    },
+    {
+      "term": "club",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "school-and-learning"
+      ]
+    },
+    {
+      "term": "competition",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "school-and-learning"
+      ]
+    },
+    {
+      "term": "assembly",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "school-and-learning"
+      ]
+    },
+    {
+      "term": "ceremony",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "school-and-learning"
+      ]
+    },
+    {
+      "term": "discipline",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "school-and-learning"
+      ]
+    },
+    {
+      "term": "punctual",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "school-and-learning"
+      ]
+    },
+    {
+      "term": "attendance",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "school-and-learning"
+      ]
+    },
+    {
+      "term": "behaviour",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "school-and-learning"
+      ]
+    },
+    {
+      "term": "attitude",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "school-and-learning"
+      ]
+    },
+    {
+      "term": "effort",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "school-and-learning"
+      ]
+    },
+    {
+      "term": "concentration",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "school-and-learning"
+      ]
+    },
+    {
+      "term": "motivation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "school-and-learning"
+      ]
+    },
+    {
+      "term": "curiosity",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "school-and-learning"
+      ]
+    },
+    {
+      "term": "creativity",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "school-and-learning"
+      ]
+    },
+    {
+      "term": "critical",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "school-and-learning"
+      ]
+    },
+    {
+      "term": "thinking",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "school-and-learning"
+      ]
+    },
+    {
+      "term": "solving",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "school-and-learning"
+      ]
+    },
+    {
+      "term": "decision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "school-and-learning"
+      ]
+    },
+    {
+      "term": "making",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "school-and-learning"
+      ]
+    },
+    {
+      "term": "reflection",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "school-and-learning"
+      ]
+    },
+    {
+      "term": "evaluation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "school-and-learning"
+      ]
+    },
+    {
+      "term": "portfolio",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "school-and-learning"
+      ]
+    },
+    {
+      "term": "handout",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "school-and-learning"
+      ]
+    },
+    {
+      "term": "worksheet",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "school-and-learning"
+      ]
+    },
+    {
+      "term": "folder",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "school-and-learning"
+      ]
+    },
+    {
+      "term": "locker",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "school-and-learning"
+      ]
+    },
+    {
+      "term": "campus",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "school-and-learning"
+      ]
+    },
+    {
+      "term": "facility",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "school-and-learning"
+      ]
+    },
+    {
+      "term": "laboratory",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "school-and-learning"
+      ]
+    },
+    {
+      "term": "library",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "school-and-learning"
+      ]
+    },
+    {
+      "term": "classroom",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "english",
+        "curriculum-style",
+        "school-and-learning"
       ]
     }
   ]

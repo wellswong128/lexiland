@@ -2,154 +2,2894 @@
   "group_code": "hk-secondary-s4-english",
   "terms": {
     "analyze": {
-      "status": "incomplete",
-      "missing": [
-        "pronunciation",
-        "part_of_speech"
-      ],
+      "status": "complete",
+      "missing": [],
       "errors": {},
-      "completed_at": null
+      "completed_at": "2026-06-25T06:25:04Z"
     },
     "consequence": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-21T00:44:00Z"
+      "completed_at": "2026-06-25T06:25:04Z"
     },
     "significant": {
-      "status": "incomplete",
-      "missing": [
-        "pronunciation",
-        "part_of_speech"
-      ],
+      "status": "complete",
+      "missing": [],
       "errors": {},
-      "completed_at": null
+      "completed_at": "2026-06-25T06:25:05Z"
     },
     "perspective": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-21T00:44:02Z"
+      "completed_at": "2026-06-25T06:25:05Z"
     },
     "evaluate": {
-      "status": "incomplete",
-      "missing": [
-        "pronunciation",
-        "part_of_speech"
-      ],
+      "status": "complete",
+      "missing": [],
       "errors": {},
-      "completed_at": null
+      "completed_at": "2026-06-25T06:25:06Z"
     },
     "sustainable": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-21T00:44:04Z"
+      "completed_at": "2026-06-25T06:25:07Z"
     },
     "argument": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-21T00:44:04Z"
+      "completed_at": "2026-06-25T06:25:07Z"
     },
     "collaborate": {
-      "status": "incomplete",
-      "missing": [
-        "pronunciation",
-        "part_of_speech"
-      ],
+      "status": "complete",
+      "missing": [],
       "errors": {},
-      "completed_at": null
+      "completed_at": "2026-06-25T06:25:08Z"
     },
     "ambiguous": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-21T00:44:06Z"
+      "completed_at": "2026-06-25T06:25:08Z"
     },
     "hypothesis": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-21T00:44:07Z"
+      "completed_at": "2026-06-25T06:25:09Z"
     },
     "impact": {
-      "status": "incomplete",
-      "missing": [
-        "pronunciation",
-        "part_of_speech"
-      ],
+      "status": "complete",
+      "missing": [],
       "errors": {},
-      "completed_at": null
+      "completed_at": "2026-06-25T06:25:09Z"
     },
     "demonstrate": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-21T00:44:09Z"
+      "completed_at": "2026-06-25T06:25:10Z"
     },
     "essential": {
-      "status": "incomplete",
-      "missing": [
-        "pronunciation",
-        "part_of_speech"
-      ],
+      "status": "complete",
+      "missing": [],
       "errors": {},
-      "completed_at": null
+      "completed_at": "2026-06-25T06:25:10Z"
     },
     "bias": {
-      "status": "incomplete",
-      "missing": [
-        "pronunciation",
-        "part_of_speech"
-      ],
+      "status": "complete",
+      "missing": [],
       "errors": {},
-      "completed_at": null
+      "completed_at": "2026-06-25T06:25:11Z"
     },
     "interpret": {
-      "status": "incomplete",
-      "missing": [
-        "pronunciation",
-        "part_of_speech"
-      ],
+      "status": "complete",
+      "missing": [],
       "errors": {},
-      "completed_at": null
+      "completed_at": "2026-06-25T06:25:11Z"
     },
     "challenge": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-21T00:44:12Z"
+      "completed_at": "2026-06-25T06:25:12Z"
     },
     "phenomenon": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-21T00:44:13Z"
+      "completed_at": "2026-06-25T06:25:12Z"
     },
     "advocate": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-21T00:44:14Z"
+      "completed_at": "2026-06-25T06:25:13Z"
     },
     "comprehensive": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:25:14Z"
+    },
+    "critique": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:25:14Z"
+    },
+    "synthesize": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:25:15Z"
+    },
+    "infer": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:25:15Z"
+    },
+    "deduce": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:25:16Z"
+    },
+    "justify": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:25:16Z"
+    },
+    "elaborate": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:25:17Z"
+    },
+    "illustrate": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:25:17Z"
+    },
+    "exemplify": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:25:18Z"
+    },
+    "summarize": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:25:18Z"
+    },
+    "paraphrase": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:25:19Z"
+    },
+    "compare": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:25:19Z"
+    },
+    "contrast": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:25:20Z"
+    },
+    "classify": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:25:21Z"
+    },
+    "identify": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:25:21Z"
+    },
+    "define": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:25:22Z"
+    },
+    "explain": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:25:22Z"
+    },
+    "describe": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:25:23Z"
+    },
+    "argue": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:25:23Z"
+    },
+    "persuade": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:25:24Z"
+    },
+    "inform": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:25:24Z"
+    },
+    "entertain": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:25:25Z"
+    },
+    "respond": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:25:25Z"
+    },
+    "reflect": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:25:26Z"
+    },
+    "assess": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:25:26Z"
+    },
+    "prioritize": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:25:27Z"
+    },
+    "negotiate": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:25:27Z"
+    },
+    "resolve": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:25:28Z"
+    },
+    "clarify": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:25:29Z"
+    },
+    "conclude": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:25:29Z"
+    },
+    "integrate": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:25:30Z"
+    },
+    "organize": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:25:30Z"
+    },
+    "structure": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:25:31Z"
+    },
+    "coherence": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:25:31Z"
+    },
+    "cohesion": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:25:32Z"
+    },
+    "register": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:25:32Z"
+    },
+    "tone": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:25:33Z"
+    },
+    "audience": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:25:34Z"
+    },
+    "purpose": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:25:34Z"
+    },
+    "context": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:25:35Z"
+    },
+    "stance": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:25:35Z"
+    },
+    "viewpoint": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:25:36Z"
+    },
+    "claim": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:25:36Z"
+    },
+    "evidence": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:25:37Z"
+    },
+    "reasoning": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:25:37Z"
+    },
+    "counterargument": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:25:38Z"
+    },
+    "rebuttal": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:25:38Z"
+    },
+    "implication": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:25:39Z"
+    },
+    "assumption": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:25:39Z"
+    },
+    "validity": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:25:40Z"
+    },
+    "relevance": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:25:41Z"
+    },
+    "credibility": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:25:41Z"
+    },
+    "reliability": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:25:42Z"
+    },
+    "article": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:25:42Z"
+    },
+    "feature": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:25:43Z"
+    },
+    "editorial": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:25:43Z"
+    },
+    "column": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:25:44Z"
+    },
+    "review": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:25:44Z"
+    },
+    "report": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:25:45Z"
+    },
+    "proposal": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:25:45Z"
+    },
+    "speech": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:25:46Z"
+    },
+    "debate": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:25:46Z"
+    },
+    "letter": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:25:47Z"
+    },
+    "email": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:25:48Z"
+    },
+    "blog": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:25:48Z"
+    },
+    "commentary": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:25:49Z"
+    },
+    "profile": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:25:49Z"
+    },
+    "interview": {
       "status": "incomplete",
       "missing": [
-        "pronunciation",
-        "part_of_speech"
+        "example_translation"
       ],
       "errors": {},
       "completed_at": null
     },
-    "critique": {
+    "leaflet": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:25:50Z"
+    },
+    "brochure": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:25:51Z"
+    },
+    "notice": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:25:51Z"
+    },
+    "announcement": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:25:52Z"
+    },
+    "agenda": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:25:52Z"
+    },
+    "minutes": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:25:53Z"
+    },
+    "abstract": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:25:53Z"
+    },
+    "summary": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:25:54Z"
+    },
+    "synopsis": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:25:55Z"
+    },
+    "script": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:25:55Z"
+    },
+    "screenplay": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:25:56Z"
+    },
+    "advertisement": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:25:56Z"
+    },
+    "campaign": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:25:57Z"
+    },
+    "presentation": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:25:57Z"
+    },
+    "discussion": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:25:58Z"
+    },
+    "exposition": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:25:58Z"
+    },
+    "argumentative": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:25:59Z"
+    },
+    "discursive": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:29:19Z"
+    },
+    "narrative": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:29:20Z"
+    },
+    "descriptive": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:29:21Z"
+    },
+    "reflective": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:29:21Z"
+    },
+    "formal": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:29:22Z"
+    },
+    "informal": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:29:22Z"
+    },
+    "semi-formal": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:32:54Z"
+    },
+    "headline": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:32:55Z"
+    },
+    "subheading": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:32:55Z"
+    },
+    "caption": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:32:56Z"
+    },
+    "byline": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:32:56Z"
+    },
+    "layout": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:32:57Z"
+    },
+    "paragraph": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:32:57Z"
+    },
+    "topic sentence": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:32:58Z"
+    },
+    "thesis": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:32:58Z"
+    },
+    "introduction": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:32:59Z"
+    },
+    "conclusion": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:32:59Z"
+    },
+    "transition": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:33:00Z"
+    },
+    "quotation": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:33:01Z"
+    },
+    "citation": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:33:01Z"
+    },
+    "reference": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:33:02Z"
+    },
+    "plagiarism": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:33:02Z"
+    },
+    "originality": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:33:03Z"
+    },
+    "draft": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:33:03Z"
+    },
+    "revise": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:33:04Z"
+    },
+    "proofread": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:33:04Z"
+    },
+    "edit": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:33:05Z"
+    },
+    "relationship": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:33:05Z"
+    },
+    "communication": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:33:06Z"
+    },
+    "interaction": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:33:06Z"
+    },
+    "conflict": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:33:07Z"
+    },
+    "compromise": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:33:07Z"
+    },
+    "consensus": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:33:08Z"
+    },
+    "cooperation": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:33:09Z"
+    },
+    "collaboration": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:33:09Z"
+    },
+    "empathy": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:33:10Z"
+    },
+    "sympathy": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:33:10Z"
+    },
+    "respect": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:33:11Z"
+    },
+    "tolerance": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:33:11Z"
+    },
+    "diversity": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:33:12Z"
+    },
+    "inclusion": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:33:12Z"
+    },
+    "identity": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:33:13Z"
+    },
+    "individuality": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:33:13Z"
+    },
+    "self-esteem": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:33:14Z"
+    },
+    "confidence": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:33:14Z"
+    },
+    "resilience": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:33:15Z"
+    },
+    "wellbeing": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:33:15Z"
+    },
+    "mental health": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:33:16Z"
+    },
+    "stress": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:33:16Z"
+    },
+    "anxiety": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:33:17Z"
+    },
+    "peer pressure": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:33:18Z"
+    },
+    "bullying": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:33:18Z"
+    },
+    "cyberbullying": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:33:19Z"
+    },
+    "stereotype": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:33:19Z"
+    },
+    "prejudice": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:33:20Z"
+    },
+    "discrimination": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:33:20Z"
+    },
+    "equality": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:33:21Z"
+    },
+    "equity": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:33:21Z"
+    },
+    "justice": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:33:22Z"
+    },
+    "fairness": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:33:22Z"
+    },
+    "responsibility": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:33:23Z"
+    },
+    "citizenship": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:33:23Z"
+    },
+    "community": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:33:24Z"
+    },
+    "volunteer": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:33:24Z"
+    },
+    "charity": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:33:25Z"
+    },
+    "service": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:33:25Z"
+    },
+    "advocacy": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:33:26Z"
+    },
+    "awareness": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:33:27Z"
+    },
+    "rights": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:33:27Z"
+    },
+    "obligation": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:33:28Z"
+    },
+    "ethics": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:33:28Z"
+    },
+    "values": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:33:29Z"
+    },
+    "attitude": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:33:29Z"
+    },
+    "behaviour": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:33:30Z"
+    },
+    "influence": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:33:30Z"
+    },
+    "role model": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T07:33:56Z"
+    },
+    "leadership": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:33:45Z"
+    },
+    "teamwork": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:33:45Z"
+    },
+    "career": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:33:46Z"
+    },
+    "profession": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:33:46Z"
+    },
+    "occupation": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:33:47Z"
+    },
+    "workplace": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:33:47Z"
+    },
+    "employment": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:33:48Z"
+    },
+    "employer": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:35:16Z"
+    },
+    "employee": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T07:33:57Z"
+    },
+    "internship": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:37:55Z"
+    },
+    "resume": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:37:56Z"
+    },
+    "application": {
       "status": "incomplete",
       "missing": [
-        "pronunciation",
-        "part_of_speech"
+        "example_translation"
       ],
       "errors": {},
       "completed_at": null
+    },
+    "qualification": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:37:57Z"
+    },
+    "skill": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:37:58Z"
+    },
+    "competence": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:37:59Z"
+    },
+    "training": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:37:59Z"
+    },
+    "experience": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:38:00Z"
+    },
+    "portfolio": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:38:00Z"
+    },
+    "achievement": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:38:01Z"
+    },
+    "goal": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:38:01Z"
+    },
+    "ambition": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:38:02Z"
+    },
+    "aspiration": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:38:02Z"
+    },
+    "pathway": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:40:02Z"
+    },
+    "opportunity": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:40:03Z"
+    },
+    "competition": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:40:03Z"
+    },
+    "productivity": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:40:04Z"
+    },
+    "efficiency": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:40:05Z"
+    },
+    "initiative": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:40:05Z"
+    },
+    "independence": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:40:06Z"
+    },
+    "self-directed": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:40:06Z"
+    },
+    "lifelong learning": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:40:07Z"
+    },
+    "time management": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:40:07Z"
+    },
+    "deadline": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:40:08Z"
+    },
+    "priority": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:40:09Z"
+    },
+    "schedule": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:40:09Z"
+    },
+    "commitment": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:40:10Z"
+    },
+    "adaptability": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:40:10Z"
+    },
+    "creativity": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:40:11Z"
+    },
+    "critical thinking": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:40:11Z"
+    },
+    "problem solving": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:40:12Z"
+    },
+    "decision making": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:40:12Z"
+    },
+    "innovation": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:40:13Z"
+    },
+    "entrepreneurship": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:40:14Z"
+    },
+    "negotiation": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:40:14Z"
+    },
+    "professional": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:40:15Z"
+    },
+    "work ethic": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:40:15Z"
+    },
+    "culture": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:40:16Z"
+    },
+    "cultural": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:40:16Z"
+    },
+    "heritage": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:40:17Z"
+    },
+    "tradition": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:40:18Z"
+    },
+    "custom": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:40:18Z"
+    },
+    "festival": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:40:19Z"
+    },
+    "globalization": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:40:19Z"
+    },
+    "globalisation": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:40:20Z"
+    },
+    "multicultural": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:40:20Z"
+    },
+    "intercultural": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:40:21Z"
+    },
+    "migration": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:40:22Z"
+    },
+    "immigration": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:40:22Z"
+    },
+    "emigration": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:40:23Z"
+    },
+    "refugee": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:40:23Z"
+    },
+    "minority": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:40:24Z"
+    },
+    "majority": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:40:24Z"
+    },
+    "language": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:40:25Z"
+    },
+    "dialect": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:40:25Z"
+    },
+    "society": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:40:26Z"
+    },
+    "nation": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:40:27Z"
+    },
+    "international": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:40:27Z"
+    },
+    "global": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:40:28Z"
+    },
+    "local": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:40:28Z"
+    },
+    "citizen": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:40:29Z"
+    },
+    "poverty": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:40:29Z"
+    },
+    "inequality": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:40:30Z"
+    },
+    "humanitarian": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:40:31Z"
+    },
+    "peace": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:40:31Z"
+    },
+    "development": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:40:32Z"
+    },
+    "sustainable development": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:40:32Z"
+    },
+    "consumerism": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:40:33Z"
+    },
+    "media": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:40:33Z"
+    },
+    "representation": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:40:34Z"
+    },
+    "worldview": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:40:34Z"
+    },
+    "exchange": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:40:35Z"
+    },
+    "adaptation": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:40:36Z"
+    },
+    "integration": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:40:36Z"
+    },
+    "belonging": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:40:37Z"
+    },
+    "environment": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:40:37Z"
+    },
+    "environmental": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:40:38Z"
+    },
+    "sustainability": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:40:38Z"
+    },
+    "conservation": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:40:39Z"
+    },
+    "biodiversity": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:40:40Z"
+    },
+    "ecosystem": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:40:40Z"
+    },
+    "habitat": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:40:41Z"
+    },
+    "species": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:40:41Z"
+    },
+    "endangered": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:40:42Z"
+    },
+    "extinction": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:40:42Z"
+    },
+    "wildlife": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:40:43Z"
+    },
+    "pollution": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:40:43Z"
+    },
+    "waste": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:40:44Z"
+    },
+    "recycling": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:40:45Z"
+    },
+    "plastic": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:40:45Z"
+    },
+    "landfill": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:40:46Z"
+    },
+    "resource": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:40:46Z"
+    },
+    "energy": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:40:47Z"
+    },
+    "renewable": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:40:47Z"
+    },
+    "solar": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:40:48Z"
+    },
+    "wind": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:40:49Z"
+    },
+    "carbon footprint": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:40:49Z"
+    },
+    "greenhouse gas": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:40:50Z"
+    },
+    "climate change": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:40:50Z"
+    },
+    "global warming": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:40:51Z"
+    },
+    "emission": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:40:51Z"
+    },
+    "fossil fuel": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:40:52Z"
+    },
+    "deforestation": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:40:53Z"
+    },
+    "urbanization": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:40:53Z"
+    },
+    "agriculture": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:40:54Z"
+    },
+    "consumption": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:40:54Z"
+    },
+    "consumer": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:40:55Z"
+    },
+    "ecological": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:40:55Z"
+    },
+    "natural disaster": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:40:56Z"
+    },
+    "typhoon": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:40:56Z"
+    },
+    "flood": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:40:57Z"
+    },
+    "drought": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:40:58Z"
+    },
+    "earthquake": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:40:58Z"
+    },
+    "erosion": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:40:59Z"
+    },
+    "mitigation": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:40:59Z"
+    },
+    "solution": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:41:00Z"
+    },
+    "policy": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:41:00Z"
+    },
+    "regulation": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:41:01Z"
+    },
+    "technology": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:41:02Z"
+    },
+    "technological": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:41:02Z"
+    },
+    "digital": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:41:03Z"
+    },
+    "online": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:41:03Z"
+    },
+    "offline": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:41:04Z"
+    },
+    "platform": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:41:04Z"
+    },
+    "device": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:41:05Z"
+    },
+    "algorithm": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:41:05Z"
+    },
+    "artificial intelligence": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:41:06Z"
+    },
+    "automation": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:41:07Z"
+    },
+    "robot": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:41:07Z"
+    },
+    "robotics": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:41:08Z"
+    },
+    "invention": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:41:08Z"
+    },
+    "data": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:41:09Z"
+    },
+    "database": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:41:09Z"
+    },
+    "privacy": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:41:10Z"
+    },
+    "security": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:41:10Z"
+    },
+    "cybersecurity": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:41:11Z"
+    },
+    "password": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:41:12Z"
+    },
+    "account": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:41:12Z"
+    },
+    "identity theft": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:41:13Z"
+    },
+    "scam": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:41:13Z"
+    },
+    "misinformation": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:41:14Z"
+    },
+    "disinformation": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:41:14Z"
+    },
+    "source": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:41:15Z"
+    },
+    "fact-check": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:41:15Z"
+    },
+    "verify": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:41:16Z"
+    },
+    "reliable": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:41:17Z"
+    },
+    "credible": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:41:17Z"
+    },
+    "media literacy": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:41:18Z"
+    },
+    "social media": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:41:18Z"
+    },
+    "streaming": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:41:19Z"
+    },
+    "podcast": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:41:19Z"
+    },
+    "vlog": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:41:20Z"
+    },
+    "post": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:41:21Z"
+    },
+    "share": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:41:21Z"
+    },
+    "comment": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:41:22Z"
+    },
+    "subscribe": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:41:22Z"
+    },
+    "viral": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:41:23Z"
+    },
+    "influencer": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:41:23Z"
+    },
+    "content": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:41:24Z"
+    },
+    "engagement": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:41:25Z"
+    },
+    "network": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:41:25Z"
+    },
+    "accessibility": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:41:26Z"
+    },
+    "digital divide": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:41:26Z"
+    },
+    "ethical": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:41:27Z"
+    },
+    "benefit": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:41:27Z"
+    },
+    "drawback": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:41:28Z"
+    },
+    "risk": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:41:29Z"
+    },
+    "limitation": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:41:29Z"
+    },
+    "leisure": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:41:30Z"
+    },
+    "entertainment": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:41:30Z"
+    },
+    "showbiz": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:41:31Z"
+    },
+    "celebrity": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:41:31Z"
+    },
+    "fame": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:41:32Z"
+    },
+    "popularity": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:41:32Z"
+    },
+    "fan": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:41:33Z"
+    },
+    "performance": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:41:34Z"
+    },
+    "concert": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:41:34Z"
+    },
+    "cinema": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:41:35Z"
+    },
+    "film": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:41:35Z"
+    },
+    "documentary": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:41:36Z"
+    },
+    "drama": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:41:36Z"
+    },
+    "theatre": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:41:37Z"
+    },
+    "music": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:41:37Z"
+    },
+    "musician": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:41:38Z"
+    },
+    "lyrics": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:41:39Z"
+    },
+    "melody": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:41:39Z"
+    },
+    "rhythm": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:41:40Z"
+    },
+    "genre": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:41:40Z"
+    },
+    "critic": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:41:41Z"
+    },
+    "recommendation": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:41:41Z"
+    },
+    "rating": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:41:42Z"
+    },
+    "plot": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:41:43Z"
+    },
+    "character": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:41:43Z"
+    },
+    "setting": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:41:44Z"
+    },
+    "theme": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:41:44Z"
+    },
+    "scene": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:41:45Z"
+    },
+    "dialogue": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:41:46Z"
+    },
+    "soundtrack": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:41:46Z"
+    },
+    "visual": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:41:47Z"
+    },
+    "special effects": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:41:47Z"
+    },
+    "animation": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:41:48Z"
+    },
+    "promotion": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:41:48Z"
+    },
+    "sponsor": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:41:49Z"
+    },
+    "brand": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:41:50Z"
+    },
+    "image": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:41:50Z"
+    },
+    "reputation": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:41:51Z"
+    },
+    "publicity": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:41:51Z"
+    },
+    "controversy": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:41:52Z"
+    },
+    "paparazzi": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:41:52Z"
+    },
+    "talent": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:41:53Z"
+    },
+    "inspiration": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:41:53Z"
+    },
+    "interpretation": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:41:54Z"
+    },
+    "appreciation": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:41:55Z"
+    },
+    "principle": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:41:55Z"
+    },
+    "concept": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:41:56Z"
+    },
+    "theory": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:41:56Z"
+    },
+    "framework": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:41:57Z"
+    },
+    "process": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:41:57Z"
+    },
+    "factor": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:41:58Z"
+    },
+    "aspect": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:41:59Z"
+    },
+    "function": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:41:59Z"
+    },
+    "system": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:42:00Z"
+    },
+    "pattern": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:42:00Z"
+    },
+    "trend": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:42:01Z"
+    },
+    "statistics": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:42:01Z"
+    },
+    "figure": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:42:02Z"
+    },
+    "percentage": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:42:03Z"
+    },
+    "proportion": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:42:03Z"
+    },
+    "correlation": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:42:04Z"
+    },
+    "cause": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:42:04Z"
+    },
+    "effect": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:42:05Z"
+    },
+    "outcome": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:42:05Z"
+    },
+    "method": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:42:06Z"
+    },
+    "approach": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:42:06Z"
+    },
+    "strategy": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:42:07Z"
+    },
+    "analysis": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:42:08Z"
+    },
+    "evaluation": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:42:08Z"
+    },
+    "research": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:42:09Z"
+    },
+    "survey": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:42:09Z"
+    },
+    "questionnaire": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:42:10Z"
+    },
+    "observation": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:42:10Z"
+    },
+    "experiment": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:42:11Z"
+    },
+    "result": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:42:12Z"
+    },
+    "variable": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:42:12Z"
+    },
+    "accurate": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:42:13Z"
+    },
+    "precise": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:42:13Z"
+    },
+    "consistent": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:42:14Z"
+    },
+    "contradictory": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:42:14Z"
+    },
+    "complex": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:42:15Z"
+    },
+    "concrete": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:42:16Z"
+    },
+    "logical": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:42:16Z"
+    },
+    "objective": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:42:17Z"
+    },
+    "subjective": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:42:17Z"
+    },
+    "relevant": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:42:18Z"
+    },
+    "word formation": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:42:18Z"
+    },
+    "prefix": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:42:19Z"
+    },
+    "suffix": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:42:20Z"
+    },
+    "root": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:42:20Z"
+    },
+    "compound": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:42:21Z"
+    },
+    "collocation": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:42:21Z"
+    },
+    "synonym": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:42:22Z"
+    },
+    "antonym": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:42:22Z"
+    },
+    "connotation": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:42:23Z"
+    },
+    "denotation": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:42:24Z"
+    },
+    "idiom": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:42:24Z"
+    },
+    "phrasal verb": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:42:25Z"
+    },
+    "fixed expression": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:42:25Z"
+    },
+    "lexical relation": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:42:26Z"
+    },
+    "inferencing": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:42:26Z"
+    },
+    "context clue": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:42:27Z"
+    },
+    "dictionary": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:42:28Z"
+    },
+    "thesaurus": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:42:28Z"
+    },
+    "word family": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:42:29Z"
+    },
+    "nominalisation": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:42:29Z"
+    },
+    "passive voice": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:42:30Z"
+    },
+    "modal verb": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:42:30Z"
+    },
+    "comparative": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:42:31Z"
+    },
+    "connective": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:43:17Z"
+    },
+    "cohesive device": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:43:17Z"
+    },
+    "discourse marker": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:43:18Z"
+    },
+    "formality": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:43:18Z"
+    },
+    "style": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:43:19Z"
+    },
+    "precision": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:43:19Z"
+    },
+    "variety": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:43:20Z"
+    },
+    "fluency": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:43:20Z"
+    },
+    "accuracy": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:43:21Z"
+    },
+    "appropriacy": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:43:21Z"
+    },
+    "mnemonic": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:43:22Z"
+    },
+    "word web": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:43:23Z"
+    },
+    "vocabulary log": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:43:23Z"
+    },
+    "receptive vocabulary": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:43:24Z"
+    },
+    "active vocabulary": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:45:56Z"
+    },
+    "academic vocabulary": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:45:56Z"
     }
   }
 }

@@ -449,12 +449,6 @@ def run_completion_rounds(
         print(f"\n=== Round {round_number}: {len(incomplete_terms)} incomplete terms ===")
         round_started = time.time()
 
-        if import_auth is not None:
-            try:
-                import_auth.refresh()
-            except AuthError:
-                import_auth.relogin()
-
         for term in incomplete_terms:
             record = progress["terms"].get(term, {})
             record["rounds"] = int(record.get("rounds", 0)) + 1

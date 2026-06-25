@@ -3,12 +3,18 @@ from __future__ import annotations
 import json
 import os
 import re
+from contextlib import contextmanager
 from getpass import getpass
 from pathlib import Path
 from typing import Any, Callable
 from urllib.parse import parse_qs, urlparse
 
 from supabase import Client, create_client
+
+try:
+    import fcntl
+except ImportError:  # pragma: no cover - Windows
+    fcntl = None
 
 
 class AuthError(Exception):
@@ -20,6 +26,64 @@ def _normalize_email(email: str) -> str:
 
 
 def _load_session(path: Path) -> dict[str, Any] | None:
+    with session_file_lock(path):
+        return _read_session_file(path)
+
+
+def _save_session(path: Path, session: dict[str, Any]) -> None:
+    with session_file_lock(path):
+        _write_session_file(path, session)
+
+
+def _session_from_response(response: Any, email: str) -> dict[str, Any]:
+    if response.user is None or response.session is None:
+        raise AuthError("Supabase did not return a session.")
+
+    return {
+        "access_token": response.session.access_token,
+        "refresh_token": response.session.refresh_token,
+        "user_id": response.user.id,
+        "email": _normalize_email(email or response.user.email or ""),
+    }
+
+
+def is_auth_error(error: Exception) -> bool:
+    message = str(error).lower()
+    markers = (
+        "jwt",
+        "401",
+        "unauthorized",
+        "expired",
+        "refresh token",
+        "invalid token",
+        "already used",
+        "not authenticated",
+        "session missing",
+    )
+    return any(marker in message for marker in markers)
+
+
+def is_refresh_token_reused_error(error: Exception) -> bool:
+    message = str(error).lower()
+    return "already used" in message or "invalid refresh token" in message
+
+
+@contextmanager
+def session_file_lock(path: Path):
+    path.parent.mkdir(parents=True, exist_ok=True)
+    lock_path = path.with_name(f"{path.name}.lock")
+
+    with lock_path.open("a+", encoding="utf-8") as lock_handle:
+        if fcntl is not None:
+            fcntl.flock(lock_handle.fileno(), fcntl.LOCK_EX)
+        try:
+            yield
+        finally:
+            if fcntl is not None:
+                fcntl.flock(lock_handle.fileno(), fcntl.LOCK_UN)
+
+
+def _read_session_file(path: Path) -> dict[str, Any] | None:
     if not path.exists():
         return None
 
@@ -45,7 +109,7 @@ def _load_session(path: Path) -> dict[str, Any] | None:
     }
 
 
-def _save_session(path: Path, session: dict[str, Any]) -> None:
+def _write_session_file(path: Path, session: dict[str, Any]) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     with path.open("w", encoding="utf-8") as handle:
         json.dump(session, handle, indent=2, ensure_ascii=False)
@@ -56,36 +120,8 @@ def _save_session(path: Path, session: dict[str, Any]) -> None:
         pass
 
 
-def _session_from_response(response: Any, email: str) -> dict[str, Any]:
-    if response.user is None or response.session is None:
-        raise AuthError("Supabase did not return a session.")
-
-    return {
-        "access_token": response.session.access_token,
-        "refresh_token": response.session.refresh_token,
-        "user_id": response.user.id,
-        "email": _normalize_email(email or response.user.email or ""),
-    }
-
-
-def is_auth_error(error: Exception) -> bool:
-    message = str(error).lower()
-    markers = (
-        "jwt",
-        "401",
-        "unauthorized",
-        "expired",
-        "refresh token",
-        "invalid token",
-        "not authenticated",
-        "session missing",
-    )
-    return any(marker in message for marker in markers)
-
-
-def persist_client_session(
+def _session_from_client(
     client: Client,
-    session_path: Path,
     *,
     fallback_email: str = "",
     fallback_user_id: str = "",
@@ -97,14 +133,118 @@ def persist_client_session(
     user_response = client.auth.get_user()
     user = user_response.user if user_response else None
 
-    stored = {
+    return {
         "access_token": session.access_token,
         "refresh_token": session.refresh_token,
         "user_id": user.id if user else fallback_user_id,
         "email": _normalize_email((user.email if user else "") or fallback_email),
     }
+
+
+def _client_session_is_valid(client: Client) -> bool:
+    try:
+        user_response = client.auth.get_user()
+        return user_response.user is not None
+    except Exception:
+        return False
+
+
+def persist_client_session(
+    client: Client,
+    session_path: Path,
+    *,
+    fallback_email: str = "",
+    fallback_user_id: str = "",
+) -> dict[str, Any]:
+    stored = _session_from_client(
+        client,
+        fallback_email=fallback_email,
+        fallback_user_id=fallback_user_id,
+    )
     _save_session(session_path, stored)
     return stored
+
+
+def sync_client_session(
+    client: Client,
+    session_path: Path,
+    *,
+    allow_refresh: bool = False,
+    fallback_email: str = "",
+    fallback_user_id: str = "",
+) -> dict[str, Any]:
+    with session_file_lock(session_path):
+        stored = _read_session_file(session_path)
+        if not stored:
+            raise AuthError("No saved session.")
+
+        session_applied = False
+        for attempt in range(2):
+            try:
+                client.auth.set_session(stored["access_token"], stored["refresh_token"])
+                session_applied = True
+                break
+            except Exception as error:
+                if attempt == 0 and (
+                    is_refresh_token_reused_error(error) or is_auth_error(error)
+                ):
+                    latest = _read_session_file(session_path)
+                    if latest and latest != stored:
+                        stored = latest
+                        continue
+                if not allow_refresh:
+                    raise AuthError(
+                        "Supabase session expired or invalid. "
+                        "Run ./scripts/wordbase_import/run.sh --login first."
+                    ) from error
+                break
+
+        if session_applied and _client_session_is_valid(client):
+            updated = _session_from_client(
+                client,
+                fallback_email=stored.get("email", "") or fallback_email,
+                fallback_user_id=stored.get("user_id", "") or fallback_user_id,
+            )
+            if (
+                updated["access_token"] != stored["access_token"]
+                or updated["refresh_token"] != stored["refresh_token"]
+            ):
+                _write_session_file(session_path, updated)
+            return updated
+
+        if not allow_refresh:
+            raise AuthError(
+                "Supabase session expired or invalid. "
+                "Run ./scripts/wordbase_import/run.sh --login first."
+            )
+
+        try:
+            refresh_response = client.auth.refresh_session(stored["refresh_token"])
+        except Exception as error:
+            if is_refresh_token_reused_error(error):
+                latest = _read_session_file(session_path)
+                if latest and latest != stored:
+                    try:
+                        client.auth.set_session(latest["access_token"], latest["refresh_token"])
+                        if _client_session_is_valid(client):
+                            return latest
+                    except Exception as retry_error:
+                        raise AuthError(
+                            "Supabase session expired or invalid. "
+                            "Run ./scripts/wordbase_import/run.sh --login first."
+                        ) from retry_error
+            raise AuthError(
+                "Supabase session expired or invalid. "
+                "Run ./scripts/wordbase_import/run.sh --login first."
+            ) from error
+
+        if refresh_response.session is None or refresh_response.user is None:
+            raise AuthError("Could not refresh Supabase session.")
+
+        updated = _session_from_response(refresh_response, stored.get("email", ""))
+        client.auth.set_session(updated["access_token"], updated["refresh_token"])
+        _write_session_file(session_path, updated)
+        return updated
 
 
 def _parse_query_params(raw: str) -> dict[str, str]:
@@ -309,19 +449,7 @@ def login_interactive(
 
 
 def refresh_client_session(client: Client, session_path: Path) -> dict[str, Any]:
-    stored = _load_session(session_path)
-    if not stored:
-        raise AuthError("No saved session to refresh.")
-
-    client.auth.set_session(stored["access_token"], stored["refresh_token"])
-    refresh_response = client.auth.refresh_session(stored["refresh_token"])
-    if refresh_response.session is None or refresh_response.user is None:
-        raise AuthError("Could not refresh Supabase session.")
-
-    updated = _session_from_response(refresh_response, stored.get("email", ""))
-    client.auth.set_session(updated["access_token"], updated["refresh_token"])
-    _save_session(session_path, updated)
-    return updated
+    return sync_client_session(client, session_path, allow_refresh=True)
 
 
 def ensure_authenticated_client(
@@ -338,32 +466,26 @@ def ensure_authenticated_client(
     session = None if force_login else _load_session(session_path)
 
     if session and not force_login:
-        client.auth.set_session(session["access_token"], session["refresh_token"])
-
         try:
-            user_response = client.auth.get_user()
-            if user_response.user is not None:
-                stored = persist_client_session(
-                    client,
-                    session_path,
-                    fallback_email=session.get("email", ""),
-                    fallback_user_id=session.get("user_id", ""),
-                )
-                return client, stored["user_id"]
-        except Exception:
-            pass
-
-        try:
-            stored = refresh_client_session(client, session_path)
+            stored = sync_client_session(
+                client,
+                session_path,
+                allow_refresh=True,
+                fallback_email=session.get("email", ""),
+                fallback_user_id=session.get("user_id", ""),
+            )
             return client, stored["user_id"]
-        except Exception:
-            pass
+        except AuthError as error:
+            raise AuthError(
+                "Supabase session expired or invalid. "
+                "Run ./scripts/wordbase_import/run.sh --login first."
+            ) from error
 
-    login_email = _normalize_email(email)
-    if not login_email:
-        login_email = _normalize_email(input("Supabase login email: "))
-
+    login_email = _normalize_email(email or (session or {}).get("email", ""))
     env_password = password or os.getenv("IMPORT_USER_PASSWORD", "").strip()
+
+    if not login_email and not env_password:
+        login_email = _normalize_email(input("Supabase login email: "))
     session = login_interactive(
         client,
         login_email,
@@ -409,11 +531,20 @@ class ImportAuth:
             password=self.import_user_password,
         )
 
-    def refresh(self) -> None:
+    def sync_session(self, *, allow_refresh: bool = False) -> None:
         if self.client is None:
             raise AuthError("Supabase client is not connected.")
-        stored = refresh_client_session(self.client, self.session_path)
+        stored = sync_client_session(
+            self.client,
+            self.session_path,
+            allow_refresh=allow_refresh,
+            fallback_email=self.import_user_email,
+            fallback_user_id=self.contributor_id,
+        )
         self.contributor_id = stored["user_id"]
+
+    def refresh(self) -> None:
+        self.sync_session(allow_refresh=True)
 
     def relogin(self) -> None:
         print("\nSupabase session expired. Please sign in again.")
@@ -422,6 +553,8 @@ class ImportAuth:
     def run(self, action: Callable[[], Any]) -> Any:
         if self.client is None:
             raise AuthError("Supabase client is not connected.")
+
+        self.sync_session()
 
         try:
             result = action()
@@ -437,7 +570,7 @@ class ImportAuth:
                 raise
 
             try:
-                self.refresh()
+                self.sync_session(allow_refresh=True)
                 result = action()
                 persist_client_session(
                     self.client,

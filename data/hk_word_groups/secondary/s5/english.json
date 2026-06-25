@@ -7,6 +7,15 @@
   "version": "2026.06",
   "display_name_en": "S5 English",
   "display_name_zh_hant": "中五英文",
+  "source": {
+    "type": "curriculum_style_public_references",
+    "references": [
+      "EDB English Language Curriculum and Assessment Guide (Secondary 4-6) (2021)",
+      "EDB English Language Education vocabulary wordlist preamble",
+      "Senior secondary English text type, workplace communication, social issues and vocabulary-building guidance"
+    ],
+    "note": "No fixed official Hong Kong S5 vocabulary list is prescribed; this list is theme-based for senior secondary English enrichment import. Term-only entries are completed during import."
+  },
   "words": [
     {
       "term": "ambiguous",
@@ -326,6 +335,4912 @@
         "adjective",
         "research",
         "science"
+      ]
+    },
+    {
+      "term": "argumentation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "advanced-argument-and-debate"
+      ]
+    },
+    {
+      "term": "contention",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "advanced-argument-and-debate"
+      ]
+    },
+    {
+      "term": "premise",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "advanced-argument-and-debate"
+      ]
+    },
+    {
+      "term": "claim",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "advanced-argument-and-debate"
+      ]
+    },
+    {
+      "term": "counterclaim",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "advanced-argument-and-debate"
+      ]
+    },
+    {
+      "term": "counterargument",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "advanced-argument-and-debate"
+      ]
+    },
+    {
+      "term": "rebuttal",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "advanced-argument-and-debate"
+      ]
+    },
+    {
+      "term": "refutation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "advanced-argument-and-debate"
+      ]
+    },
+    {
+      "term": "concession",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "advanced-argument-and-debate"
+      ]
+    },
+    {
+      "term": "qualification",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "advanced-argument-and-debate"
+      ]
+    },
+    {
+      "term": "stance",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "advanced-argument-and-debate"
+      ]
+    },
+    {
+      "term": "position",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "advanced-argument-and-debate"
+      ]
+    },
+    {
+      "term": "viewpoint",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "advanced-argument-and-debate"
+      ]
+    },
+    {
+      "term": "rationale",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "advanced-argument-and-debate"
+      ]
+    },
+    {
+      "term": "justification",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "advanced-argument-and-debate"
+      ]
+    },
+    {
+      "term": "evidence",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "advanced-argument-and-debate"
+      ]
+    },
+    {
+      "term": "case study",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "advanced-argument-and-debate"
+      ]
+    },
+    {
+      "term": "statistics",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "advanced-argument-and-debate"
+      ]
+    },
+    {
+      "term": "authority",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "advanced-argument-and-debate"
+      ]
+    },
+    {
+      "term": "credibility",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "advanced-argument-and-debate"
+      ]
+    },
+    {
+      "term": "validity",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "advanced-argument-and-debate"
+      ]
+    },
+    {
+      "term": "fallacy",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "advanced-argument-and-debate"
+      ]
+    },
+    {
+      "term": "generalisation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "advanced-argument-and-debate"
+      ]
+    },
+    {
+      "term": "assumption",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "advanced-argument-and-debate"
+      ]
+    },
+    {
+      "term": "bias",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "advanced-argument-and-debate"
+      ]
+    },
+    {
+      "term": "objectivity",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "advanced-argument-and-debate"
+      ]
+    },
+    {
+      "term": "subjectivity",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "advanced-argument-and-debate"
+      ]
+    },
+    {
+      "term": "neutrality",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "advanced-argument-and-debate"
+      ]
+    },
+    {
+      "term": "controversy",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "advanced-argument-and-debate"
+      ]
+    },
+    {
+      "term": "consensus",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "advanced-argument-and-debate"
+      ]
+    },
+    {
+      "term": "compromise",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "advanced-argument-and-debate"
+      ]
+    },
+    {
+      "term": "polarisation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "advanced-argument-and-debate"
+      ]
+    },
+    {
+      "term": "stakeholder",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "advanced-argument-and-debate"
+      ]
+    },
+    {
+      "term": "implication",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "advanced-argument-and-debate"
+      ]
+    },
+    {
+      "term": "consequence",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "advanced-argument-and-debate"
+      ]
+    },
+    {
+      "term": "feasibility",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "advanced-argument-and-debate"
+      ]
+    },
+    {
+      "term": "viability",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "advanced-argument-and-debate"
+      ]
+    },
+    {
+      "term": "sustainability",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "advanced-argument-and-debate"
+      ]
+    },
+    {
+      "term": "effectiveness",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "advanced-argument-and-debate"
+      ]
+    },
+    {
+      "term": "extent",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "advanced-argument-and-debate"
+      ]
+    },
+    {
+      "term": "priority",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "advanced-argument-and-debate"
+      ]
+    },
+    {
+      "term": "trade-off",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "advanced-argument-and-debate"
+      ]
+    },
+    {
+      "term": "pros and cons",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "advanced-argument-and-debate"
+      ]
+    },
+    {
+      "term": "recommendation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "advanced-argument-and-debate"
+      ]
+    },
+    {
+      "term": "proposal",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "advanced-argument-and-debate"
+      ]
+    },
+    {
+      "term": "policy",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "advanced-argument-and-debate"
+      ]
+    },
+    {
+      "term": "implementation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "advanced-argument-and-debate"
+      ]
+    },
+    {
+      "term": "regulation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "advanced-argument-and-debate"
+      ]
+    },
+    {
+      "term": "legislation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "advanced-argument-and-debate"
+      ]
+    },
+    {
+      "term": "enforcement",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "advanced-argument-and-debate"
+      ]
+    },
+    {
+      "term": "advocacy",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "advanced-argument-and-debate"
+      ]
+    },
+    {
+      "term": "campaign",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "advanced-argument-and-debate"
+      ]
+    },
+    {
+      "term": "public opinion",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "advanced-argument-and-debate"
+      ]
+    },
+    {
+      "term": "social responsibility",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "advanced-argument-and-debate"
+      ]
+    },
+    {
+      "term": "inequality",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "social-issues-and-citizenship"
+      ]
+    },
+    {
+      "term": "poverty",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "social-issues-and-citizenship"
+      ]
+    },
+    {
+      "term": "wealth gap",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "social-issues-and-citizenship"
+      ]
+    },
+    {
+      "term": "upward mobility",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "social-issues-and-citizenship"
+      ]
+    },
+    {
+      "term": "social mobility",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "social-issues-and-citizenship"
+      ]
+    },
+    {
+      "term": "discrimination",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "social-issues-and-citizenship"
+      ]
+    },
+    {
+      "term": "stereotype",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "social-issues-and-citizenship"
+      ]
+    },
+    {
+      "term": "prejudice",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "social-issues-and-citizenship"
+      ]
+    },
+    {
+      "term": "inclusion",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "social-issues-and-citizenship"
+      ]
+    },
+    {
+      "term": "diversity",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "social-issues-and-citizenship"
+      ]
+    },
+    {
+      "term": "equity",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "social-issues-and-citizenship"
+      ]
+    },
+    {
+      "term": "justice",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "social-issues-and-citizenship"
+      ]
+    },
+    {
+      "term": "human rights",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "social-issues-and-citizenship"
+      ]
+    },
+    {
+      "term": "civic rights",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "social-issues-and-citizenship"
+      ]
+    },
+    {
+      "term": "personal rights",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "social-issues-and-citizenship"
+      ]
+    },
+    {
+      "term": "freedom",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "social-issues-and-citizenship"
+      ]
+    },
+    {
+      "term": "privacy",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "social-issues-and-citizenship"
+      ]
+    },
+    {
+      "term": "security",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "social-issues-and-citizenship"
+      ]
+    },
+    {
+      "term": "crime",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "social-issues-and-citizenship"
+      ]
+    },
+    {
+      "term": "offender",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "social-issues-and-citizenship"
+      ]
+    },
+    {
+      "term": "victim",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "social-issues-and-citizenship"
+      ]
+    },
+    {
+      "term": "rehabilitation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "social-issues-and-citizenship"
+      ]
+    },
+    {
+      "term": "punishment",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "social-issues-and-citizenship"
+      ]
+    },
+    {
+      "term": "deterrence",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "social-issues-and-citizenship"
+      ]
+    },
+    {
+      "term": "community service",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "social-issues-and-citizenship"
+      ]
+    },
+    {
+      "term": "volunteerism",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "social-issues-and-citizenship"
+      ]
+    },
+    {
+      "term": "charity",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "social-issues-and-citizenship"
+      ]
+    },
+    {
+      "term": "welfare",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "social-issues-and-citizenship"
+      ]
+    },
+    {
+      "term": "elderly care",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "social-issues-and-citizenship"
+      ]
+    },
+    {
+      "term": "ageing population",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "social-issues-and-citizenship"
+      ]
+    },
+    {
+      "term": "youth",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "social-issues-and-citizenship"
+      ]
+    },
+    {
+      "term": "teenager",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "social-issues-and-citizenship"
+      ]
+    },
+    {
+      "term": "peer pressure",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "social-issues-and-citizenship"
+      ]
+    },
+    {
+      "term": "mental health",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "social-issues-and-citizenship"
+      ]
+    },
+    {
+      "term": "stress",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "social-issues-and-citizenship"
+      ]
+    },
+    {
+      "term": "anxiety",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "social-issues-and-citizenship"
+      ]
+    },
+    {
+      "term": "wellbeing",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "social-issues-and-citizenship"
+      ]
+    },
+    {
+      "term": "resilience",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "social-issues-and-citizenship"
+      ]
+    },
+    {
+      "term": "identity",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "social-issues-and-citizenship"
+      ]
+    },
+    {
+      "term": "belonging",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "social-issues-and-citizenship"
+      ]
+    },
+    {
+      "term": "minority",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "social-issues-and-citizenship"
+      ]
+    },
+    {
+      "term": "migration",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "social-issues-and-citizenship"
+      ]
+    },
+    {
+      "term": "refugee",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "social-issues-and-citizenship"
+      ]
+    },
+    {
+      "term": "global citizenship",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "social-issues-and-citizenship"
+      ]
+    },
+    {
+      "term": "cultural awareness",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "social-issues-and-citizenship"
+      ]
+    },
+    {
+      "term": "intercultural communication",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "social-issues-and-citizenship"
+      ]
+    },
+    {
+      "term": "ethical dilemma",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "social-issues-and-citizenship"
+      ]
+    },
+    {
+      "term": "moral responsibility",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "social-issues-and-citizenship"
+      ]
+    },
+    {
+      "term": "workplace",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "workplace-communication"
+      ]
+    },
+    {
+      "term": "profession",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "workplace-communication"
+      ]
+    },
+    {
+      "term": "career",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "workplace-communication"
+      ]
+    },
+    {
+      "term": "employment",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "workplace-communication"
+      ]
+    },
+    {
+      "term": "recruitment",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "workplace-communication"
+      ]
+    },
+    {
+      "term": "applicant",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "workplace-communication"
+      ]
+    },
+    {
+      "term": "candidate",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "workplace-communication"
+      ]
+    },
+    {
+      "term": "resume",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "workplace-communication"
+      ]
+    },
+    {
+      "term": "curriculum vitae",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "workplace-communication"
+      ]
+    },
+    {
+      "term": "cover letter",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "workplace-communication"
+      ]
+    },
+    {
+      "term": "interview",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "workplace-communication"
+      ]
+    },
+    {
+      "term": "credential",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "workplace-communication"
+      ]
+    },
+    {
+      "term": "experience",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "workplace-communication"
+      ]
+    },
+    {
+      "term": "internship",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "workplace-communication"
+      ]
+    },
+    {
+      "term": "apprenticeship",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "workplace-communication"
+      ]
+    },
+    {
+      "term": "training",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "workplace-communication"
+      ]
+    },
+    {
+      "term": "probation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "workplace-communication"
+      ]
+    },
+    {
+      "term": "promotion",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "workplace-communication"
+      ]
+    },
+    {
+      "term": "resignation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "workplace-communication"
+      ]
+    },
+    {
+      "term": "colleague",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "workplace-communication"
+      ]
+    },
+    {
+      "term": "supervisor",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "workplace-communication"
+      ]
+    },
+    {
+      "term": "manager",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "workplace-communication"
+      ]
+    },
+    {
+      "term": "employee",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "workplace-communication"
+      ]
+    },
+    {
+      "term": "employer",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "workplace-communication"
+      ]
+    },
+    {
+      "term": "client",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "workplace-communication"
+      ]
+    },
+    {
+      "term": "customer",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "workplace-communication"
+      ]
+    },
+    {
+      "term": "memo",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "workplace-communication"
+      ]
+    },
+    {
+      "term": "memorandum",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "workplace-communication"
+      ]
+    },
+    {
+      "term": "agenda",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "workplace-communication"
+      ]
+    },
+    {
+      "term": "minutes",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "workplace-communication"
+      ]
+    },
+    {
+      "term": "report",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "workplace-communication"
+      ]
+    },
+    {
+      "term": "presentation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "workplace-communication"
+      ]
+    },
+    {
+      "term": "negotiation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "workplace-communication"
+      ]
+    },
+    {
+      "term": "consultation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "workplace-communication"
+      ]
+    },
+    {
+      "term": "complaint",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "workplace-communication"
+      ]
+    },
+    {
+      "term": "enquiry",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "workplace-communication"
+      ]
+    },
+    {
+      "term": "follow-up",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "workplace-communication"
+      ]
+    },
+    {
+      "term": "deadline",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "workplace-communication"
+      ]
+    },
+    {
+      "term": "deliverable",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "workplace-communication"
+      ]
+    },
+    {
+      "term": "productivity",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "workplace-communication"
+      ]
+    },
+    {
+      "term": "efficiency",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "workplace-communication"
+      ]
+    },
+    {
+      "term": "initiative",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "workplace-communication"
+      ]
+    },
+    {
+      "term": "accountability",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "workplace-communication"
+      ]
+    },
+    {
+      "term": "collaboration",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "workplace-communication"
+      ]
+    },
+    {
+      "term": "leadership",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "workplace-communication"
+      ]
+    },
+    {
+      "term": "teamwork",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "workplace-communication"
+      ]
+    },
+    {
+      "term": "confidentiality",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "workplace-communication"
+      ]
+    },
+    {
+      "term": "professionalism",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "workplace-communication"
+      ]
+    },
+    {
+      "term": "work ethic",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "workplace-communication"
+      ]
+    },
+    {
+      "term": "adaptability",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "workplace-communication"
+      ]
+    },
+    {
+      "term": "competence",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "workplace-communication"
+      ]
+    },
+    {
+      "term": "performance appraisal",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "workplace-communication"
+      ]
+    },
+    {
+      "term": "work-life balance",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "workplace-communication"
+      ]
+    },
+    {
+      "term": "remote work",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "workplace-communication"
+      ]
+    },
+    {
+      "term": "cybersecurity",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "workplace-communication"
+      ]
+    },
+    {
+      "term": "media",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "media-publications-and-internet"
+      ]
+    },
+    {
+      "term": "publication",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "media-publications-and-internet"
+      ]
+    },
+    {
+      "term": "journalism",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "media-publications-and-internet"
+      ]
+    },
+    {
+      "term": "journalist",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "media-publications-and-internet"
+      ]
+    },
+    {
+      "term": "editorial",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "media-publications-and-internet"
+      ]
+    },
+    {
+      "term": "column",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "media-publications-and-internet"
+      ]
+    },
+    {
+      "term": "feature article",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "media-publications-and-internet"
+      ]
+    },
+    {
+      "term": "headline",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "media-publications-and-internet"
+      ]
+    },
+    {
+      "term": "caption",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "media-publications-and-internet"
+      ]
+    },
+    {
+      "term": "byline",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "media-publications-and-internet"
+      ]
+    },
+    {
+      "term": "source",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "media-publications-and-internet"
+      ]
+    },
+    {
+      "term": "quotation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "media-publications-and-internet"
+      ]
+    },
+    {
+      "term": "press release",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "media-publications-and-internet"
+      ]
+    },
+    {
+      "term": "coverage",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "media-publications-and-internet"
+      ]
+    },
+    {
+      "term": "circulation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "media-publications-and-internet"
+      ]
+    },
+    {
+      "term": "audience",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "media-publications-and-internet"
+      ]
+    },
+    {
+      "term": "readership",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "media-publications-and-internet"
+      ]
+    },
+    {
+      "term": "platform",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "media-publications-and-internet"
+      ]
+    },
+    {
+      "term": "broadcast",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "media-publications-and-internet"
+      ]
+    },
+    {
+      "term": "podcast",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "media-publications-and-internet"
+      ]
+    },
+    {
+      "term": "livestream",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "media-publications-and-internet"
+      ]
+    },
+    {
+      "term": "social media",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "media-publications-and-internet"
+      ]
+    },
+    {
+      "term": "influencer",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "media-publications-and-internet"
+      ]
+    },
+    {
+      "term": "algorithm",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "media-publications-and-internet"
+      ]
+    },
+    {
+      "term": "engagement",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "media-publications-and-internet"
+      ]
+    },
+    {
+      "term": "viral",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "media-publications-and-internet"
+      ]
+    },
+    {
+      "term": "content",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "media-publications-and-internet"
+      ]
+    },
+    {
+      "term": "clickbait",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "media-publications-and-internet"
+      ]
+    },
+    {
+      "term": "misinformation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "media-publications-and-internet"
+      ]
+    },
+    {
+      "term": "disinformation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "media-publications-and-internet"
+      ]
+    },
+    {
+      "term": "fact-check",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "media-publications-and-internet"
+      ]
+    },
+    {
+      "term": "verification",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "media-publications-and-internet"
+      ]
+    },
+    {
+      "term": "reliability",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "media-publications-and-internet"
+      ]
+    },
+    {
+      "term": "censorship",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "media-publications-and-internet"
+      ]
+    },
+    {
+      "term": "freedom of speech",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "media-publications-and-internet"
+      ]
+    },
+    {
+      "term": "digital footprint",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "media-publications-and-internet"
+      ]
+    },
+    {
+      "term": "identity theft",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "media-publications-and-internet"
+      ]
+    },
+    {
+      "term": "scam",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "media-publications-and-internet"
+      ]
+    },
+    {
+      "term": "phishing",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "media-publications-and-internet"
+      ]
+    },
+    {
+      "term": "cyberbullying",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "media-publications-and-internet"
+      ]
+    },
+    {
+      "term": "online harassment",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "media-publications-and-internet"
+      ]
+    },
+    {
+      "term": "echo chamber",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "media-publications-and-internet"
+      ]
+    },
+    {
+      "term": "filter bubble",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "media-publications-and-internet"
+      ]
+    },
+    {
+      "term": "media literacy",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "media-publications-and-internet"
+      ]
+    },
+    {
+      "term": "data privacy",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "media-publications-and-internet"
+      ]
+    },
+    {
+      "term": "terms of service",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "media-publications-and-internet"
+      ]
+    },
+    {
+      "term": "technology",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "technology-and-future"
+      ]
+    },
+    {
+      "term": "innovation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "technology-and-future"
+      ]
+    },
+    {
+      "term": "invention",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "technology-and-future"
+      ]
+    },
+    {
+      "term": "artificial intelligence",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "technology-and-future"
+      ]
+    },
+    {
+      "term": "machine learning",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "technology-and-future"
+      ]
+    },
+    {
+      "term": "automation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "technology-and-future"
+      ]
+    },
+    {
+      "term": "robotics",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "technology-and-future"
+      ]
+    },
+    {
+      "term": "database",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "technology-and-future"
+      ]
+    },
+    {
+      "term": "data analysis",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "technology-and-future"
+      ]
+    },
+    {
+      "term": "big data",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "technology-and-future"
+      ]
+    },
+    {
+      "term": "virtual reality",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "technology-and-future"
+      ]
+    },
+    {
+      "term": "augmented reality",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "technology-and-future"
+      ]
+    },
+    {
+      "term": "biotechnology",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "technology-and-future"
+      ]
+    },
+    {
+      "term": "genetics",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "technology-and-future"
+      ]
+    },
+    {
+      "term": "renewable energy",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "technology-and-future"
+      ]
+    },
+    {
+      "term": "smart city",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "technology-and-future"
+      ]
+    },
+    {
+      "term": "sustainable technology",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "technology-and-future"
+      ]
+    },
+    {
+      "term": "digital divide",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "technology-and-future"
+      ]
+    },
+    {
+      "term": "accessibility",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "technology-and-future"
+      ]
+    },
+    {
+      "term": "convenience",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "technology-and-future"
+      ]
+    },
+    {
+      "term": "surveillance",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "technology-and-future"
+      ]
+    },
+    {
+      "term": "ethical",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "technology-and-future"
+      ]
+    },
+    {
+      "term": "risk",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "technology-and-future"
+      ]
+    },
+    {
+      "term": "benefit",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "technology-and-future"
+      ]
+    },
+    {
+      "term": "drawback",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "technology-and-future"
+      ]
+    },
+    {
+      "term": "limitation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "technology-and-future"
+      ]
+    },
+    {
+      "term": "breakthrough",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "technology-and-future"
+      ]
+    },
+    {
+      "term": "prototype",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "technology-and-future"
+      ]
+    },
+    {
+      "term": "application",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "technology-and-future"
+      ]
+    },
+    {
+      "term": "device",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "technology-and-future"
+      ]
+    },
+    {
+      "term": "network",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "technology-and-future"
+      ]
+    },
+    {
+      "term": "system",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "technology-and-future"
+      ]
+    },
+    {
+      "term": "infrastructure",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "technology-and-future"
+      ]
+    },
+    {
+      "term": "encryption",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "technology-and-future"
+      ]
+    },
+    {
+      "term": "authentication",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "technology-and-future"
+      ]
+    },
+    {
+      "term": "disruption",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "technology-and-future"
+      ]
+    },
+    {
+      "term": "future-proof",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "technology-and-future"
+      ]
+    },
+    {
+      "term": "emerging",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "technology-and-future"
+      ]
+    },
+    {
+      "term": "impact",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "technology-and-future"
+      ]
+    },
+    {
+      "term": "transformation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "technology-and-future"
+      ]
+    },
+    {
+      "term": "adaptation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "technology-and-future"
+      ]
+    },
+    {
+      "term": "conservation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "nature-environment-development"
+      ]
+    },
+    {
+      "term": "biodiversity",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "nature-environment-development"
+      ]
+    },
+    {
+      "term": "ecosystem",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "nature-environment-development"
+      ]
+    },
+    {
+      "term": "habitat",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "nature-environment-development"
+      ]
+    },
+    {
+      "term": "endangered species",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "nature-environment-development"
+      ]
+    },
+    {
+      "term": "extinction",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "nature-environment-development"
+      ]
+    },
+    {
+      "term": "wildlife",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "nature-environment-development"
+      ]
+    },
+    {
+      "term": "deforestation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "nature-environment-development"
+      ]
+    },
+    {
+      "term": "desertification",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "nature-environment-development"
+      ]
+    },
+    {
+      "term": "pollution",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "nature-environment-development"
+      ]
+    },
+    {
+      "term": "air pollution",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "nature-environment-development"
+      ]
+    },
+    {
+      "term": "water pollution",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "nature-environment-development"
+      ]
+    },
+    {
+      "term": "waste management",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "nature-environment-development"
+      ]
+    },
+    {
+      "term": "recycling",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "nature-environment-development"
+      ]
+    },
+    {
+      "term": "landfill",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "nature-environment-development"
+      ]
+    },
+    {
+      "term": "carbon footprint",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "nature-environment-development"
+      ]
+    },
+    {
+      "term": "greenhouse gas",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "nature-environment-development"
+      ]
+    },
+    {
+      "term": "emission",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "nature-environment-development"
+      ]
+    },
+    {
+      "term": "fossil fuel",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "nature-environment-development"
+      ]
+    },
+    {
+      "term": "solar power",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "nature-environment-development"
+      ]
+    },
+    {
+      "term": "wind power",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "nature-environment-development"
+      ]
+    },
+    {
+      "term": "climate change",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "nature-environment-development"
+      ]
+    },
+    {
+      "term": "global warming",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "nature-environment-development"
+      ]
+    },
+    {
+      "term": "sustainable development",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "nature-environment-development"
+      ]
+    },
+    {
+      "term": "urban planning",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "nature-environment-development"
+      ]
+    },
+    {
+      "term": "economic development",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "nature-environment-development"
+      ]
+    },
+    {
+      "term": "environmental conservation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "nature-environment-development"
+      ]
+    },
+    {
+      "term": "resource allocation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "nature-environment-development"
+      ]
+    },
+    {
+      "term": "energy conservation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "nature-environment-development"
+      ]
+    },
+    {
+      "term": "consumption",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "nature-environment-development"
+      ]
+    },
+    {
+      "term": "consumerism",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "nature-environment-development"
+      ]
+    },
+    {
+      "term": "overpopulation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "nature-environment-development"
+      ]
+    },
+    {
+      "term": "natural disaster",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "nature-environment-development"
+      ]
+    },
+    {
+      "term": "mitigation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "nature-environment-development"
+      ]
+    },
+    {
+      "term": "incentive",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "nature-environment-development"
+      ]
+    },
+    {
+      "term": "awareness",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "nature-environment-development"
+      ]
+    },
+    {
+      "term": "corporate responsibility",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "nature-environment-development"
+      ]
+    },
+    {
+      "term": "ecotourism",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "nature-environment-development"
+      ]
+    },
+    {
+      "term": "popular culture",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "popular-culture-and-entertainment"
+      ]
+    },
+    {
+      "term": "celebrity",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "popular-culture-and-entertainment"
+      ]
+    },
+    {
+      "term": "fandom",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "popular-culture-and-entertainment"
+      ]
+    },
+    {
+      "term": "trend",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "popular-culture-and-entertainment"
+      ]
+    },
+    {
+      "term": "fashion",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "popular-culture-and-entertainment"
+      ]
+    },
+    {
+      "term": "showbiz",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "popular-culture-and-entertainment"
+      ]
+    },
+    {
+      "term": "entertainment",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "popular-culture-and-entertainment"
+      ]
+    },
+    {
+      "term": "film",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "popular-culture-and-entertainment"
+      ]
+    },
+    {
+      "term": "drama",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "popular-culture-and-entertainment"
+      ]
+    },
+    {
+      "term": "music",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "popular-culture-and-entertainment"
+      ]
+    },
+    {
+      "term": "concert",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "popular-culture-and-entertainment"
+      ]
+    },
+    {
+      "term": "performance",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "popular-culture-and-entertainment"
+      ]
+    },
+    {
+      "term": "streaming",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "popular-culture-and-entertainment"
+      ]
+    },
+    {
+      "term": "fan base",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "popular-culture-and-entertainment"
+      ]
+    },
+    {
+      "term": "publicity",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "popular-culture-and-entertainment"
+      ]
+    },
+    {
+      "term": "reputation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "popular-culture-and-entertainment"
+      ]
+    },
+    {
+      "term": "image",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "popular-culture-and-entertainment"
+      ]
+    },
+    {
+      "term": "branding",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "popular-culture-and-entertainment"
+      ]
+    },
+    {
+      "term": "marketing",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "popular-culture-and-entertainment"
+      ]
+    },
+    {
+      "term": "sponsor",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "popular-culture-and-entertainment"
+      ]
+    },
+    {
+      "term": "endorsement",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "popular-culture-and-entertainment"
+      ]
+    },
+    {
+      "term": "advertisement",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "popular-culture-and-entertainment"
+      ]
+    },
+    {
+      "term": "content creator",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "popular-culture-and-entertainment"
+      ]
+    },
+    {
+      "term": "review",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "popular-culture-and-entertainment"
+      ]
+    },
+    {
+      "term": "critique",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "popular-culture-and-entertainment"
+      ]
+    },
+    {
+      "term": "rating",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "popular-culture-and-entertainment"
+      ]
+    },
+    {
+      "term": "genre",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "popular-culture-and-entertainment"
+      ]
+    },
+    {
+      "term": "plot",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "popular-culture-and-entertainment"
+      ]
+    },
+    {
+      "term": "characterisation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "popular-culture-and-entertainment"
+      ]
+    },
+    {
+      "term": "theme",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "popular-culture-and-entertainment"
+      ]
+    },
+    {
+      "term": "symbolism",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "popular-culture-and-entertainment"
+      ]
+    },
+    {
+      "term": "representation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "popular-culture-and-entertainment"
+      ]
+    },
+    {
+      "term": "creativity",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "popular-culture-and-entertainment"
+      ]
+    },
+    {
+      "term": "originality",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "popular-culture-and-entertainment"
+      ]
+    },
+    {
+      "term": "franchise",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "popular-culture-and-entertainment"
+      ]
+    },
+    {
+      "term": "sequel",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "popular-culture-and-entertainment"
+      ]
+    },
+    {
+      "term": "remake",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "popular-culture-and-entertainment"
+      ]
+    },
+    {
+      "term": "paparazzi",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "popular-culture-and-entertainment"
+      ]
+    },
+    {
+      "term": "commercialisation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "popular-culture-and-entertainment"
+      ]
+    },
+    {
+      "term": "cultural influence",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "popular-culture-and-entertainment"
+      ]
+    },
+    {
+      "term": "composition",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "public-exam-writing-text-types"
+      ]
+    },
+    {
+      "term": "essay",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "public-exam-writing-text-types"
+      ]
+    },
+    {
+      "term": "article",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "public-exam-writing-text-types"
+      ]
+    },
+    {
+      "term": "letter to the editor",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "public-exam-writing-text-types"
+      ]
+    },
+    {
+      "term": "formal letter",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "public-exam-writing-text-types"
+      ]
+    },
+    {
+      "term": "informal letter",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "public-exam-writing-text-types"
+      ]
+    },
+    {
+      "term": "email",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "public-exam-writing-text-types"
+      ]
+    },
+    {
+      "term": "speech",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "public-exam-writing-text-types"
+      ]
+    },
+    {
+      "term": "debate speech",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "public-exam-writing-text-types"
+      ]
+    },
+    {
+      "term": "blog entry",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "public-exam-writing-text-types"
+      ]
+    },
+    {
+      "term": "leaflet",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "public-exam-writing-text-types"
+      ]
+    },
+    {
+      "term": "brochure",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "public-exam-writing-text-types"
+      ]
+    },
+    {
+      "term": "notice",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "public-exam-writing-text-types"
+      ]
+    },
+    {
+      "term": "announcement",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "public-exam-writing-text-types"
+      ]
+    },
+    {
+      "term": "abstract",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "public-exam-writing-text-types"
+      ]
+    },
+    {
+      "term": "summary",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "public-exam-writing-text-types"
+      ]
+    },
+    {
+      "term": "synopsis",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "public-exam-writing-text-types"
+      ]
+    },
+    {
+      "term": "profile",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "public-exam-writing-text-types"
+      ]
+    },
+    {
+      "term": "commentary",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "public-exam-writing-text-types"
+      ]
+    },
+    {
+      "term": "discursive essay",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "public-exam-writing-text-types"
+      ]
+    },
+    {
+      "term": "argumentative essay",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "public-exam-writing-text-types"
+      ]
+    },
+    {
+      "term": "expository writing",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "public-exam-writing-text-types"
+      ]
+    },
+    {
+      "term": "narrative writing",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "public-exam-writing-text-types"
+      ]
+    },
+    {
+      "term": "descriptive writing",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "public-exam-writing-text-types"
+      ]
+    },
+    {
+      "term": "reflective writing",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "public-exam-writing-text-types"
+      ]
+    },
+    {
+      "term": "tone",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "public-exam-writing-text-types"
+      ]
+    },
+    {
+      "term": "register",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "public-exam-writing-text-types"
+      ]
+    },
+    {
+      "term": "purpose",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "public-exam-writing-text-types"
+      ]
+    },
+    {
+      "term": "context",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "public-exam-writing-text-types"
+      ]
+    },
+    {
+      "term": "format",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "public-exam-writing-text-types"
+      ]
+    },
+    {
+      "term": "salutation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "public-exam-writing-text-types"
+      ]
+    },
+    {
+      "term": "complimentary close",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "public-exam-writing-text-types"
+      ]
+    },
+    {
+      "term": "subheading",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "public-exam-writing-text-types"
+      ]
+    },
+    {
+      "term": "topic sentence",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "public-exam-writing-text-types"
+      ]
+    },
+    {
+      "term": "supporting detail",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "public-exam-writing-text-types"
+      ]
+    },
+    {
+      "term": "cohesive device",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "public-exam-writing-text-types"
+      ]
+    },
+    {
+      "term": "transition",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "public-exam-writing-text-types"
+      ]
+    },
+    {
+      "term": "thesis statement",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "public-exam-writing-text-types"
+      ]
+    },
+    {
+      "term": "concluding remark",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "public-exam-writing-text-types"
+      ]
+    },
+    {
+      "term": "call to action",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "public-exam-writing-text-types"
+      ]
+    },
+    {
+      "term": "rhetorical question",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "public-exam-writing-text-types"
+      ]
+    },
+    {
+      "term": "academic vocabulary",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "academic-and-lac-language"
+      ]
+    },
+    {
+      "term": "nominalisation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "academic-and-lac-language"
+      ]
+    },
+    {
+      "term": "passive voice",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "academic-and-lac-language"
+      ]
+    },
+    {
+      "term": "modal verb",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "academic-and-lac-language"
+      ]
+    },
+    {
+      "term": "comparative",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "academic-and-lac-language"
+      ]
+    },
+    {
+      "term": "causal relationship",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "academic-and-lac-language"
+      ]
+    },
+    {
+      "term": "rhetorical function",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "academic-and-lac-language"
+      ]
+    },
+    {
+      "term": "text structure",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "academic-and-lac-language"
+      ]
+    },
+    {
+      "term": "classification",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "academic-and-lac-language"
+      ]
+    },
+    {
+      "term": "definition",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "academic-and-lac-language"
+      ]
+    },
+    {
+      "term": "description",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "academic-and-lac-language"
+      ]
+    },
+    {
+      "term": "explanation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "academic-and-lac-language"
+      ]
+    },
+    {
+      "term": "comparison",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "academic-and-lac-language"
+      ]
+    },
+    {
+      "term": "contrast",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "academic-and-lac-language"
+      ]
+    },
+    {
+      "term": "cause and effect",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "academic-and-lac-language"
+      ]
+    },
+    {
+      "term": "problem and solution",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "academic-and-lac-language"
+      ]
+    },
+    {
+      "term": "sequence",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "academic-and-lac-language"
+      ]
+    },
+    {
+      "term": "process",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "academic-and-lac-language"
+      ]
+    },
+    {
+      "term": "variable",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "academic-and-lac-language"
+      ]
+    },
+    {
+      "term": "methodology",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "academic-and-lac-language"
+      ]
+    },
+    {
+      "term": "finding",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "academic-and-lac-language"
+      ]
+    },
+    {
+      "term": "result",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "academic-and-lac-language"
+      ]
+    },
+    {
+      "term": "conclusion",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "academic-and-lac-language"
+      ]
+    },
+    {
+      "term": "correlation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "academic-and-lac-language"
+      ]
+    },
+    {
+      "term": "proportion",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "academic-and-lac-language"
+      ]
+    },
+    {
+      "term": "percentage",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "academic-and-lac-language"
+      ]
+    },
+    {
+      "term": "indicator",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "academic-and-lac-language"
+      ]
+    },
+    {
+      "term": "factor",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "academic-and-lac-language"
+      ]
+    },
+    {
+      "term": "criterion",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "academic-and-lac-language"
+      ]
+    },
+    {
+      "term": "framework",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "academic-and-lac-language"
+      ]
+    },
+    {
+      "term": "concept",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "academic-and-lac-language"
+      ]
+    },
+    {
+      "term": "principle",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "academic-and-lac-language"
+      ]
+    },
+    {
+      "term": "theory",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "academic-and-lac-language"
+      ]
+    },
+    {
+      "term": "phenomenon",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "academic-and-lac-language"
+      ]
+    },
+    {
+      "term": "analysis",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "academic-and-lac-language"
+      ]
+    },
+    {
+      "term": "evaluation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "academic-and-lac-language"
+      ]
+    },
+    {
+      "term": "interpretation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "academic-and-lac-language"
+      ]
+    },
+    {
+      "term": "synthesis",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "academic-and-lac-language"
+      ]
+    },
+    {
+      "term": "evidence-based",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "academic-and-lac-language"
+      ]
+    },
+    {
+      "term": "cross-curricular",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "academic-and-lac-language"
+      ]
+    },
+    {
+      "term": "language across the curriculum",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "academic-and-lac-language"
+      ]
+    },
+    {
+      "term": "reading across the curriculum",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "academic-and-lac-language"
+      ]
+    },
+    {
+      "term": "collocation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "vocabulary-and-style"
+      ]
+    },
+    {
+      "term": "word formation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "vocabulary-and-style"
+      ]
+    },
+    {
+      "term": "prefix",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "vocabulary-and-style"
+      ]
+    },
+    {
+      "term": "suffix",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "vocabulary-and-style"
+      ]
+    },
+    {
+      "term": "root",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "vocabulary-and-style"
+      ]
+    },
+    {
+      "term": "word family",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "vocabulary-and-style"
+      ]
+    },
+    {
+      "term": "synonym",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "vocabulary-and-style"
+      ]
+    },
+    {
+      "term": "antonym",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "vocabulary-and-style"
+      ]
+    },
+    {
+      "term": "connotation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "vocabulary-and-style"
+      ]
+    },
+    {
+      "term": "denotation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "vocabulary-and-style"
+      ]
+    },
+    {
+      "term": "idiom",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "vocabulary-and-style"
+      ]
+    },
+    {
+      "term": "phrasal verb",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "vocabulary-and-style"
+      ]
+    },
+    {
+      "term": "fixed expression",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "vocabulary-and-style"
+      ]
+    },
+    {
+      "term": "lexical relation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "vocabulary-and-style"
+      ]
+    },
+    {
+      "term": "inferencing",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "vocabulary-and-style"
+      ]
+    },
+    {
+      "term": "context clue",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "vocabulary-and-style"
+      ]
+    },
+    {
+      "term": "dictionary",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "vocabulary-and-style"
+      ]
+    },
+    {
+      "term": "thesaurus",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "vocabulary-and-style"
+      ]
+    },
+    {
+      "term": "precision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "vocabulary-and-style"
+      ]
+    },
+    {
+      "term": "appropriacy",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "vocabulary-and-style"
+      ]
+    },
+    {
+      "term": "fluency",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "vocabulary-and-style"
+      ]
+    },
+    {
+      "term": "accuracy",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "vocabulary-and-style"
+      ]
+    },
+    {
+      "term": "variety",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "vocabulary-and-style"
+      ]
+    },
+    {
+      "term": "style",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "vocabulary-and-style"
+      ]
+    },
+    {
+      "term": "formality",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "vocabulary-and-style"
+      ]
+    },
+    {
+      "term": "emphasis",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "vocabulary-and-style"
+      ]
+    },
+    {
+      "term": "hedging",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "vocabulary-and-style"
+      ]
+    },
+    {
+      "term": "modality",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "vocabulary-and-style"
+      ]
+    },
+    {
+      "term": "coherence",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "vocabulary-and-style"
+      ]
+    },
+    {
+      "term": "cohesion",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "vocabulary-and-style"
+      ]
+    },
+    {
+      "term": "conciseness",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "vocabulary-and-style"
+      ]
+    },
+    {
+      "term": "elaboration",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "vocabulary-and-style"
+      ]
+    },
+    {
+      "term": "paraphrase",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "vocabulary-and-style"
+      ]
+    },
+    {
+      "term": "citation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "vocabulary-and-style"
+      ]
+    },
+    {
+      "term": "referencing",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "vocabulary-and-style"
+      ]
+    },
+    {
+      "term": "plagiarism",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "vocabulary-and-style"
+      ]
+    },
+    {
+      "term": "proofreading",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "vocabulary-and-style"
+      ]
+    },
+    {
+      "term": "revision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "vocabulary-and-style"
+      ]
+    },
+    {
+      "term": "editing",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "vocabulary-and-style"
+      ]
+    },
+    {
+      "term": "peer feedback",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "vocabulary-and-style"
+      ]
+    },
+    {
+      "term": "self-assessment",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "english",
+        "curriculum-style",
+        "vocabulary-and-style"
       ]
     }
   ]

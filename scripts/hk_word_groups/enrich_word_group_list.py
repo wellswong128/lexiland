@@ -19,7 +19,7 @@ sys.path.insert(0, str(SCRIPT_DIR))
 
 from api_client import ApiError, LexiLandApiClient  # noqa: E402
 from auth import _load_session  # noqa: E402
-from completeness import has_memory_image, has_memory_tips, missing_parts  # noqa: E402
+from completeness import has_memory_image, has_memory_tips, missing_detail_fields, missing_parts  # noqa: E402
 from config import load_settings  # noqa: E402
 from terms import normalize_term  # noqa: E402
 from wordbase_client import (  # noqa: E402
@@ -32,6 +32,47 @@ from wordbase_client import (  # noqa: E402
 DEFAULT_WORD_LIST = REPO_ROOT / "data/hk_word_groups/primary/p1/english.json"
 TAXONOMY_PATH = REPO_ROOT / "data/hk_word_groups/taxonomy.json"
 PROGRESS_DIR = SCRIPT_DIR / "progress"
+IGNORED_DETAIL_FIELDS = {"pronunciation", "part_of_speech"}
+
+
+def missing_enrich_detail_fields(entry: dict) -> list[str]:
+    return [
+        field
+        for field in missing_detail_fields(entry)
+        if field not in IGNORED_DETAIL_FIELDS
+    ]
+
+
+def missing_enrich_parts(entry: dict | None, locale: str) -> list[str]:
+    return [
+        part
+        for part in missing_parts(entry, locale)
+        if part not in IGNORED_DETAIL_FIELDS
+    ]
+
+
+def merge_suggestions(*sources: dict) -> dict:
+    merged: dict = {"tags": []}
+    text_fields = (
+        "term",
+        "definition",
+        "translation",
+        "pronunciation",
+        "part_of_speech",
+        "example",
+        "example_translation",
+    )
+
+    for source in sources:
+        if not source:
+            continue
+        for field in text_fields:
+            value = str(source.get(field, "")).strip()
+            if value:
+                merged[field] = value
+        merged["tags"] = merge_unique_tags(merged.get("tags") or [], source.get("tags") or [])
+
+    return merged
 
 
 def parse_args() -> argparse.Namespace:
@@ -58,6 +99,18 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--skip-map", action="store_true", help="Skip wordbase_group_map upsert.")
     parser.add_argument("--skip-tips", action="store_true", help="Skip /api/word-memory-tips.")
     parser.add_argument("--skip-images", action="store_true", help="Skip /api/word-memory-image.")
+    parser.add_argument(
+        "--resume",
+        action="store_true",
+        default=True,
+        help="Skip words already marked complete in progress (default: true).",
+    )
+    parser.add_argument(
+        "--no-resume",
+        dest="resume",
+        action="store_false",
+        help="Re-process all words, including those already complete.",
+    )
     parser.add_argument(
         "--contributor-id",
         type=str,
@@ -204,6 +257,21 @@ def fetch_wordbase_id(client, term: str) -> str:
     return str((row or {}).get("id") or "")
 
 
+def merge_unique_tags(*tag_lists: list[str]) -> list[str]:
+    merged: list[str] = []
+    seen: set[str] = set()
+
+    for tags in tag_lists:
+        for tag in tags or []:
+            clean_tag = str(tag).strip()
+            if not clean_tag or clean_tag in seen:
+                continue
+            seen.add(clean_tag)
+            merged.append(clean_tag)
+
+    return merged
+
+
 def progress_path(group_code: str) -> Path:
     safe_code = group_code.replace("/", "_")
     return PROGRESS_DIR / f"enrich-{safe_code}.json"
@@ -247,55 +315,108 @@ def process_word(
         {"status": "pending", "missing": [], "errors": {}, "completed_at": None},
     )
 
-    if not suggestion.get("definition"):
-        record["status"] = "failed"
-        record["errors"]["definition"] = "Missing definition in word list JSON."
-        print(f"  [{term}] skipped — missing definition")
-        return
-
-    print(f"  [{term}] upsert wordbase")
     if args.dry_run:
-        print("    dry-run: would upsert wordbase details")
+        print(f"  [{term}] check wordbase")
+        print("    dry-run: would fetch existing Wordbase entry")
+        if not suggestion.get("definition"):
+            print(f"  [{term}] complete-word")
+            print("    dry-run: would call /api/complete-word for new Wordbase word")
+            print(f"  [{term}] upsert wordbase")
+            print("    dry-run: would insert only if the word is missing from Wordbase")
+        else:
+            print(f"  [{term}] upsert wordbase")
+            print("    dry-run: would update Wordbase if details or memory content are missing")
         entry = None
     else:
         existing = fetch_entry(client, term)
-        upsert_details(client, suggestion, contributor_id, existing)
-        entry = fetch_entry(client, term)
+        if existing:
+            entry = existing
+            print(f"  [{term}] exists in wordbase")
+            detail_missing = missing_enrich_detail_fields(entry)
+            if detail_missing:
+                print(f"  [{term}] missing details: {', '.join(detail_missing)}")
+                merged = merge_suggestions(suggestion, entry)
+                if missing_enrich_detail_fields(merged):
+                    print(f"  [{term}] complete-word")
+                    completed = api.complete_word(term, locale)
+                    merged = merge_suggestions(merged, completed)
+                suggestion = {
+                    **merged,
+                    "term": merged.get("term") or term,
+                }
+                detail_missing = missing_enrich_detail_fields({**entry, **suggestion})
+                if detail_missing:
+                    record["status"] = "failed"
+                    record["errors"]["details"] = (
+                        "Could not fill Wordbase details: " + ", ".join(detail_missing)
+                    )
+                    print(f"  [{term}] skipped — details still missing: {', '.join(detail_missing)}")
+                    return
+                print(f"  [{term}] update wordbase")
+                upsert_details(client, suggestion, contributor_id, entry)
+                entry = fetch_entry(client, suggestion["term"]) or fetch_entry(client, term)
+        else:
+            print(f"  [{term}] missing from wordbase")
+            print(f"  [{term}] complete-word")
+            completed = api.complete_word(term, locale)
+            suggestion = merge_suggestions(suggestion, completed, {"term": term})
+            suggestion["term"] = suggestion.get("term") or term
+            detail_missing = missing_enrich_detail_fields(suggestion)
+            if detail_missing:
+                record["status"] = "failed"
+                record["errors"]["details"] = (
+                    "Complete-word response missing: " + ", ".join(detail_missing)
+                )
+                print(f"  [{term}] skipped — AI details missing: {', '.join(detail_missing)}")
+                return
+
+            print(f"  [{term}] insert wordbase")
+            upsert_details(client, suggestion, contributor_id, None)
+            entry = fetch_entry(client, suggestion["term"]) or fetch_entry(client, term)
 
     if not args.skip_map and not args.dry_run:
-        wordbase_id = fetch_wordbase_id(client, term)
+        mapped_term = str((entry or {}).get("term") or term).strip()
+        wordbase_id = fetch_wordbase_id(client, mapped_term)
         if not wordbase_id:
             raise ApiError("Could not resolve wordbase id after upsert.")
         upsert_group_map(client, group_id, wordbase_id, contributor_id)
         print(f"    mapped to group")
 
-    missing = [] if args.dry_run else missing_parts(entry, locale)
+    missing = [] if args.dry_run else missing_enrich_parts(entry, locale)
 
     if not args.skip_tips and (args.dry_run or "memory_tips" in missing):
         print(f"  [{term}] memory-tips")
         if args.dry_run:
             print("    dry-run: would call /api/word-memory-tips")
         else:
-            tips = api.memory_tips(entry or suggestion, locale)
-            upsert_memory_tips(client, entry or suggestion, locale, tips, contributor_id, entry)
-            entry = fetch_entry(client, term)
+            try:
+                tips = api.memory_tips(entry or suggestion, locale)
+                upsert_memory_tips(client, entry or suggestion, locale, tips, contributor_id, entry)
+                entry = fetch_entry(client, term)
+            except Exception as e:
+                print(f"    skipped: AI memory-tips failed — {e}")
+                record["errors"]["memory_tips"] = str(e)
 
-    missing = [] if args.dry_run else missing_parts(entry, locale)
+    missing = [] if args.dry_run else missing_enrich_parts(entry, locale)
 
     if not args.skip_images and (args.dry_run or "memory_image" in missing):
         print(f"  [{term}] memory-image")
         if args.dry_run:
             print("    dry-run: would call /api/word-memory-image")
         else:
-            image = api.memory_image(entry or suggestion)
-            upsert_memory_image(client, entry or suggestion, image, contributor_id, entry)
-            entry = fetch_entry(client, term)
+            try:
+                image = api.memory_image(entry or suggestion)
+                upsert_memory_image(client, entry or suggestion, image, contributor_id, entry)
+                entry = fetch_entry(client, term)
+            except Exception as e:
+                print(f"    skipped: AI memory-image failed — {e}")
+                record["errors"]["memory_image"] = str(e)
 
     if args.dry_run:
         record["status"] = "dry-run"
         return
 
-    missing = missing_parts(entry, locale)
+    missing = missing_enrich_parts(entry, locale)
     record["missing"] = missing
     if not missing:
         record["status"] = "complete"
@@ -338,14 +459,34 @@ def enrich_word_list_file(
     group_id = "" if args.dry_run else resolve_group_id(client, group_code)
     progress = load_progress(group_code)
 
+    # Skip words already marked complete in progress (both in wordbase and group mapped)
+    # In dry-run, show all words; in actual run with --resume (default), skip already complete words
+    already_complete = set()
+    for word in words:
+        term_key = normalize_term(word.get("term"))
+        if term_key:
+            record = progress.get("terms", {}).get(term_key, {})
+            if record.get("status") == "complete":
+                already_complete.add(term_key)
+
+    if args.dry_run or not args.resume:
+        words_to_process = words
+        skipped_count = 0
+    else:
+        words_to_process = [w for w in words if normalize_term(w.get("term")) not in already_complete]
+        skipped_count = len(words) - len(words_to_process)
+
     print("\nHK word group enrich")
     print(f"  file: {file_path}")
     print(f"  group: {group_code}")
     print(f"  locale: {locale}")
     print(f"  words: {len(words)}")
+    if not args.dry_run and skipped_count > 0:
+        print(f"  skipped (already complete): {skipped_count}")
+    print(f"  to process: {len(words_to_process)}")
 
-    for index, word in enumerate(words, start=1):
-        print(f"[{index}/{len(words)}]")
+    for index, word in enumerate(words_to_process, start=1):
+        print(f"[{index}/{len(words_to_process)}]")
         try:
             process_word(
                 word=word,
@@ -368,18 +509,24 @@ def enrich_word_list_file(
                 save_progress(group_code, progress)
                 time.sleep(0.2)
 
-    completed = sum(1 for item in progress.get("terms", {}).values() if item.get("status") == "complete")
+    total_complete = sum(1 for item in progress.get("terms", {}).values() if item.get("status") == "complete")
+    newly_complete = total_complete - skipped_count if not args.dry_run else 0
+    failed_this_run = len(words_to_process) - newly_complete if not args.dry_run else 0
+
     print("\nEnrich summary")
-    print(f"  processed: {len(words)}")
-    print(f"  complete: {completed}")
+    print(f"  processed: {len(words_to_process)}")
+    print(f"  complete: {total_complete}")
+    if not args.dry_run and skipped_count > 0:
+        print(f"  newly complete this run: {newly_complete}")
+        print(f"  skipped (already done): {skipped_count}")
     if not args.dry_run:
         print(f"  progress: {progress_path(group_code)}")
 
     return {
         "group_code": group_code,
-        "processed": len(words),
-        "complete": completed,
-        "failed": len(words) - completed,
+        "processed": len(words_to_process),
+        "complete": total_complete,
+        "failed": failed_this_run if not args.dry_run else 0,
     }
 
 

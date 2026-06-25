@@ -2,160 +2,3696 @@
   "group_code": "hk-primary-p2-english",
   "terms": {
     "library": {
-      "status": "incomplete",
-      "missing": [
-        "pronunciation",
-        "part_of_speech"
-      ],
+      "status": "complete",
+      "missing": [],
       "errors": {},
-      "completed_at": null
+      "completed_at": "2026-06-25T06:07:37Z"
     },
     "paint": {
-      "status": "incomplete",
-      "missing": [
-        "pronunciation",
-        "part_of_speech"
-      ],
+      "status": "complete",
+      "missing": [],
       "errors": {},
-      "completed_at": null
+      "completed_at": "2026-06-25T06:07:38Z"
     },
     "delicious": {
-      "status": "incomplete",
-      "missing": [
-        "pronunciation",
-        "part_of_speech"
-      ],
+      "status": "complete",
+      "missing": [],
       "errors": {},
-      "completed_at": null
+      "completed_at": "2026-06-25T06:07:38Z"
     },
     "weather": {
-      "status": "incomplete",
-      "missing": [
-        "pronunciation",
-        "part_of_speech"
-      ],
+      "status": "complete",
+      "missing": [],
       "errors": {},
-      "completed_at": null
+      "completed_at": "2026-06-25T06:07:39Z"
     },
     "excited": {
-      "status": "incomplete",
-      "missing": [
-        "pronunciation",
-        "part_of_speech"
-      ],
+      "status": "complete",
+      "missing": [],
       "errors": {},
-      "completed_at": null
+      "completed_at": "2026-06-25T06:07:39Z"
     },
     "borrow": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-21T00:28:52Z"
+      "completed_at": "2026-06-25T06:07:40Z"
     },
     "squirrel": {
-      "status": "incomplete",
-      "missing": [
-        "pronunciation",
-        "part_of_speech"
-      ],
+      "status": "complete",
+      "missing": [],
       "errors": {},
-      "completed_at": null
+      "completed_at": "2026-06-25T06:07:40Z"
     },
     "carefully": {
-      "status": "incomplete",
-      "missing": [
-        "pronunciation",
-        "part_of_speech"
-      ],
+      "status": "complete",
+      "missing": [],
       "errors": {},
-      "completed_at": null
+      "completed_at": "2026-06-25T06:07:41Z"
     },
     "uniform": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-21T00:28:55Z"
+      "completed_at": "2026-06-25T06:07:41Z"
     },
     "whisper": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-21T00:28:56Z"
+      "completed_at": "2026-06-25T06:07:42Z"
     },
     "vegetables": {
-      "status": "incomplete",
-      "missing": [
-        "pronunciation",
-        "part_of_speech"
-      ],
+      "status": "complete",
+      "missing": [],
       "errors": {},
-      "completed_at": null
+      "completed_at": "2026-06-25T06:07:43Z"
     },
     "brave": {
-      "status": "incomplete",
-      "missing": [
-        "pronunciation",
-        "part_of_speech"
-      ],
+      "status": "complete",
+      "missing": [],
       "errors": {},
-      "completed_at": null
+      "completed_at": "2026-06-25T06:07:43Z"
     },
     "schedule": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-21T00:28:59Z"
+      "completed_at": "2026-06-25T06:07:44Z"
     },
     "muddy": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-21T00:29:00Z"
+      "completed_at": "2026-06-25T06:07:44Z"
     },
     "share": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-21T00:29:00Z"
+      "completed_at": "2026-06-25T06:07:45Z"
     },
     "thunder": {
-      "status": "incomplete",
-      "missing": [
-        "pronunciation",
-        "part_of_speech"
-      ],
+      "status": "complete",
+      "missing": [],
       "errors": {},
-      "completed_at": null
+      "completed_at": "2026-06-25T06:07:45Z"
     },
     "patient": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-21T00:29:02Z"
+      "completed_at": "2026-06-25T06:07:46Z"
     },
     "scissors": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-21T00:29:03Z"
+      "completed_at": "2026-06-25T06:07:46Z"
     },
     "journey": {
-      "status": "incomplete",
-      "missing": [
-        "pronunciation",
-        "part_of_speech"
-      ],
+      "status": "complete",
+      "missing": [],
       "errors": {},
-      "completed_at": null
+      "completed_at": "2026-06-25T06:07:47Z"
     },
     "tidy up": {
-      "status": "incomplete",
-      "missing": [
-        "pronunciation",
-        "part_of_speech"
-      ],
+      "status": "complete",
+      "missing": [],
       "errors": {},
+      "completed_at": "2026-06-25T06:07:47Z"
+    },
+    "computer room": {
+      "status": "failed",
+      "missing": [],
+      "errors": {
+        "last": "AI request failed: {\"error\":{\"message\":\"***.InternalServerError: InternalServerError: OpenAIException -\",\"type\":\"upstream_error\",\"param\":\"\",\"code\":\"500\"}}"
+      },
       "completed_at": null
+    },
+    "music room": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:09:07Z"
+    },
+    "art room": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T07:46:23Z"
+    },
+    "playground": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:09:08Z"
+    },
+    "hall": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:09:08Z"
+    },
+    "office": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T07:48:19Z"
+    },
+    "classroom": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:09:10Z"
+    },
+    "blackboard": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:09:10Z"
+    },
+    "whiteboard": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:09:11Z"
+    },
+    "noticeboard": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T07:50:04Z"
+    },
+    "bookshelf": {
+      "status": "failed",
+      "missing": [],
+      "errors": {
+        "last": "AI request failed: {\"error\":{\"message\":\"***.InternalServerError: InternalServerError: OpenAIException -\",\"type\":\"upstream_error\",\"param\":\"\",\"code\":\"500\"}}"
+      },
+      "completed_at": null
+    },
+    "dictionary": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:09:14Z"
+    },
+    "storybook": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:09:14Z"
+    },
+    "chapter": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:09:15Z"
+    },
+    "page": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:09:15Z"
+    },
+    "cover": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:09:16Z"
+    },
+    "title": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:09:17Z"
+    },
+    "author": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:09:17Z"
+    },
+    "picture": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:09:18Z"
+    },
+    "sentence": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:09:18Z"
+    },
+    "question": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:09:19Z"
+    },
+    "answer": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:09:19Z"
+    },
+    "homework": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:12:37Z"
+    },
+    "worksheet": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:12:38Z"
+    },
+    "project": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:12:38Z"
+    },
+    "poster": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:12:39Z"
+    },
+    "presentation": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:12:39Z"
+    },
+    "group": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:12:40Z"
+    },
+    "partner": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:12:40Z"
+    },
+    "classmate": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:12:41Z"
+    },
+    "teacher": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:12:42Z"
+    },
+    "principal": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:12:42Z"
+    },
+    "monitor": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:12:43Z"
+    },
+    "prefect": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T07:53:38Z"
+    },
+    "lesson": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:12:44Z"
+    },
+    "subject": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:12:45Z"
+    },
+    "english": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:12:45Z"
+    },
+    "chinese": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:12:46Z"
+    },
+    "mathematics": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:12:46Z"
+    },
+    "general studies": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T07:55:02Z"
+    },
+    "music": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:12:48Z"
+    },
+    "visual arts": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:12:49Z"
+    },
+    "pe": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T07:56:42Z"
+    },
+    "read": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:12:50Z"
+    },
+    "write": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:12:50Z"
+    },
+    "copy": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:12:51Z"
+    },
+    "spell": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T07:56:43Z"
+    },
+    "listen": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:14:16Z"
+    },
+    "speak": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:14:16Z"
+    },
+    "ask": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T07:58:12Z"
+    },
+    "circle": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:14:18Z"
+    },
+    "underline": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:14:18Z"
+    },
+    "tick": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:14:19Z"
+    },
+    "cross": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:14:19Z"
+    },
+    "match": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:14:20Z"
+    },
+    "complete": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:14:20Z"
+    },
+    "correct": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:14:21Z"
+    },
+    "mistake": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:14:22Z"
+    },
+    "practice": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:14:22Z"
+    },
+    "revise": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:14:23Z"
+    },
+    "letter": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:14:23Z"
+    },
+    "sound": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:14:24Z"
+    },
+    "vowel": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:14:24Z"
+    },
+    "consonant": {
+      "status": "failed",
+      "missing": [],
+      "errors": {
+        "last": "AI request failed: {\"error\":{\"message\":\"***.InternalServerError: InternalServerError: OpenAIException -\",\"type\":\"upstream_error\",\"param\":\"\",\"code\":\"500\"}}"
+      },
+      "completed_at": null
+    },
+    "word": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:14:26Z"
+    },
+    "rhyme": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:14:26Z"
+    },
+    "rhyming": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T07:59:52Z"
+    },
+    "blend": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:14:28Z"
+    },
+    "beginning sound": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:14:28Z"
+    },
+    "ending sound": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T08:02:46Z"
+    },
+    "short vowel": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T08:05:19Z"
+    },
+    "long vowel": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T08:07:19Z"
+    },
+    "syllable": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:14:32Z"
+    },
+    "phonics": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T08:10:13Z"
+    },
+    "read aloud": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T08:10:14Z"
+    },
+    "silent reading": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T08:15:13Z"
+    },
+    "shared reading": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T08:16:06Z"
+    },
+    "guided reading": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T08:18:24Z"
+    },
+    "story": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:14:38Z"
+    },
+    "fairy tale": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:14:38Z"
+    },
+    "riddle": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:14:39Z"
+    },
+    "poem": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:14:40Z"
+    },
+    "song": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:15:41Z"
+    },
+    "chant": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:15:42Z"
+    },
+    "dialogue": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:15:42Z"
+    },
+    "character": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:15:43Z"
+    },
+    "setting": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:15:43Z"
+    },
+    "beginning": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:15:44Z"
+    },
+    "middle": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:15:44Z"
+    },
+    "ending": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T08:18:24Z"
+    },
+    "problem": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:15:46Z"
+    },
+    "solution": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:15:46Z"
+    },
+    "event": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:15:47Z"
+    },
+    "next": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:15:47Z"
+    },
+    "then": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T08:18:25Z"
+    },
+    "finally": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:16:56Z"
+    },
+    "funny": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:16:57Z"
+    },
+    "interesting": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:16:57Z"
+    },
+    "exciting": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:16:58Z"
+    },
+    "scary": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T08:19:54Z"
+    },
+    "kind": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:16:59Z"
+    },
+    "clever": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:17:00Z"
+    },
+    "magic": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:17:00Z"
+    },
+    "adventure": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:17:01Z"
+    },
+    "dream": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:17:02Z"
+    },
+    "secret": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:17:02Z"
+    },
+    "tailor": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:17:03Z"
+    },
+    "clown": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:17:03Z"
+    },
+    "frog": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:17:04Z"
+    },
+    "bear hunt": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:17:04Z"
+    },
+    "birthday card": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T08:20:52Z"
+    },
+    "family": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:17:06Z"
+    },
+    "parent": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:17:06Z"
+    },
+    "father": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:17:07Z"
+    },
+    "mother": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:17:08Z"
+    },
+    "brother": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:17:08Z"
+    },
+    "sister": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:17:09Z"
+    },
+    "grandfather": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T08:23:14Z"
+    },
+    "grandmother": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:17:10Z"
+    },
+    "uncle": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:17:11Z"
+    },
+    "aunt": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:17:11Z"
+    },
+    "cousin": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:17:12Z"
+    },
+    "baby": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:17:12Z"
+    },
+    "friend": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:17:13Z"
+    },
+    "best friend": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:17:13Z"
+    },
+    "neighbour": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:17:14Z"
+    },
+    "boy": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:17:14Z"
+    },
+    "girl": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:17:15Z"
+    },
+    "man": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:17:16Z"
+    },
+    "woman": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:17:16Z"
+    },
+    "children": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:17:17Z"
+    },
+    "people": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:17:17Z"
+    },
+    "helpful": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:17:18Z"
+    },
+    "polite": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:17:18Z"
+    },
+    "friendly": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:17:19Z"
+    },
+    "honest": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:17:20Z"
+    },
+    "shy": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T08:27:48Z"
+    },
+    "quiet": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:17:21Z"
+    },
+    "noisy": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T08:30:39Z"
+    },
+    "happy": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:17:23Z"
+    },
+    "sad": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:17:23Z"
+    },
+    "angry": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:17:24Z"
+    },
+    "worried": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:17:24Z"
+    },
+    "surprised": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:17:25Z"
+    },
+    "bored": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:17:25Z"
+    },
+    "tired": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:17:26Z"
+    },
+    "hungry": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:17:26Z"
+    },
+    "thirsty": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:17:27Z"
+    },
+    "proud": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:17:28Z"
+    },
+    "afraid": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:17:28Z"
+    },
+    "lonely": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:17:29Z"
+    },
+    "help": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:17:29Z"
+    },
+    "care": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:17:30Z"
+    },
+    "hug": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:17:30Z"
+    },
+    "smile": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:17:31Z"
+    },
+    "laugh": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:17:31Z"
+    },
+    "cry": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:17:32Z"
+    },
+    "feel": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:17:33Z"
+    },
+    "love": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:17:33Z"
+    },
+    "like": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:17:34Z"
+    },
+    "dislike": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:17:34Z"
+    },
+    "enjoy": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:17:35Z"
+    },
+    "morning": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:17:35Z"
+    },
+    "afternoon": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:17:36Z"
+    },
+    "evening": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:17:36Z"
+    },
+    "night": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:17:37Z"
+    },
+    "today": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T08:30:39Z"
+    },
+    "tomorrow": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T08:32:18Z"
+    },
+    "yesterday": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:18:24Z"
+    },
+    "weekday": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T08:34:09Z"
+    },
+    "weekend": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T08:35:27Z"
+    },
+    "monday": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T08:37:09Z"
+    },
+    "tuesday": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T08:40:43Z"
+    },
+    "wednesday": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T08:42:35Z"
+    },
+    "thursday": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T08:44:00Z"
+    },
+    "friday": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T08:46:50Z"
+    },
+    "saturday": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T08:49:37Z"
+    },
+    "sunday": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T08:53:12Z"
+    },
+    "january": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T08:55:31Z"
+    },
+    "february": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T08:57:47Z"
+    },
+    "march": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:18:35Z"
+    },
+    "april": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:18:36Z"
+    },
+    "may": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:18:36Z"
+    },
+    "june": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:18:37Z"
+    },
+    "july": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T08:59:24Z"
+    },
+    "august": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:18:38Z"
+    },
+    "september": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T09:02:10Z"
+    },
+    "october": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T09:03:19Z"
+    },
+    "november": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T09:04:38Z"
+    },
+    "december": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T09:06:57Z"
+    },
+    "clock": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T09:08:52Z"
+    },
+    "time": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:18:44Z"
+    },
+    "hour": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:18:45Z"
+    },
+    "minute": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:18:46Z"
+    },
+    "early": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:18:46Z"
+    },
+    "late": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:18:47Z"
+    },
+    "before": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:18:47Z"
+    },
+    "after": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:18:48Z"
+    },
+    "first": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:18:48Z"
+    },
+    "wake up": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:19:55Z"
+    },
+    "get up": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:19:56Z"
+    },
+    "wash": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:19:56Z"
+    },
+    "brush": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:21:58Z"
+    },
+    "dress": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:21:59Z"
+    },
+    "eat": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:21:59Z"
+    },
+    "drink": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:22:00Z"
+    },
+    "go to school": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:23:17Z"
+    },
+    "go home": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T09:12:34Z"
+    },
+    "do homework": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T09:15:50Z"
+    },
+    "play": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:23:19Z"
+    },
+    "sleep": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:23:20Z"
+    },
+    "rest": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:23:21Z"
+    },
+    "visit": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:23:21Z"
+    },
+    "watch": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:23:22Z"
+    },
+    "clean": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:23:22Z"
+    },
+    "tidy": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T09:15:50Z"
+    },
+    "food": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:23:24Z"
+    },
+    "meal": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T09:17:48Z"
+    },
+    "breakfast": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T09:19:20Z"
+    },
+    "lunch": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:23:26Z"
+    },
+    "dinner": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T09:19:20Z"
+    },
+    "snack": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:23:28Z"
+    },
+    "rice": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:23:28Z"
+    },
+    "noodles": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:26:38Z"
+    },
+    "bread": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:26:39Z"
+    },
+    "sandwich": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:29:37Z"
+    },
+    "cake": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T09:19:21Z"
+    },
+    "biscuit": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:29:39Z"
+    },
+    "cookie": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:29:39Z"
+    },
+    "egg": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:29:40Z"
+    },
+    "fish": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:29:40Z"
+    },
+    "chicken": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:29:41Z"
+    },
+    "beef": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:29:42Z"
+    },
+    "pork": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T09:19:22Z"
+    },
+    "vegetable": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T09:19:22Z"
+    },
+    "carrot": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T09:20:47Z"
+    },
+    "potato": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T09:20:48Z"
+    },
+    "tomato": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T09:25:41Z"
+    },
+    "corn": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:29:46Z"
+    },
+    "fruit": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:29:47Z"
+    },
+    "apple": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:29:48Z"
+    },
+    "banana": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:29:48Z"
+    },
+    "orange": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:29:49Z"
+    },
+    "pear": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T09:25:41Z"
+    },
+    "grape": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:29:50Z"
+    },
+    "mango": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T09:27:04Z"
+    },
+    "watermelon": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T09:27:05Z"
+    },
+    "strawberry": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T09:27:05Z"
+    },
+    "milk": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:29:53Z"
+    },
+    "water": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:29:54Z"
+    },
+    "juice": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T09:27:06Z"
+    },
+    "tea": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T09:27:06Z"
+    },
+    "soup": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T09:27:07Z"
+    },
+    "ice cream": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T09:27:08Z"
+    },
+    "sweet": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T09:27:08Z"
+    },
+    "candy": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:29:59Z"
+    },
+    "healthy": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:30:00Z"
+    },
+    "unhealthy": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T09:27:09Z"
+    },
+    "fresh": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:30:02Z"
+    },
+    "hot": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:30:02Z"
+    },
+    "cold": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:30:03Z"
+    },
+    "sour": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:30:03Z"
+    },
+    "salty": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:31:47Z"
+    },
+    "plate": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:31:47Z"
+    },
+    "bowl": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T09:27:09Z"
+    },
+    "cup": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:32:09Z"
+    },
+    "spoon": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:32:10Z"
+    },
+    "fork": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:33:38Z"
+    },
+    "chopsticks": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:33:39Z"
+    },
+    "menu": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:33:40Z"
+    },
+    "order": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:33:40Z"
+    },
+    "buy": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:33:41Z"
+    },
+    "hobby": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:33:41Z"
+    },
+    "game": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:34:47Z"
+    },
+    "toy": {
+      "status": "failed",
+      "missing": [],
+      "errors": {
+        "last": "AI request failed: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 20260625063449164010640SEHb9GV8)\",\"type\":\"AgnesAI_error\"}}"
+      },
+      "completed_at": null
+    },
+    "ball": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:34:49Z"
+    },
+    "kite": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:34:49Z"
+    },
+    "doll": {
+      "status": "failed",
+      "missing": [],
+      "errors": {
+        "last": "AI request failed: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 202606250634515173447079YeJbvOH)\",\"type\":\"AgnesAI_error\"}}"
+      },
+      "completed_at": null
+    },
+    "robot": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:34:51Z"
+    },
+    "puzzle": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:34:52Z"
+    },
+    "card": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:36:01Z"
+    },
+    "football": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:37:22Z"
+    },
+    "basketball": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:39:14Z"
+    },
+    "badminton": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:39:15Z"
+    },
+    "table tennis": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:40:09Z"
+    },
+    "swimming": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:40:10Z"
+    },
+    "cycling": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:40:10Z"
+    },
+    "running": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:40:11Z"
+    },
+    "skipping": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:41:32Z"
+    },
+    "dancing": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:43:26Z"
+    },
+    "singing": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:43:27Z"
+    },
+    "drawing": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:43:27Z"
+    },
+    "painting": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:43:28Z"
+    },
+    "reading": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:43:28Z"
+    },
+    "cooking": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:43:29Z"
+    },
+    "gardening": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:43:29Z"
+    },
+    "piano": {
+      "status": "failed",
+      "missing": [],
+      "errors": {
+        "last": "AI request failed: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 20260625064331404705076MAP2Rkrh)\",\"type\":\"AgnesAI_error\"}}"
+      },
+      "completed_at": null
+    },
+    "violin": {
+      "status": "failed",
+      "missing": [],
+      "errors": {
+        "last": "AI request failed: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 20260625064332420262180AcT1ZQD5)\",\"type\":\"AgnesAI_error\"}}"
+      },
+      "completed_at": null
+    },
+    "drum": {
+      "status": "failed",
+      "missing": [],
+      "errors": {
+        "last": "AI request failed: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 20260625064333391984936oh3JELxQ)\",\"type\":\"AgnesAI_error\"}}"
+      },
+      "completed_at": null
+    },
+    "dance": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:43:33Z"
+    },
+    "sport": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:45:00Z"
+    },
+    "team": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:45:01Z"
+    },
+    "player": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:45:02Z"
+    },
+    "winner": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:46:14Z"
+    },
+    "race": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:46:15Z"
+    },
+    "prize": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:46:16Z"
+    },
+    "turn": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:46:16Z"
+    },
+    "rule": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:46:17Z"
+    },
+    "make": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:46:17Z"
+    },
+    "build": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:46:18Z"
+    },
+    "collect": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:46:18Z"
+    },
+    "draw": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:46:19Z"
+    },
+    "sing": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:46:19Z"
+    },
+    "swim": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:46:20Z"
+    },
+    "ride": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:46:21Z"
+    },
+    "jump": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:46:21Z"
+    },
+    "throw": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:46:22Z"
+    },
+    "catch": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:46:22Z"
+    },
+    "kick": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:46:23Z"
+    },
+    "win": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:46:23Z"
+    },
+    "lose": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:46:24Z"
+    },
+    "try": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:47:48Z"
+    },
+    "practise": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:47:49Z"
+    },
+    "fun": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:47:49Z"
+    },
+    "free time": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:47:50Z"
+    },
+    "home": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:47:51Z"
+    },
+    "school": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:47:51Z"
+    },
+    "park": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:47:52Z"
+    },
+    "shop": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:47:52Z"
+    },
+    "supermarket": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:47:53Z"
+    },
+    "market": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:47:53Z"
+    },
+    "restaurant": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:49:52Z"
+    },
+    "cafe": {
+      "status": "failed",
+      "missing": [],
+      "errors": {
+        "last": "AI request failed: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 2026062506505923610647gotNa2RO)\",\"type\":\"AgnesAI_error\"}}"
+      },
+      "completed_at": null
+    },
+    "bakery": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:50:59Z"
+    },
+    "clinic": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:50:59Z"
+    },
+    "hospital": {
+      "status": "failed",
+      "missing": [],
+      "errors": {
+        "last": "AI request failed: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 20260625065101193426785Oq65tg1x)\",\"type\":\"AgnesAI_error\"}}"
+      },
+      "completed_at": null
+    },
+    "post office": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:51:01Z"
+    },
+    "police station": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:51:01Z"
+    },
+    "fire station": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:51:02Z"
+    },
+    "museum": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:51:02Z"
+    },
+    "cinema": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:51:03Z"
+    },
+    "beach": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:51:03Z"
+    },
+    "zoo": {
+      "status": "failed",
+      "missing": [],
+      "errors": {
+        "last": "AI request failed: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 20260625065105198956828PJXxPj8i)\",\"type\":\"AgnesAI_error\"}}"
+      },
+      "completed_at": null
+    },
+    "farm": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:51:05Z"
+    },
+    "garden": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:51:05Z"
+    },
+    "street": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:51:06Z"
+    },
+    "road": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:51:06Z"
+    },
+    "crossing": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:51:07Z"
+    },
+    "bus stop": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:51:07Z"
+    },
+    "station": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:51:08Z"
+    },
+    "mtr": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:51:08Z"
+    },
+    "bus": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:51:09Z"
+    },
+    "taxi": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:51:10Z"
+    },
+    "train": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:51:10Z"
+    },
+    "tram": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:51:11Z"
+    },
+    "ferry": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:51:11Z"
+    },
+    "car": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:51:12Z"
+    },
+    "bicycle": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:51:12Z"
+    },
+    "map": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:51:13Z"
+    },
+    "address": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:51:13Z"
+    },
+    "hong kong": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:51:14Z"
+    },
+    "island": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:51:14Z"
+    },
+    "city": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:51:15Z"
+    },
+    "town": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:51:15Z"
+    },
+    "village": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:51:16Z"
+    },
+    "near": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:51:17Z"
+    },
+    "far": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:51:17Z"
+    },
+    "left": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:51:18Z"
+    },
+    "right": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:51:18Z"
+    },
+    "straight": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:51:19Z"
+    },
+    "in front of": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:52:15Z"
+    },
+    "behind": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:52:16Z"
+    },
+    "between": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:52:16Z"
+    },
+    "next to": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:52:17Z"
+    },
+    "inside": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:52:17Z"
+    },
+    "outside": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:52:18Z"
+    },
+    "upstairs": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:52:19Z"
+    },
+    "downstairs": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:52:19Z"
+    },
+    "travel": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:52:20Z"
+    },
+    "walk": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:52:20Z"
+    },
+    "animal": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:52:21Z"
+    },
+    "pet": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:52:21Z"
+    },
+    "cat": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:52:22Z"
+    },
+    "dog": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:52:23Z"
+    },
+    "bird": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:52:23Z"
+    },
+    "rabbit": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:52:24Z"
+    },
+    "hamster": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:53:35Z"
+    },
+    "turtle": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:53:35Z"
+    },
+    "duck": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:53:36Z"
+    },
+    "cow": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:53:36Z"
+    },
+    "pig": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:53:37Z"
+    },
+    "sheep": {
+      "status": "failed",
+      "missing": [],
+      "errors": {
+        "last": "AI request failed: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 20260625065338829891560xDmC74VD)\",\"type\":\"AgnesAI_error\"}}"
+      },
+      "completed_at": null
+    },
+    "horse": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:53:38Z"
+    },
+    "goat": {
+      "status": "failed",
+      "missing": [],
+      "errors": {
+        "last": "AI request failed: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 20260625065340303005666U0RBICVS)\",\"type\":\"AgnesAI_error\"}}"
+      },
+      "completed_at": null
+    },
+    "monkey": {
+      "status": "failed",
+      "missing": [],
+      "errors": {
+        "last": "AI request failed: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 20260625065341141690162m2ARyHv2)\",\"type\":\"AgnesAI_error\"}}"
+      },
+      "completed_at": null
+    },
+    "elephant": {
+      "status": "failed",
+      "missing": [],
+      "errors": {
+        "last": "AI request failed: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 20260625065341918797263MwOmN833)\",\"type\":\"AgnesAI_error\"}}"
+      },
+      "completed_at": null
+    },
+    "tiger": {
+      "status": "failed",
+      "missing": [],
+      "errors": {
+        "last": "AI request failed: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 20260625065342882621736A3eEhu27)\",\"type\":\"AgnesAI_error\"}}"
+      },
+      "completed_at": null
+    },
+    "lion": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:53:43Z"
+    },
+    "zebra": {
+      "status": "failed",
+      "missing": [],
+      "errors": {
+        "last": "AI request failed: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 20260625065344344820064s7hjOHXi)\",\"type\":\"AgnesAI_error\"}}"
+      },
+      "completed_at": null
+    },
+    "giraffe": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:53:44Z"
+    },
+    "bear": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:53:44Z"
+    },
+    "panda": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:53:45Z"
+    },
+    "dolphin": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:53:46Z"
+    },
+    "whale": {
+      "status": "failed",
+      "missing": [],
+      "errors": {
+        "last": "AI request failed: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 20260625065347374289326HCy5jveX)\",\"type\":\"AgnesAI_error\"}}"
+      },
+      "completed_at": null
+    },
+    "shark": {
+      "status": "failed",
+      "missing": [],
+      "errors": {
+        "last": "AI request failed: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 20260625065348449995082aglvTACv)\",\"type\":\"AgnesAI_error\"}}"
+      },
+      "completed_at": null
+    },
+    "butterfly": {
+      "status": "failed",
+      "missing": [],
+      "errors": {
+        "last": "AI request failed: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 20260625065349245221799Jp7jGVfH)\",\"type\":\"AgnesAI_error\"}}"
+      },
+      "completed_at": null
+    },
+    "bee": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:53:49Z"
+    },
+    "ant": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:53:49Z"
+    },
+    "insect": {
+      "status": "failed",
+      "missing": [],
+      "errors": {
+        "last": "AI request failed: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 202606250653513474545380FLojyrk)\",\"type\":\"AgnesAI_error\"}}"
+      },
+      "completed_at": null
+    },
+    "plant": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:53:51Z"
+    },
+    "flower": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:53:51Z"
+    },
+    "tree": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:53:52Z"
+    },
+    "grass": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:53:53Z"
+    },
+    "leaf": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:55:05Z"
+    },
+    "root": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:55:06Z"
+    },
+    "seed": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:55:06Z"
+    },
+    "forest": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:55:07Z"
+    },
+    "sea": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:55:08Z"
+    },
+    "river": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:55:08Z"
+    },
+    "hill": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:55:09Z"
+    },
+    "mountain": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:55:10Z"
+    },
+    "sky": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:57:43Z"
+    },
+    "sun": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:58:59Z"
+    },
+    "moon": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:59:00Z"
+    },
+    "star": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:59:00Z"
+    },
+    "cloud": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:59:01Z"
+    },
+    "rainbow": {
+      "status": "failed",
+      "missing": [],
+      "errors": {
+        "last": "AI request failed: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 20260625065902711751157fyjQUwcw)\",\"type\":\"AgnesAI_error\"}}"
+      },
+      "completed_at": null
+    },
+    "grow": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:59:02Z"
+    },
+    "fly": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:59:03Z"
+    },
+    "climb": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:59:03Z"
+    },
+    "hop": {
+      "status": "failed",
+      "missing": [],
+      "errors": {
+        "last": "AI request failed: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 202606250659054876381017qDoH7uN)\",\"type\":\"AgnesAI_error\"}}"
+      },
+      "completed_at": null
+    },
+    "run": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:59:05Z"
+    },
+    "feed": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:59:06Z"
+    },
+    "protect": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:59:06Z"
+    },
+    "sunny": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:59:07Z"
+    },
+    "rainy": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:59:07Z"
+    },
+    "cloudy": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:59:08Z"
+    },
+    "windy": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:59:08Z"
+    },
+    "stormy": {
+      "status": "failed",
+      "missing": [],
+      "errors": {
+        "last": "AI request failed: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 20260625065910186033102PKhgQk6j)\",\"type\":\"AgnesAI_error\"}}"
+      },
+      "completed_at": null
+    },
+    "warm": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:59:10Z"
+    },
+    "cool": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:59:10Z"
+    },
+    "wet": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:59:11Z"
+    },
+    "dry": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:59:11Z"
+    },
+    "spring": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:59:12Z"
+    },
+    "summer": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:59:12Z"
+    },
+    "autumn": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:59:13Z"
+    },
+    "winter": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:59:14Z"
+    },
+    "season": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:59:14Z"
+    },
+    "temperature": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:59:15Z"
+    },
+    "rain": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:59:15Z"
+    },
+    "wind": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:59:16Z"
+    },
+    "umbrella": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:59:16Z"
+    },
+    "raincoat": {
+      "status": "failed",
+      "missing": [],
+      "errors": {
+        "last": "AI request failed: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 20260625065918262669696jUs001bh)\",\"type\":\"AgnesAI_error\"}}"
+      },
+      "completed_at": null
+    },
+    "jacket": {
+      "status": "failed",
+      "missing": [],
+      "errors": {
+        "last": "AI request failed: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 202606250659191541587513v72KnNH)\",\"type\":\"AgnesAI_error\"}}"
+      },
+      "completed_at": null
+    },
+    "coat": {
+      "status": "failed",
+      "missing": [],
+      "errors": {
+        "last": "AI request failed: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 20260625065920440377596W9s8VyW8)\",\"type\":\"AgnesAI_error\"}}"
+      },
+      "completed_at": null
+    },
+    "shirt": {
+      "status": "failed",
+      "missing": [],
+      "errors": {
+        "last": "AI request failed: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 20260625065921541894660z1sFFc2Q)\",\"type\":\"AgnesAI_error\"}}"
+      },
+      "completed_at": null
+    },
+    "t-shirt": {
+      "status": "failed",
+      "missing": [],
+      "errors": {
+        "last": "AI request failed: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 20260625065922613093300cDvfqzVE)\",\"type\":\"AgnesAI_error\"}}"
+      },
+      "completed_at": null
+    },
+    "skirt": {
+      "status": "failed",
+      "missing": [],
+      "errors": {
+        "last": "AI request failed: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 20260625065924277050679z3fnpJeG)\",\"type\":\"AgnesAI_error\"}}"
+      },
+      "completed_at": null
+    },
+    "shorts": {
+      "status": "failed",
+      "missing": [],
+      "errors": {
+        "last": "AI request failed: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 20260625065925360947749RNNjYAcD)\",\"type\":\"AgnesAI_error\"}}"
+      },
+      "completed_at": null
+    },
+    "trousers": {
+      "status": "failed",
+      "missing": [],
+      "errors": {
+        "last": "AI request failed: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 20260625065926582894666Q8EYN73P)\",\"type\":\"AgnesAI_error\"}}"
+      },
+      "completed_at": null
+    },
+    "jeans": {
+      "status": "failed",
+      "missing": [],
+      "errors": {
+        "last": "AI request failed: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 20260625065927393229849I17z4ynZ)\",\"type\":\"AgnesAI_error\"}}"
+      },
+      "completed_at": null
+    },
+    "socks": {
+      "status": "failed",
+      "missing": [],
+      "errors": {
+        "last": "AI request failed: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 20260625065928397017840PMqndM7t)\",\"type\":\"AgnesAI_error\"}}"
+      },
+      "completed_at": null
+    },
+    "shoes": {
+      "status": "failed",
+      "missing": [],
+      "errors": {
+        "last": "AI request failed: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 20260625065929542886211HdYH5tUz)\",\"type\":\"AgnesAI_error\"}}"
+      },
+      "completed_at": null
+    },
+    "hat": {
+      "status": "failed",
+      "missing": [],
+      "errors": {
+        "last": "AI request failed: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 20260625065930346649601wIWNnaz5)\",\"type\":\"AgnesAI_error\"}}"
+      },
+      "completed_at": null
+    },
+    "cap": {
+      "status": "failed",
+      "missing": [],
+      "errors": {
+        "last": "AI request failed: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 20260625065931353893564jk492PbM)\",\"type\":\"AgnesAI_error\"}}"
+      },
+      "completed_at": null
+    },
+    "scarf": {
+      "status": "failed",
+      "missing": [],
+      "errors": {
+        "last": "AI request failed: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 20260625065932678385630TgLmycrW)\",\"type\":\"AgnesAI_error\"}}"
+      },
+      "completed_at": null
+    },
+    "gloves": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T07:03:34Z"
+    },
+    "wear": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T07:04:45Z"
+    },
+    "put on": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T07:06:04Z"
+    },
+    "take off": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T07:06:05Z"
+    },
+    "need": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T07:06:05Z"
+    },
+    "bring": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T07:06:06Z"
+    },
+    "comfortable": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T07:06:07Z"
+    },
+    "colourful": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T07:08:10Z"
+    },
+    "striped": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T07:08:10Z"
+    },
+    "spotted": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T07:09:25Z"
+    },
+    "dirty": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T07:10:33Z"
+    },
+    "festival": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T07:10:34Z"
+    },
+    "holiday": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T07:10:34Z"
+    },
+    "birthday": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T07:10:35Z"
+    },
+    "party": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T07:10:36Z"
+    },
+    "present": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T07:10:36Z"
+    },
+    "gift": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T07:10:37Z"
+    },
+    "balloon": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T07:10:37Z"
+    },
+    "candle": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T07:11:52Z"
+    },
+    "wish": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T07:11:52Z"
+    },
+    "christmas": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T07:11:53Z"
+    },
+    "easter": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T07:11:53Z"
+    },
+    "halloween": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T07:13:12Z"
+    },
+    "chinese new year": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T07:13:13Z"
+    },
+    "mid-autumn festival": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T07:14:54Z"
+    },
+    "dragon boat festival": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T07:16:22Z"
+    },
+    "lantern": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T07:17:41Z"
+    },
+    "moon cake": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T07:18:49Z"
+    },
+    "rice dumpling": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T07:20:00Z"
+    },
+    "red packet": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T07:21:25Z"
+    },
+    "family dinner": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T07:21:26Z"
+    },
+    "celebrate": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T07:21:26Z"
+    },
+    "decorate": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T07:21:27Z"
+    },
+    "give": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T07:21:28Z"
+    },
+    "receive": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T07:21:28Z"
+    },
+    "thank": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T07:21:29Z"
+    },
+    "invite": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T07:21:29Z"
+    },
+    "guest": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T07:22:43Z"
+    },
+    "host": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T07:22:44Z"
+    },
+    "tradition": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T07:22:44Z"
+    },
+    "culture": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T07:22:45Z"
+    },
+    "lucky": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T07:23:50Z"
+    },
+    "special": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T07:23:51Z"
+    },
+    "respect": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T07:23:52Z"
+    },
+    "safe": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T07:25:30Z"
+    },
+    "promise": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T07:25:31Z"
+    },
+    "take turns": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T07:27:03Z"
+    },
+    "queue": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T07:27:03Z"
+    },
+    "cross the road": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T07:29:12Z"
+    },
+    "manners": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T07:30:38Z"
+    },
+    "big": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T07:30:39Z"
+    },
+    "small": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T07:30:39Z"
+    },
+    "tall": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T07:30:40Z"
+    },
+    "short": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T07:30:41Z"
+    },
+    "long": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T07:30:41Z"
+    },
+    "round": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T07:30:42Z"
+    },
+    "square": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T07:30:43Z"
+    },
+    "new": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T07:30:44Z"
+    },
+    "old": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T07:30:44Z"
+    },
+    "young": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T07:30:45Z"
+    },
+    "fast": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T07:30:46Z"
+    },
+    "slow": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T07:30:46Z"
+    },
+    "heavy": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T07:30:47Z"
+    },
+    "light": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T07:30:48Z"
+    },
+    "beautiful": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T07:30:48Z"
+    },
+    "ugly": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T07:30:49Z"
+    },
+    "good": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T07:30:50Z"
+    },
+    "bad": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T07:32:33Z"
+    },
+    "easy": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T07:32:33Z"
+    },
+    "difficult": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T07:32:34Z"
+    },
+    "same": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T07:32:34Z"
+    },
+    "different": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T07:32:35Z"
+    },
+    "many": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T07:32:35Z"
+    },
+    "few": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T07:32:36Z"
+    },
+    "more": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T07:32:36Z"
+    },
+    "less": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T07:32:37Z"
+    },
+    "some": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T07:32:38Z"
+    },
+    "all": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T07:32:38Z"
+    },
+    "this": {
+      "status": "failed",
+      "missing": [],
+      "errors": {
+        "last": "AI request failed: {\"error\":{\"message\":\"***.InternalServerError: InternalServerError: OpenAIException -\",\"type\":\"upstream_error\",\"param\":\"\",\"code\":\"500\"}}"
+      },
+      "completed_at": null
+    },
+    "that": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T07:34:46Z"
+    },
+    "these": {
+      "status": "failed",
+      "missing": [],
+      "errors": {
+        "last": "AI request failed: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 20260625073448834840399lCQmclUb)\",\"type\":\"AgnesAI_error\"}}"
+      },
+      "completed_at": null
+    },
+    "those": {
+      "status": "failed",
+      "missing": [],
+      "errors": {
+        "last": "AI request failed: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 20260625073449655168877aTtFxd1W)\",\"type\":\"AgnesAI_error\"}}"
+      },
+      "completed_at": null
+    },
+    "here": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T07:34:49Z"
+    },
+    "there": {
+      "status": "failed",
+      "missing": [],
+      "errors": {
+        "last": "AI request failed: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 20260625073450990382235AtOUgkAp)\",\"type\":\"AgnesAI_error\"}}"
+      },
+      "completed_at": null
+    },
+    "where": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T07:34:50Z"
+    },
+    "what": {
+      "status": "failed",
+      "missing": [],
+      "errors": {
+        "last": "AI request failed: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 202606250734523164953515taVUV99)\",\"type\":\"AgnesAI_error\"}}"
+      },
+      "completed_at": null
+    },
+    "who": {
+      "status": "failed",
+      "missing": [],
+      "errors": {
+        "last": "AI request failed: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 20260625073453102096761YYVb4BSv)\",\"type\":\"AgnesAI_error\"}}"
+      },
+      "completed_at": null
+    },
+    "when": {
+      "status": "failed",
+      "missing": [],
+      "errors": {
+        "last": "AI request failed: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 20260625073453961207345UefI3Ahh)\",\"type\":\"AgnesAI_error\"}}"
+      },
+      "completed_at": null
+    },
+    "why": {
+      "status": "failed",
+      "missing": [],
+      "errors": {
+        "last": "AI request failed: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 20260625073454739979754G3thbZhe)\",\"type\":\"AgnesAI_error\"}}"
+      },
+      "completed_at": null
+    },
+    "how": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T07:34:54Z"
+    },
+    "can": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T07:34:55Z"
+    },
+    "cannot": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T07:34:55Z"
+    },
+    "have": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T07:34:56Z"
+    },
+    "has": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T07:34:56Z"
+    },
+    "am": {
+      "status": "failed",
+      "missing": [],
+      "errors": {
+        "last": "AI request failed: {\"error\":{\"message\":\"***.InternalServerError: InternalServerError: OpenAIException -\",\"type\":\"upstream_error\",\"param\":\"\",\"code\":\"500\"}}"
+      },
+      "completed_at": null
+    },
+    "is": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T07:35:46Z"
+    },
+    "are": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T07:35:47Z"
+    },
+    "was": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T07:35:47Z"
+    },
+    "were": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T07:36:54Z"
+    },
+    "likes": {
+      "status": "failed",
+      "missing": [],
+      "errors": {
+        "last": "AI request failed: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 20260625073655925903308J0Za2OJn)\",\"type\":\"AgnesAI_error\"}}"
+      },
+      "completed_at": null
+    },
+    "want": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T07:36:55Z"
+    },
+    "wants": {
+      "status": "failed",
+      "missing": [],
+      "errors": {
+        "last": "AI request failed: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 20260625073657301697154yvzIYrVA)\",\"type\":\"AgnesAI_error\"}}"
+      },
+      "completed_at": null
+    },
+    "go": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T07:36:57Z"
+    },
+    "goes": {
+      "status": "failed",
+      "missing": [],
+      "errors": {
+        "last": "AI request failed: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 20260625073658675145049Vd9Q0lyS)\",\"type\":\"AgnesAI_error\"}}"
+      },
+      "completed_at": null
+    },
+    "went": {
+      "status": "failed",
+      "missing": [],
+      "errors": {
+        "last": "AI request failed: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 20260625073659502146992hSIRkj7X)\",\"type\":\"AgnesAI_error\"}}"
+      },
+      "completed_at": null
+    },
+    "made": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T07:36:59Z"
+    },
+    "see": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T07:37:00Z"
+    },
+    "saw": {
+      "status": "failed",
+      "missing": [],
+      "errors": {
+        "last": "AI request failed: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 20260625073701376298031v4qWlQe2)\",\"type\":\"AgnesAI_error\"}}"
+      },
+      "completed_at": null
+    },
+    "come": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T07:37:01Z"
+    },
+    "came": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T07:38:13Z"
+    },
+    "do": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T07:38:14Z"
+    },
+    "did": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T07:38:14Z"
     }
   }
 }

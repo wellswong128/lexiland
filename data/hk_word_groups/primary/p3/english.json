@@ -7,6 +7,15 @@
   "version": "2026.06",
   "display_name_en": "P3 English",
   "display_name_zh_hant": "小三英文",
+  "source": {
+    "type": "curriculum_style_public_references",
+    "references": [
+      "EDB English Language Education Curriculum Guide (Primary 1-6) (2025)",
+      "EDB primary English Key Stage 1-2 reading/writing resources",
+      "EDB English vocabulary wordlist preamble and module/unit vocabulary guidance"
+    ],
+    "note": "No fixed official Hong Kong P3 vocabulary list is prescribed; this list is theme-based for upper-primary English enrichment import. Term-only entries are completed during import."
+  },
   "words": [
     {
       "term": "adventure",
@@ -306,6 +315,8014 @@
         "english",
         "noun",
         "nature"
+      ]
+    },
+    {
+      "term": "subject",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "school-and-learning"
+      ]
+    },
+    {
+      "term": "science",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "school-and-learning"
+      ]
+    },
+    {
+      "term": "history",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "school-and-learning"
+      ]
+    },
+    {
+      "term": "geography",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "school-and-learning"
+      ]
+    },
+    {
+      "term": "project",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "school-and-learning"
+      ]
+    },
+    {
+      "term": "group work",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "school-and-learning"
+      ]
+    },
+    {
+      "term": "partner",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "school-and-learning"
+      ]
+    },
+    {
+      "term": "presentation",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "school-and-learning"
+      ]
+    },
+    {
+      "term": "report",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "school-and-learning"
+      ]
+    },
+    {
+      "term": "paragraph",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "school-and-learning"
+      ]
+    },
+    {
+      "term": "chapter",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "school-and-learning"
+      ]
+    },
+    {
+      "term": "author",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "school-and-learning"
+      ]
+    },
+    {
+      "term": "illustrator",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "school-and-learning"
+      ]
+    },
+    {
+      "term": "read aloud",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "school-and-learning"
+      ]
+    },
+    {
+      "term": "comprehension",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "school-and-learning"
+      ]
+    },
+    {
+      "term": "summary",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "school-and-learning"
+      ]
+    },
+    {
+      "term": "main idea",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "school-and-learning"
+      ]
+    },
+    {
+      "term": "fact",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "school-and-learning"
+      ]
+    },
+    {
+      "term": "opinion",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "school-and-learning"
+      ]
+    },
+    {
+      "term": "draft",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "school-and-learning"
+      ]
+    },
+    {
+      "term": "edit",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "school-and-learning"
+      ]
+    },
+    {
+      "term": "revise",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "school-and-learning"
+      ]
+    },
+    {
+      "term": "handwriting",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "school-and-learning"
+      ]
+    },
+    {
+      "term": "spelling",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "school-and-learning"
+      ]
+    },
+    {
+      "term": "vocabulary",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "school-and-learning"
+      ]
+    },
+    {
+      "term": "grammar",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "school-and-learning"
+      ]
+    },
+    {
+      "term": "synonym",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "school-and-learning"
+      ]
+    },
+    {
+      "term": "antonym",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "school-and-learning"
+      ]
+    },
+    {
+      "term": "rhyme",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "school-and-learning"
+      ]
+    },
+    {
+      "term": "poem",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "school-and-learning"
+      ]
+    },
+    {
+      "term": "story map",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "school-and-learning"
+      ]
+    },
+    {
+      "term": "character",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "school-and-learning"
+      ]
+    },
+    {
+      "term": "setting",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "school-and-learning"
+      ]
+    },
+    {
+      "term": "plot",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "school-and-learning"
+      ]
+    },
+    {
+      "term": "problem",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "school-and-learning"
+      ]
+    },
+    {
+      "term": "solution",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "school-and-learning"
+      ]
+    },
+    {
+      "term": "moral",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "school-and-learning"
+      ]
+    },
+    {
+      "term": "fable",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "school-and-learning"
+      ]
+    },
+    {
+      "term": "legend",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "school-and-learning"
+      ]
+    },
+    {
+      "term": "notice",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "school-and-learning"
+      ]
+    },
+    {
+      "term": "poster",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "school-and-learning"
+      ]
+    },
+    {
+      "term": "timetable",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "school-and-learning"
+      ]
+    },
+    {
+      "term": "assembly",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "school-and-learning"
+      ]
+    },
+    {
+      "term": "class monitor",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "school-and-learning"
+      ]
+    },
+    {
+      "term": "school rule",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "school-and-learning"
+      ]
+    },
+    {
+      "term": "homework diary",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "school-and-learning"
+      ]
+    },
+    {
+      "term": "quiz",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "school-and-learning"
+      ]
+    },
+    {
+      "term": "score",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "school-and-learning"
+      ]
+    },
+    {
+      "term": "mistake",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "school-and-learning"
+      ]
+    },
+    {
+      "term": "improve",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "school-and-learning"
+      ]
+    },
+    {
+      "term": "practice",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "school-and-learning"
+      ]
+    },
+    {
+      "term": "effort",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "school-and-learning"
+      ]
+    },
+    {
+      "term": "community",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "community-and-jobs"
+      ]
+    },
+    {
+      "term": "neighbourhood",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "community-and-jobs"
+      ]
+    },
+    {
+      "term": "neighbour",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "community-and-jobs"
+      ]
+    },
+    {
+      "term": "citizen",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "community-and-jobs"
+      ]
+    },
+    {
+      "term": "volunteer",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "community-and-jobs"
+      ]
+    },
+    {
+      "term": "helper",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "community-and-jobs"
+      ]
+    },
+    {
+      "term": "police officer",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "community-and-jobs"
+      ]
+    },
+    {
+      "term": "firefighter",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "community-and-jobs"
+      ]
+    },
+    {
+      "term": "doctor",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "community-and-jobs"
+      ]
+    },
+    {
+      "term": "nurse",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "community-and-jobs"
+      ]
+    },
+    {
+      "term": "dentist",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "community-and-jobs"
+      ]
+    },
+    {
+      "term": "shopkeeper",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "community-and-jobs"
+      ]
+    },
+    {
+      "term": "cashier",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "community-and-jobs"
+      ]
+    },
+    {
+      "term": "waiter",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "community-and-jobs"
+      ]
+    },
+    {
+      "term": "chef",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "community-and-jobs"
+      ]
+    },
+    {
+      "term": "farmer",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "community-and-jobs"
+      ]
+    },
+    {
+      "term": "driver",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "community-and-jobs"
+      ]
+    },
+    {
+      "term": "pilot",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "community-and-jobs"
+      ]
+    },
+    {
+      "term": "engineer",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "community-and-jobs"
+      ]
+    },
+    {
+      "term": "scientist",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "community-and-jobs"
+      ]
+    },
+    {
+      "term": "artist",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "community-and-jobs"
+      ]
+    },
+    {
+      "term": "musician",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "community-and-jobs"
+      ]
+    },
+    {
+      "term": "postman",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "community-and-jobs"
+      ]
+    },
+    {
+      "term": "cleaner",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "community-and-jobs"
+      ]
+    },
+    {
+      "term": "guard",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "community-and-jobs"
+      ]
+    },
+    {
+      "term": "vet",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "community-and-jobs"
+      ]
+    },
+    {
+      "term": "customer",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "community-and-jobs"
+      ]
+    },
+    {
+      "term": "passenger",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "community-and-jobs"
+      ]
+    },
+    {
+      "term": "pedestrian",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "community-and-jobs"
+      ]
+    },
+    {
+      "term": "traffic",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "community-and-jobs"
+      ]
+    },
+    {
+      "term": "zebra crossing",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "community-and-jobs"
+      ]
+    },
+    {
+      "term": "traffic light",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "community-and-jobs"
+      ]
+    },
+    {
+      "term": "road",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "community-and-jobs"
+      ]
+    },
+    {
+      "term": "street",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "community-and-jobs"
+      ]
+    },
+    {
+      "term": "building",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "community-and-jobs"
+      ]
+    },
+    {
+      "term": "village",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "community-and-jobs"
+      ]
+    },
+    {
+      "term": "town",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "community-and-jobs"
+      ]
+    },
+    {
+      "term": "city",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "community-and-jobs"
+      ]
+    },
+    {
+      "term": "map",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "community-and-jobs"
+      ]
+    },
+    {
+      "term": "direction",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "community-and-jobs"
+      ]
+    },
+    {
+      "term": "north",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "community-and-jobs"
+      ]
+    },
+    {
+      "term": "south",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "community-and-jobs"
+      ]
+    },
+    {
+      "term": "east",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "community-and-jobs"
+      ]
+    },
+    {
+      "term": "west",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "community-and-jobs"
+      ]
+    },
+    {
+      "term": "left",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "community-and-jobs"
+      ]
+    },
+    {
+      "term": "right",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "community-and-jobs"
+      ]
+    },
+    {
+      "term": "straight ahead",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "community-and-jobs"
+      ]
+    },
+    {
+      "term": "corner",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "community-and-jobs"
+      ]
+    },
+    {
+      "term": "near",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "community-and-jobs"
+      ]
+    },
+    {
+      "term": "far",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "community-and-jobs"
+      ]
+    },
+    {
+      "term": "behind",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "community-and-jobs"
+      ]
+    },
+    {
+      "term": "in front of",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "community-and-jobs"
+      ]
+    },
+    {
+      "term": "health",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "health-and-fitness"
+      ]
+    },
+    {
+      "term": "healthy",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "health-and-fitness"
+      ]
+    },
+    {
+      "term": "unhealthy",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "health-and-fitness"
+      ]
+    },
+    {
+      "term": "fitness",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "health-and-fitness"
+      ]
+    },
+    {
+      "term": "exercise",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "health-and-fitness"
+      ]
+    },
+    {
+      "term": "warm up",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "health-and-fitness"
+      ]
+    },
+    {
+      "term": "stretch",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "health-and-fitness"
+      ]
+    },
+    {
+      "term": "jog",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "health-and-fitness"
+      ]
+    },
+    {
+      "term": "skip",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "health-and-fitness"
+      ]
+    },
+    {
+      "term": "swim",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "health-and-fitness"
+      ]
+    },
+    {
+      "term": "cycle",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "health-and-fitness"
+      ]
+    },
+    {
+      "term": "hike",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "health-and-fitness"
+      ]
+    },
+    {
+      "term": "yoga",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "health-and-fitness"
+      ]
+    },
+    {
+      "term": "muscle",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "health-and-fitness"
+      ]
+    },
+    {
+      "term": "bone",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "health-and-fitness"
+      ]
+    },
+    {
+      "term": "heart",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "health-and-fitness"
+      ]
+    },
+    {
+      "term": "breath",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "health-and-fitness"
+      ]
+    },
+    {
+      "term": "breathe",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "health-and-fitness"
+      ]
+    },
+    {
+      "term": "energy",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "health-and-fitness"
+      ]
+    },
+    {
+      "term": "strength",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "health-and-fitness"
+      ]
+    },
+    {
+      "term": "strong",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "health-and-fitness"
+      ]
+    },
+    {
+      "term": "weak",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "health-and-fitness"
+      ]
+    },
+    {
+      "term": "tired",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "health-and-fitness"
+      ]
+    },
+    {
+      "term": "active",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "health-and-fitness"
+      ]
+    },
+    {
+      "term": "rest",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "health-and-fitness"
+      ]
+    },
+    {
+      "term": "sleep",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "health-and-fitness"
+      ]
+    },
+    {
+      "term": "hygiene",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "health-and-fitness"
+      ]
+    },
+    {
+      "term": "wash hands",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "health-and-fitness"
+      ]
+    },
+    {
+      "term": "soap",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "health-and-fitness"
+      ]
+    },
+    {
+      "term": "toothbrush",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "health-and-fitness"
+      ]
+    },
+    {
+      "term": "toothpaste",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "health-and-fitness"
+      ]
+    },
+    {
+      "term": "brush teeth",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "health-and-fitness"
+      ]
+    },
+    {
+      "term": "shower",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "health-and-fitness"
+      ]
+    },
+    {
+      "term": "clean",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "health-and-fitness"
+      ]
+    },
+    {
+      "term": "dirty",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "health-and-fitness"
+      ]
+    },
+    {
+      "term": "germs",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "health-and-fitness"
+      ]
+    },
+    {
+      "term": "virus",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "health-and-fitness"
+      ]
+    },
+    {
+      "term": "illness",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "health-and-fitness"
+      ]
+    },
+    {
+      "term": "sick",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "health-and-fitness"
+      ]
+    },
+    {
+      "term": "fever",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "health-and-fitness"
+      ]
+    },
+    {
+      "term": "cough",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "health-and-fitness"
+      ]
+    },
+    {
+      "term": "sneeze",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "health-and-fitness"
+      ]
+    },
+    {
+      "term": "headache",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "health-and-fitness"
+      ]
+    },
+    {
+      "term": "stomach ache",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "health-and-fitness"
+      ]
+    },
+    {
+      "term": "medicine",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "health-and-fitness"
+      ]
+    },
+    {
+      "term": "bandage",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "health-and-fitness"
+      ]
+    },
+    {
+      "term": "plaster",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "health-and-fitness"
+      ]
+    },
+    {
+      "term": "first aid",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "health-and-fitness"
+      ]
+    },
+    {
+      "term": "injury",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "health-and-fitness"
+      ]
+    },
+    {
+      "term": "hurt",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "health-and-fitness"
+      ]
+    },
+    {
+      "term": "pain",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "health-and-fitness"
+      ]
+    },
+    {
+      "term": "recover",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "health-and-fitness"
+      ]
+    },
+    {
+      "term": "menu",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "food-shopping-and-money"
+      ]
+    },
+    {
+      "term": "order",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "food-shopping-and-money"
+      ]
+    },
+    {
+      "term": "serve",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "food-shopping-and-money"
+      ]
+    },
+    {
+      "term": "dish",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "food-shopping-and-money"
+      ]
+    },
+    {
+      "term": "dessert",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "food-shopping-and-money"
+      ]
+    },
+    {
+      "term": "ingredient",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "food-shopping-and-money"
+      ]
+    },
+    {
+      "term": "recipe",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "food-shopping-and-money"
+      ]
+    },
+    {
+      "term": "cook",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "food-shopping-and-money"
+      ]
+    },
+    {
+      "term": "bake",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "food-shopping-and-money"
+      ]
+    },
+    {
+      "term": "fry",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "food-shopping-and-money"
+      ]
+    },
+    {
+      "term": "boil",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "food-shopping-and-money"
+      ]
+    },
+    {
+      "term": "steam",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "food-shopping-and-money"
+      ]
+    },
+    {
+      "term": "mix",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "food-shopping-and-money"
+      ]
+    },
+    {
+      "term": "stir",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "food-shopping-and-money"
+      ]
+    },
+    {
+      "term": "chop",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "food-shopping-and-money"
+      ]
+    },
+    {
+      "term": "slice",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "food-shopping-and-money"
+      ]
+    },
+    {
+      "term": "peel",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "food-shopping-and-money"
+      ]
+    },
+    {
+      "term": "pour",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "food-shopping-and-money"
+      ]
+    },
+    {
+      "term": "taste",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "food-shopping-and-money"
+      ]
+    },
+    {
+      "term": "flavour",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "food-shopping-and-money"
+      ]
+    },
+    {
+      "term": "sweet",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "food-shopping-and-money"
+      ]
+    },
+    {
+      "term": "sour",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "food-shopping-and-money"
+      ]
+    },
+    {
+      "term": "bitter",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "food-shopping-and-money"
+      ]
+    },
+    {
+      "term": "salty",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "food-shopping-and-money"
+      ]
+    },
+    {
+      "term": "spicy",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "food-shopping-and-money"
+      ]
+    },
+    {
+      "term": "fresh",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "food-shopping-and-money"
+      ]
+    },
+    {
+      "term": "raw",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "food-shopping-and-money"
+      ]
+    },
+    {
+      "term": "cooked",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "food-shopping-and-money"
+      ]
+    },
+    {
+      "term": "frozen",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "food-shopping-and-money"
+      ]
+    },
+    {
+      "term": "organic",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "food-shopping-and-money"
+      ]
+    },
+    {
+      "term": "harvest",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "food-shopping-and-money"
+      ]
+    },
+    {
+      "term": "crop",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "food-shopping-and-money"
+      ]
+    },
+    {
+      "term": "grain",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "food-shopping-and-money"
+      ]
+    },
+    {
+      "term": "noodle",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "food-shopping-and-money"
+      ]
+    },
+    {
+      "term": "butter",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "food-shopping-and-money"
+      ]
+    },
+    {
+      "term": "cheese",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "food-shopping-and-money"
+      ]
+    },
+    {
+      "term": "yogurt",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "food-shopping-and-money"
+      ]
+    },
+    {
+      "term": "beef",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "food-shopping-and-money"
+      ]
+    },
+    {
+      "term": "pork",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "food-shopping-and-money"
+      ]
+    },
+    {
+      "term": "seafood",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "food-shopping-and-money"
+      ]
+    },
+    {
+      "term": "shrimp",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "food-shopping-and-money"
+      ]
+    },
+    {
+      "term": "salad",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "food-shopping-and-money"
+      ]
+    },
+    {
+      "term": "soup",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "food-shopping-and-money"
+      ]
+    },
+    {
+      "term": "sandwich",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "food-shopping-and-money"
+      ]
+    },
+    {
+      "term": "burger",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "food-shopping-and-money"
+      ]
+    },
+    {
+      "term": "pizza",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "food-shopping-and-money"
+      ]
+    },
+    {
+      "term": "pasta",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "food-shopping-and-money"
+      ]
+    },
+    {
+      "term": "cookie",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "food-shopping-and-money"
+      ]
+    },
+    {
+      "term": "biscuit",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "food-shopping-and-money"
+      ]
+    },
+    {
+      "term": "candy",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "food-shopping-and-money"
+      ]
+    },
+    {
+      "term": "chocolate",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "food-shopping-and-money"
+      ]
+    },
+    {
+      "term": "smoothie",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "food-shopping-and-money"
+      ]
+    },
+    {
+      "term": "wild animal",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "animals-habitats-and-science"
+      ]
+    },
+    {
+      "term": "domestic animal",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "animals-habitats-and-science"
+      ]
+    },
+    {
+      "term": "mammal",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "animals-habitats-and-science"
+      ]
+    },
+    {
+      "term": "reptile",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "animals-habitats-and-science"
+      ]
+    },
+    {
+      "term": "amphibian",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "animals-habitats-and-science"
+      ]
+    },
+    {
+      "term": "insect",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "animals-habitats-and-science"
+      ]
+    },
+    {
+      "term": "worm",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "animals-habitats-and-science"
+      ]
+    },
+    {
+      "term": "spider",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "animals-habitats-and-science"
+      ]
+    },
+    {
+      "term": "butterfly",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "animals-habitats-and-science"
+      ]
+    },
+    {
+      "term": "bee",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "animals-habitats-and-science"
+      ]
+    },
+    {
+      "term": "ant",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "animals-habitats-and-science"
+      ]
+    },
+    {
+      "term": "mosquito",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "animals-habitats-and-science"
+      ]
+    },
+    {
+      "term": "dragonfly",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "animals-habitats-and-science"
+      ]
+    },
+    {
+      "term": "ladybird",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "animals-habitats-and-science"
+      ]
+    },
+    {
+      "term": "lion",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "animals-habitats-and-science"
+      ]
+    },
+    {
+      "term": "tiger",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "animals-habitats-and-science"
+      ]
+    },
+    {
+      "term": "elephant",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "animals-habitats-and-science"
+      ]
+    },
+    {
+      "term": "giraffe",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "animals-habitats-and-science"
+      ]
+    },
+    {
+      "term": "zebra",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "animals-habitats-and-science"
+      ]
+    },
+    {
+      "term": "monkey",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "animals-habitats-and-science"
+      ]
+    },
+    {
+      "term": "panda",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "animals-habitats-and-science"
+      ]
+    },
+    {
+      "term": "bear",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "animals-habitats-and-science"
+      ]
+    },
+    {
+      "term": "wolf",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "animals-habitats-and-science"
+      ]
+    },
+    {
+      "term": "fox",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "animals-habitats-and-science"
+      ]
+    },
+    {
+      "term": "deer",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "animals-habitats-and-science"
+      ]
+    },
+    {
+      "term": "rabbit",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "animals-habitats-and-science"
+      ]
+    },
+    {
+      "term": "squirrel",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "animals-habitats-and-science"
+      ]
+    },
+    {
+      "term": "whale",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "animals-habitats-and-science"
+      ]
+    },
+    {
+      "term": "dolphin",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "animals-habitats-and-science"
+      ]
+    },
+    {
+      "term": "shark",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "animals-habitats-and-science"
+      ]
+    },
+    {
+      "term": "octopus",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "animals-habitats-and-science"
+      ]
+    },
+    {
+      "term": "turtle",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "animals-habitats-and-science"
+      ]
+    },
+    {
+      "term": "snake",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "animals-habitats-and-science"
+      ]
+    },
+    {
+      "term": "lizard",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "animals-habitats-and-science"
+      ]
+    },
+    {
+      "term": "frog",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "animals-habitats-and-science"
+      ]
+    },
+    {
+      "term": "eagle",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "animals-habitats-and-science"
+      ]
+    },
+    {
+      "term": "owl",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "animals-habitats-and-science"
+      ]
+    },
+    {
+      "term": "parrot",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "animals-habitats-and-science"
+      ]
+    },
+    {
+      "term": "penguin",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "animals-habitats-and-science"
+      ]
+    },
+    {
+      "term": "goose",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "animals-habitats-and-science"
+      ]
+    },
+    {
+      "term": "rooster",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "animals-habitats-and-science"
+      ]
+    },
+    {
+      "term": "goat",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "animals-habitats-and-science"
+      ]
+    },
+    {
+      "term": "donkey",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "animals-habitats-and-science"
+      ]
+    },
+    {
+      "term": "habitat",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "animals-habitats-and-science"
+      ]
+    },
+    {
+      "term": "jungle",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "animals-habitats-and-science"
+      ]
+    },
+    {
+      "term": "desert",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "animals-habitats-and-science"
+      ]
+    },
+    {
+      "term": "ocean",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "animals-habitats-and-science"
+      ]
+    },
+    {
+      "term": "river",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "animals-habitats-and-science"
+      ]
+    },
+    {
+      "term": "lake",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "animals-habitats-and-science"
+      ]
+    },
+    {
+      "term": "pond",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "animals-habitats-and-science"
+      ]
+    },
+    {
+      "term": "stream",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "animals-habitats-and-science"
+      ]
+    },
+    {
+      "term": "waterfall",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "animals-habitats-and-science"
+      ]
+    },
+    {
+      "term": "natural",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "environment-and-conservation"
+      ]
+    },
+    {
+      "term": "resource",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "environment-and-conservation"
+      ]
+    },
+    {
+      "term": "pollution",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "environment-and-conservation"
+      ]
+    },
+    {
+      "term": "air pollution",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "environment-and-conservation"
+      ]
+    },
+    {
+      "term": "water pollution",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "environment-and-conservation"
+      ]
+    },
+    {
+      "term": "litter",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "environment-and-conservation"
+      ]
+    },
+    {
+      "term": "rubbish",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "environment-and-conservation"
+      ]
+    },
+    {
+      "term": "garbage",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "environment-and-conservation"
+      ]
+    },
+    {
+      "term": "waste",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "environment-and-conservation"
+      ]
+    },
+    {
+      "term": "trash",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "environment-and-conservation"
+      ]
+    },
+    {
+      "term": "bin",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "environment-and-conservation"
+      ]
+    },
+    {
+      "term": "recycle",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "environment-and-conservation"
+      ]
+    },
+    {
+      "term": "reuse",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "environment-and-conservation"
+      ]
+    },
+    {
+      "term": "reduce",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "environment-and-conservation"
+      ]
+    },
+    {
+      "term": "compost",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "environment-and-conservation"
+      ]
+    },
+    {
+      "term": "landfill",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "environment-and-conservation"
+      ]
+    },
+    {
+      "term": "plastic",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "environment-and-conservation"
+      ]
+    },
+    {
+      "term": "paper",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "environment-and-conservation"
+      ]
+    },
+    {
+      "term": "glass",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "environment-and-conservation"
+      ]
+    },
+    {
+      "term": "metal",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "environment-and-conservation"
+      ]
+    },
+    {
+      "term": "can",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "environment-and-conservation"
+      ]
+    },
+    {
+      "term": "bottle",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "environment-and-conservation"
+      ]
+    },
+    {
+      "term": "bag",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "environment-and-conservation"
+      ]
+    },
+    {
+      "term": "straw",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "environment-and-conservation"
+      ]
+    },
+    {
+      "term": "reusable",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "environment-and-conservation"
+      ]
+    },
+    {
+      "term": "sustainable",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "environment-and-conservation"
+      ]
+    },
+    {
+      "term": "preserve",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "environment-and-conservation"
+      ]
+    },
+    {
+      "term": "care for",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "environment-and-conservation"
+      ]
+    },
+    {
+      "term": "clean up",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "environment-and-conservation"
+      ]
+    },
+    {
+      "term": "pick up",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "environment-and-conservation"
+      ]
+    },
+    {
+      "term": "throw away",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "environment-and-conservation"
+      ]
+    },
+    {
+      "term": "sort",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "environment-and-conservation"
+      ]
+    },
+    {
+      "term": "recycling bin",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "environment-and-conservation"
+      ]
+    },
+    {
+      "term": "eco-friendly",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "environment-and-conservation"
+      ]
+    },
+    {
+      "term": "climate",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "environment-and-conservation"
+      ]
+    },
+    {
+      "term": "global warming",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "environment-and-conservation"
+      ]
+    },
+    {
+      "term": "plant trees",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "environment-and-conservation"
+      ]
+    },
+    {
+      "term": "soil",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "environment-and-conservation"
+      ]
+    },
+    {
+      "term": "erosion",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "environment-and-conservation"
+      ]
+    },
+    {
+      "term": "flood",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "environment-and-conservation"
+      ]
+    },
+    {
+      "term": "drought",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "environment-and-conservation"
+      ]
+    },
+    {
+      "term": "typhoon",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "environment-and-conservation"
+      ]
+    },
+    {
+      "term": "earthquake",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "environment-and-conservation"
+      ]
+    },
+    {
+      "term": "disaster",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "environment-and-conservation"
+      ]
+    },
+    {
+      "term": "damage",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "environment-and-conservation"
+      ]
+    },
+    {
+      "term": "destroy",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "environment-and-conservation"
+      ]
+    },
+    {
+      "term": "harm",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "environment-and-conservation"
+      ]
+    },
+    {
+      "term": "threat",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "environment-and-conservation"
+      ]
+    },
+    {
+      "term": "habitat loss",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "environment-and-conservation"
+      ]
+    },
+    {
+      "term": "wildlife protection",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "environment-and-conservation"
+      ]
+    },
+    {
+      "term": "national park",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "environment-and-conservation"
+      ]
+    },
+    {
+      "term": "clean air",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "environment-and-conservation"
+      ]
+    },
+    {
+      "term": "vehicle",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "transport-travel-and-holidays"
+      ]
+    },
+    {
+      "term": "minibus",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "transport-travel-and-holidays"
+      ]
+    },
+    {
+      "term": "taxi",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "transport-travel-and-holidays"
+      ]
+    },
+    {
+      "term": "tram",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "transport-travel-and-holidays"
+      ]
+    },
+    {
+      "term": "train",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "transport-travel-and-holidays"
+      ]
+    },
+    {
+      "term": "MTR",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "transport-travel-and-holidays"
+      ]
+    },
+    {
+      "term": "light rail",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "transport-travel-and-holidays"
+      ]
+    },
+    {
+      "term": "ferry",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "transport-travel-and-holidays"
+      ]
+    },
+    {
+      "term": "boat",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "transport-travel-and-holidays"
+      ]
+    },
+    {
+      "term": "ship",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "transport-travel-and-holidays"
+      ]
+    },
+    {
+      "term": "bicycle",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "transport-travel-and-holidays"
+      ]
+    },
+    {
+      "term": "motorbike",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "transport-travel-and-holidays"
+      ]
+    },
+    {
+      "term": "scooter",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "transport-travel-and-holidays"
+      ]
+    },
+    {
+      "term": "skateboard",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "transport-travel-and-holidays"
+      ]
+    },
+    {
+      "term": "aeroplane",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "transport-travel-and-holidays"
+      ]
+    },
+    {
+      "term": "helicopter",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "transport-travel-and-holidays"
+      ]
+    },
+    {
+      "term": "crew",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "transport-travel-and-holidays"
+      ]
+    },
+    {
+      "term": "ticket",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "transport-travel-and-holidays"
+      ]
+    },
+    {
+      "term": "fare",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "transport-travel-and-holidays"
+      ]
+    },
+    {
+      "term": "platform",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "transport-travel-and-holidays"
+      ]
+    },
+    {
+      "term": "gate",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "transport-travel-and-holidays"
+      ]
+    },
+    {
+      "term": "terminal",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "transport-travel-and-holidays"
+      ]
+    },
+    {
+      "term": "departure",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "transport-travel-and-holidays"
+      ]
+    },
+    {
+      "term": "arrival",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "transport-travel-and-holidays"
+      ]
+    },
+    {
+      "term": "delay",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "transport-travel-and-holidays"
+      ]
+    },
+    {
+      "term": "route",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "transport-travel-and-holidays"
+      ]
+    },
+    {
+      "term": "destination",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "transport-travel-and-holidays"
+      ]
+    },
+    {
+      "term": "trip",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "transport-travel-and-holidays"
+      ]
+    },
+    {
+      "term": "visit",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "transport-travel-and-holidays"
+      ]
+    },
+    {
+      "term": "tour",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "transport-travel-and-holidays"
+      ]
+    },
+    {
+      "term": "sightseeing",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "transport-travel-and-holidays"
+      ]
+    },
+    {
+      "term": "guidebook",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "transport-travel-and-holidays"
+      ]
+    },
+    {
+      "term": "compass",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "transport-travel-and-holidays"
+      ]
+    },
+    {
+      "term": "luggage",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "transport-travel-and-holidays"
+      ]
+    },
+    {
+      "term": "suitcase",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "transport-travel-and-holidays"
+      ]
+    },
+    {
+      "term": "backpack",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "transport-travel-and-holidays"
+      ]
+    },
+    {
+      "term": "passport",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "transport-travel-and-holidays"
+      ]
+    },
+    {
+      "term": "check in",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "transport-travel-and-holidays"
+      ]
+    },
+    {
+      "term": "boarding pass",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "transport-travel-and-holidays"
+      ]
+    },
+    {
+      "term": "window seat",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "transport-travel-and-holidays"
+      ]
+    },
+    {
+      "term": "vacation",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "transport-travel-and-holidays"
+      ]
+    },
+    {
+      "term": "weekend",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "transport-travel-and-holidays"
+      ]
+    },
+    {
+      "term": "camp",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "transport-travel-and-holidays"
+      ]
+    },
+    {
+      "term": "camping",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "transport-travel-and-holidays"
+      ]
+    },
+    {
+      "term": "tent",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "transport-travel-and-holidays"
+      ]
+    },
+    {
+      "term": "campfire",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "transport-travel-and-holidays"
+      ]
+    },
+    {
+      "term": "hiking trail",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "transport-travel-and-holidays"
+      ]
+    },
+    {
+      "term": "picnic",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "transport-travel-and-holidays"
+      ]
+    },
+    {
+      "term": "souvenir",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "transport-travel-and-holidays"
+      ]
+    },
+    {
+      "term": "postcard",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "transport-travel-and-holidays"
+      ]
+    },
+    {
+      "term": "memory",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "transport-travel-and-holidays"
+      ]
+    },
+    {
+      "term": "explore",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "transport-travel-and-holidays"
+      ]
+    },
+    {
+      "term": "match",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "sports-hobbies-and-leisure"
+      ]
+    },
+    {
+      "term": "race",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "sports-hobbies-and-leisure"
+      ]
+    },
+    {
+      "term": "tournament",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "sports-hobbies-and-leisure"
+      ]
+    },
+    {
+      "term": "team sport",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "sports-hobbies-and-leisure"
+      ]
+    },
+    {
+      "term": "football",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "sports-hobbies-and-leisure"
+      ]
+    },
+    {
+      "term": "soccer",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "sports-hobbies-and-leisure"
+      ]
+    },
+    {
+      "term": "basketball",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "sports-hobbies-and-leisure"
+      ]
+    },
+    {
+      "term": "volleyball",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "sports-hobbies-and-leisure"
+      ]
+    },
+    {
+      "term": "badminton",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "sports-hobbies-and-leisure"
+      ]
+    },
+    {
+      "term": "tennis",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "sports-hobbies-and-leisure"
+      ]
+    },
+    {
+      "term": "table tennis",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "sports-hobbies-and-leisure"
+      ]
+    },
+    {
+      "term": "swimming",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "sports-hobbies-and-leisure"
+      ]
+    },
+    {
+      "term": "diving",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "sports-hobbies-and-leisure"
+      ]
+    },
+    {
+      "term": "athletics",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "sports-hobbies-and-leisure"
+      ]
+    },
+    {
+      "term": "sprinting",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "sports-hobbies-and-leisure"
+      ]
+    },
+    {
+      "term": "relay",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "sports-hobbies-and-leisure"
+      ]
+    },
+    {
+      "term": "long jump",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "sports-hobbies-and-leisure"
+      ]
+    },
+    {
+      "term": "high jump",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "sports-hobbies-and-leisure"
+      ]
+    },
+    {
+      "term": "gymnastics",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "sports-hobbies-and-leisure"
+      ]
+    },
+    {
+      "term": "judo",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "sports-hobbies-and-leisure"
+      ]
+    },
+    {
+      "term": "karate",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "sports-hobbies-and-leisure"
+      ]
+    },
+    {
+      "term": "skating",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "sports-hobbies-and-leisure"
+      ]
+    },
+    {
+      "term": "surfing",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "sports-hobbies-and-leisure"
+      ]
+    },
+    {
+      "term": "sailing",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "sports-hobbies-and-leisure"
+      ]
+    },
+    {
+      "term": "rowing",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "sports-hobbies-and-leisure"
+      ]
+    },
+    {
+      "term": "climbing",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "sports-hobbies-and-leisure"
+      ]
+    },
+    {
+      "term": "fishing",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "sports-hobbies-and-leisure"
+      ]
+    },
+    {
+      "term": "chess",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "sports-hobbies-and-leisure"
+      ]
+    },
+    {
+      "term": "board game",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "sports-hobbies-and-leisure"
+      ]
+    },
+    {
+      "term": "card game",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "sports-hobbies-and-leisure"
+      ]
+    },
+    {
+      "term": "puzzle",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "sports-hobbies-and-leisure"
+      ]
+    },
+    {
+      "term": "crossword",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "sports-hobbies-and-leisure"
+      ]
+    },
+    {
+      "term": "hobby",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "sports-hobbies-and-leisure"
+      ]
+    },
+    {
+      "term": "interest",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "sports-hobbies-and-leisure"
+      ]
+    },
+    {
+      "term": "collect",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "sports-hobbies-and-leisure"
+      ]
+    },
+    {
+      "term": "collection",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "sports-hobbies-and-leisure"
+      ]
+    },
+    {
+      "term": "drawing",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "sports-hobbies-and-leisure"
+      ]
+    },
+    {
+      "term": "painting",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "sports-hobbies-and-leisure"
+      ]
+    },
+    {
+      "term": "sketch",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "sports-hobbies-and-leisure"
+      ]
+    },
+    {
+      "term": "craft",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "sports-hobbies-and-leisure"
+      ]
+    },
+    {
+      "term": "origami",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "sports-hobbies-and-leisure"
+      ]
+    },
+    {
+      "term": "knitting",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "sports-hobbies-and-leisure"
+      ]
+    },
+    {
+      "term": "pottery",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "sports-hobbies-and-leisure"
+      ]
+    },
+    {
+      "term": "photography",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "sports-hobbies-and-leisure"
+      ]
+    },
+    {
+      "term": "singing",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "sports-hobbies-and-leisure"
+      ]
+    },
+    {
+      "term": "dancing",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "sports-hobbies-and-leisure"
+      ]
+    },
+    {
+      "term": "playing piano",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "sports-hobbies-and-leisure"
+      ]
+    },
+    {
+      "term": "playing guitar",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "sports-hobbies-and-leisure"
+      ]
+    },
+    {
+      "term": "playing violin",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "sports-hobbies-and-leisure"
+      ]
+    },
+    {
+      "term": "playing flute",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "sports-hobbies-and-leisure"
+      ]
+    },
+    {
+      "term": "orchestra",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "sports-hobbies-and-leisure"
+      ]
+    },
+    {
+      "term": "band",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "sports-hobbies-and-leisure"
+      ]
+    },
+    {
+      "term": "tale",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "stories-adventures-and-characters"
+      ]
+    },
+    {
+      "term": "fairy tale",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "stories-adventures-and-characters"
+      ]
+    },
+    {
+      "term": "folktale",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "stories-adventures-and-characters"
+      ]
+    },
+    {
+      "term": "quest",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "stories-adventures-and-characters"
+      ]
+    },
+    {
+      "term": "heroine",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "stories-adventures-and-characters"
+      ]
+    },
+    {
+      "term": "villain",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "stories-adventures-and-characters"
+      ]
+    },
+    {
+      "term": "main character",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "stories-adventures-and-characters"
+      ]
+    },
+    {
+      "term": "protagonist",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "stories-adventures-and-characters"
+      ]
+    },
+    {
+      "term": "cowardly",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "stories-adventures-and-characters"
+      ]
+    },
+    {
+      "term": "cruel",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "stories-adventures-and-characters"
+      ]
+    },
+    {
+      "term": "wise",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "stories-adventures-and-characters"
+      ]
+    },
+    {
+      "term": "foolish",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "stories-adventures-and-characters"
+      ]
+    },
+    {
+      "term": "dishonest",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "stories-adventures-and-characters"
+      ]
+    },
+    {
+      "term": "generous",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "stories-adventures-and-characters"
+      ]
+    },
+    {
+      "term": "selfish",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "stories-adventures-and-characters"
+      ]
+    },
+    {
+      "term": "loyal",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "stories-adventures-and-characters"
+      ]
+    },
+    {
+      "term": "curious",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "stories-adventures-and-characters"
+      ]
+    },
+    {
+      "term": "cautious",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "stories-adventures-and-characters"
+      ]
+    },
+    {
+      "term": "confident",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "stories-adventures-and-characters"
+      ]
+    },
+    {
+      "term": "unfriendly",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "stories-adventures-and-characters"
+      ]
+    },
+    {
+      "term": "hardworking",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "stories-adventures-and-characters"
+      ]
+    },
+    {
+      "term": "magical",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "stories-adventures-and-characters"
+      ]
+    },
+    {
+      "term": "mysterious",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "stories-adventures-and-characters"
+      ]
+    },
+    {
+      "term": "secret",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "stories-adventures-and-characters"
+      ]
+    },
+    {
+      "term": "treasure",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "stories-adventures-and-characters"
+      ]
+    },
+    {
+      "term": "key",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "stories-adventures-and-characters"
+      ]
+    },
+    {
+      "term": "dragon",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "stories-adventures-and-characters"
+      ]
+    },
+    {
+      "term": "giant",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "stories-adventures-and-characters"
+      ]
+    },
+    {
+      "term": "witch",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "stories-adventures-and-characters"
+      ]
+    },
+    {
+      "term": "wizard",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "stories-adventures-and-characters"
+      ]
+    },
+    {
+      "term": "fairy",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "stories-adventures-and-characters"
+      ]
+    },
+    {
+      "term": "prince",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "stories-adventures-and-characters"
+      ]
+    },
+    {
+      "term": "princess",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "stories-adventures-and-characters"
+      ]
+    },
+    {
+      "term": "king",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "stories-adventures-and-characters"
+      ]
+    },
+    {
+      "term": "queen",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "stories-adventures-and-characters"
+      ]
+    },
+    {
+      "term": "knight",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "stories-adventures-and-characters"
+      ]
+    },
+    {
+      "term": "pirate",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "stories-adventures-and-characters"
+      ]
+    },
+    {
+      "term": "explorer",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "stories-adventures-and-characters"
+      ]
+    },
+    {
+      "term": "inventor",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "stories-adventures-and-characters"
+      ]
+    },
+    {
+      "term": "detective",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "stories-adventures-and-characters"
+      ]
+    },
+    {
+      "term": "clue",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "stories-adventures-and-characters"
+      ]
+    },
+    {
+      "term": "suspect",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "stories-adventures-and-characters"
+      ]
+    },
+    {
+      "term": "solve",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "stories-adventures-and-characters"
+      ]
+    },
+    {
+      "term": "rescue",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "stories-adventures-and-characters"
+      ]
+    },
+    {
+      "term": "escape",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "stories-adventures-and-characters"
+      ]
+    },
+    {
+      "term": "trap",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "stories-adventures-and-characters"
+      ]
+    },
+    {
+      "term": "challenge",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "stories-adventures-and-characters"
+      ]
+    },
+    {
+      "term": "obstacle",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "stories-adventures-and-characters"
+      ]
+    },
+    {
+      "term": "overcome",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "stories-adventures-and-characters"
+      ]
+    },
+    {
+      "term": "succeed",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "stories-adventures-and-characters"
+      ]
+    },
+    {
+      "term": "fail",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "stories-adventures-and-characters"
+      ]
+    },
+    {
+      "term": "triumph",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "stories-adventures-and-characters"
+      ]
+    },
+    {
+      "term": "celebration",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "festivals-culture-and-traditions"
+      ]
+    },
+    {
+      "term": "tradition",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "festivals-culture-and-traditions"
+      ]
+    },
+    {
+      "term": "custom",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "festivals-culture-and-traditions"
+      ]
+    },
+    {
+      "term": "culture",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "festivals-culture-and-traditions"
+      ]
+    },
+    {
+      "term": "heritage",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "festivals-culture-and-traditions"
+      ]
+    },
+    {
+      "term": "Chinese New Year",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "festivals-culture-and-traditions"
+      ]
+    },
+    {
+      "term": "Spring Festival",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "festivals-culture-and-traditions"
+      ]
+    },
+    {
+      "term": "Lantern Festival",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "festivals-culture-and-traditions"
+      ]
+    },
+    {
+      "term": "Dragon Boat Festival",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "festivals-culture-and-traditions"
+      ]
+    },
+    {
+      "term": "Mid-Autumn Festival",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "festivals-culture-and-traditions"
+      ]
+    },
+    {
+      "term": "Chung Yeung Festival",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "festivals-culture-and-traditions"
+      ]
+    },
+    {
+      "term": "Easter",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "festivals-culture-and-traditions"
+      ]
+    },
+    {
+      "term": "Halloween",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "festivals-culture-and-traditions"
+      ]
+    },
+    {
+      "term": "Thanksgiving",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "festivals-culture-and-traditions"
+      ]
+    },
+    {
+      "term": "New Year",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "festivals-culture-and-traditions"
+      ]
+    },
+    {
+      "term": "graduation",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "festivals-culture-and-traditions"
+      ]
+    },
+    {
+      "term": "ceremony",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "festivals-culture-and-traditions"
+      ]
+    },
+    {
+      "term": "parade",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "festivals-culture-and-traditions"
+      ]
+    },
+    {
+      "term": "fireworks",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "festivals-culture-and-traditions"
+      ]
+    },
+    {
+      "term": "firecracker",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "festivals-culture-and-traditions"
+      ]
+    },
+    {
+      "term": "lantern",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "festivals-culture-and-traditions"
+      ]
+    },
+    {
+      "term": "mooncake",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "festivals-culture-and-traditions"
+      ]
+    },
+    {
+      "term": "rice dumpling",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "festivals-culture-and-traditions"
+      ]
+    },
+    {
+      "term": "red packet",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "festivals-culture-and-traditions"
+      ]
+    },
+    {
+      "term": "lucky money",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "festivals-culture-and-traditions"
+      ]
+    },
+    {
+      "term": "decoration",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "festivals-culture-and-traditions"
+      ]
+    },
+    {
+      "term": "ornament",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "festivals-culture-and-traditions"
+      ]
+    },
+    {
+      "term": "banner",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "festivals-culture-and-traditions"
+      ]
+    },
+    {
+      "term": "traditional dress",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "festivals-culture-and-traditions"
+      ]
+    },
+    {
+      "term": "cheongsam",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "festivals-culture-and-traditions"
+      ]
+    },
+    {
+      "term": "lion dance",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "festivals-culture-and-traditions"
+      ]
+    },
+    {
+      "term": "dragon dance",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "festivals-culture-and-traditions"
+      ]
+    },
+    {
+      "term": "blessing",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "festivals-culture-and-traditions"
+      ]
+    },
+    {
+      "term": "wish",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "festivals-culture-and-traditions"
+      ]
+    },
+    {
+      "term": "prosperity",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "festivals-culture-and-traditions"
+      ]
+    },
+    {
+      "term": "luck",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "festivals-culture-and-traditions"
+      ]
+    },
+    {
+      "term": "fortune",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "festivals-culture-and-traditions"
+      ]
+    },
+    {
+      "term": "happiness",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "festivals-culture-and-traditions"
+      ]
+    },
+    {
+      "term": "peace",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "festivals-culture-and-traditions"
+      ]
+    },
+    {
+      "term": "harmony",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "festivals-culture-and-traditions"
+      ]
+    },
+    {
+      "term": "family reunion",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "festivals-culture-and-traditions"
+      ]
+    },
+    {
+      "term": "gathering",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "festivals-culture-and-traditions"
+      ]
+    },
+    {
+      "term": "feast",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "festivals-culture-and-traditions"
+      ]
+    },
+    {
+      "term": "banquet",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "festivals-culture-and-traditions"
+      ]
+    },
+    {
+      "term": "toast",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "festivals-culture-and-traditions"
+      ]
+    },
+    {
+      "term": "gift",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "festivals-culture-and-traditions"
+      ]
+    },
+    {
+      "term": "present",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "festivals-culture-and-traditions"
+      ]
+    },
+    {
+      "term": "exchange gifts",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "festivals-culture-and-traditions"
+      ]
+    },
+    {
+      "term": "visit relatives",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "festivals-culture-and-traditions"
+      ]
+    },
+    {
+      "term": "temple fair",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "festivals-culture-and-traditions"
+      ]
+    },
+    {
+      "term": "market stall",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "festivals-culture-and-traditions"
+      ]
+    },
+    {
+      "term": "street performance",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "festivals-culture-and-traditions"
+      ]
+    },
+    {
+      "term": "emotion",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "feelings-friendship-and-social-skills"
+      ]
+    },
+    {
+      "term": "excited",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "feelings-friendship-and-social-skills"
+      ]
+    },
+    {
+      "term": "worried",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "feelings-friendship-and-social-skills"
+      ]
+    },
+    {
+      "term": "anxious",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "feelings-friendship-and-social-skills"
+      ]
+    },
+    {
+      "term": "calm",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "feelings-friendship-and-social-skills"
+      ]
+    },
+    {
+      "term": "relaxed",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "feelings-friendship-and-social-skills"
+      ]
+    },
+    {
+      "term": "stressed",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "feelings-friendship-and-social-skills"
+      ]
+    },
+    {
+      "term": "frustrated",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "feelings-friendship-and-social-skills"
+      ]
+    },
+    {
+      "term": "disappointed",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "feelings-friendship-and-social-skills"
+      ]
+    },
+    {
+      "term": "surprised",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "feelings-friendship-and-social-skills"
+      ]
+    },
+    {
+      "term": "shocked",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "feelings-friendship-and-social-skills"
+      ]
+    },
+    {
+      "term": "confused",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "feelings-friendship-and-social-skills"
+      ]
+    },
+    {
+      "term": "embarrassed",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "feelings-friendship-and-social-skills"
+      ]
+    },
+    {
+      "term": "ashamed",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "feelings-friendship-and-social-skills"
+      ]
+    },
+    {
+      "term": "proud",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "feelings-friendship-and-social-skills"
+      ]
+    },
+    {
+      "term": "hopeful",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "feelings-friendship-and-social-skills"
+      ]
+    },
+    {
+      "term": "hopeless",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "feelings-friendship-and-social-skills"
+      ]
+    },
+    {
+      "term": "lonely",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "feelings-friendship-and-social-skills"
+      ]
+    },
+    {
+      "term": "homesick",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "feelings-friendship-and-social-skills"
+      ]
+    },
+    {
+      "term": "jealous",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "feelings-friendship-and-social-skills"
+      ]
+    },
+    {
+      "term": "grateful",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "feelings-friendship-and-social-skills"
+      ]
+    },
+    {
+      "term": "sympathetic",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "feelings-friendship-and-social-skills"
+      ]
+    },
+    {
+      "term": "empathy",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "feelings-friendship-and-social-skills"
+      ]
+    },
+    {
+      "term": "compassion",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "feelings-friendship-and-social-skills"
+      ]
+    },
+    {
+      "term": "kindness",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "feelings-friendship-and-social-skills"
+      ]
+    },
+    {
+      "term": "tolerance",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "feelings-friendship-and-social-skills"
+      ]
+    },
+    {
+      "term": "understanding",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "feelings-friendship-and-social-skills"
+      ]
+    },
+    {
+      "term": "forgiveness",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "feelings-friendship-and-social-skills"
+      ]
+    },
+    {
+      "term": "apologize",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "feelings-friendship-and-social-skills"
+      ]
+    },
+    {
+      "term": "forgive",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "feelings-friendship-and-social-skills"
+      ]
+    },
+    {
+      "term": "accept",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "feelings-friendship-and-social-skills"
+      ]
+    },
+    {
+      "term": "reject",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "feelings-friendship-and-social-skills"
+      ]
+    },
+    {
+      "term": "include",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "feelings-friendship-and-social-skills"
+      ]
+    },
+    {
+      "term": "exclude",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "feelings-friendship-and-social-skills"
+      ]
+    },
+    {
+      "term": "bully",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "feelings-friendship-and-social-skills"
+      ]
+    },
+    {
+      "term": "bullying",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "feelings-friendship-and-social-skills"
+      ]
+    },
+    {
+      "term": "victim",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "feelings-friendship-and-social-skills"
+      ]
+    },
+    {
+      "term": "stand up for",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "feelings-friendship-and-social-skills"
+      ]
+    },
+    {
+      "term": "encourage",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "feelings-friendship-and-social-skills"
+      ]
+    },
+    {
+      "term": "comfort",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "feelings-friendship-and-social-skills"
+      ]
+    },
+    {
+      "term": "cheer up",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "feelings-friendship-and-social-skills"
+      ]
+    },
+    {
+      "term": "make friends",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "feelings-friendship-and-social-skills"
+      ]
+    },
+    {
+      "term": "friendship",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "feelings-friendship-and-social-skills"
+      ]
+    },
+    {
+      "term": "best friend",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "feelings-friendship-and-social-skills"
+      ]
+    },
+    {
+      "term": "classmate",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "feelings-friendship-and-social-skills"
+      ]
+    },
+    {
+      "term": "schoolmate",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "feelings-friendship-and-social-skills"
+      ]
+    },
+    {
+      "term": "playmate",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "feelings-friendship-and-social-skills"
+      ]
+    },
+    {
+      "term": "companion",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "feelings-friendship-and-social-skills"
+      ]
+    },
+    {
+      "term": "trust",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "feelings-friendship-and-social-skills"
+      ]
+    },
+    {
+      "term": "loyalty",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "feelings-friendship-and-social-skills"
+      ]
+    },
+    {
+      "term": "honesty",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "feelings-friendship-and-social-skills"
+      ]
+    },
+    {
+      "term": "reliable",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "feelings-friendship-and-social-skills"
+      ]
+    },
+    {
+      "term": "digital",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "technology-and-communication"
+      ]
+    },
+    {
+      "term": "laptop",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "technology-and-communication"
+      ]
+    },
+    {
+      "term": "tablet",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "technology-and-communication"
+      ]
+    },
+    {
+      "term": "keyboard",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "technology-and-communication"
+      ]
+    },
+    {
+      "term": "monitor",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "technology-and-communication"
+      ]
+    },
+    {
+      "term": "screen",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "technology-and-communication"
+      ]
+    },
+    {
+      "term": "printer",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "technology-and-communication"
+      ]
+    },
+    {
+      "term": "speaker",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "technology-and-communication"
+      ]
+    },
+    {
+      "term": "headphones",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "technology-and-communication"
+      ]
+    },
+    {
+      "term": "microphone",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "technology-and-communication"
+      ]
+    },
+    {
+      "term": "webcam",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "technology-and-communication"
+      ]
+    },
+    {
+      "term": "mobile phone",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "technology-and-communication"
+      ]
+    },
+    {
+      "term": "smartphone",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "technology-and-communication"
+      ]
+    },
+    {
+      "term": "charger",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "technology-and-communication"
+      ]
+    },
+    {
+      "term": "switch on",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "technology-and-communication"
+      ]
+    },
+    {
+      "term": "switch off",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "technology-and-communication"
+      ]
+    },
+    {
+      "term": "click",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "technology-and-communication"
+      ]
+    },
+    {
+      "term": "type",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "technology-and-communication"
+      ]
+    },
+    {
+      "term": "delete",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "technology-and-communication"
+      ]
+    },
+    {
+      "term": "save file",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "technology-and-communication"
+      ]
+    },
+    {
+      "term": "open file",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "technology-and-communication"
+      ]
+    },
+    {
+      "term": "close file",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "technology-and-communication"
+      ]
+    },
+    {
+      "term": "document",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "technology-and-communication"
+      ]
+    },
+    {
+      "term": "email",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "technology-and-communication"
+      ]
+    },
+    {
+      "term": "text message",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "technology-and-communication"
+      ]
+    },
+    {
+      "term": "video call",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "technology-and-communication"
+      ]
+    },
+    {
+      "term": "online",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "technology-and-communication"
+      ]
+    },
+    {
+      "term": "offline",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "technology-and-communication"
+      ]
+    },
+    {
+      "term": "internet",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "technology-and-communication"
+      ]
+    },
+    {
+      "term": "website",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "technology-and-communication"
+      ]
+    },
+    {
+      "term": "web page",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "technology-and-communication"
+      ]
+    },
+    {
+      "term": "link",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "technology-and-communication"
+      ]
+    },
+    {
+      "term": "search",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "technology-and-communication"
+      ]
+    },
+    {
+      "term": "browser",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "technology-and-communication"
+      ]
+    },
+    {
+      "term": "password",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "technology-and-communication"
+      ]
+    },
+    {
+      "term": "username",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "technology-and-communication"
+      ]
+    },
+    {
+      "term": "login",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "technology-and-communication"
+      ]
+    },
+    {
+      "term": "logout",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "technology-and-communication"
+      ]
+    },
+    {
+      "term": "account",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "technology-and-communication"
+      ]
+    },
+    {
+      "term": "profile",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "technology-and-communication"
+      ]
+    },
+    {
+      "term": "upload",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "technology-and-communication"
+      ]
+    },
+    {
+      "term": "download",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "technology-and-communication"
+      ]
+    },
+    {
+      "term": "attachment",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "technology-and-communication"
+      ]
+    },
+    {
+      "term": "emoji",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "technology-and-communication"
+      ]
+    },
+    {
+      "term": "icon",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "technology-and-communication"
+      ]
+    },
+    {
+      "term": "app",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "technology-and-communication"
+      ]
+    },
+    {
+      "term": "application",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "technology-and-communication"
+      ]
+    },
+    {
+      "term": "software",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "technology-and-communication"
+      ]
+    },
+    {
+      "term": "program",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "technology-and-communication"
+      ]
+    },
+    {
+      "term": "learning app",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "technology-and-communication"
+      ]
+    },
+    {
+      "term": "video",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "technology-and-communication"
+      ]
+    },
+    {
+      "term": "audio",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "technology-and-communication"
+      ]
+    },
+    {
+      "term": "bilingual",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "reading-writing-and-language"
+      ]
+    },
+    {
+      "term": "translate",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "reading-writing-and-language"
+      ]
+    },
+    {
+      "term": "phrase",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "reading-writing-and-language"
+      ]
+    },
+    {
+      "term": "passage",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "reading-writing-and-language"
+      ]
+    },
+    {
+      "term": "article",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "reading-writing-and-language"
+      ]
+    },
+    {
+      "term": "diary",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "reading-writing-and-language"
+      ]
+    },
+    {
+      "term": "journal",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "reading-writing-and-language"
+      ]
+    },
+    {
+      "term": "invitation",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "reading-writing-and-language"
+      ]
+    },
+    {
+      "term": "greeting card",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "reading-writing-and-language"
+      ]
+    },
+    {
+      "term": "caption",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "reading-writing-and-language"
+      ]
+    },
+    {
+      "term": "heading",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "reading-writing-and-language"
+      ]
+    },
+    {
+      "term": "subheading",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "reading-writing-and-language"
+      ]
+    },
+    {
+      "term": "bullet point",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "reading-writing-and-language"
+      ]
+    },
+    {
+      "term": "chart",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "reading-writing-and-language"
+      ]
+    },
+    {
+      "term": "diagram",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "reading-writing-and-language"
+      ]
+    },
+    {
+      "term": "illustration",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "reading-writing-and-language"
+      ]
+    },
+    {
+      "term": "bold",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "reading-writing-and-language"
+      ]
+    },
+    {
+      "term": "italic",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "reading-writing-and-language"
+      ]
+    },
+    {
+      "term": "underline",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "reading-writing-and-language"
+      ]
+    },
+    {
+      "term": "lowercase",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "reading-writing-and-language"
+      ]
+    },
+    {
+      "term": "punctuation",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "reading-writing-and-language"
+      ]
+    },
+    {
+      "term": "apostrophe",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "reading-writing-and-language"
+      ]
+    },
+    {
+      "term": "speech marks",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "reading-writing-and-language"
+      ]
+    },
+    {
+      "term": "bracket",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "reading-writing-and-language"
+      ]
+    },
+    {
+      "term": "hyphen",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "reading-writing-and-language"
+      ]
+    },
+    {
+      "term": "connective",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "reading-writing-and-language"
+      ]
+    },
+    {
+      "term": "because",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "reading-writing-and-language"
+      ]
+    },
+    {
+      "term": "although",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "reading-writing-and-language"
+      ]
+    },
+    {
+      "term": "however",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "reading-writing-and-language"
+      ]
+    },
+    {
+      "term": "therefore",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "reading-writing-and-language"
+      ]
+    },
+    {
+      "term": "first",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "reading-writing-and-language"
+      ]
+    },
+    {
+      "term": "next",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "reading-writing-and-language"
+      ]
+    },
+    {
+      "term": "then",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "reading-writing-and-language"
+      ]
+    },
+    {
+      "term": "finally",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "reading-writing-and-language"
+      ]
+    },
+    {
+      "term": "meanwhile",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "reading-writing-and-language"
+      ]
+    },
+    {
+      "term": "afterwards",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "reading-writing-and-language"
+      ]
+    },
+    {
+      "term": "during",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "reading-writing-and-language"
+      ]
+    },
+    {
+      "term": "while",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "reading-writing-and-language"
+      ]
+    },
+    {
+      "term": "where",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "reading-writing-and-language"
+      ]
+    },
+    {
+      "term": "why",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "reading-writing-and-language"
+      ]
+    },
+    {
+      "term": "how",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "reading-writing-and-language"
+      ]
+    },
+    {
+      "term": "what",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "reading-writing-and-language"
+      ]
+    },
+    {
+      "term": "who",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "reading-writing-and-language"
+      ]
+    },
+    {
+      "term": "which",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "reading-writing-and-language"
+      ]
+    },
+    {
+      "term": "whose",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "reading-writing-and-language"
+      ]
+    },
+    {
+      "term": "question word",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "reading-writing-and-language"
+      ]
+    },
+    {
+      "term": "noun",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "reading-writing-and-language"
+      ]
+    },
+    {
+      "term": "verb",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "reading-writing-and-language"
+      ]
+    },
+    {
+      "term": "adjective",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "reading-writing-and-language"
+      ]
+    },
+    {
+      "term": "adverb",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "reading-writing-and-language"
+      ]
+    },
+    {
+      "term": "pronoun",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "reading-writing-and-language"
+      ]
+    },
+    {
+      "term": "preposition",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "reading-writing-and-language"
+      ]
+    },
+    {
+      "term": "appearance",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "describing-comparing-and-nature"
+      ]
+    },
+    {
+      "term": "large",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "describing-comparing-and-nature"
+      ]
+    },
+    {
+      "term": "tiny",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "describing-comparing-and-nature"
+      ]
+    },
+    {
+      "term": "huge",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "describing-comparing-and-nature"
+      ]
+    },
+    {
+      "term": "wide",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "describing-comparing-and-nature"
+      ]
+    },
+    {
+      "term": "narrow",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "describing-comparing-and-nature"
+      ]
+    },
+    {
+      "term": "thick",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "describing-comparing-and-nature"
+      ]
+    },
+    {
+      "term": "heavy",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "describing-comparing-and-nature"
+      ]
+    },
+    {
+      "term": "rectangular",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "describing-comparing-and-nature"
+      ]
+    },
+    {
+      "term": "triangular",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "describing-comparing-and-nature"
+      ]
+    },
+    {
+      "term": "oval",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "describing-comparing-and-nature"
+      ]
+    },
+    {
+      "term": "circular",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "describing-comparing-and-nature"
+      ]
+    },
+    {
+      "term": "bright",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "describing-comparing-and-nature"
+      ]
+    },
+    {
+      "term": "dark",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "describing-comparing-and-nature"
+      ]
+    },
+    {
+      "term": "pale",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "describing-comparing-and-nature"
+      ]
+    },
+    {
+      "term": "colourful",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "describing-comparing-and-nature"
+      ]
+    },
+    {
+      "term": "pattern",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "describing-comparing-and-nature"
+      ]
+    },
+    {
+      "term": "stripe",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "describing-comparing-and-nature"
+      ]
+    },
+    {
+      "term": "spot",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "describing-comparing-and-nature"
+      ]
+    },
+    {
+      "term": "dot",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "describing-comparing-and-nature"
+      ]
+    },
+    {
+      "term": "check",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "describing-comparing-and-nature"
+      ]
+    },
+    {
+      "term": "plain",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "describing-comparing-and-nature"
+      ]
+    },
+    {
+      "term": "texture",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "describing-comparing-and-nature"
+      ]
+    },
+    {
+      "term": "smooth",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "describing-comparing-and-nature"
+      ]
+    },
+    {
+      "term": "rough",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "describing-comparing-and-nature"
+      ]
+    },
+    {
+      "term": "soft",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "describing-comparing-and-nature"
+      ]
+    },
+    {
+      "term": "hard",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "describing-comparing-and-nature"
+      ]
+    },
+    {
+      "term": "wet",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "describing-comparing-and-nature"
+      ]
+    },
+    {
+      "term": "dry",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "describing-comparing-and-nature"
+      ]
+    },
+    {
+      "term": "warm",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "describing-comparing-and-nature"
+      ]
+    },
+    {
+      "term": "cool",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "describing-comparing-and-nature"
+      ]
+    },
+    {
+      "term": "freezing",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "describing-comparing-and-nature"
+      ]
+    },
+    {
+      "term": "boiling",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "describing-comparing-and-nature"
+      ]
+    },
+    {
+      "term": "similar",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "describing-comparing-and-nature"
+      ]
+    },
+    {
+      "term": "different",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "describing-comparing-and-nature"
+      ]
+    },
+    {
+      "term": "alike",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "describing-comparing-and-nature"
+      ]
+    },
+    {
+      "term": "unlike",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "describing-comparing-and-nature"
+      ]
+    },
+    {
+      "term": "both",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "describing-comparing-and-nature"
+      ]
+    },
+    {
+      "term": "either",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "describing-comparing-and-nature"
+      ]
+    },
+    {
+      "term": "neither",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "describing-comparing-and-nature"
+      ]
+    },
+    {
+      "term": "more than",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "describing-comparing-and-nature"
+      ]
+    },
+    {
+      "term": "less than",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "describing-comparing-and-nature"
+      ]
+    },
+    {
+      "term": "equal",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "describing-comparing-and-nature"
+      ]
+    },
+    {
+      "term": "better",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "describing-comparing-and-nature"
+      ]
+    },
+    {
+      "term": "worse",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "describing-comparing-and-nature"
+      ]
+    },
+    {
+      "term": "best",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "describing-comparing-and-nature"
+      ]
+    },
+    {
+      "term": "worst",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "describing-comparing-and-nature"
+      ]
+    },
+    {
+      "term": "bigger",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "describing-comparing-and-nature"
+      ]
+    },
+    {
+      "term": "smaller",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "describing-comparing-and-nature"
+      ]
+    },
+    {
+      "term": "taller",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "describing-comparing-and-nature"
+      ]
+    },
+    {
+      "term": "shorter",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "describing-comparing-and-nature"
+      ]
+    },
+    {
+      "term": "longer",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "english",
+        "curriculum-style",
+        "describing-comparing-and-nature"
       ]
     }
   ]

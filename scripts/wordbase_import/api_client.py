@@ -10,10 +10,33 @@ from pathlib import Path
 import httpx
 from PIL import Image
 
+from auth import session_file_lock
 from config import MAX_IMAGE_WIDTH, JPEG_QUALITY, IMAGE_EXTENSIONS
 
 
 RETRYABLE_STATUS = {429, 502, 503, 504}
+RATE_LIMIT_RETRY_ATTEMPTS = 3
+RATE_LIMIT_RETRY_SECONDS = 60.0
+
+
+def _extract_error_message(data: dict, status_code: int) -> str:
+    error = data.get("error") if isinstance(data, dict) else None
+    if isinstance(error, dict):
+        message = error.get("message") or error.get("error") or error.get("code")
+        if message:
+            return str(message)
+        return json.dumps(error, ensure_ascii=False)
+    if error:
+        return str(error)
+    message = data.get("message") if isinstance(data, dict) else None
+    return str(message or f"Request failed ({status_code})")
+
+
+def _is_rate_limit_error(status_code: int | None, message: object) -> bool:
+    if status_code == 429:
+        return True
+    lowered = str(message).lower()
+    return "rate limit" in lowered or "too many requests" in lowered
 
 
 class ApiError(Exception):
@@ -52,12 +75,21 @@ class LexiLandApiClient:
     def _backoff(self, attempt: int) -> float:
         return [0.0, 5.0, 15.0, 45.0][min(attempt, 3)]
 
+    def _wait_for_rate_limit(self, path: str, retry_number: int) -> None:
+        print(
+            f"Rate limit from {path}; waiting {int(RATE_LIMIT_RETRY_SECONDS)}s "
+            f"before retry {retry_number}/{RATE_LIMIT_RETRY_ATTEMPTS}.",
+            flush=True,
+        )
+        self._sleep(RATE_LIMIT_RETRY_SECONDS)
+
     def _read_bearer_token(self) -> str:
         if not self.session_path.exists():
             return ""
 
         try:
-            payload = json.loads(self.session_path.read_text(encoding="utf-8"))
+            with session_file_lock(self.session_path):
+                payload = json.loads(self.session_path.read_text(encoding="utf-8"))
         except Exception:
             return ""
 
@@ -66,11 +98,10 @@ class LexiLandApiClient:
     def _request_json(self, path: str, payload: dict, *, pause_after: float) -> dict:
         url = f"{self.base_url}{path}"
         last_error: Exception | None = None
+        rate_limit_retries = 0
+        generic_retries = 0
 
-        for attempt in range(self.max_retries):
-            if attempt > 0:
-                self._sleep(self._backoff(attempt))
-
+        while True:
             try:
                 headers = {}
                 bearer_token = self._read_bearer_token()
@@ -81,7 +112,11 @@ class LexiLandApiClient:
                 response = self._client.post(url, json=payload, headers=headers)
             except httpx.RequestError as error:
                 last_error = ApiError(str(error), retryable=True)
-                continue
+                if generic_retries < self.max_retries - 1:
+                    generic_retries += 1
+                    self._sleep(self._backoff(generic_retries))
+                    continue
+                raise last_error
 
             try:
                 data = response.json()
@@ -93,12 +128,20 @@ class LexiLandApiClient:
                     status_code=response.status_code,
                     retryable=retryable,
                 )
-                if retryable and attempt < self.max_retries - 1:
+                if _is_rate_limit_error(response.status_code, text):
+                    if rate_limit_retries < RATE_LIMIT_RETRY_ATTEMPTS:
+                        rate_limit_retries += 1
+                        self._wait_for_rate_limit(path, rate_limit_retries)
+                        continue
+                    raise last_error
+                if retryable and generic_retries < self.max_retries - 1:
+                    generic_retries += 1
+                    self._sleep(self._backoff(generic_retries))
                     continue
                 raise last_error
 
             if response.status_code >= 400:
-                message = data.get("error") or f"Request failed ({response.status_code})"
+                message = _extract_error_message(data, response.status_code)
                 if response.status_code == 401:
                     has_auth = bool(headers.get("Authorization") or headers.get("x-lexiland-import-key"))
                     if not has_auth:
@@ -116,14 +159,20 @@ class LexiLandApiClient:
                         )
                 retryable = response.status_code in RETRYABLE_STATUS
                 last_error = ApiError(message, status_code=response.status_code, retryable=retryable)
-                if retryable and attempt < self.max_retries - 1:
+                if _is_rate_limit_error(response.status_code, message):
+                    if rate_limit_retries < RATE_LIMIT_RETRY_ATTEMPTS:
+                        rate_limit_retries += 1
+                        self._wait_for_rate_limit(path, rate_limit_retries)
+                        continue
+                    raise last_error
+                if retryable and generic_retries < self.max_retries - 1:
+                    generic_retries += 1
+                    self._sleep(self._backoff(generic_retries))
                     continue
                 raise last_error
 
             self._sleep(pause_after)
             return data
-
-        raise last_error or ApiError("Request failed.")
 
     def extract_words(self, image_data_url: str) -> list[str]:
         from terms import split_into_single_word_terms

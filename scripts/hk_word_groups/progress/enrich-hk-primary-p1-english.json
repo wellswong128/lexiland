@@ -2,904 +2,3094 @@
   "group_code": "hk-primary-p1-english",
   "terms": {
     "hello": {
-      "status": "incomplete",
-      "missing": [
-        "pronunciation",
-        "part_of_speech"
-      ],
-      "errors": {
-        "last": "Unauthorized. Please sign in."
-      },
-      "completed_at": null
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:07:50Z"
     },
     "goodbye": {
-      "status": "incomplete",
-      "missing": [
-        "pronunciation",
-        "part_of_speech"
-      ],
-      "errors": {
-        "last": "Expected ',' or '}' after property value in JSON at position 42 (line 2 column 41)"
-      },
-      "completed_at": null
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:07:50Z"
     },
     "please": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-21T00:26:39Z"
+      "completed_at": "2026-06-25T06:07:51Z"
     },
     "thank": {
-      "status": "incomplete",
-      "missing": [
-        "pronunciation",
-        "part_of_speech"
-      ],
-      "errors": {
-        "last": "Unauthorized. Please sign in."
-      },
-      "completed_at": null
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:07:51Z"
     },
     "sorry": {
-      "status": "incomplete",
-      "missing": [
-        "pronunciation",
-        "part_of_speech"
-      ],
-      "errors": {
-        "last": "Unauthorized. Please sign in."
-      },
-      "completed_at": null
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:07:52Z"
     },
     "yes": {
-      "status": "incomplete",
-      "missing": [
-        "pronunciation",
-        "part_of_speech"
-      ],
-      "errors": {
-        "last": "Unauthorized. Please sign in."
-      },
-      "completed_at": null
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:07:53Z"
     },
     "no": {
-      "status": "incomplete",
-      "missing": [
-        "pronunciation",
-        "part_of_speech"
-      ],
-      "errors": {
-        "last": "Unauthorized. Please sign in."
-      },
-      "completed_at": null
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:07:53Z"
     },
     "i": {
-      "status": "incomplete",
-      "missing": [
-        "pronunciation",
-        "part_of_speech"
-      ],
-      "errors": {
-        "last": "Unauthorized. Please sign in."
-      },
-      "completed_at": null
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:07:54Z"
     },
     "you": {
-      "status": "incomplete",
-      "missing": [
-        "pronunciation",
-        "part_of_speech"
-      ],
-      "errors": {
-        "last": "Unauthorized. Please sign in."
-      },
-      "completed_at": null
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:07:54Z"
     },
     "my": {
-      "status": "incomplete",
-      "missing": [
-        "pronunciation",
-        "part_of_speech"
-      ],
-      "errors": {
-        "last": "Unauthorized. Please sign in."
-      },
-      "completed_at": null
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:07:55Z"
     },
     "name": {
-      "status": "incomplete",
-      "missing": [
-        "pronunciation",
-        "part_of_speech"
-      ],
+      "status": "complete",
+      "missing": [],
       "errors": {},
-      "completed_at": null
+      "completed_at": "2026-06-25T06:07:55Z"
     },
     "boy": {
-      "status": "incomplete",
-      "missing": [
-        "pronunciation",
-        "part_of_speech"
-      ],
+      "status": "complete",
+      "missing": [],
       "errors": {},
-      "completed_at": null
+      "completed_at": "2026-06-25T06:07:56Z"
     },
     "girl": {
-      "status": "incomplete",
-      "missing": [
-        "pronunciation",
-        "part_of_speech"
-      ],
+      "status": "complete",
+      "missing": [],
       "errors": {},
-      "completed_at": null
+      "completed_at": "2026-06-25T06:07:56Z"
     },
     "friend": {
-      "status": "incomplete",
-      "missing": [
-        "pronunciation",
-        "part_of_speech"
-      ],
+      "status": "complete",
+      "missing": [],
       "errors": {},
-      "completed_at": null
+      "completed_at": "2026-06-25T06:07:57Z"
     },
     "teacher": {
-      "status": "incomplete",
-      "missing": [
-        "pronunciation",
-        "part_of_speech"
-      ],
+      "status": "complete",
+      "missing": [],
       "errors": {},
-      "completed_at": null
+      "completed_at": "2026-06-25T06:07:58Z"
     },
     "father": {
-      "status": "incomplete",
-      "missing": [
-        "pronunciation",
-        "part_of_speech"
-      ],
+      "status": "complete",
+      "missing": [],
       "errors": {},
-      "completed_at": null
+      "completed_at": "2026-06-25T06:07:58Z"
     },
     "mother": {
-      "status": "incomplete",
-      "missing": [
-        "pronunciation",
-        "part_of_speech"
-      ],
+      "status": "complete",
+      "missing": [],
       "errors": {},
-      "completed_at": null
+      "completed_at": "2026-06-25T06:07:59Z"
     },
     "brother": {
-      "status": "incomplete",
-      "missing": [
-        "pronunciation",
-        "part_of_speech"
-      ],
+      "status": "complete",
+      "missing": [],
       "errors": {},
-      "completed_at": null
+      "completed_at": "2026-06-25T06:07:59Z"
     },
     "sister": {
-      "status": "incomplete",
-      "missing": [
-        "pronunciation",
-        "part_of_speech"
-      ],
+      "status": "complete",
+      "missing": [],
       "errors": {},
-      "completed_at": null
+      "completed_at": "2026-06-25T06:08:00Z"
     },
     "baby": {
-      "status": "incomplete",
-      "missing": [
-        "pronunciation",
-        "part_of_speech"
-      ],
+      "status": "complete",
+      "missing": [],
       "errors": {},
-      "completed_at": null
+      "completed_at": "2026-06-25T06:08:00Z"
     },
     "one": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-21T00:26:55Z"
+      "completed_at": "2026-06-25T06:08:01Z"
     },
     "two": {
-      "status": "incomplete",
-      "missing": [
-        "pronunciation",
-        "part_of_speech"
-      ],
+      "status": "complete",
+      "missing": [],
       "errors": {},
-      "completed_at": null
+      "completed_at": "2026-06-25T06:08:01Z"
     },
     "three": {
-      "status": "incomplete",
-      "missing": [
-        "pronunciation",
-        "part_of_speech"
-      ],
+      "status": "complete",
+      "missing": [],
       "errors": {},
-      "completed_at": null
+      "completed_at": "2026-06-25T06:08:02Z"
     },
     "four": {
-      "status": "incomplete",
-      "missing": [
-        "pronunciation",
-        "part_of_speech"
-      ],
+      "status": "complete",
+      "missing": [],
       "errors": {},
-      "completed_at": null
+      "completed_at": "2026-06-25T06:08:03Z"
     },
     "five": {
-      "status": "incomplete",
-      "missing": [
-        "pronunciation",
-        "part_of_speech"
-      ],
+      "status": "complete",
+      "missing": [],
       "errors": {},
-      "completed_at": null
+      "completed_at": "2026-06-25T06:08:03Z"
     },
     "six": {
-      "status": "incomplete",
-      "missing": [
-        "pronunciation",
-        "part_of_speech"
-      ],
+      "status": "complete",
+      "missing": [],
       "errors": {},
-      "completed_at": null
+      "completed_at": "2026-06-25T06:08:04Z"
     },
     "seven": {
-      "status": "incomplete",
-      "missing": [
-        "pronunciation",
-        "part_of_speech"
-      ],
+      "status": "complete",
+      "missing": [],
       "errors": {},
-      "completed_at": null
+      "completed_at": "2026-06-25T06:08:04Z"
     },
     "eight": {
-      "status": "incomplete",
-      "missing": [
-        "pronunciation",
-        "part_of_speech"
-      ],
+      "status": "complete",
+      "missing": [],
       "errors": {},
-      "completed_at": null
+      "completed_at": "2026-06-25T06:08:05Z"
     },
     "nine": {
-      "status": "incomplete",
-      "missing": [
-        "pronunciation",
-        "part_of_speech"
-      ],
+      "status": "complete",
+      "missing": [],
       "errors": {},
-      "completed_at": null
+      "completed_at": "2026-06-25T06:08:05Z"
     },
     "ten": {
-      "status": "incomplete",
-      "missing": [
-        "pronunciation",
-        "part_of_speech"
-      ],
+      "status": "complete",
+      "missing": [],
       "errors": {},
-      "completed_at": null
+      "completed_at": "2026-06-25T06:08:06Z"
     },
     "red": {
-      "status": "incomplete",
-      "missing": [
-        "pronunciation",
-        "part_of_speech"
-      ],
+      "status": "complete",
+      "missing": [],
       "errors": {},
-      "completed_at": null
+      "completed_at": "2026-06-25T06:08:06Z"
     },
     "blue": {
-      "status": "incomplete",
-      "missing": [
-        "pronunciation",
-        "part_of_speech"
-      ],
+      "status": "complete",
+      "missing": [],
       "errors": {},
-      "completed_at": null
+      "completed_at": "2026-06-25T06:08:07Z"
     },
     "green": {
-      "status": "incomplete",
-      "missing": [
-        "pronunciation",
-        "part_of_speech"
-      ],
+      "status": "complete",
+      "missing": [],
       "errors": {},
-      "completed_at": null
+      "completed_at": "2026-06-25T06:08:08Z"
     },
     "yellow": {
-      "status": "incomplete",
-      "missing": [
-        "pronunciation",
-        "part_of_speech"
-      ],
+      "status": "complete",
+      "missing": [],
       "errors": {},
-      "completed_at": null
+      "completed_at": "2026-06-25T06:08:08Z"
     },
     "black": {
-      "status": "incomplete",
-      "missing": [
-        "pronunciation",
-        "part_of_speech"
-      ],
+      "status": "complete",
+      "missing": [],
       "errors": {},
-      "completed_at": null
+      "completed_at": "2026-06-25T06:08:09Z"
     },
     "white": {
-      "status": "incomplete",
-      "missing": [
-        "pronunciation",
-        "part_of_speech"
-      ],
+      "status": "complete",
+      "missing": [],
       "errors": {},
-      "completed_at": null
+      "completed_at": "2026-06-25T06:08:09Z"
     },
     "book": {
-      "status": "incomplete",
-      "missing": [
-        "pronunciation",
-        "part_of_speech"
-      ],
+      "status": "complete",
+      "missing": [],
       "errors": {},
-      "completed_at": null
+      "completed_at": "2026-06-25T06:08:10Z"
     },
     "pen": {
-      "status": "incomplete",
-      "missing": [
-        "pronunciation",
-        "part_of_speech"
-      ],
+      "status": "complete",
+      "missing": [],
       "errors": {},
-      "completed_at": null
+      "completed_at": "2026-06-25T06:08:10Z"
     },
     "pencil": {
-      "status": "incomplete",
-      "missing": [
-        "pronunciation",
-        "part_of_speech"
-      ],
+      "status": "complete",
+      "missing": [],
       "errors": {},
-      "completed_at": null
+      "completed_at": "2026-06-25T06:08:11Z"
     },
     "bag": {
-      "status": "incomplete",
-      "missing": [
-        "pronunciation",
-        "part_of_speech"
-      ],
+      "status": "complete",
+      "missing": [],
       "errors": {},
-      "completed_at": null
+      "completed_at": "2026-06-25T06:08:12Z"
     },
     "desk": {
-      "status": "incomplete",
-      "missing": [
-        "pronunciation",
-        "part_of_speech"
-      ],
+      "status": "complete",
+      "missing": [],
       "errors": {},
-      "completed_at": null
+      "completed_at": "2026-06-25T06:08:12Z"
     },
     "chair": {
-      "status": "incomplete",
-      "missing": [
-        "pronunciation",
-        "part_of_speech"
-      ],
+      "status": "complete",
+      "missing": [],
       "errors": {},
-      "completed_at": null
+      "completed_at": "2026-06-25T06:08:13Z"
     },
     "door": {
-      "status": "incomplete",
-      "missing": [
-        "pronunciation",
-        "part_of_speech"
-      ],
+      "status": "complete",
+      "missing": [],
       "errors": {},
-      "completed_at": null
+      "completed_at": "2026-06-25T06:08:13Z"
     },
     "window": {
-      "status": "incomplete",
-      "missing": [
-        "pronunciation",
-        "part_of_speech"
-      ],
+      "status": "complete",
+      "missing": [],
       "errors": {},
-      "completed_at": null
+      "completed_at": "2026-06-25T06:08:14Z"
     },
     "ruler": {
-      "status": "incomplete",
-      "missing": [
-        "pronunciation",
-        "part_of_speech"
-      ],
+      "status": "complete",
+      "missing": [],
       "errors": {},
-      "completed_at": null
+      "completed_at": "2026-06-25T06:08:14Z"
     },
     "rubber": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-21T00:27:18Z"
+      "completed_at": "2026-06-25T06:08:15Z"
     },
     "head": {
-      "status": "incomplete",
-      "missing": [
-        "pronunciation",
-        "part_of_speech"
-      ],
+      "status": "complete",
+      "missing": [],
       "errors": {},
-      "completed_at": null
+      "completed_at": "2026-06-25T06:08:16Z"
     },
     "eye": {
-      "status": "incomplete",
-      "missing": [
-        "pronunciation",
-        "part_of_speech"
-      ],
+      "status": "complete",
+      "missing": [],
       "errors": {},
-      "completed_at": null
+      "completed_at": "2026-06-25T06:08:16Z"
     },
     "ear": {
-      "status": "incomplete",
-      "missing": [
-        "pronunciation",
-        "part_of_speech"
-      ],
+      "status": "complete",
+      "missing": [],
       "errors": {},
-      "completed_at": null
+      "completed_at": "2026-06-25T06:08:17Z"
     },
     "nose": {
-      "status": "incomplete",
-      "missing": [
-        "pronunciation",
-        "part_of_speech"
-      ],
+      "status": "complete",
+      "missing": [],
       "errors": {},
-      "completed_at": null
+      "completed_at": "2026-06-25T06:08:17Z"
     },
     "mouth": {
-      "status": "incomplete",
-      "missing": [
-        "pronunciation",
-        "part_of_speech"
-      ],
+      "status": "complete",
+      "missing": [],
       "errors": {},
-      "completed_at": null
+      "completed_at": "2026-06-25T06:08:18Z"
     },
     "hand": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-21T00:27:23Z"
+      "completed_at": "2026-06-25T06:08:19Z"
     },
     "arm": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-21T00:27:24Z"
+      "completed_at": "2026-06-25T06:08:19Z"
     },
     "leg": {
-      "status": "incomplete",
-      "missing": [
-        "pronunciation",
-        "part_of_speech"
-      ],
+      "status": "complete",
+      "missing": [],
       "errors": {},
-      "completed_at": null
+      "completed_at": "2026-06-25T06:08:20Z"
     },
     "foot": {
-      "status": "incomplete",
-      "missing": [
-        "pronunciation",
-        "part_of_speech"
-      ],
+      "status": "complete",
+      "missing": [],
       "errors": {},
-      "completed_at": null
+      "completed_at": "2026-06-25T06:08:21Z"
     },
     "cat": {
-      "status": "incomplete",
-      "missing": [
-        "pronunciation",
-        "part_of_speech"
-      ],
+      "status": "complete",
+      "missing": [],
       "errors": {},
-      "completed_at": null
+      "completed_at": "2026-06-25T06:08:21Z"
     },
     "dog": {
-      "status": "incomplete",
-      "missing": [
-        "pronunciation",
-        "part_of_speech"
-      ],
+      "status": "complete",
+      "missing": [],
       "errors": {},
-      "completed_at": null
+      "completed_at": "2026-06-25T06:08:22Z"
     },
     "bird": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-21T00:27:28Z"
+      "completed_at": "2026-06-25T06:08:22Z"
     },
     "fish": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-21T00:27:29Z"
+      "completed_at": "2026-06-25T06:08:23Z"
     },
     "pig": {
-      "status": "incomplete",
-      "missing": [
-        "pronunciation",
-        "part_of_speech"
-      ],
+      "status": "complete",
+      "missing": [],
       "errors": {},
-      "completed_at": null
+      "completed_at": "2026-06-25T06:08:23Z"
     },
     "cow": {
-      "status": "incomplete",
-      "missing": [
-        "pronunciation",
-        "part_of_speech"
-      ],
+      "status": "complete",
+      "missing": [],
       "errors": {},
-      "completed_at": null
+      "completed_at": "2026-06-25T06:08:24Z"
     },
     "duck": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-21T00:27:32Z"
+      "completed_at": "2026-06-25T06:08:24Z"
     },
     "hen": {
-      "status": "incomplete",
-      "missing": [
-        "pronunciation",
-        "part_of_speech"
-      ],
+      "status": "complete",
+      "missing": [],
       "errors": {},
-      "completed_at": null
+      "completed_at": "2026-06-25T06:08:25Z"
     },
     "apple": {
-      "status": "incomplete",
-      "missing": [
-        "pronunciation",
-        "part_of_speech"
-      ],
+      "status": "complete",
+      "missing": [],
       "errors": {},
-      "completed_at": null
+      "completed_at": "2026-06-25T06:08:26Z"
     },
     "banana": {
-      "status": "incomplete",
-      "missing": [
-        "pronunciation",
-        "part_of_speech"
-      ],
+      "status": "complete",
+      "missing": [],
       "errors": {},
-      "completed_at": null
+      "completed_at": "2026-06-25T06:08:26Z"
     },
     "orange": {
-      "status": "incomplete",
-      "missing": [
-        "pronunciation",
-        "part_of_speech"
-      ],
+      "status": "complete",
+      "missing": [],
       "errors": {},
-      "completed_at": null
+      "completed_at": "2026-06-25T06:08:27Z"
     },
     "egg": {
-      "status": "incomplete",
-      "missing": [
-        "pronunciation",
-        "part_of_speech"
-      ],
+      "status": "complete",
+      "missing": [],
       "errors": {},
-      "completed_at": null
+      "completed_at": "2026-06-25T06:08:27Z"
     },
     "milk": {
-      "status": "incomplete",
-      "missing": [
-        "pronunciation",
-        "part_of_speech"
-      ],
+      "status": "complete",
+      "missing": [],
       "errors": {},
-      "completed_at": null
+      "completed_at": "2026-06-25T06:08:28Z"
     },
     "bread": {
-      "status": "incomplete",
-      "missing": [
-        "pronunciation",
-        "part_of_speech"
-      ],
+      "status": "complete",
+      "missing": [],
       "errors": {},
-      "completed_at": null
+      "completed_at": "2026-06-25T06:08:28Z"
     },
     "rice": {
-      "status": "incomplete",
-      "missing": [
-        "pronunciation",
-        "part_of_speech"
-      ],
+      "status": "complete",
+      "missing": [],
       "errors": {},
-      "completed_at": null
+      "completed_at": "2026-06-25T06:08:29Z"
     },
     "water": {
-      "status": "incomplete",
-      "missing": [
-        "pronunciation",
-        "part_of_speech"
-      ],
+      "status": "complete",
+      "missing": [],
       "errors": {},
-      "completed_at": null
+      "completed_at": "2026-06-25T06:08:29Z"
     },
     "school": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-21T00:27:41Z"
+      "completed_at": "2026-06-25T06:08:30Z"
     },
     "home": {
-      "status": "incomplete",
-      "missing": [
-        "pronunciation",
-        "part_of_speech"
-      ],
+      "status": "complete",
+      "missing": [],
       "errors": {},
-      "completed_at": null
+      "completed_at": "2026-06-25T06:08:31Z"
     },
     "room": {
-      "status": "incomplete",
-      "missing": [
-        "pronunciation",
-        "part_of_speech"
-      ],
+      "status": "complete",
+      "missing": [],
       "errors": {},
-      "completed_at": null
+      "completed_at": "2026-06-25T06:08:31Z"
     },
     "run": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-21T00:27:43Z"
+      "completed_at": "2026-06-25T06:08:32Z"
     },
     "jump": {
-      "status": "incomplete",
-      "missing": [
-        "pronunciation",
-        "part_of_speech"
-      ],
+      "status": "complete",
+      "missing": [],
       "errors": {},
-      "completed_at": null
+      "completed_at": "2026-06-25T06:08:32Z"
     },
     "walk": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-21T00:27:45Z"
+      "completed_at": "2026-06-25T06:08:33Z"
     },
     "sit": {
-      "status": "incomplete",
-      "missing": [
-        "pronunciation",
-        "part_of_speech"
-      ],
+      "status": "complete",
+      "missing": [],
       "errors": {},
-      "completed_at": null
+      "completed_at": "2026-06-25T06:08:33Z"
     },
     "stand": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-21T00:27:47Z"
+      "completed_at": "2026-06-25T06:08:34Z"
     },
     "read": {
-      "status": "incomplete",
-      "missing": [
-        "pronunciation",
-        "part_of_speech"
-      ],
+      "status": "complete",
+      "missing": [],
       "errors": {},
-      "completed_at": null
+      "completed_at": "2026-06-25T06:08:35Z"
     },
     "write": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-21T00:27:49Z"
+      "completed_at": "2026-06-25T06:08:35Z"
     },
     "draw": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-21T00:27:50Z"
+      "completed_at": "2026-06-25T06:08:36Z"
     },
     "sing": {
-      "status": "incomplete",
-      "missing": [
-        "pronunciation",
-        "part_of_speech"
-      ],
+      "status": "complete",
+      "missing": [],
       "errors": {},
-      "completed_at": null
+      "completed_at": "2026-06-25T06:08:36Z"
     },
     "dance": {
-      "status": "incomplete",
-      "missing": [
-        "pronunciation",
-        "part_of_speech"
-      ],
+      "status": "complete",
+      "missing": [],
       "errors": {},
-      "completed_at": null
+      "completed_at": "2026-06-25T06:08:37Z"
     },
     "play": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-21T00:27:52Z"
+      "completed_at": "2026-06-25T06:08:37Z"
     },
     "eat": {
-      "status": "incomplete",
-      "missing": [
-        "pronunciation",
-        "part_of_speech"
-      ],
+      "status": "complete",
+      "missing": [],
       "errors": {},
-      "completed_at": null
+      "completed_at": "2026-06-25T06:08:38Z"
     },
     "drink": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-21T00:27:54Z"
+      "completed_at": "2026-06-25T06:08:39Z"
     },
     "sleep": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-21T00:27:55Z"
+      "completed_at": "2026-06-25T06:08:39Z"
     },
     "look": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-21T00:27:56Z"
+      "completed_at": "2026-06-25T06:08:40Z"
     },
     "listen": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-21T00:27:57Z"
+      "completed_at": "2026-06-25T06:08:40Z"
     },
     "speak": {
-      "status": "incomplete",
-      "missing": [
-        "pronunciation",
-        "part_of_speech"
-      ],
+      "status": "complete",
+      "missing": [],
       "errors": {},
-      "completed_at": null
+      "completed_at": "2026-06-25T06:08:41Z"
     },
     "big": {
-      "status": "incomplete",
-      "missing": [
-        "pronunciation",
-        "part_of_speech"
-      ],
+      "status": "complete",
+      "missing": [],
       "errors": {},
-      "completed_at": null
+      "completed_at": "2026-06-25T06:08:41Z"
     },
     "small": {
-      "status": "incomplete",
-      "missing": [
-        "pronunciation",
-        "part_of_speech"
-      ],
+      "status": "complete",
+      "missing": [],
       "errors": {},
-      "completed_at": null
+      "completed_at": "2026-06-25T06:08:42Z"
     },
     "long": {
-      "status": "incomplete",
-      "missing": [
-        "pronunciation",
-        "part_of_speech"
-      ],
+      "status": "complete",
+      "missing": [],
       "errors": {},
-      "completed_at": null
+      "completed_at": "2026-06-25T06:08:42Z"
     },
     "short": {
-      "status": "incomplete",
-      "missing": [
-        "pronunciation",
-        "part_of_speech"
-      ],
+      "status": "complete",
+      "missing": [],
       "errors": {},
-      "completed_at": null
+      "completed_at": "2026-06-25T06:08:43Z"
     },
     "happy": {
-      "status": "incomplete",
-      "missing": [
-        "pronunciation",
-        "part_of_speech"
-      ],
+      "status": "complete",
+      "missing": [],
       "errors": {},
-      "completed_at": null
+      "completed_at": "2026-06-25T06:08:44Z"
     },
     "sad": {
-      "status": "incomplete",
-      "missing": [
-        "pronunciation",
-        "part_of_speech"
-      ],
+      "status": "complete",
+      "missing": [],
       "errors": {},
-      "completed_at": null
+      "completed_at": "2026-06-25T06:08:44Z"
     },
     "good": {
-      "status": "incomplete",
-      "missing": [
-        "pronunciation",
-        "part_of_speech"
-      ],
+      "status": "complete",
+      "missing": [],
       "errors": {},
-      "completed_at": null
+      "completed_at": "2026-06-25T06:08:45Z"
     },
     "new": {
-      "status": "incomplete",
-      "missing": [
-        "pronunciation",
-        "part_of_speech"
-      ],
+      "status": "complete",
+      "missing": [],
       "errors": {},
-      "completed_at": null
+      "completed_at": "2026-06-25T06:08:45Z"
     },
     "old": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-21T00:28:06Z"
+      "completed_at": "2026-06-25T06:08:46Z"
     },
     "hot": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-21T00:28:07Z"
+      "completed_at": "2026-06-25T06:08:46Z"
     },
     "cold": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-21T00:28:08Z"
+      "completed_at": "2026-06-25T06:08:47Z"
     },
     "like": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-21T00:28:08Z"
+      "completed_at": "2026-06-25T06:08:48Z"
     },
     "can": {
-      "status": "incomplete",
-      "missing": [
-        "pronunciation",
-        "part_of_speech"
-      ],
+      "status": "complete",
+      "missing": [],
       "errors": {},
-      "completed_at": null
+      "completed_at": "2026-06-25T06:08:48Z"
     },
     "go": {
-      "status": "incomplete",
-      "missing": [
-        "pronunciation",
-        "part_of_speech"
-      ],
+      "status": "complete",
+      "missing": [],
       "errors": {},
-      "completed_at": null
+      "completed_at": "2026-06-25T06:08:49Z"
     },
     "come": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-21T00:28:11Z"
+      "completed_at": "2026-06-25T06:08:49Z"
+    },
+    "hi": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:08:50Z"
+    },
+    "bye": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T07:34:55Z"
+    },
+    "thanks": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T07:36:25Z"
+    },
+    "excuse me": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T07:42:25Z"
+    },
+    "welcome": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:08:53Z"
+    },
+    "good morning": {
+      "status": "failed",
+      "missing": [],
+      "errors": {
+        "last": "AI request failed: {\"error\":{\"message\":\"***.InternalServerError: InternalServerError: OpenAIException -\",\"type\":\"upstream_error\",\"param\":\"\",\"code\":\"500\"}}"
+      },
+      "completed_at": null
+    },
+    "good afternoon": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T07:44:09Z"
+    },
+    "good night": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T07:46:28Z"
+    },
+    "see you": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T07:47:37Z"
+    },
+    "okay": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T07:50:13Z"
+    },
+    "fine": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:08:58Z"
+    },
+    "nice": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T07:52:17Z"
+    },
+    "meet": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:09:00Z"
+    },
+    "classmate": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:09:00Z"
+    },
+    "your": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:09:01Z"
+    },
+    "he": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:10:35Z"
+    },
+    "she": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:10:36Z"
+    },
+    "we": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T07:54:22Z"
+    },
+    "they": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:10:37Z"
+    },
+    "me": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:10:38Z"
+    },
+    "him": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T07:56:32Z"
+    },
+    "her": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T07:57:58Z"
+    },
+    "us": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T08:00:13Z"
+    },
+    "them": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:10:41Z"
+    },
+    "class": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:10:41Z"
+    },
+    "classroom": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:10:42Z"
+    },
+    "student": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T08:03:29Z"
+    },
+    "pupil": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:10:43Z"
+    },
+    "board": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:10:44Z"
+    },
+    "storybook": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:10:45Z"
+    },
+    "notebook": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:10:45Z"
+    },
+    "paper": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:10:46Z"
+    },
+    "eraser": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:10:46Z"
+    },
+    "school bag": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:10:47Z"
+    },
+    "crayon": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T08:05:00Z"
+    },
+    "glue": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:10:48Z"
+    },
+    "scissors": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:10:49Z"
+    },
+    "folder": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:10:49Z"
+    },
+    "card": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T08:05:00Z"
+    },
+    "picture": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:10:51Z"
+    },
+    "word": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:10:51Z"
+    },
+    "letter": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:10:52Z"
+    },
+    "sound": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:10:52Z"
+    },
+    "song": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T08:05:01Z"
+    },
+    "story": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:10:54Z"
+    },
+    "game": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T08:05:01Z"
+    },
+    "colour": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:10:55Z"
+    },
+    "say": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:10:56Z"
+    },
+    "point": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:10:56Z"
+    },
+    "circle": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:10:57Z"
+    },
+    "match": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:10:58Z"
+    },
+    "count": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:10:58Z"
+    },
+    "open": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:10:59Z"
+    },
+    "close": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:10:59Z"
+    },
+    "line up": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T08:07:07Z"
+    },
+    "stop": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:11:01Z"
+    },
+    "start": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:11:01Z"
+    },
+    "raise": {
+      "status": "failed",
+      "missing": [],
+      "errors": {
+        "last": "Expected ',' or '}' after property value in JSON at position 109 (line 6 column 23)"
+      },
+      "completed_at": null
+    },
+    "answer": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:11:03Z"
+    },
+    "ask": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T08:09:33Z"
+    },
+    "share": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:11:04Z"
+    },
+    "help": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:11:05Z"
+    },
+    "tidy": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T08:13:01Z"
+    },
+    "clean": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:11:06Z"
+    },
+    "zero": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T08:14:23Z"
+    },
+    "first": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:11:15Z"
+    },
+    "second": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:11:16Z"
+    },
+    "third": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T08:16:37Z"
+    },
+    "purple": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:11:17Z"
+    },
+    "pink": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T08:17:55Z"
+    },
+    "brown": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T08:20:25Z"
+    },
+    "grey": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:11:19Z"
+    },
+    "gold": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:11:20Z"
+    },
+    "silver": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:11:20Z"
+    },
+    "bright": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:11:21Z"
+    },
+    "dark": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:11:21Z"
+    },
+    "light": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:11:22Z"
+    },
+    "square": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:11:22Z"
+    },
+    "triangle": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:11:23Z"
+    },
+    "rectangle": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:11:24Z"
+    },
+    "star": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:12:34Z"
+    },
+    "heart": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:12:35Z"
+    },
+    "line": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:12:36Z"
+    },
+    "shape": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:12:36Z"
+    },
+    "tall": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:13:56Z"
+    },
+    "round": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:13:57Z"
+    },
+    "same": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:13:57Z"
+    },
+    "different": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:13:58Z"
+    },
+    "many": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:13:58Z"
+    },
+    "few": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:13:59Z"
+    },
+    "more": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:13:59Z"
+    },
+    "less": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:14:00Z"
+    },
+    "all": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:14:01Z"
+    },
+    "some": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:14:01Z"
+    },
+    "family": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:14:02Z"
+    },
+    "dad": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:14:02Z"
+    },
+    "mum": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:14:03Z"
+    },
+    "parent": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:16:05Z"
+    },
+    "grandfather": {
+      "status": "failed",
+      "missing": [],
+      "errors": {
+        "last": "AI request failed: {\"error\":{\"message\":\"***.InternalServerError: InternalServerError: OpenAIException -\",\"type\":\"upstream_error\",\"param\":\"\",\"code\":\"500\"}}"
+      },
+      "completed_at": null
+    },
+    "grandmother": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:16:06Z"
+    },
+    "grandpa": {
+      "status": "failed",
+      "missing": [],
+      "errors": {
+        "last": "AI request failed: {\"error\":{\"message\":\"***.InternalServerError: InternalServerError: OpenAIException -\",\"type\":\"upstream_error\",\"param\":\"\",\"code\":\"500\"}}"
+      },
+      "completed_at": null
+    },
+    "grandma": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T08:23:53Z"
+    },
+    "uncle": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:16:09Z"
+    },
+    "aunt": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:16:09Z"
+    },
+    "cousin": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:16:10Z"
+    },
+    "man": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:16:10Z"
+    },
+    "woman": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:16:11Z"
+    },
+    "child": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:16:11Z"
+    },
+    "children": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:16:12Z"
+    },
+    "neighbour": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:16:13Z"
+    },
+    "people": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:16:13Z"
+    },
+    "person": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:16:14Z"
+    },
+    "house": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:16:14Z"
+    },
+    "flat": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:16:15Z"
+    },
+    "bedroom": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:16:15Z"
+    },
+    "kitchen": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:17:28Z"
+    },
+    "bathroom": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:18:10Z"
+    },
+    "living room": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T08:24:50Z"
+    },
+    "bed": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T08:27:40Z"
+    },
+    "table": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:18:13Z"
+    },
+    "sofa": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T08:30:53Z"
+    },
+    "lamp": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:18:14Z"
+    },
+    "toy": {
+      "status": "failed",
+      "missing": [],
+      "errors": {
+        "last": "AI request failed: {\"error\":{\"message\":\"***.InternalServerError: InternalServerError: OpenAIException -\",\"type\":\"upstream_error\",\"param\":\"\",\"code\":\"500\"}}"
+      },
+      "completed_at": null
+    },
+    "photo": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:18:16Z"
+    },
+    "pet": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:18:16Z"
+    },
+    "love": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:18:17Z"
+    },
+    "hug": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:18:17Z"
+    },
+    "kind": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:18:18Z"
+    },
+    "polite": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:18:18Z"
+    },
+    "angry": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:18:19Z"
+    },
+    "tired": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:18:19Z"
+    },
+    "hungry": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:18:20Z"
+    },
+    "thirsty": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:18:21Z"
+    },
+    "scared": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:18:21Z"
+    },
+    "proud": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:18:22Z"
+    },
+    "body": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:18:22Z"
+    },
+    "hair": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:18:23Z"
+    },
+    "face": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:18:23Z"
+    },
+    "tooth": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:18:24Z"
+    },
+    "teeth": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T08:35:30Z"
+    },
+    "tongue": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T08:37:13Z"
+    },
+    "neck": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T08:40:43Z"
+    },
+    "finger": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T08:42:22Z"
+    },
+    "feet": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T08:44:03Z"
+    },
+    "toe": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T08:46:00Z"
+    },
+    "back": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:18:31Z"
+    },
+    "skin": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:18:31Z"
+    },
+    "wash": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:18:32Z"
+    },
+    "brush": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T08:46:01Z"
+    },
+    "rest": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:18:33Z"
+    },
+    "smile": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:18:34Z"
+    },
+    "cry": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:18:34Z"
+    },
+    "laugh": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:18:35Z"
+    },
+    "hurt": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:18:35Z"
+    },
+    "sick": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:18:36Z"
+    },
+    "well": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T08:47:28Z"
+    },
+    "healthy": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:18:37Z"
+    },
+    "dirty": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T08:47:29Z"
+    },
+    "warm": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:18:39Z"
+    },
+    "cool": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:18:39Z"
+    },
+    "mask": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:18:40Z"
+    },
+    "soap": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:18:40Z"
+    },
+    "towel": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:18:41Z"
+    },
+    "doctor": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T08:47:29Z"
+    },
+    "medicine": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:18:42Z"
+    },
+    "food": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:18:43Z"
+    },
+    "breakfast": {
+      "status": "failed",
+      "missing": [],
+      "errors": {
+        "last": "AI request failed: {\"error\":{\"message\":\"***.InternalServerError: InternalServerError: OpenAIException -\",\"type\":\"upstream_error\",\"param\":\"\",\"code\":\"500\"}}"
+      },
+      "completed_at": null
+    },
+    "lunch": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:18:44Z"
+    },
+    "dinner": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T08:50:25Z"
+    },
+    "snack": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:18:46Z"
+    },
+    "noodles": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T08:50:25Z"
+    },
+    "cake": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T08:51:34Z"
+    },
+    "biscuit": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:18:49Z"
+    },
+    "cookie": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:20:22Z"
+    },
+    "chicken": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:22:41Z"
+    },
+    "meat": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:22:41Z"
+    },
+    "vegetable": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T08:51:35Z"
+    },
+    "carrot": {
+      "status": "failed",
+      "missing": [],
+      "errors": {
+        "last": "AI request failed: {\"error\":{\"message\":\"***.InternalServerError: InternalServerError: OpenAIException -\",\"type\":\"upstream_error\",\"param\":\"\",\"code\":\"500\"}}"
+      },
+      "completed_at": null
+    },
+    "potato": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T08:54:02Z"
+    },
+    "corn": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:22:45Z"
+    },
+    "fruit": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:22:45Z"
+    },
+    "pear": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T08:55:12Z"
+    },
+    "grape": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:22:47Z"
+    },
+    "watermelon": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T08:56:39Z"
+    },
+    "strawberry": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T08:59:06Z"
+    },
+    "juice": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T09:01:30Z"
+    },
+    "tea": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T09:01:31Z"
+    },
+    "soup": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T09:01:32Z"
+    },
+    "ice cream": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T09:03:41Z"
+    },
+    "sweet": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T09:03:42Z"
+    },
+    "candy": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:22:54Z"
+    },
+    "yummy": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T09:04:59Z"
+    },
+    "delicious": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:22:55Z"
+    },
+    "plate": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:24:12Z"
+    },
+    "bowl": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T09:06:04Z"
+    },
+    "cup": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:24:14Z"
+    },
+    "spoon": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:24:14Z"
+    },
+    "fork": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T09:06:05Z"
+    },
+    "chopsticks": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:24:16Z"
+    },
+    "buy": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:25:11Z"
+    },
+    "want": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:25:11Z"
+    },
+    "dislike": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:25:12Z"
+    },
+    "animal": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:25:12Z"
+    },
+    "rabbit": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:25:13Z"
+    },
+    "hamster": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T09:06:06Z"
+    },
+    "turtle": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:25:14Z"
+    },
+    "frog": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:25:15Z"
+    },
+    "sheep": {
+      "status": "failed",
+      "missing": [],
+      "errors": {
+        "last": "AI request failed: {\"error\":{\"message\":\"***.InternalServerError: InternalServerError: OpenAIException -\",\"type\":\"upstream_error\",\"param\":\"\",\"code\":\"500\"}}"
+      },
+      "completed_at": null
+    },
+    "horse": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:25:16Z"
+    },
+    "goat": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T09:06:12Z"
+    },
+    "monkey": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T09:07:13Z"
+    },
+    "elephant": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T09:07:14Z"
+    },
+    "tiger": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T09:07:15Z"
+    },
+    "lion": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:25:20Z"
+    },
+    "zebra": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T09:09:35Z"
+    },
+    "giraffe": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:25:22Z"
+    },
+    "bear": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:25:22Z"
+    },
+    "panda": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:25:23Z"
+    },
+    "mouse": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:25:23Z"
+    },
+    "butterfly": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T09:12:03Z"
+    },
+    "bee": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:25:25Z"
+    },
+    "ant": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:25:25Z"
+    },
+    "flower": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:25:26Z"
+    },
+    "tree": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:25:26Z"
+    },
+    "grass": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:25:27Z"
+    },
+    "leaf": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T09:12:04Z"
+    },
+    "sky": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T09:12:04Z"
+    },
+    "sun": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T09:12:05Z"
+    },
+    "moon": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:25:30Z"
+    },
+    "cloud": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:27:21Z"
+    },
+    "rain": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:27:22Z"
+    },
+    "wind": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:27:22Z"
+    },
+    "rainbow": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T09:13:21Z"
+    },
+    "sea": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:27:23Z"
+    },
+    "river": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:27:24Z"
+    },
+    "hill": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:27:25Z"
+    },
+    "park": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:27:25Z"
+    },
+    "garden": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:27:26Z"
+    },
+    "farm": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:27:27Z"
+    },
+    "zoo": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T09:16:05Z"
+    },
+    "forest": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:27:28Z"
+    },
+    "grow": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:27:29Z"
+    },
+    "fly": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:27:30Z"
+    },
+    "swim": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:27:30Z"
+    },
+    "climb": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:27:31Z"
+    },
+    "hop": {
+      "status": "failed",
+      "missing": [],
+      "errors": {
+        "last": "AI request failed: {\"error\":{\"message\":\"***.InternalServerError: InternalServerError: OpenAIException -\",\"type\":\"upstream_error\",\"param\":\"\",\"code\":\"500\"}}"
+      },
+      "completed_at": null
+    },
+    "bark": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:27:32Z"
+    },
+    "meow": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:27:33Z"
+    },
+    "place": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:27:33Z"
+    },
+    "playground": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:27:34Z"
+    },
+    "library": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:27:34Z"
+    },
+    "shop": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:27:35Z"
+    },
+    "market": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:27:36Z"
+    },
+    "restaurant": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T09:16:16Z"
+    },
+    "clinic": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:27:37Z"
+    },
+    "hospital": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T09:16:17Z"
+    },
+    "station": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:27:38Z"
+    },
+    "bus stop": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:27:39Z"
+    },
+    "street": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:27:39Z"
+    },
+    "road": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:27:40Z"
+    },
+    "crossing": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:27:40Z"
+    },
+    "toilet": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T09:17:43Z"
+    },
+    "beach": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:27:42Z"
+    },
+    "museum": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:27:42Z"
+    },
+    "cinema": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:27:43Z"
+    },
+    "post office": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:27:44Z"
+    },
+    "police station": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:29:18Z"
+    },
+    "fire station": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:31:41Z"
+    },
+    "hong kong": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:34:06Z"
+    },
+    "city": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:34:06Z"
+    },
+    "town": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:34:07Z"
+    },
+    "village": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:34:08Z"
+    },
+    "mtr": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:34:08Z"
+    },
+    "bus": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:34:09Z"
+    },
+    "taxi": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:36:49Z"
+    },
+    "car": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:36:49Z"
+    },
+    "train": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:36:50Z"
+    },
+    "boat": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:38:12Z"
+    },
+    "ride": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:38:12Z"
+    },
+    "drive": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:38:13Z"
+    },
+    "visit": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:38:13Z"
+    },
+    "near": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:38:14Z"
+    },
+    "far": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:38:14Z"
+    },
+    "left": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:38:15Z"
+    },
+    "right": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:38:16Z"
+    },
+    "up": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:38:16Z"
+    },
+    "down": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:38:17Z"
+    },
+    "in": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:38:18Z"
+    },
+    "on": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:38:18Z"
+    },
+    "under": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:38:19Z"
+    },
+    "next to": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:38:19Z"
+    },
+    "behind": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:38:20Z"
+    },
+    "between": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:38:20Z"
+    },
+    "wake": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:38:21Z"
+    },
+    "get up": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:38:21Z"
+    },
+    "skip": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:38:22Z"
+    },
+    "paint": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:38:22Z"
+    },
+    "make": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:38:23Z"
+    },
+    "cut": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:38:24Z"
+    },
+    "stick": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:38:24Z"
+    },
+    "cook": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:38:25Z"
+    },
+    "push": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T09:17:43Z"
+    },
+    "pull": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:38:26Z"
+    },
+    "give": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:38:27Z"
+    },
+    "take": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:38:27Z"
+    },
+    "bring": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:38:28Z"
+    },
+    "show": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:38:28Z"
+    },
+    "find": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:38:29Z"
+    },
+    "hide": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:38:29Z"
+    },
+    "see": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:38:30Z"
+    },
+    "hear": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:38:30Z"
+    },
+    "touch": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:38:31Z"
+    },
+    "smell": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:38:32Z"
+    },
+    "taste": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:38:32Z"
+    },
+    "wear": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T09:17:44Z"
+    },
+    "put on": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T09:17:45Z"
+    },
+    "take off": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:40:00Z"
+    },
+    "sell": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:40:01Z"
+    },
+    "wait": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:40:01Z"
+    },
+    "watch": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:40:02Z"
+    },
+    "dream": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:40:03Z"
+    },
+    "learn": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:40:04Z"
+    },
+    "try": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T09:17:45Z"
+    },
+    "win": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:40:14Z"
+    },
+    "lose": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:40:15Z"
+    },
+    "day": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:40:15Z"
+    },
+    "today": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:41:17Z"
+    },
+    "tomorrow": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T09:17:46Z"
+    },
+    "yesterday": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:41:18Z"
+    },
+    "morning": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:41:19Z"
+    },
+    "afternoon": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:41:19Z"
+    },
+    "evening": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:41:20Z"
+    },
+    "night": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:41:21Z"
+    },
+    "week": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T09:21:17Z"
+    },
+    "monday": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T09:21:18Z"
+    },
+    "tuesday": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T09:21:18Z"
+    },
+    "wednesday": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T09:21:19Z"
+    },
+    "thursday": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T09:21:19Z"
+    },
+    "friday": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T09:21:20Z"
+    },
+    "saturday": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T09:21:21Z"
+    },
+    "sunday": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T09:21:21Z"
+    },
+    "birthday": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:41:29Z"
+    },
+    "holiday": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:41:29Z"
+    },
+    "time": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:41:30Z"
+    },
+    "clock": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T09:21:22Z"
+    },
+    "hour": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:41:32Z"
+    },
+    "minute": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:41:32Z"
+    },
+    "early": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:41:33Z"
+    },
+    "late": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:41:33Z"
+    },
+    "now": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:41:34Z"
+    },
+    "then": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:42:45Z"
+    },
+    "before": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:42:46Z"
+    },
+    "after": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:42:46Z"
+    },
+    "weather": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:42:47Z"
+    },
+    "sunny": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:42:47Z"
+    },
+    "rainy": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:42:48Z"
+    },
+    "cloudy": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:42:49Z"
+    },
+    "windy": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:42:49Z"
+    },
+    "wet": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:42:50Z"
+    },
+    "dry": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:42:50Z"
+    },
+    "spring": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:42:51Z"
+    },
+    "summer": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:42:51Z"
+    },
+    "autumn": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:42:52Z"
+    },
+    "winter": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:42:53Z"
+    },
+    "umbrella": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:45:43Z"
+    },
+    "raincoat": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T09:23:51Z"
+    },
+    "fairy tale": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:45:45Z"
+    },
+    "rhyme": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:45:45Z"
+    },
+    "page": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:45:46Z"
+    },
+    "cover": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:45:46Z"
+    },
+    "title": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:45:47Z"
+    },
+    "character": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:45:47Z"
+    },
+    "beginning": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:45:48Z"
+    },
+    "middle": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:45:48Z"
+    },
+    "end": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:45:49Z"
+    },
+    "bad": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T09:23:52Z"
+    },
+    "funny": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:45:50Z"
+    },
+    "brave": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:45:51Z"
+    },
+    "honest": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:45:51Z"
+    },
+    "helpful": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:45:52Z"
+    },
+    "careful": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:45:53Z"
+    },
+    "safe": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T09:23:52Z"
+    },
+    "dangerous": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:45:54Z"
+    },
+    "take turns": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T09:23:53Z"
+    },
+    "friendship": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:45:55Z"
+    },
+    "team": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:45:56Z"
+    },
+    "rule": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:45:56Z"
+    },
+    "promise": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:45:57Z"
+    },
+    "gift": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:45:57Z"
+    },
+    "present": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:45:58Z"
+    },
+    "party": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:45:59Z"
+    },
+    "balloon": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:45:59Z"
+    },
+    "surprise": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:47:07Z"
+    },
+    "magic": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:47:07Z"
+    },
+    "king": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:47:08Z"
+    },
+    "queen": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:47:08Z"
+    },
+    "prince": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:47:09Z"
+    },
+    "princess": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:47:10Z"
+    },
+    "dragon": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:47:10Z"
+    },
+    "monster": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T09:26:12Z"
+    },
+    "giant": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:47:12Z"
+    },
+    "little": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:47:12Z"
+    },
+    "beautiful": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:47:13Z"
+    },
+    "ugly": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:47:13Z"
+    },
+    "fast": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:47:14Z"
+    },
+    "slow": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T06:47:14Z"
     }
   }
 }

@@ -10,4 +10,4 @@ if [[ ! -x "$PYTHON" ]]; then
   "$DIR/.venv/bin/pip" install -r "$DIR/requirements.txt"
 fi
 
-exec "$PYTHON" "$DIR/import_words_from_images.py" "$@"
+exec env PYTHONUNBUFFERED=1 "$PYTHON" "$DIR/import_words_from_images.py" "$@"
