@@ -70,6 +70,7 @@ const ROUTE_RULES = [
   { pattern: "/admin/wordbase-library", anyOf: [PERMISSIONS.SETTINGS_MANAGE_USERS] },
   { pattern: "/words", anyOf: [PERMISSIONS.WORDS_READ] },
   { pattern: "/words/new", anyOf: [PERMISSIONS.WORDS_CREATE] },
+  { pattern: "/words/lookup", anyOf: [PERMISSIONS.WORDS_READ] },
   { pattern: "/words/:wordId", anyOf: [PERMISSIONS.WORDS_READ] },
   { pattern: "/review/flashcards", anyOf: [PERMISSIONS.REVIEW_SUBMIT] },
   { pattern: "/review/quiz", anyOf: [PERMISSIONS.REVIEW_SUBMIT] },

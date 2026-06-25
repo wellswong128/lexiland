@@ -1,4 +1,5 @@
 import { NavLink } from "react-router-dom";
+import { SearchIcon } from "./BottomNavIcons.jsx";
 import { useLocale } from "../features/locale/LocaleContext.jsx";
 
 const navItems = [
@@ -9,6 +10,12 @@ const navItems = [
     to: "/words/new?tab=photo&scan=camera",
     emoji: "📷",
     featured: true,
+  },
+  {
+    key: "lookup",
+    labelKey: "bottomNav.lookup",
+    to: "/words/lookup",
+    Icon: SearchIcon,
   },
   {
     key: "learningReport",
@@ -62,9 +69,15 @@ function BottomNav({ isMenuOpen = false, onMenuToggle }) {
               key={item.key}
               to={item.to}
             >
-              <span aria-hidden="true" className="bottom-nav-emoji">
-                {item.emoji}
-              </span>
+              {item.Icon ? (
+                <span aria-hidden="true" className="bottom-nav-icon">
+                  <item.Icon />
+                </span>
+              ) : (
+                <span aria-hidden="true" className="bottom-nav-emoji">
+                  {item.emoji}
+                </span>
+              )}
               <span className="bottom-nav-label">{t(item.labelKey)}</span>
             </NavLink>
           ),

@@ -27,6 +27,7 @@ const QuizPage = lazy(() => import("./pages/QuizPage.jsx"));
 const SettingsPage = lazy(() => import("./pages/SettingsPage.jsx"));
 const SpeedRacingPage = lazy(() => import("./pages/SpeedRacingPage.jsx"));
 const SpellingNinjaPage = lazy(() => import("./pages/SpellingNinjaPage.jsx"));
+const WordLookupPage = lazy(() => import("./pages/WordLookupPage.jsx"));
 const WordDetailPage = lazy(() => import("./pages/WordDetailPage.jsx"));
 const WordKartPage = lazy(() => import("./pages/WordKartPage.jsx"));
 const WordListPage = lazy(() => import("./pages/WordListPage.jsx"));
@@ -78,6 +79,7 @@ function AppRoutes() {
         <Route path="/admin/wordbase-library" element={<ProtectedRoute><AdminWordbaseLibraryPage /></ProtectedRoute>} />
         <Route path="/words" element={<ProtectedRoute><WordListPage /></ProtectedRoute>} />
         <Route path="/words/new" element={<ProtectedRoute><AddWordPage /></ProtectedRoute>} />
+        <Route path="/words/lookup" element={<ProtectedRoute><WordLookupPage /></ProtectedRoute>} />
         <Route path="/words/:wordId" element={<ProtectedRoute><WordDetailPage /></ProtectedRoute>} />
         <Route path="/review/flashcards" element={<ProtectedRoute><FlashcardsPage /></ProtectedRoute>} />
         <Route path="/review/quiz" element={<ProtectedRoute><QuizPage /></ProtectedRoute>} />

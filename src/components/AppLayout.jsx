@@ -20,7 +20,9 @@ function AppLayout({ children }) {
   const isHomePage = location.pathname === "/";
   const isAchievementsPage = location.pathname === "/achievements";
   const isLearningReportPage = location.pathname === "/learning-report";
-  const isMobileShellPage = isHomePage || isAchievementsPage || isLearningReportPage;
+  const isWordLookupPage = location.pathname === "/words/lookup";
+  const isMobileShellPage =
+    isHomePage || isAchievementsPage || isLearningReportPage || isWordLookupPage;
   const useMobileAppWidth = isMobileShellPage || (isStandalone && !isGamePage && !isAuthPage);
   const useFlushPagePadding = isMobileShellPage;
   const showFloatingMenu = !isGamePage && !isAuthPage;
