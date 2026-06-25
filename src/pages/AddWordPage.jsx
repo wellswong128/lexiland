@@ -3,11 +3,9 @@ import { useLocation, useNavigate, useSearchParams } from "react-router-dom";
 import PhotoWordCapture from "../components/PhotoWordCapture.jsx";
 import { useLocale } from "../features/locale/LocaleContext.jsx";
 import {
-  createDemoSuggestion,
-  fetchCompleteWord,
+  fetchCompleteWordWithFallback,
   suggestionToFormValues,
 } from "../features/words/completeWordApi.js";
-import { contributeWordDetailsFromSuggestion } from "../features/words/wordbaseApi.js";
 import { useWordsContext } from "../features/words/WordsContext.jsx";
 import { goBackToPreviousPage } from "../lib/navigation.js";
 
@@ -31,7 +29,7 @@ function AddWordPage() {
   const location = useLocation();
   const navigate = useNavigate();
   const [searchParams, setSearchParams] = useSearchParams();
-  const { addWord, user } = useWordsContext();
+  const { addWord, user, words } = useWordsContext();
   const [activeTab, setActiveTab] = useState(() => getInitialTab(searchParams));
   const autoOpenCamera = searchParams.get("scan") === "camera";
   const [formValues, setFormValues] = useState(initialFormValues);
@@ -114,27 +112,25 @@ function AddWordPage() {
       setAiMessage("");
       setIsAiLoading(true);
 
-      const { suggestion } = await fetchCompleteWord(term, locale);
+      const result = await fetchCompleteWordWithFallback(term, locale, {
+        user,
+        localWords: words,
+      });
 
       setFormValues((currentValues) => ({
         ...currentValues,
-        ...suggestionToFormValues(suggestion),
+        ...suggestionToFormValues(result.suggestion),
       }));
 
-      if (user?.id) {
-        void contributeWordDetailsFromSuggestion(suggestion, user.id).catch((syncError) => {
-          console.warn("Could not contribute word details to wordbase.", syncError);
-        });
+      if (result.fromLocal) {
+        setAiMessage(t("addWord.localSuccess"));
+      } else if (result.fromWordbase) {
+        setAiMessage(t("addWord.wordbaseSuccess"));
+      } else if (result.usedFallback) {
+        setAiMessage(t("addWord.aiFallback", { reason: result.fallbackReason }));
+      } else {
+        setAiMessage(t("addWord.aiSuccess"));
       }
-
-      setAiMessage(t("addWord.aiSuccess"));
-    } catch (aiError) {
-      setFormValues((currentValues) => ({
-        ...currentValues,
-        ...suggestionToFormValues(createDemoSuggestion(term)),
-      }));
-      setError("");
-      setAiMessage(t("addWord.aiFallback", { reason: aiError.message }));
     } finally {
       setIsAiLoading(false);
     }
@@ -219,28 +215,6 @@ function AddWordPage() {
             {t("wordDetail.backToPrevious")}
           </button>
 
-          <div className="rounded-2xl border border-blue-100 bg-blue-50 p-4">
-            <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
-              <div>
-                <h2 className="font-bold text-blue-950">{t("addWord.aiTitle")}</h2>
-                <p className="mt-1 text-sm text-slate-600">{t("addWord.aiDescription")}</p>
-              </div>
-              <button
-                className="rounded-full bg-blue-700 px-5 py-3 text-sm font-bold text-white transition hover:bg-blue-800 disabled:bg-slate-300"
-                disabled={isAiLoading || isSaving}
-                onClick={handleAiFill}
-                type="button"
-              >
-                {isAiLoading ? t("addWord.aiFilling") : t("addWord.aiFill")}
-              </button>
-            </div>
-            {aiMessage ? (
-              <p className="mt-3 rounded-xl border border-green-200 bg-green-50 px-3 py-2 text-sm font-medium text-green-700">
-                {aiMessage}
-              </p>
-            ) : null}
-          </div>
-
           {error ? (
             <p className="rounded-2xl border border-red-200 bg-red-50 px-4 py-3 text-sm font-medium text-red-700">
               {error}
@@ -269,6 +243,28 @@ function AddWordPage() {
             />
             <span className="mt-2 block text-sm text-slate-500">{t("addWord.termEnterHint")}</span>
           </label>
+
+          <div className="rounded-2xl border border-blue-100 bg-blue-50 p-4">
+            <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+              <div>
+                <h2 className="font-bold text-blue-950">{t("addWord.aiTitle")}</h2>
+                <p className="mt-1 text-sm text-slate-600">{t("addWord.aiDescription")}</p>
+              </div>
+              <button
+                className="rounded-full bg-blue-700 px-5 py-3 text-sm font-bold text-white transition hover:bg-blue-800 disabled:bg-slate-300"
+                disabled={isAiLoading || isSaving}
+                onClick={handleAiFill}
+                type="button"
+              >
+                {isAiLoading ? t("addWord.aiFilling") : t("addWord.aiFill")}
+              </button>
+            </div>
+            {aiMessage ? (
+              <p className="mt-3 rounded-xl border border-green-200 bg-green-50 px-3 py-2 text-sm font-medium text-green-700">
+                {aiMessage}
+              </p>
+            ) : null}
+          </div>
 
           <label className="block">
             <span className="text-sm font-semibold text-slate-700">

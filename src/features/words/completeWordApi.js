@@ -1,6 +1,7 @@
-import { resolveVocabularyLocale } from "../../../lib/vocabularyLocale.js";
+import { containsChinese, resolveVocabularyLocale } from "../../../lib/vocabularyLocale.js";
 import { getApiAuthHeaders } from "../../lib/apiAuth.js";
 import { resolveApiUrl } from "../../lib/apiBase.js";
+import { findWordInLibrary } from "../review/gameMistakeHelpers.js";
 import {
   canUseWordbase,
   contributeWordDetailsFromSuggestion,
@@ -8,6 +9,23 @@ import {
   hasWordbaseDetails,
   wordbaseEntryToSuggestion,
 } from "./wordbaseApi.js";
+
+function wordToSuggestion(word) {
+  return {
+    term: word.term,
+    definition: word.definition,
+    translation: word.translation,
+    pronunciation: word.pronunciation,
+    partOfSpeech: word.partOfSpeech,
+    example: word.example,
+    exampleTranslation: word.exampleTranslation,
+    tags: Array.isArray(word.tags) ? word.tags : [],
+  };
+}
+
+function hasLocalWordDetails(word) {
+  return Boolean(word?.definition?.trim() && containsChinese(word?.translation));
+}
 
 export function createDemoSuggestion(term) {
   const normalizedTerm = term.trim();
@@ -81,8 +99,19 @@ export async function fetchCompleteWord(term, uiLocale = "zh-Hant") {
 export async function fetchCompleteWordWithFallback(
   term,
   locale = "zh-Hant",
-  { user, skipWordbase = false } = {},
+  { user, skipWordbase = false, localWords = [] } = {},
 ) {
+  const localWord = findWordInLibrary(localWords, term);
+
+  if (localWord && hasLocalWordDetails(localWord)) {
+    return {
+      suggestion: wordToSuggestion(localWord),
+      usedFallback: false,
+      fromLocal: true,
+      fromWordbase: false,
+    };
+  }
+
   if (!skipWordbase) {
     try {
       if (canUseWordbase(user)) {
@@ -92,6 +121,7 @@ export async function fetchCompleteWordWithFallback(
           return {
             suggestion: wordbaseEntryToSuggestion(entry),
             usedFallback: false,
+            fromLocal: false,
             fromWordbase: true,
           };
         }
@@ -112,6 +142,7 @@ export async function fetchCompleteWordWithFallback(
 
     return {
       ...result,
+      fromLocal: false,
       fromWordbase: false,
     };
   } catch (error) {
@@ -119,6 +150,7 @@ export async function fetchCompleteWordWithFallback(
       suggestion: createDemoSuggestion(term),
       usedFallback: true,
       fallbackReason: error.message,
+      fromLocal: false,
       fromWordbase: false,
     };
   }
@@ -137,6 +169,7 @@ export async function completeWordsInBatch(
     results.push({
       ...suggestionToFormValues(result.suggestion),
       usedFallback: result.usedFallback,
+      fromLocal: Boolean(result.fromLocal),
       fromWordbase: Boolean(result.fromWordbase),
     });
 
