@@ -5,7 +5,6 @@ import { isCapacitorNative } from "../lib/platform.js";
 import {
   getNeedsRefresh,
   getOfflineReady,
-  markNeedsRefresh,
   probeNeedsRefresh,
   probeOfflineReady,
 } from "../lib/pwaRuntimeState.js";
@@ -78,9 +77,11 @@ export function usePwaRuntimeStatus() {
 
       if (hasRemoteVersionUpdate(remoteVersion)) {
         setLatestVersion(remoteVersion);
-        markNeedsRefresh();
-        setNeedsRefresh(true);
-        window.dispatchEvent(new CustomEvent("lexiland:sw-needs-refresh"));
+
+        const pendingUpdate = await probeNeedsRefresh();
+        if (!cancelled && pendingUpdate) {
+          setNeedsRefresh(true);
+        }
       }
     }
 
