@@ -308,9 +308,14 @@ def process_term(
                         alternate_term=suggestion.get("term"),
                     )
                 )
-                entry = merge_suggestion_into_entry(entry, suggestion)
-                if not str((entry or {}).get("definition", "")).strip():
-                    raise ApiError("Complete-word upsert did not persist definition.")
+                if entry is None:
+                    raise ApiError("Complete-word upsert could not be read from Wordbase.")
+                still_missing_details = missing_detail_fields(entry)
+                if still_missing_details:
+                    raise ApiError(
+                        "Complete-word upsert did not persist: "
+                        + ", ".join(still_missing_details)
+                    )
 
         missing = missing_parts(entry, locale)
         if "memory_tips" in missing:
@@ -343,7 +348,9 @@ def process_term(
                         term,
                         alternate_term=word_context.get("term"),
                     )
-                ) or word_context
+                )
+                if "memory_tips" in missing_parts(entry, locale):
+                    raise ApiError("Memory tips upsert could not be verified in Wordbase.")
 
         missing = missing_parts(entry, locale)
         if "memory_image" in missing:
@@ -373,7 +380,9 @@ def process_term(
                         term,
                         alternate_term=word_context.get("term"),
                     )
-                ) or word_context
+                )
+                if "memory_image" in missing_parts(entry, locale):
+                    raise ApiError("Memory image upsert could not be verified in Wordbase.")
 
     except AuthError as error:
         record["last_errors"] = {**record.get("last_errors", {}), "auth": str(error)}

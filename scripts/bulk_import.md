@@ -129,7 +129,7 @@ On first run, the script prompts for Supabase login. The session is saved to `~/
 | `--progress-file PATH` | Separate progress JSON (required for parallel imports) |
 | `--report-dir PATH` | Separate report directory (recommended for parallel imports) |
 
-## Running two imports in parallel
+## Running multiple imports
 
 Do **not** share the default `progress.json` between imports. Two processes writing the same file caused the error:
 
@@ -155,7 +155,7 @@ Or set env vars: `IMPORT_PROGRESS_PATH`, `IMPORT_REPORT_DIR`.
 
 Progress saves now use a file lock and per-process temp files, but **separate progress files are still required** so each import tracks its own terms correctly.
 
-**Session sharing:** All imports use the same Supabase session file (`~/.lexiland/import-session.json` by default). Supabase refresh tokens are single-use, so parallel imports can hit `Invalid Refresh Token: Already Used` if each process refreshes independently. The import script now serializes session reads/writes with a file lock and reloads the latest tokens before each Wordbase upsert. For best results, either run **one import at a time** during the Complete phase, or keep parallel Extract-only batches and merge completion into a single process afterward.
+**Session sharing:** All imports use the same Supabase session file (`~/.lexiland/import-session.json` by default). Supabase refresh tokens are single-use, so parallel Complete-phase imports can hit `Invalid Refresh Token: Already Used` if each process refreshes independently. Run **one import at a time** during the Complete phase. The old `run-parallel.sh` launcher is disabled because it started multiple Wordbase writers with the same session.
 
 If you see a refresh-token error, re-login once and resume:
 

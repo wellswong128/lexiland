@@ -141,6 +141,15 @@ def _session_from_client(
     }
 
 
+def _same_tokens(left: dict[str, Any] | None, right: dict[str, Any] | None) -> bool:
+    if not left or not right:
+        return False
+    return (
+        left.get("access_token") == right.get("access_token")
+        and left.get("refresh_token") == right.get("refresh_token")
+    )
+
+
 def _client_session_is_valid(client: Client) -> bool:
     try:
         user_response = client.auth.get_user()
@@ -155,13 +164,26 @@ def persist_client_session(
     *,
     fallback_email: str = "",
     fallback_user_id: str = "",
+    expected_session: dict[str, Any] | None = None,
 ) -> dict[str, Any]:
     stored = _session_from_client(
         client,
         fallback_email=fallback_email,
         fallback_user_id=fallback_user_id,
     )
-    _save_session(session_path, stored)
+
+    with session_file_lock(session_path):
+        current = _read_session_file(session_path)
+        if (
+            current
+            and expected_session
+            and not _same_tokens(current, expected_session)
+            and not _same_tokens(current, stored)
+        ):
+            return current
+
+        _write_session_file(session_path, stored)
+
     return stored
 
 
@@ -518,6 +540,7 @@ class ImportAuth:
         self.import_user_password = import_user_password
         self.client: Client | None = None
         self.contributor_id = ""
+        self._last_synced_session: dict[str, Any] | None = None
         self.connect(force_login=force_login)
 
     def connect(self, *, force_login: bool = False) -> None:
@@ -542,6 +565,7 @@ class ImportAuth:
             fallback_user_id=self.contributor_id,
         )
         self.contributor_id = stored["user_id"]
+        self._last_synced_session = stored
 
     def refresh(self) -> None:
         self.sync_session(allow_refresh=True)
@@ -554,16 +578,19 @@ class ImportAuth:
         if self.client is None:
             raise AuthError("Supabase client is not connected.")
 
-        self.sync_session()
+        self.sync_session(allow_refresh=True)
 
         try:
             result = action()
-            persist_client_session(
+            stored = persist_client_session(
                 self.client,
                 self.session_path,
                 fallback_email=self.import_user_email,
                 fallback_user_id=self.contributor_id,
+                expected_session=self._last_synced_session,
             )
+            self.contributor_id = stored["user_id"]
+            self._last_synced_session = stored
             return result
         except Exception as error:
             if not is_auth_error(error):
@@ -572,20 +599,26 @@ class ImportAuth:
             try:
                 self.sync_session(allow_refresh=True)
                 result = action()
-                persist_client_session(
+                stored = persist_client_session(
                     self.client,
                     self.session_path,
                     fallback_email=self.import_user_email,
                     fallback_user_id=self.contributor_id,
+                    expected_session=self._last_synced_session,
                 )
+                self.contributor_id = stored["user_id"]
+                self._last_synced_session = stored
                 return result
             except AuthError:
                 self.relogin()
                 result = action()
-                persist_client_session(
+                stored = persist_client_session(
                     self.client,
                     self.session_path,
                     fallback_email=self.import_user_email,
                     fallback_user_id=self.contributor_id,
+                    expected_session=self._last_synced_session,
                 )
+                self.contributor_id = stored["user_id"]
+                self._last_synced_session = stored
                 return result
