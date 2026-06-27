@@ -4,20 +4,25 @@ function canSpeak() {
   return typeof window !== "undefined" && "speechSynthesis" in window;
 }
 
+function runSpeech(text) {
+  window.speechSynthesis.resume();
+  const utterance = new SpeechSynthesisUtterance(text);
+  utterance.lang = "en-US";
+  utterance.rate = 0.85;
+  window.speechSynthesis.speak(utterance);
+}
+
 function speakText(text) {
   if (!canSpeak() || !text.trim()) {
     return;
   }
 
-  window.speechSynthesis.cancel();
+  const value = text.trim();
 
   window.setTimeout(() => {
-    window.speechSynthesis.resume();
-    const utterance = new SpeechSynthesisUtterance(text.trim());
-    utterance.lang = "en-US";
-    utterance.rate = 0.85;
-    window.speechSynthesis.speak(utterance);
-  }, 120);
+    window.speechSynthesis.cancel();
+    runSpeech(value);
+  }, 50);
 }
 
 function primeSpeechSynthesis() {
@@ -27,6 +32,20 @@ function primeSpeechSynthesis() {
 
   window.speechSynthesis.getVoices();
   window.speechSynthesis.resume();
+}
+
+/** Call synchronously inside a user gesture (e.g. button click) so iOS allows later speech. */
+function unlockSpeechSynthesis() {
+  if (!canSpeak()) {
+    return;
+  }
+
+  primeSpeechSynthesis();
+
+  const utterance = new SpeechSynthesisUtterance("\u200b");
+  utterance.volume = 0.01;
+  utterance.rate = 10;
+  window.speechSynthesis.speak(utterance);
 }
 
 function SpeakButton({ className = "", text }) {
@@ -64,5 +83,5 @@ function SpeakButton({ className = "", text }) {
   );
 }
 
-export { primeSpeechSynthesis, speakText };
+export { primeSpeechSynthesis, speakText, unlockSpeechSynthesis };
 export default SpeakButton;
