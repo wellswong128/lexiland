@@ -93,11 +93,18 @@ export async function applyServiceWorkerUpdate() {
   clearNeedsRefresh();
 
   if (typeof updateServiceWorker === "function") {
-    await updateServiceWorker(true);
-    return;
+    try {
+      await updateServiceWorker(true);
+    } catch {
+      // Fall through to reload.
+    }
   }
 
-  window.location.reload();
+  // Always reload as a fallback — the SW activation may not trigger
+  // a controllerchange when the update was detected via version.json.
+  if (typeof window !== "undefined") {
+    window.location.reload();
+  }
 }
 
 export async function probeNeedsRefresh() {

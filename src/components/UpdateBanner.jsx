@@ -28,6 +28,12 @@ function UpdateBanner() {
     } catch {
       setIsUpdating(false);
     }
+
+    // Safety net: if the page didn't reload, reset the button after 5s
+    // so the user isn't stuck on "Updating..." forever.
+    window.setTimeout(() => {
+      setIsUpdating(false);
+    }, 5000);
   }
 
   return (
