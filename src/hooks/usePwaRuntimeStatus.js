@@ -5,7 +5,6 @@ import { isCapacitorNative } from "../lib/platform.js";
 import {
   getNeedsRefresh,
   getOfflineReady,
-  markNeedsRefresh,
   probeNeedsRefresh,
   probeOfflineReady,
 } from "../lib/pwaRuntimeState.js";
@@ -37,10 +36,21 @@ export function usePwaRuntimeStatus() {
       setNeedsRefresh(true);
     }
 
+    function handleAppUpdateAvailable(event) {
+      const version = event?.detail?.latestVersion;
+
+      if (typeof version === "string" && version.trim()) {
+        setLatestVersion(version.trim());
+      }
+
+      setNeedsRefresh(true);
+    }
+
     window.addEventListener("online", handleOnline);
     window.addEventListener("offline", handleOffline);
     window.addEventListener("lexiland:offline-ready", handleOfflineReady);
     window.addEventListener("lexiland:sw-needs-refresh", handleNeedsRefresh);
+    window.addEventListener("lexiland:app-update-available", handleAppUpdateAvailable);
 
     void probeOfflineReady().then((ready) => {
       if (ready) {
@@ -59,37 +69,9 @@ export function usePwaRuntimeStatus() {
       window.removeEventListener("offline", handleOffline);
       window.removeEventListener("lexiland:offline-ready", handleOfflineReady);
       window.removeEventListener("lexiland:sw-needs-refresh", handleNeedsRefresh);
+      window.removeEventListener("lexiland:app-update-available", handleAppUpdateAvailable);
     };
   }, []);
-
-  useEffect(() => {
-    if (!isOnline || isCapacitorNative()) {
-      return undefined;
-    }
-
-    let cancelled = false;
-
-    async function syncLatestVersion() {
-      const remoteVersion = await fetchLatestAppVersion();
-
-      if (cancelled || !remoteVersion) {
-        return;
-      }
-
-      if (hasRemoteVersionUpdate(remoteVersion)) {
-        setLatestVersion(remoteVersion);
-        markNeedsRefresh();
-        setNeedsRefresh(true);
-        window.dispatchEvent(new CustomEvent("lexiland:sw-needs-refresh"));
-      }
-    }
-
-    void syncLatestVersion();
-
-    return () => {
-      cancelled = true;
-    };
-  }, [isOnline]);
 
   useEffect(() => {
     if (!needsRefresh || !isOnline || isCapacitorNative()) {
