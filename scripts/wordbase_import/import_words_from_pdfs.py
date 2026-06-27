@@ -29,10 +29,13 @@ from import_words_from_images import (
 from pdf_utils import (
     count_pdf_pages,
     list_pdf_files,
+    normalize_pdf_dir,
+    page_cache_matches_dir,
     page_key,
     page_label_from_pdf_page,
     pdf_page_to_data_url,
     require_fitz,
+    sync_pdf_dir_progress,
 )
 from progress_store import ProgressIOError, ensure_term_record, load_progress, save_progress
 from terms import normalize_term
@@ -55,6 +58,11 @@ def parse_args() -> argparse.Namespace:
     )
     parser.add_argument("--dry-run", action="store_true", help="Run without writing to Supabase.")
     parser.add_argument("--resume", action="store_true", help="Reuse progress file and skip finished pages.")
+    parser.add_argument(
+        "--reset-extract",
+        action="store_true",
+        help="Clear cached page extraction for PDFs in --pdf-dir and re-extract from page 1.",
+    )
     parser.add_argument("--login", action="store_true", help="Force a new Supabase OTP login.")
     parser.add_argument("--limit-pdfs", type=int, default=0, help="Process only N PDF files.")
     parser.add_argument(
@@ -130,7 +138,13 @@ def extract_pdfs(
     resume: bool,
     dry_run: bool,
     skip_wordbase_extract_check: bool,
+    reset_extract: bool,
+    progress_path: Path,
 ) -> list[str]:
+    sync_pdf_dir_progress(progress, pdf_dir, reset_extract=reset_extract)
+    save_progress(progress_path, progress)
+    normalized_pdf_dir = normalize_pdf_dir(pdf_dir)
+
     files = list_pdf_files(pdf_dir)
     if limit_pdfs > 0:
         files = files[:limit_pdfs]
@@ -178,8 +192,18 @@ def extract_pdfs(
                 },
             )
 
-            if resume and page_record.get("status") == "extracted" and page_record.get("wordbase_checked"):
-                raw_terms = page_record.get("extracted_terms") or page_record.get("terms") or []
+            cached_extract = (
+                page_record.get("extracted_terms") or page_record.get("terms") or []
+            )
+            can_reuse_extract = (
+                resume
+                and page_cache_matches_dir(page_record, pdf_dir)
+                and page_record.get("status") == "extracted"
+                and bool(cached_extract)
+            )
+
+            if can_reuse_extract and page_record.get("wordbase_checked"):
+                raw_terms = cached_extract
                 terms = page_record.get("terms") or []
                 skipped_terms = page_record.get("skipped_terms") or []
                 print(
@@ -188,8 +212,8 @@ def extract_pdfs(
                 )
             else:
                 raw_terms: list[str] = []
-                if resume and page_record.get("status") == "extracted" and page_record.get("terms"):
-                    raw_terms = page_record.get("extracted_terms") or page_record.get("terms") or []
+                if can_reuse_extract and page_record.get("terms"):
+                    raw_terms = cached_extract
                     print(f"  {key}: reuse {len(raw_terms)} extracted terms, checking wordbase")
                 else:
                     print(f"  {key} ({page_record.get('page_label', '')})")
@@ -197,6 +221,7 @@ def extract_pdfs(
                         data_url = pdf_page_to_data_url(pdf_path, page_index, zoom=pdf_zoom)
                         raw_terms = api.extract_words(data_url)
                         page_record["status"] = "extracted"
+                        page_record["pdf_dir"] = normalized_pdf_dir
                         page_record["error"] = None
                         print(f"    extracted {len(raw_terms)} terms")
                     except Exception as error:
@@ -218,6 +243,7 @@ def extract_pdfs(
                 page_record["extracted_terms"] = raw_terms
                 page_record["terms"] = terms
                 page_record["skipped_terms"] = skipped_terms
+                page_record["pdf_dir"] = normalized_pdf_dir
                 page_record["wordbase_checked"] = (
                     not dry_run and import_auth is not None and not skip_wordbase_extract_check
                 )
@@ -231,6 +257,7 @@ def extract_pdfs(
                 ensure_term_record(progress, term, key)
 
             pages_processed += 1
+            save_progress(progress_path, progress)
 
         if limit_pages > 0 and pages_processed >= limit_pages:
             break
@@ -307,6 +334,8 @@ def main() -> int:
             resume=args.resume or settings.progress_path.exists(),
             dry_run=args.dry_run,
             skip_wordbase_extract_check=args.skip_wordbase_extract_check,
+            reset_extract=args.reset_extract,
+            progress_path=settings.progress_path,
         )
         save_progress(settings.progress_path, progress)
 

@@ -21,6 +21,12 @@ class AuthError(Exception):
     pass
 
 
+LOGIN_HINT = (
+    "Run ./scripts/wordbase_import/run-pdf.sh --login "
+    "(or ./scripts/wordbase_import/run.sh --login)."
+)
+
+
 def _normalize_email(email: str) -> str:
     return email.strip().lower()
 
@@ -194,8 +200,7 @@ def sync_client_session(
                         continue
                 if not allow_refresh:
                     raise AuthError(
-                        "Supabase session expired or invalid. "
-                        "Run ./scripts/wordbase_import/run.sh --login first."
+                        f"Supabase session expired or invalid. {LOGIN_HINT}"
                     ) from error
                 break
 
@@ -214,8 +219,7 @@ def sync_client_session(
 
         if not allow_refresh:
             raise AuthError(
-                "Supabase session expired or invalid. "
-                "Run ./scripts/wordbase_import/run.sh --login first."
+                f"Supabase session expired or invalid. {LOGIN_HINT}"
             )
 
         try:
@@ -230,12 +234,10 @@ def sync_client_session(
                             return latest
                     except Exception as retry_error:
                         raise AuthError(
-                            "Supabase session expired or invalid. "
-                            "Run ./scripts/wordbase_import/run.sh --login first."
+                            f"Supabase session expired or invalid. {LOGIN_HINT}"
                         ) from retry_error
             raise AuthError(
-                "Supabase session expired or invalid. "
-                "Run ./scripts/wordbase_import/run.sh --login first."
+                f"Supabase session expired or invalid. {LOGIN_HINT}"
             ) from error
 
         if refresh_response.session is None or refresh_response.user is None:
@@ -475,11 +477,8 @@ def ensure_authenticated_client(
                 fallback_user_id=session.get("user_id", ""),
             )
             return client, stored["user_id"]
-        except AuthError as error:
-            raise AuthError(
-                "Supabase session expired or invalid. "
-                "Run ./scripts/wordbase_import/run.sh --login first."
-            ) from error
+        except AuthError:
+            print(f"Saved Supabase session expired or invalid. Sign in again, or {LOGIN_HINT}")
 
     login_email = _normalize_email(email or (session or {}).get("email", ""))
     env_password = password or os.getenv("IMPORT_USER_PASSWORD", "").strip()

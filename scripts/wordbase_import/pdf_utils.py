@@ -22,6 +22,10 @@ def require_fitz() -> None:
         )
 
 
+def normalize_pdf_dir(pdf_dir: Path) -> str:
+    return str(pdf_dir.expanduser().resolve())
+
+
 def list_pdf_files(pdf_dir: Path) -> list[Path]:
     if not pdf_dir.exists():
         return []
@@ -31,6 +35,43 @@ def list_pdf_files(pdf_dir: Path) -> list[Path]:
         for path in sorted(pdf_dir.iterdir())
         if path.is_file() and path.suffix.lower() in PDF_EXTENSIONS
     ]
+
+
+def clear_page_cache_for_pdfs(progress: dict, pdf_names: set[str]) -> int:
+    pages = progress.setdefault("pages", {})
+    keys_to_remove = [
+        key
+        for key in pages
+        if any(key.startswith(f"{pdf_name}#page-") for pdf_name in pdf_names)
+    ]
+    for key in keys_to_remove:
+        del pages[key]
+    return len(keys_to_remove)
+
+
+def sync_pdf_dir_progress(
+    progress: dict,
+    pdf_dir: Path,
+    *,
+    reset_extract: bool = False,
+) -> None:
+    normalized = normalize_pdf_dir(pdf_dir)
+    pdf_names = {path.name for path in list_pdf_files(pdf_dir)}
+    stored = progress.get("pdf_dir")
+
+    if reset_extract or (stored is not None and stored != normalized):
+        cleared = clear_page_cache_for_pdfs(progress, pdf_names)
+        reason = "reset requested" if reset_extract else f"pdf_dir changed ({stored} -> {normalized})"
+        print(f"[extract] {reason}; cleared {cleared} cached page(s) for current PDF dir")
+
+    progress["pdf_dir"] = normalized
+
+
+def page_cache_matches_dir(page_record: dict, pdf_dir: Path) -> bool:
+    stored = page_record.get("pdf_dir")
+    if not stored:
+        return False
+    return stored == normalize_pdf_dir(pdf_dir)
 
 
 def count_pdf_pages(pdf_path: Path) -> int:

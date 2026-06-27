@@ -222,9 +222,10 @@ function HomePage() {
     activeGroup,
     isGroupScopeActive,
     isUsingCustomWords,
+    isLoadingScope,
     scopedWords,
   } = useActiveGroupWordScope(words, user);
-  const isHomeLoading = isWordsLoading;
+  const isHomeLoading = isWordsLoading || isLoadingScope;
   const learningWords = isGroupScopeActive ? scopedWords : words;
   const role = getRoleFromUser(user);
   const dueWords = getDueWords(learningWords);

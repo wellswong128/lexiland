@@ -78,6 +78,15 @@ export function useActiveGroupWordScope(words, user) {
     }
 
     setState((current) => {
+      if (forceRefresh) {
+        return {
+          ...current,
+          mappedTerms: [],
+          isLoading: true,
+          error: "",
+        };
+      }
+
       const hasCachedData = Boolean(current.activeGroup) || current.mappedTerms.length > 0;
       return {
         ...current,
@@ -124,10 +133,23 @@ export function useActiveGroupWordScope(words, user) {
       return undefined;
     }
 
-    const handleActiveGroupChanged = () => {
+    const handleActiveGroupChanged = (event) => {
       invalidateUserActiveGroupWordsCache();
+      clearCachedActiveGroupScope(user?.id);
       saveWordScopeMode(user?.id, WORD_SCOPE_MODES.GROUP);
       setScopeMode(WORD_SCOPE_MODES.GROUP);
+
+      const nextActiveGroup = event?.detail?.activeGroup ?? null;
+      if (nextActiveGroup) {
+        setState((current) => ({
+          ...current,
+          activeGroup: nextActiveGroup,
+          mappedTerms: [],
+          isLoading: true,
+          error: "",
+        }));
+      }
+
       void loadScope({ forceRefresh: true });
     };
 

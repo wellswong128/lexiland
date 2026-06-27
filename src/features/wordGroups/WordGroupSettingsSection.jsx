@@ -3,9 +3,11 @@ import { Link } from "react-router-dom";
 import { useLocale } from "../locale/LocaleContext.jsx";
 import { getActiveGroupLabel } from "./getActiveGroupLabel.js";
 import { getFriendlyNetworkError } from "../../lib/networkErrors.js";
+import { clearCachedActiveGroupScope } from "./activeGroupScopeCache.js";
 import {
   fetchUserGroupPicks,
   fetchWordGroups,
+  invalidateUserActiveGroupWordsCache,
   saveUserGroupPicks,
   setUserActiveGroup,
 } from "./wordGroupsApi.js";
@@ -117,7 +119,9 @@ function WordGroupSettingsSection({ user, hasSupabaseConfig }) {
       setActiveGroupCode(payload.activeGroupCode || group.groupCode);
       setSelectedGrade(group.grade);
       setNotice(t("settings.wordGroups.activeUpdated"));
-      notifyActiveGroupChanged();
+      invalidateUserActiveGroupWordsCache();
+      clearCachedActiveGroupScope(user.id);
+      notifyActiveGroupChanged({ activeGroup: group });
     } catch (switchError) {
       setError(
         getFriendlyNetworkError(
