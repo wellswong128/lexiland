@@ -92,16 +92,27 @@ export function setUpdateServiceWorker(updateFn) {
 export async function applyServiceWorkerUpdate() {
   clearNeedsRefresh();
 
-  if (typeof updateServiceWorker === "function") {
+  // Clear all service worker caches so the page loads fresh content
+  if (typeof caches !== "undefined") {
     try {
-      await updateServiceWorker(true);
+      const cacheNames = await caches.keys();
+      await Promise.all(cacheNames.map((name) => caches.delete(name)));
     } catch {
-      // Fall through to reload.
+      // Ignore cache errors.
     }
   }
 
-  // Always reload as a fallback — the SW activation may not trigger
-  // a controllerchange when the update was detected via version.json.
+  // Unregister the service worker so it re-registers with new precache
+  if ("serviceWorker" in navigator) {
+    try {
+      const registrations = await navigator.serviceWorker.getRegistrations();
+      await Promise.all(registrations.map((reg) => reg.unregister()));
+    } catch {
+      // Ignore unregister errors.
+    }
+  }
+
+  // Always reload to pick up the new version
   if (typeof window !== "undefined") {
     window.location.reload();
   }

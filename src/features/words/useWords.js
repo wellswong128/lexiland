@@ -713,8 +713,9 @@ export function useWords({ isAuthLoading = false, user = null } = {}, storage) {
       return;
     }
 
-    activeGroupSyncPending = true;
-    setIsActiveGroupSyncing(true);
+    // Don't block the UI — import runs in the background.
+    // The scope data (mappedTerms) is already set by the event handler,
+    // so existing words that match the group show immediately.
 
     try {
       if (!preloadedPayload) {
@@ -741,12 +742,9 @@ export function useWords({ isAuthLoading = false, user = null } = {}, storage) {
       }
     } catch (error) {
       console.warn("Could not sync active-group words from wordbase.", error);
-    } finally {
-      activeGroupSyncPending = false;
-      setIsActiveGroupSyncing(false);
     }
 
-    // Memory sync runs in the background — it doesn't affect review counts.
+    // Memory sync also runs in the background.
     void syncActiveGroupWordMemory(
       wordsRef.current,
       (wordId, changes) => updateWordRef.current(wordId, changes),

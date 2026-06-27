@@ -27,7 +27,7 @@ export async function checkForAppUpdate() {
       hasUpdate: false,
       latestBuild: latestInfo?.build ?? null,
       latestVersion: latestInfo
-        ? formatAppVersionLabel({ semver: latestInfo.semver, builtAt: latestInfo.builtAt })
+        ? formatAppVersionLabel({ semver: latestInfo.semver, builtAt: latestInfo.builtAt, build: latestInfo.build })
         : null,
     };
   }
@@ -40,6 +40,7 @@ export async function checkForAppUpdate() {
     latestVersion: formatAppVersionLabel({
       semver: latestInfo.semver,
       builtAt: latestInfo.builtAt,
+      build: latestInfo.build,
     }),
   };
 }

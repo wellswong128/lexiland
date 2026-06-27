@@ -12,13 +12,15 @@ export function getAppSemver() {
 }
 
 export function formatAppVersionLabel(
-  { semver, builtAt } = {},
+  { semver, builtAt, build } = {},
   locale = typeof navigator !== "undefined" ? navigator.language : "en-GB",
 ) {
   const version = semver || APP_SEMVER;
+  const buildId = build || APP_BUILD_ID;
+  const buildSuffix = buildId && buildId !== "dev" ? ` (${buildId})` : "";
 
   if (!builtAt) {
-    return version;
+    return `${version}${buildSuffix}`;
   }
 
   const date = new Intl.DateTimeFormat(locale, {
@@ -27,12 +29,15 @@ export function formatAppVersionLabel(
     year: "numeric",
   }).format(new Date(builtAt));
 
-  return `${version} · ${date}`;
+  return `${version}${buildSuffix} · ${date}`;
 }
 
 /** User-facing version label for the currently loaded app bundle. */
 export function getAppVersionLabel(locale) {
-  return formatAppVersionLabel({ semver: APP_SEMVER, builtAt: APP_BUILT_AT }, locale);
+  return formatAppVersionLabel(
+    { semver: APP_SEMVER, builtAt: APP_BUILT_AT, build: APP_BUILD_ID },
+    locale,
+  );
 }
 
 function normalizeVersionPayload(data) {

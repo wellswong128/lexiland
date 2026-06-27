@@ -113,7 +113,7 @@ export function usePwaRuntimeStatus() {
       if (!cancelled && remoteVersion && hasRemoteVersionUpdate(remoteVersion.build)) {
         setLatestVersion(
           formatAppVersionLabel(
-            { semver: remoteVersion.semver, builtAt: remoteVersion.builtAt },
+            { semver: remoteVersion.semver, builtAt: remoteVersion.builtAt, build: remoteVersion.build },
             displayLocale,
           ),
         );
