@@ -225,7 +225,9 @@ function HomePage() {
     isLoadingScope,
     scopedWords,
   } = useActiveGroupWordScope(words, user);
-  const isHomeLoading = isWordsLoading || isLoadingScope;
+  const isScopePending =
+    isLoadingScope && isGroupScopeActive && scopedWords.length === 0;
+  const isHomeLoading = isWordsLoading || isScopePending;
   const learningWords = isGroupScopeActive ? scopedWords : words;
   const role = getRoleFromUser(user);
   const dueWords = getDueWords(learningWords);

@@ -3,11 +3,11 @@ import { Link } from "react-router-dom";
 import { useLocale } from "../locale/LocaleContext.jsx";
 import { getActiveGroupLabel } from "./getActiveGroupLabel.js";
 import { getFriendlyNetworkError } from "../../lib/networkErrors.js";
-import { clearCachedActiveGroupScope } from "./activeGroupScopeCache.js";
+import { saveCachedActiveGroupScope } from "./activeGroupScopeCache.js";
 import {
+  fetchUserActiveGroupWords,
   fetchUserGroupPicks,
   fetchWordGroups,
-  invalidateUserActiveGroupWordsCache,
   saveUserGroupPicks,
   setUserActiveGroup,
 } from "./wordGroupsApi.js";
@@ -115,13 +115,22 @@ function WordGroupSettingsSection({ user, hasSupabaseConfig }) {
         setPickedGroupCodes(nextPickedCodes);
       }
 
-      const payload = await setUserActiveGroup(group.groupCode);
-      setActiveGroupCode(payload.activeGroupCode || group.groupCode);
+      await setUserActiveGroup(group.groupCode);
+      const scopePayload = await fetchUserActiveGroupWords({ forceRefresh: true });
+      const activeGroup = scopePayload.activeGroup ?? {
+        groupCode: group.groupCode,
+        grade: group.grade,
+        subject: group.subject,
+        displayNameEn: group.displayNameEn ?? "",
+        displayNameZhHant: group.displayNameZhHant ?? "",
+      };
+      const mappedTerms = Array.isArray(scopePayload.mappedTerms) ? scopePayload.mappedTerms : [];
+
+      saveCachedActiveGroupScope(user.id, { activeGroup, mappedTerms });
+      setActiveGroupCode(activeGroup.groupCode || group.groupCode);
       setSelectedGrade(group.grade);
       setNotice(t("settings.wordGroups.activeUpdated"));
-      invalidateUserActiveGroupWordsCache();
-      clearCachedActiveGroupScope(user.id);
-      notifyActiveGroupChanged({ activeGroup: group });
+      notifyActiveGroupChanged({ activeGroup, mappedTerms });
     } catch (switchError) {
       setError(
         getFriendlyNetworkError(

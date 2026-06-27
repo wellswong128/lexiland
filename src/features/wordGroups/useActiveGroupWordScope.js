@@ -78,16 +78,8 @@ export function useActiveGroupWordScope(words, user) {
     }
 
     setState((current) => {
-      if (forceRefresh) {
-        return {
-          ...current,
-          mappedTerms: [],
-          isLoading: true,
-          error: "",
-        };
-      }
-
       const hasCachedData = Boolean(current.activeGroup) || current.mappedTerms.length > 0;
+
       return {
         ...current,
         isLoading: !hasCachedData,
@@ -135,19 +127,27 @@ export function useActiveGroupWordScope(words, user) {
 
     const handleActiveGroupChanged = (event) => {
       invalidateUserActiveGroupWordsCache();
-      clearCachedActiveGroupScope(user?.id);
       saveWordScopeMode(user?.id, WORD_SCOPE_MODES.GROUP);
       setScopeMode(WORD_SCOPE_MODES.GROUP);
 
       const nextActiveGroup = event?.detail?.activeGroup ?? null;
-      if (nextActiveGroup) {
-        setState((current) => ({
-          ...current,
+      const nextMappedTerms = event?.detail?.mappedTerms;
+
+      if (nextActiveGroup && Array.isArray(nextMappedTerms)) {
+        if (user?.id) {
+          saveCachedActiveGroupScope(user.id, {
+            activeGroup: nextActiveGroup,
+            mappedTerms: nextMappedTerms,
+          });
+        }
+
+        setState({
           activeGroup: nextActiveGroup,
-          mappedTerms: [],
-          isLoading: true,
+          mappedTerms: nextMappedTerms,
+          isLoading: false,
           error: "",
-        }));
+        });
+        return;
       }
 
       void loadScope({ forceRefresh: true });
