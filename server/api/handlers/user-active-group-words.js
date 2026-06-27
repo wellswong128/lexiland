@@ -29,6 +29,11 @@ function parseBoolean(value, fallback = false) {
   return fallback;
 }
 
+function parsePositiveInt(value) {
+  const parsed = Number.parseInt(String(value ?? ""), 10);
+  return Number.isFinite(parsed) && parsed > 0 ? parsed : 0;
+}
+
 export default async function handler(request, response) {
   if (request.method !== "GET") {
     sendJson(response, 405, { error: "Method not allowed." });
@@ -46,6 +51,7 @@ export default async function handler(request, response) {
   try {
     const rlsClient = createRlsClientForRequest(request);
     const includeWords = parseBoolean(request.query?.includeWords, false);
+    const wordLimit = parsePositiveInt(request.query?.wordLimit);
     const userId = auth.user.id;
 
     const { data: preference, error: preferenceError } = await rlsClient
@@ -144,7 +150,8 @@ export default async function handler(request, response) {
     };
 
     if (includeWords) {
-      payload.mappedWords = (wordbaseRows ?? []).map((row) => ({
+      const rowsForWords = wordLimit > 0 ? (wordbaseRows ?? []).slice(0, wordLimit) : wordbaseRows ?? [];
+      payload.mappedWords = rowsForWords.map((row) => ({
         term: row.term ?? "",
         definition: row.definition ?? "",
         translation: row.translation ?? "",

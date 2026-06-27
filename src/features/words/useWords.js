@@ -38,6 +38,7 @@ import {
   batchUpdateWordMemoryInSupabase,
 } from "./wordsApi.js";
 import {
+  ACTIVE_GROUP_INITIAL_IMPORT_COUNT,
   fetchUserActiveGroupWords,
   invalidateUserActiveGroupWordsCache,
 } from "../wordGroups/wordGroupsApi.js";
@@ -171,13 +172,29 @@ function hasRemoteWordChanges(changes) {
   return Object.keys(mapWordChangesToUpdate(changes)).length > 0;
 }
 
-async function importMissingActiveGroupWords(userId, existingWords, preloadedPayload = null) {
-  const payload =
-    preloadedPayload ?? (await fetchUserActiveGroupWords({ includeWords: true }));
+async function importMissingActiveGroupWords(
+  userId,
+  existingWords,
+  preloadedPayload = null,
+  { limit = null, wordLimit = 0, forceRefresh = false } = {},
+) {
+  let payload = preloadedPayload;
+  const payloadHasWords =
+    Array.isArray(payload?.mappedWords) && payload.mappedWords.length > 0;
+
+  if (!payloadHasWords) {
+    payload = await fetchUserActiveGroupWords({
+      includeWords: true,
+      wordLimit: wordLimit > 0 ? wordLimit : 0,
+      forceRefresh,
+    });
+  }
+
   const mappedWords = Array.isArray(payload.mappedWords) ? payload.mappedWords : [];
-  if (!payload.activeGroup || mappedWords.length === 0) {
+
+  if (!payload.activeGroup) {
     return {
-      activeGroup: payload.activeGroup ?? null,
+      activeGroup: null,
       importedWords: [],
       mappedWords,
     };
@@ -190,10 +207,22 @@ async function importMissingActiveGroupWords(userId, existingWords, preloadedPay
     });
   }
 
+  if (mappedWords.length === 0) {
+    return {
+      activeGroup: payload.activeGroup ?? null,
+      importedWords: [],
+      mappedWords,
+    };
+  }
+
   const existingTerms = new Set(existingWords.map((word) => normalizeTerm(word.term)));
   const drafts = [];
 
   for (const sourceWord of mappedWords) {
+    if (limit != null && drafts.length >= limit) {
+      break;
+    }
+
     const term = normalizeText(sourceWord?.term);
     const definition = normalizeText(sourceWord?.definition);
     const termKey = normalizeTerm(term);
@@ -277,7 +306,10 @@ export function useWords({ isAuthLoading = false, user = null } = {}, storage) {
     allowCacheSaveRef.current = false;
     const cachedWords = loadWordsForUser(user.id, storage);
     const hasCachedWords = cachedWords.length > 0;
-    const groupPayloadPromise = fetchUserActiveGroupWords({ includeWords: true });
+    const groupPayloadPromise = fetchUserActiveGroupWords({
+      includeWords: true,
+      wordLimit: ACTIVE_GROUP_INITIAL_IMPORT_COUNT,
+    });
 
     if (hasCachedWords) {
       setWords(hydrateWords(cachedWords, storage));
@@ -305,28 +337,54 @@ export function useWords({ isAuthLoading = false, user = null } = {}, storage) {
               return;
             }
 
-            const { importedWords, activeGroup, mappedWords } = await importMissingActiveGroupWords(
+            const firstBatch = await importMissingActiveGroupWords(
               user.id,
               wordsRef.current,
               groupPayload,
+              { limit: ACTIVE_GROUP_INITIAL_IMPORT_COUNT },
             );
-            lastMappedWordsRef.current = mappedWords;
+            lastMappedWordsRef.current = firstBatch.mappedWords;
 
             if (!isMounted) {
               return;
             }
 
-            if (importedWords.length > 0) {
-              const nextWords = hydrateWords([...importedWords, ...wordsRef.current], storage);
+            if (firstBatch.importedWords.length > 0) {
+              const nextWords = hydrateWords([...firstBatch.importedWords, ...wordsRef.current], storage);
               wordsRef.current = nextWords;
               setWords(nextWords);
 
-              if (activeGroup) {
+              if (firstBatch.activeGroup) {
                 setAutoImportedNotice({
-                  count: importedWords.length,
-                  groupCode: activeGroup.groupCode ?? "",
-                  groupNameEn: activeGroup.displayNameEn ?? "",
-                  groupNameZhHant: activeGroup.displayNameZhHant ?? "",
+                  count: firstBatch.importedWords.length,
+                  groupCode: firstBatch.activeGroup.groupCode ?? "",
+                  groupNameEn: firstBatch.activeGroup.displayNameEn ?? "",
+                  groupNameZhHant: firstBatch.activeGroup.displayNameZhHant ?? "",
+                });
+              }
+            }
+
+            invalidateUserActiveGroupWordsCache();
+            const fullBatch = await importMissingActiveGroupWords(user.id, wordsRef.current, null, {
+              forceRefresh: true,
+            });
+            lastMappedWordsRef.current = fullBatch.mappedWords;
+
+            if (!isMounted) {
+              return;
+            }
+
+            if (fullBatch.importedWords.length > 0) {
+              const nextWords = hydrateWords([...fullBatch.importedWords, ...wordsRef.current], storage);
+              wordsRef.current = nextWords;
+              setWords(nextWords);
+
+              if (fullBatch.activeGroup) {
+                setAutoImportedNotice({
+                  count: fullBatch.importedWords.length,
+                  groupCode: fullBatch.activeGroup.groupCode ?? "",
+                  groupNameEn: fullBatch.activeGroup.displayNameEn ?? "",
+                  groupNameZhHant: fullBatch.activeGroup.displayNameZhHant ?? "",
                 });
               }
             }
@@ -713,33 +771,47 @@ export function useWords({ isAuthLoading = false, user = null } = {}, storage) {
       return;
     }
 
-    // Don't block the UI — import runs in the background.
-    // The scope data (mappedTerms) is already set by the event handler,
-    // so existing words that match the group show immediately.
+    const applyImportedWords = (importedWords, activeGroup) => {
+      if (importedWords.length === 0) {
+        return;
+      }
+
+      const nextWords = hydrateWords([...importedWords, ...wordsRef.current], storage);
+      wordsRef.current = nextWords;
+      setWords(nextWords);
+
+      if (activeGroup) {
+        setAutoImportedNotice({
+          ...buildAutoImportedNotice(activeGroup),
+          count: importedWords.length,
+        });
+      }
+    };
 
     try {
-      if (!preloadedPayload) {
-        invalidateUserActiveGroupWordsCache();
-      }
+      const initialPayload =
+        preloadedPayload ??
+        (await fetchUserActiveGroupWords({
+          includeWords: true,
+          wordLimit: ACTIVE_GROUP_INITIAL_IMPORT_COUNT,
+          forceRefresh: true,
+        }));
 
-      const { importedWords, activeGroup, mappedWords } = await importMissingActiveGroupWords(
+      const firstBatch = await importMissingActiveGroupWords(
         user.id,
         wordsRef.current,
-        preloadedPayload,
+        initialPayload,
+        { limit: ACTIVE_GROUP_INITIAL_IMPORT_COUNT },
       );
-      lastMappedWordsRef.current = mappedWords;
+      lastMappedWordsRef.current = firstBatch.mappedWords;
+      applyImportedWords(firstBatch.importedWords, firstBatch.activeGroup);
 
-      if (importedWords.length > 0) {
-        const nextWords = hydrateWords([...importedWords, ...wordsRef.current], storage);
-        wordsRef.current = nextWords;
-        setWords(nextWords);
-        if (activeGroup) {
-          setAutoImportedNotice({
-            ...buildAutoImportedNotice(activeGroup),
-            count: importedWords.length,
-          });
-        }
-      }
+      invalidateUserActiveGroupWordsCache();
+      const fullBatch = await importMissingActiveGroupWords(user.id, wordsRef.current, null, {
+        forceRefresh: true,
+      });
+      lastMappedWordsRef.current = fullBatch.mappedWords;
+      applyImportedWords(fullBatch.importedWords, fullBatch.activeGroup);
     } catch (error) {
       console.warn("Could not sync active-group words from wordbase.", error);
     }

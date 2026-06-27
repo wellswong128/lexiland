@@ -3,6 +3,8 @@ import { resolveApiUrl } from "../../lib/apiBase.js";
 
 const CACHE_TTL_MS = 60_000;
 
+export const ACTIVE_GROUP_INITIAL_IMPORT_COUNT = 10;
+
 let cachedFullPayload = null;
 let cachedAt = 0;
 let inflightFullRequest = null;
@@ -26,11 +28,14 @@ function stripWordsFromPayload(payload) {
   return rest;
 }
 
-async function fetchUserActiveGroupWordsFromNetwork(includeWords) {
+async function fetchUserActiveGroupWordsFromNetwork({ includeWords = false, wordLimit = 0 } = {}) {
   const authHeaders = await getApiAuthHeaders();
   const params = new URLSearchParams();
   if (includeWords) {
     params.set("includeWords", "1");
+  }
+  if (wordLimit > 0) {
+    params.set("wordLimit", String(wordLimit));
   }
   const queryString = params.toString();
   const response = await fetch(
@@ -53,9 +58,10 @@ export function invalidateUserActiveGroupWordsCache() {
 
 export async function fetchUserActiveGroupWords(options = {}) {
   const includeWords = Boolean(options.includeWords);
+  const wordLimit = Number(options.wordLimit) > 0 ? Number(options.wordLimit) : 0;
   const forceRefresh = Boolean(options.forceRefresh);
 
-  if (!forceRefresh && isCacheValid()) {
+  if (!forceRefresh && isCacheValid() && wordLimit === 0) {
     if (!includeWords) {
       return stripWordsFromPayload(cachedFullPayload);
     }
@@ -65,11 +71,15 @@ export async function fetchUserActiveGroupWords(options = {}) {
   }
 
   if (includeWords) {
+    if (wordLimit > 0) {
+      return fetchUserActiveGroupWordsFromNetwork({ includeWords: true, wordLimit });
+    }
+
     if (!forceRefresh && inflightFullRequest) {
       return inflightFullRequest;
     }
 
-    inflightFullRequest = fetchUserActiveGroupWordsFromNetwork(true)
+    inflightFullRequest = fetchUserActiveGroupWordsFromNetwork({ includeWords: true, wordLimit })
       .then((payload) => {
         cachedFullPayload = payload;
         cachedAt = Date.now();
@@ -82,7 +92,7 @@ export async function fetchUserActiveGroupWords(options = {}) {
     return inflightFullRequest;
   }
 
-  if (!forceRefresh && inflightFullRequest) {
+  if (!forceRefresh && inflightFullRequest && wordLimit === 0) {
     const fullPayload = await inflightFullRequest;
     return stripWordsFromPayload(fullPayload);
   }
@@ -91,7 +101,7 @@ export async function fetchUserActiveGroupWords(options = {}) {
     return inflightTermsRequest;
   }
 
-  inflightTermsRequest = fetchUserActiveGroupWordsFromNetwork(false)
+  inflightTermsRequest = fetchUserActiveGroupWordsFromNetwork({ includeWords: false })
     .then((payload) => {
       if (!isCacheValid() || cachedFullPayload?.mappedWords) {
         cachedFullPayload = payload;
@@ -156,15 +166,22 @@ export async function fetchUserActiveGroup() {
   return parseJsonResponse(response);
 }
 
-export async function setUserActiveGroup(groupCode, { includeWords = false } = {}) {
+export async function setUserActiveGroup(
+  groupCode,
+  { includeWords = false, wordLimit = 0 } = {},
+) {
   const authHeaders = await getApiAuthHeaders();
+  const body = { groupCode, includeWords };
+  if (wordLimit > 0) {
+    body.wordLimit = wordLimit;
+  }
   const response = await fetch(resolveApiUrl("/api/user-active-group"), {
     method: "PUT",
     headers: {
       "Content-Type": "application/json",
       ...authHeaders,
     },
-    body: JSON.stringify({ groupCode, includeWords }),
+    body: JSON.stringify(body),
   });
 
   const payload = await parseJsonResponse(response);

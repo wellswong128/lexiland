@@ -24,7 +24,12 @@ function normalizeTermForGroup(value) {
   return String(value ?? "").trim().toLowerCase();
 }
 
-async function fetchGroupMappedWords(rlsClient, groupId, includeWords) {
+function parsePositiveInt(value) {
+  const parsed = Number.parseInt(String(value ?? ""), 10);
+  return Number.isFinite(parsed) && parsed > 0 ? parsed : 0;
+}
+
+async function fetchGroupMappedWords(rlsClient, groupId, includeWords, wordLimit = 0) {
   const { data: mappings, error: mappingError } = await rlsClient
     .from("wordbase_group_map")
     .select("wordbase_id")
@@ -60,7 +65,9 @@ async function fetchGroupMappedWords(rlsClient, groupId, includeWords) {
 
   let mappedWords = [];
   if (includeWords) {
-    mappedWords = (wordbaseRows ?? []).map((row) => ({
+    const rowsForWords =
+      wordLimit > 0 ? (wordbaseRows ?? []).slice(0, wordLimit) : wordbaseRows ?? [];
+    mappedWords = rowsForWords.map((row) => ({
       term: row.term ?? "",
       definition: row.definition ?? "",
       translation: row.translation ?? "",
@@ -131,6 +138,7 @@ async function handlePut(request, response, auth) {
   }
 
   const includeWords = Boolean(body.includeWords);
+  const wordLimit = parsePositiveInt(body.wordLimit);
   const rlsClient = createRlsClientForRequest(request);
   const userId = auth.user.id;
 
@@ -175,7 +183,12 @@ async function handlePut(request, response, auth) {
   }
 
   const activeGroup = mapGroupRow(group);
-  const { mappedTerms, mappedWords } = await fetchGroupMappedWords(rlsClient, group.id, includeWords);
+  const { mappedTerms, mappedWords } = await fetchGroupMappedWords(
+    rlsClient,
+    group.id,
+    includeWords,
+    wordLimit,
+  );
 
   const payload = {
     activeGroup,
