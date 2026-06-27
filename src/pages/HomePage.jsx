@@ -217,7 +217,7 @@ function getPrimaryCta({ wordCount, dueCount, mistakeCount }) {
 function HomePage() {
   const { locale, t } = useLocale();
   const location = useLocation();
-  const { isWordsLoading, user, words } = useWordsContext();
+  const { isActiveGroupSyncing, isWordsLoading, user, words } = useWordsContext();
   const {
     activeGroup,
     isGroupScopeActive,
@@ -227,7 +227,9 @@ function HomePage() {
   } = useActiveGroupWordScope(words, user);
   const isScopePending =
     isLoadingScope && isGroupScopeActive && scopedWords.length === 0;
-  const isHomeLoading = isWordsLoading || isScopePending;
+  const isGroupWordsSettling =
+    isActiveGroupSyncing && isGroupScopeActive && scopedWords.length === 0;
+  const isHomeLoading = isWordsLoading || isScopePending || isGroupWordsSettling;
   const learningWords = isGroupScopeActive ? scopedWords : words;
   const role = getRoleFromUser(user);
   const dueWords = getDueWords(learningWords);

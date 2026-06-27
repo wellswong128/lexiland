@@ -246,9 +246,12 @@ function buildAutoImportedNotice(activeGroup) {
   };
 }
 
+let activeGroupSyncPending = false;
+
 export function useWords({ isAuthLoading = false, user = null } = {}, storage) {
   const [words, setWords] = useState(() => hydrateWords(loadWords(storage), storage));
   const [isWordsLoading, setIsWordsLoading] = useState(hasSupabaseConfig);
+  const [isActiveGroupSyncing, setIsActiveGroupSyncing] = useState(() => activeGroupSyncPending);
   const [wordsError, setWordsError] = useState("");
   const [autoImportedNotice, setAutoImportedNotice] = useState(null);
   const isUsingSupabase = hasSupabaseConfig && Boolean(user);
@@ -690,16 +693,23 @@ export function useWords({ isAuthLoading = false, user = null } = {}, storage) {
     }
   }, [isUsingSupabase, user?.id]);
 
-  const runActiveGroupSync = useCallback(async () => {
+  const runActiveGroupSync = useCallback(async (preloadedPayload = null) => {
     if (!isUsingSupabase || !user?.id || !updateWordRef.current) {
       return;
     }
 
+    activeGroupSyncPending = true;
+    setIsActiveGroupSyncing(true);
+
     try {
-      invalidateUserActiveGroupWordsCache();
+      if (!preloadedPayload) {
+        invalidateUserActiveGroupWordsCache();
+      }
+
       const { importedWords, activeGroup, mappedWords } = await importMissingActiveGroupWords(
         user.id,
         wordsRef.current,
+        preloadedPayload,
       );
       lastMappedWordsRef.current = mappedWords;
 
@@ -723,6 +733,9 @@ export function useWords({ isAuthLoading = false, user = null } = {}, storage) {
       );
     } catch (error) {
       console.warn("Could not sync active-group words from wordbase.", error);
+    } finally {
+      activeGroupSyncPending = false;
+      setIsActiveGroupSyncing(false);
     }
   }, [isUsingSupabase, storage, user?.id]);
 
@@ -747,8 +760,8 @@ export function useWords({ isAuthLoading = false, user = null } = {}, storage) {
       void runActiveGroupSync();
     };
 
-    const handleActiveGroupChanged = () => {
-      void runActiveGroupSync();
+    const handleActiveGroupChanged = (event) => {
+      void runActiveGroupSync(event?.detail?.scopePayload ?? null);
     };
 
     window.addEventListener(ACTIVE_GROUP_CHANGED_EVENT, handleActiveGroupChanged);
@@ -767,6 +780,7 @@ export function useWords({ isAuthLoading = false, user = null } = {}, storage) {
     importWords,
     isUsingSupabase,
     isWordsLoading: isAuthLoading || isWordsLoading,
+    isActiveGroupSyncing,
     autoImportedNotice,
     clearAutoImportedNotice,
     resetAllWords,
