@@ -92,7 +92,7 @@ function FlashcardsPrepareErrorActions({
 
 function FlashcardsPage() {
   const { locale, t } = useLocale();
-  const { updateWord, user, words } = useWordsContext();
+  const { isActiveGroupSyncing, updateWord, user, words } = useWordsContext();
   const { isLoadingScope, isGroupScopeActive, scopedWords } = useActiveGroupWordScope(words, user);
   const reviewWords = isGroupScopeActive ? scopedWords : words;
   const enrichedExampleWordIdsRef = useRef(new Set());
@@ -369,7 +369,7 @@ function FlashcardsPage() {
     goToNextWord();
   }
 
-  if (isLoadingScope) {
+  if (isLoadingScope || (isGroupScopeActive && reviewWords.length === 0 && isActiveGroupSyncing)) {
     return (
       <section className="w-full max-w-3xl rounded-3xl border border-blue-200/70 bg-white/90 p-8 text-center shadow-2xl shadow-blue-950/10 sm:p-14">
         <p className="text-sm font-medium text-slate-600">{t("wordGroupsScope.loading")}</p>

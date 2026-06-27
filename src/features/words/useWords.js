@@ -42,7 +42,7 @@ import {
   fetchUserActiveGroupWords,
   invalidateUserActiveGroupWordsCache,
 } from "../wordGroups/wordGroupsApi.js";
-import { saveCachedActiveGroupScope } from "../wordGroups/activeGroupScopeCache.js";
+import { saveCachedActiveGroupScope, loadCachedActiveGroupScope } from "../wordGroups/activeGroupScopeCache.js";
 import { ACTIVE_GROUP_CHANGED_EVENT } from "../wordGroups/wordGroupScopeEvents.js";
 import { syncActiveGroupWordMemory } from "../wordGroups/syncActiveGroupWordMemory.js";
 import { WORD_SCOPE_MODE_CHANGED_EVENT, loadWordScopeMode, WORD_SCOPE_MODES } from "../wordGroups/wordScopeMode.js";
@@ -277,6 +277,7 @@ function buildAutoImportedNotice(activeGroup) {
 }
 
 let activeGroupSyncPending = false;
+let queuedScopePayload = null;
 
 export function useWords({ isAuthLoading = false, user = null } = {}, storage) {
   const [words, setWords] = useState(() => hydrateWords(loadWords(storage), storage));
@@ -767,9 +768,20 @@ export function useWords({ isAuthLoading = false, user = null } = {}, storage) {
   }, [isUsingSupabase, user?.id]);
 
   const runActiveGroupSync = useCallback(async (preloadedPayload = null) => {
-    if (!isUsingSupabase || !user?.id || !updateWordRef.current) {
+    if (!isUsingSupabase || !user?.id) {
       return;
     }
+
+    if (preloadedPayload) {
+      queuedScopePayload = preloadedPayload;
+    }
+
+    if (activeGroupSyncPending) {
+      return;
+    }
+
+    activeGroupSyncPending = true;
+    setIsActiveGroupSyncing(true);
 
     const applyImportedWords = (importedWords, activeGroup) => {
       if (importedWords.length === 0) {
@@ -790,12 +802,13 @@ export function useWords({ isAuthLoading = false, user = null } = {}, storage) {
 
     try {
       const initialPayload =
-        preloadedPayload ??
+        queuedScopePayload ??
         (await fetchUserActiveGroupWords({
           includeWords: true,
           wordLimit: ACTIVE_GROUP_INITIAL_IMPORT_COUNT,
           forceRefresh: true,
         }));
+      queuedScopePayload = null;
 
       const firstBatch = await importMissingActiveGroupWords(
         user.id,
@@ -814,6 +827,17 @@ export function useWords({ isAuthLoading = false, user = null } = {}, storage) {
       applyImportedWords(fullBatch.importedWords, fullBatch.activeGroup);
     } catch (error) {
       console.warn("Could not sync active-group words from wordbase.", error);
+    } finally {
+      activeGroupSyncPending = false;
+      setIsActiveGroupSyncing(false);
+
+      if (queuedScopePayload) {
+        void runActiveGroupSync();
+      }
+    }
+
+    if (!updateWordRef.current) {
+      return;
     }
 
     // Memory sync also runs in the background.
@@ -874,6 +898,35 @@ export function useWords({ isAuthLoading = false, user = null } = {}, storage) {
       window.removeEventListener(WORD_SCOPE_MODE_CHANGED_EVENT, handleGroupSync);
     };
   }, [isUsingSupabase, runActiveGroupSync, user?.id]);
+
+  useEffect(() => {
+    if (!isUsingSupabase || isWordsLoading || !user?.id) {
+      return;
+    }
+
+    if (loadWordScopeMode(user.id) !== WORD_SCOPE_MODES.GROUP) {
+      return;
+    }
+
+    const cachedScope = loadCachedActiveGroupScope(user.id);
+    if (!cachedScope?.activeGroup || !Array.isArray(cachedScope.mappedTerms)) {
+      return;
+    }
+
+    const mappedSet = new Set(
+      cachedScope.mappedTerms.map((term) => normalizeTerm(term)).filter(Boolean),
+    );
+    if (mappedSet.size === 0) {
+      return;
+    }
+
+    const hasScopedWords = wordsRef.current.some((word) =>
+      mappedSet.has(normalizeTerm(word.term)),
+    );
+    if (!hasScopedWords && !activeGroupSyncPending) {
+      void runActiveGroupSync();
+    }
+  }, [isUsingSupabase, isWordsLoading, runActiveGroupSync, user?.id]);
 
   return {
     addWord,

@@ -52,7 +52,7 @@ function getVisibleWordTags(tags = []) {
 
 function WordListPage() {
   const { locale, t } = useLocale();
-  const { autoImportedNotice, clearAutoImportedNotice, deleteWord, user, words } =
+  const { autoImportedNotice, clearAutoImportedNotice, deleteWord, isActiveGroupSyncing, user, words } =
     useWordsContext();
   const {
     isLoadingScope,
@@ -245,7 +245,7 @@ function WordListPage() {
         </p>
       ) : null}
 
-      {isLoadingScope ? (
+      {isLoadingScope || (isGroupScopeActive && scopedWords.length === 0 && isActiveGroupSyncing) ? (
         <div className="rounded-2xl border border-dashed border-blue-200 bg-blue-50/70 p-8 text-center">
           <p className="text-sm text-slate-600">{t("wordGroupsScope.loading")}</p>
         </div>
