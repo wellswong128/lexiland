@@ -2,6 +2,8 @@
 
 This guide explains how to use `scripts/wordbase_import/import_words_from_images.py` to import vocabulary from page images into LexiLand Wordbase.
 
+For PDF files, see [bulk_import_pdf.md](./bulk_import_pdf.md).
+
 ## What It Does
 
 The script runs in two phases:

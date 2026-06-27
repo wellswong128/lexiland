@@ -7,6 +7,15 @@
   "version": "2026.06",
   "display_name_en": "S5 Chemistry",
   "display_name_zh_hant": "中五化學",
+  "source": {
+    "type": "curriculum_style_public_references",
+    "references": [
+      "EDB Chemistry Curriculum and Assessment Guide (Secondary 4-6)",
+      "EDB senior secondary Chemistry Compulsory Part and Elective Part learning objectives",
+      "Public Hong Kong S5 Chemistry syllabus topic examples (energetics, kinetics, equilibrium, acids and bases, redox and electrochemistry, transition metals, organic chemistry, analytical methods, industrial chemistry)"
+    ],
+    "note": "No fixed official Hong Kong S5 chemistry vocabulary list is prescribed; this list is theme-based for senior secondary S5 chemistry enrichment import. Term-only entries are completed during import."
+  },
   "words": [
     {
       "term": "Enthalpy change",
@@ -326,6 +335,3240 @@
         "coordination chemistry",
         "component",
         "noun"
+      ]
+    },
+    {
+      "term": "acid deposition effect",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "environmental-and-green-chemistry"
+      ]
+    },
+    {
+      "term": "acid dissociation constant Ka",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "acids-bases-and-ph-calculations"
+      ]
+    },
+    {
+      "term": "activation energy determination",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "reaction-kinetics-advanced"
+      ]
+    },
+    {
+      "term": "addition polymer",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "materials-polymers-and-nanochemistry"
+      ]
+    },
+    {
+      "term": "addition polymerization",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "organic-reactions-and-mechanisms"
+      ]
+    },
+    {
+      "term": "alcohol",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "organic-functional-groups-and-nomenclature"
+      ]
+    },
+    {
+      "term": "aldehyde",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "organic-functional-groups-and-nomenclature"
+      ]
+    },
+    {
+      "term": "alloy composition design",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "materials-polymers-and-nanochemistry"
+      ]
+    },
+    {
+      "term": "alpha radiation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "nuclear-and-radiochemistry-basics"
+      ]
+    },
+    {
+      "term": "amide",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "organic-functional-groups-and-nomenclature"
+      ]
+    },
+    {
+      "term": "amine",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "organic-functional-groups-and-nomenclature"
+      ]
+    },
+    {
+      "term": "amino group",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "organic-functional-groups-and-nomenclature"
+      ]
+    },
+    {
+      "term": "ammonia synthesis catalyst",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "industrial-chemical-processes"
+      ]
+    },
+    {
+      "term": "amphoteric species",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "acids-bases-and-ph-calculations"
+      ]
+    },
+    {
+      "term": "aromatic compound",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "organic-functional-groups-and-nomenclature"
+      ]
+    },
+    {
+      "term": "Arrhenius plot",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "reaction-kinetics-advanced"
+      ]
+    },
+    {
+      "term": "atom economy improvement",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "environmental-and-green-chemistry"
+      ]
+    },
+    {
+      "term": "autocatalysis",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "reaction-kinetics-advanced"
+      ]
+    },
+    {
+      "term": "background radiation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "nuclear-and-radiochemistry-basics"
+      ]
+    },
+    {
+      "term": "base dissociation constant Kb",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "acids-bases-and-ph-calculations"
+      ]
+    },
+    {
+      "term": "batch process",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "industrial-chemical-processes"
+      ]
+    },
+    {
+      "term": "beta radiation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "nuclear-and-radiochemistry-basics"
+      ]
+    },
+    {
+      "term": "bidentate ligand",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "transition-metals-and-complex-chemistry"
+      ]
+    },
+    {
+      "term": "binding energy per nucleon",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "nuclear-and-radiochemistry-basics"
+      ]
+    },
+    {
+      "term": "biochemical oxygen demand",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "environmental-and-green-chemistry"
+      ]
+    },
+    {
+      "term": "biodegradability test",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "environmental-and-green-chemistry"
+      ]
+    },
+    {
+      "term": "biodegradable polymer",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "materials-polymers-and-nanochemistry"
+      ]
+    },
+    {
+      "term": "boiling point determination",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "laboratory-analysis-and-examination-skills"
+      ]
+    },
+    {
+      "term": "bond enthalpy mean value",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "advanced-chemical-energetics"
+      ]
+    },
+    {
+      "term": "Born-Haber cycle",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "advanced-chemical-energetics"
+      ]
+    },
+    {
+      "term": "Brønsted-Lowry acid",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "acids-bases-and-ph-calculations"
+      ]
+    },
+    {
+      "term": "Brønsted-Lowry base",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "acids-bases-and-ph-calculations"
+      ]
+    },
+    {
+      "term": "buffer capacity",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "acids-bases-and-ph-calculations"
+      ]
+    },
+    {
+      "term": "burette reading parallax",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "laboratory-analysis-and-examination-skills"
+      ]
+    },
+    {
+      "term": "by-product utilization",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "industrial-chemical-processes"
+      ]
+    },
+    {
+      "term": "calculating enthalpy change from data",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "advanced-chemical-energetics"
+      ]
+    },
+    {
+      "term": "calculating equilibrium composition",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "chemical-equilibrium-advanced"
+      ]
+    },
+    {
+      "term": "calibration curve",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "analytical-and-instrumental-chemistry"
+      ]
+    },
+    {
+      "term": "calorimeter correction",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "advanced-chemical-energetics"
+      ]
+    },
+    {
+      "term": "carbocation stability",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "organic-reactions-and-mechanisms"
+      ]
+    },
+    {
+      "term": "carbon capture concept",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "industrial-chemical-processes"
+      ]
+    },
+    {
+      "term": "carbon dating application",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "nuclear-and-radiochemistry-basics"
+      ]
+    },
+    {
+      "term": "carbon dioxide capture",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "environmental-and-green-chemistry"
+      ]
+    },
+    {
+      "term": "carbonyl group",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "organic-functional-groups-and-nomenclature"
+      ]
+    },
+    {
+      "term": "carboxylic acid",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "organic-functional-groups-and-nomenclature"
+      ]
+    },
+    {
+      "term": "catalyst at nanoscale",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "materials-polymers-and-nanochemistry"
+      ]
+    },
+    {
+      "term": "catalytic activity of transition metal",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "transition-metals-and-complex-chemistry"
+      ]
+    },
+    {
+      "term": "catalytic cracking",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "industrial-chemical-processes"
+      ]
+    },
+    {
+      "term": "catalytic pollution control",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "environmental-and-green-chemistry"
+      ]
+    },
+    {
+      "term": "cell diagram notation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "electrochemistry-and-electrode-potentials"
+      ]
+    },
+    {
+      "term": "cell potential calculation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "electrochemistry-and-electrode-potentials"
+      ]
+    },
+    {
+      "term": "ceramic material property",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "materials-polymers-and-nanochemistry"
+      ]
+    },
+    {
+      "term": "chain reaction control",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "nuclear-and-radiochemistry-basics"
+      ]
+    },
+    {
+      "term": "chelate complex",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "transition-metals-and-complex-chemistry"
+      ]
+    },
+    {
+      "term": "chemical oxygen demand",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "environmental-and-green-chemistry"
+      ]
+    },
+    {
+      "term": "chlor-alkali process",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "industrial-chemical-processes"
+      ]
+    },
+    {
+      "term": "choosing suitable indicator",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "laboratory-analysis-and-examination-skills"
+      ]
+    },
+    {
+      "term": "cobalt complex isomer",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "transition-metals-and-complex-chemistry"
+      ]
+    },
+    {
+      "term": "collision frequency factor",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "reaction-kinetics-advanced"
+      ]
+    },
+    {
+      "term": "colorimetric rate measurement",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "reaction-kinetics-advanced"
+      ]
+    },
+    {
+      "term": "coloured ion formation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "transition-metals-and-complex-chemistry"
+      ]
+    },
+    {
+      "term": "common ion effect",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "chemical-equilibrium-advanced"
+      ]
+    },
+    {
+      "term": "comparing acid strength",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "acids-bases-and-ph-calculations"
+      ]
+    },
+    {
+      "term": "comparing batch and continuous process",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "industrial-chemical-processes"
+      ]
+    },
+    {
+      "term": "comparing bond energy and lattice energy",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "advanced-chemical-energetics"
+      ]
+    },
+    {
+      "term": "comparing experimental and literature value",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "laboratory-analysis-and-examination-skills"
+      ]
+    },
+    {
+      "term": "comparing fission and fusion",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "nuclear-and-radiochemistry-basics"
+      ]
+    },
+    {
+      "term": "comparing fossil and biofuel",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "environmental-and-green-chemistry"
+      ]
+    },
+    {
+      "term": "comparing galvanic and electrolytic cell",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "electrochemistry-and-electrode-potentials"
+      ]
+    },
+    {
+      "term": "comparing homologous series property",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "organic-functional-groups-and-nomenclature"
+      ]
+    },
+    {
+      "term": "comparing Kc and Kp",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "chemical-equilibrium-advanced"
+      ]
+    },
+    {
+      "term": "comparing polymer types",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "materials-polymers-and-nanochemistry"
+      ]
+    },
+    {
+      "term": "comparing SN1 and SN2 mechanism",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "organic-reactions-and-mechanisms"
+      ]
+    },
+    {
+      "term": "comparing transition and main group metal",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "transition-metals-and-complex-chemistry"
+      ]
+    },
+    {
+      "term": "comparing wet and instrumental method",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "analytical-and-instrumental-chemistry"
+      ]
+    },
+    {
+      "term": "complex ion",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "transition-metals-and-complex-chemistry"
+      ]
+    },
+    {
+      "term": "composite material",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "materials-polymers-and-nanochemistry"
+      ]
+    },
+    {
+      "term": "concentration cell",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "electrochemistry-and-electrode-potentials"
+      ]
+    },
+    {
+      "term": "concentration change effect",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "chemical-equilibrium-advanced"
+      ]
+    },
+    {
+      "term": "concentration-time graph",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "reaction-kinetics-advanced"
+      ]
+    },
+    {
+      "term": "condensation polymer",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "materials-polymers-and-nanochemistry"
+      ]
+    },
+    {
+      "term": "condensation polymerization",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "organic-reactions-and-mechanisms"
+      ]
+    },
+    {
+      "term": "condensation reaction",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "organic-reactions-and-mechanisms"
+      ]
+    },
+    {
+      "term": "conjugate acid-base pair",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "acids-bases-and-ph-calculations"
+      ]
+    },
+    {
+      "term": "Contact process equilibrium",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "chemical-equilibrium-advanced"
+      ]
+    },
+    {
+      "term": "Contact process stage",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "industrial-chemical-processes"
+      ]
+    },
+    {
+      "term": "continuous process",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "industrial-chemical-processes"
+      ]
+    },
+    {
+      "term": "coordination number",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "transition-metals-and-complex-chemistry"
+      ]
+    },
+    {
+      "term": "copper(II) complex colour",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "transition-metals-and-complex-chemistry"
+      ]
+    },
+    {
+      "term": "corrosion as electrochemical process",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "electrochemistry-and-electrode-potentials"
+      ]
+    },
+    {
+      "term": "cross-linking in polymer",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "materials-polymers-and-nanochemistry"
+      ]
+    },
+    {
+      "term": "crystal field splitting",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "transition-metals-and-complex-chemistry"
+      ]
+    },
+    {
+      "term": "d-block element",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "transition-metals-and-complex-chemistry"
+      ]
+    },
+    {
+      "term": "decay curve graph",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "nuclear-and-radiochemistry-basics"
+      ]
+    },
+    {
+      "term": "dehydration of alcohol",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "organic-reactions-and-mechanisms"
+      ]
+    },
+    {
+      "term": "disposal of organic waste",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "laboratory-analysis-and-examination-skills"
+      ]
+    },
+    {
+      "term": "distillation fraction collection",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "laboratory-analysis-and-examination-skills"
+      ]
+    },
+    {
+      "term": "electrochemical series",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "electrochemistry-and-electrode-potentials"
+      ]
+    },
+    {
+      "term": "electrolysis of aqueous solution",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "electrochemistry-and-electrode-potentials"
+      ]
+    },
+    {
+      "term": "electrolysis of molten salt",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "electrochemistry-and-electrode-potentials"
+      ]
+    },
+    {
+      "term": "electromotive force",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "electrochemistry-and-electrode-potentials"
+      ]
+    },
+    {
+      "term": "electron affinity change",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "advanced-chemical-energetics"
+      ]
+    },
+    {
+      "term": "electrophilic addition",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "organic-reactions-and-mechanisms"
+      ]
+    },
+    {
+      "term": "electrophilic substitution",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "organic-reactions-and-mechanisms"
+      ]
+    },
+    {
+      "term": "electroplating application",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "electrochemistry-and-electrode-potentials"
+      ]
+    },
+    {
+      "term": "elimination reaction",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "organic-reactions-and-mechanisms"
+      ]
+    },
+    {
+      "term": "endothermic dissolution",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "advanced-chemical-energetics"
+      ]
+    },
+    {
+      "term": "energy efficiency in plant",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "industrial-chemical-processes"
+      ]
+    },
+    {
+      "term": "energy profile with catalyst",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "advanced-chemical-energetics"
+      ]
+    },
+    {
+      "term": "enthalpy diagram sketch",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "advanced-chemical-energetics"
+      ]
+    },
+    {
+      "term": "enthalpy of hydration",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "advanced-chemical-energetics"
+      ]
+    },
+    {
+      "term": "enthalpy of solution",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "advanced-chemical-energetics"
+      ]
+    },
+    {
+      "term": "environmental impact assessment",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "industrial-chemical-processes"
+      ]
+    },
+    {
+      "term": "enzyme catalysis comparison",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "reaction-kinetics-advanced"
+      ]
+    },
+    {
+      "term": "equilibrium constant Kc",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "chemical-equilibrium-advanced"
+      ]
+    },
+    {
+      "term": "equilibrium constant Kp",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "chemical-equilibrium-advanced"
+      ]
+    },
+    {
+      "term": "equilibrium constant unit deduction",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "chemical-equilibrium-advanced"
+      ]
+    },
+    {
+      "term": "equilibrium ICE table",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "chemical-equilibrium-advanced"
+      ]
+    },
+    {
+      "term": "equivalence point pH",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "acids-bases-and-ph-calculations"
+      ]
+    },
+    {
+      "term": "error in analytical measurement",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "analytical-and-instrumental-chemistry"
+      ]
+    },
+    {
+      "term": "ester",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "organic-functional-groups-and-nomenclature"
+      ]
+    },
+    {
+      "term": "esterification reaction",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "organic-reactions-and-mechanisms"
+      ]
+    },
+    {
+      "term": "eutrophication from fertilizer",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "environmental-and-green-chemistry"
+      ]
+    },
+    {
+      "term": "evaluating analytical procedure",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "analytical-and-instrumental-chemistry"
+      ]
+    },
+    {
+      "term": "evaluating calorimetry experiment",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "advanced-chemical-energetics"
+      ]
+    },
+    {
+      "term": "evaluating complex formation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "transition-metals-and-complex-chemistry"
+      ]
+    },
+    {
+      "term": "evaluating electrochemical data",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "electrochemistry-and-electrode-potentials"
+      ]
+    },
+    {
+      "term": "evaluating environmental policy",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "environmental-and-green-chemistry"
+      ]
+    },
+    {
+      "term": "evaluating equilibrium model",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "chemical-equilibrium-advanced"
+      ]
+    },
+    {
+      "term": "evaluating experimental design",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "laboratory-analysis-and-examination-skills"
+      ]
+    },
+    {
+      "term": "evaluating industrial route",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "industrial-chemical-processes"
+      ]
+    },
+    {
+      "term": "evaluating kinetic data",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "reaction-kinetics-advanced"
+      ]
+    },
+    {
+      "term": "evaluating new material application",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "materials-polymers-and-nanochemistry"
+      ]
+    },
+    {
+      "term": "evaluating nuclear energy risk",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "nuclear-and-radiochemistry-basics"
+      ]
+    },
+    {
+      "term": "evaluating organic synthesis route",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "organic-reactions-and-mechanisms"
+      ]
+    },
+    {
+      "term": "exothermic dissolution",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "advanced-chemical-energetics"
+      ]
+    },
+    {
+      "term": "first order reaction",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "reaction-kinetics-advanced"
+      ]
+    },
+    {
+      "term": "flame test colour",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "analytical-and-instrumental-chemistry"
+      ]
+    },
+    {
+      "term": "fractional distillation of air",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "industrial-chemical-processes"
+      ]
+    },
+    {
+      "term": "free radical substitution",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "organic-reactions-and-mechanisms"
+      ]
+    },
+    {
+      "term": "fuel cell operation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "electrochemistry-and-electrode-potentials"
+      ]
+    },
+    {
+      "term": "gamma radiation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "nuclear-and-radiochemistry-basics"
+      ]
+    },
+    {
+      "term": "gas chromatography",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "analytical-and-instrumental-chemistry"
+      ]
+    },
+    {
+      "term": "Gibbs energy and E cell",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "electrochemistry-and-electrode-potentials"
+      ]
+    },
+    {
+      "term": "graph linearization method",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "laboratory-analysis-and-examination-skills"
+      ]
+    },
+    {
+      "term": "gravimetric analysis",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "analytical-and-instrumental-chemistry"
+      ]
+    },
+    {
+      "term": "green chemistry in organic synthesis",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "organic-reactions-and-mechanisms"
+      ]
+    },
+    {
+      "term": "green chemistry principle",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "environmental-and-green-chemistry"
+      ]
+    },
+    {
+      "term": "greenhouse gas emission",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "environmental-and-green-chemistry"
+      ]
+    },
+    {
+      "term": "Haber process condition",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "industrial-chemical-processes"
+      ]
+    },
+    {
+      "term": "Haber process condition optimization",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "chemical-equilibrium-advanced"
+      ]
+    },
+    {
+      "term": "half-life calculation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "reaction-kinetics-advanced"
+      ]
+    },
+    {
+      "term": "half-life of isotope",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "nuclear-and-radiochemistry-basics"
+      ]
+    },
+    {
+      "term": "halogenoalkane",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "organic-functional-groups-and-nomenclature"
+      ]
+    },
+    {
+      "term": "heat loss reduction",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "advanced-chemical-energetics"
+      ]
+    },
+    {
+      "term": "heating under reflux setup",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "laboratory-analysis-and-examination-skills"
+      ]
+    },
+    {
+      "term": "heavy metal pollution",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "environmental-and-green-chemistry"
+      ]
+    },
+    {
+      "term": "Henderson-Hasselbalch equation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "acids-bases-and-ph-calculations"
+      ]
+    },
+    {
+      "term": "Hess cycle calculation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "advanced-chemical-energetics"
+      ]
+    },
+    {
+      "term": "heterogeneous equilibrium",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "chemical-equilibrium-advanced"
+      ]
+    },
+    {
+      "term": "high spin complex",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "transition-metals-and-complex-chemistry"
+      ]
+    },
+    {
+      "term": "hydrolysis of ester",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "organic-reactions-and-mechanisms"
+      ]
+    },
+    {
+      "term": "hydroxyl group",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "organic-functional-groups-and-nomenclature"
+      ]
+    },
+    {
+      "term": "identifying anomalous data",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "laboratory-analysis-and-examination-skills"
+      ]
+    },
+    {
+      "term": "indicator selection for titration",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "acids-bases-and-ph-calculations"
+      ]
+    },
+    {
+      "term": "industrial yield versus rate trade-off",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "chemical-equilibrium-advanced"
+      ]
+    },
+    {
+      "term": "infrared spectroscopy peak",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "analytical-and-instrumental-chemistry"
+      ]
+    },
+    {
+      "term": "initial rate method",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "reaction-kinetics-advanced"
+      ]
+    },
+    {
+      "term": "intermediate species",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "reaction-kinetics-advanced"
+      ]
+    },
+    {
+      "term": "internal standard method",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "analytical-and-instrumental-chemistry"
+      ]
+    },
+    {
+      "term": "ion identification test",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "analytical-and-instrumental-chemistry"
+      ]
+    },
+    {
+      "term": "ionic equation writing",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "laboratory-analysis-and-examination-skills"
+      ]
+    },
+    {
+      "term": "iron complex in haemoglobin",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "transition-metals-and-complex-chemistry"
+      ]
+    },
+    {
+      "term": "IUPAC naming rule",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "organic-functional-groups-and-nomenclature"
+      ]
+    },
+    {
+      "term": "ketone",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "organic-functional-groups-and-nomenclature"
+      ]
+    },
+    {
+      "term": "lattice enthalpy",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "advanced-chemical-energetics"
+      ]
+    },
+    {
+      "term": "life cycle assessment",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "industrial-chemical-processes"
+      ]
+    },
+    {
+      "term": "life cycle carbon footprint",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "environmental-and-green-chemistry"
+      ]
+    },
+    {
+      "term": "ligand substitution reaction",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "transition-metals-and-complex-chemistry"
+      ]
+    },
+    {
+      "term": "liquid crystal display material",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "materials-polymers-and-nanochemistry"
+      ]
+    },
+    {
+      "term": "lithium ion battery principle",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "electrochemistry-and-electrode-potentials"
+      ]
+    },
+    {
+      "term": "low spin complex",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "transition-metals-and-complex-chemistry"
+      ]
+    },
+    {
+      "term": "Markovnikov rule",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "organic-reactions-and-mechanisms"
+      ]
+    },
+    {
+      "term": "mass defect concept",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "nuclear-and-radiochemistry-basics"
+      ]
+    },
+    {
+      "term": "mass spectrometry molecular ion peak",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "analytical-and-instrumental-chemistry"
+      ]
+    },
+    {
+      "term": "measuring gas volume rate",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "reaction-kinetics-advanced"
+      ]
+    },
+    {
+      "term": "melting point determination",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "laboratory-analysis-and-examination-skills"
+      ]
+    },
+    {
+      "term": "mole fraction in equilibrium",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "chemical-equilibrium-advanced"
+      ]
+    },
+    {
+      "term": "monodentate ligand",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "transition-metals-and-complex-chemistry"
+      ]
+    },
+    {
+      "term": "monomer unit",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "materials-polymers-and-nanochemistry"
+      ]
+    },
+    {
+      "term": "nanoparticle size effect",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "materials-polymers-and-nanochemistry"
+      ]
+    },
+    {
+      "term": "natural rubber",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "materials-polymers-and-nanochemistry"
+      ]
+    },
+    {
+      "term": "Nernst equation concept",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "electrochemistry-and-electrode-potentials"
+      ]
+    },
+    {
+      "term": "nitrile",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "organic-functional-groups-and-nomenclature"
+      ]
+    },
+    {
+      "term": "NMR spectroscopy concept",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "analytical-and-instrumental-chemistry"
+      ]
+    },
+    {
+      "term": "nuclear equation balancing",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "nuclear-and-radiochemistry-basics"
+      ]
+    },
+    {
+      "term": "nuclear fission",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "nuclear-and-radiochemistry-basics"
+      ]
+    },
+    {
+      "term": "nuclear fusion",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "nuclear-and-radiochemistry-basics"
+      ]
+    },
+    {
+      "term": "nuclear power station",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "nuclear-and-radiochemistry-basics"
+      ]
+    },
+    {
+      "term": "nucleophile and electrophile",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "organic-reactions-and-mechanisms"
+      ]
+    },
+    {
+      "term": "nucleophilic substitution",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "organic-reactions-and-mechanisms"
+      ]
+    },
+    {
+      "term": "order of reaction",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "reaction-kinetics-advanced"
+      ]
+    },
+    {
+      "term": "overpotential effect",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "electrochemistry-and-electrode-potentials"
+      ]
+    },
+    {
+      "term": "oxidation of alcohol",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "organic-reactions-and-mechanisms"
+      ]
+    },
+    {
+      "term": "paper chromatography Rf value",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "analytical-and-instrumental-chemistry"
+      ]
+    },
+    {
+      "term": "parent chain selection",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "organic-functional-groups-and-nomenclature"
+      ]
+    },
+    {
+      "term": "partial pressure calculation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "chemical-equilibrium-advanced"
+      ]
+    },
+    {
+      "term": "percentage error calculation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "laboratory-analysis-and-examination-skills"
+      ]
+    },
+    {
+      "term": "persistent organic pollutant",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "environmental-and-green-chemistry"
+      ]
+    },
+    {
+      "term": "pH of salt solution",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "acids-bases-and-ph-calculations"
+      ]
+    },
+    {
+      "term": "pH of strong acid solution",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "acids-bases-and-ph-calculations"
+      ]
+    },
+    {
+      "term": "pH of weak acid solution",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "acids-bases-and-ph-calculations"
+      ]
+    },
+    {
+      "term": "phenol",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "organic-functional-groups-and-nomenclature"
+      ]
+    },
+    {
+      "term": "phytoremediation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "environmental-and-green-chemistry"
+      ]
+    },
+    {
+      "term": "pipette calibration check",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "laboratory-analysis-and-examination-skills"
+      ]
+    },
+    {
+      "term": "pKa value",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "acids-bases-and-ph-calculations"
+      ]
+    },
+    {
+      "term": "pKb value",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "acids-bases-and-ph-calculations"
+      ]
+    },
+    {
+      "term": "planning titration experiment",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "laboratory-analysis-and-examination-skills"
+      ]
+    },
+    {
+      "term": "pOH scale",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "acids-bases-and-ph-calculations"
+      ]
+    },
+    {
+      "term": "poisoning of catalyst",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "reaction-kinetics-advanced"
+      ]
+    },
+    {
+      "term": "polymer manufacturing plant",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "industrial-chemical-processes"
+      ]
+    },
+    {
+      "term": "polyprotic acid stepwise dissociation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "acids-bases-and-ph-calculations"
+      ]
+    },
+    {
+      "term": "position number assignment",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "organic-functional-groups-and-nomenclature"
+      ]
+    },
+    {
+      "term": "precipitate formation prediction",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "chemical-equilibrium-advanced"
+      ]
+    },
+    {
+      "term": "precipitate test",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "analytical-and-instrumental-chemistry"
+      ]
+    },
+    {
+      "term": "predicting equilibrium shift",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "chemical-equilibrium-advanced"
+      ]
+    },
+    {
+      "term": "preferential discharge of ion",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "electrochemistry-and-electrode-potentials"
+      ]
+    },
+    {
+      "term": "preparing standard solution",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "laboratory-analysis-and-examination-skills"
+      ]
+    },
+    {
+      "term": "pressure effect on gaseous equilibrium",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "chemical-equilibrium-advanced"
+      ]
+    },
+    {
+      "term": "primary alcohol",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "organic-functional-groups-and-nomenclature"
+      ]
+    },
+    {
+      "term": "primary standard substance",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "analytical-and-instrumental-chemistry"
+      ]
+    },
+    {
+      "term": "process yield optimization",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "industrial-chemical-processes"
+      ]
+    },
+    {
+      "term": "qualitative analysis",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "analytical-and-instrumental-chemistry"
+      ]
+    },
+    {
+      "term": "qualitative analysis scheme",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "laboratory-analysis-and-examination-skills"
+      ]
+    },
+    {
+      "term": "qualitative test for metal ion",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "transition-metals-and-complex-chemistry"
+      ]
+    },
+    {
+      "term": "quantitative analysis",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "analytical-and-instrumental-chemistry"
+      ]
+    },
+    {
+      "term": "radiation dose unit",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "nuclear-and-radiochemistry-basics"
+      ]
+    },
+    {
+      "term": "radiation safety shield",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "nuclear-and-radiochemistry-basics"
+      ]
+    },
+    {
+      "term": "radioactive isotope",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "nuclear-and-radiochemistry-basics"
+      ]
+    },
+    {
+      "term": "radioisotope medical use",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "nuclear-and-radiochemistry-basics"
+      ]
+    },
+    {
+      "term": "rate constant",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "reaction-kinetics-advanced"
+      ]
+    },
+    {
+      "term": "rate equation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "reaction-kinetics-advanced"
+      ]
+    },
+    {
+      "term": "reaction mechanism arrow pushing",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "organic-reactions-and-mechanisms"
+      ]
+    },
+    {
+      "term": "reaction pathway diagram",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "reaction-kinetics-advanced"
+      ]
+    },
+    {
+      "term": "reaction quotient Q",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "chemical-equilibrium-advanced"
+      ]
+    },
+    {
+      "term": "rechargeable battery",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "electrochemistry-and-electrode-potentials"
+      ]
+    },
+    {
+      "term": "recrystallization purification",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "laboratory-analysis-and-examination-skills"
+      ]
+    },
+    {
+      "term": "recycling of plastic",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "materials-polymers-and-nanochemistry"
+      ]
+    },
+    {
+      "term": "redox titration indicator",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "electrochemistry-and-electrode-potentials"
+      ]
+    },
+    {
+      "term": "reduction of carbonyl",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "organic-reactions-and-mechanisms"
+      ]
+    },
+    {
+      "term": "renewable feedstock",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "environmental-and-green-chemistry"
+      ]
+    },
+    {
+      "term": "repeat unit",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "materials-polymers-and-nanochemistry"
+      ]
+    },
+    {
+      "term": "risk assessment for experiment",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "laboratory-analysis-and-examination-skills"
+      ]
+    },
+    {
+      "term": "sacrificial protection",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "electrochemistry-and-electrode-potentials"
+      ]
+    },
+    {
+      "term": "safety in chemical plant",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "industrial-chemical-processes"
+      ]
+    },
+    {
+      "term": "second order reaction",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "reaction-kinetics-advanced"
+      ]
+    },
+    {
+      "term": "secondary alcohol",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "organic-functional-groups-and-nomenclature"
+      ]
+    },
+    {
+      "term": "secondary standard solution",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "analytical-and-instrumental-chemistry"
+      ]
+    },
+    {
+      "term": "significant figure in result",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "laboratory-analysis-and-examination-skills"
+      ]
+    },
+    {
+      "term": "smart material example",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "materials-polymers-and-nanochemistry"
+      ]
+    },
+    {
+      "term": "solubility product Ksp",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "chemical-equilibrium-advanced"
+      ]
+    },
+    {
+      "term": "solvent replacement",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "environmental-and-green-chemistry"
+      ]
+    },
+    {
+      "term": "stability constant",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "transition-metals-and-complex-chemistry"
+      ]
+    },
+    {
+      "term": "standard conditions for enthalpy",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "advanced-chemical-energetics"
+      ]
+    },
+    {
+      "term": "standard enthalpy of atomization",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "advanced-chemical-energetics"
+      ]
+    },
+    {
+      "term": "standard enthalpy of combustion",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "advanced-chemical-energetics"
+      ]
+    },
+    {
+      "term": "standard enthalpy of formation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "advanced-chemical-energetics"
+      ]
+    },
+    {
+      "term": "standard enthalpy of neutralization",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "advanced-chemical-energetics"
+      ]
+    },
+    {
+      "term": "standard hydrogen electrode",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "electrochemistry-and-electrode-potentials"
+      ]
+    },
+    {
+      "term": "state symbol use",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "laboratory-analysis-and-examination-skills"
+      ]
+    },
+    {
+      "term": "steam reforming of methane",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "industrial-chemical-processes"
+      ]
+    },
+    {
+      "term": "strong base",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "acids-bases-and-ph-calculations"
+      ]
+    },
+    {
+      "term": "student action on sustainability",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "environmental-and-green-chemistry"
+      ]
+    },
+    {
+      "term": "sulfuric acid production",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "industrial-chemical-processes"
+      ]
+    },
+    {
+      "term": "surface area to volume ratio",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "materials-polymers-and-nanochemistry"
+      ]
+    },
+    {
+      "term": "sustainable chemical industry",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "industrial-chemical-processes"
+      ]
+    },
+    {
+      "term": "temperature coefficient",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "reaction-kinetics-advanced"
+      ]
+    },
+    {
+      "term": "temperature effect on K",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "chemical-equilibrium-advanced"
+      ]
+    },
+    {
+      "term": "tertiary alcohol",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "organic-functional-groups-and-nomenclature"
+      ]
+    },
+    {
+      "term": "test tube reaction for functional group",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "organic-reactions-and-mechanisms"
+      ]
+    },
+    {
+      "term": "thermoplastic polymer",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "materials-polymers-and-nanochemistry"
+      ]
+    },
+    {
+      "term": "thermosetting polymer",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "materials-polymers-and-nanochemistry"
+      ]
+    },
+    {
+      "term": "thin layer chromatography",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "analytical-and-instrumental-chemistry"
+      ]
+    },
+    {
+      "term": "titration curve shape",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "acids-bases-and-ph-calculations"
+      ]
+    },
+    {
+      "term": "UV-visible absorption",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "analytical-and-instrumental-chemistry"
+      ]
+    },
+    {
+      "term": "vanadium redox battery",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "transition-metals-and-complex-chemistry"
+      ]
+    },
+    {
+      "term": "variable oxidation state",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "transition-metals-and-complex-chemistry"
+      ]
+    },
+    {
+      "term": "volumetric analysis accuracy",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "analytical-and-instrumental-chemistry"
+      ]
+    },
+    {
+      "term": "vulcanization of rubber",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "materials-polymers-and-nanochemistry"
+      ]
+    },
+    {
+      "term": "waste minimization",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "environmental-and-green-chemistry"
+      ]
+    },
+    {
+      "term": "waste storage issue",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "nuclear-and-radiochemistry-basics"
+      ]
+    },
+    {
+      "term": "water quality parameter",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "environmental-and-green-chemistry"
+      ]
+    },
+    {
+      "term": "weak acid dissociation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "acids-bases-and-ph-calculations"
+      ]
+    },
+    {
+      "term": "zero order reaction",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "chemistry",
+        "curriculum-style",
+        "reaction-kinetics-advanced"
       ]
     }
   ]

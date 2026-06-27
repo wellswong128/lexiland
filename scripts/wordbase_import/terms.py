@@ -10,6 +10,30 @@ def normalize_term(value: str) -> str:
     return str(value or "").strip().lower()
 
 
+def resolve_upsert_term(
+    requested_term: str,
+    suggestion_term: str,
+    existing_term: str = "",
+) -> str:
+    """Keep the canonical multi-word term when AI collapses a phrase to its command verb."""
+    requested = str(requested_term or "").strip()
+    suggestion = str(suggestion_term or "").strip()
+    existing = str(existing_term or "").strip()
+    canonical = existing or requested
+
+    if not canonical:
+        return suggestion
+    if not suggestion:
+        return canonical
+    if normalize_term(suggestion) == normalize_term(canonical):
+        return canonical
+
+    if len(canonical.split()) > 1 and len(suggestion.split()) <= 1:
+        return canonical
+
+    return suggestion
+
+
 def normalize_single_word_term(value: str) -> str:
     term = str(value or "").strip().lower()
     term = re.sub(r"[^a-z'-]", "", term)

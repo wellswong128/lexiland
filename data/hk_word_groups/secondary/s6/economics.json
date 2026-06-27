@@ -7,6 +7,15 @@
   "version": "2026.06",
   "display_name_en": "S6 Economics",
   "display_name_zh_hant": "中六經濟",
+  "source": {
+    "type": "curriculum_style_public_references",
+    "references": [
+      "EDB Economics Curriculum and Assessment Guide (Secondary 4-6)",
+      "EDB HKDSE Economics learning objectives",
+      "Public Hong Kong S6 Economics syllabus topic examples (HKDSE revision, microeconomic synthesis, market structure and welfare, macroeconomic measurement and AD-AS analysis, inflation and unemployment policy debate, fiscal and monetary policy mix, open economy and trade, exchange rate and financial stability, growth development and inequality, Hong Kong economic context, contemporary global issues, data interpretation and HKDSE evaluation skills)"
+    ],
+    "note": "No fixed official Hong Kong S6 economics vocabulary list is prescribed; this list is theme-based for senior secondary S6 / HKDSE economics enrichment import. Term-only entries are completed during import."
+  },
   "words": [
     {
       "term": "Opportunity Cost",
@@ -326,6 +335,3702 @@
         "macroeconomics",
         "trade-theory",
         "specialization"
+      ]
+    },
+    {
+      "term": "accelerator effect revision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-ad-as-model-and-macroeconomic-equilibrium-synthesis"
+      ]
+    },
+    {
+      "term": "AD AS diagram synthesis",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-ad-as-model-and-macroeconomic-equilibrium-synthesis"
+      ]
+    },
+    {
+      "term": "adverse selection revision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-welfare-market-failure-and-government-synthesis"
+      ]
+    },
+    {
+      "term": "aggregate demand component revision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-ad-as-model-and-macroeconomic-equilibrium-synthesis"
+      ]
+    },
+    {
+      "term": "aging society macro impact",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-global-economy-and-contemporary-issues-synthesis"
+      ]
+    },
+    {
+      "term": "analyse impact with diagram",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-economic-evaluation-and-structured-essay-skills"
+      ]
+    },
+    {
+      "term": "appreciation effect revision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-exchange-rate-and-financial-stability-synthesis"
+      ]
+    },
+    {
+      "term": "assess long run effect",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-economic-evaluation-and-structured-essay-skills"
+      ]
+    },
+    {
+      "term": "assess short run effect",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-economic-evaluation-and-structured-essay-skills"
+      ]
+    },
+    {
+      "term": "automatic stabilizer revision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-fiscal-and-monetary-policy-mix-synthesis"
+      ]
+    },
+    {
+      "term": "automation labour displacement",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-global-economy-and-contemporary-issues-synthesis"
+      ]
+    },
+    {
+      "term": "avoid vague economics writing",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-economic-evaluation-and-structured-essay-skills"
+      ]
+    },
+    {
+      "term": "balance of payments revision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-exchange-rate-and-financial-stability-synthesis"
+      ]
+    },
+    {
+      "term": "balanced conclusion skill",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-economic-evaluation-and-structured-essay-skills"
+      ]
+    },
+    {
+      "term": "banking stability revision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-exchange-rate-and-financial-stability-synthesis"
+      ]
+    },
+    {
+      "term": "barriers to entry revision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-market-structures-and-strategic-behaviour-synthesis"
+      ]
+    },
+    {
+      "term": "business cycle revision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-macroeconomic-measurement-and-indicators-synthesis"
+      ]
+    },
+    {
+      "term": "capital account revision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-open-economy-and-international-trade-synthesis"
+      ]
+    },
+    {
+      "term": "capital flow volatility",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-exchange-rate-and-financial-stability-synthesis"
+      ]
+    },
+    {
+      "term": "capital market revision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-factor-markets-and-income-distribution-synthesis"
+      ]
+    },
+    {
+      "term": "carbon border adjustment",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-global-economy-and-contemporary-issues-synthesis"
+      ]
+    },
+    {
+      "term": "chain of reasoning skill",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-economic-evaluation-and-structured-essay-skills"
+      ]
+    },
+    {
+      "term": "chart trend interpretation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-economic-calculation-and-data-interpretation"
+      ]
+    },
+    {
+      "term": "check answer economic plausibility",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-economic-calculation-and-data-interpretation"
+      ]
+    },
+    {
+      "term": "climate policy economic cost",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-global-economy-and-contemporary-issues-synthesis"
+      ]
+    },
+    {
+      "term": "Coase theorem revision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-welfare-market-failure-and-government-synthesis"
+      ]
+    },
+    {
+      "term": "collusion incentive analysis",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-market-structures-and-strategic-behaviour-synthesis"
+      ]
+    },
+    {
+      "term": "comparative advantage revision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-open-economy-and-international-trade-synthesis"
+      ]
+    },
+    {
+      "term": "compare contemporary shock cases",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-global-economy-and-contemporary-issues-synthesis"
+      ]
+    },
+    {
+      "term": "compare correction instruments",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-welfare-market-failure-and-government-synthesis"
+      ]
+    },
+    {
+      "term": "compare development experiences",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-economic-growth-development-and-inequality-synthesis"
+      ]
+    },
+    {
+      "term": "compare exchange rate regimes",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-exchange-rate-and-financial-stability-synthesis"
+      ]
+    },
+    {
+      "term": "compare factor market cases",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-factor-markets-and-income-distribution-synthesis"
+      ]
+    },
+    {
+      "term": "compare Hong Kong macro cycles",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-hong-kong-economy-and-public-policy-synthesis"
+      ]
+    },
+    {
+      "term": "compare inflation episodes",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-inflation-unemployment-and-policy-trade-off-synthesis"
+      ]
+    },
+    {
+      "term": "compare macro indicator cases",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-macroeconomic-measurement-and-indicators-synthesis"
+      ]
+    },
+    {
+      "term": "compare macro shock scenarios",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-ad-as-model-and-macroeconomic-equilibrium-synthesis"
+      ]
+    },
+    {
+      "term": "compare market structure outcomes",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-market-structures-and-strategic-behaviour-synthesis"
+      ]
+    },
+    {
+      "term": "compare micro market cases",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-microeconomics-revision-and-synthesis"
+      ]
+    },
+    {
+      "term": "compare numerical scenarios",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-economic-calculation-and-data-interpretation"
+      ]
+    },
+    {
+      "term": "compare policy package cases",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-fiscal-and-monetary-policy-mix-synthesis"
+      ]
+    },
+    {
+      "term": "compare trade policy cases",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-open-economy-and-international-trade-synthesis"
+      ]
+    },
+    {
+      "term": "compare two policy options",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-economic-evaluation-and-structured-essay-skills"
+      ]
+    },
+    {
+      "term": "compare unemployment cases",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-inflation-unemployment-and-policy-trade-off-synthesis"
+      ]
+    },
+    {
+      "term": "competition policy case revision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-market-structures-and-strategic-behaviour-synthesis"
+      ]
+    },
+    {
+      "term": "consumer surplus revision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-microeconomics-revision-and-synthesis"
+      ]
+    },
+    {
+      "term": "contemporary issue essay skill",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-global-economy-and-contemporary-issues-synthesis"
+      ]
+    },
+    {
+      "term": "contestable market revision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-market-structures-and-strategic-behaviour-synthesis"
+      ]
+    },
+    {
+      "term": "contractionary fiscal policy revision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-fiscal-and-monetary-policy-mix-synthesis"
+      ]
+    },
+    {
+      "term": "contractionary monetary policy revision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-fiscal-and-monetary-policy-mix-synthesis"
+      ]
+    },
+    {
+      "term": "cost push inflation case",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-ad-as-model-and-macroeconomic-equilibrium-synthesis"
+      ]
+    },
+    {
+      "term": "cost push inflation revision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-inflation-unemployment-and-policy-trade-off-synthesis"
+      ]
+    },
+    {
+      "term": "CPI calculation revision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-macroeconomic-measurement-and-indicators-synthesis"
+      ]
+    },
+    {
+      "term": "cross border policy spillover",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-global-economy-and-contemporary-issues-synthesis"
+      ]
+    },
+    {
+      "term": "cross topic essay planning",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-economic-evaluation-and-structured-essay-skills"
+      ]
+    },
+    {
+      "term": "cross topic micro synthesis",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-microeconomics-revision-and-synthesis"
+      ]
+    },
+    {
+      "term": "crowding out revision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-fiscal-and-monetary-policy-mix-synthesis"
+      ]
+    },
+    {
+      "term": "currency board revision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-exchange-rate-and-financial-stability-synthesis"
+      ]
+    },
+    {
+      "term": "current account revision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-open-economy-and-international-trade-synthesis"
+      ]
+    },
+    {
+      "term": "cyclical unemployment revision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-inflation-unemployment-and-policy-trade-off-synthesis"
+      ]
+    },
+    {
+      "term": "deadweight loss revision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-microeconomics-revision-and-synthesis"
+      ]
+    },
+    {
+      "term": "define term precisely skill",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-economic-evaluation-and-structured-essay-skills"
+      ]
+    },
+    {
+      "term": "deflation risk revision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-inflation-unemployment-and-policy-trade-off-synthesis"
+      ]
+    },
+    {
+      "term": "demand management revision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-fiscal-and-monetary-policy-mix-synthesis"
+      ]
+    },
+    {
+      "term": "demand pull inflation case",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-ad-as-model-and-macroeconomic-equilibrium-synthesis"
+      ]
+    },
+    {
+      "term": "demand pull inflation revision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-inflation-unemployment-and-policy-trade-off-synthesis"
+      ]
+    },
+    {
+      "term": "demand shock analysis",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-ad-as-model-and-macroeconomic-equilibrium-synthesis"
+      ]
+    },
+    {
+      "term": "depreciation effect revision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-exchange-rate-and-financial-stability-synthesis"
+      ]
+    },
+    {
+      "term": "development essay skill",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-economic-growth-development-and-inequality-synthesis"
+      ]
+    },
+    {
+      "term": "development indicator revision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-economic-growth-development-and-inequality-synthesis"
+      ]
+    },
+    {
+      "term": "digital economy competition",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-global-economy-and-contemporary-issues-synthesis"
+      ]
+    },
+    {
+      "term": "economic growth revision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-economic-growth-development-and-inequality-synthesis"
+      ]
+    },
+    {
+      "term": "elasticity coefficient calculation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-economic-calculation-and-data-interpretation"
+      ]
+    },
+    {
+      "term": "emerging market volatility",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-global-economy-and-contemporary-issues-synthesis"
+      ]
+    },
+    {
+      "term": "energy price shock case",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-global-economy-and-contemporary-issues-synthesis"
+      ]
+    },
+    {
+      "term": "environment growth trade-off",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-economic-growth-development-and-inequality-synthesis"
+      ]
+    },
+    {
+      "term": "environment policy link revision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-economics-cross-topic-revision-and-examination-readiness"
+      ]
+    },
+    {
+      "term": "estimate from given data",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-economic-calculation-and-data-interpretation"
+      ]
+    },
+    {
+      "term": "evaluate anti-inflation policy",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-inflation-unemployment-and-policy-trade-off-synthesis"
+      ]
+    },
+    {
+      "term": "evaluate competition policy",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-market-structures-and-strategic-behaviour-synthesis"
+      ]
+    },
+    {
+      "term": "evaluate currency policy",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-exchange-rate-and-financial-stability-synthesis"
+      ]
+    },
+    {
+      "term": "evaluate employment policy",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-inflation-unemployment-and-policy-trade-off-synthesis"
+      ]
+    },
+    {
+      "term": "evaluate global policy response",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-global-economy-and-contemporary-issues-synthesis"
+      ]
+    },
+    {
+      "term": "evaluate Hong Kong policy mix",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-hong-kong-economy-and-public-policy-synthesis"
+      ]
+    },
+    {
+      "term": "evaluate inequality policy",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-economic-growth-development-and-inequality-synthesis"
+      ]
+    },
+    {
+      "term": "evaluate intervention effectiveness",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-welfare-market-failure-and-government-synthesis"
+      ]
+    },
+    {
+      "term": "evaluate micro intervention",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-microeconomics-revision-and-synthesis"
+      ]
+    },
+    {
+      "term": "evaluate policy mix effectiveness",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-fiscal-and-monetary-policy-mix-synthesis"
+      ]
+    },
+    {
+      "term": "evaluate protectionism policy",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-open-economy-and-international-trade-synthesis"
+      ]
+    },
+    {
+      "term": "evaluate stabilization outcome",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-ad-as-model-and-macroeconomic-equilibrium-synthesis"
+      ]
+    },
+    {
+      "term": "evaluate wage policy",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-factor-markets-and-income-distribution-synthesis"
+      ]
+    },
+    {
+      "term": "evaluate with counter argument",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-economic-evaluation-and-structured-essay-skills"
+      ]
+    },
+    {
+      "term": "examination command word skill",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-economic-evaluation-and-structured-essay-skills"
+      ]
+    },
+    {
+      "term": "examination stress management",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-economics-cross-topic-revision-and-examination-readiness"
+      ]
+    },
+    {
+      "term": "exchange rate conversion skill",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-economic-calculation-and-data-interpretation"
+      ]
+    },
+    {
+      "term": "exchange rate essay skill",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-exchange-rate-and-financial-stability-synthesis"
+      ]
+    },
+    {
+      "term": "exchange rate macro link",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-economics-cross-topic-revision-and-examination-readiness"
+      ]
+    },
+    {
+      "term": "expansionary fiscal policy revision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-fiscal-and-monetary-policy-mix-synthesis"
+      ]
+    },
+    {
+      "term": "expansionary monetary policy revision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-fiscal-and-monetary-policy-mix-synthesis"
+      ]
+    },
+    {
+      "term": "expectations augmented Phillips curve",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-inflation-unemployment-and-policy-trade-off-synthesis"
+      ]
+    },
+    {
+      "term": "explain mechanism stepwise",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-economic-evaluation-and-structured-essay-skills"
+      ]
+    },
+    {
+      "term": "externality subsidy revision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-welfare-market-failure-and-government-synthesis"
+      ]
+    },
+    {
+      "term": "factor market data response",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-factor-markets-and-income-distribution-synthesis"
+      ]
+    },
+    {
+      "term": "factor market diagram skill",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-factor-markets-and-income-distribution-synthesis"
+      ]
+    },
+    {
+      "term": "factor mobility revision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-factor-markets-and-income-distribution-synthesis"
+      ]
+    },
+    {
+      "term": "final revision timetable skill",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-economics-cross-topic-revision-and-examination-readiness"
+      ]
+    },
+    {
+      "term": "financial crisis contagion",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-exchange-rate-and-financial-stability-synthesis"
+      ]
+    },
+    {
+      "term": "financial stability macro link",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-economics-cross-topic-revision-and-examination-readiness"
+      ]
+    },
+    {
+      "term": "fiscal monetary conflict case",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-fiscal-and-monetary-policy-mix-synthesis"
+      ]
+    },
+    {
+      "term": "fiscal monetary essay skill",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-fiscal-and-monetary-policy-mix-synthesis"
+      ]
+    },
+    {
+      "term": "fiscal multiplier revision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-fiscal-and-monetary-policy-mix-synthesis"
+      ]
+    },
+    {
+      "term": "fiscal trade link revision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-economics-cross-topic-revision-and-examination-readiness"
+      ]
+    },
+    {
+      "term": "fixed exchange rate revision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-exchange-rate-and-financial-stability-synthesis"
+      ]
+    },
+    {
+      "term": "floating exchange rate revision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-exchange-rate-and-financial-stability-synthesis"
+      ]
+    },
+    {
+      "term": "food price inflation case",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-global-economy-and-contemporary-issues-synthesis"
+      ]
+    },
+    {
+      "term": "free rider problem revision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-welfare-market-failure-and-government-synthesis"
+      ]
+    },
+    {
+      "term": "free trade agreement revision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-open-economy-and-international-trade-synthesis"
+      ]
+    },
+    {
+      "term": "frictional unemployment revision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-inflation-unemployment-and-policy-trade-off-synthesis"
+      ]
+    },
+    {
+      "term": "game theory payoff revision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-market-structures-and-strategic-behaviour-synthesis"
+      ]
+    },
+    {
+      "term": "GDP component analysis",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-macroeconomic-measurement-and-indicators-synthesis"
+      ]
+    },
+    {
+      "term": "GDP component calculation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-economic-calculation-and-data-interpretation"
+      ]
+    },
+    {
+      "term": "GDP deflator revision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-macroeconomic-measurement-and-indicators-synthesis"
+      ]
+    },
+    {
+      "term": "geoeconomic fragmentation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-global-economy-and-contemporary-issues-synthesis"
+      ]
+    },
+    {
+      "term": "Gini coefficient revision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-economic-growth-development-and-inequality-synthesis"
+      ]
+    },
+    {
+      "term": "global economy data response",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-global-economy-and-contemporary-issues-synthesis"
+      ]
+    },
+    {
+      "term": "global supply chain disruption",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-global-economy-and-contemporary-issues-synthesis"
+      ]
+    },
+    {
+      "term": "globalization benefit revision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-open-economy-and-international-trade-synthesis"
+      ]
+    },
+    {
+      "term": "globalization cost revision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-open-economy-and-international-trade-synthesis"
+      ]
+    },
+    {
+      "term": "government failure revision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-welfare-market-failure-and-government-synthesis"
+      ]
+    },
+    {
+      "term": "Greater Bay Area link revision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-hong-kong-economy-and-public-policy-synthesis"
+      ]
+    },
+    {
+      "term": "HKDSE AD AS integration",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-ad-as-model-and-macroeconomic-equilibrium-synthesis"
+      ]
+    },
+    {
+      "term": "HKDSE calculation checklist",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-economic-calculation-and-data-interpretation"
+      ]
+    },
+    {
+      "term": "HKDSE contemporary issue synthesis",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-global-economy-and-contemporary-issues-synthesis"
+      ]
+    },
+    {
+      "term": "HKDSE development synthesis",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-economic-growth-development-and-inequality-synthesis"
+      ]
+    },
+    {
+      "term": "HKDSE economics essay checklist",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-economic-evaluation-and-structured-essay-skills"
+      ]
+    },
+    {
+      "term": "HKDSE economics readiness checklist",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-economics-cross-topic-revision-and-examination-readiness"
+      ]
+    },
+    {
+      "term": "HKDSE factor market integration",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-factor-markets-and-income-distribution-synthesis"
+      ]
+    },
+    {
+      "term": "HKDSE financial stability synthesis",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-exchange-rate-and-financial-stability-synthesis"
+      ]
+    },
+    {
+      "term": "HKDSE Hong Kong synthesis",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-hong-kong-economy-and-public-policy-synthesis"
+      ]
+    },
+    {
+      "term": "HKDSE inflation unemployment synthesis",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-inflation-unemployment-and-policy-trade-off-synthesis"
+      ]
+    },
+    {
+      "term": "HKDSE macro data checklist",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-macroeconomic-measurement-and-indicators-synthesis"
+      ]
+    },
+    {
+      "term": "HKDSE market structure integration",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-market-structures-and-strategic-behaviour-synthesis"
+      ]
+    },
+    {
+      "term": "HKDSE micro revision checklist",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-microeconomics-revision-and-synthesis"
+      ]
+    },
+    {
+      "term": "HKDSE policy mix integration",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-fiscal-and-monetary-policy-mix-synthesis"
+      ]
+    },
+    {
+      "term": "HKDSE trade integration",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-open-economy-and-international-trade-synthesis"
+      ]
+    },
+    {
+      "term": "HKDSE welfare analysis skill",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-welfare-market-failure-and-government-synthesis"
+      ]
+    },
+    {
+      "term": "Hong Kong case essay skill",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-hong-kong-economy-and-public-policy-synthesis"
+      ]
+    },
+    {
+      "term": "Hong Kong competition policy",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-hong-kong-economy-and-public-policy-synthesis"
+      ]
+    },
+    {
+      "term": "Hong Kong data response skill",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-hong-kong-economy-and-public-policy-synthesis"
+      ]
+    },
+    {
+      "term": "Hong Kong economic structure revision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-hong-kong-economy-and-public-policy-synthesis"
+      ]
+    },
+    {
+      "term": "Hong Kong financial centre role",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-hong-kong-economy-and-public-policy-synthesis"
+      ]
+    },
+    {
+      "term": "Hong Kong fiscal reserve revision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-hong-kong-economy-and-public-policy-synthesis"
+      ]
+    },
+    {
+      "term": "Hong Kong income disparity",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-hong-kong-economy-and-public-policy-synthesis"
+      ]
+    },
+    {
+      "term": "Hong Kong labour market revision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-hong-kong-economy-and-public-policy-synthesis"
+      ]
+    },
+    {
+      "term": "Hong Kong minimum wage review",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-hong-kong-economy-and-public-policy-synthesis"
+      ]
+    },
+    {
+      "term": "Hong Kong open economy link",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-economics-cross-topic-revision-and-examination-readiness"
+      ]
+    },
+    {
+      "term": "Hong Kong policy recommendation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-hong-kong-economy-and-public-policy-synthesis"
+      ]
+    },
+    {
+      "term": "Hong Kong property market revision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-hong-kong-economy-and-public-policy-synthesis"
+      ]
+    },
+    {
+      "term": "Hong Kong public housing economics",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-hong-kong-economy-and-public-policy-synthesis"
+      ]
+    },
+    {
+      "term": "Hong Kong shock vulnerability",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-hong-kong-economy-and-public-policy-synthesis"
+      ]
+    },
+    {
+      "term": "Hong Kong tourism economy revision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-hong-kong-economy-and-public-policy-synthesis"
+      ]
+    },
+    {
+      "term": "Hong Kong trade hub revision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-hong-kong-economy-and-public-policy-synthesis"
+      ]
+    },
+    {
+      "term": "Hong Kong trade pattern revision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-open-economy-and-international-trade-synthesis"
+      ]
+    },
+    {
+      "term": "human capital revision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-economic-growth-development-and-inequality-synthesis"
+      ]
+    },
+    {
+      "term": "identify data inconsistency",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-economic-calculation-and-data-interpretation"
+      ]
+    },
+    {
+      "term": "identify model limitation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-economic-evaluation-and-structured-essay-skills"
+      ]
+    },
+    {
+      "term": "identify weak topic area",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-economics-cross-topic-revision-and-examination-readiness"
+      ]
+    },
+    {
+      "term": "inclusive growth revision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-economic-growth-development-and-inequality-synthesis"
+      ]
+    },
+    {
+      "term": "income distribution essay",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-factor-markets-and-income-distribution-synthesis"
+      ]
+    },
+    {
+      "term": "income inequality revision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-economic-growth-development-and-inequality-synthesis"
+      ]
+    },
+    {
+      "term": "index number calculation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-economic-calculation-and-data-interpretation"
+      ]
+    },
+    {
+      "term": "inequality data response",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-economic-growth-development-and-inequality-synthesis"
+      ]
+    },
+    {
+      "term": "inequality growth link revision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-economics-cross-topic-revision-and-examination-readiness"
+      ]
+    },
+    {
+      "term": "inflation expectation revision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-inflation-unemployment-and-policy-trade-off-synthesis"
+      ]
+    },
+    {
+      "term": "inflation rate from index",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-economic-calculation-and-data-interpretation"
+      ]
+    },
+    {
+      "term": "inflation rate revision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-macroeconomic-measurement-and-indicators-synthesis"
+      ]
+    },
+    {
+      "term": "inflation unemployment essay",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-inflation-unemployment-and-policy-trade-off-synthesis"
+      ]
+    },
+    {
+      "term": "information asymmetry revision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-welfare-market-failure-and-government-synthesis"
+      ]
+    },
+    {
+      "term": "integrate micro macro insight",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-economic-evaluation-and-structured-essay-skills"
+      ]
+    },
+    {
+      "term": "interest rate as capital price",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-factor-markets-and-income-distribution-synthesis"
+      ]
+    },
+    {
+      "term": "interest rate parity revision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-exchange-rate-and-financial-stability-synthesis"
+      ]
+    },
+    {
+      "term": "interest rate transmission revision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-fiscal-and-monetary-policy-mix-synthesis"
+      ]
+    },
+    {
+      "term": "international trade data response",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-open-economy-and-international-trade-synthesis"
+      ]
+    },
+    {
+      "term": "interpret macro time series",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-macroeconomic-measurement-and-indicators-synthesis"
+      ]
+    },
+    {
+      "term": "investment decision revision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-factor-markets-and-income-distribution-synthesis"
+      ]
+    },
+    {
+      "term": "J curve revision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-exchange-rate-and-financial-stability-synthesis"
+      ]
+    },
+    {
+      "term": "labour demand revision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-factor-markets-and-income-distribution-synthesis"
+      ]
+    },
+    {
+      "term": "labour force participation revision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-macroeconomic-measurement-and-indicators-synthesis"
+      ]
+    },
+    {
+      "term": "labour macro link revision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-economics-cross-topic-revision-and-examination-readiness"
+      ]
+    },
+    {
+      "term": "labour supply revision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-factor-markets-and-income-distribution-synthesis"
+      ]
+    },
+    {
+      "term": "lagging indicator revision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-macroeconomic-measurement-and-indicators-synthesis"
+      ]
+    },
+    {
+      "term": "land rent revision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-factor-markets-and-income-distribution-synthesis"
+      ]
+    },
+    {
+      "term": "law of demand revision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-microeconomics-revision-and-synthesis"
+      ]
+    },
+    {
+      "term": "law of supply revision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-microeconomics-revision-and-synthesis"
+      ]
+    },
+    {
+      "term": "leading indicator revision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-macroeconomic-measurement-and-indicators-synthesis"
+      ]
+    },
+    {
+      "term": "limitations of CPI measure",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-macroeconomic-measurement-and-indicators-synthesis"
+      ]
+    },
+    {
+      "term": "limitations of GDP measure",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-macroeconomic-measurement-and-indicators-synthesis"
+      ]
+    },
+    {
+      "term": "Linked Exchange Rate context",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-hong-kong-economy-and-public-policy-synthesis"
+      ]
+    },
+    {
+      "term": "Linked Exchange Rate revision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-exchange-rate-and-financial-stability-synthesis"
+      ]
+    },
+    {
+      "term": "long run aggregate supply",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-ad-as-model-and-macroeconomic-equilibrium-synthesis"
+      ]
+    },
+    {
+      "term": "long run neutrality revision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-inflation-unemployment-and-policy-trade-off-synthesis"
+      ]
+    },
+    {
+      "term": "Lorenz curve revision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-economic-growth-development-and-inequality-synthesis"
+      ]
+    },
+    {
+      "term": "macro chart interpretation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-macroeconomic-measurement-and-indicators-synthesis"
+      ]
+    },
+    {
+      "term": "macro data table analysis",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-macroeconomic-measurement-and-indicators-synthesis"
+      ]
+    },
+    {
+      "term": "macro equilibrium adjustment",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-ad-as-model-and-macroeconomic-equilibrium-synthesis"
+      ]
+    },
+    {
+      "term": "macro equilibrium data response",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-ad-as-model-and-macroeconomic-equilibrium-synthesis"
+      ]
+    },
+    {
+      "term": "macro equilibrium essay skill",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-ad-as-model-and-macroeconomic-equilibrium-synthesis"
+      ]
+    },
+    {
+      "term": "macro indicator essay skill",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-macroeconomic-measurement-and-indicators-synthesis"
+      ]
+    },
+    {
+      "term": "macro measurement data response",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-macroeconomic-measurement-and-indicators-synthesis"
+      ]
+    },
+    {
+      "term": "macro trade-off data response",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-inflation-unemployment-and-policy-trade-off-synthesis"
+      ]
+    },
+    {
+      "term": "macroprudential policy revision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-exchange-rate-and-financial-stability-synthesis"
+      ]
+    },
+    {
+      "term": "Mainland economic integration",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-hong-kong-economy-and-public-policy-synthesis"
+      ]
+    },
+    {
+      "term": "marginal analysis revision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-microeconomics-revision-and-synthesis"
+      ]
+    },
+    {
+      "term": "marginal revenue product revision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-factor-markets-and-income-distribution-synthesis"
+      ]
+    },
+    {
+      "term": "market equilibrium revision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-microeconomics-revision-and-synthesis"
+      ]
+    },
+    {
+      "term": "market failure case integration",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-welfare-market-failure-and-government-synthesis"
+      ]
+    },
+    {
+      "term": "market failure essay synthesis",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-welfare-market-failure-and-government-synthesis"
+      ]
+    },
+    {
+      "term": "market failure revision overview",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-welfare-market-failure-and-government-synthesis"
+      ]
+    },
+    {
+      "term": "market macro transmission",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-economics-cross-topic-revision-and-examination-readiness"
+      ]
+    },
+    {
+      "term": "market power welfare loss",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-market-structures-and-strategic-behaviour-synthesis"
+      ]
+    },
+    {
+      "term": "market structure data response",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-market-structures-and-strategic-behaviour-synthesis"
+      ]
+    },
+    {
+      "term": "market structure diagram synthesis",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-market-structures-and-strategic-behaviour-synthesis"
+      ]
+    },
+    {
+      "term": "market structure essay planning",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-market-structures-and-strategic-behaviour-synthesis"
+      ]
+    },
+    {
+      "term": "Marshall Lerner revision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-exchange-rate-and-financial-stability-synthesis"
+      ]
+    },
+    {
+      "term": "micro data response skill",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-microeconomics-revision-and-synthesis"
+      ]
+    },
+    {
+      "term": "micro diagram integration skill",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-microeconomics-revision-and-synthesis"
+      ]
+    },
+    {
+      "term": "micro macro link revision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-economics-cross-topic-revision-and-examination-readiness"
+      ]
+    },
+    {
+      "term": "micro structured essay skill",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-microeconomics-revision-and-synthesis"
+      ]
+    },
+    {
+      "term": "minimum wage revision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-factor-markets-and-income-distribution-synthesis"
+      ]
+    },
+    {
+      "term": "monopolistic competition feature",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-market-structures-and-strategic-behaviour-synthesis"
+      ]
+    },
+    {
+      "term": "monopoly profit analysis",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-market-structures-and-strategic-behaviour-synthesis"
+      ]
+    },
+    {
+      "term": "monopsony labour market revision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-factor-markets-and-income-distribution-synthesis"
+      ]
+    },
+    {
+      "term": "moral hazard revision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-welfare-market-failure-and-government-synthesis"
+      ]
+    },
+    {
+      "term": "multiplier calculation skill",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-economic-calculation-and-data-interpretation"
+      ]
+    },
+    {
+      "term": "multiplier effect revision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-ad-as-model-and-macroeconomic-equilibrium-synthesis"
+      ]
+    },
+    {
+      "term": "NAIRU revision concept",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-inflation-unemployment-and-policy-trade-off-synthesis"
+      ]
+    },
+    {
+      "term": "national income accounting revision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-macroeconomic-measurement-and-indicators-synthesis"
+      ]
+    },
+    {
+      "term": "natural monopoly regulation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-market-structures-and-strategic-behaviour-synthesis"
+      ]
+    },
+    {
+      "term": "natural rate revision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-inflation-unemployment-and-policy-trade-off-synthesis"
+      ]
+    },
+    {
+      "term": "negative externality diagram",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-welfare-market-failure-and-government-synthesis"
+      ]
+    },
+    {
+      "term": "nominal exchange rate revision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-exchange-rate-and-financial-stability-synthesis"
+      ]
+    },
+    {
+      "term": "nominal GDP revision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-macroeconomic-measurement-and-indicators-synthesis"
+      ]
+    },
+    {
+      "term": "non-price competition revision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-market-structures-and-strategic-behaviour-synthesis"
+      ]
+    },
+    {
+      "term": "oligopoly case study revision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-market-structures-and-strategic-behaviour-synthesis"
+      ]
+    },
+    {
+      "term": "oligopoly interdependence revision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-market-structures-and-strategic-behaviour-synthesis"
+      ]
+    },
+    {
+      "term": "open economy essay skill",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-open-economy-and-international-trade-synthesis"
+      ]
+    },
+    {
+      "term": "opportunity cost application",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-microeconomics-revision-and-synthesis"
+      ]
+    },
+    {
+      "term": "output gap revision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-ad-as-model-and-macroeconomic-equilibrium-synthesis"
+      ]
+    },
+    {
+      "term": "pandemic macro shock case",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-global-economy-and-contemporary-issues-synthesis"
+      ]
+    },
+    {
+      "term": "paper one time management",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-economic-evaluation-and-structured-essay-skills"
+      ]
+    },
+    {
+      "term": "paper two time management",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-economic-evaluation-and-structured-essay-skills"
+      ]
+    },
+    {
+      "term": "peer review of economics answer",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-economics-cross-topic-revision-and-examination-readiness"
+      ]
+    },
+    {
+      "term": "percentage change calculation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-economic-calculation-and-data-interpretation"
+      ]
+    },
+    {
+      "term": "percentage point distinction",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-economic-calculation-and-data-interpretation"
+      ]
+    },
+    {
+      "term": "perfect competition revision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-market-structures-and-strategic-behaviour-synthesis"
+      ]
+    },
+    {
+      "term": "Phillips curve revision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-inflation-unemployment-and-policy-trade-off-synthesis"
+      ]
+    },
+    {
+      "term": "physical capital revision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-economic-growth-development-and-inequality-synthesis"
+      ]
+    },
+    {
+      "term": "Pigouvian tax revision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-welfare-market-failure-and-government-synthesis"
+      ]
+    },
+    {
+      "term": "platform economy regulation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-global-economy-and-contemporary-issues-synthesis"
+      ]
+    },
+    {
+      "term": "policy induced AD shift",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-ad-as-model-and-macroeconomic-equilibrium-synthesis"
+      ]
+    },
+    {
+      "term": "policy induced AS shift",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-ad-as-model-and-macroeconomic-equilibrium-synthesis"
+      ]
+    },
+    {
+      "term": "policy mix coordination",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-fiscal-and-monetary-policy-mix-synthesis"
+      ]
+    },
+    {
+      "term": "policy mix data response",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-fiscal-and-monetary-policy-mix-synthesis"
+      ]
+    },
+    {
+      "term": "policy mix Hong Kong case",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-fiscal-and-monetary-policy-mix-synthesis"
+      ]
+    },
+    {
+      "term": "policy recommendation justification",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-economic-evaluation-and-structured-essay-skills"
+      ]
+    },
+    {
+      "term": "policy time lag revision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-fiscal-and-monetary-policy-mix-synthesis"
+      ]
+    },
+    {
+      "term": "positive externality diagram",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-welfare-market-failure-and-government-synthesis"
+      ]
+    },
+    {
+      "term": "potential output revision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-ad-as-model-and-macroeconomic-equilibrium-synthesis"
+      ]
+    },
+    {
+      "term": "poverty reduction policy",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-economic-growth-development-and-inequality-synthesis"
+      ]
+    },
+    {
+      "term": "practice data response set",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-economics-cross-topic-revision-and-examination-readiness"
+      ]
+    },
+    {
+      "term": "practice structured mock essay",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-economics-cross-topic-revision-and-examination-readiness"
+      ]
+    },
+    {
+      "term": "predict examination topic trend",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-economics-cross-topic-revision-and-examination-readiness"
+      ]
+    },
+    {
+      "term": "price ceiling case analysis",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-microeconomics-revision-and-synthesis"
+      ]
+    },
+    {
+      "term": "price discrimination revision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-market-structures-and-strategic-behaviour-synthesis"
+      ]
+    },
+    {
+      "term": "price floor case analysis",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-microeconomics-revision-and-synthesis"
+      ]
+    },
+    {
+      "term": "pricing strategy evaluation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-market-structures-and-strategic-behaviour-synthesis"
+      ]
+    },
+    {
+      "term": "producer surplus revision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-microeconomics-revision-and-synthesis"
+      ]
+    },
+    {
+      "term": "production possibility frontier shift",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-microeconomics-revision-and-synthesis"
+      ]
+    },
+    {
+      "term": "productivity growth revision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-economic-growth-development-and-inequality-synthesis"
+      ]
+    },
+    {
+      "term": "profit income revision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-factor-markets-and-income-distribution-synthesis"
+      ]
+    },
+    {
+      "term": "progressive tax revision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-economic-growth-development-and-inequality-synthesis"
+      ]
+    },
+    {
+      "term": "property rights solution",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-welfare-market-failure-and-government-synthesis"
+      ]
+    },
+    {
+      "term": "protectionism argument revision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-open-economy-and-international-trade-synthesis"
+      ]
+    },
+    {
+      "term": "public debt revision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-fiscal-and-monetary-policy-mix-synthesis"
+      ]
+    },
+    {
+      "term": "public good provision revision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-welfare-market-failure-and-government-synthesis"
+      ]
+    },
+    {
+      "term": "quantitative easing revision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-fiscal-and-monetary-policy-mix-synthesis"
+      ]
+    },
+    {
+      "term": "quota effect revision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-open-economy-and-international-trade-synthesis"
+      ]
+    },
+    {
+      "term": "real exchange rate revision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-exchange-rate-and-financial-stability-synthesis"
+      ]
+    },
+    {
+      "term": "real GDP revision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-macroeconomic-measurement-and-indicators-synthesis"
+      ]
+    },
+    {
+      "term": "real versus nominal conversion",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-economic-calculation-and-data-interpretation"
+      ]
+    },
+    {
+      "term": "redistributive policy revision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-economic-growth-development-and-inequality-synthesis"
+      ]
+    },
+    {
+      "term": "regulatory policy evaluation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-welfare-market-failure-and-government-synthesis"
+      ]
+    },
+    {
+      "term": "revision concept map skill",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-economics-cross-topic-revision-and-examination-readiness"
+      ]
+    },
+    {
+      "term": "round appropriately in answer",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-economic-calculation-and-data-interpretation"
+      ]
+    },
+    {
+      "term": "sacrifice ratio revision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-inflation-unemployment-and-policy-trade-off-synthesis"
+      ]
+    },
+    {
+      "term": "sanction economic effect",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-global-economy-and-contemporary-issues-synthesis"
+      ]
+    },
+    {
+      "term": "saving decision revision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-factor-markets-and-income-distribution-synthesis"
+      ]
+    },
+    {
+      "term": "scarcity and choice revision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-microeconomics-revision-and-synthesis"
+      ]
+    },
+    {
+      "term": "short run aggregate supply",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-ad-as-model-and-macroeconomic-equilibrium-synthesis"
+      ]
+    },
+    {
+      "term": "short run policy trade-off",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-inflation-unemployment-and-policy-trade-off-synthesis"
+      ]
+    },
+    {
+      "term": "show working in answer",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-economic-calculation-and-data-interpretation"
+      ]
+    },
+    {
+      "term": "skill premium revision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-factor-markets-and-income-distribution-synthesis"
+      ]
+    },
+    {
+      "term": "sovereign debt stress case",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-global-economy-and-contemporary-issues-synthesis"
+      ]
+    },
+    {
+      "term": "specialization benefit revision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-open-economy-and-international-trade-synthesis"
+      ]
+    },
+    {
+      "term": "stagflation revision case",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-ad-as-model-and-macroeconomic-equilibrium-synthesis"
+      ]
+    },
+    {
+      "term": "state assumption explicitly",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-economic-evaluation-and-structured-essay-skills"
+      ]
+    },
+    {
+      "term": "structural unemployment revision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-inflation-unemployment-and-policy-trade-off-synthesis"
+      ]
+    },
+    {
+      "term": "subsidy effect revision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-microeconomics-revision-and-synthesis"
+      ]
+    },
+    {
+      "term": "supply shock analysis",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-ad-as-model-and-macroeconomic-equilibrium-synthesis"
+      ]
+    },
+    {
+      "term": "supply side policy revision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-fiscal-and-monetary-policy-mix-synthesis"
+      ]
+    },
+    {
+      "term": "surplus area estimation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-economic-calculation-and-data-interpretation"
+      ]
+    },
+    {
+      "term": "sustainable growth revision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-economic-growth-development-and-inequality-synthesis"
+      ]
+    },
+    {
+      "term": "systemic risk revision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-exchange-rate-and-financial-stability-synthesis"
+      ]
+    },
+    {
+      "term": "table data extraction skill",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-economic-calculation-and-data-interpretation"
+      ]
+    },
+    {
+      "term": "targeted calculation drill",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-economics-cross-topic-revision-and-examination-readiness"
+      ]
+    },
+    {
+      "term": "targeted diagram drill",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-economics-cross-topic-revision-and-examination-readiness"
+      ]
+    },
+    {
+      "term": "tariff effect revision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-open-economy-and-international-trade-synthesis"
+      ]
+    },
+    {
+      "term": "tax effect revision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-microeconomics-revision-and-synthesis"
+      ]
+    },
+    {
+      "term": "tax revenue calculation skill",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-economic-calculation-and-data-interpretation"
+      ]
+    },
+    {
+      "term": "technological progress revision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-economic-growth-development-and-inequality-synthesis"
+      ]
+    },
+    {
+      "term": "terms of trade revision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-open-economy-and-international-trade-synthesis"
+      ]
+    },
+    {
+      "term": "tradable permit revision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-welfare-market-failure-and-government-synthesis"
+      ]
+    },
+    {
+      "term": "trade balance revision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-open-economy-and-international-trade-synthesis"
+      ]
+    },
+    {
+      "term": "trade case study synthesis",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-open-economy-and-international-trade-synthesis"
+      ]
+    },
+    {
+      "term": "trade deficit case analysis",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-open-economy-and-international-trade-synthesis"
+      ]
+    },
+    {
+      "term": "trade macro link revision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-economics-cross-topic-revision-and-examination-readiness"
+      ]
+    },
+    {
+      "term": "trade surplus case analysis",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-open-economy-and-international-trade-synthesis"
+      ]
+    },
+    {
+      "term": "trade union effect revision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-factor-markets-and-income-distribution-synthesis"
+      ]
+    },
+    {
+      "term": "trade war impact analysis",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-global-economy-and-contemporary-issues-synthesis"
+      ]
+    },
+    {
+      "term": "transfer payment revision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-economic-growth-development-and-inequality-synthesis"
+      ]
+    },
+    {
+      "term": "unemployment rate calculation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-economic-calculation-and-data-interpretation"
+      ]
+    },
+    {
+      "term": "unemployment rate revision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-macroeconomic-measurement-and-indicators-synthesis"
+      ]
+    },
+    {
+      "term": "use Hong Kong example effectively",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-economic-evaluation-and-structured-essay-skills"
+      ]
+    },
+    {
+      "term": "wage determination revision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-factor-markets-and-income-distribution-synthesis"
+      ]
+    },
+    {
+      "term": "weigh efficiency and equity",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-economic-evaluation-and-structured-essay-skills"
+      ]
+    },
+    {
+      "term": "welfare change calculation revision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "economics",
+        "curriculum-style",
+        "hkdse-welfare-market-failure-and-government-synthesis"
       ]
     }
   ]

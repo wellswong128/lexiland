@@ -7,6 +7,15 @@
   "version": "2026.06",
   "display_name_en": "S3 Geography",
   "display_name_zh_hant": "中三地理",
+  "source": {
+    "type": "curriculum_style_public_references",
+    "references": [
+      "EDB Geography Curriculum and Assessment Guide (Secondary 1-3)",
+      "EDB junior secondary Geography curriculum framework",
+      "Public Hong Kong Secondary 3 Geography syllabus topic examples (advanced urban geography, planning and policy, climate change mitigation and adaptation, coastal and slope processes, plate tectonics and hazards, population and development, globalization and inequality, Hong Kong geographic synthesis, GIS and spatial analysis, fieldwork synthesis and evaluation)"
+    ],
+    "note": "No fixed official Hong Kong S3 geography vocabulary list is prescribed; this list is theme-based for junior secondary S3 geography enrichment import. Term-only entries are completed during import."
+  },
   "words": [
     {
       "term": "Urbanization",
@@ -326,6 +335,3702 @@
         "gis",
         "analysis",
         "noun phrase"
+      ]
+    },
+    {
+      "term": "accessibility for elderly",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "transport-mobility-and-urban-living"
+      ]
+    },
+    {
+      "term": "aerial photograph interpretation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "gis-remote-sensing-and-spatial-analysis"
+      ]
+    },
+    {
+      "term": "aging society challenge",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "population-dynamics-and-demographic-transition"
+      ]
+    },
+    {
+      "term": "air mass interaction",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "atmospheric-processes-and-extreme-weather"
+      ]
+    },
+    {
+      "term": "anticyclone system",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "atmospheric-processes-and-extreme-weather"
+      ]
+    },
+    {
+      "term": "atmospheric circulation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "atmospheric-processes-and-extreme-weather"
+      ]
+    },
+    {
+      "term": "balancing growth and conservation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "resource-security-and-sustainable-futures"
+      ]
+    },
+    {
+      "term": "beach nourishment project",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "advanced-coastal-and-marine-geography"
+      ]
+    },
+    {
+      "term": "biodiversity hotspot",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "ecosystem-services-and-environmental-stewardship"
+      ]
+    },
+    {
+      "term": "birth rate trend",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "population-dynamics-and-demographic-transition"
+      ]
+    },
+    {
+      "term": "brain drain",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "development-inequality-and-globalization"
+      ]
+    },
+    {
+      "term": "brownfield redevelopment",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "urban-planning-governance-and-policy"
+      ]
+    },
+    {
+      "term": "buffer zone analysis",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "gis-remote-sensing-and-spatial-analysis"
+      ]
+    },
+    {
+      "term": "building earthquake resistance",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "plate-tectonics-and-seismic-volcanic-hazards"
+      ]
+    },
+    {
+      "term": "building height control",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "urban-planning-governance-and-policy"
+      ]
+    },
+    {
+      "term": "carbon footprint reduction",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "climate-change-mitigation-and-adaptation"
+      ]
+    },
+    {
+      "term": "carbon offset",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "climate-change-mitigation-and-adaptation"
+      ]
+    },
+    {
+      "term": "carrying capacity debate",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "population-dynamics-and-demographic-transition"
+      ]
+    },
+    {
+      "term": "case study comparison",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "geographic-inquiry-synthesis-and-evaluation"
+      ]
+    },
+    {
+      "term": "cause and effect in geography",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "geographic-inquiry-synthesis-and-evaluation"
+      ]
+    },
+    {
+      "term": "choropleth mapping",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "gis-remote-sensing-and-spatial-analysis"
+      ]
+    },
+    {
+      "term": "circular economy model",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "resource-security-and-sustainable-futures"
+      ]
+    },
+    {
+      "term": "climate adaptation strategy",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "climate-change-mitigation-and-adaptation"
+      ]
+    },
+    {
+      "term": "climate change impact",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "climate-change-mitigation-and-adaptation"
+      ]
+    },
+    {
+      "term": "climate justice issue",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "climate-change-mitigation-and-adaptation"
+      ]
+    },
+    {
+      "term": "climate mitigation strategy",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "climate-change-mitigation-and-adaptation"
+      ]
+    },
+    {
+      "term": "climate policy framework",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "climate-change-mitigation-and-adaptation"
+      ]
+    },
+    {
+      "term": "climate resilient city",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "climate-change-mitigation-and-adaptation"
+      ]
+    },
+    {
+      "term": "climate-related hazard increase",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "integrated-natural-hazard-management"
+      ]
+    },
+    {
+      "term": "coastal emergence",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "advanced-coastal-and-marine-geography"
+      ]
+    },
+    {
+      "term": "coastal hard engineering",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "advanced-coastal-and-marine-geography"
+      ]
+    },
+    {
+      "term": "coastal hazard risk",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "advanced-coastal-and-marine-geography"
+      ]
+    },
+    {
+      "term": "coastal sediment budget",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "advanced-coastal-and-marine-geography"
+      ]
+    },
+    {
+      "term": "coastal soft engineering",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "advanced-coastal-and-marine-geography"
+      ]
+    },
+    {
+      "term": "coastal submergence",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "advanced-coastal-and-marine-geography"
+      ]
+    },
+    {
+      "term": "coastal system",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "advanced-coastal-and-marine-geography"
+      ]
+    },
+    {
+      "term": "communicating geographic argument",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "geographic-inquiry-synthesis-and-evaluation"
+      ]
+    },
+    {
+      "term": "community conservation project",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "ecosystem-services-and-environmental-stewardship"
+      ]
+    },
+    {
+      "term": "community-based disaster management",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "integrated-natural-hazard-management"
+      ]
+    },
+    {
+      "term": "commuting pattern",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "transport-mobility-and-urban-living"
+      ]
+    },
+    {
+      "term": "comparing coastal management",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "advanced-coastal-and-marine-geography"
+      ]
+    },
+    {
+      "term": "comparing conservation approaches",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "ecosystem-services-and-environmental-stewardship"
+      ]
+    },
+    {
+      "term": "comparing development levels",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "development-inequality-and-globalization"
+      ]
+    },
+    {
+      "term": "comparing disaster case studies",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "integrated-natural-hazard-management"
+      ]
+    },
+    {
+      "term": "comparing Hong Kong districts",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "hong-kong-geographic-synthesis"
+      ]
+    },
+    {
+      "term": "comparing mapping methods",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "gis-remote-sensing-and-spatial-analysis"
+      ]
+    },
+    {
+      "term": "comparing mitigation and adaptation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "climate-change-mitigation-and-adaptation"
+      ]
+    },
+    {
+      "term": "comparing planning approaches",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "urban-planning-governance-and-policy"
+      ]
+    },
+    {
+      "term": "comparing population structures",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "population-dynamics-and-demographic-transition"
+      ]
+    },
+    {
+      "term": "comparing resource strategies",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "resource-security-and-sustainable-futures"
+      ]
+    },
+    {
+      "term": "comparing slope hazards",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "slope-processes-and-landslide-management"
+      ]
+    },
+    {
+      "term": "comparing tectonic hazards",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "plate-tectonics-and-seismic-volcanic-hazards"
+      ]
+    },
+    {
+      "term": "comparing transport systems",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "transport-mobility-and-urban-living"
+      ]
+    },
+    {
+      "term": "comparing urban change in cities",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "advanced-urban-geography-and-city-systems"
+      ]
+    },
+    {
+      "term": "comparing weather systems",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "atmospheric-processes-and-extreme-weather"
+      ]
+    },
+    {
+      "term": "conservative plate margin",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "plate-tectonics-and-seismic-volcanic-hazards"
+      ]
+    },
+    {
+      "term": "constructive plate margin",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "plate-tectonics-and-seismic-volcanic-hazards"
+      ]
+    },
+    {
+      "term": "convectional rainfall",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "atmospheric-processes-and-extreme-weather"
+      ]
+    },
+    {
+      "term": "coral reef protection",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "advanced-coastal-and-marine-geography"
+      ]
+    },
+    {
+      "term": "counter-urbanization trend",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "advanced-urban-geography-and-city-systems"
+      ]
+    },
+    {
+      "term": "cross-boundary transport link",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "hong-kong-geographic-synthesis"
+      ]
+    },
+    {
+      "term": "cross-topic geographic link",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "geographic-inquiry-synthesis-and-evaluation"
+      ]
+    },
+    {
+      "term": "cultural ecosystem service",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "ecosystem-services-and-environmental-stewardship"
+      ]
+    },
+    {
+      "term": "cycling infrastructure",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "transport-mobility-and-urban-living"
+      ]
+    },
+    {
+      "term": "cyclone system",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "atmospheric-processes-and-extreme-weather"
+      ]
+    },
+    {
+      "term": "death rate trend",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "population-dynamics-and-demographic-transition"
+      ]
+    },
+    {
+      "term": "debris flow hazard",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "slope-processes-and-landslide-management"
+      ]
+    },
+    {
+      "term": "deindustrialization impact",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "development-inequality-and-globalization"
+      ]
+    },
+    {
+      "term": "demographic data interpretation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "population-dynamics-and-demographic-transition"
+      ]
+    },
+    {
+      "term": "demographic transition model",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "population-dynamics-and-demographic-transition"
+      ]
+    },
+    {
+      "term": "dependency ratio",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "population-dynamics-and-demographic-transition"
+      ]
+    },
+    {
+      "term": "destructive plate margin",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "plate-tectonics-and-seismic-volcanic-hazards"
+      ]
+    },
+    {
+      "term": "development and environment trade-off",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "development-inequality-and-globalization"
+      ]
+    },
+    {
+      "term": "development gap",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "development-inequality-and-globalization"
+      ]
+    },
+    {
+      "term": "development indicator",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "development-inequality-and-globalization"
+      ]
+    },
+    {
+      "term": "digital elevation model",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "gis-remote-sensing-and-spatial-analysis"
+      ]
+    },
+    {
+      "term": "disaster recovery plan",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "integrated-natural-hazard-management"
+      ]
+    },
+    {
+      "term": "disaster relief coordination",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "integrated-natural-hazard-management"
+      ]
+    },
+    {
+      "term": "disaster risk reduction",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "integrated-natural-hazard-management"
+      ]
+    },
+    {
+      "term": "drought condition",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "atmospheric-processes-and-extreme-weather"
+      ]
+    },
+    {
+      "term": "early warning for tsunami",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "plate-tectonics-and-seismic-volcanic-hazards"
+      ]
+    },
+    {
+      "term": "early warning technology",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "integrated-natural-hazard-management"
+      ]
+    },
+    {
+      "term": "earthquake mechanism",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "plate-tectonics-and-seismic-volcanic-hazards"
+      ]
+    },
+    {
+      "term": "earthquake preparedness",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "plate-tectonics-and-seismic-volcanic-hazards"
+      ]
+    },
+    {
+      "term": "ecological corridor",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "ecosystem-services-and-environmental-stewardship"
+      ]
+    },
+    {
+      "term": "ecological footprint",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "resource-security-and-sustainable-futures"
+      ]
+    },
+    {
+      "term": "ecosystem service",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "ecosystem-services-and-environmental-stewardship"
+      ]
+    },
+    {
+      "term": "edge city development",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "advanced-urban-geography-and-city-systems"
+      ]
+    },
+    {
+      "term": "emergency response system",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "integrated-natural-hazard-management"
+      ]
+    },
+    {
+      "term": "energy efficiency policy",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "climate-change-mitigation-and-adaptation"
+      ]
+    },
+    {
+      "term": "energy security",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "resource-security-and-sustainable-futures"
+      ]
+    },
+    {
+      "term": "energy transition pathway",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "resource-security-and-sustainable-futures"
+      ]
+    },
+    {
+      "term": "environmental carrying capacity",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "resource-security-and-sustainable-futures"
+      ]
+    },
+    {
+      "term": "environmental impact assessment",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "ecosystem-services-and-environmental-stewardship"
+      ]
+    },
+    {
+      "term": "environmental stewardship",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "ecosystem-services-and-environmental-stewardship"
+      ]
+    },
+    {
+      "term": "ethical fieldwork practice",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "geographic-inquiry-synthesis-and-evaluation"
+      ]
+    },
+    {
+      "term": "evacuation during landslide",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "slope-processes-and-landslide-management"
+      ]
+    },
+    {
+      "term": "evacuation route planning",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "integrated-natural-hazard-management"
+      ]
+    },
+    {
+      "term": "evaluating climate response",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "climate-change-mitigation-and-adaptation"
+      ]
+    },
+    {
+      "term": "evaluating coastal protection",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "advanced-coastal-and-marine-geography"
+      ]
+    },
+    {
+      "term": "evaluating congestion solution",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "transport-mobility-and-urban-living"
+      ]
+    },
+    {
+      "term": "evaluating conservation effectiveness",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "ecosystem-services-and-environmental-stewardship"
+      ]
+    },
+    {
+      "term": "evaluating development strategy",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "development-inequality-and-globalization"
+      ]
+    },
+    {
+      "term": "evaluating disaster management",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "integrated-natural-hazard-management"
+      ]
+    },
+    {
+      "term": "evaluating geographic investigation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "geographic-inquiry-synthesis-and-evaluation"
+      ]
+    },
+    {
+      "term": "evaluating GIS application",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "gis-remote-sensing-and-spatial-analysis"
+      ]
+    },
+    {
+      "term": "evaluating Hong Kong sustainability",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "hong-kong-geographic-synthesis"
+      ]
+    },
+    {
+      "term": "evaluating planning outcome",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "urban-planning-governance-and-policy"
+      ]
+    },
+    {
+      "term": "evaluating population policy",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "population-dynamics-and-demographic-transition"
+      ]
+    },
+    {
+      "term": "evaluating slope management",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "slope-processes-and-landslide-management"
+      ]
+    },
+    {
+      "term": "evaluating sustainability policy",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "resource-security-and-sustainable-futures"
+      ]
+    },
+    {
+      "term": "evaluating tectonic risk reduction",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "plate-tectonics-and-seismic-volcanic-hazards"
+      ]
+    },
+    {
+      "term": "evaluating urban transformation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "advanced-urban-geography-and-city-systems"
+      ]
+    },
+    {
+      "term": "exposure to hazard",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "integrated-natural-hazard-management"
+      ]
+    },
+    {
+      "term": "extreme rainfall event",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "climate-change-mitigation-and-adaptation"
+      ]
+    },
+    {
+      "term": "fair trade movement",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "development-inequality-and-globalization"
+      ]
+    },
+    {
+      "term": "fieldwork report structure",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "geographic-inquiry-synthesis-and-evaluation"
+      ]
+    },
+    {
+      "term": "flood meteorology",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "atmospheric-processes-and-extreme-weather"
+      ]
+    },
+    {
+      "term": "flow map",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "gis-remote-sensing-and-spatial-analysis"
+      ]
+    },
+    {
+      "term": "focus and epicenter",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "plate-tectonics-and-seismic-volcanic-hazards"
+      ]
+    },
+    {
+      "term": "food security",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "resource-security-and-sustainable-futures"
+      ]
+    },
+    {
+      "term": "forecasting extreme weather",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "atmospheric-processes-and-extreme-weather"
+      ]
+    },
+    {
+      "term": "fossil fuel dependence",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "resource-security-and-sustainable-futures"
+      ]
+    },
+    {
+      "term": "front system weather",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "atmospheric-processes-and-extreme-weather"
+      ]
+    },
+    {
+      "term": "future city concept",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "resource-security-and-sustainable-futures"
+      ]
+    },
+    {
+      "term": "gentrification process",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "advanced-urban-geography-and-city-systems"
+      ]
+    },
+    {
+      "term": "Geographic Information System",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "gis-remote-sensing-and-spatial-analysis"
+      ]
+    },
+    {
+      "term": "geographic inquiry cycle",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "geographic-inquiry-synthesis-and-evaluation"
+      ]
+    },
+    {
+      "term": "geographic model application",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "geographic-inquiry-synthesis-and-evaluation"
+      ]
+    },
+    {
+      "term": "GIS layer analysis",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "gis-remote-sensing-and-spatial-analysis"
+      ]
+    },
+    {
+      "term": "global inequality trend",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "development-inequality-and-globalization"
+      ]
+    },
+    {
+      "term": "global supply chain",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "development-inequality-and-globalization"
+      ]
+    },
+    {
+      "term": "globalization process",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "development-inequality-and-globalization"
+      ]
+    },
+    {
+      "term": "governance in urban development",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "urban-planning-governance-and-policy"
+      ]
+    },
+    {
+      "term": "GPS field mapping",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "gis-remote-sensing-and-spatial-analysis"
+      ]
+    },
+    {
+      "term": "graph and map synthesis",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "geographic-inquiry-synthesis-and-evaluation"
+      ]
+    },
+    {
+      "term": "Greater Bay Area integration",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "hong-kong-geographic-synthesis"
+      ]
+    },
+    {
+      "term": "green belt protection",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "urban-planning-governance-and-policy"
+      ]
+    },
+    {
+      "term": "greenfield development",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "urban-planning-governance-and-policy"
+      ]
+    },
+    {
+      "term": "greenhouse gas emission",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "climate-change-mitigation-and-adaptation"
+      ]
+    },
+    {
+      "term": "Gross Domestic Product per capita",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "development-inequality-and-globalization"
+      ]
+    },
+    {
+      "term": "habitat fragmentation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "ecosystem-services-and-environmental-stewardship"
+      ]
+    },
+    {
+      "term": "hazard education programme",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "integrated-natural-hazard-management"
+      ]
+    },
+    {
+      "term": "hazard mapping technology",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "integrated-natural-hazard-management"
+      ]
+    },
+    {
+      "term": "hazard preparedness plan",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "integrated-natural-hazard-management"
+      ]
+    },
+    {
+      "term": "hazard risk equation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "integrated-natural-hazard-management"
+      ]
+    },
+    {
+      "term": "heatwave risk",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "climate-change-mitigation-and-adaptation"
+      ]
+    },
+    {
+      "term": "heavy rainfall and landslide",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "slope-processes-and-landslide-management"
+      ]
+    },
+    {
+      "term": "heritage conservation planning",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "urban-planning-governance-and-policy"
+      ]
+    },
+    {
+      "term": "Hong Kong air quality issue",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "hong-kong-geographic-synthesis"
+      ]
+    },
+    {
+      "term": "Hong Kong biodiversity conservation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "hong-kong-geographic-synthesis"
+      ]
+    },
+    {
+      "term": "Hong Kong climate action",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "hong-kong-geographic-synthesis"
+      ]
+    },
+    {
+      "term": "Hong Kong coastal management",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "hong-kong-geographic-synthesis"
+      ]
+    },
+    {
+      "term": "Hong Kong country park system",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "hong-kong-geographic-synthesis"
+      ]
+    },
+    {
+      "term": "Hong Kong future development debate",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "hong-kong-geographic-synthesis"
+      ]
+    },
+    {
+      "term": "Hong Kong geographic identity",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "hong-kong-geographic-synthesis"
+      ]
+    },
+    {
+      "term": "Hong Kong housing challenge",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "hong-kong-geographic-synthesis"
+      ]
+    },
+    {
+      "term": "Hong Kong land reclamation history",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "hong-kong-geographic-synthesis"
+      ]
+    },
+    {
+      "term": "Hong Kong slope hazard management",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "hong-kong-geographic-synthesis"
+      ]
+    },
+    {
+      "term": "Hong Kong spatial planning",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "hong-kong-geographic-synthesis"
+      ]
+    },
+    {
+      "term": "Hong Kong transport network",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "hong-kong-geographic-synthesis"
+      ]
+    },
+    {
+      "term": "Hong Kong typhoon preparedness",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "hong-kong-geographic-synthesis"
+      ]
+    },
+    {
+      "term": "Hong Kong urban development",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "hong-kong-geographic-synthesis"
+      ]
+    },
+    {
+      "term": "Hong Kong waste management",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "hong-kong-geographic-synthesis"
+      ]
+    },
+    {
+      "term": "Hong Kong water supply system",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "hong-kong-geographic-synthesis"
+      ]
+    },
+    {
+      "term": "hotspot mapping",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "gis-remote-sensing-and-spatial-analysis"
+      ]
+    },
+    {
+      "term": "housing policy planning",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "urban-planning-governance-and-policy"
+      ]
+    },
+    {
+      "term": "human activity on slope",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "slope-processes-and-landslide-management"
+      ]
+    },
+    {
+      "term": "Human Development Index",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "development-inequality-and-globalization"
+      ]
+    },
+    {
+      "term": "human-nature relationship",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "ecosystem-services-and-environmental-stewardship"
+      ]
+    },
+    {
+      "term": "hypothesis testing in fieldwork",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "geographic-inquiry-synthesis-and-evaluation"
+      ]
+    },
+    {
+      "term": "income inequality",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "development-inequality-and-globalization"
+      ]
+    },
+    {
+      "term": "infrastructure planning",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "urban-planning-governance-and-policy"
+      ]
+    },
+    {
+      "term": "inner city problem",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "advanced-urban-geography-and-city-systems"
+      ]
+    },
+    {
+      "term": "integrated hazard policy",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "integrated-natural-hazard-management"
+      ]
+    },
+    {
+      "term": "intergenerational equity",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "resource-security-and-sustainable-futures"
+      ]
+    },
+    {
+      "term": "intermodal transport hub",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "transport-mobility-and-urban-living"
+      ]
+    },
+    {
+      "term": "international climate agreement",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "climate-change-mitigation-and-adaptation"
+      ]
+    },
+    {
+      "term": "international disaster aid",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "integrated-natural-hazard-management"
+      ]
+    },
+    {
+      "term": "international migration flow",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "population-dynamics-and-demographic-transition"
+      ]
+    },
+    {
+      "term": "interpreting weather data",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "atmospheric-processes-and-extreme-weather"
+      ]
+    },
+    {
+      "term": "invasive species control",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "ecosystem-services-and-environmental-stewardship"
+      ]
+    },
+    {
+      "term": "isoline map",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "gis-remote-sensing-and-spatial-analysis"
+      ]
+    },
+    {
+      "term": "junior secondary geography capstone synthesis",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "geographic-inquiry-synthesis-and-evaluation"
+      ]
+    },
+    {
+      "term": "land use planning decision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "urban-planning-governance-and-policy"
+      ]
+    },
+    {
+      "term": "landslide disaster case study",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "slope-processes-and-landslide-management"
+      ]
+    },
+    {
+      "term": "landslide trigger factor",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "slope-processes-and-landslide-management"
+      ]
+    },
+    {
+      "term": "landslide warning signal",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "slope-processes-and-landslide-management"
+      ]
+    },
+    {
+      "term": "local climate action plan",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "climate-change-mitigation-and-adaptation"
+      ]
+    },
+    {
+      "term": "logistics and urban freight",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "transport-mobility-and-urban-living"
+      ]
+    },
+    {
+      "term": "low carbon society",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "resource-security-and-sustainable-futures"
+      ]
+    },
+    {
+      "term": "low emission zone",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "transport-mobility-and-urban-living"
+      ]
+    },
+    {
+      "term": "managed realignment",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "advanced-coastal-and-marine-geography"
+      ]
+    },
+    {
+      "term": "mangrove coast protection",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "advanced-coastal-and-marine-geography"
+      ]
+    },
+    {
+      "term": "marine pollution source",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "advanced-coastal-and-marine-geography"
+      ]
+    },
+    {
+      "term": "marine protected area",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "ecosystem-services-and-environmental-stewardship"
+      ]
+    },
+    {
+      "term": "mass movement type",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "slope-processes-and-landslide-management"
+      ]
+    },
+    {
+      "term": "mass transit development",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "transport-mobility-and-urban-living"
+      ]
+    },
+    {
+      "term": "megacity challenge",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "advanced-urban-geography-and-city-systems"
+      ]
+    },
+    {
+      "term": "microclimate variation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "atmospheric-processes-and-extreme-weather"
+      ]
+    },
+    {
+      "term": "mid-ocean ridge spreading",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "plate-tectonics-and-seismic-volcanic-hazards"
+      ]
+    },
+    {
+      "term": "mixed land use planning",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "advanced-urban-geography-and-city-systems"
+      ]
+    },
+    {
+      "term": "mobility and quality of life",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "transport-mobility-and-urban-living"
+      ]
+    },
+    {
+      "term": "monsoon mechanism",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "atmospheric-processes-and-extreme-weather"
+      ]
+    },
+    {
+      "term": "multi-hazard environment",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "integrated-natural-hazard-management"
+      ]
+    },
+    {
+      "term": "multinational corporation impact",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "development-inequality-and-globalization"
+      ]
+    },
+    {
+      "term": "natural increase rate",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "population-dynamics-and-demographic-transition"
+      ]
+    },
+    {
+      "term": "net zero target",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "climate-change-mitigation-and-adaptation"
+      ]
+    },
+    {
+      "term": "North-South divide",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "development-inequality-and-globalization"
+      ]
+    },
+    {
+      "term": "Northern Metropolis development",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "hong-kong-geographic-synthesis"
+      ]
+    },
+    {
+      "term": "ocean trench formation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "plate-tectonics-and-seismic-volcanic-hazards"
+      ]
+    },
+    {
+      "term": "orographic effect",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "atmospheric-processes-and-extreme-weather"
+      ]
+    },
+    {
+      "term": "outline zoning plan",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "urban-planning-governance-and-policy"
+      ]
+    },
+    {
+      "term": "overlay analysis",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "gis-remote-sensing-and-spatial-analysis"
+      ]
+    },
+    {
+      "term": "overpopulation pressure",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "population-dynamics-and-demographic-transition"
+      ]
+    },
+    {
+      "term": "parking policy",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "transport-mobility-and-urban-living"
+      ]
+    },
+    {
+      "term": "participatory planning",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "urban-planning-governance-and-policy"
+      ]
+    },
+    {
+      "term": "pattern and process explanation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "geographic-inquiry-synthesis-and-evaluation"
+      ]
+    },
+    {
+      "term": "peak hour congestion",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "transport-mobility-and-urban-living"
+      ]
+    },
+    {
+      "term": "pedestrian-friendly design",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "transport-mobility-and-urban-living"
+      ]
+    },
+    {
+      "term": "peer review in geography",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "geographic-inquiry-synthesis-and-evaluation"
+      ]
+    },
+    {
+      "term": "planning conflict",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "urban-planning-governance-and-policy"
+      ]
+    },
+    {
+      "term": "plate tectonic theory",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "plate-tectonics-and-seismic-volcanic-hazards"
+      ]
+    },
+    {
+      "term": "plot ratio control",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "urban-planning-governance-and-policy"
+      ]
+    },
+    {
+      "term": "pollution control measure",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "ecosystem-services-and-environmental-stewardship"
+      ]
+    },
+    {
+      "term": "population and resource pressure",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "population-dynamics-and-demographic-transition"
+      ]
+    },
+    {
+      "term": "population change",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "population-dynamics-and-demographic-transition"
+      ]
+    },
+    {
+      "term": "population policy",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "population-dynamics-and-demographic-transition"
+      ]
+    },
+    {
+      "term": "population pyramid analysis",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "population-dynamics-and-demographic-transition"
+      ]
+    },
+    {
+      "term": "pressure system",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "atmospheric-processes-and-extreme-weather"
+      ]
+    },
+    {
+      "term": "preventive slope maintenance",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "slope-processes-and-landslide-management"
+      ]
+    },
+    {
+      "term": "primary data reliability",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "geographic-inquiry-synthesis-and-evaluation"
+      ]
+    },
+    {
+      "term": "primate city dominance",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "advanced-urban-geography-and-city-systems"
+      ]
+    },
+    {
+      "term": "private car dependency",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "transport-mobility-and-urban-living"
+      ]
+    },
+    {
+      "term": "proportional symbol map",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "gis-remote-sensing-and-spatial-analysis"
+      ]
+    },
+    {
+      "term": "provisioning service",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "ecosystem-services-and-environmental-stewardship"
+      ]
+    },
+    {
+      "term": "public consultation in planning",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "urban-planning-governance-and-policy"
+      ]
+    },
+    {
+      "term": "public transport modal share",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "transport-mobility-and-urban-living"
+      ]
+    },
+    {
+      "term": "push and pull factor analysis",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "population-dynamics-and-demographic-transition"
+      ]
+    },
+    {
+      "term": "qualitative data analysis",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "geographic-inquiry-synthesis-and-evaluation"
+      ]
+    },
+    {
+      "term": "quantitative data analysis",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "geographic-inquiry-synthesis-and-evaluation"
+      ]
+    },
+    {
+      "term": "rain shadow effect",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "atmospheric-processes-and-extreme-weather"
+      ]
+    },
+    {
+      "term": "rapid coastal erosion",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "advanced-coastal-and-marine-geography"
+      ]
+    },
+    {
+      "term": "recycling infrastructure",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "resource-security-and-sustainable-futures"
+      ]
+    },
+    {
+      "term": "redevelopment scheme",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "advanced-urban-geography-and-city-systems"
+      ]
+    },
+    {
+      "term": "refugee migration",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "population-dynamics-and-demographic-transition"
+      ]
+    },
+    {
+      "term": "regulating service",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "ecosystem-services-and-environmental-stewardship"
+      ]
+    },
+    {
+      "term": "remittance flow",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "development-inequality-and-globalization"
+      ]
+    },
+    {
+      "term": "remote sensing image",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "gis-remote-sensing-and-spatial-analysis"
+      ]
+    },
+    {
+      "term": "renewable energy share",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "resource-security-and-sustainable-futures"
+      ]
+    },
+    {
+      "term": "renewable energy transition",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "climate-change-mitigation-and-adaptation"
+      ]
+    },
+    {
+      "term": "research design in geography",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "geographic-inquiry-synthesis-and-evaluation"
+      ]
+    },
+    {
+      "term": "resilience building",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "integrated-natural-hazard-management"
+      ]
+    },
+    {
+      "term": "resource conflict",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "resource-security-and-sustainable-futures"
+      ]
+    },
+    {
+      "term": "resource scarcity",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "resource-security-and-sustainable-futures"
+      ]
+    },
+    {
+      "term": "resource security",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "resource-security-and-sustainable-futures"
+      ]
+    },
+    {
+      "term": "restoring degraded environment",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "ecosystem-services-and-environmental-stewardship"
+      ]
+    },
+    {
+      "term": "retaining wall structure",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "slope-processes-and-landslide-management"
+      ]
+    },
+    {
+      "term": "rewilding project",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "ecosystem-services-and-environmental-stewardship"
+      ]
+    },
+    {
+      "term": "Ring of Fire region",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "plate-tectonics-and-seismic-volcanic-hazards"
+      ]
+    },
+    {
+      "term": "risk communication",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "integrated-natural-hazard-management"
+      ]
+    },
+    {
+      "term": "risk zoning map",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "slope-processes-and-landslide-management"
+      ]
+    },
+    {
+      "term": "road capacity problem",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "transport-mobility-and-urban-living"
+      ]
+    },
+    {
+      "term": "rockfall hazard",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "slope-processes-and-landslide-management"
+      ]
+    },
+    {
+      "term": "rural-urban migration flow",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "population-dynamics-and-demographic-transition"
+      ]
+    },
+    {
+      "term": "salt marsh coast",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "advanced-coastal-and-marine-geography"
+      ]
+    },
+    {
+      "term": "sampling strategy evaluation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "geographic-inquiry-synthesis-and-evaluation"
+      ]
+    },
+    {
+      "term": "satellite imagery interpretation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "gis-remote-sensing-and-spatial-analysis"
+      ]
+    },
+    {
+      "term": "sea level rise risk",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "climate-change-mitigation-and-adaptation"
+      ]
+    },
+    {
+      "term": "secondary data validity",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "geographic-inquiry-synthesis-and-evaluation"
+      ]
+    },
+    {
+      "term": "seismic intensity scale",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "plate-tectonics-and-seismic-volcanic-hazards"
+      ]
+    },
+    {
+      "term": "service sector growth",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "development-inequality-and-globalization"
+      ]
+    },
+    {
+      "term": "slope angle risk",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "slope-processes-and-landslide-management"
+      ]
+    },
+    {
+      "term": "slope drainage work",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "slope-processes-and-landslide-management"
+      ]
+    },
+    {
+      "term": "slope monitoring system",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "slope-processes-and-landslide-management"
+      ]
+    },
+    {
+      "term": "slope reinforcement",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "slope-processes-and-landslide-management"
+      ]
+    },
+    {
+      "term": "slope stability",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "slope-processes-and-landslide-management"
+      ]
+    },
+    {
+      "term": "smart city planning",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "urban-planning-governance-and-policy"
+      ]
+    },
+    {
+      "term": "soil saturation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "slope-processes-and-landslide-management"
+      ]
+    },
+    {
+      "term": "spatial analysis conclusion",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "gis-remote-sensing-and-spatial-analysis"
+      ]
+    },
+    {
+      "term": "spatial correlation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "gis-remote-sensing-and-spatial-analysis"
+      ]
+    },
+    {
+      "term": "spatial data",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "gis-remote-sensing-and-spatial-analysis"
+      ]
+    },
+    {
+      "term": "spatial distribution pattern",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "gis-remote-sensing-and-spatial-analysis"
+      ]
+    },
+    {
+      "term": "spatial inequality map",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "gis-remote-sensing-and-spatial-analysis"
+      ]
+    },
+    {
+      "term": "special economic zone role",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "development-inequality-and-globalization"
+      ]
+    },
+    {
+      "term": "spit and bar landform",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "advanced-coastal-and-marine-geography"
+      ]
+    },
+    {
+      "term": "squatter settlement upgrade",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "advanced-urban-geography-and-city-systems"
+      ]
+    },
+    {
+      "term": "stack and stump landform",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "advanced-coastal-and-marine-geography"
+      ]
+    },
+    {
+      "term": "stakeholder in conservation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "ecosystem-services-and-environmental-stewardship"
+      ]
+    },
+    {
+      "term": "statistical interpretation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "geographic-inquiry-synthesis-and-evaluation"
+      ]
+    },
+    {
+      "term": "storm surge risk",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "climate-change-mitigation-and-adaptation"
+      ]
+    },
+    {
+      "term": "storm warning system",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "atmospheric-processes-and-extreme-weather"
+      ]
+    },
+    {
+      "term": "subduction process",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "plate-tectonics-and-seismic-volcanic-hazards"
+      ]
+    },
+    {
+      "term": "suburban growth",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "advanced-urban-geography-and-city-systems"
+      ]
+    },
+    {
+      "term": "supporting ecosystem service",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "ecosystem-services-and-environmental-stewardship"
+      ]
+    },
+    {
+      "term": "sustainable consumption",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "resource-security-and-sustainable-futures"
+      ]
+    },
+    {
+      "term": "sustainable development goal",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "development-inequality-and-globalization"
+      ]
+    },
+    {
+      "term": "sustainable mobility plan",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "transport-mobility-and-urban-living"
+      ]
+    },
+    {
+      "term": "tectonic hazard map",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "plate-tectonics-and-seismic-volcanic-hazards"
+      ]
+    },
+    {
+      "term": "tectonic process and landform link",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "plate-tectonics-and-seismic-volcanic-hazards"
+      ]
+    },
+    {
+      "term": "tombolo landform",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "advanced-coastal-and-marine-geography"
+      ]
+    },
+    {
+      "term": "town planning board",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "urban-planning-governance-and-policy"
+      ]
+    },
+    {
+      "term": "trade network",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "development-inequality-and-globalization"
+      ]
+    },
+    {
+      "term": "traffic congestion management",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "transport-mobility-and-urban-living"
+      ]
+    },
+    {
+      "term": "transport carbon emission",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "transport-mobility-and-urban-living"
+      ]
+    },
+    {
+      "term": "transport equity",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "transport-mobility-and-urban-living"
+      ]
+    },
+    {
+      "term": "transport network planning",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "transport-mobility-and-urban-living"
+      ]
+    },
+    {
+      "term": "tropical cyclone formation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "atmospheric-processes-and-extreme-weather"
+      ]
+    },
+    {
+      "term": "tsunami generation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "plate-tectonics-and-seismic-volcanic-hazards"
+      ]
+    },
+    {
+      "term": "typhoon track",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "atmospheric-processes-and-extreme-weather"
+      ]
+    },
+    {
+      "term": "underpopulation issue",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "population-dynamics-and-demographic-transition"
+      ]
+    },
+    {
+      "term": "urban decay",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "advanced-urban-geography-and-city-systems"
+      ]
+    },
+    {
+      "term": "urban design guideline",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "urban-planning-governance-and-policy"
+      ]
+    },
+    {
+      "term": "urban function zone",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "advanced-urban-geography-and-city-systems"
+      ]
+    },
+    {
+      "term": "urban growth pattern",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "advanced-urban-geography-and-city-systems"
+      ]
+    },
+    {
+      "term": "urban heat island mitigation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "climate-change-mitigation-and-adaptation"
+      ]
+    },
+    {
+      "term": "urban hierarchy model",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "advanced-urban-geography-and-city-systems"
+      ]
+    },
+    {
+      "term": "urban inequality pattern",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "advanced-urban-geography-and-city-systems"
+      ]
+    },
+    {
+      "term": "urban microclimate",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "atmospheric-processes-and-extreme-weather"
+      ]
+    },
+    {
+      "term": "urban planning policy",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "urban-planning-governance-and-policy"
+      ]
+    },
+    {
+      "term": "urban renewal project",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "advanced-urban-geography-and-city-systems"
+      ]
+    },
+    {
+      "term": "urban sprawl impact",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "advanced-urban-geography-and-city-systems"
+      ]
+    },
+    {
+      "term": "urban sustainability challenge",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "advanced-urban-geography-and-city-systems"
+      ]
+    },
+    {
+      "term": "urban system",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "advanced-urban-geography-and-city-systems"
+      ]
+    },
+    {
+      "term": "vegetation cover on slope",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "slope-processes-and-landslide-management"
+      ]
+    },
+    {
+      "term": "volcanic eruption hazard",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "plate-tectonics-and-seismic-volcanic-hazards"
+      ]
+    },
+    {
+      "term": "volcanic landform",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "plate-tectonics-and-seismic-volcanic-hazards"
+      ]
+    },
+    {
+      "term": "vulnerability to hazard",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "integrated-natural-hazard-management"
+      ]
+    },
+    {
+      "term": "waste management system",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "resource-security-and-sustainable-futures"
+      ]
+    },
+    {
+      "term": "water security",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "resource-security-and-sustainable-futures"
+      ]
+    },
+    {
+      "term": "wave fetch",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "advanced-coastal-and-marine-geography"
+      ]
+    },
+    {
+      "term": "wave refraction",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "advanced-coastal-and-marine-geography"
+      ]
+    },
+    {
+      "term": "weather extreme event",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "atmospheric-processes-and-extreme-weather"
+      ]
+    },
+    {
+      "term": "wetland conservation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "ecosystem-services-and-environmental-stewardship"
+      ]
+    },
+    {
+      "term": "youthful population structure",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "population-dynamics-and-demographic-transition"
+      ]
+    },
+    {
+      "term": "zoning regulation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "geography",
+        "curriculum-style",
+        "urban-planning-governance-and-policy"
       ]
     }
   ]

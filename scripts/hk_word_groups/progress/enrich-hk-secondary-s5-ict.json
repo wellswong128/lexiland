@@ -2,31 +2,22 @@
   "group_code": "hk-secondary-s5-ict",
   "terms": {
     "algorithm": {
-      "status": "incomplete",
-      "missing": [
-        "pronunciation",
-        "part_of_speech"
-      ],
+      "status": "complete",
+      "missing": [],
       "errors": {},
-      "completed_at": null
+      "completed_at": "2026-06-26T18:42:19Z"
     },
     "bandwidth": {
-      "status": "incomplete",
-      "missing": [
-        "pronunciation",
-        "part_of_speech"
-      ],
+      "status": "complete",
+      "missing": [],
       "errors": {},
-      "completed_at": null
+      "completed_at": "2026-06-26T18:42:20Z"
     },
     "compile": {
-      "status": "incomplete",
-      "missing": [
-        "pronunciation",
-        "part_of_speech"
-      ],
+      "status": "complete",
+      "missing": [],
       "errors": {},
-      "completed_at": null
+      "completed_at": "2026-06-26T18:42:20Z"
     },
     "database": {
       "status": "complete",
@@ -35,148 +26,2116 @@
       "completed_at": "2026-06-21T00:49:47Z"
     },
     "debug": {
-      "status": "incomplete",
-      "missing": [
-        "pronunciation",
-        "part_of_speech"
-      ],
+      "status": "complete",
+      "missing": [],
       "errors": {},
-      "completed_at": null
+      "completed_at": "2026-06-26T18:42:21Z"
     },
     "encryption": {
-      "status": "incomplete",
-      "missing": [
-        "pronunciation",
-        "part_of_speech"
-      ],
+      "status": "complete",
+      "missing": [],
       "errors": {},
-      "completed_at": null
+      "completed_at": "2026-06-26T18:42:21Z"
     },
     "firewall": {
-      "status": "incomplete",
-      "missing": [
-        "pronunciation",
-        "part_of_speech"
-      ],
+      "status": "complete",
+      "missing": [],
       "errors": {},
-      "completed_at": null
+      "completed_at": "2026-06-26T18:42:22Z"
     },
     "hardware": {
-      "status": "incomplete",
-      "missing": [
-        "pronunciation",
-        "part_of_speech"
-      ],
+      "status": "complete",
+      "missing": [],
       "errors": {},
-      "completed_at": null
+      "completed_at": "2026-06-26T18:42:23Z"
     },
     "interface": {
-      "status": "incomplete",
-      "missing": [
-        "pronunciation",
-        "part_of_speech"
-      ],
+      "status": "complete",
+      "missing": [],
       "errors": {},
-      "completed_at": null
+      "completed_at": "2026-06-26T18:42:23Z"
     },
     "latency": {
-      "status": "incomplete",
-      "missing": [
-        "pronunciation",
-        "part_of_speech"
-      ],
+      "status": "complete",
+      "missing": [],
       "errors": {},
-      "completed_at": null
+      "completed_at": "2026-06-26T18:42:24Z"
     },
     "malware": {
-      "status": "incomplete",
-      "missing": [
-        "pronunciation",
-        "part_of_speech"
-      ],
+      "status": "complete",
+      "missing": [],
       "errors": {},
-      "completed_at": null
+      "completed_at": "2026-06-26T18:42:24Z"
     },
     "protocol": {
-      "status": "incomplete",
-      "missing": [
-        "pronunciation",
-        "part_of_speech"
-      ],
+      "status": "complete",
+      "missing": [],
       "errors": {},
-      "completed_at": null
+      "completed_at": "2026-06-26T18:42:25Z"
     },
     "query": {
-      "status": "incomplete",
-      "missing": [
-        "pronunciation",
-        "part_of_speech"
-      ],
+      "status": "complete",
+      "missing": [],
       "errors": {},
-      "completed_at": null
+      "completed_at": "2026-06-26T18:42:25Z"
     },
     "repository": {
-      "status": "incomplete",
-      "missing": [
-        "pronunciation",
-        "part_of_speech"
-      ],
+      "status": "complete",
+      "missing": [],
       "errors": {},
-      "completed_at": null
+      "completed_at": "2026-06-26T18:42:26Z"
     },
     "server": {
-      "status": "incomplete",
-      "missing": [
-        "pronunciation",
-        "part_of_speech"
-      ],
+      "status": "complete",
+      "missing": [],
       "errors": {},
-      "completed_at": null
+      "completed_at": "2026-06-26T18:42:26Z"
     },
     "syntax": {
-      "status": "incomplete",
-      "missing": [
-        "pronunciation",
-        "part_of_speech"
-      ],
+      "status": "complete",
+      "missing": [],
       "errors": {},
-      "completed_at": null
+      "completed_at": "2026-06-26T18:42:27Z"
     },
     "variable": {
-      "status": "incomplete",
-      "missing": [
-        "pronunciation",
-        "part_of_speech"
-      ],
+      "status": "complete",
+      "missing": [],
       "errors": {},
-      "completed_at": null
+      "completed_at": "2026-06-26T18:42:27Z"
     },
     "virtualization": {
-      "status": "incomplete",
-      "missing": [
-        "pronunciation",
-        "part_of_speech"
-      ],
+      "status": "complete",
+      "missing": [],
       "errors": {},
-      "completed_at": null
+      "completed_at": "2026-06-26T18:42:28Z"
     },
     "wireless": {
-      "status": "incomplete",
-      "missing": [
-        "pronunciation",
-        "part_of_speech"
-      ],
+      "status": "complete",
+      "missing": [],
       "errors": {},
-      "completed_at": null
+      "completed_at": "2026-06-26T18:42:28Z"
     },
     "pixel": {
-      "status": "incomplete",
-      "missing": [
-        "pronunciation",
-        "part_of_speech"
-      ],
+      "status": "complete",
+      "missing": [],
       "errors": {},
-      "completed_at": null
+      "completed_at": "2026-06-26T18:42:29Z"
+    },
+    "accessibility in digital media": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T18:44:34Z"
+    },
+    "adaptive bitrate streaming": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T18:46:21Z"
+    },
+    "advanced database skill": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T18:48:20Z"
+    },
+    "advanced multimedia skill": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T18:50:11Z"
+    },
+    "advanced networking skill": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T18:51:56Z"
+    },
+    "advanced programming skill": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T18:53:41Z"
+    },
+    "agile development method": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T18:55:37Z"
+    },
+    "algorithm space complexity": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T18:57:10Z"
+    },
+    "algorithm time complexity": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T18:59:02Z"
+    },
+    "algorithmic bias concern": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-27T02:44:11Z"
+    },
+    "alpha testing phase": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T19:02:54Z"
+    },
+    "analytics project case study": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T19:04:48Z"
+    },
+    "application deployment pipeline": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T19:06:26Z"
+    },
+    "application programming interface": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T19:08:29Z"
+    },
+    "application programming interface endpoint": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T19:10:15Z"
+    },
+    "array data structure": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T19:12:26Z"
+    },
+    "asymmetric encryption method": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T19:14:06Z"
+    },
+    "asynchronous request method": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T19:15:53Z"
+    },
+    "atomicity in transaction": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T19:17:46Z"
+    },
+    "attack surface analysis": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T19:19:35Z"
+    },
+    "audio mixing technique": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T19:21:32Z"
+    },
+    "augmented reality application": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T19:24:08Z"
+    },
+    "authentication token method": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T19:25:22Z"
+    },
+    "automated decision transparency": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T19:26:18Z"
+    },
+    "average case complexity": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T19:28:00Z"
+    },
+    "back end development": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T19:29:47Z"
+    },
+    "best case complexity": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T19:31:49Z"
+    },
+    "beta testing phase": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T19:33:44Z"
+    },
+    "big data characteristic": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T19:35:50Z"
+    },
+    "big o notation concept": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T19:37:49Z"
+    },
+    "binary search tree": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T19:39:43Z"
+    },
+    "blockchain ledger concept": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T19:40:41Z"
+    },
+    "bluetooth low energy": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T19:41:40Z"
+    },
+    "business intelligence platform": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T19:42:59Z"
+    },
+    "callback function concept": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T19:45:06Z"
+    },
+    "change request management": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T19:46:01Z"
+    },
+    "checksum verification method": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T19:47:10Z"
+    },
+    "class definition in programming": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T19:48:24Z"
+    },
+    "classless inter domain routing": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T19:49:10Z"
+    },
+    "cloud architecture skill": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T19:50:07Z"
+    },
+    "cloud elasticity feature": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T19:51:07Z"
+    },
+    "cloud migration case study": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T19:52:02Z"
+    },
+    "cloud scalability feature": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T19:52:59Z"
+    },
+    "cloud service model": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T19:53:58Z"
+    },
+    "cloud storage service": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T19:54:44Z"
+    },
+    "code reusability principle": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T19:56:12Z"
+    },
+    "code review process": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T19:56:58Z"
+    },
+    "collaborative coding platform": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T19:58:49Z"
+    },
+    "colour grading in video": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T20:00:35Z"
+    },
+    "compare algorithm performance": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T20:02:38Z"
+    },
+    "compare analytics approach": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T20:03:34Z"
+    },
+    "compare cloud deployment model": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T20:05:37Z"
+    },
+    "compare database schema design": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T20:06:29Z"
+    },
+    "compare development model": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T20:07:28Z"
+    },
+    "compare emerging technology trend": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T20:09:26Z"
+    },
+    "compare governance framework": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T20:11:55Z"
+    },
+    "compare hong kong ict initiative": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T20:14:52Z"
+    },
+    "compare media production pipeline": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T20:16:22Z"
+    },
+    "compare network architecture": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T20:17:25Z"
+    },
+    "compare practical solution approach": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T20:19:30Z"
+    },
+    "compare programming paradigm": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T20:21:17Z"
+    },
+    "compare project management method": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T20:23:10Z"
+    },
+    "compare security control layer": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T20:25:05Z"
+    },
+    "compare web stack choice": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T20:27:09Z"
+    },
+    "complexity analysis skill": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T20:29:06Z"
+    },
+    "consistency in transaction": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T20:30:59Z"
+    },
+    "containerization technology": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T20:32:59Z"
+    },
+    "content delivery network": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T20:34:45Z"
+    },
+    "continuous integration workflow": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T20:36:44Z"
+    },
+    "corporate social responsibility in tech": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T20:38:35Z"
+    },
+    "correlation analysis in data": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T20:40:22Z"
+    },
+    "critical path method": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T20:42:06Z"
+    },
+    "cross border data transfer rule": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T20:44:32Z"
+    },
+    "cross border digital service integration": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T20:45:34Z"
+    },
+    "cross platform mobile development": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T20:47:35Z"
+    },
+    "cross site request forgery": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T20:49:24Z"
+    },
+    "cross site scripting attack": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T20:51:33Z"
+    },
+    "cybersecurity case study": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T20:51:34Z"
+    },
+    "dashboard visualization design": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T20:52:36Z"
+    },
+    "data analytics skill": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T20:53:26Z"
+    },
+    "data cleaning procedure": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T20:55:17Z"
+    },
+    "data driven decision making": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T20:57:22Z"
+    },
+    "data ethics in analytics": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T20:58:36Z"
+    },
+    "data flow diagram": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T21:00:30Z"
+    },
+    "data governance policy": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T21:02:23Z"
+    },
+    "data mining technique": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T21:03:28Z"
+    },
+    "data protection impact assessment": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T21:04:17Z"
+    },
+    "data structure case study": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T21:06:25Z"
+    },
+    "data structure selection": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T21:08:19Z"
+    },
+    "data warehouse concept": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T21:10:09Z"
+    },
+    "database administration task": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T21:12:07Z"
+    },
+    "database backup strategy": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T21:14:12Z"
+    },
+    "database case study analysis": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T21:15:15Z"
+    },
+    "database indexing strategy": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T21:17:24Z"
+    },
+    "database transaction control": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T21:19:06Z"
+    },
+    "database trigger function": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T21:20:17Z"
+    },
+    "database view definition": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T21:20:56Z"
+    },
+    "descriptive analytics method": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T21:22:20Z"
+    },
+    "design review meeting": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T21:23:35Z"
+    },
+    "digital asset management": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T21:24:19Z"
+    },
+    "digital certificate authority": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T21:26:21Z"
+    },
+    "digital governance case study": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T21:28:27Z"
+    },
+    "digital inclusion programme": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T21:30:11Z"
+    },
+    "digital media case study": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T21:32:04Z"
+    },
+    "digital media workflow": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T21:33:03Z"
+    },
+    "digital rights management": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T21:34:03Z"
+    },
+    "digital signature verification": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T21:36:00Z"
+    },
+    "disaster recovery plan": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T21:36:01Z"
+    },
+    "distributed computing concept": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T21:37:59Z"
+    },
+    "distributed ledger technology": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T21:39:36Z"
+    },
+    "durability in transaction": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T21:40:26Z"
+    },
+    "dynamic routing protocol": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T21:42:24Z"
+    },
+    "e waste management policy": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T21:44:26Z"
+    },
+    "edge computing concept": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T21:46:26Z"
+    },
+    "emerging technology case study": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T21:48:19Z"
+    },
+    "encapsulation principle": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T21:50:22Z"
+    },
+    "evaluate cloud cost trade-off": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T21:51:32Z"
+    },
+    "evaluate data structure choice": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T21:52:24Z"
+    },
+    "evaluate ethical technology use": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T21:54:15Z"
+    },
+    "evaluate hong kong digital policy": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T21:56:15Z"
+    },
+    "evaluate multimedia product quality": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T21:57:16Z"
+    },
+    "evaluate network reliability": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T21:58:13Z"
+    },
+    "evaluate practical product quality": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T21:59:03Z"
+    },
+    "evaluate program structure": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T22:00:11Z"
+    },
+    "evaluate project delivery quality": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T22:01:06Z"
+    },
+    "evaluate query performance": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T22:02:06Z"
+    },
+    "evaluate security architecture": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T22:03:06Z"
+    },
+    "evaluate system design": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T22:04:08Z"
+    },
+    "evaluate technology adoption risk": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T22:05:11Z"
+    },
+    "evaluate visualization design": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T22:06:13Z"
+    },
+    "evaluate web application design": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T22:07:02Z"
+    },
+    "event driven programming": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T22:08:00Z"
+    },
+    "exception handling mechanism": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T22:08:41Z"
+    },
+    "extract transform load process": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T22:09:38Z"
+    },
+    "feasibility study stage": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T22:10:42Z"
+    },
+    "front end development": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T22:12:03Z"
+    },
+    "full stack development skill": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T22:12:56Z"
+    },
+    "functional requirement definition": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T22:14:03Z"
+    },
+    "gantt chart usage": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T22:14:53Z"
+    },
+    "global positioning system service": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T22:15:46Z"
+    },
+    "graph traversal algorithm": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T22:17:02Z"
+    },
+    "greater bay area tech collaboration": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T22:18:05Z"
+    },
+    "green computing initiative": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T22:19:03Z"
+    },
+    "hash function in security": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T22:20:21Z"
+    },
+    "hash table structure": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T22:21:20Z"
+    },
+    "hong kong ai development initiative": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T22:22:12Z"
+    },
+    "hong kong cloud adoption trend": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T22:23:15Z"
+    },
+    "hong kong cybersecurity law context": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T22:24:18Z"
+    },
+    "hong kong data centre hub role": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T22:25:21Z"
+    },
+    "hong kong digital economy blueprint": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T22:26:18Z"
+    },
+    "hong kong digital literacy programme": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T22:27:21Z"
+    },
+    "hong kong fintech regulation sandbox": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T22:28:25Z"
+    },
+    "hong kong ict context skill": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T22:29:24Z"
+    },
+    "hong kong ict industry case": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T22:30:22Z"
+    },
+    "hong kong ict policy analysis": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T22:31:13Z"
+    },
+    "hong kong innovation technology policy": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T22:32:13Z"
+    },
+    "hong kong personal data regulation": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T22:33:15Z"
+    },
+    "hong kong smart city project": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T22:34:07Z"
+    },
+    "hong kong startup incubation support": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T22:35:12Z"
+    },
+    "hong kong stem talent pipeline": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T22:36:02Z"
+    },
+    "hong kong tech workforce demand": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T22:37:34Z"
+    },
+    "hybrid cloud deployment": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T22:38:18Z"
+    },
+    "hypervisor role": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T22:39:08Z"
+    },
+    "ict algorithm trace skill": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T22:40:10Z"
+    },
+    "ict cost benefit analysis": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T22:41:15Z"
+    },
+    "ict cross topic synthesis answer": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T22:42:19Z"
+    },
+    "ict data response interpretation": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T22:43:37Z"
+    },
+    "ict database query interpretation": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T22:44:28Z"
+    },
+    "ict diagram annotation skill": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T22:45:24Z"
+    },
+    "ict ethical issue evaluation": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T22:46:19Z"
+    },
+    "ict ethics debate skill": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T22:47:17Z"
+    },
+    "ict evaluation with evidence": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T22:48:32Z"
+    },
+    "ict examination command word skill": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T22:49:36Z"
+    },
+    "ict hong kong context application": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T22:50:33Z"
+    },
+    "ict network configuration analysis": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T22:52:32Z"
+    },
+    "ict paper time management": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T22:53:35Z"
+    },
+    "ict practical backup strategy": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T22:54:34Z"
+    },
+    "ict practical case integration": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T22:55:36Z"
+    },
+    "ict practical coding standard": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T22:56:33Z"
+    },
+    "ict practical data set preparation": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T22:58:19Z"
+    },
+    "ict practical debugging workflow": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T22:59:10Z"
+    },
+    "ict practical demonstration skill": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T23:00:05Z"
+    },
+    "ict practical design justification": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T23:01:08Z"
+    },
+    "ict practical evaluation report": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T23:02:05Z"
+    },
+    "ict practical file organization": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T23:02:54Z"
+    },
+    "ict practical improvement proposal": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T23:03:57Z"
+    },
+    "ict practical interface design": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T23:04:48Z"
+    },
+    "ict practical limitation discussion": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T23:05:52Z"
+    },
+    "ict practical peer feedback": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T23:06:49Z"
+    },
+    "ict practical requirement analysis": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T23:08:02Z"
+    },
+    "ict practical test case design": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T23:08:59Z"
+    },
+    "ict practical testing plan": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T23:10:20Z"
+    },
+    "ict practical time planning": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T23:11:15Z"
+    },
+    "ict practical user manual writing": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T23:12:16Z"
+    },
+    "ict project case study": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T23:13:07Z"
+    },
+    "ict requirement prioritization skill": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T23:14:04Z"
+    },
+    "ict risk mitigation proposal": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T23:15:02Z"
+    },
+    "ict scenario problem identification": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T23:16:01Z"
+    },
+    "ict security incident analysis": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T23:16:51Z"
+    },
+    "ict solution comparison matrix": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T23:17:56Z"
+    },
+    "ict structured long answer skill": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T23:18:55Z"
+    },
+    "ict system limitation analysis": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T23:19:52Z"
+    },
+    "ict technology trend evaluation": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T23:20:51Z"
+    },
+    "incident response plan": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T23:21:49Z"
+    },
+    "infrastructure as a service": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T23:22:47Z"
+    },
+    "infrastructure case study": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T23:24:50Z"
+    },
+    "inheritance in programming": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T23:25:58Z"
+    },
+    "inner join operation": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T23:26:53Z"
+    },
+    "interactive multimedia design": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T23:27:55Z"
+    },
+    "internet of things device": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T23:28:47Z"
+    },
+    "isolation in transaction": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T23:30:41Z"
+    },
+    "issue tracking system": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T23:31:33Z"
+    },
+    "kanban workflow board": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T23:32:56Z"
+    },
+    "key performance indicator tracking": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T23:33:54Z"
+    },
+    "legal compliance checklist": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T23:35:22Z"
+    },
+    "library module import": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T23:36:19Z"
+    },
+    "linked list structure": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T23:37:16Z"
+    },
+    "load balancing service": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T23:38:31Z"
+    },
+    "local digital transformation example": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T23:39:30Z"
+    },
+    "machine learning model training": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T23:40:23Z"
+    },
+    "media codec selection": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T23:41:36Z"
+    },
+    "merge sort algorithm": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T23:42:59Z"
+    },
+    "method overloading concept": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T23:44:03Z"
+    },
+    "method overriding concept": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T23:45:03Z"
+    },
+    "microservices architecture": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T23:45:48Z"
+    },
+    "mobile development skill": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T23:46:49Z"
+    },
+    "mobile operating system": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T23:47:47Z"
+    },
+    "mobile user interface design": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T23:50:00Z"
+    },
+    "modular design case study": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T23:51:00Z"
+    },
+    "modular program design": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T23:52:15Z"
+    },
+    "motion graphics design": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T23:53:10Z"
+    },
+    "multimedia project planning": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T23:54:17Z"
+    },
+    "native mobile application": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T23:55:20Z"
+    },
+    "natural language processing application": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T23:56:16Z"
+    },
+    "near field communication technology": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T23:57:17Z"
+    },
+    "network congestion control": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T23:59:24Z"
+    },
+    "network monitoring tool": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-27T00:00:29Z"
+    },
+    "network segmentation strategy": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-27T00:01:31Z"
+    },
+    "network topology redesign": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-27T00:02:37Z"
+    },
+    "network troubleshooting workflow": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-27T00:04:05Z"
+    },
+    "non functional requirement definition": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-27T00:05:33Z"
+    },
+    "non linear video editing": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-27T00:06:31Z"
+    },
+    "object instance creation": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-27T00:07:19Z"
+    },
+    "object oriented programming": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-27T00:08:44Z"
+    },
+    "online content moderation policy": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-27T00:10:00Z"
+    },
+    "open data policy principle": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-27T00:11:06Z"
+    },
+    "outer join operation": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-27T00:12:01Z"
+    },
+    "outlier detection method": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-27T00:13:31Z"
+    },
+    "penetration testing concept": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-27T00:14:26Z"
+    },
+    "platform accountability issue": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-27T00:15:30Z"
+    },
+    "platform as a service": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-27T00:16:14Z"
+    },
+    "policy recommendation skill": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-27T00:17:39Z"
+    },
+    "polymorphism in programming": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-27T00:19:54Z"
+    },
+    "predictive analytics method": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-27T00:21:58Z"
+    },
+    "private cloud deployment": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-27T00:22:46Z"
+    },
+    "project management skill": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-27T00:24:49Z"
+    },
+    "project milestone review": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-27T00:25:48Z"
+    },
+    "project schedule planning": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-27T00:26:47Z"
+    },
+    "project scope definition": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-27T00:29:55Z"
+    },
+    "prototype development method": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-27T00:31:00Z"
+    },
+    "public cloud deployment": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-27T00:32:01Z"
+    },
+    "public key infrastructure": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-27T00:33:05Z"
+    },
+    "quality of service setting": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-27T00:34:30Z"
+    },
+    "query optimization method": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-27T00:35:22Z"
+    },
+    "queue data structure": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-27T00:38:25Z"
+    },
+    "quick sort algorithm": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-27T00:39:36Z"
+    },
+    "recursion in programming": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-27T00:42:18Z"
+    },
+    "redundant network design": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-27T00:44:45Z"
+    },
+    "referential integrity rule": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-27T00:45:42Z"
+    },
+    "rendering process in graphics": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-27T00:46:45Z"
+    },
+    "report automation workflow": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-27T00:47:54Z"
+    },
+    "representational state transfer": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-27T00:49:00Z"
+    },
+    "requirement gathering method": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-27T00:50:11Z"
+    },
+    "resource allocation plan": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-27T00:51:34Z"
+    },
+    "risk register in project": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-27T00:52:57Z"
+    },
+    "routing table entry": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-27T00:53:54Z"
+    },
+    "s5 ict practical readiness": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-27T00:54:55Z"
+    },
+    "scrum sprint planning": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-27T00:55:57Z"
+    },
+    "sdlc project skill": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-27T00:56:50Z"
+    },
+    "secure socket layer protocol": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-27T00:58:39Z"
+    },
+    "security audit procedure": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-27T00:59:46Z"
+    },
+    "security information event management": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-27T01:00:50Z"
+    },
+    "security operations skill": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-27T01:01:44Z"
+    },
+    "security risk assessment matrix": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-27T01:02:59Z"
+    },
+    "senior secondary ict integration": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-27T01:02:59Z"
+    },
+    "sensor data in mobile device": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-27T01:04:06Z"
+    },
+    "session state management": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-27T01:05:17Z"
+    },
+    "simple network management protocol": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-27T01:06:24Z"
+    },
+    "single page application": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-27T01:07:20Z"
+    },
+    "smart sensor network": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-27T01:08:24Z"
+    },
+    "software as a service": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-27T01:09:36Z"
+    },
+    "stack data structure": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-27T01:10:55Z"
+    },
+    "stakeholder analysis method": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-27T01:11:56Z"
+    },
+    "static routing configuration": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-27T01:13:03Z"
+    },
+    "stored procedure usage": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-27T01:14:02Z"
+    },
+    "streaming media protocol": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-27T01:15:10Z"
+    },
+    "structured query language join": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-27T01:16:55Z"
+    },
+    "subnet mask calculation": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-27T01:18:14Z"
+    },
+    "supervised learning method": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-27T01:19:21Z"
+    },
+    "sustainable ict practice": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-27T01:21:01Z"
+    },
+    "symmetric encryption method": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-27T01:21:58Z"
+    },
+    "system design specification": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-27T01:23:30Z"
+    },
+    "system documentation standard": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-27T01:24:49Z"
+    },
+    "system flowchart design": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-27T01:25:51Z"
+    },
+    "system maintenance phase": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-27T01:26:48Z"
+    },
+    "systems analysis case study": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-27T01:27:56Z"
+    },
+    "systems development lifecycle": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-27T01:28:56Z"
+    },
+    "team communication protocol": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-27T01:30:25Z"
+    },
+    "technology accessibility standard": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-27T01:31:21Z"
+    },
+    "third normal form design": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-27T01:32:51Z"
+    },
+    "threat modelling method": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-27T01:34:15Z"
+    },
+    "three dimensional modelling": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-27T01:36:08Z"
+    },
+    "transmission error detection": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-27T01:37:07Z"
+    },
+    "transport layer security protocol": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-27T01:38:13Z"
+    },
+    "tree data structure": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-27T01:41:22Z"
+    },
+    "trend analysis in data": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-27T01:42:50Z"
+    },
+    "try catch block structure": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-27T01:44:06Z"
+    },
+    "unsupervised learning method": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-27T01:45:27Z"
+    },
+    "use case diagram": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-27T01:46:33Z"
+    },
+    "user acceptance testing": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-27T01:48:32Z"
+    },
+    "user experience in multimedia": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-27T01:50:54Z"
+    },
+    "version control branch strategy": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-27T01:53:02Z"
+    },
+    "version control integration": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-27T01:55:04Z"
+    },
+    "virtual local area network": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-27T01:56:01Z"
+    },
+    "virtual machine instance": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-27T01:56:53Z"
+    },
+    "virtual private network": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-27T01:59:15Z"
+    },
+    "virtual reality application": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-27T02:01:17Z"
+    },
+    "vulnerability assessment scan": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-27T02:02:16Z"
+    },
+    "web application architecture": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-27T02:03:59Z"
+    },
+    "web application firewall": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-27T02:06:56Z"
+    },
+    "web development case study": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-27T02:09:29Z"
+    },
+    "web framework usage": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-27T02:10:51Z"
+    },
+    "web performance optimization": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-27T02:13:07Z"
+    },
+    "whistleblowing digital channel": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-27T02:14:01Z"
+    },
+    "work breakdown structure": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-27T02:16:11Z"
+    },
+    "worst case complexity": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-27T02:17:08Z"
     }
   }
 }

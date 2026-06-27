@@ -7,6 +7,15 @@
   "version": "2026.06",
   "display_name_en": "S3 History",
   "display_name_zh_hant": "中三歷史",
+  "source": {
+    "type": "curriculum_style_public_references",
+    "references": [
+      "EDB History Curriculum and Assessment Guide (Secondary 1-3)",
+      "EDB junior secondary History curriculum framework",
+      "Public Hong Kong Secondary 3 History syllabus topic examples (French Revolution, Industrial Revolution, World War I, rise of totalitarianism, World War II, Holocaust, Cold War, decolonization, post-1949 China, Reform and Opening Up, Hong Kong modern development, Middle East conflicts, international organizations, human rights, globalization)"
+    ],
+    "note": "No fixed official Hong Kong S3 history vocabulary list is prescribed; this list is theme-based for junior secondary S3 history enrichment import. Term-only entries are completed during import."
+  },
   "words": [
     {
       "term": "revolution",
@@ -306,6 +315,3702 @@
         "history",
         "noun_phrase",
         "major_events"
+      ]
+    },
+    {
+      "term": "1967 riots in Hong Kong",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "hong-kong-modern-development-and-handover"
+      ]
+    },
+    {
+      "term": "absolute monarchy in France",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "french-revolution-and-enlightenment"
+      ]
+    },
+    {
+      "term": "African independence",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "decolonization-and-independence-movements"
+      ]
+    },
+    {
+      "term": "alliance system in Europe",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "nationalism-and-19th-century-europe"
+      ]
+    },
+    {
+      "term": "Allied occupation of Germany",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "rise-of-totalitarianism-and-ww2-europe"
+      ]
+    },
+    {
+      "term": "Allied powers in Europe",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "rise-of-totalitarianism-and-ww2-europe"
+      ]
+    },
+    {
+      "term": "Allied strategy",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "world-war-two-global-impact"
+      ]
+    },
+    {
+      "term": "Anschluss",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "rise-of-totalitarianism-and-ww2-europe"
+      ]
+    },
+    {
+      "term": "anti-colonial struggle",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "decolonization-and-independence-movements"
+      ]
+    },
+    {
+      "term": "appeasement",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "rise-of-totalitarianism-and-ww2-europe"
+      ]
+    },
+    {
+      "term": "appeasement policy",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "world-war-one-and-interwar-period"
+      ]
+    },
+    {
+      "term": "Arab-Israeli conflict",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "middle-east-and-regional-conflicts"
+      ]
+    },
+    {
+      "term": "arms race in Europe",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "nationalism-and-19th-century-europe"
+      ]
+    },
+    {
+      "term": "assassination in Sarajevo",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "world-war-one-and-interwar-period"
+      ]
+    },
+    {
+      "term": "assess historical significance",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "senior-historical-inquiry-and-synthesis"
+      ]
+    },
+    {
+      "term": "atomic warfare",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "world-war-two-global-impact"
+      ]
+    },
+    {
+      "term": "Auschwitz",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "holocaust-and-war-crimes"
+      ]
+    },
+    {
+      "term": "Axis powers in Europe",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "rise-of-totalitarianism-and-ww2-europe"
+      ]
+    },
+    {
+      "term": "balance of power in Europe",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "nationalism-and-19th-century-europe"
+      ]
+    },
+    {
+      "term": "Balkan tensions",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "nationalism-and-19th-century-europe"
+      ]
+    },
+    {
+      "term": "Bandung Conference",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "decolonization-and-independence-movements"
+      ]
+    },
+    {
+      "term": "Basic Law drafting",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "hong-kong-modern-development-and-handover"
+      ]
+    },
+    {
+      "term": "Battle of Stalingrad",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "rise-of-totalitarianism-and-ww2-europe"
+      ]
+    },
+    {
+      "term": "Berlin Blockade",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "cold-war-global-confrontation"
+      ]
+    },
+    {
+      "term": "Berlin Wall",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "cold-war-global-confrontation"
+      ]
+    },
+    {
+      "term": "Bismarck",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "nationalism-and-19th-century-europe"
+      ]
+    },
+    {
+      "term": "Blitzkrieg",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "rise-of-totalitarianism-and-ww2-europe"
+      ]
+    },
+    {
+      "term": "bourgeois revolution",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "french-revolution-and-enlightenment"
+      ]
+    },
+    {
+      "term": "Camp David Accords",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "middle-east-and-regional-conflicts"
+      ]
+    },
+    {
+      "term": "capitalism",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "industrial-revolution-and-social-change"
+      ]
+    },
+    {
+      "term": "challenge after handover",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "hong-kong-modern-development-and-handover"
+      ]
+    },
+    {
+      "term": "child labour",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "industrial-revolution-and-social-change"
+      ]
+    },
+    {
+      "term": "China and Cold War",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "peoples-republic-of-china-after-1949"
+      ]
+    },
+    {
+      "term": "China in global economy",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "reform-and-opening-up-china"
+      ]
+    },
+    {
+      "term": "climate change issue",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "globalization-and-contemporary-world"
+      ]
+    },
+    {
+      "term": "Cold War and decolonization",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "decolonization-and-independence-movements"
+      ]
+    },
+    {
+      "term": "Cold War impact on Asia",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "cold-war-global-confrontation"
+      ]
+    },
+    {
+      "term": "Cold War rivalry",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "cold-war-global-confrontation"
+      ]
+    },
+    {
+      "term": "collapse of Soviet Union",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "cold-war-global-confrontation"
+      ]
+    },
+    {
+      "term": "collective security failure",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "world-war-one-and-interwar-period"
+      ]
+    },
+    {
+      "term": "collectivization",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "peoples-republic-of-china-after-1949"
+      ]
+    },
+    {
+      "term": "colonial rivalry",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "nationalism-and-19th-century-europe"
+      ]
+    },
+    {
+      "term": "commemoration of Holocaust",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "holocaust-and-war-crimes"
+      ]
+    },
+    {
+      "term": "communicate historical argument",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "senior-historical-inquiry-and-synthesis"
+      ]
+    },
+    {
+      "term": "compare Mao era and reform era",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "reform-and-opening-up-china"
+      ]
+    },
+    {
+      "term": "concentration camp",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "holocaust-and-war-crimes"
+      ]
+    },
+    {
+      "term": "Congress of Vienna",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "nationalism-and-19th-century-europe"
+      ]
+    },
+    {
+      "term": "containment strategy",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "cold-war-global-confrontation"
+      ]
+    },
+    {
+      "term": "continuity after handover",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "hong-kong-modern-development-and-handover"
+      ]
+    },
+    {
+      "term": "continuity and change in China",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "reform-and-opening-up-china"
+      ]
+    },
+    {
+      "term": "creation of Israel",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "middle-east-and-regional-conflicts"
+      ]
+    },
+    {
+      "term": "crime against humanity",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "holocaust-and-war-crimes"
+      ]
+    },
+    {
+      "term": "cross-border integration",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "hong-kong-modern-development-and-handover"
+      ]
+    },
+    {
+      "term": "cross-topic historical link",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "senior-historical-inquiry-and-synthesis"
+      ]
+    },
+    {
+      "term": "Cuban Missile Crisis",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "cold-war-global-confrontation"
+      ]
+    },
+    {
+      "term": "cult of personality",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "rise-of-totalitarianism-and-ww2-europe"
+      ]
+    },
+    {
+      "term": "cultural globalization",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "globalization-and-contemporary-world"
+      ]
+    },
+    {
+      "term": "Cultural Revolution",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "peoples-republic-of-china-after-1949"
+      ]
+    },
+    {
+      "term": "D-Day invasion",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "rise-of-totalitarianism-and-ww2-europe"
+      ]
+    },
+    {
+      "term": "Declaration of the Rights of Man",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "french-revolution-and-enlightenment"
+      ]
+    },
+    {
+      "term": "decolonization",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "decolonization-and-independence-movements"
+      ]
+    },
+    {
+      "term": "Deng Xiaoping",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "reform-and-opening-up-china"
+      ]
+    },
+    {
+      "term": "detente period",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "cold-war-global-confrontation"
+      ]
+    },
+    {
+      "term": "division of Germany",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "world-war-two-global-impact"
+      ]
+    },
+    {
+      "term": "division of Korea",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "world-war-two-global-impact"
+      ]
+    },
+    {
+      "term": "domino theory",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "cold-war-global-confrontation"
+      ]
+    },
+    {
+      "term": "Eastern Front",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "world-war-one-and-interwar-period"
+      ]
+    },
+    {
+      "term": "economic dependence after independence",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "decolonization-and-independence-movements"
+      ]
+    },
+    {
+      "term": "economic depression",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "world-war-one-and-interwar-period"
+      ]
+    },
+    {
+      "term": "economic globalization",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "globalization-and-contemporary-world"
+      ]
+    },
+    {
+      "term": "economic growth",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "industrial-revolution-and-social-change"
+      ]
+    },
+    {
+      "term": "economic reform in China",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "reform-and-opening-up-china"
+      ]
+    },
+    {
+      "term": "end of Cold War",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "cold-war-global-confrontation"
+      ]
+    },
+    {
+      "term": "end of European empire",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "decolonization-and-independence-movements"
+      ]
+    },
+    {
+      "term": "Enlightenment ideas",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "french-revolution-and-enlightenment"
+      ]
+    },
+    {
+      "term": "environmental globalization",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "globalization-and-contemporary-world"
+      ]
+    },
+    {
+      "term": "environmental impact of industry",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "industrial-revolution-and-social-change"
+      ]
+    },
+    {
+      "term": "Estates General",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "french-revolution-and-enlightenment"
+      ]
+    },
+    {
+      "term": "ethnic nationalism",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "nationalism-and-19th-century-europe"
+      ]
+    },
+    {
+      "term": "European empire expansion",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "nationalism-and-19th-century-europe"
+      ]
+    },
+    {
+      "term": "European theatre",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "world-war-two-global-impact"
+      ]
+    },
+    {
+      "term": "evaluate accountability after war",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "holocaust-and-war-crimes"
+      ]
+    },
+    {
+      "term": "evaluate Cold War",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "cold-war-global-confrontation"
+      ]
+    },
+    {
+      "term": "evaluate French Revolution",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "french-revolution-and-enlightenment"
+      ]
+    },
+    {
+      "term": "evaluate Hong Kong development",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "hong-kong-modern-development-and-handover"
+      ]
+    },
+    {
+      "term": "evaluate Mao era policies",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "peoples-republic-of-china-after-1949"
+      ]
+    },
+    {
+      "term": "evaluate Middle East conflict",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "middle-east-and-regional-conflicts"
+      ]
+    },
+    {
+      "term": "evaluate Reform and Opening Up",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "reform-and-opening-up-china"
+      ]
+    },
+    {
+      "term": "evaluate World War II impact",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "world-war-two-global-impact"
+      ]
+    },
+    {
+      "term": "export-oriented industry",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "hong-kong-modern-development-and-handover"
+      ]
+    },
+    {
+      "term": "extermination camp",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "holocaust-and-war-crimes"
+      ]
+    },
+    {
+      "term": "factory system",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "industrial-revolution-and-social-change"
+      ]
+    },
+    {
+      "term": "failure of peace settlement",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "world-war-one-and-interwar-period"
+      ]
+    },
+    {
+      "term": "fall of Berlin Wall",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "cold-war-global-confrontation"
+      ]
+    },
+    {
+      "term": "fascism",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "rise-of-totalitarianism-and-ww2-europe"
+      ]
+    },
+    {
+      "term": "Final Solution",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "holocaust-and-war-crimes"
+      ]
+    },
+    {
+      "term": "financial centre development",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "hong-kong-modern-development-and-handover"
+      ]
+    },
+    {
+      "term": "First Five-Year Plan",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "peoples-republic-of-china-after-1949"
+      ]
+    },
+    {
+      "term": "foreign investment in China",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "reform-and-opening-up-china"
+      ]
+    },
+    {
+      "term": "Four Modernizations",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "reform-and-opening-up-china"
+      ]
+    },
+    {
+      "term": "free market economy",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "industrial-revolution-and-social-change"
+      ]
+    },
+    {
+      "term": "French Revolution",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "french-revolution-and-enlightenment"
+      ]
+    },
+    {
+      "term": "future global challenge",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "globalization-and-contemporary-world"
+      ]
+    },
+    {
+      "term": "Gandhi",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "decolonization-and-independence-movements"
+      ]
+    },
+    {
+      "term": "Garibaldi",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "nationalism-and-19th-century-europe"
+      ]
+    },
+    {
+      "term": "General Assembly",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "international-organizations-and-human-rights"
+      ]
+    },
+    {
+      "term": "genocide",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "holocaust-and-war-crimes"
+      ]
+    },
+    {
+      "term": "German surrender",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "rise-of-totalitarianism-and-ww2-europe"
+      ]
+    },
+    {
+      "term": "global governance",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "international-organizations-and-human-rights"
+      ]
+    },
+    {
+      "term": "global health crisis",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "globalization-and-contemporary-world"
+      ]
+    },
+    {
+      "term": "global inequality",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "globalization-and-contemporary-world"
+      ]
+    },
+    {
+      "term": "global interdependence",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "globalization-and-contemporary-world"
+      ]
+    },
+    {
+      "term": "global war",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "world-war-two-global-impact"
+      ]
+    },
+    {
+      "term": "globalization",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "globalization-and-contemporary-world"
+      ]
+    },
+    {
+      "term": "Great Depression",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "world-war-one-and-interwar-period"
+      ]
+    },
+    {
+      "term": "Great Famine",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "peoples-republic-of-china-after-1949"
+      ]
+    },
+    {
+      "term": "Great Leap Forward",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "peoples-republic-of-china-after-1949"
+      ]
+    },
+    {
+      "term": "Greater Bay Area development",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "hong-kong-modern-development-and-handover"
+      ]
+    },
+    {
+      "term": "Gulf War",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "middle-east-and-regional-conflicts"
+      ]
+    },
+    {
+      "term": "handover ceremony 1997",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "hong-kong-modern-development-and-handover"
+      ]
+    },
+    {
+      "term": "historical causation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "senior-historical-inquiry-and-synthesis"
+      ]
+    },
+    {
+      "term": "historical change",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "senior-historical-inquiry-and-synthesis"
+      ]
+    },
+    {
+      "term": "historical continuity",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "senior-historical-inquiry-and-synthesis"
+      ]
+    },
+    {
+      "term": "historical controversy",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "senior-historical-inquiry-and-synthesis"
+      ]
+    },
+    {
+      "term": "historical debate",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "senior-historical-inquiry-and-synthesis"
+      ]
+    },
+    {
+      "term": "historical empathy",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "senior-historical-inquiry-and-synthesis"
+      ]
+    },
+    {
+      "term": "historical essay writing",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "senior-historical-inquiry-and-synthesis"
+      ]
+    },
+    {
+      "term": "historical evaluation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "senior-historical-inquiry-and-synthesis"
+      ]
+    },
+    {
+      "term": "historical evidence of atrocity",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "holocaust-and-war-crimes"
+      ]
+    },
+    {
+      "term": "historical legacy",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "senior-historical-inquiry-and-synthesis"
+      ]
+    },
+    {
+      "term": "historical memory",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "senior-historical-inquiry-and-synthesis"
+      ]
+    },
+    {
+      "term": "historical perspective",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "senior-historical-inquiry-and-synthesis"
+      ]
+    },
+    {
+      "term": "historical responsibility",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "holocaust-and-war-crimes"
+      ]
+    },
+    {
+      "term": "historical roots of conflict",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "middle-east-and-regional-conflicts"
+      ]
+    },
+    {
+      "term": "historical source comparison",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "senior-historical-inquiry-and-synthesis"
+      ]
+    },
+    {
+      "term": "historical synthesis",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "senior-historical-inquiry-and-synthesis"
+      ]
+    },
+    {
+      "term": "historical thinking for present world",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "globalization-and-contemporary-world"
+      ]
+    },
+    {
+      "term": "historical turning point",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "senior-historical-inquiry-and-synthesis"
+      ]
+    },
+    {
+      "term": "Hitler",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "rise-of-totalitarianism-and-ww2-europe"
+      ]
+    },
+    {
+      "term": "Holocaust",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "holocaust-and-war-crimes"
+      ]
+    },
+    {
+      "term": "home front",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "world-war-two-global-impact"
+      ]
+    },
+    {
+      "term": "Hong Kong economic miracle",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "hong-kong-modern-development-and-handover"
+      ]
+    },
+    {
+      "term": "Hong Kong return to China",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "reform-and-opening-up-china"
+      ]
+    },
+    {
+      "term": "Hong Kong Special Administrative Region",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "hong-kong-modern-development-and-handover"
+      ]
+    },
+    {
+      "term": "human dignity",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "holocaust-and-war-crimes"
+      ]
+    },
+    {
+      "term": "human rights violation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "international-organizations-and-human-rights"
+      ]
+    },
+    {
+      "term": "humanitarian aid",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "international-organizations-and-human-rights"
+      ]
+    },
+    {
+      "term": "hyperinflation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "world-war-one-and-interwar-period"
+      ]
+    },
+    {
+      "term": "identity of Hong Kong people",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "hong-kong-modern-development-and-handover"
+      ]
+    },
+    {
+      "term": "impact of Industrial Revolution",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "industrial-revolution-and-social-change"
+      ]
+    },
+    {
+      "term": "impact on Europe",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "french-revolution-and-enlightenment"
+      ]
+    },
+    {
+      "term": "imperial rivalry",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "nationalism-and-19th-century-europe"
+      ]
+    },
+    {
+      "term": "independence movement",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "decolonization-and-independence-movements"
+      ]
+    },
+    {
+      "term": "Indian independence",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "decolonization-and-independence-movements"
+      ]
+    },
+    {
+      "term": "industrial city",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "industrial-revolution-and-social-change"
+      ]
+    },
+    {
+      "term": "Industrial Revolution",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "industrial-revolution-and-social-change"
+      ]
+    },
+    {
+      "term": "information revolution",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "globalization-and-contemporary-world"
+      ]
+    },
+    {
+      "term": "international cooperation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "international-organizations-and-human-rights"
+      ]
+    },
+    {
+      "term": "international court",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "international-organizations-and-human-rights"
+      ]
+    },
+    {
+      "term": "International Criminal Court",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "international-organizations-and-human-rights"
+      ]
+    },
+    {
+      "term": "international justice",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "holocaust-and-war-crimes"
+      ]
+    },
+    {
+      "term": "international law enforcement",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "international-organizations-and-human-rights"
+      ]
+    },
+    {
+      "term": "international mediation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "middle-east-and-regional-conflicts"
+      ]
+    },
+    {
+      "term": "international refugee protection",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "international-organizations-and-human-rights"
+      ]
+    },
+    {
+      "term": "international terrorism",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "globalization-and-contemporary-world"
+      ]
+    },
+    {
+      "term": "international trade expansion",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "globalization-and-contemporary-world"
+      ]
+    },
+    {
+      "term": "international treaty",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "international-organizations-and-human-rights"
+      ]
+    },
+    {
+      "term": "internet age",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "globalization-and-contemporary-world"
+      ]
+    },
+    {
+      "term": "interwar period",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "world-war-one-and-interwar-period"
+      ]
+    },
+    {
+      "term": "invasion of Poland",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "rise-of-totalitarianism-and-ww2-europe"
+      ]
+    },
+    {
+      "term": "Iron Curtain division",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "cold-war-global-confrontation"
+      ]
+    },
+    {
+      "term": "Islamic revolution in Iran",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "middle-east-and-regional-conflicts"
+      ]
+    },
+    {
+      "term": "Japanese surrender",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "world-war-two-global-impact"
+      ]
+    },
+    {
+      "term": "Joint Declaration",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "hong-kong-modern-development-and-handover"
+      ]
+    },
+    {
+      "term": "Korean War",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "cold-war-global-confrontation"
+      ]
+    },
+    {
+      "term": "labour movement",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "industrial-revolution-and-social-change"
+      ]
+    },
+    {
+      "term": "land reform in China",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "peoples-republic-of-china-after-1949"
+      ]
+    },
+    {
+      "term": "League of Nations",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "world-war-one-and-interwar-period"
+      ]
+    },
+    {
+      "term": "legacy of colonial rule",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "decolonization-and-independence-movements"
+      ]
+    },
+    {
+      "term": "legacy of French Revolution",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "french-revolution-and-enlightenment"
+      ]
+    },
+    {
+      "term": "legacy of Mao era",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "peoples-republic-of-china-after-1949"
+      ]
+    },
+    {
+      "term": "liberty equality fraternity",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "french-revolution-and-enlightenment"
+      ]
+    },
+    {
+      "term": "living conditions in industrial city",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "industrial-revolution-and-social-change"
+      ]
+    },
+    {
+      "term": "long-term and short-term cause",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "senior-historical-inquiry-and-synthesis"
+      ]
+    },
+    {
+      "term": "Mao Zedong",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "peoples-republic-of-china-after-1949"
+      ]
+    },
+    {
+      "term": "market reform",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "reform-and-opening-up-china"
+      ]
+    },
+    {
+      "term": "mechanization",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "industrial-revolution-and-social-change"
+      ]
+    },
+    {
+      "term": "Middle East conflict",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "middle-east-and-regional-conflicts"
+      ]
+    },
+    {
+      "term": "migration in global age",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "globalization-and-contemporary-world"
+      ]
+    },
+    {
+      "term": "militarism in Europe",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "nationalism-and-19th-century-europe"
+      ]
+    },
+    {
+      "term": "militarization of society",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "rise-of-totalitarianism-and-ww2-europe"
+      ]
+    },
+    {
+      "term": "minority persecution",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "holocaust-and-war-crimes"
+      ]
+    },
+    {
+      "term": "modern political ideals",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "french-revolution-and-enlightenment"
+      ]
+    },
+    {
+      "term": "modernization of China",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "reform-and-opening-up-china"
+      ]
+    },
+    {
+      "term": "monitor human rights",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "international-organizations-and-human-rights"
+      ]
+    },
+    {
+      "term": "moral lesson from history",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "holocaust-and-war-crimes"
+      ]
+    },
+    {
+      "term": "multi-perspective analysis",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "senior-historical-inquiry-and-synthesis"
+      ]
+    },
+    {
+      "term": "multilateral diplomacy",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "international-organizations-and-human-rights"
+      ]
+    },
+    {
+      "term": "multinational corporation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "globalization-and-contemporary-world"
+      ]
+    },
+    {
+      "term": "Munich Agreement",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "world-war-one-and-interwar-period"
+      ]
+    },
+    {
+      "term": "Mussolini",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "rise-of-totalitarianism-and-ww2-europe"
+      ]
+    },
+    {
+      "term": "Mutually Assured Destruction",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "cold-war-global-confrontation"
+      ]
+    },
+    {
+      "term": "Napoleon Bonaparte",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "french-revolution-and-enlightenment"
+      ]
+    },
+    {
+      "term": "Napoleonic Code",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "french-revolution-and-enlightenment"
+      ]
+    },
+    {
+      "term": "nation building",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "decolonization-and-independence-movements"
+      ]
+    },
+    {
+      "term": "nation state",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "nationalism-and-19th-century-europe"
+      ]
+    },
+    {
+      "term": "national factor in conflict",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "middle-east-and-regional-conflicts"
+      ]
+    },
+    {
+      "term": "national identity",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "nationalism-and-19th-century-europe"
+      ]
+    },
+    {
+      "term": "national liberation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "decolonization-and-independence-movements"
+      ]
+    },
+    {
+      "term": "nationalism in 19th century",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "nationalism-and-19th-century-europe"
+      ]
+    },
+    {
+      "term": "nationalism in Europe",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "french-revolution-and-enlightenment"
+      ]
+    },
+    {
+      "term": "Nazi racial policy",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "holocaust-and-war-crimes"
+      ]
+    },
+    {
+      "term": "Nazism",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "rise-of-totalitarianism-and-ww2-europe"
+      ]
+    },
+    {
+      "term": "neo-colonialism",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "decolonization-and-independence-movements"
+      ]
+    },
+    {
+      "term": "never again",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "holocaust-and-war-crimes"
+      ]
+    },
+    {
+      "term": "new town development",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "hong-kong-modern-development-and-handover"
+      ]
+    },
+    {
+      "term": "new world order",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "world-war-two-global-impact"
+      ]
+    },
+    {
+      "term": "Non-Aligned Movement",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "decolonization-and-independence-movements"
+      ]
+    },
+    {
+      "term": "non-violent resistance",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "decolonization-and-independence-movements"
+      ]
+    },
+    {
+      "term": "North-South divide",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "globalization-and-contemporary-world"
+      ]
+    },
+    {
+      "term": "nuclear arms race",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "cold-war-global-confrontation"
+      ]
+    },
+    {
+      "term": "nuclear deterrence",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "cold-war-global-confrontation"
+      ]
+    },
+    {
+      "term": "Nuremberg Trials",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "rise-of-totalitarianism-and-ww2-europe"
+      ]
+    },
+    {
+      "term": "oil politics",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "middle-east-and-regional-conflicts"
+      ]
+    },
+    {
+      "term": "One China principle",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "peoples-republic-of-china-after-1949"
+      ]
+    },
+    {
+      "term": "one country two systems in Hong Kong",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "hong-kong-modern-development-and-handover"
+      ]
+    },
+    {
+      "term": "one country two systems policy",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "reform-and-opening-up-china"
+      ]
+    },
+    {
+      "term": "one-child policy",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "reform-and-opening-up-china"
+      ]
+    },
+    {
+      "term": "one-party dictatorship",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "rise-of-totalitarianism-and-ww2-europe"
+      ]
+    },
+    {
+      "term": "opening to world economy",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "reform-and-opening-up-china"
+      ]
+    },
+    {
+      "term": "Oslo Accords",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "middle-east-and-regional-conflicts"
+      ]
+    },
+    {
+      "term": "overthrow of monarchy",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "french-revolution-and-enlightenment"
+      ]
+    },
+    {
+      "term": "Pacific theatre",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "world-war-two-global-impact"
+      ]
+    },
+    {
+      "term": "Palestinian issue",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "middle-east-and-regional-conflicts"
+      ]
+    },
+    {
+      "term": "Pan-Slavism",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "nationalism-and-19th-century-europe"
+      ]
+    },
+    {
+      "term": "pandemic impact",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "globalization-and-contemporary-world"
+      ]
+    },
+    {
+      "term": "partition of Africa",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "nationalism-and-19th-century-europe"
+      ]
+    },
+    {
+      "term": "partition of India",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "decolonization-and-independence-movements"
+      ]
+    },
+    {
+      "term": "peace process",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "middle-east-and-regional-conflicts"
+      ]
+    },
+    {
+      "term": "people's commune",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "peoples-republic-of-china-after-1949"
+      ]
+    },
+    {
+      "term": "People's Republic of China founded",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "peoples-republic-of-china-after-1949"
+      ]
+    },
+    {
+      "term": "persecution of Jews",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "holocaust-and-war-crimes"
+      ]
+    },
+    {
+      "term": "planned economy",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "peoples-republic-of-china-after-1949"
+      ]
+    },
+    {
+      "term": "political campaign in China",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "peoples-republic-of-china-after-1949"
+      ]
+    },
+    {
+      "term": "political control in Mao era",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "peoples-republic-of-china-after-1949"
+      ]
+    },
+    {
+      "term": "political instability after independence",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "decolonization-and-independence-movements"
+      ]
+    },
+    {
+      "term": "political reform debate",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "reform-and-opening-up-china"
+      ]
+    },
+    {
+      "term": "political violence",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "middle-east-and-regional-conflicts"
+      ]
+    },
+    {
+      "term": "popular uprising",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "french-revolution-and-enlightenment"
+      ]
+    },
+    {
+      "term": "post-colonial state",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "decolonization-and-independence-movements"
+      ]
+    },
+    {
+      "term": "post-handover Hong Kong",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "hong-kong-modern-development-and-handover"
+      ]
+    },
+    {
+      "term": "post-war settlement",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "world-war-two-global-impact"
+      ]
+    },
+    {
+      "term": "promote peace and security",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "international-organizations-and-human-rights"
+      ]
+    },
+    {
+      "term": "propaganda machine",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "rise-of-totalitarianism-and-ww2-europe"
+      ]
+    },
+    {
+      "term": "protect civilians in war",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "international-organizations-and-human-rights"
+      ]
+    },
+    {
+      "term": "proxy conflict",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "cold-war-global-confrontation"
+      ]
+    },
+    {
+      "term": "public housing programme",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "hong-kong-modern-development-and-handover"
+      ]
+    },
+    {
+      "term": "railway expansion",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "industrial-revolution-and-social-change"
+      ]
+    },
+    {
+      "term": "rapid economic growth in China",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "reform-and-opening-up-china"
+      ]
+    },
+    {
+      "term": "rationing system",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "world-war-two-global-impact"
+      ]
+    },
+    {
+      "term": "reconstruction after war",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "world-war-two-global-impact"
+      ]
+    },
+    {
+      "term": "Red Guard movement",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "peoples-republic-of-china-after-1949"
+      ]
+    },
+    {
+      "term": "reflect on historical learning",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "senior-historical-inquiry-and-synthesis"
+      ]
+    },
+    {
+      "term": "Reform and Opening Up",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "reform-and-opening-up-china"
+      ]
+    },
+    {
+      "term": "refugee crisis after war",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "world-war-two-global-impact"
+      ]
+    },
+    {
+      "term": "refugee in global age",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "globalization-and-contemporary-world"
+      ]
+    },
+    {
+      "term": "refugee in Middle East",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "middle-east-and-regional-conflicts"
+      ]
+    },
+    {
+      "term": "regional instability",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "middle-east-and-regional-conflicts"
+      ]
+    },
+    {
+      "term": "reign of terror",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "french-revolution-and-enlightenment"
+      ]
+    },
+    {
+      "term": "religious factor in conflict",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "middle-east-and-regional-conflicts"
+      ]
+    },
+    {
+      "term": "remember wartime victims",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "holocaust-and-war-crimes"
+      ]
+    },
+    {
+      "term": "rise of China",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "reform-and-opening-up-china"
+      ]
+    },
+    {
+      "term": "rise of extremism",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "world-war-one-and-interwar-period"
+      ]
+    },
+    {
+      "term": "road to World War I",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "nationalism-and-19th-century-europe"
+      ]
+    },
+    {
+      "term": "Robespierre",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "french-revolution-and-enlightenment"
+      ]
+    },
+    {
+      "term": "role of international organization",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "international-organizations-and-human-rights"
+      ]
+    },
+    {
+      "term": "Schlieffen Plan",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "world-war-one-and-interwar-period"
+      ]
+    },
+    {
+      "term": "Scramble for Africa",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "nationalism-and-19th-century-europe"
+      ]
+    },
+    {
+      "term": "secret police",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "rise-of-totalitarianism-and-ww2-europe"
+      ]
+    },
+    {
+      "term": "Security Council",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "international-organizations-and-human-rights"
+      ]
+    },
+    {
+      "term": "self-determination",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "decolonization-and-independence-movements"
+      ]
+    },
+    {
+      "term": "shift in global power",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "world-war-two-global-impact"
+      ]
+    },
+    {
+      "term": "Sino-British negotiation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "hong-kong-modern-development-and-handover"
+      ]
+    },
+    {
+      "term": "Sino-Soviet split",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "peoples-republic-of-china-after-1949"
+      ]
+    },
+    {
+      "term": "Six-Day War",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "middle-east-and-regional-conflicts"
+      ]
+    },
+    {
+      "term": "social change after reform",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "reform-and-opening-up-china"
+      ]
+    },
+    {
+      "term": "social change in Mao era",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "peoples-republic-of-china-after-1949"
+      ]
+    },
+    {
+      "term": "social inequality",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "industrial-revolution-and-social-change"
+      ]
+    },
+    {
+      "term": "social inequality in France",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "french-revolution-and-enlightenment"
+      ]
+    },
+    {
+      "term": "social mobility in Hong Kong",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "hong-kong-modern-development-and-handover"
+      ]
+    },
+    {
+      "term": "social reform",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "industrial-revolution-and-social-change"
+      ]
+    },
+    {
+      "term": "social unrest in Hong Kong",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "hong-kong-modern-development-and-handover"
+      ]
+    },
+    {
+      "term": "socialist transformation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "peoples-republic-of-china-after-1949"
+      ]
+    },
+    {
+      "term": "Southeast Asian independence",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "decolonization-and-independence-movements"
+      ]
+    },
+    {
+      "term": "space race",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "cold-war-global-confrontation"
+      ]
+    },
+    {
+      "term": "special economic zone",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "reform-and-opening-up-china"
+      ]
+    },
+    {
+      "term": "spread of revolutionary ideas",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "french-revolution-and-enlightenment"
+      ]
+    },
+    {
+      "term": "state-sponsored violence",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "holocaust-and-war-crimes"
+      ]
+    },
+    {
+      "term": "steam engine",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "industrial-revolution-and-social-change"
+      ]
+    },
+    {
+      "term": "Storming of the Bastille",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "french-revolution-and-enlightenment"
+      ]
+    },
+    {
+      "term": "strategic bombing campaign",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "world-war-two-global-impact"
+      ]
+    },
+    {
+      "term": "superpower confrontation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "cold-war-global-confrontation"
+      ]
+    },
+    {
+      "term": "sustainable development goal",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "globalization-and-contemporary-world"
+      ]
+    },
+    {
+      "term": "Taiwan and cross-strait relations",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "peoples-republic-of-china-after-1949"
+      ]
+    },
+    {
+      "term": "technological innovation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "industrial-revolution-and-social-change"
+      ]
+    },
+    {
+      "term": "technology and society",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "globalization-and-contemporary-world"
+      ]
+    },
+    {
+      "term": "terrorism",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "middle-east-and-regional-conflicts"
+      ]
+    },
+    {
+      "term": "total war",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "world-war-one-and-interwar-period"
+      ]
+    },
+    {
+      "term": "totalitarianism",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "rise-of-totalitarianism-and-ww2-europe"
+      ]
+    },
+    {
+      "term": "trade union",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "industrial-revolution-and-social-change"
+      ]
+    },
+    {
+      "term": "transport revolution",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "industrial-revolution-and-social-change"
+      ]
+    },
+    {
+      "term": "Treaty of Versailles",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "world-war-one-and-interwar-period"
+      ]
+    },
+    {
+      "term": "trench warfare",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "world-war-one-and-interwar-period"
+      ]
+    },
+    {
+      "term": "UN Charter",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "international-organizations-and-human-rights"
+      ]
+    },
+    {
+      "term": "UN peacekeeping",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "international-organizations-and-human-rights"
+      ]
+    },
+    {
+      "term": "unification of Germany",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "nationalism-and-19th-century-europe"
+      ]
+    },
+    {
+      "term": "unification of Italy",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "nationalism-and-19th-century-europe"
+      ]
+    },
+    {
+      "term": "United Nations",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "international-organizations-and-human-rights"
+      ]
+    },
+    {
+      "term": "United Nations founded",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "world-war-two-global-impact"
+      ]
+    },
+    {
+      "term": "Universal Declaration of Human Rights",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "international-organizations-and-human-rights"
+      ]
+    },
+    {
+      "term": "urban reform in China",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "reform-and-opening-up-china"
+      ]
+    },
+    {
+      "term": "urbanization in Europe",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "industrial-revolution-and-social-change"
+      ]
+    },
+    {
+      "term": "Vietnam War",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "cold-war-global-confrontation"
+      ]
+    },
+    {
+      "term": "war crime",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "holocaust-and-war-crimes"
+      ]
+    },
+    {
+      "term": "war crime prosecution",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "international-organizations-and-human-rights"
+      ]
+    },
+    {
+      "term": "war guilt clause",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "world-war-one-and-interwar-period"
+      ]
+    },
+    {
+      "term": "war of attrition",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "world-war-one-and-interwar-period"
+      ]
+    },
+    {
+      "term": "wartime alliance",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "world-war-two-global-impact"
+      ]
+    },
+    {
+      "term": "wartime destruction",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "world-war-two-global-impact"
+      ]
+    },
+    {
+      "term": "wartime mobilization",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "world-war-two-global-impact"
+      ]
+    },
+    {
+      "term": "weigh competing interpretations",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "senior-historical-inquiry-and-synthesis"
+      ]
+    },
+    {
+      "term": "Weimar Republic",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "world-war-one-and-interwar-period"
+      ]
+    },
+    {
+      "term": "Western Front",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "world-war-one-and-interwar-period"
+      ]
+    },
+    {
+      "term": "working class",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "industrial-revolution-and-social-change"
+      ]
+    },
+    {
+      "term": "World War I",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "world-war-one-and-interwar-period"
+      ]
+    },
+    {
+      "term": "Yom Kippur War",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "history",
+        "curriculum-style",
+        "middle-east-and-regional-conflicts"
       ]
     }
   ]

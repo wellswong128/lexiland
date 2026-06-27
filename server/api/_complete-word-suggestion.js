@@ -1,6 +1,9 @@
 import {
   getVocabularyLocaleLabel,
+  hasPlaceholderTranslation,
   hasValidChineseTranslationFields,
+  isExamPhraseTerm,
+  isIncompleteExamPhraseTranslation,
   resolveVocabularyLocale,
 } from "../../lib/vocabularyLocale.js";
 
@@ -31,10 +34,20 @@ function parseAgnesJson(data) {
   return JSON.parse(text);
 }
 
-function buildPrompt(term, chineseLabel, { strict = false } = {}) {
+function buildPrompt(term, chineseLabel, { strict = false, phrase = false } = {}) {
+  const phraseMode = phrase || isExamPhraseTerm(term);
   const strictRule = strict
     ? `\nIMPORTANT: translation and exampleTranslation MUST be written in ${chineseLabel} using Chinese characters. Do NOT use English for those two fields.`
     : "";
+
+  const phraseRule = phraseMode
+    ? `\nIMPORTANT: This is a multi-word examination skill phrase. translation must translate the ENTIRE phrase into natural ${chineseLabel}. Do NOT translate only the first word, do NOT give synonym lists like "評估；評價", and do NOT use asterisks or placeholders. Example: "evaluate French Revolution" -> "評估法國大革命".`
+    : "";
+
+  const multiWordRule =
+    term.includes(" ") && !phraseMode
+      ? `\nIf the term has multiple words, translation must cover the full phrase in ${chineseLabel}. Never use * or ... as placeholders.`
+      : "";
 
   return `Create vocabulary data for this English word: ${term}
 
@@ -45,10 +58,10 @@ Use ${chineseLabel} for translation and exampleTranslation.
 translation must be the ${chineseLabel} meaning of the word (not English).
 example must be a natural English sentence that uses the word.
 exampleTranslation must be the ${chineseLabel} translation of example.
-Keep the definition concise and learner-friendly. Tags should be an array of short English labels.${strictRule}`;
+Keep the definition concise and learner-friendly. Tags should be an array of short English labels.${multiWordRule}${strictRule}${phraseRule}`;
 }
 
-async function requestSuggestion(term, chineseLabel, apiKey, { strict = false } = {}) {
+async function requestSuggestion(term, chineseLabel, apiKey, { strict = false, phrase = false } = {}) {
   const aiResponse = await fetch(AGNES_API_URL, {
     method: "POST",
     headers: {
@@ -65,7 +78,7 @@ async function requestSuggestion(term, chineseLabel, apiKey, { strict = false } 
         },
         {
           role: "user",
-          content: buildPrompt(term, chineseLabel, { strict }),
+          content: buildPrompt(term, chineseLabel, { strict, phrase }),
         },
       ],
       temperature: 0.2,
@@ -101,18 +114,36 @@ export async function generateCompleteWordSuggestion(term, locale = "zh-Hant") {
   const vocabularyLocale = resolveVocabularyLocale(String(locale ?? "zh-Hant").trim());
   const chineseLabel = getVocabularyLocaleLabel(vocabularyLocale);
 
-  let suggestion = await requestSuggestion(cleanTerm, chineseLabel, apiKey);
-  if (!hasValidChineseTranslationFields(suggestion)) {
+  let suggestion = await requestSuggestion(cleanTerm, chineseLabel, apiKey, {
+    phrase: isExamPhraseTerm(cleanTerm),
+  });
+  if (!hasValidChineseTranslationFields(suggestion, cleanTerm)) {
     suggestion = await requestSuggestion(cleanTerm, chineseLabel, apiKey, { strict: true });
+  }
+
+  if (
+    !hasValidChineseTranslationFields(suggestion, cleanTerm) &&
+    (cleanTerm.includes(" ") ||
+      hasPlaceholderTranslation(suggestion.translation) ||
+      hasPlaceholderTranslation(suggestion.exampleTranslation) ||
+      isIncompleteExamPhraseTranslation(cleanTerm, suggestion.translation))
+  ) {
+    suggestion = await requestSuggestion(cleanTerm, chineseLabel, apiKey, {
+      strict: true,
+      phrase: true,
+    });
   }
 
   if (!suggestion.term || !suggestion.definition) {
     throw new Error("AI response was missing term or definition.");
   }
 
-  if (!hasValidChineseTranslationFields(suggestion)) {
+  if (!hasValidChineseTranslationFields(suggestion, cleanTerm)) {
     throw new Error("AI response did not include Chinese translation fields.");
   }
 
-  return suggestion;
+  return {
+    ...suggestion,
+    term: cleanTerm,
+  };
 }

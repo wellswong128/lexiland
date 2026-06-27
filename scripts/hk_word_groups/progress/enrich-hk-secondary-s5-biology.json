@@ -2,181 +2,1888 @@
   "group_code": "hk-secondary-s5-biology",
   "terms": {
     "enzyme": {
-      "status": "incomplete",
-      "missing": [
-        "pronunciation",
-        "part_of_speech"
-      ],
+      "status": "complete",
+      "missing": [],
       "errors": {},
-      "completed_at": null
+      "completed_at": "2026-06-25T22:12:50Z"
     },
     "photosynthesis": {
-      "status": "incomplete",
-      "missing": [
-        "pronunciation",
-        "part_of_speech"
-      ],
+      "status": "complete",
+      "missing": [],
       "errors": {},
-      "completed_at": null
+      "completed_at": "2026-06-25T22:12:50Z"
     },
     "osmosis": {
-      "status": "incomplete",
-      "missing": [
-        "pronunciation",
-        "part_of_speech"
-      ],
+      "status": "complete",
+      "missing": [],
       "errors": {},
-      "completed_at": null
+      "completed_at": "2026-06-25T22:12:51Z"
     },
     "diffusion": {
-      "status": "incomplete",
-      "missing": [
-        "pronunciation",
-        "part_of_speech"
-      ],
+      "status": "complete",
+      "missing": [],
       "errors": {},
-      "completed_at": null
+      "completed_at": "2026-06-25T22:12:52Z"
     },
     "mitochondria": {
-      "status": "incomplete",
-      "missing": [
-        "pronunciation",
-        "part_of_speech"
-      ],
+      "status": "complete",
+      "missing": [],
       "errors": {},
-      "completed_at": null
+      "completed_at": "2026-06-25T22:12:52Z"
     },
     "homeostasis": {
-      "status": "incomplete",
-      "missing": [
-        "pronunciation",
-        "part_of_speech"
-      ],
+      "status": "complete",
+      "missing": [],
       "errors": {},
-      "completed_at": null
+      "completed_at": "2026-06-25T22:12:53Z"
     },
     "antibody": {
-      "status": "incomplete",
-      "missing": [
-        "pronunciation",
-        "part_of_speech"
-      ],
+      "status": "complete",
+      "missing": [],
       "errors": {},
-      "completed_at": null
+      "completed_at": "2026-06-25T22:12:53Z"
     },
     "genotype": {
-      "status": "incomplete",
-      "missing": [
-        "pronunciation",
-        "part_of_speech"
-      ],
+      "status": "complete",
+      "missing": [],
       "errors": {},
-      "completed_at": null
+      "completed_at": "2026-06-25T22:12:54Z"
     },
     "phenotype": {
-      "status": "incomplete",
-      "missing": [
-        "pronunciation",
-        "part_of_speech"
-      ],
+      "status": "complete",
+      "missing": [],
       "errors": {},
-      "completed_at": null
+      "completed_at": "2026-06-25T22:12:54Z"
     },
     "transpiration": {
-      "status": "incomplete",
-      "missing": [
-        "pronunciation",
-        "part_of_speech"
-      ],
+      "status": "complete",
+      "missing": [],
       "errors": {},
-      "completed_at": null
+      "completed_at": "2026-06-25T22:12:55Z"
     },
     "catalyst": {
-      "status": "incomplete",
-      "missing": [
-        "pronunciation",
-        "part_of_speech"
-      ],
+      "status": "complete",
+      "missing": [],
       "errors": {},
-      "completed_at": null
+      "completed_at": "2026-06-25T22:12:55Z"
     },
     "membrane": {
-      "status": "incomplete",
-      "missing": [
-        "pronunciation",
-        "part_of_speech"
-      ],
+      "status": "complete",
+      "missing": [],
       "errors": {},
-      "completed_at": null
+      "completed_at": "2026-06-25T22:12:56Z"
     },
     "respiration": {
-      "status": "incomplete",
-      "missing": [
-        "pronunciation",
-        "part_of_speech"
-      ],
+      "status": "complete",
+      "missing": [],
       "errors": {},
-      "completed_at": null
+      "completed_at": "2026-06-25T22:12:56Z"
     },
     "allele": {
-      "status": "incomplete",
-      "missing": [
-        "pronunciation",
-        "part_of_speech"
-      ],
+      "status": "complete",
+      "missing": [],
       "errors": {},
-      "completed_at": null
+      "completed_at": "2026-06-25T22:12:57Z"
     },
     "chromosome": {
-      "status": "incomplete",
-      "missing": [
-        "pronunciation",
-        "part_of_speech"
-      ],
+      "status": "complete",
+      "missing": [],
       "errors": {},
-      "completed_at": null
+      "completed_at": "2026-06-25T22:12:58Z"
     },
     "digestion": {
-      "status": "incomplete",
-      "missing": [
-        "pronunciation",
-        "part_of_speech"
-      ],
+      "status": "complete",
+      "missing": [],
       "errors": {},
-      "completed_at": null
+      "completed_at": "2026-06-25T22:12:58Z"
     },
     "excretion": {
-      "status": "incomplete",
-      "missing": [
-        "pronunciation",
-        "part_of_speech"
-      ],
+      "status": "complete",
+      "missing": [],
       "errors": {},
-      "completed_at": null
+      "completed_at": "2026-06-25T22:12:59Z"
     },
     "hormone": {
-      "status": "incomplete",
-      "missing": [
-        "pronunciation",
-        "part_of_speech"
-      ],
+      "status": "complete",
+      "missing": [],
       "errors": {},
-      "completed_at": null
+      "completed_at": "2026-06-25T22:12:59Z"
     },
     "vaccine": {
-      "status": "incomplete",
-      "missing": [
-        "pronunciation",
-        "part_of_speech"
-      ],
+      "status": "complete",
+      "missing": [],
       "errors": {},
-      "completed_at": null
+      "completed_at": "2026-06-25T22:13:00Z"
     },
     "evolution": {
       "status": "complete",
       "missing": [],
       "errors": {},
       "completed_at": "2026-06-21T00:48:50Z"
+    },
+    "absorption spectrum": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T22:13:00Z"
+    },
+    "acetylcholine": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T22:13:48Z"
+    },
+    "acid rain effect": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T22:14:40Z"
+    },
+    "action potential": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T22:14:40Z"
+    },
+    "action spectrum": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T22:15:40Z"
+    },
+    "adaptation": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T22:15:41Z"
+    },
+    "adaptive immunity": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T22:16:51Z"
+    },
+    "adaptive radiation": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T22:18:33Z"
+    },
+    "adrenal gland": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T22:20:29Z"
+    },
+    "adrenaline": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T22:21:03Z"
+    },
+    "allergy": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T22:21:04Z"
+    },
+    "amniotic fluid": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T22:21:53Z"
+    },
+    "anaerobic respiration in muscle": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T22:23:44Z"
+    },
+    "analogous structure": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T22:25:29Z"
+    },
+    "antibiotic resistance": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T22:27:15Z"
+    },
+    "aseptic technique": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T22:29:05Z"
+    },
+    "atherosclerosis": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T22:30:56Z"
+    },
+    "atp synthase": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T22:33:52Z"
+    },
+    "attenuated vaccine": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T22:35:43Z"
+    },
+    "autoimmune disease": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T22:37:29Z"
+    },
+    "autonomic nervous system": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T22:39:12Z"
+    },
+    "auxin": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T22:40:55Z"
+    },
+    "bacterial reproduction": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T22:42:41Z"
+    },
+    "bacterial transformation": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T22:44:22Z"
+    },
+    "basal metabolic rate": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T22:46:08Z"
+    },
+    "base pairing": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T22:48:17Z"
+    },
+    "benedict's test": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T22:50:21Z"
+    },
+    "bile salt emulsification": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T22:51:06Z"
+    },
+    "binary fission": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T22:51:44Z"
+    },
+    "bioethics in genetics": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T22:54:34Z"
+    },
+    "bioinformatics": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T22:54:34Z"
+    },
+    "biological investigation": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T22:56:10Z"
+    },
+    "biosafety protocol": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T23:01:08Z"
+    },
+    "biuret test": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T23:01:09Z"
+    },
+    "blood glucose homeostasis": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T23:01:09Z"
+    },
+    "blood group antigen": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T23:02:47Z"
+    },
+    "blood transfusion compatibility": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T23:04:31Z"
+    },
+    "body temperature regulation": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T23:07:25Z"
+    },
+    "bohr effect": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T23:07:43Z"
+    },
+    "booster dose": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T23:09:39Z"
+    },
+    "brain region": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T23:11:30Z"
+    },
+    "c3 plant": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T23:12:26Z"
+    },
+    "c4 plant": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T23:14:08Z"
+    },
+    "calorific value": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T23:14:58Z"
+    },
+    "carbon fixation": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T23:16:43Z"
+    },
+    "cardiac cycle": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T23:18:59Z"
+    },
+    "carrying capacity": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T23:19:00Z"
+    },
+    "cellular respiration pathway": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T23:20:55Z"
+    },
+    "cerebellum": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T23:20:55Z"
+    },
+    "cerebrum": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T23:20:56Z"
+    },
+    "chemiosmosis": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T23:21:40Z"
+    },
+    "chi-squared test": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T23:22:20Z"
+    },
+    "cholesterol": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T23:24:02Z"
+    },
+    "climax community": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T23:24:50Z"
+    },
+    "clonal selection": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T23:25:41Z"
+    },
+    "cohesion-tension theory": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T23:28:46Z"
+    },
+    "colorimetric assay": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T23:29:10Z"
+    },
+    "common ancestor": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T23:29:53Z"
+    },
+    "companion cell": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T23:30:36Z"
+    },
+    "comparative anatomy": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T23:32:39Z"
+    },
+    "compensation point": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T23:33:06Z"
+    },
+    "complementary strand": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T23:33:47Z"
+    },
+    "conservation strategy": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T23:35:53Z"
+    },
+    "contamination": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T23:35:54Z"
+    },
+    "contraception": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T23:36:44Z"
+    },
+    "control group": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T23:38:44Z"
+    },
+    "coronary heart disease": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T23:39:09Z"
+    },
+    "coronavirus": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T23:40:21Z"
+    },
+    "correlation coefficient": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T23:40:21Z"
+    },
+    "countercurrent multiplier": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T23:42:28Z"
+    },
+    "crispr": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T23:44:12Z"
+    },
+    "culture medium": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T23:46:19Z"
+    },
+    "deamination of amino acids": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T23:47:22Z"
+    },
+    "deforestation": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T23:47:22Z"
+    },
+    "diabetes mellitus": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T23:49:10Z"
+    },
+    "dialysis machine": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T23:49:52Z"
+    },
+    "diaphragm action": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T23:51:42Z"
+    },
+    "diastole": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T23:52:38Z"
+    },
+    "disease vector": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T23:54:28Z"
+    },
+    "dna fingerprinting": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T05:45:51Z"
+    },
+    "dna ligase": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T23:56:22Z"
+    },
+    "dna polymerase": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T23:58:21Z"
+    },
+    "dna probe": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-25T23:59:12Z"
+    },
+    "drug effect on synapse": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T00:00:10Z"
+    },
+    "ecological footprint": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T00:01:13Z"
+    },
+    "ecological niche": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T00:04:18Z"
+    },
+    "electrocardiogram": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T00:06:07Z"
+    },
+    "electroporation": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T00:07:51Z"
+    },
+    "embryo development": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T00:09:41Z"
+    },
+    "emulsion test": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T00:12:47Z"
+    },
+    "endocrine disorder": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T00:13:10Z"
+    },
+    "endocrine system": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T00:13:11Z"
+    },
+    "endospore": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T00:15:17Z"
+    },
+    "energy flow in cell": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T00:17:01Z"
+    },
+    "enzyme specificity in digestion": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T00:20:29Z"
+    },
+    "epigenetics": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T00:20:30Z"
+    },
+    "essential amino acid": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T00:22:03Z"
+    },
+    "essential fatty acid": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T00:23:47Z"
+    },
+    "eutrophication": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T00:25:39Z"
+    },
+    "experimental group": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T00:26:09Z"
+    },
+    "exponential growth": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T00:26:10Z"
+    },
+    "expression vector": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T00:27:07Z"
+    },
+    "eyepiece graticule": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T00:30:20Z"
+    },
+    "feedback mechanism": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T00:31:21Z"
+    },
+    "female reproductive system": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T00:35:27Z"
+    },
+    "fermentation product": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T00:36:09Z"
+    },
+    "fetus development": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T00:37:20Z"
+    },
+    "fitness": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T00:37:21Z"
+    },
+    "food test": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T00:40:23Z"
+    },
+    "fossil record": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T00:42:23Z"
+    },
+    "frameshift mutation": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T00:44:19Z"
+    },
+    "gametogenesis": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T00:46:22Z"
+    },
+    "gel electrophoresis": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T00:49:23Z"
+    },
+    "gene cloning": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T00:50:26Z"
+    },
+    "gene editing": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T00:52:44Z"
+    },
+    "gene expression": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T00:52:44Z"
+    },
+    "gene flow": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T00:53:47Z"
+    },
+    "gene mutation type": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T00:56:39Z"
+    },
+    "gene regulation": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T00:58:41Z"
+    },
+    "genetic drift": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T00:59:39Z"
+    },
+    "genetic screening": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T01:00:29Z"
+    },
+    "genetically modified organism": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T01:02:18Z"
+    },
+    "genome": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T01:03:17Z"
+    },
+    "geographical isolation": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T05:46:03Z"
+    },
+    "gibberellin": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T01:04:46Z"
+    },
+    "global warming impact": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T01:06:40Z"
+    },
+    "glomerular filtration rate": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T01:10:19Z"
+    },
+    "gravitropism": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T01:10:20Z"
+    },
+    "habitat destruction": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T01:11:45Z"
+    },
+    "hardy-weinberg principle": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T01:13:51Z"
+    },
+    "hepatic portal vein": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T01:14:40Z"
+    },
+    "herd immunity": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T01:15:43Z"
+    },
+    "histamine response": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T01:16:56Z"
+    },
+    "hiv transmission": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T01:17:54Z"
+    },
+    "homologous structure": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T01:20:49Z"
+    },
+    "hormonal control of reproduction": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T01:21:36Z"
+    },
+    "hormonal imbalance": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T01:23:57Z"
+    },
+    "hormone receptor": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T01:24:53Z"
+    },
+    "hybridization": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T01:26:57Z"
+    },
+    "hydrophyte": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T01:27:28Z"
+    },
+    "immunological memory": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T01:30:08Z"
+    },
+    "immunosuppression": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T01:31:12Z"
+    },
+    "implantation": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T01:33:14Z"
+    },
+    "in vitro fertilization": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T01:35:17Z"
+    },
+    "inactivated vaccine": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T01:36:13Z"
+    },
+    "infection control": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T01:38:18Z"
+    },
+    "infertility": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T01:39:37Z"
+    },
+    "influenza virus": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T01:41:08Z"
+    },
+    "innate immunity": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T01:41:50Z"
+    },
+    "intercostal muscle": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T01:44:06Z"
+    },
+    "invasive species": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T01:44:07Z"
+    },
+    "iodine test": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T01:45:53Z"
+    },
+    "kidney transplant": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T01:46:54Z"
+    },
+    "kwashiorkor": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T01:48:31Z"
+    },
+    "lac operon": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T01:49:13Z"
+    },
+    "lactase": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T01:51:15Z"
+    },
+    "leaf adaptation": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T01:53:10Z"
+    },
+    "limiting factor experiment": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T01:55:35Z"
+    },
+    "link reaction": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T01:58:17Z"
+    },
+    "lipoprotein": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T02:00:33Z"
+    },
+    "liver detoxification": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T02:02:28Z"
+    },
+    "liver metabolism": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T02:03:30Z"
+    },
+    "logistic growth": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T02:04:13Z"
+    },
+    "macroevolution": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T02:06:05Z"
+    },
+    "magnesium ion": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T02:07:16Z"
+    },
+    "maintaining blood composition": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T02:08:59Z"
+    },
+    "maintaining internal balance": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T02:11:08Z"
+    },
+    "male reproductive system": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T02:13:18Z"
+    },
+    "malnutrition": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T02:13:18Z"
+    },
+    "maltase": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T02:14:18Z"
+    },
+    "marasmus": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T02:16:47Z"
+    },
+    "mark-release-recapture": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T02:17:50Z"
+    },
+    "medulla oblongata": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T05:46:04Z"
+    },
+    "memory cell": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T02:20:00Z"
+    },
+    "menstrual cycle": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T02:22:15Z"
+    },
+    "messenger rna": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T02:24:32Z"
+    },
+    "microevolution": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T02:26:49Z"
+    },
+    "microorganism": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T02:26:49Z"
+    },
+    "microscopy calibration": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T02:26:50Z"
+    },
+    "mineral uptake": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T02:28:42Z"
+    },
+    "molecular phylogeny": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T02:28:43Z"
+    },
+    "monoclonal antibody": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T02:28:44Z"
+    },
+    "mosquito-borne disease": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T05:46:05Z"
+    },
+    "motor neuron": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T02:31:48Z"
+    },
+    "mrsa": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T02:33:58Z"
+    },
+    "myelin sheath": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T02:36:19Z"
+    },
+    "nadh": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T02:37:30Z"
+    },
+    "natural selection": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T02:37:30Z"
+    },
+    "nerve impulse": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T02:40:00Z"
+    },
+    "neurotransmitter": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T02:40:00Z"
+    },
+    "nitrate ion": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T02:42:42Z"
+    },
+    "nucleotide sequence": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T02:43:23Z"
+    },
+    "obesity": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T02:43:24Z"
+    },
+    "oogenesis": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T02:44:38Z"
+    },
+    "operator gene": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T02:46:45Z"
+    },
+    "operon model": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T05:46:05Z"
+    },
+    "organ transplant rejection": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T02:51:50Z"
+    },
+    "osmoreceptor": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T05:46:06Z"
+    },
+    "ovulation": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T02:54:47Z"
+    },
+    "oxidative phosphorylation": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T05:46:06Z"
+    },
+    "oxygen as final electron acceptor": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T02:57:22Z"
+    },
+    "oxygen dissociation curve": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T03:01:39Z"
+    },
+    "parasympathetic system": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T03:03:36Z"
+    },
+    "partial pressure of oxygen": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T03:05:44Z"
+    },
+    "pasteurization": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T03:06:43Z"
+    },
+    "pathogenic bacteria": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T05:46:07Z"
+    },
+    "pepsin": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T03:09:11Z"
+    },
+    "phosphate ion": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T03:10:34Z"
+    },
+    "photolysis of water": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T03:11:39Z"
+    },
+    "photosynthetic pigment": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T03:12:43Z"
+    },
+    "phototropism": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T03:14:49Z"
+    },
+    "pituitary gland": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T03:18:28Z"
+    },
+    "placenta": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T03:20:51Z"
+    },
+    "plant hormone": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T03:22:44Z"
+    },
+    "plasmid vector": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T03:23:52Z"
+    },
+    "point mutation": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T03:25:53Z"
+    },
+    "pollution impact": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T05:46:30Z"
+    },
+    "polymerase chain reaction": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T03:31:10Z"
+    },
+    "population growth curve": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T03:32:15Z"
+    },
+    "prenatal care": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T03:34:56Z"
+    },
+    "primary immune response": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T03:35:51Z"
+    },
+    "primary succession": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T03:36:54Z"
+    },
+    "promoter region": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T03:37:46Z"
+    },
+    "protected area": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T03:40:04Z"
+    },
+    "puberty": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T03:40:05Z"
+    },
+    "public health measure": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T03:41:22Z"
+    },
+    "pyruvate decarboxylation": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T03:44:27Z"
+    },
+    "quadrat sampling": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T03:45:09Z"
+    },
+    "quarantine": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T03:46:18Z"
+    },
+    "recombinant dna technology": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T03:47:59Z"
+    },
+    "redox reaction": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T03:49:08Z"
+    },
+    "reflex action": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T03:49:08Z"
+    },
+    "regulatory gene": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T03:50:18Z"
+    },
+    "relay neuron": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T03:51:30Z"
+    },
+    "replicate": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T03:51:30Z"
+    },
+    "reproductive isolation": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T03:52:23Z"
+    },
+    "resting potential": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T03:54:52Z"
+    },
+    "restoration ecology": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T03:56:50Z"
+    },
+    "restriction endonuclease": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T03:57:42Z"
+    },
+    "rh factor": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T04:00:20Z"
+    },
+    "ribosomal rna": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T05:46:51Z"
+    },
+    "rna polymerase": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T04:03:10Z"
+    },
+    "root pressure": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T04:04:11Z"
+    },
+    "saltatory conduction": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T04:05:16Z"
+    },
+    "sampling method": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T04:07:29Z"
+    },
+    "second messenger": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T04:08:36Z"
+    },
+    "secondary immune response": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T04:09:44Z"
+    },
+    "secondary succession": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T04:10:48Z"
+    },
+    "selective pressure": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T04:12:32Z"
+    },
+    "sensory neuron": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T04:14:38Z"
+    },
+    "serial dilution": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T04:14:39Z"
+    },
+    "sexually transmitted infection": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T04:15:42Z"
+    },
+    "sieve tube element": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T04:16:51Z"
+    },
+    "source and sink": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T04:18:21Z"
+    },
+    "speciation": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T04:18:22Z"
+    },
+    "spermatogenesis": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T05:46:51Z"
+    },
+    "spinal cord": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T04:20:10Z"
+    },
+    "stage micrometer": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T04:22:06Z"
+    },
+    "standard deviation": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T04:22:07Z"
+    },
+    "statistical significance": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T04:24:22Z"
+    },
+    "sterilization": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T04:25:32Z"
+    },
+    "sticky end": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T04:26:40Z"
+    },
+    "stomatal regulation": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T04:29:08Z"
+    },
+    "succession": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T04:29:09Z"
+    },
+    "survival of the fittest": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T04:30:09Z"
+    },
+    "sustainable resource use": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T04:32:04Z"
+    },
+    "sympathetic system": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T04:35:31Z"
+    },
+    "synaptic cleft": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T04:37:37Z"
+    },
+    "systole": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T04:39:42Z"
+    },
+    "target tissue": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T04:41:55Z"
+    },
+    "thermoreceptor": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T05:46:52Z"
+    },
+    "thyroid gland": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T05:46:52Z"
+    },
+    "thyroxine": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T04:46:48Z"
+    },
+    "tidal volume": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T04:48:49Z"
+    },
+    "transect line": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T04:51:55Z"
+    },
+    "transfer rna": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T04:52:38Z"
+    },
+    "transgenic animal": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T04:53:20Z"
+    },
+    "transpiration stream": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T04:54:15Z"
+    },
+    "tropism": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T04:58:58Z"
+    },
+    "trypsin": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T04:58:58Z"
+    },
+    "tuberculosis": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T04:58:59Z"
+    },
+    "type 1 diabetes": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T04:59:41Z"
+    },
+    "type 2 diabetes": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T05:01:50Z"
+    },
+    "umbilical cord": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T05:03:55Z"
+    },
+    "urea excretion": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T05:05:36Z"
+    },
+    "urea formation": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T05:07:25Z"
+    },
+    "vaccine development": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T05:08:33Z"
+    },
+    "ventilation mechanism": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T05:10:50Z"
+    },
+    "vestigial structure": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T05:11:21Z"
+    },
+    "viral replication": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T05:12:28Z"
+    },
+    "vital capacity": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T05:14:25Z"
+    },
+    "water reabsorption": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T05:17:28Z"
+    },
+    "water uptake": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T05:18:20Z"
+    },
+    "xerophyte": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T05:20:34Z"
     }
   }
 }

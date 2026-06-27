@@ -7,6 +7,15 @@
   "version": "2026.06",
   "display_name_en": "P3 General Studies",
   "display_name_zh_hant": "小三常識",
+  "source": {
+    "type": "curriculum_style_public_references",
+    "references": [
+      "EDB General Studies for Primary Schools Curriculum Guide",
+      "EDB primary General Studies Key Stage 2 learning objectives",
+      "Public Hong Kong Primary 3 General Studies syllabus topic examples (community and citizenship, environment and resources, culture and heritage, health, Hong Kong society, science inquiry, social values)"
+    ],
+    "note": "No fixed official Hong Kong P3 general studies vocabulary list is prescribed; this list is theme-based for Primary 3 general studies enrichment import. Term-only entries are completed during import."
+  },
   "words": [
     {
       "term": "community",
@@ -306,6 +315,2162 @@
         "general-studies",
         "society",
         "noun"
+      ]
+    },
+    {
+      "term": "adaptation",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "general-studies",
+        "curriculum-style",
+        "nature-and-science-inquiry"
+      ]
+    },
+    {
+      "term": "advertisement",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "general-studies",
+        "curriculum-style",
+        "technology-and-daily-life"
+      ]
+    },
+    {
+      "term": "air pollution",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "general-studies",
+        "curriculum-style",
+        "environment-resources-and-sustainability"
+      ]
+    },
+    {
+      "term": "animal",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "general-studies",
+        "curriculum-style",
+        "nature-and-science-inquiry"
+      ]
+    },
+    {
+      "term": "ask question",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "general-studies",
+        "curriculum-style",
+        "school-and-learning"
+      ]
+    },
+    {
+      "term": "balanced diet",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "general-studies",
+        "curriculum-style",
+        "personal-growth-and-health"
+      ]
+    },
+    {
+      "term": "budget",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "general-studies",
+        "curriculum-style",
+        "economy-and-work"
+      ]
+    },
+    {
+      "term": "business",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "general-studies",
+        "curriculum-style",
+        "economy-and-work"
+      ]
+    },
+    {
+      "term": "buy",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "general-studies",
+        "curriculum-style",
+        "economy-and-work"
+      ]
+    },
+    {
+      "term": "care",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "general-studies",
+        "curriculum-style",
+        "family-relationships-and-values"
+      ]
+    },
+    {
+      "term": "care for community",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "general-studies",
+        "curriculum-style",
+        "community-and-citizenship"
+      ]
+    },
+    {
+      "term": "career",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "general-studies",
+        "curriculum-style",
+        "economy-and-work"
+      ]
+    },
+    {
+      "term": "charity",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "general-studies",
+        "curriculum-style",
+        "community-and-citizenship"
+      ]
+    },
+    {
+      "term": "child rights",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "general-studies",
+        "curriculum-style",
+        "global-awareness-and-current-issues"
+      ]
+    },
+    {
+      "term": "Chinese New Year",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "general-studies",
+        "curriculum-style",
+        "hong-kong-society-and-heritage"
+      ]
+    },
+    {
+      "term": "classify",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "general-studies",
+        "curriculum-style",
+        "nature-and-science-inquiry"
+      ]
+    },
+    {
+      "term": "classmate",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "general-studies",
+        "curriculum-style",
+        "school-and-learning"
+      ]
+    },
+    {
+      "term": "climate change",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "general-studies",
+        "curriculum-style",
+        "environment-resources-and-sustainability"
+      ]
+    },
+    {
+      "term": "communication",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "general-studies",
+        "curriculum-style",
+        "family-relationships-and-values"
+      ]
+    },
+    {
+      "term": "community helper",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "general-studies",
+        "curriculum-style",
+        "community-and-citizenship"
+      ]
+    },
+    {
+      "term": "compare",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "general-studies",
+        "curriculum-style",
+        "nature-and-science-inquiry"
+      ]
+    },
+    {
+      "term": "computer",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "general-studies",
+        "curriculum-style",
+        "technology-and-daily-life"
+      ]
+    },
+    {
+      "term": "conflict resolution",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "general-studies",
+        "curriculum-style",
+        "family-relationships-and-values"
+      ]
+    },
+    {
+      "term": "consumer",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "general-studies",
+        "curriculum-style",
+        "economy-and-work"
+      ]
+    },
+    {
+      "term": "continent",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "general-studies",
+        "curriculum-style",
+        "global-awareness-and-current-issues"
+      ]
+    },
+    {
+      "term": "cooperation",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "general-studies",
+        "curriculum-style",
+        "family-relationships-and-values"
+      ]
+    },
+    {
+      "term": "cope",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "general-studies",
+        "curriculum-style",
+        "personal-growth-and-health"
+      ]
+    },
+    {
+      "term": "country",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "general-studies",
+        "curriculum-style",
+        "global-awareness-and-current-issues"
+      ]
+    },
+    {
+      "term": "country park",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "general-studies",
+        "curriculum-style",
+        "hong-kong-society-and-heritage"
+      ]
+    },
+    {
+      "term": "critical thinking",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "general-studies",
+        "curriculum-style",
+        "school-and-learning"
+      ]
+    },
+    {
+      "term": "cultural preservation",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "general-studies",
+        "curriculum-style",
+        "hong-kong-society-and-heritage"
+      ]
+    },
+    {
+      "term": "culture",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "general-studies",
+        "curriculum-style",
+        "hong-kong-society-and-heritage"
+      ]
+    },
+    {
+      "term": "culture difference",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "general-studies",
+        "curriculum-style",
+        "global-awareness-and-current-issues"
+      ]
+    },
+    {
+      "term": "current event",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "general-studies",
+        "curriculum-style",
+        "global-awareness-and-current-issues"
+      ]
+    },
+    {
+      "term": "custom",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "general-studies",
+        "curriculum-style",
+        "hong-kong-society-and-heritage"
+      ]
+    },
+    {
+      "term": "development",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "general-studies",
+        "curriculum-style",
+        "hong-kong-society-and-heritage"
+      ]
+    },
+    {
+      "term": "digital device",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "general-studies",
+        "curriculum-style",
+        "technology-and-daily-life"
+      ]
+    },
+    {
+      "term": "disaster",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "general-studies",
+        "curriculum-style",
+        "global-awareness-and-current-issues"
+      ]
+    },
+    {
+      "term": "discipline",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "general-studies",
+        "curriculum-style",
+        "school-and-learning"
+      ]
+    },
+    {
+      "term": "district",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "general-studies",
+        "curriculum-style",
+        "hong-kong-society-and-heritage"
+      ]
+    },
+    {
+      "term": "diversity",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "general-studies",
+        "curriculum-style",
+        "community-and-citizenship"
+      ]
+    },
+    {
+      "term": "donate",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "general-studies",
+        "curriculum-style",
+        "community-and-citizenship"
+      ]
+    },
+    {
+      "term": "Dragon Boat Festival",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "general-studies",
+        "curriculum-style",
+        "hong-kong-society-and-heritage"
+      ]
+    },
+    {
+      "term": "duty",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "general-studies",
+        "curriculum-style",
+        "community-and-citizenship"
+      ]
+    },
+    {
+      "term": "earn",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "general-studies",
+        "curriculum-style",
+        "economy-and-work"
+      ]
+    },
+    {
+      "term": "eco-friendly",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "general-studies",
+        "curriculum-style",
+        "environment-resources-and-sustainability"
+      ]
+    },
+    {
+      "term": "electricity",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "general-studies",
+        "curriculum-style",
+        "technology-and-daily-life"
+      ]
+    },
+    {
+      "term": "emotion",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "general-studies",
+        "curriculum-style",
+        "personal-growth-and-health"
+      ]
+    },
+    {
+      "term": "energy",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "general-studies",
+        "curriculum-style",
+        "environment-resources-and-sustainability"
+      ]
+    },
+    {
+      "term": "energy transfer",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "general-studies",
+        "curriculum-style",
+        "nature-and-science-inquiry"
+      ]
+    },
+    {
+      "term": "environmental action",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "general-studies",
+        "curriculum-style",
+        "environment-resources-and-sustainability"
+      ]
+    },
+    {
+      "term": "equal opportunity",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "general-studies",
+        "curriculum-style",
+        "community-and-citizenship"
+      ]
+    },
+    {
+      "term": "exercise",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "general-studies",
+        "curriculum-style",
+        "personal-growth-and-health"
+      ]
+    },
+    {
+      "term": "experiment",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "general-studies",
+        "curriculum-style",
+        "nature-and-science-inquiry"
+      ]
+    },
+    {
+      "term": "extracurricular activity",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "general-studies",
+        "curriculum-style",
+        "school-and-learning"
+      ]
+    },
+    {
+      "term": "fairness",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "general-studies",
+        "curriculum-style",
+        "family-relationships-and-values"
+      ]
+    },
+    {
+      "term": "family",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "general-studies",
+        "curriculum-style",
+        "family-relationships-and-values"
+      ]
+    },
+    {
+      "term": "family responsibility",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "general-studies",
+        "curriculum-style",
+        "family-relationships-and-values"
+      ]
+    },
+    {
+      "term": "food chain",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "general-studies",
+        "curriculum-style",
+        "nature-and-science-inquiry"
+      ]
+    },
+    {
+      "term": "force",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "general-studies",
+        "curriculum-style",
+        "nature-and-science-inquiry"
+      ]
+    },
+    {
+      "term": "forgiveness",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "general-studies",
+        "curriculum-style",
+        "family-relationships-and-values"
+      ]
+    },
+    {
+      "term": "friendship",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "general-studies",
+        "curriculum-style",
+        "family-relationships-and-values"
+      ]
+    },
+    {
+      "term": "future",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "general-studies",
+        "curriculum-style",
+        "technology-and-daily-life"
+      ]
+    },
+    {
+      "term": "global citizen",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "general-studies",
+        "curriculum-style",
+        "global-awareness-and-current-issues"
+      ]
+    },
+    {
+      "term": "global warming",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "general-studies",
+        "curriculum-style",
+        "environment-resources-and-sustainability"
+      ]
+    },
+    {
+      "term": "goal setting",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "general-studies",
+        "curriculum-style",
+        "personal-growth-and-health"
+      ]
+    },
+    {
+      "term": "good citizen",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "general-studies",
+        "curriculum-style",
+        "community-and-citizenship"
+      ]
+    },
+    {
+      "term": "greenhouse effect",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "general-studies",
+        "curriculum-style",
+        "environment-resources-and-sustainability"
+      ]
+    },
+    {
+      "term": "growth",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "general-studies",
+        "curriculum-style",
+        "personal-growth-and-health"
+      ]
+    },
+    {
+      "term": "habitat",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "general-studies",
+        "curriculum-style",
+        "nature-and-science-inquiry"
+      ]
+    },
+    {
+      "term": "habitat loss",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "general-studies",
+        "curriculum-style",
+        "environment-resources-and-sustainability"
+      ]
+    },
+    {
+      "term": "harbour",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "general-studies",
+        "curriculum-style",
+        "hong-kong-society-and-heritage"
+      ]
+    },
+    {
+      "term": "harmony",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "general-studies",
+        "curriculum-style",
+        "community-and-citizenship"
+      ]
+    },
+    {
+      "term": "healthy lifestyle",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "general-studies",
+        "curriculum-style",
+        "personal-growth-and-health"
+      ]
+    },
+    {
+      "term": "help others",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "general-studies",
+        "curriculum-style",
+        "global-awareness-and-current-issues"
+      ]
+    },
+    {
+      "term": "help-seeking",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "general-studies",
+        "curriculum-style",
+        "personal-growth-and-health"
+      ]
+    },
+    {
+      "term": "helpful technology",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "general-studies",
+        "curriculum-style",
+        "technology-and-daily-life"
+      ]
+    },
+    {
+      "term": "historical building",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "general-studies",
+        "curriculum-style",
+        "hong-kong-society-and-heritage"
+      ]
+    },
+    {
+      "term": "hobby",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "general-studies",
+        "curriculum-style",
+        "personal-growth-and-health"
+      ]
+    },
+    {
+      "term": "homework",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "general-studies",
+        "curriculum-style",
+        "school-and-learning"
+      ]
+    },
+    {
+      "term": "honesty",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "general-studies",
+        "curriculum-style",
+        "family-relationships-and-values"
+      ]
+    },
+    {
+      "term": "Hong Kong",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "general-studies",
+        "curriculum-style",
+        "hong-kong-society-and-heritage"
+      ]
+    },
+    {
+      "term": "housing estate",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "general-studies",
+        "curriculum-style",
+        "hong-kong-society-and-heritage"
+      ]
+    },
+    {
+      "term": "human rights",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "general-studies",
+        "curriculum-style",
+        "global-awareness-and-current-issues"
+      ]
+    },
+    {
+      "term": "hygiene",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "general-studies",
+        "curriculum-style",
+        "personal-growth-and-health"
+      ]
+    },
+    {
+      "term": "hypothesis",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "general-studies",
+        "curriculum-style",
+        "nature-and-science-inquiry"
+      ]
+    },
+    {
+      "term": "identity",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "general-studies",
+        "curriculum-style",
+        "hong-kong-society-and-heritage"
+      ]
+    },
+    {
+      "term": "include others",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "general-studies",
+        "curriculum-style",
+        "family-relationships-and-values"
+      ]
+    },
+    {
+      "term": "inclusion",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "general-studies",
+        "curriculum-style",
+        "community-and-citizenship"
+      ]
+    },
+    {
+      "term": "information",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "general-studies",
+        "curriculum-style",
+        "technology-and-daily-life"
+      ]
+    },
+    {
+      "term": "international",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "general-studies",
+        "curriculum-style",
+        "global-awareness-and-current-issues"
+      ]
+    },
+    {
+      "term": "internet",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "general-studies",
+        "curriculum-style",
+        "technology-and-daily-life"
+      ]
+    },
+    {
+      "term": "invention",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "general-studies",
+        "curriculum-style",
+        "technology-and-daily-life"
+      ]
+    },
+    {
+      "term": "job",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "general-studies",
+        "curriculum-style",
+        "economy-and-work"
+      ]
+    },
+    {
+      "term": "justice",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "general-studies",
+        "curriculum-style",
+        "community-and-citizenship"
+      ]
+    },
+    {
+      "term": "kindness",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "general-studies",
+        "curriculum-style",
+        "family-relationships-and-values"
+      ]
+    },
+    {
+      "term": "land pollution",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "general-studies",
+        "curriculum-style",
+        "environment-resources-and-sustainability"
+      ]
+    },
+    {
+      "term": "law",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "general-studies",
+        "curriculum-style",
+        "community-and-citizenship"
+      ]
+    },
+    {
+      "term": "leadership",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "general-studies",
+        "curriculum-style",
+        "school-and-learning"
+      ]
+    },
+    {
+      "term": "learn from failure",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "general-studies",
+        "curriculum-style",
+        "personal-growth-and-health"
+      ]
+    },
+    {
+      "term": "learning",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "general-studies",
+        "curriculum-style",
+        "school-and-learning"
+      ]
+    },
+    {
+      "term": "library",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "general-studies",
+        "curriculum-style",
+        "school-and-learning"
+      ]
+    },
+    {
+      "term": "life cycle",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "general-studies",
+        "curriculum-style",
+        "nature-and-science-inquiry"
+      ]
+    },
+    {
+      "term": "listen",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "general-studies",
+        "curriculum-style",
+        "school-and-learning"
+      ]
+    },
+    {
+      "term": "living thing",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "general-studies",
+        "curriculum-style",
+        "nature-and-science-inquiry"
+      ]
+    },
+    {
+      "term": "local cuisine",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "general-studies",
+        "curriculum-style",
+        "hong-kong-society-and-heritage"
+      ]
+    },
+    {
+      "term": "love",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "general-studies",
+        "curriculum-style",
+        "family-relationships-and-values"
+      ]
+    },
+    {
+      "term": "market",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "general-studies",
+        "curriculum-style",
+        "hong-kong-society-and-heritage"
+      ]
+    },
+    {
+      "term": "measure",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "general-studies",
+        "curriculum-style",
+        "nature-and-science-inquiry"
+      ]
+    },
+    {
+      "term": "media",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "general-studies",
+        "curriculum-style",
+        "technology-and-daily-life"
+      ]
+    },
+    {
+      "term": "mental health",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "general-studies",
+        "curriculum-style",
+        "personal-growth-and-health"
+      ]
+    },
+    {
+      "term": "Mid-Autumn Festival",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "general-studies",
+        "curriculum-style",
+        "hong-kong-society-and-heritage"
+      ]
+    },
+    {
+      "term": "money",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "general-studies",
+        "curriculum-style",
+        "economy-and-work"
+      ]
+    },
+    {
+      "term": "museum",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "general-studies",
+        "curriculum-style",
+        "hong-kong-society-and-heritage"
+      ]
+    },
+    {
+      "term": "myself",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "general-studies",
+        "curriculum-style",
+        "personal-growth-and-health"
+      ]
+    },
+    {
+      "term": "natural resource",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "general-studies",
+        "curriculum-style",
+        "environment-resources-and-sustainability"
+      ]
+    },
+    {
+      "term": "need",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "general-studies",
+        "curriculum-style",
+        "economy-and-work"
+      ]
+    },
+    {
+      "term": "neighbourhood",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "general-studies",
+        "curriculum-style",
+        "community-and-citizenship"
+      ]
+    },
+    {
+      "term": "news",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "general-studies",
+        "curriculum-style",
+        "technology-and-daily-life"
+      ]
+    },
+    {
+      "term": "news literacy",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "general-studies",
+        "curriculum-style",
+        "global-awareness-and-current-issues"
+      ]
+    },
+    {
+      "term": "noise pollution",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "general-studies",
+        "curriculum-style",
+        "environment-resources-and-sustainability"
+      ]
+    },
+    {
+      "term": "non-living thing",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "general-studies",
+        "curriculum-style",
+        "nature-and-science-inquiry"
+      ]
+    },
+    {
+      "term": "non-renewable resource",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "general-studies",
+        "curriculum-style",
+        "environment-resources-and-sustainability"
+      ]
+    },
+    {
+      "term": "note-taking",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "general-studies",
+        "curriculum-style",
+        "school-and-learning"
+      ]
+    },
+    {
+      "term": "occupation",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "general-studies",
+        "curriculum-style",
+        "economy-and-work"
+      ]
+    },
+    {
+      "term": "online safety",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "general-studies",
+        "curriculum-style",
+        "technology-and-daily-life"
+      ]
+    },
+    {
+      "term": "participate",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "general-studies",
+        "curriculum-style",
+        "community-and-citizenship"
+      ]
+    },
+    {
+      "term": "peace",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "general-studies",
+        "curriculum-style",
+        "global-awareness-and-current-issues"
+      ]
+    },
+    {
+      "term": "peer learning",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "general-studies",
+        "curriculum-style",
+        "school-and-learning"
+      ]
+    },
+    {
+      "term": "personal hygiene",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "general-studies",
+        "curriculum-style",
+        "personal-growth-and-health"
+      ]
+    },
+    {
+      "term": "plant",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "general-studies",
+        "curriculum-style",
+        "nature-and-science-inquiry"
+      ]
+    },
+    {
+      "term": "positive attitude",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "general-studies",
+        "curriculum-style",
+        "personal-growth-and-health"
+      ]
+    },
+    {
+      "term": "poverty",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "general-studies",
+        "curriculum-style",
+        "global-awareness-and-current-issues"
+      ]
+    },
+    {
+      "term": "presentation",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "general-studies",
+        "curriculum-style",
+        "school-and-learning"
+      ]
+    },
+    {
+      "term": "price",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "general-studies",
+        "curriculum-style",
+        "economy-and-work"
+      ]
+    },
+    {
+      "term": "privacy",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "general-studies",
+        "curriculum-style",
+        "technology-and-daily-life"
+      ]
+    },
+    {
+      "term": "producer",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "general-studies",
+        "curriculum-style",
+        "economy-and-work"
+      ]
+    },
+    {
+      "term": "project",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "general-studies",
+        "curriculum-style",
+        "school-and-learning"
+      ]
+    },
+    {
+      "term": "protect wildlife",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "general-studies",
+        "curriculum-style",
+        "environment-resources-and-sustainability"
+      ]
+    },
+    {
+      "term": "public property",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "general-studies",
+        "curriculum-style",
+        "community-and-citizenship"
+      ]
+    },
+    {
+      "term": "public service",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "general-studies",
+        "curriculum-style",
+        "community-and-citizenship"
+      ]
+    },
+    {
+      "term": "record data",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "general-studies",
+        "curriculum-style",
+        "nature-and-science-inquiry"
+      ]
+    },
+    {
+      "term": "reduce waste",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "general-studies",
+        "curriculum-style",
+        "environment-resources-and-sustainability"
+      ]
+    },
+    {
+      "term": "refugee",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "general-studies",
+        "curriculum-style",
+        "global-awareness-and-current-issues"
+      ]
+    },
+    {
+      "term": "relationship",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "general-studies",
+        "curriculum-style",
+        "family-relationships-and-values"
+      ]
+    },
+    {
+      "term": "relief",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "general-studies",
+        "curriculum-style",
+        "global-awareness-and-current-issues"
+      ]
+    },
+    {
+      "term": "renewable energy",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "general-studies",
+        "curriculum-style",
+        "technology-and-daily-life"
+      ]
+    },
+    {
+      "term": "renewable resource",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "general-studies",
+        "curriculum-style",
+        "environment-resources-and-sustainability"
+      ]
+    },
+    {
+      "term": "research",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "general-studies",
+        "curriculum-style",
+        "school-and-learning"
+      ]
+    },
+    {
+      "term": "respect differences",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "general-studies",
+        "curriculum-style",
+        "global-awareness-and-current-issues"
+      ]
+    },
+    {
+      "term": "respect elders",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "general-studies",
+        "curriculum-style",
+        "family-relationships-and-values"
+      ]
+    },
+    {
+      "term": "responsible use",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "general-studies",
+        "curriculum-style",
+        "technology-and-daily-life"
+      ]
+    },
+    {
+      "term": "reuse",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "general-studies",
+        "curriculum-style",
+        "environment-resources-and-sustainability"
+      ]
+    },
+    {
+      "term": "right",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "general-studies",
+        "curriculum-style",
+        "community-and-citizenship"
+      ]
+    },
+    {
+      "term": "rule",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "general-studies",
+        "curriculum-style",
+        "school-and-learning"
+      ]
+    },
+    {
+      "term": "rule of society",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "general-studies",
+        "curriculum-style",
+        "community-and-citizenship"
+      ]
+    },
+    {
+      "term": "save energy",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "general-studies",
+        "curriculum-style",
+        "environment-resources-and-sustainability"
+      ]
+    },
+    {
+      "term": "save money",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "general-studies",
+        "curriculum-style",
+        "economy-and-work"
+      ]
+    },
+    {
+      "term": "save water",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "general-studies",
+        "curriculum-style",
+        "environment-resources-and-sustainability"
+      ]
+    },
+    {
+      "term": "school",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "general-studies",
+        "curriculum-style",
+        "school-and-learning"
+      ]
+    },
+    {
+      "term": "school spirit",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "general-studies",
+        "curriculum-style",
+        "school-and-learning"
+      ]
+    },
+    {
+      "term": "season",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "general-studies",
+        "curriculum-style",
+        "nature-and-science-inquiry"
+      ]
+    },
+    {
+      "term": "self-esteem",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "general-studies",
+        "curriculum-style",
+        "personal-growth-and-health"
+      ]
+    },
+    {
+      "term": "sell",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "general-studies",
+        "curriculum-style",
+        "economy-and-work"
+      ]
+    },
+    {
+      "term": "service industry",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "general-studies",
+        "curriculum-style",
+        "economy-and-work"
+      ]
+    },
+    {
+      "term": "share housework",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "general-studies",
+        "curriculum-style",
+        "family-relationships-and-values"
+      ]
+    },
+    {
+      "term": "shared future",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "general-studies",
+        "curriculum-style",
+        "global-awareness-and-current-issues"
+      ]
+    },
+    {
+      "term": "simple machine",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "general-studies",
+        "curriculum-style",
+        "nature-and-science-inquiry"
+      ]
+    },
+    {
+      "term": "skill",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "general-studies",
+        "curriculum-style",
+        "economy-and-work"
+      ]
+    },
+    {
+      "term": "sleep",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "general-studies",
+        "curriculum-style",
+        "personal-growth-and-health"
+      ]
+    },
+    {
+      "term": "smartphone",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "general-studies",
+        "curriculum-style",
+        "technology-and-daily-life"
+      ]
+    },
+    {
+      "term": "social responsibility",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "general-studies",
+        "curriculum-style",
+        "community-and-citizenship"
+      ]
+    },
+    {
+      "term": "solar power",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "general-studies",
+        "curriculum-style",
+        "technology-and-daily-life"
+      ]
+    },
+    {
+      "term": "stress",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "general-studies",
+        "curriculum-style",
+        "personal-growth-and-health"
+      ]
+    },
+    {
+      "term": "study habit",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "general-studies",
+        "curriculum-style",
+        "school-and-learning"
+      ]
+    },
+    {
+      "term": "support",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "general-studies",
+        "curriculum-style",
+        "family-relationships-and-values"
+      ]
+    },
+    {
+      "term": "sustainable development",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "general-studies",
+        "curriculum-style",
+        "environment-resources-and-sustainability"
+      ]
+    },
+    {
+      "term": "talent",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "general-studies",
+        "curriculum-style",
+        "personal-growth-and-health"
+      ]
+    },
+    {
+      "term": "teacher",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "general-studies",
+        "curriculum-style",
+        "school-and-learning"
+      ]
+    },
+    {
+      "term": "teamwork",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "general-studies",
+        "curriculum-style",
+        "family-relationships-and-values"
+      ]
+    },
+    {
+      "term": "technology",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "general-studies",
+        "curriculum-style",
+        "technology-and-daily-life"
+      ]
+    },
+    {
+      "term": "temperature",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "general-studies",
+        "curriculum-style",
+        "nature-and-science-inquiry"
+      ]
+    },
+    {
+      "term": "time management",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "general-studies",
+        "curriculum-style",
+        "personal-growth-and-health"
+      ]
+    },
+    {
+      "term": "tourist attraction",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "general-studies",
+        "curriculum-style",
+        "hong-kong-society-and-heritage"
+      ]
+    },
+    {
+      "term": "trade",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "general-studies",
+        "curriculum-style",
+        "economy-and-work"
+      ]
+    },
+    {
+      "term": "traditional craft",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "general-studies",
+        "curriculum-style",
+        "hong-kong-society-and-heritage"
+      ]
+    },
+    {
+      "term": "transport hub",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "general-studies",
+        "curriculum-style",
+        "hong-kong-society-and-heritage"
+      ]
+    },
+    {
+      "term": "transport technology",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "general-studies",
+        "curriculum-style",
+        "technology-and-daily-life"
+      ]
+    },
+    {
+      "term": "trust",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "general-studies",
+        "curriculum-style",
+        "family-relationships-and-values"
+      ]
+    },
+    {
+      "term": "UNICEF",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "general-studies",
+        "curriculum-style",
+        "global-awareness-and-current-issues"
+      ]
+    },
+    {
+      "term": "volunteer work",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "general-studies",
+        "curriculum-style",
+        "community-and-citizenship"
+      ]
+    },
+    {
+      "term": "want",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "general-studies",
+        "curriculum-style",
+        "economy-and-work"
+      ]
+    },
+    {
+      "term": "water pollution",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "general-studies",
+        "curriculum-style",
+        "environment-resources-and-sustainability"
+      ]
+    },
+    {
+      "term": "weather",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "general-studies",
+        "curriculum-style",
+        "nature-and-science-inquiry"
+      ]
+    },
+    {
+      "term": "workplace",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "general-studies",
+        "curriculum-style",
+        "economy-and-work"
+      ]
+    },
+    {
+      "term": "world",
+      "tags": [
+        "hk",
+        "primary",
+        "p3",
+        "general-studies",
+        "curriculum-style",
+        "global-awareness-and-current-issues"
       ]
     }
   ]

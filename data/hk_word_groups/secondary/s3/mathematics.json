@@ -7,6 +7,15 @@
   "version": "2026.06",
   "display_name_en": "S3 Mathematics",
   "display_name_zh_hant": "中三數學",
+  "source": {
+    "type": "curriculum_style_public_references",
+    "references": [
+      "EDB Mathematics Education Key Learning Area Curriculum Guide (Secondary 1-3)",
+      "EDB junior secondary Mathematics curriculum framework: Number and Algebra, Measures Shape and Space, Data Handling",
+      "Public Hong Kong Secondary 3 Mathematics syllabus topic examples (quadratics, algebraic fractions, trigonometry, circle geometry, statistics, probability, combinatorics, coordinate geometry)"
+    ],
+    "note": "No fixed official Hong Kong S3 mathematics vocabulary list is prescribed; this list is theme-based for S3 mathematics enrichment import. Term-only entries are completed during import."
+  },
   "words": [
     {
       "term": "quadratic equation",
@@ -306,6 +315,3317 @@
         "mathematics",
         "geometry",
         "circles"
+      ]
+    },
+    {
+      "term": "3D trigonometry",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "trigonometry-advanced"
+      ]
+    },
+    {
+      "term": "add algebraic fractions",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "algebraic-fractions-and-polynomials"
+      ]
+    },
+    {
+      "term": "addition of vectors",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "vectors-intro"
+      ]
+    },
+    {
+      "term": "adjacent side",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "trigonometry-advanced"
+      ]
+    },
+    {
+      "term": "algebraic fraction",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "algebraic-fractions-and-polynomials"
+      ]
+    },
+    {
+      "term": "alternate segment",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "circle-geometry-and-locus"
+      ]
+    },
+    {
+      "term": "ambiguous case",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "trigonometry-advanced"
+      ]
+    },
+    {
+      "term": "angle at centre",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "circle-geometry-and-locus"
+      ]
+    },
+    {
+      "term": "angle at circumference",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "circle-geometry-and-locus"
+      ]
+    },
+    {
+      "term": "angle between line and plane",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "trigonometry-advanced"
+      ]
+    },
+    {
+      "term": "angle in semicircle",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "circle-geometry-and-locus"
+      ]
+    },
+    {
+      "term": "angle of depression",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "trigonometry-advanced"
+      ]
+    },
+    {
+      "term": "angle of elevation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "trigonometry-advanced"
+      ]
+    },
+    {
+      "term": "angle-side-angle",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "similarity-congruence-and-transformations"
+      ]
+    },
+    {
+      "term": "approximation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "mathematical-reasoning-and-problem-solving"
+      ]
+    },
+    {
+      "term": "arc",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "circle-geometry-and-locus"
+      ]
+    },
+    {
+      "term": "arc length",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "mensuration-and-3d-geometry"
+      ]
+    },
+    {
+      "term": "area of sector",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "mensuration-and-3d-geometry"
+      ]
+    },
+    {
+      "term": "area of triangle formula",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "trigonometry-advanced"
+      ]
+    },
+    {
+      "term": "arithmetic sequence",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "sequences-and-series"
+      ]
+    },
+    {
+      "term": "arithmetic series",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "sequences-and-series"
+      ]
+    },
+    {
+      "term": "assumption",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "mathematical-reasoning-and-problem-solving"
+      ]
+    },
+    {
+      "term": "asymptote",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "functions-and-graphs"
+      ]
+    },
+    {
+      "term": "axis of symmetry",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "quadratic-equations-and-inequalities"
+      ]
+    },
+    {
+      "term": "bearing",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "trigonometry-advanced"
+      ]
+    },
+    {
+      "term": "biased",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "probability-and-combinatorics"
+      ]
+    },
+    {
+      "term": "Cartesian plane",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "coordinate-geometry-advanced"
+      ]
+    },
+    {
+      "term": "centre of circle",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "coordinate-geometry-advanced"
+      ]
+    },
+    {
+      "term": "change of subject",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "algebraic-fractions-and-polynomials"
+      ]
+    },
+    {
+      "term": "check solution",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "simultaneous-equations-and-systems"
+      ]
+    },
+    {
+      "term": "chord",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "circle-geometry-and-locus"
+      ]
+    },
+    {
+      "term": "circle",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "circle-geometry-and-locus"
+      ]
+    },
+    {
+      "term": "circumference",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "circle-geometry-and-locus"
+      ]
+    },
+    {
+      "term": "column vector",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "vectors-intro"
+      ]
+    },
+    {
+      "term": "common denominator",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "algebraic-fractions-and-polynomials"
+      ]
+    },
+    {
+      "term": "common difference",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "sequences-and-series"
+      ]
+    },
+    {
+      "term": "common factor",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "algebraic-fractions-and-polynomials"
+      ]
+    },
+    {
+      "term": "common ratio",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "sequences-and-series"
+      ]
+    },
+    {
+      "term": "complete the square",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "quadratic-equations-and-inequalities"
+      ]
+    },
+    {
+      "term": "composite function",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "functions-and-graphs"
+      ]
+    },
+    {
+      "term": "composite solid",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "mensuration-and-3d-geometry"
+      ]
+    },
+    {
+      "term": "compound interest",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "proportion-rates-and-variation"
+      ]
+    },
+    {
+      "term": "compound shape",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "mensuration-and-3d-geometry"
+      ]
+    },
+    {
+      "term": "conditional probability",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "probability-and-combinatorics"
+      ]
+    },
+    {
+      "term": "congruence test",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "similarity-congruence-and-transformations"
+      ]
+    },
+    {
+      "term": "congruent triangle",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "similarity-congruence-and-transformations"
+      ]
+    },
+    {
+      "term": "conjecture",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "mathematical-reasoning-and-problem-solving"
+      ]
+    },
+    {
+      "term": "consistent system",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "simultaneous-equations-and-systems"
+      ]
+    },
+    {
+      "term": "constant of proportionality",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "proportion-rates-and-variation"
+      ]
+    },
+    {
+      "term": "constant term",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "algebraic-fractions-and-polynomials"
+      ]
+    },
+    {
+      "term": "convergent series",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "sequences-and-series"
+      ]
+    },
+    {
+      "term": "coordinate plane",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "coordinate-geometry-advanced"
+      ]
+    },
+    {
+      "term": "correlation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "statistics-and-data-handling"
+      ]
+    },
+    {
+      "term": "cosine",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "trigonometry-advanced"
+      ]
+    },
+    {
+      "term": "cosine rule",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "trigonometry-advanced"
+      ]
+    },
+    {
+      "term": "counterexample",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "mathematical-reasoning-and-problem-solving"
+      ]
+    },
+    {
+      "term": "counting principle",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "probability-and-combinatorics"
+      ]
+    },
+    {
+      "term": "cross multiply",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "algebraic-fractions-and-polynomials"
+      ]
+    },
+    {
+      "term": "cross section",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "mensuration-and-3d-geometry"
+      ]
+    },
+    {
+      "term": "cubic unit",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "mensuration-and-3d-geometry"
+      ]
+    },
+    {
+      "term": "cumulative frequency curve",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "statistics-and-data-handling"
+      ]
+    },
+    {
+      "term": "curved surface area",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "mensuration-and-3d-geometry"
+      ]
+    },
+    {
+      "term": "cyclic quadrilateral",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "circle-geometry-and-locus"
+      ]
+    },
+    {
+      "term": "data set",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "statistics-and-data-handling"
+      ]
+    },
+    {
+      "term": "deduce",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "mathematical-reasoning-and-problem-solving"
+      ]
+    },
+    {
+      "term": "definition",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "mathematical-reasoning-and-problem-solving"
+      ]
+    },
+    {
+      "term": "degree of polynomial",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "algebraic-fractions-and-polynomials"
+      ]
+    },
+    {
+      "term": "density",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "proportion-rates-and-variation"
+      ]
+    },
+    {
+      "term": "dependent event",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "probability-and-combinatorics"
+      ]
+    },
+    {
+      "term": "diagram",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "mathematical-reasoning-and-problem-solving"
+      ]
+    },
+    {
+      "term": "diameter",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "circle-geometry-and-locus"
+      ]
+    },
+    {
+      "term": "difference of two squares",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "algebraic-fractions-and-polynomials"
+      ]
+    },
+    {
+      "term": "direction",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "vectors-intro"
+      ]
+    },
+    {
+      "term": "discount rate",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "proportion-rates-and-variation"
+      ]
+    },
+    {
+      "term": "discriminant",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "quadratic-equations-and-inequalities"
+      ]
+    },
+    {
+      "term": "displacement",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "vectors-intro"
+      ]
+    },
+    {
+      "term": "distance between two points",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "coordinate-geometry-advanced"
+      ]
+    },
+    {
+      "term": "distance formula",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "coordinate-geometry-advanced"
+      ]
+    },
+    {
+      "term": "divide algebraic fractions",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "algebraic-fractions-and-polynomials"
+      ]
+    },
+    {
+      "term": "domain",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "functions-and-graphs"
+      ]
+    },
+    {
+      "term": "elimination method",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "simultaneous-equations-and-systems"
+      ]
+    },
+    {
+      "term": "enlargement",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "similarity-congruence-and-transformations"
+      ]
+    },
+    {
+      "term": "equally likely",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "probability-and-combinatorics"
+      ]
+    },
+    {
+      "term": "equation of circle",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "coordinate-geometry-advanced"
+      ]
+    },
+    {
+      "term": "equation of straight line",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "coordinate-geometry-advanced"
+      ]
+    },
+    {
+      "term": "equidistant",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "circle-geometry-and-locus"
+      ]
+    },
+    {
+      "term": "estimate",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "mathematical-reasoning-and-problem-solving"
+      ]
+    },
+    {
+      "term": "event",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "probability-and-combinatorics"
+      ]
+    },
+    {
+      "term": "exchange rate",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "proportion-rates-and-variation"
+      ]
+    },
+    {
+      "term": "expand brackets",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "algebraic-fractions-and-polynomials"
+      ]
+    },
+    {
+      "term": "expected value",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "probability-and-combinatorics"
+      ]
+    },
+    {
+      "term": "experimental probability",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "probability-and-combinatorics"
+      ]
+    },
+    {
+      "term": "factorial",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "probability-and-combinatorics"
+      ]
+    },
+    {
+      "term": "factorization method",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "quadratic-equations-and-inequalities"
+      ]
+    },
+    {
+      "term": "factorize completely",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "algebraic-fractions-and-polynomials"
+      ]
+    },
+    {
+      "term": "fair",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "probability-and-combinatorics"
+      ]
+    },
+    {
+      "term": "five-number summary",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "statistics-and-data-handling"
+      ]
+    },
+    {
+      "term": "fixed distance",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "circle-geometry-and-locus"
+      ]
+    },
+    {
+      "term": "fixed ratio",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "circle-geometry-and-locus"
+      ]
+    },
+    {
+      "term": "form equations",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "simultaneous-equations-and-systems"
+      ]
+    },
+    {
+      "term": "formula rearrangement",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "algebraic-fractions-and-polynomials"
+      ]
+    },
+    {
+      "term": "fractional index",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "indices-surds-and-notation"
+      ]
+    },
+    {
+      "term": "frequency",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "statistics-and-data-handling"
+      ]
+    },
+    {
+      "term": "frequency table",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "statistics-and-data-handling"
+      ]
+    },
+    {
+      "term": "frustum",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "mensuration-and-3d-geometry"
+      ]
+    },
+    {
+      "term": "function",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "functions-and-graphs"
+      ]
+    },
+    {
+      "term": "function notation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "functions-and-graphs"
+      ]
+    },
+    {
+      "term": "general term",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "sequences-and-series"
+      ]
+    },
+    {
+      "term": "geometric sequence",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "sequences-and-series"
+      ]
+    },
+    {
+      "term": "geometric series",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "sequences-and-series"
+      ]
+    },
+    {
+      "term": "gradient-intercept form",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "coordinate-geometry-advanced"
+      ]
+    },
+    {
+      "term": "graph transformation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "functions-and-graphs"
+      ]
+    },
+    {
+      "term": "graphical method",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "quadratic-equations-and-inequalities"
+      ]
+    },
+    {
+      "term": "grouped data",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "statistics-and-data-handling"
+      ]
+    },
+    {
+      "term": "hemisphere",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "mensuration-and-3d-geometry"
+      ]
+    },
+    {
+      "term": "hypotenuse",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "trigonometry-advanced"
+      ]
+    },
+    {
+      "term": "image",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "similarity-congruence-and-transformations"
+      ]
+    },
+    {
+      "term": "inconsistent system",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "simultaneous-equations-and-systems"
+      ]
+    },
+    {
+      "term": "independent event",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "probability-and-combinatorics"
+      ]
+    },
+    {
+      "term": "index notation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "indices-surds-and-notation"
+      ]
+    },
+    {
+      "term": "input",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "functions-and-graphs"
+      ]
+    },
+    {
+      "term": "interpret result",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "mathematical-reasoning-and-problem-solving"
+      ]
+    },
+    {
+      "term": "interpretation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "statistics-and-data-handling"
+      ]
+    },
+    {
+      "term": "interquartile range",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "statistics-and-data-handling"
+      ]
+    },
+    {
+      "term": "intersection of line and circle",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "coordinate-geometry-advanced"
+      ]
+    },
+    {
+      "term": "intersection point",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "simultaneous-equations-and-systems"
+      ]
+    },
+    {
+      "term": "invariant point",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "similarity-congruence-and-transformations"
+      ]
+    },
+    {
+      "term": "inverse function",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "functions-and-graphs"
+      ]
+    },
+    {
+      "term": "joint variation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "proportion-rates-and-variation"
+      ]
+    },
+    {
+      "term": "justify",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "mathematical-reasoning-and-problem-solving"
+      ]
+    },
+    {
+      "term": "lateral surface area",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "mensuration-and-3d-geometry"
+      ]
+    },
+    {
+      "term": "law of indices",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "indices-surds-and-notation"
+      ]
+    },
+    {
+      "term": "leading coefficient",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "algebraic-fractions-and-polynomials"
+      ]
+    },
+    {
+      "term": "like surd",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "indices-surds-and-notation"
+      ]
+    },
+    {
+      "term": "line of best fit",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "statistics-and-data-handling"
+      ]
+    },
+    {
+      "term": "line symmetry",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "similarity-congruence-and-transformations"
+      ]
+    },
+    {
+      "term": "linear equation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "simultaneous-equations-and-systems"
+      ]
+    },
+    {
+      "term": "linear function",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "functions-and-graphs"
+      ]
+    },
+    {
+      "term": "locus",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "circle-geometry-and-locus"
+      ]
+    },
+    {
+      "term": "lower bound",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "mathematical-reasoning-and-problem-solving"
+      ]
+    },
+    {
+      "term": "lower quartile",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "statistics-and-data-handling"
+      ]
+    },
+    {
+      "term": "lowest terms",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "algebraic-fractions-and-polynomials"
+      ]
+    },
+    {
+      "term": "magnitude",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "vectors-intro"
+      ]
+    },
+    {
+      "term": "map scale",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "proportion-rates-and-variation"
+      ]
+    },
+    {
+      "term": "mapping",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "functions-and-graphs"
+      ]
+    },
+    {
+      "term": "mark-up",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "proportion-rates-and-variation"
+      ]
+    },
+    {
+      "term": "maximum value",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "quadratic-equations-and-inequalities"
+      ]
+    },
+    {
+      "term": "mean",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "statistics-and-data-handling"
+      ]
+    },
+    {
+      "term": "median",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "statistics-and-data-handling"
+      ]
+    },
+    {
+      "term": "method",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "mathematical-reasoning-and-problem-solving"
+      ]
+    },
+    {
+      "term": "minimum value",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "quadratic-equations-and-inequalities"
+      ]
+    },
+    {
+      "term": "mode",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "statistics-and-data-handling"
+      ]
+    },
+    {
+      "term": "multiply algebraic fractions",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "algebraic-fractions-and-polynomials"
+      ]
+    },
+    {
+      "term": "mutually exclusive",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "probability-and-combinatorics"
+      ]
+    },
+    {
+      "term": "nature of roots",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "quadratic-equations-and-inequalities"
+      ]
+    },
+    {
+      "term": "nCr",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "probability-and-combinatorics"
+      ]
+    },
+    {
+      "term": "negative correlation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "statistics-and-data-handling"
+      ]
+    },
+    {
+      "term": "negative index",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "indices-surds-and-notation"
+      ]
+    },
+    {
+      "term": "net of solid",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "mensuration-and-3d-geometry"
+      ]
+    },
+    {
+      "term": "non-linear graph",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "functions-and-graphs"
+      ]
+    },
+    {
+      "term": "nPr",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "probability-and-combinatorics"
+      ]
+    },
+    {
+      "term": "nth term",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "sequences-and-series"
+      ]
+    },
+    {
+      "term": "object",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "similarity-congruence-and-transformations"
+      ]
+    },
+    {
+      "term": "ogive",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "statistics-and-data-handling"
+      ]
+    },
+    {
+      "term": "one linear one quadratic",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "simultaneous-equations-and-systems"
+      ]
+    },
+    {
+      "term": "opposite side",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "trigonometry-advanced"
+      ]
+    },
+    {
+      "term": "ordered pair",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "coordinate-geometry-advanced"
+      ]
+    },
+    {
+      "term": "outcome",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "probability-and-combinatorics"
+      ]
+    },
+    {
+      "term": "outlier",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "statistics-and-data-handling"
+      ]
+    },
+    {
+      "term": "output",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "functions-and-graphs"
+      ]
+    },
+    {
+      "term": "parabola",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "quadratic-equations-and-inequalities"
+      ]
+    },
+    {
+      "term": "parallel line",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "coordinate-geometry-advanced"
+      ]
+    },
+    {
+      "term": "parallel vector",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "vectors-intro"
+      ]
+    },
+    {
+      "term": "partial variation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "proportion-rates-and-variation"
+      ]
+    },
+    {
+      "term": "pattern",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "sequences-and-series"
+      ]
+    },
+    {
+      "term": "percentage change",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "proportion-rates-and-variation"
+      ]
+    },
+    {
+      "term": "percentile",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "statistics-and-data-handling"
+      ]
+    },
+    {
+      "term": "perfect square trinomial",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "algebraic-fractions-and-polynomials"
+      ]
+    },
+    {
+      "term": "perpendicular bisector locus",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "circle-geometry-and-locus"
+      ]
+    },
+    {
+      "term": "perpendicular line",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "coordinate-geometry-advanced"
+      ]
+    },
+    {
+      "term": "point of contact",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "circle-geometry-and-locus"
+      ]
+    },
+    {
+      "term": "point-slope form",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "coordinate-geometry-advanced"
+      ]
+    },
+    {
+      "term": "polynomial",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "algebraic-fractions-and-polynomials"
+      ]
+    },
+    {
+      "term": "position vector",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "vectors-intro"
+      ]
+    },
+    {
+      "term": "positive correlation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "statistics-and-data-handling"
+      ]
+    },
+    {
+      "term": "power of a power",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "indices-surds-and-notation"
+      ]
+    },
+    {
+      "term": "pressure",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "proportion-rates-and-variation"
+      ]
+    },
+    {
+      "term": "problem solving",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "mathematical-reasoning-and-problem-solving"
+      ]
+    },
+    {
+      "term": "product of powers",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "indices-surds-and-notation"
+      ]
+    },
+    {
+      "term": "profit margin",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "proportion-rates-and-variation"
+      ]
+    },
+    {
+      "term": "proof",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "mathematical-reasoning-and-problem-solving"
+      ]
+    },
+    {
+      "term": "property",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "mathematical-reasoning-and-problem-solving"
+      ]
+    },
+    {
+      "term": "quadratic expression",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "quadratic-equations-and-inequalities"
+      ]
+    },
+    {
+      "term": "quadratic formula",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "quadratic-equations-and-inequalities"
+      ]
+    },
+    {
+      "term": "quadratic function",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "quadratic-equations-and-inequalities"
+      ]
+    },
+    {
+      "term": "quadratic inequality",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "quadratic-equations-and-inequalities"
+      ]
+    },
+    {
+      "term": "quartile",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "statistics-and-data-handling"
+      ]
+    },
+    {
+      "term": "quotient of powers",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "indices-surds-and-notation"
+      ]
+    },
+    {
+      "term": "radius",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "circle-geometry-and-locus"
+      ]
+    },
+    {
+      "term": "radius of circle",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "coordinate-geometry-advanced"
+      ]
+    },
+    {
+      "term": "random experiment",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "probability-and-combinatorics"
+      ]
+    },
+    {
+      "term": "range",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "functions-and-graphs"
+      ]
+    },
+    {
+      "term": "rate",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "proportion-rates-and-variation"
+      ]
+    },
+    {
+      "term": "ratio",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "proportion-rates-and-variation"
+      ]
+    },
+    {
+      "term": "ratio of areas",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "similarity-congruence-and-transformations"
+      ]
+    },
+    {
+      "term": "ratio of volumes",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "similarity-congruence-and-transformations"
+      ]
+    },
+    {
+      "term": "rationalize",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "indices-surds-and-notation"
+      ]
+    },
+    {
+      "term": "rationalizing denominator",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "indices-surds-and-notation"
+      ]
+    },
+    {
+      "term": "raw data",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "statistics-and-data-handling"
+      ]
+    },
+    {
+      "term": "reasonableness",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "mathematical-reasoning-and-problem-solving"
+      ]
+    },
+    {
+      "term": "reasoning",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "mathematical-reasoning-and-problem-solving"
+      ]
+    },
+    {
+      "term": "reflection",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "similarity-congruence-and-transformations"
+      ]
+    },
+    {
+      "term": "reflection of graph",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "functions-and-graphs"
+      ]
+    },
+    {
+      "term": "region",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "coordinate-geometry-advanced"
+      ]
+    },
+    {
+      "term": "relative frequency",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "probability-and-combinatorics"
+      ]
+    },
+    {
+      "term": "resultant vector",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "vectors-intro"
+      ]
+    },
+    {
+      "term": "right-angled triangle",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "trigonometry-advanced"
+      ]
+    },
+    {
+      "term": "root",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "quadratic-equations-and-inequalities"
+      ]
+    },
+    {
+      "term": "rotation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "similarity-congruence-and-transformations"
+      ]
+    },
+    {
+      "term": "rotational symmetry",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "similarity-congruence-and-transformations"
+      ]
+    },
+    {
+      "term": "round off",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "mathematical-reasoning-and-problem-solving"
+      ]
+    },
+    {
+      "term": "rule of sequence",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "sequences-and-series"
+      ]
+    },
+    {
+      "term": "sample space",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "probability-and-combinatorics"
+      ]
+    },
+    {
+      "term": "scalar",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "vectors-intro"
+      ]
+    },
+    {
+      "term": "scalar multiplication",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "vectors-intro"
+      ]
+    },
+    {
+      "term": "scale",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "proportion-rates-and-variation"
+      ]
+    },
+    {
+      "term": "scale factor",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "similarity-congruence-and-transformations"
+      ]
+    },
+    {
+      "term": "scatter diagram",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "statistics-and-data-handling"
+      ]
+    },
+    {
+      "term": "scientific notation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "indices-surds-and-notation"
+      ]
+    },
+    {
+      "term": "sequence",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "sequences-and-series"
+      ]
+    },
+    {
+      "term": "side-angle-side",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "similarity-congruence-and-transformations"
+      ]
+    },
+    {
+      "term": "side-side-side",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "similarity-congruence-and-transformations"
+      ]
+    },
+    {
+      "term": "significant figure",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "mathematical-reasoning-and-problem-solving"
+      ]
+    },
+    {
+      "term": "similar triangle",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "similarity-congruence-and-transformations"
+      ]
+    },
+    {
+      "term": "similarity test",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "similarity-congruence-and-transformations"
+      ]
+    },
+    {
+      "term": "simple interest",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "proportion-rates-and-variation"
+      ]
+    },
+    {
+      "term": "simplify algebraic fraction",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "algebraic-fractions-and-polynomials"
+      ]
+    },
+    {
+      "term": "simplify surd",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "indices-surds-and-notation"
+      ]
+    },
+    {
+      "term": "simultaneous linear equations",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "simultaneous-equations-and-systems"
+      ]
+    },
+    {
+      "term": "sine",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "trigonometry-advanced"
+      ]
+    },
+    {
+      "term": "sine rule",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "trigonometry-advanced"
+      ]
+    },
+    {
+      "term": "sketch",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "mathematical-reasoning-and-problem-solving"
+      ]
+    },
+    {
+      "term": "sketch graph",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "functions-and-graphs"
+      ]
+    },
+    {
+      "term": "solution by graph",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "quadratic-equations-and-inequalities"
+      ]
+    },
+    {
+      "term": "solution set",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "simultaneous-equations-and-systems"
+      ]
+    },
+    {
+      "term": "solution steps",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "mathematical-reasoning-and-problem-solving"
+      ]
+    },
+    {
+      "term": "solve triangle",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "trigonometry-advanced"
+      ]
+    },
+    {
+      "term": "speed",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "proportion-rates-and-variation"
+      ]
+    },
+    {
+      "term": "square unit",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "mensuration-and-3d-geometry"
+      ]
+    },
+    {
+      "term": "standard form",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "indices-surds-and-notation"
+      ]
+    },
+    {
+      "term": "strategy",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "mathematical-reasoning-and-problem-solving"
+      ]
+    },
+    {
+      "term": "stretch of graph",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "functions-and-graphs"
+      ]
+    },
+    {
+      "term": "substitution method",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "simultaneous-equations-and-systems"
+      ]
+    },
+    {
+      "term": "subtract algebraic fractions",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "algebraic-fractions-and-polynomials"
+      ]
+    },
+    {
+      "term": "subtraction of vectors",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "vectors-intro"
+      ]
+    },
+    {
+      "term": "sum of terms",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "sequences-and-series"
+      ]
+    },
+    {
+      "term": "sum to infinity",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "sequences-and-series"
+      ]
+    },
+    {
+      "term": "sum to n terms",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "sequences-and-series"
+      ]
+    },
+    {
+      "term": "surd",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "indices-surds-and-notation"
+      ]
+    },
+    {
+      "term": "surface area",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "mensuration-and-3d-geometry"
+      ]
+    },
+    {
+      "term": "table of values",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "functions-and-graphs"
+      ]
+    },
+    {
+      "term": "tangent",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "trigonometry-advanced"
+      ]
+    },
+    {
+      "term": "tangent to circle",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "coordinate-geometry-advanced"
+      ]
+    },
+    {
+      "term": "tangent-radius property",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "circle-geometry-and-locus"
+      ]
+    },
+    {
+      "term": "term of sequence",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "sequences-and-series"
+      ]
+    },
+    {
+      "term": "theorem",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "mathematical-reasoning-and-problem-solving"
+      ]
+    },
+    {
+      "term": "theoretical probability",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "probability-and-combinatorics"
+      ]
+    },
+    {
+      "term": "three-figure bearing",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "trigonometry-advanced"
+      ]
+    },
+    {
+      "term": "transformation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "similarity-congruence-and-transformations"
+      ]
+    },
+    {
+      "term": "translation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "similarity-congruence-and-transformations"
+      ]
+    },
+    {
+      "term": "translation of graph",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "functions-and-graphs"
+      ]
+    },
+    {
+      "term": "tree diagram",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "probability-and-combinatorics"
+      ]
+    },
+    {
+      "term": "trend",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "statistics-and-data-handling"
+      ]
+    },
+    {
+      "term": "trial",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "probability-and-combinatorics"
+      ]
+    },
+    {
+      "term": "turning point",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "quadratic-equations-and-inequalities"
+      ]
+    },
+    {
+      "term": "unit conversion",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "mensuration-and-3d-geometry"
+      ]
+    },
+    {
+      "term": "unit rate",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "proportion-rates-and-variation"
+      ]
+    },
+    {
+      "term": "unit vector",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "vectors-intro"
+      ]
+    },
+    {
+      "term": "upper bound",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "mathematical-reasoning-and-problem-solving"
+      ]
+    },
+    {
+      "term": "upper quartile",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "statistics-and-data-handling"
+      ]
+    },
+    {
+      "term": "variance",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "statistics-and-data-handling"
+      ]
+    },
+    {
+      "term": "vector",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "vectors-intro"
+      ]
+    },
+    {
+      "term": "vector notation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "vectors-intro"
+      ]
+    },
+    {
+      "term": "velocity vector",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "vectors-intro"
+      ]
+    },
+    {
+      "term": "vertex",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "quadratic-equations-and-inequalities"
+      ]
+    },
+    {
+      "term": "volume of cone",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "mensuration-and-3d-geometry"
+      ]
+    },
+    {
+      "term": "volume of cylinder",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "mensuration-and-3d-geometry"
+      ]
+    },
+    {
+      "term": "volume of prism",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "mensuration-and-3d-geometry"
+      ]
+    },
+    {
+      "term": "volume of pyramid",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "mensuration-and-3d-geometry"
+      ]
+    },
+    {
+      "term": "volume of sphere",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "mensuration-and-3d-geometry"
+      ]
+    },
+    {
+      "term": "weighted mean",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "statistics-and-data-handling"
+      ]
+    },
+    {
+      "term": "with replacement",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "probability-and-combinatorics"
+      ]
+    },
+    {
+      "term": "without replacement",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "probability-and-combinatorics"
+      ]
+    },
+    {
+      "term": "word problem",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "simultaneous-equations-and-systems"
+      ]
+    },
+    {
+      "term": "working",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "mathematical-reasoning-and-problem-solving"
+      ]
+    },
+    {
+      "term": "x-coordinate",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "coordinate-geometry-advanced"
+      ]
+    },
+    {
+      "term": "x-intercept",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "quadratic-equations-and-inequalities"
+      ]
+    },
+    {
+      "term": "y-coordinate",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "coordinate-geometry-advanced"
+      ]
+    },
+    {
+      "term": "y-intercept",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "quadratic-equations-and-inequalities"
+      ]
+    },
+    {
+      "term": "zero index",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "indices-surds-and-notation"
+      ]
+    },
+    {
+      "term": "zero of function",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "mathematics",
+        "curriculum-style",
+        "quadratic-equations-and-inequalities"
       ]
     }
   ]

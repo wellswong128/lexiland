@@ -7,6 +7,15 @@
   "version": "2026.06",
   "display_name_en": "S6 Mathematics",
   "display_name_zh_hant": "中六數學",
+  "source": {
+    "type": "curriculum_style_public_references",
+    "references": [
+      "EDB Mathematics Curriculum and Assessment Guide (Secondary 4-6)",
+      "EDB senior secondary Mathematics Compulsory Part and Module 1/2 learning objectives",
+      "Public Hong Kong S6 Mathematics / HKDSE syllabus topic examples (calculus applications, complex numbers, vectors, statistics inference, probability, coordinate geometry, matrices)"
+    ],
+    "note": "No fixed official Hong Kong S6 mathematics vocabulary list is prescribed; this list is theme-based for senior secondary S6 mathematics enrichment import. Term-only entries are completed during import."
+  },
   "words": [
     {
       "term": "differentiation",
@@ -326,6 +335,2591 @@
         "probability",
         "events",
         "bayes' theorem"
+      ]
+    },
+    {
+      "term": "acceleration",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "differential-calculus-advanced"
+      ]
+    },
+    {
+      "term": "accumulation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "integral-calculus-advanced"
+      ]
+    },
+    {
+      "term": "addition of vectors",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "vectors-and-3d-geometry"
+      ]
+    },
+    {
+      "term": "addition rule",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "probability-and-distributions"
+      ]
+    },
+    {
+      "term": "alternative hypothesis",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "statistics-and-inference"
+      ]
+    },
+    {
+      "term": "angle between vectors",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "vectors-and-3d-geometry"
+      ]
+    },
+    {
+      "term": "antiderivative",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "integral-calculus-advanced"
+      ]
+    },
+    {
+      "term": "approximation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "mathematical-reasoning-and-problem-solving"
+      ]
+    },
+    {
+      "term": "arccos",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "trigonometry-advanced"
+      ]
+    },
+    {
+      "term": "arcsin",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "trigonometry-advanced"
+      ]
+    },
+    {
+      "term": "arctan",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "trigonometry-advanced"
+      ]
+    },
+    {
+      "term": "area between curves",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "integral-calculus-advanced"
+      ]
+    },
+    {
+      "term": "area under curve",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "integral-calculus-advanced"
+      ]
+    },
+    {
+      "term": "Argand diagram",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "complex-numbers"
+      ]
+    },
+    {
+      "term": "argument of complex number",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "complex-numbers"
+      ]
+    },
+    {
+      "term": "arithmetic series",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "limits-continuity-and-series"
+      ]
+    },
+    {
+      "term": "assumption",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "mathematical-reasoning-and-problem-solving"
+      ]
+    },
+    {
+      "term": "asymptote",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "limits-continuity-and-series"
+      ]
+    },
+    {
+      "term": "base case",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "limits-continuity-and-series"
+      ]
+    },
+    {
+      "term": "Bayes theorem",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "probability-and-distributions"
+      ]
+    },
+    {
+      "term": "binomial distribution",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "probability-and-distributions"
+      ]
+    },
+    {
+      "term": "box-and-whisker plot",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "statistics-and-inference"
+      ]
+    },
+    {
+      "term": "chain rule",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "differential-calculus-advanced"
+      ]
+    },
+    {
+      "term": "change of base",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "functions-and-modelling"
+      ]
+    },
+    {
+      "term": "chi-square test",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "statistics-and-inference"
+      ]
+    },
+    {
+      "term": "column vector",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "vectors-and-3d-geometry"
+      ]
+    },
+    {
+      "term": "complex conjugate",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "complex-numbers"
+      ]
+    },
+    {
+      "term": "composite function",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "functions-and-modelling"
+      ]
+    },
+    {
+      "term": "compound angle formula",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "trigonometry-advanced"
+      ]
+    },
+    {
+      "term": "concave down",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "differential-calculus-advanced"
+      ]
+    },
+    {
+      "term": "concave up",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "differential-calculus-advanced"
+      ]
+    },
+    {
+      "term": "confidence interval",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "statistics-and-inference"
+      ]
+    },
+    {
+      "term": "conic section",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "coordinate-geometry-and-parametric-curves"
+      ]
+    },
+    {
+      "term": "conjecture",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "mathematical-reasoning-and-problem-solving"
+      ]
+    },
+    {
+      "term": "continuity correction",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "probability-and-distributions"
+      ]
+    },
+    {
+      "term": "continuous random variable",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "probability-and-distributions"
+      ]
+    },
+    {
+      "term": "converge",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "limits-continuity-and-series"
+      ]
+    },
+    {
+      "term": "coordinate plane",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "coordinate-geometry-and-parametric-curves"
+      ]
+    },
+    {
+      "term": "correlation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "statistics-and-inference"
+      ]
+    },
+    {
+      "term": "cosine graph",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "trigonometry-advanced"
+      ]
+    },
+    {
+      "term": "counterexample",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "mathematical-reasoning-and-problem-solving"
+      ]
+    },
+    {
+      "term": "Cramer's rule",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "matrices-and-linear-systems"
+      ]
+    },
+    {
+      "term": "critical region",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "statistics-and-inference"
+      ]
+    },
+    {
+      "term": "cross product",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "vectors-and-3d-geometry"
+      ]
+    },
+    {
+      "term": "De Moivre theorem",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "complex-numbers"
+      ]
+    },
+    {
+      "term": "decay model",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "functions-and-modelling"
+      ]
+    },
+    {
+      "term": "deduce",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "mathematical-reasoning-and-problem-solving"
+      ]
+    },
+    {
+      "term": "definite integral",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "integral-calculus-advanced"
+      ]
+    },
+    {
+      "term": "definition",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "mathematical-reasoning-and-problem-solving"
+      ]
+    },
+    {
+      "term": "derivative",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "differential-calculus-advanced"
+      ]
+    },
+    {
+      "term": "determinant",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "matrices-and-linear-systems"
+      ]
+    },
+    {
+      "term": "diagram",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "mathematical-reasoning-and-problem-solving"
+      ]
+    },
+    {
+      "term": "differential equation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "integral-calculus-advanced"
+      ]
+    },
+    {
+      "term": "direction",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "vectors-and-3d-geometry"
+      ]
+    },
+    {
+      "term": "directrix",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "coordinate-geometry-and-parametric-curves"
+      ]
+    },
+    {
+      "term": "discontinuity",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "limits-continuity-and-series"
+      ]
+    },
+    {
+      "term": "discrete random variable",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "probability-and-distributions"
+      ]
+    },
+    {
+      "term": "displacement",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "integral-calculus-advanced"
+      ]
+    },
+    {
+      "term": "displacement vector",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "vectors-and-3d-geometry"
+      ]
+    },
+    {
+      "term": "distance formula",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "coordinate-geometry-and-parametric-curves"
+      ]
+    },
+    {
+      "term": "distance from point to line",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "vectors-and-3d-geometry"
+      ]
+    },
+    {
+      "term": "diverge",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "limits-continuity-and-series"
+      ]
+    },
+    {
+      "term": "domain",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "functions-and-modelling"
+      ]
+    },
+    {
+      "term": "dot product",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "vectors-and-3d-geometry"
+      ]
+    },
+    {
+      "term": "double angle formula",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "trigonometry-advanced"
+      ]
+    },
+    {
+      "term": "eccentricity",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "coordinate-geometry-and-parametric-curves"
+      ]
+    },
+    {
+      "term": "element of matrix",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "matrices-and-linear-systems"
+      ]
+    },
+    {
+      "term": "ellipse",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "coordinate-geometry-and-parametric-curves"
+      ]
+    },
+    {
+      "term": "enlargement matrix",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "matrices-and-linear-systems"
+      ]
+    },
+    {
+      "term": "equation of circle",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "coordinate-geometry-and-parametric-curves"
+      ]
+    },
+    {
+      "term": "equation of plane",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "vectors-and-3d-geometry"
+      ]
+    },
+    {
+      "term": "equation of straight line",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "coordinate-geometry-and-parametric-curves"
+      ]
+    },
+    {
+      "term": "estimate",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "mathematical-reasoning-and-problem-solving"
+      ]
+    },
+    {
+      "term": "expectation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "probability-and-distributions"
+      ]
+    },
+    {
+      "term": "expected value",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "probability-and-distributions"
+      ]
+    },
+    {
+      "term": "exponential function",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "functions-and-modelling"
+      ]
+    },
+    {
+      "term": "first derivative test",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "differential-calculus-advanced"
+      ]
+    },
+    {
+      "term": "focus",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "coordinate-geometry-and-parametric-curves"
+      ]
+    },
+    {
+      "term": "function notation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "functions-and-modelling"
+      ]
+    },
+    {
+      "term": "fundamental theorem of calculus",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "integral-calculus-advanced"
+      ]
+    },
+    {
+      "term": "general solution",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "trigonometry-advanced"
+      ]
+    },
+    {
+      "term": "geometric series",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "limits-continuity-and-series"
+      ]
+    },
+    {
+      "term": "gradient function",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "differential-calculus-advanced"
+      ]
+    },
+    {
+      "term": "gradient of tangent",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "differential-calculus-advanced"
+      ]
+    },
+    {
+      "term": "graph transformation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "functions-and-modelling"
+      ]
+    },
+    {
+      "term": "growth model",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "functions-and-modelling"
+      ]
+    },
+    {
+      "term": "horizontal asymptote",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "limits-continuity-and-series"
+      ]
+    },
+    {
+      "term": "hyperbola",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "coordinate-geometry-and-parametric-curves"
+      ]
+    },
+    {
+      "term": "identity matrix",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "matrices-and-linear-systems"
+      ]
+    },
+    {
+      "term": "imaginary part",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "complex-numbers"
+      ]
+    },
+    {
+      "term": "imaginary unit",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "complex-numbers"
+      ]
+    },
+    {
+      "term": "implicit differentiation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "differential-calculus-advanced"
+      ]
+    },
+    {
+      "term": "indefinite integral",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "integral-calculus-advanced"
+      ]
+    },
+    {
+      "term": "independent event",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "probability-and-distributions"
+      ]
+    },
+    {
+      "term": "inductive step",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "limits-continuity-and-series"
+      ]
+    },
+    {
+      "term": "infinite limit",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "limits-continuity-and-series"
+      ]
+    },
+    {
+      "term": "integration by parts",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "integral-calculus-advanced"
+      ]
+    },
+    {
+      "term": "integration by substitution",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "integral-calculus-advanced"
+      ]
+    },
+    {
+      "term": "integration constant",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "integral-calculus-advanced"
+      ]
+    },
+    {
+      "term": "interpret result",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "mathematical-reasoning-and-problem-solving"
+      ]
+    },
+    {
+      "term": "interquartile range",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "statistics-and-inference"
+      ]
+    },
+    {
+      "term": "intersection of curves",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "coordinate-geometry-and-parametric-curves"
+      ]
+    },
+    {
+      "term": "invariant point",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "matrices-and-linear-systems"
+      ]
+    },
+    {
+      "term": "inverse function",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "functions-and-modelling"
+      ]
+    },
+    {
+      "term": "inverse matrix",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "matrices-and-linear-systems"
+      ]
+    },
+    {
+      "term": "justify",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "mathematical-reasoning-and-problem-solving"
+      ]
+    },
+    {
+      "term": "kinematics",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "differential-calculus-advanced"
+      ]
+    },
+    {
+      "term": "left-hand limit",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "limits-continuity-and-series"
+      ]
+    },
+    {
+      "term": "limit at infinity",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "limits-continuity-and-series"
+      ]
+    },
+    {
+      "term": "limits of integration",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "integral-calculus-advanced"
+      ]
+    },
+    {
+      "term": "line of best fit",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "statistics-and-inference"
+      ]
+    },
+    {
+      "term": "local maximum",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "differential-calculus-advanced"
+      ]
+    },
+    {
+      "term": "local minimum",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "differential-calculus-advanced"
+      ]
+    },
+    {
+      "term": "locus",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "coordinate-geometry-and-parametric-curves"
+      ]
+    },
+    {
+      "term": "locus in complex plane",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "complex-numbers"
+      ]
+    },
+    {
+      "term": "logarithm law",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "functions-and-modelling"
+      ]
+    },
+    {
+      "term": "logarithmic function",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "functions-and-modelling"
+      ]
+    },
+    {
+      "term": "lower bound",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "mathematical-reasoning-and-problem-solving"
+      ]
+    },
+    {
+      "term": "lower limit",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "integral-calculus-advanced"
+      ]
+    },
+    {
+      "term": "magnitude",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "vectors-and-3d-geometry"
+      ]
+    },
+    {
+      "term": "mathematical induction",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "limits-continuity-and-series"
+      ]
+    },
+    {
+      "term": "matrix",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "matrices-and-linear-systems"
+      ]
+    },
+    {
+      "term": "matrix multiplication",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "matrices-and-linear-systems"
+      ]
+    },
+    {
+      "term": "mean",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "statistics-and-inference"
+      ]
+    },
+    {
+      "term": "median",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "statistics-and-inference"
+      ]
+    },
+    {
+      "term": "method",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "mathematical-reasoning-and-problem-solving"
+      ]
+    },
+    {
+      "term": "midpoint",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "coordinate-geometry-and-parametric-curves"
+      ]
+    },
+    {
+      "term": "mode",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "statistics-and-inference"
+      ]
+    },
+    {
+      "term": "modelling assumption",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "functions-and-modelling"
+      ]
+    },
+    {
+      "term": "modulus-argument form",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "complex-numbers"
+      ]
+    },
+    {
+      "term": "multiplication rule",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "probability-and-distributions"
+      ]
+    },
+    {
+      "term": "mutually exclusive",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "probability-and-distributions"
+      ]
+    },
+    {
+      "term": "natural exponential",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "functions-and-modelling"
+      ]
+    },
+    {
+      "term": "natural logarithm",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "functions-and-modelling"
+      ]
+    },
+    {
+      "term": "negative correlation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "statistics-and-inference"
+      ]
+    },
+    {
+      "term": "normal line",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "differential-calculus-advanced"
+      ]
+    },
+    {
+      "term": "normal vector",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "vectors-and-3d-geometry"
+      ]
+    },
+    {
+      "term": "null hypothesis",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "statistics-and-inference"
+      ]
+    },
+    {
+      "term": "optimization",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "differential-calculus-advanced"
+      ]
+    },
+    {
+      "term": "order of matrix",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "matrices-and-linear-systems"
+      ]
+    },
+    {
+      "term": "p-value",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "statistics-and-inference"
+      ]
+    },
+    {
+      "term": "parabola",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "coordinate-geometry-and-parametric-curves"
+      ]
+    },
+    {
+      "term": "parallel vector",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "vectors-and-3d-geometry"
+      ]
+    },
+    {
+      "term": "parameter",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "coordinate-geometry-and-parametric-curves"
+      ]
+    },
+    {
+      "term": "parametric form",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "coordinate-geometry-and-parametric-curves"
+      ]
+    },
+    {
+      "term": "period",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "trigonometry-advanced"
+      ]
+    },
+    {
+      "term": "perpendicular vector",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "vectors-and-3d-geometry"
+      ]
+    },
+    {
+      "term": "piecewise function",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "functions-and-modelling"
+      ]
+    },
+    {
+      "term": "point of inflection",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "differential-calculus-advanced"
+      ]
+    },
+    {
+      "term": "Poisson distribution",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "probability-and-distributions"
+      ]
+    },
+    {
+      "term": "polar coordinates",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "coordinate-geometry-and-parametric-curves"
+      ]
+    },
+    {
+      "term": "polar equation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "coordinate-geometry-and-parametric-curves"
+      ]
+    },
+    {
+      "term": "polar form",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "complex-numbers"
+      ]
+    },
+    {
+      "term": "population",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "statistics-and-inference"
+      ]
+    },
+    {
+      "term": "position vector",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "vectors-and-3d-geometry"
+      ]
+    },
+    {
+      "term": "positive correlation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "statistics-and-inference"
+      ]
+    },
+    {
+      "term": "power rule",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "differential-calculus-advanced"
+      ]
+    },
+    {
+      "term": "principal value",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "trigonometry-advanced"
+      ]
+    },
+    {
+      "term": "probability density function",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "probability-and-distributions"
+      ]
+    },
+    {
+      "term": "probability distribution",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "probability-and-distributions"
+      ]
+    },
+    {
+      "term": "probability mass function",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "probability-and-distributions"
+      ]
+    },
+    {
+      "term": "problem solving",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "mathematical-reasoning-and-problem-solving"
+      ]
+    },
+    {
+      "term": "product rule",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "differential-calculus-advanced"
+      ]
+    },
+    {
+      "term": "product-to-sum formula",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "trigonometry-advanced"
+      ]
+    },
+    {
+      "term": "projection",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "vectors-and-3d-geometry"
+      ]
+    },
+    {
+      "term": "proof",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "mathematical-reasoning-and-problem-solving"
+      ]
+    },
+    {
+      "term": "property",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "mathematical-reasoning-and-problem-solving"
+      ]
+    },
+    {
+      "term": "Pythagorean identity",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "trigonometry-advanced"
+      ]
+    },
+    {
+      "term": "quadratic equation with complex roots",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "complex-numbers"
+      ]
+    },
+    {
+      "term": "quotient rule",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "differential-calculus-advanced"
+      ]
+    },
+    {
+      "term": "R-formula",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "trigonometry-advanced"
+      ]
+    },
+    {
+      "term": "radian measure",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "trigonometry-advanced"
+      ]
+    },
+    {
+      "term": "random variable",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "probability-and-distributions"
+      ]
+    },
+    {
+      "term": "range",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "functions-and-modelling"
+      ]
+    },
+    {
+      "term": "rate of change",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "differential-calculus-advanced"
+      ]
+    },
+    {
+      "term": "real part",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "complex-numbers"
+      ]
+    },
+    {
+      "term": "reasonableness",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "mathematical-reasoning-and-problem-solving"
+      ]
+    },
+    {
+      "term": "reasoning",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "mathematical-reasoning-and-problem-solving"
+      ]
+    },
+    {
+      "term": "reflection matrix",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "matrices-and-linear-systems"
+      ]
+    },
+    {
+      "term": "regression line",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "statistics-and-inference"
+      ]
+    },
+    {
+      "term": "related rate",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "differential-calculus-advanced"
+      ]
+    },
+    {
+      "term": "removable discontinuity",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "limits-continuity-and-series"
+      ]
+    },
+    {
+      "term": "residual",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "statistics-and-inference"
+      ]
+    },
+    {
+      "term": "resultant vector",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "vectors-and-3d-geometry"
+      ]
+    },
+    {
+      "term": "right-hand limit",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "limits-continuity-and-series"
+      ]
+    },
+    {
+      "term": "root of complex number",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "complex-numbers"
+      ]
+    },
+    {
+      "term": "rotation matrix",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "matrices-and-linear-systems"
+      ]
+    },
+    {
+      "term": "round off",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "mathematical-reasoning-and-problem-solving"
+      ]
+    },
+    {
+      "term": "sample",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "statistics-and-inference"
+      ]
+    },
+    {
+      "term": "sampling",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "statistics-and-inference"
+      ]
+    },
+    {
+      "term": "scalar",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "vectors-and-3d-geometry"
+      ]
+    },
+    {
+      "term": "scalar multiplication",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "vectors-and-3d-geometry"
+      ]
+    },
+    {
+      "term": "scale factor",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "matrices-and-linear-systems"
+      ]
+    },
+    {
+      "term": "scatter diagram",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "statistics-and-inference"
+      ]
+    },
+    {
+      "term": "second derivative test",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "differential-calculus-advanced"
+      ]
+    },
+    {
+      "term": "separation of variables",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "integral-calculus-advanced"
+      ]
+    },
+    {
+      "term": "sigma notation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "limits-continuity-and-series"
+      ]
+    },
+    {
+      "term": "significance level",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "statistics-and-inference"
+      ]
+    },
+    {
+      "term": "significant figure",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "mathematical-reasoning-and-problem-solving"
+      ]
+    },
+    {
+      "term": "sine graph",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "trigonometry-advanced"
+      ]
+    },
+    {
+      "term": "sketch",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "mathematical-reasoning-and-problem-solving"
+      ]
+    },
+    {
+      "term": "sketch curve",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "coordinate-geometry-and-parametric-curves"
+      ]
+    },
+    {
+      "term": "solution steps",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "mathematical-reasoning-and-problem-solving"
+      ]
+    },
+    {
+      "term": "standard normal distribution",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "probability-and-distributions"
+      ]
+    },
+    {
+      "term": "standard score",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "probability-and-distributions"
+      ]
+    },
+    {
+      "term": "statistic",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "statistics-and-inference"
+      ]
+    },
+    {
+      "term": "strategy",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "mathematical-reasoning-and-problem-solving"
+      ]
+    },
+    {
+      "term": "subtraction of vectors",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "vectors-and-3d-geometry"
+      ]
+    },
+    {
+      "term": "sum to infinity",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "limits-continuity-and-series"
+      ]
+    },
+    {
+      "term": "sum-to-product formula",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "trigonometry-advanced"
+      ]
+    },
+    {
+      "term": "system of linear equations",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "matrices-and-linear-systems"
+      ]
+    },
+    {
+      "term": "tangent graph",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "trigonometry-advanced"
+      ]
+    },
+    {
+      "term": "tangent line",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "differential-calculus-advanced"
+      ]
+    },
+    {
+      "term": "tangent to circle",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "coordinate-geometry-and-parametric-curves"
+      ]
+    },
+    {
+      "term": "theorem",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "mathematical-reasoning-and-problem-solving"
+      ]
+    },
+    {
+      "term": "total distance",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "integral-calculus-advanced"
+      ]
+    },
+    {
+      "term": "transformation matrix",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "matrices-and-linear-systems"
+      ]
+    },
+    {
+      "term": "transpose",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "matrices-and-linear-systems"
+      ]
+    },
+    {
+      "term": "tree diagram",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "probability-and-distributions"
+      ]
+    },
+    {
+      "term": "trigonometric equation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "trigonometry-advanced"
+      ]
+    },
+    {
+      "term": "trigonometric identity",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "trigonometry-advanced"
+      ]
+    },
+    {
+      "term": "type I error",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "statistics-and-inference"
+      ]
+    },
+    {
+      "term": "type II error",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "statistics-and-inference"
+      ]
+    },
+    {
+      "term": "unit circle",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "trigonometry-advanced"
+      ]
+    },
+    {
+      "term": "unit vector",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "vectors-and-3d-geometry"
+      ]
+    },
+    {
+      "term": "upper bound",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "mathematical-reasoning-and-problem-solving"
+      ]
+    },
+    {
+      "term": "upper limit",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "integral-calculus-advanced"
+      ]
+    },
+    {
+      "term": "variance",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "probability-and-distributions"
+      ]
+    },
+    {
+      "term": "vector",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "vectors-and-3d-geometry"
+      ]
+    },
+    {
+      "term": "vector equation of line",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "vectors-and-3d-geometry"
+      ]
+    },
+    {
+      "term": "velocity",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "differential-calculus-advanced"
+      ]
+    },
+    {
+      "term": "vertical asymptote",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "limits-continuity-and-series"
+      ]
+    },
+    {
+      "term": "volume of revolution",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "integral-calculus-advanced"
+      ]
+    },
+    {
+      "term": "working",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "mathematical-reasoning-and-problem-solving"
+      ]
+    },
+    {
+      "term": "z-score",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "mathematics",
+        "curriculum-style",
+        "probability-and-distributions"
       ]
     }
   ]

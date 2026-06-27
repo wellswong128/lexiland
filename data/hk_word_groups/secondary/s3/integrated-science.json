@@ -7,6 +7,15 @@
   "version": "2026.06",
   "display_name_en": "S3 Integrated Science",
   "display_name_zh_hant": "中三綜合科學",
+  "source": {
+    "type": "curriculum_style_public_references",
+    "references": [
+      "EDB Science Education Key Learning Area Curriculum Guide (Secondary 1-3)",
+      "EDB junior secondary Integrated Science curriculum framework",
+      "Public Hong Kong Secondary 3 Integrated Science syllabus topic examples (cells and genetics, human body systems, chemical reactions, acids and metals, electricity, light and waves, ecology, earth and atmosphere, scientific investigation)"
+    ],
+    "note": "No fixed official Hong Kong S3 integrated science vocabulary list is prescribed; this list is theme-based for S3 integrated science enrichment import. Term-only entries are completed during import."
+  },
   "words": [
     {
       "term": "photosynthesis",
@@ -326,6 +335,2998 @@
         "physics",
         "light",
         "technology"
+      ]
+    },
+    {
+      "term": "acceleration",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "forces-motion-and-pressure"
+      ]
+    },
+    {
+      "term": "accurate",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "laboratory-skills-and-safety"
+      ]
+    },
+    {
+      "term": "acid",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "acids-bases-metals-and-salts"
+      ]
+    },
+    {
+      "term": "acid rain",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "acids-bases-metals-and-salts"
+      ]
+    },
+    {
+      "term": "alcohol",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "health-disease-and-lifestyle"
+      ]
+    },
+    {
+      "term": "alkali",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "acids-bases-metals-and-salts"
+      ]
+    },
+    {
+      "term": "allele",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "cells-and-genetics"
+      ]
+    },
+    {
+      "term": "ammeter",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "electricity-and-magnetism"
+      ]
+    },
+    {
+      "term": "amplitude",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "light-waves-and-sound"
+      ]
+    },
+    {
+      "term": "anomaly",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "scientific-method-and-inquiry"
+      ]
+    },
+    {
+      "term": "antibiotic",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "health-disease-and-lifestyle"
+      ]
+    },
+    {
+      "term": "apparatus",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "laboratory-skills-and-safety"
+      ]
+    },
+    {
+      "term": "area",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "forces-motion-and-pressure"
+      ]
+    },
+    {
+      "term": "artery",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "human-body-systems"
+      ]
+    },
+    {
+      "term": "atmosphere",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "earth-and-space-science"
+      ]
+    },
+    {
+      "term": "atom",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "matter-and-separation"
+      ]
+    },
+    {
+      "term": "attract",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "electricity-and-magnetism"
+      ]
+    },
+    {
+      "term": "average",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "scientific-method-and-inquiry"
+      ]
+    },
+    {
+      "term": "bacteria",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "health-disease-and-lifestyle"
+      ]
+    },
+    {
+      "term": "balance",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "laboratory-skills-and-safety"
+      ]
+    },
+    {
+      "term": "balance equation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "chemical-reactions-and-equations"
+      ]
+    },
+    {
+      "term": "balanced diet",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "health-disease-and-lifestyle"
+      ]
+    },
+    {
+      "term": "balanced force",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "forces-motion-and-pressure"
+      ]
+    },
+    {
+      "term": "base",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "acids-bases-metals-and-salts"
+      ]
+    },
+    {
+      "term": "battery",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "electricity-and-magnetism"
+      ]
+    },
+    {
+      "term": "beaker",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "laboratory-skills-and-safety"
+      ]
+    },
+    {
+      "term": "biodiversity",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "ecology-and-environment"
+      ]
+    },
+    {
+      "term": "blood",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "human-body-systems"
+      ]
+    },
+    {
+      "term": "brain",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "human-body-systems"
+      ]
+    },
+    {
+      "term": "bulb",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "electricity-and-magnetism"
+      ]
+    },
+    {
+      "term": "Bunsen burner",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "laboratory-skills-and-safety"
+      ]
+    },
+    {
+      "term": "burette",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "laboratory-skills-and-safety"
+      ]
+    },
+    {
+      "term": "capillary",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "human-body-systems"
+      ]
+    },
+    {
+      "term": "carbon cycle",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "ecology-and-environment"
+      ]
+    },
+    {
+      "term": "catalyst",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "chemical-reactions-and-equations"
+      ]
+    },
+    {
+      "term": "cell",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "cells-and-genetics"
+      ]
+    },
+    {
+      "term": "cell membrane",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "cells-and-genetics"
+      ]
+    },
+    {
+      "term": "cell wall",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "cells-and-genetics"
+      ]
+    },
+    {
+      "term": "chemical change",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "matter-and-separation"
+      ]
+    },
+    {
+      "term": "chemical reaction",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "chemical-reactions-and-equations"
+      ]
+    },
+    {
+      "term": "chloroplast",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "cells-and-genetics"
+      ]
+    },
+    {
+      "term": "chromatography",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "matter-and-separation"
+      ]
+    },
+    {
+      "term": "chromosome",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "cells-and-genetics"
+      ]
+    },
+    {
+      "term": "circuit",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "electricity-and-magnetism"
+      ]
+    },
+    {
+      "term": "circulatory system",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "human-body-systems"
+      ]
+    },
+    {
+      "term": "climate",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "earth-and-space-science"
+      ]
+    },
+    {
+      "term": "climate change",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "ecology-and-environment"
+      ]
+    },
+    {
+      "term": "combustion",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "chemical-reactions-and-equations"
+      ]
+    },
+    {
+      "term": "community",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "ecology-and-environment"
+      ]
+    },
+    {
+      "term": "compound",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "matter-and-separation"
+      ]
+    },
+    {
+      "term": "conclusion",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "scientific-method-and-inquiry"
+      ]
+    },
+    {
+      "term": "conduction",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "energy-and-heat-transfer"
+      ]
+    },
+    {
+      "term": "conservation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "ecology-and-environment"
+      ]
+    },
+    {
+      "term": "consumer",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "ecology-and-environment"
+      ]
+    },
+    {
+      "term": "control variable",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "scientific-method-and-inquiry"
+      ]
+    },
+    {
+      "term": "convection",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "energy-and-heat-transfer"
+      ]
+    },
+    {
+      "term": "corrosion",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "acids-bases-metals-and-salts"
+      ]
+    },
+    {
+      "term": "critical angle",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "light-waves-and-sound"
+      ]
+    },
+    {
+      "term": "cytoplasm",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "cells-and-genetics"
+      ]
+    },
+    {
+      "term": "data",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "scientific-method-and-inquiry"
+      ]
+    },
+    {
+      "term": "decomposer",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "ecology-and-environment"
+      ]
+    },
+    {
+      "term": "deforestation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "ecology-and-environment"
+      ]
+    },
+    {
+      "term": "dependent variable",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "scientific-method-and-inquiry"
+      ]
+    },
+    {
+      "term": "digestive system",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "human-body-systems"
+      ]
+    },
+    {
+      "term": "disease",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "health-disease-and-lifestyle"
+      ]
+    },
+    {
+      "term": "displacement reaction",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "acids-bases-metals-and-salts"
+      ]
+    },
+    {
+      "term": "dispose safely",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "laboratory-skills-and-safety"
+      ]
+    },
+    {
+      "term": "dissolve",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "matter-and-separation"
+      ]
+    },
+    {
+      "term": "distance",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "forces-motion-and-pressure"
+      ]
+    },
+    {
+      "term": "distillation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "matter-and-separation"
+      ]
+    },
+    {
+      "term": "DNA",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "cells-and-genetics"
+      ]
+    },
+    {
+      "term": "dominant",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "cells-and-genetics"
+      ]
+    },
+    {
+      "term": "drug abuse",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "health-disease-and-lifestyle"
+      ]
+    },
+    {
+      "term": "Earth",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "earth-and-space-science"
+      ]
+    },
+    {
+      "term": "echo",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "light-waves-and-sound"
+      ]
+    },
+    {
+      "term": "electric current",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "electricity-and-magnetism"
+      ]
+    },
+    {
+      "term": "electricity",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "electricity-and-magnetism"
+      ]
+    },
+    {
+      "term": "electrolysis",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "acids-bases-metals-and-salts"
+      ]
+    },
+    {
+      "term": "electromagnetic spectrum",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "light-waves-and-sound"
+      ]
+    },
+    {
+      "term": "element",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "matter-and-separation"
+      ]
+    },
+    {
+      "term": "endocrine system",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "human-body-systems"
+      ]
+    },
+    {
+      "term": "endothermic reaction",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "chemical-reactions-and-equations"
+      ]
+    },
+    {
+      "term": "energy",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "energy-and-heat-transfer"
+      ]
+    },
+    {
+      "term": "energy change",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "chemical-reactions-and-equations"
+      ]
+    },
+    {
+      "term": "energy conversion",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "energy-and-heat-transfer"
+      ]
+    },
+    {
+      "term": "energy efficiency",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "energy-and-heat-transfer"
+      ]
+    },
+    {
+      "term": "energy flow",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "ecology-and-environment"
+      ]
+    },
+    {
+      "term": "energy transfer",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "energy-and-heat-transfer"
+      ]
+    },
+    {
+      "term": "epidemic",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "health-disease-and-lifestyle"
+      ]
+    },
+    {
+      "term": "equilibrium",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "chemical-reactions-and-equations"
+      ]
+    },
+    {
+      "term": "erosion",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "earth-and-space-science"
+      ]
+    },
+    {
+      "term": "evaporation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "matter-and-separation"
+      ]
+    },
+    {
+      "term": "evidence",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "scientific-method-and-inquiry"
+      ]
+    },
+    {
+      "term": "exercise",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "health-disease-and-lifestyle"
+      ]
+    },
+    {
+      "term": "exothermic reaction",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "chemical-reactions-and-equations"
+      ]
+    },
+    {
+      "term": "experiment",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "scientific-method-and-inquiry"
+      ]
+    },
+    {
+      "term": "extraction",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "acids-bases-metals-and-salts"
+      ]
+    },
+    {
+      "term": "fair test",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "scientific-method-and-inquiry"
+      ]
+    },
+    {
+      "term": "fertilization",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "cells-and-genetics"
+      ]
+    },
+    {
+      "term": "filtration",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "matter-and-separation"
+      ]
+    },
+    {
+      "term": "food web",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "ecology-and-environment"
+      ]
+    },
+    {
+      "term": "force",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "forces-motion-and-pressure"
+      ]
+    },
+    {
+      "term": "fossil",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "earth-and-space-science"
+      ]
+    },
+    {
+      "term": "fossil fuel",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "energy-and-heat-transfer"
+      ]
+    },
+    {
+      "term": "frequency",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "light-waves-and-sound"
+      ]
+    },
+    {
+      "term": "friction",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "forces-motion-and-pressure"
+      ]
+    },
+    {
+      "term": "fuel",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "energy-and-heat-transfer"
+      ]
+    },
+    {
+      "term": "fungus",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "health-disease-and-lifestyle"
+      ]
+    },
+    {
+      "term": "gamete",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "cells-and-genetics"
+      ]
+    },
+    {
+      "term": "gas given off",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "chemical-reactions-and-equations"
+      ]
+    },
+    {
+      "term": "gene",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "cells-and-genetics"
+      ]
+    },
+    {
+      "term": "generator",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "electricity-and-magnetism"
+      ]
+    },
+    {
+      "term": "genetic variation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "cells-and-genetics"
+      ]
+    },
+    {
+      "term": "genotype",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "cells-and-genetics"
+      ]
+    },
+    {
+      "term": "global warming",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "ecology-and-environment"
+      ]
+    },
+    {
+      "term": "graph",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "scientific-method-and-inquiry"
+      ]
+    },
+    {
+      "term": "gravity",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "forces-motion-and-pressure"
+      ]
+    },
+    {
+      "term": "greenhouse effect",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "earth-and-space-science"
+      ]
+    },
+    {
+      "term": "habitat",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "ecology-and-environment"
+      ]
+    },
+    {
+      "term": "hazard",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "laboratory-skills-and-safety"
+      ]
+    },
+    {
+      "term": "healthy lifestyle",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "health-disease-and-lifestyle"
+      ]
+    },
+    {
+      "term": "heart",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "human-body-systems"
+      ]
+    },
+    {
+      "term": "heat",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "energy-and-heat-transfer"
+      ]
+    },
+    {
+      "term": "homeostasis",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "human-body-systems"
+      ]
+    },
+    {
+      "term": "hygiene",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "health-disease-and-lifestyle"
+      ]
+    },
+    {
+      "term": "hypothesis",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "scientific-method-and-inquiry"
+      ]
+    },
+    {
+      "term": "immune system",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "human-body-systems"
+      ]
+    },
+    {
+      "term": "independent variable",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "scientific-method-and-inquiry"
+      ]
+    },
+    {
+      "term": "indicator",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "acids-bases-metals-and-salts"
+      ]
+    },
+    {
+      "term": "infection",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "health-disease-and-lifestyle"
+      ]
+    },
+    {
+      "term": "inheritance",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "cells-and-genetics"
+      ]
+    },
+    {
+      "term": "insoluble",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "matter-and-separation"
+      ]
+    },
+    {
+      "term": "interpret results",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "scientific-method-and-inquiry"
+      ]
+    },
+    {
+      "term": "investigation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "scientific-method-and-inquiry"
+      ]
+    },
+    {
+      "term": "laboratory",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "laboratory-skills-and-safety"
+      ]
+    },
+    {
+      "term": "lens",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "light-waves-and-sound"
+      ]
+    },
+    {
+      "term": "lever",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "forces-motion-and-pressure"
+      ]
+    },
+    {
+      "term": "light",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "light-waves-and-sound"
+      ]
+    },
+    {
+      "term": "load",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "forces-motion-and-pressure"
+      ]
+    },
+    {
+      "term": "lung",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "human-body-systems"
+      ]
+    },
+    {
+      "term": "magnet",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "electricity-and-magnetism"
+      ]
+    },
+    {
+      "term": "magnetic field",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "electricity-and-magnetism"
+      ]
+    },
+    {
+      "term": "magnify",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "laboratory-skills-and-safety"
+      ]
+    },
+    {
+      "term": "mass",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "forces-motion-and-pressure"
+      ]
+    },
+    {
+      "term": "matter",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "matter-and-separation"
+      ]
+    },
+    {
+      "term": "measuring cylinder",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "laboratory-skills-and-safety"
+      ]
+    },
+    {
+      "term": "medium",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "light-waves-and-sound"
+      ]
+    },
+    {
+      "term": "meiosis",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "cells-and-genetics"
+      ]
+    },
+    {
+      "term": "metal",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "acids-bases-metals-and-salts"
+      ]
+    },
+    {
+      "term": "microscope",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "laboratory-skills-and-safety"
+      ]
+    },
+    {
+      "term": "mirror",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "light-waves-and-sound"
+      ]
+    },
+    {
+      "term": "mixture",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "matter-and-separation"
+      ]
+    },
+    {
+      "term": "molecule",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "matter-and-separation"
+      ]
+    },
+    {
+      "term": "moment",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "forces-motion-and-pressure"
+      ]
+    },
+    {
+      "term": "Moon",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "earth-and-space-science"
+      ]
+    },
+    {
+      "term": "motion",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "forces-motion-and-pressure"
+      ]
+    },
+    {
+      "term": "motor",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "electricity-and-magnetism"
+      ]
+    },
+    {
+      "term": "muscular system",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "human-body-systems"
+      ]
+    },
+    {
+      "term": "mutation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "cells-and-genetics"
+      ]
+    },
+    {
+      "term": "natural resource",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "earth-and-space-science"
+      ]
+    },
+    {
+      "term": "neuron",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "human-body-systems"
+      ]
+    },
+    {
+      "term": "neutral",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "acids-bases-metals-and-salts"
+      ]
+    },
+    {
+      "term": "neutralization",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "acids-bases-metals-and-salts"
+      ]
+    },
+    {
+      "term": "newton",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "forces-motion-and-pressure"
+      ]
+    },
+    {
+      "term": "nitrogen cycle",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "ecology-and-environment"
+      ]
+    },
+    {
+      "term": "non-renewable energy",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "energy-and-heat-transfer"
+      ]
+    },
+    {
+      "term": "nucleus",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "cells-and-genetics"
+      ]
+    },
+    {
+      "term": "nutrient",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "health-disease-and-lifestyle"
+      ]
+    },
+    {
+      "term": "observation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "scientific-method-and-inquiry"
+      ]
+    },
+    {
+      "term": "optical fibre",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "light-waves-and-sound"
+      ]
+    },
+    {
+      "term": "orbit",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "earth-and-space-science"
+      ]
+    },
+    {
+      "term": "ore",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "acids-bases-metals-and-salts"
+      ]
+    },
+    {
+      "term": "oxidation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "chemical-reactions-and-equations"
+      ]
+    },
+    {
+      "term": "ozone layer",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "earth-and-space-science"
+      ]
+    },
+    {
+      "term": "particle model",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "matter-and-separation"
+      ]
+    },
+    {
+      "term": "pathogen",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "health-disease-and-lifestyle"
+      ]
+    },
+    {
+      "term": "pH",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "acids-bases-metals-and-salts"
+      ]
+    },
+    {
+      "term": "pH scale",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "acids-bases-metals-and-salts"
+      ]
+    },
+    {
+      "term": "phenotype",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "cells-and-genetics"
+      ]
+    },
+    {
+      "term": "physical change",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "matter-and-separation"
+      ]
+    },
+    {
+      "term": "pipette",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "laboratory-skills-and-safety"
+      ]
+    },
+    {
+      "term": "pitch",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "light-waves-and-sound"
+      ]
+    },
+    {
+      "term": "planet",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "earth-and-space-science"
+      ]
+    },
+    {
+      "term": "plate tectonics",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "earth-and-space-science"
+      ]
+    },
+    {
+      "term": "pollution",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "ecology-and-environment"
+      ]
+    },
+    {
+      "term": "population",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "ecology-and-environment"
+      ]
+    },
+    {
+      "term": "power",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "energy-and-heat-transfer"
+      ]
+    },
+    {
+      "term": "precipitate",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "chemical-reactions-and-equations"
+      ]
+    },
+    {
+      "term": "precise",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "laboratory-skills-and-safety"
+      ]
+    },
+    {
+      "term": "prediction",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "scientific-method-and-inquiry"
+      ]
+    },
+    {
+      "term": "prevention",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "health-disease-and-lifestyle"
+      ]
+    },
+    {
+      "term": "producer",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "ecology-and-environment"
+      ]
+    },
+    {
+      "term": "product",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "chemical-reactions-and-equations"
+      ]
+    },
+    {
+      "term": "pulley",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "forces-motion-and-pressure"
+      ]
+    },
+    {
+      "term": "radiation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "energy-and-heat-transfer"
+      ]
+    },
+    {
+      "term": "rate of reaction",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "chemical-reactions-and-equations"
+      ]
+    },
+    {
+      "term": "ray diagram",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "light-waves-and-sound"
+      ]
+    },
+    {
+      "term": "reactant",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "chemical-reactions-and-equations"
+      ]
+    },
+    {
+      "term": "reactivity series",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "acids-bases-metals-and-salts"
+      ]
+    },
+    {
+      "term": "recessive",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "cells-and-genetics"
+      ]
+    },
+    {
+      "term": "recycle",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "ecology-and-environment"
+      ]
+    },
+    {
+      "term": "reduction",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "chemical-reactions-and-equations"
+      ]
+    },
+    {
+      "term": "reflection",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "light-waves-and-sound"
+      ]
+    },
+    {
+      "term": "reliable",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "scientific-method-and-inquiry"
+      ]
+    },
+    {
+      "term": "renewable energy",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "energy-and-heat-transfer"
+      ]
+    },
+    {
+      "term": "renewable resource",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "ecology-and-environment"
+      ]
+    },
+    {
+      "term": "repeat",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "scientific-method-and-inquiry"
+      ]
+    },
+    {
+      "term": "repel",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "electricity-and-magnetism"
+      ]
+    },
+    {
+      "term": "resistance",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "electricity-and-magnetism"
+      ]
+    },
+    {
+      "term": "respiratory system",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "human-body-systems"
+      ]
+    },
+    {
+      "term": "response",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "human-body-systems"
+      ]
+    },
+    {
+      "term": "reversible reaction",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "chemical-reactions-and-equations"
+      ]
+    },
+    {
+      "term": "revolution",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "earth-and-space-science"
+      ]
+    },
+    {
+      "term": "risk assessment",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "laboratory-skills-and-safety"
+      ]
+    },
+    {
+      "term": "rock",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "earth-and-space-science"
+      ]
+    },
+    {
+      "term": "rotation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "earth-and-space-science"
+      ]
+    },
+    {
+      "term": "rusting",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "acids-bases-metals-and-salts"
+      ]
+    },
+    {
+      "term": "safety goggles",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "laboratory-skills-and-safety"
+      ]
+    },
+    {
+      "term": "salt",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "acids-bases-metals-and-salts"
+      ]
+    },
+    {
+      "term": "scientific method",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "scientific-method-and-inquiry"
+      ]
+    },
+    {
+      "term": "shadow",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "light-waves-and-sound"
+      ]
+    },
+    {
+      "term": "simple machine",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "forces-motion-and-pressure"
+      ]
+    },
+    {
+      "term": "skeletal system",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "human-body-systems"
+      ]
+    },
+    {
+      "term": "slide",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "laboratory-skills-and-safety"
+      ]
+    },
+    {
+      "term": "smoking",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "health-disease-and-lifestyle"
+      ]
+    },
+    {
+      "term": "solar energy",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "energy-and-heat-transfer"
+      ]
+    },
+    {
+      "term": "solar system",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "earth-and-space-science"
+      ]
+    },
+    {
+      "term": "soluble",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "matter-and-separation"
+      ]
+    },
+    {
+      "term": "solute",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "matter-and-separation"
+      ]
+    },
+    {
+      "term": "solution",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "matter-and-separation"
+      ]
+    },
+    {
+      "term": "solvent",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "matter-and-separation"
+      ]
+    },
+    {
+      "term": "sound",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "light-waves-and-sound"
+      ]
+    },
+    {
+      "term": "specific heat capacity",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "energy-and-heat-transfer"
+      ]
+    },
+    {
+      "term": "specimen",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "laboratory-skills-and-safety"
+      ]
+    },
+    {
+      "term": "speed",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "forces-motion-and-pressure"
+      ]
+    },
+    {
+      "term": "spinal cord",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "human-body-systems"
+      ]
+    },
+    {
+      "term": "star",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "earth-and-space-science"
+      ]
+    },
+    {
+      "term": "stimulus",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "human-body-systems"
+      ]
+    },
+    {
+      "term": "substance",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "matter-and-separation"
+      ]
+    },
+    {
+      "term": "Sun",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "earth-and-space-science"
+      ]
+    },
+    {
+      "term": "sustainability",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "ecology-and-environment"
+      ]
+    },
+    {
+      "term": "switch",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "electricity-and-magnetism"
+      ]
+    },
+    {
+      "term": "symbol equation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "chemical-reactions-and-equations"
+      ]
+    },
+    {
+      "term": "temperature",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "energy-and-heat-transfer"
+      ]
+    },
+    {
+      "term": "test tube",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "laboratory-skills-and-safety"
+      ]
+    },
+    {
+      "term": "thermal energy",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "energy-and-heat-transfer"
+      ]
+    },
+    {
+      "term": "thermometer",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "laboratory-skills-and-safety"
+      ]
+    },
+    {
+      "term": "time",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "forces-motion-and-pressure"
+      ]
+    },
+    {
+      "term": "transformer",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "electricity-and-magnetism"
+      ]
+    },
+    {
+      "term": "treatment",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "health-disease-and-lifestyle"
+      ]
+    },
+    {
+      "term": "unbalanced force",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "forces-motion-and-pressure"
+      ]
+    },
+    {
+      "term": "vaccination",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "human-body-systems"
+      ]
+    },
+    {
+      "term": "vacuum",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "light-waves-and-sound"
+      ]
+    },
+    {
+      "term": "valid",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "scientific-method-and-inquiry"
+      ]
+    },
+    {
+      "term": "variable",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "scientific-method-and-inquiry"
+      ]
+    },
+    {
+      "term": "vein",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "human-body-systems"
+      ]
+    },
+    {
+      "term": "velocity",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "forces-motion-and-pressure"
+      ]
+    },
+    {
+      "term": "vibration",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "light-waves-and-sound"
+      ]
+    },
+    {
+      "term": "virus",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "health-disease-and-lifestyle"
+      ]
+    },
+    {
+      "term": "voltage",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "electricity-and-magnetism"
+      ]
+    },
+    {
+      "term": "voltmeter",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "electricity-and-magnetism"
+      ]
+    },
+    {
+      "term": "volume",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "light-waves-and-sound"
+      ]
+    },
+    {
+      "term": "water cycle",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "ecology-and-environment"
+      ]
+    },
+    {
+      "term": "wave",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "light-waves-and-sound"
+      ]
+    },
+    {
+      "term": "wavelength",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "light-waves-and-sound"
+      ]
+    },
+    {
+      "term": "weather",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "earth-and-space-science"
+      ]
+    },
+    {
+      "term": "weathering",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "earth-and-space-science"
+      ]
+    },
+    {
+      "term": "weight",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "forces-motion-and-pressure"
+      ]
+    },
+    {
+      "term": "wind energy",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "energy-and-heat-transfer"
+      ]
+    },
+    {
+      "term": "wire",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "electricity-and-magnetism"
+      ]
+    },
+    {
+      "term": "word equation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "chemical-reactions-and-equations"
+      ]
+    },
+    {
+      "term": "work",
+      "tags": [
+        "hk",
+        "secondary",
+        "s3",
+        "integrated-science",
+        "curriculum-style",
+        "energy-and-heat-transfer"
       ]
     }
   ]

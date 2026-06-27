@@ -14,49 +14,34 @@
       "completed_at": "2026-06-21T00:43:27Z"
     },
     "treaty": {
-      "status": "incomplete",
-      "missing": [
-        "pronunciation",
-        "part_of_speech"
-      ],
+      "status": "complete",
+      "missing": [],
       "errors": {},
-      "completed_at": null
+      "completed_at": "2026-06-26T04:33:32Z"
     },
     "colonialism": {
-      "status": "incomplete",
-      "missing": [
-        "pronunciation",
-        "part_of_speech"
-      ],
+      "status": "complete",
+      "missing": [],
       "errors": {},
-      "completed_at": null
+      "completed_at": "2026-06-26T04:33:32Z"
     },
     "democracy": {
-      "status": "incomplete",
-      "missing": [
-        "pronunciation",
-        "part_of_speech"
-      ],
+      "status": "complete",
+      "missing": [],
       "errors": {},
-      "completed_at": null
+      "completed_at": "2026-06-26T04:33:33Z"
     },
     "propaganda": {
-      "status": "incomplete",
-      "missing": [
-        "pronunciation",
-        "part_of_speech"
-      ],
+      "status": "complete",
+      "missing": [],
       "errors": {},
-      "completed_at": null
+      "completed_at": "2026-06-26T04:33:33Z"
     },
     "alliance": {
-      "status": "incomplete",
-      "missing": [
-        "pronunciation",
-        "part_of_speech"
-      ],
+      "status": "complete",
+      "missing": [],
       "errors": {},
-      "completed_at": null
+      "completed_at": "2026-06-26T04:33:34Z"
     },
     "conflict": {
       "status": "complete",
@@ -65,40 +50,28 @@
       "completed_at": "2026-06-21T00:43:32Z"
     },
     "sovereignty": {
-      "status": "incomplete",
-      "missing": [
-        "pronunciation",
-        "part_of_speech"
-      ],
+      "status": "complete",
+      "missing": [],
       "errors": {},
-      "completed_at": null
+      "completed_at": "2026-06-26T04:33:35Z"
     },
     "ideology": {
-      "status": "incomplete",
-      "missing": [
-        "pronunciation",
-        "part_of_speech"
-      ],
+      "status": "complete",
+      "missing": [],
       "errors": {},
-      "completed_at": null
+      "completed_at": "2026-06-26T04:33:35Z"
     },
     "emigrate": {
-      "status": "incomplete",
-      "missing": [
-        "pronunciation",
-        "part_of_speech"
-      ],
+      "status": "complete",
+      "missing": [],
       "errors": {},
-      "completed_at": null
+      "completed_at": "2026-06-26T04:33:36Z"
     },
     "annex": {
-      "status": "incomplete",
-      "missing": [
-        "pronunciation",
-        "part_of_speech"
-      ],
+      "status": "complete",
+      "missing": [],
       "errors": {},
-      "completed_at": null
+      "completed_at": "2026-06-26T04:33:36Z"
     },
     "negotiate": {
       "status": "complete",
@@ -107,67 +80,2062 @@
       "completed_at": "2026-06-21T00:43:36Z"
     },
     "oppressed": {
-      "status": "incomplete",
-      "missing": [
-        "pronunciation",
-        "part_of_speech"
-      ],
+      "status": "complete",
+      "missing": [],
       "errors": {},
-      "completed_at": null
+      "completed_at": "2026-06-26T04:33:37Z"
     },
     "authoritarian": {
-      "status": "incomplete",
-      "missing": [
-        "pronunciation",
-        "part_of_speech"
-      ],
+      "status": "complete",
+      "missing": [],
       "errors": {},
-      "completed_at": null
+      "completed_at": "2026-06-26T04:33:37Z"
     },
     "economic": {
-      "status": "incomplete",
-      "missing": [
-        "pronunciation",
-        "part_of_speech"
-      ],
+      "status": "complete",
+      "missing": [],
       "errors": {},
-      "completed_at": null
+      "completed_at": "2026-06-26T04:33:38Z"
     },
     "civil war": {
-      "status": "incomplete",
-      "missing": [
-        "pronunciation",
-        "part_of_speech"
-      ],
+      "status": "complete",
+      "missing": [],
       "errors": {},
-      "completed_at": null
+      "completed_at": "2026-06-26T04:33:38Z"
     },
     "human rights": {
-      "status": "incomplete",
-      "missing": [
-        "pronunciation",
-        "part_of_speech"
-      ],
+      "status": "complete",
+      "missing": [],
       "errors": {},
-      "completed_at": null
+      "completed_at": "2026-06-26T04:33:39Z"
     },
     "cold war": {
-      "status": "incomplete",
-      "missing": [
-        "pronunciation",
-        "part_of_speech"
-      ],
+      "status": "complete",
+      "missing": [],
       "errors": {},
-      "completed_at": null
+      "completed_at": "2026-06-26T04:33:39Z"
     },
     "world war ii": {
-      "status": "incomplete",
-      "missing": [
-        "pronunciation",
-        "part_of_speech"
-      ],
+      "status": "complete",
+      "missing": [],
       "errors": {},
-      "completed_at": null
+      "completed_at": "2026-06-26T04:33:40Z"
+    },
+    "1967 riots in hong kong": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T04:35:45Z"
+    },
+    "absolute monarchy in france": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T04:37:49Z"
+    },
+    "african independence": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T04:40:04Z"
+    },
+    "alliance system in europe": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T04:42:55Z"
+    },
+    "allied occupation of germany": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T04:45:13Z"
+    },
+    "allied powers in europe": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T04:46:16Z"
+    },
+    "allied strategy": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T04:47:34Z"
+    },
+    "anschluss": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T04:49:00Z"
+    },
+    "anti-colonial struggle": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T04:50:39Z"
+    },
+    "appeasement": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T04:50:39Z"
+    },
+    "appeasement policy": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T15:10:58Z"
+    },
+    "arab-israeli conflict": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T04:52:54Z"
+    },
+    "arms race in europe": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T04:54:58Z"
+    },
+    "assassination in sarajevo": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T04:57:59Z"
+    },
+    "assess historical significance": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T04:59:41Z"
+    },
+    "atomic warfare": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T05:01:48Z"
+    },
+    "auschwitz": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T05:01:48Z"
+    },
+    "axis powers in europe": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T05:04:03Z"
+    },
+    "balance of power in europe": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T05:05:34Z"
+    },
+    "balkan tensions": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T05:07:48Z"
+    },
+    "bandung conference": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T05:09:58Z"
+    },
+    "basic law drafting": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T05:10:51Z"
+    },
+    "battle of stalingrad": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T05:14:24Z"
+    },
+    "berlin blockade": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T05:17:36Z"
+    },
+    "berlin wall": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T05:17:36Z"
+    },
+    "bismarck": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T05:18:47Z"
+    },
+    "blitzkrieg": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T05:19:53Z"
+    },
+    "bourgeois revolution": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T05:20:56Z"
+    },
+    "camp david accords": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T05:21:59Z"
+    },
+    "capitalism": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T05:23:03Z"
+    },
+    "challenge after handover": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T05:25:07Z"
+    },
+    "child labour": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T05:26:23Z"
+    },
+    "china and cold war": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T05:27:18Z"
+    },
+    "china in global economy": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T05:28:35Z"
+    },
+    "climate change issue": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T05:30:19Z"
+    },
+    "cold war and decolonization": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T05:32:26Z"
+    },
+    "cold war impact on asia": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T05:34:20Z"
+    },
+    "cold war rivalry": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T05:35:29Z"
+    },
+    "collapse of soviet union": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T05:36:49Z"
+    },
+    "collective security failure": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T05:38:37Z"
+    },
+    "collectivization": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T05:39:40Z"
+    },
+    "colonial rivalry": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T05:40:46Z"
+    },
+    "commemoration of holocaust": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T05:42:54Z"
+    },
+    "communicate historical argument": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T05:44:28Z"
+    },
+    "compare mao era and reform era": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T05:45:29Z"
+    },
+    "concentration camp": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T05:47:41Z"
+    },
+    "congress of vienna": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T05:50:00Z"
+    },
+    "containment strategy": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T15:10:59Z"
+    },
+    "continuity after handover": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T05:51:00Z"
+    },
+    "continuity and change in china": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T05:51:56Z"
+    },
+    "creation of israel": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T05:53:01Z"
+    },
+    "crime against humanity": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T05:54:09Z"
+    },
+    "cross-border integration": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T05:56:25Z"
+    },
+    "cross-topic historical link": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T15:10:59Z"
+    },
+    "cuban missile crisis": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T05:57:27Z"
+    },
+    "cult of personality": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T05:59:56Z"
+    },
+    "cultural globalization": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T06:01:13Z"
+    },
+    "cultural revolution": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T06:02:20Z"
+    },
+    "d-day invasion": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T06:04:32Z"
+    },
+    "declaration of the rights of man": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T06:05:38Z"
+    },
+    "decolonization": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T06:05:39Z"
+    },
+    "deng xiaoping": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T06:06:46Z"
+    },
+    "detente period": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T06:08:43Z"
+    },
+    "division of germany": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T06:10:37Z"
+    },
+    "division of korea": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T15:11:00Z"
+    },
+    "domino theory": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T06:13:14Z"
+    },
+    "eastern front": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T06:14:24Z"
+    },
+    "economic dependence after independence": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T06:15:58Z"
+    },
+    "economic depression": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T06:17:19Z"
+    },
+    "economic globalization": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T06:18:54Z"
+    },
+    "economic growth": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T06:18:54Z"
+    },
+    "economic reform in china": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T06:20:03Z"
+    },
+    "end of cold war": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T06:21:32Z"
+    },
+    "end of european empire": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T06:23:53Z"
+    },
+    "enlightenment ideas": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T06:25:27Z"
+    },
+    "environmental globalization": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T06:27:19Z"
+    },
+    "environmental impact of industry": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T06:28:40Z"
+    },
+    "estates general": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T06:30:07Z"
+    },
+    "ethnic nationalism": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T06:33:20Z"
+    },
+    "european empire expansion": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T06:34:17Z"
+    },
+    "european theatre": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T06:38:50Z"
+    },
+    "evaluate accountability after war": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T06:40:44Z"
+    },
+    "evaluate cold war": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T06:43:25Z"
+    },
+    "evaluate french revolution": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T06:45:30Z"
+    },
+    "evaluate hong kong development": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T06:48:08Z"
+    },
+    "evaluate mao era policies": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T06:49:50Z"
+    },
+    "evaluate middle east conflict": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T06:52:27Z"
+    },
+    "evaluate reform and opening up": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T15:11:00Z"
+    },
+    "evaluate world war ii impact": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T06:55:30Z"
+    },
+    "export-oriented industry": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T06:57:35Z"
+    },
+    "extermination camp": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T06:59:57Z"
+    },
+    "factory system": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T07:00:50Z"
+    },
+    "failure of peace settlement": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T07:03:08Z"
+    },
+    "fall of berlin wall": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T15:11:01Z"
+    },
+    "fascism": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T07:03:47Z"
+    },
+    "final solution": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T07:04:50Z"
+    },
+    "financial centre development": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T07:07:16Z"
+    },
+    "first five-year plan": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T07:11:42Z"
+    },
+    "foreign investment in china": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T07:12:48Z"
+    },
+    "four modernizations": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T07:13:47Z"
+    },
+    "free market economy": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T07:15:46Z"
+    },
+    "french revolution": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T07:18:22Z"
+    },
+    "future global challenge": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T07:21:25Z"
+    },
+    "gandhi": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T07:22:34Z"
+    },
+    "garibaldi": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T07:24:00Z"
+    },
+    "general assembly": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T07:26:01Z"
+    },
+    "genocide": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T07:26:01Z"
+    },
+    "german surrender": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T07:27:55Z"
+    },
+    "global governance": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T07:29:27Z"
+    },
+    "global health crisis": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T07:31:38Z"
+    },
+    "global inequality": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T07:34:29Z"
+    },
+    "global interdependence": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T07:37:10Z"
+    },
+    "global war": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T07:39:08Z"
+    },
+    "globalization": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T07:39:08Z"
+    },
+    "great depression": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T08:45:17Z"
+    },
+    "great famine": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T08:46:33Z"
+    },
+    "great leap forward": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T08:51:39Z"
+    },
+    "greater bay area development": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T08:54:12Z"
+    },
+    "gulf war": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T08:56:24Z"
+    },
+    "handover ceremony 1997": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T08:58:10Z"
+    },
+    "historical causation": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T08:58:10Z"
+    },
+    "historical change": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T08:59:27Z"
+    },
+    "historical continuity": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T09:00:37Z"
+    },
+    "historical controversy": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T09:00:37Z"
+    },
+    "historical debate": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T09:00:38Z"
+    },
+    "historical empathy": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T09:00:38Z"
+    },
+    "historical essay writing": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T09:03:02Z"
+    },
+    "historical evaluation": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T09:03:03Z"
+    },
+    "historical evidence of atrocity": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T09:04:14Z"
+    },
+    "historical legacy": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T09:04:15Z"
+    },
+    "historical memory": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T09:04:15Z"
+    },
+    "historical perspective": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T09:04:16Z"
+    },
+    "historical responsibility": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T09:06:40Z"
+    },
+    "historical roots of conflict": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T09:07:46Z"
+    },
+    "historical source comparison": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T09:10:08Z"
+    },
+    "historical synthesis": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T09:10:08Z"
+    },
+    "historical thinking for present world": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T09:12:44Z"
+    },
+    "historical turning point": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T09:13:59Z"
+    },
+    "hitler": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T09:15:51Z"
+    },
+    "holocaust": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T15:11:02Z"
+    },
+    "home front": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T09:17:46Z"
+    },
+    "hong kong economic miracle": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T09:19:57Z"
+    },
+    "hong kong return to china": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T09:22:06Z"
+    },
+    "hong kong special administrative region": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T09:22:06Z"
+    },
+    "human dignity": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T09:22:07Z"
+    },
+    "human rights violation": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T09:24:49Z"
+    },
+    "humanitarian aid": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T09:24:50Z"
+    },
+    "hyperinflation": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T09:26:29Z"
+    },
+    "identity of hong kong people": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T15:11:42Z"
+    },
+    "impact of industrial revolution": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T09:31:46Z"
+    },
+    "impact on europe": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T09:33:24Z"
+    },
+    "imperial rivalry": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T09:34:31Z"
+    },
+    "independence movement": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T09:35:36Z"
+    },
+    "indian independence": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T09:36:54Z"
+    },
+    "industrial city": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T09:38:59Z"
+    },
+    "industrial revolution": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T09:40:51Z"
+    },
+    "information revolution": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T09:43:03Z"
+    },
+    "international cooperation": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T09:43:03Z"
+    },
+    "international court": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T09:43:50Z"
+    },
+    "international criminal court": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T09:45:21Z"
+    },
+    "international justice": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T09:46:49Z"
+    },
+    "international law enforcement": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T09:48:42Z"
+    },
+    "international mediation": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T09:49:52Z"
+    },
+    "international refugee protection": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T09:52:02Z"
+    },
+    "international terrorism": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T09:54:38Z"
+    },
+    "international trade expansion": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T09:56:38Z"
+    },
+    "international treaty": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T09:58:41Z"
+    },
+    "internet age": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T10:00:46Z"
+    },
+    "interwar period": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T10:03:01Z"
+    },
+    "invasion of poland": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T10:05:27Z"
+    },
+    "iron curtain division": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T10:06:31Z"
+    },
+    "islamic revolution in iran": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T10:08:40Z"
+    },
+    "japanese surrender": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T10:08:41Z"
+    },
+    "joint declaration": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T10:10:39Z"
+    },
+    "korean war": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T10:10:40Z"
+    },
+    "labour movement": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T10:13:14Z"
+    },
+    "land reform in china": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T10:14:38Z"
+    },
+    "league of nations": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T10:16:26Z"
+    },
+    "legacy of colonial rule": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T10:17:30Z"
+    },
+    "legacy of french revolution": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T10:18:42Z"
+    },
+    "legacy of mao era": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T10:20:02Z"
+    },
+    "liberty equality fraternity": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T10:21:56Z"
+    },
+    "living conditions in industrial city": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T10:24:14Z"
+    },
+    "long-term and short-term cause": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T11:01:49Z"
+    },
+    "mao zedong": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T11:02:59Z"
+    },
+    "market reform": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T11:03:59Z"
+    },
+    "mechanization": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T11:06:12Z"
+    },
+    "middle east conflict": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T11:10:14Z"
+    },
+    "migration in global age": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T11:13:26Z"
+    },
+    "militarism in europe": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T11:15:20Z"
+    },
+    "militarization of society": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T11:18:13Z"
+    },
+    "minority persecution": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T11:19:30Z"
+    },
+    "modern political ideals": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T11:22:58Z"
+    },
+    "modernization of china": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T11:23:40Z"
+    },
+    "monitor human rights": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T11:24:46Z"
+    },
+    "moral lesson from history": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T11:25:52Z"
+    },
+    "multi-perspective analysis": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T11:28:52Z"
+    },
+    "multilateral diplomacy": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T11:31:08Z"
+    },
+    "multinational corporation": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T11:33:21Z"
+    },
+    "munich agreement": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T11:34:21Z"
+    },
+    "mussolini": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T11:37:00Z"
+    },
+    "mutually assured destruction": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T11:38:45Z"
+    },
+    "napoleon bonaparte": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T11:40:52Z"
+    },
+    "napoleonic code": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T11:42:49Z"
+    },
+    "nation building": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T11:45:20Z"
+    },
+    "nation state": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T11:47:55Z"
+    },
+    "national factor in conflict": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T11:48:42Z"
+    },
+    "national identity": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T11:48:43Z"
+    },
+    "national liberation": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T11:50:32Z"
+    },
+    "nationalism in 19th century": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T11:52:24Z"
+    },
+    "nationalism in europe": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T11:54:13Z"
+    },
+    "nazi racial policy": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T11:56:40Z"
+    },
+    "nazism": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T11:57:37Z"
+    },
+    "neo-colonialism": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T12:00:27Z"
+    },
+    "never again": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T12:02:43Z"
+    },
+    "new town development": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T12:04:56Z"
+    },
+    "new world order": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T12:07:20Z"
+    },
+    "non-aligned movement": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T12:07:20Z"
+    },
+    "non-violent resistance": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T12:09:15Z"
+    },
+    "north-south divide": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T12:09:46Z"
+    },
+    "nuclear arms race": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T12:09:47Z"
+    },
+    "nuclear deterrence": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T12:11:55Z"
+    },
+    "nuremberg trials": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T12:11:56Z"
+    },
+    "oil politics": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T12:13:38Z"
+    },
+    "one china principle": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T12:15:48Z"
+    },
+    "one country two systems in hong kong": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T12:17:02Z"
+    },
+    "one country two systems policy": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T12:17:02Z"
+    },
+    "one-child policy": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T12:17:03Z"
+    },
+    "one-party dictatorship": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T12:19:54Z"
+    },
+    "opening to world economy": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T12:20:34Z"
+    },
+    "oslo accords": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T12:23:32Z"
+    },
+    "overthrow of monarchy": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T12:25:29Z"
+    },
+    "pacific theatre": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T12:28:32Z"
+    },
+    "palestinian issue": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T12:30:41Z"
+    },
+    "pan-slavism": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T12:31:41Z"
+    },
+    "pandemic impact": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T12:33:55Z"
+    },
+    "partition of africa": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T12:34:55Z"
+    },
+    "partition of india": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T12:35:38Z"
+    },
+    "peace process": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T12:36:20Z"
+    },
+    "people's commune": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T12:38:08Z"
+    },
+    "people's republic of china founded": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T12:38:08Z"
+    },
+    "persecution of jews": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T12:40:13Z"
+    },
+    "planned economy": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T12:42:24Z"
+    },
+    "political campaign in china": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T12:43:47Z"
+    },
+    "political control in mao era": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T12:45:51Z"
+    },
+    "political instability after independence": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T12:49:18Z"
+    },
+    "political reform debate": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T12:50:24Z"
+    },
+    "political violence": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T12:54:23Z"
+    },
+    "popular uprising": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T15:12:58Z"
+    },
+    "post-colonial state": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T12:57:36Z"
+    },
+    "post-handover hong kong": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T13:00:02Z"
+    },
+    "post-war settlement": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T13:01:00Z"
+    },
+    "promote peace and security": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T13:03:14Z"
+    },
+    "propaganda machine": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T15:13:53Z"
+    },
+    "protect civilians in war": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T13:05:17Z"
+    },
+    "proxy conflict": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T13:07:32Z"
+    },
+    "public housing programme": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T13:07:33Z"
+    },
+    "railway expansion": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T13:08:23Z"
+    },
+    "rapid economic growth in china": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T13:08:24Z"
+    },
+    "rationing system": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T13:10:29Z"
+    },
+    "reconstruction after war": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T13:11:30Z"
+    },
+    "red guard movement": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T13:11:30Z"
+    },
+    "reflect on historical learning": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T13:11:31Z"
+    },
+    "reform and opening up": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T13:11:31Z"
+    },
+    "refugee crisis after war": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T13:12:55Z"
+    },
+    "refugee in global age": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T13:14:14Z"
+    },
+    "refugee in middle east": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T13:18:15Z"
+    },
+    "regional instability": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T13:20:33Z"
+    },
+    "reign of terror": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T13:23:02Z"
+    },
+    "religious factor in conflict": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T13:25:32Z"
+    },
+    "remember wartime victims": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T13:26:50Z"
+    },
+    "rise of china": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T13:29:06Z"
+    },
+    "rise of extremism": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T13:30:24Z"
+    },
+    "road to world war i": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T13:32:43Z"
+    },
+    "robespierre": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T13:34:53Z"
+    },
+    "role of international organization": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T13:37:31Z"
+    },
+    "schlieffen plan": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T13:37:31Z"
+    },
+    "scramble for africa": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T13:37:32Z"
+    },
+    "secret police": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T13:38:28Z"
+    },
+    "security council": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T13:40:22Z"
+    },
+    "self-determination": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T13:43:31Z"
+    },
+    "shift in global power": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T13:44:33Z"
+    },
+    "sino-british negotiation": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T13:46:25Z"
+    },
+    "sino-soviet split": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T13:46:25Z"
+    },
+    "six-day war": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T13:48:33Z"
+    },
+    "social change after reform": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T13:51:08Z"
+    },
+    "social change in mao era": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T13:53:42Z"
+    },
+    "social inequality": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T13:56:38Z"
+    },
+    "social inequality in france": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T13:57:43Z"
+    },
+    "social mobility in hong kong": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T13:59:45Z"
+    },
+    "social reform": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T14:01:50Z"
+    },
+    "social unrest in hong kong": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T14:05:14Z"
+    },
+    "socialist transformation": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T14:06:03Z"
+    },
+    "southeast asian independence": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T14:08:15Z"
+    },
+    "space race": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T14:08:15Z"
+    },
+    "special economic zone": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T14:08:16Z"
+    },
+    "spread of revolutionary ideas": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T14:10:43Z"
+    },
+    "state-sponsored violence": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T14:10:44Z"
+    },
+    "steam engine": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T14:12:47Z"
+    },
+    "storming of the bastille": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T14:14:20Z"
+    },
+    "strategic bombing campaign": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T14:14:21Z"
+    },
+    "superpower confrontation": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T14:16:15Z"
+    },
+    "sustainable development goal": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T14:18:12Z"
+    },
+    "taiwan and cross-strait relations": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T14:19:54Z"
+    },
+    "technological innovation": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T14:23:05Z"
+    },
+    "technology and society": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T14:24:10Z"
+    },
+    "terrorism": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T14:26:21Z"
+    },
+    "total war": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T14:28:44Z"
+    },
+    "totalitarianism": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T14:30:14Z"
+    },
+    "trade union": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T14:32:07Z"
+    },
+    "transport revolution": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T14:34:41Z"
+    },
+    "treaty of versailles": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T14:34:41Z"
+    },
+    "trench warfare": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T14:34:42Z"
+    },
+    "un charter": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T14:35:29Z"
+    },
+    "un peacekeeping": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T14:39:35Z"
+    },
+    "unification of germany": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T14:41:44Z"
+    },
+    "unification of italy": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T14:43:40Z"
+    },
+    "united nations": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T14:43:41Z"
+    },
+    "united nations founded": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T14:43:41Z"
+    },
+    "universal declaration of human rights": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T14:46:21Z"
+    },
+    "urban reform in china": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T14:46:22Z"
+    },
+    "urbanization in europe": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T14:49:15Z"
+    },
+    "vietnam war": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T14:49:16Z"
+    },
+    "war crime": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T14:49:16Z"
+    },
+    "war crime prosecution": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T14:50:20Z"
+    },
+    "war guilt clause": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T14:51:30Z"
+    },
+    "war of attrition": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T15:15:00Z"
+    },
+    "wartime alliance": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T14:55:29Z"
+    },
+    "wartime destruction": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T14:57:42Z"
+    },
+    "wartime mobilization": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T14:59:37Z"
+    },
+    "weigh competing interpretations": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T15:01:43Z"
+    },
+    "weimar republic": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T15:02:42Z"
+    },
+    "western front": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T15:04:46Z"
+    },
+    "working class": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T15:05:49Z"
+    },
+    "world war i": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T15:08:01Z"
+    },
+    "yom kippur war": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T15:09:28Z"
     }
   }
 }

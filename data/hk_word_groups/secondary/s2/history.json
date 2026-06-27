@@ -7,6 +7,15 @@
   "version": "2026.06",
   "display_name_en": "S2 History",
   "display_name_zh_hant": "中二歷史",
+  "source": {
+    "type": "curriculum_style_public_references",
+    "references": [
+      "EDB History Curriculum and Assessment Guide (Secondary 1-3)",
+      "EDB junior secondary History curriculum framework",
+      "Public Hong Kong Secondary 2 History syllabus topic examples (late Qing and reform, Republican China, Chinese Civil War, modern Japan and Meiji modernization, Japanese expansion, World War II in Asia, Hong Kong wartime history, Cold War introduction, historical analysis and interpretation)"
+    ],
+    "note": "No fixed official Hong Kong S2 history vocabulary list is prescribed; this list is theme-based for junior secondary S2 history enrichment import. Term-only entries are completed during import."
+  },
   "words": [
     {
       "term": "Dynasty",
@@ -306,6 +315,3691 @@
         "history",
         "historical analysis",
         "noun"
+      ]
+    },
+    {
+      "term": "1911 Revolution",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "xinhai-revolution-and-republican-china"
+      ]
+    },
+    {
+      "term": "abolition of feudal domains",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "meiji-japan-and-modernization"
+      ]
+    },
+    {
+      "term": "agrarian crisis",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "late-qing-crisis-and-internal-challenges"
+      ]
+    },
+    {
+      "term": "air raid",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "world-war-two-in-asia-and-pacific"
+      ]
+    },
+    {
+      "term": "Allied occupation of Japan",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "japanese-militarism-and-expansion"
+      ]
+    },
+    {
+      "term": "Allied powers in Asia",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "world-war-two-in-asia-and-pacific"
+      ]
+    },
+    {
+      "term": "Allied victory in Pacific",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "world-war-two-in-asia-and-pacific"
+      ]
+    },
+    {
+      "term": "annexation of Korea",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "japanese-militarism-and-expansion"
+      ]
+    },
+    {
+      "term": "anti-Christian movement",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "boxer-rebellion-and-anti-foreign-movement"
+      ]
+    },
+    {
+      "term": "anti-communist policy",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "cold-war-and-ideological-conflict"
+      ]
+    },
+    {
+      "term": "anti-foreign sentiment",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "boxer-rebellion-and-anti-foreign-movement"
+      ]
+    },
+    {
+      "term": "anti-imperialist sentiment",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "may-fourth-and-cultural-movements"
+      ]
+    },
+    {
+      "term": "armed conflict between warlords",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "warlord-era-and-political-fragmentation"
+      ]
+    },
+    {
+      "term": "arsenal",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "self-strengthening-and-modernization-in-china"
+      ]
+    },
+    {
+      "term": "atomic bomb",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "world-war-two-in-asia-and-pacific"
+      ]
+    },
+    {
+      "term": "Axis powers in Asia",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "world-war-two-in-asia-and-pacific"
+      ]
+    },
+    {
+      "term": "balance of power",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "international-relations-and-diplomacy"
+      ]
+    },
+    {
+      "term": "Battle of Hong Kong",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "hong-kong-in-war-and-postwar-period"
+      ]
+    },
+    {
+      "term": "Beiyang Government",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "xinhai-revolution-and-republican-china"
+      ]
+    },
+    {
+      "term": "Beiyang warlords",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "warlord-era-and-political-fragmentation"
+      ]
+    },
+    {
+      "term": "birth of modern Chinese state",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "xinhai-revolution-and-republican-china"
+      ]
+    },
+    {
+      "term": "Black Market in wartime Hong Kong",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "hong-kong-in-war-and-postwar-period"
+      ]
+    },
+    {
+      "term": "border closure effect",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "hong-kong-in-war-and-postwar-period"
+      ]
+    },
+    {
+      "term": "Boxer Protocol",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "boxer-rebellion-and-anti-foreign-movement"
+      ]
+    },
+    {
+      "term": "Boxer Rebellion",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "boxer-rebellion-and-anti-foreign-movement"
+      ]
+    },
+    {
+      "term": "Boxer Uprising",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "boxer-rebellion-and-anti-foreign-movement"
+      ]
+    },
+    {
+      "term": "British expansion in Asia",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "opium-wars-and-foreign-incursion"
+      ]
+    },
+    {
+      "term": "call for national reunification",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "warlord-era-and-political-fragmentation"
+      ]
+    },
+    {
+      "term": "call for national salvation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "hundred-days-reform-and-political-change"
+      ]
+    },
+    {
+      "term": "capitalism versus communism",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "cold-war-and-ideological-conflict"
+      ]
+    },
+    {
+      "term": "central authority weak",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "warlord-era-and-political-fragmentation"
+      ]
+    },
+    {
+      "term": "challenge to Chinese dominance",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "meiji-japan-and-modernization"
+      ]
+    },
+    {
+      "term": "challenge to imperial rule",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "late-qing-crisis-and-internal-challenges"
+      ]
+    },
+    {
+      "term": "challenge to national unity",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "warlord-era-and-political-fragmentation"
+      ]
+    },
+    {
+      "term": "Chen Duxiu",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "may-fourth-and-cultural-movements"
+      ]
+    },
+    {
+      "term": "Chinese Civil War",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "chinese-civil-war-and-political-parties"
+      ]
+    },
+    {
+      "term": "Chinese Communist Party",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "chinese-civil-war-and-political-parties"
+      ]
+    },
+    {
+      "term": "Chinese learning as foundation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "self-strengthening-and-modernization-in-china"
+      ]
+    },
+    {
+      "term": "Civil War impact on Hong Kong",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "hong-kong-in-war-and-postwar-period"
+      ]
+    },
+    {
+      "term": "civilian suffering in war",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "world-war-two-in-asia-and-pacific"
+      ]
+    },
+    {
+      "term": "Cold War",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "cold-war-and-ideological-conflict"
+      ]
+    },
+    {
+      "term": "Cold War context for Hong Kong",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "hong-kong-in-war-and-postwar-period"
+      ]
+    },
+    {
+      "term": "Cold War in Asia",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "cold-war-and-ideological-conflict"
+      ]
+    },
+    {
+      "term": "collapse of imperial system",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "late-qing-crisis-and-internal-challenges"
+      ]
+    },
+    {
+      "term": "collective memory",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "advanced-historical-analysis-and-interpretation"
+      ]
+    },
+    {
+      "term": "collective security",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "international-relations-and-diplomacy"
+      ]
+    },
+    {
+      "term": "communicate historical findings",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "advanced-historical-analysis-and-interpretation"
+      ]
+    },
+    {
+      "term": "communist bloc",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "cold-war-and-ideological-conflict"
+      ]
+    },
+    {
+      "term": "communist revolution",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "cold-war-and-ideological-conflict"
+      ]
+    },
+    {
+      "term": "compare China and Japan modernization",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "meiji-japan-and-modernization"
+      ]
+    },
+    {
+      "term": "compare historical accounts",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "advanced-historical-analysis-and-interpretation"
+      ]
+    },
+    {
+      "term": "conservative backlash",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "hundred-days-reform-and-political-change"
+      ]
+    },
+    {
+      "term": "conservative faction",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "late-qing-crisis-and-internal-challenges"
+      ]
+    },
+    {
+      "term": "conservative resistance to reform",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "self-strengthening-and-modernization-in-china"
+      ]
+    },
+    {
+      "term": "constitutional monarchy proposal",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "hundred-days-reform-and-political-change"
+      ]
+    },
+    {
+      "term": "constitutional reform proposal",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "hundred-days-reform-and-political-change"
+      ]
+    },
+    {
+      "term": "containment policy",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "cold-war-and-ideological-conflict"
+      ]
+    },
+    {
+      "term": "corruption in government",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "late-qing-crisis-and-internal-challenges"
+      ]
+    },
+    {
+      "term": "court politics",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "late-qing-crisis-and-internal-challenges"
+      ]
+    },
+    {
+      "term": "critical examination of tradition",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "may-fourth-and-cultural-movements"
+      ]
+    },
+    {
+      "term": "crossing the Yangtze",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "chinese-civil-war-and-political-parties"
+      ]
+    },
+    {
+      "term": "Cuban Missile Crisis",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "cold-war-and-ideological-conflict"
+      ]
+    },
+    {
+      "term": "cultural revolution in thought",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "may-fourth-and-cultural-movements"
+      ]
+    },
+    {
+      "term": "cultural transformation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "may-fourth-and-cultural-movements"
+      ]
+    },
+    {
+      "term": "decisive campaign",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "chinese-civil-war-and-political-parties"
+      ]
+    },
+    {
+      "term": "decline of Qing",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "late-qing-crisis-and-internal-challenges"
+      ]
+    },
+    {
+      "term": "decolonization and Cold War",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "cold-war-and-ideological-conflict"
+      ]
+    },
+    {
+      "term": "defeat of KMT on mainland",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "chinese-civil-war-and-political-parties"
+      ]
+    },
+    {
+      "term": "democratic experiment",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "xinhai-revolution-and-republican-china"
+      ]
+    },
+    {
+      "term": "diplomacy versus war",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "international-relations-and-diplomacy"
+      ]
+    },
+    {
+      "term": "diplomatic negotiation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "international-relations-and-diplomacy"
+      ]
+    },
+    {
+      "term": "diplomatic recognition",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "international-relations-and-diplomacy"
+      ]
+    },
+    {
+      "term": "economic growth in Meiji Japan",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "meiji-japan-and-modernization"
+      ]
+    },
+    {
+      "term": "economic hardship",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "warlord-era-and-political-fragmentation"
+      ]
+    },
+    {
+      "term": "economic modernization",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "self-strengthening-and-modernization-in-china"
+      ]
+    },
+    {
+      "term": "economic transformation of Hong Kong",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "hong-kong-in-war-and-postwar-period"
+      ]
+    },
+    {
+      "term": "education for national renewal",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "may-fourth-and-cultural-movements"
+      ]
+    },
+    {
+      "term": "education reform in late Qing",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "self-strengthening-and-modernization-in-china"
+      ]
+    },
+    {
+      "term": "education reform proposal",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "hundred-days-reform-and-political-change"
+      ]
+    },
+    {
+      "term": "Eight-Nation Alliance",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "boxer-rebellion-and-anti-foreign-movement"
+      ]
+    },
+    {
+      "term": "embassy and consulate",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "international-relations-and-diplomacy"
+      ]
+    },
+    {
+      "term": "emperor-centered modernization",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "meiji-japan-and-modernization"
+      ]
+    },
+    {
+      "term": "Empress Dowager Cixi",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "late-qing-crisis-and-internal-challenges"
+      ]
+    },
+    {
+      "term": "encirclement campaigns",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "chinese-civil-war-and-political-parties"
+      ]
+    },
+    {
+      "term": "end of dynastic rule",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "late-qing-crisis-and-internal-challenges"
+      ]
+    },
+    {
+      "term": "end of imperial China",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "xinhai-revolution-and-republican-china"
+      ]
+    },
+    {
+      "term": "entrepot trade",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "hong-kong-in-war-and-postwar-period"
+      ]
+    },
+    {
+      "term": "evaluate diplomatic outcome",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "international-relations-and-diplomacy"
+      ]
+    },
+    {
+      "term": "evaluate Japanese expansion",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "japanese-militarism-and-expansion"
+      ]
+    },
+    {
+      "term": "evaluate outcome of Civil War",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "chinese-civil-war-and-political-parties"
+      ]
+    },
+    {
+      "term": "evaluate Self-Strengthening Movement",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "self-strengthening-and-modernization-in-china"
+      ]
+    },
+    {
+      "term": "extraterritoriality",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "opium-wars-and-foreign-incursion"
+      ]
+    },
+    {
+      "term": "failed reform",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "hundred-days-reform-and-political-change"
+      ]
+    },
+    {
+      "term": "failure of republican institutions",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "xinhai-revolution-and-republican-china"
+      ]
+    },
+    {
+      "term": "First Opium War",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "opium-wars-and-foreign-incursion"
+      ]
+    },
+    {
+      "term": "First United Front",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "chinese-civil-war-and-political-parties"
+      ]
+    },
+    {
+      "term": "fiscal crisis",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "late-qing-crisis-and-internal-challenges"
+      ]
+    },
+    {
+      "term": "foreign aggression",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "opium-wars-and-foreign-incursion"
+      ]
+    },
+    {
+      "term": "foreign concession",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "opium-wars-and-foreign-incursion"
+      ]
+    },
+    {
+      "term": "foreign control strengthened",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "boxer-rebellion-and-anti-foreign-movement"
+      ]
+    },
+    {
+      "term": "foreign exploitation during fragmentation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "warlord-era-and-political-fragmentation"
+      ]
+    },
+    {
+      "term": "foreign intervention in China",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "boxer-rebellion-and-anti-foreign-movement"
+      ]
+    },
+    {
+      "term": "foreign military suppression",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "boxer-rebellion-and-anti-foreign-movement"
+      ]
+    },
+    {
+      "term": "foreign policy",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "international-relations-and-diplomacy"
+      ]
+    },
+    {
+      "term": "foreign settlement",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "opium-wars-and-foreign-incursion"
+      ]
+    },
+    {
+      "term": "foreign troop presence",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "boxer-rebellion-and-anti-foreign-movement"
+      ]
+    },
+    {
+      "term": "French expansion in Asia",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "opium-wars-and-foreign-incursion"
+      ]
+    },
+    {
+      "term": "from reform to revolution",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "hundred-days-reform-and-political-change"
+      ]
+    },
+    {
+      "term": "Greater East Asia Co-Prosperity Sphere",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "japanese-militarism-and-expansion"
+      ]
+    },
+    {
+      "term": "Guangxu Emperor",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "hundred-days-reform-and-political-change"
+      ]
+    },
+    {
+      "term": "Guangzhou government",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "warlord-era-and-political-fragmentation"
+      ]
+    },
+    {
+      "term": "Hiroshima bombing",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "world-war-two-in-asia-and-pacific"
+      ]
+    },
+    {
+      "term": "historical analysis",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "advanced-historical-analysis-and-interpretation"
+      ]
+    },
+    {
+      "term": "historical argument",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "advanced-historical-analysis-and-interpretation"
+      ]
+    },
+    {
+      "term": "historical causation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "advanced-historical-analysis-and-interpretation"
+      ]
+    },
+    {
+      "term": "historical controversy",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "advanced-historical-analysis-and-interpretation"
+      ]
+    },
+    {
+      "term": "historical debate",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "advanced-historical-analysis-and-interpretation"
+      ]
+    },
+    {
+      "term": "historical empathy",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "advanced-historical-analysis-and-interpretation"
+      ]
+    },
+    {
+      "term": "historical evaluation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "advanced-historical-analysis-and-interpretation"
+      ]
+    },
+    {
+      "term": "historical inquiry skill",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "advanced-historical-analysis-and-interpretation"
+      ]
+    },
+    {
+      "term": "historical interpretation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "advanced-historical-analysis-and-interpretation"
+      ]
+    },
+    {
+      "term": "historical judgment",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "advanced-historical-analysis-and-interpretation"
+      ]
+    },
+    {
+      "term": "historical legacy",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "advanced-historical-analysis-and-interpretation"
+      ]
+    },
+    {
+      "term": "historical lesson of World War II",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "world-war-two-in-asia-and-pacific"
+      ]
+    },
+    {
+      "term": "historical memory",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "advanced-historical-analysis-and-interpretation"
+      ]
+    },
+    {
+      "term": "historical perspective",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "advanced-historical-analysis-and-interpretation"
+      ]
+    },
+    {
+      "term": "historical significance",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "advanced-historical-analysis-and-interpretation"
+      ]
+    },
+    {
+      "term": "historical synthesis",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "advanced-historical-analysis-and-interpretation"
+      ]
+    },
+    {
+      "term": "Hong Kong as refugee society",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "hong-kong-in-war-and-postwar-period"
+      ]
+    },
+    {
+      "term": "Hong Kong during World War II",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "hong-kong-in-war-and-postwar-period"
+      ]
+    },
+    {
+      "term": "Hong Kong Island cession",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "opium-wars-and-foreign-incursion"
+      ]
+    },
+    {
+      "term": "housing shortage in post-war Hong Kong",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "hong-kong-in-war-and-postwar-period"
+      ]
+    },
+    {
+      "term": "humiliation of China",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "boxer-rebellion-and-anti-foreign-movement"
+      ]
+    },
+    {
+      "term": "Hundred Days' Reform",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "hundred-days-reform-and-political-change"
+      ]
+    },
+    {
+      "term": "ideological conflict",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "cold-war-and-ideological-conflict"
+      ]
+    },
+    {
+      "term": "impact of Cold War on China",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "cold-war-and-ideological-conflict"
+      ]
+    },
+    {
+      "term": "impact of failed reform",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "hundred-days-reform-and-political-change"
+      ]
+    },
+    {
+      "term": "impact on Chinese society",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "boxer-rebellion-and-anti-foreign-movement"
+      ]
+    },
+    {
+      "term": "impact on Qing prestige",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "boxer-rebellion-and-anti-foreign-movement"
+      ]
+    },
+    {
+      "term": "Imperial Diet",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "meiji-japan-and-modernization"
+      ]
+    },
+    {
+      "term": "indemnity payment",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "boxer-rebellion-and-anti-foreign-movement"
+      ]
+    },
+    {
+      "term": "industrial revolution in Japan",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "meiji-japan-and-modernization"
+      ]
+    },
+    {
+      "term": "industrial take-off in Hong Kong",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "hong-kong-in-war-and-postwar-period"
+      ]
+    },
+    {
+      "term": "instability of early republic",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "xinhai-revolution-and-republican-china"
+      ]
+    },
+    {
+      "term": "intellectual awakening",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "may-fourth-and-cultural-movements"
+      ]
+    },
+    {
+      "term": "intellectual reform movement",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "hundred-days-reform-and-political-change"
+      ]
+    },
+    {
+      "term": "internal rebellion",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "late-qing-crisis-and-internal-challenges"
+      ]
+    },
+    {
+      "term": "international cooperation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "international-relations-and-diplomacy"
+      ]
+    },
+    {
+      "term": "international law",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "international-relations-and-diplomacy"
+      ]
+    },
+    {
+      "term": "international relations",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "international-relations-and-diplomacy"
+      ]
+    },
+    {
+      "term": "Iron Curtain",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "cold-war-and-ideological-conflict"
+      ]
+    },
+    {
+      "term": "Japanese colony in Korea",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "japanese-militarism-and-expansion"
+      ]
+    },
+    {
+      "term": "Japanese colony in Taiwan",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "japanese-militarism-and-expansion"
+      ]
+    },
+    {
+      "term": "Japanese defeat",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "world-war-two-in-asia-and-pacific"
+      ]
+    },
+    {
+      "term": "Japanese expansion in Asia",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "japanese-militarism-and-expansion"
+      ]
+    },
+    {
+      "term": "Japanese invasion of China",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "japanese-militarism-and-expansion"
+      ]
+    },
+    {
+      "term": "Japanese militarism",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "japanese-militarism-and-expansion"
+      ]
+    },
+    {
+      "term": "Japanese military occupation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "world-war-two-in-asia-and-pacific"
+      ]
+    },
+    {
+      "term": "Japanese modernization model",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "meiji-japan-and-modernization"
+      ]
+    },
+    {
+      "term": "Japanese occupation of Hong Kong",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "hong-kong-in-war-and-postwar-period"
+      ]
+    },
+    {
+      "term": "Japanese surrender",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "japanese-militarism-and-expansion"
+      ]
+    },
+    {
+      "term": "Japanese wartime policy",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "japanese-militarism-and-expansion"
+      ]
+    },
+    {
+      "term": "Kang Youwei",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "hundred-days-reform-and-political-change"
+      ]
+    },
+    {
+      "term": "Korean War",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "cold-war-and-ideological-conflict"
+      ]
+    },
+    {
+      "term": "Kowloon Peninsula",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "opium-wars-and-foreign-incursion"
+      ]
+    },
+    {
+      "term": "Kuomintang",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "chinese-civil-war-and-political-parties"
+      ]
+    },
+    {
+      "term": "labour intensive industry",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "hong-kong-in-war-and-postwar-period"
+      ]
+    },
+    {
+      "term": "late Qing Dynasty",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "late-qing-crisis-and-internal-challenges"
+      ]
+    },
+    {
+      "term": "League of Nations",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "international-relations-and-diplomacy"
+      ]
+    },
+    {
+      "term": "legacy of May Fourth",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "may-fourth-and-cultural-movements"
+      ]
+    },
+    {
+      "term": "lesson from Boxer Rebellion",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "boxer-rebellion-and-anti-foreign-movement"
+      ]
+    },
+    {
+      "term": "Li Dazhao",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "may-fourth-and-cultural-movements"
+      ]
+    },
+    {
+      "term": "Liang Qichao",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "hundred-days-reform-and-political-change"
+      ]
+    },
+    {
+      "term": "limited reform",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "self-strengthening-and-modernization-in-china"
+      ]
+    },
+    {
+      "term": "living through wartime Hong Kong",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "hong-kong-in-war-and-postwar-period"
+      ]
+    },
+    {
+      "term": "local identity formation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "hong-kong-in-war-and-postwar-period"
+      ]
+    },
+    {
+      "term": "Long March",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "chinese-civil-war-and-political-parties"
+      ]
+    },
+    {
+      "term": "Manchukuo puppet state",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "japanese-militarism-and-expansion"
+      ]
+    },
+    {
+      "term": "Manchuria incident",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "japanese-militarism-and-expansion"
+      ]
+    },
+    {
+      "term": "manufacturing boom",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "hong-kong-in-war-and-postwar-period"
+      ]
+    },
+    {
+      "term": "Marco Polo Bridge Incident",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "japanese-militarism-and-expansion"
+      ]
+    },
+    {
+      "term": "May Fourth Movement",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "may-fourth-and-cultural-movements"
+      ]
+    },
+    {
+      "term": "Meiji Japan",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "meiji-japan-and-modernization"
+      ]
+    },
+    {
+      "term": "military alliance",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "international-relations-and-diplomacy"
+      ]
+    },
+    {
+      "term": "military campaign",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "warlord-era-and-political-fragmentation"
+      ]
+    },
+    {
+      "term": "military dominance in politics",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "japanese-militarism-and-expansion"
+      ]
+    },
+    {
+      "term": "military faction",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "warlord-era-and-political-fragmentation"
+      ]
+    },
+    {
+      "term": "military modernization",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "self-strengthening-and-modernization-in-china"
+      ]
+    },
+    {
+      "term": "modern army",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "self-strengthening-and-modernization-in-china"
+      ]
+    },
+    {
+      "term": "modern Chinese nationalism",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "hundred-days-reform-and-political-change"
+      ]
+    },
+    {
+      "term": "modern Chinese thought",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "may-fourth-and-cultural-movements"
+      ]
+    },
+    {
+      "term": "modern constitution of Japan",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "meiji-japan-and-modernization"
+      ]
+    },
+    {
+      "term": "modern education system in Japan",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "meiji-japan-and-modernization"
+      ]
+    },
+    {
+      "term": "modern industry in China",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "self-strengthening-and-modernization-in-china"
+      ]
+    },
+    {
+      "term": "modern Japanese industry",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "meiji-japan-and-modernization"
+      ]
+    },
+    {
+      "term": "modern military in Japan",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "meiji-japan-and-modernization"
+      ]
+    },
+    {
+      "term": "modern navy",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "self-strengthening-and-modernization-in-china"
+      ]
+    },
+    {
+      "term": "modern political thought in China",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "hundred-days-reform-and-political-change"
+      ]
+    },
+    {
+      "term": "modernization debate",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "self-strengthening-and-modernization-in-china"
+      ]
+    },
+    {
+      "term": "most favoured nation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "opium-wars-and-foreign-incursion"
+      ]
+    },
+    {
+      "term": "multi-causal explanation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "advanced-historical-analysis-and-interpretation"
+      ]
+    },
+    {
+      "term": "Nagasaki bombing",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "world-war-two-in-asia-and-pacific"
+      ]
+    },
+    {
+      "term": "Nanjing Massacre",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "japanese-militarism-and-expansion"
+      ]
+    },
+    {
+      "term": "national crisis",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "boxer-rebellion-and-anti-foreign-movement"
+      ]
+    },
+    {
+      "term": "national humiliation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "opium-wars-and-foreign-incursion"
+      ]
+    },
+    {
+      "term": "national interest in diplomacy",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "international-relations-and-diplomacy"
+      ]
+    },
+    {
+      "term": "national modernization program",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "meiji-japan-and-modernization"
+      ]
+    },
+    {
+      "term": "Nationalist government reunification",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "warlord-era-and-political-fragmentation"
+      ]
+    },
+    {
+      "term": "nationalist protest",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "may-fourth-and-cultural-movements"
+      ]
+    },
+    {
+      "term": "NATO alliance",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "cold-war-and-ideological-conflict"
+      ]
+    },
+    {
+      "term": "New Culture Movement",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "may-fourth-and-cultural-movements"
+      ]
+    },
+    {
+      "term": "New Territories lease",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "opium-wars-and-foreign-incursion"
+      ]
+    },
+    {
+      "term": "newspaper and public opinion",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "hundred-days-reform-and-political-change"
+      ]
+    },
+    {
+      "term": "Nian Rebellion",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "late-qing-crisis-and-internal-challenges"
+      ]
+    },
+    {
+      "term": "non-aggression pact",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "international-relations-and-diplomacy"
+      ]
+    },
+    {
+      "term": "Northern Expedition",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "warlord-era-and-political-fragmentation"
+      ]
+    },
+    {
+      "term": "Northern Expedition campaign",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "chinese-civil-war-and-political-parties"
+      ]
+    },
+    {
+      "term": "nuclear arms race",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "cold-war-and-ideological-conflict"
+      ]
+    },
+    {
+      "term": "official modernization",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "self-strengthening-and-modernization-in-china"
+      ]
+    },
+    {
+      "term": "Opium Trade",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "opium-wars-and-foreign-incursion"
+      ]
+    },
+    {
+      "term": "overthrow of Qing",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "xinhai-revolution-and-republican-china"
+      ]
+    },
+    {
+      "term": "Pacific expansion",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "japanese-militarism-and-expansion"
+      ]
+    },
+    {
+      "term": "Pacific War",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "world-war-two-in-asia-and-pacific"
+      ]
+    },
+    {
+      "term": "parliament in early republic",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "xinhai-revolution-and-republican-china"
+      ]
+    },
+    {
+      "term": "peace conference",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "international-relations-and-diplomacy"
+      ]
+    },
+    {
+      "term": "Pearl Harbor attack",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "japanese-militarism-and-expansion"
+      ]
+    },
+    {
+      "term": "peasant uprising",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "late-qing-crisis-and-internal-challenges"
+      ]
+    },
+    {
+      "term": "People's Republic of China founded",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "chinese-civil-war-and-political-parties"
+      ]
+    },
+    {
+      "term": "political awakening",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "hundred-days-reform-and-political-change"
+      ]
+    },
+    {
+      "term": "political coalition",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "warlord-era-and-political-fragmentation"
+      ]
+    },
+    {
+      "term": "political crisis",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "late-qing-crisis-and-internal-challenges"
+      ]
+    },
+    {
+      "term": "political fragmentation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "xinhai-revolution-and-republican-china"
+      ]
+    },
+    {
+      "term": "political instability",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "warlord-era-and-political-fragmentation"
+      ]
+    },
+    {
+      "term": "political party organization",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "xinhai-revolution-and-republican-china"
+      ]
+    },
+    {
+      "term": "political reform in Qing",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "hundred-days-reform-and-political-change"
+      ]
+    },
+    {
+      "term": "political struggle for China",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "chinese-civil-war-and-political-parties"
+      ]
+    },
+    {
+      "term": "politicization of culture",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "may-fourth-and-cultural-movements"
+      ]
+    },
+    {
+      "term": "popular resistance",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "boxer-rebellion-and-anti-foreign-movement"
+      ]
+    },
+    {
+      "term": "population growth in Hong Kong",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "hong-kong-in-war-and-postwar-period"
+      ]
+    },
+    {
+      "term": "population pressure",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "late-qing-crisis-and-internal-challenges"
+      ]
+    },
+    {
+      "term": "post-war Hong Kong recovery",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "hong-kong-in-war-and-postwar-period"
+      ]
+    },
+    {
+      "term": "post-war Japanese reform",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "japanese-militarism-and-expansion"
+      ]
+    },
+    {
+      "term": "post-war settlement in Asia",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "world-war-two-in-asia-and-pacific"
+      ]
+    },
+    {
+      "term": "presidential system",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "xinhai-revolution-and-republican-china"
+      ]
+    },
+    {
+      "term": "Provisional Government of Republic of China",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "xinhai-revolution-and-republican-china"
+      ]
+    },
+    {
+      "term": "proxy war",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "cold-war-and-ideological-conflict"
+      ]
+    },
+    {
+      "term": "Qing authority weakened",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "boxer-rebellion-and-anti-foreign-movement"
+      ]
+    },
+    {
+      "term": "Qing government reform",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "late-qing-crisis-and-internal-challenges"
+      ]
+    },
+    {
+      "term": "radicalization of intellectuals",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "hundred-days-reform-and-political-change"
+      ]
+    },
+    {
+      "term": "railway building",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "self-strengthening-and-modernization-in-china"
+      ]
+    },
+    {
+      "term": "rationing in wartime",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "world-war-two-in-asia-and-pacific"
+      ]
+    },
+    {
+      "term": "reform faction",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "late-qing-crisis-and-internal-challenges"
+      ]
+    },
+    {
+      "term": "reform movement legacy",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "hundred-days-reform-and-political-change"
+      ]
+    },
+    {
+      "term": "reform versus revolution",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "hundred-days-reform-and-political-change"
+      ]
+    },
+    {
+      "term": "refugee from mainland China",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "hong-kong-in-war-and-postwar-period"
+      ]
+    },
+    {
+      "term": "refugee influx to Hong Kong",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "hong-kong-in-war-and-postwar-period"
+      ]
+    },
+    {
+      "term": "regional autonomy",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "warlord-era-and-political-fragmentation"
+      ]
+    },
+    {
+      "term": "regional military leader",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "warlord-era-and-political-fragmentation"
+      ]
+    },
+    {
+      "term": "reject traditional culture",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "may-fourth-and-cultural-movements"
+      ]
+    },
+    {
+      "term": "Republic of China founded",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "xinhai-revolution-and-republican-china"
+      ]
+    },
+    {
+      "term": "resumption of civil war",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "chinese-civil-war-and-political-parties"
+      ]
+    },
+    {
+      "term": "retreat to Taiwan",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "chinese-civil-war-and-political-parties"
+      ]
+    },
+    {
+      "term": "revolutionary base area",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "chinese-civil-war-and-political-parties"
+      ]
+    },
+    {
+      "term": "rise of Japan as power",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "meiji-japan-and-modernization"
+      ]
+    },
+    {
+      "term": "sanction",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "international-relations-and-diplomacy"
+      ]
+    },
+    {
+      "term": "science and democracy",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "may-fourth-and-cultural-movements"
+      ]
+    },
+    {
+      "term": "search for strong leader",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "xinhai-revolution-and-republican-china"
+      ]
+    },
+    {
+      "term": "Second Opium War",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "opium-wars-and-foreign-incursion"
+      ]
+    },
+    {
+      "term": "Second Sino-Japanese War",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "japanese-militarism-and-expansion"
+      ]
+    },
+    {
+      "term": "Second United Front",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "chinese-civil-war-and-political-parties"
+      ]
+    },
+    {
+      "term": "Self-Strengthening Movement",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "self-strengthening-and-modernization-in-china"
+      ]
+    },
+    {
+      "term": "semi-colonial status",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "opium-wars-and-foreign-incursion"
+      ]
+    },
+    {
+      "term": "shipbuilding",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "self-strengthening-and-modernization-in-china"
+      ]
+    },
+    {
+      "term": "Siege of Legations",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "boxer-rebellion-and-anti-foreign-movement"
+      ]
+    },
+    {
+      "term": "significance of 1911 Revolution",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "xinhai-revolution-and-republican-china"
+      ]
+    },
+    {
+      "term": "Sino-Japanese War 1894",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "meiji-japan-and-modernization"
+      ]
+    },
+    {
+      "term": "social change in Meiji Japan",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "meiji-japan-and-modernization"
+      ]
+    },
+    {
+      "term": "social change in post-war Hong Kong",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "hong-kong-in-war-and-postwar-period"
+      ]
+    },
+    {
+      "term": "social disorder",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "warlord-era-and-political-fragmentation"
+      ]
+    },
+    {
+      "term": "social reform movement",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "may-fourth-and-cultural-movements"
+      ]
+    },
+    {
+      "term": "social unrest in Qing China",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "late-qing-crisis-and-internal-challenges"
+      ]
+    },
+    {
+      "term": "split between KMT and CCP",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "chinese-civil-war-and-political-parties"
+      ]
+    },
+    {
+      "term": "spread of Marxism in China",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "may-fourth-and-cultural-movements"
+      ]
+    },
+    {
+      "term": "state-led development",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "meiji-japan-and-modernization"
+      ]
+    },
+    {
+      "term": "state-led modernization",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "self-strengthening-and-modernization-in-china"
+      ]
+    },
+    {
+      "term": "strategic bombing",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "world-war-two-in-asia-and-pacific"
+      ]
+    },
+    {
+      "term": "student protest",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "may-fourth-and-cultural-movements"
+      ]
+    },
+    {
+      "term": "study abroad movement",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "self-strengthening-and-modernization-in-china"
+      ]
+    },
+    {
+      "term": "Sun Yat-sen",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "xinhai-revolution-and-republican-china"
+      ]
+    },
+    {
+      "term": "support with examples",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "advanced-historical-analysis-and-interpretation"
+      ]
+    },
+    {
+      "term": "Taiping Rebellion",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "late-qing-crisis-and-internal-challenges"
+      ]
+    },
+    {
+      "term": "technological transfer",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "self-strengthening-and-modernization-in-china"
+      ]
+    },
+    {
+      "term": "telegraph in China",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "self-strengthening-and-modernization-in-china"
+      ]
+    },
+    {
+      "term": "territorial cession",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "opium-wars-and-foreign-incursion"
+      ]
+    },
+    {
+      "term": "Third World in Cold War",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "cold-war-and-ideological-conflict"
+      ]
+    },
+    {
+      "term": "Three Principles of the People",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "xinhai-revolution-and-republican-china"
+      ]
+    },
+    {
+      "term": "Tokyo Trial",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "world-war-two-in-asia-and-pacific"
+      ]
+    },
+    {
+      "term": "Tongmenghui",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "xinhai-revolution-and-republican-china"
+      ]
+    },
+    {
+      "term": "trade agreement",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "international-relations-and-diplomacy"
+      ]
+    },
+    {
+      "term": "transition to republic",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "late-qing-crisis-and-internal-challenges"
+      ]
+    },
+    {
+      "term": "treaty negotiation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "international-relations-and-diplomacy"
+      ]
+    },
+    {
+      "term": "Treaty of Nanking",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "opium-wars-and-foreign-incursion"
+      ]
+    },
+    {
+      "term": "Treaty of Shimonoseki",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "meiji-japan-and-modernization"
+      ]
+    },
+    {
+      "term": "Treaty of Tientsin",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "opium-wars-and-foreign-incursion"
+      ]
+    },
+    {
+      "term": "treaty port",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "opium-wars-and-foreign-incursion"
+      ]
+    },
+    {
+      "term": "turning point in late Qing",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "boxer-rebellion-and-anti-foreign-movement"
+      ]
+    },
+    {
+      "term": "Twenty-One Demands",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "japanese-militarism-and-expansion"
+      ]
+    },
+    {
+      "term": "underground resistance",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "world-war-two-in-asia-and-pacific"
+      ]
+    },
+    {
+      "term": "unequal treaty",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "opium-wars-and-foreign-incursion"
+      ]
+    },
+    {
+      "term": "unification movement",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "warlord-era-and-political-fragmentation"
+      ]
+    },
+    {
+      "term": "United Nations founded",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "international-relations-and-diplomacy"
+      ]
+    },
+    {
+      "term": "United States and Soviet Union",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "cold-war-and-ideological-conflict"
+      ]
+    },
+    {
+      "term": "vernacular literature movement",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "may-fourth-and-cultural-movements"
+      ]
+    },
+    {
+      "term": "Versailles Peace Conference",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "international-relations-and-diplomacy"
+      ]
+    },
+    {
+      "term": "victory of CCP",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "chinese-civil-war-and-political-parties"
+      ]
+    },
+    {
+      "term": "Vietnam War",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "cold-war-and-ideological-conflict"
+      ]
+    },
+    {
+      "term": "violent uprising",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "boxer-rebellion-and-anti-foreign-movement"
+      ]
+    },
+    {
+      "term": "war crimes trial",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "world-war-two-in-asia-and-pacific"
+      ]
+    },
+    {
+      "term": "War of Resistance against Japan",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "chinese-civil-war-and-political-parties"
+      ]
+    },
+    {
+      "term": "Warlord Era",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "warlord-era-and-political-fragmentation"
+      ]
+    },
+    {
+      "term": "warlord rule",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "warlord-era-and-political-fragmentation"
+      ]
+    },
+    {
+      "term": "Warsaw Pact",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "cold-war-and-ideological-conflict"
+      ]
+    },
+    {
+      "term": "wartime economy",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "world-war-two-in-asia-and-pacific"
+      ]
+    },
+    {
+      "term": "wartime resistance",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "world-war-two-in-asia-and-pacific"
+      ]
+    },
+    {
+      "term": "weigh evidence",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "advanced-historical-analysis-and-interpretation"
+      ]
+    },
+    {
+      "term": "Western bloc",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "cold-war-and-ideological-conflict"
+      ]
+    },
+    {
+      "term": "Western learning",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "self-strengthening-and-modernization-in-china"
+      ]
+    },
+    {
+      "term": "Western powers in China",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "opium-wars-and-foreign-incursion"
+      ]
+    },
+    {
+      "term": "Western technology adoption",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "meiji-japan-and-modernization"
+      ]
+    },
+    {
+      "term": "Whampoa Military Academy",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "warlord-era-and-political-fragmentation"
+      ]
+    },
+    {
+      "term": "women's emancipation movement",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "may-fourth-and-cultural-movements"
+      ]
+    },
+    {
+      "term": "World War II in Asia",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "world-war-two-in-asia-and-pacific"
+      ]
+    },
+    {
+      "term": "Xinhai Revolution",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "xinhai-revolution-and-republican-china"
+      ]
+    },
+    {
+      "term": "Yan'an base area",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "chinese-civil-war-and-political-parties"
+      ]
+    },
+    {
+      "term": "Yuan Shikai",
+      "tags": [
+        "hk",
+        "secondary",
+        "s2",
+        "history",
+        "curriculum-style",
+        "xinhai-revolution-and-republican-china"
       ]
     }
   ]

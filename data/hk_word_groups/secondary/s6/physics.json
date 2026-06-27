@@ -7,6 +7,15 @@
   "version": "2026.06",
   "display_name_en": "S6 Physics",
   "display_name_zh_hant": "中六物理",
+  "source": {
+    "type": "curriculum_style_public_references",
+    "references": [
+      "EDB Physics Curriculum and Assessment Guide (Secondary 4-6)",
+      "EDB HKDSE Physics Compulsory Part and Elective Part learning objectives",
+      "Public Hong Kong S6 Physics syllabus topic examples (HKDSE revision, atomic world, medical physics, astronomy and space science, energy and environment, experimental skills, data analysis and evaluation)"
+    ],
+    "note": "No fixed official Hong Kong S6 physics vocabulary list is prescribed; this list is theme-based for senior secondary S6 / HKDSE physics enrichment import. Term-only entries are completed during import."
+  },
   "words": [
     {
       "term": "Simple Harmonic Motion",
@@ -326,6 +335,3086 @@
         "modern physics",
         "nuclear",
         "noun"
+      ]
+    },
+    {
+      "term": "absolute zero concept",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "thermal-physics-and-gas-applications"
+      ]
+    },
+    {
+      "term": "absorption line spectrum",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "hkdse-waves-optics-and-interference"
+      ]
+    },
+    {
+      "term": "AC power factor",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "hkdse-fields-circuits-and-power"
+      ]
+    },
+    {
+      "term": "acoustic gel coupling",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "medical-physics-and-imaging"
+      ]
+    },
+    {
+      "term": "activity decay",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "radioactivity-and-nuclear-energy"
+      ]
+    },
+    {
+      "term": "adiabatic process",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "thermal-physics-and-gas-applications"
+      ]
+    },
+    {
+      "term": "age of universe estimate",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "astronomy-and-cosmology"
+      ]
+    },
+    {
+      "term": "ALARA principle",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "medical-physics-and-imaging"
+      ]
+    },
+    {
+      "term": "anomaly handling",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "experimental-design-and-investigation"
+      ]
+    },
+    {
+      "term": "antenna radiation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "electromagnetic-technology-and-applications"
+      ]
+    },
+    {
+      "term": "apparatus setup",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "experimental-design-and-investigation"
+      ]
+    },
+    {
+      "term": "area under curve meaning",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "data-analysis-graphing-and-evaluation"
+      ]
+    },
+    {
+      "term": "assumption statement",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "hkdse-problem-solving-and-modelling"
+      ]
+    },
+    {
+      "term": "atomic spectrum",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "atomic-world-and-quantum-physics"
+      ]
+    },
+    {
+      "term": "background count correction",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "radioactivity-and-nuclear-energy"
+      ]
+    },
+    {
+      "term": "battery storage system",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "energy-environment-and-sustainable-technology"
+      ]
+    },
+    {
+      "term": "best-fit line drawing",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "data-analysis-graphing-and-evaluation"
+      ]
+    },
+    {
+      "term": "binding energy per nucleon",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "radioactivity-and-nuclear-energy"
+      ]
+    },
+    {
+      "term": "black hole concept",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "astronomy-and-cosmology"
+      ]
+    },
+    {
+      "term": "Bohr model limitation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "atomic-world-and-quantum-physics"
+      ]
+    },
+    {
+      "term": "boundary condition",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "hkdse-problem-solving-and-modelling"
+      ]
+    },
+    {
+      "term": "calibration procedure",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "experimental-design-and-investigation"
+      ]
+    },
+    {
+      "term": "calorimetry method",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "thermal-physics-and-gas-applications"
+      ]
+    },
+    {
+      "term": "capacitor energy formula",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "hkdse-fields-circuits-and-power"
+      ]
+    },
+    {
+      "term": "carbon intensity",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "energy-environment-and-sustainable-technology"
+      ]
+    },
+    {
+      "term": "carbon-14 dating",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "radioactivity-and-nuclear-energy"
+      ]
+    },
+    {
+      "term": "Carnot cycle concept",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "thermal-physics-and-gas-applications"
+      ]
+    },
+    {
+      "term": "centre of gravity",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "hkdse-mechanics-and-energy-synthesis"
+      ]
+    },
+    {
+      "term": "centripetal force application",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "hkdse-mechanics-and-energy-synthesis"
+      ]
+    },
+    {
+      "term": "characteristic X-ray",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "atomic-world-and-quantum-physics"
+      ]
+    },
+    {
+      "term": "charging curve",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "hkdse-fields-circuits-and-power"
+      ]
+    },
+    {
+      "term": "checking answer plausibility",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "hkdse-problem-solving-and-modelling"
+      ]
+    },
+    {
+      "term": "circuit protection",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "hkdse-fields-circuits-and-power"
+      ]
+    },
+    {
+      "term": "climate change mitigation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "energy-environment-and-sustainable-technology"
+      ]
+    },
+    {
+      "term": "climate science evidence",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "modern-physics-issues-and-society"
+      ]
+    },
+    {
+      "term": "computed tomography scan",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "medical-physics-and-imaging"
+      ]
+    },
+    {
+      "term": "conservation of momentum",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "hkdse-mechanics-and-energy-synthesis"
+      ]
+    },
+    {
+      "term": "continuous X-ray spectrum",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "atomic-world-and-quantum-physics"
+      ]
+    },
+    {
+      "term": "contrast agent",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "medical-physics-and-imaging"
+      ]
+    },
+    {
+      "term": "control rod",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "radioactivity-and-nuclear-energy"
+      ]
+    },
+    {
+      "term": "controlled variable",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "experimental-design-and-investigation"
+      ]
+    },
+    {
+      "term": "coolant system",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "radioactivity-and-nuclear-energy"
+      ]
+    },
+    {
+      "term": "cooling curve analysis",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "thermal-physics-and-gas-applications"
+      ]
+    },
+    {
+      "term": "correlation assessment",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "data-analysis-graphing-and-evaluation"
+      ]
+    },
+    {
+      "term": "cosmic background radiation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "astronomy-and-cosmology"
+      ]
+    },
+    {
+      "term": "cosmological red shift",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "astronomy-and-cosmology"
+      ]
+    },
+    {
+      "term": "critical angle condition",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "hkdse-waves-optics-and-interference"
+      ]
+    },
+    {
+      "term": "critical mass concept",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "radioactivity-and-nuclear-energy"
+      ]
+    },
+    {
+      "term": "cyclotron motion",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "electromagnetic-technology-and-applications"
+      ]
+    },
+    {
+      "term": "dark matter concept",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "astronomy-and-cosmology"
+      ]
+    },
+    {
+      "term": "data reliability",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "data-analysis-graphing-and-evaluation"
+      ]
+    },
+    {
+      "term": "data validity",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "data-analysis-graphing-and-evaluation"
+      ]
+    },
+    {
+      "term": "de Broglie hypothesis",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "atomic-world-and-quantum-physics"
+      ]
+    },
+    {
+      "term": "decay curve analysis",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "radioactivity-and-nuclear-energy"
+      ]
+    },
+    {
+      "term": "dependent variable",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "experimental-design-and-investigation"
+      ]
+    },
+    {
+      "term": "diagnostic radiology",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "medical-physics-and-imaging"
+      ]
+    },
+    {
+      "term": "diagram labelling",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "experimental-design-and-investigation"
+      ]
+    },
+    {
+      "term": "diffraction grating equation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "hkdse-waves-optics-and-interference"
+      ]
+    },
+    {
+      "term": "dimensional consistency",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "data-analysis-graphing-and-evaluation"
+      ]
+    },
+    {
+      "term": "discharging curve",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "hkdse-fields-circuits-and-power"
+      ]
+    },
+    {
+      "term": "Doppler effect",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "hkdse-waves-optics-and-interference"
+      ]
+    },
+    {
+      "term": "dosimeter badge",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "medical-physics-and-imaging"
+      ]
+    },
+    {
+      "term": "double-slit formula",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "hkdse-waves-optics-and-interference"
+      ]
+    },
+    {
+      "term": "echocardiography",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "medical-physics-and-imaging"
+      ]
+    },
+    {
+      "term": "efficiency calculation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "hkdse-mechanics-and-energy-synthesis"
+      ]
+    },
+    {
+      "term": "elastic and inelastic collision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "hkdse-mechanics-and-energy-synthesis"
+      ]
+    },
+    {
+      "term": "electric field pattern",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "hkdse-fields-circuits-and-power"
+      ]
+    },
+    {
+      "term": "electric motor principle",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "electromagnetic-technology-and-applications"
+      ]
+    },
+    {
+      "term": "electric vehicle charging",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "energy-environment-and-sustainable-technology"
+      ]
+    },
+    {
+      "term": "electromagnetic compatibility",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "electromagnetic-technology-and-applications"
+      ]
+    },
+    {
+      "term": "electromagnetic induction application",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "hkdse-fields-circuits-and-power"
+      ]
+    },
+    {
+      "term": "electromagnetic relay",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "electromagnetic-technology-and-applications"
+      ]
+    },
+    {
+      "term": "electromagnetic wave generation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "electromagnetic-technology-and-applications"
+      ]
+    },
+    {
+      "term": "electron transition energy",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "atomic-world-and-quantum-physics"
+      ]
+    },
+    {
+      "term": "electron wave nature",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "atomic-world-and-quantum-physics"
+      ]
+    },
+    {
+      "term": "emission line spectrum",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "hkdse-waves-optics-and-interference"
+      ]
+    },
+    {
+      "term": "endoscopic examination",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "medical-physics-and-imaging"
+      ]
+    },
+    {
+      "term": "energy audit method",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "energy-environment-and-sustainable-technology"
+      ]
+    },
+    {
+      "term": "energy conservation policy",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "energy-environment-and-sustainable-technology"
+      ]
+    },
+    {
+      "term": "energy demand trend",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "energy-environment-and-sustainable-technology"
+      ]
+    },
+    {
+      "term": "energy dissipation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "hkdse-mechanics-and-energy-synthesis"
+      ]
+    },
+    {
+      "term": "energy resource comparison",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "hkdse-mechanics-and-energy-synthesis"
+      ]
+    },
+    {
+      "term": "engineering application",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "modern-physics-issues-and-society"
+      ]
+    },
+    {
+      "term": "equilibrium of forces",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "hkdse-mechanics-and-energy-synthesis"
+      ]
+    },
+    {
+      "term": "equipotential line",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "hkdse-fields-circuits-and-power"
+      ]
+    },
+    {
+      "term": "error bar analysis",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "data-analysis-graphing-and-evaluation"
+      ]
+    },
+    {
+      "term": "escape speed",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "hkdse-mechanics-and-energy-synthesis"
+      ]
+    },
+    {
+      "term": "evidence-based inference",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "experimental-design-and-investigation"
+      ]
+    },
+    {
+      "term": "exam command term",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "hkdse-problem-solving-and-modelling"
+      ]
+    },
+    {
+      "term": "excitation energy",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "atomic-world-and-quantum-physics"
+      ]
+    },
+    {
+      "term": "exoplanet detection",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "astronomy-and-cosmology"
+      ]
+    },
+    {
+      "term": "experimental report",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "experimental-design-and-investigation"
+      ]
+    },
+    {
+      "term": "extreme case check",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "hkdse-problem-solving-and-modelling"
+      ]
+    },
+    {
+      "term": "fair test design",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "experimental-design-and-investigation"
+      ]
+    },
+    {
+      "term": "fission chain reaction",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "radioactivity-and-nuclear-energy"
+      ]
+    },
+    {
+      "term": "formula selection",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "hkdse-problem-solving-and-modelling"
+      ]
+    },
+    {
+      "term": "free-body diagram",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "hkdse-problem-solving-and-modelling"
+      ]
+    },
+    {
+      "term": "fringe width",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "hkdse-waves-optics-and-interference"
+      ]
+    },
+    {
+      "term": "fundamental and harmonic",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "hkdse-waves-optics-and-interference"
+      ]
+    },
+    {
+      "term": "fuse rating",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "hkdse-fields-circuits-and-power"
+      ]
+    },
+    {
+      "term": "fusion in stars",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "radioactivity-and-nuclear-energy"
+      ]
+    },
+    {
+      "term": "future physics challenge",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "modern-physics-issues-and-society"
+      ]
+    },
+    {
+      "term": "gamma camera imaging",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "medical-physics-and-imaging"
+      ]
+    },
+    {
+      "term": "gamma decay",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "radioactivity-and-nuclear-energy"
+      ]
+    },
+    {
+      "term": "gas law graph",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "thermal-physics-and-gas-applications"
+      ]
+    },
+    {
+      "term": "Geiger counter calibration",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "radioactivity-and-nuclear-energy"
+      ]
+    },
+    {
+      "term": "generator principle",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "electromagnetic-technology-and-applications"
+      ]
+    },
+    {
+      "term": "gradient interpretation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "data-analysis-graphing-and-evaluation"
+      ]
+    },
+    {
+      "term": "graph linearization",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "data-analysis-graphing-and-evaluation"
+      ]
+    },
+    {
+      "term": "graphical solution",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "hkdse-problem-solving-and-modelling"
+      ]
+    },
+    {
+      "term": "gravitational lensing",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "astronomy-and-cosmology"
+      ]
+    },
+    {
+      "term": "Greater Bay Area technology",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "modern-physics-issues-and-society"
+      ]
+    },
+    {
+      "term": "greenhouse gas emission",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "energy-environment-and-sustainable-technology"
+      ]
+    },
+    {
+      "term": "grid stability",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "energy-environment-and-sustainable-technology"
+      ]
+    },
+    {
+      "term": "half-life calculation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "radioactivity-and-nuclear-energy"
+      ]
+    },
+    {
+      "term": "Hall probe",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "electromagnetic-technology-and-applications"
+      ]
+    },
+    {
+      "term": "heat engine efficiency",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "thermal-physics-and-gas-applications"
+      ]
+    },
+    {
+      "term": "heat insulation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "thermal-physics-and-gas-applications"
+      ]
+    },
+    {
+      "term": "heating curve analysis",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "thermal-physics-and-gas-applications"
+      ]
+    },
+    {
+      "term": "Hertzsprung-Russell diagram",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "astronomy-and-cosmology"
+      ]
+    },
+    {
+      "term": "Hong Kong science development",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "modern-physics-issues-and-society"
+      ]
+    },
+    {
+      "term": "household wiring safety",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "hkdse-fields-circuits-and-power"
+      ]
+    },
+    {
+      "term": "Hubble constant",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "astronomy-and-cosmology"
+      ]
+    },
+    {
+      "term": "hydroelectric dam",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "energy-environment-and-sustainable-technology"
+      ]
+    },
+    {
+      "term": "hypothesis testing",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "experimental-design-and-investigation"
+      ]
+    },
+    {
+      "term": "ideal gas equation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "thermal-physics-and-gas-applications"
+      ]
+    },
+    {
+      "term": "image resolution",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "medical-physics-and-imaging"
+      ]
+    },
+    {
+      "term": "improvement suggestion",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "experimental-design-and-investigation"
+      ]
+    },
+    {
+      "term": "independent variable",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "experimental-design-and-investigation"
+      ]
+    },
+    {
+      "term": "induction cooker",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "electromagnetic-technology-and-applications"
+      ]
+    },
+    {
+      "term": "innovation and invention",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "modern-physics-issues-and-society"
+      ]
+    },
+    {
+      "term": "instrument resolution",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "experimental-design-and-investigation"
+      ]
+    },
+    {
+      "term": "intellectual property",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "modern-physics-issues-and-society"
+      ]
+    },
+    {
+      "term": "intercept meaning",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "data-analysis-graphing-and-evaluation"
+      ]
+    },
+    {
+      "term": "internal resistance effect",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "hkdse-fields-circuits-and-power"
+      ]
+    },
+    {
+      "term": "international research collaboration",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "modern-physics-issues-and-society"
+      ]
+    },
+    {
+      "term": "ionization energy",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "atomic-world-and-quantum-physics"
+      ]
+    },
+    {
+      "term": "ionizing imaging risk",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "medical-physics-and-imaging"
+      ]
+    },
+    {
+      "term": "isothermal expansion",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "thermal-physics-and-gas-applications"
+      ]
+    },
+    {
+      "term": "kinetic theory explanation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "thermal-physics-and-gas-applications"
+      ]
+    },
+    {
+      "term": "latent heat experiment",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "thermal-physics-and-gas-applications"
+      ]
+    },
+    {
+      "term": "lead apron",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "medical-physics-and-imaging"
+      ]
+    },
+    {
+      "term": "lens formula application",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "hkdse-waves-optics-and-interference"
+      ]
+    },
+    {
+      "term": "life-cycle assessment",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "energy-environment-and-sustainable-technology"
+      ]
+    },
+    {
+      "term": "light-year distance",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "astronomy-and-cosmology"
+      ]
+    },
+    {
+      "term": "limitation of model",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "hkdse-problem-solving-and-modelling"
+      ]
+    },
+    {
+      "term": "linear graph",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "data-analysis-graphing-and-evaluation"
+      ]
+    },
+    {
+      "term": "logarithmic scale",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "data-analysis-graphing-and-evaluation"
+      ]
+    },
+    {
+      "term": "low-carbon transition",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "energy-environment-and-sustainable-technology"
+      ]
+    },
+    {
+      "term": "maglev train concept",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "electromagnetic-technology-and-applications"
+      ]
+    },
+    {
+      "term": "magnetic force direction",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "hkdse-fields-circuits-and-power"
+      ]
+    },
+    {
+      "term": "magnetic resonance imaging",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "medical-physics-and-imaging"
+      ]
+    },
+    {
+      "term": "magnetic resonance principle",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "electromagnetic-technology-and-applications"
+      ]
+    },
+    {
+      "term": "magnification calculation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "hkdse-waves-optics-and-interference"
+      ]
+    },
+    {
+      "term": "main sequence star",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "astronomy-and-cosmology"
+      ]
+    },
+    {
+      "term": "mass spectrometer",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "electromagnetic-technology-and-applications"
+      ]
+    },
+    {
+      "term": "mass-energy equivalence",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "radioactivity-and-nuclear-energy"
+      ]
+    },
+    {
+      "term": "mechanical advantage",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "hkdse-mechanics-and-energy-synthesis"
+      ]
+    },
+    {
+      "term": "medical radiation ethics",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "modern-physics-issues-and-society"
+      ]
+    },
+    {
+      "term": "medical tracer isotope",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "radioactivity-and-nuclear-energy"
+      ]
+    },
+    {
+      "term": "method limitation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "experimental-design-and-investigation"
+      ]
+    },
+    {
+      "term": "misinformation in science",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "modern-physics-issues-and-society"
+      ]
+    },
+    {
+      "term": "moderator",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "radioactivity-and-nuclear-energy"
+      ]
+    },
+    {
+      "term": "multi-step calculation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "hkdse-problem-solving-and-modelling"
+      ]
+    },
+    {
+      "term": "neutron star formation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "astronomy-and-cosmology"
+      ]
+    },
+    {
+      "term": "non-ionizing imaging",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "medical-physics-and-imaging"
+      ]
+    },
+    {
+      "term": "nuclear energy debate",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "energy-environment-and-sustainable-technology"
+      ]
+    },
+    {
+      "term": "nuclear reactor control",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "radioactivity-and-nuclear-energy"
+      ]
+    },
+    {
+      "term": "nuclear safety debate",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "modern-physics-issues-and-society"
+      ]
+    },
+    {
+      "term": "nuclear transmutation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "radioactivity-and-nuclear-energy"
+      ]
+    },
+    {
+      "term": "optical fibre application",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "hkdse-waves-optics-and-interference"
+      ]
+    },
+    {
+      "term": "orbital mechanics",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "hkdse-mechanics-and-energy-synthesis"
+      ]
+    },
+    {
+      "term": "orbital period law",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "astronomy-and-cosmology"
+      ]
+    },
+    {
+      "term": "order of magnitude estimate",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "hkdse-problem-solving-and-modelling"
+      ]
+    },
+    {
+      "term": "outlier identification",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "data-analysis-graphing-and-evaluation"
+      ]
+    },
+    {
+      "term": "parallax method",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "astronomy-and-cosmology"
+      ]
+    },
+    {
+      "term": "particle accelerator",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "electromagnetic-technology-and-applications"
+      ]
+    },
+    {
+      "term": "payback period",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "energy-environment-and-sustainable-technology"
+      ]
+    },
+    {
+      "term": "peak and RMS conversion",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "hkdse-fields-circuits-and-power"
+      ]
+    },
+    {
+      "term": "peak load management",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "energy-environment-and-sustainable-technology"
+      ]
+    },
+    {
+      "term": "peer review process",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "modern-physics-issues-and-society"
+      ]
+    },
+    {
+      "term": "percentage difference",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "data-analysis-graphing-and-evaluation"
+      ]
+    },
+    {
+      "term": "percentage uncertainty propagation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "data-analysis-graphing-and-evaluation"
+      ]
+    },
+    {
+      "term": "PET imaging",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "medical-physics-and-imaging"
+      ]
+    },
+    {
+      "term": "phase relationship",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "hkdse-waves-optics-and-interference"
+      ]
+    },
+    {
+      "term": "photoelectric experiment",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "atomic-world-and-quantum-physics"
+      ]
+    },
+    {
+      "term": "photon energy equation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "atomic-world-and-quantum-physics"
+      ]
+    },
+    {
+      "term": "photovoltaic efficiency",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "energy-environment-and-sustainable-technology"
+      ]
+    },
+    {
+      "term": "physical meaning of result",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "hkdse-problem-solving-and-modelling"
+      ]
+    },
+    {
+      "term": "pilot experiment",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "experimental-design-and-investigation"
+      ]
+    },
+    {
+      "term": "Planck-Einstein relation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "atomic-world-and-quantum-physics"
+      ]
+    },
+    {
+      "term": "polarized light",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "hkdse-waves-optics-and-interference"
+      ]
+    },
+    {
+      "term": "power loss in resistor",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "hkdse-fields-circuits-and-power"
+      ]
+    },
+    {
+      "term": "power rating",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "hkdse-mechanics-and-energy-synthesis"
+      ]
+    },
+    {
+      "term": "pressure-volume work",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "thermal-physics-and-gas-applications"
+      ]
+    },
+    {
+      "term": "projectile at an angle",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "hkdse-mechanics-and-energy-synthesis"
+      ]
+    },
+    {
+      "term": "proportionality method",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "hkdse-problem-solving-and-modelling"
+      ]
+    },
+    {
+      "term": "proportionality test",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "data-analysis-graphing-and-evaluation"
+      ]
+    },
+    {
+      "term": "public understanding of science",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "modern-physics-issues-and-society"
+      ]
+    },
+    {
+      "term": "quantized energy level",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "atomic-world-and-quantum-physics"
+      ]
+    },
+    {
+      "term": "quantum jump",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "atomic-world-and-quantum-physics"
+      ]
+    },
+    {
+      "term": "radiation dosage",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "radioactivity-and-nuclear-energy"
+      ]
+    },
+    {
+      "term": "radiation safety shield",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "medical-physics-and-imaging"
+      ]
+    },
+    {
+      "term": "radioactive decay law",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "radioactivity-and-nuclear-energy"
+      ]
+    },
+    {
+      "term": "rate from gradient",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "data-analysis-graphing-and-evaluation"
+      ]
+    },
+    {
+      "term": "ratio method",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "hkdse-problem-solving-and-modelling"
+      ]
+    },
+    {
+      "term": "RC time constant",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "hkdse-fields-circuits-and-power"
+      ]
+    },
+    {
+      "term": "reactance calculation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "hkdse-fields-circuits-and-power"
+      ]
+    },
+    {
+      "term": "real and virtual image",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "hkdse-waves-optics-and-interference"
+      ]
+    },
+    {
+      "term": "rearranging formula",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "hkdse-problem-solving-and-modelling"
+      ]
+    },
+    {
+      "term": "rectifier circuit",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "electromagnetic-technology-and-applications"
+      ]
+    },
+    {
+      "term": "red giant",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "astronomy-and-cosmology"
+      ]
+    },
+    {
+      "term": "refraction at boundary",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "hkdse-waves-optics-and-interference"
+      ]
+    },
+    {
+      "term": "refrigerator cycle",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "thermal-physics-and-gas-applications"
+      ]
+    },
+    {
+      "term": "relative motion problem",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "hkdse-mechanics-and-energy-synthesis"
+      ]
+    },
+    {
+      "term": "renewable policy choice",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "modern-physics-issues-and-society"
+      ]
+    },
+    {
+      "term": "renewable versus non-renewable",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "hkdse-mechanics-and-energy-synthesis"
+      ]
+    },
+    {
+      "term": "repeat measurement",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "experimental-design-and-investigation"
+      ]
+    },
+    {
+      "term": "research question",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "experimental-design-and-investigation"
+      ]
+    },
+    {
+      "term": "resonance frequency",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "hkdse-fields-circuits-and-power"
+      ]
+    },
+    {
+      "term": "risk-benefit analysis",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "modern-physics-issues-and-society"
+      ]
+    },
+    {
+      "term": "safety factor",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "hkdse-mechanics-and-energy-synthesis"
+      ]
+    },
+    {
+      "term": "safety risk assessment",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "experimental-design-and-investigation"
+      ]
+    },
+    {
+      "term": "sankey diagram analysis",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "hkdse-mechanics-and-energy-synthesis"
+      ]
+    },
+    {
+      "term": "scale drawing",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "hkdse-problem-solving-and-modelling"
+      ]
+    },
+    {
+      "term": "scanning resolution",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "medical-physics-and-imaging"
+      ]
+    },
+    {
+      "term": "scientific ethics",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "modern-physics-issues-and-society"
+      ]
+    },
+    {
+      "term": "scientific literacy",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "modern-physics-issues-and-society"
+      ]
+    },
+    {
+      "term": "semi-log plot",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "data-analysis-graphing-and-evaluation"
+      ]
+    },
+    {
+      "term": "shielding method",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "electromagnetic-technology-and-applications"
+      ]
+    },
+    {
+      "term": "signal transmission",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "electromagnetic-technology-and-applications"
+      ]
+    },
+    {
+      "term": "significant figures rule",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "data-analysis-graphing-and-evaluation"
+      ]
+    },
+    {
+      "term": "simultaneous relationship",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "hkdse-problem-solving-and-modelling"
+      ]
+    },
+    {
+      "term": "single-slit diffraction pattern",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "hkdse-waves-optics-and-interference"
+      ]
+    },
+    {
+      "term": "smart meter",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "energy-environment-and-sustainable-technology"
+      ]
+    },
+    {
+      "term": "smoothing capacitor",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "electromagnetic-technology-and-applications"
+      ]
+    },
+    {
+      "term": "space exploration benefit",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "modern-physics-issues-and-society"
+      ]
+    },
+    {
+      "term": "space exploration mission",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "astronomy-and-cosmology"
+      ]
+    },
+    {
+      "term": "space telescope",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "astronomy-and-cosmology"
+      ]
+    },
+    {
+      "term": "specific heat capacity experiment",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "thermal-physics-and-gas-applications"
+      ]
+    },
+    {
+      "term": "spectral line analysis",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "atomic-world-and-quantum-physics"
+      ]
+    },
+    {
+      "term": "spectrometer use",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "hkdse-waves-optics-and-interference"
+      ]
+    },
+    {
+      "term": "standing wave pattern",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "hkdse-waves-optics-and-interference"
+      ]
+    },
+    {
+      "term": "stellar classification",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "astronomy-and-cosmology"
+      ]
+    },
+    {
+      "term": "STEM career pathway",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "modern-physics-issues-and-society"
+      ]
+    },
+    {
+      "term": "stopping potential graph",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "atomic-world-and-quantum-physics"
+      ]
+    },
+    {
+      "term": "supernova explosion",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "astronomy-and-cosmology"
+      ]
+    },
+    {
+      "term": "superposition principle",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "hkdse-waves-optics-and-interference"
+      ]
+    },
+    {
+      "term": "sustainable city design",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "energy-environment-and-sustainable-technology"
+      ]
+    },
+    {
+      "term": "symbol substitution",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "hkdse-problem-solving-and-modelling"
+      ]
+    },
+    {
+      "term": "technology impact",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "modern-physics-issues-and-society"
+      ]
+    },
+    {
+      "term": "temperature scale conversion",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "thermal-physics-and-gas-applications"
+      ]
+    },
+    {
+      "term": "terminal voltage",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "hkdse-fields-circuits-and-power"
+      ]
+    },
+    {
+      "term": "therapeutic radiation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "medical-physics-and-imaging"
+      ]
+    },
+    {
+      "term": "thermal conductivity",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "thermal-physics-and-gas-applications"
+      ]
+    },
+    {
+      "term": "thermal equilibrium",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "thermal-physics-and-gas-applications"
+      ]
+    },
+    {
+      "term": "threshold frequency",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "atomic-world-and-quantum-physics"
+      ]
+    },
+    {
+      "term": "tidal barrage",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "energy-environment-and-sustainable-technology"
+      ]
+    },
+    {
+      "term": "tissue attenuation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "medical-physics-and-imaging"
+      ]
+    },
+    {
+      "term": "toppling condition",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "hkdse-mechanics-and-energy-synthesis"
+      ]
+    },
+    {
+      "term": "torque and equilibrium",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "hkdse-mechanics-and-energy-synthesis"
+      ]
+    },
+    {
+      "term": "transformer losses",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "electromagnetic-technology-and-applications"
+      ]
+    },
+    {
+      "term": "transformer ratio",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "hkdse-fields-circuits-and-power"
+      ]
+    },
+    {
+      "term": "transmission efficiency",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "hkdse-fields-circuits-and-power"
+      ]
+    },
+    {
+      "term": "U-value",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "thermal-physics-and-gas-applications"
+      ]
+    },
+    {
+      "term": "ultrasound scan",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "medical-physics-and-imaging"
+      ]
+    },
+    {
+      "term": "unit consistency check",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "data-analysis-graphing-and-evaluation"
+      ]
+    },
+    {
+      "term": "unit conversion step",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "hkdse-problem-solving-and-modelling"
+      ]
+    },
+    {
+      "term": "valid conclusion",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "experimental-design-and-investigation"
+      ]
+    },
+    {
+      "term": "vector diagram",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "hkdse-problem-solving-and-modelling"
+      ]
+    },
+    {
+      "term": "velocity selector",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "electromagnetic-technology-and-applications"
+      ]
+    },
+    {
+      "term": "wave equation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "hkdse-waves-optics-and-interference"
+      ]
+    },
+    {
+      "term": "wave function concept",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "atomic-world-and-quantum-physics"
+      ]
+    },
+    {
+      "term": "white dwarf",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "astronomy-and-cosmology"
+      ]
+    },
+    {
+      "term": "wind turbine power",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "energy-environment-and-sustainable-technology"
+      ]
+    },
+    {
+      "term": "wireless charging",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "electromagnetic-technology-and-applications"
+      ]
+    },
+    {
+      "term": "work function concept",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "atomic-world-and-quantum-physics"
+      ]
+    },
+    {
+      "term": "work-energy theorem",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "hkdse-mechanics-and-energy-synthesis"
+      ]
+    },
+    {
+      "term": "X-ray production",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "atomic-world-and-quantum-physics"
+      ]
+    },
+    {
+      "term": "zero adjustment",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "physics",
+        "curriculum-style",
+        "experimental-design-and-investigation"
       ]
     }
   ]

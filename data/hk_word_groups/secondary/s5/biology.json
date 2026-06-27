@@ -7,6 +7,15 @@
   "version": "2026.06",
   "display_name_en": "S5 Biology",
   "display_name_zh_hant": "中五生物",
+  "source": {
+    "type": "curriculum_style_public_references",
+    "references": [
+      "EDB Biology Curriculum and Assessment Guide (Secondary 4-6)",
+      "EDB senior secondary Biology Compulsory Part and Elective Part learning objectives",
+      "Public Hong Kong S5 Biology syllabus topic examples (molecular genetics, human physiology, reproduction, ecology and conservation, evolution, biotechnology, microbiology, applied biology)"
+    ],
+    "note": "No fixed official Hong Kong S5 biology vocabulary list is prescribed; this list is theme-based for senior secondary S5 biology enrichment import. Term-only entries are completed during import."
+  },
   "words": [
     {
       "term": "Enzyme",
@@ -306,6 +315,3240 @@
         "biology",
         "ecology",
         "noun"
+      ]
+    },
+    {
+      "term": "absorption spectrum",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "cellular-energy-and-metabolism"
+      ]
+    },
+    {
+      "term": "acetylcholine",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "nervous-system-and-coordination"
+      ]
+    },
+    {
+      "term": "acid rain effect",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "ecology-conservation-and-human-impact"
+      ]
+    },
+    {
+      "term": "action potential",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "nervous-system-and-coordination"
+      ]
+    },
+    {
+      "term": "action spectrum",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "cellular-energy-and-metabolism"
+      ]
+    },
+    {
+      "term": "adaptation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "evolution-and-natural-selection"
+      ]
+    },
+    {
+      "term": "adaptive immunity",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "immunity-and-vaccination"
+      ]
+    },
+    {
+      "term": "adaptive radiation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "evolution-and-natural-selection"
+      ]
+    },
+    {
+      "term": "adrenal gland",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "endocrine-system-and-homeostasis"
+      ]
+    },
+    {
+      "term": "adrenaline",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "endocrine-system-and-homeostasis"
+      ]
+    },
+    {
+      "term": "allergy",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "immunity-and-vaccination"
+      ]
+    },
+    {
+      "term": "amniotic fluid",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "human-reproduction-and-development"
+      ]
+    },
+    {
+      "term": "anaerobic respiration in muscle",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "cellular-energy-and-metabolism"
+      ]
+    },
+    {
+      "term": "analogous structure",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "evolution-and-natural-selection"
+      ]
+    },
+    {
+      "term": "antibiotic resistance",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "microbiology-and-infectious-disease"
+      ]
+    },
+    {
+      "term": "aseptic technique",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "microbiology-and-infectious-disease"
+      ]
+    },
+    {
+      "term": "atherosclerosis",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "gas-exchange-circulation-and-excretion"
+      ]
+    },
+    {
+      "term": "ATP synthase",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "cellular-energy-and-metabolism"
+      ]
+    },
+    {
+      "term": "attenuated vaccine",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "immunity-and-vaccination"
+      ]
+    },
+    {
+      "term": "autoimmune disease",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "immunity-and-vaccination"
+      ]
+    },
+    {
+      "term": "autonomic nervous system",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "nervous-system-and-coordination"
+      ]
+    },
+    {
+      "term": "auxin",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "plant-responses-and-transport"
+      ]
+    },
+    {
+      "term": "bacterial reproduction",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "microbiology-and-infectious-disease"
+      ]
+    },
+    {
+      "term": "bacterial transformation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "biotechnology-and-genetic-engineering"
+      ]
+    },
+    {
+      "term": "basal metabolic rate",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "nutrition-metabolism-and-digestion"
+      ]
+    },
+    {
+      "term": "base pairing",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "molecular-genetics-and-gene-expression"
+      ]
+    },
+    {
+      "term": "Benedict's test",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "experimental-biology-and-data-analysis"
+      ]
+    },
+    {
+      "term": "bile salt emulsification",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "nutrition-metabolism-and-digestion"
+      ]
+    },
+    {
+      "term": "binary fission",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "microbiology-and-infectious-disease"
+      ]
+    },
+    {
+      "term": "bioethics in genetics",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "biotechnology-and-genetic-engineering"
+      ]
+    },
+    {
+      "term": "bioinformatics",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "biotechnology-and-genetic-engineering"
+      ]
+    },
+    {
+      "term": "biological investigation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "experimental-biology-and-data-analysis"
+      ]
+    },
+    {
+      "term": "biosafety protocol",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "biotechnology-and-genetic-engineering"
+      ]
+    },
+    {
+      "term": "Biuret test",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "experimental-biology-and-data-analysis"
+      ]
+    },
+    {
+      "term": "blood glucose homeostasis",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "endocrine-system-and-homeostasis"
+      ]
+    },
+    {
+      "term": "blood group antigen",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "immunity-and-vaccination"
+      ]
+    },
+    {
+      "term": "blood transfusion compatibility",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "immunity-and-vaccination"
+      ]
+    },
+    {
+      "term": "body temperature regulation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "endocrine-system-and-homeostasis"
+      ]
+    },
+    {
+      "term": "Bohr effect",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "gas-exchange-circulation-and-excretion"
+      ]
+    },
+    {
+      "term": "booster dose",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "immunity-and-vaccination"
+      ]
+    },
+    {
+      "term": "brain region",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "nervous-system-and-coordination"
+      ]
+    },
+    {
+      "term": "C3 plant",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "cellular-energy-and-metabolism"
+      ]
+    },
+    {
+      "term": "C4 plant",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "cellular-energy-and-metabolism"
+      ]
+    },
+    {
+      "term": "calorific value",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "nutrition-metabolism-and-digestion"
+      ]
+    },
+    {
+      "term": "carbon fixation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "cellular-energy-and-metabolism"
+      ]
+    },
+    {
+      "term": "cardiac cycle",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "gas-exchange-circulation-and-excretion"
+      ]
+    },
+    {
+      "term": "carrying capacity",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "ecology-conservation-and-human-impact"
+      ]
+    },
+    {
+      "term": "cellular respiration pathway",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "cellular-energy-and-metabolism"
+      ]
+    },
+    {
+      "term": "cerebellum",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "nervous-system-and-coordination"
+      ]
+    },
+    {
+      "term": "cerebrum",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "nervous-system-and-coordination"
+      ]
+    },
+    {
+      "term": "chemiosmosis",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "cellular-energy-and-metabolism"
+      ]
+    },
+    {
+      "term": "chi-squared test",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "experimental-biology-and-data-analysis"
+      ]
+    },
+    {
+      "term": "cholesterol",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "nutrition-metabolism-and-digestion"
+      ]
+    },
+    {
+      "term": "climax community",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "ecology-conservation-and-human-impact"
+      ]
+    },
+    {
+      "term": "clonal selection",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "immunity-and-vaccination"
+      ]
+    },
+    {
+      "term": "cohesion-tension theory",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "plant-responses-and-transport"
+      ]
+    },
+    {
+      "term": "colorimetric assay",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "experimental-biology-and-data-analysis"
+      ]
+    },
+    {
+      "term": "common ancestor",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "evolution-and-natural-selection"
+      ]
+    },
+    {
+      "term": "companion cell",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "plant-responses-and-transport"
+      ]
+    },
+    {
+      "term": "comparative anatomy",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "evolution-and-natural-selection"
+      ]
+    },
+    {
+      "term": "compensation point",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "cellular-energy-and-metabolism"
+      ]
+    },
+    {
+      "term": "complementary strand",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "molecular-genetics-and-gene-expression"
+      ]
+    },
+    {
+      "term": "conservation strategy",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "ecology-conservation-and-human-impact"
+      ]
+    },
+    {
+      "term": "contamination",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "microbiology-and-infectious-disease"
+      ]
+    },
+    {
+      "term": "contraception",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "human-reproduction-and-development"
+      ]
+    },
+    {
+      "term": "control group",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "experimental-biology-and-data-analysis"
+      ]
+    },
+    {
+      "term": "coronary heart disease",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "gas-exchange-circulation-and-excretion"
+      ]
+    },
+    {
+      "term": "coronavirus",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "microbiology-and-infectious-disease"
+      ]
+    },
+    {
+      "term": "correlation coefficient",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "experimental-biology-and-data-analysis"
+      ]
+    },
+    {
+      "term": "countercurrent multiplier",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "gas-exchange-circulation-and-excretion"
+      ]
+    },
+    {
+      "term": "CRISPR",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "biotechnology-and-genetic-engineering"
+      ]
+    },
+    {
+      "term": "culture medium",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "microbiology-and-infectious-disease"
+      ]
+    },
+    {
+      "term": "deamination of amino acids",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "nutrition-metabolism-and-digestion"
+      ]
+    },
+    {
+      "term": "deforestation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "ecology-conservation-and-human-impact"
+      ]
+    },
+    {
+      "term": "diabetes mellitus",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "endocrine-system-and-homeostasis"
+      ]
+    },
+    {
+      "term": "dialysis machine",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "gas-exchange-circulation-and-excretion"
+      ]
+    },
+    {
+      "term": "diaphragm action",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "gas-exchange-circulation-and-excretion"
+      ]
+    },
+    {
+      "term": "diastole",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "gas-exchange-circulation-and-excretion"
+      ]
+    },
+    {
+      "term": "disease vector",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "microbiology-and-infectious-disease"
+      ]
+    },
+    {
+      "term": "DNA fingerprinting",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "biotechnology-and-genetic-engineering"
+      ]
+    },
+    {
+      "term": "DNA ligase",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "biotechnology-and-genetic-engineering"
+      ]
+    },
+    {
+      "term": "DNA polymerase",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "molecular-genetics-and-gene-expression"
+      ]
+    },
+    {
+      "term": "DNA probe",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "biotechnology-and-genetic-engineering"
+      ]
+    },
+    {
+      "term": "drug effect on synapse",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "nervous-system-and-coordination"
+      ]
+    },
+    {
+      "term": "ecological footprint",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "ecology-conservation-and-human-impact"
+      ]
+    },
+    {
+      "term": "ecological niche",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "ecology-conservation-and-human-impact"
+      ]
+    },
+    {
+      "term": "electrocardiogram",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "gas-exchange-circulation-and-excretion"
+      ]
+    },
+    {
+      "term": "electroporation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "biotechnology-and-genetic-engineering"
+      ]
+    },
+    {
+      "term": "embryo development",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "human-reproduction-and-development"
+      ]
+    },
+    {
+      "term": "emulsion test",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "experimental-biology-and-data-analysis"
+      ]
+    },
+    {
+      "term": "endocrine disorder",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "endocrine-system-and-homeostasis"
+      ]
+    },
+    {
+      "term": "endocrine system",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "endocrine-system-and-homeostasis"
+      ]
+    },
+    {
+      "term": "endospore",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "microbiology-and-infectious-disease"
+      ]
+    },
+    {
+      "term": "energy flow in cell",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "cellular-energy-and-metabolism"
+      ]
+    },
+    {
+      "term": "enzyme specificity in digestion",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "nutrition-metabolism-and-digestion"
+      ]
+    },
+    {
+      "term": "epigenetics",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "molecular-genetics-and-gene-expression"
+      ]
+    },
+    {
+      "term": "essential amino acid",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "nutrition-metabolism-and-digestion"
+      ]
+    },
+    {
+      "term": "essential fatty acid",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "nutrition-metabolism-and-digestion"
+      ]
+    },
+    {
+      "term": "eutrophication",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "ecology-conservation-and-human-impact"
+      ]
+    },
+    {
+      "term": "experimental group",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "experimental-biology-and-data-analysis"
+      ]
+    },
+    {
+      "term": "exponential growth",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "ecology-conservation-and-human-impact"
+      ]
+    },
+    {
+      "term": "expression vector",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "biotechnology-and-genetic-engineering"
+      ]
+    },
+    {
+      "term": "eyepiece graticule",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "experimental-biology-and-data-analysis"
+      ]
+    },
+    {
+      "term": "feedback mechanism",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "endocrine-system-and-homeostasis"
+      ]
+    },
+    {
+      "term": "female reproductive system",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "human-reproduction-and-development"
+      ]
+    },
+    {
+      "term": "fermentation product",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "cellular-energy-and-metabolism"
+      ]
+    },
+    {
+      "term": "fetus development",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "human-reproduction-and-development"
+      ]
+    },
+    {
+      "term": "fitness",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "evolution-and-natural-selection"
+      ]
+    },
+    {
+      "term": "food test",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "nutrition-metabolism-and-digestion"
+      ]
+    },
+    {
+      "term": "fossil record",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "evolution-and-natural-selection"
+      ]
+    },
+    {
+      "term": "frameshift mutation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "molecular-genetics-and-gene-expression"
+      ]
+    },
+    {
+      "term": "gametogenesis",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "human-reproduction-and-development"
+      ]
+    },
+    {
+      "term": "gel electrophoresis",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "biotechnology-and-genetic-engineering"
+      ]
+    },
+    {
+      "term": "gene cloning",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "biotechnology-and-genetic-engineering"
+      ]
+    },
+    {
+      "term": "gene editing",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "biotechnology-and-genetic-engineering"
+      ]
+    },
+    {
+      "term": "gene expression",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "molecular-genetics-and-gene-expression"
+      ]
+    },
+    {
+      "term": "gene flow",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "evolution-and-natural-selection"
+      ]
+    },
+    {
+      "term": "gene mutation type",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "molecular-genetics-and-gene-expression"
+      ]
+    },
+    {
+      "term": "gene regulation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "molecular-genetics-and-gene-expression"
+      ]
+    },
+    {
+      "term": "genetic drift",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "evolution-and-natural-selection"
+      ]
+    },
+    {
+      "term": "genetic screening",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "molecular-genetics-and-gene-expression"
+      ]
+    },
+    {
+      "term": "genetically modified organism",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "biotechnology-and-genetic-engineering"
+      ]
+    },
+    {
+      "term": "genome",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "molecular-genetics-and-gene-expression"
+      ]
+    },
+    {
+      "term": "geographical isolation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "evolution-and-natural-selection"
+      ]
+    },
+    {
+      "term": "gibberellin",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "plant-responses-and-transport"
+      ]
+    },
+    {
+      "term": "global warming impact",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "ecology-conservation-and-human-impact"
+      ]
+    },
+    {
+      "term": "glomerular filtration rate",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "gas-exchange-circulation-and-excretion"
+      ]
+    },
+    {
+      "term": "gravitropism",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "plant-responses-and-transport"
+      ]
+    },
+    {
+      "term": "habitat destruction",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "ecology-conservation-and-human-impact"
+      ]
+    },
+    {
+      "term": "Hardy-Weinberg principle",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "evolution-and-natural-selection"
+      ]
+    },
+    {
+      "term": "hepatic portal vein",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "nutrition-metabolism-and-digestion"
+      ]
+    },
+    {
+      "term": "herd immunity",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "immunity-and-vaccination"
+      ]
+    },
+    {
+      "term": "histamine response",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "immunity-and-vaccination"
+      ]
+    },
+    {
+      "term": "HIV transmission",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "human-reproduction-and-development"
+      ]
+    },
+    {
+      "term": "homologous structure",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "evolution-and-natural-selection"
+      ]
+    },
+    {
+      "term": "hormonal control of reproduction",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "human-reproduction-and-development"
+      ]
+    },
+    {
+      "term": "hormonal imbalance",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "endocrine-system-and-homeostasis"
+      ]
+    },
+    {
+      "term": "hormone receptor",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "endocrine-system-and-homeostasis"
+      ]
+    },
+    {
+      "term": "hybridization",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "biotechnology-and-genetic-engineering"
+      ]
+    },
+    {
+      "term": "hydrophyte",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "plant-responses-and-transport"
+      ]
+    },
+    {
+      "term": "immunological memory",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "immunity-and-vaccination"
+      ]
+    },
+    {
+      "term": "immunosuppression",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "immunity-and-vaccination"
+      ]
+    },
+    {
+      "term": "implantation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "human-reproduction-and-development"
+      ]
+    },
+    {
+      "term": "in vitro fertilization",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "human-reproduction-and-development"
+      ]
+    },
+    {
+      "term": "inactivated vaccine",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "immunity-and-vaccination"
+      ]
+    },
+    {
+      "term": "infection control",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "microbiology-and-infectious-disease"
+      ]
+    },
+    {
+      "term": "infertility",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "human-reproduction-and-development"
+      ]
+    },
+    {
+      "term": "influenza virus",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "microbiology-and-infectious-disease"
+      ]
+    },
+    {
+      "term": "innate immunity",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "immunity-and-vaccination"
+      ]
+    },
+    {
+      "term": "intercostal muscle",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "gas-exchange-circulation-and-excretion"
+      ]
+    },
+    {
+      "term": "invasive species",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "ecology-conservation-and-human-impact"
+      ]
+    },
+    {
+      "term": "iodine test",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "experimental-biology-and-data-analysis"
+      ]
+    },
+    {
+      "term": "kidney transplant",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "gas-exchange-circulation-and-excretion"
+      ]
+    },
+    {
+      "term": "kwashiorkor",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "nutrition-metabolism-and-digestion"
+      ]
+    },
+    {
+      "term": "lac operon",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "molecular-genetics-and-gene-expression"
+      ]
+    },
+    {
+      "term": "lactase",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "nutrition-metabolism-and-digestion"
+      ]
+    },
+    {
+      "term": "leaf adaptation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "plant-responses-and-transport"
+      ]
+    },
+    {
+      "term": "limiting factor experiment",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "cellular-energy-and-metabolism"
+      ]
+    },
+    {
+      "term": "link reaction",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "cellular-energy-and-metabolism"
+      ]
+    },
+    {
+      "term": "lipoprotein",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "nutrition-metabolism-and-digestion"
+      ]
+    },
+    {
+      "term": "liver detoxification",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "gas-exchange-circulation-and-excretion"
+      ]
+    },
+    {
+      "term": "liver metabolism",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "nutrition-metabolism-and-digestion"
+      ]
+    },
+    {
+      "term": "logistic growth",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "ecology-conservation-and-human-impact"
+      ]
+    },
+    {
+      "term": "macroevolution",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "evolution-and-natural-selection"
+      ]
+    },
+    {
+      "term": "magnesium ion",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "plant-responses-and-transport"
+      ]
+    },
+    {
+      "term": "maintaining blood composition",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "gas-exchange-circulation-and-excretion"
+      ]
+    },
+    {
+      "term": "maintaining internal balance",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "endocrine-system-and-homeostasis"
+      ]
+    },
+    {
+      "term": "male reproductive system",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "human-reproduction-and-development"
+      ]
+    },
+    {
+      "term": "malnutrition",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "nutrition-metabolism-and-digestion"
+      ]
+    },
+    {
+      "term": "maltase",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "nutrition-metabolism-and-digestion"
+      ]
+    },
+    {
+      "term": "marasmus",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "nutrition-metabolism-and-digestion"
+      ]
+    },
+    {
+      "term": "mark-release-recapture",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "experimental-biology-and-data-analysis"
+      ]
+    },
+    {
+      "term": "medulla oblongata",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "nervous-system-and-coordination"
+      ]
+    },
+    {
+      "term": "memory cell",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "immunity-and-vaccination"
+      ]
+    },
+    {
+      "term": "menstrual cycle",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "human-reproduction-and-development"
+      ]
+    },
+    {
+      "term": "messenger RNA",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "molecular-genetics-and-gene-expression"
+      ]
+    },
+    {
+      "term": "microevolution",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "evolution-and-natural-selection"
+      ]
+    },
+    {
+      "term": "microorganism",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "microbiology-and-infectious-disease"
+      ]
+    },
+    {
+      "term": "microscopy calibration",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "experimental-biology-and-data-analysis"
+      ]
+    },
+    {
+      "term": "mineral uptake",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "plant-responses-and-transport"
+      ]
+    },
+    {
+      "term": "molecular phylogeny",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "evolution-and-natural-selection"
+      ]
+    },
+    {
+      "term": "monoclonal antibody",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "immunity-and-vaccination"
+      ]
+    },
+    {
+      "term": "mosquito-borne disease",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "microbiology-and-infectious-disease"
+      ]
+    },
+    {
+      "term": "motor neuron",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "nervous-system-and-coordination"
+      ]
+    },
+    {
+      "term": "MRSA",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "microbiology-and-infectious-disease"
+      ]
+    },
+    {
+      "term": "myelin sheath",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "nervous-system-and-coordination"
+      ]
+    },
+    {
+      "term": "NADH",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "cellular-energy-and-metabolism"
+      ]
+    },
+    {
+      "term": "natural selection",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "evolution-and-natural-selection"
+      ]
+    },
+    {
+      "term": "nerve impulse",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "nervous-system-and-coordination"
+      ]
+    },
+    {
+      "term": "neurotransmitter",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "nervous-system-and-coordination"
+      ]
+    },
+    {
+      "term": "nitrate ion",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "plant-responses-and-transport"
+      ]
+    },
+    {
+      "term": "nucleotide sequence",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "molecular-genetics-and-gene-expression"
+      ]
+    },
+    {
+      "term": "obesity",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "nutrition-metabolism-and-digestion"
+      ]
+    },
+    {
+      "term": "oogenesis",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "human-reproduction-and-development"
+      ]
+    },
+    {
+      "term": "operator gene",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "molecular-genetics-and-gene-expression"
+      ]
+    },
+    {
+      "term": "operon model",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "molecular-genetics-and-gene-expression"
+      ]
+    },
+    {
+      "term": "organ transplant rejection",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "immunity-and-vaccination"
+      ]
+    },
+    {
+      "term": "osmoreceptor",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "endocrine-system-and-homeostasis"
+      ]
+    },
+    {
+      "term": "ovulation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "human-reproduction-and-development"
+      ]
+    },
+    {
+      "term": "oxidative phosphorylation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "cellular-energy-and-metabolism"
+      ]
+    },
+    {
+      "term": "oxygen as final electron acceptor",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "cellular-energy-and-metabolism"
+      ]
+    },
+    {
+      "term": "oxygen dissociation curve",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "gas-exchange-circulation-and-excretion"
+      ]
+    },
+    {
+      "term": "parasympathetic system",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "nervous-system-and-coordination"
+      ]
+    },
+    {
+      "term": "partial pressure of oxygen",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "gas-exchange-circulation-and-excretion"
+      ]
+    },
+    {
+      "term": "pasteurization",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "microbiology-and-infectious-disease"
+      ]
+    },
+    {
+      "term": "pathogenic bacteria",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "microbiology-and-infectious-disease"
+      ]
+    },
+    {
+      "term": "pepsin",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "nutrition-metabolism-and-digestion"
+      ]
+    },
+    {
+      "term": "phosphate ion",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "plant-responses-and-transport"
+      ]
+    },
+    {
+      "term": "photolysis of water",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "cellular-energy-and-metabolism"
+      ]
+    },
+    {
+      "term": "photosynthetic pigment",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "cellular-energy-and-metabolism"
+      ]
+    },
+    {
+      "term": "phototropism",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "plant-responses-and-transport"
+      ]
+    },
+    {
+      "term": "pituitary gland",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "endocrine-system-and-homeostasis"
+      ]
+    },
+    {
+      "term": "placenta",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "human-reproduction-and-development"
+      ]
+    },
+    {
+      "term": "plant hormone",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "plant-responses-and-transport"
+      ]
+    },
+    {
+      "term": "plasmid vector",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "biotechnology-and-genetic-engineering"
+      ]
+    },
+    {
+      "term": "point mutation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "molecular-genetics-and-gene-expression"
+      ]
+    },
+    {
+      "term": "pollution impact",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "ecology-conservation-and-human-impact"
+      ]
+    },
+    {
+      "term": "polymerase chain reaction",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "biotechnology-and-genetic-engineering"
+      ]
+    },
+    {
+      "term": "population growth curve",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "ecology-conservation-and-human-impact"
+      ]
+    },
+    {
+      "term": "prenatal care",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "human-reproduction-and-development"
+      ]
+    },
+    {
+      "term": "primary immune response",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "immunity-and-vaccination"
+      ]
+    },
+    {
+      "term": "primary succession",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "ecology-conservation-and-human-impact"
+      ]
+    },
+    {
+      "term": "promoter region",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "molecular-genetics-and-gene-expression"
+      ]
+    },
+    {
+      "term": "protected area",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "ecology-conservation-and-human-impact"
+      ]
+    },
+    {
+      "term": "puberty",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "human-reproduction-and-development"
+      ]
+    },
+    {
+      "term": "public health measure",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "microbiology-and-infectious-disease"
+      ]
+    },
+    {
+      "term": "pyruvate decarboxylation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "cellular-energy-and-metabolism"
+      ]
+    },
+    {
+      "term": "quadrat sampling",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "experimental-biology-and-data-analysis"
+      ]
+    },
+    {
+      "term": "quarantine",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "microbiology-and-infectious-disease"
+      ]
+    },
+    {
+      "term": "recombinant DNA technology",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "biotechnology-and-genetic-engineering"
+      ]
+    },
+    {
+      "term": "redox reaction",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "cellular-energy-and-metabolism"
+      ]
+    },
+    {
+      "term": "reflex action",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "nervous-system-and-coordination"
+      ]
+    },
+    {
+      "term": "regulatory gene",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "molecular-genetics-and-gene-expression"
+      ]
+    },
+    {
+      "term": "relay neuron",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "nervous-system-and-coordination"
+      ]
+    },
+    {
+      "term": "replicate",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "experimental-biology-and-data-analysis"
+      ]
+    },
+    {
+      "term": "reproductive isolation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "evolution-and-natural-selection"
+      ]
+    },
+    {
+      "term": "resting potential",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "nervous-system-and-coordination"
+      ]
+    },
+    {
+      "term": "restoration ecology",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "ecology-conservation-and-human-impact"
+      ]
+    },
+    {
+      "term": "restriction endonuclease",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "biotechnology-and-genetic-engineering"
+      ]
+    },
+    {
+      "term": "Rh factor",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "immunity-and-vaccination"
+      ]
+    },
+    {
+      "term": "ribosomal RNA",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "molecular-genetics-and-gene-expression"
+      ]
+    },
+    {
+      "term": "RNA polymerase",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "molecular-genetics-and-gene-expression"
+      ]
+    },
+    {
+      "term": "root pressure",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "plant-responses-and-transport"
+      ]
+    },
+    {
+      "term": "saltatory conduction",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "nervous-system-and-coordination"
+      ]
+    },
+    {
+      "term": "sampling method",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "experimental-biology-and-data-analysis"
+      ]
+    },
+    {
+      "term": "second messenger",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "endocrine-system-and-homeostasis"
+      ]
+    },
+    {
+      "term": "secondary immune response",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "immunity-and-vaccination"
+      ]
+    },
+    {
+      "term": "secondary succession",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "ecology-conservation-and-human-impact"
+      ]
+    },
+    {
+      "term": "selective pressure",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "evolution-and-natural-selection"
+      ]
+    },
+    {
+      "term": "sensory neuron",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "nervous-system-and-coordination"
+      ]
+    },
+    {
+      "term": "serial dilution",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "experimental-biology-and-data-analysis"
+      ]
+    },
+    {
+      "term": "sexually transmitted infection",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "human-reproduction-and-development"
+      ]
+    },
+    {
+      "term": "sieve tube element",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "plant-responses-and-transport"
+      ]
+    },
+    {
+      "term": "source and sink",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "plant-responses-and-transport"
+      ]
+    },
+    {
+      "term": "speciation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "evolution-and-natural-selection"
+      ]
+    },
+    {
+      "term": "spermatogenesis",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "human-reproduction-and-development"
+      ]
+    },
+    {
+      "term": "spinal cord",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "nervous-system-and-coordination"
+      ]
+    },
+    {
+      "term": "stage micrometer",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "experimental-biology-and-data-analysis"
+      ]
+    },
+    {
+      "term": "standard deviation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "experimental-biology-and-data-analysis"
+      ]
+    },
+    {
+      "term": "statistical significance",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "experimental-biology-and-data-analysis"
+      ]
+    },
+    {
+      "term": "sterilization",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "microbiology-and-infectious-disease"
+      ]
+    },
+    {
+      "term": "sticky end",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "biotechnology-and-genetic-engineering"
+      ]
+    },
+    {
+      "term": "stomatal regulation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "plant-responses-and-transport"
+      ]
+    },
+    {
+      "term": "succession",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "ecology-conservation-and-human-impact"
+      ]
+    },
+    {
+      "term": "survival of the fittest",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "evolution-and-natural-selection"
+      ]
+    },
+    {
+      "term": "sustainable resource use",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "ecology-conservation-and-human-impact"
+      ]
+    },
+    {
+      "term": "sympathetic system",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "nervous-system-and-coordination"
+      ]
+    },
+    {
+      "term": "synaptic cleft",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "nervous-system-and-coordination"
+      ]
+    },
+    {
+      "term": "systole",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "gas-exchange-circulation-and-excretion"
+      ]
+    },
+    {
+      "term": "target tissue",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "endocrine-system-and-homeostasis"
+      ]
+    },
+    {
+      "term": "thermoreceptor",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "endocrine-system-and-homeostasis"
+      ]
+    },
+    {
+      "term": "thyroid gland",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "endocrine-system-and-homeostasis"
+      ]
+    },
+    {
+      "term": "thyroxine",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "endocrine-system-and-homeostasis"
+      ]
+    },
+    {
+      "term": "tidal volume",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "gas-exchange-circulation-and-excretion"
+      ]
+    },
+    {
+      "term": "transect line",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "experimental-biology-and-data-analysis"
+      ]
+    },
+    {
+      "term": "transfer RNA",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "molecular-genetics-and-gene-expression"
+      ]
+    },
+    {
+      "term": "transgenic animal",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "biotechnology-and-genetic-engineering"
+      ]
+    },
+    {
+      "term": "transpiration stream",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "plant-responses-and-transport"
+      ]
+    },
+    {
+      "term": "tropism",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "plant-responses-and-transport"
+      ]
+    },
+    {
+      "term": "trypsin",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "nutrition-metabolism-and-digestion"
+      ]
+    },
+    {
+      "term": "tuberculosis",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "microbiology-and-infectious-disease"
+      ]
+    },
+    {
+      "term": "Type 1 diabetes",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "endocrine-system-and-homeostasis"
+      ]
+    },
+    {
+      "term": "Type 2 diabetes",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "endocrine-system-and-homeostasis"
+      ]
+    },
+    {
+      "term": "umbilical cord",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "human-reproduction-and-development"
+      ]
+    },
+    {
+      "term": "urea excretion",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "gas-exchange-circulation-and-excretion"
+      ]
+    },
+    {
+      "term": "urea formation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "nutrition-metabolism-and-digestion"
+      ]
+    },
+    {
+      "term": "vaccine development",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "immunity-and-vaccination"
+      ]
+    },
+    {
+      "term": "ventilation mechanism",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "gas-exchange-circulation-and-excretion"
+      ]
+    },
+    {
+      "term": "vestigial structure",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "evolution-and-natural-selection"
+      ]
+    },
+    {
+      "term": "viral replication",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "microbiology-and-infectious-disease"
+      ]
+    },
+    {
+      "term": "vital capacity",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "gas-exchange-circulation-and-excretion"
+      ]
+    },
+    {
+      "term": "water reabsorption",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "endocrine-system-and-homeostasis"
+      ]
+    },
+    {
+      "term": "water uptake",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "plant-responses-and-transport"
+      ]
+    },
+    {
+      "term": "xerophyte",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "biology",
+        "curriculum-style",
+        "plant-responses-and-transport"
       ]
     }
   ]

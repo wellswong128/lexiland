@@ -11,7 +11,7 @@ sys.path.insert(0, str(SCRIPT_DIR))
 from api_client import ApiError, LexiLandApiClient
 from auth import AuthError, ImportAuth
 from config import load_settings
-from text_locale import needs_translation_fix
+from text_locale import has_placeholder_translation, is_incomplete_exam_phrase_translation, needs_translation_fix
 from wordbase_client import fetch_entry, upsert_details
 
 try:
@@ -41,22 +41,48 @@ def parse_args() -> argparse.Namespace:
         action="store_true",
         help="Also fix rows in public.words (requires SUPABASE_SERVICE_ROLE_KEY).",
     )
+    parser.add_argument(
+        "--exam-phrases-only",
+        action="store_true",
+        help="Fix only incomplete examination-skill phrase translations (evaluate/compare/assess ...).",
+    )
     parser.add_argument("--limit", type=int, default=0, help="Process at most N affected rows.")
     return parser.parse_args()
 
 
-def list_wordbase_rows(client, term: str = "") -> list[dict]:
-    query = client.table("wordbase").select(
-        "id, term_key, term, definition, translation, example, example_translation"
-    )
-    if term:
-        from terms import normalize_term
+def row_matches_filters(row: dict, args: argparse.Namespace) -> bool:
+    if not needs_translation_fix(row):
+        return False
+    if args.exam_phrases_only:
+        return is_incomplete_exam_phrase_translation(row.get("term", ""), row.get("translation", ""))
+    return True
 
-        query = query.eq("term_key", normalize_term(term))
 
-    response = query.execute()
-    rows = response.data or []
-    return [row for row in rows if needs_translation_fix(row)]
+def list_wordbase_rows(client, args: argparse.Namespace) -> list[dict]:
+    rows: list[dict] = []
+    start = 0
+    page_size = 1000
+
+    while True:
+        query = client.table("wordbase").select(
+            "id, term_key, term, definition, translation, example, example_translation"
+        )
+        if args.term:
+            from terms import normalize_term
+
+            query = query.eq("term_key", normalize_term(args.term))
+            response = query.execute()
+            rows.extend(response.data or [])
+            break
+
+        response = query.range(start, start + page_size - 1).execute()
+        batch = response.data or []
+        rows.extend(batch)
+        if len(batch) < page_size:
+            break
+        start += page_size
+
+    return [row for row in rows if row_matches_filters(row, args)]
 
 
 def list_user_word_rows(client, term: str = "") -> list[dict]:
@@ -94,9 +120,30 @@ def fix_wordbase_row(api: LexiLandApiClient, client, contributor_id: str, row: d
         return
 
     suggestion = api.complete_word(term, locale)
+    translation = str(suggestion.get("translation", "")).strip()
+    if is_incomplete_exam_phrase_translation(term, translation) or has_placeholder_translation(
+        translation
+    ):
+        raise ApiError(f"AI still returned incomplete translation for {term!r}: {translation!r}")
+
     existing = fetch_entry(client, term)
-    upsert_details(client, suggestion_to_wordbase_payload(suggestion), contributor_id, existing)
-    print(f"[wordbase] {term}: updated -> {suggestion.get('translation', '')!r}")
+    if not existing:
+        raise ApiError(f"Wordbase row not found for {term!r}")
+
+    payload = suggestion_to_wordbase_payload(suggestion)
+    payload["term"] = term
+    upsert_details(client, payload, contributor_id, existing)
+
+    updated = fetch_entry(client, term)
+    updated_translation = str((updated or {}).get("translation", "")).strip()
+    if is_incomplete_exam_phrase_translation(term, updated_translation) or has_placeholder_translation(
+        updated_translation
+    ):
+        raise ApiError(
+            f"Update did not persist for {term!r}: translation={updated_translation!r}"
+        )
+
+    print(f"[wordbase] {term}: updated -> {updated_translation!r}")
 
 
 def fix_user_word_row(api: LexiLandApiClient, client, row: dict, locale: str, dry_run: bool) -> None:
@@ -106,7 +153,28 @@ def fix_user_word_row(api: LexiLandApiClient, client, row: dict, locale: str, dr
     if dry_run:
         return
 
-    suggestion = api.complete_word(term, locale)
+    suggestion = None
+    for attempt in range(3):
+        suggestion = api.complete_word(term, locale)
+        translation = str(suggestion.get("translation", "")).strip()
+        example_translation = str(suggestion.get("example_translation", "")).strip()
+        if not has_placeholder_translation(translation) and not has_placeholder_translation(
+            example_translation
+        ) and not is_incomplete_exam_phrase_translation(term, translation):
+            break
+        print(
+            f"[words] {term}: placeholder translation on attempt {attempt + 1}, retrying...",
+            file=sys.stderr,
+        )
+
+    if suggestion is None:
+        raise ApiError("No suggestion returned.")
+
+    if has_placeholder_translation(suggestion.get("translation")) or has_placeholder_translation(
+        suggestion.get("example_translation")
+    ) or is_incomplete_exam_phrase_translation(term, suggestion.get("translation")):
+        raise ApiError("AI still returned incomplete translation fields.")
+
     client.table("words").update(
         {
             "translation": suggestion["translation"],
@@ -192,7 +260,7 @@ def main() -> int:
     )
 
     try:
-        wordbase_rows = list_wordbase_rows(client, args.term)
+        wordbase_rows = list_wordbase_rows(client, args)
         if args.limit > 0:
             wordbase_rows = wordbase_rows[: args.limit]
 

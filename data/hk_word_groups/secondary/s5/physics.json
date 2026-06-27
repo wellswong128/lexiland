@@ -7,6 +7,15 @@
   "version": "2026.06",
   "display_name_en": "S5 Physics",
   "display_name_zh_hant": "中五物理",
+  "source": {
+    "type": "curriculum_style_public_references",
+    "references": [
+      "EDB Physics Curriculum and Assessment Guide (Secondary 4-6)",
+      "EDB senior secondary Physics Compulsory Part and Elective Part learning objectives",
+      "Public Hong Kong S5 Physics syllabus topic examples (further mechanics, fields, electromagnetic induction, alternating current, atomic world, medical physics, astronomy and space science, energy and environment)"
+    ],
+    "note": "No fixed official Hong Kong S5 physics vocabulary list is prescribed; this list is theme-based for senior secondary S5 physics enrichment import. Term-only entries are completed during import."
+  },
   "words": [
     {
       "term": "Simple Harmonic Motion",
@@ -326,6 +335,3086 @@
         "waves",
         "optics",
         "noun phrase"
+      ]
+    },
+    {
+      "term": "absorption spectrum",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "atomic-world-and-quantum-physics"
+      ]
+    },
+    {
+      "term": "acoustic impedance",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "medical-physics-applications"
+      ]
+    },
+    {
+      "term": "activity unit",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "radioactivity-and-nuclear-physics"
+      ]
+    },
+    {
+      "term": "alternator",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "magnetic-fields-and-electromagnetism"
+      ]
+    },
+    {
+      "term": "angular frequency",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "simple-harmonic-motion-and-oscillations"
+      ]
+    },
+    {
+      "term": "angular speed",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "circular-motion-and-gravitation"
+      ]
+    },
+    {
+      "term": "antinode",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "wave-interference-and-diffraction"
+      ]
+    },
+    {
+      "term": "artificial satellite",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "circular-motion-and-gravitation"
+      ]
+    },
+    {
+      "term": "atomic model",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "atomic-world-and-quantum-physics"
+      ]
+    },
+    {
+      "term": "atomic number",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "radioactivity-and-nuclear-physics"
+      ]
+    },
+    {
+      "term": "average power",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "alternating-current-and-circuits"
+      ]
+    },
+    {
+      "term": "banked track",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "circular-motion-and-gravitation"
+      ]
+    },
+    {
+      "term": "battery technology",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "energy-systems-and-environment"
+      ]
+    },
+    {
+      "term": "becquerel",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "radioactivity-and-nuclear-physics"
+      ]
+    },
+    {
+      "term": "Big Bang theory",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "astronomy-and-space-science"
+      ]
+    },
+    {
+      "term": "binding energy",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "radioactivity-and-nuclear-physics"
+      ]
+    },
+    {
+      "term": "black hole",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "astronomy-and-space-science"
+      ]
+    },
+    {
+      "term": "blue shift",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "astronomy-and-space-science"
+      ]
+    },
+    {
+      "term": "Bohr model",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "atomic-world-and-quantum-physics"
+      ]
+    },
+    {
+      "term": "breakdown voltage",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "electric-fields-and-capacitors"
+      ]
+    },
+    {
+      "term": "bright fringe",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "wave-interference-and-diffraction"
+      ]
+    },
+    {
+      "term": "calibration",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "experimental-physics-and-data-analysis"
+      ]
+    },
+    {
+      "term": "capacitive reactance",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "alternating-current-and-circuits"
+      ]
+    },
+    {
+      "term": "capacitor combination",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "electric-fields-and-capacitors"
+      ]
+    },
+    {
+      "term": "capacitor plate",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "electric-fields-and-capacitors"
+      ]
+    },
+    {
+      "term": "carbon dating",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "radioactivity-and-nuclear-physics"
+      ]
+    },
+    {
+      "term": "carbon footprint",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "energy-systems-and-environment"
+      ]
+    },
+    {
+      "term": "Carnot efficiency",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "energy-systems-and-environment"
+      ]
+    },
+    {
+      "term": "centre of gravity",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "vectors-and-advanced-mechanics"
+      ]
+    },
+    {
+      "term": "centre of mass",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "vectors-and-advanced-mechanics"
+      ]
+    },
+    {
+      "term": "centripetal acceleration",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "circular-motion-and-gravitation"
+      ]
+    },
+    {
+      "term": "centripetal force",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "circular-motion-and-gravitation"
+      ]
+    },
+    {
+      "term": "charge stored",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "electric-fields-and-capacitors"
+      ]
+    },
+    {
+      "term": "charging capacitor",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "electric-fields-and-capacitors"
+      ]
+    },
+    {
+      "term": "coherent source",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "wave-interference-and-diffraction"
+      ]
+    },
+    {
+      "term": "combined uncertainty",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "experimental-physics-and-data-analysis"
+      ]
+    },
+    {
+      "term": "computed tomography",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "medical-physics-applications"
+      ]
+    },
+    {
+      "term": "concave mirror",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "optics-and-instruments"
+      ]
+    },
+    {
+      "term": "conical pendulum",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "circular-motion-and-gravitation"
+      ]
+    },
+    {
+      "term": "conservation of momentum in 2D",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "vectors-and-advanced-mechanics"
+      ]
+    },
+    {
+      "term": "contamination",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "radioactivity-and-nuclear-physics"
+      ]
+    },
+    {
+      "term": "contrast medium",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "medical-physics-applications"
+      ]
+    },
+    {
+      "term": "control experiment",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "experimental-physics-and-data-analysis"
+      ]
+    },
+    {
+      "term": "controlled reaction",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "radioactivity-and-nuclear-physics"
+      ]
+    },
+    {
+      "term": "convex mirror",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "optics-and-instruments"
+      ]
+    },
+    {
+      "term": "cooling system",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "energy-systems-and-environment"
+      ]
+    },
+    {
+      "term": "cosmic microwave background",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "astronomy-and-space-science"
+      ]
+    },
+    {
+      "term": "Coulomb's law",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "electric-fields-and-capacitors"
+      ]
+    },
+    {
+      "term": "couple",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "vectors-and-advanced-mechanics"
+      ]
+    },
+    {
+      "term": "critical angle calculation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "optics-and-instruments"
+      ]
+    },
+    {
+      "term": "critical damping",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "simple-harmonic-motion-and-oscillations"
+      ]
+    },
+    {
+      "term": "dark fringe",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "wave-interference-and-diffraction"
+      ]
+    },
+    {
+      "term": "data logger",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "experimental-physics-and-data-analysis"
+      ]
+    },
+    {
+      "term": "de Broglie wavelength",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "atomic-world-and-quantum-physics"
+      ]
+    },
+    {
+      "term": "decay constant",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "radioactivity-and-nuclear-physics"
+      ]
+    },
+    {
+      "term": "diagnostic imaging",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "medical-physics-applications"
+      ]
+    },
+    {
+      "term": "diffraction grating",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "wave-interference-and-diffraction"
+      ]
+    },
+    {
+      "term": "digital instrument",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "experimental-physics-and-data-analysis"
+      ]
+    },
+    {
+      "term": "discharging capacitor",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "electric-fields-and-capacitors"
+      ]
+    },
+    {
+      "term": "discrete energy",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "atomic-world-and-quantum-physics"
+      ]
+    },
+    {
+      "term": "dispersion of light",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "optics-and-instruments"
+      ]
+    },
+    {
+      "term": "displacement-time graph",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "simple-harmonic-motion-and-oscillations"
+      ]
+    },
+    {
+      "term": "Doppler effect in astronomy",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "astronomy-and-space-science"
+      ]
+    },
+    {
+      "term": "double-slit experiment",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "wave-interference-and-diffraction"
+      ]
+    },
+    {
+      "term": "driving frequency",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "simple-harmonic-motion-and-oscillations"
+      ]
+    },
+    {
+      "term": "dynamo",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "magnetic-fields-and-electromagnetism"
+      ]
+    },
+    {
+      "term": "Earth's magnetic field",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "magnetic-fields-and-electromagnetism"
+      ]
+    },
+    {
+      "term": "echolocation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "medical-physics-applications"
+      ]
+    },
+    {
+      "term": "electric field line",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "electric-fields-and-capacitors"
+      ]
+    },
+    {
+      "term": "electric potential",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "electric-fields-and-capacitors"
+      ]
+    },
+    {
+      "term": "electromagnetic relay",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "magnetic-fields-and-electromagnetism"
+      ]
+    },
+    {
+      "term": "electron diffraction",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "atomic-world-and-quantum-physics"
+      ]
+    },
+    {
+      "term": "electron transition",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "atomic-world-and-quantum-physics"
+      ]
+    },
+    {
+      "term": "electron volt",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "atomic-world-and-quantum-physics"
+      ]
+    },
+    {
+      "term": "emission spectrum",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "atomic-world-and-quantum-physics"
+      ]
+    },
+    {
+      "term": "endoscope",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "medical-physics-applications"
+      ]
+    },
+    {
+      "term": "energy conversion efficiency",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "energy-systems-and-environment"
+      ]
+    },
+    {
+      "term": "energy density",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "energy-systems-and-environment"
+      ]
+    },
+    {
+      "term": "energy in oscillation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "simple-harmonic-motion-and-oscillations"
+      ]
+    },
+    {
+      "term": "energy level",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "atomic-world-and-quantum-physics"
+      ]
+    },
+    {
+      "term": "energy loss",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "energy-systems-and-environment"
+      ]
+    },
+    {
+      "term": "energy policy",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "energy-systems-and-environment"
+      ]
+    },
+    {
+      "term": "energy storage",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "energy-systems-and-environment"
+      ]
+    },
+    {
+      "term": "energy stored in capacitor",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "electric-fields-and-capacitors"
+      ]
+    },
+    {
+      "term": "environmental impact",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "energy-systems-and-environment"
+      ]
+    },
+    {
+      "term": "equilibrium condition",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "vectors-and-advanced-mechanics"
+      ]
+    },
+    {
+      "term": "equilibrium position",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "simple-harmonic-motion-and-oscillations"
+      ]
+    },
+    {
+      "term": "equipotential surface",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "electric-fields-and-capacitors"
+      ]
+    },
+    {
+      "term": "error bar",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "experimental-physics-and-data-analysis"
+      ]
+    },
+    {
+      "term": "escape velocity",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "circular-motion-and-gravitation"
+      ]
+    },
+    {
+      "term": "event horizon",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "astronomy-and-space-science"
+      ]
+    },
+    {
+      "term": "expanding universe",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "astronomy-and-space-science"
+      ]
+    },
+    {
+      "term": "fair comparison",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "experimental-physics-and-data-analysis"
+      ]
+    },
+    {
+      "term": "Fleming's right-hand rule",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "magnetic-fields-and-electromagnetism"
+      ]
+    },
+    {
+      "term": "flux cutting",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "magnetic-fields-and-electromagnetism"
+      ]
+    },
+    {
+      "term": "force on current-carrying conductor",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "magnetic-fields-and-electromagnetism"
+      ]
+    },
+    {
+      "term": "force on moving charge",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "magnetic-fields-and-electromagnetism"
+      ]
+    },
+    {
+      "term": "forced oscillation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "simple-harmonic-motion-and-oscillations"
+      ]
+    },
+    {
+      "term": "frequency formula",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "simple-harmonic-motion-and-oscillations"
+      ]
+    },
+    {
+      "term": "frequency of AC",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "alternating-current-and-circuits"
+      ]
+    },
+    {
+      "term": "fringe spacing",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "wave-interference-and-diffraction"
+      ]
+    },
+    {
+      "term": "fuel cell",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "energy-systems-and-environment"
+      ]
+    },
+    {
+      "term": "fundamental frequency",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "wave-interference-and-diffraction"
+      ]
+    },
+    {
+      "term": "galaxy",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "astronomy-and-space-science"
+      ]
+    },
+    {
+      "term": "gamma camera",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "medical-physics-applications"
+      ]
+    },
+    {
+      "term": "geostationary orbit",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "circular-motion-and-gravitation"
+      ]
+    },
+    {
+      "term": "grating",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "wave-interference-and-diffraction"
+      ]
+    },
+    {
+      "term": "gravitational field",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "circular-motion-and-gravitation"
+      ]
+    },
+    {
+      "term": "gravitational field strength",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "circular-motion-and-gravitation"
+      ]
+    },
+    {
+      "term": "gravitational potential",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "circular-motion-and-gravitation"
+      ]
+    },
+    {
+      "term": "Hall effect",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "magnetic-fields-and-electromagnetism"
+      ]
+    },
+    {
+      "term": "hard X-ray",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "medical-physics-applications"
+      ]
+    },
+    {
+      "term": "harmonic",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "wave-interference-and-diffraction"
+      ]
+    },
+    {
+      "term": "hearing range",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "medical-physics-applications"
+      ]
+    },
+    {
+      "term": "heat engine",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "energy-systems-and-environment"
+      ]
+    },
+    {
+      "term": "heavy damping",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "simple-harmonic-motion-and-oscillations"
+      ]
+    },
+    {
+      "term": "high-voltage transmission",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "alternating-current-and-circuits"
+      ]
+    },
+    {
+      "term": "Hubble's law",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "astronomy-and-space-science"
+      ]
+    },
+    {
+      "term": "image distance",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "optics-and-instruments"
+      ]
+    },
+    {
+      "term": "impedance",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "alternating-current-and-circuits"
+      ]
+    },
+    {
+      "term": "induced current",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "magnetic-fields-and-electromagnetism"
+      ]
+    },
+    {
+      "term": "induced magnetic field",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "magnetic-fields-and-electromagnetism"
+      ]
+    },
+    {
+      "term": "inductive reactance",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "alternating-current-and-circuits"
+      ]
+    },
+    {
+      "term": "intensity of light",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "atomic-world-and-quantum-physics"
+      ]
+    },
+    {
+      "term": "ionizing dose",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "medical-physics-applications"
+      ]
+    },
+    {
+      "term": "irradiation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "radioactivity-and-nuclear-physics"
+      ]
+    },
+    {
+      "term": "Kepler's law",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "circular-motion-and-gravitation"
+      ]
+    },
+    {
+      "term": "laser surgery",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "medical-physics-applications"
+      ]
+    },
+    {
+      "term": "lens aberration",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "optics-and-instruments"
+      ]
+    },
+    {
+      "term": "lens formula",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "optics-and-instruments"
+      ]
+    },
+    {
+      "term": "life cycle of star",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "astronomy-and-space-science"
+      ]
+    },
+    {
+      "term": "light damping",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "simple-harmonic-motion-and-oscillations"
+      ]
+    },
+    {
+      "term": "light year",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "astronomy-and-space-science"
+      ]
+    },
+    {
+      "term": "line spectrum",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "atomic-world-and-quantum-physics"
+      ]
+    },
+    {
+      "term": "linear speed",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "circular-motion-and-gravitation"
+      ]
+    },
+    {
+      "term": "linearization",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "experimental-physics-and-data-analysis"
+      ]
+    },
+    {
+      "term": "load management",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "energy-systems-and-environment"
+      ]
+    },
+    {
+      "term": "log-log graph",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "experimental-physics-and-data-analysis"
+      ]
+    },
+    {
+      "term": "magnetic field pattern",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "magnetic-fields-and-electromagnetism"
+      ]
+    },
+    {
+      "term": "magnetic flux change",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "magnetic-fields-and-electromagnetism"
+      ]
+    },
+    {
+      "term": "magnetic flux linkage",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "magnetic-fields-and-electromagnetism"
+      ]
+    },
+    {
+      "term": "magnetic resonance imaging",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "medical-physics-applications"
+      ]
+    },
+    {
+      "term": "magnetic shielding",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "magnetic-fields-and-electromagnetism"
+      ]
+    },
+    {
+      "term": "mass defect",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "radioactivity-and-nuclear-physics"
+      ]
+    },
+    {
+      "term": "mass number",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "radioactivity-and-nuclear-physics"
+      ]
+    },
+    {
+      "term": "mass-spring system",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "simple-harmonic-motion-and-oscillations"
+      ]
+    },
+    {
+      "term": "maximum acceleration",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "simple-harmonic-motion-and-oscillations"
+      ]
+    },
+    {
+      "term": "maximum height",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "vectors-and-advanced-mechanics"
+      ]
+    },
+    {
+      "term": "maximum speed",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "simple-harmonic-motion-and-oscillations"
+      ]
+    },
+    {
+      "term": "medical tracer",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "medical-physics-applications"
+      ]
+    },
+    {
+      "term": "microscope",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "optics-and-instruments"
+      ]
+    },
+    {
+      "term": "mirror formula",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "optics-and-instruments"
+      ]
+    },
+    {
+      "term": "moment of force",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "vectors-and-advanced-mechanics"
+      ]
+    },
+    {
+      "term": "motional e.m.f.",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "magnetic-fields-and-electromagnetism"
+      ]
+    },
+    {
+      "term": "mutual inductance",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "magnetic-fields-and-electromagnetism"
+      ]
+    },
+    {
+      "term": "natural frequency",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "simple-harmonic-motion-and-oscillations"
+      ]
+    },
+    {
+      "term": "neutron star",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "astronomy-and-space-science"
+      ]
+    },
+    {
+      "term": "Newton's law of gravitation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "circular-motion-and-gravitation"
+      ]
+    },
+    {
+      "term": "node",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "wave-interference-and-diffraction"
+      ]
+    },
+    {
+      "term": "nuclear equation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "radioactivity-and-nuclear-physics"
+      ]
+    },
+    {
+      "term": "nuclear fusion",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "radioactivity-and-nuclear-physics"
+      ]
+    },
+    {
+      "term": "nuclear power plant",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "energy-systems-and-environment"
+      ]
+    },
+    {
+      "term": "nuclear waste",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "radioactivity-and-nuclear-physics"
+      ]
+    },
+    {
+      "term": "object distance",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "optics-and-instruments"
+      ]
+    },
+    {
+      "term": "oblique collision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "vectors-and-advanced-mechanics"
+      ]
+    },
+    {
+      "term": "optical centre",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "optics-and-instruments"
+      ]
+    },
+    {
+      "term": "optical fibre",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "optics-and-instruments"
+      ]
+    },
+    {
+      "term": "orbital motion",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "circular-motion-and-gravitation"
+      ]
+    },
+    {
+      "term": "orbital speed",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "circular-motion-and-gravitation"
+      ]
+    },
+    {
+      "term": "order of diffraction",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "wave-interference-and-diffraction"
+      ]
+    },
+    {
+      "term": "oscillation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "simple-harmonic-motion-and-oscillations"
+      ]
+    },
+    {
+      "term": "overtone",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "wave-interference-and-diffraction"
+      ]
+    },
+    {
+      "term": "parallax error",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "experimental-physics-and-data-analysis"
+      ]
+    },
+    {
+      "term": "parallel combination of capacitors",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "electric-fields-and-capacitors"
+      ]
+    },
+    {
+      "term": "parallel plate capacitor",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "electric-fields-and-capacitors"
+      ]
+    },
+    {
+      "term": "parsec",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "astronomy-and-space-science"
+      ]
+    },
+    {
+      "term": "path difference",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "wave-interference-and-diffraction"
+      ]
+    },
+    {
+      "term": "peak value",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "alternating-current-and-circuits"
+      ]
+    },
+    {
+      "term": "peak-to-peak value",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "alternating-current-and-circuits"
+      ]
+    },
+    {
+      "term": "pendulum",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "simple-harmonic-motion-and-oscillations"
+      ]
+    },
+    {
+      "term": "percentage uncertainty",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "experimental-physics-and-data-analysis"
+      ]
+    },
+    {
+      "term": "PET scan",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "medical-physics-applications"
+      ]
+    },
+    {
+      "term": "phase angle",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "alternating-current-and-circuits"
+      ]
+    },
+    {
+      "term": "phase difference",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "simple-harmonic-motion-and-oscillations"
+      ]
+    },
+    {
+      "term": "phase difference in waves",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "wave-interference-and-diffraction"
+      ]
+    },
+    {
+      "term": "photoelectric equation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "atomic-world-and-quantum-physics"
+      ]
+    },
+    {
+      "term": "photovoltaic cell",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "energy-systems-and-environment"
+      ]
+    },
+    {
+      "term": "physical model validation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "experimental-physics-and-data-analysis"
+      ]
+    },
+    {
+      "term": "Planck constant",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "atomic-world-and-quantum-physics"
+      ]
+    },
+    {
+      "term": "planet",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "astronomy-and-space-science"
+      ]
+    },
+    {
+      "term": "point charge",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "electric-fields-and-capacitors"
+      ]
+    },
+    {
+      "term": "polarization",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "wave-interference-and-diffraction"
+      ]
+    },
+    {
+      "term": "potential gradient",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "electric-fields-and-capacitors"
+      ]
+    },
+    {
+      "term": "power in AC circuit",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "alternating-current-and-circuits"
+      ]
+    },
+    {
+      "term": "power loss in cable",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "alternating-current-and-circuits"
+      ]
+    },
+    {
+      "term": "power of lens",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "optics-and-instruments"
+      ]
+    },
+    {
+      "term": "power output",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "energy-systems-and-environment"
+      ]
+    },
+    {
+      "term": "power transmission",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "alternating-current-and-circuits"
+      ]
+    },
+    {
+      "term": "principal axis",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "optics-and-instruments"
+      ]
+    },
+    {
+      "term": "principal focus",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "optics-and-instruments"
+      ]
+    },
+    {
+      "term": "prism",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "optics-and-instruments"
+      ]
+    },
+    {
+      "term": "projectile at angle",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "vectors-and-advanced-mechanics"
+      ]
+    },
+    {
+      "term": "pure capacitor in AC",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "alternating-current-and-circuits"
+      ]
+    },
+    {
+      "term": "pure inductor in AC",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "alternating-current-and-circuits"
+      ]
+    },
+    {
+      "term": "pure resistor in AC",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "alternating-current-and-circuits"
+      ]
+    },
+    {
+      "term": "quantum of energy",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "atomic-world-and-quantum-physics"
+      ]
+    },
+    {
+      "term": "quantum phenomenon",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "atomic-world-and-quantum-physics"
+      ]
+    },
+    {
+      "term": "radiation dose",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "radioactivity-and-nuclear-physics"
+      ]
+    },
+    {
+      "term": "radiation monitoring",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "radioactivity-and-nuclear-physics"
+      ]
+    },
+    {
+      "term": "radioactive source",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "radioactivity-and-nuclear-physics"
+      ]
+    },
+    {
+      "term": "radiotherapy",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "medical-physics-applications"
+      ]
+    },
+    {
+      "term": "random decay",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "radioactivity-and-nuclear-physics"
+      ]
+    },
+    {
+      "term": "range formula",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "vectors-and-advanced-mechanics"
+      ]
+    },
+    {
+      "term": "ray diagram",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "optics-and-instruments"
+      ]
+    },
+    {
+      "term": "RC circuit",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "electric-fields-and-capacitors"
+      ]
+    },
+    {
+      "term": "rectification",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "alternating-current-and-circuits"
+      ]
+    },
+    {
+      "term": "red shift",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "astronomy-and-space-science"
+      ]
+    },
+    {
+      "term": "relative motion",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "vectors-and-advanced-mechanics"
+      ]
+    },
+    {
+      "term": "relative permittivity",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "electric-fields-and-capacitors"
+      ]
+    },
+    {
+      "term": "relative velocity",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "vectors-and-advanced-mechanics"
+      ]
+    },
+    {
+      "term": "renewable transition",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "energy-systems-and-environment"
+      ]
+    },
+    {
+      "term": "repeatability",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "experimental-physics-and-data-analysis"
+      ]
+    },
+    {
+      "term": "reproducibility",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "experimental-physics-and-data-analysis"
+      ]
+    },
+    {
+      "term": "resonance curve",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "simple-harmonic-motion-and-oscillations"
+      ]
+    },
+    {
+      "term": "resonance in RLC circuit",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "alternating-current-and-circuits"
+      ]
+    },
+    {
+      "term": "restoring force",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "simple-harmonic-motion-and-oscillations"
+      ]
+    },
+    {
+      "term": "resultant vector",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "vectors-and-advanced-mechanics"
+      ]
+    },
+    {
+      "term": "ripple tank",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "wave-interference-and-diffraction"
+      ]
+    },
+    {
+      "term": "risk control",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "experimental-physics-and-data-analysis"
+      ]
+    },
+    {
+      "term": "RLC circuit",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "alternating-current-and-circuits"
+      ]
+    },
+    {
+      "term": "safety precaution",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "experimental-physics-and-data-analysis"
+      ]
+    },
+    {
+      "term": "satellite",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "circular-motion-and-gravitation"
+      ]
+    },
+    {
+      "term": "self-inductance",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "magnetic-fields-and-electromagnetism"
+      ]
+    },
+    {
+      "term": "semi-log graph",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "experimental-physics-and-data-analysis"
+      ]
+    },
+    {
+      "term": "sensor",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "experimental-physics-and-data-analysis"
+      ]
+    },
+    {
+      "term": "series combination of capacitors",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "electric-fields-and-capacitors"
+      ]
+    },
+    {
+      "term": "sievert",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "radioactivity-and-nuclear-physics"
+      ]
+    },
+    {
+      "term": "single-slit diffraction",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "wave-interference-and-diffraction"
+      ]
+    },
+    {
+      "term": "sinusoidal waveform",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "alternating-current-and-circuits"
+      ]
+    },
+    {
+      "term": "slip ring",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "magnetic-fields-and-electromagnetism"
+      ]
+    },
+    {
+      "term": "smart grid",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "energy-systems-and-environment"
+      ]
+    },
+    {
+      "term": "soft X-ray",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "medical-physics-applications"
+      ]
+    },
+    {
+      "term": "solar system",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "astronomy-and-space-science"
+      ]
+    },
+    {
+      "term": "sound intensity level",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "medical-physics-applications"
+      ]
+    },
+    {
+      "term": "space probe",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "astronomy-and-space-science"
+      ]
+    },
+    {
+      "term": "spectrometer",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "optics-and-instruments"
+      ]
+    },
+    {
+      "term": "spectroscopy",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "atomic-world-and-quantum-physics"
+      ]
+    },
+    {
+      "term": "spherical mirror",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "optics-and-instruments"
+      ]
+    },
+    {
+      "term": "split-ring commutator",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "magnetic-fields-and-electromagnetism"
+      ]
+    },
+    {
+      "term": "stability",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "vectors-and-advanced-mechanics"
+      ]
+    },
+    {
+      "term": "standing wave",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "wave-interference-and-diffraction"
+      ]
+    },
+    {
+      "term": "star",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "astronomy-and-space-science"
+      ]
+    },
+    {
+      "term": "stellar spectrum",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "astronomy-and-space-science"
+      ]
+    },
+    {
+      "term": "stopping potential",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "atomic-world-and-quantum-physics"
+      ]
+    },
+    {
+      "term": "supernova",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "astronomy-and-space-science"
+      ]
+    },
+    {
+      "term": "sustainable development",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "energy-systems-and-environment"
+      ]
+    },
+    {
+      "term": "systematic uncertainty",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "experimental-physics-and-data-analysis"
+      ]
+    },
+    {
+      "term": "telescope",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "optics-and-instruments"
+      ]
+    },
+    {
+      "term": "threshold frequency",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "atomic-world-and-quantum-physics"
+      ]
+    },
+    {
+      "term": "tidal energy",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "energy-systems-and-environment"
+      ]
+    },
+    {
+      "term": "time constant",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "electric-fields-and-capacitors"
+      ]
+    },
+    {
+      "term": "time of flight formula",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "vectors-and-advanced-mechanics"
+      ]
+    },
+    {
+      "term": "time period",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "simple-harmonic-motion-and-oscillations"
+      ]
+    },
+    {
+      "term": "toppling",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "vectors-and-advanced-mechanics"
+      ]
+    },
+    {
+      "term": "torque",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "vectors-and-advanced-mechanics"
+      ]
+    },
+    {
+      "term": "transformer efficiency",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "alternating-current-and-circuits"
+      ]
+    },
+    {
+      "term": "two-dimensional motion",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "vectors-and-advanced-mechanics"
+      ]
+    },
+    {
+      "term": "ultrasound imaging",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "medical-physics-applications"
+      ]
+    },
+    {
+      "term": "uncontrolled reaction",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "radioactivity-and-nuclear-physics"
+      ]
+    },
+    {
+      "term": "uniform circular motion",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "circular-motion-and-gravitation"
+      ]
+    },
+    {
+      "term": "uniform electric field",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "electric-fields-and-capacitors"
+      ]
+    },
+    {
+      "term": "vector component",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "vectors-and-advanced-mechanics"
+      ]
+    },
+    {
+      "term": "vector resolution",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "vectors-and-advanced-mechanics"
+      ]
+    },
+    {
+      "term": "vertical circle",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "circular-motion-and-gravitation"
+      ]
+    },
+    {
+      "term": "wave speed on string",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "wave-interference-and-diffraction"
+      ]
+    },
+    {
+      "term": "weightlessness",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "circular-motion-and-gravitation"
+      ]
+    },
+    {
+      "term": "work function",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "atomic-world-and-quantum-physics"
+      ]
+    },
+    {
+      "term": "X-ray imaging",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "medical-physics-applications"
+      ]
+    },
+    {
+      "term": "X-ray tube",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "medical-physics-applications"
+      ]
+    },
+    {
+      "term": "zero error",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "physics",
+        "curriculum-style",
+        "experimental-physics-and-data-analysis"
       ]
     }
   ]

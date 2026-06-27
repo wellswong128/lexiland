@@ -2317,26 +2317,17 @@
       "wordbase_exists": true
     },
     "hierarchy": {
-      "status": "incomplete",
-      "missing": [
-        "definition",
-        "translation",
-        "pronunciation",
-        "part_of_speech",
-        "example",
-        "example_translation",
-        "tags",
-        "memory_tips",
-        "memory_image"
-      ],
-      "rounds": 5,
-      "attempts": 5,
+      "status": "complete",
+      "missing": [],
+      "rounds": 6,
+      "attempts": 6,
       "source_images": [
         "IMG_0051.JPG"
       ],
       "last_errors": {
         "complete": "AI request failed: {\"error\":{\"message\":\"***.InternalServerError: InternalServerError: OpenAIException -\",\"type\":\"upstream_error\",\"param\":\"\",\"code\":\"500\"}}"
-      }
+      },
+      "completed_at": "2026-06-25T11:05:48Z"
     },
     "hierarchical": {
       "status": "complete",
@@ -3707,27 +3698,20 @@
       "completed_at": "2026-06-25T06:24:04Z"
     },
     "incompatible": {
-      "status": "incomplete",
-      "missing": [
-        "definition",
-        "translation",
-        "pronunciation",
-        "part_of_speech",
-        "example",
-        "example_translation",
-        "tags",
-        "memory_tips",
-        "memory_image"
-      ],
-      "rounds": 5,
-      "attempts": 5,
+      "status": "complete",
+      "missing": [],
+      "rounds": 6,
+      "attempts": 6,
       "source_images": [
         "IMG_0052.JPG"
       ],
       "last_errors": {
         "complete": "AI request failed: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 20260625065932693090775zgxlbMcO)\",\"type\":\"AgnesAI_error\"}}",
         "memory_tips": "Expected ',' or '}' after property value in JSON at position 29 (line 2 column 28)"
-      }
+      },
+      "completed_at": "2026-06-25T11:05:49Z",
+      "skipped_reason": "exists_in_wordbase",
+      "wordbase_exists": true
     },
     "incongruity": {
       "status": "complete",
@@ -4018,70 +4002,43 @@
       "completed_at": "2026-06-25T09:27:46Z"
     },
     "jaw": {
-      "status": "incomplete",
-      "missing": [
-        "definition",
-        "translation",
-        "pronunciation",
-        "part_of_speech",
-        "example",
-        "example_translation",
-        "tags",
-        "memory_tips",
-        "memory_image"
-      ],
-      "rounds": 3,
-      "attempts": 3,
+      "status": "complete",
+      "missing": [],
+      "rounds": 4,
+      "attempts": 4,
       "source_images": [
         "IMG_0053.JPG"
       ],
       "last_errors": {
         "complete": "AI request failed: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 20260625062528599685065cdOA8g7B)\",\"type\":\"AgnesAI_error\"}}"
-      }
+      },
+      "completed_at": "2026-06-25T09:30:00Z"
     },
     "jeans": {
-      "status": "incomplete",
-      "missing": [
-        "definition",
-        "translation",
-        "pronunciation",
-        "part_of_speech",
-        "example",
-        "example_translation",
-        "tags",
-        "memory_tips",
-        "memory_image"
-      ],
-      "rounds": 3,
-      "attempts": 3,
+      "status": "complete",
+      "missing": [],
+      "rounds": 4,
+      "attempts": 4,
       "source_images": [
         "IMG_0053.JPG"
       ],
       "last_errors": {
         "complete": "AI request failed: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 20260625062529712007158lEtzre2E)\",\"type\":\"AgnesAI_error\"}}"
-      }
+      },
+      "completed_at": "2026-06-25T09:31:35Z"
     },
     "jelly": {
-      "status": "incomplete",
-      "missing": [
-        "definition",
-        "translation",
-        "pronunciation",
-        "part_of_speech",
-        "example",
-        "example_translation",
-        "tags",
-        "memory_tips",
-        "memory_image"
-      ],
-      "rounds": 3,
-      "attempts": 3,
+      "status": "complete",
+      "missing": [],
+      "rounds": 4,
+      "attempts": 4,
       "source_images": [
         "IMG_0053.JPG"
       ],
       "last_errors": {
         "complete": "AI request failed: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 20260625062530819406810BbrjNER0)\",\"type\":\"AgnesAI_error\"}}"
-      }
+      },
+      "completed_at": "2026-06-25T09:32:50Z"
     },
     "jeopardize": {
       "status": "complete",
@@ -4136,48 +4093,30 @@
       "wordbase_exists": true
     },
     "jolt": {
-      "status": "incomplete",
-      "missing": [
-        "definition",
-        "translation",
-        "pronunciation",
-        "part_of_speech",
-        "example",
-        "example_translation",
-        "tags",
-        "memory_tips",
-        "memory_image"
-      ],
-      "rounds": 3,
-      "attempts": 3,
+      "status": "complete",
+      "missing": [],
+      "rounds": 4,
+      "attempts": 4,
       "source_images": [
         "IMG_0053.JPG"
       ],
       "last_errors": {
         "complete": "AI request failed: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 202606250628025571010017mhOXz0T)\",\"type\":\"AgnesAI_error\"}}"
-      }
+      },
+      "completed_at": "2026-06-25T09:34:38Z"
     },
     "jot": {
-      "status": "incomplete",
-      "missing": [
-        "definition",
-        "translation",
-        "pronunciation",
-        "part_of_speech",
-        "example",
-        "example_translation",
-        "tags",
-        "memory_tips",
-        "memory_image"
-      ],
-      "rounds": 3,
-      "attempts": 3,
+      "status": "complete",
+      "missing": [],
+      "rounds": 4,
+      "attempts": 4,
       "source_images": [
         "IMG_0053.JPG"
       ],
       "last_errors": {
         "complete": "AI request failed: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 2026062506280455174055Dct0tlym)\",\"type\":\"AgnesAI_error\"}}"
-      }
+      },
+      "completed_at": "2026-06-25T09:35:29Z"
     },
     "journal": {
       "status": "complete",
@@ -4193,70 +4132,47 @@
       "wordbase_exists": true
     },
     "journalism": {
-      "status": "incomplete",
-      "missing": [
-        "definition",
-        "translation",
-        "pronunciation",
-        "part_of_speech",
-        "example",
-        "example_translation",
-        "tags",
-        "memory_tips",
-        "memory_image"
-      ],
-      "rounds": 3,
-      "attempts": 3,
+      "status": "complete",
+      "missing": [],
+      "rounds": 4,
+      "attempts": 4,
       "source_images": [
         "IMG_0053.JPG"
       ],
       "last_errors": {
         "complete": "AI request failed: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 20260625062805811323289ee9qb6yj)\",\"type\":\"AgnesAI_error\"}}"
-      }
+      },
+      "completed_at": "2026-06-25T09:35:30Z",
+      "skipped_reason": "exists_in_wordbase",
+      "wordbase_exists": true
     },
     "juice": {
-      "status": "incomplete",
-      "missing": [
-        "definition",
-        "translation",
-        "pronunciation",
-        "part_of_speech",
-        "example",
-        "example_translation",
-        "tags",
-        "memory_tips",
-        "memory_image"
-      ],
-      "rounds": 3,
-      "attempts": 3,
+      "status": "complete",
+      "missing": [],
+      "rounds": 4,
+      "attempts": 4,
       "source_images": [
         "IMG_0053.JPG"
       ],
       "last_errors": {
         "complete": "AI request failed: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 20260625062807688199204WpUrRlg7)\",\"type\":\"AgnesAI_error\"}}"
-      }
+      },
+      "completed_at": "2026-06-25T09:35:31Z",
+      "skipped_reason": "exists_in_wordbase",
+      "wordbase_exists": true
     },
     "jumble": {
-      "status": "incomplete",
-      "missing": [
-        "definition",
-        "translation",
-        "pronunciation",
-        "part_of_speech",
-        "example",
-        "example_translation",
-        "tags",
-        "memory_tips",
-        "memory_image"
-      ],
-      "rounds": 3,
-      "attempts": 3,
+      "status": "complete",
+      "missing": [],
+      "rounds": 4,
+      "attempts": 4,
       "source_images": [
         "IMG_0053.JPG"
       ],
       "last_errors": {
         "complete": "AI request failed: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 20260625062809392697414UslJnqTd)\",\"type\":\"AgnesAI_error\"}}"
-      }
+      },
+      "completed_at": "2026-06-25T09:36:40Z"
     },
     "junction": {
       "status": "complete",
@@ -4272,26 +4188,17 @@
       "completed_at": "2026-06-25T06:29:33Z"
     },
     "juridical": {
-      "status": "incomplete",
-      "missing": [
-        "definition",
-        "translation",
-        "pronunciation",
-        "part_of_speech",
-        "example",
-        "example_translation",
-        "tags",
-        "memory_tips",
-        "memory_image"
-      ],
-      "rounds": 3,
-      "attempts": 3,
+      "status": "complete",
+      "missing": [],
+      "rounds": 4,
+      "attempts": 4,
       "source_images": [
         "IMG_0053.JPG"
       ],
       "last_errors": {
         "complete": "AI request failed: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 20260625062934953973443uI1kixsg)\",\"type\":\"AgnesAI_error\"}}"
-      }
+      },
+      "completed_at": "2026-06-25T09:39:56Z"
     },
     "justice": {
       "status": "complete",
@@ -4344,26 +4251,17 @@
       "wordbase_exists": true
     },
     "kennel": {
-      "status": "incomplete",
-      "missing": [
-        "definition",
-        "translation",
-        "pronunciation",
-        "part_of_speech",
-        "example",
-        "example_translation",
-        "tags",
-        "memory_tips",
-        "memory_image"
-      ],
-      "rounds": 3,
-      "attempts": 3,
+      "status": "complete",
+      "missing": [],
+      "rounds": 4,
+      "attempts": 4,
       "source_images": [
         "IMG_0053.JPG"
       ],
       "last_errors": {
         "complete": "AI request failed: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 20260625062936357080364eBkTrKQy)\",\"type\":\"AgnesAI_error\"}}"
-      }
+      },
+      "completed_at": "2026-06-25T09:42:13Z"
     },
     "kernel": {
       "status": "complete",
@@ -4377,26 +4275,20 @@
       "completed_at": "2026-06-25T04:27:45Z"
     },
     "kerosene": {
-      "status": "incomplete",
-      "missing": [
-        "definition",
-        "translation",
-        "pronunciation",
-        "part_of_speech",
-        "example",
-        "example_translation",
-        "tags",
-        "memory_tips",
-        "memory_image"
-      ],
-      "rounds": 3,
-      "attempts": 3,
+      "status": "complete",
+      "missing": [],
+      "rounds": 5,
+      "attempts": 5,
       "source_images": [
         "IMG_0053.JPG"
       ],
       "last_errors": {
-        "complete": "AI request failed: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 202606250629377187770934xf6rIrm)\",\"type\":\"AgnesAI_error\"}}"
-      }
+        "complete": "AI request failed: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 202606250629377187770934xf6rIrm)\",\"type\":\"AgnesAI_error\"}}",
+        "memory_tips": "AI request failed: {\"error\":{\"message\":\"***.InternalServerError: InternalServerError: OpenAIException -\",\"type\":\"upstream_error\",\"param\":\"\",\"code\":\"500\"}}"
+      },
+      "completed_at": "2026-06-25T11:05:50Z",
+      "skipped_reason": "exists_in_wordbase",
+      "wordbase_exists": true
     },
     "kiln": {
       "status": "complete",
@@ -4464,26 +4356,17 @@
       "wordbase_exists": true
     },
     "maize": {
-      "status": "incomplete",
-      "missing": [
-        "definition",
-        "translation",
-        "pronunciation",
-        "part_of_speech",
-        "example",
-        "example_translation",
-        "tags",
-        "memory_tips",
-        "memory_image"
-      ],
-      "rounds": 3,
-      "attempts": 3,
+      "status": "complete",
+      "missing": [],
+      "rounds": 4,
+      "attempts": 4,
       "source_images": [
         "IMG_0054.JPG"
       ],
       "last_errors": {
         "complete": "AI request failed: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 202606250629398291263svNlO90Z)\",\"type\":\"AgnesAI_error\"}}"
-      }
+      },
+      "completed_at": "2026-06-25T09:45:21Z"
     },
     "major": {
       "status": "complete",
@@ -4499,114 +4382,69 @@
       "wordbase_exists": true
     },
     "male": {
-      "status": "incomplete",
-      "missing": [
-        "definition",
-        "translation",
-        "pronunciation",
-        "part_of_speech",
-        "example",
-        "example_translation",
-        "tags",
-        "memory_tips",
-        "memory_image"
-      ],
-      "rounds": 3,
-      "attempts": 3,
+      "status": "complete",
+      "missing": [],
+      "rounds": 4,
+      "attempts": 4,
       "source_images": [
         "IMG_0054.JPG"
       ],
       "last_errors": {
         "complete": "AI request failed: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 202606250629402550344463CMD86mt)\",\"type\":\"AgnesAI_error\"}}"
-      }
+      },
+      "completed_at": "2026-06-25T09:46:56Z"
     },
     "malice": {
-      "status": "incomplete",
-      "missing": [
-        "definition",
-        "translation",
-        "pronunciation",
-        "part_of_speech",
-        "example",
-        "example_translation",
-        "tags",
-        "memory_tips",
-        "memory_image"
-      ],
-      "rounds": 3,
-      "attempts": 3,
+      "status": "complete",
+      "missing": [],
+      "rounds": 4,
+      "attempts": 4,
       "source_images": [
         "IMG_0054.JPG"
       ],
       "last_errors": {
         "complete": "AI request failed: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 20260625062941586291094zUwjeCwY)\",\"type\":\"AgnesAI_error\"}}"
-      }
+      },
+      "completed_at": "2026-06-25T09:48:06Z"
     },
     "malicious": {
-      "status": "incomplete",
-      "missing": [
-        "definition",
-        "translation",
-        "pronunciation",
-        "part_of_speech",
-        "example",
-        "example_translation",
-        "tags",
-        "memory_tips",
-        "memory_image"
-      ],
-      "rounds": 3,
-      "attempts": 3,
+      "status": "complete",
+      "missing": [],
+      "rounds": 4,
+      "attempts": 4,
       "source_images": [
         "IMG_0054.JPG"
       ],
       "last_errors": {
         "complete": "AI request failed: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 20260625062943824494883L3THKRE)\",\"type\":\"AgnesAI_error\"}}"
-      }
+      },
+      "completed_at": "2026-06-25T09:49:37Z"
     },
     "malleable": {
-      "status": "incomplete",
-      "missing": [
-        "definition",
-        "translation",
-        "pronunciation",
-        "part_of_speech",
-        "example",
-        "example_translation",
-        "tags",
-        "memory_tips",
-        "memory_image"
-      ],
-      "rounds": 3,
-      "attempts": 3,
+      "status": "complete",
+      "missing": [],
+      "rounds": 4,
+      "attempts": 4,
       "source_images": [
         "IMG_0054.JPG"
       ],
       "last_errors": {
         "complete": "AI request failed: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 20260625062944314064511VdbGoOoH)\",\"type\":\"AgnesAI_error\"}}"
-      }
+      },
+      "completed_at": "2026-06-25T09:51:03Z"
     },
     "malnutrition": {
-      "status": "incomplete",
-      "missing": [
-        "definition",
-        "translation",
-        "pronunciation",
-        "part_of_speech",
-        "example",
-        "example_translation",
-        "tags",
-        "memory_tips",
-        "memory_image"
-      ],
-      "rounds": 3,
-      "attempts": 3,
+      "status": "complete",
+      "missing": [],
+      "rounds": 4,
+      "attempts": 4,
       "source_images": [
         "IMG_0054.JPG"
       ],
       "last_errors": {
         "complete": "AI request failed: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 202606250629455452691496tOvJZfm)\",\"type\":\"AgnesAI_error\"}}"
-      }
+      },
+      "completed_at": "2026-06-25T09:52:15Z"
     },
     "mammal": {
       "status": "complete",
@@ -4620,26 +4458,17 @@
       "completed_at": "2026-06-25T04:28:54Z"
     },
     "mammoth": {
-      "status": "incomplete",
-      "missing": [
-        "definition",
-        "translation",
-        "pronunciation",
-        "part_of_speech",
-        "example",
-        "example_translation",
-        "tags",
-        "memory_tips",
-        "memory_image"
-      ],
-      "rounds": 3,
-      "attempts": 3,
+      "status": "complete",
+      "missing": [],
+      "rounds": 4,
+      "attempts": 4,
       "source_images": [
         "IMG_0054.JPG"
       ],
       "last_errors": {
         "complete": "AI request failed: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 20260625062946824819171Ibnemp3P)\",\"type\":\"AgnesAI_error\"}}"
-      }
+      },
+      "completed_at": "2026-06-25T09:54:10Z"
     },
     "manage": {
       "status": "complete",
@@ -4655,92 +4484,59 @@
       "wordbase_exists": true
     },
     "mandate": {
-      "status": "incomplete",
-      "missing": [
-        "definition",
-        "translation",
-        "pronunciation",
-        "part_of_speech",
-        "example",
-        "example_translation",
-        "tags",
-        "memory_tips",
-        "memory_image"
-      ],
-      "rounds": 3,
-      "attempts": 3,
+      "status": "complete",
+      "missing": [],
+      "rounds": 4,
+      "attempts": 4,
       "source_images": [
         "IMG_0054.JPG"
       ],
       "last_errors": {
         "complete": "AI request failed: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 20260625062948302315853zzRNJL6)\",\"type\":\"AgnesAI_error\"}}"
-      }
+      },
+      "completed_at": "2026-06-25T09:56:50Z"
     },
     "mandatory": {
-      "status": "incomplete",
-      "missing": [
-        "definition",
-        "translation",
-        "pronunciation",
-        "part_of_speech",
-        "example",
-        "example_translation",
-        "tags",
-        "memory_tips",
-        "memory_image"
-      ],
-      "rounds": 3,
-      "attempts": 3,
+      "status": "complete",
+      "missing": [],
+      "rounds": 4,
+      "attempts": 4,
       "source_images": [
         "IMG_0054.JPG"
       ],
       "last_errors": {
         "complete": "AI request failed: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 202606250629493040104791ZJ7vOlH)\",\"type\":\"AgnesAI_error\"}}"
-      }
+      },
+      "completed_at": "2026-06-25T09:59:38Z"
     },
     "maneuver": {
-      "status": "incomplete",
-      "missing": [
-        "definition",
-        "translation",
-        "pronunciation",
-        "part_of_speech",
-        "example",
-        "example_translation",
-        "tags",
-        "memory_tips",
-        "memory_image"
-      ],
-      "rounds": 3,
-      "attempts": 3,
+      "status": "complete",
+      "missing": [],
+      "rounds": 4,
+      "attempts": 4,
       "source_images": [
         "IMG_0054.JPG"
       ],
       "last_errors": {
         "complete": "AI request failed: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 20260625062950437926008uQmAqAgS)\",\"type\":\"AgnesAI_error\"}}"
-      }
+      },
+      "completed_at": "2026-06-25T10:02:16Z"
     },
     "mania": {
-      "status": "incomplete",
-      "missing": [
-        "definition",
-        "translation",
-        "pronunciation",
-        "part_of_speech",
-        "example",
-        "example_translation",
-        "tags",
-        "memory_tips",
-        "memory_image"
-      ],
-      "rounds": 3,
-      "attempts": 3,
+      "status": "complete",
+      "missing": [],
+      "rounds": 5,
+      "attempts": 5,
       "source_images": [
         "IMG_0054.JPG"
       ],
       "last_errors": {
-        "complete": "AI request failed: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 20260625062951653743415chY1HFqO)\",\"type\":\"AgnesAI_error\"}}"
-      }
+        "complete": "AI request failed: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 20260625062951653743415chY1HFqO)\",\"type\":\"AgnesAI_error\"}}",
+        "memory_tips": "Expected ',' or '}' after property value in JSON at position 221 (line 10 column 23)"
+      },
+      "completed_at": "2026-06-25T11:05:50Z",
+      "skipped_reason": "exists_in_wordbase",
+      "wordbase_exists": true
     },
     "manifest": {
       "status": "complete",
@@ -4758,48 +4554,36 @@
       "wordbase_exists": true
     },
     "manifestation": {
-      "status": "incomplete",
-      "missing": [
-        "definition",
-        "translation",
-        "pronunciation",
-        "part_of_speech",
-        "example",
-        "example_translation",
-        "tags",
-        "memory_tips",
-        "memory_image"
-      ],
-      "rounds": 2,
-      "attempts": 2,
+      "status": "complete",
+      "missing": [],
+      "rounds": 4,
+      "attempts": 4,
       "source_images": [
         "IMG_0054.JPG"
       ],
       "last_errors": {
-        "complete": "AI request failed: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 20260625062953513724406GTkmQsNN)\",\"type\":\"AgnesAI_error\"}}"
-      }
+        "complete": "AI request failed: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 20260625062953513724406GTkmQsNN)\",\"type\":\"AgnesAI_error\"}}",
+        "memory_tips": "AI request failed: {\"error\":{\"message\":\"***.InternalServerError: InternalServerError: OpenAIException -\",\"type\":\"upstream_error\",\"param\":\"\",\"code\":\"500\"}}"
+      },
+      "completed_at": "2026-06-25T11:05:51Z",
+      "skipped_reason": "exists_in_wordbase",
+      "wordbase_exists": true
     },
     "manifesto": {
-      "status": "incomplete",
-      "missing": [
-        "definition",
-        "translation",
-        "pronunciation",
-        "part_of_speech",
-        "example",
-        "example_translation",
-        "tags",
-        "memory_tips",
-        "memory_image"
-      ],
-      "rounds": 2,
-      "attempts": 2,
+      "status": "complete",
+      "missing": [],
+      "rounds": 4,
+      "attempts": 4,
       "source_images": [
         "IMG_0054.JPG"
       ],
       "last_errors": {
-        "complete": "AI request failed: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 20260625062954906164762wtcnaXHY)\",\"type\":\"AgnesAI_error\"}}"
-      }
+        "complete": "AI request failed: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 20260625062954906164762wtcnaXHY)\",\"type\":\"AgnesAI_error\"}}",
+        "memory_tips": "AI request failed: {\"error\":{\"message\":\"***.InternalServerError: InternalServerError: OpenAIException -\",\"type\":\"upstream_error\",\"param\":\"\",\"code\":\"500\"}}"
+      },
+      "completed_at": "2026-06-25T11:05:52Z",
+      "skipped_reason": "exists_in_wordbase",
+      "wordbase_exists": true
     },
     "manipulate": {
       "status": "complete",
@@ -4826,70 +4610,43 @@
       "wordbase_exists": true
     },
     "mannerism": {
-      "status": "incomplete",
-      "missing": [
-        "definition",
-        "translation",
-        "pronunciation",
-        "part_of_speech",
-        "example",
-        "example_translation",
-        "tags",
-        "memory_tips",
-        "memory_image"
-      ],
-      "rounds": 2,
-      "attempts": 2,
+      "status": "complete",
+      "missing": [],
+      "rounds": 3,
+      "attempts": 3,
       "source_images": [
         "IMG_0054.JPG"
       ],
       "last_errors": {
         "complete": "AI request failed: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 2026062506295665293757rqimCoTq)\",\"type\":\"AgnesAI_error\"}}"
-      }
+      },
+      "completed_at": "2026-06-25T10:07:44Z"
     },
     "mansion": {
-      "status": "incomplete",
-      "missing": [
-        "definition",
-        "translation",
-        "pronunciation",
-        "part_of_speech",
-        "example",
-        "example_translation",
-        "tags",
-        "memory_tips",
-        "memory_image"
-      ],
-      "rounds": 2,
-      "attempts": 2,
+      "status": "complete",
+      "missing": [],
+      "rounds": 3,
+      "attempts": 3,
       "source_images": [
         "IMG_0054.JPG"
       ],
       "last_errors": {
         "complete": "AI request failed: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 20260625062957260681110FHPDQ9kI)\",\"type\":\"AgnesAI_error\"}}"
-      }
+      },
+      "completed_at": "2026-06-25T10:09:31Z"
     },
     "mantle": {
-      "status": "incomplete",
-      "missing": [
-        "definition",
-        "translation",
-        "pronunciation",
-        "part_of_speech",
-        "example",
-        "example_translation",
-        "tags",
-        "memory_tips",
-        "memory_image"
-      ],
-      "rounds": 2,
-      "attempts": 2,
+      "status": "complete",
+      "missing": [],
+      "rounds": 3,
+      "attempts": 3,
       "source_images": [
         "IMG_0054.JPG"
       ],
       "last_errors": {
         "complete": "AI request failed: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 20260625062958797344389jpXWfhCW)\",\"type\":\"AgnesAI_error\"}}"
-      }
+      },
+      "completed_at": "2026-06-25T10:11:47Z"
     },
     "manual": {
       "status": "complete",
@@ -4918,26 +4675,17 @@
       "wordbase_exists": true
     },
     "mar": {
-      "status": "incomplete",
-      "missing": [
-        "definition",
-        "translation",
-        "pronunciation",
-        "part_of_speech",
-        "example",
-        "example_translation",
-        "tags",
-        "memory_tips",
-        "memory_image"
-      ],
-      "rounds": 2,
-      "attempts": 2,
+      "status": "complete",
+      "missing": [],
+      "rounds": 3,
+      "attempts": 3,
       "source_images": [
         "IMG_0054.JPG"
       ],
       "last_errors": {
         "complete": "AI request failed: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 2026062506300061146922r2OZEGFC)\",\"type\":\"AgnesAI_error\"}}"
-      }
+      },
+      "completed_at": "2026-06-25T10:14:18Z"
     },
     "marble": {
       "status": "complete",
@@ -4992,26 +4740,17 @@
       "wordbase_exists": true
     },
     "maritime": {
-      "status": "incomplete",
-      "missing": [
-        "definition",
-        "translation",
-        "pronunciation",
-        "part_of_speech",
-        "example",
-        "example_translation",
-        "tags",
-        "memory_tips",
-        "memory_image"
-      ],
-      "rounds": 2,
-      "attempts": 2,
+      "status": "complete",
+      "missing": [],
+      "rounds": 3,
+      "attempts": 3,
       "source_images": [
         "IMG_0054.JPG"
       ],
       "last_errors": {
         "complete": "AI request failed: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 20260625063001330902616kEXMKSw2)\",\"type\":\"AgnesAI_error\"}}"
-      }
+      },
+      "completed_at": "2026-06-25T10:18:59Z"
     },
     "marked": {
       "status": "complete",
@@ -5040,26 +4779,17 @@
       "wordbase_exists": true
     },
     "marvel": {
-      "status": "incomplete",
-      "missing": [
-        "definition",
-        "translation",
-        "pronunciation",
-        "part_of_speech",
-        "example",
-        "example_translation",
-        "tags",
-        "memory_tips",
-        "memory_image"
-      ],
-      "rounds": 2,
-      "attempts": 2,
+      "status": "complete",
+      "missing": [],
+      "rounds": 3,
+      "attempts": 3,
       "source_images": [
         "IMG_0054.JPG"
       ],
       "last_errors": {
         "complete": "AI request failed: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 20260625063002572784869LGPrHi9y)\",\"type\":\"AgnesAI_error\"}}"
-      }
+      },
+      "completed_at": "2026-06-25T10:21:22Z"
     },
     "mask": {
       "status": "complete",
@@ -5114,26 +4844,17 @@
       "completed_at": "2026-06-25T06:33:02Z"
     },
     "mat": {
-      "status": "incomplete",
-      "missing": [
-        "definition",
-        "translation",
-        "pronunciation",
-        "part_of_speech",
-        "example",
-        "example_translation",
-        "tags",
-        "memory_tips",
-        "memory_image"
-      ],
-      "rounds": 2,
-      "attempts": 2,
+      "status": "complete",
+      "missing": [],
+      "rounds": 3,
+      "attempts": 3,
       "source_images": [
         "IMG_0054.JPG"
       ],
       "last_errors": {
         "complete": "AI request failed: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 20260625063304150551186XL50mSvL)\",\"type\":\"AgnesAI_error\"}}"
-      }
+      },
+      "completed_at": "2026-06-25T10:22:33Z"
     },
     "match": {
       "status": "complete",
@@ -5149,26 +4870,17 @@
       "wordbase_exists": true
     },
     "mate": {
-      "status": "incomplete",
-      "missing": [
-        "definition",
-        "translation",
-        "pronunciation",
-        "part_of_speech",
-        "example",
-        "example_translation",
-        "tags",
-        "memory_tips",
-        "memory_image"
-      ],
-      "rounds": 2,
-      "attempts": 2,
+      "status": "complete",
+      "missing": [],
+      "rounds": 3,
+      "attempts": 3,
       "source_images": [
         "IMG_0054.JPG"
       ],
       "last_errors": {
         "complete": "AI request failed: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 20260625063305317851049PKqPSIQW)\",\"type\":\"AgnesAI_error\"}}"
-      }
+      },
+      "completed_at": "2026-06-25T10:23:39Z"
     },
     "material": {
       "status": "complete",
@@ -5234,48 +4946,32 @@
       "wordbase_exists": true
     },
     "motor": {
-      "status": "incomplete",
-      "missing": [
-        "definition",
-        "translation",
-        "pronunciation",
-        "part_of_speech",
-        "example",
-        "example_translation",
-        "tags",
-        "memory_tips",
-        "memory_image"
-      ],
-      "rounds": 2,
-      "attempts": 2,
+      "status": "complete",
+      "missing": [],
+      "rounds": 3,
+      "attempts": 3,
       "source_images": [
         "IMG_0055.JPG"
       ],
       "last_errors": {
         "complete": "AI request failed: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 20260625063306555225011Ue5vMZuo)\",\"type\":\"AgnesAI_error\"}}"
-      }
+      },
+      "completed_at": "2026-06-25T10:23:40Z",
+      "skipped_reason": "exists_in_wordbase",
+      "wordbase_exists": true
     },
     "mottled": {
-      "status": "incomplete",
-      "missing": [
-        "definition",
-        "translation",
-        "pronunciation",
-        "part_of_speech",
-        "example",
-        "example_translation",
-        "tags",
-        "memory_tips",
-        "memory_image"
-      ],
-      "rounds": 2,
-      "attempts": 2,
+      "status": "complete",
+      "missing": [],
+      "rounds": 3,
+      "attempts": 3,
       "source_images": [
         "IMG_0055.JPG"
       ],
       "last_errors": {
         "complete": "AI request failed: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 20260625063307725424087a8QvenxO)\",\"type\":\"AgnesAI_error\"}}"
-      }
+      },
+      "completed_at": "2026-06-25T10:27:35Z"
     },
     "motto": {
       "status": "complete",
@@ -5291,26 +4987,17 @@
       "wordbase_exists": true
     },
     "mound": {
-      "status": "incomplete",
-      "missing": [
-        "definition",
-        "translation",
-        "pronunciation",
-        "part_of_speech",
-        "example",
-        "example_translation",
-        "tags",
-        "memory_tips",
-        "memory_image"
-      ],
-      "rounds": 2,
-      "attempts": 2,
+      "status": "complete",
+      "missing": [],
+      "rounds": 3,
+      "attempts": 3,
       "source_images": [
         "IMG_0055.JPG"
       ],
       "last_errors": {
         "complete": "AI request failed: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 20260625063308875598802Innqdzh8)\",\"type\":\"AgnesAI_error\"}}"
-      }
+      },
+      "completed_at": "2026-06-25T10:28:52Z"
     },
     "mount": {
       "status": "complete",
@@ -5339,26 +5026,17 @@
       "wordbase_exists": true
     },
     "muggy": {
-      "status": "incomplete",
-      "missing": [
-        "definition",
-        "translation",
-        "pronunciation",
-        "part_of_speech",
-        "example",
-        "example_translation",
-        "tags",
-        "memory_tips",
-        "memory_image"
-      ],
-      "rounds": 2,
-      "attempts": 2,
+      "status": "complete",
+      "missing": [],
+      "rounds": 3,
+      "attempts": 3,
       "source_images": [
         "IMG_0055.JPG"
       ],
       "last_errors": {
         "complete": "AI request failed: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 20260625063310113240601umULn1lX)\",\"type\":\"AgnesAI_error\"}}"
-      }
+      },
+      "completed_at": "2026-06-25T10:30:11Z"
     },
     "multiple": {
       "status": "complete",
@@ -5374,26 +5052,17 @@
       "wordbase_exists": true
     },
     "multiplicative": {
-      "status": "incomplete",
-      "missing": [
-        "definition",
-        "translation",
-        "pronunciation",
-        "part_of_speech",
-        "example",
-        "example_translation",
-        "tags",
-        "memory_tips",
-        "memory_image"
-      ],
-      "rounds": 2,
-      "attempts": 2,
+      "status": "complete",
+      "missing": [],
+      "rounds": 3,
+      "attempts": 3,
       "source_images": [
         "IMG_0055.JPG"
       ],
       "last_errors": {
         "complete": "AI request failed: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 20260625063311320162927bChMGQ1F)\",\"type\":\"AgnesAI_error\"}}"
-      }
+      },
+      "completed_at": "2026-06-25T10:31:40Z"
     },
     "multiply": {
       "status": "complete",
@@ -5409,26 +5078,17 @@
       "wordbase_exists": true
     },
     "multitude": {
-      "status": "incomplete",
-      "missing": [
-        "definition",
-        "translation",
-        "pronunciation",
-        "part_of_speech",
-        "example",
-        "example_translation",
-        "tags",
-        "memory_tips",
-        "memory_image"
-      ],
-      "rounds": 2,
-      "attempts": 2,
+      "status": "complete",
+      "missing": [],
+      "rounds": 3,
+      "attempts": 3,
       "source_images": [
         "IMG_0055.JPG"
       ],
       "last_errors": {
         "complete": "AI request failed: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 20260625063312847035342blmwWsd6)\",\"type\":\"AgnesAI_error\"}}"
-      }
+      },
+      "completed_at": "2026-06-25T10:33:14Z"
     },
     "mundane": {
       "status": "complete",
@@ -5444,26 +5104,17 @@
       "wordbase_exists": true
     },
     "municipal": {
-      "status": "incomplete",
-      "missing": [
-        "definition",
-        "translation",
-        "pronunciation",
-        "part_of_speech",
-        "example",
-        "example_translation",
-        "tags",
-        "memory_tips",
-        "memory_image"
-      ],
-      "rounds": 2,
-      "attempts": 2,
+      "status": "complete",
+      "missing": [],
+      "rounds": 3,
+      "attempts": 3,
       "source_images": [
         "IMG_0055.JPG"
       ],
       "last_errors": {
         "complete": "AI request failed: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 2026062506331450867025ll1bXuPR)\",\"type\":\"AgnesAI_error\"}}"
-      }
+      },
+      "completed_at": "2026-06-25T10:34:18Z"
     },
     "mural": {
       "status": "complete",
@@ -5505,48 +5156,30 @@
       "wordbase_exists": true
     },
     "muse": {
-      "status": "incomplete",
-      "missing": [
-        "definition",
-        "translation",
-        "pronunciation",
-        "part_of_speech",
-        "example",
-        "example_translation",
-        "tags",
-        "memory_tips",
-        "memory_image"
-      ],
-      "rounds": 2,
-      "attempts": 2,
+      "status": "complete",
+      "missing": [],
+      "rounds": 3,
+      "attempts": 3,
       "source_images": [
         "IMG_0055.JPG"
       ],
       "last_errors": {
         "complete": "AI request failed: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 20260625063315195434128wSOCbvo7)\",\"type\":\"AgnesAI_error\"}}"
-      }
+      },
+      "completed_at": "2026-06-25T10:35:35Z"
     },
     "mushroom": {
-      "status": "incomplete",
-      "missing": [
-        "definition",
-        "translation",
-        "pronunciation",
-        "part_of_speech",
-        "example",
-        "example_translation",
-        "tags",
-        "memory_tips",
-        "memory_image"
-      ],
-      "rounds": 2,
-      "attempts": 2,
+      "status": "complete",
+      "missing": [],
+      "rounds": 3,
+      "attempts": 3,
       "source_images": [
         "IMG_0055.JPG"
       ],
       "last_errors": {
         "complete": "AI request failed: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 202606250633163743079872s6hQluM)\",\"type\":\"AgnesAI_error\"}}"
-      }
+      },
+      "completed_at": "2026-06-25T10:36:50Z"
     },
     "musical": {
       "status": "complete",
@@ -5586,26 +5219,17 @@
       "completed_at": "2026-06-25T04:33:15Z"
     },
     "myriad": {
-      "status": "incomplete",
-      "missing": [
-        "definition",
-        "translation",
-        "pronunciation",
-        "part_of_speech",
-        "example",
-        "example_translation",
-        "tags",
-        "memory_tips",
-        "memory_image"
-      ],
-      "rounds": 2,
-      "attempts": 2,
+      "status": "complete",
+      "missing": [],
+      "rounds": 4,
+      "attempts": 4,
       "source_images": [
         "IMG_0055.JPG"
       ],
       "last_errors": {
-        "complete": "AI request failed: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 20260625063317555292657e6xUjiVm)\",\"type\":\"AgnesAI_error\"}}"
-      }
+        "complete": "AI request failed: {\"error\":{\"message\":\"***.InternalServerError: InternalServerError: OpenAIException -\",\"type\":\"upstream_error\",\"param\":\"\",\"code\":\"500\"}}"
+      },
+      "completed_at": "2026-06-25T11:07:12Z"
     },
     "mythology": {
       "status": "complete",
@@ -5621,48 +5245,30 @@
       "wordbase_exists": true
     },
     "nail": {
-      "status": "incomplete",
-      "missing": [
-        "definition",
-        "translation",
-        "pronunciation",
-        "part_of_speech",
-        "example",
-        "example_translation",
-        "tags",
-        "memory_tips",
-        "memory_image"
-      ],
-      "rounds": 2,
-      "attempts": 2,
+      "status": "complete",
+      "missing": [],
+      "rounds": 3,
+      "attempts": 3,
       "source_images": [
         "IMG_0055.JPG"
       ],
       "last_errors": {
         "complete": "AI request failed: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 20260625063318710739487kDvAXRyp)\",\"type\":\"AgnesAI_error\"}}"
-      }
+      },
+      "completed_at": "2026-06-25T10:38:13Z"
     },
     "naive": {
-      "status": "incomplete",
-      "missing": [
-        "definition",
-        "translation",
-        "pronunciation",
-        "part_of_speech",
-        "example",
-        "example_translation",
-        "tags",
-        "memory_tips",
-        "memory_image"
-      ],
-      "rounds": 2,
-      "attempts": 2,
+      "status": "complete",
+      "missing": [],
+      "rounds": 3,
+      "attempts": 3,
       "source_images": [
         "IMG_0055.JPG"
       ],
       "last_errors": {
         "complete": "AI request failed: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 20260625063319874533477neJMU9be)\",\"type\":\"AgnesAI_error\"}}"
-      }
+      },
+      "completed_at": "2026-06-25T10:39:35Z"
     },
     "naked": {
       "status": "complete",
@@ -5678,48 +5284,30 @@
       "wordbase_exists": true
     },
     "nap": {
-      "status": "incomplete",
-      "missing": [
-        "definition",
-        "translation",
-        "pronunciation",
-        "part_of_speech",
-        "example",
-        "example_translation",
-        "tags",
-        "memory_tips",
-        "memory_image"
-      ],
-      "rounds": 2,
-      "attempts": 2,
+      "status": "complete",
+      "missing": [],
+      "rounds": 3,
+      "attempts": 3,
       "source_images": [
         "IMG_0055.JPG"
       ],
       "last_errors": {
         "complete": "AI request failed: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 2026062506332116494004W9G53JtZ)\",\"type\":\"AgnesAI_error\"}}"
-      }
+      },
+      "completed_at": "2026-06-25T10:40:54Z"
     },
     "narrate": {
-      "status": "incomplete",
-      "missing": [
-        "definition",
-        "translation",
-        "pronunciation",
-        "part_of_speech",
-        "example",
-        "example_translation",
-        "tags",
-        "memory_tips",
-        "memory_image"
-      ],
-      "rounds": 2,
-      "attempts": 2,
+      "status": "complete",
+      "missing": [],
+      "rounds": 3,
+      "attempts": 3,
       "source_images": [
         "IMG_0055.JPG"
       ],
       "last_errors": {
         "complete": "AI request failed: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 20260625063322174414364o3NlEdGf)\",\"type\":\"AgnesAI_error\"}}"
-      }
+      },
+      "completed_at": "2026-06-25T10:42:10Z"
     },
     "narrative": {
       "status": "complete",
@@ -5748,26 +5336,17 @@
       "wordbase_exists": true
     },
     "naturalist": {
-      "status": "incomplete",
-      "missing": [
-        "definition",
-        "translation",
-        "pronunciation",
-        "part_of_speech",
-        "example",
-        "example_translation",
-        "tags",
-        "memory_tips",
-        "memory_image"
-      ],
-      "rounds": 2,
-      "attempts": 2,
+      "status": "complete",
+      "missing": [],
+      "rounds": 3,
+      "attempts": 3,
       "source_images": [
         "IMG_0055.JPG"
       ],
       "last_errors": {
         "complete": "AI request failed: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 20260625063323346839445ml3RrMxA)\",\"type\":\"AgnesAI_error\"}}"
-      }
+      },
+      "completed_at": "2026-06-25T10:43:17Z"
     },
     "nauseous": {
       "status": "complete",
@@ -5885,48 +5464,30 @@
       "completed_at": "2026-06-25T06:40:00Z"
     },
     "outrageous": {
-      "status": "incomplete",
-      "missing": [
-        "definition",
-        "translation",
-        "pronunciation",
-        "part_of_speech",
-        "example",
-        "example_translation",
-        "tags",
-        "memory_tips",
-        "memory_image"
-      ],
-      "rounds": 2,
-      "attempts": 2,
+      "status": "complete",
+      "missing": [],
+      "rounds": 3,
+      "attempts": 3,
       "source_images": [
         "IMG_0056.JPG"
       ],
       "last_errors": {
         "complete": "AI request failed: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 20260625064002643692037O8A0uCGS)\",\"type\":\"AgnesAI_error\"}}"
-      }
+      },
+      "completed_at": "2026-06-25T10:44:32Z"
     },
     "outrageously": {
-      "status": "incomplete",
-      "missing": [
-        "definition",
-        "translation",
-        "pronunciation",
-        "part_of_speech",
-        "example",
-        "example_translation",
-        "tags",
-        "memory_tips",
-        "memory_image"
-      ],
-      "rounds": 2,
-      "attempts": 2,
+      "status": "complete",
+      "missing": [],
+      "rounds": 3,
+      "attempts": 3,
       "source_images": [
         "IMG_0056.JPG"
       ],
       "last_errors": {
         "complete": "AI request failed: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 20260625064004796991521BCHXy0YD)\",\"type\":\"AgnesAI_error\"}}"
-      }
+      },
+      "completed_at": "2026-06-25T10:45:59Z"
     },
     "outspoken": {
       "status": "complete",
@@ -5968,48 +5529,30 @@
       "wordbase_exists": true
     },
     "oval": {
-      "status": "incomplete",
-      "missing": [
-        "definition",
-        "translation",
-        "pronunciation",
-        "part_of_speech",
-        "example",
-        "example_translation",
-        "tags",
-        "memory_tips",
-        "memory_image"
-      ],
-      "rounds": 2,
-      "attempts": 2,
+      "status": "complete",
+      "missing": [],
+      "rounds": 3,
+      "attempts": 3,
       "source_images": [
         "IMG_0056.JPG"
       ],
       "last_errors": {
         "complete": "AI request failed: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 20260625064006179103292Dc7PGa48)\",\"type\":\"AgnesAI_error\"}}"
-      }
+      },
+      "completed_at": "2026-06-25T10:47:06Z"
     },
     "overact": {
-      "status": "incomplete",
-      "missing": [
-        "definition",
-        "translation",
-        "pronunciation",
-        "part_of_speech",
-        "example",
-        "example_translation",
-        "tags",
-        "memory_tips",
-        "memory_image"
-      ],
-      "rounds": 2,
-      "attempts": 2,
+      "status": "complete",
+      "missing": [],
+      "rounds": 3,
+      "attempts": 3,
       "source_images": [
         "IMG_0056.JPG"
       ],
       "last_errors": {
         "complete": "AI request failed: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 20260625064007698464152tqveaMdQ)\",\"type\":\"AgnesAI_error\"}}"
-      }
+      },
+      "completed_at": "2026-06-25T10:49:03Z"
     },
     "overall": {
       "status": "complete",
@@ -6025,26 +5568,17 @@
       "wordbase_exists": true
     },
     "overcharge": {
-      "status": "incomplete",
-      "missing": [
-        "definition",
-        "translation",
-        "pronunciation",
-        "part_of_speech",
-        "example",
-        "example_translation",
-        "tags",
-        "memory_tips",
-        "memory_image"
-      ],
-      "rounds": 2,
-      "attempts": 2,
+      "status": "complete",
+      "missing": [],
+      "rounds": 3,
+      "attempts": 3,
       "source_images": [
         "IMG_0056.JPG"
       ],
       "last_errors": {
         "complete": "AI request failed: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 20260625064009134795253p1A6wE01)\",\"type\":\"AgnesAI_error\"}}"
-      }
+      },
+      "completed_at": "2026-06-25T10:51:28Z"
     },
     "overcome": {
       "status": "complete",
@@ -6097,26 +5631,17 @@
       "completed_at": "2026-06-25T04:37:47Z"
     },
     "overhaul": {
-      "status": "incomplete",
-      "missing": [
-        "definition",
-        "translation",
-        "pronunciation",
-        "part_of_speech",
-        "example",
-        "example_translation",
-        "tags",
-        "memory_tips",
-        "memory_image"
-      ],
-      "rounds": 2,
-      "attempts": 2,
+      "status": "complete",
+      "missing": [],
+      "rounds": 3,
+      "attempts": 3,
       "source_images": [
         "IMG_0056.JPG"
       ],
       "last_errors": {
         "complete": "AI request failed: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 20260625064332903960395DtNxb96k)\",\"type\":\"AgnesAI_error\"}}"
-      }
+      },
+      "completed_at": "2026-06-25T10:52:45Z"
     },
     "overlap": {
       "status": "complete",
@@ -6197,70 +5722,43 @@
       "wordbase_exists": true
     },
     "oversleep": {
-      "status": "incomplete",
-      "missing": [
-        "definition",
-        "translation",
-        "pronunciation",
-        "part_of_speech",
-        "example",
-        "example_translation",
-        "tags",
-        "memory_tips",
-        "memory_image"
-      ],
-      "rounds": 2,
-      "attempts": 2,
+      "status": "complete",
+      "missing": [],
+      "rounds": 3,
+      "attempts": 3,
       "source_images": [
         "IMG_0056.JPG"
       ],
       "last_errors": {
         "complete": "AI request failed: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 20260625064917938958214iaixv0SZ)\",\"type\":\"AgnesAI_error\"}}"
-      }
+      },
+      "completed_at": "2026-06-25T10:54:22Z"
     },
     "overt": {
-      "status": "incomplete",
-      "missing": [
-        "definition",
-        "translation",
-        "pronunciation",
-        "part_of_speech",
-        "example",
-        "example_translation",
-        "tags",
-        "memory_tips",
-        "memory_image"
-      ],
-      "rounds": 2,
-      "attempts": 2,
+      "status": "complete",
+      "missing": [],
+      "rounds": 3,
+      "attempts": 3,
       "source_images": [
         "IMG_0056.JPG"
       ],
       "last_errors": {
         "complete": "AI request failed: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 20260625064919277542535r7R387Cg)\",\"type\":\"AgnesAI_error\"}}"
-      }
+      },
+      "completed_at": "2026-06-25T10:55:43Z"
     },
     "overtime": {
-      "status": "incomplete",
-      "missing": [
-        "definition",
-        "translation",
-        "pronunciation",
-        "part_of_speech",
-        "example",
-        "example_translation",
-        "tags",
-        "memory_tips",
-        "memory_image"
-      ],
-      "rounds": 2,
-      "attempts": 2,
+      "status": "complete",
+      "missing": [],
+      "rounds": 3,
+      "attempts": 3,
       "source_images": [
         "IMG_0056.JPG"
       ],
       "last_errors": {
         "complete": "AI request failed: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 20260625064920370789071vMsB2Auz)\",\"type\":\"AgnesAI_error\"}}"
-      }
+      },
+      "completed_at": "2026-06-25T10:56:59Z"
     },
     "overview": {
       "status": "complete",
@@ -6315,26 +5813,17 @@
       "wordbase_exists": true
     },
     "oyster": {
-      "status": "incomplete",
-      "missing": [
-        "definition",
-        "translation",
-        "pronunciation",
-        "part_of_speech",
-        "example",
-        "example_translation",
-        "tags",
-        "memory_tips",
-        "memory_image"
-      ],
-      "rounds": 2,
-      "attempts": 2,
+      "status": "complete",
+      "missing": [],
+      "rounds": 3,
+      "attempts": 3,
       "source_images": [
         "IMG_0056.JPG"
       ],
       "last_errors": {
         "complete": "AI request failed: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 202606250649214588920266Im9mfqh)\",\"type\":\"AgnesAI_error\"}}"
-      }
+      },
+      "completed_at": "2026-06-25T11:00:07Z"
     },
     "pack": {
       "status": "complete",
@@ -6363,26 +5852,17 @@
       "wordbase_exists": true
     },
     "pact": {
-      "status": "incomplete",
-      "missing": [
-        "definition",
-        "translation",
-        "pronunciation",
-        "part_of_speech",
-        "example",
-        "example_translation",
-        "tags",
-        "memory_tips",
-        "memory_image"
-      ],
-      "rounds": 2,
-      "attempts": 2,
+      "status": "complete",
+      "missing": [],
+      "rounds": 3,
+      "attempts": 3,
       "source_images": [
         "IMG_0056.JPG"
       ],
       "last_errors": {
         "complete": "AI request failed: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 20260625064922536401276oBimCTw3)\",\"type\":\"AgnesAI_error\"}}"
-      }
+      },
+      "completed_at": "2026-06-25T11:01:27Z"
     },
     "paddle": {
       "status": "complete",
@@ -6409,26 +5889,17 @@
       "completed_at": "2026-06-25T04:40:30Z"
     },
     "palatable": {
-      "status": "incomplete",
-      "missing": [
-        "definition",
-        "translation",
-        "pronunciation",
-        "part_of_speech",
-        "example",
-        "example_translation",
-        "tags",
-        "memory_tips",
-        "memory_image"
-      ],
-      "rounds": 2,
-      "attempts": 2,
+      "status": "complete",
+      "missing": [],
+      "rounds": 3,
+      "attempts": 3,
       "source_images": [
         "IMG_0056.JPG"
       ],
       "last_errors": {
         "complete": "AI request failed: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 2026062506492361379516310y9fpvn)\",\"type\":\"AgnesAI_error\"}}"
-      }
+      },
+      "completed_at": "2026-06-25T11:02:31Z"
     },
     "palate": {
       "status": "complete",

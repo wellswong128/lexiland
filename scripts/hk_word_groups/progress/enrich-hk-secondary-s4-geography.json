@@ -2,94 +2,64 @@
   "group_code": "hk-secondary-s4-geography",
   "terms": {
     "urbanization": {
-      "status": "incomplete",
-      "missing": [
-        "pronunciation",
-        "part_of_speech"
-      ],
+      "status": "complete",
+      "missing": [],
       "errors": {},
-      "completed_at": null
+      "completed_at": "2026-06-26T08:46:17Z"
     },
     "suburbanization": {
-      "status": "incomplete",
-      "missing": [
-        "pronunciation",
-        "part_of_speech"
-      ],
+      "status": "complete",
+      "missing": [],
       "errors": {},
-      "completed_at": null
+      "completed_at": "2026-06-26T08:46:17Z"
     },
     "gentrification": {
-      "status": "incomplete",
-      "missing": [
-        "pronunciation",
-        "part_of_speech"
-      ],
+      "status": "complete",
+      "missing": [],
       "errors": {},
-      "completed_at": null
+      "completed_at": "2026-06-26T08:46:18Z"
     },
     "urban sprawl": {
-      "status": "incomplete",
-      "missing": [
-        "pronunciation",
-        "part_of_speech"
-      ],
+      "status": "complete",
+      "missing": [],
       "errors": {},
-      "completed_at": null
+      "completed_at": "2026-06-26T08:46:18Z"
     },
     "traffic congestion": {
-      "status": "incomplete",
-      "missing": [
-        "pronunciation",
-        "part_of_speech"
-      ],
+      "status": "complete",
+      "missing": [],
       "errors": {},
-      "completed_at": null
+      "completed_at": "2026-06-26T08:46:19Z"
     },
     "air pollution": {
-      "status": "incomplete",
-      "missing": [
-        "pronunciation",
-        "part_of_speech"
-      ],
+      "status": "complete",
+      "missing": [],
       "errors": {},
-      "completed_at": null
+      "completed_at": "2026-06-26T08:46:19Z"
     },
     "land reclamation": {
-      "status": "incomplete",
-      "missing": [
-        "pronunciation",
-        "part_of_speech"
-      ],
+      "status": "complete",
+      "missing": [],
       "errors": {},
-      "completed_at": null
+      "completed_at": "2026-06-26T08:46:20Z"
     },
     "high density housing": {
-      "status": "incomplete",
-      "missing": [
-        "pronunciation",
-        "part_of_speech"
-      ],
+      "status": "complete",
+      "missing": [],
       "errors": {},
-      "completed_at": null
+      "completed_at": "2026-06-26T08:46:20Z"
     },
     "green belt": {
-      "status": "incomplete",
-      "missing": [
-        "pronunciation",
-        "part_of_speech"
-      ],
+      "status": "complete",
+      "missing": [],
       "errors": {},
-      "completed_at": null
+      "completed_at": "2026-06-26T08:46:21Z"
     },
     "monsoon": {
-      "status": "incomplete",
-      "missing": [
-        "pronunciation",
-        "part_of_speech"
-      ],
+      "status": "complete",
+      "missing": [],
       "errors": {},
-      "completed_at": null
+      "completed_at": "2026-06-26T08:46:21Z"
     },
     "typhoon": {
       "status": "complete",
@@ -98,85 +68,2074 @@
       "completed_at": "2026-06-21T00:46:36Z"
     },
     "topography": {
-      "status": "incomplete",
-      "missing": [
-        "pronunciation",
-        "part_of_speech"
-      ],
+      "status": "complete",
+      "missing": [],
       "errors": {},
-      "completed_at": null
+      "completed_at": "2026-06-26T08:46:22Z"
     },
     "erosion": {
-      "status": "incomplete",
-      "missing": [
-        "pronunciation",
-        "part_of_speech"
-      ],
+      "status": "complete",
+      "missing": [],
       "errors": {},
-      "completed_at": null
+      "completed_at": "2026-06-26T08:46:23Z"
     },
     "deforestation": {
-      "status": "incomplete",
-      "missing": [
-        "pronunciation",
-        "part_of_speech"
-      ],
+      "status": "complete",
+      "missing": [],
       "errors": {},
-      "completed_at": null
+      "completed_at": "2026-06-26T08:46:23Z"
     },
     "sustainable development": {
-      "status": "incomplete",
-      "missing": [
-        "pronunciation",
-        "part_of_speech"
-      ],
+      "status": "complete",
+      "missing": [],
       "errors": {},
-      "completed_at": null
+      "completed_at": "2026-06-26T08:46:24Z"
     },
     "waste management": {
-      "status": "incomplete",
-      "missing": [
-        "pronunciation",
-        "part_of_speech"
-      ],
+      "status": "complete",
+      "missing": [],
       "errors": {},
-      "completed_at": null
+      "completed_at": "2026-06-26T08:46:25Z"
     },
     "floodplain": {
-      "status": "incomplete",
-      "missing": [
-        "pronunciation",
-        "part_of_speech"
-      ],
+      "status": "complete",
+      "missing": [],
       "errors": {},
-      "completed_at": null
+      "completed_at": "2026-06-26T08:46:25Z"
     },
     "microclimate": {
-      "status": "incomplete",
-      "missing": [
-        "pronunciation",
-        "part_of_speech"
-      ],
+      "status": "complete",
+      "missing": [],
       "errors": {},
-      "completed_at": null
+      "completed_at": "2026-06-26T08:46:26Z"
     },
     "infrastructure": {
-      "status": "incomplete",
-      "missing": [
-        "pronunciation",
-        "part_of_speech"
-      ],
+      "status": "complete",
+      "missing": [],
       "errors": {},
-      "completed_at": null
+      "completed_at": "2026-06-26T08:46:26Z"
     },
     "relocation": {
-      "status": "incomplete",
-      "missing": [
-        "pronunciation",
-        "part_of_speech"
-      ],
+      "status": "complete",
+      "missing": [],
       "errors": {},
-      "completed_at": null
+      "completed_at": "2026-06-26T08:46:27Z"
+    },
+    "abiotic component": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T08:48:43Z"
+    },
+    "aerial photograph interpretation": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T08:48:43Z"
+    },
+    "afforestation for flood control": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T08:49:50Z"
+    },
+    "air mass classification": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T08:50:56Z"
+    },
+    "air pollution control": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T08:53:12Z"
+    },
+    "anomaly identification": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T08:54:53Z"
+    },
+    "anticyclone weather system": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T08:57:15Z"
+    },
+    "atmospheric structure": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T08:59:26Z"
+    },
+    "balancing development and conservation": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T09:00:26Z"
+    },
+    "bar chart interpretation": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T09:02:49Z"
+    },
+    "beach nourishment project": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T09:02:51Z"
+    },
+    "biodiversity value": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T18:38:35Z"
+    },
+    "biological weathering process": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T09:04:18Z"
+    },
+    "biotic component": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T09:06:55Z"
+    },
+    "brownfield redevelopment": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T09:06:55Z"
+    },
+    "buffer zone analysis": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T09:06:56Z"
+    },
+    "building earthquake resistance": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T09:06:57Z"
+    },
+    "carbon reduction target": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T09:08:31Z"
+    },
+    "case study data comparison": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T09:10:00Z"
+    },
+    "change detection mapping": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T09:11:14Z"
+    },
+    "chemical weathering process": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T09:12:24Z"
+    },
+    "choropleth map design": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T09:15:43Z"
+    },
+    "circular economy approach": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T09:17:50Z"
+    },
+    "climate adaptation measure": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T09:20:33Z"
+    },
+    "climate change mechanism": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T09:21:58Z"
+    },
+    "climate data analysis": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T09:24:18Z"
+    },
+    "climate graph interpretation": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T18:38:57Z"
+    },
+    "climate mitigation measure": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T09:28:42Z"
+    },
+    "coastal abrasion": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T09:30:48Z"
+    },
+    "coastal attrition": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T09:32:07Z"
+    },
+    "coastal conservation strategy": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T09:34:08Z"
+    },
+    "coastal deposition landform": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T09:35:37Z"
+    },
+    "coastal erosion mechanism": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T09:38:53Z"
+    },
+    "coastal hard engineering": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T09:40:01Z"
+    },
+    "coastal hazard risk": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T09:40:02Z"
+    },
+    "coastal soft engineering": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T09:40:02Z"
+    },
+    "communicate geographic findings": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T09:41:41Z"
+    },
+    "commuting pattern analysis": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T09:43:10Z"
+    },
+    "comparing climate responses": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T09:44:23Z"
+    },
+    "comparing coastal environments": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T09:45:39Z"
+    },
+    "comparing ecosystem types": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T09:45:40Z"
+    },
+    "comparing flood management": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T18:40:38Z"
+    },
+    "comparing hong kong districts": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T09:48:00Z"
+    },
+    "comparing industrial regions": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T09:48:00Z"
+    },
+    "comparing mapping techniques": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T18:40:48Z"
+    },
+    "comparing planning systems": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T18:42:34Z"
+    },
+    "comparing regional development": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T09:50:54Z"
+    },
+    "comparing resource strategies": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T09:50:55Z"
+    },
+    "comparing slope hazards": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T09:50:55Z"
+    },
+    "comparing tectonic hazards": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T09:50:56Z"
+    },
+    "comparing transport models": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T09:53:15Z"
+    },
+    "comparing urban growth models": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T09:54:26Z"
+    },
+    "comparing weather systems": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T09:54:27Z"
+    },
+    "conservative plate boundary": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T09:56:26Z"
+    },
+    "constructive plate boundary": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T09:58:41Z"
+    },
+    "convectional rainfall": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T09:59:02Z"
+    },
+    "coral reef environment": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T10:01:21Z"
+    },
+    "coriolis effect": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T10:03:26Z"
+    },
+    "correlation in geographic data": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T10:04:28Z"
+    },
+    "counter-urbanization trend": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T10:04:28Z"
+    },
+    "country park system": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T10:04:29Z"
+    },
+    "cross section drawing": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T10:06:36Z"
+    },
+    "cross-boundary economic link": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T10:08:34Z"
+    },
+    "cyclone weather system": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T10:10:20Z"
+    },
+    "data reliability assessment": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T10:12:20Z"
+    },
+    "data validity assessment": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T10:15:22Z"
+    },
+    "deforestation impact": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T18:44:27Z"
+    },
+    "deindustrialization process": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T10:18:36Z"
+    },
+    "destructive plate boundary": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T10:20:43Z"
+    },
+    "digital elevation model": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T10:20:43Z"
+    },
+    "disaster risk reduction": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T10:20:44Z"
+    },
+    "dot distribution map": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T10:21:52Z"
+    },
+    "drainage basin system": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T10:21:53Z"
+    },
+    "draw geographic conclusion": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T11:01:49Z"
+    },
+    "earthquake focus and epicenter": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T11:04:23Z"
+    },
+    "earthquake generation": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T11:06:23Z"
+    },
+    "earthquake preparedness plan": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T11:10:05Z"
+    },
+    "ecological footprint concept": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T11:11:28Z"
+    },
+    "ecological restoration project": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T11:12:48Z"
+    },
+    "economic data analysis": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T11:15:16Z"
+    },
+    "economic restructuring": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T11:15:17Z"
+    },
+    "ecosystem structure": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T11:17:01Z"
+    },
+    "edge city formation": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T11:19:24Z"
+    },
+    "endangered species protection": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T11:21:36Z"
+    },
+    "energy flow in ecosystem": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T11:23:20Z"
+    },
+    "energy resource management": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T11:25:11Z"
+    },
+    "energy security policy": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T11:27:16Z"
+    },
+    "enhanced greenhouse effect": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T11:27:16Z"
+    },
+    "environmental carrying capacity": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T11:27:17Z"
+    },
+    "environmental governance": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T18:45:38Z"
+    },
+    "environmental impact assessment": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T11:29:02Z"
+    },
+    "environmental justice issue": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T11:32:13Z"
+    },
+    "environmental monitoring": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T11:32:14Z"
+    },
+    "estuary environment": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T11:34:23Z"
+    },
+    "evaluate data limitation": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T11:36:39Z"
+    },
+    "evaluate fieldwork method": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T11:36:39Z"
+    },
+    "evaluating coastal management": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T11:37:38Z"
+    },
+    "evaluating congestion solution": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T11:37:39Z"
+    },
+    "evaluating conservation strategy": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T11:37:39Z"
+    },
+    "evaluating environmental policy": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T11:37:40Z"
+    },
+    "evaluating flood control measure": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T11:37:45Z"
+    },
+    "evaluating gis application": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T11:37:46Z"
+    },
+    "evaluating hazard mitigation": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T11:39:16Z"
+    },
+    "evaluating hong kong sustainability": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T11:39:17Z"
+    },
+    "evaluating industrial policy": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T11:40:10Z"
+    },
+    "evaluating land use policy": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T11:41:04Z"
+    },
+    "evaluating slope management": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T11:41:04Z"
+    },
+    "evaluating sustainability policy": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T11:41:05Z"
+    },
+    "evaluating urban change policy": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T11:43:23Z"
+    },
+    "extreme weather increase": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T11:46:56Z"
+    },
+    "field measurement technique": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T11:49:17Z"
+    },
+    "field sketch drawing": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T11:50:34Z"
+    },
+    "fieldwork planning": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T11:52:35Z"
+    },
+    "fieldwork safety management": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T11:54:48Z"
+    },
+    "flood control engineering": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T11:55:53Z"
+    },
+    "flood risk zone": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T11:57:59Z"
+    },
+    "floodplain formation": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T12:00:00Z"
+    },
+    "flow line map": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T12:00:01Z"
+    },
+    "food chain relationship": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T12:01:58Z"
+    },
+    "food supply security": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T12:03:40Z"
+    },
+    "food web relationship": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T12:04:48Z"
+    },
+    "free trade port function": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T12:07:01Z"
+    },
+    "freight transport planning": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T12:09:06Z"
+    },
+    "front system weather": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T12:09:07Z"
+    },
+    "frontal rainfall": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T12:10:25Z"
+    },
+    "gentrification impact": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T12:11:18Z"
+    },
+    "geographic information system": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T12:11:18Z"
+    },
+    "geographic inquiry": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T12:11:19Z"
+    },
+    "gis data layer": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T12:13:12Z"
+    },
+    "global production network": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T12:15:10Z"
+    },
+    "global temperature trend": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T12:17:30Z"
+    },
+    "global wind system": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T12:18:55Z"
+    },
+    "globalization and industry change": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T12:20:41Z"
+    },
+    "government policy factor": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T12:23:28Z"
+    },
+    "gps coordinate mapping": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T12:25:13Z"
+    },
+    "gps field mapping": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T12:25:14Z"
+    },
+    "graph interpretation in geography": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T12:27:27Z"
+    },
+    "greater bay area development": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T12:27:27Z"
+    },
+    "green belt policy": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T12:28:20Z"
+    },
+    "greenfield development": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T12:28:20Z"
+    },
+    "greenhouse gas emission source": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T12:30:15Z"
+    },
+    "habitat loss threat": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T12:32:51Z"
+    },
+    "headland and bay coast": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T12:34:04Z"
+    },
+    "heritage conservation area": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T12:36:11Z"
+    },
+    "high density housing policy": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T12:37:30Z"
+    },
+    "hkdse geography examination skill": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T12:38:41Z"
+    },
+    "hong kong air quality management": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T12:39:50Z"
+    },
+    "hong kong coastal management": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T12:39:51Z"
+    },
+    "hong kong country park network": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T12:41:54Z"
+    },
+    "hong kong future planning debate": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T12:43:40Z"
+    },
+    "hong kong housing development": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T12:45:51Z"
+    },
+    "hong kong land reclamation": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T12:48:20Z"
+    },
+    "hong kong physical environment": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T12:49:23Z"
+    },
+    "hong kong regional case study": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T12:50:37Z"
+    },
+    "hong kong slope hazard management": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T12:51:57Z"
+    },
+    "hong kong transport system": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T12:52:55Z"
+    },
+    "hong kong typhoon preparedness": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T12:54:22Z"
+    },
+    "hong kong urban structure": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T12:55:33Z"
+    },
+    "hong kong waste management policy": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T12:56:32Z"
+    },
+    "hong kong water supply system": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T12:57:33Z"
+    },
+    "hotspot analysis": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T12:59:24Z"
+    },
+    "human activity on slope": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T13:01:32Z"
+    },
+    "human impact on ecosystem": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T13:03:49Z"
+    },
+    "human impact on river system": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T13:05:20Z"
+    },
+    "hydraulic action": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T13:05:21Z"
+    },
+    "hydrograph analysis": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T13:07:32Z"
+    },
+    "hypothesis in geography": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T13:07:32Z"
+    },
+    "industrial agglomeration": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T13:08:57Z"
+    },
+    "industrial estate development": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T13:09:53Z"
+    },
+    "industrial location factor": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T13:09:53Z"
+    },
+    "industrial relocation trend": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T18:46:39Z"
+    },
+    "inner city decline": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T13:12:01Z"
+    },
+    "integrated flood management": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T13:14:04Z"
+    },
+    "intergenerational equity": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T13:16:14Z"
+    },
+    "intermodal transport system": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T13:17:38Z"
+    },
+    "interpreting weather data": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T13:18:57Z"
+    },
+    "interview survey": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T18:48:24Z"
+    },
+    "invasive species impact": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T13:22:03Z"
+    },
+    "isobar analysis": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T13:24:59Z"
+    },
+    "isotherm analysis": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T13:28:45Z"
+    },
+    "labour supply factor": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T13:30:47Z"
+    },
+    "lag time analysis": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T13:32:51Z"
+    },
+    "land reclamation planning": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T13:34:49Z"
+    },
+    "land use zoning": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T13:38:57Z"
+    },
+    "landslide hazard": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T13:38:58Z"
+    },
+    "landslide warning system": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T13:41:29Z"
+    },
+    "levee construction": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T13:44:33Z"
+    },
+    "line graph interpretation": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T13:47:00Z"
+    },
+    "lithosphere and asthenosphere": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T13:52:04Z"
+    },
+    "longshore drift process": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T13:53:54Z"
+    },
+    "low carbon transport mode": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T13:56:34Z"
+    },
+    "managed retreat policy": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T13:57:34Z"
+    },
+    "mangrove ecosystem coast": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T14:02:00Z"
+    },
+    "map data synthesis": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T14:04:07Z"
+    },
+    "map interpretation skill": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T14:06:47Z"
+    },
+    "marine pollution issue": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T14:07:56Z"
+    },
+    "marine protected area": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T14:07:56Z"
+    },
+    "market location factor": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T14:08:56Z"
+    },
+    "mass movement classification": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T14:11:18Z"
+    },
+    "mass transit system": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T14:11:19Z"
+    },
+    "megacity problem": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T14:13:33Z"
+    },
+    "mercalli intensity scale": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T14:15:54Z"
+    },
+    "mineral resource extraction": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T14:18:35Z"
+    },
+    "mixed land use design": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T18:50:12Z"
+    },
+    "mobility and urban development link": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T18:53:15Z"
+    },
+    "monsoon system": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T14:21:10Z"
+    },
+    "mudflow hazard": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T14:22:26Z"
+    },
+    "national park conservation": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T14:25:25Z"
+    },
+    "natural resource classification": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T14:26:38Z"
+    },
+    "non-renewable resource management": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T14:28:26Z"
+    },
+    "nutrient cycle in ecosystem": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T14:30:59Z"
+    },
+    "offshore manufacturing": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T14:31:55Z"
+    },
+    "orographic rainfall": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T14:33:50Z"
+    },
+    "outline zoning plan": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T14:33:50Z"
+    },
+    "overlay map analysis": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T14:35:06Z"
+    },
+    "parking policy management": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T14:38:05Z"
+    },
+    "pattern analysis in geography": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T14:41:30Z"
+    },
+    "peak discharge": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T14:41:31Z"
+    },
+    "peak hour traffic flow": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T14:43:40Z"
+    },
+    "pearl river delta region": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T14:45:49Z"
+    },
+    "physical weathering process": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T14:46:44Z"
+    },
+    "pie chart interpretation": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T14:48:29Z"
+    },
+    "planning conflict resolution": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T14:50:50Z"
+    },
+    "plate tectonic theory": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T14:51:46Z"
+    },
+    "population data analysis": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T18:55:07Z"
+    },
+    "pressure gradient force": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T14:53:54Z"
+    },
+    "primary data collection": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T18:56:14Z"
+    },
+    "private car ownership trend": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T14:58:35Z"
+    },
+    "private housing development": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T15:00:02Z"
+    },
+    "proportional symbol map": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T15:00:02Z"
+    },
+    "public housing planning": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T15:03:27Z"
+    },
+    "public participation in planning": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T15:05:31Z"
+    },
+    "public transport policy": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T15:05:32Z"
+    },
+    "qualitative geographic data": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T15:07:45Z"
+    },
+    "quantitative geographic data": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T15:08:42Z"
+    },
+    "questionnaire survey": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T15:11:45Z"
+    },
+    "rail transport planning": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T15:14:12Z"
+    },
+    "rainfall trigger on slope": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T15:15:29Z"
+    },
+    "raw material location factor": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T15:17:59Z"
+    },
+    "recycling programme": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T15:18:40Z"
+    },
+    "redevelopment project": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T15:21:32Z"
+    },
+    "regional integration impact": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T15:23:20Z"
+    },
+    "relocation compensation": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T15:25:12Z"
+    },
+    "remote sensing technology": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T15:26:52Z"
+    },
+    "renewable energy policy": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T15:29:22Z"
+    },
+    "renewable resource management": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T15:30:54Z"
+    },
+    "research question design": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T15:32:38Z"
+    },
+    "reservoir flood regulation": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T15:33:38Z"
+    },
+    "resource conflict issue": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T15:37:05Z"
+    },
+    "resource depletion problem": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T15:39:08Z"
+    },
+    "resource use efficiency": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T15:40:26Z"
+    },
+    "richter scale": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T15:43:02Z"
+    },
+    "risk zoning for slope": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T15:45:08Z"
+    },
+    "river channel process": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T15:47:22Z"
+    },
+    "river deposition process": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T15:49:26Z"
+    },
+    "river erosion process": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T15:51:25Z"
+    },
+    "river regime": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T15:53:32Z"
+    },
+    "river transportation process": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T15:55:34Z"
+    },
+    "road transport planning": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T15:57:26Z"
+    },
+    "rockfall hazard": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T15:57:26Z"
+    },
+    "sampling strategy": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T15:59:49Z"
+    },
+    "satellite image interpretation": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T15:59:49Z"
+    },
+    "scatter graph interpretation": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T16:00:52Z"
+    },
+    "science park development": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T16:01:47Z"
+    },
+    "sea level rise impact": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T16:02:45Z"
+    },
+    "secondary data collection": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T16:04:48Z"
+    },
+    "seismic wave type": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T18:56:18Z"
+    },
+    "senior secondary data skill synthesis": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T16:07:31Z"
+    },
+    "service industry growth": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T16:09:27Z"
+    },
+    "slope angle influence": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T16:11:26Z"
+    },
+    "slope drainage engineering": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T16:13:24Z"
+    },
+    "slope hazard case study": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T16:14:38Z"
+    },
+    "slope reinforcement work": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T16:15:36Z"
+    },
+    "slope stability factor": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T16:17:29Z"
+    },
+    "smart city development": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T16:19:47Z"
+    },
+    "soil creep movement": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T16:22:02Z"
+    },
+    "solar radiation balance": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T16:23:54Z"
+    },
+    "spatial conclusion drawing": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T16:26:04Z"
+    },
+    "spatial data analysis": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T16:27:10Z"
+    },
+    "spatial inequality mapping": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T16:29:14Z"
+    },
+    "spatial pattern recognition": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T16:30:40Z"
+    },
+    "special economic zone": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T16:30:40Z"
+    },
+    "spit and bar landform": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T16:31:44Z"
+    },
+    "squatter settlement": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T16:31:44Z"
+    },
+    "statistical presentation": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T16:33:47Z"
+    },
+    "storm hydrograph": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T16:33:48Z"
+    },
+    "storm surge impact": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T16:36:59Z"
+    },
+    "storm warning signal": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T16:37:00Z"
+    },
+    "subduction zone process": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T16:39:04Z"
+    },
+    "suburbanization process": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T16:40:40Z"
+    },
+    "support argument with data": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T16:41:31Z"
+    },
+    "sustainable city development": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T16:42:38Z"
+    },
+    "sustainable consumption pattern": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T16:43:39Z"
+    },
+    "sustainable development policy": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T18:56:24Z"
+    },
+    "sustainable tourism management": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T16:45:45Z"
+    },
+    "sustainable transport policy": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T16:48:05Z"
+    },
+    "tectonic hazard map": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T16:48:59Z"
+    },
+    "tectonic process and landform": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T16:52:30Z"
+    },
+    "tourism industry development": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T16:54:26Z"
+    },
+    "town planning process": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T16:55:19Z"
+    },
+    "traffic congestion management": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T16:57:05Z"
+    },
+    "transport cost factor": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T16:59:52Z"
+    },
+    "transport environmental impact": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T17:00:55Z"
+    },
+    "transport equity issue": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T17:02:57Z"
+    },
+    "transport hub design": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T17:05:38Z"
+    },
+    "transport infrastructure investment": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T17:08:21Z"
+    },
+    "transport network development": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T17:09:27Z"
+    },
+    "trend analysis in geography": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T17:11:37Z"
+    },
+    "tsunami generation process": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T17:13:27Z"
+    },
+    "typhoon structure": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T17:14:34Z"
+    },
+    "urban design guideline": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T17:15:55Z"
+    },
+    "urban function change": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T17:17:52Z"
+    },
+    "urban governance structure": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T17:18:53Z"
+    },
+    "urban growth process": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T17:19:58Z"
+    },
+    "urban inequality": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T17:19:59Z"
+    },
+    "urban morphology": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T17:21:01Z"
+    },
+    "urban planning framework": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T17:21:52Z"
+    },
+    "urban quality of life": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T17:23:57Z"
+    },
+    "urban renewal scheme": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T17:24:53Z"
+    },
+    "urban sprawl impact": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T17:26:12Z"
+    },
+    "urban sustainability indicator": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T17:27:15Z"
+    },
+    "urban transformation case study": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T17:28:21Z"
+    },
+    "urban village": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T17:30:34Z"
+    },
+    "urbanization trend": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T17:31:38Z"
+    },
+    "vegetation cover on slope": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T17:32:28Z"
+    },
+    "volcanic eruption type": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T17:32:29Z"
+    },
+    "volcanic hazard zone": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T17:33:27Z"
+    },
+    "waste management system": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T17:34:29Z"
+    },
+    "water pollution control": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T17:36:11Z"
+    },
+    "water resource management": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T17:37:09Z"
+    },
+    "water supply security": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T17:40:13Z"
+    },
+    "watershed management": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T17:41:07Z"
+    },
+    "weather forecasting method": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T17:43:00Z"
+    },
+    "weather map reading": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T17:43:58Z"
+    },
+    "weathering rate factor": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T17:44:51Z"
+    },
+    "wetland conservation site": {
+      "status": "complete",
+      "missing": [],
+      "errors": {},
+      "completed_at": "2026-06-26T17:47:05Z"
     }
   }
 }

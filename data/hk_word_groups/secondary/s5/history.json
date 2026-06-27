@@ -7,6 +7,15 @@
   "version": "2026.06",
   "display_name_en": "S5 History",
   "display_name_zh_hant": "中五歷史",
+  "source": {
+    "type": "curriculum_style_public_references",
+    "references": [
+      "EDB History Curriculum and Assessment Guide (Secondary 4-6)",
+      "EDB senior secondary History elective learning objectives",
+      "Public Hong Kong S5 History syllabus topic examples (modern China, Republican era and Civil War, Japanese aggression and World War II, Holocaust and war crimes, Cold War origins and Asia, decolonization, Mao era and Reform and Opening Up, European conflicts, diplomacy and international order, political ideologies, HKDSE source-based and essay skills)"
+    ],
+    "note": "No fixed official Hong Kong S5 history vocabulary list is prescribed; this list is theme-based for senior secondary S5 history enrichment import. Term-only entries are completed during import."
+  },
   "words": [
     {
       "term": "imperialism",
@@ -326,6 +335,3702 @@
         "s5 history",
         "contemporary history",
         "noun"
+      ]
+    },
+    {
+      "term": "accountability after war",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "holocaust-war-crimes-and-international-justice"
+      ]
+    },
+    {
+      "term": "Afghan conflict during Cold War",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "cold-war-in-asia-and-proxy-conflicts"
+      ]
+    },
+    {
+      "term": "alliance system in Europe",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "european-conflicts-and-international-order"
+      ]
+    },
+    {
+      "term": "Allied peace settlement",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "world-war-two-causes-and-global-war"
+      ]
+    },
+    {
+      "term": "Allied powers",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "world-war-two-causes-and-global-war"
+      ]
+    },
+    {
+      "term": "Allied support to China",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "japanese-aggression-and-war-in-china"
+      ]
+    },
+    {
+      "term": "anti-colonial nationalism",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "decolonization-and-independence-in-asia"
+      ]
+    },
+    {
+      "term": "anti-imperialist movement",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "nationalism-imperialism-and-global-power"
+      ]
+    },
+    {
+      "term": "appeasement policy in Europe",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "european-conflicts-and-international-order"
+      ]
+    },
+    {
+      "term": "archive research skill",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "thematic-synthesis-and-hkdse-examination-skills"
+      ]
+    },
+    {
+      "term": "armistice agreement",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "diplomacy-international-relations-and-treaties"
+      ]
+    },
+    {
+      "term": "assess historical significance",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "hkdse-advanced-historical-skills-and-evaluation"
+      ]
+    },
+    {
+      "term": "atomic bomb decision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "world-war-two-causes-and-global-war"
+      ]
+    },
+    {
+      "term": "Auschwitz",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "holocaust-war-crimes-and-international-justice"
+      ]
+    },
+    {
+      "term": "authoritarian regime",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "political-ideologies-and-regime-types"
+      ]
+    },
+    {
+      "term": "Axis powers",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "world-war-two-causes-and-global-war"
+      ]
+    },
+    {
+      "term": "balance of power diplomacy",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "diplomacy-international-relations-and-treaties"
+      ]
+    },
+    {
+      "term": "Bandung Conference",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "cold-war-in-asia-and-proxy-conflicts"
+      ]
+    },
+    {
+      "term": "Battle of Stalingrad",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "world-war-two-causes-and-global-war"
+      ]
+    },
+    {
+      "term": "Beiyang Government",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "modern-china-republican-era-and-warlord-politics"
+      ]
+    },
+    {
+      "term": "Berlin Blockade",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "cold-war-origins-and-global-confrontation"
+      ]
+    },
+    {
+      "term": "Berlin Wall",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "cold-war-origins-and-global-confrontation"
+      ]
+    },
+    {
+      "term": "bilateral diplomacy",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "diplomacy-international-relations-and-treaties"
+      ]
+    },
+    {
+      "term": "Blitzkrieg warfare",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "world-war-two-causes-and-global-war"
+      ]
+    },
+    {
+      "term": "Cambodian conflict",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "cold-war-in-asia-and-proxy-conflicts"
+      ]
+    },
+    {
+      "term": "capitalist ideology",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "political-ideologies-and-regime-types"
+      ]
+    },
+    {
+      "term": "causation essay",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "hkdse-advanced-historical-skills-and-evaluation"
+      ]
+    },
+    {
+      "term": "causes of World War II",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "world-war-two-causes-and-global-war"
+      ]
+    },
+    {
+      "term": "ceasefire agreement",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "diplomacy-international-relations-and-treaties"
+      ]
+    },
+    {
+      "term": "China and United Nations seat",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "modern-china-mao-era-and-social-transformation"
+      ]
+    },
+    {
+      "term": "China in global economy",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "reform-and-opening-up-and-contemporary-china"
+      ]
+    },
+    {
+      "term": "Chinese Civil War",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "chinese-civil-war-and-political-struggle"
+      ]
+    },
+    {
+      "term": "Chinese Civil War and Cold War",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "cold-war-in-asia-and-proxy-conflicts"
+      ]
+    },
+    {
+      "term": "Chinese Communist Party",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "chinese-civil-war-and-political-struggle"
+      ]
+    },
+    {
+      "term": "civil liberty",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "political-ideologies-and-regime-types"
+      ]
+    },
+    {
+      "term": "civilian suffering in war",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "japanese-aggression-and-war-in-china"
+      ]
+    },
+    {
+      "term": "class struggle policy",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "modern-china-mao-era-and-social-transformation"
+      ]
+    },
+    {
+      "term": "Cold War and decolonization",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "decolonization-and-independence-in-asia"
+      ]
+    },
+    {
+      "term": "Cold War in Asia",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "cold-war-in-asia-and-proxy-conflicts"
+      ]
+    },
+    {
+      "term": "collapse of Soviet Union",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "cold-war-origins-and-global-confrontation"
+      ]
+    },
+    {
+      "term": "collectivization in China",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "modern-china-mao-era-and-social-transformation"
+      ]
+    },
+    {
+      "term": "colonial exploitation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "nationalism-imperialism-and-global-power"
+      ]
+    },
+    {
+      "term": "comfort women issue",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "japanese-aggression-and-war-in-china"
+      ]
+    },
+    {
+      "term": "commemoration of victims",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "holocaust-war-crimes-and-international-justice"
+      ]
+    },
+    {
+      "term": "communicate historical judgment",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "hkdse-advanced-historical-skills-and-evaluation"
+      ]
+    },
+    {
+      "term": "communist ideology",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "political-ideologies-and-regime-types"
+      ]
+    },
+    {
+      "term": "compare historical interpretations",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "hkdse-advanced-historical-skills-and-evaluation"
+      ]
+    },
+    {
+      "term": "compare Mao era and reform era",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "reform-and-opening-up-and-contemporary-china"
+      ]
+    },
+    {
+      "term": "compare political systems",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "political-ideologies-and-regime-types"
+      ]
+    },
+    {
+      "term": "compare two periods in history",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "thematic-synthesis-and-hkdse-examination-skills"
+      ]
+    },
+    {
+      "term": "compare two regions in history",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "thematic-synthesis-and-hkdse-examination-skills"
+      ]
+    },
+    {
+      "term": "concentration camp",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "holocaust-war-crimes-and-international-justice"
+      ]
+    },
+    {
+      "term": "constitutional experiment in China",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "modern-china-republican-era-and-warlord-politics"
+      ]
+    },
+    {
+      "term": "containment in Asia",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "cold-war-in-asia-and-proxy-conflicts"
+      ]
+    },
+    {
+      "term": "contemporary China challenges",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "reform-and-opening-up-and-contemporary-china"
+      ]
+    },
+    {
+      "term": "contemporary Chinese diplomacy",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "reform-and-opening-up-and-contemporary-china"
+      ]
+    },
+    {
+      "term": "continuity and change analysis",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "thematic-synthesis-and-hkdse-examination-skills"
+      ]
+    },
+    {
+      "term": "continuity and change essay",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "hkdse-advanced-historical-skills-and-evaluation"
+      ]
+    },
+    {
+      "term": "continuity and change in Mao era",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "modern-china-mao-era-and-social-transformation"
+      ]
+    },
+    {
+      "term": "continuity from Qing to republic",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "modern-china-republican-era-and-warlord-politics"
+      ]
+    },
+    {
+      "term": "crime against humanity",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "holocaust-war-crimes-and-international-justice"
+      ]
+    },
+    {
+      "term": "Cross-Strait relations",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "reform-and-opening-up-and-contemporary-china"
+      ]
+    },
+    {
+      "term": "cross-topic historical link",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "thematic-synthesis-and-hkdse-examination-skills"
+      ]
+    },
+    {
+      "term": "crossing the Yangtze River",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "chinese-civil-war-and-political-struggle"
+      ]
+    },
+    {
+      "term": "Cuban Missile Crisis",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "cold-war-origins-and-global-confrontation"
+      ]
+    },
+    {
+      "term": "cult of personality",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "political-ideologies-and-regime-types"
+      ]
+    },
+    {
+      "term": "cultural imperialism",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "nationalism-imperialism-and-global-power"
+      ]
+    },
+    {
+      "term": "Cultural Revolution",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "modern-china-mao-era-and-social-transformation"
+      ]
+    },
+    {
+      "term": "Cultural Revolution and regional impact",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "cold-war-in-asia-and-proxy-conflicts"
+      ]
+    },
+    {
+      "term": "D-Day landings",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "world-war-two-causes-and-global-war"
+      ]
+    },
+    {
+      "term": "data-based question skill",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "hkdse-advanced-historical-skills-and-evaluation"
+      ]
+    },
+    {
+      "term": "decisive campaign in Civil War",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "chinese-civil-war-and-political-struggle"
+      ]
+    },
+    {
+      "term": "decolonization in Asia",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "decolonization-and-independence-in-asia"
+      ]
+    },
+    {
+      "term": "decolonization movement",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "nationalism-imperialism-and-global-power"
+      ]
+    },
+    {
+      "term": "demilitarized zone",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "cold-war-in-asia-and-proxy-conflicts"
+      ]
+    },
+    {
+      "term": "Deng Xiaoping",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "reform-and-opening-up-and-contemporary-china"
+      ]
+    },
+    {
+      "term": "detente period",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "cold-war-origins-and-global-confrontation"
+      ]
+    },
+    {
+      "term": "diplomacy versus military force",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "diplomacy-international-relations-and-treaties"
+      ]
+    },
+    {
+      "term": "diplomatic negotiation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "diplomacy-international-relations-and-treaties"
+      ]
+    },
+    {
+      "term": "diplomatic recognition",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "diplomacy-international-relations-and-treaties"
+      ]
+    },
+    {
+      "term": "division of Korea",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "cold-war-in-asia-and-proxy-conflicts"
+      ]
+    },
+    {
+      "term": "domino theory",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "cold-war-in-asia-and-proxy-conflicts"
+      ]
+    },
+    {
+      "term": "economic imperialism",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "nationalism-imperialism-and-global-power"
+      ]
+    },
+    {
+      "term": "embassy and consulate",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "diplomacy-international-relations-and-treaties"
+      ]
+    },
+    {
+      "term": "encirclement campaign",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "chinese-civil-war-and-political-struggle"
+      ]
+    },
+    {
+      "term": "end of Cold War",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "cold-war-origins-and-global-confrontation"
+      ]
+    },
+    {
+      "term": "end of European empire in Asia",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "decolonization-and-independence-in-asia"
+      ]
+    },
+    {
+      "term": "European imperialism",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "nationalism-imperialism-and-global-power"
+      ]
+    },
+    {
+      "term": "European integration movement",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "european-conflicts-and-international-order"
+      ]
+    },
+    {
+      "term": "European security order",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "european-conflicts-and-international-order"
+      ]
+    },
+    {
+      "term": "European theatre of war",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "world-war-two-causes-and-global-war"
+      ]
+    },
+    {
+      "term": "European Union development",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "european-conflicts-and-international-order"
+      ]
+    },
+    {
+      "term": "evaluate Cold War",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "cold-war-origins-and-global-confrontation"
+      ]
+    },
+    {
+      "term": "evaluate Cold War in Asia",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "cold-war-in-asia-and-proxy-conflicts"
+      ]
+    },
+    {
+      "term": "evaluate decolonization process",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "decolonization-and-independence-in-asia"
+      ]
+    },
+    {
+      "term": "evaluate diplomatic outcome",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "diplomacy-international-relations-and-treaties"
+      ]
+    },
+    {
+      "term": "evaluate European conflict history",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "european-conflicts-and-international-order"
+      ]
+    },
+    {
+      "term": "evaluate ideology impact",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "political-ideologies-and-regime-types"
+      ]
+    },
+    {
+      "term": "evaluate imperialism impact",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "nationalism-imperialism-and-global-power"
+      ]
+    },
+    {
+      "term": "evaluate Japanese aggression",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "japanese-aggression-and-war-in-china"
+      ]
+    },
+    {
+      "term": "evaluate long-term consequence",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "thematic-synthesis-and-hkdse-examination-skills"
+      ]
+    },
+    {
+      "term": "evaluate Mao era policies",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "modern-china-mao-era-and-social-transformation"
+      ]
+    },
+    {
+      "term": "evaluate outcome of Civil War",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "chinese-civil-war-and-political-struggle"
+      ]
+    },
+    {
+      "term": "evaluate post-war justice",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "holocaust-war-crimes-and-international-justice"
+      ]
+    },
+    {
+      "term": "evaluate Reform and Opening Up",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "reform-and-opening-up-and-contemporary-china"
+      ]
+    },
+    {
+      "term": "evaluate Republican era",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "modern-china-republican-era-and-warlord-politics"
+      ]
+    },
+    {
+      "term": "evaluate source reliability",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "hkdse-advanced-historical-skills-and-evaluation"
+      ]
+    },
+    {
+      "term": "evaluate source utility",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "hkdse-advanced-historical-skills-and-evaluation"
+      ]
+    },
+    {
+      "term": "evaluate World War II impact",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "world-war-two-causes-and-global-war"
+      ]
+    },
+    {
+      "term": "evidence of atrocity",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "holocaust-war-crimes-and-international-justice"
+      ]
+    },
+    {
+      "term": "explain multi-causal change",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "thematic-synthesis-and-hkdse-examination-skills"
+      ]
+    },
+    {
+      "term": "extermination camp",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "holocaust-war-crimes-and-international-justice"
+      ]
+    },
+    {
+      "term": "failure of early republican institutions",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "modern-china-republican-era-and-warlord-politics"
+      ]
+    },
+    {
+      "term": "failure of interwar peace",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "european-conflicts-and-international-order"
+      ]
+    },
+    {
+      "term": "fall of Berlin Wall",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "cold-war-origins-and-global-confrontation"
+      ]
+    },
+    {
+      "term": "fascist ideology",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "political-ideologies-and-regime-types"
+      ]
+    },
+    {
+      "term": "Final Solution",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "holocaust-war-crimes-and-international-justice"
+      ]
+    },
+    {
+      "term": "First Five-Year Plan",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "modern-china-mao-era-and-social-transformation"
+      ]
+    },
+    {
+      "term": "First United Front",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "chinese-civil-war-and-political-struggle"
+      ]
+    },
+    {
+      "term": "foreign policy decision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "diplomacy-international-relations-and-treaties"
+      ]
+    },
+    {
+      "term": "foreign policy in Mao era",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "modern-china-mao-era-and-social-transformation"
+      ]
+    },
+    {
+      "term": "Four Modernizations",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "reform-and-opening-up-and-contemporary-china"
+      ]
+    },
+    {
+      "term": "Gandhi and non-violent resistance",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "decolonization-and-independence-in-asia"
+      ]
+    },
+    {
+      "term": "German reunification",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "european-conflicts-and-international-order"
+      ]
+    },
+    {
+      "term": "German surrender",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "world-war-two-causes-and-global-war"
+      ]
+    },
+    {
+      "term": "Global South concept",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "nationalism-imperialism-and-global-power"
+      ]
+    },
+    {
+      "term": "Great Depression impact",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "european-conflicts-and-international-order"
+      ]
+    },
+    {
+      "term": "Great Famine",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "modern-china-mao-era-and-social-transformation"
+      ]
+    },
+    {
+      "term": "Great Leap Forward",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "modern-china-mao-era-and-social-transformation"
+      ]
+    },
+    {
+      "term": "great power politics",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "nationalism-imperialism-and-global-power"
+      ]
+    },
+    {
+      "term": "Guangzhou government",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "modern-china-republican-era-and-warlord-politics"
+      ]
+    },
+    {
+      "term": "hegemony",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "nationalism-imperialism-and-global-power"
+      ]
+    },
+    {
+      "term": "historical argument construction",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "hkdse-advanced-historical-skills-and-evaluation"
+      ]
+    },
+    {
+      "term": "historical controversy analysis",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "hkdse-advanced-historical-skills-and-evaluation"
+      ]
+    },
+    {
+      "term": "historical debate essay",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "thematic-synthesis-and-hkdse-examination-skills"
+      ]
+    },
+    {
+      "term": "historical debate on Mao era",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "modern-china-mao-era-and-social-transformation"
+      ]
+    },
+    {
+      "term": "historical discussion skill",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "thematic-synthesis-and-hkdse-examination-skills"
+      ]
+    },
+    {
+      "term": "historical empathy in analysis",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "hkdse-advanced-historical-skills-and-evaluation"
+      ]
+    },
+    {
+      "term": "historical evaluation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "hkdse-advanced-historical-skills-and-evaluation"
+      ]
+    },
+    {
+      "term": "historical field investigation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "thematic-synthesis-and-hkdse-examination-skills"
+      ]
+    },
+    {
+      "term": "historical memory of invasion",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "japanese-aggression-and-war-in-china"
+      ]
+    },
+    {
+      "term": "historical periodization skill",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "thematic-synthesis-and-hkdse-examination-skills"
+      ]
+    },
+    {
+      "term": "historical presentation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "thematic-synthesis-and-hkdse-examination-skills"
+      ]
+    },
+    {
+      "term": "historical responsibility",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "holocaust-war-crimes-and-international-justice"
+      ]
+    },
+    {
+      "term": "historical synthesis",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "hkdse-advanced-historical-skills-and-evaluation"
+      ]
+    },
+    {
+      "term": "Hitler expansion policy",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "world-war-two-causes-and-global-war"
+      ]
+    },
+    {
+      "term": "HKDSE history examination technique",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "hkdse-advanced-historical-skills-and-evaluation"
+      ]
+    },
+    {
+      "term": "Ho Chi Minh",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "decolonization-and-independence-in-asia"
+      ]
+    },
+    {
+      "term": "Holocaust",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "holocaust-war-crimes-and-international-justice"
+      ]
+    },
+    {
+      "term": "Hong Kong return to China",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "reform-and-opening-up-and-contemporary-china"
+      ]
+    },
+    {
+      "term": "human dignity in history",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "holocaust-war-crimes-and-international-justice"
+      ]
+    },
+    {
+      "term": "human rights principle",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "political-ideologies-and-regime-types"
+      ]
+    },
+    {
+      "term": "identify bias in source",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "hkdse-advanced-historical-skills-and-evaluation"
+      ]
+    },
+    {
+      "term": "identify turning point",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "thematic-synthesis-and-hkdse-examination-skills"
+      ]
+    },
+    {
+      "term": "ideological conflict",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "political-ideologies-and-regime-types"
+      ]
+    },
+    {
+      "term": "ideological confrontation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "cold-war-origins-and-global-confrontation"
+      ]
+    },
+    {
+      "term": "impact of war on modern China",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "japanese-aggression-and-war-in-china"
+      ]
+    },
+    {
+      "term": "imperial rivalry",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "nationalism-imperialism-and-global-power"
+      ]
+    },
+    {
+      "term": "Indian independence movement",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "decolonization-and-independence-in-asia"
+      ]
+    },
+    {
+      "term": "Indonesian independence",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "decolonization-and-independence-in-asia"
+      ]
+    },
+    {
+      "term": "informal empire",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "nationalism-imperialism-and-global-power"
+      ]
+    },
+    {
+      "term": "integrate evidence and argument",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "thematic-synthesis-and-hkdse-examination-skills"
+      ]
+    },
+    {
+      "term": "International Criminal Court development",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "holocaust-war-crimes-and-international-justice"
+      ]
+    },
+    {
+      "term": "international military tribunal",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "holocaust-war-crimes-and-international-justice"
+      ]
+    },
+    {
+      "term": "international order change",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "european-conflicts-and-international-order"
+      ]
+    },
+    {
+      "term": "international relations theory in history",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "diplomacy-international-relations-and-treaties"
+      ]
+    },
+    {
+      "term": "international treaty obligation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "diplomacy-international-relations-and-treaties"
+      ]
+    },
+    {
+      "term": "invasion of Poland",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "world-war-two-causes-and-global-war"
+      ]
+    },
+    {
+      "term": "Iron Curtain speech",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "cold-war-origins-and-global-confrontation"
+      ]
+    },
+    {
+      "term": "Japanese imperial expansion",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "japanese-aggression-and-war-in-china"
+      ]
+    },
+    {
+      "term": "Japanese occupation of China",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "japanese-aggression-and-war-in-china"
+      ]
+    },
+    {
+      "term": "Japanese surrender",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "world-war-two-causes-and-global-war"
+      ]
+    },
+    {
+      "term": "Japanese surrender in China",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "japanese-aggression-and-war-in-china"
+      ]
+    },
+    {
+      "term": "Korean War",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "cold-war-in-asia-and-proxy-conflicts"
+      ]
+    },
+    {
+      "term": "Kuomintang",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "chinese-civil-war-and-political-struggle"
+      ]
+    },
+    {
+      "term": "land reform campaign",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "chinese-civil-war-and-political-struggle"
+      ]
+    },
+    {
+      "term": "League of Nations",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "european-conflicts-and-international-order"
+      ]
+    },
+    {
+      "term": "legacy of Chinese Civil War",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "chinese-civil-war-and-political-struggle"
+      ]
+    },
+    {
+      "term": "legacy of Cold War",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "cold-war-origins-and-global-confrontation"
+      ]
+    },
+    {
+      "term": "legacy of colonial rule in Asia",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "decolonization-and-independence-in-asia"
+      ]
+    },
+    {
+      "term": "legacy of Mao era",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "modern-china-mao-era-and-social-transformation"
+      ]
+    },
+    {
+      "term": "liberal democracy",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "political-ideologies-and-regime-types"
+      ]
+    },
+    {
+      "term": "Long March",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "chinese-civil-war-and-political-struggle"
+      ]
+    },
+    {
+      "term": "Macau return to China",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "reform-and-opening-up-and-contemporary-china"
+      ]
+    },
+    {
+      "term": "Malayan independence",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "decolonization-and-independence-in-asia"
+      ]
+    },
+    {
+      "term": "Manchukuo puppet state",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "japanese-aggression-and-war-in-china"
+      ]
+    },
+    {
+      "term": "Manchuria incident",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "japanese-aggression-and-war-in-china"
+      ]
+    },
+    {
+      "term": "Mao Zedong era",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "modern-china-mao-era-and-social-transformation"
+      ]
+    },
+    {
+      "term": "Marco Polo Bridge Incident",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "japanese-aggression-and-war-in-china"
+      ]
+    },
+    {
+      "term": "market reform in China",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "reform-and-opening-up-and-contemporary-china"
+      ]
+    },
+    {
+      "term": "Marshall Plan",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "cold-war-origins-and-global-confrontation"
+      ]
+    },
+    {
+      "term": "mass line policy",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "chinese-civil-war-and-political-struggle"
+      ]
+    },
+    {
+      "term": "mediation in conflict",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "diplomacy-international-relations-and-treaties"
+      ]
+    },
+    {
+      "term": "military strategy in Civil War",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "chinese-civil-war-and-political-struggle"
+      ]
+    },
+    {
+      "term": "moral lesson from Holocaust",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "holocaust-war-crimes-and-international-justice"
+      ]
+    },
+    {
+      "term": "multi-party system",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "political-ideologies-and-regime-types"
+      ]
+    },
+    {
+      "term": "multilateral diplomacy",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "diplomacy-international-relations-and-treaties"
+      ]
+    },
+    {
+      "term": "Munich Agreement",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "world-war-two-causes-and-global-war"
+      ]
+    },
+    {
+      "term": "museum source study",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "thematic-synthesis-and-hkdse-examination-skills"
+      ]
+    },
+    {
+      "term": "Mutually Assured Destruction",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "cold-war-origins-and-global-confrontation"
+      ]
+    },
+    {
+      "term": "Nanjing Massacre",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "japanese-aggression-and-war-in-china"
+      ]
+    },
+    {
+      "term": "nation building challenge",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "decolonization-and-independence-in-asia"
+      ]
+    },
+    {
+      "term": "national interest in diplomacy",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "diplomacy-international-relations-and-treaties"
+      ]
+    },
+    {
+      "term": "national liberation struggle",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "nationalism-imperialism-and-global-power"
+      ]
+    },
+    {
+      "term": "national self-determination",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "nationalism-imperialism-and-global-power"
+      ]
+    },
+    {
+      "term": "nationalism and global conflict",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "nationalism-imperialism-and-global-power"
+      ]
+    },
+    {
+      "term": "Nationalist government reunification",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "modern-china-republican-era-and-warlord-politics"
+      ]
+    },
+    {
+      "term": "nationalist ideology",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "political-ideologies-and-regime-types"
+      ]
+    },
+    {
+      "term": "NATO formation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "cold-war-origins-and-global-confrontation"
+      ]
+    },
+    {
+      "term": "Nazi racial policy",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "holocaust-war-crimes-and-international-justice"
+      ]
+    },
+    {
+      "term": "Nazism in Germany",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "world-war-two-causes-and-global-war"
+      ]
+    },
+    {
+      "term": "neo-colonialism debate",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "decolonization-and-independence-in-asia"
+      ]
+    },
+    {
+      "term": "never again principle",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "holocaust-war-crimes-and-international-justice"
+      ]
+    },
+    {
+      "term": "Non-Aligned Movement in Asia",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "cold-war-in-asia-and-proxy-conflicts"
+      ]
+    },
+    {
+      "term": "normalization of relations",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "diplomacy-international-relations-and-treaties"
+      ]
+    },
+    {
+      "term": "North-South divide",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "nationalism-imperialism-and-global-power"
+      ]
+    },
+    {
+      "term": "Northern Expedition",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "modern-china-republican-era-and-warlord-politics"
+      ]
+    },
+    {
+      "term": "nuclear arms race",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "cold-war-origins-and-global-confrontation"
+      ]
+    },
+    {
+      "term": "Nuremberg Trials",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "holocaust-war-crimes-and-international-justice"
+      ]
+    },
+    {
+      "term": "one country two systems policy",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "reform-and-opening-up-and-contemporary-china"
+      ]
+    },
+    {
+      "term": "one-child policy",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "reform-and-opening-up-and-contemporary-china"
+      ]
+    },
+    {
+      "term": "one-party state",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "political-ideologies-and-regime-types"
+      ]
+    },
+    {
+      "term": "opening to world economy",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "reform-and-opening-up-and-contemporary-china"
+      ]
+    },
+    {
+      "term": "origins of Cold War",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "cold-war-origins-and-global-confrontation"
+      ]
+    },
+    {
+      "term": "Pacific theatre of war",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "world-war-two-causes-and-global-war"
+      ]
+    },
+    {
+      "term": "Pakistan independence",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "decolonization-and-independence-in-asia"
+      ]
+    },
+    {
+      "term": "Pan-Arabism",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "nationalism-imperialism-and-global-power"
+      ]
+    },
+    {
+      "term": "Pan-Asianism",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "nationalism-imperialism-and-global-power"
+      ]
+    },
+    {
+      "term": "parliamentary politics in China",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "modern-china-republican-era-and-warlord-politics"
+      ]
+    },
+    {
+      "term": "partition of India",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "decolonization-and-independence-in-asia"
+      ]
+    },
+    {
+      "term": "peace conference",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "diplomacy-international-relations-and-treaties"
+      ]
+    },
+    {
+      "term": "peace process",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "diplomacy-international-relations-and-treaties"
+      ]
+    },
+    {
+      "term": "Pearl Harbor attack",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "world-war-two-causes-and-global-war"
+      ]
+    },
+    {
+      "term": "people's commune",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "modern-china-mao-era-and-social-transformation"
+      ]
+    },
+    {
+      "term": "People's Republic of China founded",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "chinese-civil-war-and-political-struggle"
+      ]
+    },
+    {
+      "term": "persecution of Jews",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "holocaust-war-crimes-and-international-justice"
+      ]
+    },
+    {
+      "term": "Philippine independence",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "decolonization-and-independence-in-asia"
+      ]
+    },
+    {
+      "term": "planned economy in China",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "modern-china-mao-era-and-social-transformation"
+      ]
+    },
+    {
+      "term": "political campaign in China",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "modern-china-mao-era-and-social-transformation"
+      ]
+    },
+    {
+      "term": "political coalition in China",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "modern-china-republican-era-and-warlord-politics"
+      ]
+    },
+    {
+      "term": "political control in Mao era",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "modern-china-mao-era-and-social-transformation"
+      ]
+    },
+    {
+      "term": "political fragmentation in China",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "modern-china-republican-era-and-warlord-politics"
+      ]
+    },
+    {
+      "term": "political instability in early republic",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "modern-china-republican-era-and-warlord-politics"
+      ]
+    },
+    {
+      "term": "political propaganda",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "political-ideologies-and-regime-types"
+      ]
+    },
+    {
+      "term": "political reform debate in China",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "reform-and-opening-up-and-contemporary-china"
+      ]
+    },
+    {
+      "term": "political struggle for China",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "chinese-civil-war-and-political-struggle"
+      ]
+    },
+    {
+      "term": "post-colonial state building",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "decolonization-and-independence-in-asia"
+      ]
+    },
+    {
+      "term": "post-war division of Europe",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "european-conflicts-and-international-order"
+      ]
+    },
+    {
+      "term": "Provisional Government of Republic of China",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "modern-china-republican-era-and-warlord-politics"
+      ]
+    },
+    {
+      "term": "proxy war in Asia",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "cold-war-in-asia-and-proxy-conflicts"
+      ]
+    },
+    {
+      "term": "public history project",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "thematic-synthesis-and-hkdse-examination-skills"
+      ]
+    },
+    {
+      "term": "rapid economic growth in China",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "reform-and-opening-up-and-contemporary-china"
+      ]
+    },
+    {
+      "term": "Reagan era confrontation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "cold-war-origins-and-global-confrontation"
+      ]
+    },
+    {
+      "term": "Red Guard movement",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "modern-china-mao-era-and-social-transformation"
+      ]
+    },
+    {
+      "term": "reflect on historical debate",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "hkdse-advanced-historical-skills-and-evaluation"
+      ]
+    },
+    {
+      "term": "Reform and Opening Up",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "reform-and-opening-up-and-contemporary-china"
+      ]
+    },
+    {
+      "term": "reformist ideology",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "political-ideologies-and-regime-types"
+      ]
+    },
+    {
+      "term": "regime change",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "political-ideologies-and-regime-types"
+      ]
+    },
+    {
+      "term": "regional alliance in Asia",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "cold-war-in-asia-and-proxy-conflicts"
+      ]
+    },
+    {
+      "term": "regional cooperation after independence",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "decolonization-and-independence-in-asia"
+      ]
+    },
+    {
+      "term": "regional military leader",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "modern-china-republican-era-and-warlord-politics"
+      ]
+    },
+    {
+      "term": "regional power",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "nationalism-imperialism-and-global-power"
+      ]
+    },
+    {
+      "term": "Republican China",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "modern-china-republican-era-and-warlord-politics"
+      ]
+    },
+    {
+      "term": "retreat to Taiwan",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "chinese-civil-war-and-political-struggle"
+      ]
+    },
+    {
+      "term": "revision strategy for history",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "thematic-synthesis-and-hkdse-examination-skills"
+      ]
+    },
+    {
+      "term": "revolutionary base area",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "chinese-civil-war-and-political-struggle"
+      ]
+    },
+    {
+      "term": "revolutionary ideology",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "political-ideologies-and-regime-types"
+      ]
+    },
+    {
+      "term": "rise of China",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "reform-and-opening-up-and-contemporary-china"
+      ]
+    },
+    {
+      "term": "rise of fascism in Europe",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "european-conflicts-and-international-order"
+      ]
+    },
+    {
+      "term": "rise of totalitarianism",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "world-war-two-causes-and-global-war"
+      ]
+    },
+    {
+      "term": "rule of law principle",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "political-ideologies-and-regime-types"
+      ]
+    },
+    {
+      "term": "sanction policy",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "diplomacy-international-relations-and-treaties"
+      ]
+    },
+    {
+      "term": "Schlieffen Plan",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "european-conflicts-and-international-order"
+      ]
+    },
+    {
+      "term": "Scramble for Africa",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "nationalism-imperialism-and-global-power"
+      ]
+    },
+    {
+      "term": "search for national unity",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "modern-china-republican-era-and-warlord-politics"
+      ]
+    },
+    {
+      "term": "SEATO alliance",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "cold-war-in-asia-and-proxy-conflicts"
+      ]
+    },
+    {
+      "term": "Second Sino-Japanese War",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "japanese-aggression-and-war-in-china"
+      ]
+    },
+    {
+      "term": "Second United Front",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "chinese-civil-war-and-political-struggle"
+      ]
+    },
+    {
+      "term": "self-determination principle",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "decolonization-and-independence-in-asia"
+      ]
+    },
+    {
+      "term": "senior secondary history synthesis",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "thematic-synthesis-and-hkdse-examination-skills"
+      ]
+    },
+    {
+      "term": "significance essay writing",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "thematic-synthesis-and-hkdse-examination-skills"
+      ]
+    },
+    {
+      "term": "Singapore separation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "decolonization-and-independence-in-asia"
+      ]
+    },
+    {
+      "term": "Sino-American relations in Mao era",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "modern-china-mao-era-and-social-transformation"
+      ]
+    },
+    {
+      "term": "Sino-Soviet split",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "cold-war-in-asia-and-proxy-conflicts"
+      ]
+    },
+    {
+      "term": "social change after reform",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "reform-and-opening-up-and-contemporary-china"
+      ]
+    },
+    {
+      "term": "social change in Mao era",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "modern-china-mao-era-and-social-transformation"
+      ]
+    },
+    {
+      "term": "socialism",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "political-ideologies-and-regime-types"
+      ]
+    },
+    {
+      "term": "socialist transformation in China",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "modern-china-mao-era-and-social-transformation"
+      ]
+    },
+    {
+      "term": "source-based question skill",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "hkdse-advanced-historical-skills-and-evaluation"
+      ]
+    },
+    {
+      "term": "Southeast Asia conflict",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "cold-war-in-asia-and-proxy-conflicts"
+      ]
+    },
+    {
+      "term": "space race",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "cold-war-origins-and-global-confrontation"
+      ]
+    },
+    {
+      "term": "Spanish Civil War",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "european-conflicts-and-international-order"
+      ]
+    },
+    {
+      "term": "special economic zone",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "reform-and-opening-up-and-contemporary-china"
+      ]
+    },
+    {
+      "term": "spheres of influence diplomacy",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "diplomacy-international-relations-and-treaties"
+      ]
+    },
+    {
+      "term": "split between KMT and CCP",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "chinese-civil-war-and-political-struggle"
+      ]
+    },
+    {
+      "term": "state-sponsored violence",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "holocaust-war-crimes-and-international-justice"
+      ]
+    },
+    {
+      "term": "strategic bombing campaign",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "world-war-two-causes-and-global-war"
+      ]
+    },
+    {
+      "term": "structured history essay",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "hkdse-advanced-historical-skills-and-evaluation"
+      ]
+    },
+    {
+      "term": "Sun Yat-sen",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "modern-china-republican-era-and-warlord-politics"
+      ]
+    },
+    {
+      "term": "superpower rivalry",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "cold-war-origins-and-global-confrontation"
+      ]
+    },
+    {
+      "term": "superpower status",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "nationalism-imperialism-and-global-power"
+      ]
+    },
+    {
+      "term": "support thesis with evidence",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "hkdse-advanced-historical-skills-and-evaluation"
+      ]
+    },
+    {
+      "term": "Taiwan Strait crisis",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "cold-war-in-asia-and-proxy-conflicts"
+      ]
+    },
+    {
+      "term": "thematic comparison in history",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "thematic-synthesis-and-hkdse-examination-skills"
+      ]
+    },
+    {
+      "term": "thematic history essay",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "hkdse-advanced-historical-skills-and-evaluation"
+      ]
+    },
+    {
+      "term": "Three Principles of the People",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "modern-china-republican-era-and-warlord-politics"
+      ]
+    },
+    {
+      "term": "time management in history exam",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "thematic-synthesis-and-hkdse-examination-skills"
+      ]
+    },
+    {
+      "term": "Tokyo Trial",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "japanese-aggression-and-war-in-china"
+      ]
+    },
+    {
+      "term": "total war in China",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "japanese-aggression-and-war-in-china"
+      ]
+    },
+    {
+      "term": "totalitarian regime",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "political-ideologies-and-regime-types"
+      ]
+    },
+    {
+      "term": "treaty negotiation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "diplomacy-international-relations-and-treaties"
+      ]
+    },
+    {
+      "term": "Treaty of Versailles",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "european-conflicts-and-international-order"
+      ]
+    },
+    {
+      "term": "Treaty of Versailles legacy",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "world-war-two-causes-and-global-war"
+      ]
+    },
+    {
+      "term": "trench warfare",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "european-conflicts-and-international-order"
+      ]
+    },
+    {
+      "term": "Truman Doctrine",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "cold-war-origins-and-global-confrontation"
+      ]
+    },
+    {
+      "term": "Twenty-One Demands",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "japanese-aggression-and-war-in-china"
+      ]
+    },
+    {
+      "term": "Two Chinas issue",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "chinese-civil-war-and-political-struggle"
+      ]
+    },
+    {
+      "term": "United Front against Japan",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "japanese-aggression-and-war-in-china"
+      ]
+    },
+    {
+      "term": "United Nations founded",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "european-conflicts-and-international-order"
+      ]
+    },
+    {
+      "term": "urban reform in China",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "reform-and-opening-up-and-contemporary-china"
+      ]
+    },
+    {
+      "term": "US-China rapprochement",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "cold-war-in-asia-and-proxy-conflicts"
+      ]
+    },
+    {
+      "term": "Vietnam War",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "cold-war-in-asia-and-proxy-conflicts"
+      ]
+    },
+    {
+      "term": "Vietnamese independence struggle",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "decolonization-and-independence-in-asia"
+      ]
+    },
+    {
+      "term": "war crime",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "holocaust-war-crimes-and-international-justice"
+      ]
+    },
+    {
+      "term": "War of Resistance against Japan",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "japanese-aggression-and-war-in-china"
+      ]
+    },
+    {
+      "term": "war reparations debate",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "japanese-aggression-and-war-in-china"
+      ]
+    },
+    {
+      "term": "Warlord Era",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "modern-china-republican-era-and-warlord-politics"
+      ]
+    },
+    {
+      "term": "Warsaw Pact",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "cold-war-origins-and-global-confrontation"
+      ]
+    },
+    {
+      "term": "wartime mobilization in China",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "japanese-aggression-and-war-in-china"
+      ]
+    },
+    {
+      "term": "weigh competing evidence",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "hkdse-advanced-historical-skills-and-evaluation"
+      ]
+    },
+    {
+      "term": "Weimar Republic crisis",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "european-conflicts-and-international-order"
+      ]
+    },
+    {
+      "term": "Whampoa Military Academy",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "modern-china-republican-era-and-warlord-politics"
+      ]
+    },
+    {
+      "term": "World War I causes",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "european-conflicts-and-international-order"
+      ]
+    },
+    {
+      "term": "World War II in Europe",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "european-conflicts-and-international-order"
+      ]
+    },
+    {
+      "term": "Yan'an base area",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "chinese-civil-war-and-political-struggle"
+      ]
+    },
+    {
+      "term": "Yuan Shikai",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "history",
+        "curriculum-style",
+        "modern-china-republican-era-and-warlord-politics"
       ]
     }
   ]

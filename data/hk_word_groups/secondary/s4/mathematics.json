@@ -7,6 +7,15 @@
   "version": "2026.06",
   "display_name_en": "S4 Mathematics",
   "display_name_zh_hant": "中四數學",
+  "source": {
+    "type": "curriculum_style_public_references",
+    "references": [
+      "EDB Mathematics Curriculum and Assessment Guide (Secondary 4-6)",
+      "EDB senior secondary Mathematics Compulsory Part learning objectives",
+      "Public Hong Kong S4 Mathematics syllabus topic examples (quadratics, functions, exponentials and logarithms, trigonometry, coordinate geometry, statistics, probability, combinatorics)"
+    ],
+    "note": "No fixed official Hong Kong S4 mathematics vocabulary list is prescribed; this list is theme-based for senior secondary S4 mathematics enrichment import. Term-only entries are completed during import."
+  },
   "words": [
     {
       "term": "quadratic equation",
@@ -306,6 +315,2965 @@
         "mathematics",
         "statistics",
         "graphs"
+      ]
+    },
+    {
+      "term": "3D trigonometry",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "trigonometry-and-radian-measure"
+      ]
+    },
+    {
+      "term": "addition of vectors",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "vectors-and-transformations"
+      ]
+    },
+    {
+      "term": "addition rule",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "probability-and-combinatorics"
+      ]
+    },
+    {
+      "term": "algebraic fraction",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "polynomials-and-algebraic-manipulation"
+      ]
+    },
+    {
+      "term": "alternate segment",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "circle-geometry-and-mensuration"
+      ]
+    },
+    {
+      "term": "ambiguous case",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "trigonometry-and-radian-measure"
+      ]
+    },
+    {
+      "term": "amplitude",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "trigonometry-and-radian-measure"
+      ]
+    },
+    {
+      "term": "angle at centre",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "circle-geometry-and-mensuration"
+      ]
+    },
+    {
+      "term": "angle at circumference",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "circle-geometry-and-mensuration"
+      ]
+    },
+    {
+      "term": "angle in semicircle",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "circle-geometry-and-mensuration"
+      ]
+    },
+    {
+      "term": "angle of depression",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "trigonometry-and-radian-measure"
+      ]
+    },
+    {
+      "term": "angle of elevation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "trigonometry-and-radian-measure"
+      ]
+    },
+    {
+      "term": "approximation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "mathematical-reasoning-and-problem-solving"
+      ]
+    },
+    {
+      "term": "arc",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "circle-geometry-and-mensuration"
+      ]
+    },
+    {
+      "term": "area of triangle formula",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "trigonometry-and-radian-measure"
+      ]
+    },
+    {
+      "term": "arithmetic sequence",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "sequences-and-series"
+      ]
+    },
+    {
+      "term": "arithmetic series",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "sequences-and-series"
+      ]
+    },
+    {
+      "term": "assumption",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "mathematical-reasoning-and-problem-solving"
+      ]
+    },
+    {
+      "term": "asymptote",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "functions-and-graphs"
+      ]
+    },
+    {
+      "term": "axis of symmetry",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "quadratic-equations-and-inequalities"
+      ]
+    },
+    {
+      "term": "bearing",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "trigonometry-and-radian-measure"
+      ]
+    },
+    {
+      "term": "binomial expansion",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "polynomials-and-algebraic-manipulation"
+      ]
+    },
+    {
+      "term": "box-and-whisker plot",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "statistics-and-data-handling"
+      ]
+    },
+    {
+      "term": "Cartesian plane",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "coordinate-geometry"
+      ]
+    },
+    {
+      "term": "centre of circle",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "coordinate-geometry"
+      ]
+    },
+    {
+      "term": "change of base",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "exponential-and-logarithmic-functions"
+      ]
+    },
+    {
+      "term": "change of subject",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "polynomials-and-algebraic-manipulation"
+      ]
+    },
+    {
+      "term": "chord",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "circle-geometry-and-mensuration"
+      ]
+    },
+    {
+      "term": "circle",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "circle-geometry-and-mensuration"
+      ]
+    },
+    {
+      "term": "circumference",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "circle-geometry-and-mensuration"
+      ]
+    },
+    {
+      "term": "coefficient in expansion",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "polynomials-and-algebraic-manipulation"
+      ]
+    },
+    {
+      "term": "column vector",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "vectors-and-transformations"
+      ]
+    },
+    {
+      "term": "common difference",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "sequences-and-series"
+      ]
+    },
+    {
+      "term": "common factor",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "polynomials-and-algebraic-manipulation"
+      ]
+    },
+    {
+      "term": "common logarithm",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "exponential-and-logarithmic-functions"
+      ]
+    },
+    {
+      "term": "common ratio",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "sequences-and-series"
+      ]
+    },
+    {
+      "term": "complete the square",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "quadratic-equations-and-inequalities"
+      ]
+    },
+    {
+      "term": "composite function",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "functions-and-graphs"
+      ]
+    },
+    {
+      "term": "composite solid",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "circle-geometry-and-mensuration"
+      ]
+    },
+    {
+      "term": "compound interest",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "variation-and-modelling"
+      ]
+    },
+    {
+      "term": "conditional probability",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "probability-and-combinatorics"
+      ]
+    },
+    {
+      "term": "conjecture",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "mathematical-reasoning-and-problem-solving"
+      ]
+    },
+    {
+      "term": "constant of proportionality",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "variation-and-modelling"
+      ]
+    },
+    {
+      "term": "constant term",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "polynomials-and-algebraic-manipulation"
+      ]
+    },
+    {
+      "term": "constraint",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "linear-programming-intro"
+      ]
+    },
+    {
+      "term": "convergent series",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "sequences-and-series"
+      ]
+    },
+    {
+      "term": "coordinate plane",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "coordinate-geometry"
+      ]
+    },
+    {
+      "term": "corner point",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "linear-programming-intro"
+      ]
+    },
+    {
+      "term": "correlation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "statistics-and-data-handling"
+      ]
+    },
+    {
+      "term": "cosine graph",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "trigonometry-and-radian-measure"
+      ]
+    },
+    {
+      "term": "counterexample",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "mathematical-reasoning-and-problem-solving"
+      ]
+    },
+    {
+      "term": "counting principle",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "probability-and-combinatorics"
+      ]
+    },
+    {
+      "term": "cumulative frequency curve",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "statistics-and-data-handling"
+      ]
+    },
+    {
+      "term": "curved surface area",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "circle-geometry-and-mensuration"
+      ]
+    },
+    {
+      "term": "cyclic quadrilateral",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "circle-geometry-and-mensuration"
+      ]
+    },
+    {
+      "term": "data set",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "statistics-and-data-handling"
+      ]
+    },
+    {
+      "term": "decay rate",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "variation-and-modelling"
+      ]
+    },
+    {
+      "term": "deduce",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "mathematical-reasoning-and-problem-solving"
+      ]
+    },
+    {
+      "term": "definition",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "mathematical-reasoning-and-problem-solving"
+      ]
+    },
+    {
+      "term": "degree of polynomial",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "polynomials-and-algebraic-manipulation"
+      ]
+    },
+    {
+      "term": "degree-radian conversion",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "trigonometry-and-radian-measure"
+      ]
+    },
+    {
+      "term": "dependent event",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "probability-and-combinatorics"
+      ]
+    },
+    {
+      "term": "diagram",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "mathematical-reasoning-and-problem-solving"
+      ]
+    },
+    {
+      "term": "diameter",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "circle-geometry-and-mensuration"
+      ]
+    },
+    {
+      "term": "difference of two squares",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "polynomials-and-algebraic-manipulation"
+      ]
+    },
+    {
+      "term": "direction",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "vectors-and-transformations"
+      ]
+    },
+    {
+      "term": "distance between two points",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "coordinate-geometry"
+      ]
+    },
+    {
+      "term": "distance formula",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "coordinate-geometry"
+      ]
+    },
+    {
+      "term": "domain",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "functions-and-graphs"
+      ]
+    },
+    {
+      "term": "dot product",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "vectors-and-transformations"
+      ]
+    },
+    {
+      "term": "enlargement",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "vectors-and-transformations"
+      ]
+    },
+    {
+      "term": "equally likely",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "probability-and-combinatorics"
+      ]
+    },
+    {
+      "term": "equation of circle",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "coordinate-geometry"
+      ]
+    },
+    {
+      "term": "equation of straight line",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "coordinate-geometry"
+      ]
+    },
+    {
+      "term": "estimate",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "mathematical-reasoning-and-problem-solving"
+      ]
+    },
+    {
+      "term": "even function",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "functions-and-graphs"
+      ]
+    },
+    {
+      "term": "event",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "probability-and-combinatorics"
+      ]
+    },
+    {
+      "term": "expand brackets",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "polynomials-and-algebraic-manipulation"
+      ]
+    },
+    {
+      "term": "expected value",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "probability-and-combinatorics"
+      ]
+    },
+    {
+      "term": "experimental probability",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "probability-and-combinatorics"
+      ]
+    },
+    {
+      "term": "exponential decay",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "exponential-and-logarithmic-functions"
+      ]
+    },
+    {
+      "term": "exponential equation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "exponential-and-logarithmic-functions"
+      ]
+    },
+    {
+      "term": "exponential function",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "exponential-and-logarithmic-functions"
+      ]
+    },
+    {
+      "term": "exponential growth",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "exponential-and-logarithmic-functions"
+      ]
+    },
+    {
+      "term": "factor theorem",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "polynomials-and-algebraic-manipulation"
+      ]
+    },
+    {
+      "term": "factorial",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "probability-and-combinatorics"
+      ]
+    },
+    {
+      "term": "factorization method",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "quadratic-equations-and-inequalities"
+      ]
+    },
+    {
+      "term": "factorize completely",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "polynomials-and-algebraic-manipulation"
+      ]
+    },
+    {
+      "term": "feasible region",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "linear-programming-intro"
+      ]
+    },
+    {
+      "term": "five-number summary",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "statistics-and-data-handling"
+      ]
+    },
+    {
+      "term": "formula rearrangement",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "polynomials-and-algebraic-manipulation"
+      ]
+    },
+    {
+      "term": "frequency",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "statistics-and-data-handling"
+      ]
+    },
+    {
+      "term": "frequency polygon",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "statistics-and-data-handling"
+      ]
+    },
+    {
+      "term": "frequency table",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "statistics-and-data-handling"
+      ]
+    },
+    {
+      "term": "frustum",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "circle-geometry-and-mensuration"
+      ]
+    },
+    {
+      "term": "function",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "functions-and-graphs"
+      ]
+    },
+    {
+      "term": "function notation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "functions-and-graphs"
+      ]
+    },
+    {
+      "term": "general term",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "sequences-and-series"
+      ]
+    },
+    {
+      "term": "geometric sequence",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "sequences-and-series"
+      ]
+    },
+    {
+      "term": "geometric series",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "sequences-and-series"
+      ]
+    },
+    {
+      "term": "gradient",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "coordinate-geometry"
+      ]
+    },
+    {
+      "term": "gradient-intercept form",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "coordinate-geometry"
+      ]
+    },
+    {
+      "term": "graph of exponential function",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "exponential-and-logarithmic-functions"
+      ]
+    },
+    {
+      "term": "graph of logarithmic function",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "exponential-and-logarithmic-functions"
+      ]
+    },
+    {
+      "term": "graph transformation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "functions-and-graphs"
+      ]
+    },
+    {
+      "term": "graphical method",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "quadratic-equations-and-inequalities"
+      ]
+    },
+    {
+      "term": "graphical solution",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "linear-programming-intro"
+      ]
+    },
+    {
+      "term": "grouped data",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "statistics-and-data-handling"
+      ]
+    },
+    {
+      "term": "growth rate",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "variation-and-modelling"
+      ]
+    },
+    {
+      "term": "half-life",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "variation-and-modelling"
+      ]
+    },
+    {
+      "term": "hemisphere",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "circle-geometry-and-mensuration"
+      ]
+    },
+    {
+      "term": "image",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "vectors-and-transformations"
+      ]
+    },
+    {
+      "term": "independent event",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "probability-and-combinatorics"
+      ]
+    },
+    {
+      "term": "index notation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "exponential-and-logarithmic-functions"
+      ]
+    },
+    {
+      "term": "inequality region",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "linear-programming-intro"
+      ]
+    },
+    {
+      "term": "input",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "functions-and-graphs"
+      ]
+    },
+    {
+      "term": "interpret result",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "mathematical-reasoning-and-problem-solving"
+      ]
+    },
+    {
+      "term": "interquartile range",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "statistics-and-data-handling"
+      ]
+    },
+    {
+      "term": "intersection of line and circle",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "coordinate-geometry"
+      ]
+    },
+    {
+      "term": "invariant point",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "vectors-and-transformations"
+      ]
+    },
+    {
+      "term": "inverse function",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "functions-and-graphs"
+      ]
+    },
+    {
+      "term": "inverse relation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "exponential-and-logarithmic-functions"
+      ]
+    },
+    {
+      "term": "joint variation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "variation-and-modelling"
+      ]
+    },
+    {
+      "term": "justify",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "mathematical-reasoning-and-problem-solving"
+      ]
+    },
+    {
+      "term": "law of indices",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "exponential-and-logarithmic-functions"
+      ]
+    },
+    {
+      "term": "leading coefficient",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "polynomials-and-algebraic-manipulation"
+      ]
+    },
+    {
+      "term": "line of best fit",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "statistics-and-data-handling"
+      ]
+    },
+    {
+      "term": "linear function",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "functions-and-graphs"
+      ]
+    },
+    {
+      "term": "linear programming",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "linear-programming-intro"
+      ]
+    },
+    {
+      "term": "locus",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "coordinate-geometry"
+      ]
+    },
+    {
+      "term": "logarithm law",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "exponential-and-logarithmic-functions"
+      ]
+    },
+    {
+      "term": "logarithmic equation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "exponential-and-logarithmic-functions"
+      ]
+    },
+    {
+      "term": "logarithmic function",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "exponential-and-logarithmic-functions"
+      ]
+    },
+    {
+      "term": "lower bound",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "mathematical-reasoning-and-problem-solving"
+      ]
+    },
+    {
+      "term": "lower quartile",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "statistics-and-data-handling"
+      ]
+    },
+    {
+      "term": "magnitude",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "vectors-and-transformations"
+      ]
+    },
+    {
+      "term": "mapping",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "functions-and-graphs"
+      ]
+    },
+    {
+      "term": "mathematical model",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "variation-and-modelling"
+      ]
+    },
+    {
+      "term": "maximum profit",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "linear-programming-intro"
+      ]
+    },
+    {
+      "term": "maximum value",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "quadratic-equations-and-inequalities"
+      ]
+    },
+    {
+      "term": "method",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "mathematical-reasoning-and-problem-solving"
+      ]
+    },
+    {
+      "term": "midpoint",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "coordinate-geometry"
+      ]
+    },
+    {
+      "term": "minimum cost",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "linear-programming-intro"
+      ]
+    },
+    {
+      "term": "minimum value",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "quadratic-equations-and-inequalities"
+      ]
+    },
+    {
+      "term": "modelling assumption",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "variation-and-modelling"
+      ]
+    },
+    {
+      "term": "multiplication rule",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "probability-and-combinatorics"
+      ]
+    },
+    {
+      "term": "mutually exclusive",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "probability-and-combinatorics"
+      ]
+    },
+    {
+      "term": "natural exponential",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "exponential-and-logarithmic-functions"
+      ]
+    },
+    {
+      "term": "natural logarithm",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "exponential-and-logarithmic-functions"
+      ]
+    },
+    {
+      "term": "nature of roots",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "quadratic-equations-and-inequalities"
+      ]
+    },
+    {
+      "term": "nCr",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "probability-and-combinatorics"
+      ]
+    },
+    {
+      "term": "negative correlation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "statistics-and-data-handling"
+      ]
+    },
+    {
+      "term": "normal distribution",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "statistics-and-data-handling"
+      ]
+    },
+    {
+      "term": "nPr",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "probability-and-combinatorics"
+      ]
+    },
+    {
+      "term": "nth term",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "sequences-and-series"
+      ]
+    },
+    {
+      "term": "object",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "vectors-and-transformations"
+      ]
+    },
+    {
+      "term": "objective function",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "linear-programming-intro"
+      ]
+    },
+    {
+      "term": "odd function",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "functions-and-graphs"
+      ]
+    },
+    {
+      "term": "ogive",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "statistics-and-data-handling"
+      ]
+    },
+    {
+      "term": "optimize",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "linear-programming-intro"
+      ]
+    },
+    {
+      "term": "ordered pair",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "coordinate-geometry"
+      ]
+    },
+    {
+      "term": "outcome",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "probability-and-combinatorics"
+      ]
+    },
+    {
+      "term": "outlier",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "statistics-and-data-handling"
+      ]
+    },
+    {
+      "term": "output",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "functions-and-graphs"
+      ]
+    },
+    {
+      "term": "parabola",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "quadratic-equations-and-inequalities"
+      ]
+    },
+    {
+      "term": "parallel line",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "coordinate-geometry"
+      ]
+    },
+    {
+      "term": "partial variation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "variation-and-modelling"
+      ]
+    },
+    {
+      "term": "pattern",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "sequences-and-series"
+      ]
+    },
+    {
+      "term": "percentage change",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "variation-and-modelling"
+      ]
+    },
+    {
+      "term": "percentile",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "statistics-and-data-handling"
+      ]
+    },
+    {
+      "term": "perfect square trinomial",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "polynomials-and-algebraic-manipulation"
+      ]
+    },
+    {
+      "term": "period",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "trigonometry-and-radian-measure"
+      ]
+    },
+    {
+      "term": "perpendicular line",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "coordinate-geometry"
+      ]
+    },
+    {
+      "term": "phase shift",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "trigonometry-and-radian-measure"
+      ]
+    },
+    {
+      "term": "piecewise function",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "functions-and-graphs"
+      ]
+    },
+    {
+      "term": "point of contact",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "circle-geometry-and-mensuration"
+      ]
+    },
+    {
+      "term": "point-slope form",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "coordinate-geometry"
+      ]
+    },
+    {
+      "term": "polynomial",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "polynomials-and-algebraic-manipulation"
+      ]
+    },
+    {
+      "term": "position vector",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "vectors-and-transformations"
+      ]
+    },
+    {
+      "term": "positive correlation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "statistics-and-data-handling"
+      ]
+    },
+    {
+      "term": "problem solving",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "mathematical-reasoning-and-problem-solving"
+      ]
+    },
+    {
+      "term": "product of roots",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "quadratic-equations-and-inequalities"
+      ]
+    },
+    {
+      "term": "proof",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "mathematical-reasoning-and-problem-solving"
+      ]
+    },
+    {
+      "term": "property",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "mathematical-reasoning-and-problem-solving"
+      ]
+    },
+    {
+      "term": "Pythagorean identity",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "trigonometry-and-radian-measure"
+      ]
+    },
+    {
+      "term": "quadratic expression",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "quadratic-equations-and-inequalities"
+      ]
+    },
+    {
+      "term": "quadratic formula",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "quadratic-equations-and-inequalities"
+      ]
+    },
+    {
+      "term": "quadratic function",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "quadratic-equations-and-inequalities"
+      ]
+    },
+    {
+      "term": "quadratic inequality",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "quadratic-equations-and-inequalities"
+      ]
+    },
+    {
+      "term": "quartile",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "statistics-and-data-handling"
+      ]
+    },
+    {
+      "term": "radian",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "trigonometry-and-radian-measure"
+      ]
+    },
+    {
+      "term": "radius",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "circle-geometry-and-mensuration"
+      ]
+    },
+    {
+      "term": "radius of circle",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "coordinate-geometry"
+      ]
+    },
+    {
+      "term": "random experiment",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "probability-and-combinatorics"
+      ]
+    },
+    {
+      "term": "range",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "functions-and-graphs"
+      ]
+    },
+    {
+      "term": "rate of change",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "variation-and-modelling"
+      ]
+    },
+    {
+      "term": "ratio",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "variation-and-modelling"
+      ]
+    },
+    {
+      "term": "raw data",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "statistics-and-data-handling"
+      ]
+    },
+    {
+      "term": "reasonableness",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "mathematical-reasoning-and-problem-solving"
+      ]
+    },
+    {
+      "term": "reasoning",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "mathematical-reasoning-and-problem-solving"
+      ]
+    },
+    {
+      "term": "reflection",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "vectors-and-transformations"
+      ]
+    },
+    {
+      "term": "reflection of graph",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "functions-and-graphs"
+      ]
+    },
+    {
+      "term": "relative frequency",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "probability-and-combinatorics"
+      ]
+    },
+    {
+      "term": "remainder theorem",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "polynomials-and-algebraic-manipulation"
+      ]
+    },
+    {
+      "term": "resultant vector",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "vectors-and-transformations"
+      ]
+    },
+    {
+      "term": "root",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "quadratic-equations-and-inequalities"
+      ]
+    },
+    {
+      "term": "rotation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "vectors-and-transformations"
+      ]
+    },
+    {
+      "term": "round off",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "mathematical-reasoning-and-problem-solving"
+      ]
+    },
+    {
+      "term": "rule of sequence",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "sequences-and-series"
+      ]
+    },
+    {
+      "term": "sample space",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "probability-and-combinatorics"
+      ]
+    },
+    {
+      "term": "scalar",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "vectors-and-transformations"
+      ]
+    },
+    {
+      "term": "scalar multiplication",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "vectors-and-transformations"
+      ]
+    },
+    {
+      "term": "scale",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "variation-and-modelling"
+      ]
+    },
+    {
+      "term": "scale factor",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "vectors-and-transformations"
+      ]
+    },
+    {
+      "term": "scatter diagram",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "statistics-and-data-handling"
+      ]
+    },
+    {
+      "term": "sector",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "circle-geometry-and-mensuration"
+      ]
+    },
+    {
+      "term": "segment",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "circle-geometry-and-mensuration"
+      ]
+    },
+    {
+      "term": "sequence",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "sequences-and-series"
+      ]
+    },
+    {
+      "term": "significant figure",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "mathematical-reasoning-and-problem-solving"
+      ]
+    },
+    {
+      "term": "simple interest",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "variation-and-modelling"
+      ]
+    },
+    {
+      "term": "simplify algebraic fraction",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "polynomials-and-algebraic-manipulation"
+      ]
+    },
+    {
+      "term": "sine graph",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "trigonometry-and-radian-measure"
+      ]
+    },
+    {
+      "term": "sketch",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "mathematical-reasoning-and-problem-solving"
+      ]
+    },
+    {
+      "term": "sketch graph",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "functions-and-graphs"
+      ]
+    },
+    {
+      "term": "solution by graph",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "quadratic-equations-and-inequalities"
+      ]
+    },
+    {
+      "term": "solution steps",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "mathematical-reasoning-and-problem-solving"
+      ]
+    },
+    {
+      "term": "standard score",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "statistics-and-data-handling"
+      ]
+    },
+    {
+      "term": "strategy",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "mathematical-reasoning-and-problem-solving"
+      ]
+    },
+    {
+      "term": "stretch of graph",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "functions-and-graphs"
+      ]
+    },
+    {
+      "term": "subtraction of vectors",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "vectors-and-transformations"
+      ]
+    },
+    {
+      "term": "sum of roots",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "quadratic-equations-and-inequalities"
+      ]
+    },
+    {
+      "term": "sum of terms",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "sequences-and-series"
+      ]
+    },
+    {
+      "term": "sum to infinity",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "sequences-and-series"
+      ]
+    },
+    {
+      "term": "sum to n terms",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "sequences-and-series"
+      ]
+    },
+    {
+      "term": "surface area",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "circle-geometry-and-mensuration"
+      ]
+    },
+    {
+      "term": "table of values",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "functions-and-graphs"
+      ]
+    },
+    {
+      "term": "tangent",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "circle-geometry-and-mensuration"
+      ]
+    },
+    {
+      "term": "tangent graph",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "trigonometry-and-radian-measure"
+      ]
+    },
+    {
+      "term": "tangent to circle",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "coordinate-geometry"
+      ]
+    },
+    {
+      "term": "term of sequence",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "sequences-and-series"
+      ]
+    },
+    {
+      "term": "theorem",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "mathematical-reasoning-and-problem-solving"
+      ]
+    },
+    {
+      "term": "theoretical probability",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "probability-and-combinatorics"
+      ]
+    },
+    {
+      "term": "transformation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "vectors-and-transformations"
+      ]
+    },
+    {
+      "term": "translation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "vectors-and-transformations"
+      ]
+    },
+    {
+      "term": "translation of graph",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "functions-and-graphs"
+      ]
+    },
+    {
+      "term": "tree diagram",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "probability-and-combinatorics"
+      ]
+    },
+    {
+      "term": "trial",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "probability-and-combinatorics"
+      ]
+    },
+    {
+      "term": "trigonometric function",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "trigonometry-and-radian-measure"
+      ]
+    },
+    {
+      "term": "trigonometric identity",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "trigonometry-and-radian-measure"
+      ]
+    },
+    {
+      "term": "turning point",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "quadratic-equations-and-inequalities"
+      ]
+    },
+    {
+      "term": "unit circle",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "trigonometry-and-radian-measure"
+      ]
+    },
+    {
+      "term": "upper bound",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "mathematical-reasoning-and-problem-solving"
+      ]
+    },
+    {
+      "term": "upper quartile",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "statistics-and-data-handling"
+      ]
+    },
+    {
+      "term": "variance",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "statistics-and-data-handling"
+      ]
+    },
+    {
+      "term": "vector",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "vectors-and-transformations"
+      ]
+    },
+    {
+      "term": "vertex",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "quadratic-equations-and-inequalities"
+      ]
+    },
+    {
+      "term": "volume of cone",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "circle-geometry-and-mensuration"
+      ]
+    },
+    {
+      "term": "volume of cylinder",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "circle-geometry-and-mensuration"
+      ]
+    },
+    {
+      "term": "volume of sphere",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "circle-geometry-and-mensuration"
+      ]
+    },
+    {
+      "term": "weighted mean",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "statistics-and-data-handling"
+      ]
+    },
+    {
+      "term": "with replacement",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "probability-and-combinatorics"
+      ]
+    },
+    {
+      "term": "without replacement",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "probability-and-combinatorics"
+      ]
+    },
+    {
+      "term": "working",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "mathematical-reasoning-and-problem-solving"
+      ]
+    },
+    {
+      "term": "x-coordinate",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "coordinate-geometry"
+      ]
+    },
+    {
+      "term": "x-intercept",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "quadratic-equations-and-inequalities"
+      ]
+    },
+    {
+      "term": "y-coordinate",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "coordinate-geometry"
+      ]
+    },
+    {
+      "term": "y-intercept",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "quadratic-equations-and-inequalities"
+      ]
+    },
+    {
+      "term": "z-score",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "statistics-and-data-handling"
+      ]
+    },
+    {
+      "term": "zero of function",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "mathematics",
+        "curriculum-style",
+        "quadratic-equations-and-inequalities"
       ]
     }
   ]

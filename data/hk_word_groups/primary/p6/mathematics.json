@@ -7,6 +7,15 @@
   "version": "2026.06",
   "display_name_en": "P6 Mathematics",
   "display_name_zh_hant": "小六數學",
+  "source": {
+    "type": "curriculum_style_public_references",
+    "references": [
+      "EDB Mathematics Education Key Learning Area Curriculum Guide (Primary 1-6)",
+      "EDB primary Mathematics Key Stage 2 learning objectives",
+      "Public Hong Kong Primary 6 Mathematics syllabus topic examples (fractions, decimals, percentages, ratio, algebra, circles, volume, coordinates, statistics, probability, speed, directed numbers)"
+    ],
+    "note": "No fixed official Hong Kong P6 mathematics vocabulary list is prescribed; this list is theme-based for Primary 6 mathematics enrichment import. Term-only entries are completed during import."
+  },
   "words": [
     {
       "term": "fraction",
@@ -306,6 +315,2514 @@
         "mathematics",
         "statistics",
         "data-representation"
+      ]
+    },
+    {
+      "term": "2D shape",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "curriculum-style",
+        "shapes-and-symmetry"
+      ]
+    },
+    {
+      "term": "3D shape",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "curriculum-style",
+        "shapes-and-symmetry"
+      ]
+    },
+    {
+      "term": "absolute value",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "curriculum-style",
+        "number-sense-and-directed-numbers"
+      ]
+    },
+    {
+      "term": "acute angle",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "curriculum-style",
+        "circles-and-angles"
+      ]
+    },
+    {
+      "term": "add decimals",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "curriculum-style",
+        "fractions-decimals-and-percentages"
+      ]
+    },
+    {
+      "term": "add fractions",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "curriculum-style",
+        "fractions-decimals-and-percentages"
+      ]
+    },
+    {
+      "term": "add integers",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "curriculum-style",
+        "number-sense-and-directed-numbers"
+      ]
+    },
+    {
+      "term": "angle sum of quadrilateral",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "curriculum-style",
+        "circles-and-angles"
+      ]
+    },
+    {
+      "term": "angle sum of triangle",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "curriculum-style",
+        "circles-and-angles"
+      ]
+    },
+    {
+      "term": "answer",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "curriculum-style",
+        "mathematical-language-and-problem-solving"
+      ]
+    },
+    {
+      "term": "approximate",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "curriculum-style",
+        "mathematical-language-and-problem-solving"
+      ]
+    },
+    {
+      "term": "arc",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "curriculum-style",
+        "circles-and-angles"
+      ]
+    },
+    {
+      "term": "area of circle",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "curriculum-style",
+        "area-perimeter-and-volume"
+      ]
+    },
+    {
+      "term": "area of parallelogram",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "curriculum-style",
+        "area-perimeter-and-volume"
+      ]
+    },
+    {
+      "term": "area of trapezium",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "curriculum-style",
+        "area-perimeter-and-volume"
+      ]
+    },
+    {
+      "term": "area of triangle",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "curriculum-style",
+        "area-perimeter-and-volume"
+      ]
+    },
+    {
+      "term": "average speed",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "curriculum-style",
+        "ratio-proportion-and-rate"
+      ]
+    },
+    {
+      "term": "balance method",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "curriculum-style",
+        "algebra-and-formulae"
+      ]
+    },
+    {
+      "term": "bar chart",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "curriculum-style",
+        "coordinates-and-graphs"
+      ]
+    },
+    {
+      "term": "bar model",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "curriculum-style",
+        "mathematical-language-and-problem-solving"
+      ]
+    },
+    {
+      "term": "base",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "curriculum-style",
+        "area-perimeter-and-volume"
+      ]
+    },
+    {
+      "term": "broken line graph",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "curriculum-style",
+        "coordinates-and-graphs"
+      ]
+    },
+    {
+      "term": "centre of circle",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "curriculum-style",
+        "circles-and-angles"
+      ]
+    },
+    {
+      "term": "certain",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "curriculum-style",
+        "probability-and-chance"
+      ]
+    },
+    {
+      "term": "chance",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "curriculum-style",
+        "probability-and-chance"
+      ]
+    },
+    {
+      "term": "check",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "curriculum-style",
+        "mathematical-language-and-problem-solving"
+      ]
+    },
+    {
+      "term": "chord",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "curriculum-style",
+        "circles-and-angles"
+      ]
+    },
+    {
+      "term": "circle",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "curriculum-style",
+        "circles-and-angles"
+      ]
+    },
+    {
+      "term": "circumference",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "curriculum-style",
+        "circles-and-angles"
+      ]
+    },
+    {
+      "term": "coefficient",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "curriculum-style",
+        "algebra-and-formulae"
+      ]
+    },
+    {
+      "term": "collect data",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "curriculum-style",
+        "statistics-and-averages"
+      ]
+    },
+    {
+      "term": "combined event",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "curriculum-style",
+        "probability-and-chance"
+      ]
+    },
+    {
+      "term": "common factor",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "curriculum-style",
+        "number-theory"
+      ]
+    },
+    {
+      "term": "common multiple",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "curriculum-style",
+        "number-theory"
+      ]
+    },
+    {
+      "term": "compare data sets",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "curriculum-style",
+        "statistics-and-averages"
+      ]
+    },
+    {
+      "term": "compare fractions",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "curriculum-style",
+        "fractions-decimals-and-percentages"
+      ]
+    },
+    {
+      "term": "compare integers",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "curriculum-style",
+        "number-sense-and-directed-numbers"
+      ]
+    },
+    {
+      "term": "composite number",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "curriculum-style",
+        "number-theory"
+      ]
+    },
+    {
+      "term": "composite shape",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "curriculum-style",
+        "area-perimeter-and-volume"
+      ]
+    },
+    {
+      "term": "compound shape",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "curriculum-style",
+        "area-perimeter-and-volume"
+      ]
+    },
+    {
+      "term": "conclusion",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "curriculum-style",
+        "statistics-and-averages"
+      ]
+    },
+    {
+      "term": "cone",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "curriculum-style",
+        "shapes-and-symmetry"
+      ]
+    },
+    {
+      "term": "congruent shape",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "curriculum-style",
+        "shapes-and-symmetry"
+      ]
+    },
+    {
+      "term": "constant",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "curriculum-style",
+        "algebra-and-formulae"
+      ]
+    },
+    {
+      "term": "convert decimal to percent",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "curriculum-style",
+        "fractions-decimals-and-percentages"
+      ]
+    },
+    {
+      "term": "convert fraction to decimal",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "curriculum-style",
+        "fractions-decimals-and-percentages"
+      ]
+    },
+    {
+      "term": "coordinate plane",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "curriculum-style",
+        "coordinates-and-graphs"
+      ]
+    },
+    {
+      "term": "correct",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "curriculum-style",
+        "mathematical-language-and-problem-solving"
+      ]
+    },
+    {
+      "term": "cube",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "curriculum-style",
+        "area-perimeter-and-volume"
+      ]
+    },
+    {
+      "term": "cube number",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "curriculum-style",
+        "number-sense-and-directed-numbers"
+      ]
+    },
+    {
+      "term": "cubic unit",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "curriculum-style",
+        "area-perimeter-and-volume"
+      ]
+    },
+    {
+      "term": "cuboid",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "curriculum-style",
+        "area-perimeter-and-volume"
+      ]
+    },
+    {
+      "term": "cylinder",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "curriculum-style",
+        "area-perimeter-and-volume"
+      ]
+    },
+    {
+      "term": "data",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "curriculum-style",
+        "statistics-and-averages"
+      ]
+    },
+    {
+      "term": "decimal point",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "curriculum-style",
+        "fractions-decimals-and-percentages"
+      ]
+    },
+    {
+      "term": "degree",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "curriculum-style",
+        "circles-and-angles"
+      ]
+    },
+    {
+      "term": "denominator",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "curriculum-style",
+        "fractions-decimals-and-percentages"
+      ]
+    },
+    {
+      "term": "density",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "curriculum-style",
+        "ratio-proportion-and-rate"
+      ]
+    },
+    {
+      "term": "direct proportion",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "curriculum-style",
+        "ratio-proportion-and-rate"
+      ]
+    },
+    {
+      "term": "directed number",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "curriculum-style",
+        "number-sense-and-directed-numbers"
+      ]
+    },
+    {
+      "term": "discount",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "curriculum-style",
+        "fractions-decimals-and-percentages"
+      ]
+    },
+    {
+      "term": "distance",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "curriculum-style",
+        "ratio-proportion-and-rate"
+      ]
+    },
+    {
+      "term": "divide decimals",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "curriculum-style",
+        "fractions-decimals-and-percentages"
+      ]
+    },
+    {
+      "term": "divide fractions",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "curriculum-style",
+        "fractions-decimals-and-percentages"
+      ]
+    },
+    {
+      "term": "divisibility",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "curriculum-style",
+        "number-theory"
+      ]
+    },
+    {
+      "term": "divisible",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "curriculum-style",
+        "number-theory"
+      ]
+    },
+    {
+      "term": "draw a diagram",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "curriculum-style",
+        "mathematical-language-and-problem-solving"
+      ]
+    },
+    {
+      "term": "edge",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "curriculum-style",
+        "shapes-and-symmetry"
+      ]
+    },
+    {
+      "term": "equally likely",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "curriculum-style",
+        "probability-and-chance"
+      ]
+    },
+    {
+      "term": "equivalent fraction",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "curriculum-style",
+        "fractions-decimals-and-percentages"
+      ]
+    },
+    {
+      "term": "equivalent ratio",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "curriculum-style",
+        "ratio-proportion-and-rate"
+      ]
+    },
+    {
+      "term": "estimate",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "curriculum-style",
+        "number-sense-and-directed-numbers"
+      ]
+    },
+    {
+      "term": "even number",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "curriculum-style",
+        "number-theory"
+      ]
+    },
+    {
+      "term": "event",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "curriculum-style",
+        "probability-and-chance"
+      ]
+    },
+    {
+      "term": "experiment",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "curriculum-style",
+        "probability-and-chance"
+      ]
+    },
+    {
+      "term": "explain",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "curriculum-style",
+        "mathematical-language-and-problem-solving"
+      ]
+    },
+    {
+      "term": "exponent",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "curriculum-style",
+        "number-sense-and-directed-numbers"
+      ]
+    },
+    {
+      "term": "expression",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "curriculum-style",
+        "algebra-and-formulae"
+      ]
+    },
+    {
+      "term": "exterior angle",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "curriculum-style",
+        "circles-and-angles"
+      ]
+    },
+    {
+      "term": "face",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "curriculum-style",
+        "shapes-and-symmetry"
+      ]
+    },
+    {
+      "term": "fair",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "curriculum-style",
+        "probability-and-chance"
+      ]
+    },
+    {
+      "term": "find percentage of quantity",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "curriculum-style",
+        "fractions-decimals-and-percentages"
+      ]
+    },
+    {
+      "term": "formula",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "curriculum-style",
+        "algebra-and-formulae"
+      ]
+    },
+    {
+      "term": "four quadrants",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "curriculum-style",
+        "coordinates-and-graphs"
+      ]
+    },
+    {
+      "term": "fraction of probability",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "curriculum-style",
+        "probability-and-chance"
+      ]
+    },
+    {
+      "term": "function table",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "curriculum-style",
+        "algebra-and-formulae"
+      ]
+    },
+    {
+      "term": "grid",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "curriculum-style",
+        "coordinates-and-graphs"
+      ]
+    },
+    {
+      "term": "height",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "curriculum-style",
+        "area-perimeter-and-volume"
+      ]
+    },
+    {
+      "term": "hexagon",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "curriculum-style",
+        "shapes-and-symmetry"
+      ]
+    },
+    {
+      "term": "highest common factor",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "curriculum-style",
+        "number-theory"
+      ]
+    },
+    {
+      "term": "horizontal",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "curriculum-style",
+        "coordinates-and-graphs"
+      ]
+    },
+    {
+      "term": "how many fewer",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "curriculum-style",
+        "statistics-and-averages"
+      ]
+    },
+    {
+      "term": "how many more",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "curriculum-style",
+        "statistics-and-averages"
+      ]
+    },
+    {
+      "term": "impossible",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "curriculum-style",
+        "probability-and-chance"
+      ]
+    },
+    {
+      "term": "improper fraction",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "curriculum-style",
+        "fractions-decimals-and-percentages"
+      ]
+    },
+    {
+      "term": "incorrect",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "curriculum-style",
+        "mathematical-language-and-problem-solving"
+      ]
+    },
+    {
+      "term": "index notation",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "curriculum-style",
+        "number-sense-and-directed-numbers"
+      ]
+    },
+    {
+      "term": "input",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "curriculum-style",
+        "algebra-and-formulae"
+      ]
+    },
+    {
+      "term": "integer",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "curriculum-style",
+        "number-sense-and-directed-numbers"
+      ]
+    },
+    {
+      "term": "interest",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "curriculum-style",
+        "fractions-decimals-and-percentages"
+      ]
+    },
+    {
+      "term": "interior angle",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "curriculum-style",
+        "circles-and-angles"
+      ]
+    },
+    {
+      "term": "interpret data",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "curriculum-style",
+        "statistics-and-averages"
+      ]
+    },
+    {
+      "term": "interpret graph",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "curriculum-style",
+        "coordinates-and-graphs"
+      ]
+    },
+    {
+      "term": "inverse proportion",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "curriculum-style",
+        "ratio-proportion-and-rate"
+      ]
+    },
+    {
+      "term": "least",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "curriculum-style",
+        "statistics-and-averages"
+      ]
+    },
+    {
+      "term": "least common multiple",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "curriculum-style",
+        "number-theory"
+      ]
+    },
+    {
+      "term": "length",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "curriculum-style",
+        "area-perimeter-and-volume"
+      ]
+    },
+    {
+      "term": "like terms",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "curriculum-style",
+        "algebra-and-formulae"
+      ]
+    },
+    {
+      "term": "likely",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "curriculum-style",
+        "probability-and-chance"
+      ]
+    },
+    {
+      "term": "line graph",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "curriculum-style",
+        "coordinates-and-graphs"
+      ]
+    },
+    {
+      "term": "line of symmetry",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "curriculum-style",
+        "shapes-and-symmetry"
+      ]
+    },
+    {
+      "term": "linear relationship",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "curriculum-style",
+        "algebra-and-formulae"
+      ]
+    },
+    {
+      "term": "map scale",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "curriculum-style",
+        "ratio-proportion-and-rate"
+      ]
+    },
+    {
+      "term": "mean",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "curriculum-style",
+        "statistics-and-averages"
+      ]
+    },
+    {
+      "term": "median",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "curriculum-style",
+        "statistics-and-averages"
+      ]
+    },
+    {
+      "term": "method",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "curriculum-style",
+        "mathematical-language-and-problem-solving"
+      ]
+    },
+    {
+      "term": "million",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "curriculum-style",
+        "number-sense-and-directed-numbers"
+      ]
+    },
+    {
+      "term": "mixed number",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "curriculum-style",
+        "fractions-decimals-and-percentages"
+      ]
+    },
+    {
+      "term": "mode",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "curriculum-style",
+        "statistics-and-averages"
+      ]
+    },
+    {
+      "term": "most",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "curriculum-style",
+        "statistics-and-averages"
+      ]
+    },
+    {
+      "term": "multiply decimals",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "curriculum-style",
+        "fractions-decimals-and-percentages"
+      ]
+    },
+    {
+      "term": "multiply fractions",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "curriculum-style",
+        "fractions-decimals-and-percentages"
+      ]
+    },
+    {
+      "term": "negative number",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "curriculum-style",
+        "number-sense-and-directed-numbers"
+      ]
+    },
+    {
+      "term": "net of solid",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "curriculum-style",
+        "shapes-and-symmetry"
+      ]
+    },
+    {
+      "term": "number line",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "curriculum-style",
+        "number-sense-and-directed-numbers"
+      ]
+    },
+    {
+      "term": "number sentence",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "curriculum-style",
+        "algebra-and-formulae"
+      ]
+    },
+    {
+      "term": "numerator",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "curriculum-style",
+        "fractions-decimals-and-percentages"
+      ]
+    },
+    {
+      "term": "obtuse angle",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "curriculum-style",
+        "circles-and-angles"
+      ]
+    },
+    {
+      "term": "octagon",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "curriculum-style",
+        "shapes-and-symmetry"
+      ]
+    },
+    {
+      "term": "odd number",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "curriculum-style",
+        "number-theory"
+      ]
+    },
+    {
+      "term": "order integers",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "curriculum-style",
+        "number-sense-and-directed-numbers"
+      ]
+    },
+    {
+      "term": "order of operations",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "curriculum-style",
+        "number-sense-and-directed-numbers"
+      ]
+    },
+    {
+      "term": "order of rotational symmetry",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "curriculum-style",
+        "shapes-and-symmetry"
+      ]
+    },
+    {
+      "term": "ordered pair",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "curriculum-style",
+        "coordinates-and-graphs"
+      ]
+    },
+    {
+      "term": "origin",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "curriculum-style",
+        "coordinates-and-graphs"
+      ]
+    },
+    {
+      "term": "outcome",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "curriculum-style",
+        "probability-and-chance"
+      ]
+    },
+    {
+      "term": "output",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "curriculum-style",
+        "algebra-and-formulae"
+      ]
+    },
+    {
+      "term": "parallel lines",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "curriculum-style",
+        "circles-and-angles"
+      ]
+    },
+    {
+      "term": "parallelogram",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "curriculum-style",
+        "area-perimeter-and-volume"
+      ]
+    },
+    {
+      "term": "part-to-part ratio",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "curriculum-style",
+        "ratio-proportion-and-rate"
+      ]
+    },
+    {
+      "term": "part-to-whole ratio",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "curriculum-style",
+        "ratio-proportion-and-rate"
+      ]
+    },
+    {
+      "term": "part-whole model",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "curriculum-style",
+        "mathematical-language-and-problem-solving"
+      ]
+    },
+    {
+      "term": "pentagon",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "curriculum-style",
+        "shapes-and-symmetry"
+      ]
+    },
+    {
+      "term": "percentage decrease",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "curriculum-style",
+        "fractions-decimals-and-percentages"
+      ]
+    },
+    {
+      "term": "percentage increase",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "curriculum-style",
+        "fractions-decimals-and-percentages"
+      ]
+    },
+    {
+      "term": "perpendicular lines",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "curriculum-style",
+        "circles-and-angles"
+      ]
+    },
+    {
+      "term": "pi",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "curriculum-style",
+        "circles-and-angles"
+      ]
+    },
+    {
+      "term": "pie chart",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "curriculum-style",
+        "coordinates-and-graphs"
+      ]
+    },
+    {
+      "term": "place value",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "curriculum-style",
+        "number-sense-and-directed-numbers"
+      ]
+    },
+    {
+      "term": "plot point",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "curriculum-style",
+        "coordinates-and-graphs"
+      ]
+    },
+    {
+      "term": "polygon",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "curriculum-style",
+        "shapes-and-symmetry"
+      ]
+    },
+    {
+      "term": "positive number",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "curriculum-style",
+        "number-sense-and-directed-numbers"
+      ]
+    },
+    {
+      "term": "power",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "curriculum-style",
+        "number-sense-and-directed-numbers"
+      ]
+    },
+    {
+      "term": "predict",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "curriculum-style",
+        "probability-and-chance"
+      ]
+    },
+    {
+      "term": "prime factorization",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "curriculum-style",
+        "number-theory"
+      ]
+    },
+    {
+      "term": "prism",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "curriculum-style",
+        "area-perimeter-and-volume"
+      ]
+    },
+    {
+      "term": "problem",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "curriculum-style",
+        "mathematical-language-and-problem-solving"
+      ]
+    },
+    {
+      "term": "properties of shape",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "curriculum-style",
+        "shapes-and-symmetry"
+      ]
+    },
+    {
+      "term": "proportion",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "curriculum-style",
+        "ratio-proportion-and-rate"
+      ]
+    },
+    {
+      "term": "protractor",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "curriculum-style",
+        "circles-and-angles"
+      ]
+    },
+    {
+      "term": "pyramid",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "curriculum-style",
+        "shapes-and-symmetry"
+      ]
+    },
+    {
+      "term": "quadrant",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "curriculum-style",
+        "coordinates-and-graphs"
+      ]
+    },
+    {
+      "term": "random",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "curriculum-style",
+        "probability-and-chance"
+      ]
+    },
+    {
+      "term": "range",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "curriculum-style",
+        "statistics-and-averages"
+      ]
+    },
+    {
+      "term": "rate",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "curriculum-style",
+        "ratio-proportion-and-rate"
+      ]
+    },
+    {
+      "term": "reason",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "curriculum-style",
+        "mathematical-language-and-problem-solving"
+      ]
+    },
+    {
+      "term": "reasonable answer",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "curriculum-style",
+        "mathematical-language-and-problem-solving"
+      ]
+    },
+    {
+      "term": "record data",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "curriculum-style",
+        "statistics-and-averages"
+      ]
+    },
+    {
+      "term": "rectangle",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "curriculum-style",
+        "area-perimeter-and-volume"
+      ]
+    },
+    {
+      "term": "reflective symmetry",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "curriculum-style",
+        "shapes-and-symmetry"
+      ]
+    },
+    {
+      "term": "reflex angle",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "curriculum-style",
+        "circles-and-angles"
+      ]
+    },
+    {
+      "term": "remainder",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "curriculum-style",
+        "number-theory"
+      ]
+    },
+    {
+      "term": "right angle",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "curriculum-style",
+        "circles-and-angles"
+      ]
+    },
+    {
+      "term": "rotational symmetry",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "curriculum-style",
+        "shapes-and-symmetry"
+      ]
+    },
+    {
+      "term": "round off",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "curriculum-style",
+        "number-sense-and-directed-numbers"
+      ]
+    },
+    {
+      "term": "sample space",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "curriculum-style",
+        "probability-and-chance"
+      ]
+    },
+    {
+      "term": "scale",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "curriculum-style",
+        "ratio-proportion-and-rate"
+      ]
+    },
+    {
+      "term": "sector",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "curriculum-style",
+        "circles-and-angles"
+      ]
+    },
+    {
+      "term": "sector graph",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "curriculum-style",
+        "statistics-and-averages"
+      ]
+    },
+    {
+      "term": "segment",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "curriculum-style",
+        "circles-and-angles"
+      ]
+    },
+    {
+      "term": "share in ratio",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "curriculum-style",
+        "ratio-proportion-and-rate"
+      ]
+    },
+    {
+      "term": "show working",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "curriculum-style",
+        "mathematical-language-and-problem-solving"
+      ]
+    },
+    {
+      "term": "side",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "curriculum-style",
+        "area-perimeter-and-volume"
+      ]
+    },
+    {
+      "term": "similar shape",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "curriculum-style",
+        "shapes-and-symmetry"
+      ]
+    },
+    {
+      "term": "simple inequality",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "curriculum-style",
+        "algebra-and-formulae"
+      ]
+    },
+    {
+      "term": "simplest form",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "curriculum-style",
+        "fractions-decimals-and-percentages"
+      ]
+    },
+    {
+      "term": "simplify expression",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "curriculum-style",
+        "algebra-and-formulae"
+      ]
+    },
+    {
+      "term": "simplify ratio",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "curriculum-style",
+        "ratio-proportion-and-rate"
+      ]
+    },
+    {
+      "term": "solve equation",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "curriculum-style",
+        "algebra-and-formulae"
+      ]
+    },
+    {
+      "term": "speed",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "curriculum-style",
+        "ratio-proportion-and-rate"
+      ]
+    },
+    {
+      "term": "sphere",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "curriculum-style",
+        "shapes-and-symmetry"
+      ]
+    },
+    {
+      "term": "square",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "curriculum-style",
+        "area-perimeter-and-volume"
+      ]
+    },
+    {
+      "term": "square number",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "curriculum-style",
+        "number-sense-and-directed-numbers"
+      ]
+    },
+    {
+      "term": "square unit",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "curriculum-style",
+        "area-perimeter-and-volume"
+      ]
+    },
+    {
+      "term": "stem-and-leaf plot",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "curriculum-style",
+        "statistics-and-averages"
+      ]
+    },
+    {
+      "term": "step",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "curriculum-style",
+        "mathematical-language-and-problem-solving"
+      ]
+    },
+    {
+      "term": "story problem",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "curriculum-style",
+        "mathematical-language-and-problem-solving"
+      ]
+    },
+    {
+      "term": "straight angle",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "curriculum-style",
+        "circles-and-angles"
+      ]
+    },
+    {
+      "term": "straight line graph",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "curriculum-style",
+        "coordinates-and-graphs"
+      ]
+    },
+    {
+      "term": "strategy",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "curriculum-style",
+        "mathematical-language-and-problem-solving"
+      ]
+    },
+    {
+      "term": "subject of formula",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "curriculum-style",
+        "algebra-and-formulae"
+      ]
+    },
+    {
+      "term": "substitute",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "curriculum-style",
+        "algebra-and-formulae"
+      ]
+    },
+    {
+      "term": "subtract decimals",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "curriculum-style",
+        "fractions-decimals-and-percentages"
+      ]
+    },
+    {
+      "term": "subtract fractions",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "curriculum-style",
+        "fractions-decimals-and-percentages"
+      ]
+    },
+    {
+      "term": "subtract integers",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "curriculum-style",
+        "number-sense-and-directed-numbers"
+      ]
+    },
+    {
+      "term": "surface area",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "curriculum-style",
+        "area-perimeter-and-volume"
+      ]
+    },
+    {
+      "term": "survey",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "curriculum-style",
+        "statistics-and-averages"
+      ]
+    },
+    {
+      "term": "table",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "curriculum-style",
+        "statistics-and-averages"
+      ]
+    },
+    {
+      "term": "table of values",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "curriculum-style",
+        "coordinates-and-graphs"
+      ]
+    },
+    {
+      "term": "tally chart",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "curriculum-style",
+        "statistics-and-averages"
+      ]
+    },
+    {
+      "term": "term",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "curriculum-style",
+        "algebra-and-formulae"
+      ]
+    },
+    {
+      "term": "time",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "curriculum-style",
+        "ratio-proportion-and-rate"
+      ]
+    },
+    {
+      "term": "title",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "curriculum-style",
+        "coordinates-and-graphs"
+      ]
+    },
+    {
+      "term": "trapezium",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "curriculum-style",
+        "area-perimeter-and-volume"
+      ]
+    },
+    {
+      "term": "tree diagram",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "curriculum-style",
+        "probability-and-chance"
+      ]
+    },
+    {
+      "term": "trial",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "curriculum-style",
+        "probability-and-chance"
+      ]
+    },
+    {
+      "term": "triangle",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "curriculum-style",
+        "area-perimeter-and-volume"
+      ]
+    },
+    {
+      "term": "unit price",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "curriculum-style",
+        "ratio-proportion-and-rate"
+      ]
+    },
+    {
+      "term": "unit rate",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "curriculum-style",
+        "ratio-proportion-and-rate"
+      ]
+    },
+    {
+      "term": "unknown",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "curriculum-style",
+        "algebra-and-formulae"
+      ]
+    },
+    {
+      "term": "unlikely",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "curriculum-style",
+        "probability-and-chance"
+      ]
+    },
+    {
+      "term": "vertex",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "curriculum-style",
+        "shapes-and-symmetry"
+      ]
+    },
+    {
+      "term": "vertical",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "curriculum-style",
+        "coordinates-and-graphs"
+      ]
+    },
+    {
+      "term": "width",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "curriculum-style",
+        "area-perimeter-and-volume"
+      ]
+    },
+    {
+      "term": "word problem",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "curriculum-style",
+        "mathematical-language-and-problem-solving"
+      ]
+    },
+    {
+      "term": "working",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "curriculum-style",
+        "mathematical-language-and-problem-solving"
+      ]
+    },
+    {
+      "term": "x-axis",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "curriculum-style",
+        "coordinates-and-graphs"
+      ]
+    },
+    {
+      "term": "y-axis",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "mathematics",
+        "curriculum-style",
+        "coordinates-and-graphs"
       ]
     }
   ]

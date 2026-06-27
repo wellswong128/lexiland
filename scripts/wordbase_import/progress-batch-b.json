@@ -18180,20 +18180,10 @@
       "wordbase_exists": true
     },
     "unknowns": {
-      "status": "pending",
-      "missing": [
-        "definition",
-        "translation",
-        "pronunciation",
-        "part_of_speech",
-        "example",
-        "example_translation",
-        "tags",
-        "memory_tips",
-        "memory_image"
-      ],
-      "rounds": 0,
-      "attempts": 0,
+      "status": "complete",
+      "missing": [],
+      "rounds": 1,
+      "attempts": 1,
       "source_images": [
         "IMG_8315.JPG",
         "IMG_8366.JPG",
@@ -18222,7 +18212,8 @@
         "IMG_8484.JPG",
         "IMG_8478.JPG"
       ],
-      "last_errors": {}
+      "last_errors": {},
+      "completed_at": "2026-06-25T10:11:04Z"
     },
     "percentages": {
       "status": "complete",
@@ -18445,20 +18436,10 @@
       "wordbase_exists": true
     },
     "triangles": {
-      "status": "pending",
-      "missing": [
-        "definition",
-        "translation",
-        "pronunciation",
-        "part_of_speech",
-        "example",
-        "example_translation",
-        "tags",
-        "memory_tips",
-        "memory_image"
-      ],
-      "rounds": 0,
-      "attempts": 0,
+      "status": "complete",
+      "missing": [],
+      "rounds": 1,
+      "attempts": 1,
       "source_images": [
         "IMG_8315.JPG",
         "IMG_8417.JPG",
@@ -18472,7 +18453,8 @@
         "IMG_8463.JPG",
         "IMG_8440.JPG"
       ],
-      "last_errors": {}
+      "last_errors": {},
+      "completed_at": "2026-06-25T09:39:53Z"
     },
     "polygons": {
       "status": "complete",
@@ -18546,20 +18528,10 @@
       "completed_at": "2026-06-25T08:49:28Z"
     },
     "trigonometric": {
-      "status": "pending",
-      "missing": [
-        "definition",
-        "translation",
-        "pronunciation",
-        "part_of_speech",
-        "example",
-        "example_translation",
-        "tags",
-        "memory_tips",
-        "memory_image"
-      ],
-      "rounds": 0,
-      "attempts": 0,
+      "status": "complete",
+      "missing": [],
+      "rounds": 1,
+      "attempts": 1,
       "source_images": [
         "IMG_8315.JPG",
         "IMG_8470.JPG",
@@ -18572,7 +18544,8 @@
         "IMG_8484.JPG",
         "IMG_8478.JPG"
       ],
-      "last_errors": {}
+      "last_errors": {},
+      "completed_at": "2026-06-25T09:43:11Z"
     },
     "areas": {
       "status": "complete",
@@ -18596,20 +18569,10 @@
       "wordbase_exists": true
     },
     "volumes": {
-      "status": "pending",
-      "missing": [
-        "definition",
-        "translation",
-        "pronunciation",
-        "part_of_speech",
-        "example",
-        "example_translation",
-        "tags",
-        "memory_tips",
-        "memory_image"
-      ],
-      "rounds": 0,
-      "attempts": 0,
+      "status": "complete",
+      "missing": [],
+      "rounds": 1,
+      "attempts": 1,
       "source_images": [
         "IMG_8315.JPG",
         "IMG_8486.JPG",
@@ -18620,7 +18583,8 @@
         "IMG_8567.JPG",
         "IMG_8578.JPG"
       ],
-      "last_errors": {}
+      "last_errors": {},
+      "completed_at": "2026-06-25T10:34:17Z"
     },
     "introduction": {
       "status": "complete",
@@ -19729,26 +19693,19 @@
       "wordbase_exists": true
     },
     "zero": {
-      "status": "pending",
-      "missing": [
-        "definition",
-        "translation",
-        "pronunciation",
-        "part_of_speech",
-        "example",
-        "example_translation",
-        "tags",
-        "memory_tips",
-        "memory_image"
-      ],
-      "rounds": 0,
-      "attempts": 0,
+      "status": "complete",
+      "missing": [],
+      "rounds": 1,
+      "attempts": 1,
       "source_images": [
         "IMG_8317.JPG",
         "IMG_8319.JPG",
         "IMG_8326.JPG"
       ],
-      "last_errors": {}
+      "last_errors": {},
+      "completed_at": "2026-06-25T11:08:05Z",
+      "skipped_reason": "exists_in_wordbase",
+      "wordbase_exists": true
     },
     "nearest": {
       "status": "complete",
@@ -20961,27 +20918,20 @@
       "completed_at": "2026-06-24T06:41:08Z"
     },
     "termed": {
-      "status": "incomplete",
-      "missing": [
-        "definition",
-        "translation",
-        "pronunciation",
-        "part_of_speech",
-        "example",
-        "example_translation",
-        "tags",
-        "memory_tips",
-        "memory_image"
-      ],
-      "rounds": 2,
-      "attempts": 2,
+      "status": "complete",
+      "missing": [],
+      "rounds": 3,
+      "attempts": 3,
       "source_images": [
         "IMG_8320.JPG"
       ],
       "last_errors": {
         "complete": "AI request failed: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 20260625061725578312344BPx3Jz2y)\",\"type\":\"AgnesAI_error\"}}",
         "memory_tips": "Expected ',' or '}' after property value in JSON at position 119 (line 6 column 23)"
-      }
+      },
+      "completed_at": "2026-06-25T11:16:44Z",
+      "skipped_reason": "exists_in_wordbase",
+      "wordbase_exists": true
     },
     "regular": {
       "status": "complete",
@@ -21487,20 +21437,10 @@
       "completed_at": "2026-06-25T09:10:53Z"
     },
     "warm-up": {
-      "status": "pending",
-      "missing": [
-        "definition",
-        "translation",
-        "pronunciation",
-        "part_of_speech",
-        "example",
-        "example_translation",
-        "tags",
-        "memory_tips",
-        "memory_image"
-      ],
-      "rounds": 0,
-      "attempts": 0,
+      "status": "complete",
+      "missing": [],
+      "rounds": 1,
+      "attempts": 1,
       "source_images": [
         "IMG_8322.JPG",
         "IMG_8337.JPG",
@@ -21530,23 +21470,16 @@
         "IMG_8462.JPG",
         "IMG_8541.JPG"
       ],
-      "last_errors": {}
+      "last_errors": {},
+      "completed_at": "2026-06-25T10:40:59Z",
+      "skipped_reason": "exists_in_wordbase",
+      "wordbase_exists": true
     },
     "zone": {
-      "status": "pending",
-      "missing": [
-        "definition",
-        "translation",
-        "pronunciation",
-        "part_of_speech",
-        "example",
-        "example_translation",
-        "tags",
-        "memory_tips",
-        "memory_image"
-      ],
-      "rounds": 0,
-      "attempts": 0,
+      "status": "complete",
+      "missing": [],
+      "rounds": 1,
+      "attempts": 1,
       "source_images": [
         "IMG_8322.JPG",
         "IMG_8337.JPG",
@@ -21578,7 +21511,8 @@
         "IMG_8462.JPG",
         "IMG_8541.JPG"
       ],
-      "last_errors": {}
+      "last_errors": {},
+      "completed_at": "2026-06-25T11:15:05Z"
     },
     "complete": {
       "status": "complete",
@@ -22802,20 +22736,10 @@
       "wordbase_exists": true
     },
     "using": {
-      "status": "pending",
-      "missing": [
-        "definition",
-        "translation",
-        "pronunciation",
-        "part_of_speech",
-        "example",
-        "example_translation",
-        "tags",
-        "memory_tips",
-        "memory_image"
-      ],
-      "rounds": 0,
-      "attempts": 0,
+      "status": "complete",
+      "missing": [],
+      "rounds": 1,
+      "attempts": 1,
       "source_images": [
         "IMG_8328.JPG",
         "IMG_8343.JPG",
@@ -22834,7 +22758,8 @@
         "IMG_8488.JPG",
         "IMG_8462.JPG"
       ],
-      "last_errors": {}
+      "last_errors": {},
+      "completed_at": "2026-06-25T10:19:46Z"
     },
     "better": {
       "status": "complete",
@@ -23798,25 +23723,18 @@
       "completed_at": "2026-06-24T07:14:43Z"
     },
     "words": {
-      "status": "pending",
-      "missing": [
-        "definition",
-        "translation",
-        "pronunciation",
-        "part_of_speech",
-        "example",
-        "example_translation",
-        "tags",
-        "memory_tips",
-        "memory_image"
-      ],
-      "rounds": 0,
-      "attempts": 0,
+      "status": "complete",
+      "missing": [],
+      "rounds": 1,
+      "attempts": 1,
       "source_images": [
         "IMG_8332.JPG",
         "IMG_8501.JPG"
       ],
-      "last_errors": {}
+      "last_errors": {},
+      "completed_at": "2026-06-25T10:50:05Z",
+      "skipped_reason": "exists_in_wordbase",
+      "wordbase_exists": true
     },
     "targets": {
       "status": "complete",
@@ -23939,20 +23857,10 @@
       "completed_at": "2026-06-24T03:39:23Z"
     },
     "unknown": {
-      "status": "pending",
-      "missing": [
-        "definition",
-        "translation",
-        "pronunciation",
-        "part_of_speech",
-        "example",
-        "example_translation",
-        "tags",
-        "memory_tips",
-        "memory_image"
-      ],
-      "rounds": 0,
-      "attempts": 0,
+      "status": "complete",
+      "missing": [],
+      "rounds": 1,
+      "attempts": 1,
       "source_images": [
         "IMG_8333.JPG",
         "IMG_8334.JPG",
@@ -23967,7 +23875,10 @@
         "IMG_8551.JPG",
         "IMG_8440.JPG"
       ],
-      "last_errors": {}
+      "last_errors": {},
+      "completed_at": "2026-06-25T10:09:05Z",
+      "skipped_reason": "exists_in_wordbase",
+      "wordbase_exists": true
     },
     "appropriate": {
       "status": "complete",
@@ -24048,26 +23959,19 @@
       "completed_at": "2026-06-24T09:07:38Z"
     },
     "use": {
-      "status": "pending",
-      "missing": [
-        "definition",
-        "translation",
-        "pronunciation",
-        "part_of_speech",
-        "example",
-        "example_translation",
-        "tags",
-        "memory_tips",
-        "memory_image"
-      ],
-      "rounds": 0,
-      "attempts": 0,
+      "status": "complete",
+      "missing": [],
+      "rounds": 1,
+      "attempts": 1,
       "source_images": [
         "IMG_8333.JPG",
         "IMG_8352.JPG",
         "IMG_8463.JPG"
       ],
-      "last_errors": {}
+      "last_errors": {},
+      "completed_at": "2026-06-25T10:16:31Z",
+      "skipped_reason": "exists_in_wordbase",
+      "wordbase_exists": true
     },
     "compare": {
       "status": "complete",
@@ -24142,25 +24046,16 @@
       "completed_at": "2026-06-24T02:06:39Z"
     },
     "way": {
-      "status": "pending",
-      "missing": [
-        "definition",
-        "translation",
-        "pronunciation",
-        "part_of_speech",
-        "example",
-        "example_translation",
-        "tags",
-        "memory_tips",
-        "memory_image"
-      ],
-      "rounds": 0,
-      "attempts": 0,
+      "status": "complete",
+      "missing": [],
+      "rounds": 1,
+      "attempts": 1,
       "source_images": [
         "IMG_8334.JPG",
         "IMG_8416.JPG"
       ],
-      "last_errors": {}
+      "last_errors": {},
+      "completed_at": "2026-06-25T10:44:53Z"
     },
     "ax": {
       "status": "complete",
@@ -24384,24 +24279,15 @@
       "completed_at": "2026-06-25T02:51:09Z"
     },
     "tx": {
-      "status": "pending",
-      "missing": [
-        "definition",
-        "translation",
-        "pronunciation",
-        "part_of_speech",
-        "example",
-        "example_translation",
-        "tags",
-        "memory_tips",
-        "memory_image"
-      ],
-      "rounds": 0,
-      "attempts": 0,
+      "status": "complete",
+      "missing": [],
+      "rounds": 1,
+      "attempts": 1,
       "source_images": [
         "IMG_8334.JPG"
       ],
-      "last_errors": {}
+      "last_errors": {},
+      "completed_at": "2026-06-25T10:00:47Z"
     },
     "expressions": {
       "status": "complete",
@@ -24699,26 +24585,19 @@
       "wordbase_exists": true
     },
     "when": {
-      "status": "pending",
-      "missing": [
-        "definition",
-        "translation",
-        "pronunciation",
-        "part_of_speech",
-        "example",
-        "example_translation",
-        "tags",
-        "memory_tips",
-        "memory_image"
-      ],
-      "rounds": 0,
-      "attempts": 0,
+      "status": "complete",
+      "missing": [],
+      "rounds": 1,
+      "attempts": 1,
       "source_images": [
         "IMG_8342.JPG",
         "IMG_8391.JPG",
         "IMG_8503.JPG"
       ],
-      "last_errors": {}
+      "last_errors": {},
+      "completed_at": "2026-06-25T10:47:11Z",
+      "skipped_reason": "exists_in_wordbase",
+      "wordbase_exists": true
     },
     "do": {
       "status": "complete",
@@ -25115,24 +24994,17 @@
       "wordbase_exists": true
     },
     "where": {
-      "status": "pending",
-      "missing": [
-        "definition",
-        "translation",
-        "pronunciation",
-        "part_of_speech",
-        "example",
-        "example_translation",
-        "tags",
-        "memory_tips",
-        "memory_image"
-      ],
-      "rounds": 0,
-      "attempts": 0,
+      "status": "complete",
+      "missing": [],
+      "rounds": 1,
+      "attempts": 1,
       "source_images": [
         "IMG_8345.JPG"
       ],
-      "last_errors": {}
+      "last_errors": {},
+      "completed_at": "2026-06-25T10:47:12Z",
+      "skipped_reason": "exists_in_wordbase",
+      "wordbase_exists": true
     },
     "expression": {
       "status": "complete",
@@ -25188,25 +25060,18 @@
       "wordbase_exists": true
     },
     "warm": {
-      "status": "pending",
-      "missing": [
-        "definition",
-        "translation",
-        "pronunciation",
-        "part_of_speech",
-        "example",
-        "example_translation",
-        "tags",
-        "memory_tips",
-        "memory_image"
-      ],
-      "rounds": 0,
-      "attempts": 0,
+      "status": "complete",
+      "missing": [],
+      "rounds": 1,
+      "attempts": 1,
       "source_images": [
         "IMG_8347.JPG",
         "IMG_8390.JPG"
       ],
-      "last_errors": {}
+      "last_errors": {},
+      "completed_at": "2026-06-25T10:40:58Z",
+      "skipped_reason": "exists_in_wordbase",
+      "wordbase_exists": true
     },
     "let": {
       "status": "complete",
@@ -25374,25 +25239,16 @@
       "wordbase_exists": true
     },
     "trinomial": {
-      "status": "pending",
-      "missing": [
-        "definition",
-        "translation",
-        "pronunciation",
-        "part_of_speech",
-        "example",
-        "example_translation",
-        "tags",
-        "memory_tips",
-        "memory_image"
-      ],
-      "rounds": 0,
-      "attempts": 0,
+      "status": "complete",
+      "missing": [],
+      "rounds": 1,
+      "attempts": 1,
       "source_images": [
         "IMG_8347.JPG",
         "IMG_8359.JPG"
       ],
-      "last_errors": {}
+      "last_errors": {},
+      "completed_at": "2026-06-25T09:50:10Z"
     },
     "inequality": {
       "status": "complete",
@@ -25743,20 +25599,10 @@
       "wordbase_exists": true
     },
     "trapezium": {
-      "status": "pending",
-      "missing": [
-        "definition",
-        "translation",
-        "pronunciation",
-        "part_of_speech",
-        "example",
-        "example_translation",
-        "tags",
-        "memory_tips",
-        "memory_image"
-      ],
-      "rounds": 0,
-      "attempts": 0,
+      "status": "complete",
+      "missing": [],
+      "rounds": 1,
+      "attempts": 1,
       "source_images": [
         "IMG_8354.JPG",
         "IMG_8378.JPG",
@@ -25764,7 +25610,8 @@
         "IMG_8481.JPG",
         "IMG_8485.JPG"
       ],
-      "last_errors": {}
+      "last_errors": {},
+      "completed_at": "2026-06-25T09:35:24Z"
     },
     "radius": {
       "status": "complete",
@@ -26359,20 +26206,10 @@
       "wordbase_exists": true
     },
     "width": {
-      "status": "pending",
-      "missing": [
-        "definition",
-        "translation",
-        "pronunciation",
-        "part_of_speech",
-        "example",
-        "example_translation",
-        "tags",
-        "memory_tips",
-        "memory_image"
-      ],
-      "rounds": 0,
-      "attempts": 0,
+      "status": "complete",
+      "missing": [],
+      "rounds": 2,
+      "attempts": 2,
       "source_images": [
         "IMG_8362.JPG",
         "IMG_8378.JPG",
@@ -26383,7 +26220,10 @@
         "IMG_8365.JPG",
         "IMG_8325.JPG"
       ],
-      "last_errors": {}
+      "last_errors": {
+        "complete": "AI request failed: {\"error\":{\"message\":\"***.InternalServerError: InternalServerError: OpenAIException -\",\"type\":\"upstream_error\",\"param\":\"\",\"code\":\"500\"}}"
+      },
+      "completed_at": "2026-06-25T11:21:17Z"
     },
     "write": {
       "status": "complete",
@@ -26416,24 +26256,15 @@
       "wordbase_exists": true
     },
     "x-": {
-      "status": "pending",
-      "missing": [
-        "definition",
-        "translation",
-        "pronunciation",
-        "part_of_speech",
-        "example",
-        "example_translation",
-        "tags",
-        "memory_tips",
-        "memory_image"
-      ],
-      "rounds": 0,
-      "attempts": 0,
+      "status": "complete",
+      "missing": [],
+      "rounds": 1,
+      "attempts": 1,
       "source_images": [
         "IMG_8363.JPG"
       ],
-      "last_errors": {}
+      "last_errors": {},
+      "completed_at": "2026-06-25T10:57:07Z"
     },
     "-x": {
       "status": "complete",
@@ -26447,24 +26278,15 @@
       "completed_at": "2026-06-24T01:18:42Z"
     },
     "variables": {
-      "status": "pending",
-      "missing": [
-        "definition",
-        "translation",
-        "pronunciation",
-        "part_of_speech",
-        "example",
-        "example_translation",
-        "tags",
-        "memory_tips",
-        "memory_image"
-      ],
-      "rounds": 0,
-      "attempts": 0,
+      "status": "complete",
+      "missing": [],
+      "rounds": 1,
+      "attempts": 1,
       "source_images": [
         "IMG_8366.JPG"
       ],
-      "last_errors": {}
+      "last_errors": {},
+      "completed_at": "2026-06-25T10:24:30Z"
     },
     "ordered": {
       "status": "complete",
@@ -26749,44 +26571,26 @@
       "wordbase_exists": true
     },
     "x-axis": {
-      "status": "pending",
-      "missing": [
-        "definition",
-        "translation",
-        "pronunciation",
-        "part_of_speech",
-        "example",
-        "example_translation",
-        "tags",
-        "memory_tips",
-        "memory_image"
-      ],
-      "rounds": 0,
-      "attempts": 0,
+      "status": "complete",
+      "missing": [],
+      "rounds": 1,
+      "attempts": 1,
       "source_images": [
         "IMG_8366.JPG"
       ],
-      "last_errors": {}
+      "last_errors": {},
+      "completed_at": "2026-06-25T10:58:00Z"
     },
     "y-axis": {
-      "status": "pending",
-      "missing": [
-        "definition",
-        "translation",
-        "pronunciation",
-        "part_of_speech",
-        "example",
-        "example_translation",
-        "tags",
-        "memory_tips",
-        "memory_image"
-      ],
-      "rounds": 0,
-      "attempts": 0,
+      "status": "complete",
+      "missing": [],
+      "rounds": 1,
+      "attempts": 1,
       "source_images": [
         "IMG_8366.JPG"
       ],
-      "last_errors": {}
+      "last_errors": {},
+      "completed_at": "2026-06-25T11:01:39Z"
     },
     "intercept": {
       "status": "complete",
@@ -27422,66 +27226,45 @@
       "wordbase_exists": true
     },
     "we": {
-      "status": "pending",
-      "missing": [
-        "definition",
-        "translation",
-        "pronunciation",
-        "part_of_speech",
-        "example",
-        "example_translation",
-        "tags",
-        "memory_tips",
-        "memory_image"
-      ],
-      "rounds": 0,
-      "attempts": 0,
+      "status": "complete",
+      "missing": [],
+      "rounds": 1,
+      "attempts": 1,
       "source_images": [
         "IMG_8369.JPG",
         "IMG_8420.JPG",
         "IMG_8503.JPG"
       ],
-      "last_errors": {}
+      "last_errors": {},
+      "completed_at": "2026-06-25T10:44:54Z",
+      "skipped_reason": "exists_in_wordbase",
+      "wordbase_exists": true
     },
     "y-intercept": {
-      "status": "pending",
-      "missing": [
-        "definition",
-        "translation",
-        "pronunciation",
-        "part_of_speech",
-        "example",
-        "example_translation",
-        "tags",
-        "memory_tips",
-        "memory_image"
-      ],
-      "rounds": 0,
-      "attempts": 0,
+      "status": "complete",
+      "missing": [],
+      "rounds": 1,
+      "attempts": 1,
       "source_images": [
         "IMG_8369.JPG"
       ],
-      "last_errors": {}
+      "last_errors": {},
+      "completed_at": "2026-06-25T11:02:51Z"
     },
     "x-intercept": {
-      "status": "pending",
-      "missing": [
-        "definition",
-        "translation",
-        "pronunciation",
-        "part_of_speech",
-        "example",
-        "example_translation",
-        "tags",
-        "memory_tips",
-        "memory_image"
-      ],
-      "rounds": 0,
-      "attempts": 0,
+      "status": "complete",
+      "missing": [],
+      "rounds": 2,
+      "attempts": 2,
       "source_images": [
         "IMG_8369.JPG"
       ],
-      "last_errors": {}
+      "last_errors": {
+        "memory_tips": "AI request failed: {\"error\":{\"message\":\"***.InternalServerError: InternalServerError: OpenAIException -\",\"type\":\"upstream_error\",\"param\":\"\",\"code\":\"500\"}}"
+      },
+      "completed_at": "2026-06-25T11:21:19Z",
+      "skipped_reason": "exists_in_wordbase",
+      "wordbase_exists": true
     },
     "lie": {
       "status": "complete",
@@ -28016,20 +27799,10 @@
       "wordbase_exists": true
     },
     "years": {
-      "status": "pending",
-      "missing": [
-        "definition",
-        "translation",
-        "pronunciation",
-        "part_of_speech",
-        "example",
-        "example_translation",
-        "tags",
-        "memory_tips",
-        "memory_image"
-      ],
-      "rounds": 0,
-      "attempts": 0,
+      "status": "complete",
+      "missing": [],
+      "rounds": 1,
+      "attempts": 1,
       "source_images": [
         "IMG_8377.JPG",
         "IMG_8388.JPG",
@@ -28047,7 +27820,10 @@
         "IMG_8552.JPG",
         "IMG_8394.JPG"
       ],
-      "last_errors": {}
+      "last_errors": {},
+      "completed_at": "2026-06-25T11:05:26Z",
+      "skipped_reason": "exists_in_wordbase",
+      "wordbase_exists": true
     },
     "ago": {
       "status": "complete",
@@ -28440,24 +28216,15 @@
       "wordbase_exists": true
     },
     "wrong": {
-      "status": "pending",
-      "missing": [
-        "definition",
-        "translation",
-        "pronunciation",
-        "part_of_speech",
-        "example",
-        "example_translation",
-        "tags",
-        "memory_tips",
-        "memory_image"
-      ],
-      "rounds": 0,
-      "attempts": 0,
+      "status": "complete",
+      "missing": [],
+      "rounds": 1,
+      "attempts": 1,
       "source_images": [
         "IMG_8381.JPG"
       ],
-      "last_errors": {}
+      "last_errors": {},
+      "completed_at": "2026-06-25T10:55:29Z"
     },
     "deducted": {
       "status": "complete",
@@ -28881,20 +28648,10 @@
       "wordbase_exists": true
     },
     "yearly": {
-      "status": "pending",
-      "missing": [
-        "definition",
-        "translation",
-        "pronunciation",
-        "part_of_speech",
-        "example",
-        "example_translation",
-        "tags",
-        "memory_tips",
-        "memory_image"
-      ],
-      "rounds": 0,
-      "attempts": 0,
+      "status": "complete",
+      "missing": [],
+      "rounds": 1,
+      "attempts": 1,
       "source_images": [
         "IMG_8384.JPG",
         "IMG_8388.JPG",
@@ -28902,7 +28659,8 @@
         "IMG_8396.JPG",
         "IMG_8394.JPG"
       ],
-      "last_errors": {}
+      "last_errors": {},
+      "completed_at": "2026-06-25T11:05:26Z"
     },
     "basis": {
       "status": "complete",
@@ -28958,24 +28716,15 @@
       "wordbase_exists": true
     },
     "withdrawn": {
-      "status": "pending",
-      "missing": [
-        "definition",
-        "translation",
-        "pronunciation",
-        "part_of_speech",
-        "example",
-        "example_translation",
-        "tags",
-        "memory_tips",
-        "memory_image"
-      ],
-      "rounds": 0,
-      "attempts": 0,
+      "status": "complete",
+      "missing": [],
+      "rounds": 1,
+      "attempts": 1,
       "source_images": [
         "IMG_8384.JPG"
       ],
-      "last_errors": {}
+      "last_errors": {},
+      "completed_at": "2026-06-25T10:49:46Z"
     },
     "remains": {
       "status": "complete",
@@ -29196,20 +28945,10 @@
       "completed_at": "2026-06-24T07:36:38Z"
     },
     "year": {
-      "status": "pending",
-      "missing": [
-        "definition",
-        "translation",
-        "pronunciation",
-        "part_of_speech",
-        "example",
-        "example_translation",
-        "tags",
-        "memory_tips",
-        "memory_image"
-      ],
-      "rounds": 0,
-      "attempts": 0,
+      "status": "complete",
+      "missing": [],
+      "rounds": 1,
+      "attempts": 1,
       "source_images": [
         "IMG_8389.JPG",
         "IMG_8393.JPG",
@@ -29217,7 +28956,8 @@
         "IMG_8386.JPG",
         "IMG_8552.JPG"
       ],
-      "last_errors": {}
+      "last_errors": {},
+      "completed_at": "2026-06-25T11:03:50Z"
     },
     "half-yearly": {
       "status": "complete",
@@ -29722,24 +29462,19 @@
       "wordbase_exists": true
     },
     "withdraws": {
-      "status": "pending",
-      "missing": [
-        "definition",
-        "translation",
-        "pronunciation",
-        "part_of_speech",
-        "example",
-        "example_translation",
-        "tags",
-        "memory_tips",
-        "memory_image"
-      ],
-      "rounds": 0,
-      "attempts": 0,
+      "status": "complete",
+      "missing": [],
+      "rounds": 2,
+      "attempts": 2,
       "source_images": [
         "IMG_8393.JPG"
       ],
-      "last_errors": {}
+      "last_errors": {
+        "memory_tips": "Expected ',' or '}' after property value in JSON at position 32 (line 2 column 31)"
+      },
+      "completed_at": "2026-06-25T11:21:18Z",
+      "skipped_reason": "exists_in_wordbase",
+      "wordbase_exists": true
     },
     "grew": {
       "status": "complete",
@@ -29860,25 +29595,16 @@
       "completed_at": "2026-06-24T17:12:06Z"
     },
     "turnover": {
-      "status": "pending",
-      "missing": [
-        "definition",
-        "translation",
-        "pronunciation",
-        "part_of_speech",
-        "example",
-        "example_translation",
-        "tags",
-        "memory_tips",
-        "memory_image"
-      ],
-      "rounds": 0,
-      "attempts": 0,
+      "status": "complete",
+      "missing": [],
+      "rounds": 1,
+      "attempts": 1,
       "source_images": [
         "IMG_8395.JPG",
         "IMG_8413.JPG"
       ],
-      "last_errors": {}
+      "last_errors": {},
+      "completed_at": "2026-06-25T09:56:27Z"
     },
     "company": {
       "status": "complete",
@@ -30100,24 +29826,15 @@
       "wordbase_exists": true
     },
     "written": {
-      "status": "pending",
-      "missing": [
-        "definition",
-        "translation",
-        "pronunciation",
-        "part_of_speech",
-        "example",
-        "example_translation",
-        "tags",
-        "memory_tips",
-        "memory_image"
-      ],
-      "rounds": 0,
-      "attempts": 0,
+      "status": "complete",
+      "missing": [],
+      "rounds": 1,
+      "attempts": 1,
       "source_images": [
         "IMG_8397.JPG"
       ],
-      "last_errors": {}
+      "last_errors": {},
+      "completed_at": "2026-06-25T10:53:30Z"
     },
     "cancelled": {
       "status": "complete",
@@ -30561,24 +30278,17 @@
       "wordbase_exists": true
     },
     "world": {
-      "status": "pending",
-      "missing": [
-        "definition",
-        "translation",
-        "pronunciation",
-        "part_of_speech",
-        "example",
-        "example_translation",
-        "tags",
-        "memory_tips",
-        "memory_image"
-      ],
-      "rounds": 0,
-      "attempts": 0,
+      "status": "complete",
+      "missing": [],
+      "rounds": 1,
+      "attempts": 1,
       "source_images": [
         "IMG_8399.JPG"
       ],
-      "last_errors": {}
+      "last_errors": {},
+      "completed_at": "2026-06-25T10:51:34Z",
+      "skipped_reason": "exists_in_wordbase",
+      "wordbase_exists": true
     },
     "record": {
       "status": "complete",
@@ -30595,24 +30305,15 @@
       "wordbase_exists": true
     },
     "typing": {
-      "status": "pending",
-      "missing": [
-        "definition",
-        "translation",
-        "pronunciation",
-        "part_of_speech",
-        "example",
-        "example_translation",
-        "tags",
-        "memory_tips",
-        "memory_image"
-      ],
-      "rounds": 0,
-      "attempts": 0,
+      "status": "complete",
+      "missing": [],
+      "rounds": 1,
+      "attempts": 1,
       "source_images": [
         "IMG_8399.JPG"
       ],
-      "last_errors": {}
+      "last_errors": {},
+      "completed_at": "2026-06-25T10:03:22Z"
     },
     "faster": {
       "status": "complete",
@@ -30719,24 +30420,15 @@
       "wordbase_exists": true
     },
     "transposing": {
-      "status": "pending",
-      "missing": [
-        "definition",
-        "translation",
-        "pronunciation",
-        "part_of_speech",
-        "example",
-        "example_translation",
-        "tags",
-        "memory_tips",
-        "memory_image"
-      ],
-      "rounds": 0,
-      "attempts": 0,
+      "status": "complete",
+      "missing": [],
+      "rounds": 1,
+      "attempts": 1,
       "source_images": [
         "IMG_8400.JPG"
       ],
-      "last_errors": {}
+      "last_errors": {},
+      "completed_at": "2026-06-25T09:30:27Z"
     },
     "transform": {
       "status": "complete",
@@ -31010,24 +30702,15 @@
       "wordbase_exists": true
     },
     "workers": {
-      "status": "pending",
-      "missing": [
-        "definition",
-        "translation",
-        "pronunciation",
-        "part_of_speech",
-        "example",
-        "example_translation",
-        "tags",
-        "memory_tips",
-        "memory_image"
-      ],
-      "rounds": 0,
-      "attempts": 0,
+      "status": "complete",
+      "missing": [],
+      "rounds": 1,
+      "attempts": 1,
       "source_images": [
         "IMG_8405.JPG"
       ],
-      "last_errors": {}
+      "last_errors": {},
+      "completed_at": "2026-06-25T10:51:33Z"
     },
     "finish": {
       "status": "complete",
@@ -31088,27 +30771,20 @@
       "wordbase_exists": true
     },
     "used": {
-      "status": "pending",
-      "missing": [
-        "definition",
-        "translation",
-        "pronunciation",
-        "part_of_speech",
-        "example",
-        "example_translation",
-        "tags",
-        "memory_tips",
-        "memory_image"
-      ],
-      "rounds": 0,
-      "attempts": 0,
+      "status": "complete",
+      "missing": [],
+      "rounds": 2,
+      "attempts": 2,
       "source_images": [
         "IMG_8405.JPG",
         "IMG_8414.JPG",
         "IMG_8459.JPG",
         "IMG_8461.JPG"
       ],
-      "last_errors": {}
+      "last_errors": {
+        "complete": "AI request failed: {\"error\":{\"message\":\"***.InternalServerError: InternalServerError: OpenAIException -\",\"type\":\"upstream_error\",\"param\":\"\",\"code\":\"500\"}}"
+      },
+      "completed_at": "2026-06-25T11:18:55Z"
     },
     "packs": {
       "status": "complete",
@@ -31448,24 +31124,15 @@
       "completed_at": "2026-06-24T13:14:01Z"
     },
     "types": {
-      "status": "pending",
-      "missing": [
-        "definition",
-        "translation",
-        "pronunciation",
-        "part_of_speech",
-        "example",
-        "example_translation",
-        "tags",
-        "memory_tips",
-        "memory_image"
-      ],
-      "rounds": 0,
-      "attempts": 0,
+      "status": "complete",
+      "missing": [],
+      "rounds": 1,
+      "attempts": 1,
       "source_images": [
         "IMG_8408.JPG"
       ],
-      "last_errors": {}
+      "last_errors": {},
+      "completed_at": "2026-06-25T10:02:11Z"
     },
     "mixed": {
       "status": "complete",
@@ -31993,25 +31660,18 @@
       "wordbase_exists": true
     },
     "travels": {
-      "status": "pending",
-      "missing": [
-        "definition",
-        "translation",
-        "pronunciation",
-        "part_of_speech",
-        "example",
-        "example_translation",
-        "tags",
-        "memory_tips",
-        "memory_image"
-      ],
-      "rounds": 0,
-      "attempts": 0,
+      "status": "complete",
+      "missing": [],
+      "rounds": 1,
+      "attempts": 1,
       "source_images": [
         "IMG_8412.JPG",
         "IMG_8413.JPG"
       ],
-      "last_errors": {}
+      "last_errors": {},
+      "completed_at": "2026-06-25T09:38:46Z",
+      "skipped_reason": "exists_in_wordbase",
+      "wordbase_exists": true
     },
     "decreased": {
       "status": "complete",
@@ -32062,24 +31722,15 @@
       "wordbase_exists": true
     },
     "travelled": {
-      "status": "pending",
-      "missing": [
-        "definition",
-        "translation",
-        "pronunciation",
-        "part_of_speech",
-        "example",
-        "example_translation",
-        "tags",
-        "memory_tips",
-        "memory_image"
-      ],
-      "rounds": 0,
-      "attempts": 0,
+      "status": "complete",
+      "missing": [],
+      "rounds": 1,
+      "attempts": 1,
       "source_images": [
         "IMG_8413.JPG"
       ],
-      "last_errors": {}
+      "last_errors": {},
+      "completed_at": "2026-06-25T09:38:45Z"
     },
     "journey": {
       "status": "complete",
@@ -32157,24 +31808,15 @@
       "wordbase_exists": true
     },
     "unsatisfactory": {
-      "status": "pending",
-      "missing": [
-        "definition",
-        "translation",
-        "pronunciation",
-        "part_of_speech",
-        "example",
-        "example_translation",
-        "tags",
-        "memory_tips",
-        "memory_image"
-      ],
-      "rounds": 0,
-      "attempts": 0,
+      "status": "complete",
+      "missing": [],
+      "rounds": 1,
+      "attempts": 1,
       "source_images": [
         "IMG_8413.JPG"
       ],
-      "last_errors": {}
+      "last_errors": {},
+      "completed_at": "2026-06-25T10:12:22Z"
     },
     "shop": {
       "status": "complete",
@@ -32378,26 +32020,17 @@
       "wordbase_exists": true
     },
     "understanding": {
-      "status": "pending",
-      "missing": [
-        "definition",
-        "translation",
-        "pronunciation",
-        "part_of_speech",
-        "example",
-        "example_translation",
-        "tags",
-        "memory_tips",
-        "memory_image"
-      ],
-      "rounds": 0,
-      "attempts": 0,
+      "status": "complete",
+      "missing": [],
+      "rounds": 1,
+      "attempts": 1,
       "source_images": [
         "IMG_8415.JPG",
         "IMG_8421.JPG",
         "IMG_8359.JPG"
       ],
-      "last_errors": {}
+      "last_errors": {},
+      "completed_at": "2026-06-25T10:08:04Z"
     },
     "applications": {
       "status": "complete",
@@ -32458,20 +32091,10 @@
       "wordbase_exists": true
     },
     "vertex": {
-      "status": "pending",
-      "missing": [
-        "definition",
-        "translation",
-        "pronunciation",
-        "part_of_speech",
-        "example",
-        "example_translation",
-        "tags",
-        "memory_tips",
-        "memory_image"
-      ],
-      "rounds": 0,
-      "attempts": 0,
+      "status": "complete",
+      "missing": [],
+      "rounds": 1,
+      "attempts": 1,
       "source_images": [
         "IMG_8415.JPG",
         "IMG_8417.JPG",
@@ -32498,7 +32121,8 @@
         "IMG_8495.JPG",
         "IMG_8478.JPG"
       ],
-      "last_errors": {}
+      "last_errors": {},
+      "completed_at": "2026-06-25T10:26:12Z"
     },
     "located": {
       "status": "complete",
@@ -32549,26 +32173,17 @@
       "completed_at": "2026-06-24T13:49:37Z"
     },
     "vertically": {
-      "status": "pending",
-      "missing": [
-        "definition",
-        "translation",
-        "pronunciation",
-        "part_of_speech",
-        "example",
-        "example_translation",
-        "tags",
-        "memory_tips",
-        "memory_image"
-      ],
-      "rounds": 0,
-      "attempts": 0,
+      "status": "complete",
+      "missing": [],
+      "rounds": 1,
+      "attempts": 1,
       "source_images": [
         "IMG_8415.JPG",
         "IMG_8419.JPG",
         "IMG_8469.JPG"
       ],
-      "last_errors": {}
+      "last_errors": {},
+      "completed_at": "2026-06-25T10:27:37Z"
     },
     "formed": {
       "status": "complete",
@@ -32621,20 +32236,10 @@
       "wordbase_exists": true
     },
     "transversal": {
-      "status": "pending",
-      "missing": [
-        "definition",
-        "translation",
-        "pronunciation",
-        "part_of_speech",
-        "example",
-        "example_translation",
-        "tags",
-        "memory_tips",
-        "memory_image"
-      ],
-      "rounds": 0,
-      "attempts": 0,
+      "status": "complete",
+      "missing": [],
+      "rounds": 1,
+      "attempts": 1,
       "source_images": [
         "IMG_8416.JPG",
         "IMG_8420.JPG",
@@ -32645,7 +32250,8 @@
         "IMG_8429.JPG",
         "IMG_8430.JPG"
       ],
-      "last_errors": {}
+      "last_errors": {},
+      "completed_at": "2026-06-25T09:32:09Z"
     },
     "alternate": {
       "status": "complete",
@@ -32794,20 +32400,10 @@
       "wordbase_exists": true
     },
     "which": {
-      "status": "pending",
-      "missing": [
-        "definition",
-        "translation",
-        "pronunciation",
-        "part_of_speech",
-        "example",
-        "example_translation",
-        "tags",
-        "memory_tips",
-        "memory_image"
-      ],
-      "rounds": 0,
-      "attempts": 0,
+      "status": "complete",
+      "missing": [],
+      "rounds": 1,
+      "attempts": 1,
       "source_images": [
         "IMG_8417.JPG",
         "IMG_8432.JPG",
@@ -32815,7 +32411,10 @@
         "IMG_8508.JPG",
         "IMG_8447.JPG"
       ],
-      "last_errors": {}
+      "last_errors": {},
+      "completed_at": "2026-06-25T10:47:13Z",
+      "skipped_reason": "exists_in_wordbase",
+      "wordbase_exists": true
     },
     "through": {
       "status": "complete",
@@ -34525,24 +34124,15 @@
       "wordbase_exists": true
     },
     "uncertainty": {
-      "status": "pending",
-      "missing": [
-        "definition",
-        "translation",
-        "pronunciation",
-        "part_of_speech",
-        "example",
-        "example_translation",
-        "tags",
-        "memory_tips",
-        "memory_image"
-      ],
-      "rounds": 0,
-      "attempts": 0,
+      "status": "complete",
+      "missing": [],
+      "rounds": 1,
+      "attempts": 1,
       "source_images": [
         "IMG_8421.JPG"
       ],
-      "last_errors": {}
+      "last_errors": {},
+      "completed_at": "2026-06-25T10:04:21Z"
     },
     "question": {
       "status": "complete",
@@ -34711,25 +34301,18 @@
       "wordbase_exists": true
     },
     "work": {
-      "status": "pending",
-      "missing": [
-        "definition",
-        "translation",
-        "pronunciation",
-        "part_of_speech",
-        "example",
-        "example_translation",
-        "tags",
-        "memory_tips",
-        "memory_image"
-      ],
-      "rounds": 0,
-      "attempts": 0,
+      "status": "complete",
+      "missing": [],
+      "rounds": 1,
+      "attempts": 1,
       "source_images": [
         "IMG_8421.JPG",
         "IMG_8487.JPG"
       ],
-      "last_errors": {}
+      "last_errors": {},
+      "completed_at": "2026-06-25T10:50:06Z",
+      "skipped_reason": "exists_in_wordbase",
+      "wordbase_exists": true
     },
     "role": {
       "status": "complete",
@@ -34893,24 +34476,17 @@
       "wordbase_exists": true
     },
     "vision": {
-      "status": "pending",
-      "missing": [
-        "definition",
-        "translation",
-        "pronunciation",
-        "part_of_speech",
-        "example",
-        "example_translation",
-        "tags",
-        "memory_tips",
-        "memory_image"
-      ],
-      "rounds": 0,
-      "attempts": 0,
+      "status": "complete",
+      "missing": [],
+      "rounds": 1,
+      "attempts": 1,
       "source_images": [
         "IMG_8421.JPG"
       ],
-      "last_errors": {}
+      "last_errors": {},
+      "completed_at": "2026-06-25T10:30:27Z",
+      "skipped_reason": "exists_in_wordbase",
+      "wordbase_exists": true
     },
     "fantasy": {
       "status": "complete",
@@ -35146,24 +34722,15 @@
       "completed_at": "2026-06-24T05:40:44Z"
     },
     "upgrade": {
-      "status": "pending",
-      "missing": [
-        "definition",
-        "translation",
-        "pronunciation",
-        "part_of_speech",
-        "example",
-        "example_translation",
-        "tags",
-        "memory_tips",
-        "memory_image"
-      ],
-      "rounds": 0,
-      "attempts": 0,
+      "status": "complete",
+      "missing": [],
+      "rounds": 1,
+      "attempts": 1,
       "source_images": [
         "IMG_8421.JPG"
       ],
-      "last_errors": {}
+      "last_errors": {},
+      "completed_at": "2026-06-25T10:13:33Z"
     },
     "update": {
       "status": "complete",
@@ -35214,25 +34781,18 @@
       "completed_at": "2026-06-24T01:23:16Z"
     },
     "variation": {
-      "status": "pending",
-      "missing": [
-        "definition",
-        "translation",
-        "pronunciation",
-        "part_of_speech",
-        "example",
-        "example_translation",
-        "tags",
-        "memory_tips",
-        "memory_image"
-      ],
-      "rounds": 0,
-      "attempts": 0,
+      "status": "complete",
+      "missing": [],
+      "rounds": 1,
+      "attempts": 1,
       "source_images": [
         "IMG_8421.JPG",
         "IMG_8359.JPG"
       ],
-      "last_errors": {}
+      "last_errors": {},
+      "completed_at": "2026-06-25T10:24:31Z",
+      "skipped_reason": "exists_in_wordbase",
+      "wordbase_exists": true
     },
     "distinction": {
       "status": "complete",
@@ -35527,44 +35087,28 @@
       "wordbase_exists": true
     },
     "vigor": {
-      "status": "pending",
-      "missing": [
-        "definition",
-        "translation",
-        "pronunciation",
-        "part_of_speech",
-        "example",
-        "example_translation",
-        "tags",
-        "memory_tips",
-        "memory_image"
-      ],
-      "rounds": 0,
-      "attempts": 0,
+      "status": "complete",
+      "missing": [],
+      "rounds": 1,
+      "attempts": 1,
       "source_images": [
         "IMG_8421.JPG"
       ],
-      "last_errors": {}
+      "last_errors": {},
+      "completed_at": "2026-06-25T10:30:26Z",
+      "skipped_reason": "exists_in_wordbase",
+      "wordbase_exists": true
     },
     "vitality": {
-      "status": "pending",
-      "missing": [
-        "definition",
-        "translation",
-        "pronunciation",
-        "part_of_speech",
-        "example",
-        "example_translation",
-        "tags",
-        "memory_tips",
-        "memory_image"
-      ],
-      "rounds": 0,
-      "attempts": 0,
+      "status": "complete",
+      "missing": [],
+      "rounds": 1,
+      "attempts": 1,
       "source_images": [
         "IMG_8421.JPG"
       ],
-      "last_errors": {}
+      "last_errors": {},
+      "completed_at": "2026-06-25T10:33:06Z"
     },
     "life": {
       "status": "complete",
@@ -35776,24 +35320,17 @@
       "wordbase_exists": true
     },
     "workshop": {
-      "status": "pending",
-      "missing": [
-        "definition",
-        "translation",
-        "pronunciation",
-        "part_of_speech",
-        "example",
-        "example_translation",
-        "tags",
-        "memory_tips",
-        "memory_image"
-      ],
-      "rounds": 0,
-      "attempts": 0,
+      "status": "complete",
+      "missing": [],
+      "rounds": 1,
+      "attempts": 1,
       "source_images": [
         "IMG_8421.JPG"
       ],
-      "last_errors": {}
+      "last_errors": {},
+      "completed_at": "2026-06-25T10:51:33Z",
+      "skipped_reason": "exists_in_wordbase",
+      "wordbase_exists": true
     },
     "lecture": {
       "status": "complete",
@@ -36807,24 +36344,17 @@
       "wordbase_exists": true
     },
     "war": {
-      "status": "pending",
-      "missing": [
-        "definition",
-        "translation",
-        "pronunciation",
-        "part_of_speech",
-        "example",
-        "example_translation",
-        "tags",
-        "memory_tips",
-        "memory_image"
-      ],
-      "rounds": 0,
-      "attempts": 0,
+      "status": "complete",
+      "missing": [],
+      "rounds": 1,
+      "attempts": 1,
       "source_images": [
         "IMG_8421.JPG"
       ],
-      "last_errors": {}
+      "last_errors": {},
+      "completed_at": "2026-06-25T10:40:58Z",
+      "skipped_reason": "exists_in_wordbase",
+      "wordbase_exists": true
     },
     "peace": {
       "status": "complete",
@@ -36853,24 +36383,15 @@
       "wordbase_exists": true
     },
     "unity": {
-      "status": "pending",
-      "missing": [
-        "definition",
-        "translation",
-        "pronunciation",
-        "part_of_speech",
-        "example",
-        "example_translation",
-        "tags",
-        "memory_tips",
-        "memory_image"
-      ],
-      "rounds": 0,
-      "attempts": 0,
+      "status": "complete",
+      "missing": [],
+      "rounds": 1,
+      "attempts": 1,
       "source_images": [
         "IMG_8421.JPG"
       ],
-      "last_errors": {}
+      "last_errors": {},
+      "completed_at": "2026-06-25T10:09:04Z"
     },
     "cooperation": {
       "status": "complete",
@@ -37042,24 +36563,17 @@
       "wordbase_exists": true
     },
     "venture": {
-      "status": "pending",
-      "missing": [
-        "definition",
-        "translation",
-        "pronunciation",
-        "part_of_speech",
-        "example",
-        "example_translation",
-        "tags",
-        "memory_tips",
-        "memory_image"
-      ],
-      "rounds": 0,
-      "attempts": 0,
+      "status": "complete",
+      "missing": [],
+      "rounds": 1,
+      "attempts": 1,
       "source_images": [
         "IMG_8421.JPG"
       ],
-      "last_errors": {}
+      "last_errors": {},
+      "completed_at": "2026-06-25T10:24:32Z",
+      "skipped_reason": "exists_in_wordbase",
+      "wordbase_exists": true
     },
     "initiative": {
       "status": "complete",
@@ -37253,20 +36767,10 @@
       "wordbase_exists": true
     },
     "vertices": {
-      "status": "pending",
-      "missing": [
-        "definition",
-        "translation",
-        "pronunciation",
-        "part_of_speech",
-        "example",
-        "example_translation",
-        "tags",
-        "memory_tips",
-        "memory_image"
-      ],
-      "rounds": 0,
-      "attempts": 0,
+      "status": "complete",
+      "missing": [],
+      "rounds": 1,
+      "attempts": 1,
       "source_images": [
         "IMG_8427.JPG",
         "IMG_8439.JPG",
@@ -37274,7 +36778,8 @@
         "IMG_8450.JPG",
         "IMG_8426.JPG"
       ],
-      "last_errors": {}
+      "last_errors": {},
+      "completed_at": "2026-06-25T10:30:24Z"
     },
     "similar": {
       "status": "complete",
@@ -37471,20 +36976,10 @@
       "completed_at": "2026-06-24T03:40:29Z"
     },
     "true": {
-      "status": "pending",
-      "missing": [
-        "definition",
-        "translation",
-        "pronunciation",
-        "part_of_speech",
-        "example",
-        "example_translation",
-        "tags",
-        "memory_tips",
-        "memory_image"
-      ],
-      "rounds": 0,
-      "attempts": 0,
+      "status": "complete",
+      "missing": [],
+      "rounds": 2,
+      "attempts": 2,
       "source_images": [
         "IMG_8432.JPG",
         "IMG_8433.JPG",
@@ -37492,28 +36987,26 @@
         "IMG_8451.JPG",
         "IMG_8523.JPG"
       ],
-      "last_errors": {}
+      "last_errors": {
+        "complete": "AI request failed: {\"error\":{\"message\":\"***.InternalServerError: InternalServerError: OpenAIException -\",\"type\":\"upstream_error\",\"param\":\"\",\"code\":\"500\"}}"
+      },
+      "completed_at": "2026-06-25T11:16:46Z",
+      "skipped_reason": "exists_in_wordbase",
+      "wordbase_exists": true
     },
     "word": {
-      "status": "pending",
-      "missing": [
-        "definition",
-        "translation",
-        "pronunciation",
-        "part_of_speech",
-        "example",
-        "example_translation",
-        "tags",
-        "memory_tips",
-        "memory_image"
-      ],
-      "rounds": 0,
-      "attempts": 0,
+      "status": "complete",
+      "missing": [],
+      "rounds": 1,
+      "attempts": 1,
       "source_images": [
         "IMG_8432.JPG",
         "IMG_8502.JPG"
       ],
-      "last_errors": {}
+      "last_errors": {},
+      "completed_at": "2026-06-25T10:50:04Z",
+      "skipped_reason": "exists_in_wordbase",
+      "wordbase_exists": true
     },
     "must": {
       "status": "complete",
@@ -37930,25 +37423,18 @@
       "completed_at": "2026-06-24T07:51:12Z"
     },
     "verify": {
-      "status": "pending",
-      "missing": [
-        "definition",
-        "translation",
-        "pronunciation",
-        "part_of_speech",
-        "example",
-        "example_translation",
-        "tags",
-        "memory_tips",
-        "memory_image"
-      ],
-      "rounds": 0,
-      "attempts": 0,
+      "status": "complete",
+      "missing": [],
+      "rounds": 1,
+      "attempts": 1,
       "source_images": [
         "IMG_8442.JPG",
         "IMG_8547.JPG"
       ],
-      "last_errors": {}
+      "last_errors": {},
+      "completed_at": "2026-06-25T10:24:32Z",
+      "skipped_reason": "exists_in_wordbase",
+      "wordbase_exists": true
     },
     "demonstrate": {
       "status": "complete",
@@ -38143,20 +37629,10 @@
       "completed_at": "2026-06-24T07:47:25Z"
     },
     "tessellate": {
-      "status": "incomplete",
-      "missing": [
-        "definition",
-        "translation",
-        "pronunciation",
-        "part_of_speech",
-        "example",
-        "example_translation",
-        "tags",
-        "memory_tips",
-        "memory_image"
-      ],
-      "rounds": 2,
-      "attempts": 2,
+      "status": "complete",
+      "missing": [],
+      "rounds": 3,
+      "attempts": 3,
       "source_images": [
         "IMG_8449.JPG",
         "IMG_8451.JPG"
@@ -38164,7 +37640,10 @@
       "last_errors": {
         "complete": "AI request failed: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 2026062506172837365912ua9AKKel)\",\"type\":\"AgnesAI_error\"}}",
         "memory_tips": "Expected ',' or '}' after property value in JSON at position 97 (line 6 column 22)"
-      }
+      },
+      "completed_at": "2026-06-25T11:16:45Z",
+      "skipped_reason": "exists_in_wordbase",
+      "wordbase_exists": true
     },
     "identical": {
       "status": "complete",
@@ -38292,8 +37771,8 @@
         "memory_tips",
         "memory_image"
       ],
-      "rounds": 6,
-      "attempts": 6,
+      "rounds": 14,
+      "attempts": 14,
       "source_images": [
         "IMG_8451.JPG"
       ],
@@ -38530,24 +38009,15 @@
       "wordbase_exists": true
     },
     "zhou": {
-      "status": "pending",
-      "missing": [
-        "definition",
-        "translation",
-        "pronunciation",
-        "part_of_speech",
-        "example",
-        "example_translation",
-        "tags",
-        "memory_tips",
-        "memory_image"
-      ],
-      "rounds": 0,
-      "attempts": 0,
+      "status": "complete",
+      "missing": [],
+      "rounds": 1,
+      "attempts": 1,
       "source_images": [
         "IMG_8455.JPG"
       ],
-      "last_errors": {}
+      "last_errors": {},
+      "completed_at": "2026-06-25T11:09:17Z"
     },
     "dynasty": {
       "status": "complete",
@@ -38799,45 +38269,31 @@
       "completed_at": "2026-06-24T09:23:53Z"
     },
     "wants": {
-      "status": "pending",
-      "missing": [
-        "definition",
-        "translation",
-        "pronunciation",
-        "part_of_speech",
-        "example",
-        "example_translation",
-        "tags",
-        "memory_tips",
-        "memory_image"
-      ],
-      "rounds": 0,
-      "attempts": 0,
+      "status": "complete",
+      "missing": [],
+      "rounds": 1,
+      "attempts": 1,
       "source_images": [
         "IMG_8465.JPG",
         "IMG_8493.JPG"
       ],
-      "last_errors": {}
+      "last_errors": {},
+      "completed_at": "2026-06-25T10:40:57Z",
+      "skipped_reason": "exists_in_wordbase",
+      "wordbase_exists": true
     },
     "wire": {
-      "status": "pending",
-      "missing": [
-        "definition",
-        "translation",
-        "pronunciation",
-        "part_of_speech",
-        "example",
-        "example_translation",
-        "tags",
-        "memory_tips",
-        "memory_image"
-      ],
-      "rounds": 0,
-      "attempts": 0,
+      "status": "complete",
+      "missing": [],
+      "rounds": 1,
+      "attempts": 1,
       "source_images": [
         "IMG_8465.JPG"
       ],
-      "last_errors": {}
+      "last_errors": {},
+      "completed_at": "2026-06-25T10:48:20Z",
+      "skipped_reason": "exists_in_wordbase",
+      "wordbase_exists": true
     },
     "could": {
       "status": "complete",
@@ -38901,24 +38357,17 @@
       "wordbase_exists": true
     },
     "twelve": {
-      "status": "pending",
-      "missing": [
-        "definition",
-        "translation",
-        "pronunciation",
-        "part_of_speech",
-        "example",
-        "example_translation",
-        "tags",
-        "memory_tips",
-        "memory_image"
-      ],
-      "rounds": 0,
-      "attempts": 0,
+      "status": "complete",
+      "missing": [],
+      "rounds": 1,
+      "attempts": 1,
       "source_images": [
         "IMG_8468.JPG"
       ],
-      "last_errors": {}
+      "last_errors": {},
+      "completed_at": "2026-06-25T09:56:28Z",
+      "skipped_reason": "exists_in_wordbase",
+      "wordbase_exists": true
     },
     "thirteen": {
       "status": "complete",
@@ -39002,24 +38451,15 @@
       "completed_at": "2026-06-24T13:11:24Z"
     },
     "twenty": {
-      "status": "pending",
-      "missing": [
-        "definition",
-        "translation",
-        "pronunciation",
-        "part_of_speech",
-        "example",
-        "example_translation",
-        "tags",
-        "memory_tips",
-        "memory_image"
-      ],
-      "rounds": 0,
-      "attempts": 0,
+      "status": "complete",
+      "missing": [],
+      "rounds": 1,
+      "attempts": 1,
       "source_images": [
         "IMG_8468.JPG"
       ],
-      "last_errors": {}
+      "last_errors": {},
+      "completed_at": "2026-06-25T09:57:38Z"
     },
     "name": {
       "status": "complete",
@@ -39074,27 +38514,18 @@
       "wordbase_exists": true
     },
     "wall": {
-      "status": "pending",
-      "missing": [
-        "definition",
-        "translation",
-        "pronunciation",
-        "part_of_speech",
-        "example",
-        "example_translation",
-        "tags",
-        "memory_tips",
-        "memory_image"
-      ],
-      "rounds": 0,
-      "attempts": 0,
+      "status": "complete",
+      "missing": [],
+      "rounds": 1,
+      "attempts": 1,
       "source_images": [
         "IMG_8469.JPG",
         "IMG_8481.JPG",
         "IMG_8480.JPG",
         "IMG_8359.JPG"
       ],
-      "last_errors": {}
+      "last_errors": {},
+      "completed_at": "2026-06-25T10:37:43Z"
     },
     "above": {
       "status": "complete",
@@ -39459,26 +38890,17 @@
       "completed_at": "2026-06-24T03:27:36Z"
     },
     "trigonometry": {
-      "status": "pending",
-      "missing": [
-        "definition",
-        "translation",
-        "pronunciation",
-        "part_of_speech",
-        "example",
-        "example_translation",
-        "tags",
-        "memory_tips",
-        "memory_image"
-      ],
-      "rounds": 0,
-      "attempts": 0,
+      "status": "complete",
+      "missing": [],
+      "rounds": 1,
+      "attempts": 1,
       "source_images": [
         "IMG_8473.JPG",
         "IMG_8475.JPG",
         "IMG_8477.JPG"
       ],
-      "last_errors": {}
+      "last_errors": {},
+      "completed_at": "2026-06-25T09:46:25Z"
     },
     "parentheses": {
       "status": "complete",
@@ -40006,24 +39428,17 @@
       "wordbase_exists": true
     },
     "vessel": {
-      "status": "pending",
-      "missing": [
-        "definition",
-        "translation",
-        "pronunciation",
-        "part_of_speech",
-        "example",
-        "example_translation",
-        "tags",
-        "memory_tips",
-        "memory_image"
-      ],
-      "rounds": 0,
-      "attempts": 0,
+      "status": "complete",
+      "missing": [],
+      "rounds": 1,
+      "attempts": 1,
       "source_images": [
         "IMG_8494.JPG"
       ],
-      "last_errors": {}
+      "last_errors": {},
+      "completed_at": "2026-06-25T10:30:25Z",
+      "skipped_reason": "exists_in_wordbase",
+      "wordbase_exists": true
     },
     "rise": {
       "status": "complete",
@@ -40523,24 +39938,17 @@
       "wordbase_exists": true
     },
     "yield": {
-      "status": "pending",
-      "missing": [
-        "definition",
-        "translation",
-        "pronunciation",
-        "part_of_speech",
-        "example",
-        "example_translation",
-        "tags",
-        "memory_tips",
-        "memory_image"
-      ],
-      "rounds": 0,
-      "attempts": 0,
+      "status": "complete",
+      "missing": [],
+      "rounds": 1,
+      "attempts": 1,
       "source_images": [
         "IMG_8502.JPG"
       ],
-      "last_errors": {}
+      "last_errors": {},
+      "completed_at": "2026-06-25T11:05:27Z",
+      "skipped_reason": "exists_in_wordbase",
+      "wordbase_exists": true
     },
     "grouped": {
       "status": "complete",
@@ -40723,24 +40131,15 @@
       "completed_at": "2026-06-24T03:46:10Z"
     },
     "widths": {
-      "status": "pending",
-      "missing": [
-        "definition",
-        "translation",
-        "pronunciation",
-        "part_of_speech",
-        "example",
-        "example_translation",
-        "tags",
-        "memory_tips",
-        "memory_image"
-      ],
-      "rounds": 0,
-      "attempts": 0,
+      "status": "complete",
+      "missing": [],
+      "rounds": 1,
+      "attempts": 1,
       "source_images": [
         "IMG_8504.JPG"
       ],
-      "last_errors": {}
+      "last_errors": {},
+      "completed_at": "2026-06-25T10:48:19Z"
     },
     "boundaries": {
       "status": "complete",
@@ -41443,25 +40842,18 @@
       "wordbase_exists": true
     },
     "week": {
-      "status": "pending",
-      "missing": [
-        "definition",
-        "translation",
-        "pronunciation",
-        "part_of_speech",
-        "example",
-        "example_translation",
-        "tags",
-        "memory_tips",
-        "memory_image"
-      ],
-      "rounds": 0,
-      "attempts": 0,
+      "status": "complete",
+      "missing": [],
+      "rounds": 1,
+      "attempts": 1,
       "source_images": [
         "IMG_8518.JPG",
         "IMG_8570.JPG"
       ],
-      "last_errors": {}
+      "last_errors": {},
+      "completed_at": "2026-06-25T10:47:00Z",
+      "skipped_reason": "exists_in_wordbase",
+      "wordbase_exists": true
     },
     "present": {
       "status": "complete",
@@ -41534,25 +40926,16 @@
       "wordbase_exists": true
     },
     "watermelons": {
-      "status": "pending",
-      "missing": [
-        "definition",
-        "translation",
-        "pronunciation",
-        "part_of_speech",
-        "example",
-        "example_translation",
-        "tags",
-        "memory_tips",
-        "memory_image"
-      ],
-      "rounds": 0,
-      "attempts": 0,
+      "status": "complete",
+      "missing": [],
+      "rounds": 1,
+      "attempts": 1,
       "source_images": [
         "IMG_8519.JPG",
         "IMG_8571.JPG"
       ],
-      "last_errors": {}
+      "last_errors": {},
+      "completed_at": "2026-06-25T10:42:23Z"
     },
     "grading": {
       "status": "complete",
@@ -41613,24 +40996,15 @@
       "completed_at": "2026-06-24T06:26:19Z"
     },
     "wealthier": {
-      "status": "pending",
-      "missing": [
-        "definition",
-        "translation",
-        "pronunciation",
-        "part_of_speech",
-        "example",
-        "example_translation",
-        "tags",
-        "memory_tips",
-        "memory_image"
-      ],
-      "rounds": 0,
-      "attempts": 0,
+      "status": "complete",
+      "missing": [],
+      "rounds": 1,
+      "attempts": 1,
       "source_images": [
         "IMG_8521.JPG"
       ],
-      "last_errors": {}
+      "last_errors": {},
+      "completed_at": "2026-06-25T10:46:05Z"
     },
     "groups": {
       "status": "complete",
@@ -41871,24 +41245,15 @@
       "completed_at": "2026-06-24T12:02:16Z"
     },
     "wang": {
-      "status": "pending",
-      "missing": [
-        "definition",
-        "translation",
-        "pronunciation",
-        "part_of_speech",
-        "example",
-        "example_translation",
-        "tags",
-        "memory_tips",
-        "memory_image"
-      ],
-      "rounds": 0,
-      "attempts": 0,
+      "status": "complete",
+      "missing": [],
+      "rounds": 1,
+      "attempts": 1,
       "source_images": [
         "IMG_8543.JPG"
       ],
-      "last_errors": {}
+      "last_errors": {},
+      "completed_at": "2026-06-25T10:40:56Z"
     },
     "lung": {
       "status": "complete",
@@ -41905,45 +41270,27 @@
       "wordbase_exists": true
     },
     "tsuen": {
-      "status": "pending",
-      "missing": [
-        "definition",
-        "translation",
-        "pronunciation",
-        "part_of_speech",
-        "example",
-        "example_translation",
-        "tags",
-        "memory_tips",
-        "memory_image"
-      ],
-      "rounds": 0,
-      "attempts": 0,
+      "status": "complete",
+      "missing": [],
+      "rounds": 1,
+      "attempts": 1,
       "source_images": [
         "IMG_8543.JPG"
       ],
-      "last_errors": {}
+      "last_errors": {},
+      "completed_at": "2026-06-25T09:54:00Z"
     },
     "wan": {
-      "status": "pending",
-      "missing": [
-        "definition",
-        "translation",
-        "pronunciation",
-        "part_of_speech",
-        "example",
-        "example_translation",
-        "tags",
-        "memory_tips",
-        "memory_image"
-      ],
-      "rounds": 0,
-      "attempts": 0,
+      "status": "complete",
+      "missing": [],
+      "rounds": 1,
+      "attempts": 1,
       "source_images": [
         "IMG_8543.JPG",
         "IMG_8545.JPG"
       ],
-      "last_errors": {}
+      "last_errors": {},
+      "completed_at": "2026-06-25T10:38:55Z"
     },
     "origin": {
       "status": "complete",
@@ -42291,24 +41638,15 @@
       "completed_at": "2026-06-24T02:46:36Z"
     },
     "visualizations": {
-      "status": "pending",
-      "missing": [
-        "definition",
-        "translation",
-        "pronunciation",
-        "part_of_speech",
-        "example",
-        "example_translation",
-        "tags",
-        "memory_tips",
-        "memory_image"
-      ],
-      "rounds": 0,
-      "attempts": 0,
+      "status": "complete",
+      "missing": [],
+      "rounds": 1,
+      "attempts": 1,
       "source_images": [
         "IMG_8569.JPG"
       ],
-      "last_errors": {}
+      "last_errors": {},
+      "completed_at": "2026-06-25T10:31:27Z"
     },
     "interpretations": {
       "status": "complete",
@@ -42324,24 +41662,15 @@
       "wordbase_exists": true
     },
     "wealthy": {
-      "status": "pending",
-      "missing": [
-        "definition",
-        "translation",
-        "pronunciation",
-        "part_of_speech",
-        "example",
-        "example_translation",
-        "tags",
-        "memory_tips",
-        "memory_image"
-      ],
-      "rounds": 0,
-      "attempts": 0,
+      "status": "complete",
+      "missing": [],
+      "rounds": 1,
+      "attempts": 1,
       "source_images": [
         "IMG_8572.JPG"
       ],
-      "last_errors": {}
+      "last_errors": {},
+      "completed_at": "2026-06-25T10:46:59Z"
     },
     "jordan": {
       "status": "complete",
@@ -42880,24 +42209,17 @@
       "wordbase_exists": true
     },
     "weighs": {
-      "status": "pending",
-      "missing": [
-        "definition",
-        "translation",
-        "pronunciation",
-        "part_of_speech",
-        "example",
-        "example_translation",
-        "tags",
-        "memory_tips",
-        "memory_image"
-      ],
-      "rounds": 0,
-      "attempts": 0,
+      "status": "complete",
+      "missing": [],
+      "rounds": 2,
+      "attempts": 2,
       "source_images": [
         "IMG_8406.JPG"
       ],
-      "last_errors": {}
+      "last_errors": {
+        "complete": "AI request failed: {\"error\":{\"message\":\"***.InternalServerError: InternalServerError: OpenAIException -\",\"type\":\"upstream_error\",\"param\":\"\",\"code\":\"500\"}}"
+      },
+      "completed_at": "2026-06-25T11:20:07Z"
     },
     "beef": {
       "status": "complete",
@@ -43049,24 +42371,17 @@
       "wordbase_exists": true
     },
     "west": {
-      "status": "pending",
-      "missing": [
-        "definition",
-        "translation",
-        "pronunciation",
-        "part_of_speech",
-        "example",
-        "example_translation",
-        "tags",
-        "memory_tips",
-        "memory_image"
-      ],
-      "rounds": 0,
-      "attempts": 0,
+      "status": "complete",
+      "missing": [],
+      "rounds": 1,
+      "attempts": 1,
       "source_images": [
         "IMG_8480.JPG"
       ],
-      "last_errors": {}
+      "last_errors": {},
+      "completed_at": "2026-06-25T10:47:10Z",
+      "skipped_reason": "exists_in_wordbase",
+      "wordbase_exists": true
     },
     "east": {
       "status": "complete",
@@ -43180,24 +42495,15 @@
       "completed_at": "2026-06-24T17:52:10Z"
     },
     "zoie": {
-      "status": "pending",
-      "missing": [
-        "definition",
-        "translation",
-        "pronunciation",
-        "part_of_speech",
-        "example",
-        "example_translation",
-        "tags",
-        "memory_tips",
-        "memory_image"
-      ],
-      "rounds": 0,
-      "attempts": 0,
+      "status": "complete",
+      "missing": [],
+      "rounds": 1,
+      "attempts": 1,
       "source_images": [
         "IMG_8485.JPG"
       ],
-      "last_errors": {}
+      "last_errors": {},
+      "completed_at": "2026-06-25T11:13:46Z"
     },
     "started": {
       "status": "complete",
@@ -43261,24 +42567,15 @@
       "wordbase_exists": true
     },
     "walked": {
-      "status": "pending",
-      "missing": [
-        "definition",
-        "translation",
-        "pronunciation",
-        "part_of_speech",
-        "example",
-        "example_translation",
-        "tags",
-        "memory_tips",
-        "memory_image"
-      ],
-      "rounds": 0,
-      "attempts": 0,
+      "status": "complete",
+      "missing": [],
+      "rounds": 1,
+      "attempts": 1,
       "source_images": [
         "IMG_8485.JPG"
       ],
-      "last_errors": {}
+      "last_errors": {},
+      "completed_at": "2026-06-25T10:36:24Z"
     },
     "found": {
       "status": "complete",
@@ -43391,24 +42688,17 @@
       "completed_at": "2026-06-25T09:16:34Z"
     },
     "what": {
-      "status": "pending",
-      "missing": [
-        "definition",
-        "translation",
-        "pronunciation",
-        "part_of_speech",
-        "example",
-        "example_translation",
-        "tags",
-        "memory_tips",
-        "memory_image"
-      ],
-      "rounds": 0,
-      "attempts": 0,
+      "status": "complete",
+      "missing": [],
+      "rounds": 1,
+      "attempts": 1,
       "source_images": [
         "IMG_8493.JPG"
       ],
-      "last_errors": {}
+      "last_errors": {},
+      "completed_at": "2026-06-25T10:47:10Z",
+      "skipped_reason": "exists_in_wordbase",
+      "wordbase_exists": true
     },
     "overflows": {
       "status": "complete",
@@ -43435,24 +42725,17 @@
       "completed_at": "2026-06-24T14:51:34Z"
     },
     "watching": {
-      "status": "pending",
-      "missing": [
-        "definition",
-        "translation",
-        "pronunciation",
-        "part_of_speech",
-        "example",
-        "example_translation",
-        "tags",
-        "memory_tips",
-        "memory_image"
-      ],
-      "rounds": 0,
-      "attempts": 0,
+      "status": "complete",
+      "missing": [],
+      "rounds": 1,
+      "attempts": 1,
       "source_images": [
         "IMG_8514.JPG"
       ],
-      "last_errors": {}
+      "last_errors": {},
+      "completed_at": "2026-06-25T10:41:00Z",
+      "skipped_reason": "exists_in_wordbase",
+      "wordbase_exists": true
     },
     "staffs": {
       "status": "complete",
@@ -43492,24 +42775,17 @@
       "wordbase_exists": true
     },
     "within": {
-      "status": "pending",
-      "missing": [
-        "definition",
-        "translation",
-        "pronunciation",
-        "part_of_speech",
-        "example",
-        "example_translation",
-        "tags",
-        "memory_tips",
-        "memory_image"
-      ],
-      "rounds": 0,
-      "attempts": 0,
+      "status": "complete",
+      "missing": [],
+      "rounds": 1,
+      "attempts": 1,
       "source_images": [
         "IMG_8524.JPG"
       ],
-      "last_errors": {}
+      "last_errors": {},
+      "completed_at": "2026-06-25T10:50:02Z",
+      "skipped_reason": "exists_in_wordbase",
+      "wordbase_exists": true
     },
     "lb": {
       "status": "complete",
@@ -43561,25 +42837,16 @@
       "wordbase_exists": true
     },
     "unchanged": {
-      "status": "pending",
-      "missing": [
-        "definition",
-        "translation",
-        "pronunciation",
-        "part_of_speech",
-        "example",
-        "example_translation",
-        "tags",
-        "memory_tips",
-        "memory_image"
-      ],
-      "rounds": 0,
-      "attempts": 0,
+      "status": "complete",
+      "missing": [],
+      "rounds": 1,
+      "attempts": 1,
       "source_images": [
         "IMG_8552.JPG",
         "IMG_8532.JPG"
       ],
-      "last_errors": {}
+      "last_errors": {},
+      "completed_at": "2026-06-25T10:06:21Z"
     },
     "shorter": {
       "status": "complete",
@@ -44043,24 +43310,15 @@
       "wordbase_exists": true
     },
     "twin": {
-      "status": "pending",
-      "missing": [
-        "definition",
-        "translation",
-        "pronunciation",
-        "part_of_speech",
-        "example",
-        "example_translation",
-        "tags",
-        "memory_tips",
-        "memory_image"
-      ],
-      "rounds": 0,
-      "attempts": 0,
+      "status": "complete",
+      "missing": [],
+      "rounds": 1,
+      "attempts": 1,
       "source_images": [
         "IMG_8359.JPG"
       ],
-      "last_errors": {}
+      "last_errors": {},
+      "completed_at": "2026-06-25T09:59:20Z"
     },
     "couple": {
       "status": "complete",
@@ -44087,24 +43345,15 @@
       "completed_at": "2026-06-24T23:21:12Z"
     },
     "trio": {
-      "status": "pending",
-      "missing": [
-        "definition",
-        "translation",
-        "pronunciation",
-        "part_of_speech",
-        "example",
-        "example_translation",
-        "tags",
-        "memory_tips",
-        "memory_image"
-      ],
-      "rounds": 0,
-      "attempts": 0,
+      "status": "complete",
+      "missing": [],
+      "rounds": 1,
+      "attempts": 1,
       "source_images": [
         "IMG_8359.JPG"
       ],
-      "last_errors": {}
+      "last_errors": {},
+      "completed_at": "2026-06-25T09:52:45Z"
     },
     "quartet": {
       "status": "complete",
@@ -45102,24 +44351,15 @@
       "completed_at": "2026-06-25T00:28:25Z"
     },
     "urinary": {
-      "status": "pending",
-      "missing": [
-        "definition",
-        "translation",
-        "pronunciation",
-        "part_of_speech",
-        "example",
-        "example_translation",
-        "tags",
-        "memory_tips",
-        "memory_image"
-      ],
-      "rounds": 0,
-      "attempts": 0,
+      "status": "complete",
+      "missing": [],
+      "rounds": 1,
+      "attempts": 1,
       "source_images": [
         "IMG_8359.JPG"
       ],
-      "last_errors": {}
+      "last_errors": {},
+      "completed_at": "2026-06-25T10:16:30Z"
     },
     "gastrointestinal": {
       "status": "complete",
@@ -45700,24 +44940,15 @@
       "wordbase_exists": true
     },
     "vacuole": {
-      "status": "pending",
-      "missing": [
-        "definition",
-        "translation",
-        "pronunciation",
-        "part_of_speech",
-        "example",
-        "example_translation",
-        "tags",
-        "memory_tips",
-        "memory_image"
-      ],
-      "rounds": 0,
-      "attempts": 0,
+      "status": "complete",
+      "missing": [],
+      "rounds": 1,
+      "attempts": 1,
       "source_images": [
         "IMG_8359.JPG"
       ],
-      "last_errors": {}
+      "last_errors": {},
+      "completed_at": "2026-06-25T10:20:48Z"
     },
     "centriole": {
       "status": "complete",
@@ -45873,24 +45104,17 @@
       "wordbase_exists": true
     },
     "vitamin": {
-      "status": "pending",
-      "missing": [
-        "definition",
-        "translation",
-        "pronunciation",
-        "part_of_speech",
-        "example",
-        "example_translation",
-        "tags",
-        "memory_tips",
-        "memory_image"
-      ],
-      "rounds": 0,
-      "attempts": 0,
+      "status": "complete",
+      "missing": [],
+      "rounds": 1,
+      "attempts": 1,
       "source_images": [
         "IMG_8359.JPG"
       ],
-      "last_errors": {}
+      "last_errors": {},
+      "completed_at": "2026-06-25T10:33:07Z",
+      "skipped_reason": "exists_in_wordbase",
+      "wordbase_exists": true
     },
     "mineral": {
       "status": "complete",
@@ -46171,24 +45395,15 @@
       "completed_at": "2026-06-25T09:12:25Z"
     },
     "vanadium": {
-      "status": "pending",
-      "missing": [
-        "definition",
-        "translation",
-        "pronunciation",
-        "part_of_speech",
-        "example",
-        "example_translation",
-        "tags",
-        "memory_tips",
-        "memory_image"
-      ],
-      "rounds": 0,
-      "attempts": 0,
+      "status": "complete",
+      "missing": [],
+      "rounds": 1,
+      "attempts": 1,
       "source_images": [
         "IMG_8359.JPG"
       ],
-      "last_errors": {}
+      "last_errors": {},
+      "completed_at": "2026-06-25T10:23:09Z"
     },
     "chromium": {
       "status": "complete",
@@ -46257,24 +45472,15 @@
       "completed_at": "2026-06-24T23:02:47Z"
     },
     "zinc": {
-      "status": "pending",
-      "missing": [
-        "definition",
-        "translation",
-        "pronunciation",
-        "part_of_speech",
-        "example",
-        "example_translation",
-        "tags",
-        "memory_tips",
-        "memory_image"
-      ],
-      "rounds": 0,
-      "attempts": 0,
+      "status": "complete",
+      "missing": [],
+      "rounds": 1,
+      "attempts": 1,
       "source_images": [
         "IMG_8359.JPG"
       ],
-      "last_errors": {}
+      "last_errors": {},
+      "completed_at": "2026-06-25T11:10:29Z"
     },
     "gallium": {
       "status": "complete",
@@ -46365,44 +45571,26 @@
       "completed_at": "2026-06-25T02:31:16Z"
     },
     "yttrium": {
-      "status": "pending",
-      "missing": [
-        "definition",
-        "translation",
-        "pronunciation",
-        "part_of_speech",
-        "example",
-        "example_translation",
-        "tags",
-        "memory_tips",
-        "memory_image"
-      ],
-      "rounds": 0,
-      "attempts": 0,
+      "status": "complete",
+      "missing": [],
+      "rounds": 1,
+      "attempts": 1,
       "source_images": [
         "IMG_8359.JPG"
       ],
-      "last_errors": {}
+      "last_errors": {},
+      "completed_at": "2026-06-25T11:08:05Z"
     },
     "zirconium": {
-      "status": "pending",
-      "missing": [
-        "definition",
-        "translation",
-        "pronunciation",
-        "part_of_speech",
-        "example",
-        "example_translation",
-        "tags",
-        "memory_tips",
-        "memory_image"
-      ],
-      "rounds": 0,
-      "attempts": 0,
+      "status": "complete",
+      "missing": [],
+      "rounds": 1,
+      "attempts": 1,
       "source_images": [
         "IMG_8359.JPG"
       ],
-      "last_errors": {}
+      "last_errors": {},
+      "completed_at": "2026-06-25T11:12:12Z"
     },
     "niobium": {
       "status": "complete",
@@ -46554,24 +45742,15 @@
       "completed_at": "2026-06-25T00:08:18Z"
     },
     "xenon": {
-      "status": "pending",
-      "missing": [
-        "definition",
-        "translation",
-        "pronunciation",
-        "part_of_speech",
-        "example",
-        "example_translation",
-        "tags",
-        "memory_tips",
-        "memory_image"
-      ],
-      "rounds": 0,
-      "attempts": 0,
+      "status": "complete",
+      "missing": [],
+      "rounds": 1,
+      "attempts": 1,
       "source_images": [
         "IMG_8359.JPG"
       ],
-      "last_errors": {}
+      "last_errors": {},
+      "completed_at": "2026-06-25T11:00:16Z"
     },
     "cesium": {
       "status": "complete",
@@ -46743,24 +45922,15 @@
       "completed_at": "2026-06-25T09:04:53Z"
     },
     "ytterbium": {
-      "status": "pending",
-      "missing": [
-        "definition",
-        "translation",
-        "pronunciation",
-        "part_of_speech",
-        "example",
-        "example_translation",
-        "tags",
-        "memory_tips",
-        "memory_image"
-      ],
-      "rounds": 0,
-      "attempts": 0,
+      "status": "complete",
+      "missing": [],
+      "rounds": 1,
+      "attempts": 1,
       "source_images": [
         "IMG_8359.JPG"
       ],
-      "last_errors": {}
+      "last_errors": {},
+      "completed_at": "2026-06-25T11:06:47Z"
     },
     "lutetium": {
       "status": "complete",
@@ -46798,24 +45968,15 @@
       "completed_at": "2026-06-25T07:57:44Z"
     },
     "tungsten": {
-      "status": "pending",
-      "missing": [
-        "definition",
-        "translation",
-        "pronunciation",
-        "part_of_speech",
-        "example",
-        "example_translation",
-        "tags",
-        "memory_tips",
-        "memory_image"
-      ],
-      "rounds": 0,
-      "attempts": 0,
+      "status": "complete",
+      "missing": [],
+      "rounds": 1,
+      "attempts": 1,
       "source_images": [
         "IMG_8359.JPG"
       ],
-      "last_errors": {}
+      "last_errors": {},
+      "completed_at": "2026-06-25T09:55:07Z"
     },
     "rhenium": {
       "status": "complete",
@@ -47006,24 +46167,15 @@
       "completed_at": "2026-06-25T01:24:20Z"
     },
     "uranium": {
-      "status": "pending",
-      "missing": [
-        "definition",
-        "translation",
-        "pronunciation",
-        "part_of_speech",
-        "example",
-        "example_translation",
-        "tags",
-        "memory_tips",
-        "memory_image"
-      ],
-      "rounds": 0,
-      "attempts": 0,
+      "status": "complete",
+      "missing": [],
+      "rounds": 1,
+      "attempts": 1,
       "source_images": [
         "IMG_8359.JPG"
       ],
-      "last_errors": {}
+      "last_errors": {},
+      "completed_at": "2026-06-25T10:15:18Z"
     },
     "neptunium": {
       "status": "complete",
@@ -47408,24 +46560,17 @@
       "completed_at": "2026-06-24T22:43:35Z"
     },
     "walks": {
-      "status": "pending",
-      "missing": [
-        "definition",
-        "translation",
-        "pronunciation",
-        "part_of_speech",
-        "example",
-        "example_translation",
-        "tags",
-        "memory_tips",
-        "memory_image"
-      ],
-      "rounds": 0,
-      "attempts": 0,
+      "status": "complete",
+      "missing": [],
+      "rounds": 1,
+      "attempts": 1,
       "source_images": [
         "IMG_8409.JPG"
       ],
-      "last_errors": {}
+      "last_errors": {},
+      "completed_at": "2026-06-25T10:36:25Z",
+      "skipped_reason": "exists_in_wordbase",
+      "wordbase_exists": true
     },
     "runs": {
       "status": "complete",
@@ -47524,24 +46669,17 @@
       "wordbase_exists": true
     },
     "with": {
-      "status": "pending",
-      "missing": [
-        "definition",
-        "translation",
-        "pronunciation",
-        "part_of_speech",
-        "example",
-        "example_translation",
-        "tags",
-        "memory_tips",
-        "memory_image"
-      ],
-      "rounds": 0,
-      "attempts": 0,
+      "status": "complete",
+      "missing": [],
+      "rounds": 1,
+      "attempts": 1,
       "source_images": [
         "IMG_8447.JPG"
       ],
-      "last_errors": {}
+      "last_errors": {},
+      "completed_at": "2026-06-25T10:48:20Z",
+      "skipped_reason": "exists_in_wordbase",
+      "wordbase_exists": true
     },
     "lily": {
       "status": "complete",
@@ -47724,24 +46862,17 @@
       "wordbase_exists": true
     },
     "women": {
-      "status": "pending",
-      "missing": [
-        "definition",
-        "translation",
-        "pronunciation",
-        "part_of_speech",
-        "example",
-        "example_translation",
-        "tags",
-        "memory_tips",
-        "memory_image"
-      ],
-      "rounds": 0,
-      "attempts": 0,
+      "status": "complete",
+      "missing": [],
+      "rounds": 1,
+      "attempts": 1,
       "source_images": [
         "IMG_8534.JPG"
       ],
-      "last_errors": {}
+      "last_errors": {},
+      "completed_at": "2026-06-25T10:50:03Z",
+      "skipped_reason": "exists_in_wordbase",
+      "wordbase_exists": true
     },
     "joined": {
       "status": "complete",

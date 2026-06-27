@@ -668,12 +668,10 @@
       "completed_at": "2026-06-25T06:08:53Z"
     },
     "good morning": {
-      "status": "failed",
+      "status": "complete",
       "missing": [],
-      "errors": {
-        "last": "AI request failed: {\"error\":{\"message\":\"***.InternalServerError: InternalServerError: OpenAIException -\",\"type\":\"upstream_error\",\"param\":\"\",\"code\":\"500\"}}"
-      },
-      "completed_at": null
+      "errors": {},
+      "completed_at": "2026-06-25T09:46:43Z"
     },
     "good afternoon": {
       "status": "complete",
@@ -982,12 +980,10 @@
       "completed_at": "2026-06-25T06:11:01Z"
     },
     "raise": {
-      "status": "failed",
+      "status": "complete",
       "missing": [],
-      "errors": {
-        "last": "Expected ',' or '}' after property value in JSON at position 109 (line 6 column 23)"
-      },
-      "completed_at": null
+      "errors": {},
+      "completed_at": "2026-06-25T09:47:36Z"
     },
     "answer": {
       "status": "complete",
@@ -1230,12 +1226,10 @@
       "completed_at": "2026-06-25T06:16:05Z"
     },
     "grandfather": {
-      "status": "failed",
+      "status": "complete",
       "missing": [],
-      "errors": {
-        "last": "AI request failed: {\"error\":{\"message\":\"***.InternalServerError: InternalServerError: OpenAIException -\",\"type\":\"upstream_error\",\"param\":\"\",\"code\":\"500\"}}"
-      },
-      "completed_at": null
+      "errors": {},
+      "completed_at": "2026-06-25T09:47:37Z"
     },
     "grandmother": {
       "status": "complete",
@@ -1244,12 +1238,10 @@
       "completed_at": "2026-06-25T06:16:06Z"
     },
     "grandpa": {
-      "status": "failed",
+      "status": "complete",
       "missing": [],
-      "errors": {
-        "last": "AI request failed: {\"error\":{\"message\":\"***.InternalServerError: InternalServerError: OpenAIException -\",\"type\":\"upstream_error\",\"param\":\"\",\"code\":\"500\"}}"
-      },
-      "completed_at": null
+      "errors": {},
+      "completed_at": "2026-06-25T09:49:11Z"
     },
     "grandma": {
       "status": "complete",
@@ -1378,12 +1370,10 @@
       "completed_at": "2026-06-25T06:18:14Z"
     },
     "toy": {
-      "status": "failed",
+      "status": "complete",
       "missing": [],
-      "errors": {
-        "last": "AI request failed: {\"error\":{\"message\":\"***.InternalServerError: InternalServerError: OpenAIException -\",\"type\":\"upstream_error\",\"param\":\"\",\"code\":\"500\"}}"
-      },
-      "completed_at": null
+      "errors": {},
+      "completed_at": "2026-06-25T09:49:58Z"
     },
     "photo": {
       "status": "complete",
@@ -1644,12 +1634,10 @@
       "completed_at": "2026-06-25T06:18:43Z"
     },
     "breakfast": {
-      "status": "failed",
+      "status": "complete",
       "missing": [],
-      "errors": {
-        "last": "AI request failed: {\"error\":{\"message\":\"***.InternalServerError: InternalServerError: OpenAIException -\",\"type\":\"upstream_error\",\"param\":\"\",\"code\":\"500\"}}"
-      },
-      "completed_at": null
+      "errors": {},
+      "completed_at": "2026-06-25T09:49:58Z"
     },
     "lunch": {
       "status": "complete",
@@ -1712,12 +1700,10 @@
       "completed_at": "2026-06-25T08:51:35Z"
     },
     "carrot": {
-      "status": "failed",
+      "status": "complete",
       "missing": [],
-      "errors": {
-        "last": "AI request failed: {\"error\":{\"message\":\"***.InternalServerError: InternalServerError: OpenAIException -\",\"type\":\"upstream_error\",\"param\":\"\",\"code\":\"500\"}}"
-      },
-      "completed_at": null
+      "errors": {},
+      "completed_at": "2026-06-25T09:49:59Z"
     },
     "potato": {
       "status": "complete",
@@ -1894,12 +1880,10 @@
       "completed_at": "2026-06-25T06:25:15Z"
     },
     "sheep": {
-      "status": "failed",
+      "status": "complete",
       "missing": [],
-      "errors": {
-        "last": "AI request failed: {\"error\":{\"message\":\"***.InternalServerError: InternalServerError: OpenAIException -\",\"type\":\"upstream_error\",\"param\":\"\",\"code\":\"500\"}}"
-      },
-      "completed_at": null
+      "errors": {},
+      "completed_at": "2026-06-25T09:49:59Z"
     },
     "horse": {
       "status": "complete",
@@ -2124,12 +2108,10 @@
       "completed_at": "2026-06-25T06:27:31Z"
     },
     "hop": {
-      "status": "failed",
+      "status": "complete",
       "missing": [],
-      "errors": {
-        "last": "AI request failed: {\"error\":{\"message\":\"***.InternalServerError: InternalServerError: OpenAIException -\",\"type\":\"upstream_error\",\"param\":\"\",\"code\":\"500\"}}"
-      },
-      "completed_at": null
+      "errors": {},
+      "completed_at": "2026-06-25T09:50:00Z"
     },
     "bark": {
       "status": "complete",

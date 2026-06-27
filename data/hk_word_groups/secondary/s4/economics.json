@@ -7,6 +7,15 @@
   "version": "2026.06",
   "display_name_en": "S4 Economics",
   "display_name_zh_hant": "中四經濟",
+  "source": {
+    "type": "curriculum_style_public_references",
+    "references": [
+      "EDB Economics Curriculum and Assessment Guide (Secondary 4-6)",
+      "EDB senior secondary Economics learning objectives",
+      "Public Hong Kong S4 Economics syllabus topic examples (basic economic concepts, demand and supply, elasticity, consumer and producer surplus, production and costs, market structures, market failure, macroeconomic indicators, inflation and unemployment, fiscal and monetary policy, international trade, economic growth, Hong Kong economy, factor markets, examination skills)"
+    ],
+    "note": "No fixed official Hong Kong S4 economics vocabulary list is prescribed; this list is theme-based for senior secondary S4 economics enrichment import. Term-only entries are completed during import."
+  },
   "words": [
     {
       "term": "opportunity cost",
@@ -326,6 +335,3702 @@
         "macroeconomics",
         "international-trade",
         "accounts"
+      ]
+    },
+    {
+      "term": "absolute advantage",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "international-trade-and-globalization"
+      ]
+    },
+    {
+      "term": "actual output",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "inflation-unemployment-and-macroeconomic-stability"
+      ]
+    },
+    {
+      "term": "adverse selection",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "market-failure-and-government-intervention"
+      ]
+    },
+    {
+      "term": "allocative efficiency",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "consumer-producer-surplus-and-welfare"
+      ]
+    },
+    {
+      "term": "analyze economic impact",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "hkdse-economic-analysis-and-examination-skills"
+      ]
+    },
+    {
+      "term": "appreciation of currency",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "international-trade-and-globalization"
+      ]
+    },
+    {
+      "term": "automatic stabilizer",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "fiscal-policy-and-public-finance"
+      ]
+    },
+    {
+      "term": "average fixed cost",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "production-costs-and-business-decisions"
+      ]
+    },
+    {
+      "term": "average variable cost",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "production-costs-and-business-decisions"
+      ]
+    },
+    {
+      "term": "banking sector regulation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "monetary-policy-and-financial-system"
+      ]
+    },
+    {
+      "term": "break-even output",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "production-costs-and-business-decisions"
+      ]
+    },
+    {
+      "term": "budget deficit",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "fiscal-policy-and-public-finance"
+      ]
+    },
+    {
+      "term": "budget surplus",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "fiscal-policy-and-public-finance"
+      ]
+    },
+    {
+      "term": "business cycle phase",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "macroeconomic-measurement-and-indicators"
+      ]
+    },
+    {
+      "term": "capital and financial account",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "international-trade-and-globalization"
+      ]
+    },
+    {
+      "term": "capital as factor",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "production-costs-and-business-decisions"
+      ]
+    },
+    {
+      "term": "capital market",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "factor-markets-and-income-distribution"
+      ]
+    },
+    {
+      "term": "central bank role",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "monetary-policy-and-financial-system"
+      ]
+    },
+    {
+      "term": "ceteris paribus assumption",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "hkdse-basic-economic-concepts-and-decision-making"
+      ]
+    },
+    {
+      "term": "choice in economics",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "hkdse-basic-economic-concepts-and-decision-making"
+      ]
+    },
+    {
+      "term": "collusion in oligopoly",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "market-structures-and-competition"
+      ]
+    },
+    {
+      "term": "commercial bank lending",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "monetary-policy-and-financial-system"
+      ]
+    },
+    {
+      "term": "comparative advantage",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "international-trade-and-globalization"
+      ]
+    },
+    {
+      "term": "compare economic scenarios",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "hkdse-economic-analysis-and-examination-skills"
+      ]
+    },
+    {
+      "term": "comparing elasticity across goods",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "elasticity-and-market-responsiveness"
+      ]
+    },
+    {
+      "term": "comparing factor market cases",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "factor-markets-and-income-distribution"
+      ]
+    },
+    {
+      "term": "comparing fiscal policy cases",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "fiscal-policy-and-public-finance"
+      ]
+    },
+    {
+      "term": "comparing growth experience",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "economic-growth-and-development"
+      ]
+    },
+    {
+      "term": "comparing Hong Kong business cycle",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "hong-kong-economy-and-policy-context"
+      ]
+    },
+    {
+      "term": "comparing inflation cases",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "inflation-unemployment-and-macroeconomic-stability"
+      ]
+    },
+    {
+      "term": "comparing intervention tools",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "market-failure-and-government-intervention"
+      ]
+    },
+    {
+      "term": "comparing macro indicators",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "macroeconomic-measurement-and-indicators"
+      ]
+    },
+    {
+      "term": "comparing market structures",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "market-structures-and-competition"
+      ]
+    },
+    {
+      "term": "comparing monetary policy tools",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "monetary-policy-and-financial-system"
+      ]
+    },
+    {
+      "term": "comparing trade policy",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "international-trade-and-globalization"
+      ]
+    },
+    {
+      "term": "comparing welfare outcomes",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "consumer-producer-surplus-and-welfare"
+      ]
+    },
+    {
+      "term": "competition policy objective",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "market-structures-and-competition"
+      ]
+    },
+    {
+      "term": "Consumer Price Index",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "macroeconomic-measurement-and-indicators"
+      ]
+    },
+    {
+      "term": "consumer surplus",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "consumer-producer-surplus-and-welfare"
+      ]
+    },
+    {
+      "term": "contractionary fiscal policy",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "fiscal-policy-and-public-finance"
+      ]
+    },
+    {
+      "term": "contractionary monetary policy",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "monetary-policy-and-financial-system"
+      ]
+    },
+    {
+      "term": "cost curve diagram",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "hkdse-economic-analysis-and-examination-skills"
+      ]
+    },
+    {
+      "term": "cost minimization",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "production-costs-and-business-decisions"
+      ]
+    },
+    {
+      "term": "cost-push inflation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "inflation-unemployment-and-macroeconomic-stability"
+      ]
+    },
+    {
+      "term": "cross elasticity of demand",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "elasticity-and-market-responsiveness"
+      ]
+    },
+    {
+      "term": "crowding out effect",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "fiscal-policy-and-public-finance"
+      ]
+    },
+    {
+      "term": "current account",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "international-trade-and-globalization"
+      ]
+    },
+    {
+      "term": "cyclical unemployment",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "inflation-unemployment-and-macroeconomic-stability"
+      ]
+    },
+    {
+      "term": "data interpretation in economics",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "hkdse-economic-analysis-and-examination-skills"
+      ]
+    },
+    {
+      "term": "data response question skill",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "hkdse-economic-analysis-and-examination-skills"
+      ]
+    },
+    {
+      "term": "deadweight loss",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "consumer-producer-surplus-and-welfare"
+      ]
+    },
+    {
+      "term": "define economic term precisely",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "hkdse-economic-analysis-and-examination-skills"
+      ]
+    },
+    {
+      "term": "deflation risk",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "inflation-unemployment-and-macroeconomic-stability"
+      ]
+    },
+    {
+      "term": "demand curve",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "demand-supply-and-market-equilibrium"
+      ]
+    },
+    {
+      "term": "demand schedule",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "demand-supply-and-market-equilibrium"
+      ]
+    },
+    {
+      "term": "demand supply diagram shift",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "hkdse-economic-analysis-and-examination-skills"
+      ]
+    },
+    {
+      "term": "demand-pull inflation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "inflation-unemployment-and-macroeconomic-stability"
+      ]
+    },
+    {
+      "term": "depreciation of currency",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "international-trade-and-globalization"
+      ]
+    },
+    {
+      "term": "determinants of demand",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "demand-supply-and-market-equilibrium"
+      ]
+    },
+    {
+      "term": "determinants of elasticity",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "elasticity-and-market-responsiveness"
+      ]
+    },
+    {
+      "term": "determinants of supply",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "demand-supply-and-market-equilibrium"
+      ]
+    },
+    {
+      "term": "developed economy feature",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "economic-growth-and-development"
+      ]
+    },
+    {
+      "term": "developing economy feature",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "economic-growth-and-development"
+      ]
+    },
+    {
+      "term": "development indicator",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "economic-growth-and-development"
+      ]
+    },
+    {
+      "term": "direct tax",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "fiscal-policy-and-public-finance"
+      ]
+    },
+    {
+      "term": "discretionary fiscal policy",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "fiscal-policy-and-public-finance"
+      ]
+    },
+    {
+      "term": "diseconomies of scale",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "production-costs-and-business-decisions"
+      ]
+    },
+    {
+      "term": "economic development case study",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "economic-growth-and-development"
+      ]
+    },
+    {
+      "term": "economic diagram drawing",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "hkdse-economic-analysis-and-examination-skills"
+      ]
+    },
+    {
+      "term": "economic growth definition",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "economic-growth-and-development"
+      ]
+    },
+    {
+      "term": "economic hypothesis",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "hkdse-basic-economic-concepts-and-decision-making"
+      ]
+    },
+    {
+      "term": "economic model",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "hkdse-basic-economic-concepts-and-decision-making"
+      ]
+    },
+    {
+      "term": "economic problem",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "hkdse-basic-economic-concepts-and-decision-making"
+      ]
+    },
+    {
+      "term": "economic vulnerability in Hong Kong",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "hong-kong-economy-and-policy-context"
+      ]
+    },
+    {
+      "term": "economies of scale barrier",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "market-structures-and-competition"
+      ]
+    },
+    {
+      "term": "efficiency in resource use",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "hkdse-basic-economic-concepts-and-decision-making"
+      ]
+    },
+    {
+      "term": "elastic demand",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "elasticity-and-market-responsiveness"
+      ]
+    },
+    {
+      "term": "elasticity application case study",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "elasticity-and-market-responsiveness"
+      ]
+    },
+    {
+      "term": "elasticity calculation skill",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "hkdse-economic-analysis-and-examination-skills"
+      ]
+    },
+    {
+      "term": "elasticity coefficient calculation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "elasticity-and-market-responsiveness"
+      ]
+    },
+    {
+      "term": "elasticity diagram interpretation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "elasticity-and-market-responsiveness"
+      ]
+    },
+    {
+      "term": "elasticity in policy design",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "elasticity-and-market-responsiveness"
+      ]
+    },
+    {
+      "term": "entrepreneurship",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "production-costs-and-business-decisions"
+      ]
+    },
+    {
+      "term": "entry and exit freedom",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "market-structures-and-competition"
+      ]
+    },
+    {
+      "term": "equity in resource distribution",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "hkdse-basic-economic-concepts-and-decision-making"
+      ]
+    },
+    {
+      "term": "equity versus efficiency trade-off",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "consumer-producer-surplus-and-welfare"
+      ]
+    },
+    {
+      "term": "evaluate economic choice",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "hkdse-basic-economic-concepts-and-decision-making"
+      ]
+    },
+    {
+      "term": "evaluate economic policy",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "hkdse-economic-analysis-and-examination-skills"
+      ]
+    },
+    {
+      "term": "evaluate production decision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "production-costs-and-business-decisions"
+      ]
+    },
+    {
+      "term": "evaluating development policy",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "economic-growth-and-development"
+      ]
+    },
+    {
+      "term": "evaluating elasticity estimate",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "elasticity-and-market-responsiveness"
+      ]
+    },
+    {
+      "term": "evaluating fiscal stimulus",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "fiscal-policy-and-public-finance"
+      ]
+    },
+    {
+      "term": "evaluating Hong Kong economic policy",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "hong-kong-economy-and-policy-context"
+      ]
+    },
+    {
+      "term": "evaluating income policy",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "factor-markets-and-income-distribution"
+      ]
+    },
+    {
+      "term": "evaluating interest rate decision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "monetary-policy-and-financial-system"
+      ]
+    },
+    {
+      "term": "evaluating intervention effectiveness",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "market-failure-and-government-intervention"
+      ]
+    },
+    {
+      "term": "evaluating market intervention",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "consumer-producer-surplus-and-welfare"
+      ]
+    },
+    {
+      "term": "evaluating market performance",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "market-structures-and-competition"
+      ]
+    },
+    {
+      "term": "evaluating protectionism",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "international-trade-and-globalization"
+      ]
+    },
+    {
+      "term": "evaluating unemployment policy",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "inflation-unemployment-and-macroeconomic-stability"
+      ]
+    },
+    {
+      "term": "examination time management",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "hkdse-economic-analysis-and-examination-skills"
+      ]
+    },
+    {
+      "term": "excess demand",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "demand-supply-and-market-equilibrium"
+      ]
+    },
+    {
+      "term": "excess supply",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "demand-supply-and-market-equilibrium"
+      ]
+    },
+    {
+      "term": "exchange rate",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "international-trade-and-globalization"
+      ]
+    },
+    {
+      "term": "exchange rate link effect",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "monetary-policy-and-financial-system"
+      ]
+    },
+    {
+      "term": "expansion phase",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "macroeconomic-measurement-and-indicators"
+      ]
+    },
+    {
+      "term": "expansionary fiscal policy",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "fiscal-policy-and-public-finance"
+      ]
+    },
+    {
+      "term": "expansionary monetary policy",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "monetary-policy-and-financial-system"
+      ]
+    },
+    {
+      "term": "expenditure approach to GDP",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "macroeconomic-measurement-and-indicators"
+      ]
+    },
+    {
+      "term": "explain economic mechanism",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "hkdse-economic-analysis-and-examination-skills"
+      ]
+    },
+    {
+      "term": "export of goods",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "international-trade-and-globalization"
+      ]
+    },
+    {
+      "term": "externality",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "market-failure-and-government-intervention"
+      ]
+    },
+    {
+      "term": "factor market diagram analysis",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "factor-markets-and-income-distribution"
+      ]
+    },
+    {
+      "term": "factors of production",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "production-costs-and-business-decisions"
+      ]
+    },
+    {
+      "term": "financial centre role",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "hong-kong-economy-and-policy-context"
+      ]
+    },
+    {
+      "term": "financial system stability",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "monetary-policy-and-financial-system"
+      ]
+    },
+    {
+      "term": "fiscal policy definition",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "fiscal-policy-and-public-finance"
+      ]
+    },
+    {
+      "term": "fiscal policy in Hong Kong context",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "fiscal-policy-and-public-finance"
+      ]
+    },
+    {
+      "term": "Fiscal Reserve in Hong Kong",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "hong-kong-economy-and-policy-context"
+      ]
+    },
+    {
+      "term": "free rider problem",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "market-failure-and-government-intervention"
+      ]
+    },
+    {
+      "term": "free trade agreement",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "international-trade-and-globalization"
+      ]
+    },
+    {
+      "term": "frictional unemployment",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "inflation-unemployment-and-macroeconomic-stability"
+      ]
+    },
+    {
+      "term": "GDP deflator",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "macroeconomic-measurement-and-indicators"
+      ]
+    },
+    {
+      "term": "GDP growth rate",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "macroeconomic-measurement-and-indicators"
+      ]
+    },
+    {
+      "term": "GDP per capita",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "macroeconomic-measurement-and-indicators"
+      ]
+    },
+    {
+      "term": "Gini coefficient",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "economic-growth-and-development"
+      ]
+    },
+    {
+      "term": "globalization impact",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "international-trade-and-globalization"
+      ]
+    },
+    {
+      "term": "government budget",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "fiscal-policy-and-public-finance"
+      ]
+    },
+    {
+      "term": "government expenditure",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "fiscal-policy-and-public-finance"
+      ]
+    },
+    {
+      "term": "government regulation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "market-failure-and-government-intervention"
+      ]
+    },
+    {
+      "term": "government revenue source in Hong Kong",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "hong-kong-economy-and-policy-context"
+      ]
+    },
+    {
+      "term": "Greater Bay Area economic link",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "hong-kong-economy-and-policy-context"
+      ]
+    },
+    {
+      "term": "Gross National Product",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "macroeconomic-measurement-and-indicators"
+      ]
+    },
+    {
+      "term": "growth versus environment trade-off",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "economic-growth-and-development"
+      ]
+    },
+    {
+      "term": "HKDSE economics examination skill",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "hkdse-basic-economic-concepts-and-decision-making"
+      ]
+    },
+    {
+      "term": "Hong Kong competitiveness factor",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "hong-kong-economy-and-policy-context"
+      ]
+    },
+    {
+      "term": "Hong Kong economic case study",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "hong-kong-economy-and-policy-context"
+      ]
+    },
+    {
+      "term": "Hong Kong economic challenge",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "hong-kong-economy-and-policy-context"
+      ]
+    },
+    {
+      "term": "Hong Kong economic structure",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "hong-kong-economy-and-policy-context"
+      ]
+    },
+    {
+      "term": "Hong Kong monetary system",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "monetary-policy-and-financial-system"
+      ]
+    },
+    {
+      "term": "Hong Kong trade pattern",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "international-trade-and-globalization"
+      ]
+    },
+    {
+      "term": "human capital investment",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "economic-growth-and-development"
+      ]
+    },
+    {
+      "term": "Human Development Index",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "economic-growth-and-development"
+      ]
+    },
+    {
+      "term": "hyperinflation risk",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "inflation-unemployment-and-macroeconomic-stability"
+      ]
+    },
+    {
+      "term": "import of goods",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "international-trade-and-globalization"
+      ]
+    },
+    {
+      "term": "import quota",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "international-trade-and-globalization"
+      ]
+    },
+    {
+      "term": "inclusive growth concept",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "economic-growth-and-development"
+      ]
+    },
+    {
+      "term": "income approach to GDP",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "macroeconomic-measurement-and-indicators"
+      ]
+    },
+    {
+      "term": "income distribution pattern",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "factor-markets-and-income-distribution"
+      ]
+    },
+    {
+      "term": "income effect",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "demand-supply-and-market-equilibrium"
+      ]
+    },
+    {
+      "term": "income elasticity of demand",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "elasticity-and-market-responsiveness"
+      ]
+    },
+    {
+      "term": "income inequality measure",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "economic-growth-and-development"
+      ]
+    },
+    {
+      "term": "index number calculation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "hkdse-economic-analysis-and-examination-skills"
+      ]
+    },
+    {
+      "term": "indirect tax",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "fiscal-policy-and-public-finance"
+      ]
+    },
+    {
+      "term": "inelastic demand",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "elasticity-and-market-responsiveness"
+      ]
+    },
+    {
+      "term": "inflation expectation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "inflation-unemployment-and-macroeconomic-stability"
+      ]
+    },
+    {
+      "term": "inflation rate calculation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "macroeconomic-measurement-and-indicators"
+      ]
+    },
+    {
+      "term": "inflation targeting framework",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "monetary-policy-and-financial-system"
+      ]
+    },
+    {
+      "term": "information asymmetry",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "market-failure-and-government-intervention"
+      ]
+    },
+    {
+      "term": "institutional quality",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "economic-growth-and-development"
+      ]
+    },
+    {
+      "term": "interest rate as price of capital",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "factor-markets-and-income-distribution"
+      ]
+    },
+    {
+      "term": "interest rate policy",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "monetary-policy-and-financial-system"
+      ]
+    },
+    {
+      "term": "intergenerational mobility",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "factor-markets-and-income-distribution"
+      ]
+    },
+    {
+      "term": "international trade benefit",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "international-trade-and-globalization"
+      ]
+    },
+    {
+      "term": "interpreting macro data",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "macroeconomic-measurement-and-indicators"
+      ]
+    },
+    {
+      "term": "investment decision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "factor-markets-and-income-distribution"
+      ]
+    },
+    {
+      "term": "labour as factor",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "production-costs-and-business-decisions"
+      ]
+    },
+    {
+      "term": "labour demand",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "factor-markets-and-income-distribution"
+      ]
+    },
+    {
+      "term": "labour market equilibrium",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "factor-markets-and-income-distribution"
+      ]
+    },
+    {
+      "term": "labour market in Hong Kong",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "hong-kong-economy-and-policy-context"
+      ]
+    },
+    {
+      "term": "labour supply",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "factor-markets-and-income-distribution"
+      ]
+    },
+    {
+      "term": "lagging economic indicator",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "macroeconomic-measurement-and-indicators"
+      ]
+    },
+    {
+      "term": "land as factor",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "production-costs-and-business-decisions"
+      ]
+    },
+    {
+      "term": "land rent",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "factor-markets-and-income-distribution"
+      ]
+    },
+    {
+      "term": "law of demand",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "demand-supply-and-market-equilibrium"
+      ]
+    },
+    {
+      "term": "law of diminishing marginal returns",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "production-costs-and-business-decisions"
+      ]
+    },
+    {
+      "term": "law of supply",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "demand-supply-and-market-equilibrium"
+      ]
+    },
+    {
+      "term": "leading economic indicator",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "macroeconomic-measurement-and-indicators"
+      ]
+    },
+    {
+      "term": "limited resources",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "hkdse-basic-economic-concepts-and-decision-making"
+      ]
+    },
+    {
+      "term": "Linked Exchange Rate System",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "hong-kong-economy-and-policy-context"
+      ]
+    },
+    {
+      "term": "liquidity management",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "monetary-policy-and-financial-system"
+      ]
+    },
+    {
+      "term": "logistics industry in Hong Kong",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "hong-kong-economy-and-policy-context"
+      ]
+    },
+    {
+      "term": "long run elasticity",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "elasticity-and-market-responsiveness"
+      ]
+    },
+    {
+      "term": "long run growth trend",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "economic-growth-and-development"
+      ]
+    },
+    {
+      "term": "long run neutrality debate",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "inflation-unemployment-and-macroeconomic-stability"
+      ]
+    },
+    {
+      "term": "long run production",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "production-costs-and-business-decisions"
+      ]
+    },
+    {
+      "term": "Lorenz curve",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "economic-growth-and-development"
+      ]
+    },
+    {
+      "term": "luxury good elasticity",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "elasticity-and-market-responsiveness"
+      ]
+    },
+    {
+      "term": "macro indicator graph",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "hkdse-economic-analysis-and-examination-skills"
+      ]
+    },
+    {
+      "term": "macro indicator limitation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "macroeconomic-measurement-and-indicators"
+      ]
+    },
+    {
+      "term": "macro stability case study",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "inflation-unemployment-and-macroeconomic-stability"
+      ]
+    },
+    {
+      "term": "macroeconomic stability goal",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "inflation-unemployment-and-macroeconomic-stability"
+      ]
+    },
+    {
+      "term": "macroeconomics overview",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "macroeconomic-measurement-and-indicators"
+      ]
+    },
+    {
+      "term": "Mainland economic integration",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "hong-kong-economy-and-policy-context"
+      ]
+    },
+    {
+      "term": "marginal analysis",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "hkdse-basic-economic-concepts-and-decision-making"
+      ]
+    },
+    {
+      "term": "marginal cost",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "hkdse-basic-economic-concepts-and-decision-making"
+      ]
+    },
+    {
+      "term": "marginal cost curve",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "production-costs-and-business-decisions"
+      ]
+    },
+    {
+      "term": "marginal revenue product",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "factor-markets-and-income-distribution"
+      ]
+    },
+    {
+      "term": "marginal utility",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "hkdse-basic-economic-concepts-and-decision-making"
+      ]
+    },
+    {
+      "term": "market clearing process",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "demand-supply-and-market-equilibrium"
+      ]
+    },
+    {
+      "term": "market concentration ratio",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "market-structures-and-competition"
+      ]
+    },
+    {
+      "term": "market efficiency",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "consumer-producer-surplus-and-welfare"
+      ]
+    },
+    {
+      "term": "market equilibrium price",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "demand-supply-and-market-equilibrium"
+      ]
+    },
+    {
+      "term": "market equilibrium quantity",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "demand-supply-and-market-equilibrium"
+      ]
+    },
+    {
+      "term": "market failure",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "market-failure-and-government-intervention"
+      ]
+    },
+    {
+      "term": "market failure case analysis",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "market-failure-and-government-intervention"
+      ]
+    },
+    {
+      "term": "market power",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "market-structures-and-competition"
+      ]
+    },
+    {
+      "term": "market structure case study",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "market-structures-and-competition"
+      ]
+    },
+    {
+      "term": "market structure classification",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "market-structures-and-competition"
+      ]
+    },
+    {
+      "term": "market structure diagram",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "hkdse-economic-analysis-and-examination-skills"
+      ]
+    },
+    {
+      "term": "minimum wage effect",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "consumer-producer-surplus-and-welfare"
+      ]
+    },
+    {
+      "term": "minimum wage labour effect",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "factor-markets-and-income-distribution"
+      ]
+    },
+    {
+      "term": "minimum wage policy in Hong Kong",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "hong-kong-economy-and-policy-context"
+      ]
+    },
+    {
+      "term": "monetary policy case study",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "monetary-policy-and-financial-system"
+      ]
+    },
+    {
+      "term": "monetary policy definition",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "monetary-policy-and-financial-system"
+      ]
+    },
+    {
+      "term": "monetary policy time lag",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "monetary-policy-and-financial-system"
+      ]
+    },
+    {
+      "term": "money multiplier",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "monetary-policy-and-financial-system"
+      ]
+    },
+    {
+      "term": "money supply",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "monetary-policy-and-financial-system"
+      ]
+    },
+    {
+      "term": "monopolistic competition",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "market-structures-and-competition"
+      ]
+    },
+    {
+      "term": "monopoly market",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "market-structures-and-competition"
+      ]
+    },
+    {
+      "term": "monopsony labour market",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "factor-markets-and-income-distribution"
+      ]
+    },
+    {
+      "term": "moral hazard",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "market-failure-and-government-intervention"
+      ]
+    },
+    {
+      "term": "movement along demand curve",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "demand-supply-and-market-equilibrium"
+      ]
+    },
+    {
+      "term": "movement along supply curve",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "demand-supply-and-market-equilibrium"
+      ]
+    },
+    {
+      "term": "multiple choice elimination strategy",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "hkdse-economic-analysis-and-examination-skills"
+      ]
+    },
+    {
+      "term": "multiplier effect in fiscal policy",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "fiscal-policy-and-public-finance"
+      ]
+    },
+    {
+      "term": "national income accounting",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "macroeconomic-measurement-and-indicators"
+      ]
+    },
+    {
+      "term": "natural monopoly",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "market-structures-and-competition"
+      ]
+    },
+    {
+      "term": "natural rate of unemployment",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "inflation-unemployment-and-macroeconomic-stability"
+      ]
+    },
+    {
+      "term": "necessity good elasticity",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "elasticity-and-market-responsiveness"
+      ]
+    },
+    {
+      "term": "negative externality",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "market-failure-and-government-intervention"
+      ]
+    },
+    {
+      "term": "nominal GDP",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "macroeconomic-measurement-and-indicators"
+      ]
+    },
+    {
+      "term": "non-price competition",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "market-structures-and-competition"
+      ]
+    },
+    {
+      "term": "normative economics",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "hkdse-basic-economic-concepts-and-decision-making"
+      ]
+    },
+    {
+      "term": "oligopolistic market",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "market-structures-and-competition"
+      ]
+    },
+    {
+      "term": "opportunity cost illustration",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "hkdse-basic-economic-concepts-and-decision-making"
+      ]
+    },
+    {
+      "term": "output gap",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "inflation-unemployment-and-macroeconomic-stability"
+      ]
+    },
+    {
+      "term": "Pareto efficiency concept",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "consumer-producer-surplus-and-welfare"
+      ]
+    },
+    {
+      "term": "patent as barrier",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "market-structures-and-competition"
+      ]
+    },
+    {
+      "term": "percentage change calculation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "hkdse-economic-analysis-and-examination-skills"
+      ]
+    },
+    {
+      "term": "perfectly competitive market",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "market-structures-and-competition"
+      ]
+    },
+    {
+      "term": "Phillips curve concept",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "inflation-unemployment-and-macroeconomic-stability"
+      ]
+    },
+    {
+      "term": "physical capital accumulation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "economic-growth-and-development"
+      ]
+    },
+    {
+      "term": "Pigouvian tax",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "market-failure-and-government-intervention"
+      ]
+    },
+    {
+      "term": "policy interest rate",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "monetary-policy-and-financial-system"
+      ]
+    },
+    {
+      "term": "positive economics",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "hkdse-basic-economic-concepts-and-decision-making"
+      ]
+    },
+    {
+      "term": "positive externality",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "market-failure-and-government-intervention"
+      ]
+    },
+    {
+      "term": "potential output",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "inflation-unemployment-and-macroeconomic-stability"
+      ]
+    },
+    {
+      "term": "poverty rate",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "economic-growth-and-development"
+      ]
+    },
+    {
+      "term": "price adjustment mechanism",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "demand-supply-and-market-equilibrium"
+      ]
+    },
+    {
+      "term": "price ceiling effect",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "consumer-producer-surplus-and-welfare"
+      ]
+    },
+    {
+      "term": "price elasticity of demand",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "elasticity-and-market-responsiveness"
+      ]
+    },
+    {
+      "term": "price elasticity of supply",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "elasticity-and-market-responsiveness"
+      ]
+    },
+    {
+      "term": "price floor effect",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "consumer-producer-surplus-and-welfare"
+      ]
+    },
+    {
+      "term": "price maker",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "market-structures-and-competition"
+      ]
+    },
+    {
+      "term": "price taker",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "market-structures-and-competition"
+      ]
+    },
+    {
+      "term": "price war in oligopoly",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "market-structures-and-competition"
+      ]
+    },
+    {
+      "term": "private benefit",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "market-failure-and-government-intervention"
+      ]
+    },
+    {
+      "term": "private cost",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "market-failure-and-government-intervention"
+      ]
+    },
+    {
+      "term": "producer surplus",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "consumer-producer-surplus-and-welfare"
+      ]
+    },
+    {
+      "term": "product differentiation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "market-structures-and-competition"
+      ]
+    },
+    {
+      "term": "production approach to GDP",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "macroeconomic-measurement-and-indicators"
+      ]
+    },
+    {
+      "term": "production function",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "production-costs-and-business-decisions"
+      ]
+    },
+    {
+      "term": "production possibility frontier",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "hkdse-basic-economic-concepts-and-decision-making"
+      ]
+    },
+    {
+      "term": "productive efficiency",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "consumer-producer-surplus-and-welfare"
+      ]
+    },
+    {
+      "term": "productivity growth",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "economic-growth-and-development"
+      ]
+    },
+    {
+      "term": "profit as income",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "factor-markets-and-income-distribution"
+      ]
+    },
+    {
+      "term": "profit maximization rule",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "production-costs-and-business-decisions"
+      ]
+    },
+    {
+      "term": "progressive tax",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "fiscal-policy-and-public-finance"
+      ]
+    },
+    {
+      "term": "property market in Hong Kong",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "hong-kong-economy-and-policy-context"
+      ]
+    },
+    {
+      "term": "property rights assignment",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "market-failure-and-government-intervention"
+      ]
+    },
+    {
+      "term": "public debt",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "fiscal-policy-and-public-finance"
+      ]
+    },
+    {
+      "term": "public finance sustainability",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "fiscal-policy-and-public-finance"
+      ]
+    },
+    {
+      "term": "public good",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "market-failure-and-government-intervention"
+      ]
+    },
+    {
+      "term": "public housing subsidy in Hong Kong",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "hong-kong-economy-and-policy-context"
+      ]
+    },
+    {
+      "term": "purchasing power erosion",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "inflation-unemployment-and-macroeconomic-stability"
+      ]
+    },
+    {
+      "term": "quantitative easing",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "monetary-policy-and-financial-system"
+      ]
+    },
+    {
+      "term": "rational decision making",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "hkdse-basic-economic-concepts-and-decision-making"
+      ]
+    },
+    {
+      "term": "real GDP",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "macroeconomic-measurement-and-indicators"
+      ]
+    },
+    {
+      "term": "recession definition",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "macroeconomic-measurement-and-indicators"
+      ]
+    },
+    {
+      "term": "redistributive policy",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "factor-markets-and-income-distribution"
+      ]
+    },
+    {
+      "term": "regressive tax",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "fiscal-policy-and-public-finance"
+      ]
+    },
+    {
+      "term": "rent control effect",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "consumer-producer-surplus-and-welfare"
+      ]
+    },
+    {
+      "term": "returns to scale",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "production-costs-and-business-decisions"
+      ]
+    },
+    {
+      "term": "saving decision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "factor-markets-and-income-distribution"
+      ]
+    },
+    {
+      "term": "senior secondary economics synthesis",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "hkdse-economic-analysis-and-examination-skills"
+      ]
+    },
+    {
+      "term": "service sector dominance",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "hong-kong-economy-and-policy-context"
+      ]
+    },
+    {
+      "term": "shift in demand curve",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "demand-supply-and-market-equilibrium"
+      ]
+    },
+    {
+      "term": "shift in supply curve",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "demand-supply-and-market-equilibrium"
+      ]
+    },
+    {
+      "term": "short run elasticity",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "elasticity-and-market-responsiveness"
+      ]
+    },
+    {
+      "term": "short run production",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "production-costs-and-business-decisions"
+      ]
+    },
+    {
+      "term": "short run trade-off debate",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "inflation-unemployment-and-macroeconomic-stability"
+      ]
+    },
+    {
+      "term": "shutdown decision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "production-costs-and-business-decisions"
+      ]
+    },
+    {
+      "term": "simultaneous shift analysis",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "demand-supply-and-market-equilibrium"
+      ]
+    },
+    {
+      "term": "social benefit",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "market-failure-and-government-intervention"
+      ]
+    },
+    {
+      "term": "social cost",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "market-failure-and-government-intervention"
+      ]
+    },
+    {
+      "term": "specialization in trade",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "international-trade-and-globalization"
+      ]
+    },
+    {
+      "term": "stagflation situation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "inflation-unemployment-and-macroeconomic-stability"
+      ]
+    },
+    {
+      "term": "structural unemployment",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "inflation-unemployment-and-macroeconomic-stability"
+      ]
+    },
+    {
+      "term": "structured economics essay",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "hkdse-economic-analysis-and-examination-skills"
+      ]
+    },
+    {
+      "term": "subsidy benefit distribution",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "consumer-producer-surplus-and-welfare"
+      ]
+    },
+    {
+      "term": "subsidy effect and elasticity",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "elasticity-and-market-responsiveness"
+      ]
+    },
+    {
+      "term": "subsidy for positive externality",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "market-failure-and-government-intervention"
+      ]
+    },
+    {
+      "term": "substitution effect",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "demand-supply-and-market-equilibrium"
+      ]
+    },
+    {
+      "term": "supply curve",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "demand-supply-and-market-equilibrium"
+      ]
+    },
+    {
+      "term": "supply schedule",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "demand-supply-and-market-equilibrium"
+      ]
+    },
+    {
+      "term": "surplus diagram analysis",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "consumer-producer-surplus-and-welfare"
+      ]
+    },
+    {
+      "term": "sustainable economic growth",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "economic-growth-and-development"
+      ]
+    },
+    {
+      "term": "table data analysis",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "hkdse-economic-analysis-and-examination-skills"
+      ]
+    },
+    {
+      "term": "tariff on imports",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "international-trade-and-globalization"
+      ]
+    },
+    {
+      "term": "tax burden sharing",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "consumer-producer-surplus-and-welfare"
+      ]
+    },
+    {
+      "term": "tax incidence and elasticity",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "elasticity-and-market-responsiveness"
+      ]
+    },
+    {
+      "term": "technological progress",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "economic-growth-and-development"
+      ]
+    },
+    {
+      "term": "total cost",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "production-costs-and-business-decisions"
+      ]
+    },
+    {
+      "term": "total revenue and elasticity",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "elasticity-and-market-responsiveness"
+      ]
+    },
+    {
+      "term": "total surplus",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "consumer-producer-surplus-and-welfare"
+      ]
+    },
+    {
+      "term": "tourism economy in Hong Kong",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "hong-kong-economy-and-policy-context"
+      ]
+    },
+    {
+      "term": "tradable permit scheme",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "market-failure-and-government-intervention"
+      ]
+    },
+    {
+      "term": "trade balance",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "international-trade-and-globalization"
+      ]
+    },
+    {
+      "term": "trade deficit",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "international-trade-and-globalization"
+      ]
+    },
+    {
+      "term": "trade hub function",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "hong-kong-economy-and-policy-context"
+      ]
+    },
+    {
+      "term": "trade surplus",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "international-trade-and-globalization"
+      ]
+    },
+    {
+      "term": "trade union bargaining",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "factor-markets-and-income-distribution"
+      ]
+    },
+    {
+      "term": "trade-off",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "hkdse-basic-economic-concepts-and-decision-making"
+      ]
+    },
+    {
+      "term": "transfer payment",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "fiscal-policy-and-public-finance"
+      ]
+    },
+    {
+      "term": "transmission mechanism",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "monetary-policy-and-financial-system"
+      ]
+    },
+    {
+      "term": "unit elastic demand",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "elasticity-and-market-responsiveness"
+      ]
+    },
+    {
+      "term": "unlimited wants",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "hkdse-basic-economic-concepts-and-decision-making"
+      ]
+    },
+    {
+      "term": "use Hong Kong example in answer",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "hkdse-economic-analysis-and-examination-skills"
+      ]
+    },
+    {
+      "term": "utility maximization",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "hkdse-basic-economic-concepts-and-decision-making"
+      ]
+    },
+    {
+      "term": "variable cost",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "production-costs-and-business-decisions"
+      ]
+    },
+    {
+      "term": "wage determination",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "factor-markets-and-income-distribution"
+      ]
+    },
+    {
+      "term": "wealth inequality",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "factor-markets-and-income-distribution"
+      ]
+    },
+    {
+      "term": "welfare change calculation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "consumer-producer-surplus-and-welfare"
+      ]
+    },
+    {
+      "term": "welfare economics",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "consumer-producer-surplus-and-welfare"
+      ]
+    },
+    {
+      "term": "welfare gain from trade",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "economics",
+        "curriculum-style",
+        "consumer-producer-surplus-and-welfare"
       ]
     }
   ]

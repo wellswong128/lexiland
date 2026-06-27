@@ -7,6 +7,15 @@
   "version": "2026.06",
   "display_name_en": "S4 History",
   "display_name_zh_hant": "中四歷史",
+  "source": {
+    "type": "curriculum_style_public_references",
+    "references": [
+      "EDB History Curriculum and Assessment Guide (Secondary 4-6)",
+      "EDB senior secondary History elective learning objectives",
+      "Public Hong Kong S4 History syllabus topic examples (historical inquiry and fieldwork, modern China, Hong Kong modern development, colonial rule and social change, economy and urbanization, governance and law, culture and identity, Sino-British relations and handover, post-1997 Hong Kong, 20th-century Asia in global context)"
+    ],
+    "note": "No fixed official Hong Kong S4 history vocabulary list is prescribed; this list is theme-based for senior secondary S4 history enrichment import. Term-only entries are completed during import."
+  },
   "words": [
     {
       "term": "sovereignty",
@@ -305,6 +314,3471 @@
         "history",
         "economy",
         "characteristics"
+      ]
+    },
+    {
+      "term": "1967 riots in Hong Kong",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "wartime-hong-kong-and-social-upheaval"
+      ]
+    },
+    {
+      "term": "accountability in government",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "hong-kong-governance-and-legal-development"
+      ]
+    },
+    {
+      "term": "Allied occupation of Japan",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "japan-and-20th-century-east-asia"
+      ]
+    },
+    {
+      "term": "anti-corruption reform",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "hong-kong-governance-and-legal-development"
+      ]
+    },
+    {
+      "term": "apply history to present issue",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "thematic-synthesis-and-public-history"
+      ]
+    },
+    {
+      "term": "Asia-Pacific regional change",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "cold-war-and-global-context-for-hong-kong"
+      ]
+    },
+    {
+      "term": "assess historical change",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "hkdse-historical-skills-and-inquiry"
+      ]
+    },
+    {
+      "term": "Basic Law drafting process",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "sino-british-relations-and-handover"
+      ]
+    },
+    {
+      "term": "Basic Law of Hong Kong",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "hong-kong-governance-and-legal-development"
+      ]
+    },
+    {
+      "term": "Battle of Hong Kong",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "wartime-hong-kong-and-social-upheaval"
+      ]
+    },
+    {
+      "term": "bias in historical source",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "source-analysis-and-historical-evidence"
+      ]
+    },
+    {
+      "term": "bilingual education policy",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "hong-kong-culture-education-and-identity"
+      ]
+    },
+    {
+      "term": "Black Market in Hong Kong",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "wartime-hong-kong-and-social-upheaval"
+      ]
+    },
+    {
+      "term": "Boxer Rebellion",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "modern-china-late-qing-and-crisis"
+      ]
+    },
+    {
+      "term": "British occupation of Hong Kong Island",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "early-hong-kong-and-colonial-establishment"
+      ]
+    },
+    {
+      "term": "cause and consequence essay",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "thematic-synthesis-and-public-history"
+      ]
+    },
+    {
+      "term": "central government authority",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "sino-british-relations-and-handover"
+      ]
+    },
+    {
+      "term": "cession of Hong Kong Island",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "early-hong-kong-and-colonial-establishment"
+      ]
+    },
+    {
+      "term": "change after handover",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "sino-british-relations-and-handover"
+      ]
+    },
+    {
+      "term": "Chinese and English in Hong Kong",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "hong-kong-culture-education-and-identity"
+      ]
+    },
+    {
+      "term": "Chinese Civil War",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "chinese-revolution-and-20th-century-politics"
+      ]
+    },
+    {
+      "term": "Chinese Communist Party",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "chinese-revolution-and-20th-century-politics"
+      ]
+    },
+    {
+      "term": "Chinese community in early Hong Kong",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "early-hong-kong-and-colonial-establishment"
+      ]
+    },
+    {
+      "term": "Chinese nationalism",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "chinese-revolution-and-20th-century-politics"
+      ]
+    },
+    {
+      "term": "civic awareness in Hong Kong",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "hong-kong-culture-education-and-identity"
+      ]
+    },
+    {
+      "term": "civil service in Hong Kong",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "hong-kong-governance-and-legal-development"
+      ]
+    },
+    {
+      "term": "Cold War global context",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "cold-war-and-global-context-for-hong-kong"
+      ]
+    },
+    {
+      "term": "Cold War in East Asia",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "japan-and-20th-century-east-asia"
+      ]
+    },
+    {
+      "term": "collective memory in Hong Kong",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "hong-kong-culture-education-and-identity"
+      ]
+    },
+    {
+      "term": "colonial administration in Hong Kong",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "early-hong-kong-and-colonial-establishment"
+      ]
+    },
+    {
+      "term": "colonial education in Hong Kong",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "early-hong-kong-and-colonial-establishment"
+      ]
+    },
+    {
+      "term": "colonial governance in Hong Kong",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "hong-kong-governance-and-legal-development"
+      ]
+    },
+    {
+      "term": "colonial legal system in Hong Kong",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "early-hong-kong-and-colonial-establishment"
+      ]
+    },
+    {
+      "term": "colonial urban development",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "early-hong-kong-and-colonial-establishment"
+      ]
+    },
+    {
+      "term": "commemorative activity",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "thematic-synthesis-and-public-history"
+      ]
+    },
+    {
+      "term": "common law system in Hong Kong",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "hong-kong-governance-and-legal-development"
+      ]
+    },
+    {
+      "term": "communicate historical findings",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "hkdse-historical-skills-and-inquiry"
+      ]
+    },
+    {
+      "term": "communist revolution in China",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "cold-war-and-global-context-for-hong-kong"
+      ]
+    },
+    {
+      "term": "community history research",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "thematic-synthesis-and-public-history"
+      ]
+    },
+    {
+      "term": "community organization in Hong Kong",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "hong-kong-society-and-urban-development"
+      ]
+    },
+    {
+      "term": "community resilience",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "wartime-hong-kong-and-social-upheaval"
+      ]
+    },
+    {
+      "term": "compare China and Japan modernization",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "japan-and-20th-century-east-asia"
+      ]
+    },
+    {
+      "term": "compare historical developments",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "hkdse-historical-skills-and-inquiry"
+      ]
+    },
+    {
+      "term": "compare two sources",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "source-analysis-and-historical-evidence"
+      ]
+    },
+    {
+      "term": "constitutional development debate",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "hong-kong-governance-and-legal-development"
+      ]
+    },
+    {
+      "term": "constitutional status of Hong Kong",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "sino-british-relations-and-handover"
+      ]
+    },
+    {
+      "term": "continuity after handover",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "sino-british-relations-and-handover"
+      ]
+    },
+    {
+      "term": "continuity and change in modern China",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "chinese-revolution-and-20th-century-politics"
+      ]
+    },
+    {
+      "term": "corroboration of evidence",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "source-analysis-and-historical-evidence"
+      ]
+    },
+    {
+      "term": "cross-border economic link",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "hong-kong-economy-and-industrial-transformation"
+      ]
+    },
+    {
+      "term": "cross-boundary movement",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "post-1997-hong-kong-and-regional-integration"
+      ]
+    },
+    {
+      "term": "cultural diversity in Hong Kong",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "hong-kong-culture-education-and-identity"
+      ]
+    },
+    {
+      "term": "cultural exchange in Hong Kong",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "hong-kong-culture-education-and-identity"
+      ]
+    },
+    {
+      "term": "Cultural Revolution",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "chinese-revolution-and-20th-century-politics"
+      ]
+    },
+    {
+      "term": "data-based question",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "hkdse-historical-skills-and-inquiry"
+      ]
+    },
+    {
+      "term": "decline of Qing China",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "modern-china-late-qing-and-crisis"
+      ]
+    },
+    {
+      "term": "decolonization context",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "cold-war-and-global-context-for-hong-kong"
+      ]
+    },
+    {
+      "term": "demographic challenge in Hong Kong",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "post-1997-hong-kong-and-regional-integration"
+      ]
+    },
+    {
+      "term": "demographic change in Hong Kong",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "hong-kong-society-and-urban-development"
+      ]
+    },
+    {
+      "term": "Deng Xiaoping reform",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "chinese-revolution-and-20th-century-politics"
+      ]
+    },
+    {
+      "term": "district council",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "hong-kong-governance-and-legal-development"
+      ]
+    },
+    {
+      "term": "early Hong Kong history",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "early-hong-kong-and-colonial-establishment"
+      ]
+    },
+    {
+      "term": "East Asian international relations",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "japan-and-20th-century-east-asia"
+      ]
+    },
+    {
+      "term": "East Asian regional order",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "japan-and-20th-century-east-asia"
+      ]
+    },
+    {
+      "term": "economic crisis in Hong Kong",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "hong-kong-economy-and-industrial-transformation"
+      ]
+    },
+    {
+      "term": "economic integration with mainland",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "post-1997-hong-kong-and-regional-integration"
+      ]
+    },
+    {
+      "term": "economic miracle in Japan",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "japan-and-20th-century-east-asia"
+      ]
+    },
+    {
+      "term": "economic planning in Hong Kong",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "hong-kong-economy-and-industrial-transformation"
+      ]
+    },
+    {
+      "term": "economic resilience in Hong Kong",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "hong-kong-economy-and-industrial-transformation"
+      ]
+    },
+    {
+      "term": "economic restructuring",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "hong-kong-economy-and-industrial-transformation"
+      ]
+    },
+    {
+      "term": "economic transformation period",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "hong-kong-economy-and-industrial-transformation"
+      ]
+    },
+    {
+      "term": "end of imperial China",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "modern-china-late-qing-and-crisis"
+      ]
+    },
+    {
+      "term": "entrepot trade",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "hong-kong-economy-and-industrial-transformation"
+      ]
+    },
+    {
+      "term": "essay question in history",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "hkdse-historical-skills-and-inquiry"
+      ]
+    },
+    {
+      "term": "evaluate colonial establishment",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "early-hong-kong-and-colonial-establishment"
+      ]
+    },
+    {
+      "term": "evaluate cultural development",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "hong-kong-culture-education-and-identity"
+      ]
+    },
+    {
+      "term": "evaluate global context impact",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "cold-war-and-global-context-for-hong-kong"
+      ]
+    },
+    {
+      "term": "evaluate governance development",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "hong-kong-governance-and-legal-development"
+      ]
+    },
+    {
+      "term": "evaluate handover process",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "sino-british-relations-and-handover"
+      ]
+    },
+    {
+      "term": "evaluate historical significance",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "hkdse-historical-skills-and-inquiry"
+      ]
+    },
+    {
+      "term": "evaluate Hong Kong economic change",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "hong-kong-economy-and-industrial-transformation"
+      ]
+    },
+    {
+      "term": "evaluate Japanese expansion",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "japan-and-20th-century-east-asia"
+      ]
+    },
+    {
+      "term": "evaluate late Qing reform",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "modern-china-late-qing-and-crisis"
+      ]
+    },
+    {
+      "term": "evaluate modern Chinese revolution",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "chinese-revolution-and-20th-century-politics"
+      ]
+    },
+    {
+      "term": "evaluate post-1997 development",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "post-1997-hong-kong-and-regional-integration"
+      ]
+    },
+    {
+      "term": "evaluate social crisis response",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "wartime-hong-kong-and-social-upheaval"
+      ]
+    },
+    {
+      "term": "evaluate source value",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "source-analysis-and-historical-evidence"
+      ]
+    },
+    {
+      "term": "evaluate urban development impact",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "hong-kong-society-and-urban-development"
+      ]
+    },
+    {
+      "term": "Executive and Legislative Council",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "early-hong-kong-and-colonial-establishment"
+      ]
+    },
+    {
+      "term": "executive-led government",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "hong-kong-governance-and-legal-development"
+      ]
+    },
+    {
+      "term": "export-oriented economy",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "hong-kong-economy-and-industrial-transformation"
+      ]
+    },
+    {
+      "term": "extract information from source",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "source-analysis-and-historical-evidence"
+      ]
+    },
+    {
+      "term": "festival tradition in Hong Kong",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "hong-kong-culture-education-and-identity"
+      ]
+    },
+    {
+      "term": "fieldwork in history",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "hkdse-historical-skills-and-inquiry"
+      ]
+    },
+    {
+      "term": "financial centre development",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "hong-kong-economy-and-industrial-transformation"
+      ]
+    },
+    {
+      "term": "financial market integration",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "post-1997-hong-kong-and-regional-integration"
+      ]
+    },
+    {
+      "term": "foreign concession in China",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "modern-china-late-qing-and-crisis"
+      ]
+    },
+    {
+      "term": "foreign investment in Hong Kong",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "cold-war-and-global-context-for-hong-kong"
+      ]
+    },
+    {
+      "term": "foreign policy factor",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "cold-war-and-global-context-for-hong-kong"
+      ]
+    },
+    {
+      "term": "foreign relations of Hong Kong",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "sino-british-relations-and-handover"
+      ]
+    },
+    {
+      "term": "foundation of modern Hong Kong",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "early-hong-kong-and-colonial-establishment"
+      ]
+    },
+    {
+      "term": "free port status",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "early-hong-kong-and-colonial-establishment"
+      ]
+    },
+    {
+      "term": "future development planning",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "post-1997-hong-kong-and-regional-integration"
+      ]
+    },
+    {
+      "term": "global city role of Hong Kong",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "post-1997-hong-kong-and-regional-integration"
+      ]
+    },
+    {
+      "term": "global economic connection",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "hong-kong-economy-and-industrial-transformation"
+      ]
+    },
+    {
+      "term": "global economic shift",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "cold-war-and-global-context-for-hong-kong"
+      ]
+    },
+    {
+      "term": "global history connection",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "cold-war-and-global-context-for-hong-kong"
+      ]
+    },
+    {
+      "term": "global issue and local response",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "cold-war-and-global-context-for-hong-kong"
+      ]
+    },
+    {
+      "term": "globalization impact on Hong Kong",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "cold-war-and-global-context-for-hong-kong"
+      ]
+    },
+    {
+      "term": "governance after handover",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "hong-kong-governance-and-legal-development"
+      ]
+    },
+    {
+      "term": "Governor of Hong Kong",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "early-hong-kong-and-colonial-establishment"
+      ]
+    },
+    {
+      "term": "Great Leap Forward",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "chinese-revolution-and-20th-century-politics"
+      ]
+    },
+    {
+      "term": "Greater Bay Area development",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "post-1997-hong-kong-and-regional-integration"
+      ]
+    },
+    {
+      "term": "Greater Bay Area economy",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "hong-kong-economy-and-industrial-transformation"
+      ]
+    },
+    {
+      "term": "Greater East Asia Co-Prosperity Sphere",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "japan-and-20th-century-east-asia"
+      ]
+    },
+    {
+      "term": "handover of Hong Kong",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "sino-british-relations-and-handover"
+      ]
+    },
+    {
+      "term": "harbour development",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "hong-kong-society-and-urban-development"
+      ]
+    },
+    {
+      "term": "heritage conservation in Hong Kong",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "hong-kong-culture-education-and-identity"
+      ]
+    },
+    {
+      "term": "heritage trail study",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "thematic-synthesis-and-public-history"
+      ]
+    },
+    {
+      "term": "high degree of autonomy",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "hong-kong-governance-and-legal-development"
+      ]
+    },
+    {
+      "term": "historical argument",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "hkdse-historical-skills-and-inquiry"
+      ]
+    },
+    {
+      "term": "historical change analysis",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "thematic-synthesis-and-public-history"
+      ]
+    },
+    {
+      "term": "historical continuity analysis",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "thematic-synthesis-and-public-history"
+      ]
+    },
+    {
+      "term": "historical debate skill",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "thematic-synthesis-and-public-history"
+      ]
+    },
+    {
+      "term": "historical documentary",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "thematic-synthesis-and-public-history"
+      ]
+    },
+    {
+      "term": "historical empathy in study",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "thematic-synthesis-and-public-history"
+      ]
+    },
+    {
+      "term": "historical ethics",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "thematic-synthesis-and-public-history"
+      ]
+    },
+    {
+      "term": "historical evaluation essay",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "thematic-synthesis-and-public-history"
+      ]
+    },
+    {
+      "term": "historical inquiry",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "hkdse-historical-skills-and-inquiry"
+      ]
+    },
+    {
+      "term": "historical interpretation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "hkdse-historical-skills-and-inquiry"
+      ]
+    },
+    {
+      "term": "historical investigation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "hkdse-historical-skills-and-inquiry"
+      ]
+    },
+    {
+      "term": "historical link between local and global",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "cold-war-and-global-context-for-hong-kong"
+      ]
+    },
+    {
+      "term": "historical memory of crisis",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "wartime-hong-kong-and-social-upheaval"
+      ]
+    },
+    {
+      "term": "historical presentation skill",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "thematic-synthesis-and-public-history"
+      ]
+    },
+    {
+      "term": "historical significance of handover",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "sino-british-relations-and-handover"
+      ]
+    },
+    {
+      "term": "historical site visit",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "thematic-synthesis-and-public-history"
+      ]
+    },
+    {
+      "term": "historical synthesis",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "hkdse-historical-skills-and-inquiry"
+      ]
+    },
+    {
+      "term": "historical theme comparison",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "thematic-synthesis-and-public-history"
+      ]
+    },
+    {
+      "term": "HKDSE history examination skill",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "hkdse-historical-skills-and-inquiry"
+      ]
+    },
+    {
+      "term": "Hong Kong cultural heritage",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "hong-kong-culture-education-and-identity"
+      ]
+    },
+    {
+      "term": "Hong Kong economic development",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "hong-kong-economy-and-industrial-transformation"
+      ]
+    },
+    {
+      "term": "Hong Kong Special Administrative Region status",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "sino-british-relations-and-handover"
+      ]
+    },
+    {
+      "term": "housing policy challenge",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "post-1997-hong-kong-and-regional-integration"
+      ]
+    },
+    {
+      "term": "housing shortage in Hong Kong",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "hong-kong-society-and-urban-development"
+      ]
+    },
+    {
+      "term": "Hundred Days' Reform",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "modern-china-late-qing-and-crisis"
+      ]
+    },
+    {
+      "term": "hypothesis in history",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "hkdse-historical-skills-and-inquiry"
+      ]
+    },
+    {
+      "term": "identity debate in Hong Kong",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "post-1997-hong-kong-and-regional-integration"
+      ]
+    },
+    {
+      "term": "identity formation process",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "hong-kong-culture-education-and-identity"
+      ]
+    },
+    {
+      "term": "impact of Cold War on Hong Kong",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "cold-war-and-global-context-for-hong-kong"
+      ]
+    },
+    {
+      "term": "impact of unrest on governance",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "wartime-hong-kong-and-social-upheaval"
+      ]
+    },
+    {
+      "term": "impact of war on East Asia",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "japan-and-20th-century-east-asia"
+      ]
+    },
+    {
+      "term": "impact of war on society",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "wartime-hong-kong-and-social-upheaval"
+      ]
+    },
+    {
+      "term": "Independent Commission Against Corruption",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "hong-kong-governance-and-legal-development"
+      ]
+    },
+    {
+      "term": "independent judiciary",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "hong-kong-governance-and-legal-development"
+      ]
+    },
+    {
+      "term": "industrial district",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "hong-kong-economy-and-industrial-transformation"
+      ]
+    },
+    {
+      "term": "industrial take-off in Hong Kong",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "hong-kong-economy-and-industrial-transformation"
+      ]
+    },
+    {
+      "term": "infrastructure link with mainland",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "post-1997-hong-kong-and-regional-integration"
+      ]
+    },
+    {
+      "term": "international agreement on Hong Kong",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "sino-british-relations-and-handover"
+      ]
+    },
+    {
+      "term": "international diplomacy",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "cold-war-and-global-context-for-hong-kong"
+      ]
+    },
+    {
+      "term": "international finance centre",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "post-1997-hong-kong-and-regional-integration"
+      ]
+    },
+    {
+      "term": "international financial network",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "cold-war-and-global-context-for-hong-kong"
+      ]
+    },
+    {
+      "term": "international migration link",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "cold-war-and-global-context-for-hong-kong"
+      ]
+    },
+    {
+      "term": "international organization role",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "cold-war-and-global-context-for-hong-kong"
+      ]
+    },
+    {
+      "term": "international trade under Cold War",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "cold-war-and-global-context-for-hong-kong"
+      ]
+    },
+    {
+      "term": "interpret source in context",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "source-analysis-and-historical-evidence"
+      ]
+    },
+    {
+      "term": "Japanese imperial expansion",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "japan-and-20th-century-east-asia"
+      ]
+    },
+    {
+      "term": "Japanese invasion of China",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "japan-and-20th-century-east-asia"
+      ]
+    },
+    {
+      "term": "Japanese occupation in Asia",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "japan-and-20th-century-east-asia"
+      ]
+    },
+    {
+      "term": "Japanese occupation of Hong Kong",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "wartime-hong-kong-and-social-upheaval"
+      ]
+    },
+    {
+      "term": "Japanese surrender",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "japan-and-20th-century-east-asia"
+      ]
+    },
+    {
+      "term": "Joint Declaration",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "sino-british-relations-and-handover"
+      ]
+    },
+    {
+      "term": "Korean Peninsula division",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "japan-and-20th-century-east-asia"
+      ]
+    },
+    {
+      "term": "Kowloon Peninsula cession",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "early-hong-kong-and-colonial-establishment"
+      ]
+    },
+    {
+      "term": "Kuomintang",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "chinese-revolution-and-20th-century-politics"
+      ]
+    },
+    {
+      "term": "labour dispute in Hong Kong",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "wartime-hong-kong-and-social-upheaval"
+      ]
+    },
+    {
+      "term": "labour movement in Hong Kong",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "hong-kong-society-and-urban-development"
+      ]
+    },
+    {
+      "term": "labour-intensive industry",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "hong-kong-economy-and-industrial-transformation"
+      ]
+    },
+    {
+      "term": "land reclamation in Hong Kong",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "hong-kong-society-and-urban-development"
+      ]
+    },
+    {
+      "term": "late Qing Dynasty",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "modern-china-late-qing-and-crisis"
+      ]
+    },
+    {
+      "term": "legal protection of rights",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "hong-kong-governance-and-legal-development"
+      ]
+    },
+    {
+      "term": "Legislative Council election",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "hong-kong-governance-and-legal-development"
+      ]
+    },
+    {
+      "term": "lesson from social upheaval",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "wartime-hong-kong-and-social-upheaval"
+      ]
+    },
+    {
+      "term": "limitation of evidence",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "source-analysis-and-historical-evidence"
+      ]
+    },
+    {
+      "term": "living environment change",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "hong-kong-society-and-urban-development"
+      ]
+    },
+    {
+      "term": "local government authority",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "sino-british-relations-and-handover"
+      ]
+    },
+    {
+      "term": "local history awareness",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "hong-kong-culture-education-and-identity"
+      ]
+    },
+    {
+      "term": "local history project",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "thematic-synthesis-and-public-history"
+      ]
+    },
+    {
+      "term": "local identity in Hong Kong",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "hong-kong-culture-education-and-identity"
+      ]
+    },
+    {
+      "term": "Long March",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "chinese-revolution-and-20th-century-politics"
+      ]
+    },
+    {
+      "term": "manufacturing industry in Hong Kong",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "hong-kong-economy-and-industrial-transformation"
+      ]
+    },
+    {
+      "term": "Mao Zedong era",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "chinese-revolution-and-20th-century-politics"
+      ]
+    },
+    {
+      "term": "map as historical source",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "source-analysis-and-historical-evidence"
+      ]
+    },
+    {
+      "term": "May Fourth Movement",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "chinese-revolution-and-20th-century-politics"
+      ]
+    },
+    {
+      "term": "media development in Hong Kong",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "hong-kong-culture-education-and-identity"
+      ]
+    },
+    {
+      "term": "Meiji Restoration",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "japan-and-20th-century-east-asia"
+      ]
+    },
+    {
+      "term": "modernization attempt in Qing",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "modern-china-late-qing-and-crisis"
+      ]
+    },
+    {
+      "term": "modernization of Japan",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "japan-and-20th-century-east-asia"
+      ]
+    },
+    {
+      "term": "multiple perspectives in history",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "hkdse-historical-skills-and-inquiry"
+      ]
+    },
+    {
+      "term": "museum exhibition",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "thematic-synthesis-and-public-history"
+      ]
+    },
+    {
+      "term": "national development participation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "post-1997-hong-kong-and-regional-integration"
+      ]
+    },
+    {
+      "term": "national humiliation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "modern-china-late-qing-and-crisis"
+      ]
+    },
+    {
+      "term": "New Territories lease",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "early-hong-kong-and-colonial-establishment"
+      ]
+    },
+    {
+      "term": "new town development",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "hong-kong-society-and-urban-development"
+      ]
+    },
+    {
+      "term": "newspaper as historical source",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "source-analysis-and-historical-evidence"
+      ]
+    },
+    {
+      "term": "Northern Expedition",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "chinese-revolution-and-20th-century-politics"
+      ]
+    },
+    {
+      "term": "official document analysis",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "source-analysis-and-historical-evidence"
+      ]
+    },
+    {
+      "term": "one country two systems",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "hong-kong-governance-and-legal-development"
+      ]
+    },
+    {
+      "term": "one country two systems arrangement",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "sino-british-relations-and-handover"
+      ]
+    },
+    {
+      "term": "one country two systems practice",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "post-1997-hong-kong-and-regional-integration"
+      ]
+    },
+    {
+      "term": "Opium War",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "modern-china-late-qing-and-crisis"
+      ]
+    },
+    {
+      "term": "oral history source",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "source-analysis-and-historical-evidence"
+      ]
+    },
+    {
+      "term": "Pacific War",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "japan-and-20th-century-east-asia"
+      ]
+    },
+    {
+      "term": "People's Republic of China founded",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "chinese-revolution-and-20th-century-politics"
+      ]
+    },
+    {
+      "term": "photograph as historical evidence",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "source-analysis-and-historical-evidence"
+      ]
+    },
+    {
+      "term": "police reform in Hong Kong",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "hong-kong-governance-and-legal-development"
+      ]
+    },
+    {
+      "term": "political fragmentation in early republic",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "modern-china-late-qing-and-crisis"
+      ]
+    },
+    {
+      "term": "political reform in Hong Kong",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "hong-kong-governance-and-legal-development"
+      ]
+    },
+    {
+      "term": "political reform in late Qing",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "modern-china-late-qing-and-crisis"
+      ]
+    },
+    {
+      "term": "political tension in society",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "wartime-hong-kong-and-social-upheaval"
+      ]
+    },
+    {
+      "term": "political transformation in China",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "chinese-revolution-and-20th-century-politics"
+      ]
+    },
+    {
+      "term": "popular culture in Hong Kong",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "hong-kong-culture-education-and-identity"
+      ]
+    },
+    {
+      "term": "population growth in Hong Kong",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "hong-kong-society-and-urban-development"
+      ]
+    },
+    {
+      "term": "post-1997 Hong Kong development",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "post-1997-hong-kong-and-regional-integration"
+      ]
+    },
+    {
+      "term": "post-handover governance framework",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "sino-british-relations-and-handover"
+      ]
+    },
+    {
+      "term": "post-war Japanese recovery",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "japan-and-20th-century-east-asia"
+      ]
+    },
+    {
+      "term": "post-war recovery in Hong Kong",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "wartime-hong-kong-and-social-upheaval"
+      ]
+    },
+    {
+      "term": "pre-handover political debate",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "sino-british-relations-and-handover"
+      ]
+    },
+    {
+      "term": "primary source analysis",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "source-analysis-and-historical-evidence"
+      ]
+    },
+    {
+      "term": "professional education in Hong Kong",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "hong-kong-culture-education-and-identity"
+      ]
+    },
+    {
+      "term": "property market development",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "hong-kong-economy-and-industrial-transformation"
+      ]
+    },
+    {
+      "term": "protest movement in Hong Kong",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "wartime-hong-kong-and-social-upheaval"
+      ]
+    },
+    {
+      "term": "public administration reform",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "hong-kong-governance-and-legal-development"
+      ]
+    },
+    {
+      "term": "public health crisis response",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "post-1997-hong-kong-and-regional-integration"
+      ]
+    },
+    {
+      "term": "public history",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "thematic-synthesis-and-public-history"
+      ]
+    },
+    {
+      "term": "public housing programme",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "hong-kong-society-and-urban-development"
+      ]
+    },
+    {
+      "term": "public order issue",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "wartime-hong-kong-and-social-upheaval"
+      ]
+    },
+    {
+      "term": "quality of life improvement",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "hong-kong-society-and-urban-development"
+      ]
+    },
+    {
+      "term": "reflect on historical learning",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "hkdse-historical-skills-and-inquiry"
+      ]
+    },
+    {
+      "term": "Reform and Opening Up",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "chinese-revolution-and-20th-century-politics"
+      ]
+    },
+    {
+      "term": "refugee flow during Cold War",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "cold-war-and-global-context-for-hong-kong"
+      ]
+    },
+    {
+      "term": "refugee influx to Hong Kong",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "hong-kong-society-and-urban-development"
+      ]
+    },
+    {
+      "term": "regional conflict in East Asia",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "japan-and-20th-century-east-asia"
+      ]
+    },
+    {
+      "term": "regional cooperation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "post-1997-hong-kong-and-regional-integration"
+      ]
+    },
+    {
+      "term": "regional economic integration",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "hong-kong-economy-and-industrial-transformation"
+      ]
+    },
+    {
+      "term": "regional trade hub",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "early-hong-kong-and-colonial-establishment"
+      ]
+    },
+    {
+      "term": "reliability of source",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "source-analysis-and-historical-evidence"
+      ]
+    },
+    {
+      "term": "religious community in Hong Kong",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "hong-kong-culture-education-and-identity"
+      ]
+    },
+    {
+      "term": "Republic of China founded",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "modern-china-late-qing-and-crisis"
+      ]
+    },
+    {
+      "term": "research question in history",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "hkdse-historical-skills-and-inquiry"
+      ]
+    },
+    {
+      "term": "rise of modern China",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "chinese-revolution-and-20th-century-politics"
+      ]
+    },
+    {
+      "term": "rule of law in Hong Kong",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "hong-kong-governance-and-legal-development"
+      ]
+    },
+    {
+      "term": "rule of law maintenance",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "post-1997-hong-kong-and-regional-integration"
+      ]
+    },
+    {
+      "term": "school system development",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "hong-kong-culture-education-and-identity"
+      ]
+    },
+    {
+      "term": "search for national salvation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "modern-china-late-qing-and-crisis"
+      ]
+    },
+    {
+      "term": "Second Sino-Japanese War",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "japan-and-20th-century-east-asia"
+      ]
+    },
+    {
+      "term": "secondary source analysis",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "source-analysis-and-historical-evidence"
+      ]
+    },
+    {
+      "term": "Self-Strengthening Movement",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "modern-china-late-qing-and-crisis"
+      ]
+    },
+    {
+      "term": "senior secondary history synthesis",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "thematic-synthesis-and-public-history"
+      ]
+    },
+    {
+      "term": "sense of belonging",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "hong-kong-culture-education-and-identity"
+      ]
+    },
+    {
+      "term": "service economy in Hong Kong",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "hong-kong-economy-and-industrial-transformation"
+      ]
+    },
+    {
+      "term": "significance essay",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "thematic-synthesis-and-public-history"
+      ]
+    },
+    {
+      "term": "Sino-British negotiation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "sino-british-relations-and-handover"
+      ]
+    },
+    {
+      "term": "Sino-British relations",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "sino-british-relations-and-handover"
+      ]
+    },
+    {
+      "term": "Sino-Japanese War",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "japan-and-20th-century-east-asia"
+      ]
+    },
+    {
+      "term": "social adaptation after crisis",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "wartime-hong-kong-and-social-upheaval"
+      ]
+    },
+    {
+      "term": "social cohesion",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "post-1997-hong-kong-and-regional-integration"
+      ]
+    },
+    {
+      "term": "social consensus building",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "hong-kong-culture-education-and-identity"
+      ]
+    },
+    {
+      "term": "social crisis in late Qing",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "modern-china-late-qing-and-crisis"
+      ]
+    },
+    {
+      "term": "social hierarchy in colonial Hong Kong",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "early-hong-kong-and-colonial-establishment"
+      ]
+    },
+    {
+      "term": "social inequality in Hong Kong",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "hong-kong-society-and-urban-development"
+      ]
+    },
+    {
+      "term": "social mobility in Hong Kong",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "hong-kong-society-and-urban-development"
+      ]
+    },
+    {
+      "term": "social policy development",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "post-1997-hong-kong-and-regional-integration"
+      ]
+    },
+    {
+      "term": "social stability",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "wartime-hong-kong-and-social-upheaval"
+      ]
+    },
+    {
+      "term": "social transformation in China",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "chinese-revolution-and-20th-century-politics"
+      ]
+    },
+    {
+      "term": "social transformation in Hong Kong",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "hong-kong-society-and-urban-development"
+      ]
+    },
+    {
+      "term": "social unrest in Hong Kong",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "wartime-hong-kong-and-social-upheaval"
+      ]
+    },
+    {
+      "term": "social welfare development",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "hong-kong-society-and-urban-development"
+      ]
+    },
+    {
+      "term": "source-based historical writing",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "source-analysis-and-historical-evidence"
+      ]
+    },
+    {
+      "term": "source-based question",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "hkdse-historical-skills-and-inquiry"
+      ]
+    },
+    {
+      "term": "sovereignty restoration",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "sino-british-relations-and-handover"
+      ]
+    },
+    {
+      "term": "special economic zone in China",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "chinese-revolution-and-20th-century-politics"
+      ]
+    },
+    {
+      "term": "squatter settlement",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "hong-kong-society-and-urban-development"
+      ]
+    },
+    {
+      "term": "statistical evidence in history",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "source-analysis-and-historical-evidence"
+      ]
+    },
+    {
+      "term": "stock market development",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "hong-kong-economy-and-industrial-transformation"
+      ]
+    },
+    {
+      "term": "structured essay",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "hkdse-historical-skills-and-inquiry"
+      ]
+    },
+    {
+      "term": "student movement in Hong Kong",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "wartime-hong-kong-and-social-upheaval"
+      ]
+    },
+    {
+      "term": "support argument with evidence",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "source-analysis-and-historical-evidence"
+      ]
+    },
+    {
+      "term": "Taiwan and cross-strait relations",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "chinese-revolution-and-20th-century-politics"
+      ]
+    },
+    {
+      "term": "talent mobility",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "post-1997-hong-kong-and-regional-integration"
+      ]
+    },
+    {
+      "term": "technological change impact",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "cold-war-and-global-context-for-hong-kong"
+      ]
+    },
+    {
+      "term": "thematic essay",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "hkdse-historical-skills-and-inquiry"
+      ]
+    },
+    {
+      "term": "thematic study in history",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "thematic-synthesis-and-public-history"
+      ]
+    },
+    {
+      "term": "through train arrangement",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "sino-british-relations-and-handover"
+      ]
+    },
+    {
+      "term": "trading post economy",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "early-hong-kong-and-colonial-establishment"
+      ]
+    },
+    {
+      "term": "transition period before 1997",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "sino-british-relations-and-handover"
+      ]
+    },
+    {
+      "term": "transport infrastructure in Hong Kong",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "hong-kong-society-and-urban-development"
+      ]
+    },
+    {
+      "term": "Treaty of Nanking",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "modern-china-late-qing-and-crisis"
+      ]
+    },
+    {
+      "term": "Treaty of Nanking impact on Hong Kong",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "early-hong-kong-and-colonial-establishment"
+      ]
+    },
+    {
+      "term": "treaty port function of Hong Kong",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "early-hong-kong-and-colonial-establishment"
+      ]
+    },
+    {
+      "term": "treaty port network",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "modern-china-late-qing-and-crisis"
+      ]
+    },
+    {
+      "term": "unequal treaty system",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "modern-china-late-qing-and-crisis"
+      ]
+    },
+    {
+      "term": "United Nations and Hong Kong question",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "cold-war-and-global-context-for-hong-kong"
+      ]
+    },
+    {
+      "term": "university expansion in Hong Kong",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "hong-kong-culture-education-and-identity"
+      ]
+    },
+    {
+      "term": "urban development in Hong Kong",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "hong-kong-society-and-urban-development"
+      ]
+    },
+    {
+      "term": "urban planning in Hong Kong",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "hong-kong-society-and-urban-development"
+      ]
+    },
+    {
+      "term": "utility of source",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "source-analysis-and-historical-evidence"
+      ]
+    },
+    {
+      "term": "visual historical source",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "source-analysis-and-historical-evidence"
+      ]
+    },
+    {
+      "term": "War of Resistance against Japan",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "chinese-revolution-and-20th-century-politics"
+      ]
+    },
+    {
+      "term": "wartime hardship in Hong Kong",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "wartime-hong-kong-and-social-upheaval"
+      ]
+    },
+    {
+      "term": "wartime refugee movement",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "wartime-hong-kong-and-social-upheaval"
+      ]
+    },
+    {
+      "term": "weigh historical evidence",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "hkdse-historical-skills-and-inquiry"
+      ]
+    },
+    {
+      "term": "Western community in early Hong Kong",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "early-hong-kong-and-colonial-establishment"
+      ]
+    },
+    {
+      "term": "Western influence in China",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "modern-china-late-qing-and-crisis"
+      ]
+    },
+    {
+      "term": "written historical source",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "source-analysis-and-historical-evidence"
+      ]
+    },
+    {
+      "term": "Xinhai Revolution",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "history",
+        "curriculum-style",
+        "modern-china-late-qing-and-crisis"
       ]
     }
   ]

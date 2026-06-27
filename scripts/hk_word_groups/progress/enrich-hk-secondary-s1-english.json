@@ -782,12 +782,10 @@
       "completed_at": "2026-06-25T06:37:39Z"
     },
     "whispers": {
-      "status": "failed",
+      "status": "complete",
       "missing": [],
-      "errors": {
-        "last": "AI request failed: {\"error\":{\"message\":\"***.InternalServerError: InternalServerError: OpenAIException -\",\"type\":\"upstream_error\",\"param\":\"\",\"code\":\"500\"}}"
-      },
-      "completed_at": null
+      "errors": {},
+      "completed_at": "2026-06-25T10:41:01Z"
     },
     "inviting": {
       "status": "complete",
@@ -1072,12 +1070,10 @@
       "completed_at": "2026-06-25T07:03:47Z"
     },
     "subjects": {
-      "status": "failed",
+      "status": "complete",
       "missing": [],
-      "errors": {
-        "last": "AI request failed: {\"error\":{\"message\":\"***.InternalServerError: InternalServerError: OpenAIException -\",\"type\":\"upstream_error\",\"param\":\"\",\"code\":\"500\"}}"
-      },
-      "completed_at": null
+      "errors": {},
+      "completed_at": "2026-06-25T10:41:01Z"
     },
     "teamed": {
       "status": "complete",
@@ -1320,12 +1316,10 @@
       "completed_at": "2026-06-25T07:24:09Z"
     },
     "wafting": {
-      "status": "failed",
+      "status": "complete",
       "missing": [],
-      "errors": {
-        "last": "AI request failed: {\"error\":{\"message\":\"***.InternalServerError: InternalServerError: OpenAIException -\",\"type\":\"upstream_error\",\"param\":\"\",\"code\":\"500\"}}"
-      },
-      "completed_at": null
+      "errors": {},
+      "completed_at": "2026-06-25T10:42:25Z"
     },
     "renewal": {
       "status": "complete",
@@ -1592,12 +1586,10 @@
       "completed_at": "2026-06-25T07:40:28Z"
     },
     "understanding": {
-      "status": "failed",
+      "status": "complete",
       "missing": [],
-      "errors": {
-        "last": "AI request failed: {\"error\":{\"message\":\"***.InternalServerError: InternalServerError: OpenAIException -\",\"type\":\"upstream_error\",\"param\":\"\",\"code\":\"500\"}}"
-      },
-      "completed_at": null
+      "errors": {},
+      "completed_at": "2026-06-25T10:42:26Z"
     },
     "teaching": {
       "status": "complete",
@@ -2218,12 +2210,10 @@
       "completed_at": "2026-06-25T08:52:21Z"
     },
     "spaceships": {
-      "status": "failed",
+      "status": "complete",
       "missing": [],
-      "errors": {
-        "last": "AI request failed: {\"error\":{\"message\":\"***.InternalServerError: InternalServerError: OpenAIException -\",\"type\":\"upstream_error\",\"param\":\"\",\"code\":\"500\"}}"
-      },
-      "completed_at": null
+      "errors": {},
+      "completed_at": "2026-06-25T10:42:26Z"
     },
     "sending": {
       "status": "complete",
@@ -2712,3200 +2702,2962 @@
       "completed_at": "2026-06-25T09:26:14Z"
     },
     "sneak": {
-      "status": "failed",
+      "status": "complete",
       "missing": [],
-      "errors": {
-        "last": "AI request failed: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 20260625044045818354478aAs0wBFA)\",\"type\":\"AgnesAI_error\"}}"
-      },
-      "completed_at": null
+      "errors": {},
+      "completed_at": "2026-06-25T09:28:54Z"
     },
     "mundane": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T04:42:49Z"
+      "completed_at": "2026-06-25T09:28:55Z"
     },
     "recalled": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T04:42:50Z"
+      "completed_at": "2026-06-25T09:28:55Z"
     },
     "triumphs": {
-      "status": "failed",
+      "status": "complete",
       "missing": [],
-      "errors": {
-        "last": "AI request failed: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 20260625044251270417008PnVmQczZ)\",\"type\":\"AgnesAI_error\"}}"
-      },
-      "completed_at": null
+      "errors": {},
+      "completed_at": "2026-06-25T09:31:40Z"
     },
     "critically": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T04:42:51Z"
+      "completed_at": "2026-06-25T09:31:40Z"
     },
     "delved": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T04:42:52Z"
+      "completed_at": "2026-06-25T09:31:41Z"
     },
     "perceptions": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T04:42:52Z"
+      "completed_at": "2026-06-25T09:31:42Z"
     },
     "shaped": {
-      "status": "failed",
+      "status": "complete",
       "missing": [],
-      "errors": {
-        "last": "AI request failed: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 2026062504425418177062pPw5s9M8)\",\"type\":\"AgnesAI_error\"}}"
-      },
-      "completed_at": null
+      "errors": {},
+      "completed_at": "2026-06-25T09:31:42Z"
     },
     "unlock": {
-      "status": "failed",
+      "status": "complete",
       "missing": [],
-      "errors": {
-        "last": "AI request failed: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 20260625044254816659703mKPmSKYc)\",\"type\":\"AgnesAI_error\"}}"
-      },
-      "completed_at": null
+      "errors": {},
+      "completed_at": "2026-06-25T09:32:59Z"
     },
     "storytelling": {
-      "status": "failed",
+      "status": "complete",
       "missing": [],
-      "errors": {
-        "last": "AI request failed: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 20260625044255871616149BEx7g9Hu)\",\"type\":\"AgnesAI_error\"}}"
-      },
-      "completed_at": null
+      "errors": {},
+      "completed_at": "2026-06-25T09:33:00Z"
     },
     "setting": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T04:42:56Z"
+      "completed_at": "2026-06-25T09:33:00Z"
     },
     "characters": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T04:42:56Z"
+      "completed_at": "2026-06-25T09:33:01Z"
     },
     "reacted": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T04:42:57Z"
+      "completed_at": "2026-06-25T09:33:01Z"
     },
     "sparked": {
-      "status": "failed",
+      "status": "complete",
       "missing": [],
-      "errors": {
-        "last": "AI request failed: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 202606250442584334946043ltWPeyw)\",\"type\":\"AgnesAI_error\"}}"
-      },
-      "completed_at": null
+      "errors": {},
+      "completed_at": "2026-06-25T09:33:02Z"
     },
     "years": {
-      "status": "failed",
+      "status": "complete",
       "missing": [],
-      "errors": {
-        "last": "AI request failed: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 20260625044259317771646m6c7POV3)\",\"type\":\"AgnesAI_error\"}}"
-      },
-      "completed_at": null
+      "errors": {},
+      "completed_at": "2026-06-25T09:34:11Z"
     },
     "carriages": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T04:42:59Z"
+      "completed_at": "2026-06-25T09:34:12Z"
     },
     "chatter": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T04:43:00Z"
+      "completed_at": "2026-06-25T09:34:12Z"
     },
     "passersby": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T04:43:00Z"
+      "completed_at": "2026-06-25T09:34:13Z"
     },
     "sheer": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T04:43:01Z"
+      "completed_at": "2026-06-25T09:34:14Z"
     },
     "thames": {
-      "status": "failed",
+      "status": "complete",
       "missing": [],
-      "errors": {
-        "last": "AI request failed: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 202606250443024871494238mcfT50m)\",\"type\":\"AgnesAI_error\"}}"
-      },
-      "completed_at": null
+      "errors": {},
+      "completed_at": "2026-06-25T09:35:28Z"
     },
     "industriousness": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T04:43:02Z"
+      "completed_at": "2026-06-25T09:35:29Z"
     },
     "lifeline": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T04:43:03Z"
+      "completed_at": "2026-06-25T09:35:29Z"
     },
     "banks": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T04:43:04Z"
+      "completed_at": "2026-06-25T09:35:30Z"
     },
     "tales": {
-      "status": "failed",
+      "status": "complete",
       "missing": [],
-      "errors": {
-        "last": "AI request failed: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 2026062504430553353837L2iNJYgt)\",\"type\":\"AgnesAI_error\"}}"
-      },
-      "completed_at": null
+      "errors": {},
+      "completed_at": "2026-06-25T09:36:42Z"
     },
     "struggles": {
-      "status": "failed",
+      "status": "complete",
       "missing": [],
-      "errors": {
-        "last": "AI request failed: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 20260625044305955706024AtsvkQ47)\",\"type\":\"AgnesAI_error\"}}"
-      },
-      "completed_at": null
+      "errors": {},
+      "completed_at": "2026-06-25T09:36:43Z"
     },
     "dotted": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T04:43:06Z"
+      "completed_at": "2026-06-25T09:36:44Z"
     },
     "merchants": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T04:43:07Z"
+      "completed_at": "2026-06-25T09:36:44Z"
     },
     "wares": {
-      "status": "failed",
+      "status": "complete",
       "missing": [],
-      "errors": {
-        "last": "AI request failed: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 20260625044308148144217VafaeEK4)\",\"type\":\"AgnesAI_error\"}}"
-      },
-      "completed_at": null
+      "errors": {},
+      "completed_at": "2026-06-25T09:40:13Z"
     },
     "smells": {
-      "status": "failed",
+      "status": "complete",
       "missing": [],
-      "errors": {
-        "last": "AI request failed: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 20260625044309113918292cDAxpYg4)\",\"type\":\"AgnesAI_error\"}}"
-      },
-      "completed_at": null
+      "errors": {},
+      "completed_at": "2026-06-25T09:40:14Z"
     },
     "freshly": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T04:43:09Z"
+      "completed_at": "2026-06-25T09:40:15Z"
     },
     "baked": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T04:43:10Z"
+      "completed_at": "2026-06-25T09:40:16Z"
     },
     "mingled": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T04:43:10Z"
+      "completed_at": "2026-06-25T09:40:16Z"
     },
     "salty": {
-      "status": "failed",
+      "status": "complete",
       "missing": [],
-      "errors": {
-        "last": "AI request failed: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 20260625044311876746850e64r90KU)\",\"type\":\"AgnesAI_error\"}}"
-      },
-      "completed_at": null
+      "errors": {},
+      "completed_at": "2026-06-25T09:40:17Z"
     },
     "towering": {
-      "status": "failed",
+      "status": "complete",
       "missing": [],
-      "errors": {
-        "last": "AI request failed: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 20260625044312778169771rZtoXUNB)\",\"type\":\"AgnesAI_error\"}}"
-      },
-      "completed_at": null
+      "errors": {},
+      "completed_at": "2026-06-25T09:40:18Z"
     },
     "chimed": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T04:43:13Z"
+      "completed_at": "2026-06-25T09:40:18Z"
     },
     "marking": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T04:43:13Z"
+      "completed_at": "2026-06-25T09:40:19Z"
     },
     "time": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T04:43:14Z"
+      "completed_at": "2026-06-25T09:40:21Z"
     },
     "parliament": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T04:43:15Z"
+      "completed_at": "2026-06-25T09:40:21Z"
     },
     "stood": {
-      "status": "failed",
+      "status": "complete",
       "missing": [],
-      "errors": {
-        "last": "AI request failed: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 2026062504431672963202RESpjZw9)\",\"type\":\"AgnesAI_error\"}}"
-      },
-      "completed_at": null
+      "errors": {},
+      "completed_at": "2026-06-25T09:42:26Z"
     },
     "symbol": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T04:43:16Z"
+      "completed_at": "2026-06-25T09:42:26Z"
     },
     "governance": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T04:43:17Z"
+      "completed_at": "2026-06-25T09:42:27Z"
     },
     "color": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T04:43:17Z"
+      "completed_at": "2026-06-25T09:42:28Z"
     },
     "surroundings": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T04:43:18Z"
+      "completed_at": "2026-06-25T09:42:28Z"
     },
     "modernity": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T04:43:18Z"
+      "completed_at": "2026-06-25T09:42:29Z"
     },
     "venturing": {
-      "status": "failed",
+      "status": "complete",
       "missing": [],
-      "errors": {
-        "last": "AI request failed: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 20260625044320113504489YzcoJnt9)\",\"type\":\"AgnesAI_error\"}}"
-      },
-      "completed_at": null
+      "errors": {},
+      "completed_at": "2026-06-25T10:43:16Z"
     },
     "quieter": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T04:43:20Z"
+      "completed_at": "2026-06-25T09:42:59Z"
     },
     "neighborhoods": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T04:43:21Z"
+      "completed_at": "2026-06-25T09:43:00Z"
     },
     "side": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T04:43:21Z"
+      "completed_at": "2026-06-25T09:43:00Z"
     },
     "lined": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T04:43:22Z"
+      "completed_at": "2026-06-25T09:43:01Z"
     },
     "quaint": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T04:43:22Z"
+      "completed_at": "2026-06-25T09:43:02Z"
     },
     "walls": {
-      "status": "failed",
+      "status": "complete",
       "missing": [],
-      "errors": {
-        "last": "AI request failed: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 20260625044323985410041H3QgH4k1)\",\"type\":\"AgnesAI_error\"}}"
-      },
-      "completed_at": null
+      "errors": {},
+      "completed_at": "2026-06-25T09:45:09Z"
     },
     "where": {
-      "status": "failed",
+      "status": "complete",
       "missing": [],
-      "errors": {
-        "last": "AI request failed: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 20260625044324964256881jSdxcnGv)\",\"type\":\"AgnesAI_error\"}}"
-      },
-      "completed_at": null
+      "errors": {},
+      "completed_at": "2026-06-25T09:45:10Z"
     },
     "knew": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T04:43:25Z"
+      "completed_at": "2026-06-25T09:45:10Z"
     },
     "shared": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T04:43:26Z"
+      "completed_at": "2026-06-25T09:45:11Z"
     },
     "sorrows": {
-      "status": "failed",
+      "status": "complete",
       "missing": [],
-      "errors": {
-        "last": "AI request failed: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 20260625044327449333765P1MreJDQ)\",\"type\":\"AgnesAI_error\"}}"
-      },
-      "completed_at": null
+      "errors": {},
+      "completed_at": "2026-06-25T09:45:12Z"
     },
     "turned": {
-      "status": "failed",
+      "status": "complete",
       "missing": [],
-      "errors": {
-        "last": "AI request failed: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 20260625044328331225506fORlNLNs)\",\"type\":\"AgnesAI_error\"}}"
-      },
-      "completed_at": null
+      "errors": {},
+      "completed_at": "2026-06-25T09:46:16Z"
     },
     "gas": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T04:43:28Z"
+      "completed_at": "2026-06-25T09:46:16Z"
     },
     "lamps": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T04:43:29Z"
+      "completed_at": "2026-06-25T09:46:17Z"
     },
     "flickered": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T04:44:24Z"
+      "completed_at": "2026-06-25T09:46:18Z"
     },
     "casting": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T04:44:24Z"
+      "completed_at": "2026-06-25T09:46:18Z"
     },
     "glow": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T04:44:25Z"
+      "completed_at": "2026-06-25T09:46:19Z"
     },
     "cobblestone": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T04:44:26Z"
+      "completed_at": "2026-06-25T09:46:20Z"
     },
     "paths": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T04:44:26Z"
+      "completed_at": "2026-06-25T09:46:20Z"
     },
     "sounds": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T04:45:33Z"
+      "completed_at": "2026-06-25T09:46:21Z"
     },
     "music": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T04:45:33Z"
+      "completed_at": "2026-06-25T09:46:22Z"
     },
     "spilled": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T04:47:03Z"
+      "completed_at": "2026-06-25T09:46:23Z"
     },
     "pubs": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T04:47:04Z"
+      "completed_at": "2026-06-25T09:46:23Z"
     },
     "theaters": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T04:48:08Z"
+      "completed_at": "2026-06-25T09:46:24Z"
     },
     "partake": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T04:48:09Z"
+      "completed_at": "2026-06-25T09:46:25Z"
     },
     "evening": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T04:48:10Z"
+      "completed_at": "2026-06-25T09:46:26Z"
     },
     "festivities": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T04:48:10Z"
+      "completed_at": "2026-06-25T09:46:26Z"
     },
     "was": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T04:49:03Z"
+      "completed_at": "2026-06-25T09:46:27Z"
     },
     "londoners": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T04:49:04Z"
+      "completed_at": "2026-06-25T09:46:27Z"
     },
     "they": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T04:49:04Z"
+      "completed_at": "2026-06-25T09:46:28Z"
     },
     "stark": {
-      "status": "failed",
+      "status": "complete",
       "missing": [],
-      "errors": {
-        "last": "AI request failed: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 20260625044905835612969HBInwCLS)\",\"type\":\"AgnesAI_error\"}}"
-      },
-      "completed_at": null
+      "errors": {},
+      "completed_at": "2026-06-25T09:46:29Z"
     },
     "poignant": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T04:49:06Z"
+      "completed_at": "2026-06-25T09:46:29Z"
     },
     "humanity": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T04:49:06Z"
+      "completed_at": "2026-06-25T09:46:30Z"
     },
     "solace": {
-      "status": "failed",
+      "status": "complete",
       "missing": [],
-      "errors": {
-        "last": "AI request failed: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 202606250449078314686337l9bsTYm)\",\"type\":\"AgnesAI_error\"}}"
-      },
-      "completed_at": null
+      "errors": {},
+      "completed_at": "2026-06-25T09:46:31Z"
     },
     "thoroughfares": {
-      "status": "failed",
+      "status": "complete",
       "missing": [],
-      "errors": {
-        "last": "AI request failed: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 20260625044908646821169Mfo6xdEz)\",\"type\":\"AgnesAI_error\"}}"
-      },
-      "completed_at": null
+      "errors": {},
+      "completed_at": "2026-06-25T09:46:32Z"
     },
     "mosaic": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T04:49:08Z"
+      "completed_at": "2026-06-25T09:46:33Z"
     },
     "akin": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T04:49:09Z"
+      "completed_at": "2026-06-25T09:46:33Z"
     },
     "whispered": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T04:50:28Z"
+      "completed_at": "2026-06-25T09:46:34Z"
     },
     "contradictions": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T04:50:29Z"
+      "completed_at": "2026-06-25T09:46:35Z"
     },
     "glimpse": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T04:50:30Z"
+      "completed_at": "2026-06-25T09:46:35Z"
     },
     "enduring": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T04:50:30Z"
+      "completed_at": "2026-06-25T09:46:36Z"
     },
     "vibrancy": {
-      "status": "failed",
+      "status": "complete",
       "missing": [],
-      "errors": {
-        "last": "AI request failed: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 20260625045031932858624V17uX9Xj)\",\"type\":\"AgnesAI_error\"}}"
-      },
-      "completed_at": null
+      "errors": {},
+      "completed_at": "2026-06-25T09:48:21Z"
     },
     "sadness": {
-      "status": "failed",
+      "status": "complete",
       "missing": [],
-      "errors": {
-        "last": "AI request failed: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 20260625045032862236120FhRa1FBg)\",\"type\":\"AgnesAI_error\"}}"
-      },
-      "completed_at": null
+      "errors": {},
+      "completed_at": "2026-06-25T09:49:41Z"
     },
     "simplistic": {
-      "status": "failed",
+      "status": "complete",
       "missing": [],
-      "errors": {
-        "last": "AI request failed: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 20260625045033709986840VDyO015E)\",\"type\":\"AgnesAI_error\"}}"
-      },
-      "completed_at": null
+      "errors": {},
+      "completed_at": "2026-06-25T09:49:41Z"
     },
     "unchanging": {
-      "status": "failed",
+      "status": "complete",
       "missing": [],
-      "errors": {
-        "last": "AI request failed: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 20260625045034564584747FC6qyz6H)\",\"type\":\"AgnesAI_error\"}}"
-      },
-      "completed_at": null
+      "errors": {},
+      "completed_at": "2026-06-25T09:51:05Z"
     },
     "uncover": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T04:50:34Z"
+      "completed_at": "2026-06-25T09:51:06Z"
     },
     "secrets": {
-      "status": "failed",
+      "status": "complete",
       "missing": [],
-      "errors": {
-        "last": "AI request failed: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 202606250450361015522147NynanBk)\",\"type\":\"AgnesAI_error\"}}"
-      },
-      "completed_at": null
+      "errors": {},
+      "completed_at": "2026-06-25T09:51:06Z"
     },
     "showcasing": {
-      "status": "failed",
+      "status": "complete",
       "missing": [],
-      "errors": {
-        "last": "AI request failed: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 20260625045037352461357qNhXAlp)\",\"type\":\"AgnesAI_error\"}}"
-      },
-      "completed_at": null
+      "errors": {},
+      "completed_at": "2026-06-25T09:51:50Z"
     },
     "town": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T04:50:37Z"
+      "completed_at": "2026-06-25T09:51:50Z"
     },
     "spent": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T04:50:38Z"
+      "completed_at": "2026-06-25T09:51:51Z"
     },
     "rivers": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T04:51:43Z"
+      "completed_at": "2026-06-25T09:51:52Z"
     },
     "wildflowers": {
-      "status": "failed",
+      "status": "complete",
       "missing": [],
-      "errors": {
-        "last": "AI request failed: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 20260625045144649567352iOsooNDy)\",\"type\":\"AgnesAI_error\"}}"
-      },
-      "completed_at": null
+      "errors": {},
+      "completed_at": "2026-06-25T09:55:08Z"
     },
     "colours": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T04:51:45Z"
+      "completed_at": "2026-06-25T09:55:09Z"
     },
     "sweet": {
-      "status": "failed",
+      "status": "complete",
       "missing": [],
-      "errors": {
-        "last": "AI request failed: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 202606250451463035622385BVS8k7u)\",\"type\":\"AgnesAI_error\"}}"
-      },
-      "completed_at": null
+      "errors": {},
+      "completed_at": "2026-06-25T09:55:09Z"
     },
     "grass": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T04:51:46Z"
+      "completed_at": "2026-06-25T09:55:10Z"
     },
     "watching": {
-      "status": "failed",
+      "status": "complete",
       "missing": [],
-      "errors": {
-        "last": "AI request failed: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 20260625045147735418503b3i8BVSO)\",\"type\":\"AgnesAI_error\"}}"
-      },
-      "completed_at": null
+      "errors": {},
+      "completed_at": "2026-06-25T09:56:34Z"
     },
     "drift": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T04:51:48Z"
+      "completed_at": "2026-06-25T09:56:35Z"
     },
     "imagining": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T04:51:48Z"
+      "completed_at": "2026-06-25T09:56:35Z"
     },
     "sorts": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T04:51:49Z"
+      "completed_at": "2026-06-25T09:56:36Z"
     },
     "fantastical": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T04:51:49Z"
+      "completed_at": "2026-06-25T09:56:36Z"
     },
     "creatures": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T04:51:50Z"
+      "completed_at": "2026-06-25T09:56:37Z"
     },
     "trees": {
-      "status": "failed",
+      "status": "complete",
       "missing": [],
-      "errors": {
-        "last": "AI request failed: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 20260625045151456289471bh11qmO1)\",\"type\":\"AgnesAI_error\"}}"
-      },
-      "completed_at": null
+      "errors": {},
+      "completed_at": "2026-06-25T09:58:46Z"
     },
     "riverbank": {
-      "status": "failed",
+      "status": "complete",
       "missing": [],
-      "errors": {
-        "last": "AI request failed: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 20260625045152245011669eApdGXjm)\",\"type\":\"AgnesAI_error\"}}"
-      },
-      "completed_at": null
+      "errors": {},
+      "completed_at": "2026-06-25T09:58:47Z"
     },
     "friends": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T04:51:52Z"
+      "completed_at": "2026-06-25T09:58:47Z"
     },
     "makeshift": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T04:51:53Z"
+      "completed_at": "2026-06-25T09:58:48Z"
     },
     "boats": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T04:51:53Z"
+      "completed_at": "2026-06-25T09:58:48Z"
     },
     "them": {
-      "status": "failed",
+      "status": "complete",
       "missing": [],
-      "errors": {
-        "last": "AI request failed: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 20260625045154665326425pFutzCTU)\",\"type\":\"AgnesAI_error\"}}"
-      },
-      "completed_at": null
+      "errors": {},
+      "completed_at": "2026-06-25T09:58:49Z"
     },
     "splashed": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T04:51:55Z"
+      "completed_at": "2026-06-25T09:58:49Z"
     },
     "cool": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T04:51:55Z"
+      "completed_at": "2026-06-25T09:58:50Z"
     },
     "worries": {
-      "status": "failed",
+      "status": "complete",
       "missing": [],
-      "errors": {
-        "last": "AI request failed: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 202606250451568281682428YfnhoD0)\",\"type\":\"AgnesAI_error\"}}"
-      },
-      "completed_at": null
+      "errors": {},
+      "completed_at": "2026-06-25T10:00:25Z"
     },
     "melting": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T04:51:57Z"
+      "completed_at": "2026-06-25T10:00:25Z"
     },
     "summer": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T04:51:57Z"
+      "completed_at": "2026-06-25T10:00:26Z"
     },
     "sun": {
-      "status": "failed",
+      "status": "complete",
       "missing": [],
-      "errors": {
-        "last": "AI request failed: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 20260625045158964272886nwXRRoky)\",\"type\":\"AgnesAI_error\"}}"
-      },
-      "completed_at": null
+      "errors": {},
+      "completed_at": "2026-06-25T10:00:26Z"
     },
     "visited": {
-      "status": "failed",
+      "status": "complete",
       "missing": [],
-      "errors": {
-        "last": "AI request failed: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 20260625045159888025994pYNacy96)\",\"type\":\"AgnesAI_error\"}}"
-      },
-      "completed_at": null
+      "errors": {},
+      "completed_at": "2026-06-25T10:02:01Z"
     },
     "tree": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T04:52:00Z"
+      "completed_at": "2026-06-25T10:02:01Z"
     },
     "tall": {
-      "status": "failed",
+      "status": "complete",
       "missing": [],
-      "errors": {
-        "last": "AI request failed: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 20260625045201464642454p6JjXqjL)\",\"type\":\"AgnesAI_error\"}}"
-      },
-      "completed_at": null
+      "errors": {},
+      "completed_at": "2026-06-25T10:02:02Z"
     },
     "hands": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T04:52:01Z"
+      "completed_at": "2026-06-25T10:02:02Z"
     },
     "see": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T04:52:02Z"
+      "completed_at": "2026-06-25T10:02:03Z"
     },
     "seasons": {
-      "status": "failed",
+      "status": "complete",
       "missing": [],
-      "errors": {
-        "last": "AI request failed: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 20260625045203647653541ih67mYd9)\",\"type\":\"AgnesAI_error\"}}"
-      },
-      "completed_at": null
+      "errors": {},
+      "completed_at": "2026-06-25T10:02:04Z"
     },
     "did": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T04:52:04Z"
+      "completed_at": "2026-06-25T10:02:04Z"
     },
     "carpet": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T04:52:04Z"
+      "completed_at": "2026-06-25T10:02:05Z"
     },
     "piles": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T04:52:05Z"
+      "completed_at": "2026-06-25T10:02:05Z"
     },
     "snowfall": {
-      "status": "failed",
+      "status": "complete",
       "missing": [],
-      "errors": {
-        "last": "AI request failed: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 20260625045206703529254oNCGyWqu)\",\"type\":\"AgnesAI_error\"}}"
-      },
-      "completed_at": null
+      "errors": {},
+      "completed_at": "2026-06-25T10:02:06Z"
     },
     "everything": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T04:52:07Z"
+      "completed_at": "2026-06-25T10:02:06Z"
     },
     "snowmen": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T04:52:07Z"
+      "completed_at": "2026-06-25T10:02:07Z"
     },
     "had": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T04:52:08Z"
+      "completed_at": "2026-06-25T10:02:08Z"
     },
     "snowball": {
-      "status": "failed",
+      "status": "complete",
       "missing": [],
-      "errors": {
-        "last": "AI request failed: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 20260625045209848579548Tyw8fqZg)\",\"type\":\"AgnesAI_error\"}}"
-      },
-      "completed_at": null
+      "errors": {},
+      "completed_at": "2026-06-25T10:03:16Z"
     },
     "fights": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T04:52:10Z"
+      "completed_at": "2026-06-25T10:03:17Z"
     },
     "cheeks": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T04:52:10Z"
+      "completed_at": "2026-06-25T10:03:18Z"
     },
     "wonderland": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T04:53:02Z"
+      "completed_at": "2026-06-25T10:03:18Z"
     },
     "spring": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T04:53:03Z"
+      "completed_at": "2026-06-25T10:03:19Z"
     },
     "bloomed": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T04:53:03Z"
+      "completed_at": "2026-06-25T10:03:19Z"
     },
     "waking": {
-      "status": "failed",
+      "status": "complete",
       "missing": [],
-      "errors": {
-        "last": "AI request failed: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 20260625045305467211203yueR9JFX)\",\"type\":\"AgnesAI_error\"}}"
-      },
-      "completed_at": null
+      "errors": {},
+      "completed_at": "2026-06-25T10:04:24Z"
     },
     "with": {
-      "status": "failed",
+      "status": "complete",
       "missing": [],
-      "errors": {
-        "last": "AI request failed: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 20260625045306283909800dypjBEK4)\",\"type\":\"AgnesAI_error\"}}"
-      },
-      "completed_at": null
+      "errors": {},
+      "completed_at": "2026-06-25T10:43:17Z"
     },
     "older": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T04:53:06Z"
+      "completed_at": "2026-06-25T10:05:27Z"
     },
     "fade": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T04:53:07Z"
+      "completed_at": "2026-06-25T10:05:28Z"
     },
     "magical": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T04:53:08Z"
+      "completed_at": "2026-06-25T10:05:29Z"
     },
     "responsibilities": {
-      "status": "failed",
+      "status": "complete",
       "missing": [],
-      "errors": {
-        "last": "AI request failed: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 20260625045309261153531J7YW7Bhu)\",\"type\":\"AgnesAI_error\"}}"
-      },
-      "completed_at": null
+      "errors": {},
+      "completed_at": "2026-06-25T10:05:29Z"
     },
     "stayed": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T04:54:22Z"
+      "completed_at": "2026-06-25T10:05:30Z"
     },
     "reflected": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T04:54:22Z"
+      "completed_at": "2026-06-25T10:05:30Z"
     },
     "those": {
-      "status": "failed",
+      "status": "complete",
       "missing": [],
-      "errors": {
-        "last": "AI request failed: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 202606250454239657474585OI4aEfB)\",\"type\":\"AgnesAI_error\"}}"
-      },
-      "completed_at": null
+      "errors": {},
+      "completed_at": "2026-06-25T10:05:31Z"
     },
     "carefree": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T04:54:24Z"
+      "completed_at": "2026-06-25T10:05:31Z"
     },
     "much": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T04:54:24Z"
+      "completed_at": "2026-06-25T10:05:32Z"
     },
     "now": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T04:54:25Z"
+      "completed_at": "2026-06-25T10:05:32Z"
     },
     "understands": {
-      "status": "failed",
+      "status": "complete",
       "missing": [],
-      "errors": {
-        "last": "AI request failed: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 20260625045426787866519Wt43Oniw)\",\"type\":\"AgnesAI_error\"}}"
-      },
-      "completed_at": null
+      "errors": {},
+      "completed_at": "2026-06-25T10:06:39Z"
     },
     "but": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T04:54:27Z"
+      "completed_at": "2026-06-25T10:06:40Z"
     },
     "warmth": {
-      "status": "failed",
+      "status": "complete",
       "missing": [],
-      "errors": {
-        "last": "AI request failed: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 20260625045428224697754pav62cGb)\",\"type\":\"AgnesAI_error\"}}"
-      },
-      "completed_at": null
+      "errors": {},
+      "completed_at": "2026-06-25T10:08:32Z"
     },
     "exists": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T04:54:28Z"
+      "completed_at": "2026-06-25T10:08:32Z"
     },
     "takes": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T04:54:29Z"
+      "completed_at": "2026-06-25T10:08:33Z"
     },
     "studies": {
-      "status": "failed",
+      "status": "complete",
       "missing": [],
-      "errors": {
-        "last": "AI request failed: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 20260625045430690634320Vdg0RFpk)\",\"type\":\"AgnesAI_error\"}}"
-      },
-      "completed_at": null
+      "errors": {},
+      "completed_at": "2026-06-25T10:08:33Z"
     },
     "scientist": {
-      "status": "failed",
+      "status": "complete",
       "missing": [],
-      "errors": {
-        "last": "AI request failed: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 20260625045431558658467mOwoE0HQ)\",\"type\":\"AgnesAI_error\"}}"
-      },
-      "completed_at": null
+      "errors": {},
+      "completed_at": "2026-06-25T10:08:34Z"
     },
     "passions": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T04:54:32Z"
+      "completed_at": "2026-06-25T10:08:34Z"
     },
     "transition": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T04:54:32Z"
+      "completed_at": "2026-06-25T10:08:35Z"
     },
     "poverty": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T04:54:33Z"
+      "completed_at": "2026-06-25T10:08:35Z"
     },
     "ethic": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T04:54:33Z"
+      "completed_at": "2026-06-25T10:08:36Z"
     },
     "thrive": {
-      "status": "failed",
+      "status": "complete",
       "missing": [],
-      "errors": {
-        "last": "AI request failed: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 2026062504543537162158pH5c3RUl)\",\"type\":\"AgnesAI_error\"}}"
-      },
-      "completed_at": null
+      "errors": {},
+      "completed_at": "2026-06-25T10:08:36Z"
     },
     "physicist": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T04:54:35Z"
+      "completed_at": "2026-06-25T10:08:37Z"
     },
     "partners": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T04:54:36Z"
+      "completed_at": "2026-06-25T10:08:38Z"
     },
     "embarked": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T04:54:36Z"
+      "completed_at": "2026-06-25T10:08:38Z"
     },
     "radioactivity": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T04:54:37Z"
+      "completed_at": "2026-06-25T10:08:39Z"
     },
     "coined": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T04:54:37Z"
+      "completed_at": "2026-06-25T10:08:39Z"
     },
     "elements": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T04:54:38Z"
+      "completed_at": "2026-06-25T10:08:40Z"
     },
     "nobel": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T04:54:39Z"
+      "completed_at": "2026-06-25T10:08:40Z"
     },
     "scientific": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T04:54:39Z"
+      "completed_at": "2026-06-25T10:08:41Z"
     },
     "techniques": {
-      "status": "failed",
+      "status": "complete",
       "missing": [],
-      "errors": {
-        "last": "AI request failed: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 20260625045441211060724v7TMFmc7)\",\"type\":\"AgnesAI_error\"}}"
-      },
-      "completed_at": null
+      "errors": {},
+      "completed_at": "2026-06-25T10:08:41Z"
     },
     "therapy": {
-      "status": "failed",
+      "status": "complete",
       "missing": [],
-      "errors": {
-        "last": "AI request failed: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 202606250454424372397807pGTFaH4)\",\"type\":\"AgnesAI_error\"}}"
-      },
-      "completed_at": null
+      "errors": {},
+      "completed_at": "2026-06-25T10:08:42Z"
     },
     "revolutionizing": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T04:54:42Z"
+      "completed_at": "2026-06-25T10:08:42Z"
     },
     "healthcare": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T04:54:43Z"
+      "completed_at": "2026-06-25T10:08:43Z"
     },
     "undeterred": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T04:55:45Z"
+      "completed_at": "2026-06-25T10:08:44Z"
     },
     "broke": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T04:55:45Z"
+      "completed_at": "2026-06-25T10:08:44Z"
     },
     "societal": {
-      "status": "failed",
+      "status": "complete",
       "missing": [],
-      "errors": {
-        "last": "AI request failed: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 20260625045546954787184xrgS3ASq)\",\"type\":\"AgnesAI_error\"}}"
-      },
-      "completed_at": null
+      "errors": {},
+      "completed_at": "2026-06-25T10:08:45Z"
     },
     "doors": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T04:55:47Z"
+      "completed_at": "2026-06-25T10:08:45Z"
     },
     "skepticism": {
-      "status": "failed",
+      "status": "complete",
       "missing": [],
-      "errors": {
-        "last": "AI request failed: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 20260625045548830647984qzwU6KiT)\",\"type\":\"AgnesAI_error\"}}"
-      },
-      "completed_at": null
+      "errors": {},
+      "completed_at": "2026-06-25T10:08:46Z"
     },
     "surgery": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T04:55:49Z"
+      "completed_at": "2026-06-25T10:08:46Z"
     },
     "women": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T04:56:50Z"
+      "completed_at": "2026-06-25T10:08:47Z"
     },
     "woman": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T04:56:51Z"
+      "completed_at": "2026-06-25T10:08:47Z"
     },
     "germany": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T04:56:52Z"
+      "completed_at": "2026-06-25T10:08:48Z"
     },
     "exhibited": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T04:56:52Z"
+      "completed_at": "2026-06-25T10:08:49Z"
     },
     "playing": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T04:56:53Z"
+      "completed_at": "2026-06-25T10:08:49Z"
     },
     "traveled": {
-      "status": "failed",
+      "status": "complete",
       "missing": [],
-      "errors": {
-        "last": "AI request failed: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 20260625045654483432003wLS8I4Gx)\",\"type\":\"AgnesAI_error\"}}"
-      },
-      "completed_at": null
+      "errors": {},
+      "completed_at": "2026-06-25T10:09:32Z"
     },
     "student": {
-      "status": "failed",
+      "status": "complete",
       "missing": [],
-      "errors": {
-        "last": "AI request failed: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 20260625045655280438504MkRZ3ljB)\",\"type\":\"AgnesAI_error\"}}"
-      },
-      "completed_at": null
+      "errors": {},
+      "completed_at": "2026-06-25T10:09:33Z"
     },
     "rigid": {
-      "status": "failed",
+      "status": "complete",
       "missing": [],
-      "errors": {
-        "last": "AI request failed: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 2026062504565672179710BrFFz7A5)\",\"type\":\"AgnesAI_error\"}}"
-      },
-      "completed_at": null
+      "errors": {},
+      "completed_at": "2026-06-25T10:09:33Z"
     },
     "system": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T04:56:56Z"
+      "completed_at": "2026-06-25T10:09:34Z"
     },
     "teachers": {
-      "status": "failed",
+      "status": "complete",
       "missing": [],
-      "errors": {
-        "last": "AI request failed: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 20260625045657594161737HaC1IcEm)\",\"type\":\"AgnesAI_error\"}}"
-      },
-      "completed_at": null
+      "errors": {},
+      "completed_at": "2026-06-25T10:09:34Z"
     },
     "unconventional": {
-      "status": "failed",
+      "status": "complete",
       "missing": [],
-      "errors": {
-        "last": "AI request failed: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 20260625045658555267952gQRqZmGe)\",\"type\":\"AgnesAI_error\"}}"
-      },
-      "completed_at": null
+      "errors": {},
+      "completed_at": "2026-06-25T10:11:23Z"
     },
     "conforming": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T04:56:59Z"
+      "completed_at": "2026-06-25T10:11:24Z"
     },
     "followed": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T04:56:59Z"
+      "completed_at": "2026-06-25T10:11:24Z"
     },
     "later": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T04:57:00Z"
+      "completed_at": "2026-06-25T10:11:25Z"
     },
     "revolutionize": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T04:57:00Z"
+      "completed_at": "2026-06-25T10:11:25Z"
     },
     "relativity": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T04:57:01Z"
+      "completed_at": "2026-06-25T10:11:26Z"
     },
     "publications": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T04:57:02Z"
+      "completed_at": "2026-06-25T10:11:27Z"
     },
     "enlightenment": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T04:57:02Z"
+      "completed_at": "2026-06-25T10:11:27Z"
     },
     "supporting": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T04:57:03Z"
+      "completed_at": "2026-06-25T10:11:28Z"
     },
     "confirmed": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T04:57:03Z"
+      "completed_at": "2026-06-25T10:11:28Z"
     },
     "predictions": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T04:57:04Z"
+      "completed_at": "2026-06-25T10:11:29Z"
     },
     "deformation": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T04:57:04Z"
+      "completed_at": "2026-06-25T10:11:29Z"
     },
     "particle": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T04:57:05Z"
+      "completed_at": "2026-06-25T10:11:30Z"
     },
     "warping": {
-      "status": "failed",
+      "status": "complete",
       "missing": [],
-      "errors": {
-        "last": "AI request failed: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 20260625045706651649773UHiaPF5P)\",\"type\":\"AgnesAI_error\"}}"
-      },
-      "completed_at": null
+      "errors": {},
+      "completed_at": "2026-06-25T10:13:39Z"
     },
     "marriage": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T04:57:07Z"
+      "completed_at": "2026-06-25T10:13:40Z"
     },
     "stance": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T04:57:07Z"
+      "completed_at": "2026-06-25T10:13:40Z"
     },
     "recognized": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T04:57:08Z"
+      "completed_at": "2026-06-25T10:13:41Z"
     },
     "experiments": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T04:57:08Z"
+      "completed_at": "2026-06-25T10:13:42Z"
     },
     "university": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T04:58:15Z"
+      "completed_at": "2026-06-25T10:13:42Z"
     },
     "teenage": {
-      "status": "failed",
+      "status": "complete",
       "missing": [],
-      "errors": {
-        "last": "AI request failed: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 20260625045816190850252hmc8fu2Z)\",\"type\":\"AgnesAI_error\"}}"
-      },
-      "completed_at": null
+      "errors": {},
+      "completed_at": "2026-06-25T10:13:43Z"
     },
     "symptoms": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T04:58:16Z"
+      "completed_at": "2026-06-25T10:13:43Z"
     },
     "sclerosis": {
-      "status": "failed",
+      "status": "complete",
       "missing": [],
-      "errors": {
-        "last": "AI request failed: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 20260625045817915071864cEzNOQCz)\",\"type\":\"AgnesAI_error\"}}"
-      },
-      "completed_at": null
+      "errors": {},
+      "completed_at": "2026-06-25T10:13:44Z"
     },
     "speech-generating": {
-      "status": "failed",
+      "status": "complete",
       "missing": [],
-      "errors": {
-        "last": "AI request failed: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 202606250458189958491395iqoaylN)\",\"type\":\"AgnesAI_error\"}}"
-      },
-      "completed_at": null
+      "errors": {},
+      "completed_at": "2026-06-25T10:13:44Z"
     },
     "synthesized": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T04:58:19Z"
+      "completed_at": "2026-06-25T10:13:45Z"
     },
     "bestseller": {
-      "status": "failed",
+      "status": "complete",
       "missing": [],
-      "errors": {
-        "last": "Expected ',' or '}' after property value in JSON at position 32 (line 2 column 31)"
-      },
-      "completed_at": null
+      "errors": {},
+      "completed_at": "2026-06-25T10:15:14Z"
     },
     "icon": {
-      "status": "failed",
+      "status": "complete",
       "missing": [],
-      "errors": {
-        "last": "Expected ',' or '}' after property value in JSON at position 183 (line 6 column 81)"
-      },
-      "completed_at": null
+      "errors": {},
+      "completed_at": "2026-06-25T10:15:14Z"
     },
     "theories": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T05:01:19Z"
+      "completed_at": "2026-06-25T10:15:15Z"
     },
     "clarity": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T05:01:19Z"
+      "completed_at": "2026-06-25T10:15:16Z"
     },
     "academia": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T05:01:20Z"
+      "completed_at": "2026-06-25T10:15:16Z"
     },
     "mourning": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T05:01:20Z"
+      "completed_at": "2026-06-25T10:15:17Z"
     },
     "dreamers": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T05:01:21Z"
+      "completed_at": "2026-06-25T10:15:17Z"
     },
     "reminded": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T05:01:22Z"
+      "completed_at": "2026-06-25T10:15:18Z"
     },
     "cosmos": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T05:01:22Z"
+      "completed_at": "2026-06-25T10:15:18Z"
     },
     "unbeatable": {
-      "status": "failed",
+      "status": "complete",
       "missing": [],
-      "errors": {
-        "last": "AI request failed: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 20260625050123887652714eMeceUip)\",\"type\":\"AgnesAI_error\"}}"
-      },
-      "completed_at": null
+      "errors": {},
+      "completed_at": "2026-06-25T10:16:39Z"
     },
     "withdrawal": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T05:01:24Z"
+      "completed_at": "2026-06-25T10:16:40Z"
     },
     "nutshell": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T05:02:08Z"
+      "completed_at": "2026-06-25T10:16:41Z"
     },
     "holes": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T05:02:08Z"
+      "completed_at": "2026-06-25T10:16:41Z"
     },
     "alabama": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T05:02:09Z"
+      "completed_at": "2026-06-25T10:16:42Z"
     },
     "appearing": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T05:02:09Z"
+      "completed_at": "2026-06-25T10:16:43Z"
     },
     "perfectly": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T05:02:10Z"
+      "completed_at": "2026-06-25T10:16:43Z"
     },
     "contracted": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T05:02:11Z"
+      "completed_at": "2026-06-25T10:16:44Z"
     },
     "trapped": {
-      "status": "failed",
+      "status": "complete",
       "missing": [],
-      "errors": {
-        "last": "AI request failed: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 20260625050212251413236A2QN1anS)\",\"type\":\"AgnesAI_error\"}}"
-      },
-      "completed_at": null
+      "errors": {},
+      "completed_at": "2026-06-25T10:16:44Z"
     },
     "acted": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T05:02:12Z"
+      "completed_at": "2026-06-25T10:16:45Z"
     },
     "desperation": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T05:02:13Z"
+      "completed_at": "2026-06-25T10:16:45Z"
     },
     "sought": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T05:03:20Z"
+      "completed_at": "2026-06-25T10:16:46Z"
     },
     "anne": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T05:03:21Z"
+      "completed_at": "2026-06-25T10:16:47Z"
     },
     "sullivan": {
-      "status": "failed",
+      "status": "complete",
       "missing": [],
-      "errors": {
-        "last": "AI request failed: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 2026062505032377211079PjTYsp4Y)\",\"type\":\"AgnesAI_error\"}}"
-      },
-      "completed_at": null
+      "errors": {},
+      "completed_at": "2026-06-25T10:16:47Z"
     },
     "arrived": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T05:03:23Z"
+      "completed_at": "2026-06-25T10:16:48Z"
     },
     "strengths": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T05:03:24Z"
+      "completed_at": "2026-06-25T10:16:48Z"
     },
     "publicly": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T05:03:24Z"
+      "completed_at": "2026-06-25T10:16:49Z"
     },
     "surmount": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T05:03:25Z"
+      "completed_at": "2026-06-25T10:16:50Z"
     },
     "obstacle": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T05:03:25Z"
+      "completed_at": "2026-06-25T10:16:50Z"
     },
     "vinci": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T05:06:50Z"
+      "completed_at": "2026-06-25T10:16:51Z"
     },
     "workshop": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T05:06:51Z"
+      "completed_at": "2026-06-25T10:16:51Z"
     },
     "renowned": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T05:06:51Z"
+      "completed_at": "2026-06-25T10:16:52Z"
     },
     "painter": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T05:06:52Z"
+      "completed_at": "2026-06-25T10:16:52Z"
     },
     "surpassing": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T05:07:49Z"
+      "completed_at": "2026-06-25T10:16:53Z"
     },
     "masterpiece": {
-      "status": "failed",
+      "status": "complete",
       "missing": [],
-      "errors": {
-        "last": "Expected ',' or '}' after property value in JSON at position 34 (line 2 column 33)"
-      },
-      "completed_at": null
+      "errors": {},
+      "completed_at": "2026-06-25T10:17:47Z"
     },
     "designs": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T05:08:32Z"
+      "completed_at": "2026-06-25T10:17:47Z"
     },
     "visionary": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T05:10:50Z"
+      "completed_at": "2026-06-25T10:17:48Z"
     },
     "thoughts": {
-      "status": "failed",
+      "status": "complete",
       "missing": [],
-      "errors": {
-        "last": "AI request failed: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 20260625051051674711765nc3GpcyJ)\",\"type\":\"AgnesAI_error\"}}"
-      },
-      "completed_at": null
+      "errors": {},
+      "completed_at": "2026-06-25T10:17:48Z"
     },
     "poems": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T05:10:52Z"
+      "completed_at": "2026-06-25T10:17:49Z"
     },
     "serves": {
-      "status": "failed",
+      "status": "complete",
       "missing": [],
-      "errors": {
-        "last": "AI request failed: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 20260625051053370742556nN6XnigO)\",\"type\":\"AgnesAI_error\"}}"
-      },
-      "completed_at": null
+      "errors": {},
+      "completed_at": "2026-06-25T10:17:49Z"
     },
     "france": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T05:10:53Z"
+      "completed_at": "2026-06-25T10:17:50Z"
     },
     "word": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T05:10:54Z"
+      "completed_at": "2026-06-25T10:17:50Z"
     },
     "serenely": {
-      "status": "failed",
+      "status": "complete",
       "missing": [],
-      "errors": {
-        "last": "AI request failed: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 202606250510557341738170dzbuEAZ)\",\"type\":\"AgnesAI_error\"}}"
-      },
-      "completed_at": null
+      "errors": {},
+      "completed_at": "2026-06-25T10:17:51Z"
     },
     "rustle": {
-      "status": "failed",
+      "status": "complete",
       "missing": [],
-      "errors": {
-        "last": "AI request failed: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 20260625051056562093511YuQ0IZeI)\",\"type\":\"AgnesAI_error\"}}"
-      },
-      "completed_at": null
+      "errors": {},
+      "completed_at": "2026-06-25T10:17:52Z"
     },
     "shimmering": {
-      "status": "failed",
+      "status": "complete",
       "missing": [],
-      "errors": {
-        "last": "AI request failed: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 20260625051057448669453Zyvlfleq)\",\"type\":\"AgnesAI_error\"}}"
-      },
-      "completed_at": null
+      "errors": {},
+      "completed_at": "2026-06-25T10:17:52Z"
     },
     "tranquil": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T05:10:57Z"
+      "completed_at": "2026-06-25T10:17:53Z"
     },
     "serene": {
-      "status": "failed",
+      "status": "complete",
       "missing": [],
-      "errors": {
-        "last": "AI request failed: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 20260625051059241759605tyNxSK7z)\",\"type\":\"AgnesAI_error\"}}"
-      },
-      "completed_at": null
+      "errors": {},
+      "completed_at": "2026-06-25T10:17:53Z"
     },
     "reverence": {
-      "status": "failed",
+      "status": "complete",
       "missing": [],
-      "errors": {
-        "last": "AI request failed: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 20260625051100185601253VkhkcswA)\",\"type\":\"AgnesAI_error\"}}"
-      },
-      "completed_at": null
+      "errors": {},
+      "completed_at": "2026-06-25T10:17:54Z"
     },
     "mindfulness": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T05:11:00Z"
+      "completed_at": "2026-06-25T10:17:54Z"
     },
     "virtues": {
-      "status": "failed",
+      "status": "complete",
       "missing": [],
-      "errors": {
-        "last": "AI request failed: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 20260625051101976448666BMc3PX4I)\",\"type\":\"AgnesAI_error\"}}"
-      },
-      "completed_at": null
+      "errors": {},
+      "completed_at": "2026-06-25T10:19:19Z"
     },
     "stillness": {
-      "status": "failed",
+      "status": "complete",
       "missing": [],
-      "errors": {
-        "last": "AI request failed: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 202606250511027994067322XkFrCEb)\",\"type\":\"AgnesAI_error\"}}"
-      },
-      "completed_at": null
+      "errors": {},
+      "completed_at": "2026-06-25T10:19:19Z"
     },
     "smallest": {
-      "status": "failed",
+      "status": "complete",
       "missing": [],
-      "errors": {
-        "last": "AI request failed: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 20260625051103902415586UGCaGKJd)\",\"type\":\"AgnesAI_error\"}}"
-      },
-      "completed_at": null
+      "errors": {},
+      "completed_at": "2026-06-25T10:19:20Z"
     },
     "seated": {
-      "status": "failed",
+      "status": "complete",
       "missing": [],
-      "errors": {
-        "last": "AI request failed: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 20260625051104802216409cXiNLAk0)\",\"type\":\"AgnesAI_error\"}}"
-      },
-      "completed_at": null
+      "errors": {},
+      "completed_at": "2026-06-25T10:19:20Z"
     },
     "transportation": {
-      "status": "failed",
+      "status": "complete",
       "missing": [],
-      "errors": {
-        "last": "AI request failed: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 20260625051105685797706wmXfspxC)\",\"type\":\"AgnesAI_error\"}}"
-      },
-      "completed_at": null
+      "errors": {},
+      "completed_at": "2026-06-25T10:19:21Z"
     },
     "reverent": {
-      "status": "failed",
+      "status": "complete",
       "missing": [],
-      "errors": {
-        "last": "AI request failed: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 20260625051106709161193RwvLXcNR)\",\"type\":\"AgnesAI_error\"}}"
-      },
-      "completed_at": null
+      "errors": {},
+      "completed_at": "2026-06-25T10:19:21Z"
     },
     "steps": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T05:11:07Z"
+      "completed_at": "2026-06-25T10:19:22Z"
     },
     "riding": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T05:11:07Z"
+      "completed_at": "2026-06-25T10:19:22Z"
     },
     "symbolizes": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T05:11:08Z"
+      "completed_at": "2026-06-25T10:19:23Z"
     },
     "amid": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T05:11:09Z"
+      "completed_at": "2026-06-25T10:19:24Z"
     },
     "sustainability": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T05:11:09Z"
+      "completed_at": "2026-06-25T10:19:24Z"
     },
     "nestled": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T05:11:10Z"
+      "completed_at": "2026-06-25T10:19:25Z"
     },
     "landscapes": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T05:11:10Z"
+      "completed_at": "2026-06-25T10:19:25Z"
     },
     "vision": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T05:11:11Z"
+      "completed_at": "2026-06-25T10:19:26Z"
     },
     "greener": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T05:11:12Z"
+      "completed_at": "2026-06-25T10:19:26Z"
     },
     "illustrates": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T05:11:12Z"
+      "completed_at": "2026-06-25T10:19:27Z"
     },
     "pressing": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T05:11:13Z"
+      "completed_at": "2026-06-25T10:19:27Z"
     },
     "showcased": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T05:14:11Z"
+      "completed_at": "2026-06-25T10:19:28Z"
     },
     "strengthened": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T05:15:41Z"
+      "completed_at": "2026-06-25T10:19:28Z"
     },
     "reinforcing": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T05:15:41Z"
+      "completed_at": "2026-06-25T10:19:29Z"
     },
     "urging": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T05:16:48Z"
+      "completed_at": "2026-06-25T10:19:29Z"
     },
     "program": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T05:16:49Z"
+      "completed_at": "2026-06-25T10:19:30Z"
     },
     "source": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T05:16:49Z"
+      "completed_at": "2026-06-25T10:19:31Z"
     },
     "residents": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T05:19:04Z"
+      "completed_at": "2026-06-25T10:19:31Z"
     },
     "wind": {
-      "status": "failed",
+      "status": "complete",
       "missing": [],
-      "errors": {
-        "last": "AI request failed: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 20260625051905220306779O7EzS3Vw)\",\"type\":\"AgnesAI_error\"}}"
-      },
-      "completed_at": null
+      "errors": {},
+      "completed_at": "2026-06-25T10:19:32Z"
     },
     "reducing": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T05:19:05Z"
+      "completed_at": "2026-06-25T10:19:32Z"
     },
     "traditions": {
-      "status": "failed",
+      "status": "complete",
       "missing": [],
-      "errors": {
-        "last": "AI request failed: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 20260625051906717987305xF7TbnUg)\",\"type\":\"AgnesAI_error\"}}"
-      },
-      "completed_at": null
+      "errors": {},
+      "completed_at": "2026-06-25T10:19:33Z"
     },
     "unity": {
-      "status": "failed",
+      "status": "complete",
       "missing": [],
-      "errors": {
-        "last": "AI request failed: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 20260625051907679199414Thzzj8Ap)\",\"type\":\"AgnesAI_error\"}}"
-      },
-      "completed_at": null
+      "errors": {},
+      "completed_at": "2026-06-25T10:19:33Z"
     },
     "relationships": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T05:19:08Z"
+      "completed_at": "2026-06-25T10:19:34Z"
     },
     "seem": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T05:20:06Z"
+      "completed_at": "2026-06-25T10:19:34Z"
     },
     "clever": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T05:20:06Z"
+      "completed_at": "2026-06-25T10:19:35Z"
     },
     "searching": {
-      "status": "failed",
+      "status": "complete",
       "missing": [],
-      "errors": {
-        "last": "Expected ',' or '}' after property value in JSON at position 119 (line 6 column 25)"
-      },
-      "completed_at": null
+      "errors": {},
+      "completed_at": "2026-06-25T10:20:48Z"
     },
     "beak": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T05:21:09Z"
+      "completed_at": "2026-06-25T10:20:49Z"
     },
     "tummy": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T05:22:14Z"
+      "completed_at": "2026-06-25T10:20:50Z"
     },
     "rumble": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T05:25:04Z"
+      "completed_at": "2026-06-25T10:20:50Z"
     },
     "feathers": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T05:25:05Z"
+      "completed_at": "2026-06-25T10:20:51Z"
     },
     "flattered": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T05:25:05Z"
+      "completed_at": "2026-06-25T10:20:51Z"
     },
     "trick": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T05:26:10Z"
+      "completed_at": "2026-06-25T10:20:52Z"
     },
     "singing": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T05:27:36Z"
+      "completed_at": "2026-06-25T10:20:52Z"
     },
     "tricked": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T05:28:34Z"
+      "completed_at": "2026-06-25T10:20:53Z"
     },
     "squawked": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T05:29:41Z"
+      "completed_at": "2026-06-25T10:20:53Z"
     },
     "thief": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T05:31:08Z"
+      "completed_at": "2026-06-25T10:20:54Z"
     },
     "careful": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T05:31:09Z"
+      "completed_at": "2026-06-25T10:20:54Z"
     },
     "scurried": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T05:32:43Z"
+      "completed_at": "2026-06-25T10:20:55Z"
     },
     "pondered": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T05:32:44Z"
+      "completed_at": "2026-06-25T10:20:56Z"
     },
     "admiring": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T05:32:45Z"
+      "completed_at": "2026-06-25T10:20:56Z"
     },
     "agility": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T05:32:45Z"
+      "completed_at": "2026-06-25T10:20:57Z"
     },
     "remorseful": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T05:32:46Z"
+      "completed_at": "2026-06-25T10:20:57Z"
     },
     "vowed": {
-      "status": "failed",
+      "status": "complete",
       "missing": [],
-      "errors": {
-        "last": "AI request failed: {\"error\":{\"message\":\"***.InternalServerError: InternalServerError: OpenAIException -\",\"type\":\"upstream_error\",\"param\":\"\",\"code\":\"500\"}}"
-      },
-      "completed_at": null
+      "errors": {},
+      "completed_at": "2026-06-25T10:23:07Z"
     },
     "unaware": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T05:33:53Z"
+      "completed_at": "2026-06-25T10:23:08Z"
     },
     "underestimating": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T05:35:04Z"
+      "completed_at": "2026-06-25T10:23:08Z"
     },
     "glances": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T05:35:05Z"
+      "completed_at": "2026-06-25T10:23:09Z"
     },
     "acknowledgment": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T05:35:06Z"
+      "completed_at": "2026-06-25T10:23:09Z"
     },
     "newfound": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T05:35:06Z"
+      "completed_at": "2026-06-25T10:23:10Z"
     },
     "traits": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T05:37:10Z"
+      "completed_at": "2026-06-25T10:23:10Z"
     },
     "nest": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T05:37:11Z"
+      "completed_at": "2026-06-25T10:23:11Z"
     },
     "laughed": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T05:37:12Z"
+      "completed_at": "2026-06-25T10:23:12Z"
     },
     "regretful": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T05:37:12Z"
+      "completed_at": "2026-06-25T10:23:12Z"
     },
     "vow": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T05:38:36Z"
+      "completed_at": "2026-06-25T10:23:13Z"
     },
     "ways": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T05:40:06Z"
+      "completed_at": "2026-06-25T10:23:13Z"
     },
     "workbench": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T05:40:58Z"
+      "completed_at": "2026-06-25T10:23:14Z"
     },
     "sign": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T05:40:58Z"
+      "completed_at": "2026-06-25T10:23:14Z"
     },
     "summoned": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T05:42:23Z"
+      "completed_at": "2026-06-25T10:23:15Z"
     },
     "tools": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T05:43:54Z"
+      "completed_at": "2026-06-25T10:23:15Z"
     },
     "stone": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T05:43:55Z"
+      "completed_at": "2026-06-25T10:23:16Z"
     },
     "rewarded": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T05:43:55Z"
+      "completed_at": "2026-06-25T10:23:16Z"
     },
     "simple": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T05:43:56Z"
+      "completed_at": "2026-06-25T10:23:17Z"
     },
     "wit": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T05:46:25Z"
+      "completed_at": "2026-06-25T10:23:18Z"
     },
     "within": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T05:47:37Z"
+      "completed_at": "2026-06-25T10:23:18Z"
     },
     "spill": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T05:47:37Z"
+      "completed_at": "2026-06-25T10:23:19Z"
     },
     "glue": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T05:47:38Z"
+      "completed_at": "2026-06-25T10:23:19Z"
     },
     "fearless": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T05:47:38Z"
+      "completed_at": "2026-06-25T10:23:20Z"
     },
     "self-assured": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T05:48:51Z"
+      "completed_at": "2026-06-25T10:23:20Z"
     },
     "queen": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T05:48:51Z"
+      "completed_at": "2026-06-25T10:23:21Z"
     },
     "knock": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T05:48:52Z"
+      "completed_at": "2026-06-25T10:23:21Z"
     },
     "fists": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T05:48:52Z"
+      "completed_at": "2026-06-25T10:23:22Z"
     },
     "sword": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T05:49:58Z"
+      "completed_at": "2026-06-25T10:23:22Z"
     },
     "net": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T05:49:58Z"
+      "completed_at": "2026-06-25T10:23:23Z"
     },
     "horse": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T05:49:59Z"
+      "completed_at": "2026-06-25T10:23:23Z"
     },
     "title": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T05:50:00Z"
+      "completed_at": "2026-06-25T10:23:24Z"
     },
     "married": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T05:51:07Z"
+      "completed_at": "2026-06-25T10:23:25Z"
     },
     "shop": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T05:51:08Z"
+      "completed_at": "2026-06-25T10:23:25Z"
     },
     "soldier": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T05:52:14Z"
+      "completed_at": "2026-06-25T10:23:26Z"
     },
     "right": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T05:52:14Z"
+      "completed_at": "2026-06-25T10:23:26Z"
     },
     "brings": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T05:52:15Z"
+      "completed_at": "2026-06-25T10:23:27Z"
     },
     "strategy": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T05:52:15Z"
+      "completed_at": "2026-06-25T10:23:27Z"
     },
     "skeptical": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T05:53:20Z"
+      "completed_at": "2026-06-25T10:23:28Z"
     },
     "sewing": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T05:55:03Z"
+      "completed_at": "2026-06-25T10:23:28Z"
     },
     "turns": {
-      "status": "failed",
+      "status": "complete",
       "missing": [],
-      "errors": {
-        "last": "AI request failed: {\"error\":{\"message\":\"***.InternalServerError: InternalServerError: OpenAIException -\",\"type\":\"upstream_error\",\"param\":\"\",\"code\":\"500\"}}"
-      },
-      "completed_at": null
+      "errors": {},
+      "completed_at": "2026-06-25T10:24:43Z"
     },
     "storm": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T05:56:46Z"
+      "completed_at": "2026-06-25T10:24:44Z"
     },
     "secure": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T05:58:10Z"
+      "completed_at": "2026-06-25T10:24:44Z"
     },
     "relieved": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T05:58:11Z"
+      "completed_at": "2026-06-25T10:24:45Z"
     },
     "standing": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T05:59:30Z"
+      "completed_at": "2026-06-25T10:24:45Z"
     },
     "repaired": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T06:00:29Z"
+      "completed_at": "2026-06-25T10:24:46Z"
     },
     "roofs": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T06:01:49Z"
+      "completed_at": "2026-06-25T10:24:46Z"
     },
     "welcomed": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T06:03:18Z"
+      "completed_at": "2026-06-25T10:24:47Z"
     },
     "places": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T06:03:19Z"
+      "completed_at": "2026-06-25T10:24:47Z"
     },
     "bags": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T06:03:19Z"
+      "completed_at": "2026-06-25T10:24:48Z"
     },
     "travels": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T06:04:27Z"
+      "completed_at": "2026-06-25T10:24:48Z"
     },
     "supported": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T06:04:28Z"
+      "completed_at": "2026-06-25T10:24:49Z"
     },
     "bringing": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T06:04:28Z"
+      "completed_at": "2026-06-25T10:24:50Z"
     },
     "supplies": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T06:04:29Z"
+      "completed_at": "2026-06-25T10:24:50Z"
     },
     "house": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T06:04:29Z"
+      "completed_at": "2026-06-25T10:24:51Z"
     },
     "tasks": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T06:05:45Z"
+      "completed_at": "2026-06-25T10:24:51Z"
     },
     "kingdom": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T06:05:45Z"
+      "completed_at": "2026-06-25T10:24:52Z"
     },
     "furious": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T06:05:46Z"
+      "completed_at": "2026-06-25T10:24:52Z"
     },
     "knights": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T06:05:47Z"
+      "completed_at": "2026-06-25T10:24:53Z"
     },
     "venture": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T06:05:47Z"
+      "completed_at": "2026-06-25T10:24:53Z"
     },
     "perch": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T06:05:48Z"
+      "completed_at": "2026-06-25T10:24:54Z"
     },
     "swift": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T06:06:50Z"
+      "completed_at": "2026-06-25T10:24:54Z"
     },
     "plea": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T06:06:51Z"
+      "completed_at": "2026-06-25T10:24:55Z"
     },
     "wicked": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T06:06:51Z"
+      "completed_at": "2026-06-25T10:24:56Z"
     },
     "sorcerer": {
-      "status": "failed",
+      "status": "complete",
       "missing": [],
-      "errors": {
-        "last": "AI request failed: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 2026062506065397081556vp5jWSIv)\",\"type\":\"AgnesAI_error\"}}"
-      },
-      "completed_at": null
+      "errors": {},
+      "completed_at": "2026-06-25T10:26:31Z"
     },
     "token": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T06:06:53Z"
+      "completed_at": "2026-06-25T10:26:32Z"
     },
     "missing": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T06:06:53Z"
+      "completed_at": "2026-06-25T10:26:33Z"
     },
     "unimaginable": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T06:08:47Z"
+      "completed_at": "2026-06-25T10:26:33Z"
     },
     "unexpected": {
-      "status": "failed",
+      "status": "complete",
       "missing": [],
-      "errors": {
-        "last": "AI request failed: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 2026062506084939321422Mu68xNxi)\",\"type\":\"AgnesAI_error\"}}"
-      },
-      "completed_at": null
+      "errors": {},
+      "completed_at": "2026-06-25T10:26:34Z"
     },
     "rewards": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T06:08:49Z"
+      "completed_at": "2026-06-25T10:26:34Z"
     },
     "spell": {
-      "status": "failed",
+      "status": "complete",
       "missing": [],
-      "errors": {
-        "last": "AI request failed: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 20260625060850699715930KXsF6S7u)\",\"type\":\"AgnesAI_error\"}}"
-      },
-      "completed_at": null
+      "errors": {},
+      "completed_at": "2026-06-25T10:26:35Z"
     },
     "stolen": {
-      "status": "failed",
+      "status": "complete",
       "missing": [],
-      "errors": {
-        "last": "AI request failed: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 20260625060851548151528nULwVlqE)\",\"type\":\"AgnesAI_error\"}}"
-      },
-      "completed_at": null
+      "errors": {},
+      "completed_at": "2026-06-25T10:26:35Z"
     },
     "riches": {
-      "status": "failed",
+      "status": "complete",
       "missing": [],
-      "errors": {
-        "last": "AI request failed: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 20260625060852507782464ajXAT6Rv)\",\"type\":\"AgnesAI_error\"}}"
-      },
-      "completed_at": null
+      "errors": {},
+      "completed_at": "2026-06-25T10:26:36Z"
     },
     "frankfurt": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T06:08:52Z"
+      "completed_at": "2026-06-25T10:26:37Z"
     },
     "becoming": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T06:08:53Z"
+      "completed_at": "2026-06-25T10:26:37Z"
     },
     "overshadowed": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T06:08:53Z"
+      "completed_at": "2026-06-25T10:26:38Z"
     },
     "nazi": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T06:08:54Z"
+      "completed_at": "2026-06-25T10:26:38Z"
     },
     "regime": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T06:08:54Z"
+      "completed_at": "2026-06-25T10:26:39Z"
     },
     "targeted": {
-      "status": "failed",
+      "status": "complete",
       "missing": [],
-      "errors": {
-        "last": "AI request failed: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 2026062506085617235635gV6F3Drs)\",\"type\":\"AgnesAI_error\"}}"
-      },
-      "completed_at": null
+      "errors": {},
+      "completed_at": "2026-06-25T10:28:51Z"
     },
     "jews": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T06:08:56Z"
+      "completed_at": "2026-06-25T10:28:52Z"
     },
     "anti-jewish": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T06:08:56Z"
+      "completed_at": "2026-06-25T10:28:52Z"
     },
     "stricter": {
-      "status": "failed",
+      "status": "complete",
       "missing": [],
-      "errors": {
-        "last": "AI request failed: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 20260625060857940734485F6YdFS1S)\",\"type\":\"AgnesAI_error\"}}"
-      },
-      "completed_at": null
+      "errors": {},
+      "completed_at": "2026-06-25T10:28:53Z"
     },
     "netherlands": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T06:08:58Z"
+      "completed_at": "2026-06-25T10:28:53Z"
     },
     "seeking": {
-      "status": "failed",
+      "status": "complete",
       "missing": [],
-      "errors": {
-        "last": "AI request failed: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 202606250608593107913864B8SrKY6)\",\"type\":\"AgnesAI_error\"}}"
-      },
-      "completed_at": null
+      "errors": {},
+      "completed_at": "2026-06-25T10:28:54Z"
     },
     "enjoyed": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T06:08:59Z"
+      "completed_at": "2026-06-25T10:28:54Z"
     },
     "worsened": {
-      "status": "failed",
+      "status": "complete",
       "missing": [],
-      "errors": {
-        "last": "AI request failed: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 202606250609006517680982mrVq4Tp)\",\"type\":\"AgnesAI_error\"}}"
-      },
-      "completed_at": null
+      "errors": {},
+      "completed_at": "2026-06-25T10:30:12Z"
     },
     "invaded": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T06:09:00Z"
+      "completed_at": "2026-06-25T10:30:13Z"
     },
     "wear": {
-      "status": "failed",
+      "status": "complete",
       "missing": [],
-      "errors": {
-        "last": "AI request failed: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 202606250609019910813470emWUUrW)\",\"type\":\"AgnesAI_error\"}}"
-      },
-      "completed_at": null
+      "errors": {},
+      "completed_at": "2026-06-25T10:30:13Z"
     },
     "stars": {
-      "status": "failed",
+      "status": "complete",
       "missing": [],
-      "errors": {
-        "last": "AI request failed: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 20260625060902823642836QjT60lR4)\",\"type\":\"AgnesAI_error\"}}"
-      },
-      "completed_at": null
+      "errors": {},
+      "completed_at": "2026-06-25T10:30:14Z"
     },
     "restrictions": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T06:10:23Z"
+      "completed_at": "2026-06-25T10:30:15Z"
     },
     "freedoms": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T06:10:23Z"
+      "completed_at": "2026-06-25T10:30:15Z"
     },
     "threat": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T06:10:24Z"
+      "completed_at": "2026-06-25T10:30:16Z"
     },
     "went": {
-      "status": "failed",
+      "status": "complete",
       "missing": [],
-      "errors": {
-        "last": "AI request failed: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 20260625061025608936818P1G0IVrA)\",\"type\":\"AgnesAI_error\"}}"
-      },
-      "completed_at": null
+      "errors": {},
+      "completed_at": "2026-06-25T10:30:16Z"
     },
     "hiding": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T06:10:25Z"
+      "completed_at": "2026-06-25T10:30:17Z"
     },
     "secret": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T06:10:26Z"
+      "completed_at": "2026-06-25T10:30:18Z"
     },
     "van": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T06:10:26Z"
+      "completed_at": "2026-06-25T10:30:18Z"
     },
     "pels": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T06:10:27Z"
+      "completed_at": "2026-06-25T10:30:19Z"
     },
     "detection": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T06:10:27Z"
+      "completed_at": "2026-06-25T10:30:19Z"
     },
     "hardships": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T06:10:28Z"
+      "completed_at": "2026-06-25T10:30:20Z"
     },
     "writing": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T06:12:12Z"
+      "completed_at": "2026-06-25T10:30:20Z"
     },
     "kitty": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T06:12:12Z"
+      "completed_at": "2026-06-25T10:30:21Z"
     },
     "fears": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T06:12:13Z"
+      "completed_at": "2026-06-25T10:30:21Z"
     },
     "outlet": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T06:12:13Z"
+      "completed_at": "2026-06-25T10:30:22Z"
     },
     "documented": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T06:12:14Z"
+      "completed_at": "2026-06-25T10:30:23Z"
     },
     "reflections": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T06:12:15Z"
+      "completed_at": "2026-06-25T10:30:23Z"
     },
     "wrote": {
-      "status": "failed",
+      "status": "complete",
       "missing": [],
-      "errors": {
-        "last": "AI request failed: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 20260625061216345219820tG45aBx3)\",\"type\":\"AgnesAI_error\"}}"
-      },
-      "completed_at": null
+      "errors": {},
+      "completed_at": "2026-06-25T10:31:24Z"
     },
     "hopes": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T06:12:16Z"
+      "completed_at": "2026-06-25T10:31:25Z"
     },
     "august": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T06:12:17Z"
+      "completed_at": "2026-06-25T10:31:25Z"
     },
     "than": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T06:13:56Z"
+      "completed_at": "2026-06-25T10:31:26Z"
     },
     "betrayed": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T06:13:57Z"
+      "completed_at": "2026-06-25T10:31:26Z"
     },
     "gestapo": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T06:13:58Z"
+      "completed_at": "2026-06-25T10:31:27Z"
     },
     "raided": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T06:13:58Z"
+      "completed_at": "2026-06-25T10:31:28Z"
     },
     "arresting": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T06:13:59Z"
+      "completed_at": "2026-06-25T10:31:28Z"
     },
     "taken": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T06:16:42Z"
+      "completed_at": "2026-06-25T10:31:29Z"
     },
     "concentration": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T06:16:42Z"
+      "completed_at": "2026-06-25T10:31:29Z"
     },
     "camps": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T06:16:43Z"
+      "completed_at": "2026-06-25T10:31:30Z"
     },
     "sent": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T06:20:11Z"
+      "completed_at": "2026-06-25T10:31:31Z"
     },
     "auschwitz": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T06:20:12Z"
+      "completed_at": "2026-06-25T10:31:31Z"
     },
     "bergen-belsen": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T06:20:12Z"
+      "completed_at": "2026-06-25T10:31:32Z"
     },
     "horrific": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T06:20:13Z"
+      "completed_at": "2026-06-25T10:31:32Z"
     },
     "suffered": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T06:21:22Z"
+      "completed_at": "2026-06-25T10:31:33Z"
     },
     "march": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T06:21:23Z"
+      "completed_at": "2026-06-25T10:31:33Z"
     },
     "weeks": {
-      "status": "failed",
+      "status": "complete",
       "missing": [],
-      "errors": {
-        "last": "AI request failed: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 20260625062124707345305W52EvNh0)\",\"type\":\"AgnesAI_error\"}}"
-      },
-      "completed_at": null
+      "errors": {},
+      "completed_at": "2026-06-25T10:31:34Z"
     },
     "liberated": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T06:21:24Z"
+      "completed_at": "2026-06-25T10:31:35Z"
     },
     "died": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T06:21:25Z"
+      "completed_at": "2026-06-25T10:31:35Z"
     },
     "typhus": {
-      "status": "failed",
+      "status": "complete",
       "missing": [],
-      "errors": {
-        "last": "AI request failed: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 2026062506212747943609EcToq0hz)\",\"type\":\"AgnesAI_error\"}}"
-      },
-      "completed_at": null
+      "errors": {},
+      "completed_at": "2026-06-25T10:31:36Z"
     },
     "words": {
-      "status": "failed",
+      "status": "complete",
       "missing": [],
-      "errors": {
-        "last": "AI request failed: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 20260625062127963627099XqR0hwUB)\",\"type\":\"AgnesAI_error\"}}"
-      },
-      "completed_at": null
+      "errors": {},
+      "completed_at": "2026-06-25T10:32:28Z"
     },
     "otto": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T06:21:28Z"
+      "completed_at": "2026-06-25T10:32:28Z"
     },
     "honoring": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T06:21:28Z"
+      "completed_at": "2026-06-25T10:32:29Z"
     },
     "resonate": {
-      "status": "failed",
+      "status": "complete",
       "missing": [],
-      "errors": {
-        "last": "AI request failed: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 20260625062130385206328vqWfk5v4)\",\"type\":\"AgnesAI_error\"}}"
-      },
-      "completed_at": null
+      "errors": {},
+      "completed_at": "2026-06-25T10:32:30Z"
     },
     "tolerance": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T06:21:30Z"
+      "completed_at": "2026-06-25T10:32:30Z"
     },
     "work": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T06:21:31Z"
+      "completed_at": "2026-06-25T10:32:31Z"
     },
     "compassionate": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T06:21:31Z"
+      "completed_at": "2026-06-25T10:32:31Z"
     },
     "through": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T06:21:32Z"
+      "completed_at": "2026-06-25T10:32:32Z"
     },
     "strive": {
-      "status": "failed",
+      "status": "complete",
       "missing": [],
-      "errors": {
-        "last": "AI request failed: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 20260625062133713778035DKYh15cM)\",\"type\":\"AgnesAI_error\"}}"
-      },
-      "completed_at": null
+      "errors": {},
+      "completed_at": "2026-06-25T10:32:32Z"
     },
     "returns": {
-      "status": "failed",
+      "status": "complete",
       "missing": [],
-      "errors": {
-        "last": "AI request failed: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 20260625062134537686585EjrCG9di)\",\"type\":\"AgnesAI_error\"}}"
-      },
-      "completed_at": null
+      "errors": {},
+      "completed_at": "2026-06-25T10:32:33Z"
     },
     "diary": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T06:21:34Z"
+      "completed_at": "2026-06-25T10:32:34Z"
     },
     "berlin": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T06:21:35Z"
+      "completed_at": "2026-06-25T10:32:34Z"
     },
     "amsterdam": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T06:21:35Z"
+      "completed_at": "2026-06-25T10:32:35Z"
     },
     "vienna": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T06:23:00Z"
+      "completed_at": "2026-06-25T10:32:35Z"
     },
     "birthday": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T06:23:00Z"
+      "completed_at": "2026-06-25T10:32:36Z"
     },
     "necklace": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T06:23:01Z"
+      "completed_at": "2026-06-25T10:32:37Z"
     },
     "happened": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T06:23:01Z"
+      "completed_at": "2026-06-25T10:32:37Z"
     },
     "reunited": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T06:24:02Z"
+      "completed_at": "2026-06-25T10:32:38Z"
     },
     "nazis": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T06:24:03Z"
+      "completed_at": "2026-06-25T10:32:38Z"
     },
     "themes": {
-      "status": "failed",
+      "status": "complete",
       "missing": [],
-      "errors": {
-        "last": "AI request failed: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 20260625062405318100A2rR7m5f)\",\"type\":\"AgnesAI_error\"}}"
-      },
-      "completed_at": null
+      "errors": {},
+      "completed_at": "2026-06-25T10:33:41Z"
     },
     "tribal": {
-      "status": "failed",
+      "status": "complete",
       "missing": [],
-      "errors": {
-        "last": "AI request failed: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 20260625062406322844908SWXOY3jR)\",\"type\":\"AgnesAI_error\"}}"
-      },
-      "completed_at": null
+      "errors": {},
+      "completed_at": "2026-06-25T10:33:42Z"
     },
     "rural": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T06:24:06Z"
+      "completed_at": "2026-06-25T10:33:42Z"
     },
     "activist": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T06:24:07Z"
+      "completed_at": "2026-06-25T10:33:43Z"
     },
     "fighting": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T06:24:07Z"
+      "completed_at": "2026-06-25T10:33:43Z"
     },
     "oppressive": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T06:24:08Z"
+      "completed_at": "2026-06-25T10:33:44Z"
     },
     "enforced": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T06:24:09Z"
+      "completed_at": "2026-06-25T10:33:45Z"
     },
     "racial": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T06:24:09Z"
+      "completed_at": "2026-06-25T10:33:45Z"
     },
     "segregation": {
-      "status": "failed",
+      "status": "complete",
       "missing": [],
-      "errors": {
-        "last": "AI request failed: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 2026062506241123867643qoKRgcij)\",\"type\":\"AgnesAI_error\"}}"
-      },
-      "completed_at": null
+      "errors": {},
+      "completed_at": "2026-06-25T10:33:46Z"
     },
     "intensified": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T06:24:11Z"
+      "completed_at": "2026-06-25T10:33:46Z"
     },
     "organize": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T06:24:11Z"
+      "completed_at": "2026-06-25T10:33:47Z"
     },
     "insufficient": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T06:24:12Z"
+      "completed_at": "2026-06-25T10:33:47Z"
     },
     "co-founded": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T06:24:12Z"
+      "completed_at": "2026-06-25T10:33:48Z"
     },
     "armed": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T06:24:13Z"
+      "completed_at": "2026-06-25T10:33:48Z"
     },
     "wing": {
-      "status": "failed",
+      "status": "complete",
       "missing": [],
-      "errors": {
-        "last": "AI request failed: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 20260625062414887811482MRuvAZ0X)\",\"type\":\"AgnesAI_error\"}}"
-      },
-      "completed_at": null
+      "errors": {},
+      "completed_at": "2026-06-25T10:34:39Z"
     },
     "aimed": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T06:24:15Z"
+      "completed_at": "2026-06-25T10:34:40Z"
     },
     "sabotage": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T06:25:19Z"
+      "completed_at": "2026-06-25T10:34:40Z"
     },
     "pivotal": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T06:25:20Z"
+      "completed_at": "2026-06-25T10:34:41Z"
     },
     "militant": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T06:25:20Z"
+      "completed_at": "2026-06-25T10:34:42Z"
     },
     "achieving": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T06:25:21Z"
+      "completed_at": "2026-06-25T10:34:42Z"
     },
     "arrested": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T06:25:22Z"
+      "completed_at": "2026-06-25T10:34:43Z"
     },
     "sentenced": {
-      "status": "failed",
+      "status": "complete",
       "missing": [],
-      "errors": {
-        "last": "AI request failed: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 20260625062523292264062k9GRCASi)\",\"type\":\"AgnesAI_error\"}}"
-      },
-      "completed_at": null
+      "errors": {},
+      "completed_at": "2026-06-25T10:34:43Z"
     },
     "anti-apartheid": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T06:25:23Z"
+      "completed_at": "2026-06-25T10:34:44Z"
     },
     "endured": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T06:25:23Z"
+      "completed_at": "2026-06-25T10:34:44Z"
     },
     "labor": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T06:25:24Z"
+      "completed_at": "2026-06-25T10:34:45Z"
     },
     "unwavering": {
-      "status": "failed",
+      "status": "complete",
       "missing": [],
-      "errors": {
-        "last": "AI request failed: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 2026062506252576684277749ZvDAtF)\",\"type\":\"AgnesAI_error\"}}"
-      },
-      "completed_at": null
+      "errors": {},
+      "completed_at": "2026-06-25T10:34:45Z"
     },
     "mounted": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T06:25:25Z"
+      "completed_at": "2026-06-25T10:34:46Z"
     },
     "rallied": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T06:25:26Z"
+      "completed_at": "2026-06-25T10:34:47Z"
     },
     "reconciliation": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T06:25:26Z"
+      "completed_at": "2026-06-25T10:34:47Z"
     },
     "stepped": {
-      "status": "failed",
+      "status": "complete",
       "missing": [],
-      "errors": {
-        "last": "AI request failed: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 202606250625283048260233TA4Bao9)\",\"type\":\"AgnesAI_error\"}}"
-      },
-      "completed_at": null
+      "errors": {},
+      "completed_at": "2026-06-25T10:34:48Z"
     },
     "retired": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T06:25:28Z"
+      "completed_at": "2026-06-25T10:34:48Z"
     },
     "released": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T06:25:29Z"
+      "completed_at": "2026-06-25T10:34:49Z"
     },
     "taking": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T06:25:29Z"
+      "completed_at": "2026-06-25T10:34:49Z"
     },
     "shaping": {
-      "status": "failed",
+      "status": "complete",
       "missing": [],
-      "errors": {
-        "last": "AI request failed: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 202606250625308314329554WJeEPO5)\",\"type\":\"AgnesAI_error\"}}"
-      },
-      "completed_at": null
+      "errors": {},
+      "completed_at": "2026-06-25T10:34:50Z"
     },
     "trends": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T06:27:01Z"
+      "completed_at": "2026-06-25T10:34:51Z"
     },
     "spotlight": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T06:29:29Z"
+      "completed_at": "2026-06-25T10:34:51Z"
     },
     "trustworthiness": {
-      "status": "failed",
+      "status": "complete",
       "missing": [],
-      "errors": {
-        "last": "AI request failed: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 2026062506293178600575lQjrbStM)\",\"type\":\"AgnesAI_error\"}}"
-      },
-      "completed_at": null
+      "errors": {},
+      "completed_at": "2026-06-25T10:34:52Z"
     },
     "undermine": {
-      "status": "failed",
+      "status": "complete",
       "missing": [],
-      "errors": {
-        "last": "AI request failed: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 20260625062932683080472W6zAN0Ud)\",\"type\":\"AgnesAI_error\"}}"
-      },
-      "completed_at": null
+      "errors": {},
+      "completed_at": "2026-06-25T10:34:52Z"
     },
     "redefine": {
       "status": "complete",
       "missing": [],
       "errors": {},
-      "completed_at": "2026-06-25T06:29:32Z"
+      "completed_at": "2026-06-25T10:34:53Z"
     },
     "telemarketing": {
-      "status": "failed",
+      "status": "complete",
       "missing": [],
-      "errors": {
-        "last": "AI request failed: {\"error\":{\"code\":\"\",\"message\":\"You’ve reached the API rate limit for free users. Upgrade to a Token Plan to unlock higher limits and continue using the API without interruption. (request id: 20260625062934129254993iCTPWLU7)\",\"type\":\"AgnesAI_error\"}}"
-      },
-      "completed_at": null
+      "errors": {},
+      "completed_at": "2026-06-25T10:34:53Z"
     }
   }
 }

@@ -7,6 +7,15 @@
   "version": "2026.06",
   "display_name_en": "P2 General Studies",
   "display_name_zh_hant": "小二常識",
+  "source": {
+    "type": "curriculum_style_public_references",
+    "references": [
+      "EDB General Studies for Primary Schools Curriculum Guide",
+      "EDB primary General Studies Key Stage 1 learning objectives",
+      "Public Hong Kong Primary 2 General Studies syllabus topic examples (community, health and safety, environment, culture and festivals, Hong Kong life, transport, citizenship, simple science inquiry)"
+    ],
+    "note": "No fixed official Hong Kong P2 general studies vocabulary list is prescribed; this list is theme-based for Primary 2 general studies enrichment import. Term-only entries are completed during import."
+  },
   "words": [
     {
       "term": "community",
@@ -310,6 +319,2437 @@
         "community",
         "transport",
         "noun"
+      ]
+    },
+    {
+      "term": "999",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "curriculum-style",
+        "safety-and-emergency"
+      ]
+    },
+    {
+      "term": "air",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "curriculum-style",
+        "environment-and-conservation"
+      ]
+    },
+    {
+      "term": "animal",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "curriculum-style",
+        "nature-weather-and-simple-science"
+      ]
+    },
+    {
+      "term": "ask question",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "curriculum-style",
+        "school-and-learning-community"
+      ]
+    },
+    {
+      "term": "assembly",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "curriculum-style",
+        "school-and-learning-community"
+      ]
+    },
+    {
+      "term": "belonging",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "curriculum-style",
+        "community-and-public-services"
+      ]
+    },
+    {
+      "term": "bicycle",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "curriculum-style",
+        "transport-and-daily-life"
+      ]
+    },
+    {
+      "term": "bird",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "curriculum-style",
+        "nature-weather-and-simple-science"
+      ]
+    },
+    {
+      "term": "brave",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "curriculum-style",
+        "myself-and-personal-development"
+      ]
+    },
+    {
+      "term": "brush teeth",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "curriculum-style",
+        "health-hygiene-and-wellbeing"
+      ]
+    },
+    {
+      "term": "bus",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "curriculum-style",
+        "transport-and-daily-life"
+      ]
+    },
+    {
+      "term": "call for help",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "curriculum-style",
+        "safety-and-emergency"
+      ]
+    },
+    {
+      "term": "care",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "curriculum-style",
+        "family-and-relationships"
+      ]
+    },
+    {
+      "term": "care for community",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "curriculum-style",
+        "citizenship-and-social-values"
+      ]
+    },
+    {
+      "term": "careful",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "curriculum-style",
+        "safety-and-emergency"
+      ]
+    },
+    {
+      "term": "celebrate together",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "curriculum-style",
+        "family-and-relationships"
+      ]
+    },
+    {
+      "term": "celebration",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "curriculum-style",
+        "hong-kong-culture-and-festivals"
+      ]
+    },
+    {
+      "term": "change",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "curriculum-style",
+        "nature-weather-and-simple-science"
+      ]
+    },
+    {
+      "term": "charity",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "curriculum-style",
+        "citizenship-and-social-values"
+      ]
+    },
+    {
+      "term": "Chinese New Year",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "curriculum-style",
+        "hong-kong-culture-and-festivals"
+      ]
+    },
+    {
+      "term": "Ching Ming Festival",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "curriculum-style",
+        "hong-kong-culture-and-festivals"
+      ]
+    },
+    {
+      "term": "citizen",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "curriculum-style",
+        "citizenship-and-social-values"
+      ]
+    },
+    {
+      "term": "classmate",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "curriculum-style",
+        "school-and-learning-community"
+      ]
+    },
+    {
+      "term": "classroom",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "curriculum-style",
+        "school-and-learning-community"
+      ]
+    },
+    {
+      "term": "clean",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "curriculum-style",
+        "environment-and-conservation"
+      ]
+    },
+    {
+      "term": "cleaner",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "curriculum-style",
+        "community-and-public-services"
+      ]
+    },
+    {
+      "term": "climate",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "curriculum-style",
+        "environment-and-conservation"
+      ]
+    },
+    {
+      "term": "clinic",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "curriculum-style",
+        "community-and-public-services"
+      ]
+    },
+    {
+      "term": "cloudy",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "curriculum-style",
+        "nature-weather-and-simple-science"
+      ]
+    },
+    {
+      "term": "cold",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "curriculum-style",
+        "nature-weather-and-simple-science"
+      ]
+    },
+    {
+      "term": "communication",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "curriculum-style",
+        "family-and-relationships"
+      ]
+    },
+    {
+      "term": "community centre",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "curriculum-style",
+        "community-and-public-services"
+      ]
+    },
+    {
+      "term": "compare",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "curriculum-style",
+        "nature-weather-and-simple-science"
+      ]
+    },
+    {
+      "term": "confident",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "curriculum-style",
+        "myself-and-personal-development"
+      ]
+    },
+    {
+      "term": "cultural identity",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "curriculum-style",
+        "hong-kong-culture-and-festivals"
+      ]
+    },
+    {
+      "term": "culture",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "curriculum-style",
+        "hong-kong-culture-and-festivals"
+      ]
+    },
+    {
+      "term": "custom",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "curriculum-style",
+        "hong-kong-culture-and-festivals"
+      ]
+    },
+    {
+      "term": "daily routine",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "curriculum-style",
+        "transport-and-daily-life"
+      ]
+    },
+    {
+      "term": "danger",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "curriculum-style",
+        "safety-and-emergency"
+      ]
+    },
+    {
+      "term": "dentist",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "curriculum-style",
+        "health-hygiene-and-wellbeing"
+      ]
+    },
+    {
+      "term": "discipline",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "curriculum-style",
+        "school-and-learning-community"
+      ]
+    },
+    {
+      "term": "doctor",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "curriculum-style",
+        "health-hygiene-and-wellbeing"
+      ]
+    },
+    {
+      "term": "donate",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "curriculum-style",
+        "citizenship-and-social-values"
+      ]
+    },
+    {
+      "term": "Dragon Boat Festival",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "curriculum-style",
+        "hong-kong-culture-and-festivals"
+      ]
+    },
+    {
+      "term": "duty",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "curriculum-style",
+        "citizenship-and-social-values"
+      ]
+    },
+    {
+      "term": "eco-friendly",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "curriculum-style",
+        "environment-and-conservation"
+      ]
+    },
+    {
+      "term": "emotion",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "curriculum-style",
+        "myself-and-personal-development"
+      ]
+    },
+    {
+      "term": "empathy",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "curriculum-style",
+        "myself-and-personal-development"
+      ]
+    },
+    {
+      "term": "environmental protection",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "curriculum-style",
+        "environment-and-conservation"
+      ]
+    },
+    {
+      "term": "escape route",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "curriculum-style",
+        "safety-and-emergency"
+      ]
+    },
+    {
+      "term": "fairness",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "curriculum-style",
+        "citizenship-and-social-values"
+      ]
+    },
+    {
+      "term": "family",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "curriculum-style",
+        "family-and-relationships"
+      ]
+    },
+    {
+      "term": "family activity",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "curriculum-style",
+        "family-and-relationships"
+      ]
+    },
+    {
+      "term": "family role",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "curriculum-style",
+        "family-and-relationships"
+      ]
+    },
+    {
+      "term": "family rule",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "curriculum-style",
+        "family-and-relationships"
+      ]
+    },
+    {
+      "term": "feelings",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "curriculum-style",
+        "myself-and-personal-development"
+      ]
+    },
+    {
+      "term": "ferry",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "curriculum-style",
+        "transport-and-daily-life"
+      ]
+    },
+    {
+      "term": "fire drill",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "curriculum-style",
+        "safety-and-emergency"
+      ]
+    },
+    {
+      "term": "fire safety",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "curriculum-style",
+        "safety-and-emergency"
+      ]
+    },
+    {
+      "term": "fire station",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "curriculum-style",
+        "community-and-public-services"
+      ]
+    },
+    {
+      "term": "firefighter",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "curriculum-style",
+        "community-and-public-services"
+      ]
+    },
+    {
+      "term": "first aid",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "curriculum-style",
+        "safety-and-emergency"
+      ]
+    },
+    {
+      "term": "flower",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "curriculum-style",
+        "nature-weather-and-simple-science"
+      ]
+    },
+    {
+      "term": "follow law",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "curriculum-style",
+        "citizenship-and-social-values"
+      ]
+    },
+    {
+      "term": "follow rules",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "curriculum-style",
+        "safety-and-emergency"
+      ]
+    },
+    {
+      "term": "friendship",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "curriculum-style",
+        "family-and-relationships"
+      ]
+    },
+    {
+      "term": "fruit",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "curriculum-style",
+        "health-hygiene-and-wellbeing"
+      ]
+    },
+    {
+      "term": "germs",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "curriculum-style",
+        "health-hygiene-and-wellbeing"
+      ]
+    },
+    {
+      "term": "global warming",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "curriculum-style",
+        "environment-and-conservation"
+      ]
+    },
+    {
+      "term": "goal",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "curriculum-style",
+        "myself-and-personal-development"
+      ]
+    },
+    {
+      "term": "green living",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "curriculum-style",
+        "environment-and-conservation"
+      ]
+    },
+    {
+      "term": "group work",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "curriculum-style",
+        "school-and-learning-community"
+      ]
+    },
+    {
+      "term": "grow",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "curriculum-style",
+        "nature-weather-and-simple-science"
+      ]
+    },
+    {
+      "term": "habitat",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "curriculum-style",
+        "environment-and-conservation"
+      ]
+    },
+    {
+      "term": "harmony",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "curriculum-style",
+        "citizenship-and-social-values"
+      ]
+    },
+    {
+      "term": "health",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "curriculum-style",
+        "health-hygiene-and-wellbeing"
+      ]
+    },
+    {
+      "term": "healthy habit",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "curriculum-style",
+        "health-hygiene-and-wellbeing"
+      ]
+    },
+    {
+      "term": "helmet",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "curriculum-style",
+        "safety-and-emergency"
+      ]
+    },
+    {
+      "term": "help at home",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "curriculum-style",
+        "family-and-relationships"
+      ]
+    },
+    {
+      "term": "help others",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "curriculum-style",
+        "myself-and-personal-development"
+      ]
+    },
+    {
+      "term": "help the community",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "curriculum-style",
+        "community-and-public-services"
+      ]
+    },
+    {
+      "term": "history",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "curriculum-style",
+        "hong-kong-culture-and-festivals"
+      ]
+    },
+    {
+      "term": "hobby",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "curriculum-style",
+        "myself-and-personal-development"
+      ]
+    },
+    {
+      "term": "home safety",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "curriculum-style",
+        "safety-and-emergency"
+      ]
+    },
+    {
+      "term": "homework",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "curriculum-style",
+        "school-and-learning-community"
+      ]
+    },
+    {
+      "term": "honest",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "curriculum-style",
+        "citizenship-and-social-values"
+      ]
+    },
+    {
+      "term": "Hong Kong",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "curriculum-style",
+        "hong-kong-culture-and-festivals"
+      ]
+    },
+    {
+      "term": "hospital",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "curriculum-style",
+        "community-and-public-services"
+      ]
+    },
+    {
+      "term": "hot",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "curriculum-style",
+        "nature-weather-and-simple-science"
+      ]
+    },
+    {
+      "term": "illness",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "curriculum-style",
+        "health-hygiene-and-wellbeing"
+      ]
+    },
+    {
+      "term": "improve",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "curriculum-style",
+        "myself-and-personal-development"
+      ]
+    },
+    {
+      "term": "include others",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "curriculum-style",
+        "family-and-relationships"
+      ]
+    },
+    {
+      "term": "insect",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "curriculum-style",
+        "nature-weather-and-simple-science"
+      ]
+    },
+    {
+      "term": "interest",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "curriculum-style",
+        "myself-and-personal-development"
+      ]
+    },
+    {
+      "term": "journey",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "curriculum-style",
+        "transport-and-daily-life"
+      ]
+    },
+    {
+      "term": "junk food",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "curriculum-style",
+        "health-hygiene-and-wellbeing"
+      ]
+    },
+    {
+      "term": "justice",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "curriculum-style",
+        "citizenship-and-social-values"
+      ]
+    },
+    {
+      "term": "kindness",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "curriculum-style",
+        "myself-and-personal-development"
+      ]
+    },
+    {
+      "term": "land",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "curriculum-style",
+        "environment-and-conservation"
+      ]
+    },
+    {
+      "term": "landmark",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "curriculum-style",
+        "hong-kong-culture-and-festivals"
+      ]
+    },
+    {
+      "term": "lantern",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "curriculum-style",
+        "hong-kong-culture-and-festivals"
+      ]
+    },
+    {
+      "term": "leadership",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "curriculum-style",
+        "citizenship-and-social-values"
+      ]
+    },
+    {
+      "term": "learn from mistake",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "curriculum-style",
+        "myself-and-personal-development"
+      ]
+    },
+    {
+      "term": "learning attitude",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "curriculum-style",
+        "school-and-learning-community"
+      ]
+    },
+    {
+      "term": "library",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "curriculum-style",
+        "school-and-learning-community"
+      ]
+    },
+    {
+      "term": "lion dance",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "curriculum-style",
+        "hong-kong-culture-and-festivals"
+      ]
+    },
+    {
+      "term": "listen carefully",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "curriculum-style",
+        "school-and-learning-community"
+      ]
+    },
+    {
+      "term": "listen to others",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "curriculum-style",
+        "family-and-relationships"
+      ]
+    },
+    {
+      "term": "living thing",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "curriculum-style",
+        "nature-weather-and-simple-science"
+      ]
+    },
+    {
+      "term": "local food",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "curriculum-style",
+        "hong-kong-culture-and-festivals"
+      ]
+    },
+    {
+      "term": "look both ways",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "curriculum-style",
+        "safety-and-emergency"
+      ]
+    },
+    {
+      "term": "love",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "curriculum-style",
+        "family-and-relationships"
+      ]
+    },
+    {
+      "term": "manage feelings",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "curriculum-style",
+        "myself-and-personal-development"
+      ]
+    },
+    {
+      "term": "market",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "curriculum-style",
+        "community-and-public-services"
+      ]
+    },
+    {
+      "term": "medicine",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "curriculum-style",
+        "health-hygiene-and-wellbeing"
+      ]
+    },
+    {
+      "term": "Mid-Autumn Festival",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "curriculum-style",
+        "hong-kong-culture-and-festivals"
+      ]
+    },
+    {
+      "term": "minibus",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "curriculum-style",
+        "transport-and-daily-life"
+      ]
+    },
+    {
+      "term": "mooncake",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "curriculum-style",
+        "hong-kong-culture-and-festivals"
+      ]
+    },
+    {
+      "term": "MTR",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "curriculum-style",
+        "transport-and-daily-life"
+      ]
+    },
+    {
+      "term": "museum",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "curriculum-style",
+        "hong-kong-culture-and-festivals"
+      ]
+    },
+    {
+      "term": "myself",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "curriculum-style",
+        "myself-and-personal-development"
+      ]
+    },
+    {
+      "term": "nature",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "curriculum-style",
+        "environment-and-conservation"
+      ]
+    },
+    {
+      "term": "neighbourhood",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "curriculum-style",
+        "community-and-public-services"
+      ]
+    },
+    {
+      "term": "non-living thing",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "curriculum-style",
+        "nature-weather-and-simple-science"
+      ]
+    },
+    {
+      "term": "nurse",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "curriculum-style",
+        "community-and-public-services"
+      ]
+    },
+    {
+      "term": "nutrition",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "curriculum-style",
+        "health-hygiene-and-wellbeing"
+      ]
+    },
+    {
+      "term": "observe",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "curriculum-style",
+        "nature-weather-and-simple-science"
+      ]
+    },
+    {
+      "term": "Octopus card",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "curriculum-style",
+        "transport-and-daily-life"
+      ]
+    },
+    {
+      "term": "outdoor activity",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "curriculum-style",
+        "health-hygiene-and-wellbeing"
+      ]
+    },
+    {
+      "term": "parent",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "curriculum-style",
+        "family-and-relationships"
+      ]
+    },
+    {
+      "term": "park",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "curriculum-style",
+        "community-and-public-services"
+      ]
+    },
+    {
+      "term": "passenger",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "curriculum-style",
+        "transport-and-daily-life"
+      ]
+    },
+    {
+      "term": "peace",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "curriculum-style",
+        "citizenship-and-social-values"
+      ]
+    },
+    {
+      "term": "pedestrian",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "curriculum-style",
+        "safety-and-emergency"
+      ]
+    },
+    {
+      "term": "personal hygiene",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "curriculum-style",
+        "health-hygiene-and-wellbeing"
+      ]
+    },
+    {
+      "term": "pet",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "curriculum-style",
+        "nature-weather-and-simple-science"
+      ]
+    },
+    {
+      "term": "plan a trip",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "curriculum-style",
+        "transport-and-daily-life"
+      ]
+    },
+    {
+      "term": "plant",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "curriculum-style",
+        "nature-weather-and-simple-science"
+      ]
+    },
+    {
+      "term": "plant a tree",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "curriculum-style",
+        "environment-and-conservation"
+      ]
+    },
+    {
+      "term": "playground",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "curriculum-style",
+        "school-and-learning-community"
+      ]
+    },
+    {
+      "term": "playground safety",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "curriculum-style",
+        "safety-and-emergency"
+      ]
+    },
+    {
+      "term": "police officer",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "curriculum-style",
+        "community-and-public-services"
+      ]
+    },
+    {
+      "term": "police station",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "curriculum-style",
+        "community-and-public-services"
+      ]
+    },
+    {
+      "term": "polite",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "curriculum-style",
+        "citizenship-and-social-values"
+      ]
+    },
+    {
+      "term": "post office",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "curriculum-style",
+        "community-and-public-services"
+      ]
+    },
+    {
+      "term": "postman",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "curriculum-style",
+        "community-and-public-services"
+      ]
+    },
+    {
+      "term": "presentation",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "curriculum-style",
+        "school-and-learning-community"
+      ]
+    },
+    {
+      "term": "preserve",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "curriculum-style",
+        "hong-kong-culture-and-festivals"
+      ]
+    },
+    {
+      "term": "principal",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "curriculum-style",
+        "school-and-learning-community"
+      ]
+    },
+    {
+      "term": "project",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "curriculum-style",
+        "school-and-learning-community"
+      ]
+    },
+    {
+      "term": "protect",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "curriculum-style",
+        "safety-and-emergency"
+      ]
+    },
+    {
+      "term": "protect animals",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "curriculum-style",
+        "environment-and-conservation"
+      ]
+    },
+    {
+      "term": "protein",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "curriculum-style",
+        "health-hygiene-and-wellbeing"
+      ]
+    },
+    {
+      "term": "public facility",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "curriculum-style",
+        "community-and-public-services"
+      ]
+    },
+    {
+      "term": "public spirit",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "curriculum-style",
+        "citizenship-and-social-values"
+      ]
+    },
+    {
+      "term": "rainy",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "curriculum-style",
+        "nature-weather-and-simple-science"
+      ]
+    },
+    {
+      "term": "record",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "curriculum-style",
+        "nature-weather-and-simple-science"
+      ]
+    },
+    {
+      "term": "red packet",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "curriculum-style",
+        "hong-kong-culture-and-festivals"
+      ]
+    },
+    {
+      "term": "reduce",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "curriculum-style",
+        "environment-and-conservation"
+      ]
+    },
+    {
+      "term": "relative",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "curriculum-style",
+        "family-and-relationships"
+      ]
+    },
+    {
+      "term": "respect differences",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "curriculum-style",
+        "hong-kong-culture-and-festivals"
+      ]
+    },
+    {
+      "term": "respect diversity",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "curriculum-style",
+        "citizenship-and-social-values"
+      ]
+    },
+    {
+      "term": "respect elders",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "curriculum-style",
+        "family-and-relationships"
+      ]
+    },
+    {
+      "term": "responsibility",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "curriculum-style",
+        "myself-and-personal-development"
+      ]
+    },
+    {
+      "term": "responsible citizen",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "curriculum-style",
+        "environment-and-conservation"
+      ]
+    },
+    {
+      "term": "rest",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "curriculum-style",
+        "health-hygiene-and-wellbeing"
+      ]
+    },
+    {
+      "term": "reuse",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "curriculum-style",
+        "environment-and-conservation"
+      ]
+    },
+    {
+      "term": "right",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "curriculum-style",
+        "citizenship-and-social-values"
+      ]
+    },
+    {
+      "term": "road safety",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "curriculum-style",
+        "safety-and-emergency"
+      ]
+    },
+    {
+      "term": "rule",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "curriculum-style",
+        "school-and-learning-community"
+      ]
+    },
+    {
+      "term": "safe",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "curriculum-style",
+        "safety-and-emergency"
+      ]
+    },
+    {
+      "term": "save energy",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "curriculum-style",
+        "environment-and-conservation"
+      ]
+    },
+    {
+      "term": "save water",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "curriculum-style",
+        "environment-and-conservation"
+      ]
+    },
+    {
+      "term": "school",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "curriculum-style",
+        "school-and-learning-community"
+      ]
+    },
+    {
+      "term": "school event",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "curriculum-style",
+        "school-and-learning-community"
+      ]
+    },
+    {
+      "term": "school service",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "curriculum-style",
+        "school-and-learning-community"
+      ]
+    },
+    {
+      "term": "season",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "curriculum-style",
+        "nature-weather-and-simple-science"
+      ]
+    },
+    {
+      "term": "seat belt",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "curriculum-style",
+        "safety-and-emergency"
+      ]
+    },
+    {
+      "term": "seed",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "curriculum-style",
+        "nature-weather-and-simple-science"
+      ]
+    },
+    {
+      "term": "self-care",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "curriculum-style",
+        "myself-and-personal-development"
+      ]
+    },
+    {
+      "term": "service worker",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "curriculum-style",
+        "community-and-public-services"
+      ]
+    },
+    {
+      "term": "share",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "curriculum-style",
+        "citizenship-and-social-values"
+      ]
+    },
+    {
+      "term": "share chores",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "curriculum-style",
+        "family-and-relationships"
+      ]
+    },
+    {
+      "term": "shop",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "curriculum-style",
+        "community-and-public-services"
+      ]
+    },
+    {
+      "term": "shy",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "curriculum-style",
+        "myself-and-personal-development"
+      ]
+    },
+    {
+      "term": "simple experiment",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "curriculum-style",
+        "nature-weather-and-simple-science"
+      ]
+    },
+    {
+      "term": "sleep",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "curriculum-style",
+        "health-hygiene-and-wellbeing"
+      ]
+    },
+    {
+      "term": "solve conflict",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "curriculum-style",
+        "family-and-relationships"
+      ]
+    },
+    {
+      "term": "station",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "curriculum-style",
+        "transport-and-daily-life"
+      ]
+    },
+    {
+      "term": "stay fit",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "curriculum-style",
+        "health-hygiene-and-wellbeing"
+      ]
+    },
+    {
+      "term": "stranger danger",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "curriculum-style",
+        "safety-and-emergency"
+      ]
+    },
+    {
+      "term": "strength",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "curriculum-style",
+        "myself-and-personal-development"
+      ]
+    },
+    {
+      "term": "sunny",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "curriculum-style",
+        "nature-weather-and-simple-science"
+      ]
+    },
+    {
+      "term": "support",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "curriculum-style",
+        "family-and-relationships"
+      ]
+    },
+    {
+      "term": "talent",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "curriculum-style",
+        "myself-and-personal-development"
+      ]
+    },
+    {
+      "term": "taxi",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "curriculum-style",
+        "transport-and-daily-life"
+      ]
+    },
+    {
+      "term": "teacher",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "curriculum-style",
+        "school-and-learning-community"
+      ]
+    },
+    {
+      "term": "teamwork",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "curriculum-style",
+        "citizenship-and-social-values"
+      ]
+    },
+    {
+      "term": "temperature",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "curriculum-style",
+        "nature-weather-and-simple-science"
+      ]
+    },
+    {
+      "term": "ticket",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "curriculum-style",
+        "transport-and-daily-life"
+      ]
+    },
+    {
+      "term": "traffic",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "curriculum-style",
+        "transport-and-daily-life"
+      ]
+    },
+    {
+      "term": "train",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "curriculum-style",
+        "transport-and-daily-life"
+      ]
+    },
+    {
+      "term": "tram",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "curriculum-style",
+        "transport-and-daily-life"
+      ]
+    },
+    {
+      "term": "transport",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "curriculum-style",
+        "transport-and-daily-life"
+      ]
+    },
+    {
+      "term": "tree",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "curriculum-style",
+        "nature-weather-and-simple-science"
+      ]
+    },
+    {
+      "term": "trust",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "curriculum-style",
+        "family-and-relationships"
+      ]
+    },
+    {
+      "term": "try your best",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "curriculum-style",
+        "school-and-learning-community"
+      ]
+    },
+    {
+      "term": "vegetable",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "curriculum-style",
+        "health-hygiene-and-wellbeing"
+      ]
+    },
+    {
+      "term": "volunteer service",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "curriculum-style",
+        "citizenship-and-social-values"
+      ]
+    },
+    {
+      "term": "walk",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "curriculum-style",
+        "transport-and-daily-life"
+      ]
+    },
+    {
+      "term": "wash hands",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "curriculum-style",
+        "health-hygiene-and-wellbeing"
+      ]
+    },
+    {
+      "term": "waste",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "curriculum-style",
+        "environment-and-conservation"
+      ]
+    },
+    {
+      "term": "water",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "curriculum-style",
+        "health-hygiene-and-wellbeing"
+      ]
+    },
+    {
+      "term": "weakness",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "curriculum-style",
+        "myself-and-personal-development"
+      ]
+    },
+    {
+      "term": "weather",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "curriculum-style",
+        "nature-weather-and-simple-science"
+      ]
+    },
+    {
+      "term": "weekday",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "curriculum-style",
+        "transport-and-daily-life"
+      ]
+    },
+    {
+      "term": "weekend",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "curriculum-style",
+        "transport-and-daily-life"
+      ]
+    },
+    {
+      "term": "wildlife",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "curriculum-style",
+        "environment-and-conservation"
+      ]
+    },
+    {
+      "term": "windy",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "curriculum-style",
+        "nature-weather-and-simple-science"
+      ]
+    },
+    {
+      "term": "younger sibling",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "curriculum-style",
+        "family-and-relationships"
+      ]
+    },
+    {
+      "term": "zebra crossing",
+      "tags": [
+        "hk",
+        "primary",
+        "p2",
+        "general-studies",
+        "curriculum-style",
+        "safety-and-emergency"
       ]
     }
   ]

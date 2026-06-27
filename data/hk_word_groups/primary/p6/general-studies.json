@@ -7,6 +7,15 @@
   "version": "2026.06",
   "display_name_en": "P6 General Studies",
   "display_name_zh_hant": "小六常識",
+  "source": {
+    "type": "curriculum_style_public_references",
+    "references": [
+      "EDB General Studies for Primary Schools Curriculum Guide",
+      "EDB primary General Studies Key Stage 2 learning objectives",
+      "Public Hong Kong Primary 6 General Studies syllabus topic examples (Hong Kong governance, sustainable development, global citizenship, China and national development, disaster preparedness, technology and media literacy, transition to secondary education)"
+    ],
+    "note": "No fixed official Hong Kong P6 general studies vocabulary list is prescribed; this list is theme-based for Primary 6 general studies enrichment import. Term-only entries are completed during import."
+  },
   "words": [
     {
       "term": "sustainable development",
@@ -306,6 +315,2206 @@
         "general-studies",
         "society",
         "values"
+      ]
+    },
+    {
+      "term": "accountability",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "general-studies",
+        "curriculum-style",
+        "democracy-governance-and-legislation"
+      ]
+    },
+    {
+      "term": "active citizen",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "general-studies",
+        "curriculum-style",
+        "civic-responsibility-and-social-equity"
+      ]
+    },
+    {
+      "term": "adaptation",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "general-studies",
+        "curriculum-style",
+        "transition-to-secondary-and-life-planning"
+      ]
+    },
+    {
+      "term": "aging society",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "general-studies",
+        "curriculum-style",
+        "hong-kong-development-and-infrastructure"
+      ]
+    },
+    {
+      "term": "anti-bullying",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "general-studies",
+        "curriculum-style",
+        "civic-responsibility-and-social-equity"
+      ]
+    },
+    {
+      "term": "archaeology",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "general-studies",
+        "curriculum-style",
+        "biodiversity-conservation-and-heritage"
+      ]
+    },
+    {
+      "term": "artificial intelligence",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "general-studies",
+        "curriculum-style",
+        "technology-media-and-future-challenges"
+      ]
+    },
+    {
+      "term": "automation",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "general-studies",
+        "curriculum-style",
+        "technology-media-and-future-challenges"
+      ]
+    },
+    {
+      "term": "Belt and Road Initiative",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "general-studies",
+        "curriculum-style",
+        "china-modernization-and-national-identity"
+      ]
+    },
+    {
+      "term": "biotechnology",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "general-studies",
+        "curriculum-style",
+        "technology-media-and-future-challenges"
+      ]
+    },
+    {
+      "term": "build back better",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "general-studies",
+        "curriculum-style",
+        "disaster-risk-and-community-resilience"
+      ]
+    },
+    {
+      "term": "carbon reduction",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "general-studies",
+        "curriculum-style",
+        "sustainability-climate-and-resource-management"
+      ]
+    },
+    {
+      "term": "career interest",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "general-studies",
+        "curriculum-style",
+        "transition-to-secondary-and-life-planning"
+      ]
+    },
+    {
+      "term": "charity work",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "general-studies",
+        "curriculum-style",
+        "civic-responsibility-and-social-equity"
+      ]
+    },
+    {
+      "term": "Chinese civilization",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "general-studies",
+        "curriculum-style",
+        "china-modernization-and-national-identity"
+      ]
+    },
+    {
+      "term": "circular economy",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "general-studies",
+        "curriculum-style",
+        "sustainability-climate-and-resource-management"
+      ]
+    },
+    {
+      "term": "city competitiveness",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "general-studies",
+        "curriculum-style",
+        "hong-kong-development-and-infrastructure"
+      ]
+    },
+    {
+      "term": "civic duty",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "general-studies",
+        "curriculum-style",
+        "civic-responsibility-and-social-equity"
+      ]
+    },
+    {
+      "term": "civic participation",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "general-studies",
+        "curriculum-style",
+        "democracy-governance-and-legislation"
+      ]
+    },
+    {
+      "term": "climate action",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "general-studies",
+        "curriculum-style",
+        "sustainability-climate-and-resource-management"
+      ]
+    },
+    {
+      "term": "climate adaptation",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "general-studies",
+        "curriculum-style",
+        "sustainability-climate-and-resource-management"
+      ]
+    },
+    {
+      "term": "climate hazard",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "general-studies",
+        "curriculum-style",
+        "disaster-risk-and-community-resilience"
+      ]
+    },
+    {
+      "term": "common good",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "general-studies",
+        "curriculum-style",
+        "civic-responsibility-and-social-equity"
+      ]
+    },
+    {
+      "term": "communication skill",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "general-studies",
+        "curriculum-style",
+        "transition-to-secondary-and-life-planning"
+      ]
+    },
+    {
+      "term": "community building",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "general-studies",
+        "curriculum-style",
+        "civic-responsibility-and-social-equity"
+      ]
+    },
+    {
+      "term": "community drill",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "general-studies",
+        "curriculum-style",
+        "disaster-risk-and-community-resilience"
+      ]
+    },
+    {
+      "term": "community facility",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "general-studies",
+        "curriculum-style",
+        "hong-kong-development-and-infrastructure"
+      ]
+    },
+    {
+      "term": "conflict resolution",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "general-studies",
+        "curriculum-style",
+        "civic-responsibility-and-social-equity"
+      ]
+    },
+    {
+      "term": "conservation ethics",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "general-studies",
+        "curriculum-style",
+        "biodiversity-conservation-and-heritage"
+      ]
+    },
+    {
+      "term": "consumer choice",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "general-studies",
+        "curriculum-style",
+        "sustainability-climate-and-resource-management"
+      ]
+    },
+    {
+      "term": "corporate responsibility",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "general-studies",
+        "curriculum-style",
+        "sustainability-climate-and-resource-management"
+      ]
+    },
+    {
+      "term": "country park system",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "general-studies",
+        "curriculum-style",
+        "biodiversity-conservation-and-heritage"
+      ]
+    },
+    {
+      "term": "crisis communication",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "general-studies",
+        "curriculum-style",
+        "disaster-risk-and-community-resilience"
+      ]
+    },
+    {
+      "term": "critical thinking",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "general-studies",
+        "curriculum-style",
+        "transition-to-secondary-and-life-planning"
+      ]
+    },
+    {
+      "term": "cross-boundary cooperation",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "general-studies",
+        "curriculum-style",
+        "hong-kong-development-and-infrastructure"
+      ]
+    },
+    {
+      "term": "cultural continuity",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "general-studies",
+        "curriculum-style",
+        "biodiversity-conservation-and-heritage"
+      ]
+    },
+    {
+      "term": "cultural exchange",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "general-studies",
+        "curriculum-style",
+        "global-economy-and-international-relations"
+      ]
+    },
+    {
+      "term": "cultural heritage",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "general-studies",
+        "curriculum-style",
+        "china-modernization-and-national-identity"
+      ]
+    },
+    {
+      "term": "cultural heritage site",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "general-studies",
+        "curriculum-style",
+        "biodiversity-conservation-and-heritage"
+      ]
+    },
+    {
+      "term": "cyberbullying",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "general-studies",
+        "curriculum-style",
+        "technology-media-and-future-challenges"
+      ]
+    },
+    {
+      "term": "democratic society",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "general-studies",
+        "curriculum-style",
+        "democracy-governance-and-legislation"
+      ]
+    },
+    {
+      "term": "development challenge",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "general-studies",
+        "curriculum-style",
+        "hong-kong-development-and-infrastructure"
+      ]
+    },
+    {
+      "term": "digital citizenship",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "general-studies",
+        "curriculum-style",
+        "technology-media-and-future-challenges"
+      ]
+    },
+    {
+      "term": "digital society",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "general-studies",
+        "curriculum-style",
+        "technology-media-and-future-challenges"
+      ]
+    },
+    {
+      "term": "disaster management",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "general-studies",
+        "curriculum-style",
+        "disaster-risk-and-community-resilience"
+      ]
+    },
+    {
+      "term": "disaster preparedness",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "general-studies",
+        "curriculum-style",
+        "disaster-risk-and-community-resilience"
+      ]
+    },
+    {
+      "term": "disaster volunteer",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "general-studies",
+        "curriculum-style",
+        "disaster-risk-and-community-resilience"
+      ]
+    },
+    {
+      "term": "District Council",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "general-studies",
+        "curriculum-style",
+        "democracy-governance-and-legislation"
+      ]
+    },
+    {
+      "term": "diversity",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "general-studies",
+        "curriculum-style",
+        "civic-responsibility-and-social-equity"
+      ]
+    },
+    {
+      "term": "early warning",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "general-studies",
+        "curriculum-style",
+        "disaster-risk-and-community-resilience"
+      ]
+    },
+    {
+      "term": "economic achievement",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "general-studies",
+        "curriculum-style",
+        "china-modernization-and-national-identity"
+      ]
+    },
+    {
+      "term": "economic interdependence",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "general-studies",
+        "curriculum-style",
+        "global-economy-and-international-relations"
+      ]
+    },
+    {
+      "term": "ecosystem balance",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "general-studies",
+        "curriculum-style",
+        "biodiversity-conservation-and-heritage"
+      ]
+    },
+    {
+      "term": "election",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "general-studies",
+        "curriculum-style",
+        "democracy-governance-and-legislation"
+      ]
+    },
+    {
+      "term": "emergency response",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "general-studies",
+        "curriculum-style",
+        "disaster-risk-and-community-resilience"
+      ]
+    },
+    {
+      "term": "emergency shelter",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "general-studies",
+        "curriculum-style",
+        "disaster-risk-and-community-resilience"
+      ]
+    },
+    {
+      "term": "empathy",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "general-studies",
+        "curriculum-style",
+        "civic-responsibility-and-social-equity"
+      ]
+    },
+    {
+      "term": "energy efficiency",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "general-studies",
+        "curriculum-style",
+        "sustainability-climate-and-resource-management"
+      ]
+    },
+    {
+      "term": "enforcement",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "general-studies",
+        "curriculum-style",
+        "democracy-governance-and-legislation"
+      ]
+    },
+    {
+      "term": "environmental footprint",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "general-studies",
+        "curriculum-style",
+        "sustainability-climate-and-resource-management"
+      ]
+    },
+    {
+      "term": "environmental justice",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "general-studies",
+        "curriculum-style",
+        "sustainability-climate-and-resource-management"
+      ]
+    },
+    {
+      "term": "equality",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "general-studies",
+        "curriculum-style",
+        "civic-responsibility-and-social-equity"
+      ]
+    },
+    {
+      "term": "ethical technology",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "general-studies",
+        "curriculum-style",
+        "technology-media-and-future-challenges"
+      ]
+    },
+    {
+      "term": "evacuation plan",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "general-studies",
+        "curriculum-style",
+        "disaster-risk-and-community-resilience"
+      ]
+    },
+    {
+      "term": "executive",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "general-studies",
+        "curriculum-style",
+        "democracy-governance-and-legislation"
+      ]
+    },
+    {
+      "term": "extreme weather",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "general-studies",
+        "curriculum-style",
+        "disaster-risk-and-community-resilience"
+      ]
+    },
+    {
+      "term": "fact checking",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "general-studies",
+        "curriculum-style",
+        "technology-media-and-future-challenges"
+      ]
+    },
+    {
+      "term": "financial centre",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "general-studies",
+        "curriculum-style",
+        "hong-kong-development-and-infrastructure"
+      ]
+    },
+    {
+      "term": "food aid",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "general-studies",
+        "curriculum-style",
+        "global-economy-and-international-relations"
+      ]
+    },
+    {
+      "term": "food security",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "general-studies",
+        "curriculum-style",
+        "sustainability-climate-and-resource-management"
+      ]
+    },
+    {
+      "term": "foreign aid",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "general-studies",
+        "curriculum-style",
+        "global-economy-and-international-relations"
+      ]
+    },
+    {
+      "term": "future generations",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "general-studies",
+        "curriculum-style",
+        "sustainability-climate-and-resource-management"
+      ]
+    },
+    {
+      "term": "future Hong Kong",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "general-studies",
+        "curriculum-style",
+        "hong-kong-development-and-infrastructure"
+      ]
+    },
+    {
+      "term": "future job",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "general-studies",
+        "curriculum-style",
+        "technology-media-and-future-challenges"
+      ]
+    },
+    {
+      "term": "future readiness",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "general-studies",
+        "curriculum-style",
+        "transition-to-secondary-and-life-planning"
+      ]
+    },
+    {
+      "term": "global citizen",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "general-studies",
+        "curriculum-style",
+        "global-economy-and-international-relations"
+      ]
+    },
+    {
+      "term": "global health",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "general-studies",
+        "curriculum-style",
+        "global-economy-and-international-relations"
+      ]
+    },
+    {
+      "term": "global influence",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "general-studies",
+        "curriculum-style",
+        "china-modernization-and-national-identity"
+      ]
+    },
+    {
+      "term": "global issue",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "general-studies",
+        "curriculum-style",
+        "global-economy-and-international-relations"
+      ]
+    },
+    {
+      "term": "globalization",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "general-studies",
+        "curriculum-style",
+        "global-economy-and-international-relations"
+      ]
+    },
+    {
+      "term": "goal setting",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "general-studies",
+        "curriculum-style",
+        "transition-to-secondary-and-life-planning"
+      ]
+    },
+    {
+      "term": "government",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "general-studies",
+        "curriculum-style",
+        "democracy-governance-and-legislation"
+      ]
+    },
+    {
+      "term": "Greater Bay Area",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "general-studies",
+        "curriculum-style",
+        "hong-kong-development-and-infrastructure"
+      ]
+    },
+    {
+      "term": "green policy",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "general-studies",
+        "curriculum-style",
+        "sustainability-climate-and-resource-management"
+      ]
+    },
+    {
+      "term": "green transport",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "general-studies",
+        "curriculum-style",
+        "sustainability-climate-and-resource-management"
+      ]
+    },
+    {
+      "term": "growth mindset",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "general-studies",
+        "curriculum-style",
+        "transition-to-secondary-and-life-planning"
+      ]
+    },
+    {
+      "term": "habitat restoration",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "general-studies",
+        "curriculum-style",
+        "biodiversity-conservation-and-heritage"
+      ]
+    },
+    {
+      "term": "heritage preservation",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "general-studies",
+        "curriculum-style",
+        "biodiversity-conservation-and-heritage"
+      ]
+    },
+    {
+      "term": "high-speed rail",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "general-studies",
+        "curriculum-style",
+        "china-modernization-and-national-identity"
+      ]
+    },
+    {
+      "term": "historical building",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "general-studies",
+        "curriculum-style",
+        "biodiversity-conservation-and-heritage"
+      ]
+    },
+    {
+      "term": "housing policy",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "general-studies",
+        "curriculum-style",
+        "hong-kong-development-and-infrastructure"
+      ]
+    },
+    {
+      "term": "human dignity",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "general-studies",
+        "curriculum-style",
+        "civic-responsibility-and-social-equity"
+      ]
+    },
+    {
+      "term": "human rights",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "general-studies",
+        "curriculum-style",
+        "global-economy-and-international-relations"
+      ]
+    },
+    {
+      "term": "humanitarian support",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "general-studies",
+        "curriculum-style",
+        "disaster-risk-and-community-resilience"
+      ]
+    },
+    {
+      "term": "identity and belonging",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "general-studies",
+        "curriculum-style",
+        "china-modernization-and-national-identity"
+      ]
+    },
+    {
+      "term": "inclusion",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "general-studies",
+        "curriculum-style",
+        "civic-responsibility-and-social-equity"
+      ]
+    },
+    {
+      "term": "independence",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "general-studies",
+        "curriculum-style",
+        "transition-to-secondary-and-life-planning"
+      ]
+    },
+    {
+      "term": "information age",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "general-studies",
+        "curriculum-style",
+        "technology-media-and-future-challenges"
+      ]
+    },
+    {
+      "term": "infrastructure project",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "general-studies",
+        "curriculum-style",
+        "china-modernization-and-national-identity"
+      ]
+    },
+    {
+      "term": "innovation culture",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "general-studies",
+        "curriculum-style",
+        "technology-media-and-future-challenges"
+      ]
+    },
+    {
+      "term": "innovation hub",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "general-studies",
+        "curriculum-style",
+        "hong-kong-development-and-infrastructure"
+      ]
+    },
+    {
+      "term": "intangible heritage",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "general-studies",
+        "curriculum-style",
+        "biodiversity-conservation-and-heritage"
+      ]
+    },
+    {
+      "term": "international agreement",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "general-studies",
+        "curriculum-style",
+        "sustainability-climate-and-resource-management"
+      ]
+    },
+    {
+      "term": "international cooperation",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "general-studies",
+        "curriculum-style",
+        "global-economy-and-international-relations"
+      ]
+    },
+    {
+      "term": "international responsibility",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "general-studies",
+        "curriculum-style",
+        "global-economy-and-international-relations"
+      ]
+    },
+    {
+      "term": "international trade",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "general-studies",
+        "curriculum-style",
+        "global-economy-and-international-relations"
+      ]
+    },
+    {
+      "term": "invasive species",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "general-studies",
+        "curriculum-style",
+        "biodiversity-conservation-and-heritage"
+      ]
+    },
+    {
+      "term": "judiciary",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "general-studies",
+        "curriculum-style",
+        "democracy-governance-and-legislation"
+      ]
+    },
+    {
+      "term": "law making",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "general-studies",
+        "curriculum-style",
+        "democracy-governance-and-legislation"
+      ]
+    },
+    {
+      "term": "leadership",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "general-studies",
+        "curriculum-style",
+        "transition-to-secondary-and-life-planning"
+      ]
+    },
+    {
+      "term": "learning habit",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "general-studies",
+        "curriculum-style",
+        "transition-to-secondary-and-life-planning"
+      ]
+    },
+    {
+      "term": "legal system",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "general-studies",
+        "curriculum-style",
+        "democracy-governance-and-legislation"
+      ]
+    },
+    {
+      "term": "Legislative Council",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "general-studies",
+        "curriculum-style",
+        "democracy-governance-and-legislation"
+      ]
+    },
+    {
+      "term": "legislature",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "general-studies",
+        "curriculum-style",
+        "democracy-governance-and-legislation"
+      ]
+    },
+    {
+      "term": "life planning",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "general-studies",
+        "curriculum-style",
+        "transition-to-secondary-and-life-planning"
+      ]
+    },
+    {
+      "term": "lifelong learning",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "general-studies",
+        "curriculum-style",
+        "technology-media-and-future-challenges"
+      ]
+    },
+    {
+      "term": "livelihood issue",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "general-studies",
+        "curriculum-style",
+        "hong-kong-development-and-infrastructure"
+      ]
+    },
+    {
+      "term": "living heritage",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "general-studies",
+        "curriculum-style",
+        "biodiversity-conservation-and-heritage"
+      ]
+    },
+    {
+      "term": "local culture",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "general-studies",
+        "curriculum-style",
+        "biodiversity-conservation-and-heritage"
+      ]
+    },
+    {
+      "term": "marine reserve",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "general-studies",
+        "curriculum-style",
+        "biodiversity-conservation-and-heritage"
+      ]
+    },
+    {
+      "term": "media responsibility",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "general-studies",
+        "curriculum-style",
+        "technology-media-and-future-challenges"
+      ]
+    },
+    {
+      "term": "metropolitan city",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "general-studies",
+        "curriculum-style",
+        "hong-kong-development-and-infrastructure"
+      ]
+    },
+    {
+      "term": "misinformation",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "general-studies",
+        "curriculum-style",
+        "technology-media-and-future-challenges"
+      ]
+    },
+    {
+      "term": "modern China",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "general-studies",
+        "curriculum-style",
+        "china-modernization-and-national-identity"
+      ]
+    },
+    {
+      "term": "museum education",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "general-studies",
+        "curriculum-style",
+        "biodiversity-conservation-and-heritage"
+      ]
+    },
+    {
+      "term": "mutual aid",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "general-studies",
+        "curriculum-style",
+        "disaster-risk-and-community-resilience"
+      ]
+    },
+    {
+      "term": "mutual support",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "general-studies",
+        "curriculum-style",
+        "civic-responsibility-and-social-equity"
+      ]
+    },
+    {
+      "term": "national development",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "general-studies",
+        "curriculum-style",
+        "china-modernization-and-national-identity"
+      ]
+    },
+    {
+      "term": "national education",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "general-studies",
+        "curriculum-style",
+        "china-modernization-and-national-identity"
+      ]
+    },
+    {
+      "term": "national pride",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "general-studies",
+        "curriculum-style",
+        "china-modernization-and-national-identity"
+      ]
+    },
+    {
+      "term": "national unity",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "general-studies",
+        "curriculum-style",
+        "china-modernization-and-national-identity"
+      ]
+    },
+    {
+      "term": "net zero",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "general-studies",
+        "curriculum-style",
+        "sustainability-climate-and-resource-management"
+      ]
+    },
+    {
+      "term": "One Country Two Systems",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "general-studies",
+        "curriculum-style",
+        "china-modernization-and-national-identity"
+      ]
+    },
+    {
+      "term": "online privacy",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "general-studies",
+        "curriculum-style",
+        "technology-media-and-future-challenges"
+      ]
+    },
+    {
+      "term": "pandemic response",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "general-studies",
+        "curriculum-style",
+        "global-economy-and-international-relations"
+      ]
+    },
+    {
+      "term": "Paris Agreement",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "general-studies",
+        "curriculum-style",
+        "sustainability-climate-and-resource-management"
+      ]
+    },
+    {
+      "term": "patriotic sentiment",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "general-studies",
+        "curriculum-style",
+        "china-modernization-and-national-identity"
+      ]
+    },
+    {
+      "term": "peacekeeping",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "general-studies",
+        "curriculum-style",
+        "global-economy-and-international-relations"
+      ]
+    },
+    {
+      "term": "policy",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "general-studies",
+        "curriculum-style",
+        "democracy-governance-and-legislation"
+      ]
+    },
+    {
+      "term": "population policy",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "general-studies",
+        "curriculum-style",
+        "hong-kong-development-and-infrastructure"
+      ]
+    },
+    {
+      "term": "port economy",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "general-studies",
+        "curriculum-style",
+        "hong-kong-development-and-infrastructure"
+      ]
+    },
+    {
+      "term": "poverty reduction",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "general-studies",
+        "curriculum-style",
+        "global-economy-and-international-relations"
+      ]
+    },
+    {
+      "term": "problem solving",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "general-studies",
+        "curriculum-style",
+        "transition-to-secondary-and-life-planning"
+      ]
+    },
+    {
+      "term": "psychological support",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "general-studies",
+        "curriculum-style",
+        "disaster-risk-and-community-resilience"
+      ]
+    },
+    {
+      "term": "public consultation",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "general-studies",
+        "curriculum-style",
+        "democracy-governance-and-legislation"
+      ]
+    },
+    {
+      "term": "public governance",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "general-studies",
+        "curriculum-style",
+        "democracy-governance-and-legislation"
+      ]
+    },
+    {
+      "term": "public infrastructure",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "general-studies",
+        "curriculum-style",
+        "hong-kong-development-and-infrastructure"
+      ]
+    },
+    {
+      "term": "public interest",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "general-studies",
+        "curriculum-style",
+        "civic-responsibility-and-social-equity"
+      ]
+    },
+    {
+      "term": "public service",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "general-studies",
+        "curriculum-style",
+        "hong-kong-development-and-infrastructure"
+      ]
+    },
+    {
+      "term": "recovery plan",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "general-studies",
+        "curriculum-style",
+        "disaster-risk-and-community-resilience"
+      ]
+    },
+    {
+      "term": "reform and opening up",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "general-studies",
+        "curriculum-style",
+        "china-modernization-and-national-identity"
+      ]
+    },
+    {
+      "term": "refugee crisis",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "general-studies",
+        "curriculum-style",
+        "global-economy-and-international-relations"
+      ]
+    },
+    {
+      "term": "regional diversity",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "general-studies",
+        "curriculum-style",
+        "china-modernization-and-national-identity"
+      ]
+    },
+    {
+      "term": "regional integration",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "general-studies",
+        "curriculum-style",
+        "hong-kong-development-and-infrastructure"
+      ]
+    },
+    {
+      "term": "regulation",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "general-studies",
+        "curriculum-style",
+        "democracy-governance-and-legislation"
+      ]
+    },
+    {
+      "term": "renewable technology",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "general-studies",
+        "curriculum-style",
+        "technology-media-and-future-challenges"
+      ]
+    },
+    {
+      "term": "renewable transition",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "general-studies",
+        "curriculum-style",
+        "sustainability-climate-and-resource-management"
+      ]
+    },
+    {
+      "term": "rescue operation",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "general-studies",
+        "curriculum-style",
+        "disaster-risk-and-community-resilience"
+      ]
+    },
+    {
+      "term": "resilience",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "general-studies",
+        "curriculum-style",
+        "transition-to-secondary-and-life-planning"
+      ]
+    },
+    {
+      "term": "resilient community",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "general-studies",
+        "curriculum-style",
+        "disaster-risk-and-community-resilience"
+      ]
+    },
+    {
+      "term": "respect for law",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "general-studies",
+        "curriculum-style",
+        "civic-responsibility-and-social-equity"
+      ]
+    },
+    {
+      "term": "responsible choice",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "general-studies",
+        "curriculum-style",
+        "transition-to-secondary-and-life-planning"
+      ]
+    },
+    {
+      "term": "responsible innovation",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "general-studies",
+        "curriculum-style",
+        "technology-media-and-future-challenges"
+      ]
+    },
+    {
+      "term": "rights and responsibilities",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "general-studies",
+        "curriculum-style",
+        "civic-responsibility-and-social-equity"
+      ]
+    },
+    {
+      "term": "risk reduction",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "general-studies",
+        "curriculum-style",
+        "disaster-risk-and-community-resilience"
+      ]
+    },
+    {
+      "term": "safety education",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "general-studies",
+        "curriculum-style",
+        "disaster-risk-and-community-resilience"
+      ]
+    },
+    {
+      "term": "science and technology power",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "general-studies",
+        "curriculum-style",
+        "china-modernization-and-national-identity"
+      ]
+    },
+    {
+      "term": "secondary school",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "general-studies",
+        "curriculum-style",
+        "transition-to-secondary-and-life-planning"
+      ]
+    },
+    {
+      "term": "self-discipline",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "general-studies",
+        "curriculum-style",
+        "transition-to-secondary-and-life-planning"
+      ]
+    },
+    {
+      "term": "separation of powers",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "general-studies",
+        "curriculum-style",
+        "democracy-governance-and-legislation"
+      ]
+    },
+    {
+      "term": "shared future",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "general-studies",
+        "curriculum-style",
+        "china-modernization-and-national-identity"
+      ]
+    },
+    {
+      "term": "smart city",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "general-studies",
+        "curriculum-style",
+        "hong-kong-development-and-infrastructure"
+      ]
+    },
+    {
+      "term": "smart device",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "general-studies",
+        "curriculum-style",
+        "technology-media-and-future-challenges"
+      ]
+    },
+    {
+      "term": "social contribution",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "general-studies",
+        "curriculum-style",
+        "civic-responsibility-and-social-equity"
+      ]
+    },
+    {
+      "term": "social harmony",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "general-studies",
+        "curriculum-style",
+        "civic-responsibility-and-social-equity"
+      ]
+    },
+    {
+      "term": "social justice",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "general-studies",
+        "curriculum-style",
+        "civic-responsibility-and-social-equity"
+      ]
+    },
+    {
+      "term": "space exploration",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "general-studies",
+        "curriculum-style",
+        "china-modernization-and-national-identity"
+      ]
+    },
+    {
+      "term": "species protection",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "general-studies",
+        "curriculum-style",
+        "biodiversity-conservation-and-heritage"
+      ]
+    },
+    {
+      "term": "STEM career",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "general-studies",
+        "curriculum-style",
+        "technology-media-and-future-challenges"
+      ]
+    },
+    {
+      "term": "strength",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "general-studies",
+        "curriculum-style",
+        "transition-to-secondary-and-life-planning"
+      ]
+    },
+    {
+      "term": "study skill",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "general-studies",
+        "curriculum-style",
+        "transition-to-secondary-and-life-planning"
+      ]
+    },
+    {
+      "term": "supply chain",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "general-studies",
+        "curriculum-style",
+        "global-economy-and-international-relations"
+      ]
+    },
+    {
+      "term": "sustainable city",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "general-studies",
+        "curriculum-style",
+        "sustainability-climate-and-resource-management"
+      ]
+    },
+    {
+      "term": "sustainable lifestyle",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "general-studies",
+        "curriculum-style",
+        "sustainability-climate-and-resource-management"
+      ]
+    },
+    {
+      "term": "sustainable world",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "general-studies",
+        "curriculum-style",
+        "global-economy-and-international-relations"
+      ]
+    },
+    {
+      "term": "teamwork",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "general-studies",
+        "curriculum-style",
+        "transition-to-secondary-and-life-planning"
+      ]
+    },
+    {
+      "term": "technology gap",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "general-studies",
+        "curriculum-style",
+        "technology-media-and-future-challenges"
+      ]
+    },
+    {
+      "term": "time management",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "general-studies",
+        "curriculum-style",
+        "transition-to-secondary-and-life-planning"
+      ]
+    },
+    {
+      "term": "traditional craft",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "general-studies",
+        "curriculum-style",
+        "biodiversity-conservation-and-heritage"
+      ]
+    },
+    {
+      "term": "transparency",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "general-studies",
+        "curriculum-style",
+        "democracy-governance-and-legislation"
+      ]
+    },
+    {
+      "term": "transport network",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "general-studies",
+        "curriculum-style",
+        "hong-kong-development-and-infrastructure"
+      ]
+    },
+    {
+      "term": "UNESCO heritage",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "general-studies",
+        "curriculum-style",
+        "biodiversity-conservation-and-heritage"
+      ]
+    },
+    {
+      "term": "United Nations",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "general-studies",
+        "curriculum-style",
+        "global-economy-and-international-relations"
+      ]
+    },
+    {
+      "term": "urban planning",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "general-studies",
+        "curriculum-style",
+        "hong-kong-development-and-infrastructure"
+      ]
+    },
+    {
+      "term": "volunteerism",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "general-studies",
+        "curriculum-style",
+        "civic-responsibility-and-social-equity"
+      ]
+    },
+    {
+      "term": "vote",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "general-studies",
+        "curriculum-style",
+        "democracy-governance-and-legislation"
+      ]
+    },
+    {
+      "term": "water resource",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "general-studies",
+        "curriculum-style",
+        "sustainability-climate-and-resource-management"
+      ]
+    },
+    {
+      "term": "wetland conservation",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "general-studies",
+        "curriculum-style",
+        "biodiversity-conservation-and-heritage"
+      ]
+    },
+    {
+      "term": "wildlife corridor",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "general-studies",
+        "curriculum-style",
+        "biodiversity-conservation-and-heritage"
+      ]
+    },
+    {
+      "term": "World Trade Organization",
+      "tags": [
+        "hk",
+        "primary",
+        "p6",
+        "general-studies",
+        "curriculum-style",
+        "global-economy-and-international-relations"
       ]
     }
   ]

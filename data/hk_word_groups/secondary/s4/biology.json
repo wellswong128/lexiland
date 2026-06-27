@@ -7,6 +7,15 @@
   "version": "2026.06",
   "display_name_en": "S4 Biology",
   "display_name_zh_hant": "中四生物",
+  "source": {
+    "type": "curriculum_style_public_references",
+    "references": [
+      "EDB Biology Curriculum and Assessment Guide (Secondary 4-6)",
+      "EDB senior secondary Biology Compulsory Part learning objectives",
+      "Public Hong Kong S4 Biology syllabus topic examples (cells and molecules of life, genetics, gas exchange, transport, regulation, reproduction, health and disease, ecology, biotechnology)"
+    ],
+    "note": "No fixed official Hong Kong S4 biology vocabulary list is prescribed; this list is theme-based for senior secondary S4 biology enrichment import. Term-only entries are completed during import."
+  },
   "words": [
     {
       "term": "enzyme",
@@ -306,6 +315,3229 @@
         "biology",
         "nervous_system",
         "physiology"
+      ]
+    },
+    {
+      "term": "abiotic factor",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "ecology-and-environment"
+      ]
+    },
+    {
+      "term": "absorption",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "nutrition-and-digestion"
+      ]
+    },
+    {
+      "term": "active immunity",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "immunity-and-disease"
+      ]
+    },
+    {
+      "term": "active transport",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "membrane-transport-and-osmosis"
+      ]
+    },
+    {
+      "term": "ADH",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "excretion-and-osmoregulation"
+      ]
+    },
+    {
+      "term": "aerobic respiration",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "respiration-and-energy"
+      ]
+    },
+    {
+      "term": "alcoholic fermentation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "respiration-and-energy"
+      ]
+    },
+    {
+      "term": "alveolus",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "gas-exchange-and-circulation"
+      ]
+    },
+    {
+      "term": "amino acid",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "biological-molecules-and-enzymes"
+      ]
+    },
+    {
+      "term": "amylase",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "nutrition-and-digestion"
+      ]
+    },
+    {
+      "term": "anaerobic respiration",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "respiration-and-energy"
+      ]
+    },
+    {
+      "term": "anaphase",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "cell-division-and-reproduction"
+      ]
+    },
+    {
+      "term": "antibiotic",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "immunity-and-disease"
+      ]
+    },
+    {
+      "term": "antibody",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "immunity-and-disease"
+      ]
+    },
+    {
+      "term": "antigen",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "immunity-and-disease"
+      ]
+    },
+    {
+      "term": "antiviral drug",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "immunity-and-disease"
+      ]
+    },
+    {
+      "term": "artery",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "gas-exchange-and-circulation"
+      ]
+    },
+    {
+      "term": "asexual reproduction",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "cell-division-and-reproduction"
+      ]
+    },
+    {
+      "term": "assimilation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "nutrition-and-digestion"
+      ]
+    },
+    {
+      "term": "ATP synthesis",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "respiration-and-energy"
+      ]
+    },
+    {
+      "term": "atrium",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "gas-exchange-and-circulation"
+      ]
+    },
+    {
+      "term": "autotroph",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "photosynthesis-and-plant-biology"
+      ]
+    },
+    {
+      "term": "bacterium",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "immunity-and-disease"
+      ]
+    },
+    {
+      "term": "balanced diet",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "nutrition-and-digestion"
+      ]
+    },
+    {
+      "term": "bile",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "nutrition-and-digestion"
+      ]
+    },
+    {
+      "term": "biochemical reaction",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "biological-molecules-and-enzymes"
+      ]
+    },
+    {
+      "term": "biodiversity",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "ecology-and-environment"
+      ]
+    },
+    {
+      "term": "biofuel",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "biotechnology-and-applied-biology"
+      ]
+    },
+    {
+      "term": "biological energy",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "respiration-and-energy"
+      ]
+    },
+    {
+      "term": "biomass",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "ecology-and-environment"
+      ]
+    },
+    {
+      "term": "bioreactor",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "biotechnology-and-applied-biology"
+      ]
+    },
+    {
+      "term": "biosafety",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "biotechnology-and-applied-biology"
+      ]
+    },
+    {
+      "term": "biotechnology",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "biotechnology-and-applied-biology"
+      ]
+    },
+    {
+      "term": "biotic factor",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "ecology-and-environment"
+      ]
+    },
+    {
+      "term": "bladder",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "excretion-and-osmoregulation"
+      ]
+    },
+    {
+      "term": "blood glucose regulation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "homeostasis-and-coordination"
+      ]
+    },
+    {
+      "term": "blood pressure",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "gas-exchange-and-circulation"
+      ]
+    },
+    {
+      "term": "Bowman's capsule",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "excretion-and-osmoregulation"
+      ]
+    },
+    {
+      "term": "breathing rate",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "gas-exchange-and-circulation"
+      ]
+    },
+    {
+      "term": "bulk transport",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "membrane-transport-and-osmosis"
+      ]
+    },
+    {
+      "term": "Calvin cycle",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "photosynthesis-and-plant-biology"
+      ]
+    },
+    {
+      "term": "capillary",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "gas-exchange-and-circulation"
+      ]
+    },
+    {
+      "term": "capillary network",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "gas-exchange-and-circulation"
+      ]
+    },
+    {
+      "term": "carbohydrate",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "biological-molecules-and-enzymes"
+      ]
+    },
+    {
+      "term": "carbon cycle",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "ecology-and-environment"
+      ]
+    },
+    {
+      "term": "carbon dioxide concentration",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "photosynthesis-and-plant-biology"
+      ]
+    },
+    {
+      "term": "carrier protein",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "membrane-transport-and-osmosis"
+      ]
+    },
+    {
+      "term": "catalyst",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "biological-molecules-and-enzymes"
+      ]
+    },
+    {
+      "term": "cell",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "cells-and-organelles"
+      ]
+    },
+    {
+      "term": "cell cycle",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "cell-division-and-reproduction"
+      ]
+    },
+    {
+      "term": "cell membrane",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "cells-and-organelles"
+      ]
+    },
+    {
+      "term": "cell theory",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "cells-and-organelles"
+      ]
+    },
+    {
+      "term": "cell wall",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "cells-and-organelles"
+      ]
+    },
+    {
+      "term": "central nervous system",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "homeostasis-and-coordination"
+      ]
+    },
+    {
+      "term": "centriole",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "cells-and-organelles"
+      ]
+    },
+    {
+      "term": "channel protein",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "membrane-transport-and-osmosis"
+      ]
+    },
+    {
+      "term": "chlorophyll",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "photosynthesis-and-plant-biology"
+      ]
+    },
+    {
+      "term": "chromosome",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "genetics-and-inheritance"
+      ]
+    },
+    {
+      "term": "clone",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "cell-division-and-reproduction"
+      ]
+    },
+    {
+      "term": "codon",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "genetics-and-inheritance"
+      ]
+    },
+    {
+      "term": "coenzyme",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "respiration-and-energy"
+      ]
+    },
+    {
+      "term": "collecting duct",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "excretion-and-osmoregulation"
+      ]
+    },
+    {
+      "term": "community",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "ecology-and-environment"
+      ]
+    },
+    {
+      "term": "competition",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "ecology-and-environment"
+      ]
+    },
+    {
+      "term": "concentration gradient",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "membrane-transport-and-osmosis"
+      ]
+    },
+    {
+      "term": "consumer",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "ecology-and-environment"
+      ]
+    },
+    {
+      "term": "control centre",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "homeostasis-and-coordination"
+      ]
+    },
+    {
+      "term": "coordination",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "homeostasis-and-coordination"
+      ]
+    },
+    {
+      "term": "crenation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "membrane-transport-and-osmosis"
+      ]
+    },
+    {
+      "term": "cristae",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "respiration-and-energy"
+      ]
+    },
+    {
+      "term": "crossing over",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "cell-division-and-reproduction"
+      ]
+    },
+    {
+      "term": "cytokinesis",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "cell-division-and-reproduction"
+      ]
+    },
+    {
+      "term": "cytoplasm",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "cells-and-organelles"
+      ]
+    },
+    {
+      "term": "deamination",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "excretion-and-osmoregulation"
+      ]
+    },
+    {
+      "term": "decomposer",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "ecology-and-environment"
+      ]
+    },
+    {
+      "term": "denaturation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "biological-molecules-and-enzymes"
+      ]
+    },
+    {
+      "term": "dialysis",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "excretion-and-osmoregulation"
+      ]
+    },
+    {
+      "term": "dietary fibre",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "nutrition-and-digestion"
+      ]
+    },
+    {
+      "term": "differentiation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "cell-division-and-reproduction"
+      ]
+    },
+    {
+      "term": "digestion",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "nutrition-and-digestion"
+      ]
+    },
+    {
+      "term": "digestive system",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "nutrition-and-digestion"
+      ]
+    },
+    {
+      "term": "dihybrid cross",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "genetics-and-inheritance"
+      ]
+    },
+    {
+      "term": "diploid",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "cell-division-and-reproduction"
+      ]
+    },
+    {
+      "term": "DNA",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "biological-molecules-and-enzymes"
+      ]
+    },
+    {
+      "term": "DNA profiling",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "biotechnology-and-applied-biology"
+      ]
+    },
+    {
+      "term": "DNA replication",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "genetics-and-inheritance"
+      ]
+    },
+    {
+      "term": "dominant allele",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "genetics-and-inheritance"
+      ]
+    },
+    {
+      "term": "double circulation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "gas-exchange-and-circulation"
+      ]
+    },
+    {
+      "term": "ecosystem",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "ecology-and-environment"
+      ]
+    },
+    {
+      "term": "effector",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "homeostasis-and-coordination"
+      ]
+    },
+    {
+      "term": "egestion",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "nutrition-and-digestion"
+      ]
+    },
+    {
+      "term": "electron transport chain",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "respiration-and-energy"
+      ]
+    },
+    {
+      "term": "endocrine gland",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "homeostasis-and-coordination"
+      ]
+    },
+    {
+      "term": "endocytosis",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "membrane-transport-and-osmosis"
+      ]
+    },
+    {
+      "term": "endoplasmic reticulum",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "cells-and-organelles"
+      ]
+    },
+    {
+      "term": "energy pyramid",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "ecology-and-environment"
+      ]
+    },
+    {
+      "term": "energy release",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "respiration-and-energy"
+      ]
+    },
+    {
+      "term": "energy transfer",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "respiration-and-energy"
+      ]
+    },
+    {
+      "term": "enzyme activity",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "biological-molecules-and-enzymes"
+      ]
+    },
+    {
+      "term": "enzyme in digestion",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "nutrition-and-digestion"
+      ]
+    },
+    {
+      "term": "epidemic",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "immunity-and-disease"
+      ]
+    },
+    {
+      "term": "ethical issue",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "biotechnology-and-applied-biology"
+      ]
+    },
+    {
+      "term": "eukaryotic cell",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "cells-and-organelles"
+      ]
+    },
+    {
+      "term": "exhalation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "gas-exchange-and-circulation"
+      ]
+    },
+    {
+      "term": "exocytosis",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "membrane-transport-and-osmosis"
+      ]
+    },
+    {
+      "term": "facilitated diffusion",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "membrane-transport-and-osmosis"
+      ]
+    },
+    {
+      "term": "FAD",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "respiration-and-energy"
+      ]
+    },
+    {
+      "term": "fatty acid",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "biological-molecules-and-enzymes"
+      ]
+    },
+    {
+      "term": "fermentation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "biotechnology-and-applied-biology"
+      ]
+    },
+    {
+      "term": "fertilization",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "cell-division-and-reproduction"
+      ]
+    },
+    {
+      "term": "Fick's law",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "membrane-transport-and-osmosis"
+      ]
+    },
+    {
+      "term": "filtration",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "excretion-and-osmoregulation"
+      ]
+    },
+    {
+      "term": "food chain",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "ecology-and-environment"
+      ]
+    },
+    {
+      "term": "food storage",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "photosynthesis-and-plant-biology"
+      ]
+    },
+    {
+      "term": "food web",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "ecology-and-environment"
+      ]
+    },
+    {
+      "term": "forensic application",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "biotechnology-and-applied-biology"
+      ]
+    },
+    {
+      "term": "fungus",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "immunity-and-disease"
+      ]
+    },
+    {
+      "term": "gamete",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "cell-division-and-reproduction"
+      ]
+    },
+    {
+      "term": "gas exchange surface",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "gas-exchange-and-circulation"
+      ]
+    },
+    {
+      "term": "gene",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "genetics-and-inheritance"
+      ]
+    },
+    {
+      "term": "gene therapy",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "biotechnology-and-applied-biology"
+      ]
+    },
+    {
+      "term": "genetic code",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "genetics-and-inheritance"
+      ]
+    },
+    {
+      "term": "genetic cross",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "genetics-and-inheritance"
+      ]
+    },
+    {
+      "term": "genetic engineering",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "genetics-and-inheritance"
+      ]
+    },
+    {
+      "term": "genetic recombination",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "cell-division-and-reproduction"
+      ]
+    },
+    {
+      "term": "genetic variation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "genetics-and-inheritance"
+      ]
+    },
+    {
+      "term": "glomerulus",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "excretion-and-osmoregulation"
+      ]
+    },
+    {
+      "term": "glucagon",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "homeostasis-and-coordination"
+      ]
+    },
+    {
+      "term": "glucose",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "biological-molecules-and-enzymes"
+      ]
+    },
+    {
+      "term": "glucose production",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "photosynthesis-and-plant-biology"
+      ]
+    },
+    {
+      "term": "glycogen",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "biological-molecules-and-enzymes"
+      ]
+    },
+    {
+      "term": "glycolysis",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "respiration-and-energy"
+      ]
+    },
+    {
+      "term": "GM crop",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "biotechnology-and-applied-biology"
+      ]
+    },
+    {
+      "term": "Golgi apparatus",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "cells-and-organelles"
+      ]
+    },
+    {
+      "term": "growth",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "cell-division-and-reproduction"
+      ]
+    },
+    {
+      "term": "guard cell",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "photosynthesis-and-plant-biology"
+      ]
+    },
+    {
+      "term": "habitat",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "ecology-and-environment"
+      ]
+    },
+    {
+      "term": "haemoglobin",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "gas-exchange-and-circulation"
+      ]
+    },
+    {
+      "term": "haemolysis",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "membrane-transport-and-osmosis"
+      ]
+    },
+    {
+      "term": "haploid",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "cell-division-and-reproduction"
+      ]
+    },
+    {
+      "term": "health promotion",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "immunity-and-disease"
+      ]
+    },
+    {
+      "term": "heart",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "gas-exchange-and-circulation"
+      ]
+    },
+    {
+      "term": "heterotroph",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "photosynthesis-and-plant-biology"
+      ]
+    },
+    {
+      "term": "heterozygous",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "genetics-and-inheritance"
+      ]
+    },
+    {
+      "term": "homozygous",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "genetics-and-inheritance"
+      ]
+    },
+    {
+      "term": "hormone",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "homeostasis-and-coordination"
+      ]
+    },
+    {
+      "term": "hypertonic solution",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "membrane-transport-and-osmosis"
+      ]
+    },
+    {
+      "term": "hypotonic solution",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "membrane-transport-and-osmosis"
+      ]
+    },
+    {
+      "term": "immune response",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "immunity-and-disease"
+      ]
+    },
+    {
+      "term": "immunity",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "immunity-and-disease"
+      ]
+    },
+    {
+      "term": "impulse",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "homeostasis-and-coordination"
+      ]
+    },
+    {
+      "term": "independent assortment",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "cell-division-and-reproduction"
+      ]
+    },
+    {
+      "term": "induced fit model",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "biological-molecules-and-enzymes"
+      ]
+    },
+    {
+      "term": "infection",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "immunity-and-disease"
+      ]
+    },
+    {
+      "term": "ingestion",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "nutrition-and-digestion"
+      ]
+    },
+    {
+      "term": "inhalation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "gas-exchange-and-circulation"
+      ]
+    },
+    {
+      "term": "inheritance pattern",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "genetics-and-inheritance"
+      ]
+    },
+    {
+      "term": "inhibitor",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "biological-molecules-and-enzymes"
+      ]
+    },
+    {
+      "term": "insulin",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "homeostasis-and-coordination"
+      ]
+    },
+    {
+      "term": "internal environment",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "homeostasis-and-coordination"
+      ]
+    },
+    {
+      "term": "interphase",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "cell-division-and-reproduction"
+      ]
+    },
+    {
+      "term": "isotonic solution",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "membrane-transport-and-osmosis"
+      ]
+    },
+    {
+      "term": "kidney",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "excretion-and-osmoregulation"
+      ]
+    },
+    {
+      "term": "kidney failure",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "excretion-and-osmoregulation"
+      ]
+    },
+    {
+      "term": "Krebs cycle",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "respiration-and-energy"
+      ]
+    },
+    {
+      "term": "lactic acid fermentation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "respiration-and-energy"
+      ]
+    },
+    {
+      "term": "large intestine",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "nutrition-and-digestion"
+      ]
+    },
+    {
+      "term": "leaf structure",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "photosynthesis-and-plant-biology"
+      ]
+    },
+    {
+      "term": "lifestyle factor",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "immunity-and-disease"
+      ]
+    },
+    {
+      "term": "ligase enzyme",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "biotechnology-and-applied-biology"
+      ]
+    },
+    {
+      "term": "light intensity",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "photosynthesis-and-plant-biology"
+      ]
+    },
+    {
+      "term": "light-dependent reaction",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "photosynthesis-and-plant-biology"
+      ]
+    },
+    {
+      "term": "light-independent reaction",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "photosynthesis-and-plant-biology"
+      ]
+    },
+    {
+      "term": "limiting factor",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "photosynthesis-and-plant-biology"
+      ]
+    },
+    {
+      "term": "lipase",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "nutrition-and-digestion"
+      ]
+    },
+    {
+      "term": "lipid",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "biological-molecules-and-enzymes"
+      ]
+    },
+    {
+      "term": "liver function",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "excretion-and-osmoregulation"
+      ]
+    },
+    {
+      "term": "lock and key model",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "biological-molecules-and-enzymes"
+      ]
+    },
+    {
+      "term": "loop of Henle",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "excretion-and-osmoregulation"
+      ]
+    },
+    {
+      "term": "lymphocyte",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "immunity-and-disease"
+      ]
+    },
+    {
+      "term": "lysosome",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "cells-and-organelles"
+      ]
+    },
+    {
+      "term": "magnification",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "cells-and-organelles"
+      ]
+    },
+    {
+      "term": "mesophyll cell",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "photosynthesis-and-plant-biology"
+      ]
+    },
+    {
+      "term": "metabolic pathway",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "respiration-and-energy"
+      ]
+    },
+    {
+      "term": "metaphase",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "cell-division-and-reproduction"
+      ]
+    },
+    {
+      "term": "micropropagation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "biotechnology-and-applied-biology"
+      ]
+    },
+    {
+      "term": "microscope",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "cells-and-organelles"
+      ]
+    },
+    {
+      "term": "microvillus",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "nutrition-and-digestion"
+      ]
+    },
+    {
+      "term": "mineral ion",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "nutrition-and-digestion"
+      ]
+    },
+    {
+      "term": "mitochondrial matrix",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "respiration-and-energy"
+      ]
+    },
+    {
+      "term": "mitochondrion",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "cells-and-organelles"
+      ]
+    },
+    {
+      "term": "monohybrid cross",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "genetics-and-inheritance"
+      ]
+    },
+    {
+      "term": "mutation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "genetics-and-inheritance"
+      ]
+    },
+    {
+      "term": "mutualism",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "ecology-and-environment"
+      ]
+    },
+    {
+      "term": "NAD",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "respiration-and-energy"
+      ]
+    },
+    {
+      "term": "nervous system",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "homeostasis-and-coordination"
+      ]
+    },
+    {
+      "term": "neuron",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "homeostasis-and-coordination"
+      ]
+    },
+    {
+      "term": "nitrogen cycle",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "ecology-and-environment"
+      ]
+    },
+    {
+      "term": "non-communicable disease",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "immunity-and-disease"
+      ]
+    },
+    {
+      "term": "nucleic acid",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "biological-molecules-and-enzymes"
+      ]
+    },
+    {
+      "term": "nucleus",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "cells-and-organelles"
+      ]
+    },
+    {
+      "term": "optimum pH",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "biological-molecules-and-enzymes"
+      ]
+    },
+    {
+      "term": "optimum temperature",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "biological-molecules-and-enzymes"
+      ]
+    },
+    {
+      "term": "osmoregulation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "excretion-and-osmoregulation"
+      ]
+    },
+    {
+      "term": "oxygen debt",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "respiration-and-energy"
+      ]
+    },
+    {
+      "term": "oxygen production",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "photosynthesis-and-plant-biology"
+      ]
+    },
+    {
+      "term": "pancreas",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "homeostasis-and-coordination"
+      ]
+    },
+    {
+      "term": "partially permeable membrane",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "membrane-transport-and-osmosis"
+      ]
+    },
+    {
+      "term": "passive immunity",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "immunity-and-disease"
+      ]
+    },
+    {
+      "term": "passive transport",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "membrane-transport-and-osmosis"
+      ]
+    },
+    {
+      "term": "pathogen",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "immunity-and-disease"
+      ]
+    },
+    {
+      "term": "penicillin production",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "biotechnology-and-applied-biology"
+      ]
+    },
+    {
+      "term": "peripheral nervous system",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "homeostasis-and-coordination"
+      ]
+    },
+    {
+      "term": "peristalsis",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "nutrition-and-digestion"
+      ]
+    },
+    {
+      "term": "phagocyte",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "immunity-and-disease"
+      ]
+    },
+    {
+      "term": "phloem",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "photosynthesis-and-plant-biology"
+      ]
+    },
+    {
+      "term": "plasma",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "gas-exchange-and-circulation"
+      ]
+    },
+    {
+      "term": "plasmid",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "biotechnology-and-applied-biology"
+      ]
+    },
+    {
+      "term": "plasmolysis",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "membrane-transport-and-osmosis"
+      ]
+    },
+    {
+      "term": "platelet",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "gas-exchange-and-circulation"
+      ]
+    },
+    {
+      "term": "population",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "ecology-and-environment"
+      ]
+    },
+    {
+      "term": "positive feedback",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "homeostasis-and-coordination"
+      ]
+    },
+    {
+      "term": "predation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "ecology-and-environment"
+      ]
+    },
+    {
+      "term": "producer",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "ecology-and-environment"
+      ]
+    },
+    {
+      "term": "product",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "biological-molecules-and-enzymes"
+      ]
+    },
+    {
+      "term": "prokaryotic cell",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "cells-and-organelles"
+      ]
+    },
+    {
+      "term": "prophase",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "cell-division-and-reproduction"
+      ]
+    },
+    {
+      "term": "protease",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "nutrition-and-digestion"
+      ]
+    },
+    {
+      "term": "protein",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "biological-molecules-and-enzymes"
+      ]
+    },
+    {
+      "term": "protein synthesis",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "genetics-and-inheritance"
+      ]
+    },
+    {
+      "term": "proximal convoluted tubule",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "excretion-and-osmoregulation"
+      ]
+    },
+    {
+      "term": "pulse rate",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "gas-exchange-and-circulation"
+      ]
+    },
+    {
+      "term": "Punnett square",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "genetics-and-inheritance"
+      ]
+    },
+    {
+      "term": "reabsorption",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "excretion-and-osmoregulation"
+      ]
+    },
+    {
+      "term": "receptor",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "homeostasis-and-coordination"
+      ]
+    },
+    {
+      "term": "recessive allele",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "genetics-and-inheritance"
+      ]
+    },
+    {
+      "term": "recombinant DNA",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "biotechnology-and-applied-biology"
+      ]
+    },
+    {
+      "term": "red blood cell",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "gas-exchange-and-circulation"
+      ]
+    },
+    {
+      "term": "resolution",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "cells-and-organelles"
+      ]
+    },
+    {
+      "term": "respiration rate",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "respiration-and-energy"
+      ]
+    },
+    {
+      "term": "respirometer",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "respiration-and-energy"
+      ]
+    },
+    {
+      "term": "response",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "homeostasis-and-coordination"
+      ]
+    },
+    {
+      "term": "restriction enzyme",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "biotechnology-and-applied-biology"
+      ]
+    },
+    {
+      "term": "ribosome",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "cells-and-organelles"
+      ]
+    },
+    {
+      "term": "RNA",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "biological-molecules-and-enzymes"
+      ]
+    },
+    {
+      "term": "root hair cell",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "photosynthesis-and-plant-biology"
+      ]
+    },
+    {
+      "term": "secretion",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "excretion-and-osmoregulation"
+      ]
+    },
+    {
+      "term": "selective breeding",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "biotechnology-and-applied-biology"
+      ]
+    },
+    {
+      "term": "selectively permeable membrane",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "membrane-transport-and-osmosis"
+      ]
+    },
+    {
+      "term": "sex-linked inheritance",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "genetics-and-inheritance"
+      ]
+    },
+    {
+      "term": "sexual reproduction",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "cell-division-and-reproduction"
+      ]
+    },
+    {
+      "term": "small intestine",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "nutrition-and-digestion"
+      ]
+    },
+    {
+      "term": "specialized cell",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "cells-and-organelles"
+      ]
+    },
+    {
+      "term": "specimen",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "cells-and-organelles"
+      ]
+    },
+    {
+      "term": "staining",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "cells-and-organelles"
+      ]
+    },
+    {
+      "term": "starch",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "biological-molecules-and-enzymes"
+      ]
+    },
+    {
+      "term": "stem cell",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "cell-division-and-reproduction"
+      ]
+    },
+    {
+      "term": "stomach",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "nutrition-and-digestion"
+      ]
+    },
+    {
+      "term": "stomata",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "photosynthesis-and-plant-biology"
+      ]
+    },
+    {
+      "term": "surface area to volume ratio",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "membrane-transport-and-osmosis"
+      ]
+    },
+    {
+      "term": "symbiosis",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "ecology-and-environment"
+      ]
+    },
+    {
+      "term": "synapse",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "homeostasis-and-coordination"
+      ]
+    },
+    {
+      "term": "target organ",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "homeostasis-and-coordination"
+      ]
+    },
+    {
+      "term": "telophase",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "cell-division-and-reproduction"
+      ]
+    },
+    {
+      "term": "thermoregulation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "homeostasis-and-coordination"
+      ]
+    },
+    {
+      "term": "tissue culture",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "biotechnology-and-applied-biology"
+      ]
+    },
+    {
+      "term": "transcription",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "genetics-and-inheritance"
+      ]
+    },
+    {
+      "term": "transgenic organism",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "biotechnology-and-applied-biology"
+      ]
+    },
+    {
+      "term": "translation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "genetics-and-inheritance"
+      ]
+    },
+    {
+      "term": "translocation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "photosynthesis-and-plant-biology"
+      ]
+    },
+    {
+      "term": "transmission",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "immunity-and-disease"
+      ]
+    },
+    {
+      "term": "transpiration",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "photosynthesis-and-plant-biology"
+      ]
+    },
+    {
+      "term": "trophic level",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "ecology-and-environment"
+      ]
+    },
+    {
+      "term": "turgor pressure",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "membrane-transport-and-osmosis"
+      ]
+    },
+    {
+      "term": "urea",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "excretion-and-osmoregulation"
+      ]
+    },
+    {
+      "term": "ureter",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "excretion-and-osmoregulation"
+      ]
+    },
+    {
+      "term": "urethra",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "excretion-and-osmoregulation"
+      ]
+    },
+    {
+      "term": "urine",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "excretion-and-osmoregulation"
+      ]
+    },
+    {
+      "term": "vaccination",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "immunity-and-disease"
+      ]
+    },
+    {
+      "term": "vacuole",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "cells-and-organelles"
+      ]
+    },
+    {
+      "term": "vector",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "biotechnology-and-applied-biology"
+      ]
+    },
+    {
+      "term": "vein",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "gas-exchange-and-circulation"
+      ]
+    },
+    {
+      "term": "ventilation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "gas-exchange-and-circulation"
+      ]
+    },
+    {
+      "term": "ventricle",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "gas-exchange-and-circulation"
+      ]
+    },
+    {
+      "term": "villus",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "nutrition-and-digestion"
+      ]
+    },
+    {
+      "term": "virus",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "immunity-and-disease"
+      ]
+    },
+    {
+      "term": "vitamin",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "nutrition-and-digestion"
+      ]
+    },
+    {
+      "term": "water balance",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "excretion-and-osmoregulation"
+      ]
+    },
+    {
+      "term": "water potential",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "membrane-transport-and-osmosis"
+      ]
+    },
+    {
+      "term": "white blood cell",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "gas-exchange-and-circulation"
+      ]
+    },
+    {
+      "term": "xylem",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "photosynthesis-and-plant-biology"
+      ]
+    },
+    {
+      "term": "yoghurt production",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "biotechnology-and-applied-biology"
+      ]
+    },
+    {
+      "term": "zygote",
+      "tags": [
+        "hk",
+        "secondary",
+        "s4",
+        "biology",
+        "curriculum-style",
+        "cell-division-and-reproduction"
       ]
     }
   ]

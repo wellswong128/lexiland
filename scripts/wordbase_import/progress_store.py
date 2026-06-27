@@ -23,6 +23,7 @@ def empty_progress() -> dict[str, Any]:
     return {
         "version": PROGRESS_VERSION,
         "images": {},
+        "pages": {},
         "terms": {},
     }
 
@@ -59,6 +60,7 @@ def load_progress(path: Path) -> dict[str, Any]:
 
     data.setdefault("version", PROGRESS_VERSION)
     data.setdefault("images", {})
+    data.setdefault("pages", {})
     data.setdefault("terms", {})
     return data
 

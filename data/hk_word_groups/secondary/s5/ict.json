@@ -7,6 +7,15 @@
   "version": "2026.06",
   "display_name_en": "S5 ICT",
   "display_name_zh_hant": "中五資訊及通訊科技",
+  "source": {
+    "type": "curriculum_style_public_references",
+    "references": [
+      "EDB Information and Communication Technology Curriculum and Assessment Guide (Secondary 4-6)",
+      "EDB senior secondary ICT compulsory and elective part learning objectives (S5 progression)",
+      "Public Hong Kong S5 ICT syllabus topic examples (advanced programming, object-oriented design, data structures, systems analysis, advanced networking, cloud and virtualization, web application development, advanced databases, cybersecurity, mobile and emerging technologies, project management, Hong Kong digital policy context, HKDSE practical and evaluation skills)"
+    ],
+    "note": "No fixed official Hong Kong S5 ICT vocabulary list is prescribed; this list is theme-based for senior secondary S5 ICT enrichment import. Term-only entries are completed during import."
+  },
   "words": [
     {
       "term": "algorithm",
@@ -306,6 +315,3702 @@
         "ict",
         "graphics",
         "display"
+      ]
+    },
+    {
+      "term": "accessibility in digital media",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "multimedia-production-and-digital-media-systems"
+      ]
+    },
+    {
+      "term": "adaptive bitrate streaming",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "multimedia-production-and-digital-media-systems"
+      ]
+    },
+    {
+      "term": "advanced database skill",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "advanced-database-management-and-data-integrity"
+      ]
+    },
+    {
+      "term": "advanced multimedia skill",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "multimedia-production-and-digital-media-systems"
+      ]
+    },
+    {
+      "term": "advanced networking skill",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "advanced-networking-routing-and-infrastructure"
+      ]
+    },
+    {
+      "term": "advanced programming skill",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "advanced-programming-and-modular-design"
+      ]
+    },
+    {
+      "term": "agile development method",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "ict-project-management-and-collaboration"
+      ]
+    },
+    {
+      "term": "algorithm space complexity",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "data-structures-and-algorithm-efficiency"
+      ]
+    },
+    {
+      "term": "algorithm time complexity",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "data-structures-and-algorithm-efficiency"
+      ]
+    },
+    {
+      "term": "algorithmic bias concern",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "ict-ethics-law-and-digital-governance"
+      ]
+    },
+    {
+      "term": "alpha testing phase",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "systems-analysis-design-and-development-lifecycle"
+      ]
+    },
+    {
+      "term": "analytics project case study",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "data-analytics-visualization-and-business-intelligence"
+      ]
+    },
+    {
+      "term": "application deployment pipeline",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "web-application-development-and-online-platforms"
+      ]
+    },
+    {
+      "term": "application programming interface",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "advanced-programming-and-modular-design"
+      ]
+    },
+    {
+      "term": "application programming interface endpoint",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "web-application-development-and-online-platforms"
+      ]
+    },
+    {
+      "term": "array data structure",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "data-structures-and-algorithm-efficiency"
+      ]
+    },
+    {
+      "term": "asymmetric encryption method",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "cybersecurity-threat-modelling-and-protection"
+      ]
+    },
+    {
+      "term": "asynchronous request method",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "web-application-development-and-online-platforms"
+      ]
+    },
+    {
+      "term": "atomicity in transaction",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "advanced-database-management-and-data-integrity"
+      ]
+    },
+    {
+      "term": "attack surface analysis",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "cybersecurity-threat-modelling-and-protection"
+      ]
+    },
+    {
+      "term": "audio mixing technique",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "multimedia-production-and-digital-media-systems"
+      ]
+    },
+    {
+      "term": "augmented reality application",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "multimedia-production-and-digital-media-systems"
+      ]
+    },
+    {
+      "term": "authentication token method",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "web-application-development-and-online-platforms"
+      ]
+    },
+    {
+      "term": "automated decision transparency",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "ict-ethics-law-and-digital-governance"
+      ]
+    },
+    {
+      "term": "average case complexity",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "data-structures-and-algorithm-efficiency"
+      ]
+    },
+    {
+      "term": "back end development",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "web-application-development-and-online-platforms"
+      ]
+    },
+    {
+      "term": "best case complexity",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "data-structures-and-algorithm-efficiency"
+      ]
+    },
+    {
+      "term": "beta testing phase",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "systems-analysis-design-and-development-lifecycle"
+      ]
+    },
+    {
+      "term": "big data characteristic",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "data-analytics-visualization-and-business-intelligence"
+      ]
+    },
+    {
+      "term": "big O notation concept",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "data-structures-and-algorithm-efficiency"
+      ]
+    },
+    {
+      "term": "binary search tree",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "data-structures-and-algorithm-efficiency"
+      ]
+    },
+    {
+      "term": "blockchain ledger concept",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "mobile-computing-and-emerging-technologies"
+      ]
+    },
+    {
+      "term": "bluetooth low energy",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "mobile-computing-and-emerging-technologies"
+      ]
+    },
+    {
+      "term": "business intelligence platform",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "data-analytics-visualization-and-business-intelligence"
+      ]
+    },
+    {
+      "term": "callback function concept",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "advanced-programming-and-modular-design"
+      ]
+    },
+    {
+      "term": "change request management",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "systems-analysis-design-and-development-lifecycle"
+      ]
+    },
+    {
+      "term": "checksum verification method",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "advanced-networking-routing-and-infrastructure"
+      ]
+    },
+    {
+      "term": "class definition in programming",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "advanced-programming-and-modular-design"
+      ]
+    },
+    {
+      "term": "classless inter domain routing",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "advanced-networking-routing-and-infrastructure"
+      ]
+    },
+    {
+      "term": "cloud architecture skill",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "cloud-computing-virtualization-and-distributed-systems"
+      ]
+    },
+    {
+      "term": "cloud elasticity feature",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "cloud-computing-virtualization-and-distributed-systems"
+      ]
+    },
+    {
+      "term": "cloud migration case study",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "cloud-computing-virtualization-and-distributed-systems"
+      ]
+    },
+    {
+      "term": "cloud scalability feature",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "cloud-computing-virtualization-and-distributed-systems"
+      ]
+    },
+    {
+      "term": "cloud service model",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "cloud-computing-virtualization-and-distributed-systems"
+      ]
+    },
+    {
+      "term": "cloud storage service",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "cloud-computing-virtualization-and-distributed-systems"
+      ]
+    },
+    {
+      "term": "code reusability principle",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "advanced-programming-and-modular-design"
+      ]
+    },
+    {
+      "term": "code review process",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "ict-project-management-and-collaboration"
+      ]
+    },
+    {
+      "term": "collaborative coding platform",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "ict-project-management-and-collaboration"
+      ]
+    },
+    {
+      "term": "colour grading in video",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "multimedia-production-and-digital-media-systems"
+      ]
+    },
+    {
+      "term": "compare algorithm performance",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "data-structures-and-algorithm-efficiency"
+      ]
+    },
+    {
+      "term": "compare analytics approach",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "data-analytics-visualization-and-business-intelligence"
+      ]
+    },
+    {
+      "term": "compare cloud deployment model",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "cloud-computing-virtualization-and-distributed-systems"
+      ]
+    },
+    {
+      "term": "compare database schema design",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "advanced-database-management-and-data-integrity"
+      ]
+    },
+    {
+      "term": "compare development model",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "systems-analysis-design-and-development-lifecycle"
+      ]
+    },
+    {
+      "term": "compare emerging technology trend",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "mobile-computing-and-emerging-technologies"
+      ]
+    },
+    {
+      "term": "compare governance framework",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "ict-ethics-law-and-digital-governance"
+      ]
+    },
+    {
+      "term": "compare Hong Kong ICT initiative",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "hong-kong-ict-industry-and-digital-policy-context"
+      ]
+    },
+    {
+      "term": "compare media production pipeline",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "multimedia-production-and-digital-media-systems"
+      ]
+    },
+    {
+      "term": "compare network architecture",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "advanced-networking-routing-and-infrastructure"
+      ]
+    },
+    {
+      "term": "compare practical solution approach",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "hkdse-ict-practical-task-and-implementation-skills"
+      ]
+    },
+    {
+      "term": "compare programming paradigm",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "advanced-programming-and-modular-design"
+      ]
+    },
+    {
+      "term": "compare project management method",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "ict-project-management-and-collaboration"
+      ]
+    },
+    {
+      "term": "compare security control layer",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "cybersecurity-threat-modelling-and-protection"
+      ]
+    },
+    {
+      "term": "compare web stack choice",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "web-application-development-and-online-platforms"
+      ]
+    },
+    {
+      "term": "complexity analysis skill",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "data-structures-and-algorithm-efficiency"
+      ]
+    },
+    {
+      "term": "consistency in transaction",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "advanced-database-management-and-data-integrity"
+      ]
+    },
+    {
+      "term": "containerization technology",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "cloud-computing-virtualization-and-distributed-systems"
+      ]
+    },
+    {
+      "term": "content delivery network",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "cloud-computing-virtualization-and-distributed-systems"
+      ]
+    },
+    {
+      "term": "continuous integration workflow",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "web-application-development-and-online-platforms"
+      ]
+    },
+    {
+      "term": "corporate social responsibility in tech",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "ict-ethics-law-and-digital-governance"
+      ]
+    },
+    {
+      "term": "correlation analysis in data",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "data-analytics-visualization-and-business-intelligence"
+      ]
+    },
+    {
+      "term": "critical path method",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "ict-project-management-and-collaboration"
+      ]
+    },
+    {
+      "term": "cross border data transfer rule",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "ict-ethics-law-and-digital-governance"
+      ]
+    },
+    {
+      "term": "cross border digital service integration",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "hong-kong-ict-industry-and-digital-policy-context"
+      ]
+    },
+    {
+      "term": "cross platform mobile development",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "mobile-computing-and-emerging-technologies"
+      ]
+    },
+    {
+      "term": "cross site request forgery",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "web-application-development-and-online-platforms"
+      ]
+    },
+    {
+      "term": "cross site scripting attack",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "web-application-development-and-online-platforms"
+      ]
+    },
+    {
+      "term": "cybersecurity case study",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "cybersecurity-threat-modelling-and-protection"
+      ]
+    },
+    {
+      "term": "dashboard visualization design",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "data-analytics-visualization-and-business-intelligence"
+      ]
+    },
+    {
+      "term": "data analytics skill",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "data-analytics-visualization-and-business-intelligence"
+      ]
+    },
+    {
+      "term": "data cleaning procedure",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "data-analytics-visualization-and-business-intelligence"
+      ]
+    },
+    {
+      "term": "data driven decision making",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "data-analytics-visualization-and-business-intelligence"
+      ]
+    },
+    {
+      "term": "data ethics in analytics",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "data-analytics-visualization-and-business-intelligence"
+      ]
+    },
+    {
+      "term": "data flow diagram",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "systems-analysis-design-and-development-lifecycle"
+      ]
+    },
+    {
+      "term": "data governance policy",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "data-analytics-visualization-and-business-intelligence"
+      ]
+    },
+    {
+      "term": "data mining technique",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "data-analytics-visualization-and-business-intelligence"
+      ]
+    },
+    {
+      "term": "data protection impact assessment",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "ict-ethics-law-and-digital-governance"
+      ]
+    },
+    {
+      "term": "data structure case study",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "data-structures-and-algorithm-efficiency"
+      ]
+    },
+    {
+      "term": "data structure selection",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "data-structures-and-algorithm-efficiency"
+      ]
+    },
+    {
+      "term": "data warehouse concept",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "data-analytics-visualization-and-business-intelligence"
+      ]
+    },
+    {
+      "term": "database administration task",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "advanced-database-management-and-data-integrity"
+      ]
+    },
+    {
+      "term": "database backup strategy",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "advanced-database-management-and-data-integrity"
+      ]
+    },
+    {
+      "term": "database case study analysis",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "advanced-database-management-and-data-integrity"
+      ]
+    },
+    {
+      "term": "database indexing strategy",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "advanced-database-management-and-data-integrity"
+      ]
+    },
+    {
+      "term": "database transaction control",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "advanced-database-management-and-data-integrity"
+      ]
+    },
+    {
+      "term": "database trigger function",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "advanced-database-management-and-data-integrity"
+      ]
+    },
+    {
+      "term": "database view definition",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "advanced-database-management-and-data-integrity"
+      ]
+    },
+    {
+      "term": "descriptive analytics method",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "data-analytics-visualization-and-business-intelligence"
+      ]
+    },
+    {
+      "term": "design review meeting",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "systems-analysis-design-and-development-lifecycle"
+      ]
+    },
+    {
+      "term": "digital asset management",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "multimedia-production-and-digital-media-systems"
+      ]
+    },
+    {
+      "term": "digital certificate authority",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "cybersecurity-threat-modelling-and-protection"
+      ]
+    },
+    {
+      "term": "digital governance case study",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "ict-ethics-law-and-digital-governance"
+      ]
+    },
+    {
+      "term": "digital inclusion programme",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "ict-ethics-law-and-digital-governance"
+      ]
+    },
+    {
+      "term": "digital media case study",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "multimedia-production-and-digital-media-systems"
+      ]
+    },
+    {
+      "term": "digital media workflow",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "multimedia-production-and-digital-media-systems"
+      ]
+    },
+    {
+      "term": "digital rights management",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "ict-ethics-law-and-digital-governance"
+      ]
+    },
+    {
+      "term": "digital signature verification",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "cybersecurity-threat-modelling-and-protection"
+      ]
+    },
+    {
+      "term": "disaster recovery plan",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "cybersecurity-threat-modelling-and-protection"
+      ]
+    },
+    {
+      "term": "distributed computing concept",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "cloud-computing-virtualization-and-distributed-systems"
+      ]
+    },
+    {
+      "term": "distributed ledger technology",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "mobile-computing-and-emerging-technologies"
+      ]
+    },
+    {
+      "term": "durability in transaction",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "advanced-database-management-and-data-integrity"
+      ]
+    },
+    {
+      "term": "dynamic routing protocol",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "advanced-networking-routing-and-infrastructure"
+      ]
+    },
+    {
+      "term": "e waste management policy",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "ict-ethics-law-and-digital-governance"
+      ]
+    },
+    {
+      "term": "edge computing concept",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "mobile-computing-and-emerging-technologies"
+      ]
+    },
+    {
+      "term": "emerging technology case study",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "mobile-computing-and-emerging-technologies"
+      ]
+    },
+    {
+      "term": "encapsulation principle",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "advanced-programming-and-modular-design"
+      ]
+    },
+    {
+      "term": "evaluate cloud cost trade-off",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "cloud-computing-virtualization-and-distributed-systems"
+      ]
+    },
+    {
+      "term": "evaluate data structure choice",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "data-structures-and-algorithm-efficiency"
+      ]
+    },
+    {
+      "term": "evaluate ethical technology use",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "ict-ethics-law-and-digital-governance"
+      ]
+    },
+    {
+      "term": "evaluate Hong Kong digital policy",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "hong-kong-ict-industry-and-digital-policy-context"
+      ]
+    },
+    {
+      "term": "evaluate multimedia product quality",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "multimedia-production-and-digital-media-systems"
+      ]
+    },
+    {
+      "term": "evaluate network reliability",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "advanced-networking-routing-and-infrastructure"
+      ]
+    },
+    {
+      "term": "evaluate practical product quality",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "hkdse-ict-practical-task-and-implementation-skills"
+      ]
+    },
+    {
+      "term": "evaluate program structure",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "advanced-programming-and-modular-design"
+      ]
+    },
+    {
+      "term": "evaluate project delivery quality",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "ict-project-management-and-collaboration"
+      ]
+    },
+    {
+      "term": "evaluate query performance",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "advanced-database-management-and-data-integrity"
+      ]
+    },
+    {
+      "term": "evaluate security architecture",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "cybersecurity-threat-modelling-and-protection"
+      ]
+    },
+    {
+      "term": "evaluate system design",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "systems-analysis-design-and-development-lifecycle"
+      ]
+    },
+    {
+      "term": "evaluate technology adoption risk",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "mobile-computing-and-emerging-technologies"
+      ]
+    },
+    {
+      "term": "evaluate visualization design",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "data-analytics-visualization-and-business-intelligence"
+      ]
+    },
+    {
+      "term": "evaluate web application design",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "web-application-development-and-online-platforms"
+      ]
+    },
+    {
+      "term": "event driven programming",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "advanced-programming-and-modular-design"
+      ]
+    },
+    {
+      "term": "exception handling mechanism",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "advanced-programming-and-modular-design"
+      ]
+    },
+    {
+      "term": "extract transform load process",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "data-analytics-visualization-and-business-intelligence"
+      ]
+    },
+    {
+      "term": "feasibility study stage",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "systems-analysis-design-and-development-lifecycle"
+      ]
+    },
+    {
+      "term": "front end development",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "web-application-development-and-online-platforms"
+      ]
+    },
+    {
+      "term": "full stack development skill",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "web-application-development-and-online-platforms"
+      ]
+    },
+    {
+      "term": "functional requirement definition",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "systems-analysis-design-and-development-lifecycle"
+      ]
+    },
+    {
+      "term": "gantt chart usage",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "ict-project-management-and-collaboration"
+      ]
+    },
+    {
+      "term": "global positioning system service",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "mobile-computing-and-emerging-technologies"
+      ]
+    },
+    {
+      "term": "graph traversal algorithm",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "data-structures-and-algorithm-efficiency"
+      ]
+    },
+    {
+      "term": "Greater Bay Area tech collaboration",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "hong-kong-ict-industry-and-digital-policy-context"
+      ]
+    },
+    {
+      "term": "green computing initiative",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "ict-ethics-law-and-digital-governance"
+      ]
+    },
+    {
+      "term": "hash function in security",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "cybersecurity-threat-modelling-and-protection"
+      ]
+    },
+    {
+      "term": "hash table structure",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "data-structures-and-algorithm-efficiency"
+      ]
+    },
+    {
+      "term": "Hong Kong AI development initiative",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "hong-kong-ict-industry-and-digital-policy-context"
+      ]
+    },
+    {
+      "term": "Hong Kong cloud adoption trend",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "hong-kong-ict-industry-and-digital-policy-context"
+      ]
+    },
+    {
+      "term": "Hong Kong cybersecurity law context",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "hong-kong-ict-industry-and-digital-policy-context"
+      ]
+    },
+    {
+      "term": "Hong Kong data centre hub role",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "hong-kong-ict-industry-and-digital-policy-context"
+      ]
+    },
+    {
+      "term": "Hong Kong digital economy blueprint",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "hong-kong-ict-industry-and-digital-policy-context"
+      ]
+    },
+    {
+      "term": "Hong Kong digital literacy programme",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "hong-kong-ict-industry-and-digital-policy-context"
+      ]
+    },
+    {
+      "term": "Hong Kong fintech regulation sandbox",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "hong-kong-ict-industry-and-digital-policy-context"
+      ]
+    },
+    {
+      "term": "Hong Kong ICT context skill",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "hong-kong-ict-industry-and-digital-policy-context"
+      ]
+    },
+    {
+      "term": "Hong Kong ICT industry case",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "hong-kong-ict-industry-and-digital-policy-context"
+      ]
+    },
+    {
+      "term": "Hong Kong ICT policy analysis",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "hong-kong-ict-industry-and-digital-policy-context"
+      ]
+    },
+    {
+      "term": "Hong Kong innovation technology policy",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "hong-kong-ict-industry-and-digital-policy-context"
+      ]
+    },
+    {
+      "term": "Hong Kong personal data regulation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "hong-kong-ict-industry-and-digital-policy-context"
+      ]
+    },
+    {
+      "term": "Hong Kong smart city project",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "hong-kong-ict-industry-and-digital-policy-context"
+      ]
+    },
+    {
+      "term": "Hong Kong startup incubation support",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "hong-kong-ict-industry-and-digital-policy-context"
+      ]
+    },
+    {
+      "term": "Hong Kong STEM talent pipeline",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "hong-kong-ict-industry-and-digital-policy-context"
+      ]
+    },
+    {
+      "term": "Hong Kong tech workforce demand",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "hong-kong-ict-industry-and-digital-policy-context"
+      ]
+    },
+    {
+      "term": "hybrid cloud deployment",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "cloud-computing-virtualization-and-distributed-systems"
+      ]
+    },
+    {
+      "term": "hypervisor role",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "cloud-computing-virtualization-and-distributed-systems"
+      ]
+    },
+    {
+      "term": "ICT algorithm trace skill",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "hkdse-ict-analysis-evaluation-and-examination-skills"
+      ]
+    },
+    {
+      "term": "ICT cost benefit analysis",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "hkdse-ict-analysis-evaluation-and-examination-skills"
+      ]
+    },
+    {
+      "term": "ICT cross topic synthesis answer",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "hkdse-ict-analysis-evaluation-and-examination-skills"
+      ]
+    },
+    {
+      "term": "ICT data response interpretation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "hkdse-ict-analysis-evaluation-and-examination-skills"
+      ]
+    },
+    {
+      "term": "ICT database query interpretation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "hkdse-ict-analysis-evaluation-and-examination-skills"
+      ]
+    },
+    {
+      "term": "ICT diagram annotation skill",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "hkdse-ict-analysis-evaluation-and-examination-skills"
+      ]
+    },
+    {
+      "term": "ICT ethical issue evaluation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "hkdse-ict-analysis-evaluation-and-examination-skills"
+      ]
+    },
+    {
+      "term": "ICT ethics debate skill",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "ict-ethics-law-and-digital-governance"
+      ]
+    },
+    {
+      "term": "ICT evaluation with evidence",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "hkdse-ict-analysis-evaluation-and-examination-skills"
+      ]
+    },
+    {
+      "term": "ICT examination command word skill",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "hkdse-ict-analysis-evaluation-and-examination-skills"
+      ]
+    },
+    {
+      "term": "ICT Hong Kong context application",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "hkdse-ict-analysis-evaluation-and-examination-skills"
+      ]
+    },
+    {
+      "term": "ICT network configuration analysis",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "hkdse-ict-analysis-evaluation-and-examination-skills"
+      ]
+    },
+    {
+      "term": "ICT paper time management",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "hkdse-ict-analysis-evaluation-and-examination-skills"
+      ]
+    },
+    {
+      "term": "ICT practical backup strategy",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "hkdse-ict-practical-task-and-implementation-skills"
+      ]
+    },
+    {
+      "term": "ICT practical case integration",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "hkdse-ict-practical-task-and-implementation-skills"
+      ]
+    },
+    {
+      "term": "ICT practical coding standard",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "hkdse-ict-practical-task-and-implementation-skills"
+      ]
+    },
+    {
+      "term": "ICT practical data set preparation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "hkdse-ict-practical-task-and-implementation-skills"
+      ]
+    },
+    {
+      "term": "ICT practical debugging workflow",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "hkdse-ict-practical-task-and-implementation-skills"
+      ]
+    },
+    {
+      "term": "ICT practical demonstration skill",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "hkdse-ict-practical-task-and-implementation-skills"
+      ]
+    },
+    {
+      "term": "ICT practical design justification",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "hkdse-ict-practical-task-and-implementation-skills"
+      ]
+    },
+    {
+      "term": "ICT practical evaluation report",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "hkdse-ict-practical-task-and-implementation-skills"
+      ]
+    },
+    {
+      "term": "ICT practical file organization",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "hkdse-ict-practical-task-and-implementation-skills"
+      ]
+    },
+    {
+      "term": "ICT practical improvement proposal",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "hkdse-ict-practical-task-and-implementation-skills"
+      ]
+    },
+    {
+      "term": "ICT practical interface design",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "hkdse-ict-practical-task-and-implementation-skills"
+      ]
+    },
+    {
+      "term": "ICT practical limitation discussion",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "hkdse-ict-practical-task-and-implementation-skills"
+      ]
+    },
+    {
+      "term": "ICT practical peer feedback",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "hkdse-ict-practical-task-and-implementation-skills"
+      ]
+    },
+    {
+      "term": "ICT practical requirement analysis",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "hkdse-ict-practical-task-and-implementation-skills"
+      ]
+    },
+    {
+      "term": "ICT practical test case design",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "hkdse-ict-practical-task-and-implementation-skills"
+      ]
+    },
+    {
+      "term": "ICT practical testing plan",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "hkdse-ict-practical-task-and-implementation-skills"
+      ]
+    },
+    {
+      "term": "ICT practical time planning",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "hkdse-ict-practical-task-and-implementation-skills"
+      ]
+    },
+    {
+      "term": "ICT practical user manual writing",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "hkdse-ict-practical-task-and-implementation-skills"
+      ]
+    },
+    {
+      "term": "ICT project case study",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "ict-project-management-and-collaboration"
+      ]
+    },
+    {
+      "term": "ICT requirement prioritization skill",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "hkdse-ict-analysis-evaluation-and-examination-skills"
+      ]
+    },
+    {
+      "term": "ICT risk mitigation proposal",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "hkdse-ict-analysis-evaluation-and-examination-skills"
+      ]
+    },
+    {
+      "term": "ICT scenario problem identification",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "hkdse-ict-analysis-evaluation-and-examination-skills"
+      ]
+    },
+    {
+      "term": "ICT security incident analysis",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "hkdse-ict-analysis-evaluation-and-examination-skills"
+      ]
+    },
+    {
+      "term": "ICT solution comparison matrix",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "hkdse-ict-analysis-evaluation-and-examination-skills"
+      ]
+    },
+    {
+      "term": "ICT structured long answer skill",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "hkdse-ict-analysis-evaluation-and-examination-skills"
+      ]
+    },
+    {
+      "term": "ICT system limitation analysis",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "hkdse-ict-analysis-evaluation-and-examination-skills"
+      ]
+    },
+    {
+      "term": "ICT technology trend evaluation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "hkdse-ict-analysis-evaluation-and-examination-skills"
+      ]
+    },
+    {
+      "term": "incident response plan",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "cybersecurity-threat-modelling-and-protection"
+      ]
+    },
+    {
+      "term": "infrastructure as a service",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "cloud-computing-virtualization-and-distributed-systems"
+      ]
+    },
+    {
+      "term": "infrastructure case study",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "advanced-networking-routing-and-infrastructure"
+      ]
+    },
+    {
+      "term": "inheritance in programming",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "advanced-programming-and-modular-design"
+      ]
+    },
+    {
+      "term": "inner join operation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "advanced-database-management-and-data-integrity"
+      ]
+    },
+    {
+      "term": "interactive multimedia design",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "multimedia-production-and-digital-media-systems"
+      ]
+    },
+    {
+      "term": "internet of things device",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "mobile-computing-and-emerging-technologies"
+      ]
+    },
+    {
+      "term": "isolation in transaction",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "advanced-database-management-and-data-integrity"
+      ]
+    },
+    {
+      "term": "issue tracking system",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "ict-project-management-and-collaboration"
+      ]
+    },
+    {
+      "term": "kanban workflow board",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "ict-project-management-and-collaboration"
+      ]
+    },
+    {
+      "term": "key performance indicator tracking",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "data-analytics-visualization-and-business-intelligence"
+      ]
+    },
+    {
+      "term": "legal compliance checklist",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "ict-ethics-law-and-digital-governance"
+      ]
+    },
+    {
+      "term": "library module import",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "advanced-programming-and-modular-design"
+      ]
+    },
+    {
+      "term": "linked list structure",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "data-structures-and-algorithm-efficiency"
+      ]
+    },
+    {
+      "term": "load balancing service",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "cloud-computing-virtualization-and-distributed-systems"
+      ]
+    },
+    {
+      "term": "local digital transformation example",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "hong-kong-ict-industry-and-digital-policy-context"
+      ]
+    },
+    {
+      "term": "machine learning model training",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "mobile-computing-and-emerging-technologies"
+      ]
+    },
+    {
+      "term": "media codec selection",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "multimedia-production-and-digital-media-systems"
+      ]
+    },
+    {
+      "term": "merge sort algorithm",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "data-structures-and-algorithm-efficiency"
+      ]
+    },
+    {
+      "term": "method overloading concept",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "advanced-programming-and-modular-design"
+      ]
+    },
+    {
+      "term": "method overriding concept",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "advanced-programming-and-modular-design"
+      ]
+    },
+    {
+      "term": "microservices architecture",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "cloud-computing-virtualization-and-distributed-systems"
+      ]
+    },
+    {
+      "term": "mobile development skill",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "mobile-computing-and-emerging-technologies"
+      ]
+    },
+    {
+      "term": "mobile operating system",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "mobile-computing-and-emerging-technologies"
+      ]
+    },
+    {
+      "term": "mobile user interface design",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "mobile-computing-and-emerging-technologies"
+      ]
+    },
+    {
+      "term": "modular design case study",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "advanced-programming-and-modular-design"
+      ]
+    },
+    {
+      "term": "modular program design",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "advanced-programming-and-modular-design"
+      ]
+    },
+    {
+      "term": "motion graphics design",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "multimedia-production-and-digital-media-systems"
+      ]
+    },
+    {
+      "term": "multimedia project planning",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "multimedia-production-and-digital-media-systems"
+      ]
+    },
+    {
+      "term": "native mobile application",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "mobile-computing-and-emerging-technologies"
+      ]
+    },
+    {
+      "term": "natural language processing application",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "mobile-computing-and-emerging-technologies"
+      ]
+    },
+    {
+      "term": "near field communication technology",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "mobile-computing-and-emerging-technologies"
+      ]
+    },
+    {
+      "term": "network congestion control",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "advanced-networking-routing-and-infrastructure"
+      ]
+    },
+    {
+      "term": "network monitoring tool",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "advanced-networking-routing-and-infrastructure"
+      ]
+    },
+    {
+      "term": "network segmentation strategy",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "advanced-networking-routing-and-infrastructure"
+      ]
+    },
+    {
+      "term": "network topology redesign",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "advanced-networking-routing-and-infrastructure"
+      ]
+    },
+    {
+      "term": "network troubleshooting workflow",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "advanced-networking-routing-and-infrastructure"
+      ]
+    },
+    {
+      "term": "non functional requirement definition",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "systems-analysis-design-and-development-lifecycle"
+      ]
+    },
+    {
+      "term": "non linear video editing",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "multimedia-production-and-digital-media-systems"
+      ]
+    },
+    {
+      "term": "object instance creation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "advanced-programming-and-modular-design"
+      ]
+    },
+    {
+      "term": "object oriented programming",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "advanced-programming-and-modular-design"
+      ]
+    },
+    {
+      "term": "online content moderation policy",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "ict-ethics-law-and-digital-governance"
+      ]
+    },
+    {
+      "term": "open data policy principle",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "ict-ethics-law-and-digital-governance"
+      ]
+    },
+    {
+      "term": "outer join operation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "advanced-database-management-and-data-integrity"
+      ]
+    },
+    {
+      "term": "outlier detection method",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "data-analytics-visualization-and-business-intelligence"
+      ]
+    },
+    {
+      "term": "penetration testing concept",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "cybersecurity-threat-modelling-and-protection"
+      ]
+    },
+    {
+      "term": "platform accountability issue",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "ict-ethics-law-and-digital-governance"
+      ]
+    },
+    {
+      "term": "platform as a service",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "cloud-computing-virtualization-and-distributed-systems"
+      ]
+    },
+    {
+      "term": "policy recommendation skill",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "ict-ethics-law-and-digital-governance"
+      ]
+    },
+    {
+      "term": "polymorphism in programming",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "advanced-programming-and-modular-design"
+      ]
+    },
+    {
+      "term": "predictive analytics method",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "data-analytics-visualization-and-business-intelligence"
+      ]
+    },
+    {
+      "term": "private cloud deployment",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "cloud-computing-virtualization-and-distributed-systems"
+      ]
+    },
+    {
+      "term": "project management skill",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "ict-project-management-and-collaboration"
+      ]
+    },
+    {
+      "term": "project milestone review",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "ict-project-management-and-collaboration"
+      ]
+    },
+    {
+      "term": "project schedule planning",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "ict-project-management-and-collaboration"
+      ]
+    },
+    {
+      "term": "project scope definition",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "ict-project-management-and-collaboration"
+      ]
+    },
+    {
+      "term": "prototype development method",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "systems-analysis-design-and-development-lifecycle"
+      ]
+    },
+    {
+      "term": "public cloud deployment",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "cloud-computing-virtualization-and-distributed-systems"
+      ]
+    },
+    {
+      "term": "public key infrastructure",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "cybersecurity-threat-modelling-and-protection"
+      ]
+    },
+    {
+      "term": "quality of service setting",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "advanced-networking-routing-and-infrastructure"
+      ]
+    },
+    {
+      "term": "query optimization method",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "advanced-database-management-and-data-integrity"
+      ]
+    },
+    {
+      "term": "queue data structure",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "data-structures-and-algorithm-efficiency"
+      ]
+    },
+    {
+      "term": "quick sort algorithm",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "data-structures-and-algorithm-efficiency"
+      ]
+    },
+    {
+      "term": "recursion in programming",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "advanced-programming-and-modular-design"
+      ]
+    },
+    {
+      "term": "redundant network design",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "advanced-networking-routing-and-infrastructure"
+      ]
+    },
+    {
+      "term": "referential integrity rule",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "advanced-database-management-and-data-integrity"
+      ]
+    },
+    {
+      "term": "rendering process in graphics",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "multimedia-production-and-digital-media-systems"
+      ]
+    },
+    {
+      "term": "report automation workflow",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "data-analytics-visualization-and-business-intelligence"
+      ]
+    },
+    {
+      "term": "representational state transfer",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "web-application-development-and-online-platforms"
+      ]
+    },
+    {
+      "term": "requirement gathering method",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "systems-analysis-design-and-development-lifecycle"
+      ]
+    },
+    {
+      "term": "resource allocation plan",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "ict-project-management-and-collaboration"
+      ]
+    },
+    {
+      "term": "risk register in project",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "ict-project-management-and-collaboration"
+      ]
+    },
+    {
+      "term": "routing table entry",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "advanced-networking-routing-and-infrastructure"
+      ]
+    },
+    {
+      "term": "S5 ICT practical readiness",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "hkdse-ict-practical-task-and-implementation-skills"
+      ]
+    },
+    {
+      "term": "scrum sprint planning",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "ict-project-management-and-collaboration"
+      ]
+    },
+    {
+      "term": "SDLC project skill",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "systems-analysis-design-and-development-lifecycle"
+      ]
+    },
+    {
+      "term": "secure socket layer protocol",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "cybersecurity-threat-modelling-and-protection"
+      ]
+    },
+    {
+      "term": "security audit procedure",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "cybersecurity-threat-modelling-and-protection"
+      ]
+    },
+    {
+      "term": "security information event management",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "cybersecurity-threat-modelling-and-protection"
+      ]
+    },
+    {
+      "term": "security operations skill",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "cybersecurity-threat-modelling-and-protection"
+      ]
+    },
+    {
+      "term": "security risk assessment matrix",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "cybersecurity-threat-modelling-and-protection"
+      ]
+    },
+    {
+      "term": "senior secondary ICT integration",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "hkdse-ict-analysis-evaluation-and-examination-skills"
+      ]
+    },
+    {
+      "term": "sensor data in mobile device",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "mobile-computing-and-emerging-technologies"
+      ]
+    },
+    {
+      "term": "session state management",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "web-application-development-and-online-platforms"
+      ]
+    },
+    {
+      "term": "simple network management protocol",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "advanced-networking-routing-and-infrastructure"
+      ]
+    },
+    {
+      "term": "single page application",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "web-application-development-and-online-platforms"
+      ]
+    },
+    {
+      "term": "smart sensor network",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "mobile-computing-and-emerging-technologies"
+      ]
+    },
+    {
+      "term": "software as a service",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "cloud-computing-virtualization-and-distributed-systems"
+      ]
+    },
+    {
+      "term": "stack data structure",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "data-structures-and-algorithm-efficiency"
+      ]
+    },
+    {
+      "term": "stakeholder analysis method",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "ict-project-management-and-collaboration"
+      ]
+    },
+    {
+      "term": "static routing configuration",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "advanced-networking-routing-and-infrastructure"
+      ]
+    },
+    {
+      "term": "stored procedure usage",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "advanced-database-management-and-data-integrity"
+      ]
+    },
+    {
+      "term": "streaming media protocol",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "multimedia-production-and-digital-media-systems"
+      ]
+    },
+    {
+      "term": "structured query language join",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "advanced-database-management-and-data-integrity"
+      ]
+    },
+    {
+      "term": "subnet mask calculation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "advanced-networking-routing-and-infrastructure"
+      ]
+    },
+    {
+      "term": "supervised learning method",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "mobile-computing-and-emerging-technologies"
+      ]
+    },
+    {
+      "term": "sustainable ICT practice",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "ict-ethics-law-and-digital-governance"
+      ]
+    },
+    {
+      "term": "symmetric encryption method",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "cybersecurity-threat-modelling-and-protection"
+      ]
+    },
+    {
+      "term": "system design specification",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "systems-analysis-design-and-development-lifecycle"
+      ]
+    },
+    {
+      "term": "system documentation standard",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "systems-analysis-design-and-development-lifecycle"
+      ]
+    },
+    {
+      "term": "system flowchart design",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "systems-analysis-design-and-development-lifecycle"
+      ]
+    },
+    {
+      "term": "system maintenance phase",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "systems-analysis-design-and-development-lifecycle"
+      ]
+    },
+    {
+      "term": "systems analysis case study",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "systems-analysis-design-and-development-lifecycle"
+      ]
+    },
+    {
+      "term": "systems development lifecycle",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "systems-analysis-design-and-development-lifecycle"
+      ]
+    },
+    {
+      "term": "team communication protocol",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "ict-project-management-and-collaboration"
+      ]
+    },
+    {
+      "term": "technology accessibility standard",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "ict-ethics-law-and-digital-governance"
+      ]
+    },
+    {
+      "term": "third normal form design",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "advanced-database-management-and-data-integrity"
+      ]
+    },
+    {
+      "term": "threat modelling method",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "cybersecurity-threat-modelling-and-protection"
+      ]
+    },
+    {
+      "term": "three dimensional modelling",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "multimedia-production-and-digital-media-systems"
+      ]
+    },
+    {
+      "term": "transmission error detection",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "advanced-networking-routing-and-infrastructure"
+      ]
+    },
+    {
+      "term": "transport layer security protocol",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "cybersecurity-threat-modelling-and-protection"
+      ]
+    },
+    {
+      "term": "tree data structure",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "data-structures-and-algorithm-efficiency"
+      ]
+    },
+    {
+      "term": "trend analysis in data",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "data-analytics-visualization-and-business-intelligence"
+      ]
+    },
+    {
+      "term": "try catch block structure",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "advanced-programming-and-modular-design"
+      ]
+    },
+    {
+      "term": "unsupervised learning method",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "mobile-computing-and-emerging-technologies"
+      ]
+    },
+    {
+      "term": "use case diagram",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "systems-analysis-design-and-development-lifecycle"
+      ]
+    },
+    {
+      "term": "user acceptance testing",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "systems-analysis-design-and-development-lifecycle"
+      ]
+    },
+    {
+      "term": "user experience in multimedia",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "multimedia-production-and-digital-media-systems"
+      ]
+    },
+    {
+      "term": "version control branch strategy",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "ict-project-management-and-collaboration"
+      ]
+    },
+    {
+      "term": "version control integration",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "web-application-development-and-online-platforms"
+      ]
+    },
+    {
+      "term": "virtual local area network",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "advanced-networking-routing-and-infrastructure"
+      ]
+    },
+    {
+      "term": "virtual machine instance",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "cloud-computing-virtualization-and-distributed-systems"
+      ]
+    },
+    {
+      "term": "virtual private network",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "advanced-networking-routing-and-infrastructure"
+      ]
+    },
+    {
+      "term": "virtual reality application",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "multimedia-production-and-digital-media-systems"
+      ]
+    },
+    {
+      "term": "vulnerability assessment scan",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "cybersecurity-threat-modelling-and-protection"
+      ]
+    },
+    {
+      "term": "web application architecture",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "web-application-development-and-online-platforms"
+      ]
+    },
+    {
+      "term": "web application firewall",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "web-application-development-and-online-platforms"
+      ]
+    },
+    {
+      "term": "web development case study",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "web-application-development-and-online-platforms"
+      ]
+    },
+    {
+      "term": "web framework usage",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "web-application-development-and-online-platforms"
+      ]
+    },
+    {
+      "term": "web performance optimization",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "web-application-development-and-online-platforms"
+      ]
+    },
+    {
+      "term": "whistleblowing digital channel",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "ict-ethics-law-and-digital-governance"
+      ]
+    },
+    {
+      "term": "work breakdown structure",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "ict-project-management-and-collaboration"
+      ]
+    },
+    {
+      "term": "worst case complexity",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "ict",
+        "curriculum-style",
+        "data-structures-and-algorithm-efficiency"
       ]
     }
   ]

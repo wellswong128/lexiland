@@ -7,6 +7,15 @@
   "version": "2026.06",
   "display_name_en": "S1 Mathematics",
   "display_name_zh_hant": "中一數學",
+  "source": {
+    "type": "curriculum_style_public_references",
+    "references": [
+      "EDB Mathematics Education Key Learning Area Curriculum Guide (Secondary 1-3)",
+      "EDB junior secondary Mathematics curriculum framework: Number and Algebra, Measures Shape and Space, Data Handling",
+      "Public Hong Kong Secondary 1 Mathematics syllabus topic examples (directed numbers, percentages, algebraic expressions, linear equations, angles, congruence, coordinates, statistics)"
+    ],
+    "note": "No fixed official Hong Kong S1 mathematics vocabulary list is prescribed; this list is theme-based for S1 mathematics enrichment import. Term-only entries are completed during import."
+  },
   "words": [
     {
       "term": "variable",
@@ -306,6 +315,3185 @@
         "mathematics",
         "statistics",
         "data-analysis"
+      ]
+    },
+    {
+      "term": "absolute value",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "number-and-directed-numbers"
+      ]
+    },
+    {
+      "term": "acute angle",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "angles-and-parallel-lines"
+      ]
+    },
+    {
+      "term": "acute triangle",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "triangles-and-congruence"
+      ]
+    },
+    {
+      "term": "addition",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "number-and-directed-numbers"
+      ]
+    },
+    {
+      "term": "adjacent angles",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "quadrilaterals-and-polygons"
+      ]
+    },
+    {
+      "term": "algebraic expression",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "algebraic-expressions-and-formulae"
+      ]
+    },
+    {
+      "term": "alternate angles",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "angles-and-parallel-lines"
+      ]
+    },
+    {
+      "term": "altitude",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "triangles-and-congruence"
+      ]
+    },
+    {
+      "term": "angle",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "angles-and-parallel-lines"
+      ]
+    },
+    {
+      "term": "angle sum",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "angles-and-parallel-lines"
+      ]
+    },
+    {
+      "term": "angle-angle-side",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "triangles-and-congruence"
+      ]
+    },
+    {
+      "term": "angle-side-angle",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "triangles-and-congruence"
+      ]
+    },
+    {
+      "term": "approximation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "number-and-directed-numbers"
+      ]
+    },
+    {
+      "term": "arc",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "mensuration-area-and-volume"
+      ]
+    },
+    {
+      "term": "arithmetic operation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "number-and-directed-numbers"
+      ]
+    },
+    {
+      "term": "assumption",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "mathematical-reasoning-and-problem-solving"
+      ]
+    },
+    {
+      "term": "at least",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "equations-and-inequalities"
+      ]
+    },
+    {
+      "term": "at most",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "equations-and-inequalities"
+      ]
+    },
+    {
+      "term": "average",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "statistics-and-data-handling"
+      ]
+    },
+    {
+      "term": "average speed",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "number-and-directed-numbers"
+      ]
+    },
+    {
+      "term": "axis label",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "coordinates-and-graphs"
+      ]
+    },
+    {
+      "term": "axis of symmetry",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "triangles-and-congruence"
+      ]
+    },
+    {
+      "term": "balance",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "equations-and-inequalities"
+      ]
+    },
+    {
+      "term": "bar chart",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "statistics-and-data-handling"
+      ]
+    },
+    {
+      "term": "base",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "mensuration-area-and-volume"
+      ]
+    },
+    {
+      "term": "binomial",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "algebraic-expressions-and-formulae"
+      ]
+    },
+    {
+      "term": "bisector",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "triangles-and-congruence"
+      ]
+    },
+    {
+      "term": "bracket",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "number-and-directed-numbers"
+      ]
+    },
+    {
+      "term": "breadth",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "mensuration-area-and-volume"
+      ]
+    },
+    {
+      "term": "calculate",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "number-and-directed-numbers"
+      ]
+    },
+    {
+      "term": "capacity",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "mensuration-area-and-volume"
+      ]
+    },
+    {
+      "term": "Cartesian plane",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "coordinates-and-graphs"
+      ]
+    },
+    {
+      "term": "certain",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "probability-and-chance"
+      ]
+    },
+    {
+      "term": "chance",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "probability-and-chance"
+      ]
+    },
+    {
+      "term": "check",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "equations-and-inequalities"
+      ]
+    },
+    {
+      "term": "chord",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "mensuration-area-and-volume"
+      ]
+    },
+    {
+      "term": "circumference",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "mensuration-area-and-volume"
+      ]
+    },
+    {
+      "term": "class boundary",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "statistics-and-data-handling"
+      ]
+    },
+    {
+      "term": "class interval",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "statistics-and-data-handling"
+      ]
+    },
+    {
+      "term": "common factor",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "number-and-directed-numbers"
+      ]
+    },
+    {
+      "term": "complementary angles",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "angles-and-parallel-lines"
+      ]
+    },
+    {
+      "term": "composite number",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "number-and-directed-numbers"
+      ]
+    },
+    {
+      "term": "composite shape",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "mensuration-area-and-volume"
+      ]
+    },
+    {
+      "term": "compound shape",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "mensuration-area-and-volume"
+      ]
+    },
+    {
+      "term": "cone",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "mensuration-area-and-volume"
+      ]
+    },
+    {
+      "term": "congruence",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "triangles-and-congruence"
+      ]
+    },
+    {
+      "term": "congruent",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "triangles-and-congruence"
+      ]
+    },
+    {
+      "term": "constant",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "algebraic-expressions-and-formulae"
+      ]
+    },
+    {
+      "term": "construction",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "triangles-and-congruence"
+      ]
+    },
+    {
+      "term": "conversion",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "mathematical-reasoning-and-problem-solving"
+      ]
+    },
+    {
+      "term": "coordinate",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "coordinates-and-graphs"
+      ]
+    },
+    {
+      "term": "correlation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "statistics-and-data-handling"
+      ]
+    },
+    {
+      "term": "corresponding angles",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "angles-and-parallel-lines"
+      ]
+    },
+    {
+      "term": "corresponding parts",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "triangles-and-congruence"
+      ]
+    },
+    {
+      "term": "counting number",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "number-and-directed-numbers"
+      ]
+    },
+    {
+      "term": "cross section",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "mensuration-area-and-volume"
+      ]
+    },
+    {
+      "term": "cube",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "number-and-directed-numbers"
+      ]
+    },
+    {
+      "term": "cube number",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "number-and-directed-numbers"
+      ]
+    },
+    {
+      "term": "cube root",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "number-and-directed-numbers"
+      ]
+    },
+    {
+      "term": "cubic unit",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "mensuration-area-and-volume"
+      ]
+    },
+    {
+      "term": "cuboid",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "mensuration-area-and-volume"
+      ]
+    },
+    {
+      "term": "cumulative frequency",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "statistics-and-data-handling"
+      ]
+    },
+    {
+      "term": "cylinder",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "mensuration-area-and-volume"
+      ]
+    },
+    {
+      "term": "data",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "statistics-and-data-handling"
+      ]
+    },
+    {
+      "term": "data set",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "statistics-and-data-handling"
+      ]
+    },
+    {
+      "term": "decimal fraction",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "number-and-directed-numbers"
+      ]
+    },
+    {
+      "term": "decimal point",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "number-and-directed-numbers"
+      ]
+    },
+    {
+      "term": "decrease",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "number-and-directed-numbers"
+      ]
+    },
+    {
+      "term": "definition",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "mathematical-reasoning-and-problem-solving"
+      ]
+    },
+    {
+      "term": "degree",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "algebraic-expressions-and-formulae"
+      ]
+    },
+    {
+      "term": "denominator",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "number-and-directed-numbers"
+      ]
+    },
+    {
+      "term": "diagonal",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "quadrilaterals-and-polygons"
+      ]
+    },
+    {
+      "term": "diagram",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "mathematical-reasoning-and-problem-solving"
+      ]
+    },
+    {
+      "term": "diameter",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "mensuration-area-and-volume"
+      ]
+    },
+    {
+      "term": "digit",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "number-and-directed-numbers"
+      ]
+    },
+    {
+      "term": "dimension",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "mathematical-reasoning-and-problem-solving"
+      ]
+    },
+    {
+      "term": "directed number",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "number-and-directed-numbers"
+      ]
+    },
+    {
+      "term": "discount",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "number-and-directed-numbers"
+      ]
+    },
+    {
+      "term": "distance",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "number-and-directed-numbers"
+      ]
+    },
+    {
+      "term": "divisibility",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "number-and-directed-numbers"
+      ]
+    },
+    {
+      "term": "divisible",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "number-and-directed-numbers"
+      ]
+    },
+    {
+      "term": "division",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "number-and-directed-numbers"
+      ]
+    },
+    {
+      "term": "equal to",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "equations-and-inequalities"
+      ]
+    },
+    {
+      "term": "equally likely",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "probability-and-chance"
+      ]
+    },
+    {
+      "term": "equilateral triangle",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "triangles-and-congruence"
+      ]
+    },
+    {
+      "term": "equivalent expression",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "algebraic-expressions-and-formulae"
+      ]
+    },
+    {
+      "term": "equivalent fraction",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "number-and-directed-numbers"
+      ]
+    },
+    {
+      "term": "error",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "mathematical-reasoning-and-problem-solving"
+      ]
+    },
+    {
+      "term": "estimation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "number-and-directed-numbers"
+      ]
+    },
+    {
+      "term": "evaluate",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "number-and-directed-numbers"
+      ]
+    },
+    {
+      "term": "evaluate expression",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "algebraic-expressions-and-formulae"
+      ]
+    },
+    {
+      "term": "event",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "probability-and-chance"
+      ]
+    },
+    {
+      "term": "expand",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "algebraic-expressions-and-formulae"
+      ]
+    },
+    {
+      "term": "expected outcome",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "probability-and-chance"
+      ]
+    },
+    {
+      "term": "experiment",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "probability-and-chance"
+      ]
+    },
+    {
+      "term": "exponent",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "number-and-directed-numbers"
+      ]
+    },
+    {
+      "term": "exterior angle",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "angles-and-parallel-lines"
+      ]
+    },
+    {
+      "term": "factorisation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "algebraic-expressions-and-formulae"
+      ]
+    },
+    {
+      "term": "factorize",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "algebraic-expressions-and-formulae"
+      ]
+    },
+    {
+      "term": "fair",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "probability-and-chance"
+      ]
+    },
+    {
+      "term": "form an equation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "equations-and-inequalities"
+      ]
+    },
+    {
+      "term": "formula",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "algebraic-expressions-and-formulae"
+      ]
+    },
+    {
+      "term": "formula application",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "mathematical-reasoning-and-problem-solving"
+      ]
+    },
+    {
+      "term": "formula rearrangement",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "algebraic-expressions-and-formulae"
+      ]
+    },
+    {
+      "term": "fraction of probability",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "probability-and-chance"
+      ]
+    },
+    {
+      "term": "frequency",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "statistics-and-data-handling"
+      ]
+    },
+    {
+      "term": "frequency table",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "statistics-and-data-handling"
+      ]
+    },
+    {
+      "term": "full turn",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "angles-and-parallel-lines"
+      ]
+    },
+    {
+      "term": "function",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "algebraic-expressions-and-formulae"
+      ]
+    },
+    {
+      "term": "gradient",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "coordinates-and-graphs"
+      ]
+    },
+    {
+      "term": "graph",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "coordinates-and-graphs"
+      ]
+    },
+    {
+      "term": "greater than",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "equations-and-inequalities"
+      ]
+    },
+    {
+      "term": "greatest common factor",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "number-and-directed-numbers"
+      ]
+    },
+    {
+      "term": "grouped data",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "statistics-and-data-handling"
+      ]
+    },
+    {
+      "term": "height",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "mensuration-area-and-volume"
+      ]
+    },
+    {
+      "term": "heptagon",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "quadrilaterals-and-polygons"
+      ]
+    },
+    {
+      "term": "hexagon",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "quadrilaterals-and-polygons"
+      ]
+    },
+    {
+      "term": "highest common factor",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "number-and-directed-numbers"
+      ]
+    },
+    {
+      "term": "histogram",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "statistics-and-data-handling"
+      ]
+    },
+    {
+      "term": "identity",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "algebraic-expressions-and-formulae"
+      ]
+    },
+    {
+      "term": "impossible",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "probability-and-chance"
+      ]
+    },
+    {
+      "term": "improper fraction",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "number-and-directed-numbers"
+      ]
+    },
+    {
+      "term": "increase",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "number-and-directed-numbers"
+      ]
+    },
+    {
+      "term": "index",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "number-and-directed-numbers"
+      ]
+    },
+    {
+      "term": "input",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "algebraic-expressions-and-formulae"
+      ]
+    },
+    {
+      "term": "interest",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "number-and-directed-numbers"
+      ]
+    },
+    {
+      "term": "interior angle sum",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "angles-and-parallel-lines"
+      ]
+    },
+    {
+      "term": "interior angles on same side",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "angles-and-parallel-lines"
+      ]
+    },
+    {
+      "term": "interpret result",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "mathematical-reasoning-and-problem-solving"
+      ]
+    },
+    {
+      "term": "interpretation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "statistics-and-data-handling"
+      ]
+    },
+    {
+      "term": "inverse operation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "equations-and-inequalities"
+      ]
+    },
+    {
+      "term": "isosceles triangle",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "triangles-and-congruence"
+      ]
+    },
+    {
+      "term": "kite",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "quadrilaterals-and-polygons"
+      ]
+    },
+    {
+      "term": "length",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "mensuration-area-and-volume"
+      ]
+    },
+    {
+      "term": "less than",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "equations-and-inequalities"
+      ]
+    },
+    {
+      "term": "like term",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "algebraic-expressions-and-formulae"
+      ]
+    },
+    {
+      "term": "like terms on both sides",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "equations-and-inequalities"
+      ]
+    },
+    {
+      "term": "likely",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "probability-and-chance"
+      ]
+    },
+    {
+      "term": "line graph",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "statistics-and-data-handling"
+      ]
+    },
+    {
+      "term": "linear equation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "equations-and-inequalities"
+      ]
+    },
+    {
+      "term": "linear graph",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "coordinates-and-graphs"
+      ]
+    },
+    {
+      "term": "linear relation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "algebraic-expressions-and-formulae"
+      ]
+    },
+    {
+      "term": "litre",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "mensuration-area-and-volume"
+      ]
+    },
+    {
+      "term": "loss",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "number-and-directed-numbers"
+      ]
+    },
+    {
+      "term": "lower bound",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "mathematical-reasoning-and-problem-solving"
+      ]
+    },
+    {
+      "term": "lowest common multiple",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "number-and-directed-numbers"
+      ]
+    },
+    {
+      "term": "mapping",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "algebraic-expressions-and-formulae"
+      ]
+    },
+    {
+      "term": "mean",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "statistics-and-data-handling"
+      ]
+    },
+    {
+      "term": "measure",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "mathematical-reasoning-and-problem-solving"
+      ]
+    },
+    {
+      "term": "method",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "mathematical-reasoning-and-problem-solving"
+      ]
+    },
+    {
+      "term": "millilitre",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "mensuration-area-and-volume"
+      ]
+    },
+    {
+      "term": "mixed number",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "number-and-directed-numbers"
+      ]
+    },
+    {
+      "term": "mode",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "statistics-and-data-handling"
+      ]
+    },
+    {
+      "term": "monomial",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "algebraic-expressions-and-formulae"
+      ]
+    },
+    {
+      "term": "multiplication",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "number-and-directed-numbers"
+      ]
+    },
+    {
+      "term": "natural number",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "number-and-directed-numbers"
+      ]
+    },
+    {
+      "term": "negative number",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "number-and-directed-numbers"
+      ]
+    },
+    {
+      "term": "net",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "mensuration-area-and-volume"
+      ]
+    },
+    {
+      "term": "nth term",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "algebraic-expressions-and-formulae"
+      ]
+    },
+    {
+      "term": "number line",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "number-and-directed-numbers"
+      ]
+    },
+    {
+      "term": "numerator",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "number-and-directed-numbers"
+      ]
+    },
+    {
+      "term": "obtuse angle",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "angles-and-parallel-lines"
+      ]
+    },
+    {
+      "term": "obtuse triangle",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "triangles-and-congruence"
+      ]
+    },
+    {
+      "term": "octagon",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "quadrilaterals-and-polygons"
+      ]
+    },
+    {
+      "term": "opposite angles",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "quadrilaterals-and-polygons"
+      ]
+    },
+    {
+      "term": "opposite number",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "number-and-directed-numbers"
+      ]
+    },
+    {
+      "term": "opposite sides",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "quadrilaterals-and-polygons"
+      ]
+    },
+    {
+      "term": "order of operations",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "number-and-directed-numbers"
+      ]
+    },
+    {
+      "term": "ordered pair",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "coordinates-and-graphs"
+      ]
+    },
+    {
+      "term": "outcome",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "probability-and-chance"
+      ]
+    },
+    {
+      "term": "outlier",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "statistics-and-data-handling"
+      ]
+    },
+    {
+      "term": "output",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "algebraic-expressions-and-formulae"
+      ]
+    },
+    {
+      "term": "parallel lines",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "angles-and-parallel-lines"
+      ]
+    },
+    {
+      "term": "parallel sides",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "quadrilaterals-and-polygons"
+      ]
+    },
+    {
+      "term": "parallelogram",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "quadrilaterals-and-polygons"
+      ]
+    },
+    {
+      "term": "pattern",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "algebraic-expressions-and-formulae"
+      ]
+    },
+    {
+      "term": "pentagon",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "quadrilaterals-and-polygons"
+      ]
+    },
+    {
+      "term": "percent",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "number-and-directed-numbers"
+      ]
+    },
+    {
+      "term": "percentage",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "number-and-directed-numbers"
+      ]
+    },
+    {
+      "term": "perpendicular",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "angles-and-parallel-lines"
+      ]
+    },
+    {
+      "term": "pi",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "mensuration-area-and-volume"
+      ]
+    },
+    {
+      "term": "pie chart",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "statistics-and-data-handling"
+      ]
+    },
+    {
+      "term": "place value",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "number-and-directed-numbers"
+      ]
+    },
+    {
+      "term": "plot",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "coordinates-and-graphs"
+      ]
+    },
+    {
+      "term": "point",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "coordinates-and-graphs"
+      ]
+    },
+    {
+      "term": "polygon",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "angles-and-parallel-lines"
+      ]
+    },
+    {
+      "term": "polynomial",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "algebraic-expressions-and-formulae"
+      ]
+    },
+    {
+      "term": "positive number",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "number-and-directed-numbers"
+      ]
+    },
+    {
+      "term": "power",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "number-and-directed-numbers"
+      ]
+    },
+    {
+      "term": "prediction",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "probability-and-chance"
+      ]
+    },
+    {
+      "term": "prime factorization",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "number-and-directed-numbers"
+      ]
+    },
+    {
+      "term": "prime number",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "number-and-directed-numbers"
+      ]
+    },
+    {
+      "term": "prism",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "mensuration-area-and-volume"
+      ]
+    },
+    {
+      "term": "probability",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "probability-and-chance"
+      ]
+    },
+    {
+      "term": "problem solving",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "mathematical-reasoning-and-problem-solving"
+      ]
+    },
+    {
+      "term": "profit",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "number-and-directed-numbers"
+      ]
+    },
+    {
+      "term": "proof",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "mathematical-reasoning-and-problem-solving"
+      ]
+    },
+    {
+      "term": "property",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "mathematical-reasoning-and-problem-solving"
+      ]
+    },
+    {
+      "term": "proportion",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "number-and-directed-numbers"
+      ]
+    },
+    {
+      "term": "protractor",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "angles-and-parallel-lines"
+      ]
+    },
+    {
+      "term": "pyramid",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "mensuration-area-and-volume"
+      ]
+    },
+    {
+      "term": "quadrilateral",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "quadrilaterals-and-polygons"
+      ]
+    },
+    {
+      "term": "radius",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "mensuration-area-and-volume"
+      ]
+    },
+    {
+      "term": "random",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "probability-and-chance"
+      ]
+    },
+    {
+      "term": "range",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "statistics-and-data-handling"
+      ]
+    },
+    {
+      "term": "rate",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "number-and-directed-numbers"
+      ]
+    },
+    {
+      "term": "ratio",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "number-and-directed-numbers"
+      ]
+    },
+    {
+      "term": "raw data",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "statistics-and-data-handling"
+      ]
+    },
+    {
+      "term": "reasonableness",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "mathematical-reasoning-and-problem-solving"
+      ]
+    },
+    {
+      "term": "reasoning",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "mathematical-reasoning-and-problem-solving"
+      ]
+    },
+    {
+      "term": "rectangle",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "quadrilaterals-and-polygons"
+      ]
+    },
+    {
+      "term": "reflex angle",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "angles-and-parallel-lines"
+      ]
+    },
+    {
+      "term": "regular polygon",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "angles-and-parallel-lines"
+      ]
+    },
+    {
+      "term": "relative frequency",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "probability-and-chance"
+      ]
+    },
+    {
+      "term": "remainder",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "number-and-directed-numbers"
+      ]
+    },
+    {
+      "term": "rhombus",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "quadrilaterals-and-polygons"
+      ]
+    },
+    {
+      "term": "right angle",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "angles-and-parallel-lines"
+      ]
+    },
+    {
+      "term": "right-angled triangle",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "triangles-and-congruence"
+      ]
+    },
+    {
+      "term": "root",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "equations-and-inequalities"
+      ]
+    },
+    {
+      "term": "round off",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "mathematical-reasoning-and-problem-solving"
+      ]
+    },
+    {
+      "term": "rounding",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "number-and-directed-numbers"
+      ]
+    },
+    {
+      "term": "rule",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "algebraic-expressions-and-formulae"
+      ]
+    },
+    {
+      "term": "sample space",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "probability-and-chance"
+      ]
+    },
+    {
+      "term": "scale",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "coordinates-and-graphs"
+      ]
+    },
+    {
+      "term": "scalene triangle",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "triangles-and-congruence"
+      ]
+    },
+    {
+      "term": "scatter diagram",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "statistics-and-data-handling"
+      ]
+    },
+    {
+      "term": "scientific notation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "number-and-directed-numbers"
+      ]
+    },
+    {
+      "term": "sector",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "mensuration-area-and-volume"
+      ]
+    },
+    {
+      "term": "sequence",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "algebraic-expressions-and-formulae"
+      ]
+    },
+    {
+      "term": "shift",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "coordinates-and-graphs"
+      ]
+    },
+    {
+      "term": "side-angle-side",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "triangles-and-congruence"
+      ]
+    },
+    {
+      "term": "side-side-side",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "triangles-and-congruence"
+      ]
+    },
+    {
+      "term": "sign",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "number-and-directed-numbers"
+      ]
+    },
+    {
+      "term": "significant figure",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "number-and-directed-numbers"
+      ]
+    },
+    {
+      "term": "simplest form",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "number-and-directed-numbers"
+      ]
+    },
+    {
+      "term": "sketch",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "mathematical-reasoning-and-problem-solving"
+      ]
+    },
+    {
+      "term": "solution",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "equations-and-inequalities"
+      ]
+    },
+    {
+      "term": "solution set",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "equations-and-inequalities"
+      ]
+    },
+    {
+      "term": "solution steps",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "mathematical-reasoning-and-problem-solving"
+      ]
+    },
+    {
+      "term": "solve",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "equations-and-inequalities"
+      ]
+    },
+    {
+      "term": "speed",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "number-and-directed-numbers"
+      ]
+    },
+    {
+      "term": "sphere",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "mensuration-area-and-volume"
+      ]
+    },
+    {
+      "term": "square",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "number-and-directed-numbers"
+      ]
+    },
+    {
+      "term": "square number",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "number-and-directed-numbers"
+      ]
+    },
+    {
+      "term": "square root",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "number-and-directed-numbers"
+      ]
+    },
+    {
+      "term": "square unit",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "mensuration-area-and-volume"
+      ]
+    },
+    {
+      "term": "standard form",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "number-and-directed-numbers"
+      ]
+    },
+    {
+      "term": "statistic",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "statistics-and-data-handling"
+      ]
+    },
+    {
+      "term": "statistics",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "statistics-and-data-handling"
+      ]
+    },
+    {
+      "term": "step",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "mathematical-reasoning-and-problem-solving"
+      ]
+    },
+    {
+      "term": "straight angle",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "angles-and-parallel-lines"
+      ]
+    },
+    {
+      "term": "straight line graph",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "coordinates-and-graphs"
+      ]
+    },
+    {
+      "term": "strategy",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "mathematical-reasoning-and-problem-solving"
+      ]
+    },
+    {
+      "term": "subject of formula",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "algebraic-expressions-and-formulae"
+      ]
+    },
+    {
+      "term": "subtraction",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "number-and-directed-numbers"
+      ]
+    },
+    {
+      "term": "supplementary angles",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "angles-and-parallel-lines"
+      ]
+    },
+    {
+      "term": "surface area",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "mensuration-area-and-volume"
+      ]
+    },
+    {
+      "term": "symmetry",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "triangles-and-congruence"
+      ]
+    },
+    {
+      "term": "table of values",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "algebraic-expressions-and-formulae"
+      ]
+    },
+    {
+      "term": "tally chart",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "statistics-and-data-handling"
+      ]
+    },
+    {
+      "term": "term",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "algebraic-expressions-and-formulae"
+      ]
+    },
+    {
+      "term": "term of sequence",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "algebraic-expressions-and-formulae"
+      ]
+    },
+    {
+      "term": "theorem",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "mathematical-reasoning-and-problem-solving"
+      ]
+    },
+    {
+      "term": "time",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "number-and-directed-numbers"
+      ]
+    },
+    {
+      "term": "translation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "coordinates-and-graphs"
+      ]
+    },
+    {
+      "term": "transposition",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "equations-and-inequalities"
+      ]
+    },
+    {
+      "term": "transversal",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "angles-and-parallel-lines"
+      ]
+    },
+    {
+      "term": "trapezium",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "quadrilaterals-and-polygons"
+      ]
+    },
+    {
+      "term": "trend",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "statistics-and-data-handling"
+      ]
+    },
+    {
+      "term": "trial",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "probability-and-chance"
+      ]
+    },
+    {
+      "term": "triangle",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "angles-and-parallel-lines"
+      ]
+    },
+    {
+      "term": "unit",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "mathematical-reasoning-and-problem-solving"
+      ]
+    },
+    {
+      "term": "unit conversion",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "mensuration-area-and-volume"
+      ]
+    },
+    {
+      "term": "unit rate",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "number-and-directed-numbers"
+      ]
+    },
+    {
+      "term": "unknown",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "equations-and-inequalities"
+      ]
+    },
+    {
+      "term": "unlike term",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "algebraic-expressions-and-formulae"
+      ]
+    },
+    {
+      "term": "unlikely",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "probability-and-chance"
+      ]
+    },
+    {
+      "term": "upper bound",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "mathematical-reasoning-and-problem-solving"
+      ]
+    },
+    {
+      "term": "verify",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "equations-and-inequalities"
+      ]
+    },
+    {
+      "term": "vertically opposite angles",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "angles-and-parallel-lines"
+      ]
+    },
+    {
+      "term": "whole number",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "number-and-directed-numbers"
+      ]
+    },
+    {
+      "term": "width",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "mensuration-area-and-volume"
+      ]
+    },
+    {
+      "term": "word problem",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "equations-and-inequalities"
+      ]
+    },
+    {
+      "term": "working",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "mathematical-reasoning-and-problem-solving"
+      ]
+    },
+    {
+      "term": "x-axis",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "coordinates-and-graphs"
+      ]
+    },
+    {
+      "term": "x-intercept",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "coordinates-and-graphs"
+      ]
+    },
+    {
+      "term": "y-axis",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "coordinates-and-graphs"
+      ]
+    },
+    {
+      "term": "y-intercept",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "coordinates-and-graphs"
+      ]
+    },
+    {
+      "term": "zero",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "mathematics",
+        "curriculum-style",
+        "number-and-directed-numbers"
       ]
     }
   ]

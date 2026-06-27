@@ -7,6 +7,15 @@
   "version": "2026.06",
   "display_name_en": "S6 Biology",
   "display_name_zh_hant": "中六生物",
+  "source": {
+    "type": "curriculum_style_public_references",
+    "references": [
+      "EDB Biology Curriculum and Assessment Guide (Secondary 4-6)",
+      "EDB HKDSE Biology Compulsory Part and Elective Part learning objectives",
+      "Public Hong Kong S6 Biology syllabus topic examples (HKDSE revision, integrated human physiology, applied genetics, ecology and conservation, biotechnology, disease and public health, experimental evaluation, bioethics)"
+    ],
+    "note": "No fixed official Hong Kong S6 biology vocabulary list is prescribed; this list is theme-based for senior secondary S6 / HKDSE biology enrichment import. Term-only entries are completed during import."
+  },
   "words": [
     {
       "term": "Homeostasis",
@@ -306,6 +315,3240 @@
         "biology",
         "topic: ecology",
         "process"
+      ]
+    },
+    {
+      "term": "acetylcholinesterase",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-nervous-system-and-neurophysiology"
+      ]
+    },
+    {
+      "term": "active immunity duration",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-immunity-vaccination-and-medicine"
+      ]
+    },
+    {
+      "term": "adaptive trait example",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-evolution-and-speciation"
+      ]
+    },
+    {
+      "term": "ADH secretion control",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-kidney-and-osmoregulation"
+      ]
+    },
+    {
+      "term": "adhesion to xylem wall",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-plant-transport-and-water-relations"
+      ]
+    },
+    {
+      "term": "aeration requirement",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-microbiology-and-industrial-biology"
+      ]
+    },
+    {
+      "term": "all-or-nothing law",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-nervous-system-and-neurophysiology"
+      ]
+    },
+    {
+      "term": "allele frequency change",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-reproduction-genetics-and-inheritance"
+      ]
+    },
+    {
+      "term": "allopatric speciation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-evolution-and-speciation"
+      ]
+    },
+    {
+      "term": "amniocentesis procedure",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-reproduction-genetics-and-inheritance"
+      ]
+    },
+    {
+      "term": "anaerobic yeast fermentation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-respiration-photosynthesis-and-energy-flow"
+      ]
+    },
+    {
+      "term": "animal testing debate",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-bioethics-environment-and-society"
+      ]
+    },
+    {
+      "term": "anomalous result handling",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-experimental-design-data-and-examination-skills"
+      ]
+    },
+    {
+      "term": "antibiotic resistance evolution",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-evolution-and-speciation"
+      ]
+    },
+    {
+      "term": "antibiotic use in livestock",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-bioethics-environment-and-society"
+      ]
+    },
+    {
+      "term": "antigenic drift",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-immunity-vaccination-and-medicine"
+      ]
+    },
+    {
+      "term": "antigenic shift",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-immunity-vaccination-and-medicine"
+      ]
+    },
+    {
+      "term": "apoplast pathway",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-plant-transport-and-water-relations"
+      ]
+    },
+    {
+      "term": "aquaporin insertion",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-kidney-and-osmoregulation"
+      ]
+    },
+    {
+      "term": "ATP yield comparison",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-respiration-photosynthesis-and-energy-flow"
+      ]
+    },
+    {
+      "term": "attenuated pathogen vaccine",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-immunity-vaccination-and-medicine"
+      ]
+    },
+    {
+      "term": "autoimmune disorder example",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-immunity-vaccination-and-medicine"
+      ]
+    },
+    {
+      "term": "autosomal dominant pedigree",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-reproduction-genetics-and-inheritance"
+      ]
+    },
+    {
+      "term": "autosomal recessive pedigree",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-reproduction-genetics-and-inheritance"
+      ]
+    },
+    {
+      "term": "bar chart comparison",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-experimental-design-data-and-examination-skills"
+      ]
+    },
+    {
+      "term": "batch fermentation culture",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-microbiology-and-industrial-biology"
+      ]
+    },
+    {
+      "term": "bicarbonate buffer system",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-homeostasis-and-feedback-integration"
+      ]
+    },
+    {
+      "term": "biogas generation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-microbiology-and-industrial-biology"
+      ]
+    },
+    {
+      "term": "biomagnification of toxin",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-ecology-and-biodiversity-management"
+      ]
+    },
+    {
+      "term": "biopiracy concern",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-bioethics-environment-and-society"
+      ]
+    },
+    {
+      "term": "bioremediation application",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-microbiology-and-industrial-biology"
+      ]
+    },
+    {
+      "term": "biosafety level classification",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-microbiology-and-industrial-biology"
+      ]
+    },
+    {
+      "term": "blood glucose fluctuation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-homeostasis-and-feedback-integration"
+      ]
+    },
+    {
+      "term": "blood pH regulation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-homeostasis-and-feedback-integration"
+      ]
+    },
+    {
+      "term": "blood pressure in glomerulus",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-kidney-and-osmoregulation"
+      ]
+    },
+    {
+      "term": "booster immunization schedule",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-immunity-vaccination-and-medicine"
+      ]
+    },
+    {
+      "term": "Bowman's capsule",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-kidney-and-osmoregulation"
+      ]
+    },
+    {
+      "term": "Calvin cycle intermediate",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-respiration-photosynthesis-and-energy-flow"
+      ]
+    },
+    {
+      "term": "CAM plant adaptation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-respiration-photosynthesis-and-energy-flow"
+      ]
+    },
+    {
+      "term": "captive breeding programme",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-ecology-and-biodiversity-management"
+      ]
+    },
+    {
+      "term": "carbon cycle link to climate",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-respiration-photosynthesis-and-energy-flow"
+      ]
+    },
+    {
+      "term": "carbon dioxide transport",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-homeostasis-and-feedback-integration"
+      ]
+    },
+    {
+      "term": "cardiovascular risk factor",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-human-health-disease-and-public-health"
+      ]
+    },
+    {
+      "term": "carrier frequency calculation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-reproduction-genetics-and-inheritance"
+      ]
+    },
+    {
+      "term": "cheese ripening enzyme",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-microbiology-and-industrial-biology"
+      ]
+    },
+    {
+      "term": "chi-squared test application",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-experimental-design-data-and-examination-skills"
+      ]
+    },
+    {
+      "term": "cholera Vibrio spread",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-human-health-disease-and-public-health"
+      ]
+    },
+    {
+      "term": "chorionic villus sampling",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-reproduction-genetics-and-inheritance"
+      ]
+    },
+    {
+      "term": "cirrhosis of liver",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-human-health-disease-and-public-health"
+      ]
+    },
+    {
+      "term": "climate change effect on species",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-bioethics-environment-and-society"
+      ]
+    },
+    {
+      "term": "clinical sign of imbalance",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-homeostasis-and-feedback-integration"
+      ]
+    },
+    {
+      "term": "clinical trial phase",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-bioethics-environment-and-society"
+      ]
+    },
+    {
+      "term": "co-evolution relationship",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-evolution-and-speciation"
+      ]
+    },
+    {
+      "term": "cohesion of water molecules",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-plant-transport-and-water-relations"
+      ]
+    },
+    {
+      "term": "collecting duct",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-kidney-and-osmoregulation"
+      ]
+    },
+    {
+      "term": "comparative biochemistry evidence",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-evolution-and-speciation"
+      ]
+    },
+    {
+      "term": "comparing aerobic and anaerobic respiration",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-respiration-photosynthesis-and-energy-flow"
+      ]
+    },
+    {
+      "term": "comparing antibiotic and antiviral drug",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-microbiology-and-industrial-biology"
+      ]
+    },
+    {
+      "term": "comparing C3 and C4 photosynthesis",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-respiration-photosynthesis-and-energy-flow"
+      ]
+    },
+    {
+      "term": "comparing central and peripheral nervous system",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-nervous-system-and-neurophysiology"
+      ]
+    },
+    {
+      "term": "comparing conservation and development",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-bioethics-environment-and-society"
+      ]
+    },
+    {
+      "term": "comparing conservation methods",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-ecology-and-biodiversity-management"
+      ]
+    },
+    {
+      "term": "comparing feedback types",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-homeostasis-and-feedback-integration"
+      ]
+    },
+    {
+      "term": "comparing infectious and non-infectious disease",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-human-health-disease-and-public-health"
+      ]
+    },
+    {
+      "term": "comparing innate and adaptive response",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-immunity-vaccination-and-medicine"
+      ]
+    },
+    {
+      "term": "comparing kidney and skin excretion",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-kidney-and-osmoregulation"
+      ]
+    },
+    {
+      "term": "comparing Lamarckism and Darwinism",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-evolution-and-speciation"
+      ]
+    },
+    {
+      "term": "comparing monohybrid and dihybrid cross",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-reproduction-genetics-and-inheritance"
+      ]
+    },
+    {
+      "term": "comparing qualitative and quantitative data",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-experimental-design-data-and-examination-skills"
+      ]
+    },
+    {
+      "term": "comparing traditional breeding and GM",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-genetic-engineering-and-biotech-applications"
+      ]
+    },
+    {
+      "term": "comparing xylem and phloem function",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-plant-transport-and-water-relations"
+      ]
+    },
+    {
+      "term": "compensation point interpretation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-respiration-photosynthesis-and-energy-flow"
+      ]
+    },
+    {
+      "term": "composting microbial role",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-microbiology-and-industrial-biology"
+      ]
+    },
+    {
+      "term": "contact tracing method",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-human-health-disease-and-public-health"
+      ]
+    },
+    {
+      "term": "continuous fermentation culture",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-microbiology-and-industrial-biology"
+      ]
+    },
+    {
+      "term": "control centre",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-homeostasis-and-feedback-integration"
+      ]
+    },
+    {
+      "term": "controlling confounding variable",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-experimental-design-data-and-examination-skills"
+      ]
+    },
+    {
+      "term": "coronary bypass surgery",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-human-health-disease-and-public-health"
+      ]
+    },
+    {
+      "term": "countercurrent multiplier system",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-kidney-and-osmoregulation"
+      ]
+    },
+    {
+      "term": "crossing over frequency",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-reproduction-genetics-and-inheritance"
+      ]
+    },
+    {
+      "term": "cystic fibrosis inheritance",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-reproduction-genetics-and-inheritance"
+      ]
+    },
+    {
+      "term": "Darwin's theory evidence",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-evolution-and-speciation"
+      ]
+    },
+    {
+      "term": "DDT case study",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-ecology-and-biodiversity-management"
+      ]
+    },
+    {
+      "term": "depolarization phase",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-nervous-system-and-neurophysiology"
+      ]
+    },
+    {
+      "term": "designer baby ethical issue",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-bioethics-environment-and-society"
+      ]
+    },
+    {
+      "term": "diagnostic test kit principle",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-immunity-vaccination-and-medicine"
+      ]
+    },
+    {
+      "term": "differential reproductive success",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-evolution-and-speciation"
+      ]
+    },
+    {
+      "term": "dilute versus concentrated urine",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-kidney-and-osmoregulation"
+      ]
+    },
+    {
+      "term": "disruption of homeostasis",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-homeostasis-and-feedback-integration"
+      ]
+    },
+    {
+      "term": "distal convoluted tubule",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-kidney-and-osmoregulation"
+      ]
+    },
+    {
+      "term": "DNA fragment isolation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-genetic-engineering-and-biotech-applications"
+      ]
+    },
+    {
+      "term": "DNA profiling in forensics",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-genetic-engineering-and-biotech-applications"
+      ]
+    },
+    {
+      "term": "DNA sequence similarity",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-evolution-and-speciation"
+      ]
+    },
+    {
+      "term": "Down syndrome trisomy",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-reproduction-genetics-and-inheritance"
+      ]
+    },
+    {
+      "term": "downstream processing step",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-microbiology-and-industrial-biology"
+      ]
+    },
+    {
+      "term": "drug action at synapse",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-nervous-system-and-neurophysiology"
+      ]
+    },
+    {
+      "term": "ecological pyramid interpretation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-ecology-and-biodiversity-management"
+      ]
+    },
+    {
+      "term": "edge effect",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-ecology-and-biodiversity-management"
+      ]
+    },
+    {
+      "term": "electron transport chain location",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-respiration-photosynthesis-and-energy-flow"
+      ]
+    },
+    {
+      "term": "embryo research regulation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-bioethics-environment-and-society"
+      ]
+    },
+    {
+      "term": "emphysema pathology",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-human-health-disease-and-public-health"
+      ]
+    },
+    {
+      "term": "endodermis Casparian strip",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-plant-transport-and-water-relations"
+      ]
+    },
+    {
+      "term": "energy transfer efficiency",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-ecology-and-biodiversity-management"
+      ]
+    },
+    {
+      "term": "energy transfer in food chain",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-respiration-photosynthesis-and-energy-flow"
+      ]
+    },
+    {
+      "term": "environmental change pressure",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-evolution-and-speciation"
+      ]
+    },
+    {
+      "term": "epidemic curve analysis",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-human-health-disease-and-public-health"
+      ]
+    },
+    {
+      "term": "ethical approval requirement",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-experimental-design-data-and-examination-skills"
+      ]
+    },
+    {
+      "term": "ethical issue in organ donation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-immunity-vaccination-and-medicine"
+      ]
+    },
+    {
+      "term": "evaluating biofuel sustainability",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-respiration-photosynthesis-and-energy-flow"
+      ]
+    },
+    {
+      "term": "evaluating biotechnology safety",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-genetic-engineering-and-biotech-applications"
+      ]
+    },
+    {
+      "term": "evaluating dialysis treatment",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-kidney-and-osmoregulation"
+      ]
+    },
+    {
+      "term": "evaluating evolutionary evidence",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-evolution-and-speciation"
+      ]
+    },
+    {
+      "term": "evaluating experimental limitation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-experimental-design-data-and-examination-skills"
+      ]
+    },
+    {
+      "term": "evaluating genetic screening ethics",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-reproduction-genetics-and-inheritance"
+      ]
+    },
+    {
+      "term": "evaluating GM crop policy",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-bioethics-environment-and-society"
+      ]
+    },
+    {
+      "term": "evaluating human impact mitigation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-ecology-and-biodiversity-management"
+      ]
+    },
+    {
+      "term": "evaluating industrial fermentation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-microbiology-and-industrial-biology"
+      ]
+    },
+    {
+      "term": "evaluating mass flow evidence",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-plant-transport-and-water-relations"
+      ]
+    },
+    {
+      "term": "evaluating public health policy",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-human-health-disease-and-public-health"
+      ]
+    },
+    {
+      "term": "evaluating vaccination programme",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-immunity-vaccination-and-medicine"
+      ]
+    },
+    {
+      "term": "ex situ conservation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-ecology-and-biodiversity-management"
+      ]
+    },
+    {
+      "term": "excitatory postsynaptic potential",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-nervous-system-and-neurophysiology"
+      ]
+    },
+    {
+      "term": "extinction event",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-evolution-and-speciation"
+      ]
+    },
+    {
+      "term": "fair trade in biological resource",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-bioethics-environment-and-society"
+      ]
+    },
+    {
+      "term": "fermenter design feature",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-microbiology-and-industrial-biology"
+      ]
+    },
+    {
+      "term": "filtration slits",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-kidney-and-osmoregulation"
+      ]
+    },
+    {
+      "term": "fluid intake regulation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-kidney-and-osmoregulation"
+      ]
+    },
+    {
+      "term": "food poisoning outbreak",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-human-health-disease-and-public-health"
+      ]
+    },
+    {
+      "term": "formulating testable hypothesis",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-experimental-design-data-and-examination-skills"
+      ]
+    },
+    {
+      "term": "frequency coding",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-nervous-system-and-neurophysiology"
+      ]
+    },
+    {
+      "term": "gene expression in host",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-genetic-engineering-and-biotech-applications"
+      ]
+    },
+    {
+      "term": "gene linkage on chromosome",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-reproduction-genetics-and-inheritance"
+      ]
+    },
+    {
+      "term": "gene therapy concept",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-genetic-engineering-and-biotech-applications"
+      ]
+    },
+    {
+      "term": "genetic counselling role",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-reproduction-genetics-and-inheritance"
+      ]
+    },
+    {
+      "term": "genetic map unit",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-reproduction-genetics-and-inheritance"
+      ]
+    },
+    {
+      "term": "genetic modification process",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-genetic-engineering-and-biotech-applications"
+      ]
+    },
+    {
+      "term": "genetic privacy concern",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-bioethics-environment-and-society"
+      ]
+    },
+    {
+      "term": "glycolysis location",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-respiration-photosynthesis-and-energy-flow"
+      ]
+    },
+    {
+      "term": "GMO food labelling",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-genetic-engineering-and-biotech-applications"
+      ]
+    },
+    {
+      "term": "golden rice project",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-genetic-engineering-and-biotech-applications"
+      ]
+    },
+    {
+      "term": "guard cell turgor",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-plant-transport-and-water-relations"
+      ]
+    },
+    {
+      "term": "habitat fragmentation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-ecology-and-biodiversity-management"
+      ]
+    },
+    {
+      "term": "haemodialysis principle",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-kidney-and-osmoregulation"
+      ]
+    },
+    {
+      "term": "Hardy-Weinberg equilibrium application",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-reproduction-genetics-and-inheritance"
+      ]
+    },
+    {
+      "term": "health education strategy",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-human-health-disease-and-public-health"
+      ]
+    },
+    {
+      "term": "hepatitis transmission route",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-human-health-disease-and-public-health"
+      ]
+    },
+    {
+      "term": "hepatitis virus type",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-human-health-disease-and-public-health"
+      ]
+    },
+    {
+      "term": "herd immunity threshold",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-immunity-vaccination-and-medicine"
+      ]
+    },
+    {
+      "term": "host cell uptake",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-genetic-engineering-and-biotech-applications"
+      ]
+    },
+    {
+      "term": "Huntington disease late onset",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-reproduction-genetics-and-inheritance"
+      ]
+    },
+    {
+      "term": "hyperpolarization",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-nervous-system-and-neurophysiology"
+      ]
+    },
+    {
+      "term": "identifying dependent variable",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-experimental-design-data-and-examination-skills"
+      ]
+    },
+    {
+      "term": "identifying independent variable",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-experimental-design-data-and-examination-skills"
+      ]
+    },
+    {
+      "term": "immunosuppressive drug use",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-immunity-vaccination-and-medicine"
+      ]
+    },
+    {
+      "term": "in situ conservation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-ecology-and-biodiversity-management"
+      ]
+    },
+    {
+      "term": "indicator species",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-ecology-and-biodiversity-management"
+      ]
+    },
+    {
+      "term": "industrial melanism case",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-evolution-and-speciation"
+      ]
+    },
+    {
+      "term": "informed consent in research",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-bioethics-environment-and-society"
+      ]
+    },
+    {
+      "term": "inheritance of advantageous trait",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-evolution-and-speciation"
+      ]
+    },
+    {
+      "term": "inhibitory postsynaptic potential",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-nervous-system-and-neurophysiology"
+      ]
+    },
+    {
+      "term": "insulin and glucagon interaction",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-homeostasis-and-feedback-integration"
+      ]
+    },
+    {
+      "term": "insulin production by bacteria",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-genetic-engineering-and-biotech-applications"
+      ]
+    },
+    {
+      "term": "insurance discrimination risk",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-bioethics-environment-and-society"
+      ]
+    },
+    {
+      "term": "integrated regulatory response",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-homeostasis-and-feedback-integration"
+      ]
+    },
+    {
+      "term": "internal environment",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-homeostasis-and-feedback-integration"
+      ]
+    },
+    {
+      "term": "interpreting pedigree chart",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-reproduction-genetics-and-inheritance"
+      ]
+    },
+    {
+      "term": "inverse square law for light",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-respiration-photosynthesis-and-energy-flow"
+      ]
+    },
+    {
+      "term": "ion balance in blood",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-homeostasis-and-feedback-integration"
+      ]
+    },
+    {
+      "term": "karyotype abnormality",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-reproduction-genetics-and-inheritance"
+      ]
+    },
+    {
+      "term": "keystone species",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-ecology-and-biodiversity-management"
+      ]
+    },
+    {
+      "term": "kidney failure symptom",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-kidney-and-osmoregulation"
+      ]
+    },
+    {
+      "term": "Krebs cycle location",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-respiration-photosynthesis-and-energy-flow"
+      ]
+    },
+    {
+      "term": "lactic acid accumulation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-respiration-photosynthesis-and-energy-flow"
+      ]
+    },
+    {
+      "term": "lactic acid bacteria use",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-microbiology-and-industrial-biology"
+      ]
+    },
+    {
+      "term": "lifestyle disease prevention",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-human-health-disease-and-public-health"
+      ]
+    },
+    {
+      "term": "light-dependent stage product",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-respiration-photosynthesis-and-energy-flow"
+      ]
+    },
+    {
+      "term": "limitation of fossil record",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-evolution-and-speciation"
+      ]
+    },
+    {
+      "term": "limiting factor graph analysis",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-respiration-photosynthesis-and-energy-flow"
+      ]
+    },
+    {
+      "term": "line graph interpretation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-experimental-design-data-and-examination-skills"
+      ]
+    },
+    {
+      "term": "loop of Henle",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-kidney-and-osmoregulation"
+      ]
+    },
+    {
+      "term": "lung cancer causation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-human-health-disease-and-public-health"
+      ]
+    },
+    {
+      "term": "maintaining stable conditions",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-homeostasis-and-feedback-integration"
+      ]
+    },
+    {
+      "term": "molecular clock concept",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-evolution-and-speciation"
+      ]
+    },
+    {
+      "term": "monoclonal antibody production",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-immunity-vaccination-and-medicine"
+      ]
+    },
+    {
+      "term": "mRNA vaccine mechanism",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-immunity-vaccination-and-medicine"
+      ]
+    },
+    {
+      "term": "nephron structure",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-kidney-and-osmoregulation"
+      ]
+    },
+    {
+      "term": "nerve pathway integration",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-nervous-system-and-neurophysiology"
+      ]
+    },
+    {
+      "term": "net primary productivity",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-respiration-photosynthesis-and-energy-flow"
+      ]
+    },
+    {
+      "term": "neuromuscular junction",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-nervous-system-and-neurophysiology"
+      ]
+    },
+    {
+      "term": "non-communicable disease",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-human-health-disease-and-public-health"
+      ]
+    },
+    {
+      "term": "oil spill cleanup bacteria",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-microbiology-and-industrial-biology"
+      ]
+    },
+    {
+      "term": "organic farming comparison",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-bioethics-environment-and-society"
+      ]
+    },
+    {
+      "term": "oxygen debt repayment",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-respiration-photosynthesis-and-energy-flow"
+      ]
+    },
+    {
+      "term": "pandemic preparedness",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-human-health-disease-and-public-health"
+      ]
+    },
+    {
+      "term": "passive immunity duration",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-immunity-vaccination-and-medicine"
+      ]
+    },
+    {
+      "term": "patent on gene sequence",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-bioethics-environment-and-society"
+      ]
+    },
+    {
+      "term": "paternity testing principle",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-genetic-engineering-and-biotech-applications"
+      ]
+    },
+    {
+      "term": "penicillin production history",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-microbiology-and-industrial-biology"
+      ]
+    },
+    {
+      "term": "peritoneal dialysis",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-kidney-and-osmoregulation"
+      ]
+    },
+    {
+      "term": "pesticide residue risk",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-bioethics-environment-and-society"
+      ]
+    },
+    {
+      "term": "pH control in fermenter",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-microbiology-and-industrial-biology"
+      ]
+    },
+    {
+      "term": "phloem loading",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-plant-transport-and-water-relations"
+      ]
+    },
+    {
+      "term": "photorespiration disadvantage",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-respiration-photosynthesis-and-energy-flow"
+      ]
+    },
+    {
+      "term": "pilot study purpose",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-experimental-design-data-and-examination-skills"
+      ]
+    },
+    {
+      "term": "placebo control ethics",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-bioethics-environment-and-society"
+      ]
+    },
+    {
+      "term": "plastic pollution in ocean food web",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-bioethics-environment-and-society"
+      ]
+    },
+    {
+      "term": "positive feedback loop",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-homeostasis-and-feedback-integration"
+      ]
+    },
+    {
+      "term": "postsynaptic neuron",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-nervous-system-and-neurophysiology"
+      ]
+    },
+    {
+      "term": "postzygotic isolation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-evolution-and-speciation"
+      ]
+    },
+    {
+      "term": "potometer measurement",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-plant-transport-and-water-relations"
+      ]
+    },
+    {
+      "term": "pressure flow model",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-plant-transport-and-water-relations"
+      ]
+    },
+    {
+      "term": "presynaptic neuron",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-nervous-system-and-neurophysiology"
+      ]
+    },
+    {
+      "term": "prezygotic isolation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-evolution-and-speciation"
+      ]
+    },
+    {
+      "term": "proximal convoluted tubule",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-kidney-and-osmoregulation"
+      ]
+    },
+    {
+      "term": "quality control in bioprocessing",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-microbiology-and-industrial-biology"
+      ]
+    },
+    {
+      "term": "random sampling method",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-experimental-design-data-and-examination-skills"
+      ]
+    },
+    {
+      "term": "receptor and effector pathway",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-homeostasis-and-feedback-integration"
+      ]
+    },
+    {
+      "term": "reflex arc analysis",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-nervous-system-and-neurophysiology"
+      ]
+    },
+    {
+      "term": "regression line meaning",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-experimental-design-data-and-examination-skills"
+      ]
+    },
+    {
+      "term": "rejection reaction mechanism",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-immunity-vaccination-and-medicine"
+      ]
+    },
+    {
+      "term": "reliability of method",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-experimental-design-data-and-examination-skills"
+      ]
+    },
+    {
+      "term": "repolarization phase",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-nervous-system-and-neurophysiology"
+      ]
+    },
+    {
+      "term": "reproductive cloning debate",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-genetic-engineering-and-biotech-applications"
+      ]
+    },
+    {
+      "term": "resting membrane potential",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-nervous-system-and-neurophysiology"
+      ]
+    },
+    {
+      "term": "restriction enzyme recognition site",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-genetic-engineering-and-biotech-applications"
+      ]
+    },
+    {
+      "term": "rewilding project",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-ecology-and-biodiversity-management"
+      ]
+    },
+    {
+      "term": "rheumatoid arthritis",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-immunity-vaccination-and-medicine"
+      ]
+    },
+    {
+      "term": "ring species example",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-evolution-and-speciation"
+      ]
+    },
+    {
+      "term": "ringing experiment",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-plant-transport-and-water-relations"
+      ]
+    },
+    {
+      "term": "risk assessment in lab",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-experimental-design-data-and-examination-skills"
+      ]
+    },
+    {
+      "term": "root hair surface area",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-plant-transport-and-water-relations"
+      ]
+    },
+    {
+      "term": "RuBP regeneration",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-respiration-photosynthesis-and-energy-flow"
+      ]
+    },
+    {
+      "term": "salmonella contamination",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-human-health-disease-and-public-health"
+      ]
+    },
+    {
+      "term": "saltatory conduction speed",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-nervous-system-and-neurophysiology"
+      ]
+    },
+    {
+      "term": "scatter plot correlation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-experimental-design-data-and-examination-skills"
+      ]
+    },
+    {
+      "term": "screening programme benefit",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-human-health-disease-and-public-health"
+      ]
+    },
+    {
+      "term": "seasonal flu variation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-immunity-vaccination-and-medicine"
+      ]
+    },
+    {
+      "term": "seasonal translocation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-plant-transport-and-water-relations"
+      ]
+    },
+    {
+      "term": "seed bank storage",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-ecology-and-biodiversity-management"
+      ]
+    },
+    {
+      "term": "selection marker gene",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-genetic-engineering-and-biotech-applications"
+      ]
+    },
+    {
+      "term": "selective reabsorption",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-kidney-and-osmoregulation"
+      ]
+    },
+    {
+      "term": "set point",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-homeostasis-and-feedback-integration"
+      ]
+    },
+    {
+      "term": "Shannon index",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-ecology-and-biodiversity-management"
+      ]
+    },
+    {
+      "term": "shivering response",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-homeostasis-and-feedback-integration"
+      ]
+    },
+    {
+      "term": "sickle cell anaemia inheritance",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-reproduction-genetics-and-inheritance"
+      ]
+    },
+    {
+      "term": "Simpson index",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-ecology-and-biodiversity-management"
+      ]
+    },
+    {
+      "term": "single cell protein source",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-microbiology-and-industrial-biology"
+      ]
+    },
+    {
+      "term": "smoking cessation programme",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-human-health-disease-and-public-health"
+      ]
+    },
+    {
+      "term": "somatic versus germ line therapy",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-genetic-engineering-and-biotech-applications"
+      ]
+    },
+    {
+      "term": "source-to-sink transport",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-plant-transport-and-water-relations"
+      ]
+    },
+    {
+      "term": "species evenness",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-ecology-and-biodiversity-management"
+      ]
+    },
+    {
+      "term": "species richness",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-ecology-and-biodiversity-management"
+      ]
+    },
+    {
+      "term": "standard error concept",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-experimental-design-data-and-examination-skills"
+      ]
+    },
+    {
+      "term": "statins medication",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-human-health-disease-and-public-health"
+      ]
+    },
+    {
+      "term": "stem cell application",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-genetic-engineering-and-biotech-applications"
+      ]
+    },
+    {
+      "term": "stem cell source controversy",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-bioethics-environment-and-society"
+      ]
+    },
+    {
+      "term": "sterile condition maintenance",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-microbiology-and-industrial-biology"
+      ]
+    },
+    {
+      "term": "stomatal opening control",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-plant-transport-and-water-relations"
+      ]
+    },
+    {
+      "term": "student role in environmental action",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-bioethics-environment-and-society"
+      ]
+    },
+    {
+      "term": "subunit vaccine design",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-immunity-vaccination-and-medicine"
+      ]
+    },
+    {
+      "term": "summation of impulses",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-nervous-system-and-neurophysiology"
+      ]
+    },
+    {
+      "term": "sustainable agriculture practice",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-bioethics-environment-and-society"
+      ]
+    },
+    {
+      "term": "sustainable fishing quota",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-ecology-and-biodiversity-management"
+      ]
+    },
+    {
+      "term": "sweating response",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-homeostasis-and-feedback-integration"
+      ]
+    },
+    {
+      "term": "sympatric speciation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-evolution-and-speciation"
+      ]
+    },
+    {
+      "term": "symplast pathway",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-plant-transport-and-water-relations"
+      ]
+    },
+    {
+      "term": "synapse structure",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-nervous-system-and-neurophysiology"
+      ]
+    },
+    {
+      "term": "synaptic delay",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-nervous-system-and-neurophysiology"
+      ]
+    },
+    {
+      "term": "systematic sampling method",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-experimental-design-data-and-examination-skills"
+      ]
+    },
+    {
+      "term": "systemic lupus erythematosus",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-immunity-vaccination-and-medicine"
+      ]
+    },
+    {
+      "term": "t-test application",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-experimental-design-data-and-examination-skills"
+      ]
+    },
+    {
+      "term": "temperature control in fermenter",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-microbiology-and-industrial-biology"
+      ]
+    },
+    {
+      "term": "therapeutic cloning",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-genetic-engineering-and-biotech-applications"
+      ]
+    },
+    {
+      "term": "thermoregulation mechanism",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-homeostasis-and-feedback-integration"
+      ]
+    },
+    {
+      "term": "threshold potential",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-nervous-system-and-neurophysiology"
+      ]
+    },
+    {
+      "term": "tissue typing for transplant",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-immunity-vaccination-and-medicine"
+      ]
+    },
+    {
+      "term": "transgenic crop benefit",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-genetic-engineering-and-biotech-applications"
+      ]
+    },
+    {
+      "term": "transgenic crop risk",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-genetic-engineering-and-biotech-applications"
+      ]
+    },
+    {
+      "term": "transpiration pull mechanism",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-plant-transport-and-water-relations"
+      ]
+    },
+    {
+      "term": "transpiration rate factor",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-plant-transport-and-water-relations"
+      ]
+    },
+    {
+      "term": "trophic level limitation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-ecology-and-biodiversity-management"
+      ]
+    },
+    {
+      "term": "Turner syndrome monosomy",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-reproduction-genetics-and-inheritance"
+      ]
+    },
+    {
+      "term": "ultrafiltration process",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-kidney-and-osmoregulation"
+      ]
+    },
+    {
+      "term": "validity of conclusion",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-experimental-design-data-and-examination-skills"
+      ]
+    },
+    {
+      "term": "variation within population",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-evolution-and-speciation"
+      ]
+    },
+    {
+      "term": "vasodilation and vasoconstriction",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-homeostasis-and-feedback-integration"
+      ]
+    },
+    {
+      "term": "vector insertion step",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-genetic-engineering-and-biotech-applications"
+      ]
+    },
+    {
+      "term": "water balance control",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-homeostasis-and-feedback-integration"
+      ]
+    },
+    {
+      "term": "water potential gradient",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-kidney-and-osmoregulation"
+      ]
+    },
+    {
+      "term": "water potential in soil",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-plant-transport-and-water-relations"
+      ]
+    },
+    {
+      "term": "wilting condition",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-plant-transport-and-water-relations"
+      ]
+    },
+    {
+      "term": "X-linked inheritance pattern",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-reproduction-genetics-and-inheritance"
+      ]
+    },
+    {
+      "term": "xerophytic leaf adaptation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-plant-transport-and-water-relations"
+      ]
+    },
+    {
+      "term": "yoghurt production step",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "biology",
+        "curriculum-style",
+        "hkdse-microbiology-and-industrial-biology"
       ]
     }
   ]

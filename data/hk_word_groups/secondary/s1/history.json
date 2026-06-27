@@ -7,6 +7,15 @@
   "version": "2026.06",
   "display_name_en": "S1 History",
   "display_name_zh_hant": "中一歷史",
+  "source": {
+    "type": "curriculum_style_public_references",
+    "references": [
+      "EDB History Curriculum and Assessment Guide (Secondary 1-3)",
+      "EDB junior secondary History curriculum framework",
+      "Public Hong Kong Secondary 1 History syllabus topic examples (historical skills, time and chronology, sources and evidence, cause and consequence, ancient civilizations, Chinese history overview, Hong Kong history, colonialism and modernization, world history introduction, society and culture)"
+    ],
+    "note": "No fixed official Hong Kong S1 history vocabulary list is prescribed; this list is theme-based for junior secondary S1 history enrichment import. Term-only entries are completed during import."
+  },
   "words": [
     {
       "term": "chronology",
@@ -306,6 +315,3240 @@
         "history",
         "noun",
         "analysis"
+      ]
+    },
+    {
+      "term": "absolute monarchy",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "political-systems-and-governance"
+      ]
+    },
+    {
+      "term": "agricultural society",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "time-periods-and-civilizations"
+      ]
+    },
+    {
+      "term": "ancient China",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "ancient-china-and-early-dynasties"
+      ]
+    },
+    {
+      "term": "ancient civilization",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "time-periods-and-civilizations"
+      ]
+    },
+    {
+      "term": "ancient Egypt",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "time-periods-and-civilizations"
+      ]
+    },
+    {
+      "term": "ancient Greece",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "time-periods-and-civilizations"
+      ]
+    },
+    {
+      "term": "ancient India",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "time-periods-and-civilizations"
+      ]
+    },
+    {
+      "term": "ancient Rome",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "time-periods-and-civilizations"
+      ]
+    },
+    {
+      "term": "archaeological evidence",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "sources-evidence-and-reliability"
+      ]
+    },
+    {
+      "term": "artifact",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "sources-evidence-and-reliability"
+      ]
+    },
+    {
+      "term": "authoritarian rule",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "political-systems-and-governance"
+      ]
+    },
+    {
+      "term": "authority",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "political-systems-and-governance"
+      ]
+    },
+    {
+      "term": "BC and AD",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "historical-skills-and-chronology"
+      ]
+    },
+    {
+      "term": "BCE and CE",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "historical-skills-and-chronology"
+      ]
+    },
+    {
+      "term": "before and after",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "historical-skills-and-chronology"
+      ]
+    },
+    {
+      "term": "belief system",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "society-culture-and-heritage"
+      ]
+    },
+    {
+      "term": "bias in source",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "sources-evidence-and-reliability"
+      ]
+    },
+    {
+      "term": "Boxer Rebellion",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "chinese-modernization-and-reform"
+      ]
+    },
+    {
+      "term": "breaking tradition",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "change-continuity-and-comparison"
+      ]
+    },
+    {
+      "term": "Bronze Age",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "time-periods-and-civilizations"
+      ]
+    },
+    {
+      "term": "Buddhism in China",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "ancient-china-and-early-dynasties"
+      ]
+    },
+    {
+      "term": "century",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "historical-skills-and-chronology"
+      ]
+    },
+    {
+      "term": "cession of Hong Kong",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "hong-kong-history-and-development"
+      ]
+    },
+    {
+      "term": "chain of events",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "cause-consequence-and-significance"
+      ]
+    },
+    {
+      "term": "change over time",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "change-continuity-and-comparison"
+      ]
+    },
+    {
+      "term": "Chinese civilization",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "ancient-china-and-early-dynasties"
+      ]
+    },
+    {
+      "term": "Chinese cultural heritage",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "ancient-china-and-early-dynasties"
+      ]
+    },
+    {
+      "term": "Chinese nationalism",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "chinese-modernization-and-reform"
+      ]
+    },
+    {
+      "term": "chronological order",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "historical-skills-and-chronology"
+      ]
+    },
+    {
+      "term": "cite source",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "historical-research-and-communication"
+      ]
+    },
+    {
+      "term": "citizenship",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "political-systems-and-governance"
+      ]
+    },
+    {
+      "term": "civil rights",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "political-systems-and-governance"
+      ]
+    },
+    {
+      "term": "civilian in war",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "world-conflicts-and-global-history"
+      ]
+    },
+    {
+      "term": "classical civilization",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "time-periods-and-civilizations"
+      ]
+    },
+    {
+      "term": "Cold War",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "world-conflicts-and-global-history"
+      ]
+    },
+    {
+      "term": "colonial power",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "colonialism-and-foreign-relations"
+      ]
+    },
+    {
+      "term": "colonial rule",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "colonialism-and-foreign-relations"
+      ]
+    },
+    {
+      "term": "colonization",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "colonialism-and-foreign-relations"
+      ]
+    },
+    {
+      "term": "colony",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "colonialism-and-foreign-relations"
+      ]
+    },
+    {
+      "term": "commemoration",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "world-conflicts-and-global-history"
+      ]
+    },
+    {
+      "term": "communicate historical findings",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "historical-research-and-communication"
+      ]
+    },
+    {
+      "term": "compare and contrast",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "change-continuity-and-comparison"
+      ]
+    },
+    {
+      "term": "Confucianism",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "ancient-china-and-early-dynasties"
+      ]
+    },
+    {
+      "term": "constitution",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "political-systems-and-governance"
+      ]
+    },
+    {
+      "term": "constitutional monarchy",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "political-systems-and-governance"
+      ]
+    },
+    {
+      "term": "continuing tradition",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "change-continuity-and-comparison"
+      ]
+    },
+    {
+      "term": "continuity over time",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "change-continuity-and-comparison"
+      ]
+    },
+    {
+      "term": "corroborate evidence",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "sources-evidence-and-reliability"
+      ]
+    },
+    {
+      "term": "critical thinking in history",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "historical-inquiry-and-interpretation"
+      ]
+    },
+    {
+      "term": "cross-check sources",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "sources-evidence-and-reliability"
+      ]
+    },
+    {
+      "term": "cultural exchange",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "time-periods-and-civilizations"
+      ]
+    },
+    {
+      "term": "cultural heritage site",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "society-culture-and-heritage"
+      ]
+    },
+    {
+      "term": "cultural identity",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "society-culture-and-heritage"
+      ]
+    },
+    {
+      "term": "culture",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "society-culture-and-heritage"
+      ]
+    },
+    {
+      "term": "custom",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "society-culture-and-heritage"
+      ]
+    },
+    {
+      "term": "daily life in history",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "society-culture-and-heritage"
+      ]
+    },
+    {
+      "term": "date in history",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "historical-skills-and-chronology"
+      ]
+    },
+    {
+      "term": "decade",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "historical-skills-and-chronology"
+      ]
+    },
+    {
+      "term": "declaration of war",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "world-conflicts-and-global-history"
+      ]
+    },
+    {
+      "term": "decline",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "change-continuity-and-comparison"
+      ]
+    },
+    {
+      "term": "decolonization",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "colonialism-and-foreign-relations"
+      ]
+    },
+    {
+      "term": "define historical term",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "historical-research-and-communication"
+      ]
+    },
+    {
+      "term": "democracy",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "political-systems-and-governance"
+      ]
+    },
+    {
+      "term": "describe historical event",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "historical-inquiry-and-interpretation"
+      ]
+    },
+    {
+      "term": "development of Hong Kong",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "hong-kong-history-and-development"
+      ]
+    },
+    {
+      "term": "diary as source",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "sources-evidence-and-reliability"
+      ]
+    },
+    {
+      "term": "dictatorship",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "political-systems-and-governance"
+      ]
+    },
+    {
+      "term": "difference",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "change-continuity-and-comparison"
+      ]
+    },
+    {
+      "term": "diplomacy",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "colonialism-and-foreign-relations"
+      ]
+    },
+    {
+      "term": "document",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "sources-evidence-and-reliability"
+      ]
+    },
+    {
+      "term": "draw conclusion",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "historical-inquiry-and-interpretation"
+      ]
+    },
+    {
+      "term": "early modern period",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "time-periods-and-civilizations"
+      ]
+    },
+    {
+      "term": "economic development of Hong Kong",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "hong-kong-history-and-development"
+      ]
+    },
+    {
+      "term": "education in history",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "society-culture-and-heritage"
+      ]
+    },
+    {
+      "term": "effect on economy",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "cause-consequence-and-significance"
+      ]
+    },
+    {
+      "term": "effect on politics",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "cause-consequence-and-significance"
+      ]
+    },
+    {
+      "term": "effect on society",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "cause-consequence-and-significance"
+      ]
+    },
+    {
+      "term": "election",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "political-systems-and-governance"
+      ]
+    },
+    {
+      "term": "emperor",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "ancient-china-and-early-dynasties"
+      ]
+    },
+    {
+      "term": "empire building",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "colonialism-and-foreign-relations"
+      ]
+    },
+    {
+      "term": "era",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "historical-skills-and-chronology"
+      ]
+    },
+    {
+      "term": "evidence",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "sources-evidence-and-reliability"
+      ]
+    },
+    {
+      "term": "expansion",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "colonialism-and-foreign-relations"
+      ]
+    },
+    {
+      "term": "explain cause and effect",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "cause-consequence-and-significance"
+      ]
+    },
+    {
+      "term": "explain historical change",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "historical-inquiry-and-interpretation"
+      ]
+    },
+    {
+      "term": "family life in history",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "society-culture-and-heritage"
+      ]
+    },
+    {
+      "term": "festival",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "society-culture-and-heritage"
+      ]
+    },
+    {
+      "term": "feudal system",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "ancient-china-and-early-dynasties"
+      ]
+    },
+    {
+      "term": "field study in history",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "historical-research-and-communication"
+      ]
+    },
+    {
+      "term": "First Opium War",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "chinese-modernization-and-reform"
+      ]
+    },
+    {
+      "term": "First World War",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "world-conflicts-and-global-history"
+      ]
+    },
+    {
+      "term": "foreign concession",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "chinese-modernization-and-reform"
+      ]
+    },
+    {
+      "term": "foreign policy",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "colonialism-and-foreign-relations"
+      ]
+    },
+    {
+      "term": "foreign trade",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "colonialism-and-foreign-relations"
+      ]
+    },
+    {
+      "term": "gender role in history",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "society-culture-and-heritage"
+      ]
+    },
+    {
+      "term": "global conflict",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "world-conflicts-and-global-history"
+      ]
+    },
+    {
+      "term": "global issue",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "world-conflicts-and-global-history"
+      ]
+    },
+    {
+      "term": "government",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "political-systems-and-governance"
+      ]
+    },
+    {
+      "term": "Great Wall of China",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "ancient-china-and-early-dynasties"
+      ]
+    },
+    {
+      "term": "group discussion in history",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "historical-research-and-communication"
+      ]
+    },
+    {
+      "term": "Han Dynasty",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "ancient-china-and-early-dynasties"
+      ]
+    },
+    {
+      "term": "handover of Hong Kong",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "hong-kong-history-and-development"
+      ]
+    },
+    {
+      "term": "heritage conservation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "hong-kong-history-and-development"
+      ]
+    },
+    {
+      "term": "heritage trail",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "historical-research-and-communication"
+      ]
+    },
+    {
+      "term": "historian",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "historical-skills-and-chronology"
+      ]
+    },
+    {
+      "term": "historical argument",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "historical-inquiry-and-interpretation"
+      ]
+    },
+    {
+      "term": "historical background",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "historical-skills-and-chronology"
+      ]
+    },
+    {
+      "term": "historical building in Hong Kong",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "hong-kong-history-and-development"
+      ]
+    },
+    {
+      "term": "historical comparison",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "change-continuity-and-comparison"
+      ]
+    },
+    {
+      "term": "historical connection",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "change-continuity-and-comparison"
+      ]
+    },
+    {
+      "term": "historical context",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "historical-skills-and-chronology"
+      ]
+    },
+    {
+      "term": "historical debate",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "historical-inquiry-and-interpretation"
+      ]
+    },
+    {
+      "term": "historical development",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "change-continuity-and-comparison"
+      ]
+    },
+    {
+      "term": "historical diagram",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "historical-research-and-communication"
+      ]
+    },
+    {
+      "term": "historical empathy",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "historical-inquiry-and-interpretation"
+      ]
+    },
+    {
+      "term": "historical essay",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "historical-research-and-communication"
+      ]
+    },
+    {
+      "term": "historical event",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "historical-skills-and-chronology"
+      ]
+    },
+    {
+      "term": "historical explanation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "historical-inquiry-and-interpretation"
+      ]
+    },
+    {
+      "term": "historical hypothesis",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "historical-inquiry-and-interpretation"
+      ]
+    },
+    {
+      "term": "historical imagination",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "historical-inquiry-and-interpretation"
+      ]
+    },
+    {
+      "term": "historical importance",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "cause-consequence-and-significance"
+      ]
+    },
+    {
+      "term": "historical inquiry",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "historical-inquiry-and-interpretation"
+      ]
+    },
+    {
+      "term": "historical interpretation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "historical-inquiry-and-interpretation"
+      ]
+    },
+    {
+      "term": "historical investigation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "historical-inquiry-and-interpretation"
+      ]
+    },
+    {
+      "term": "historical judgment",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "cause-consequence-and-significance"
+      ]
+    },
+    {
+      "term": "historical link",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "change-continuity-and-comparison"
+      ]
+    },
+    {
+      "term": "historical map",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "historical-research-and-communication"
+      ]
+    },
+    {
+      "term": "historical memory of war",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "world-conflicts-and-global-history"
+      ]
+    },
+    {
+      "term": "historical narrative",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "historical-skills-and-chronology"
+      ]
+    },
+    {
+      "term": "historical outcome",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "cause-consequence-and-significance"
+      ]
+    },
+    {
+      "term": "historical paragraph",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "historical-research-and-communication"
+      ]
+    },
+    {
+      "term": "historical period",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "historical-skills-and-chronology"
+      ]
+    },
+    {
+      "term": "historical presentation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "historical-research-and-communication"
+      ]
+    },
+    {
+      "term": "historical project",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "historical-research-and-communication"
+      ]
+    },
+    {
+      "term": "historical question",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "historical-skills-and-chronology"
+      ]
+    },
+    {
+      "term": "historical reasoning",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "historical-inquiry-and-interpretation"
+      ]
+    },
+    {
+      "term": "historical record",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "historical-skills-and-chronology"
+      ]
+    },
+    {
+      "term": "historical research",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "historical-research-and-communication"
+      ]
+    },
+    {
+      "term": "historical role-play",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "historical-research-and-communication"
+      ]
+    },
+    {
+      "term": "historical significance",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "cause-consequence-and-significance"
+      ]
+    },
+    {
+      "term": "historical source",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "sources-evidence-and-reliability"
+      ]
+    },
+    {
+      "term": "historical study",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "historical-skills-and-chronology"
+      ]
+    },
+    {
+      "term": "historical table",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "historical-research-and-communication"
+      ]
+    },
+    {
+      "term": "historical trend",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "change-continuity-and-comparison"
+      ]
+    },
+    {
+      "term": "historical vocabulary",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "historical-research-and-communication"
+      ]
+    },
+    {
+      "term": "history",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "historical-skills-and-chronology"
+      ]
+    },
+    {
+      "term": "Hong Kong history",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "hong-kong-history-and-development"
+      ]
+    },
+    {
+      "term": "Hong Kong Special Administrative Region",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "hong-kong-history-and-development"
+      ]
+    },
+    {
+      "term": "Hong Kong under British rule",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "hong-kong-history-and-development"
+      ]
+    },
+    {
+      "term": "housing development",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "hong-kong-history-and-development"
+      ]
+    },
+    {
+      "term": "humanitarian crisis",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "world-conflicts-and-global-history"
+      ]
+    },
+    {
+      "term": "Hundred Days' Reform",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "chinese-modernization-and-reform"
+      ]
+    },
+    {
+      "term": "identify bias",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "historical-inquiry-and-interpretation"
+      ]
+    },
+    {
+      "term": "imperial court",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "ancient-china-and-early-dynasties"
+      ]
+    },
+    {
+      "term": "imperial examination",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "ancient-china-and-early-dynasties"
+      ]
+    },
+    {
+      "term": "imperial power",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "colonialism-and-foreign-relations"
+      ]
+    },
+    {
+      "term": "imperialism",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "colonialism-and-foreign-relations"
+      ]
+    },
+    {
+      "term": "industrialization in China",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "chinese-modernization-and-reform"
+      ]
+    },
+    {
+      "term": "intangible cultural heritage",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "society-culture-and-heritage"
+      ]
+    },
+    {
+      "term": "intended consequence",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "cause-consequence-and-significance"
+      ]
+    },
+    {
+      "term": "international cooperation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "world-conflicts-and-global-history"
+      ]
+    },
+    {
+      "term": "international relations",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "colonialism-and-foreign-relations"
+      ]
+    },
+    {
+      "term": "international trade hub",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "hong-kong-history-and-development"
+      ]
+    },
+    {
+      "term": "interpret historical image",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "historical-inquiry-and-interpretation"
+      ]
+    },
+    {
+      "term": "interpret historical map",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "historical-inquiry-and-interpretation"
+      ]
+    },
+    {
+      "term": "invasion",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "colonialism-and-foreign-relations"
+      ]
+    },
+    {
+      "term": "Iron Age",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "time-periods-and-civilizations"
+      ]
+    },
+    {
+      "term": "law and order",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "political-systems-and-governance"
+      ]
+    },
+    {
+      "term": "lesson from history",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "world-conflicts-and-global-history"
+      ]
+    },
+    {
+      "term": "letter as source",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "sources-evidence-and-reliability"
+      ]
+    },
+    {
+      "term": "limitation of source",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "sources-evidence-and-reliability"
+      ]
+    },
+    {
+      "term": "living history in Hong Kong",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "hong-kong-history-and-development"
+      ]
+    },
+    {
+      "term": "local history",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "hong-kong-history-and-development"
+      ]
+    },
+    {
+      "term": "local identity",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "hong-kong-history-and-development"
+      ]
+    },
+    {
+      "term": "long-term cause",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "cause-consequence-and-significance"
+      ]
+    },
+    {
+      "term": "long-term consequence",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "cause-consequence-and-significance"
+      ]
+    },
+    {
+      "term": "major event",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "cause-consequence-and-significance"
+      ]
+    },
+    {
+      "term": "make inference",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "historical-inquiry-and-interpretation"
+      ]
+    },
+    {
+      "term": "mandate of heaven",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "ancient-china-and-early-dynasties"
+      ]
+    },
+    {
+      "term": "manufacturing in Hong Kong",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "hong-kong-history-and-development"
+      ]
+    },
+    {
+      "term": "material evidence",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "sources-evidence-and-reliability"
+      ]
+    },
+    {
+      "term": "May Fourth Movement",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "chinese-modernization-and-reform"
+      ]
+    },
+    {
+      "term": "medieval period",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "time-periods-and-civilizations"
+      ]
+    },
+    {
+      "term": "Mesopotamia",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "time-periods-and-civilizations"
+      ]
+    },
+    {
+      "term": "migration",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "society-culture-and-heritage"
+      ]
+    },
+    {
+      "term": "military alliance",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "world-conflicts-and-global-history"
+      ]
+    },
+    {
+      "term": "military force",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "colonialism-and-foreign-relations"
+      ]
+    },
+    {
+      "term": "Ming Dynasty",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "ancient-china-and-early-dynasties"
+      ]
+    },
+    {
+      "term": "minor event",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "cause-consequence-and-significance"
+      ]
+    },
+    {
+      "term": "modern China",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "chinese-modernization-and-reform"
+      ]
+    },
+    {
+      "term": "modern period",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "time-periods-and-civilizations"
+      ]
+    },
+    {
+      "term": "modernization",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "chinese-modernization-and-reform"
+      ]
+    },
+    {
+      "term": "monarchy",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "political-systems-and-governance"
+      ]
+    },
+    {
+      "term": "multiple perspectives",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "historical-inquiry-and-interpretation"
+      ]
+    },
+    {
+      "term": "museum visit",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "historical-research-and-communication"
+      ]
+    },
+    {
+      "term": "national humiliation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "chinese-modernization-and-reform"
+      ]
+    },
+    {
+      "term": "national interest",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "colonialism-and-foreign-relations"
+      ]
+    },
+    {
+      "term": "negotiation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "colonialism-and-foreign-relations"
+      ]
+    },
+    {
+      "term": "New Territories lease",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "hong-kong-history-and-development"
+      ]
+    },
+    {
+      "term": "newspaper as source",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "sources-evidence-and-reliability"
+      ]
+    },
+    {
+      "term": "note-taking in history",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "historical-research-and-communication"
+      ]
+    },
+    {
+      "term": "occupation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "colonialism-and-foreign-relations"
+      ]
+    },
+    {
+      "term": "official record",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "sources-evidence-and-reliability"
+      ]
+    },
+    {
+      "term": "one country two systems",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "hong-kong-history-and-development"
+      ]
+    },
+    {
+      "term": "Opium War",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "chinese-modernization-and-reform"
+      ]
+    },
+    {
+      "term": "oral history",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "sources-evidence-and-reliability"
+      ]
+    },
+    {
+      "term": "parliament",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "political-systems-and-governance"
+      ]
+    },
+    {
+      "term": "past and present",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "change-continuity-and-comparison"
+      ]
+    },
+    {
+      "term": "pattern of change",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "change-continuity-and-comparison"
+      ]
+    },
+    {
+      "term": "pattern of continuity",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "change-continuity-and-comparison"
+      ]
+    },
+    {
+      "term": "peace treaty",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "world-conflicts-and-global-history"
+      ]
+    },
+    {
+      "term": "periodization",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "historical-skills-and-chronology"
+      ]
+    },
+    {
+      "term": "photograph as source",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "sources-evidence-and-reliability"
+      ]
+    },
+    {
+      "term": "point of view in source",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "sources-evidence-and-reliability"
+      ]
+    },
+    {
+      "term": "political party",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "political-systems-and-governance"
+      ]
+    },
+    {
+      "term": "political power",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "political-systems-and-governance"
+      ]
+    },
+    {
+      "term": "political reform",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "political-systems-and-governance"
+      ]
+    },
+    {
+      "term": "political stability",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "political-systems-and-governance"
+      ]
+    },
+    {
+      "term": "political system",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "political-systems-and-governance"
+      ]
+    },
+    {
+      "term": "population movement",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "society-culture-and-heritage"
+      ]
+    },
+    {
+      "term": "post-war Hong Kong",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "hong-kong-history-and-development"
+      ]
+    },
+    {
+      "term": "post-war period",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "world-conflicts-and-global-history"
+      ]
+    },
+    {
+      "term": "prehistoric period",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "time-periods-and-civilizations"
+      ]
+    },
+    {
+      "term": "preserve heritage",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "society-culture-and-heritage"
+      ]
+    },
+    {
+      "term": "progress",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "change-continuity-and-comparison"
+      ]
+    },
+    {
+      "term": "Qin Dynasty",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "ancient-china-and-early-dynasties"
+      ]
+    },
+    {
+      "term": "Qing Dynasty",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "ancient-china-and-early-dynasties"
+      ]
+    },
+    {
+      "term": "rank historical importance",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "cause-consequence-and-significance"
+      ]
+    },
+    {
+      "term": "refugee",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "world-conflicts-and-global-history"
+      ]
+    },
+    {
+      "term": "refugee influx",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "hong-kong-history-and-development"
+      ]
+    },
+    {
+      "term": "reliable source",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "sources-evidence-and-reliability"
+      ]
+    },
+    {
+      "term": "religion",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "society-culture-and-heritage"
+      ]
+    },
+    {
+      "term": "republic",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "political-systems-and-governance"
+      ]
+    },
+    {
+      "term": "Republic of China",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "chinese-modernization-and-reform"
+      ]
+    },
+    {
+      "term": "research question",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "historical-research-and-communication"
+      ]
+    },
+    {
+      "term": "resistance movement",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "colonialism-and-foreign-relations"
+      ]
+    },
+    {
+      "term": "rise and fall",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "change-continuity-and-comparison"
+      ]
+    },
+    {
+      "term": "river valley civilization",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "time-periods-and-civilizations"
+      ]
+    },
+    {
+      "term": "rule of law",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "political-systems-and-governance"
+      ]
+    },
+    {
+      "term": "rural life",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "society-culture-and-heritage"
+      ]
+    },
+    {
+      "term": "Second Opium War",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "chinese-modernization-and-reform"
+      ]
+    },
+    {
+      "term": "Second World War",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "world-conflicts-and-global-history"
+      ]
+    },
+    {
+      "term": "Self-Strengthening Movement",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "chinese-modernization-and-reform"
+      ]
+    },
+    {
+      "term": "sequence of events",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "historical-skills-and-chronology"
+      ]
+    },
+    {
+      "term": "Shang Dynasty",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "ancient-china-and-early-dynasties"
+      ]
+    },
+    {
+      "term": "short-term cause",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "cause-consequence-and-significance"
+      ]
+    },
+    {
+      "term": "short-term consequence",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "cause-consequence-and-significance"
+      ]
+    },
+    {
+      "term": "Silk Road",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "time-periods-and-civilizations"
+      ]
+    },
+    {
+      "term": "similarity",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "change-continuity-and-comparison"
+      ]
+    },
+    {
+      "term": "social change",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "society-culture-and-heritage"
+      ]
+    },
+    {
+      "term": "social class",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "society-culture-and-heritage"
+      ]
+    },
+    {
+      "term": "social structure",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "society-culture-and-heritage"
+      ]
+    },
+    {
+      "term": "society",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "society-culture-and-heritage"
+      ]
+    },
+    {
+      "term": "Song Dynasty",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "ancient-china-and-early-dynasties"
+      ]
+    },
+    {
+      "term": "sovereignty",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "colonialism-and-foreign-relations"
+      ]
+    },
+    {
+      "term": "spheres of influence",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "chinese-modernization-and-reform"
+      ]
+    },
+    {
+      "term": "stability",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "change-continuity-and-comparison"
+      ]
+    },
+    {
+      "term": "summarize historical account",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "historical-inquiry-and-interpretation"
+      ]
+    },
+    {
+      "term": "superpower",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "world-conflicts-and-global-history"
+      ]
+    },
+    {
+      "term": "support with evidence",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "historical-inquiry-and-interpretation"
+      ]
+    },
+    {
+      "term": "Tang Dynasty",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "ancient-china-and-early-dynasties"
+      ]
+    },
+    {
+      "term": "Taoism",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "ancient-china-and-early-dynasties"
+      ]
+    },
+    {
+      "term": "technological development",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "time-periods-and-civilizations"
+      ]
+    },
+    {
+      "term": "territory",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "colonialism-and-foreign-relations"
+      ]
+    },
+    {
+      "term": "then and now",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "change-continuity-and-comparison"
+      ]
+    },
+    {
+      "term": "timeline",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "historical-skills-and-chronology"
+      ]
+    },
+    {
+      "term": "topic sentence",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "historical-research-and-communication"
+      ]
+    },
+    {
+      "term": "trade route",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "time-periods-and-civilizations"
+      ]
+    },
+    {
+      "term": "transformation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "change-continuity-and-comparison"
+      ]
+    },
+    {
+      "term": "Treaty of Nanking",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "chinese-modernization-and-reform"
+      ]
+    },
+    {
+      "term": "treaty port",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "chinese-modernization-and-reform"
+      ]
+    },
+    {
+      "term": "trigger event",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "cause-consequence-and-significance"
+      ]
+    },
+    {
+      "term": "turning point",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "cause-consequence-and-significance"
+      ]
+    },
+    {
+      "term": "unequal treaty",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "chinese-modernization-and-reform"
+      ]
+    },
+    {
+      "term": "unintended consequence",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "cause-consequence-and-significance"
+      ]
+    },
+    {
+      "term": "United Nations",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "world-conflicts-and-global-history"
+      ]
+    },
+    {
+      "term": "unreliable source",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "sources-evidence-and-reliability"
+      ]
+    },
+    {
+      "term": "urban civilization",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "time-periods-and-civilizations"
+      ]
+    },
+    {
+      "term": "urban development",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "hong-kong-history-and-development"
+      ]
+    },
+    {
+      "term": "urbanization",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "society-culture-and-heritage"
+      ]
+    },
+    {
+      "term": "use evidence in writing",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "historical-research-and-communication"
+      ]
+    },
+    {
+      "term": "Victoria Harbour",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "hong-kong-history-and-development"
+      ]
+    },
+    {
+      "term": "visual source",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "sources-evidence-and-reliability"
+      ]
+    },
+    {
+      "term": "war memorial",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "world-conflicts-and-global-history"
+      ]
+    },
+    {
+      "term": "warlord era",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "chinese-modernization-and-reform"
+      ]
+    },
+    {
+      "term": "wartime experience",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "world-conflicts-and-global-history"
+      ]
+    },
+    {
+      "term": "weigh historical significance",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "cause-consequence-and-significance"
+      ]
+    },
+    {
+      "term": "Western influence in China",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "chinese-modernization-and-reform"
+      ]
+    },
+    {
+      "term": "world history overview",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "time-periods-and-civilizations"
+      ]
+    },
+    {
+      "term": "world war",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "world-conflicts-and-global-history"
+      ]
+    },
+    {
+      "term": "written source",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "sources-evidence-and-reliability"
+      ]
+    },
+    {
+      "term": "Xinhai Revolution",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "chinese-modernization-and-reform"
+      ]
+    },
+    {
+      "term": "Yellow River civilization",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "ancient-china-and-early-dynasties"
+      ]
+    },
+    {
+      "term": "Zhou Dynasty",
+      "tags": [
+        "hk",
+        "secondary",
+        "s1",
+        "history",
+        "curriculum-style",
+        "ancient-china-and-early-dynasties"
       ]
     }
   ]

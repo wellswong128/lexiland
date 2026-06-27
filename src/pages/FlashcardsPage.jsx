@@ -124,9 +124,26 @@ function FlashcardsPage() {
   const imageQuestionsRef = useRef([]);
   const imageQuestionsLengthRef = useRef(0);
   const lastSpokenRef = useRef({ index: -1, term: "" });
+  const quizBottomRef = useRef(null);
 
   imageQuestionsRef.current = imageQuestions;
   imageQuestionsLengthRef.current = imageQuestions.length;
+
+  function scrollQuizToBottom() {
+    const scrollToEnd = () => {
+      quizBottomRef.current?.scrollIntoView({ block: "end", behavior: "auto" });
+
+      const scrollingElement = document.scrollingElement;
+      if (scrollingElement) {
+        scrollingElement.scrollTop = scrollingElement.scrollHeight;
+      }
+
+      window.scrollTo({ top: document.documentElement.scrollHeight, behavior: "auto" });
+    };
+
+    scrollToEnd();
+    requestAnimationFrame(scrollToEnd);
+  }
 
   const currentQuestion = imageQuestions[currentIndex];
   const currentWord =
@@ -189,6 +206,7 @@ function FlashcardsPage() {
         return;
       }
 
+      imageQuestionsRef.current = questions;
       setImageQuestions(questions);
       setCurrentIndex(0);
       setSelectedAnswer("");
@@ -197,6 +215,8 @@ function FlashcardsPage() {
       setIsComplete(false);
       setHasStarted(true);
       lastSpokenRef.current = { index: -1, term: "" };
+      primeSpeechSynthesis();
+      speakWordAtIndex(0);
     } catch (error) {
       setPrepareError(error.message);
     } finally {
@@ -251,7 +271,7 @@ function FlashcardsPage() {
   }, [hasStarted, locale, sessionWords, updateWord, user]);
 
   useEffect(() => {
-    if (!hasStarted || isComplete || isPreparing || feedback) {
+    if (!hasStarted || isComplete || feedback) {
       return undefined;
     }
 
@@ -260,7 +280,22 @@ function FlashcardsPage() {
     }, 120);
 
     return () => window.clearTimeout(timerId);
-  }, [currentIndex, feedback, hasStarted, isComplete, isPreparing]);
+  }, [currentIndex, feedback, hasStarted, isComplete]);
+
+  useEffect(() => {
+    if (!hasStarted || isComplete || !currentQuestion) {
+      return undefined;
+    }
+
+    scrollQuizToBottom();
+    const shortTimerId = window.setTimeout(scrollQuizToBottom, 150);
+    const imageTimerId = window.setTimeout(scrollQuizToBottom, 450);
+
+    return () => {
+      window.clearTimeout(shortTimerId);
+      window.clearTimeout(imageTimerId);
+    };
+  }, [currentIndex, currentQuestion?.word.id, feedback, hasStarted, isComplete]);
 
   function goToNextWord() {
     setSelectedAnswer("");
@@ -673,6 +708,7 @@ function FlashcardsPage() {
           </button>
         </div>
       ) : null}
+      <div aria-hidden="true" className="h-px w-full shrink-0" ref={quizBottomRef} />
     </section>
   );
 }

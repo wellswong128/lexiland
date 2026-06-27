@@ -130,21 +130,53 @@ export async function fetchWordbaseEntry(term) {
   return data ? mapWordbaseRow(data) : null;
 }
 
+function resolveUpsertTerm(requestedTerm, suggestionTerm, existingTerm = "") {
+  const requested = String(requestedTerm ?? "").trim();
+  const suggestion = String(suggestionTerm ?? "").trim();
+  const existing = String(existingTerm ?? "").trim();
+  const canonical = existing || requested;
+
+  if (!canonical) {
+    return suggestion;
+  }
+  if (!suggestion) {
+    return canonical;
+  }
+  if (normalizeTerm(suggestion) === normalizeTerm(canonical)) {
+    return canonical;
+  }
+  if (canonical.split(/\s+/).length > 1 && suggestion.split(/\s+/).length <= 1) {
+    return canonical;
+  }
+
+  return suggestion;
+}
+
 function buildWordDetailsRow(suggestion, contributorId, existing = null) {
-  const termKey = normalizeTerm(suggestion.term);
+  const resolvedTerm = resolveUpsertTerm(
+    existing?.term ?? suggestion.term,
+    suggestion.term,
+    existing?.term ?? "",
+  );
+  const termKey = normalizeTerm(resolvedTerm);
 
   return {
     contributor_id: contributorId,
     term_key: termKey,
-    term: suggestion.term.trim(),
+    term: resolvedTerm.trim(),
     definition: suggestion.definition?.trim() || existing?.definition || "",
-    translation: pickChineseText(suggestion.translation, existing?.translation),
+    translation: pickChineseText(
+      suggestion.translation,
+      existing?.translation,
+      resolvedTerm,
+    ),
     pronunciation: suggestion.pronunciation ?? existing?.pronunciation ?? "",
     part_of_speech: suggestion.partOfSpeech ?? existing?.partOfSpeech ?? "",
     example: suggestion.example ?? existing?.example ?? "",
     example_translation: pickChineseText(
       suggestion.exampleTranslation,
       existing?.exampleTranslation,
+      resolvedTerm,
     ),
     notes: existing?.notes ?? "",
     tags: Array.isArray(suggestion.tags)
@@ -173,8 +205,18 @@ function buildWordContextRow(word, contributorId, existing = null) {
   );
 }
 
-async function upsertWordbaseRow(row) {
+async function upsertWordbaseRow(row, existingId = null) {
   ensureSupabase();
+
+  if (existingId) {
+    const { error } = await supabase.from("wordbase").update(row).eq("id", existingId);
+
+    if (error) {
+      throw error;
+    }
+
+    return existingId;
+  }
 
   const { data: existing, error: lookupError } = await supabase
     .from("wordbase")
@@ -226,7 +268,7 @@ export async function contributeWordDetailsFromSuggestion(suggestion, contributo
   const existing = await fetchWordbaseEntry(suggestion.term);
   const row = buildWordDetailsRow(suggestion, contributorId, existing);
 
-  await upsertWordbaseRow(row);
+  await upsertWordbaseRow(row, existing?.id ?? null);
 }
 
 export async function contributeMemoryTipsToWordbase(word, locale, memoryTips, contributorId) {

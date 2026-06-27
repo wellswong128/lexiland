@@ -6,8 +6,8 @@ from typing import Any
 from supabase import Client
 
 from completeness import map_wordbase_row
-from terms import normalize_term
-from text_locale import contains_chinese
+from terms import normalize_term, resolve_upsert_term
+from text_locale import contains_chinese, is_incomplete_exam_phrase_translation
 
 WORDBASE_COLUMNS = (
     "id, contributor_id, term_key, term, definition, translation, pronunciation, "
@@ -147,13 +147,24 @@ def _pick_text(new_value: str, existing_value: str) -> str:
     return str(existing_value or "").strip()
 
 
-def _pick_chinese_text(new_value: str, existing_value: str) -> str:
+def _pick_chinese_text(new_value: str, existing_value: str, *, term: str = "") -> str:
     suggestion = str(new_value or "").strip()
     existing = str(existing_value or "").strip()
 
-    if suggestion and contains_chinese(suggestion):
+    suggestion_ok = bool(
+        suggestion
+        and contains_chinese(suggestion)
+        and not is_incomplete_exam_phrase_translation(term, suggestion)
+    )
+    existing_ok = bool(
+        existing
+        and contains_chinese(existing)
+        and not is_incomplete_exam_phrase_translation(term, existing)
+    )
+
+    if suggestion_ok:
         return suggestion
-    if existing and contains_chinese(existing):
+    if existing_ok:
         return existing
     return suggestion or existing
 
@@ -168,12 +179,23 @@ def build_details_row(
     if not tags:
         tags = existing.get("tags") or []
 
+    existing_term = str(existing.get("term", "")).strip()
+    resolved_term = resolve_upsert_term(
+        existing_term,
+        str(suggestion.get("term", "")).strip(),
+        existing_term,
+    )
+
     return {
         "contributor_id": contributor_id,
-        "term_key": normalize_term(suggestion.get("term") or existing.get("term", "")),
-        "term": _pick_text(suggestion.get("term"), existing.get("term", "")),
+        "term_key": normalize_term(resolved_term),
+        "term": resolved_term,
         "definition": _pick_text(suggestion.get("definition"), existing.get("definition", "")),
-        "translation": _pick_chinese_text(suggestion.get("translation"), existing.get("translation", "")),
+        "translation": _pick_chinese_text(
+            suggestion.get("translation"),
+            existing.get("translation", ""),
+            term=suggestion.get("term") or existing.get("term", ""),
+        ),
         "pronunciation": _pick_text(suggestion.get("pronunciation"), existing.get("pronunciation", "")),
         "part_of_speech": _pick_text(
             suggestion.get("part_of_speech"),
@@ -183,6 +205,7 @@ def build_details_row(
         "example_translation": _pick_chinese_text(
             suggestion.get("example_translation"),
             existing.get("example_translation", ""),
+            term=suggestion.get("term") or existing.get("term", ""),
         ),
         "notes": existing.get("notes") or "",
         "tags": [str(tag).strip() for tag in tags if str(tag).strip()],
@@ -209,7 +232,16 @@ def build_context_row(word: dict[str, Any], contributor_id: str, existing: dict[
     )
 
 
-def upsert_row(client: Client, row: dict[str, Any]) -> None:
+def upsert_row(
+    client: Client,
+    row: dict[str, Any],
+    *,
+    existing_id: str | None = None,
+) -> None:
+    if existing_id:
+        client.table("wordbase").update(row).eq("id", existing_id).execute()
+        return
+
     term_key = row["term_key"]
     response = (
         client.table("wordbase")
@@ -219,10 +251,10 @@ def upsert_row(client: Client, row: dict[str, Any]) -> None:
         .execute()
     )
     existing = _first_row(response)
-    existing_id = existing.get("id") if existing else None
+    resolved_id = existing.get("id") if existing else None
 
-    if existing_id:
-        client.table("wordbase").update(row).eq("id", existing_id).execute()
+    if resolved_id:
+        client.table("wordbase").update(row).eq("id", resolved_id).execute()
         return
 
     client.table("wordbase").insert({**default_review_fields(), **row}).execute()
@@ -238,7 +270,8 @@ def upsert_details(
     if not row["term_key"] or not row["definition"]:
         raise ValueError("Word details require term and definition.")
 
-    upsert_row(client, row)
+    existing_id = str((existing or {}).get("id") or "").strip() or None
+    upsert_row(client, row, existing_id=existing_id)
     return row
 
 

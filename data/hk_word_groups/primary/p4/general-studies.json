@@ -7,6 +7,15 @@
   "version": "2026.06",
   "display_name_en": "P4 General Studies",
   "display_name_zh_hant": "小四常識",
+  "source": {
+    "type": "curriculum_style_public_references",
+    "references": [
+      "EDB General Studies for Primary Schools Curriculum Guide",
+      "EDB primary General Studies Key Stage 2 learning objectives",
+      "Public Hong Kong Primary 4 General Studies syllabus topic examples (Hong Kong community, environment and ecosystems, culture and heritage, citizenship, health, technology, economy, China and the world, scientific inquiry)"
+    ],
+    "note": "No fixed official Hong Kong P4 general studies vocabulary list is prescribed; this list is theme-based for Primary 4 general studies enrichment import. Term-only entries are completed during import."
+  },
   "words": [
     {
       "term": "community",
@@ -326,6 +335,2162 @@
         "biology",
         "noun",
         "environment"
+      ]
+    },
+    {
+      "term": "adaptation",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "general-studies",
+        "curriculum-style",
+        "science-inquiry-and-nature"
+      ]
+    },
+    {
+      "term": "agriculture",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "general-studies",
+        "curriculum-style",
+        "economy-china-and-global-links"
+      ]
+    },
+    {
+      "term": "air pollution",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "general-studies",
+        "curriculum-style",
+        "pollution-and-environmental-action"
+      ]
+    },
+    {
+      "term": "art",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "general-studies",
+        "curriculum-style",
+        "culture-heritage-and-festivals"
+      ]
+    },
+    {
+      "term": "automation",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "general-studies",
+        "curriculum-style",
+        "technology-media-and-society"
+      ]
+    },
+    {
+      "term": "Basic Law",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "general-studies",
+        "curriculum-style",
+        "citizenship-law-and-governance"
+      ]
+    },
+    {
+      "term": "Belt and Road",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "general-studies",
+        "curriculum-style",
+        "economy-china-and-global-links"
+      ]
+    },
+    {
+      "term": "biodiversity",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "general-studies",
+        "curriculum-style",
+        "environment-ecosystems-and-conservation"
+      ]
+    },
+    {
+      "term": "budget",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "general-studies",
+        "curriculum-style",
+        "economy-china-and-global-links"
+      ]
+    },
+    {
+      "term": "bullying prevention",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "general-studies",
+        "curriculum-style",
+        "family-school-and-social-skills"
+      ]
+    },
+    {
+      "term": "carbon dioxide",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "general-studies",
+        "curriculum-style",
+        "pollution-and-environmental-action"
+      ]
+    },
+    {
+      "term": "carbon footprint",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "general-studies",
+        "curriculum-style",
+        "environment-ecosystems-and-conservation"
+      ]
+    },
+    {
+      "term": "celebration",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "general-studies",
+        "curriculum-style",
+        "culture-heritage-and-festivals"
+      ]
+    },
+    {
+      "term": "China",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "general-studies",
+        "curriculum-style",
+        "economy-china-and-global-links"
+      ]
+    },
+    {
+      "term": "Chinese New Year",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "general-studies",
+        "curriculum-style",
+        "culture-heritage-and-festivals"
+      ]
+    },
+    {
+      "term": "Ching Ming Festival",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "general-studies",
+        "curriculum-style",
+        "culture-heritage-and-festivals"
+      ]
+    },
+    {
+      "term": "Christmas",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "general-studies",
+        "curriculum-style",
+        "culture-heritage-and-festivals"
+      ]
+    },
+    {
+      "term": "citizen",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "general-studies",
+        "curriculum-style",
+        "citizenship-law-and-governance"
+      ]
+    },
+    {
+      "term": "city planning",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "general-studies",
+        "curriculum-style",
+        "hong-kong-community-and-development"
+      ]
+    },
+    {
+      "term": "classmate",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "general-studies",
+        "curriculum-style",
+        "family-school-and-social-skills"
+      ]
+    },
+    {
+      "term": "clean up",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "general-studies",
+        "curriculum-style",
+        "pollution-and-environmental-action"
+      ]
+    },
+    {
+      "term": "climate",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "general-studies",
+        "curriculum-style",
+        "science-inquiry-and-nature"
+      ]
+    },
+    {
+      "term": "climate change",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "general-studies",
+        "curriculum-style",
+        "environment-ecosystems-and-conservation"
+      ]
+    },
+    {
+      "term": "communication",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "general-studies",
+        "curriculum-style",
+        "family-school-and-social-skills"
+      ]
+    },
+    {
+      "term": "communication technology",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "general-studies",
+        "curriculum-style",
+        "technology-media-and-society"
+      ]
+    },
+    {
+      "term": "community participation",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "general-studies",
+        "curriculum-style",
+        "hong-kong-community-and-development"
+      ]
+    },
+    {
+      "term": "community rule",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "general-studies",
+        "curriculum-style",
+        "citizenship-law-and-governance"
+      ]
+    },
+    {
+      "term": "compost",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "general-studies",
+        "curriculum-style",
+        "pollution-and-environmental-action"
+      ]
+    },
+    {
+      "term": "conclusion",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "general-studies",
+        "curriculum-style",
+        "science-inquiry-and-nature"
+      ]
+    },
+    {
+      "term": "conflict resolution",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "general-studies",
+        "curriculum-style",
+        "family-school-and-social-skills"
+      ]
+    },
+    {
+      "term": "conservation area",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "general-studies",
+        "curriculum-style",
+        "environment-ecosystems-and-conservation"
+      ]
+    },
+    {
+      "term": "consumer",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "general-studies",
+        "curriculum-style",
+        "economy-china-and-global-links"
+      ]
+    },
+    {
+      "term": "cooperation",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "general-studies",
+        "curriculum-style",
+        "family-school-and-social-skills"
+      ]
+    },
+    {
+      "term": "country park",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "general-studies",
+        "curriculum-style",
+        "hong-kong-community-and-development"
+      ]
+    },
+    {
+      "term": "craft",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "general-studies",
+        "curriculum-style",
+        "culture-heritage-and-festivals"
+      ]
+    },
+    {
+      "term": "creative thinking",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "general-studies",
+        "curriculum-style",
+        "technology-media-and-society"
+      ]
+    },
+    {
+      "term": "cultural exchange",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "general-studies",
+        "curriculum-style",
+        "culture-heritage-and-festivals"
+      ]
+    },
+    {
+      "term": "culture",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "general-studies",
+        "curriculum-style",
+        "culture-heritage-and-festivals"
+      ]
+    },
+    {
+      "term": "custom",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "general-studies",
+        "curriculum-style",
+        "culture-heritage-and-festivals"
+      ]
+    },
+    {
+      "term": "cyberbullying",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "general-studies",
+        "curriculum-style",
+        "technology-media-and-society"
+      ]
+    },
+    {
+      "term": "data",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "general-studies",
+        "curriculum-style",
+        "science-inquiry-and-nature"
+      ]
+    },
+    {
+      "term": "development",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "general-studies",
+        "curriculum-style",
+        "hong-kong-community-and-development"
+      ]
+    },
+    {
+      "term": "digital world",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "general-studies",
+        "curriculum-style",
+        "technology-media-and-society"
+      ]
+    },
+    {
+      "term": "discipline",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "general-studies",
+        "curriculum-style",
+        "family-school-and-social-skills"
+      ]
+    },
+    {
+      "term": "district",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "general-studies",
+        "curriculum-style",
+        "hong-kong-community-and-development"
+      ]
+    },
+    {
+      "term": "Dragon Boat Festival",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "general-studies",
+        "curriculum-style",
+        "culture-heritage-and-festivals"
+      ]
+    },
+    {
+      "term": "drug education",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "general-studies",
+        "curriculum-style",
+        "personal-development-and-health"
+      ]
+    },
+    {
+      "term": "duty",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "general-studies",
+        "curriculum-style",
+        "citizenship-law-and-governance"
+      ]
+    },
+    {
+      "term": "eco-friendly habit",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "general-studies",
+        "curriculum-style",
+        "pollution-and-environmental-action"
+      ]
+    },
+    {
+      "term": "economy",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "general-studies",
+        "curriculum-style",
+        "economy-china-and-global-links"
+      ]
+    },
+    {
+      "term": "election",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "general-studies",
+        "curriculum-style",
+        "citizenship-law-and-governance"
+      ]
+    },
+    {
+      "term": "emotion management",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "general-studies",
+        "curriculum-style",
+        "personal-development-and-health"
+      ]
+    },
+    {
+      "term": "empathy",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "general-studies",
+        "curriculum-style",
+        "family-school-and-social-skills"
+      ]
+    },
+    {
+      "term": "endangered species",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "general-studies",
+        "curriculum-style",
+        "environment-ecosystems-and-conservation"
+      ]
+    },
+    {
+      "term": "energy flow",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "general-studies",
+        "curriculum-style",
+        "science-inquiry-and-nature"
+      ]
+    },
+    {
+      "term": "energy saving",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "general-studies",
+        "curriculum-style",
+        "pollution-and-environmental-action"
+      ]
+    },
+    {
+      "term": "environment",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "general-studies",
+        "curriculum-style",
+        "environment-ecosystems-and-conservation"
+      ]
+    },
+    {
+      "term": "environmental action",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "general-studies",
+        "curriculum-style",
+        "pollution-and-environmental-action"
+      ]
+    },
+    {
+      "term": "environmental group",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "general-studies",
+        "curriculum-style",
+        "pollution-and-environmental-action"
+      ]
+    },
+    {
+      "term": "environmental protection",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "general-studies",
+        "curriculum-style",
+        "environment-ecosystems-and-conservation"
+      ]
+    },
+    {
+      "term": "exercise",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "general-studies",
+        "curriculum-style",
+        "personal-development-and-health"
+      ]
+    },
+    {
+      "term": "experiment",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "general-studies",
+        "curriculum-style",
+        "science-inquiry-and-nature"
+      ]
+    },
+    {
+      "term": "export",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "general-studies",
+        "curriculum-style",
+        "economy-china-and-global-links"
+      ]
+    },
+    {
+      "term": "fair test",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "general-studies",
+        "curriculum-style",
+        "science-inquiry-and-nature"
+      ]
+    },
+    {
+      "term": "fairness",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "general-studies",
+        "curriculum-style",
+        "citizenship-law-and-governance"
+      ]
+    },
+    {
+      "term": "fake news",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "general-studies",
+        "curriculum-style",
+        "technology-media-and-society"
+      ]
+    },
+    {
+      "term": "family",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "general-studies",
+        "curriculum-style",
+        "family-school-and-social-skills"
+      ]
+    },
+    {
+      "term": "first aid",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "general-studies",
+        "curriculum-style",
+        "personal-development-and-health"
+      ]
+    },
+    {
+      "term": "food chain",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "general-studies",
+        "curriculum-style",
+        "science-inquiry-and-nature"
+      ]
+    },
+    {
+      "term": "forest",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "general-studies",
+        "curriculum-style",
+        "environment-ecosystems-and-conservation"
+      ]
+    },
+    {
+      "term": "friendship",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "general-studies",
+        "curriculum-style",
+        "family-school-and-social-skills"
+      ]
+    },
+    {
+      "term": "future career",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "general-studies",
+        "curriculum-style",
+        "technology-media-and-society"
+      ]
+    },
+    {
+      "term": "global citizen",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "general-studies",
+        "curriculum-style",
+        "economy-china-and-global-links"
+      ]
+    },
+    {
+      "term": "global connection",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "general-studies",
+        "curriculum-style",
+        "economy-china-and-global-links"
+      ]
+    },
+    {
+      "term": "global warming",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "general-studies",
+        "curriculum-style",
+        "environment-ecosystems-and-conservation"
+      ]
+    },
+    {
+      "term": "goal setting",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "general-studies",
+        "curriculum-style",
+        "personal-development-and-health"
+      ]
+    },
+    {
+      "term": "government",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "general-studies",
+        "curriculum-style",
+        "citizenship-law-and-governance"
+      ]
+    },
+    {
+      "term": "green living",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "general-studies",
+        "curriculum-style",
+        "environment-ecosystems-and-conservation"
+      ]
+    },
+    {
+      "term": "green policy",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "general-studies",
+        "curriculum-style",
+        "pollution-and-environmental-action"
+      ]
+    },
+    {
+      "term": "greenhouse gas",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "general-studies",
+        "curriculum-style",
+        "pollution-and-environmental-action"
+      ]
+    },
+    {
+      "term": "growth",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "general-studies",
+        "curriculum-style",
+        "personal-development-and-health"
+      ]
+    },
+    {
+      "term": "habitat",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "general-studies",
+        "curriculum-style",
+        "environment-ecosystems-and-conservation"
+      ]
+    },
+    {
+      "term": "harbour",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "general-studies",
+        "curriculum-style",
+        "hong-kong-community-and-development"
+      ]
+    },
+    {
+      "term": "harmonious society",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "general-studies",
+        "curriculum-style",
+        "citizenship-law-and-governance"
+      ]
+    },
+    {
+      "term": "harmony",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "general-studies",
+        "curriculum-style",
+        "family-school-and-social-skills"
+      ]
+    },
+    {
+      "term": "healthy lifestyle",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "general-studies",
+        "curriculum-style",
+        "personal-development-and-health"
+      ]
+    },
+    {
+      "term": "help others",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "general-studies",
+        "curriculum-style",
+        "family-school-and-social-skills"
+      ]
+    },
+    {
+      "term": "heritage site",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "general-studies",
+        "curriculum-style",
+        "culture-heritage-and-festivals"
+      ]
+    },
+    {
+      "term": "historical building",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "general-studies",
+        "curriculum-style",
+        "culture-heritage-and-festivals"
+      ]
+    },
+    {
+      "term": "Hong Kong",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "general-studies",
+        "curriculum-style",
+        "hong-kong-community-and-development"
+      ]
+    },
+    {
+      "term": "housing",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "general-studies",
+        "curriculum-style",
+        "hong-kong-community-and-development"
+      ]
+    },
+    {
+      "term": "humanitarian aid",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "general-studies",
+        "curriculum-style",
+        "economy-china-and-global-links"
+      ]
+    },
+    {
+      "term": "hygiene",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "general-studies",
+        "curriculum-style",
+        "personal-development-and-health"
+      ]
+    },
+    {
+      "term": "hypothesis",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "general-studies",
+        "curriculum-style",
+        "science-inquiry-and-nature"
+      ]
+    },
+    {
+      "term": "identity",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "general-studies",
+        "curriculum-style",
+        "culture-heritage-and-festivals"
+      ]
+    },
+    {
+      "term": "immigration",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "general-studies",
+        "curriculum-style",
+        "hong-kong-community-and-development"
+      ]
+    },
+    {
+      "term": "import",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "general-studies",
+        "curriculum-style",
+        "economy-china-and-global-links"
+      ]
+    },
+    {
+      "term": "inclusion",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "general-studies",
+        "curriculum-style",
+        "family-school-and-social-skills"
+      ]
+    },
+    {
+      "term": "industry",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "general-studies",
+        "curriculum-style",
+        "economy-china-and-global-links"
+      ]
+    },
+    {
+      "term": "information literacy",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "general-studies",
+        "curriculum-style",
+        "technology-media-and-society"
+      ]
+    },
+    {
+      "term": "innovation",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "general-studies",
+        "curriculum-style",
+        "technology-media-and-society"
+      ]
+    },
+    {
+      "term": "international city",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "general-studies",
+        "curriculum-style",
+        "hong-kong-community-and-development"
+      ]
+    },
+    {
+      "term": "international cooperation",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "general-studies",
+        "curriculum-style",
+        "economy-china-and-global-links"
+      ]
+    },
+    {
+      "term": "internet",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "general-studies",
+        "curriculum-style",
+        "technology-media-and-society"
+      ]
+    },
+    {
+      "term": "invention",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "general-studies",
+        "curriculum-style",
+        "technology-media-and-society"
+      ]
+    },
+    {
+      "term": "justice",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "general-studies",
+        "curriculum-style",
+        "citizenship-law-and-governance"
+      ]
+    },
+    {
+      "term": "land pollution",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "general-studies",
+        "curriculum-style",
+        "pollution-and-environmental-action"
+      ]
+    },
+    {
+      "term": "landfill",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "general-studies",
+        "curriculum-style",
+        "pollution-and-environmental-action"
+      ]
+    },
+    {
+      "term": "leadership",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "general-studies",
+        "curriculum-style",
+        "family-school-and-social-skills"
+      ]
+    },
+    {
+      "term": "life cycle",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "general-studies",
+        "curriculum-style",
+        "science-inquiry-and-nature"
+      ]
+    },
+    {
+      "term": "living thing",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "general-studies",
+        "curriculum-style",
+        "science-inquiry-and-nature"
+      ]
+    },
+    {
+      "term": "local culture",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "general-studies",
+        "curriculum-style",
+        "hong-kong-community-and-development"
+      ]
+    },
+    {
+      "term": "local food",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "general-studies",
+        "curriculum-style",
+        "culture-heritage-and-festivals"
+      ]
+    },
+    {
+      "term": "mangrove",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "general-studies",
+        "curriculum-style",
+        "environment-ecosystems-and-conservation"
+      ]
+    },
+    {
+      "term": "marine life",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "general-studies",
+        "curriculum-style",
+        "environment-ecosystems-and-conservation"
+      ]
+    },
+    {
+      "term": "market",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "general-studies",
+        "curriculum-style",
+        "economy-china-and-global-links"
+      ]
+    },
+    {
+      "term": "mental health",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "general-studies",
+        "curriculum-style",
+        "personal-development-and-health"
+      ]
+    },
+    {
+      "term": "Mid-Autumn Festival",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "general-studies",
+        "curriculum-style",
+        "culture-heritage-and-festivals"
+      ]
+    },
+    {
+      "term": "money",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "general-studies",
+        "curriculum-style",
+        "economy-china-and-global-links"
+      ]
+    },
+    {
+      "term": "monitor pollution",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "general-studies",
+        "curriculum-style",
+        "pollution-and-environmental-action"
+      ]
+    },
+    {
+      "term": "multicultural society",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "general-studies",
+        "curriculum-style",
+        "culture-heritage-and-festivals"
+      ]
+    },
+    {
+      "term": "museum",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "general-studies",
+        "curriculum-style",
+        "culture-heritage-and-festivals"
+      ]
+    },
+    {
+      "term": "national identity",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "general-studies",
+        "curriculum-style",
+        "citizenship-law-and-governance"
+      ]
+    },
+    {
+      "term": "natural disaster",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "general-studies",
+        "curriculum-style",
+        "science-inquiry-and-nature"
+      ]
+    },
+    {
+      "term": "neighbourhood activity",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "general-studies",
+        "curriculum-style",
+        "hong-kong-community-and-development"
+      ]
+    },
+    {
+      "term": "noise pollution",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "general-studies",
+        "curriculum-style",
+        "pollution-and-environmental-action"
+      ]
+    },
+    {
+      "term": "non-living thing",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "general-studies",
+        "curriculum-style",
+        "science-inquiry-and-nature"
+      ]
+    },
+    {
+      "term": "non-renewable resource",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "general-studies",
+        "curriculum-style",
+        "environment-ecosystems-and-conservation"
+      ]
+    },
+    {
+      "term": "nutrition",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "general-studies",
+        "curriculum-style",
+        "personal-development-and-health"
+      ]
+    },
+    {
+      "term": "One Country Two Systems",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "general-studies",
+        "curriculum-style",
+        "economy-china-and-global-links"
+      ]
+    },
+    {
+      "term": "online safety",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "general-studies",
+        "curriculum-style",
+        "personal-development-and-health"
+      ]
+    },
+    {
+      "term": "participation",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "general-studies",
+        "curriculum-style",
+        "citizenship-law-and-governance"
+      ]
+    },
+    {
+      "term": "patriotism",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "general-studies",
+        "curriculum-style",
+        "citizenship-law-and-governance"
+      ]
+    },
+    {
+      "term": "peer pressure",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "general-studies",
+        "curriculum-style",
+        "personal-development-and-health"
+      ]
+    },
+    {
+      "term": "plastic waste",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "general-studies",
+        "curriculum-style",
+        "pollution-and-environmental-action"
+      ]
+    },
+    {
+      "term": "population",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "general-studies",
+        "curriculum-style",
+        "hong-kong-community-and-development"
+      ]
+    },
+    {
+      "term": "positive values",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "general-studies",
+        "curriculum-style",
+        "personal-development-and-health"
+      ]
+    },
+    {
+      "term": "preserve culture",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "general-studies",
+        "curriculum-style",
+        "culture-heritage-and-festivals"
+      ]
+    },
+    {
+      "term": "prevent disease",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "general-studies",
+        "curriculum-style",
+        "personal-development-and-health"
+      ]
+    },
+    {
+      "term": "privacy",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "general-studies",
+        "curriculum-style",
+        "technology-media-and-society"
+      ]
+    },
+    {
+      "term": "problem solving",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "general-studies",
+        "curriculum-style",
+        "technology-media-and-society"
+      ]
+    },
+    {
+      "term": "producer",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "general-studies",
+        "curriculum-style",
+        "economy-china-and-global-links"
+      ]
+    },
+    {
+      "term": "protect nature",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "general-studies",
+        "curriculum-style",
+        "pollution-and-environmental-action"
+      ]
+    },
+    {
+      "term": "province",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "general-studies",
+        "curriculum-style",
+        "economy-china-and-global-links"
+      ]
+    },
+    {
+      "term": "puberty",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "general-studies",
+        "curriculum-style",
+        "personal-development-and-health"
+      ]
+    },
+    {
+      "term": "public facility",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "general-studies",
+        "curriculum-style",
+        "hong-kong-community-and-development"
+      ]
+    },
+    {
+      "term": "public property",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "general-studies",
+        "curriculum-style",
+        "citizenship-law-and-governance"
+      ]
+    },
+    {
+      "term": "public service",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "general-studies",
+        "curriculum-style",
+        "citizenship-law-and-governance"
+      ]
+    },
+    {
+      "term": "public spirit",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "general-studies",
+        "curriculum-style",
+        "citizenship-law-and-governance"
+      ]
+    },
+    {
+      "term": "question",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "general-studies",
+        "curriculum-style",
+        "science-inquiry-and-nature"
+      ]
+    },
+    {
+      "term": "record",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "general-studies",
+        "curriculum-style",
+        "science-inquiry-and-nature"
+      ]
+    },
+    {
+      "term": "reduce reuse recycle",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "general-studies",
+        "curriculum-style",
+        "environment-ecosystems-and-conservation"
+      ]
+    },
+    {
+      "term": "refuse drugs",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "general-studies",
+        "curriculum-style",
+        "personal-development-and-health"
+      ]
+    },
+    {
+      "term": "renewable energy technology",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "general-studies",
+        "curriculum-style",
+        "technology-media-and-society"
+      ]
+    },
+    {
+      "term": "renewable resource",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "general-studies",
+        "curriculum-style",
+        "environment-ecosystems-and-conservation"
+      ]
+    },
+    {
+      "term": "respect",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "general-studies",
+        "curriculum-style",
+        "family-school-and-social-skills"
+      ]
+    },
+    {
+      "term": "respect differences",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "general-studies",
+        "curriculum-style",
+        "culture-heritage-and-festivals"
+      ]
+    },
+    {
+      "term": "responsible citizen",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "general-studies",
+        "curriculum-style",
+        "citizenship-law-and-governance"
+      ]
+    },
+    {
+      "term": "responsible use",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "general-studies",
+        "curriculum-style",
+        "technology-media-and-society"
+      ]
+    },
+    {
+      "term": "right",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "general-studies",
+        "curriculum-style",
+        "citizenship-law-and-governance"
+      ]
+    },
+    {
+      "term": "rule",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "general-studies",
+        "curriculum-style",
+        "family-school-and-social-skills"
+      ]
+    },
+    {
+      "term": "rule of law",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "general-studies",
+        "curriculum-style",
+        "citizenship-law-and-governance"
+      ]
+    },
+    {
+      "term": "rural area",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "general-studies",
+        "curriculum-style",
+        "hong-kong-community-and-development"
+      ]
+    },
+    {
+      "term": "school",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "general-studies",
+        "curriculum-style",
+        "family-school-and-social-skills"
+      ]
+    },
+    {
+      "term": "scientific method",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "general-studies",
+        "curriculum-style",
+        "science-inquiry-and-nature"
+      ]
+    },
+    {
+      "term": "self-awareness",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "general-studies",
+        "curriculum-style",
+        "personal-development-and-health"
+      ]
+    },
+    {
+      "term": "self-discipline",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "general-studies",
+        "curriculum-style",
+        "personal-development-and-health"
+      ]
+    },
+    {
+      "term": "service industry",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "general-studies",
+        "curriculum-style",
+        "hong-kong-community-and-development"
+      ]
+    },
+    {
+      "term": "service learning",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "general-studies",
+        "curriculum-style",
+        "family-school-and-social-skills"
+      ]
+    },
+    {
+      "term": "sleep",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "general-studies",
+        "curriculum-style",
+        "personal-development-and-health"
+      ]
+    },
+    {
+      "term": "smart city",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "general-studies",
+        "curriculum-style",
+        "technology-media-and-society"
+      ]
+    },
+    {
+      "term": "smog",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "general-studies",
+        "curriculum-style",
+        "pollution-and-environmental-action"
+      ]
+    },
+    {
+      "term": "social media",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "general-studies",
+        "curriculum-style",
+        "technology-media-and-society"
+      ]
+    },
+    {
+      "term": "social order",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "general-studies",
+        "curriculum-style",
+        "citizenship-law-and-governance"
+      ]
+    },
+    {
+      "term": "species",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "general-studies",
+        "curriculum-style",
+        "environment-ecosystems-and-conservation"
+      ]
+    },
+    {
+      "term": "STEM",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "general-studies",
+        "curriculum-style",
+        "technology-media-and-society"
+      ]
+    },
+    {
+      "term": "stress",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "general-studies",
+        "curriculum-style",
+        "personal-development-and-health"
+      ]
+    },
+    {
+      "term": "sustainable development",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "general-studies",
+        "curriculum-style",
+        "environment-ecosystems-and-conservation"
+      ]
+    },
+    {
+      "term": "teamwork",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "general-studies",
+        "curriculum-style",
+        "family-school-and-social-skills"
+      ]
+    },
+    {
+      "term": "technology",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "general-studies",
+        "curriculum-style",
+        "technology-media-and-society"
+      ]
+    },
+    {
+      "term": "technology application",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "general-studies",
+        "curriculum-style",
+        "science-inquiry-and-nature"
+      ]
+    },
+    {
+      "term": "tourism",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "general-studies",
+        "curriculum-style",
+        "hong-kong-community-and-development"
+      ]
+    },
+    {
+      "term": "trade",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "general-studies",
+        "curriculum-style",
+        "hong-kong-community-and-development"
+      ]
+    },
+    {
+      "term": "traditional costume",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "general-studies",
+        "curriculum-style",
+        "culture-heritage-and-festivals"
+      ]
+    },
+    {
+      "term": "transport network",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "general-studies",
+        "curriculum-style",
+        "hong-kong-community-and-development"
+      ]
+    },
+    {
+      "term": "transport technology",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "general-studies",
+        "curriculum-style",
+        "technology-media-and-society"
+      ]
+    },
+    {
+      "term": "urban area",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "general-studies",
+        "curriculum-style",
+        "hong-kong-community-and-development"
+      ]
+    },
+    {
+      "term": "variable",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "general-studies",
+        "curriculum-style",
+        "science-inquiry-and-nature"
+      ]
+    },
+    {
+      "term": "volunteer service",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "general-studies",
+        "curriculum-style",
+        "family-school-and-social-skills"
+      ]
+    },
+    {
+      "term": "vote",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "general-studies",
+        "curriculum-style",
+        "citizenship-law-and-governance"
+      ]
+    },
+    {
+      "term": "waste management",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "general-studies",
+        "curriculum-style",
+        "pollution-and-environmental-action"
+      ]
+    },
+    {
+      "term": "water pollution",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "general-studies",
+        "curriculum-style",
+        "pollution-and-environmental-action"
+      ]
+    },
+    {
+      "term": "water saving",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "general-studies",
+        "curriculum-style",
+        "pollution-and-environmental-action"
+      ]
+    },
+    {
+      "term": "weather",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "general-studies",
+        "curriculum-style",
+        "science-inquiry-and-nature"
+      ]
+    },
+    {
+      "term": "wetland",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "general-studies",
+        "curriculum-style",
+        "environment-ecosystems-and-conservation"
+      ]
+    },
+    {
+      "term": "world issue",
+      "tags": [
+        "hk",
+        "primary",
+        "p4",
+        "general-studies",
+        "curriculum-style",
+        "economy-china-and-global-links"
       ]
     }
   ]

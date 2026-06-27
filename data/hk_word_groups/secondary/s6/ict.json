@@ -7,6 +7,15 @@
   "version": "2026.06",
   "display_name_en": "S6 ICT",
   "display_name_zh_hant": "中六資訊及通訊科技",
+  "source": {
+    "type": "curriculum_style_public_references",
+    "references": [
+      "EDB Information and Communication Technology Curriculum and Assessment Guide (Secondary 4-6)",
+      "EDB HKDSE ICT learning objectives",
+      "Public Hong Kong S6 ICT syllabus topic examples (HKDSE revision, programming and algorithms, systems development, networking and cloud, web and database applications, cybersecurity, emerging technologies, data analytics, multimedia, project management, ethics and governance, Hong Kong digital context, practical tasks and examination evaluation skills)"
+    ],
+    "note": "No fixed official Hong Kong S6 ICT vocabulary list is prescribed; this list is theme-based for senior secondary S6 / HKDSE ICT enrichment import. Term-only entries are completed during import."
+  },
   "words": [
     {
       "term": "Artificial Intelligence",
@@ -326,6 +335,3702 @@
         "system design",
         "performance",
         "noun"
+      ]
+    },
+    {
+      "term": "acceptable use revision policy",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-ict-ethics-law-and-digital-governance-synthesis"
+      ]
+    },
+    {
+      "term": "accessibility in multimedia revision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-multimedia-and-digital-content-synthesis"
+      ]
+    },
+    {
+      "term": "agile model revision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-systems-development-and-analysis-synthesis"
+      ]
+    },
+    {
+      "term": "agile scrum revision concept",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-ict-project-management-and-collaboration-synthesis"
+      ]
+    },
+    {
+      "term": "algorithm data response skill",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-data-structures-and-complexity-revision"
+      ]
+    },
+    {
+      "term": "algorithm design revision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-programming-and-algorithm-revision-synthesis"
+      ]
+    },
+    {
+      "term": "algorithm efficiency comparison",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-data-structures-and-complexity-revision"
+      ]
+    },
+    {
+      "term": "algorithm trace revision skill",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-data-structures-and-complexity-revision"
+      ]
+    },
+    {
+      "term": "algorithmic bias revision concern",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-ict-ethics-law-and-digital-governance-synthesis"
+      ]
+    },
+    {
+      "term": "analytics case synthesis analysis",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-data-analytics-and-information-management-synthesis"
+      ]
+    },
+    {
+      "term": "analytics data response skill",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-data-analytics-and-information-management-synthesis"
+      ]
+    },
+    {
+      "term": "animation production revision workflow",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-multimedia-and-digital-content-synthesis"
+      ]
+    },
+    {
+      "term": "application programming interface revision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-web-technologies-and-application-synthesis"
+      ]
+    },
+    {
+      "term": "array structure revision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-data-structures-and-complexity-revision"
+      ]
+    },
+    {
+      "term": "artificial intelligence revision application",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-emerging-technologies-and-digital-innovation-synthesis"
+      ]
+    },
+    {
+      "term": "asymmetric encryption revision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-cybersecurity-and-risk-management-synthesis"
+      ]
+    },
+    {
+      "term": "audio sampling revision concept",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-multimedia-and-digital-content-synthesis"
+      ]
+    },
+    {
+      "term": "augmented reality revision application",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-emerging-technologies-and-digital-innovation-synthesis"
+      ]
+    },
+    {
+      "term": "authentication revision method",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-cybersecurity-and-risk-management-synthesis"
+      ]
+    },
+    {
+      "term": "bandwidth latency revision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-networking-and-internet-revision-synthesis"
+      ]
+    },
+    {
+      "term": "best case analysis revision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-data-structures-and-complexity-revision"
+      ]
+    },
+    {
+      "term": "big data revision characteristic",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-emerging-technologies-and-digital-innovation-synthesis"
+      ]
+    },
+    {
+      "term": "big O notation revision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-data-structures-and-complexity-revision"
+      ]
+    },
+    {
+      "term": "binary conversion revision skill",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-data-analytics-and-information-management-synthesis"
+      ]
+    },
+    {
+      "term": "bitmap vector revision distinction",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-multimedia-and-digital-content-synthesis"
+      ]
+    },
+    {
+      "term": "blockchain revision concept",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-emerging-technologies-and-digital-innovation-synthesis"
+      ]
+    },
+    {
+      "term": "business intelligence revision platform",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-data-analytics-and-information-management-synthesis"
+      ]
+    },
+    {
+      "term": "cascading style sheets revision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-web-technologies-and-application-synthesis"
+      ]
+    },
+    {
+      "term": "change management revision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-systems-development-and-analysis-synthesis"
+      ]
+    },
+    {
+      "term": "client side scripting revision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-web-technologies-and-application-synthesis"
+      ]
+    },
+    {
+      "term": "cloud architecture revision diagram",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-cloud-virtualization-and-infrastructure-synthesis"
+      ]
+    },
+    {
+      "term": "cloud computing revision concept",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-cloud-virtualization-and-infrastructure-synthesis"
+      ]
+    },
+    {
+      "term": "cloud cost trade-off analysis",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-cloud-virtualization-and-infrastructure-synthesis"
+      ]
+    },
+    {
+      "term": "cloud service selection skill",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-cloud-virtualization-and-infrastructure-synthesis"
+      ]
+    },
+    {
+      "term": "cloud storage revision service",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-cloud-virtualization-and-infrastructure-synthesis"
+      ]
+    },
+    {
+      "term": "code review revision process",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-ict-project-management-and-collaboration-synthesis"
+      ]
+    },
+    {
+      "term": "collaborative development revision platform",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-ict-project-management-and-collaboration-synthesis"
+      ]
+    },
+    {
+      "term": "compare analytics method",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-data-analytics-and-information-management-synthesis"
+      ]
+    },
+    {
+      "term": "compare cloud deployment model",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-cloud-virtualization-and-infrastructure-synthesis"
+      ]
+    },
+    {
+      "term": "compare data structure option",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-data-structures-and-complexity-revision"
+      ]
+    },
+    {
+      "term": "compare database schema design",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-database-management-revision-synthesis"
+      ]
+    },
+    {
+      "term": "compare development approach",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-systems-development-and-analysis-synthesis"
+      ]
+    },
+    {
+      "term": "compare emerging technology option",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-emerging-technologies-and-digital-innovation-synthesis"
+      ]
+    },
+    {
+      "term": "compare ethical dilemma case",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-ict-ethics-law-and-digital-governance-synthesis"
+      ]
+    },
+    {
+      "term": "compare Hong Kong ICT initiative",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-hong-kong-ict-context-and-policy-synthesis"
+      ]
+    },
+    {
+      "term": "compare multimedia production method",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-multimedia-and-digital-content-synthesis"
+      ]
+    },
+    {
+      "term": "compare network design option",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-networking-and-internet-revision-synthesis"
+      ]
+    },
+    {
+      "term": "compare practical solution approach",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-ict-practical-task-revision-and-readiness"
+      ]
+    },
+    {
+      "term": "compare programming solution",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-programming-and-algorithm-revision-synthesis"
+      ]
+    },
+    {
+      "term": "compare project method",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-ict-project-management-and-collaboration-synthesis"
+      ]
+    },
+    {
+      "term": "compare security control measure",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-cybersecurity-and-risk-management-synthesis"
+      ]
+    },
+    {
+      "term": "compare web development stack",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-web-technologies-and-application-synthesis"
+      ]
+    },
+    {
+      "term": "complexity calculation revision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-data-structures-and-complexity-revision"
+      ]
+    },
+    {
+      "term": "compression codec revision selection",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-multimedia-and-digital-content-synthesis"
+      ]
+    },
+    {
+      "term": "computer ethics revision principle",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-ict-ethics-law-and-digital-governance-synthesis"
+      ]
+    },
+    {
+      "term": "confidentiality integrity availability revision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-cybersecurity-and-risk-management-synthesis"
+      ]
+    },
+    {
+      "term": "containerization revision concept",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-cloud-virtualization-and-infrastructure-synthesis"
+      ]
+    },
+    {
+      "term": "control structure revision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-programming-and-algorithm-revision-synthesis"
+      ]
+    },
+    {
+      "term": "copyright in multimedia revision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-multimedia-and-digital-content-synthesis"
+      ]
+    },
+    {
+      "term": "copyright revision law application",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-ict-ethics-law-and-digital-governance-synthesis"
+      ]
+    },
+    {
+      "term": "cross border data revision rule",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-ict-ethics-law-and-digital-governance-synthesis"
+      ]
+    },
+    {
+      "term": "cross site scripting revision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-web-technologies-and-application-synthesis"
+      ]
+    },
+    {
+      "term": "cyberbullying revision issue",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-ict-ethics-law-and-digital-governance-synthesis"
+      ]
+    },
+    {
+      "term": "cybersecurity data response skill",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-cybersecurity-and-risk-management-synthesis"
+      ]
+    },
+    {
+      "term": "data cleaning revision procedure",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-data-analytics-and-information-management-synthesis"
+      ]
+    },
+    {
+      "term": "data compression revision method",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-data-analytics-and-information-management-synthesis"
+      ]
+    },
+    {
+      "term": "data driven decision revision skill",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-data-analytics-and-information-management-synthesis"
+      ]
+    },
+    {
+      "term": "data ethics revision issue",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-data-analytics-and-information-management-synthesis"
+      ]
+    },
+    {
+      "term": "data flow diagram revision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-systems-development-and-analysis-synthesis"
+      ]
+    },
+    {
+      "term": "data governance revision policy",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-data-analytics-and-information-management-synthesis"
+      ]
+    },
+    {
+      "term": "data integrity revision rule",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-database-management-revision-synthesis"
+      ]
+    },
+    {
+      "term": "data mining revision concept",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-data-analytics-and-information-management-synthesis"
+      ]
+    },
+    {
+      "term": "data project evaluation skill",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-data-analytics-and-information-management-synthesis"
+      ]
+    },
+    {
+      "term": "data representation revision concept",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-data-analytics-and-information-management-synthesis"
+      ]
+    },
+    {
+      "term": "data structure case synthesis",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-data-structures-and-complexity-revision"
+      ]
+    },
+    {
+      "term": "data structure selection revision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-data-structures-and-complexity-revision"
+      ]
+    },
+    {
+      "term": "data validation revision rule",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-data-analytics-and-information-management-synthesis"
+      ]
+    },
+    {
+      "term": "data visualization revision chart",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-data-analytics-and-information-management-synthesis"
+      ]
+    },
+    {
+      "term": "database administration revision task",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-database-management-revision-synthesis"
+      ]
+    },
+    {
+      "term": "database backup revision strategy",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-database-management-revision-synthesis"
+      ]
+    },
+    {
+      "term": "database case synthesis analysis",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-database-management-revision-synthesis"
+      ]
+    },
+    {
+      "term": "database data response skill",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-database-management-revision-synthesis"
+      ]
+    },
+    {
+      "term": "database design justification skill",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-database-management-revision-synthesis"
+      ]
+    },
+    {
+      "term": "database indexing revision concept",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-database-management-revision-synthesis"
+      ]
+    },
+    {
+      "term": "database query interpretation skill",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-database-management-revision-synthesis"
+      ]
+    },
+    {
+      "term": "database transaction revision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-database-management-revision-synthesis"
+      ]
+    },
+    {
+      "term": "debugging workflow revision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-programming-and-algorithm-revision-synthesis"
+      ]
+    },
+    {
+      "term": "design specification revision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-systems-development-and-analysis-synthesis"
+      ]
+    },
+    {
+      "term": "digital certificate revision concept",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-cybersecurity-and-risk-management-synthesis"
+      ]
+    },
+    {
+      "term": "digital citizenship revision responsibility",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-ict-ethics-law-and-digital-governance-synthesis"
+      ]
+    },
+    {
+      "term": "digital content data response skill",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-multimedia-and-digital-content-synthesis"
+      ]
+    },
+    {
+      "term": "digital governance data response",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-ict-ethics-law-and-digital-governance-synthesis"
+      ]
+    },
+    {
+      "term": "digital inclusion revision issue",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-ict-ethics-law-and-digital-governance-synthesis"
+      ]
+    },
+    {
+      "term": "digital transformation revision concept",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-emerging-technologies-and-digital-innovation-synthesis"
+      ]
+    },
+    {
+      "term": "disaster recovery revision plan",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-cloud-virtualization-and-infrastructure-synthesis"
+      ]
+    },
+    {
+      "term": "domain name system revision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-networking-and-internet-revision-synthesis"
+      ]
+    },
+    {
+      "term": "e waste revision management",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-ict-ethics-law-and-digital-governance-synthesis"
+      ]
+    },
+    {
+      "term": "edge computing revision concept",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-emerging-technologies-and-digital-innovation-synthesis"
+      ]
+    },
+    {
+      "term": "emerging tech data response",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-emerging-technologies-and-digital-innovation-synthesis"
+      ]
+    },
+    {
+      "term": "emerging technology case synthesis",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-emerging-technologies-and-digital-innovation-synthesis"
+      ]
+    },
+    {
+      "term": "emerging technology ethical issue",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-emerging-technologies-and-digital-innovation-synthesis"
+      ]
+    },
+    {
+      "term": "encapsulation revision concept",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-programming-and-algorithm-revision-synthesis"
+      ]
+    },
+    {
+      "term": "encryption revision method",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-cybersecurity-and-risk-management-synthesis"
+      ]
+    },
+    {
+      "term": "entity relationship revision diagram",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-database-management-revision-synthesis"
+      ]
+    },
+    {
+      "term": "ethics essay answer skill",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-ict-ethics-law-and-digital-governance-synthesis"
+      ]
+    },
+    {
+      "term": "evaluate algorithm choice",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-data-structures-and-complexity-revision"
+      ]
+    },
+    {
+      "term": "evaluate cloud migration case",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-cloud-virtualization-and-infrastructure-synthesis"
+      ]
+    },
+    {
+      "term": "evaluate data interpretation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-data-analytics-and-information-management-synthesis"
+      ]
+    },
+    {
+      "term": "evaluate database performance",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-database-management-revision-synthesis"
+      ]
+    },
+    {
+      "term": "evaluate Hong Kong digital policy",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-hong-kong-ict-context-and-policy-synthesis"
+      ]
+    },
+    {
+      "term": "evaluate innovation impact",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-emerging-technologies-and-digital-innovation-synthesis"
+      ]
+    },
+    {
+      "term": "evaluate multimedia product quality",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-multimedia-and-digital-content-synthesis"
+      ]
+    },
+    {
+      "term": "evaluate network performance",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-networking-and-internet-revision-synthesis"
+      ]
+    },
+    {
+      "term": "evaluate practical product quality",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-ict-practical-task-revision-and-readiness"
+      ]
+    },
+    {
+      "term": "evaluate privacy trade-off",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-ict-ethics-law-and-digital-governance-synthesis"
+      ]
+    },
+    {
+      "term": "evaluate program correctness",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-programming-and-algorithm-revision-synthesis"
+      ]
+    },
+    {
+      "term": "evaluate project outcome",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-ict-project-management-and-collaboration-synthesis"
+      ]
+    },
+    {
+      "term": "evaluate security architecture",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-cybersecurity-and-risk-management-synthesis"
+      ]
+    },
+    {
+      "term": "evaluate system proposal",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-systems-development-and-analysis-synthesis"
+      ]
+    },
+    {
+      "term": "evaluate website design quality",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-web-technologies-and-application-synthesis"
+      ]
+    },
+    {
+      "term": "event driven programming revision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-programming-and-algorithm-revision-synthesis"
+      ]
+    },
+    {
+      "term": "exception handling revision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-programming-and-algorithm-revision-synthesis"
+      ]
+    },
+    {
+      "term": "feasibility study revision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-systems-development-and-analysis-synthesis"
+      ]
+    },
+    {
+      "term": "firewall revision function",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-cybersecurity-and-risk-management-synthesis"
+      ]
+    },
+    {
+      "term": "flowchart interpretation revision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-programming-and-algorithm-revision-synthesis"
+      ]
+    },
+    {
+      "term": "foreign key revision rule",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-database-management-revision-synthesis"
+      ]
+    },
+    {
+      "term": "function procedure revision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-programming-and-algorithm-revision-synthesis"
+      ]
+    },
+    {
+      "term": "future technology prediction skill",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-emerging-technologies-and-digital-innovation-synthesis"
+      ]
+    },
+    {
+      "term": "gantt chart revision interpretation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-ict-project-management-and-collaboration-synthesis"
+      ]
+    },
+    {
+      "term": "governance case synthesis analysis",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-ict-ethics-law-and-digital-governance-synthesis"
+      ]
+    },
+    {
+      "term": "Greater Bay Area digital revision link",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-hong-kong-ict-context-and-policy-synthesis"
+      ]
+    },
+    {
+      "term": "green computing revision practice",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-ict-ethics-law-and-digital-governance-synthesis"
+      ]
+    },
+    {
+      "term": "hash table revision concept",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-data-structures-and-complexity-revision"
+      ]
+    },
+    {
+      "term": "HKDSE algorithm integration",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-data-structures-and-complexity-revision"
+      ]
+    },
+    {
+      "term": "HKDSE analytics integration",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-data-analytics-and-information-management-synthesis"
+      ]
+    },
+    {
+      "term": "HKDSE cloud integration",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-cloud-virtualization-and-infrastructure-synthesis"
+      ]
+    },
+    {
+      "term": "HKDSE database integration",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-database-management-revision-synthesis"
+      ]
+    },
+    {
+      "term": "HKDSE emerging tech integration",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-emerging-technologies-and-digital-innovation-synthesis"
+      ]
+    },
+    {
+      "term": "HKDSE ethics integration",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-ict-ethics-law-and-digital-governance-synthesis"
+      ]
+    },
+    {
+      "term": "HKDSE Hong Kong ICT synthesis",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-hong-kong-ict-context-and-policy-synthesis"
+      ]
+    },
+    {
+      "term": "HKDSE ICT examination readiness",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-ict-examination-evaluation-and-cross-topic-synthesis"
+      ]
+    },
+    {
+      "term": "HKDSE multimedia integration",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-multimedia-and-digital-content-synthesis"
+      ]
+    },
+    {
+      "term": "HKDSE networking integration",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-networking-and-internet-revision-synthesis"
+      ]
+    },
+    {
+      "term": "HKDSE practical integration",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-ict-practical-task-revision-and-readiness"
+      ]
+    },
+    {
+      "term": "HKDSE programming integration",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-programming-and-algorithm-revision-synthesis"
+      ]
+    },
+    {
+      "term": "HKDSE project integration",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-ict-project-management-and-collaboration-synthesis"
+      ]
+    },
+    {
+      "term": "HKDSE security integration",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-cybersecurity-and-risk-management-synthesis"
+      ]
+    },
+    {
+      "term": "HKDSE systems integration",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-systems-development-and-analysis-synthesis"
+      ]
+    },
+    {
+      "term": "HKDSE web integration",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-web-technologies-and-application-synthesis"
+      ]
+    },
+    {
+      "term": "Hong Kong cloud adoption revision trend",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-hong-kong-ict-context-and-policy-synthesis"
+      ]
+    },
+    {
+      "term": "Hong Kong context data response",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-hong-kong-ict-context-and-policy-synthesis"
+      ]
+    },
+    {
+      "term": "Hong Kong cybersecurity revision strategy",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-hong-kong-ict-context-and-policy-synthesis"
+      ]
+    },
+    {
+      "term": "Hong Kong digital economy revision blueprint",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-hong-kong-ict-context-and-policy-synthesis"
+      ]
+    },
+    {
+      "term": "Hong Kong digital inclusion revision issue",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-hong-kong-ict-context-and-policy-synthesis"
+      ]
+    },
+    {
+      "term": "Hong Kong digital literacy revision programme",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-hong-kong-ict-context-and-policy-synthesis"
+      ]
+    },
+    {
+      "term": "Hong Kong e payment revision ecosystem",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-hong-kong-ict-context-and-policy-synthesis"
+      ]
+    },
+    {
+      "term": "Hong Kong fintech revision development",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-hong-kong-ict-context-and-policy-synthesis"
+      ]
+    },
+    {
+      "term": "Hong Kong ICT case revision example",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-hong-kong-ict-context-and-policy-synthesis"
+      ]
+    },
+    {
+      "term": "Hong Kong ICT policy essay skill",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-hong-kong-ict-context-and-policy-synthesis"
+      ]
+    },
+    {
+      "term": "Hong Kong innovation technology revision policy",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-hong-kong-ict-context-and-policy-synthesis"
+      ]
+    },
+    {
+      "term": "Hong Kong personal data revision regulation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-hong-kong-ict-context-and-policy-synthesis"
+      ]
+    },
+    {
+      "term": "Hong Kong smart city revision initiative",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-hong-kong-ict-context-and-policy-synthesis"
+      ]
+    },
+    {
+      "term": "Hong Kong startup revision ecosystem",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-hong-kong-ict-context-and-policy-synthesis"
+      ]
+    },
+    {
+      "term": "Hong Kong STEM talent revision pipeline",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-hong-kong-ict-context-and-policy-synthesis"
+      ]
+    },
+    {
+      "term": "Hong Kong technology impact analysis",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-hong-kong-ict-context-and-policy-synthesis"
+      ]
+    },
+    {
+      "term": "hybrid cloud revision concept",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-cloud-virtualization-and-infrastructure-synthesis"
+      ]
+    },
+    {
+      "term": "hypertext markup language revision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-web-technologies-and-application-synthesis"
+      ]
+    },
+    {
+      "term": "ICT algorithm trace revision skill",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-ict-examination-evaluation-and-cross-topic-synthesis"
+      ]
+    },
+    {
+      "term": "ICT cost benefit revision analysis",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-ict-examination-evaluation-and-cross-topic-synthesis"
+      ]
+    },
+    {
+      "term": "ICT cross topic revision synthesis",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-ict-examination-evaluation-and-cross-topic-synthesis"
+      ]
+    },
+    {
+      "term": "ICT data response revision interpretation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-ict-examination-evaluation-and-cross-topic-synthesis"
+      ]
+    },
+    {
+      "term": "ICT database query revision interpretation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-ict-examination-evaluation-and-cross-topic-synthesis"
+      ]
+    },
+    {
+      "term": "ICT diagram annotation revision skill",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-ict-examination-evaluation-and-cross-topic-synthesis"
+      ]
+    },
+    {
+      "term": "ICT ethical issue revision evaluation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-ict-examination-evaluation-and-cross-topic-synthesis"
+      ]
+    },
+    {
+      "term": "ICT evaluation with evidence revision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-ict-examination-evaluation-and-cross-topic-synthesis"
+      ]
+    },
+    {
+      "term": "ICT examination command word revision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-ict-examination-evaluation-and-cross-topic-synthesis"
+      ]
+    },
+    {
+      "term": "ICT final revision planning skill",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-ict-examination-evaluation-and-cross-topic-synthesis"
+      ]
+    },
+    {
+      "term": "ICT network analysis revision skill",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-ict-examination-evaluation-and-cross-topic-synthesis"
+      ]
+    },
+    {
+      "term": "ICT paper time management revision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-ict-examination-evaluation-and-cross-topic-synthesis"
+      ]
+    },
+    {
+      "term": "ICT requirement revision prioritization",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-ict-examination-evaluation-and-cross-topic-synthesis"
+      ]
+    },
+    {
+      "term": "ICT risk mitigation revision proposal",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-ict-examination-evaluation-and-cross-topic-synthesis"
+      ]
+    },
+    {
+      "term": "ICT scenario problem revision identification",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-ict-examination-evaluation-and-cross-topic-synthesis"
+      ]
+    },
+    {
+      "term": "ICT security incident revision analysis",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-ict-examination-evaluation-and-cross-topic-synthesis"
+      ]
+    },
+    {
+      "term": "ICT solution revision comparison matrix",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-ict-examination-evaluation-and-cross-topic-synthesis"
+      ]
+    },
+    {
+      "term": "ICT structured long answer revision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-ict-examination-evaluation-and-cross-topic-synthesis"
+      ]
+    },
+    {
+      "term": "ICT system limitation revision analysis",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-ict-examination-evaluation-and-cross-topic-synthesis"
+      ]
+    },
+    {
+      "term": "ICT technology trend revision evaluation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-ict-examination-evaluation-and-cross-topic-synthesis"
+      ]
+    },
+    {
+      "term": "implementation planning revision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-systems-development-and-analysis-synthesis"
+      ]
+    },
+    {
+      "term": "incident response revision plan",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-cybersecurity-and-risk-management-synthesis"
+      ]
+    },
+    {
+      "term": "information management revision workflow",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-data-analytics-and-information-management-synthesis"
+      ]
+    },
+    {
+      "term": "information quality revision criterion",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-data-analytics-and-information-management-synthesis"
+      ]
+    },
+    {
+      "term": "information security revision principle",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-cybersecurity-and-risk-management-synthesis"
+      ]
+    },
+    {
+      "term": "infrastructure as a service revision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-cloud-virtualization-and-infrastructure-synthesis"
+      ]
+    },
+    {
+      "term": "infrastructure case synthesis",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-cloud-virtualization-and-infrastructure-synthesis"
+      ]
+    },
+    {
+      "term": "inheritance revision concept",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-programming-and-algorithm-revision-synthesis"
+      ]
+    },
+    {
+      "term": "innovation policy evaluation skill",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-emerging-technologies-and-digital-innovation-synthesis"
+      ]
+    },
+    {
+      "term": "intellectual property revision right",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-ict-ethics-law-and-digital-governance-synthesis"
+      ]
+    },
+    {
+      "term": "interactive media revision design",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-multimedia-and-digital-content-synthesis"
+      ]
+    },
+    {
+      "term": "internet of things revision concept",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-emerging-technologies-and-digital-innovation-synthesis"
+      ]
+    },
+    {
+      "term": "internet protocol revision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-networking-and-internet-revision-synthesis"
+      ]
+    },
+    {
+      "term": "internet service revision concept",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-networking-and-internet-revision-synthesis"
+      ]
+    },
+    {
+      "term": "intrusion detection revision system",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-cybersecurity-and-risk-management-synthesis"
+      ]
+    },
+    {
+      "term": "join operation revision skill",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-database-management-revision-synthesis"
+      ]
+    },
+    {
+      "term": "key performance indicator revision tracking",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-data-analytics-and-information-management-synthesis"
+      ]
+    },
+    {
+      "term": "legal compliance revision checklist",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-ict-ethics-law-and-digital-governance-synthesis"
+      ]
+    },
+    {
+      "term": "linked list revision concept",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-data-structures-and-complexity-revision"
+      ]
+    },
+    {
+      "term": "load balancing revision concept",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-cloud-virtualization-and-infrastructure-synthesis"
+      ]
+    },
+    {
+      "term": "local area network revision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-networking-and-internet-revision-synthesis"
+      ]
+    },
+    {
+      "term": "local technology revision adoption trend",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-hong-kong-ict-context-and-policy-synthesis"
+      ]
+    },
+    {
+      "term": "machine learning revision concept",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-emerging-technologies-and-digital-innovation-synthesis"
+      ]
+    },
+    {
+      "term": "maintenance phase revision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-systems-development-and-analysis-synthesis"
+      ]
+    },
+    {
+      "term": "malware threat revision type",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-cybersecurity-and-risk-management-synthesis"
+      ]
+    },
+    {
+      "term": "media file optimization revision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-multimedia-and-digital-content-synthesis"
+      ]
+    },
+    {
+      "term": "multimedia authoring revision tool",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-multimedia-and-digital-content-synthesis"
+      ]
+    },
+    {
+      "term": "multimedia case synthesis analysis",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-multimedia-and-digital-content-synthesis"
+      ]
+    },
+    {
+      "term": "multimedia design justification skill",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-multimedia-and-digital-content-synthesis"
+      ]
+    },
+    {
+      "term": "multimedia element revision type",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-multimedia-and-digital-content-synthesis"
+      ]
+    },
+    {
+      "term": "multimedia project revision checklist",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-multimedia-and-digital-content-synthesis"
+      ]
+    },
+    {
+      "term": "network configuration case synthesis",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-networking-and-internet-revision-synthesis"
+      ]
+    },
+    {
+      "term": "network data response skill",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-networking-and-internet-revision-synthesis"
+      ]
+    },
+    {
+      "term": "network diagram interpretation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-networking-and-internet-revision-synthesis"
+      ]
+    },
+    {
+      "term": "network fault analysis skill",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-networking-and-internet-revision-synthesis"
+      ]
+    },
+    {
+      "term": "network security layer revision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-networking-and-internet-revision-synthesis"
+      ]
+    },
+    {
+      "term": "network topology revision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-networking-and-internet-revision-synthesis"
+      ]
+    },
+    {
+      "term": "network troubleshooting revision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-networking-and-internet-revision-synthesis"
+      ]
+    },
+    {
+      "term": "normalization revision concept",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-database-management-revision-synthesis"
+      ]
+    },
+    {
+      "term": "object oriented concept revision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-programming-and-algorithm-revision-synthesis"
+      ]
+    },
+    {
+      "term": "packet switching revision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-networking-and-internet-revision-synthesis"
+      ]
+    },
+    {
+      "term": "personal data privacy ordinance revision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-ict-ethics-law-and-digital-governance-synthesis"
+      ]
+    },
+    {
+      "term": "personal data privacy revision rule",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-ict-ethics-law-and-digital-governance-synthesis"
+      ]
+    },
+    {
+      "term": "phishing attack revision case",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-cybersecurity-and-risk-management-synthesis"
+      ]
+    },
+    {
+      "term": "platform as a service revision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-cloud-virtualization-and-infrastructure-synthesis"
+      ]
+    },
+    {
+      "term": "policy recommendation revision skill",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-ict-ethics-law-and-digital-governance-synthesis"
+      ]
+    },
+    {
+      "term": "polymorphism revision concept",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-programming-and-algorithm-revision-synthesis"
+      ]
+    },
+    {
+      "term": "practical backup revision strategy",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-ict-practical-task-revision-and-readiness"
+      ]
+    },
+    {
+      "term": "practical case synthesis analysis",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-ict-practical-task-revision-and-readiness"
+      ]
+    },
+    {
+      "term": "practical debugging revision workflow",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-ict-practical-task-revision-and-readiness"
+      ]
+    },
+    {
+      "term": "practical demonstration revision skill",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-ict-practical-task-revision-and-readiness"
+      ]
+    },
+    {
+      "term": "practical design revision specification",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-ict-practical-task-revision-and-readiness"
+      ]
+    },
+    {
+      "term": "practical documentation revision standard",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-ict-practical-task-revision-and-readiness"
+      ]
+    },
+    {
+      "term": "practical evaluation revision report",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-ict-practical-task-revision-and-readiness"
+      ]
+    },
+    {
+      "term": "practical file organization revision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-ict-practical-task-revision-and-readiness"
+      ]
+    },
+    {
+      "term": "practical implementation revision step",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-ict-practical-task-revision-and-readiness"
+      ]
+    },
+    {
+      "term": "practical improvement revision proposal",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-ict-practical-task-revision-and-readiness"
+      ]
+    },
+    {
+      "term": "practical limitation revision discussion",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-ict-practical-task-revision-and-readiness"
+      ]
+    },
+    {
+      "term": "practical peer review revision skill",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-ict-practical-task-revision-and-readiness"
+      ]
+    },
+    {
+      "term": "practical readiness revision checklist",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-ict-practical-task-revision-and-readiness"
+      ]
+    },
+    {
+      "term": "practical requirement revision analysis",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-ict-practical-task-revision-and-readiness"
+      ]
+    },
+    {
+      "term": "practical test case revision design",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-ict-practical-task-revision-and-readiness"
+      ]
+    },
+    {
+      "term": "practical testing revision plan",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-ict-practical-task-revision-and-readiness"
+      ]
+    },
+    {
+      "term": "practical time planning revision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-ict-practical-task-revision-and-readiness"
+      ]
+    },
+    {
+      "term": "practical user manual revision writing",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-ict-practical-task-revision-and-readiness"
+      ]
+    },
+    {
+      "term": "primary key revision rule",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-database-management-revision-synthesis"
+      ]
+    },
+    {
+      "term": "private cloud revision concept",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-cloud-virtualization-and-infrastructure-synthesis"
+      ]
+    },
+    {
+      "term": "programming case synthesis",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-programming-and-algorithm-revision-synthesis"
+      ]
+    },
+    {
+      "term": "programming concept revision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-programming-and-algorithm-revision-synthesis"
+      ]
+    },
+    {
+      "term": "programming essay answer skill",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-programming-and-algorithm-revision-synthesis"
+      ]
+    },
+    {
+      "term": "project case synthesis analysis",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-ict-project-management-and-collaboration-synthesis"
+      ]
+    },
+    {
+      "term": "project documentation revision standard",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-ict-project-management-and-collaboration-synthesis"
+      ]
+    },
+    {
+      "term": "project evaluation report skill",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-ict-project-management-and-collaboration-synthesis"
+      ]
+    },
+    {
+      "term": "project management data response",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-ict-project-management-and-collaboration-synthesis"
+      ]
+    },
+    {
+      "term": "project recommendation skill",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-ict-project-management-and-collaboration-synthesis"
+      ]
+    },
+    {
+      "term": "project schedule revision planning",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-ict-project-management-and-collaboration-synthesis"
+      ]
+    },
+    {
+      "term": "project scope revision definition",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-ict-project-management-and-collaboration-synthesis"
+      ]
+    },
+    {
+      "term": "prototype testing revision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-systems-development-and-analysis-synthesis"
+      ]
+    },
+    {
+      "term": "pseudocode writing revision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-programming-and-algorithm-revision-synthesis"
+      ]
+    },
+    {
+      "term": "public cloud revision concept",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-cloud-virtualization-and-infrastructure-synthesis"
+      ]
+    },
+    {
+      "term": "query optimization revision concept",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-database-management-revision-synthesis"
+      ]
+    },
+    {
+      "term": "recursion revision concept",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-programming-and-algorithm-revision-synthesis"
+      ]
+    },
+    {
+      "term": "relational database revision concept",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-database-management-revision-synthesis"
+      ]
+    },
+    {
+      "term": "representational state transfer revision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-web-technologies-and-application-synthesis"
+      ]
+    },
+    {
+      "term": "requirement analysis revision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-systems-development-and-analysis-synthesis"
+      ]
+    },
+    {
+      "term": "resource allocation revision plan",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-ict-project-management-and-collaboration-synthesis"
+      ]
+    },
+    {
+      "term": "responsive design revision concept",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-web-technologies-and-application-synthesis"
+      ]
+    },
+    {
+      "term": "risk assessment revision matrix",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-cybersecurity-and-risk-management-synthesis"
+      ]
+    },
+    {
+      "term": "risk management revision plan",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-ict-project-management-and-collaboration-synthesis"
+      ]
+    },
+    {
+      "term": "robotics automation revision trend",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-emerging-technologies-and-digital-innovation-synthesis"
+      ]
+    },
+    {
+      "term": "router switch revision role",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-networking-and-internet-revision-synthesis"
+      ]
+    },
+    {
+      "term": "scalability revision concept",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-cloud-virtualization-and-infrastructure-synthesis"
+      ]
+    },
+    {
+      "term": "SDLC essay answer skill",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-systems-development-and-analysis-synthesis"
+      ]
+    },
+    {
+      "term": "searching algorithm revision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-data-structures-and-complexity-revision"
+      ]
+    },
+    {
+      "term": "security audit revision procedure",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-cybersecurity-and-risk-management-synthesis"
+      ]
+    },
+    {
+      "term": "security incident case synthesis",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-cybersecurity-and-risk-management-synthesis"
+      ]
+    },
+    {
+      "term": "security policy revision document",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-cybersecurity-and-risk-management-synthesis"
+      ]
+    },
+    {
+      "term": "security recommendation skill",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-cybersecurity-and-risk-management-synthesis"
+      ]
+    },
+    {
+      "term": "select query revision skill",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-database-management-revision-synthesis"
+      ]
+    },
+    {
+      "term": "server side scripting revision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-web-technologies-and-application-synthesis"
+      ]
+    },
+    {
+      "term": "session management revision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-web-technologies-and-application-synthesis"
+      ]
+    },
+    {
+      "term": "smart city revision technology",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-emerging-technologies-and-digital-innovation-synthesis"
+      ]
+    },
+    {
+      "term": "software as a service revision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-cloud-virtualization-and-infrastructure-synthesis"
+      ]
+    },
+    {
+      "term": "sorting algorithm revision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-data-structures-and-complexity-revision"
+      ]
+    },
+    {
+      "term": "space complexity revision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-data-structures-and-complexity-revision"
+      ]
+    },
+    {
+      "term": "spreadsheet modelling revision skill",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-data-analytics-and-information-management-synthesis"
+      ]
+    },
+    {
+      "term": "stack queue revision concept",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-data-structures-and-complexity-revision"
+      ]
+    },
+    {
+      "term": "stakeholder revision analysis",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-ict-project-management-and-collaboration-synthesis"
+      ]
+    },
+    {
+      "term": "storyboard revision planning method",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-multimedia-and-digital-content-synthesis"
+      ]
+    },
+    {
+      "term": "streaming media revision protocol",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-multimedia-and-digital-content-synthesis"
+      ]
+    },
+    {
+      "term": "structured query language revision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-database-management-revision-synthesis"
+      ]
+    },
+    {
+      "term": "subnetting revision concept",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-networking-and-internet-revision-synthesis"
+      ]
+    },
+    {
+      "term": "symmetric encryption revision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-cybersecurity-and-risk-management-synthesis"
+      ]
+    },
+    {
+      "term": "system design revision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-systems-development-and-analysis-synthesis"
+      ]
+    },
+    {
+      "term": "system documentation revision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-systems-development-and-analysis-synthesis"
+      ]
+    },
+    {
+      "term": "systems analysis case synthesis",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-systems-development-and-analysis-synthesis"
+      ]
+    },
+    {
+      "term": "systems development lifecycle revision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-systems-development-and-analysis-synthesis"
+      ]
+    },
+    {
+      "term": "systems evaluation report skill",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-systems-development-and-analysis-synthesis"
+      ]
+    },
+    {
+      "term": "team communication revision protocol",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-ict-project-management-and-collaboration-synthesis"
+      ]
+    },
+    {
+      "term": "technology adoption lifecycle",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-emerging-technologies-and-digital-innovation-synthesis"
+      ]
+    },
+    {
+      "term": "technology trend analysis skill",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-emerging-technologies-and-digital-innovation-synthesis"
+      ]
+    },
+    {
+      "term": "test case design revision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-programming-and-algorithm-revision-synthesis"
+      ]
+    },
+    {
+      "term": "testing milestone revision review",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-ict-project-management-and-collaboration-synthesis"
+      ]
+    },
+    {
+      "term": "time complexity revision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-data-structures-and-complexity-revision"
+      ]
+    },
+    {
+      "term": "trace table revision skill",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-programming-and-algorithm-revision-synthesis"
+      ]
+    },
+    {
+      "term": "transmission control protocol revision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-networking-and-internet-revision-synthesis"
+      ]
+    },
+    {
+      "term": "tree structure revision concept",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-data-structures-and-complexity-revision"
+      ]
+    },
+    {
+      "term": "use case diagram revision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-systems-development-and-analysis-synthesis"
+      ]
+    },
+    {
+      "term": "user acceptance testing revision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-systems-development-and-analysis-synthesis"
+      ]
+    },
+    {
+      "term": "user experience revision principle",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-multimedia-and-digital-content-synthesis"
+      ]
+    },
+    {
+      "term": "version control revision workflow",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-ict-project-management-and-collaboration-synthesis"
+      ]
+    },
+    {
+      "term": "video frame rate revision concept",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-multimedia-and-digital-content-synthesis"
+      ]
+    },
+    {
+      "term": "virtual machine revision concept",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-cloud-virtualization-and-infrastructure-synthesis"
+      ]
+    },
+    {
+      "term": "virtual private network revision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-networking-and-internet-revision-synthesis"
+      ]
+    },
+    {
+      "term": "virtual reality revision application",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-emerging-technologies-and-digital-innovation-synthesis"
+      ]
+    },
+    {
+      "term": "virtualization revision benefit",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-cloud-virtualization-and-infrastructure-synthesis"
+      ]
+    },
+    {
+      "term": "waterfall model revision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-systems-development-and-analysis-synthesis"
+      ]
+    },
+    {
+      "term": "web accessibility revision principle",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-web-technologies-and-application-synthesis"
+      ]
+    },
+    {
+      "term": "web application architecture revision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-web-technologies-and-application-synthesis"
+      ]
+    },
+    {
+      "term": "web application case synthesis",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-web-technologies-and-application-synthesis"
+      ]
+    },
+    {
+      "term": "web debugging revision skill",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-web-technologies-and-application-synthesis"
+      ]
+    },
+    {
+      "term": "web performance revision optimization",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-web-technologies-and-application-synthesis"
+      ]
+    },
+    {
+      "term": "web security threat revision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-web-technologies-and-application-synthesis"
+      ]
+    },
+    {
+      "term": "web server revision role",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-web-technologies-and-application-synthesis"
+      ]
+    },
+    {
+      "term": "web solution recommendation skill",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-web-technologies-and-application-synthesis"
+      ]
+    },
+    {
+      "term": "web technology data response",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-web-technologies-and-application-synthesis"
+      ]
+    },
+    {
+      "term": "wide area network revision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-networking-and-internet-revision-synthesis"
+      ]
+    },
+    {
+      "term": "work breakdown revision structure",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-ict-project-management-and-collaboration-synthesis"
+      ]
+    },
+    {
+      "term": "worst case analysis revision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s6",
+        "ict",
+        "curriculum-style",
+        "hkdse-data-structures-and-complexity-revision"
       ]
     }
   ]

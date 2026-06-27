@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>第2节：枪手 vs 教练——两种用法的大比拼（40分钟）</title>
+  <style>
+    :root {
+      --bg: #f8fafc;
+      --card: #ffffff;
+      --text: #1e293b;
+      --muted: #64748b;
+      --accent: #2563eb;
+      --accent-light: #dbeafe;
+      --shooter: #ef4444;
+      --shooter-bg: #fef2f2;
+      --coach: #16a34a;
+      --coach-bg: #f0fdf4;
+      --border: #e2e8f0;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: "PingFang SC", "Microsoft YaHei", "Noto Sans SC", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      padding: 2rem 1rem;
+    }
+
+    .container {
+      max-width: 860px;
+      margin: 0 auto;
+    }
+
+    header {
+      background: linear-gradient(135deg, #1e40af, #2563eb);
+      color: #fff;
+      border-radius: 16px;
+      padding: 2rem 2.5rem;
+      margin-bottom: 2rem;
+    }
+
+    header h1 {
+      font-size: 1.6rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .core-message {
+      background: rgba(255,255,255,0.15);
+      border-radius: 8px;
+      padding: 0.75rem 1rem;
+      font-size: 1.05rem;
+    }
+
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-top: 1rem;
+      font-size: 0.9rem;
+      opacity: 0.9;
+    }
+
+    section {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.75rem 2rem;
+      margin-bottom: 1.5rem;
+    }
+
+    section h2 {
+      font-size: 1.2rem;
+      color: var(--accent);
+      margin-bottom: 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid var(--accent-light);
+    }
+
+    .time-badge {
+      display: inline-block;
+      background: var(--accent-light);
+      color: var(--accent);
+      font-size: 0.85rem;
+      font-weight: 600;
+      padding: 0.2rem 0.65rem;
+      border-radius: 999px;
+      margin-left: 0.5rem;
+      vertical-align: middle;
+    }
+
+    .timeline {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.95rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .timeline th,
+    .timeline td {
+      border: 1px solid var(--border);
+      padding: 0.6rem 0.85rem;
+      text-align: left;
+    }
+
+    .timeline th {
+      background: #f1f5f9;
+      font-weight: 600;
+    }
+
+    .timeline tfoot td {
+      font-weight: 700;
+      background: var(--accent-light);
+    }
+
+    blockquote.teacher {
+      border-left: 4px solid var(--accent);
+      background: #f8fafc;
+      padding: 1rem 1.25rem;
+      margin: 1rem 0;
+      border-radius: 0 8px 8px 0;
+      font-style: normal;
+    }
+
+    blockquote.teacher strong {
+      display: block;
+      color: var(--muted);
+      font-size: 0.8rem;
+      margin-bottom: 0.35rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .prompt-box {
+      background: #1e293b;
+      color: #e2e8f0;
+      border-radius: 8px;
+      padding: 1rem 1.25rem;
+      font-family: "SF Mono", "Fira Code", monospace;
+      font-size: 0.92rem;
+      margin: 1rem 0;
+      white-space: pre-wrap;
+    }
+
+    .prompt-box.shooter { border-left: 4px solid var(--shooter); }
+    .prompt-box.coach { border-left: 4px solid var(--coach); }
+
+    .question-card {
+      background: #fffbeb;
+      border: 1px solid #fde68a;
+      border-radius: 10px;
+      padding: 1.25rem 1.5rem;
+      margin: 1rem 0;
+    }
+
+    .question-card h3 {
+      font-size: 1rem;
+      color: #92400e;
+      margin-bottom: 0.75rem;
+    }
+
+    .options {
+      list-style: none;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.4rem 1.5rem;
+      margin-top: 0.75rem;
+    }
+
+    @media (max-width: 520px) {
+      .options { grid-template-columns: 1fr; }
+    }
+
+    .compare-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1rem 0;
+    }
+
+    .compare-table th,
+    .compare-table td {
+      border: 1px solid var(--border);
+      padding: 0.65rem 0.85rem;
+      text-align: center;
+    }
+
+    .compare-table thead th:first-child { background: #f1f5f9; }
+    .compare-table thead th:nth-child(2) { background: var(--shooter-bg); color: var(--shooter); }
+    .compare-table thead th:nth-child(3) { background: var(--coach-bg); color: var(--coach); }
+
+    .compare-table td:first-child {
+      text-align: left;
+      font-weight: 500;
+      background: #f8fafc;
+    }
+
+    .dialogue-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.92rem;
+      margin: 1rem 0;
+    }
+
+    .dialogue-table th,
+    .dialogue-table td {
+      border: 1px solid var(--border);
+      padding: 0.55rem 0.75rem;
+      vertical-align: top;
+    }
+
+    .dialogue-table th {
+      background: #f1f5f9;
+    }
+
+    .dialogue-table td:first-child {
+      background: var(--coach-bg);
+      width: 55%;
+    }
+
+    ul.steps {
+      padding-left: 1.25rem;
+    }
+
+    ul.steps li {
+      margin-bottom: 0.4rem;
+    }
+
+    .checklist {
+      list-style: none;
+      padding: 0;
+    }
+
+    .checklist li {
+      padding: 0.35rem 0;
+      padding-left: 1.5rem;
+      position: relative;
+    }
+
+    .checklist li::before {
+      content: "☐";
+      position: absolute;
+      left: 0;
+    }
+
+    .homework-form {
+      border: 1px dashed var(--border);
+      border-radius: 8px;
+      padding: 1.25rem;
+      margin-top: 1rem;
+    }
+
+    .homework-form .field {
+      margin-bottom: 1.25rem;
+    }
+
+    .homework-form .field label {
+      display: block;
+      font-weight: 600;
+      margin-bottom: 0.35rem;
+    }
+
+    .homework-form .blank {
+      border-bottom: 1px solid #94a3b8;
+      min-height: 1.5rem;
+      margin-top: 0.25rem;
+    }
+
+    .tip-box {
+      background: #eff6ff;
+      border: 1px solid #bfdbfe;
+      border-radius: 8px;
+      padding: 0.85rem 1rem;
+      font-size: 0.92rem;
+      margin-top: 1rem;
+    }
+
+    .tip-box.warning {
+      background: #fff7ed;
+      border-color: #fed7aa;
+    }
+
+    footer {
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.85rem;
+      padding: 1rem 0 2rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <header>
+      <h1>第2节：枪手 vs 教练——两种用法的大比拼</h1>
+      <div class="core-message">本节课核心信息：同一个 AI，用法不同，结果差很远。</div>
+      <div class="meta">
+        <span>⏱ 总时长：40 分钟</span>
+        <span>👥 适用对象：初一（可兼顾小六升中过渡）</span>
+        <span>🛠 所需工具：可上网的设备、纸笔、白板或投影</span>
+      </div>
+    </header>
+
+    <!-- 时间总览 -->
+    <section>
+      <h2>时间总览</h2>
+      <table class="timeline">
+        <thead>
+          <tr>
+            <th>环节</th>
+            <th>内容</th>
+            <th>时间</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>1</td><td>引入：两个小明的故事</td><td>5 分钟</td></tr>
+          <tr><td>2</td><td>实验：枪手模式</td><td>7 分钟</td></tr>
+          <tr><td>3</td><td>实验：教练模式</td><td>13 分钟</td></tr>
+          <tr><td>4</td><td>画出区别</td><td>5 分钟</td></tr>
+          <tr><td>5</td><td>定规矩 + 口诀</td><td>7 分钟</td></tr>
+          <tr><td>6</td><td>作业说明 + 收束</td><td>3 分钟</td></tr>
+        </tbody>
+        <tfoot>
+          <tr><td colspan="2">合计</td><td>40 分钟</td></tr>
+        </tfoot>
+      </table>
+    </section>
+
+    <!-- 环节 1 -->
+    <section>
+      <h2>环节 1：引入——两个小明的故事 <span class="time-badge">5 分钟</span></h2>
+
+      <blockquote class="teacher">
+        <strong>教师话术</strong>
+        「有两个小明，都用 AI 做功课。第一个对 AI 说：『帮我把这道题全做了』，抄完就交。第二个对 AI 说：『不要给我答案，教我怎么做好』。考试那天……谁会做？」
+      </blockquote>
+
+      <p><strong>等待学生回答</strong>（通常会答第二个），再追问：</p>
+      <blockquote class="teacher">
+        <strong>追问</strong>
+        「为什么？第一个不也交了功课吗？」
+      </blockquote>
+
+      <p><strong>带出比喻：</strong></p>
+      <ul class="steps">
+        <li><strong>枪手模式</strong>——AI 帮你「射中目标」（交功课），但你自己不会瞄准。</li>
+        <li><strong>教练模式</strong>——AI 不帮你射，但一步步教你怎样自己射中。</li>
+      </ul>
+
+      <blockquote class="teacher">
+        <strong>快速确认</strong>
+        「哪个模式快？哪个模式对考试有用？」（让学生先猜，实验后再验证。）
+      </blockquote>
+    </section>
+
+    <!-- 示范题目 -->
+    <section>
+      <h2>示范题目（初一数学 · 选择题 · 较难）</h2>
+
+      <div class="question-card">
+        <h3>📐 课堂实验共用题目</h3>
+        <p>某长方形，若<strong>长增加 4 cm、宽减少 2 cm</strong>，面积不变；若<strong>长减少 2 cm、宽增加 3 cm</strong>，面积增加 6 cm²。原长方形的面积为多少 cm²？</p>
+        <ul class="options">
+          <li>A. 48</li>
+          <li>B. 60</li>
+          <li>C. 72</li>
+          <li>D. 84</li>
+        </ul>
+      </div>
+
+      <div class="tip-box">
+        <strong>选题说明：</strong>本题需要设未知数、列方程、联立求解，涉及多步推理，不适合「一眼看出答案」。正好凸显枪手模式「抄了也不懂」与教练模式「自己推出来」的对比。
+      </div>
+
+      <details style="margin-top:1rem;">
+        <summary style="cursor:pointer;color:var(--muted);font-size:0.9rem;">教师参考答案（勿提前透露）</summary>
+        <p style="margin-top:0.75rem;font-size:0.92rem;">
+          设原长为 <em>l</em> cm，宽为 <em>w</em> cm。<br>
+          由面积不变：<em>lw</em> = (<em>l</em>+4)(<em>w</em>−2) → 2<em>w</em> − <em>l</em> = 4 → <em>l</em> = 2<em>w</em> − 4<br>
+          由面积增加 6：(<em>l</em>−2)(<em>w</em>+3) = <em>lw</em> + 6 → 3<em>l</em> − 2<em>w</em> = 12<br>
+          代入得 <em>w</em> = 6，<em>l</em> = 8，面积 = <strong>48 cm²（A）</strong>
+        </p>
+      </details>
+    </section>
+
+    <!-- 环节 2 -->
+    <section>
+      <h2>环节 2：实验——枪手模式 <span class="time-badge">7 分钟</span></h2>
+
+      <ol class="steps">
+        <li><strong>发题（1 分钟）</strong>：全班看题，先不要动笔算，等 AI 给答案。</li>
+        <li><strong>输入指令（1 分钟）</strong>：请学生输入以下指令（可投影示范）：</li>
+      </ol>
+
+      <div class="prompt-box shooter">请直接告诉我这道题的答案。</div>
+
+      <ol class="steps" start="3">
+        <li><strong>AI 回复后（2 分钟）</strong>：让学生照抄答案（通常为 A. 48）。</li>
+        <li><strong>关键追问（3 分钟）</strong>——逐个或举手问：</li>
+      </ol>
+
+      <blockquote class="teacher">
+        <strong>追问</strong>
+        「你明白为什么是 48 吗？」<br>
+        「如果 AI 说是 B，你会不会也照抄？」<br>
+        「考试没有 AI，你会做吗？」
+      </blockquote>
+
+      <p><strong>预期：</strong>多数学生答不出完整推导，或只能复述「因为长是 8 宽是 6」但讲不清怎么来的。</p>
+
+      <blockquote class="teacher">
+        <strong>教师小结（一句）</strong>
+        「枪手模式：快，有答案，但<strong>脑子里面是空的</strong>。」
+      </blockquote>
+    </section>
+
+    <!-- 环节 3 -->
+    <section>
+      <h2>环节 3：实验——教练模式 <span class="time-badge">13 分钟</span></h2>
+
+      <p>请学生抄写或投影以下指令：</p>
+
+      <div class="prompt-box coach">我是小六学生。请你不要直接给我答案，一步一步引导我自己想出来。每次只问我一个问题，等我答完再讲下一步。</div>
+
+      <ol class="steps">
+        <li><strong>重置（1 分钟）</strong>：「同一道题，换教练模式，这次<strong>不准抄答案</strong>，要自己思考。」</li>
+        <li><strong>跟着 AI 逐步做（8–9 分钟）</strong>：教师可投影示范对话，或巡堂观察学生进度。</li>
+      </ol>
+
+      <p><strong>典型教练对话示例：</strong></p>
+      <table class="dialogue-table">
+        <thead>
+          <tr><th>AI 提问</th><th>学生回答（参考）</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>「这道题涉及什么图形？我们要求什么？」</td><td>长方形，求原来的面积</td></tr>
+          <tr><td>「面积不变时，长宽各怎么变？你能用字母表示原来的长和宽吗？」</td><td>设长 l、宽 w</td></tr>
+          <tr><td>「长加 4、宽减 2 后面积不变，能列出等式吗？」</td><td>lw = (l+4)(w−2)</td></tr>
+          <tr><td>「展开后，能化简成更简单的关系吗？」</td><td>2w − l = 4</td></tr>
+          <tr><td>「第二个条件呢？长减 2、宽加 3 后面积多 6，怎么列式？」</td><td>(l−2)(w+3) = lw + 6</td></tr>
+          <tr><td>「化简后得到什么？」</td><td>3l − 2w = 12</td></tr>
+          <tr><td>「现在有两个方程，你打算怎么解？」</td><td>代入或消元</td></tr>
+          <tr><td>「解出来 w 是多少？l 呢？」</td><td>w = 6，l = 8</td></tr>
+          <tr><td>「所以原面积是多少？」</td><td>48 cm²</td></tr>
+        </tbody>
+      </table>
+
+      <div class="tip-box warning">
+        ⚠️ 若 AI 仍直接给答案，提醒学生：「停！重新说：『请不要给答案，只问我一个问题。』」
+      </div>
+
+      <ol class="steps" start="3">
+        <li><strong>做完后追问（3 分钟）</strong>：</li>
+      </ol>
+
+      <blockquote class="teacher">
+        <strong>追问</strong>
+        「这次和刚才有什么不同？」<br>
+        「哪次你真正学会了？」<br>
+        「哪次你觉得自己变厉害了？」
+      </blockquote>
+
+      <blockquote class="teacher">
+        <strong>教师小结（一句）</strong>
+        「教练模式：稍慢一点，但<strong>每一步都是你自己走过的</strong>——考试没有 AI 也能做。」
+      </blockquote>
+
+      <div class="tip-box">
+        <strong>时间不足时：</strong>可只做到「列出两个方程」，余下口头完成；重点是<strong>过程</strong>，不是速度。
+      </div>
+    </section>
+
+    <!-- 环节 4 -->
+    <section>
+      <h2>环节 4：画出区别 <span class="time-badge">5 分钟</span></h2>
+
+      <p>全班一起在纸上画对比表（可先写白板，学生抄写）：</p>
+
+      <table class="compare-table">
+        <thead>
+          <tr>
+            <th></th>
+            <th>枪手模式</th>
+            <th>教练模式</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>用时</td><td>快（约 1 分钟）</td><td>稍慢（约 8–12 分钟）</td></tr>
+          <tr><td>立刻交到功课</td><td>✓</td><td>✓</td></tr>
+          <tr><td>考试会不会做</td><td>✗</td><td>✓</td></tr>
+          <tr><td>谁变厉害了</td><td>✗</td><td>✓</td></tr>
+          <tr><td>AI 做什么</td><td>替你答</td><td>问你问题</td></tr>
+          <tr><td>你做什么</td><td>抄</td><td>想</td></tr>
+        </tbody>
+      </table>
+
+      <p><strong>互动：</strong>请 1–2 位学生用自己的话讲「枪手和教练最大的区别是什么」。</p>
+    </section>
+
+    <!-- 环节 5 -->
+    <section>
+      <h2>环节 5：定规矩 + 口诀 <span class="time-badge">7 分钟</span></h2>
+
+      <h3 style="font-size:1rem;margin:1rem 0 0.5rem;">5a. 自己讲规矩（3 分钟）</h3>
+
+      <blockquote class="teacher">
+        <strong>提问</strong>
+        「以后做功课，我应该用哪个模式？」
+      </blockquote>
+
+      <p>等全班答<strong>教练模式</strong>，再追问：</p>
+
+      <blockquote class="teacher">
+        <strong>追问</strong>
+        「那什么时候可以用枪手模式？」
+      </blockquote>
+
+      <ul class="steps">
+        <li><strong>教练模式</strong> → 想<strong>学会</strong>、考试会考、不会的题</li>
+        <li><strong>枪手模式</strong> → 只是赶交、不在乎学不学得会（但要讲清楚：<strong>有后果</strong>）</li>
+      </ul>
+
+      <h3 style="font-size:1rem;margin:1.5rem 0 0.5rem;">5b. 抄口诀（4 分钟）</h3>
+
+      <p>请学生<strong>工整抄下</strong>，贴在书桌 / 手机备忘：</p>
+
+      <div class="prompt-box coach">【教练模式口诀】
+请不要给答案，一步步引导我。
+每次只问一个问题，等我答完再讲下一步。</div>
+
+      <p><strong>全班齐读一次</strong>（加强记忆）。</p>
+
+      <div class="tip-box">
+        <strong>进阶（有时间）：</strong>加一句「我是 ___ 年级学生」，让 AI 用合适难度引导。
+      </div>
+    </section>
+
+    <!-- 环节 6 -->
+    <section>
+      <h2>环节 6：作业说明 + 收束 <span class="time-badge">3 分钟</span></h2>
+
+      <h3 style="font-size:1rem;margin-bottom:0.75rem;">作业：教练模式实战</h3>
+      <p>用今天学到的<strong>教练模式口诀</strong>，完成<strong>一份真实的学校预习或功课</strong>（任何科目、任何一题）。</p>
+
+      <div class="homework-form">
+        <p style="font-weight:600;margin-bottom:1rem;">反思表（可印发或 Google Form）</p>
+        <div class="field">
+          <label>1. 我做的是哪一科、哪一题？</label>
+          <div class="blank"></div>
+        </div>
+        <div class="field">
+          <label>2. AI 给了什么提示？（写 1–2 个）</label>
+          <div class="blank"></div>
+        </div>
+        <div class="field">
+          <label>3. 我自己想到的部分在哪里？</label>
+          <div class="blank"></div>
+        </div>
+        <div class="field">
+          <label>4. 我的感受：用教练模式，你觉得辛苦一点还是有成就感一点？</label>
+          <div class="blank"></div>
+        </div>
+      </div>
+
+      <blockquote class="teacher" style="margin-top:1.25rem;">
+        <strong>收束金句</strong>
+        「AI 可以是枪手，也可以是教练——<strong>你怎么问，它就怎么答。选教练，就是选择自己变厉害。</strong>」
+      </blockquote>
+    </section>
+
+    <!-- 教师备忘 -->
+    <section>
+      <h2>教师备忘</h2>
+
+      <table class="timeline">
+        <thead>
+          <tr><th>情况</th><th>处理</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>AI 教练模式仍直接给答案</td>
+            <td>学生再贴口诀；或换「每次只问一个问题，不要解释太多」</td>
+          </tr>
+          <tr>
+            <td>枪手模式 AI 解释很详细</td>
+            <td>强调：「我们这节课<strong>故意</strong>只问答案，看抄答案的后果」</td>
+          </tr>
+          <tr>
+            <td>学生说「教练好慢」</td>
+            <td>「慢 10 分钟 vs 考试不会做——哪个代价大？」</td>
+          </tr>
+          <tr>
+            <td>没有设备</td>
+            <td>两三人一组；每组至少一人操作，其他人口述「你会怎么答 AI 的问题」</td>
+          </tr>
+          <tr>
+            <td>题目太难，教练模式做不完</td>
+            <td>做到「列出第一个方程」即可；强调<strong>思考过程</strong>比完整解出更重要</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3 style="font-size:1rem;margin:1.25rem 0 0.75rem;">课前准备</h3>
+      <ul class="checklist">
+        <li>确认 AI 工具可用（ChatGPT / Gemini / 学校核准平台）</li>
+        <li>投影枪手 / 教练指令及示范题</li>
+        <li>准备对比表空白纸 + 作业反思表</li>
+        <li>预先试跑一次教练模式，确认 AI 会逐步提问</li>
+      </ul>
+    </section>
+
+    <footer>第2节教案 · 40 分钟 · 枪手 vs 教练</footer>
+  </div>
+</body>
+</html>

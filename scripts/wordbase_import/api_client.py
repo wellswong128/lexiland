@@ -11,7 +11,7 @@ import httpx
 from PIL import Image
 
 from auth import session_file_lock
-from config import MAX_IMAGE_WIDTH, JPEG_QUALITY, IMAGE_EXTENSIONS
+from config import MAX_IMAGE_WIDTH, JPEG_QUALITY, IMAGE_EXTENSIONS, REPO_ROOT
 
 
 RETRYABLE_STATUS = {429, 502, 503, 504}
@@ -187,15 +187,100 @@ class LexiLandApiClient:
             [item.get("term") if isinstance(item, dict) else item for item in words]
         )
 
-    def complete_word(self, term: str, locale: str) -> dict:
+    def complete_word(self, term: str, locale: str, *, max_attempts: int = 3) -> dict:
+        from text_locale import has_placeholder_translation, is_incomplete_exam_phrase_translation
+
+        last_error: ApiError | None = None
+        last_suggestion: dict | None = None
+
+        for _ in range(max_attempts):
+            suggestion = self._complete_word_once(term, locale)
+            last_suggestion = suggestion
+            translation = str(suggestion.get("translation", "")).strip()
+            example_translation = str(suggestion.get("example_translation", "")).strip()
+            if (
+                not has_placeholder_translation(translation)
+                and not has_placeholder_translation(example_translation)
+                and not is_incomplete_exam_phrase_translation(term, translation)
+            ):
+                return suggestion
+            last_error = ApiError(f"Incomplete translation returned for {term!r}.")
+
+        if last_suggestion is not None:
+            if is_incomplete_exam_phrase_translation(term, last_suggestion.get("translation", "")):
+                try:
+                    return self._repair_exam_phrase_translation(term, locale, last_suggestion)
+                except Exception as error:
+                    last_error = ApiError(str(error))
+            raise last_error or ApiError(f"Incomplete translation returned for {term!r}.")
+        raise ApiError(f"Complete-word failed for {term!r}.")
+
+    def _repair_exam_phrase_translation(self, term: str, locale: str, base: dict) -> dict:
+        from dotenv import load_dotenv
+        from terms import resolve_upsert_term
+        from text_locale import is_incomplete_exam_phrase_translation
+
+        load_dotenv(REPO_ROOT / ".env")
+        load_dotenv(REPO_ROOT / ".env.local", override=True)
+
+        api_key = os.getenv("AGNES_API_KEY", "").strip()
+        if not api_key:
+            raise ApiError("AGNES_API_KEY is required to repair exam phrase translations.")
+
+        chinese_label = "Simplified Chinese" if locale == "zh-Hans" else "Traditional Chinese"
+        prompt = (
+            f'Translate this English examination skill phrase for a Hong Kong vocabulary card.\n'
+            f'Phrase: {term}\n'
+            f'Return JSON only: {{"translation": "..."}}\n'
+            f'Write translation in {chinese_label}. Translate the FULL phrase, not just the first word.\n'
+            f'Do not use asterisks, placeholders, or synonym lists like "評估；評價".\n'
+            f'Example: "evaluate French Revolution" -> "評估法國大革命".'
+        )
+
+        response = self._client.post(
+            "https://apihub.agnes-ai.com/v1/chat/completions",
+            json={
+                "model": os.getenv("AGNES_MODEL", "agnes-2.0-flash"),
+                "messages": [
+                    {"role": "system", "content": "Return only valid JSON."},
+                    {"role": "user", "content": prompt},
+                ],
+                "temperature": 0.2,
+            },
+            headers={
+                "Authorization": f"Bearer {api_key}",
+                "Content-Type": "application/json",
+            },
+        )
+
+        if response.status_code >= 400:
+            raise ApiError(response.text or f"Agnes request failed ({response.status_code})")
+
+        content = response.json().get("choices", [{}])[0].get("message", {}).get("content", "")
+        if not content:
+            raise ApiError("Agnes response did not include text output.")
+
+        payload = json.loads(content)
+        translation = str(payload.get("translation", "")).strip()
+        if not translation or is_incomplete_exam_phrase_translation(term, translation):
+            raise ApiError(f"Could not repair exam phrase translation for {term!r}.")
+
+        repaired = dict(base)
+        repaired["term"] = resolve_upsert_term(term, str(base.get("term", term)).strip(), term)
+        repaired["translation"] = translation
+        return repaired
+
+    def _complete_word_once(self, term: str, locale: str) -> dict:
         data = self._request_json(
             "/api/complete-word",
             {"term": term, "locale": locale},
             pause_after=self.request_pause_seconds,
         )
+        from terms import resolve_upsert_term
+
         suggestion = data.get("suggestion") or {}
         return {
-            "term": str(suggestion.get("term", term)).strip(),
+            "term": resolve_upsert_term(term, str(suggestion.get("term", term)).strip(), ""),
             "definition": str(suggestion.get("definition", "")).strip(),
             "translation": str(suggestion.get("translation", "")).strip(),
             "pronunciation": str(suggestion.get("pronunciation", "")).strip(),

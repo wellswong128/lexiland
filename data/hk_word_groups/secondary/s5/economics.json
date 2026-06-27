@@ -7,6 +7,15 @@
   "version": "2026.06",
   "display_name_en": "S5 Economics",
   "display_name_zh_hant": "中五經濟",
+  "source": {
+    "type": "curriculum_style_public_references",
+    "references": [
+      "EDB Economics Curriculum and Assessment Guide (Secondary 4-6)",
+      "EDB senior secondary Economics learning objectives (S5 progression)",
+      "Public Hong Kong S5 Economics syllabus topic examples (advanced microeconomic theory, strategic market behaviour, general equilibrium and welfare, AD-AS macro analysis, inflation and unemployment trade-offs, open economy and balance of payments, exchange rate regimes, fiscal and monetary policy mix, development and inequality, Hong Kong economic policy context, HKDSE data response and evaluation skills)"
+    ],
+    "note": "No fixed official Hong Kong S5 economics vocabulary list is prescribed; this list is theme-based for senior secondary S5 economics enrichment import. Term-only entries are completed during import."
+  },
   "words": [
     {
       "term": "opportunity cost",
@@ -326,6 +335,3702 @@
         "macroeconomics",
         "unemployment-types",
         "noun"
+      ]
+    },
+    {
+      "term": "abuse of dominant position",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "market-power-pricing-and-competition-policy"
+      ]
+    },
+    {
+      "term": "AD AS diagram shift skill",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "aggregate-demand-aggregate-supply-macroeconomics"
+      ]
+    },
+    {
+      "term": "ad valorem tax effect",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "advanced-elasticity-welfare-and-tax-policy"
+      ]
+    },
+    {
+      "term": "adaptive expectations assumption",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "inflation-unemployment-and-expectations"
+      ]
+    },
+    {
+      "term": "advanced economic diagram labelling",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "hkdse-s5-economic-analysis-and-examination-skills"
+      ]
+    },
+    {
+      "term": "aggregate demand curve",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "aggregate-demand-aggregate-supply-macroeconomics"
+      ]
+    },
+    {
+      "term": "aggregate supply long run",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "aggregate-demand-aggregate-supply-macroeconomics"
+      ]
+    },
+    {
+      "term": "aggregate supply short run",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "aggregate-demand-aggregate-supply-macroeconomics"
+      ]
+    },
+    {
+      "term": "anchoring bias in decision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "advanced-market-failure-and-behavioural-insights"
+      ]
+    },
+    {
+      "term": "anti-competitive practice",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "market-power-pricing-and-competition-policy"
+      ]
+    },
+    {
+      "term": "assess short run long run effect",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "hkdse-s5-economic-analysis-and-examination-skills"
+      ]
+    },
+    {
+      "term": "asset price channel",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "monetary-policy-transmission-and-financial-stability"
+      ]
+    },
+    {
+      "term": "automatic fiscal stabilizer",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "fiscal-policy-multipliers-and-public-debt"
+      ]
+    },
+    {
+      "term": "automatic stabilizer role",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "aggregate-demand-aggregate-supply-macroeconomics"
+      ]
+    },
+    {
+      "term": "balance of payments data skill",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "open-economy-and-balance-of-payments"
+      ]
+    },
+    {
+      "term": "balance of payments equilibrium",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "open-economy-and-balance-of-payments"
+      ]
+    },
+    {
+      "term": "balanced budget multiplier",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "fiscal-policy-multipliers-and-public-debt"
+      ]
+    },
+    {
+      "term": "bandwagon effect",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "advanced-market-failure-and-behavioural-insights"
+      ]
+    },
+    {
+      "term": "bank capital adequacy ratio",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "monetary-policy-transmission-and-financial-stability"
+      ]
+    },
+    {
+      "term": "barriers to entry analysis",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "market-power-pricing-and-competition-policy"
+      ]
+    },
+    {
+      "term": "Bertrand competition model",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "oligopoly-game-theory-and-strategic-behaviour"
+      ]
+    },
+    {
+      "term": "best response strategy",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "oligopoly-game-theory-and-strategic-behaviour"
+      ]
+    },
+    {
+      "term": "bounded rationality",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "advanced-market-failure-and-behavioural-insights"
+      ]
+    },
+    {
+      "term": "brand loyalty barrier",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "market-power-pricing-and-competition-policy"
+      ]
+    },
+    {
+      "term": "budget constraint line",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "advanced-consumer-theory-and-utility"
+      ]
+    },
+    {
+      "term": "capital account flow",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "open-economy-and-balance-of-payments"
+      ]
+    },
+    {
+      "term": "carbon pricing mechanism",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "economic-development-inequality-and-sustainability"
+      ]
+    },
+    {
+      "term": "cardinal utility assumption",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "advanced-consumer-theory-and-utility"
+      ]
+    },
+    {
+      "term": "cartel stability problem",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "oligopoly-game-theory-and-strategic-behaviour"
+      ]
+    },
+    {
+      "term": "ceteris paribus explanation skill",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "hkdse-s5-economic-analysis-and-examination-skills"
+      ]
+    },
+    {
+      "term": "chain of reasoning in essay",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "hkdse-s5-economic-analysis-and-examination-skills"
+      ]
+    },
+    {
+      "term": "circular economy concept",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "economic-development-inequality-and-sustainability"
+      ]
+    },
+    {
+      "term": "Coase theorem application",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "advanced-market-failure-and-behavioural-insights"
+      ]
+    },
+    {
+      "term": "collusive agreement",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "oligopoly-game-theory-and-strategic-behaviour"
+      ]
+    },
+    {
+      "term": "common resource problem",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "advanced-market-failure-and-behavioural-insights"
+      ]
+    },
+    {
+      "term": "compare consumer choice cases",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "advanced-consumer-theory-and-utility"
+      ]
+    },
+    {
+      "term": "compare cost structure cases",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "advanced-production-costs-and-scale"
+      ]
+    },
+    {
+      "term": "compare two policy options",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "hkdse-s5-economic-analysis-and-examination-skills"
+      ]
+    },
+    {
+      "term": "comparing development models",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "economic-development-inequality-and-sustainability"
+      ]
+    },
+    {
+      "term": "comparing exchange rate regimes",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "exchange-rate-systems-and-currency-policy"
+      ]
+    },
+    {
+      "term": "comparing fiscal package cases",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "fiscal-policy-multipliers-and-public-debt"
+      ]
+    },
+    {
+      "term": "comparing Hong Kong macro cycles",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "hong-kong-economy-s5-policy-analysis"
+      ]
+    },
+    {
+      "term": "comparing inflation episodes",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "inflation-unemployment-and-expectations"
+      ]
+    },
+    {
+      "term": "comparing intervention alternatives",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "advanced-market-failure-and-behavioural-insights"
+      ]
+    },
+    {
+      "term": "comparing macro shock cases",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "aggregate-demand-aggregate-supply-macroeconomics"
+      ]
+    },
+    {
+      "term": "comparing monetary policy cases",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "monetary-policy-transmission-and-financial-stability"
+      ]
+    },
+    {
+      "term": "comparing oligopoly models",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "oligopoly-game-theory-and-strategic-behaviour"
+      ]
+    },
+    {
+      "term": "comparing open economy cases",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "open-economy-and-balance-of-payments"
+      ]
+    },
+    {
+      "term": "comparing pricing strategy",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "market-power-pricing-and-competition-policy"
+      ]
+    },
+    {
+      "term": "comparing tax policy design",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "advanced-elasticity-welfare-and-tax-policy"
+      ]
+    },
+    {
+      "term": "comparing welfare criteria",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "general-equilibrium-and-advanced-welfare-economics"
+      ]
+    },
+    {
+      "term": "compensating variation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "advanced-consumer-theory-and-utility"
+      ]
+    },
+    {
+      "term": "compensation principle",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "general-equilibrium-and-advanced-welfare-economics"
+      ]
+    },
+    {
+      "term": "competition commission role",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "market-power-pricing-and-competition-policy"
+      ]
+    },
+    {
+      "term": "competition policy in Hong Kong",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "market-power-pricing-and-competition-policy"
+      ]
+    },
+    {
+      "term": "competitiveness index",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "exchange-rate-systems-and-currency-policy"
+      ]
+    },
+    {
+      "term": "constant returns to scale",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "advanced-production-costs-and-scale"
+      ]
+    },
+    {
+      "term": "consumer equilibrium condition",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "advanced-consumer-theory-and-utility"
+      ]
+    },
+    {
+      "term": "consumer protection regulation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "market-power-pricing-and-competition-policy"
+      ]
+    },
+    {
+      "term": "consumer surplus change",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "advanced-consumer-theory-and-utility"
+      ]
+    },
+    {
+      "term": "consumer theory diagram skill",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "advanced-consumer-theory-and-utility"
+      ]
+    },
+    {
+      "term": "contestable market theory",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "market-power-pricing-and-competition-policy"
+      ]
+    },
+    {
+      "term": "contract curve concept",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "general-equilibrium-and-advanced-welfare-economics"
+      ]
+    },
+    {
+      "term": "convertibility undertaking",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "exchange-rate-systems-and-currency-policy"
+      ]
+    },
+    {
+      "term": "cooperative game outcome",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "oligopoly-game-theory-and-strategic-behaviour"
+      ]
+    },
+    {
+      "term": "core inflation measure",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "inflation-unemployment-and-expectations"
+      ]
+    },
+    {
+      "term": "cost benefit analysis framework",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "general-equilibrium-and-advanced-welfare-economics"
+      ]
+    },
+    {
+      "term": "counter argument in evaluation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "hkdse-s5-economic-analysis-and-examination-skills"
+      ]
+    },
+    {
+      "term": "Cournot duopoly model",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "oligopoly-game-theory-and-strategic-behaviour"
+      ]
+    },
+    {
+      "term": "credibility of central bank",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "inflation-unemployment-and-expectations"
+      ]
+    },
+    {
+      "term": "credit boom and bust",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "monetary-policy-transmission-and-financial-stability"
+      ]
+    },
+    {
+      "term": "credit channel mechanism",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "monetary-policy-transmission-and-financial-stability"
+      ]
+    },
+    {
+      "term": "cross elasticity policy use",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "advanced-elasticity-welfare-and-tax-policy"
+      ]
+    },
+    {
+      "term": "crowding in effect",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "aggregate-demand-aggregate-supply-macroeconomics"
+      ]
+    },
+    {
+      "term": "crowding out in bond market",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "fiscal-policy-multipliers-and-public-debt"
+      ]
+    },
+    {
+      "term": "currency board arrangement",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "exchange-rate-systems-and-currency-policy"
+      ]
+    },
+    {
+      "term": "currency crisis contagion",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "exchange-rate-systems-and-currency-policy"
+      ]
+    },
+    {
+      "term": "currency peg maintenance",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "exchange-rate-systems-and-currency-policy"
+      ]
+    },
+    {
+      "term": "current account adjustment",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "open-economy-and-balance-of-payments"
+      ]
+    },
+    {
+      "term": "data response structured answer",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "hkdse-s5-economic-analysis-and-examination-skills"
+      ]
+    },
+    {
+      "term": "deadweight loss of subsidy",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "advanced-elasticity-welfare-and-tax-policy"
+      ]
+    },
+    {
+      "term": "deadweight loss of taxation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "advanced-elasticity-welfare-and-tax-policy"
+      ]
+    },
+    {
+      "term": "debt sustainability analysis",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "fiscal-policy-multipliers-and-public-debt"
+      ]
+    },
+    {
+      "term": "debt to GDP ratio",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "fiscal-policy-multipliers-and-public-debt"
+      ]
+    },
+    {
+      "term": "decreasing returns to scale",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "advanced-production-costs-and-scale"
+      ]
+    },
+    {
+      "term": "define explain analyse evaluate sequence",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "hkdse-s5-economic-analysis-and-examination-skills"
+      ]
+    },
+    {
+      "term": "demand shock in macroeconomy",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "aggregate-demand-aggregate-supply-macroeconomics"
+      ]
+    },
+    {
+      "term": "development economics case study",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "economic-development-inequality-and-sustainability"
+      ]
+    },
+    {
+      "term": "development indicator comparison",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "economic-development-inequality-and-sustainability"
+      ]
+    },
+    {
+      "term": "discounting future benefit",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "general-equilibrium-and-advanced-welfare-economics"
+      ]
+    },
+    {
+      "term": "discretionary fiscal stimulus",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "fiscal-policy-multipliers-and-public-debt"
+      ]
+    },
+    {
+      "term": "diseconomies of scale source",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "advanced-production-costs-and-scale"
+      ]
+    },
+    {
+      "term": "disinflation policy cost",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "inflation-unemployment-and-expectations"
+      ]
+    },
+    {
+      "term": "dominant strategy equilibrium",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "oligopoly-game-theory-and-strategic-behaviour"
+      ]
+    },
+    {
+      "term": "economies of scale source",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "advanced-production-costs-and-scale"
+      ]
+    },
+    {
+      "term": "Edgeworth box diagram",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "general-equilibrium-and-advanced-welfare-economics"
+      ]
+    },
+    {
+      "term": "elasticity based policy case",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "advanced-elasticity-welfare-and-tax-policy"
+      ]
+    },
+    {
+      "term": "environmental Kuznets curve",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "economic-development-inequality-and-sustainability"
+      ]
+    },
+    {
+      "term": "equity efficiency trade-off debate",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "general-equilibrium-and-advanced-welfare-economics"
+      ]
+    },
+    {
+      "term": "equivalent variation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "advanced-consumer-theory-and-utility"
+      ]
+    },
+    {
+      "term": "evaluate consumer welfare change",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "advanced-consumer-theory-and-utility"
+      ]
+    },
+    {
+      "term": "evaluate scale decision",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "advanced-production-costs-and-scale"
+      ]
+    },
+    {
+      "term": "evaluating austerity policy",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "fiscal-policy-multipliers-and-public-debt"
+      ]
+    },
+    {
+      "term": "evaluating behavioural policy",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "advanced-market-failure-and-behavioural-insights"
+      ]
+    },
+    {
+      "term": "evaluating collusion likelihood",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "oligopoly-game-theory-and-strategic-behaviour"
+      ]
+    },
+    {
+      "term": "evaluating competition policy",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "market-power-pricing-and-competition-policy"
+      ]
+    },
+    {
+      "term": "evaluating devaluation impact",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "exchange-rate-systems-and-currency-policy"
+      ]
+    },
+    {
+      "term": "evaluating financial regulation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "monetary-policy-transmission-and-financial-stability"
+      ]
+    },
+    {
+      "term": "evaluating Hong Kong policy mix",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "hong-kong-economy-s5-policy-analysis"
+      ]
+    },
+    {
+      "term": "evaluating inequality policy",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "economic-development-inequality-and-sustainability"
+      ]
+    },
+    {
+      "term": "evaluating policy trade-off",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "general-equilibrium-and-advanced-welfare-economics"
+      ]
+    },
+    {
+      "term": "evaluating stabilization policy",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "aggregate-demand-aggregate-supply-macroeconomics"
+      ]
+    },
+    {
+      "term": "evaluating subsidy programme",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "advanced-elasticity-welfare-and-tax-policy"
+      ]
+    },
+    {
+      "term": "evaluating trade imbalance",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "open-economy-and-balance-of-payments"
+      ]
+    },
+    {
+      "term": "evaluating unemployment trade-off",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "inflation-unemployment-and-expectations"
+      ]
+    },
+    {
+      "term": "examination command word skill",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "hkdse-s5-economic-analysis-and-examination-skills"
+      ]
+    },
+    {
+      "term": "exchange rate channel",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "monetary-policy-transmission-and-financial-stability"
+      ]
+    },
+    {
+      "term": "exchange rate policy case",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "exchange-rate-systems-and-currency-policy"
+      ]
+    },
+    {
+      "term": "excise duty effect",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "advanced-elasticity-welfare-and-tax-policy"
+      ]
+    },
+    {
+      "term": "expansion path",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "advanced-production-costs-and-scale"
+      ]
+    },
+    {
+      "term": "expectations augmented Phillips curve",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "inflation-unemployment-and-expectations"
+      ]
+    },
+    {
+      "term": "export led growth strategy",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "economic-development-inequality-and-sustainability"
+      ]
+    },
+    {
+      "term": "external debt sustainability",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "open-economy-and-balance-of-payments"
+      ]
+    },
+    {
+      "term": "financial accelerator effect",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "monetary-policy-transmission-and-financial-stability"
+      ]
+    },
+    {
+      "term": "financial account transaction",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "open-economy-and-balance-of-payments"
+      ]
+    },
+    {
+      "term": "financial stability case study",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "monetary-policy-transmission-and-financial-stability"
+      ]
+    },
+    {
+      "term": "first welfare theorem idea",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "general-equilibrium-and-advanced-welfare-economics"
+      ]
+    },
+    {
+      "term": "fiscal consolidation programme",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "fiscal-policy-multipliers-and-public-debt"
+      ]
+    },
+    {
+      "term": "fiscal policy diagram skill",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "fiscal-policy-multipliers-and-public-debt"
+      ]
+    },
+    {
+      "term": "fiscal policy time lag",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "fiscal-policy-multipliers-and-public-debt"
+      ]
+    },
+    {
+      "term": "fixed exchange rate system",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "exchange-rate-systems-and-currency-policy"
+      ]
+    },
+    {
+      "term": "fixed input constraint",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "advanced-production-costs-and-scale"
+      ]
+    },
+    {
+      "term": "floating exchange rate system",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "exchange-rate-systems-and-currency-policy"
+      ]
+    },
+    {
+      "term": "foreign aid effectiveness debate",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "economic-development-inequality-and-sustainability"
+      ]
+    },
+    {
+      "term": "foreign direct investment flow",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "open-economy-and-balance-of-payments"
+      ]
+    },
+    {
+      "term": "forward guidance policy tool",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "monetary-policy-transmission-and-financial-stability"
+      ]
+    },
+    {
+      "term": "game theory diagram skill",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "oligopoly-game-theory-and-strategic-behaviour"
+      ]
+    },
+    {
+      "term": "gender inequality in development",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "economic-development-inequality-and-sustainability"
+      ]
+    },
+    {
+      "term": "general equilibrium concept",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "general-equilibrium-and-advanced-welfare-economics"
+      ]
+    },
+    {
+      "term": "Giffen good case",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "advanced-consumer-theory-and-utility"
+      ]
+    },
+    {
+      "term": "government failure concept",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "advanced-market-failure-and-behavioural-insights"
+      ]
+    },
+    {
+      "term": "government spending multiplier",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "fiscal-policy-multipliers-and-public-debt"
+      ]
+    },
+    {
+      "term": "Greater Bay Area integration effect",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "hong-kong-economy-s5-policy-analysis"
+      ]
+    },
+    {
+      "term": "green growth strategy",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "economic-development-inequality-and-sustainability"
+      ]
+    },
+    {
+      "term": "headline inflation measure",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "inflation-unemployment-and-expectations"
+      ]
+    },
+    {
+      "term": "herding behaviour in market",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "advanced-market-failure-and-behavioural-insights"
+      ]
+    },
+    {
+      "term": "Hong Kong ageing population impact",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "hong-kong-economy-s5-policy-analysis"
+      ]
+    },
+    {
+      "term": "Hong Kong commercial property cycle",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "hong-kong-economy-s5-policy-analysis"
+      ]
+    },
+    {
+      "term": "Hong Kong competition policy case",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "hong-kong-economy-s5-policy-analysis"
+      ]
+    },
+    {
+      "term": "Hong Kong contextualized example",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "hkdse-s5-economic-analysis-and-examination-skills"
+      ]
+    },
+    {
+      "term": "Hong Kong currency system analysis",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "exchange-rate-systems-and-currency-policy"
+      ]
+    },
+    {
+      "term": "Hong Kong economic restructuring",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "hong-kong-economy-s5-policy-analysis"
+      ]
+    },
+    {
+      "term": "Hong Kong economics case synthesis",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "hong-kong-economy-s5-policy-analysis"
+      ]
+    },
+    {
+      "term": "Hong Kong external shock vulnerability",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "hong-kong-economy-s5-policy-analysis"
+      ]
+    },
+    {
+      "term": "Hong Kong fiscal reserve use",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "hong-kong-economy-s5-policy-analysis"
+      ]
+    },
+    {
+      "term": "Hong Kong household debt trend",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "hong-kong-economy-s5-policy-analysis"
+      ]
+    },
+    {
+      "term": "Hong Kong income disparity trend",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "hong-kong-economy-s5-policy-analysis"
+      ]
+    },
+    {
+      "term": "Hong Kong innovation economy policy",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "hong-kong-economy-s5-policy-analysis"
+      ]
+    },
+    {
+      "term": "Hong Kong labour force participation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "hong-kong-economy-s5-policy-analysis"
+      ]
+    },
+    {
+      "term": "Hong Kong long term competitiveness",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "hong-kong-economy-s5-policy-analysis"
+      ]
+    },
+    {
+      "term": "Hong Kong mainland trade dependence",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "hong-kong-economy-s5-policy-analysis"
+      ]
+    },
+    {
+      "term": "Hong Kong minimum wage review",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "hong-kong-economy-s5-policy-analysis"
+      ]
+    },
+    {
+      "term": "Hong Kong public housing economics",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "hong-kong-economy-s5-policy-analysis"
+      ]
+    },
+    {
+      "term": "Hong Kong startup ecosystem support",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "hong-kong-economy-s5-policy-analysis"
+      ]
+    },
+    {
+      "term": "Hong Kong tax system feature",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "hong-kong-economy-s5-policy-analysis"
+      ]
+    },
+    {
+      "term": "Hong Kong tourism recovery policy",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "hong-kong-economy-s5-policy-analysis"
+      ]
+    },
+    {
+      "term": "hot money capital flow",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "open-economy-and-balance-of-payments"
+      ]
+    },
+    {
+      "term": "hysteresis in unemployment",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "inflation-unemployment-and-expectations"
+      ]
+    },
+    {
+      "term": "identify assumption in model",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "hkdse-s5-economic-analysis-and-examination-skills"
+      ]
+    },
+    {
+      "term": "import substitution policy",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "economic-development-inequality-and-sustainability"
+      ]
+    },
+    {
+      "term": "income consumption curve",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "advanced-consumer-theory-and-utility"
+      ]
+    },
+    {
+      "term": "income effect analysis",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "advanced-consumer-theory-and-utility"
+      ]
+    },
+    {
+      "term": "income elasticity policy use",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "advanced-elasticity-welfare-and-tax-policy"
+      ]
+    },
+    {
+      "term": "increasing returns to scale",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "advanced-production-costs-and-scale"
+      ]
+    },
+    {
+      "term": "index number interpretation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "hkdse-s5-economic-analysis-and-examination-skills"
+      ]
+    },
+    {
+      "term": "indifference curve",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "advanced-consumer-theory-and-utility"
+      ]
+    },
+    {
+      "term": "inflation expectation management",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "inflation-unemployment-and-expectations"
+      ]
+    },
+    {
+      "term": "inflation targeting regime",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "inflation-unemployment-and-expectations"
+      ]
+    },
+    {
+      "term": "infrastructure spending effect",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "fiscal-policy-multipliers-and-public-debt"
+      ]
+    },
+    {
+      "term": "institutional development theory",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "economic-development-inequality-and-sustainability"
+      ]
+    },
+    {
+      "term": "interest rate effect on investment",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "aggregate-demand-aggregate-supply-macroeconomics"
+      ]
+    },
+    {
+      "term": "interest rate parity condition",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "exchange-rate-systems-and-currency-policy"
+      ]
+    },
+    {
+      "term": "interest rate transmission channel",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "monetary-policy-transmission-and-financial-stability"
+      ]
+    },
+    {
+      "term": "intergenerational equity in debt",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "fiscal-policy-multipliers-and-public-debt"
+      ]
+    },
+    {
+      "term": "international macro case study",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "open-economy-and-balance-of-payments"
+      ]
+    },
+    {
+      "term": "international trade effect on net export",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "aggregate-demand-aggregate-supply-macroeconomics"
+      ]
+    },
+    {
+      "term": "isocost line",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "advanced-production-costs-and-scale"
+      ]
+    },
+    {
+      "term": "isoquant curve",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "advanced-production-costs-and-scale"
+      ]
+    },
+    {
+      "term": "J curve effect",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "open-economy-and-balance-of-payments"
+      ]
+    },
+    {
+      "term": "Kaldor-Hicks efficiency",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "general-equilibrium-and-advanced-welfare-economics"
+      ]
+    },
+    {
+      "term": "kinked demand curve model",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "oligopoly-game-theory-and-strategic-behaviour"
+      ]
+    },
+    {
+      "term": "Laffer curve concept",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "advanced-elasticity-welfare-and-tax-policy"
+      ]
+    },
+    {
+      "term": "learning curve effect",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "advanced-production-costs-and-scale"
+      ]
+    },
+    {
+      "term": "legal barrier to entry",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "market-power-pricing-and-competition-policy"
+      ]
+    },
+    {
+      "term": "lender of last resort role",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "monetary-policy-transmission-and-financial-stability"
+      ]
+    },
+    {
+      "term": "limit pricing strategy",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "market-power-pricing-and-competition-policy"
+      ]
+    },
+    {
+      "term": "limitations of economic model",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "hkdse-s5-economic-analysis-and-examination-skills"
+      ]
+    },
+    {
+      "term": "Linked Exchange Rate mechanism",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "exchange-rate-systems-and-currency-policy"
+      ]
+    },
+    {
+      "term": "liquidity trap situation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "monetary-policy-transmission-and-financial-stability"
+      ]
+    },
+    {
+      "term": "long run average cost curve",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "advanced-production-costs-and-scale"
+      ]
+    },
+    {
+      "term": "loss aversion behaviour",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "advanced-market-failure-and-behavioural-insights"
+      ]
+    },
+    {
+      "term": "macro data interpretation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "aggregate-demand-aggregate-supply-macroeconomics"
+      ]
+    },
+    {
+      "term": "macro equilibrium adjustment",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "aggregate-demand-aggregate-supply-macroeconomics"
+      ]
+    },
+    {
+      "term": "macro synthesis essay skill",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "aggregate-demand-aggregate-supply-macroeconomics"
+      ]
+    },
+    {
+      "term": "macro trade-off case study",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "inflation-unemployment-and-expectations"
+      ]
+    },
+    {
+      "term": "macroprudential regulation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "monetary-policy-transmission-and-financial-stability"
+      ]
+    },
+    {
+      "term": "managed float regime",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "exchange-rate-systems-and-currency-policy"
+      ]
+    },
+    {
+      "term": "marginal rate of substitution",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "advanced-consumer-theory-and-utility"
+      ]
+    },
+    {
+      "term": "marginal rate of technical substitution",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "advanced-production-costs-and-scale"
+      ]
+    },
+    {
+      "term": "market dominance case study",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "market-power-pricing-and-competition-policy"
+      ]
+    },
+    {
+      "term": "market failure correction limit",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "general-equilibrium-and-advanced-welfare-economics"
+      ]
+    },
+    {
+      "term": "market failure synthesis case",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "advanced-market-failure-and-behavioural-insights"
+      ]
+    },
+    {
+      "term": "Marshall Lerner condition",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "open-economy-and-balance-of-payments"
+      ]
+    },
+    {
+      "term": "menu cost of inflation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "inflation-unemployment-and-expectations"
+      ]
+    },
+    {
+      "term": "merger control policy",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "market-power-pricing-and-competition-policy"
+      ]
+    },
+    {
+      "term": "microfinance development tool",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "economic-development-inequality-and-sustainability"
+      ]
+    },
+    {
+      "term": "middle income trap concept",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "economic-development-inequality-and-sustainability"
+      ]
+    },
+    {
+      "term": "minimum efficient scale",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "advanced-production-costs-and-scale"
+      ]
+    },
+    {
+      "term": "monetary policy lag analysis",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "monetary-policy-transmission-and-financial-stability"
+      ]
+    },
+    {
+      "term": "moral hazard in bailout",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "monetary-policy-transmission-and-financial-stability"
+      ]
+    },
+    {
+      "term": "multi step elasticity calculation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "hkdse-s5-economic-analysis-and-examination-skills"
+      ]
+    },
+    {
+      "term": "multiplier accelerator interaction",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "aggregate-demand-aggregate-supply-macroeconomics"
+      ]
+    },
+    {
+      "term": "NAIRU concept",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "inflation-unemployment-and-expectations"
+      ]
+    },
+    {
+      "term": "Nash equilibrium concept",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "oligopoly-game-theory-and-strategic-behaviour"
+      ]
+    },
+    {
+      "term": "natural rate hypothesis",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "inflation-unemployment-and-expectations"
+      ]
+    },
+    {
+      "term": "net export function",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "open-economy-and-balance-of-payments"
+      ]
+    },
+    {
+      "term": "network externality",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "advanced-market-failure-and-behavioural-insights"
+      ]
+    },
+    {
+      "term": "nominal exchange rate change",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "exchange-rate-systems-and-currency-policy"
+      ]
+    },
+    {
+      "term": "non performing loan ratio",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "monetary-policy-transmission-and-financial-stability"
+      ]
+    },
+    {
+      "term": "non-cooperative game",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "oligopoly-game-theory-and-strategic-behaviour"
+      ]
+    },
+    {
+      "term": "nudge policy design",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "advanced-market-failure-and-behavioural-insights"
+      ]
+    },
+    {
+      "term": "oligopoly case study analysis",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "oligopoly-game-theory-and-strategic-behaviour"
+      ]
+    },
+    {
+      "term": "open economy diagram analysis",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "open-economy-and-balance-of-payments"
+      ]
+    },
+    {
+      "term": "open economy macro model",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "open-economy-and-balance-of-payments"
+      ]
+    },
+    {
+      "term": "optimal tax theory overview",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "advanced-elasticity-welfare-and-tax-policy"
+      ]
+    },
+    {
+      "term": "ordinal utility assumption",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "advanced-consumer-theory-and-utility"
+      ]
+    },
+    {
+      "term": "output gap measurement",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "aggregate-demand-aggregate-supply-macroeconomics"
+      ]
+    },
+    {
+      "term": "Pareto improvement criterion",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "general-equilibrium-and-advanced-welfare-economics"
+      ]
+    },
+    {
+      "term": "Pareto optimal allocation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "general-equilibrium-and-advanced-welfare-economics"
+      ]
+    },
+    {
+      "term": "partial equilibrium limitation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "general-equilibrium-and-advanced-welfare-economics"
+      ]
+    },
+    {
+      "term": "payoff matrix analysis",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "oligopoly-game-theory-and-strategic-behaviour"
+      ]
+    },
+    {
+      "term": "peak load pricing",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "market-power-pricing-and-competition-policy"
+      ]
+    },
+    {
+      "term": "percentage point versus percent",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "hkdse-s5-economic-analysis-and-examination-skills"
+      ]
+    },
+    {
+      "term": "Phillips curve diagram skill",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "inflation-unemployment-and-expectations"
+      ]
+    },
+    {
+      "term": "policy mix coordination",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "aggregate-demand-aggregate-supply-macroeconomics"
+      ]
+    },
+    {
+      "term": "policy recommendation justification",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "hkdse-s5-economic-analysis-and-examination-skills"
+      ]
+    },
+    {
+      "term": "portfolio investment flow",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "open-economy-and-balance-of-payments"
+      ]
+    },
+    {
+      "term": "potential GDP growth path",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "aggregate-demand-aggregate-supply-macroeconomics"
+      ]
+    },
+    {
+      "term": "predatory pricing allegation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "market-power-pricing-and-competition-policy"
+      ]
+    },
+    {
+      "term": "price consumption curve",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "advanced-consumer-theory-and-utility"
+      ]
+    },
+    {
+      "term": "price discrimination first degree",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "market-power-pricing-and-competition-policy"
+      ]
+    },
+    {
+      "term": "price discrimination second degree",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "market-power-pricing-and-competition-policy"
+      ]
+    },
+    {
+      "term": "price discrimination third degree",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "market-power-pricing-and-competition-policy"
+      ]
+    },
+    {
+      "term": "price leadership model",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "oligopoly-game-theory-and-strategic-behaviour"
+      ]
+    },
+    {
+      "term": "primary budget balance",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "fiscal-policy-multipliers-and-public-debt"
+      ]
+    },
+    {
+      "term": "principal agent problem",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "advanced-market-failure-and-behavioural-insights"
+      ]
+    },
+    {
+      "term": "prisoner's dilemma model",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "oligopoly-game-theory-and-strategic-behaviour"
+      ]
+    },
+    {
+      "term": "producer equilibrium condition",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "advanced-production-costs-and-scale"
+      ]
+    },
+    {
+      "term": "production diagram analysis",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "advanced-production-costs-and-scale"
+      ]
+    },
+    {
+      "term": "progressive redistribution policy",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "economic-development-inequality-and-sustainability"
+      ]
+    },
+    {
+      "term": "prospect theory overview",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "advanced-market-failure-and-behavioural-insights"
+      ]
+    },
+    {
+      "term": "public finance case study",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "fiscal-policy-multipliers-and-public-debt"
+      ]
+    },
+    {
+      "term": "public investment multiplier",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "fiscal-policy-multipliers-and-public-debt"
+      ]
+    },
+    {
+      "term": "purchasing power parity theory",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "exchange-rate-systems-and-currency-policy"
+      ]
+    },
+    {
+      "term": "quantitative tightening policy",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "monetary-policy-transmission-and-financial-stability"
+      ]
+    },
+    {
+      "term": "rational consumer assumption",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "advanced-consumer-theory-and-utility"
+      ]
+    },
+    {
+      "term": "rational expectations assumption",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "inflation-unemployment-and-expectations"
+      ]
+    },
+    {
+      "term": "Rawlsian fairness idea",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "general-equilibrium-and-advanced-welfare-economics"
+      ]
+    },
+    {
+      "term": "real exchange rate calculation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "exchange-rate-systems-and-currency-policy"
+      ]
+    },
+    {
+      "term": "real versus nominal distinction",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "hkdse-s5-economic-analysis-and-examination-skills"
+      ]
+    },
+    {
+      "term": "regional development disparity",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "economic-development-inequality-and-sustainability"
+      ]
+    },
+    {
+      "term": "regulatory capture risk",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "advanced-market-failure-and-behavioural-insights"
+      ]
+    },
+    {
+      "term": "reserve asset management",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "exchange-rate-systems-and-currency-policy"
+      ]
+    },
+    {
+      "term": "revealed preference theory",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "advanced-consumer-theory-and-utility"
+      ]
+    },
+    {
+      "term": "Ricardian equivalence debate",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "fiscal-policy-multipliers-and-public-debt"
+      ]
+    },
+    {
+      "term": "sacrifice ratio concept",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "inflation-unemployment-and-expectations"
+      ]
+    },
+    {
+      "term": "screening in insurance market",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "advanced-market-failure-and-behavioural-insights"
+      ]
+    },
+    {
+      "term": "second welfare theorem idea",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "general-equilibrium-and-advanced-welfare-economics"
+      ]
+    },
+    {
+      "term": "senior secondary economics integration",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "hkdse-s5-economic-analysis-and-examination-skills"
+      ]
+    },
+    {
+      "term": "shadow banking sector",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "monetary-policy-transmission-and-financial-stability"
+      ]
+    },
+    {
+      "term": "shadow price concept",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "general-equilibrium-and-advanced-welfare-economics"
+      ]
+    },
+    {
+      "term": "shift versus movement distinction",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "hkdse-s5-economic-analysis-and-examination-skills"
+      ]
+    },
+    {
+      "term": "shoe leather cost of inflation",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "inflation-unemployment-and-expectations"
+      ]
+    },
+    {
+      "term": "signalling in labour market",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "advanced-market-failure-and-behavioural-insights"
+      ]
+    },
+    {
+      "term": "snob effect in demand",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "advanced-market-failure-and-behavioural-insights"
+      ]
+    },
+    {
+      "term": "social welfare function",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "general-equilibrium-and-advanced-welfare-economics"
+      ]
+    },
+    {
+      "term": "sovereign debt crisis link",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "open-economy-and-balance-of-payments"
+      ]
+    },
+    {
+      "term": "specific tax effect",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "advanced-elasticity-welfare-and-tax-policy"
+      ]
+    },
+    {
+      "term": "speculative attack on currency",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "exchange-rate-systems-and-currency-policy"
+      ]
+    },
+    {
+      "term": "Stackelberg leadership model",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "oligopoly-game-theory-and-strategic-behaviour"
+      ]
+    },
+    {
+      "term": "stagflation scenario analysis",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "aggregate-demand-aggregate-supply-macroeconomics"
+      ]
+    },
+    {
+      "term": "sterilized intervention",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "exchange-rate-systems-and-currency-policy"
+      ]
+    },
+    {
+      "term": "strategic interdependence",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "oligopoly-game-theory-and-strategic-behaviour"
+      ]
+    },
+    {
+      "term": "structural budget balance",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "fiscal-policy-multipliers-and-public-debt"
+      ]
+    },
+    {
+      "term": "subsidy incidence analysis",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "advanced-elasticity-welfare-and-tax-policy"
+      ]
+    },
+    {
+      "term": "substitution effect analysis",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "advanced-consumer-theory-and-utility"
+      ]
+    },
+    {
+      "term": "sunk cost as barrier",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "market-power-pricing-and-competition-policy"
+      ]
+    },
+    {
+      "term": "sunk cost in production",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "advanced-production-costs-and-scale"
+      ]
+    },
+    {
+      "term": "supply shock in macroeconomy",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "aggregate-demand-aggregate-supply-macroeconomics"
+      ]
+    },
+    {
+      "term": "sustainability trade-off analysis",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "economic-development-inequality-and-sustainability"
+      ]
+    },
+    {
+      "term": "sustainable development goal link",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "economic-development-inequality-and-sustainability"
+      ]
+    },
+    {
+      "term": "systemic risk monitoring",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "monetary-policy-transmission-and-financial-stability"
+      ]
+    },
+    {
+      "term": "table and chart synthesis",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "hkdse-s5-economic-analysis-and-examination-skills"
+      ]
+    },
+    {
+      "term": "tax burden on consumer",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "advanced-elasticity-welfare-and-tax-policy"
+      ]
+    },
+    {
+      "term": "tax burden on producer",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "advanced-elasticity-welfare-and-tax-policy"
+      ]
+    },
+    {
+      "term": "tax incidence analysis",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "advanced-elasticity-welfare-and-tax-policy"
+      ]
+    },
+    {
+      "term": "tax multiplier effect",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "fiscal-policy-multipliers-and-public-debt"
+      ]
+    },
+    {
+      "term": "tax policy diagram skill",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "advanced-elasticity-welfare-and-tax-policy"
+      ]
+    },
+    {
+      "term": "tax reform supply effect",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "fiscal-policy-multipliers-and-public-debt"
+      ]
+    },
+    {
+      "term": "tax wedge in market",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "advanced-elasticity-welfare-and-tax-policy"
+      ]
+    },
+    {
+      "term": "technical efficiency",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "advanced-production-costs-and-scale"
+      ]
+    },
+    {
+      "term": "terms of trade change",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "open-economy-and-balance-of-payments"
+      ]
+    },
+    {
+      "term": "time inconsistency problem",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "inflation-unemployment-and-expectations"
+      ]
+    },
+    {
+      "term": "time management in paper two",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "hkdse-s5-economic-analysis-and-examination-skills"
+      ]
+    },
+    {
+      "term": "tit-for-tat strategy",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "oligopoly-game-theory-and-strategic-behaviour"
+      ]
+    },
+    {
+      "term": "trade weighted exchange rate",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "open-economy-and-balance-of-payments"
+      ]
+    },
+    {
+      "term": "tragedy of the commons",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "advanced-market-failure-and-behavioural-insights"
+      ]
+    },
+    {
+      "term": "transaction cost economics",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "advanced-market-failure-and-behavioural-insights"
+      ]
+    },
+    {
+      "term": "trigger strategy in oligopoly",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "oligopoly-game-theory-and-strategic-behaviour"
+      ]
+    },
+    {
+      "term": "twin deficit hypothesis",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "open-economy-and-balance-of-payments"
+      ]
+    },
+    {
+      "term": "two-part tariff pricing",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "market-power-pricing-and-competition-policy"
+      ]
+    },
+    {
+      "term": "universal basic income debate",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "economic-development-inequality-and-sustainability"
+      ]
+    },
+    {
+      "term": "unsterilized intervention",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "exchange-rate-systems-and-currency-policy"
+      ]
+    },
+    {
+      "term": "urban rural income gap",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "economic-development-inequality-and-sustainability"
+      ]
+    },
+    {
+      "term": "utilitarian welfare rule",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "general-equilibrium-and-advanced-welfare-economics"
+      ]
+    },
+    {
+      "term": "utility maximization constraint",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "advanced-consumer-theory-and-utility"
+      ]
+    },
+    {
+      "term": "variable input adjustment",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "advanced-production-costs-and-scale"
+      ]
+    },
+    {
+      "term": "Veblen good case",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "advanced-consumer-theory-and-utility"
+      ]
+    },
+    {
+      "term": "wage price spiral",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "inflation-unemployment-and-expectations"
+      ]
+    },
+    {
+      "term": "wealth effect on consumption",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "aggregate-demand-aggregate-supply-macroeconomics"
+      ]
+    },
+    {
+      "term": "welfare calculation in answer",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "advanced-elasticity-welfare-and-tax-policy"
+      ]
+    },
+    {
+      "term": "welfare cost of monopoly",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "advanced-elasticity-welfare-and-tax-policy"
+      ]
+    },
+    {
+      "term": "welfare economics case study",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "general-equilibrium-and-advanced-welfare-economics"
+      ]
+    },
+    {
+      "term": "welfare gain from competition",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "advanced-elasticity-welfare-and-tax-policy"
+      ]
+    },
+    {
+      "term": "X-inefficiency",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "advanced-production-costs-and-scale"
+      ]
+    },
+    {
+      "term": "zero lower bound constraint",
+      "tags": [
+        "hk",
+        "secondary",
+        "s5",
+        "economics",
+        "curriculum-style",
+        "monetary-policy-transmission-and-financial-stability"
       ]
     }
   ]
