@@ -114,7 +114,7 @@ function WordGroupSettingsSection({ user, hasSupabaseConfig }) {
         setPickedGroupCodes(nextPickedCodes);
       }
 
-      const scopePayload = await setUserActiveGroup(group.groupCode, { includeWords: true });
+      const scopePayload = await setUserActiveGroup(group.groupCode);
       const activeGroup = scopePayload.activeGroup ?? {
         groupCode: group.groupCode,
         grade: group.grade,
@@ -128,7 +128,7 @@ function WordGroupSettingsSection({ user, hasSupabaseConfig }) {
       setActiveGroupCode(activeGroup.groupCode || group.groupCode);
       setSelectedGrade(group.grade);
       setNotice(t("settings.wordGroups.activeUpdated"));
-      notifyActiveGroupChanged({ activeGroup, mappedTerms, scopePayload });
+      notifyActiveGroupChanged({ activeGroup, mappedTerms });
     } catch (switchError) {
       setError(
         getFriendlyNetworkError(

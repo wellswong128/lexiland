@@ -184,6 +184,10 @@ export function useActiveGroupWordScope(words, user) {
 
     return words.filter((word) => mappedSet.has(normalizeTerm(word.term)));
   }, [isGroupScopeActive, mappedSet, words]);
+  const mappedTermCount = mappedSet.size;
+  const missingMappedTermCount = isGroupScopeActive
+    ? Math.max(0, mappedTermCount - scopedWords.length)
+    : 0;
 
   const scopeReason = !shouldScopeByGroup
     ? "not-scoped"
@@ -206,6 +210,8 @@ export function useActiveGroupWordScope(words, user) {
     scopeError: state.error,
     scopeMode,
     scopeReason,
+    mappedTermCount,
+    missingMappedTermCount,
     scopedWords,
     switchToCustomWords,
     switchToGroupWords,

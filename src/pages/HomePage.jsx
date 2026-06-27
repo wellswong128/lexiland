@@ -223,6 +223,8 @@ function HomePage() {
     isGroupScopeActive,
     isUsingCustomWords,
     isLoadingScope,
+    mappedTermCount,
+    missingMappedTermCount,
     scopedWords,
   } = useActiveGroupWordScope(words, user);
   const isScopePending =
@@ -232,8 +234,12 @@ function HomePage() {
   const role = getRoleFromUser(user);
   const dueWords = getDueWords(learningWords);
   const mistakeWords = learningWords.filter((word) => word.mistake.isMistake);
-  const wordCount = learningWords.length;
-  const dueCount = dueWords.length;
+  const wordCount = isGroupScopeActive
+    ? Math.max(learningWords.length, mappedTermCount)
+    : learningWords.length;
+  const dueCount = isGroupScopeActive
+    ? dueWords.length + missingMappedTermCount
+    : dueWords.length;
   const mistakeCount = mistakeWords.length;
   const isEmpty = wordCount === 0;
   const showSyncPrompt = hasSupabaseConfig && !isWordsLoading && !user;
