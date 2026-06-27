@@ -219,15 +219,15 @@ async function importMissingActiveGroupWords(
   const drafts = [];
 
   for (const sourceWord of mappedWords) {
-    if (limit != null && drafts.length >= limit) {
-      break;
-    }
-
     const term = normalizeText(sourceWord?.term);
     const definition = normalizeText(sourceWord?.definition);
     const termKey = normalizeTerm(term);
     if (!termKey || !definition || existingTerms.has(termKey)) {
       continue;
+    }
+
+    if (limit != null && drafts.length >= limit) {
+      break;
     }
 
     drafts.push(
@@ -810,10 +810,18 @@ export function useWords({ isAuthLoading = false, user = null } = {}, storage) {
         }));
       queuedScopePayload = null;
 
+      const resolvedInitialPayload =
+        Array.isArray(initialPayload.mappedWords) && initialPayload.mappedWords.length > 0
+          ? initialPayload
+          : await fetchUserActiveGroupWords({
+              includeWords: true,
+              forceRefresh: true,
+            });
+
       const firstBatch = await importMissingActiveGroupWords(
         user.id,
         wordsRef.current,
-        initialPayload,
+        resolvedInitialPayload,
         { limit: ACTIVE_GROUP_INITIAL_IMPORT_COUNT },
       );
       lastMappedWordsRef.current = firstBatch.mappedWords;

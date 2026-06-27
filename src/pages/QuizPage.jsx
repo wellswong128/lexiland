@@ -14,8 +14,16 @@ import { REVIEW_RESULTS } from "../features/words/wordTypes.js";
 function QuizPage() {
   const { t } = useLocale();
   const { isActiveGroupSyncing, updateWord, user, words } = useWordsContext();
-  const { isLoadingScope, isGroupScopeActive, scopedWords } = useActiveGroupWordScope(words, user);
+  const {
+    activeGroup,
+    isLoadingScope,
+    isGroupScopeActive,
+    scopeReason,
+    scopedWords,
+  } = useActiveGroupWordScope(words, user);
   const reviewWords = isGroupScopeActive ? scopedWords : words;
+  const isScopeWordsPending =
+    isGroupScopeActive && reviewWords.length === 0 && isActiveGroupSyncing;
   const reviewWordIdsKey = useMemo(
     () => reviewWords.map((word) => word.id).sort().join("|"),
     [reviewWords],
@@ -100,7 +108,7 @@ function QuizPage() {
     });
   }
 
-  if (isLoadingScope || (isGroupScopeActive && reviewWords.length === 0 && isActiveGroupSyncing)) {
+  if (isLoadingScope || isScopeWordsPending) {
     return (
       <section className="w-full max-w-3xl rounded-3xl border border-blue-200/70 bg-white/90 p-8 text-center shadow-2xl shadow-blue-950/10 sm:p-14">
         <p className="text-sm font-medium text-slate-600">{t("wordGroupsScope.loading")}</p>
@@ -111,7 +119,7 @@ function QuizPage() {
   if (isGroupScopeActive && reviewWords.length === 0) {
     return (
       <section className="w-full max-w-3xl rounded-3xl border border-blue-200/70 bg-white/90 p-8 shadow-2xl shadow-blue-950/10 sm:p-14">
-        <WordGroupScopeEmptyState />
+        <WordGroupScopeEmptyState activeGroup={activeGroup} scopeReason={scopeReason} />
       </section>
     );
   }

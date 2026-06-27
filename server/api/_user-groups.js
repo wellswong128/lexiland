@@ -105,3 +105,50 @@ export function mapGroupRow(row) {
     isActive: Boolean(row.is_active),
   };
 }
+
+export function normalizeTermForGroup(value) {
+  return String(value ?? "").trim().toLowerCase();
+}
+
+export function buildMappedTermsFromWordbaseRows(rows) {
+  return [...new Set(
+    (rows ?? [])
+      .flatMap((row) => [normalizeTermForGroup(row.term_key), normalizeTermForGroup(row.term)])
+      .filter(Boolean),
+  )];
+}
+
+export function isImportableWordbaseRow(row) {
+  const term = String(row?.term ?? row?.term_key ?? "").trim();
+  const definition = String(row?.definition ?? "").trim();
+  return Boolean(term && definition);
+}
+
+export function selectImportableWordbaseRows(rows, wordLimit = 0) {
+  const importable = (rows ?? []).filter(isImportableWordbaseRow);
+  if (wordLimit > 0) {
+    return importable.slice(0, wordLimit);
+  }
+  return importable;
+}
+
+export function mapWordbaseRowToMappedWord(row) {
+  return {
+    term: String(row.term ?? row.term_key ?? "").trim(),
+    definition: String(row.definition ?? "").trim(),
+    translation: row.translation ?? "",
+    pronunciation: row.pronunciation ?? "",
+    partOfSpeech: row.part_of_speech ?? "",
+    example: row.example ?? "",
+    exampleTranslation: row.example_translation ?? "",
+    tags: Array.isArray(row.tags) ? row.tags : [],
+    memoryTipsByLocale:
+      row.memory_tips_by_locale && typeof row.memory_tips_by_locale === "object"
+        ? row.memory_tips_by_locale
+        : {},
+    memoryImage:
+      row.memory_image && typeof row.memory_image === "object"
+        ? row.memory_image
+        : null,
+  };
+}

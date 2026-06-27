@@ -1,10 +1,13 @@
 import { sendAuthError } from "../_authz.js";
 import {
+  buildMappedTermsFromWordbaseRows,
   createRlsClientForRequest,
   getRequestBody,
   mapGroupRow,
+  mapWordbaseRowToMappedWord,
   normalizeGroupCode,
   requireUserGroupAccess,
+  selectImportableWordbaseRows,
   sendJson,
 } from "../_user-groups.js";
 
@@ -19,10 +22,6 @@ const GROUP_COLUMNS = [
   "locale",
   "is_active",
 ];
-
-function normalizeTermForGroup(value) {
-  return String(value ?? "").trim().toLowerCase();
-}
 
 function parsePositiveInt(value) {
   const parsed = Number.parseInt(String(value ?? ""), 10);
@@ -57,34 +56,12 @@ async function fetchGroupMappedWords(rlsClient, groupId, includeWords, wordLimit
     throw new Error(wordbaseError.message || "Failed to load mapped words.");
   }
 
-  const mappedTerms = [...new Set(
-    (wordbaseRows ?? [])
-      .flatMap((row) => [normalizeTermForGroup(row.term_key), normalizeTermForGroup(row.term)])
-      .filter(Boolean),
-  )];
-
+  const mappedTerms = buildMappedTermsFromWordbaseRows(wordbaseRows);
   let mappedWords = [];
+
   if (includeWords) {
-    const rowsForWords =
-      wordLimit > 0 ? (wordbaseRows ?? []).slice(0, wordLimit) : wordbaseRows ?? [];
-    mappedWords = rowsForWords.map((row) => ({
-      term: row.term ?? "",
-      definition: row.definition ?? "",
-      translation: row.translation ?? "",
-      pronunciation: row.pronunciation ?? "",
-      partOfSpeech: row.part_of_speech ?? "",
-      example: row.example ?? "",
-      exampleTranslation: row.example_translation ?? "",
-      tags: Array.isArray(row.tags) ? row.tags : [],
-      memoryTipsByLocale:
-        row.memory_tips_by_locale && typeof row.memory_tips_by_locale === "object"
-          ? row.memory_tips_by_locale
-          : {},
-      memoryImage:
-        row.memory_image && typeof row.memory_image === "object"
-          ? row.memory_image
-          : null,
-    }));
+    const rowsForWords = selectImportableWordbaseRows(wordbaseRows, wordLimit);
+    mappedWords = rowsForWords.map(mapWordbaseRowToMappedWord);
   }
 
   return { mappedTerms, mappedWords };

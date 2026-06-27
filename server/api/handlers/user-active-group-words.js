@@ -1,14 +1,13 @@
 import { sendAuthError } from "../_authz.js";
 import {
+  buildMappedTermsFromWordbaseRows,
   createRlsClientForRequest,
+  mapWordbaseRowToMappedWord,
   normalizeGroupCode,
   requireUserGroupAccess,
+  selectImportableWordbaseRows,
   sendJson,
 } from "../_user-groups.js";
-
-function normalizeTerm(value) {
-  return String(value ?? "").trim().toLowerCase();
-}
 
 function parseBoolean(value, fallback = false) {
   if (typeof value === "boolean") {
@@ -131,11 +130,7 @@ export default async function handler(request, response) {
       throw new Error(wordbaseError.message || "Failed to load mapped words.");
     }
 
-    const mappedTerms = [...new Set(
-      (wordbaseRows ?? [])
-        .flatMap((row) => [normalizeTerm(row.term_key), normalizeTerm(row.term)])
-        .filter(Boolean),
-    )];
+    const mappedTerms = buildMappedTermsFromWordbaseRows(wordbaseRows);
 
     const payload = {
       activeGroup: {
@@ -150,25 +145,8 @@ export default async function handler(request, response) {
     };
 
     if (includeWords) {
-      const rowsForWords = wordLimit > 0 ? (wordbaseRows ?? []).slice(0, wordLimit) : wordbaseRows ?? [];
-      payload.mappedWords = rowsForWords.map((row) => ({
-        term: row.term ?? "",
-        definition: row.definition ?? "",
-        translation: row.translation ?? "",
-        pronunciation: row.pronunciation ?? "",
-        partOfSpeech: row.part_of_speech ?? "",
-        example: row.example ?? "",
-        exampleTranslation: row.example_translation ?? "",
-        tags: Array.isArray(row.tags) ? row.tags : [],
-        memoryTipsByLocale:
-          row.memory_tips_by_locale && typeof row.memory_tips_by_locale === "object"
-            ? row.memory_tips_by_locale
-            : {},
-        memoryImage:
-          row.memory_image && typeof row.memory_image === "object"
-            ? row.memory_image
-            : null,
-      }));
+      const rowsForWords = selectImportableWordbaseRows(wordbaseRows, wordLimit);
+      payload.mappedWords = rowsForWords.map(mapWordbaseRowToMappedWord);
     }
 
     sendJson(response, 200, payload);
