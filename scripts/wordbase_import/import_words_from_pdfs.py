@@ -210,27 +210,9 @@ def extract_pdfs(
                     f"  {key}: reuse {len(raw_terms)} extracted, "
                     f"{len(terms)} to process, {len(skipped_terms)} already in wordbase"
                 )
-            else:
-                raw_terms: list[str] = []
-                if can_reuse_extract and page_record.get("terms"):
-                    raw_terms = cached_extract
-                    print(f"  {key}: reuse {len(raw_terms)} extracted terms, checking wordbase")
-                else:
-                    print(f"  {key} ({page_record.get('page_label', '')})")
-                    try:
-                        data_url = pdf_page_to_data_url(pdf_path, page_index, zoom=pdf_zoom)
-                        raw_terms = api.extract_words(data_url)
-                        page_record["status"] = "extracted"
-                        page_record["pdf_dir"] = normalized_pdf_dir
-                        page_record["error"] = None
-                        print(f"    extracted {len(raw_terms)} terms")
-                    except Exception as error:
-                        page_record["status"] = "extract_failed"
-                        page_record["error"] = str(error)
-                        print(f"    extract failed: {error}")
-                        pages_processed += 1
-                        continue
-
+            elif can_reuse_extract:
+                raw_terms = cached_extract
+                print(f"  {key}: reuse {len(raw_terms)} extracted terms, checking wordbase")
                 terms, skipped_terms = filter_terms_against_wordbase(
                     raw_terms=raw_terms,
                     locale=locale,
@@ -244,6 +226,43 @@ def extract_pdfs(
                 page_record["terms"] = terms
                 page_record["skipped_terms"] = skipped_terms
                 page_record["pdf_dir"] = normalized_pdf_dir
+                page_record["wordbase_checked"] = (
+                    not dry_run and import_auth is not None and not skip_wordbase_extract_check
+                )
+                print(
+                    f"    wordbase: {len(skipped_terms)} already complete, "
+                    f"{len(terms)} need processing"
+                )
+            else:
+                print(f"  {key} ({page_record.get('page_label', '')})")
+                try:
+                    data_url = pdf_page_to_data_url(pdf_path, page_index, zoom=pdf_zoom)
+                    raw_terms = api.extract_words(data_url)
+                    page_record["status"] = "extracted"
+                    page_record["pdf_dir"] = normalized_pdf_dir
+                    page_record["error"] = None
+                    page_record["extracted_terms"] = raw_terms
+                    print(f"    extracted {len(raw_terms)} terms")
+                    save_progress(progress_path, progress)
+                except Exception as error:
+                    page_record["status"] = "extract_failed"
+                    page_record["error"] = str(error)
+                    print(f"    extract failed: {error}")
+                    pages_processed += 1
+                    save_progress(progress_path, progress)
+                    continue
+
+                terms, skipped_terms = filter_terms_against_wordbase(
+                    raw_terms=raw_terms,
+                    locale=locale,
+                    import_auth=import_auth,
+                    progress=progress,
+                    filename=key,
+                    dry_run=dry_run,
+                    skip_wordbase_check=skip_wordbase_extract_check,
+                )
+                page_record["terms"] = terms
+                page_record["skipped_terms"] = skipped_terms
                 page_record["wordbase_checked"] = (
                     not dry_run and import_auth is not None and not skip_wordbase_extract_check
                 )
@@ -377,6 +396,7 @@ def main() -> int:
     except AuthError as error:
         print(f"Auth error: {error}", file=sys.stderr)
         print_proxy_hint(error)
+        save_progress(settings.progress_path, progress)
         return 2
     except KeyboardInterrupt:
         print("\nInterrupted. Progress saved.")

@@ -58,20 +58,49 @@ def sync_pdf_dir_progress(
     normalized = normalize_pdf_dir(pdf_dir)
     pdf_names = {path.name for path in list_pdf_files(pdf_dir)}
     stored = progress.get("pdf_dir")
+    pages = progress.setdefault("pages", {})
 
-    if reset_extract or (stored is not None and stored != normalized):
+    if reset_extract:
         cleared = clear_page_cache_for_pdfs(progress, pdf_names)
-        reason = "reset requested" if reset_extract else f"pdf_dir changed ({stored} -> {normalized})"
-        print(f"[extract] {reason}; cleared {cleared} cached page(s) for current PDF dir")
+        print(f"[extract] reset requested; cleared {cleared} cached page(s) for current PDF dir")
+    elif stored is not None and stored != normalized:
+        cached_names = {
+            page_record.get("pdf_file")
+            for page_record in pages.values()
+            if page_record.get("pdf_file")
+        }
+        if cached_names and cached_names <= pdf_names:
+            migrated = 0
+            for page_record in pages.values():
+                if page_record.get("pdf_file") in pdf_names:
+                    page_record["pdf_dir"] = normalized
+                    migrated += 1
+            print(
+                f"[extract] pdf_dir moved ({stored} -> {normalized}); "
+                f"kept {migrated} cached page(s)"
+            )
+        else:
+            cleared = clear_page_cache_for_pdfs(progress, pdf_names)
+            print(
+                f"[extract] pdf_dir changed ({stored} -> {normalized}); "
+                f"cleared {cleared} cached page(s) for current PDF dir"
+            )
 
     progress["pdf_dir"] = normalized
 
 
 def page_cache_matches_dir(page_record: dict, pdf_dir: Path) -> bool:
+    normalized = normalize_pdf_dir(pdf_dir)
     stored = page_record.get("pdf_dir")
-    if not stored:
-        return False
-    return stored == normalize_pdf_dir(pdf_dir)
+    if stored == normalized:
+        return True
+
+    pdf_file = page_record.get("pdf_file")
+    if pdf_file and (pdf_dir / pdf_file).is_file():
+        page_record["pdf_dir"] = normalized
+        return True
+
+    return not stored
 
 
 def count_pdf_pages(pdf_path: Path) -> int:

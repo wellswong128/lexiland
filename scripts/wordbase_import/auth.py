@@ -553,7 +553,10 @@ class ImportAuth:
         if self.client is None:
             raise AuthError("Supabase client is not connected.")
 
-        self.sync_session()
+        try:
+            self.sync_session(allow_refresh=True)
+        except AuthError:
+            self.relogin()
 
         try:
             result = action()
