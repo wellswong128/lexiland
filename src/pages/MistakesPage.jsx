@@ -5,6 +5,7 @@ import { getActiveGroupLabel } from "../features/wordGroups/getActiveGroupLabel.
 import WordScopeModeSwitch from "../features/wordGroups/WordScopeModeSwitch.jsx";
 import WordGroupScopeEmptyState from "../features/wordGroups/WordGroupScopeEmptyState.jsx";
 import { useActiveGroupWordScope } from "../features/wordGroups/useActiveGroupWordScope.js";
+import { useEnsureActiveGroupWords } from "../features/wordGroups/useEnsureActiveGroupWords.js";
 import { useWordsContext } from "../features/words/WordsContext.jsx";
 import { recordDailyMistakeCleared } from "../lib/learningActivity.js";
 
@@ -19,6 +20,7 @@ function MistakesPage() {
     scopeReason,
     scopedWords,
   } = useActiveGroupWordScope(words, user);
+  useEnsureActiveGroupWords();
   const sourceWords = isGroupScopeActive ? scopedWords : words;
   const mistakeWords = sourceWords.filter((word) => word.mistake.isMistake);
   const activeGroupLabel = getActiveGroupLabel(activeGroup, locale);

@@ -898,13 +898,11 @@ export function useWords({ isAuthLoading = false, user = null } = {}, storage) {
       return;
     }
 
-    const hasScopedWords = wordsRef.current.some((word) =>
-      mappedSet.has(normalizeTerm(word.term)),
-    );
+    const hasScopedWords = words.some((word) => mappedSet.has(normalizeTerm(word.term)));
     if (!hasScopedWords && !activeGroupSyncPending) {
       void runActiveGroupSync();
     }
-  }, [isUsingSupabase, isWordsLoading, runActiveGroupSync, user?.id]);
+  }, [isUsingSupabase, isWordsLoading, runActiveGroupSync, user?.id, words]);
 
   return {
     addWord,
@@ -917,6 +915,7 @@ export function useWords({ isAuthLoading = false, user = null } = {}, storage) {
     autoImportedNotice,
     clearAutoImportedNotice,
     resetAllWords,
+    syncActiveGroupWords: runActiveGroupSync,
     syncLocalWordsToSupabase,
     words,
     wordsError,

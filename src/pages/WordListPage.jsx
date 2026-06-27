@@ -8,6 +8,7 @@ import WordScopeModeSwitch from "../features/wordGroups/WordScopeModeSwitch.jsx"
 import { getActiveGroupLabel } from "../features/wordGroups/getActiveGroupLabel.js";
 import WordGroupScopeEmptyState from "../features/wordGroups/WordGroupScopeEmptyState.jsx";
 import { useActiveGroupWordScope } from "../features/wordGroups/useActiveGroupWordScope.js";
+import { useEnsureActiveGroupWords } from "../features/wordGroups/useEnsureActiveGroupWords.js";
 import { useWordsContext } from "../features/words/WordsContext.jsx";
 import { can, getRoleFromUser, PERMISSIONS } from "../lib/authorization.js";
 
@@ -63,6 +64,7 @@ function WordListPage() {
     scopeReason,
     scopeError,
   } = useActiveGroupWordScope(words, user);
+  useEnsureActiveGroupWords();
   const role = getRoleFromUser(user);
   const canCreateWord = can(role, PERMISSIONS.WORDS_CREATE);
   const canDeleteWord = can(role, PERMISSIONS.WORDS_DELETE);

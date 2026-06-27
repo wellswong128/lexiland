@@ -1,13 +1,11 @@
 import { sendAuthError } from "../_authz.js";
 import {
-  buildMappedTermsFromWordbaseRows,
+  buildActiveGroupWordPayload,
   createRlsClientForRequest,
   getRequestBody,
   mapGroupRow,
-  mapWordbaseRowToMappedWord,
   normalizeGroupCode,
   requireUserGroupAccess,
-  selectImportableWordbaseRows,
   sendJson,
 } from "../_user-groups.js";
 
@@ -45,7 +43,7 @@ async function fetchGroupMappedWords(rlsClient, groupId, includeWords, wordLimit
 
   const wordbaseSelect = includeWords
     ? "term_key,term,definition,translation,pronunciation,part_of_speech,example,example_translation,tags,memory_tips_by_locale,memory_image"
-    : "term_key,term";
+    : "term_key,term,definition";
 
   const { data: wordbaseRows, error: wordbaseError } = await rlsClient
     .from("wordbase")
@@ -56,15 +54,7 @@ async function fetchGroupMappedWords(rlsClient, groupId, includeWords, wordLimit
     throw new Error(wordbaseError.message || "Failed to load mapped words.");
   }
 
-  const mappedTerms = buildMappedTermsFromWordbaseRows(wordbaseRows);
-  let mappedWords = [];
-
-  if (includeWords) {
-    const rowsForWords = selectImportableWordbaseRows(wordbaseRows, wordLimit);
-    mappedWords = rowsForWords.map(mapWordbaseRowToMappedWord);
-  }
-
-  return { mappedTerms, mappedWords };
+  return buildActiveGroupWordPayload(wordbaseRows, { includeWords, wordLimit });
 }
 
 async function readActiveGroup(rlsClient, userId) {

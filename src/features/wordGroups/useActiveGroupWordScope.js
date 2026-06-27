@@ -10,6 +10,7 @@ import {
 import {
   fetchUserActiveGroupWords,
   invalidateUserActiveGroupWordsCache,
+  ACTIVE_GROUP_INITIAL_IMPORT_COUNT,
 } from "./wordGroupsApi.js";
 import {
   loadWordScopeMode,
@@ -88,7 +89,13 @@ export function useActiveGroupWordScope(words, user) {
     });
 
     try {
-      const payload = await fetchUserActiveGroupWords({ forceRefresh });
+      invalidateUserActiveGroupWordsCache();
+      const payload = await fetchUserActiveGroupWords({
+        forceRefresh,
+        wordLimit: loadWordScopeMode(user?.id) === WORD_SCOPE_MODES.GROUP
+          ? ACTIVE_GROUP_INITIAL_IMPORT_COUNT
+          : 0,
+      });
       const activeGroup = payload.activeGroup ?? null;
       const mappedTerms = Array.isArray(payload.mappedTerms) ? payload.mappedTerms : [];
 

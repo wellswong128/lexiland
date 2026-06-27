@@ -5,6 +5,7 @@ import WordMemoryPanel from "../components/WordMemoryPanel.jsx";
 import { useLocale } from "../features/locale/LocaleContext.jsx";
 import WordGroupScopeEmptyState from "../features/wordGroups/WordGroupScopeEmptyState.jsx";
 import { useActiveGroupWordScope } from "../features/wordGroups/useActiveGroupWordScope.js";
+import { useEnsureActiveGroupWords } from "../features/wordGroups/useEnsureActiveGroupWords.js";
 import { createQuizQuestions } from "../features/review/quizHelpers.js";
 import { updateReviewResult } from "../features/review/reviewHelpers.js";
 import { useWordsContext } from "../features/words/WordsContext.jsx";
@@ -21,6 +22,7 @@ function QuizPage() {
     scopeReason,
     scopedWords,
   } = useActiveGroupWordScope(words, user);
+  useEnsureActiveGroupWords();
   const reviewWords = isGroupScopeActive ? scopedWords : words;
   const isScopeWordsPending =
     isGroupScopeActive && reviewWords.length === 0 && isActiveGroupSyncing;

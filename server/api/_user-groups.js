@@ -118,6 +118,16 @@ export function buildMappedTermsFromWordbaseRows(rows) {
   )];
 }
 
+export function buildActiveGroupWordPayload(wordbaseRows, { includeWords = false, wordLimit = 0 } = {}) {
+  const importableRows = selectImportableWordbaseRows(wordbaseRows, wordLimit);
+  const mappedTerms = buildMappedTermsFromWordbaseRows(importableRows);
+  const mappedWords = includeWords
+    ? importableRows.map(mapWordbaseRowToMappedWord)
+    : [];
+
+  return { mappedTerms, mappedWords };
+}
+
 export function isImportableWordbaseRow(row) {
   const term = String(row?.term ?? row?.term_key ?? "").trim();
   const definition = String(row?.definition ?? "").trim();
