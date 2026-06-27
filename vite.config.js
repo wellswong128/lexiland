@@ -7,7 +7,16 @@ import { VitePWA } from "vite-plugin-pwa";
 import { applyApiCors } from "./server/api/_cors.js";
 import { routeRequest } from "./server/api/router.js";
 
-function resolveAppVersion(env = process.env) {
+function readPackageVersion() {
+  try {
+    const pkg = JSON.parse(readFileSync("package.json", "utf8"));
+    return pkg.version && pkg.version !== "0.0.0" ? pkg.version : "1.0.0";
+  } catch {
+    return "1.0.0";
+  }
+}
+
+function resolveBuildId(env = process.env) {
   const fromEnv = env.VERCEL_GIT_COMMIT_SHA?.slice(0, 7);
 
   if (fromEnv) {
@@ -17,30 +26,37 @@ function resolveAppVersion(env = process.env) {
   try {
     return execSync("git rev-parse --short HEAD", { encoding: "utf8" }).trim();
   } catch {
-    try {
-      const pkg = JSON.parse(readFileSync("package.json", "utf8"));
-      return pkg.version && pkg.version !== "0.0.0" ? pkg.version : "dev";
-    } catch {
-      return "dev";
-    }
+    return "dev";
   }
 }
 
-function appVersionPlugin(appVersion) {
+function resolveAppVersionMetadata(env = process.env) {
+  const semver = readPackageVersion();
+  const build = resolveBuildId(env);
+  const builtAt = new Date().toISOString();
+
+  return {
+    semver,
+    build,
+    builtAt,
+  };
+}
+
+function appVersionPlugin(versionMetadata) {
   return {
     name: "lexiland-app-version",
     configureServer(server) {
       server.middlewares.use("/version.json", (_request, response) => {
         response.setHeader("Content-Type", "application/json");
         response.setHeader("Cache-Control", "no-cache");
-        response.end(JSON.stringify({ version: appVersion }));
+        response.end(JSON.stringify(versionMetadata));
       });
     },
     generateBundle() {
       this.emitFile({
         type: "asset",
         fileName: "version.json",
-        source: `${JSON.stringify({ version: appVersion }, null, 2)}\n`,
+        source: `${JSON.stringify(versionMetadata, null, 2)}\n`,
       });
     },
   };
@@ -95,7 +111,7 @@ function localApiPlugin() {
 
 export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, process.cwd(), "");
-  const appVersion = resolveAppVersion(env);
+  const appVersion = resolveAppVersionMetadata(env);
 
   process.env.AGNES_API_KEY ||= env.AGNES_API_KEY;
   process.env.AGNES_MODEL ||= env.AGNES_MODEL;
@@ -104,7 +120,9 @@ export default defineConfig(({ mode }) => {
 
   return {
     define: {
-      __APP_VERSION__: JSON.stringify(appVersion),
+      __APP_VERSION__: JSON.stringify(appVersion.build),
+      __APP_SEMVER__: JSON.stringify(appVersion.semver),
+      __APP_BUILT_AT__: JSON.stringify(appVersion.builtAt),
     },
     plugins: [
       react(),
@@ -112,7 +130,7 @@ export default defineConfig(({ mode }) => {
       localApiPlugin(),
       appVersionPlugin(appVersion),
       VitePWA({
-        registerType: "autoUpdate",
+        registerType: "prompt",
         includeAssets: [
           "apple-touch-icon.png",
           "pwa-192.png",
@@ -124,8 +142,12 @@ export default defineConfig(({ mode }) => {
           globPatterns: ["**/*.{js,css,html,ico,png,svg,webp,woff2,webmanifest}"],
           globIgnores: ["**/version.json"],
           navigateFallback: "/index.html",
-          navigateFallbackDenylist: [/^\/api\//],
+          navigateFallbackDenylist: [/^\/api\//, /^\/version\.json$/],
           runtimeCaching: [
+            {
+              urlPattern: /\/version\.json(?:\?.*)?$/,
+              handler: "NetworkOnly",
+            },
             {
               urlPattern: /^https:\/\/fonts\.googleapis\.com\/.*/i,
               handler: "CacheFirst",

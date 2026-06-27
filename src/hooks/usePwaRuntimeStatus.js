@@ -1,5 +1,10 @@
 import { useEffect, useState } from "react";
-import { fetchLatestAppVersion, getAppVersion, hasRemoteVersionUpdate } from "../lib/appVersion.js";
+import {
+  checkForAppUpdate,
+  notifyAppUpdateAvailable,
+} from "../lib/appUpdateWatcher.js";
+import { useLocale } from "../features/locale/LocaleContext.jsx";
+import { fetchLatestAppVersionInfo, formatAppVersionLabel, getAppVersionLabel, hasRemoteVersionUpdate } from "../lib/appVersion.js";
 import { getIsStandaloneDisplay, getPwaPlatform, getServiceWorkerSupport } from "../lib/pwaPlatform.js";
 import { isCapacitorNative } from "../lib/platform.js";
 import {
@@ -10,6 +15,8 @@ import {
 } from "../lib/pwaRuntimeState.js";
 
 export function usePwaRuntimeStatus() {
+  const { locale } = useLocale();
+  const displayLocale = locale === "zh-Hant" ? "zh-Hant" : "en-GB";
   const [isOnline, setIsOnline] = useState(
     typeof navigator !== "undefined" ? navigator.onLine : true,
   );
@@ -17,7 +24,7 @@ export function usePwaRuntimeStatus() {
   const [needsRefresh, setNeedsRefresh] = useState(getNeedsRefresh);
   const [latestVersion, setLatestVersion] = useState(null);
   const [serviceWorkerState, setServiceWorkerState] = useState("checking");
-  const currentVersion = getAppVersion();
+  const currentVersion = getAppVersionLabel(displayLocale);
 
   useEffect(() => {
     function handleOnline() {
@@ -46,11 +53,29 @@ export function usePwaRuntimeStatus() {
       setNeedsRefresh(true);
     }
 
+    async function syncRemoteVersion() {
+      const result = await checkForAppUpdate();
+
+      if (result?.hasUpdate) {
+        notifyAppUpdateAvailable(result.latestVersion);
+      }
+    }
+
+    function handleVisibleAgain() {
+      if (document.visibilityState === "visible") {
+        void syncRemoteVersion();
+      }
+    }
+
     window.addEventListener("online", handleOnline);
     window.addEventListener("offline", handleOffline);
     window.addEventListener("lexiland:offline-ready", handleOfflineReady);
     window.addEventListener("lexiland:sw-needs-refresh", handleNeedsRefresh);
     window.addEventListener("lexiland:app-update-available", handleAppUpdateAvailable);
+    document.addEventListener("visibilitychange", handleVisibleAgain);
+    window.addEventListener("focus", handleVisibleAgain);
+
+    void syncRemoteVersion();
 
     void probeOfflineReady().then((ready) => {
       if (ready) {
@@ -70,6 +95,8 @@ export function usePwaRuntimeStatus() {
       window.removeEventListener("lexiland:offline-ready", handleOfflineReady);
       window.removeEventListener("lexiland:sw-needs-refresh", handleNeedsRefresh);
       window.removeEventListener("lexiland:app-update-available", handleAppUpdateAvailable);
+      document.removeEventListener("visibilitychange", handleVisibleAgain);
+      window.removeEventListener("focus", handleVisibleAgain);
     };
   }, []);
 
@@ -81,10 +108,15 @@ export function usePwaRuntimeStatus() {
     let cancelled = false;
 
     async function loadLatestVersion() {
-      const remoteVersion = await fetchLatestAppVersion();
+      const remoteVersion = await fetchLatestAppVersionInfo();
 
-      if (!cancelled && remoteVersion && hasRemoteVersionUpdate(remoteVersion)) {
-        setLatestVersion(remoteVersion);
+      if (!cancelled && remoteVersion && hasRemoteVersionUpdate(remoteVersion.build)) {
+        setLatestVersion(
+          formatAppVersionLabel(
+            { semver: remoteVersion.semver, builtAt: remoteVersion.builtAt },
+            displayLocale,
+          ),
+        );
       }
     }
 
@@ -93,7 +125,7 @@ export function usePwaRuntimeStatus() {
     return () => {
       cancelled = true;
     };
-  }, [isOnline, needsRefresh]);
+  }, [displayLocale, isOnline, needsRefresh]);
 
   useEffect(() => {
     if (isCapacitorNative()) {

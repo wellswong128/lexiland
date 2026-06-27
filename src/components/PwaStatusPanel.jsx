@@ -88,7 +88,7 @@ function PwaStatusPanel({ showInstallActions = true }) {
           tone={offlineReady ? "success" : "default"}
           value={offlineReady ? t("pwa.yes") : t("pwa.no")}
         />
-        {currentVersion && currentVersion !== "dev" ? (
+        {currentVersion && !currentVersion.startsWith("dev") ? (
           <StatusRow label={t("pwa.statusCurrentVersion")} value={currentVersion} />
         ) : null}
       </div>

@@ -1,33 +1,46 @@
 import {
-  fetchLatestAppVersion,
+  fetchLatestAppVersionInfo,
+  formatAppVersionLabel,
   getAppVersion,
+  getAppVersionLabel,
   hasRemoteVersionUpdate,
 } from "./appVersion.js";
 import { isCapacitorNative } from "./platform.js";
 import { markNeedsRefresh } from "./pwaRuntimeState.js";
 
-const DEFAULT_POLL_INTERVAL_MS = 5 * 60 * 1000;
+const DEFAULT_POLL_INTERVAL_MS = 60 * 1000;
+const INITIAL_CHECK_DELAY_MS = 250;
 
 /**
  * Compare the bundled app version with /version.json on the server.
  * Returns whether a newer deployment is available.
  */
 export async function checkForAppUpdate() {
-  const currentVersion = getAppVersion();
-  const latestVersion = await fetchLatestAppVersion();
+  const currentVersion = getAppVersionLabel();
+  const currentBuild = getAppVersion();
+  const latestInfo = await fetchLatestAppVersionInfo();
 
-  if (!latestVersion || !hasRemoteVersionUpdate(latestVersion)) {
+  if (!latestInfo || !hasRemoteVersionUpdate(latestInfo.build)) {
     return {
+      currentBuild,
       currentVersion,
       hasUpdate: false,
-      latestVersion,
+      latestBuild: latestInfo?.build ?? null,
+      latestVersion: latestInfo
+        ? formatAppVersionLabel({ semver: latestInfo.semver, builtAt: latestInfo.builtAt })
+        : null,
     };
   }
 
   return {
+    currentBuild,
     currentVersion,
     hasUpdate: true,
-    latestVersion,
+    latestBuild: latestInfo.build,
+    latestVersion: formatAppVersionLabel({
+      semver: latestInfo.semver,
+      builtAt: latestInfo.builtAt,
+    }),
   };
 }
 
@@ -47,12 +60,12 @@ async function promptServiceWorkerUpdateCheck() {
 /**
  * Mark the app as needing refresh and notify listeners (UpdateBanner, settings panel, etc.).
  */
-export function notifyAppUpdateAvailable(latestVersion) {
+export function notifyAppUpdateAvailable(latestVersionLabel) {
   markNeedsRefresh();
 
   window.dispatchEvent(
     new CustomEvent("lexiland:app-update-available", {
-      detail: { latestVersion: latestVersion || null },
+      detail: { latestVersion: latestVersionLabel || null },
     }),
   );
 
@@ -91,6 +104,10 @@ export function startAppUpdateWatcher({
 
   void runCheck();
 
+  const initialCheckId = window.setTimeout(() => {
+    void runCheck();
+  }, INITIAL_CHECK_DELAY_MS);
+
   const intervalId = window.setInterval(() => {
     void runCheck();
   }, intervalMs);
@@ -111,6 +128,7 @@ export function startAppUpdateWatcher({
 
   return () => {
     cancelled = true;
+    window.clearTimeout(initialCheckId);
     window.clearInterval(intervalId);
     document.removeEventListener("visibilitychange", handleVisibleAgain);
     window.removeEventListener("focus", handleVisibleAgain);
