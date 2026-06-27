@@ -157,7 +157,7 @@ function FlashcardsPage() {
     const term = imageQuestionsRef.current[index]?.word?.term?.trim();
 
     if (!term) {
-      return;
+      return false;
     }
 
     if (
@@ -165,11 +165,12 @@ function FlashcardsPage() {
       lastSpokenRef.current.index === index &&
       lastSpokenRef.current.term === term
     ) {
-      return;
+      return false;
     }
 
     lastSpokenRef.current = { index, term };
     speakText(term);
+    return true;
   }
 
   function handleStartReview() {
@@ -282,12 +283,14 @@ function FlashcardsPage() {
     const delayMs = isFirstQuestion ? 400 : 120;
 
     const timerId = window.setTimeout(() => {
-      speakWordAtIndex(currentIndex, { force: isFirstQuestion });
+      speakWordAtIndex(currentIndex);
     }, delayMs);
 
     const retryId = isFirstQuestion
       ? window.setTimeout(() => {
-          speakWordAtIndex(0, { force: true });
+          if (lastSpokenRef.current.index !== 0) {
+            speakWordAtIndex(0, { force: true });
+          }
         }, 1200)
       : undefined;
 
@@ -324,7 +327,7 @@ function FlashcardsPage() {
         return index;
       }
 
-      speakWordAtIndex(index + 1, { force: true });
+      speakWordAtIndex(index + 1);
 
       return index + 1;
     });
