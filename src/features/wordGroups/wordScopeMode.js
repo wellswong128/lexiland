@@ -20,7 +20,7 @@ export function loadWordScopeMode(userId) {
     : WORD_SCOPE_MODES.GROUP;
 }
 
-export function saveWordScopeMode(userId, mode) {
+export function saveWordScopeMode(userId, mode, { notify = true } = {}) {
   if (typeof window === "undefined") {
     return;
   }
@@ -28,7 +28,10 @@ export function saveWordScopeMode(userId, mode) {
   const nextMode =
     mode === WORD_SCOPE_MODES.CUSTOM ? WORD_SCOPE_MODES.CUSTOM : WORD_SCOPE_MODES.GROUP;
   window.localStorage.setItem(getStorageKey(userId), nextMode);
-  window.dispatchEvent(
-    new CustomEvent(WORD_SCOPE_MODE_CHANGED_EVENT, { detail: { mode: nextMode } }),
-  );
+
+  if (notify) {
+    window.dispatchEvent(
+      new CustomEvent(WORD_SCOPE_MODE_CHANGED_EVENT, { detail: { mode: nextMode } }),
+    );
+  }
 }

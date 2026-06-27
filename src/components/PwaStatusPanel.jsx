@@ -1,9 +1,7 @@
 import { Link } from "react-router-dom";
-import { useState } from "react";
 import { useLocale } from "../features/locale/LocaleContext.jsx";
 import { usePwaInstall } from "../hooks/usePwaInstall.js";
 import { usePwaRuntimeStatus } from "../hooks/usePwaRuntimeStatus.js";
-import { applyServiceWorkerUpdate } from "../lib/pwaRuntimeState.js";
 
 function StatusRow({ label, value, tone = "default" }) {
   return (
@@ -17,12 +15,9 @@ function StatusRow({ label, value, tone = "default" }) {
 function PwaStatusPanel({ showInstallActions = true }) {
   const { t } = useLocale();
   const { canInstall, isInstalled, promptInstall } = usePwaInstall();
-  const [isUpdating, setIsUpdating] = useState(false);
   const {
     currentVersion,
     isOnline,
-    latestVersion,
-    needsRefresh,
     offlineReady,
     platform,
     serviceWorkerState,
@@ -33,23 +28,6 @@ function PwaStatusPanel({ showInstallActions = true }) {
   const serviceWorkerLabel = serviceWorkerSupported
     ? t(`pwa.serviceWorker.${serviceWorkerState}`)
     : t("pwa.serviceWorker.unsupported");
-  const refreshHint = latestVersion
-    ? t("pwa.refreshHintWithVersion", { version: latestVersion })
-    : t("pwa.refreshHint");
-
-  async function handleUpdate() {
-    if (isUpdating) {
-      return;
-    }
-
-    setIsUpdating(true);
-
-    try {
-      await applyServiceWorkerUpdate();
-    } catch {
-      setIsUpdating(false);
-    }
-  }
 
   return (
     <section aria-labelledby="pwa-status-title" className="pwa-status-panel">
@@ -92,22 +70,6 @@ function PwaStatusPanel({ showInstallActions = true }) {
           <StatusRow label={t("pwa.statusCurrentVersion")} value={currentVersion} />
         ) : null}
       </div>
-
-      {needsRefresh ? (
-        <>
-          <p className="pwa-status-note pwa-status-note-info">{refreshHint}</p>
-          <button
-            className="pwa-status-update-action"
-            disabled={isUpdating}
-            onClick={() => {
-              void handleUpdate();
-            }}
-            type="button"
-          >
-            {isUpdating ? t("pwa.updateButtonLoading") : t("pwa.updateButton")}
-          </button>
-        </>
-      ) : null}
 
       {!isOnline ? (
         <p className="pwa-status-note pwa-status-note-warning">{t("pwa.offlineNote")}</p>

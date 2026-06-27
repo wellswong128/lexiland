@@ -128,10 +128,9 @@ export function useActiveGroupWordScope(words, user) {
     const handleActiveGroupChanged = (event) => {
       invalidateUserActiveGroupWordsCache();
       if (loadWordScopeMode(user?.id) !== WORD_SCOPE_MODES.GROUP) {
-        saveWordScopeMode(user?.id, WORD_SCOPE_MODES.GROUP);
-      } else {
-        setScopeMode(WORD_SCOPE_MODES.GROUP);
+        saveWordScopeMode(user?.id, WORD_SCOPE_MODES.GROUP, { notify: false });
       }
+      setScopeMode(WORD_SCOPE_MODES.GROUP);
 
       const nextActiveGroup = event?.detail?.activeGroup ?? null;
       const nextMappedTerms = event?.detail?.mappedTerms;
