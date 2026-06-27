@@ -1,4 +1,7 @@
-import { fetchUserActiveGroupWords } from "./wordGroupsApi.js";
+import {
+  ACTIVE_GROUP_INITIAL_IMPORT_COUNT,
+  fetchUserActiveGroupWords,
+} from "./wordGroupsApi.js";
 import { normalizeTerm } from "../words/wordTypes.js";
 import { loadWordScopeMode, WORD_SCOPE_MODES } from "./wordScopeMode.js";
 
@@ -69,7 +72,10 @@ export async function syncActiveGroupWordMemory(
 
   let mappedWords = preloadedMappedWords;
   if (!Array.isArray(mappedWords)) {
-    const payload = await fetchUserActiveGroupWords({ includeWords: true });
+    const payload = await fetchUserActiveGroupWords({
+      includeWords: true,
+      wordLimit: ACTIVE_GROUP_INITIAL_IMPORT_COUNT,
+    });
     if (!payload.activeGroup) {
       return 0;
     }

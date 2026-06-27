@@ -365,30 +365,6 @@ export function useWords({ isAuthLoading = false, user = null } = {}, storage) {
               }
             }
 
-            invalidateUserActiveGroupWordsCache();
-            const fullBatch = await importMissingActiveGroupWords(user.id, wordsRef.current, null, {
-              forceRefresh: true,
-            });
-            lastMappedWordsRef.current = fullBatch.mappedWords;
-
-            if (!isMounted) {
-              return;
-            }
-
-            if (fullBatch.importedWords.length > 0) {
-              const nextWords = hydrateWords([...fullBatch.importedWords, ...wordsRef.current], storage);
-              wordsRef.current = nextWords;
-              setWords(nextWords);
-
-              if (fullBatch.activeGroup) {
-                setAutoImportedNotice({
-                  count: fullBatch.importedWords.length,
-                  groupCode: fullBatch.activeGroup.groupCode ?? "",
-                  groupNameEn: fullBatch.activeGroup.displayNameEn ?? "",
-                  groupNameZhHant: fullBatch.activeGroup.displayNameZhHant ?? "",
-                });
-              }
-            }
           })
           .catch((error) => {
             console.warn("Could not sync active-group words in background.", error);
@@ -815,6 +791,7 @@ export function useWords({ isAuthLoading = false, user = null } = {}, storage) {
           ? initialPayload
           : await fetchUserActiveGroupWords({
               includeWords: true,
+              wordLimit: ACTIVE_GROUP_INITIAL_IMPORT_COUNT,
               forceRefresh: true,
             });
 
@@ -826,13 +803,6 @@ export function useWords({ isAuthLoading = false, user = null } = {}, storage) {
       );
       lastMappedWordsRef.current = firstBatch.mappedWords;
       applyImportedWords(firstBatch.importedWords, firstBatch.activeGroup);
-
-      invalidateUserActiveGroupWordsCache();
-      const fullBatch = await importMissingActiveGroupWords(user.id, wordsRef.current, null, {
-        forceRefresh: true,
-      });
-      lastMappedWordsRef.current = fullBatch.mappedWords;
-      applyImportedWords(fullBatch.importedWords, fullBatch.activeGroup);
     } catch (error) {
       console.warn("Could not sync active-group words from wordbase.", error);
     } finally {
