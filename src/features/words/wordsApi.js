@@ -224,6 +224,48 @@ export async function updateWordInSupabase(wordId, changes) {
   return mapDbWordToWord(data);
 }
 
+const MEMORY_UPDATE_CONCURRENCY = 8;
+
+async function runWithConcurrency(items, worker, concurrency) {
+  const queue = [...items];
+  const workers = Array.from({ length: Math.min(concurrency, queue.length) }, async () => {
+    while (queue.length > 0) {
+      const item = queue.shift();
+      if (!item) break;
+      await worker(item);
+    }
+  });
+  await Promise.all(workers);
+}
+
+export async function batchUpdateWordMemoryInSupabase(updates) {
+  ensureSupabase();
+
+  if (!Array.isArray(updates) || updates.length === 0) {
+    return [];
+  }
+
+  const results = [];
+
+  await runWithConcurrency(updates, async ({ wordId, changes }) => {
+    try {
+      const { data, error } = await supabase
+        .from("words")
+        .update(mapWordChangesToUpdate(changes))
+        .eq("id", wordId)
+        .select(WORD_COLUMNS)
+        .single();
+
+      if (error) throw error;
+      results.push(mapDbWordToWord(data));
+    } catch (error) {
+      // Skip failed updates and continue.
+    }
+  }, MEMORY_UPDATE_CONCURRENCY);
+
+  return results;
+}
+
 export async function deleteWordFromSupabase(wordId) {
   ensureSupabase();
 

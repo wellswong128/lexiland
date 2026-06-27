@@ -57,6 +57,7 @@ export async function syncActiveGroupWordMemory(
   updateWord,
   userId,
   preloadedMappedWords = null,
+  { batchUpdater = null } = {},
 ) {
   if (!userId || !Array.isArray(userWords) || userWords.length === 0) {
     return 0;
@@ -85,7 +86,7 @@ export async function syncActiveGroupWordMemory(
       .filter(([termKey]) => Boolean(termKey)),
   );
 
-  let synced = 0;
+  const pendingUpdates = [];
 
   for (const word of userWords) {
     const mappedWord = mappedByTerm.get(normalizeTerm(word.term));
@@ -98,9 +99,21 @@ export async function syncActiveGroupWordMemory(
       continue;
     }
 
-    await updateWord(word.id, changes);
-    synced += 1;
+    pendingUpdates.push({ wordId: word.id, word, changes });
   }
 
-  return synced;
+  if (pendingUpdates.length === 0) {
+    return 0;
+  }
+
+  if (batchUpdater) {
+    await batchUpdater(pendingUpdates);
+    return pendingUpdates.length;
+  }
+
+  for (const { wordId, changes } of pendingUpdates) {
+    await updateWord(wordId, changes);
+  }
+
+  return pendingUpdates.length;
 }

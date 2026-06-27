@@ -35,6 +35,7 @@ import {
   insertWordsInSupabase,
   mapWordChangesToUpdate,
   updateWordInSupabase,
+  batchUpdateWordMemoryInSupabase,
 } from "./wordsApi.js";
 import {
   fetchUserActiveGroupWords,
@@ -687,6 +688,20 @@ export function useWords({ isAuthLoading = false, user = null } = {}, storage) {
         (wordId, changes) => updateWordRef.current(wordId, changes),
         user.id,
         preloadedMappedWords,
+        {
+          batchUpdater: async (pendingUpdates) => {
+            const savedWords = await batchUpdateWordMemoryInSupabase(pendingUpdates);
+            if (savedWords.length > 0) {
+              const savedById = new Map(savedWords.map((w) => [w.id, w]));
+              setWords((currentWords) =>
+                currentWords.map((word) => {
+                  const saved = savedById.get(word.id);
+                  return saved ? mergeWordAiMemory(saved, word) : word;
+                }),
+              );
+            }
+          },
+        },
       );
     } catch (error) {
       console.warn("Could not sync active-group memory from wordbase.", error);
@@ -724,19 +739,36 @@ export function useWords({ isAuthLoading = false, user = null } = {}, storage) {
           });
         }
       }
-
-      await syncActiveGroupWordMemory(
-        wordsRef.current,
-        (wordId, changes) => updateWordRef.current(wordId, changes),
-        user.id,
-        mappedWords,
-      );
     } catch (error) {
       console.warn("Could not sync active-group words from wordbase.", error);
     } finally {
       activeGroupSyncPending = false;
       setIsActiveGroupSyncing(false);
     }
+
+    // Memory sync runs in the background — it doesn't affect review counts.
+    void syncActiveGroupWordMemory(
+      wordsRef.current,
+      (wordId, changes) => updateWordRef.current(wordId, changes),
+      user.id,
+      lastMappedWordsRef.current,
+      {
+        batchUpdater: async (pendingUpdates) => {
+          const savedWords = await batchUpdateWordMemoryInSupabase(pendingUpdates);
+          if (savedWords.length > 0) {
+            const savedById = new Map(savedWords.map((w) => [w.id, w]));
+            setWords((currentWords) =>
+              currentWords.map((word) => {
+                const saved = savedById.get(word.id);
+                return saved ? mergeWordAiMemory(saved, word) : word;
+              }),
+            );
+          }
+        },
+      },
+    ).catch((error) => {
+      console.warn("Could not sync active-group word memory in background.", error);
+    });
   }, [isUsingSupabase, storage, user?.id]);
 
   useEffect(() => {
