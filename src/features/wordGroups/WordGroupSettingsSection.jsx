@@ -5,7 +5,6 @@ import { getActiveGroupLabel } from "./getActiveGroupLabel.js";
 import { getFriendlyNetworkError } from "../../lib/networkErrors.js";
 import { saveCachedActiveGroupScope } from "./activeGroupScopeCache.js";
 import {
-  fetchUserActiveGroupWords,
   fetchUserGroupPicks,
   fetchWordGroups,
   saveUserGroupPicks,
@@ -115,11 +114,7 @@ function WordGroupSettingsSection({ user, hasSupabaseConfig }) {
         setPickedGroupCodes(nextPickedCodes);
       }
 
-      await setUserActiveGroup(group.groupCode);
-      const scopePayload = await fetchUserActiveGroupWords({
-        forceRefresh: true,
-        includeWords: true,
-      });
+      const scopePayload = await setUserActiveGroup(group.groupCode, { includeWords: true });
       const activeGroup = scopePayload.activeGroup ?? {
         groupCode: group.groupCode,
         grade: group.grade,

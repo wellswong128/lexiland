@@ -156,7 +156,7 @@ export async function fetchUserActiveGroup() {
   return parseJsonResponse(response);
 }
 
-export async function setUserActiveGroup(groupCode) {
+export async function setUserActiveGroup(groupCode, { includeWords = false } = {}) {
   const authHeaders = await getApiAuthHeaders();
   const response = await fetch(resolveApiUrl("/api/user-active-group"), {
     method: "PUT",
@@ -164,7 +164,7 @@ export async function setUserActiveGroup(groupCode) {
       "Content-Type": "application/json",
       ...authHeaders,
     },
-    body: JSON.stringify({ groupCode }),
+    body: JSON.stringify({ groupCode, includeWords }),
   });
 
   const payload = await parseJsonResponse(response);

@@ -160,7 +160,7 @@ export async function fetchWordsFromSupabase(userId, { includeMemory = false } =
   return data.map(mapDbWordToWord);
 }
 
-const INSERT_BATCH_SIZE = 50;
+const INSERT_BATCH_SIZE = 500;
 
 export async function insertWordInSupabase(word, userId) {
   ensureSupabase();
@@ -183,30 +183,36 @@ export async function insertWordsInSupabase(words, userId) {
     return [];
   }
 
-  const savedWords = [];
-
+  const batches = [];
   for (let index = 0; index < words.length; index += INSERT_BATCH_SIZE) {
-    const batch = words.slice(index, index + INSERT_BATCH_SIZE);
-    const { data, error } = await supabase
-      .from("words")
-      .insert(batch.map((word) => mapWordToInsert(word, userId)))
-      .select(WORD_COLUMNS);
-
-    if (error) {
-      for (const word of batch) {
-        try {
-          savedWords.push(await insertWordInSupabase(word, userId));
-        } catch {
-          // Skip invalid or duplicate terms and continue importing remaining words.
-        }
-      }
-      continue;
-    }
-
-    savedWords.push(...data.map(mapDbWordToWord));
+    batches.push(words.slice(index, index + INSERT_BATCH_SIZE));
   }
 
-  return savedWords;
+  const batchResults = await Promise.all(
+    batches.map(async (batch) => {
+      const { data, error } = await supabase
+        .from("words")
+        .insert(batch.map((word) => mapWordToInsert(word, userId)))
+        .select(WORD_COLUMNS);
+
+      if (error) {
+        // Fallback: insert one by one to skip duplicates
+        const saved = [];
+        for (const word of batch) {
+          try {
+            saved.push(await insertWordInSupabase(word, userId));
+          } catch {
+            // Skip invalid or duplicate terms.
+          }
+        }
+        return saved;
+      }
+
+      return data.map(mapDbWordToWord);
+    }),
+  );
+
+  return batchResults.flat();
 }
 
 export async function updateWordInSupabase(wordId, changes) {

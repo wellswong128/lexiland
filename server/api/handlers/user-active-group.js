@@ -20,6 +20,69 @@ const GROUP_COLUMNS = [
   "is_active",
 ];
 
+function normalizeTermForGroup(value) {
+  return String(value ?? "").trim().toLowerCase();
+}
+
+async function fetchGroupMappedWords(rlsClient, groupId, includeWords) {
+  const { data: mappings, error: mappingError } = await rlsClient
+    .from("wordbase_group_map")
+    .select("wordbase_id")
+    .eq("group_id", groupId);
+
+  if (mappingError) {
+    throw new Error(mappingError.message || "Failed to load group mappings.");
+  }
+
+  const wordbaseIds = [...new Set((mappings ?? []).map((row) => row.wordbase_id).filter(Boolean))];
+  if (wordbaseIds.length === 0) {
+    return { mappedTerms: [], mappedWords: [] };
+  }
+
+  const wordbaseSelect = includeWords
+    ? "term_key,term,definition,translation,pronunciation,part_of_speech,example,example_translation,tags,memory_tips_by_locale,memory_image"
+    : "term_key,term";
+
+  const { data: wordbaseRows, error: wordbaseError } = await rlsClient
+    .from("wordbase")
+    .select(wordbaseSelect)
+    .in("id", wordbaseIds);
+
+  if (wordbaseError) {
+    throw new Error(wordbaseError.message || "Failed to load mapped words.");
+  }
+
+  const mappedTerms = [...new Set(
+    (wordbaseRows ?? [])
+      .flatMap((row) => [normalizeTermForGroup(row.term_key), normalizeTermForGroup(row.term)])
+      .filter(Boolean),
+  )];
+
+  let mappedWords = [];
+  if (includeWords) {
+    mappedWords = (wordbaseRows ?? []).map((row) => ({
+      term: row.term ?? "",
+      definition: row.definition ?? "",
+      translation: row.translation ?? "",
+      pronunciation: row.pronunciation ?? "",
+      partOfSpeech: row.part_of_speech ?? "",
+      example: row.example ?? "",
+      exampleTranslation: row.example_translation ?? "",
+      tags: Array.isArray(row.tags) ? row.tags : [],
+      memoryTipsByLocale:
+        row.memory_tips_by_locale && typeof row.memory_tips_by_locale === "object"
+          ? row.memory_tips_by_locale
+          : {},
+      memoryImage:
+        row.memory_image && typeof row.memory_image === "object"
+          ? row.memory_image
+          : null,
+    }));
+  }
+
+  return { mappedTerms, mappedWords };
+}
+
 async function readActiveGroup(rlsClient, userId) {
   const { data: preference, error: preferenceError } = await rlsClient
     .from("user_group_preferences")
@@ -67,6 +130,7 @@ async function handlePut(request, response, auth) {
     return;
   }
 
+  const includeWords = Boolean(body.includeWords);
   const rlsClient = createRlsClientForRequest(request);
   const userId = auth.user.id;
 
@@ -110,11 +174,21 @@ async function handlePut(request, response, auth) {
     throw new Error(upsertError.message || "Failed to set active group.");
   }
 
-  sendJson(response, 200, {
-    activeGroup: mapGroupRow(group),
+  const activeGroup = mapGroupRow(group);
+  const { mappedTerms, mappedWords } = await fetchGroupMappedWords(rlsClient, group.id, includeWords);
+
+  const payload = {
+    activeGroup,
     activeGroupCode: group.group_code,
     activeGroupId: group.id,
-  });
+    mappedTerms,
+  };
+
+  if (includeWords) {
+    payload.mappedWords = mappedWords;
+  }
+
+  sendJson(response, 200, payload);
 }
 
 export default async function handler(request, response) {
