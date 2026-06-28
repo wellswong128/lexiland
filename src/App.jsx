@@ -46,7 +46,7 @@ function ProtectedRoute({ children }) {
   const role = getRoleFromUser(user);
 
   if (isAuthLoading) {
-    return null;
+    return <RouteFallback />;
   }
 
   if (canRoute(role, location.pathname)) {

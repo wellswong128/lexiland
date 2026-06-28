@@ -1,6 +1,9 @@
 import { useCallback, useEffect, useState } from "react";
 import { hasSupabaseConfig } from "../../lib/supabaseClient.js";
-import { ACTIVE_GROUP_SCOPE_LOADED_EVENT } from "./wordGroupScopeEvents.js";
+import {
+  ACTIVE_GROUP_CHANGED_EVENT,
+  ACTIVE_GROUP_SCOPE_LOADED_EVENT,
+} from "./wordGroupScopeEvents.js";
 import {
   clearCachedActiveGroupScope,
   loadCachedActiveGroupScope,
