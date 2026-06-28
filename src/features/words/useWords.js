@@ -812,13 +812,6 @@ export function useWords({ isAuthLoading = false, user = null } = {}, storage) {
         );
         lastMappedWordsRef.current = firstBatch.mappedWords;
         applyImportedWords(firstBatch.importedWords, firstBatch.activeGroup);
-
-        invalidateUserActiveGroupWordsCache();
-        const fullBatch = await importMissingActiveGroupWords(user.id, wordsRef.current, null, {
-          forceRefresh: true,
-        });
-        lastMappedWordsRef.current = fullBatch.mappedWords;
-        applyImportedWords(fullBatch.importedWords, fullBatch.activeGroup);
       } catch (error) {
         console.warn("Could not sync active-group words from wordbase.", error);
       } finally {
@@ -829,6 +822,17 @@ export function useWords({ isAuthLoading = false, user = null } = {}, storage) {
           void runActiveGroupSync();
         }
       }
+
+      void importMissingActiveGroupWords(user.id, wordsRef.current, null, {
+        forceRefresh: true,
+      })
+        .then((fullBatch) => {
+          lastMappedWordsRef.current = fullBatch.mappedWords;
+          applyImportedWords(fullBatch.importedWords, fullBatch.activeGroup);
+        })
+        .catch((error) => {
+          console.warn("Could not finish full active-group word import.", error);
+        });
 
       if (!updateWordRef.current) {
         return;

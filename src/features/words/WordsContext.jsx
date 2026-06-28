@@ -1,4 +1,5 @@
 import { createContext, useContext } from "react";
+import { ActiveGroupScopeProvider } from "../wordGroups/ActiveGroupScopeContext.jsx";
 import { useSupabaseAuth } from "../auth/useSupabaseAuth.js";
 import { useWords } from "./useWords.js";
 
@@ -13,7 +14,7 @@ export function WordsProvider({ children }) {
 
   return (
     <WordsContext.Provider value={{ ...authState, ...wordsState }}>
-      {children}
+      <ActiveGroupScopeProvider user={authState.user}>{children}</ActiveGroupScopeProvider>
     </WordsContext.Provider>
   );
 }
