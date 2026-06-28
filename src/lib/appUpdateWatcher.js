@@ -6,10 +6,9 @@ import {
   hasRemoteVersionUpdate,
 } from "./appVersion.js";
 import { isCapacitorNative } from "./platform.js";
-import { markNeedsRefresh } from "./pwaRuntimeState.js";
+import { getNeedsRefresh, markNeedsRefresh } from "./pwaRuntimeState.js";
 
 const DEFAULT_POLL_INTERVAL_MS = 60 * 1000;
-const INITIAL_CHECK_DELAY_MS = 250;
 
 /**
  * Compare the bundled app version with /version.json on the server.
@@ -62,7 +61,12 @@ async function promptServiceWorkerUpdateCheck() {
  * Mark the app as needing refresh and notify listeners (UpdateBanner, settings panel, etc.).
  */
 export function notifyAppUpdateAvailable(latestVersionLabel) {
+  const wasAlreadyPending = getNeedsRefresh();
   markNeedsRefresh();
+
+  if (wasAlreadyPending) {
+    return;
+  }
 
   window.dispatchEvent(
     new CustomEvent("lexiland:app-update-available", {
@@ -105,10 +109,6 @@ export function startAppUpdateWatcher({
 
   void runCheck();
 
-  const initialCheckId = window.setTimeout(() => {
-    void runCheck();
-  }, INITIAL_CHECK_DELAY_MS);
-
   const intervalId = window.setInterval(() => {
     void runCheck();
   }, intervalMs);
@@ -129,7 +129,6 @@ export function startAppUpdateWatcher({
 
   return () => {
     cancelled = true;
-    window.clearTimeout(initialCheckId);
     window.clearInterval(intervalId);
     document.removeEventListener("visibilitychange", handleVisibleAgain);
     window.removeEventListener("focus", handleVisibleAgain);

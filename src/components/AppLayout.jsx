@@ -4,6 +4,7 @@ import BottomNav from "./BottomNav.jsx";
 import LexiFloatingMenu from "./LexiFloatingMenu.jsx";
 import OfflineBanner from "./OfflineBanner.jsx";
 import UpdateBanner from "./UpdateBanner.jsx";
+import { usePwaRuntimeStatus } from "../hooks/usePwaRuntimeStatus.js";
 import {
   getActivityForLocation,
   recordLearningActivity,
@@ -28,6 +29,7 @@ function AppLayout({ children }) {
   const showFloatingMenu = !isGamePage && !isAuthPage;
   const showBottomNav = showFloatingMenu;
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { isOnline, latestVersion, needsRefresh, offlineReady } = usePwaRuntimeStatus();
 
   useEffect(() => {
     setIsMenuOpen(false);
@@ -88,8 +90,8 @@ function AppLayout({ children }) {
       ) : null}
       {!isGamePage && !isAuthPage ? (
         <div className="top-status-banners">
-          <OfflineBanner />
-          <UpdateBanner />
+          <OfflineBanner isOnline={isOnline} offlineReady={offlineReady} />
+          <UpdateBanner latestVersion={latestVersion} needsRefresh={needsRefresh} />
         </div>
       ) : null}
       <main

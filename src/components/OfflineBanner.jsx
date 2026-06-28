@@ -1,8 +1,6 @@
-import { usePwaRuntimeStatus } from "../hooks/usePwaRuntimeStatus.js";
 import { useLocale } from "../features/locale/LocaleContext.jsx";
 
-function OfflineBanner() {
-  const { isOnline, offlineReady } = usePwaRuntimeStatus();
+function OfflineBanner({ isOnline, offlineReady }) {
   const { t } = useLocale();
 
   if (isOnline) {

@@ -375,30 +375,6 @@ export function useWords({ isAuthLoading = false, user = null } = {}, storage) {
               }
             }
 
-            invalidateUserActiveGroupWordsCache();
-            const fullBatch = await importMissingActiveGroupWords(user.id, wordsRef.current, null, {
-              forceRefresh: true,
-            });
-            lastMappedWordsRef.current = fullBatch.mappedWords;
-
-            if (!isMounted) {
-              return;
-            }
-
-            if (fullBatch.importedWords.length > 0) {
-              const nextWords = hydrateWords([...fullBatch.importedWords, ...wordsRef.current], storage);
-              wordsRef.current = nextWords;
-              setWords(nextWords);
-
-              if (fullBatch.activeGroup) {
-                setAutoImportedNotice({
-                  count: fullBatch.importedWords.length,
-                  groupCode: fullBatch.activeGroup.groupCode ?? "",
-                  groupNameEn: fullBatch.activeGroup.displayNameEn ?? "",
-                  groupNameZhHant: fullBatch.activeGroup.displayNameZhHant ?? "",
-                });
-              }
-            }
           })
           .catch((error) => {
             console.warn("Could not sync active-group words in background.", error);
@@ -959,13 +935,11 @@ export function useWords({ isAuthLoading = false, user = null } = {}, storage) {
       return;
     }
 
-    const hasScopedWords = wordsRef.current.some((word) =>
-      mappedSet.has(normalizeTerm(word.term)),
-    );
+    const hasScopedWords = words.some((word) => mappedSet.has(normalizeTerm(word.term)));
     if (!hasScopedWords && !activeGroupSyncPending) {
       void runActiveGroupSync();
     }
-  }, [isUsingSupabase, isWordsLoading, runActiveGroupSync, user?.id]);
+  }, [isUsingSupabase, isWordsLoading, runActiveGroupSync, user?.id, words]);
 
   return {
     addWord,
@@ -979,6 +953,7 @@ export function useWords({ isAuthLoading = false, user = null } = {}, storage) {
     clearAutoImportedNotice,
     ensureActiveGroupWordsSynced,
     resetAllWords,
+    syncActiveGroupWords: runActiveGroupSync,
     syncLocalWordsToSupabase,
     words,
     wordsError,

@@ -1,10 +1,11 @@
 import { useEffect, useState } from "react";
-import {
-  checkForAppUpdate,
-  notifyAppUpdateAvailable,
-} from "../lib/appUpdateWatcher.js";
 import { useLocale } from "../features/locale/LocaleContext.jsx";
-import { fetchLatestAppVersionInfo, formatAppVersionLabel, getAppVersionLabel, hasRemoteVersionUpdate } from "../lib/appVersion.js";
+import {
+  fetchLatestAppVersionInfo,
+  formatAppVersionLabel,
+  getAppVersionLabel,
+  hasRemoteVersionUpdate,
+} from "../lib/appVersion.js";
 import { getIsStandaloneDisplay, getPwaPlatform, getServiceWorkerSupport } from "../lib/pwaPlatform.js";
 import { isCapacitorNative } from "../lib/platform.js";
 import {
@@ -53,29 +54,11 @@ export function usePwaRuntimeStatus() {
       setNeedsRefresh(true);
     }
 
-    async function syncRemoteVersion() {
-      const result = await checkForAppUpdate();
-
-      if (result?.hasUpdate) {
-        notifyAppUpdateAvailable(result.latestVersion);
-      }
-    }
-
-    function handleVisibleAgain() {
-      if (document.visibilityState === "visible") {
-        void syncRemoteVersion();
-      }
-    }
-
     window.addEventListener("online", handleOnline);
     window.addEventListener("offline", handleOffline);
     window.addEventListener("lexiland:offline-ready", handleOfflineReady);
     window.addEventListener("lexiland:sw-needs-refresh", handleNeedsRefresh);
     window.addEventListener("lexiland:app-update-available", handleAppUpdateAvailable);
-    document.addEventListener("visibilitychange", handleVisibleAgain);
-    window.addEventListener("focus", handleVisibleAgain);
-
-    void syncRemoteVersion();
 
     void probeOfflineReady().then((ready) => {
       if (ready) {
@@ -95,8 +78,6 @@ export function usePwaRuntimeStatus() {
       window.removeEventListener("lexiland:offline-ready", handleOfflineReady);
       window.removeEventListener("lexiland:sw-needs-refresh", handleNeedsRefresh);
       window.removeEventListener("lexiland:app-update-available", handleAppUpdateAvailable);
-      document.removeEventListener("visibilitychange", handleVisibleAgain);
-      window.removeEventListener("focus", handleVisibleAgain);
     };
   }, []);
 

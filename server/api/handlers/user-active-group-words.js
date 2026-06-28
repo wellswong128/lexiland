@@ -1,12 +1,10 @@
 import { sendAuthError } from "../_authz.js";
 import {
-  buildMappedTermsFromWordbaseRows,
+  buildActiveGroupWordPayload,
   createRlsClientForRequest,
   fetchWordbaseRowsByIds,
-  mapWordbaseRowToMappedWord,
   normalizeGroupCode,
   requireUserGroupAccess,
-  selectImportableWordbaseRows,
   sendJson,
 } from "../_user-groups.js";
 
@@ -120,11 +118,14 @@ export default async function handler(request, response) {
 
     const wordbaseSelect = includeWords
       ? "term_key,term,definition,translation,pronunciation,part_of_speech,example,example_translation,tags,memory_tips_by_locale,memory_image"
-      : "term_key,term";
+      : "term_key,term,definition";
 
     const wordbaseRows = await fetchWordbaseRowsByIds(rlsClient, wordbaseIds, wordbaseSelect);
 
-    const mappedTerms = buildMappedTermsFromWordbaseRows(wordbaseRows);
+    const { mappedTerms, mappedWords } = buildActiveGroupWordPayload(wordbaseRows, {
+      includeWords,
+      wordLimit,
+    });
 
     const payload = {
       activeGroup: {
@@ -139,8 +140,7 @@ export default async function handler(request, response) {
     };
 
     if (includeWords) {
-      const rowsForWords = selectImportableWordbaseRows(wordbaseRows, wordLimit);
-      payload.mappedWords = rowsForWords.map(mapWordbaseRowToMappedWord);
+      payload.mappedWords = mappedWords;
     }
 
     sendJson(response, 200, payload);

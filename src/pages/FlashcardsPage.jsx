@@ -13,6 +13,7 @@ import {
 import { prefetchImageReviewPool } from "../features/review/prefetchImageReviewPool.js";
 import WordGroupScopeEmptyState from "../features/wordGroups/WordGroupScopeEmptyState.jsx";
 import { useActiveGroupWordScope } from "../features/wordGroups/useActiveGroupWordScope.js";
+import { useEnsureActiveGroupWords } from "../features/wordGroups/useEnsureActiveGroupWords.js";
 import {
   getReviewSessionWords,
   updateReviewResult,
@@ -102,6 +103,7 @@ function FlashcardsPage() {
     scopeReason,
     scopedWords,
   } = useActiveGroupWordScope(words, user);
+  useEnsureActiveGroupWords();
   const reviewWords = isGroupScopeActive ? scopedWords : words;
   const isScopeWordsPending =
     isGroupScopeActive &&

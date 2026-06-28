@@ -1,11 +1,9 @@
 import { useState } from "react";
 import { useLocale } from "../features/locale/LocaleContext.jsx";
-import { usePwaRuntimeStatus } from "../hooks/usePwaRuntimeStatus.js";
 import { applyServiceWorkerUpdate } from "../lib/pwaRuntimeState.js";
 
-function UpdateBanner() {
+function UpdateBanner({ latestVersion, needsRefresh }) {
   const { t } = useLocale();
-  const { latestVersion, needsRefresh } = usePwaRuntimeStatus();
   const [isUpdating, setIsUpdating] = useState(false);
 
   if (!needsRefresh) {
@@ -29,8 +27,6 @@ function UpdateBanner() {
       setIsUpdating(false);
     }
 
-    // Safety net: if the page didn't reload, reset the button after 5s
-    // so the user isn't stuck on "Updating..." forever.
     window.setTimeout(() => {
       setIsUpdating(false);
     }, 5000);
