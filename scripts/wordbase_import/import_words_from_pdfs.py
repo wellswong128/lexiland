@@ -33,6 +33,7 @@ from pdf_utils import (
     page_cache_matches_dir,
     page_key,
     page_label_from_pdf_page,
+    pdf_file_fingerprint,
     pdf_page_to_data_url,
     require_fitz,
     sync_pdf_dir_progress,
@@ -240,6 +241,7 @@ def extract_pdfs(
                     raw_terms = api.extract_words(data_url)
                     page_record["status"] = "extracted"
                     page_record["pdf_dir"] = normalized_pdf_dir
+                    page_record["pdf_fingerprint"] = pdf_file_fingerprint(pdf_path)
                     page_record["error"] = None
                     page_record["extracted_terms"] = raw_terms
                     print(f"    extracted {len(raw_terms)} terms")
