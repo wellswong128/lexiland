@@ -37,6 +37,58 @@ def list_pdf_files(pdf_dir: Path) -> list[Path]:
     ]
 
 
+def pdf_file_fingerprint(pdf_path: Path) -> dict[str, int]:
+    stat = pdf_path.stat()
+    return {
+        "size": stat.st_size,
+        "mtime_ns": stat.st_mtime_ns,
+    }
+
+
+def _fingerprints_match(page_record: dict, pdf_path: Path) -> bool:
+    fingerprint = page_record.get("pdf_fingerprint")
+    if not isinstance(fingerprint, dict):
+        return False
+
+    try:
+        current = pdf_file_fingerprint(pdf_path)
+    except OSError:
+        return False
+
+    return (
+        fingerprint.get("size") == current["size"]
+        and fingerprint.get("mtime_ns") == current["mtime_ns"]
+    )
+
+
+def _remove_page_cache_entries(progress: dict, keys_to_remove: list[str]) -> int:
+    pages = progress.setdefault("pages", {})
+    for key in keys_to_remove:
+        pages.pop(key, None)
+
+    if not keys_to_remove:
+        return 0
+
+    removed_keys = set(keys_to_remove)
+    terms = progress.setdefault("terms", {})
+    terms_to_remove = []
+    for term, record in terms.items():
+        source_images = record.get("source_images")
+        if not isinstance(source_images, list):
+            continue
+
+        next_sources = [source for source in source_images if source not in removed_keys]
+        if next_sources:
+            record["source_images"] = next_sources
+        else:
+            terms_to_remove.append(term)
+
+    for term in terms_to_remove:
+        terms.pop(term, None)
+
+    return len(keys_to_remove)
+
+
 def clear_page_cache_for_pdfs(progress: dict, pdf_names: set[str]) -> int:
     pages = progress.setdefault("pages", {})
     keys_to_remove = [
@@ -44,9 +96,7 @@ def clear_page_cache_for_pdfs(progress: dict, pdf_names: set[str]) -> int:
         for key in pages
         if any(key.startswith(f"{pdf_name}#page-") for pdf_name in pdf_names)
     ]
-    for key in keys_to_remove:
-        del pages[key]
-    return len(keys_to_remove)
+    return _remove_page_cache_entries(progress, keys_to_remove)
 
 
 def sync_pdf_dir_progress(
@@ -61,30 +111,26 @@ def sync_pdf_dir_progress(
     pages = progress.setdefault("pages", {})
 
     if reset_extract:
-        cleared = clear_page_cache_for_pdfs(progress, pdf_names)
-        print(f"[extract] reset requested; cleared {cleared} cached page(s) for current PDF dir")
+        cleared = _remove_page_cache_entries(progress, list(pages.keys()))
+        print(f"[extract] reset requested; cleared {cleared} cached page(s)")
     elif stored is not None and stored != normalized:
-        cached_names = {
-            page_record.get("pdf_file")
-            for page_record in pages.values()
-            if page_record.get("pdf_file")
-        }
-        if cached_names and cached_names <= pdf_names:
-            migrated = 0
-            for page_record in pages.values():
-                if page_record.get("pdf_file") in pdf_names:
-                    page_record["pdf_dir"] = normalized
-                    migrated += 1
-            print(
-                f"[extract] pdf_dir moved ({stored} -> {normalized}); "
-                f"kept {migrated} cached page(s)"
-            )
-        else:
-            cleared = clear_page_cache_for_pdfs(progress, pdf_names)
-            print(
-                f"[extract] pdf_dir changed ({stored} -> {normalized}); "
-                f"cleared {cleared} cached page(s) for current PDF dir"
-            )
+        current_pdfs = {path.name: path for path in list_pdf_files(pdf_dir)}
+        migrated = 0
+        keys_to_remove = []
+        for key, page_record in pages.items():
+            pdf_file = page_record.get("pdf_file")
+            current_pdf = current_pdfs.get(pdf_file)
+            if current_pdf is not None and _fingerprints_match(page_record, current_pdf):
+                page_record["pdf_dir"] = normalized
+                migrated += 1
+            else:
+                keys_to_remove.append(key)
+
+        cleared = _remove_page_cache_entries(progress, keys_to_remove)
+        print(
+            f"[extract] pdf_dir changed ({stored} -> {normalized}); "
+            f"kept {migrated} fingerprint-matched page(s), cleared {cleared} cached page(s)"
+        )
 
     progress["pdf_dir"] = normalized
 
@@ -96,11 +142,11 @@ def page_cache_matches_dir(page_record: dict, pdf_dir: Path) -> bool:
         return True
 
     pdf_file = page_record.get("pdf_file")
-    if pdf_file and (pdf_dir / pdf_file).is_file():
+    if pdf_file and _fingerprints_match(page_record, pdf_dir / pdf_file):
         page_record["pdf_dir"] = normalized
         return True
 
-    return not stored
+    return False
 
 
 def count_pdf_pages(pdf_path: Path) -> int:
