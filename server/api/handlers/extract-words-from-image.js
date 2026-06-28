@@ -1,5 +1,6 @@
 import { splitIntoSingleWordTerms } from "../../../lib/normalizeWordTerms.js";
 import { requireAiApiAccess, sendAuthError } from "../_authz.js";
+import { parseAgnesJson } from "../_parse-agnes-json.js";
 
 const AGNES_API_URL = "https://apihub.agnes-ai.com/v1/chat/completions";
 const MAX_IMAGE_CHARS = 4_500_000;
@@ -16,19 +17,6 @@ function getRequestBody(request) {
   }
 
   return request.body ?? {};
-}
-
-function parseAgnesJson(data) {
-  const text = data.choices?.[0]?.message?.content;
-
-  if (!text) {
-    throw new Error("AI response did not include text output.");
-  }
-
-  const fencedMatch = text.match(/```(?:json)?\s*([\s\S]*?)```/i);
-  const jsonText = fencedMatch ? fencedMatch[1].trim() : text.trim();
-
-  return JSON.parse(jsonText);
 }
 
 function normalizeExtractedWords(words) {

@@ -152,3 +152,27 @@ export function mapWordbaseRowToMappedWord(row) {
         : null,
   };
 }
+
+const WORDBASE_ID_CHUNK_SIZE = 80;
+
+export async function fetchWordbaseRowsByIds(rlsClient, wordbaseIds, selectColumns) {
+  const uniqueIds = [...new Set(wordbaseIds.filter(Boolean))];
+  if (uniqueIds.length === 0) {
+    return [];
+  }
+
+  const rows = [];
+
+  for (let index = 0; index < uniqueIds.length; index += WORDBASE_ID_CHUNK_SIZE) {
+    const chunk = uniqueIds.slice(index, index + WORDBASE_ID_CHUNK_SIZE);
+    const { data, error } = await rlsClient.from("wordbase").select(selectColumns).in("id", chunk);
+
+    if (error) {
+      throw new Error(error.message || "Failed to load mapped words.");
+    }
+
+    rows.push(...(data ?? []));
+  }
+
+  return rows;
+}

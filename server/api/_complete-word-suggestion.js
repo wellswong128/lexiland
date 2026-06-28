@@ -6,8 +6,10 @@ import {
   isIncompleteExamPhraseTranslation,
   resolveVocabularyLocale,
 } from "../../lib/vocabularyLocale.js";
+import { isAiJsonOutputError, parseAgnesJson } from "../_parse-agnes-json.js";
 
 const AGNES_API_URL = "https://apihub.agnes-ai.com/v1/chat/completions";
+const AI_OUTPUT_RETRY_ATTEMPTS = 3;
 
 function normalizeSuggestion(value) {
   return {
@@ -22,16 +24,6 @@ function normalizeSuggestion(value) {
       ? value.tags.map((tag) => String(tag).trim()).filter(Boolean)
       : [],
   };
-}
-
-function parseAgnesJson(data) {
-  const text = data.choices?.[0]?.message?.content;
-
-  if (!text) {
-    throw new Error("AI response did not include text output.");
-  }
-
-  return JSON.parse(text);
 }
 
 function buildPrompt(term, chineseLabel, { strict = false, phrase = false } = {}) {
@@ -58,41 +50,55 @@ Use ${chineseLabel} for translation and exampleTranslation.
 translation must be the ${chineseLabel} meaning of the word (not English).
 example must be a natural English sentence that uses the word.
 exampleTranslation must be the ${chineseLabel} translation of example.
-Keep the definition concise and learner-friendly. Tags should be an array of short English labels.${multiWordRule}${strictRule}${phraseRule}`;
+Keep the definition concise and learner-friendly. Tags should be an array of short English labels.
+Use plain double quotes in JSON strings. Escape any internal quotes with backslashes. Do not use smart quotes or unescaped quotation marks inside values.${multiWordRule}${strictRule}${phraseRule}`;
 }
 
 async function requestSuggestion(term, chineseLabel, apiKey, { strict = false, phrase = false } = {}) {
-  const aiResponse = await fetch(AGNES_API_URL, {
-    method: "POST",
-    headers: {
-      Authorization: `Bearer ${apiKey}`,
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({
-      model: process.env.AGNES_MODEL || "agnes-2.0-flash",
-      messages: [
-        {
-          role: "system",
-          content:
-            "You help English learners create vocabulary cards. Return only valid JSON.",
-        },
-        {
-          role: "user",
-          content: buildPrompt(term, chineseLabel, { strict, phrase }),
-        },
-      ],
-      temperature: 0.2,
-    }),
-  });
+  let lastError = null;
 
-  if (!aiResponse.ok) {
-    const errorText = await aiResponse.text();
-    throw new Error(`AI request failed: ${errorText}`);
+  for (let attempt = 0; attempt < AI_OUTPUT_RETRY_ATTEMPTS; attempt += 1) {
+    try {
+      const aiResponse = await fetch(AGNES_API_URL, {
+        method: "POST",
+        headers: {
+          Authorization: `Bearer ${apiKey}`,
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          model: process.env.AGNES_MODEL || "agnes-2.0-flash",
+          messages: [
+            {
+              role: "system",
+              content:
+                "You help English learners create vocabulary cards. Return only valid JSON.",
+            },
+            {
+              role: "user",
+              content: buildPrompt(term, chineseLabel, { strict, phrase }),
+            },
+          ],
+          temperature: 0.2,
+        }),
+      });
+
+      if (!aiResponse.ok) {
+        const errorText = await aiResponse.text();
+        throw new Error(`AI request failed: ${errorText}`);
+      }
+
+      const data = await aiResponse.json();
+      return normalizeSuggestion(parseAgnesJson(data));
+    } catch (error) {
+      lastError = error;
+      if (attempt < AI_OUTPUT_RETRY_ATTEMPTS - 1 && isAiJsonOutputError(error)) {
+        continue;
+      }
+      throw error;
+    }
   }
 
-  const data = await aiResponse.json();
-
-  return normalizeSuggestion(parseAgnesJson(data));
+  throw lastError ?? new Error(`Complete-word failed for ${term}.`);
 }
 
 function ensureAgnesApiKey() {

@@ -232,14 +232,15 @@ function HomePage() {
   const isHomeLoading = isWordsLoading || isScopePending;
   const learningWords = isGroupScopeActive ? scopedWords : words;
   const role = getRoleFromUser(user);
-  const dueWords = getDueWords(learningWords);
   const mistakeWords = learningWords.filter((word) => word.mistake.isMistake);
   const wordCount = isGroupScopeActive
     ? Math.max(learningWords.length, mappedTermCount)
     : learningWords.length;
   const dueCount = isGroupScopeActive
-    ? dueWords.length + missingMappedTermCount
-    : dueWords.length;
+    ? isActiveGroupSyncing && scopedWords.length === 0
+      ? missingMappedTermCount
+      : getDueWords(scopedWords).length
+    : getDueWords(words).length;
   const mistakeCount = mistakeWords.length;
   const isEmpty = wordCount === 0;
   const showSyncPrompt = hasSupabaseConfig && !isWordsLoading && !user;

@@ -18,6 +18,7 @@ sys.path.insert(0, str(WORDBASE_IMPORT_DIR))
 sys.path.insert(0, str(SCRIPT_DIR))
 
 from api_client import ApiError, LexiLandApiClient  # noqa: E402
+from ai_retries import call_ai_step  # noqa: E402
 from auth import _load_session  # noqa: E402
 from completeness import has_memory_image, has_memory_tips, missing_detail_fields, missing_parts  # noqa: E402
 from config import load_settings  # noqa: E402
@@ -389,8 +390,12 @@ def process_word(
         if args.dry_run:
             print("    dry-run: would call /api/word-memory-tips")
         else:
+            record["errors"].pop("memory_tips", None)
             try:
-                tips = api.memory_tips(entry or suggestion, locale)
+                tips = call_ai_step(
+                    "memory-tips",
+                    lambda: api.memory_tips(entry or suggestion, locale),
+                )
                 upsert_memory_tips(client, entry or suggestion, locale, tips, contributor_id, entry)
                 entry = fetch_entry(client, term)
             except Exception as e:
@@ -404,8 +409,12 @@ def process_word(
         if args.dry_run:
             print("    dry-run: would call /api/word-memory-image")
         else:
+            record["errors"].pop("memory_image", None)
             try:
-                image = api.memory_image(entry or suggestion)
+                image = call_ai_step(
+                    "memory-image",
+                    lambda: api.memory_image(entry or suggestion),
+                )
                 upsert_memory_image(client, entry or suggestion, image, contributor_id, entry)
                 entry = fetch_entry(client, term)
             except Exception as e:
@@ -483,6 +492,13 @@ def enrich_word_list_file(
     print(f"  words: {len(words)}")
     if not args.dry_run and skipped_count > 0:
         print(f"  skipped (already complete): {skipped_count}")
+    incomplete_count = sum(
+        1
+        for item in progress.get("terms", {}).values()
+        if item.get("status") in ("incomplete", "failed")
+    )
+    if not args.dry_run and incomplete_count > 0:
+        print(f"  incomplete/failed in progress: {incomplete_count}")
     print(f"  to process: {len(words_to_process)}")
 
     for index, word in enumerate(words_to_process, start=1):

@@ -18,6 +18,7 @@ SCRIPT_DIR = Path(__file__).resolve().parent
 sys.path.insert(0, str(SCRIPT_DIR))
 
 from api_client import ApiError, LexiLandApiClient, image_to_data_url, list_image_files
+from ai_retries import call_ai_step
 from auth import AuthError, ImportAuth
 from completeness import (
     is_complete,
@@ -287,7 +288,10 @@ def process_term(
                 print("    dry-run: would call /api/complete-word and upsert details")
             else:
                 print(f"  [{term}] complete-word ({', '.join(detail_fields_missing)})")
-                suggestion = api.complete_word(term, locale)
+                suggestion = call_ai_step(
+                    "complete-word",
+                    lambda: api.complete_word(term, locale),
+                )
                 if not suggestion.get("definition"):
                     raise ApiError("Complete-word response missing definition.")
                 assert import_auth is not None
@@ -322,7 +326,10 @@ def process_term(
             if dry_run:
                 print("    dry-run: would call /api/word-memory-tips and upsert tips")
             else:
-                tips = api.memory_tips(word_context, locale)
+                tips = call_ai_step(
+                    "memory-tips",
+                    lambda: api.memory_tips(word_context, locale),
+                )
                 if not tips.get("tips"):
                     raise ApiError("Memory tips response was empty.")
                 assert import_auth is not None
@@ -355,7 +362,10 @@ def process_term(
             if dry_run:
                 print("    dry-run: would call /api/word-memory-image and upsert image")
             else:
-                image = api.memory_image(word_context)
+                image = call_ai_step(
+                    "memory-image",
+                    lambda: api.memory_image(word_context),
+                )
                 assert import_auth is not None
                 contributor_id = import_auth.contributor_id
                 import_auth.run(

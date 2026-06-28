@@ -2,6 +2,7 @@ import { sendAuthError } from "../_authz.js";
 import {
   buildMappedTermsFromWordbaseRows,
   createRlsClientForRequest,
+  fetchWordbaseRowsByIds,
   mapWordbaseRowToMappedWord,
   normalizeGroupCode,
   requireUserGroupAccess,
@@ -121,14 +122,7 @@ export default async function handler(request, response) {
       ? "term_key,term,definition,translation,pronunciation,part_of_speech,example,example_translation,tags,memory_tips_by_locale,memory_image"
       : "term_key,term";
 
-    const { data: wordbaseRows, error: wordbaseError } = await rlsClient
-      .from("wordbase")
-      .select(wordbaseSelect)
-      .in("id", wordbaseIds);
-
-    if (wordbaseError) {
-      throw new Error(wordbaseError.message || "Failed to load mapped words.");
-    }
+    const wordbaseRows = await fetchWordbaseRowsByIds(rlsClient, wordbaseIds, wordbaseSelect);
 
     const mappedTerms = buildMappedTermsFromWordbaseRows(wordbaseRows);
 

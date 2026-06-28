@@ -13,17 +13,21 @@ import { REVIEW_RESULTS } from "../features/words/wordTypes.js";
 
 function QuizPage() {
   const { t } = useLocale();
-  const { isActiveGroupSyncing, updateWord, user, words } = useWordsContext();
+  const { ensureActiveGroupWordsSynced, isActiveGroupSyncing, updateWord, user, words } =
+    useWordsContext();
   const {
     activeGroup,
     isLoadingScope,
     isGroupScopeActive,
+    mappedTermCount,
     scopeReason,
     scopedWords,
   } = useActiveGroupWordScope(words, user);
   const reviewWords = isGroupScopeActive ? scopedWords : words;
   const isScopeWordsPending =
-    isGroupScopeActive && reviewWords.length === 0 && isActiveGroupSyncing;
+    isGroupScopeActive &&
+    reviewWords.length === 0 &&
+    (isActiveGroupSyncing || mappedTermCount > 0);
   const reviewWordIdsKey = useMemo(
     () => reviewWords.map((word) => word.id).sort().join("|"),
     [reviewWords],
@@ -48,6 +52,19 @@ function QuizPage() {
     current: Math.min(currentIndex + 1, questions.length),
     total: questions.length,
   });
+
+  useEffect(() => {
+    if (!isGroupScopeActive || mappedTermCount === 0 || scopedWords.length > 0) {
+      return;
+    }
+
+    void ensureActiveGroupWordsSynced();
+  }, [
+    ensureActiveGroupWordsSynced,
+    isGroupScopeActive,
+    mappedTermCount,
+    scopedWords.length,
+  ]);
 
   useEffect(() => {
     if (initializedQuizKeyRef.current === reviewWordIdsKey) {

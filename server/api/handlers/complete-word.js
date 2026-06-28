@@ -1,5 +1,6 @@
 import { requireAiApiAccess, sendAuthError } from "../_authz.js";
 import { generateCompleteWordSuggestion } from "../_complete-word-suggestion.js";
+import { isAiJsonOutputError } from "../_parse-agnes-json.js";
 
 function sendJson(response, statusCode, payload) {
   response.statusCode = statusCode;
@@ -41,6 +42,7 @@ export default async function handler(request, response) {
     const suggestion = await generateCompleteWordSuggestion(term, vocabularyLocale);
     sendJson(response, 200, { suggestion });
   } catch (error) {
-    sendJson(response, 500, { error: error.message });
+    const statusCode = isAiJsonOutputError(error) ? 502 : 500;
+    sendJson(response, statusCode, { error: error.message });
   }
 }

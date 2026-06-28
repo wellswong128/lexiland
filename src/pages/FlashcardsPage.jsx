@@ -92,17 +92,21 @@ function FlashcardsPrepareErrorActions({
 
 function FlashcardsPage() {
   const { locale, t } = useLocale();
-  const { isActiveGroupSyncing, updateWord, user, words } = useWordsContext();
+  const { ensureActiveGroupWordsSynced, isActiveGroupSyncing, updateWord, user, words } =
+    useWordsContext();
   const {
     activeGroup,
     isLoadingScope,
     isGroupScopeActive,
+    mappedTermCount,
     scopeReason,
     scopedWords,
   } = useActiveGroupWordScope(words, user);
   const reviewWords = isGroupScopeActive ? scopedWords : words;
   const isScopeWordsPending =
-    isGroupScopeActive && reviewWords.length === 0 && isActiveGroupSyncing;
+    isGroupScopeActive &&
+    reviewWords.length === 0 &&
+    (isActiveGroupSyncing || mappedTermCount > 0);
   const enrichedExampleWordIdsRef = useRef(new Set());
   const [searchParams] = useSearchParams();
   const mistakesOnly = searchParams.get("mode") === "mistakes";
@@ -136,6 +140,19 @@ function FlashcardsPage() {
 
   imageQuestionsRef.current = imageQuestions;
   imageQuestionsLengthRef.current = imageQuestions.length;
+
+  useEffect(() => {
+    if (!isGroupScopeActive || mappedTermCount === 0 || scopedWords.length > 0) {
+      return;
+    }
+
+    void ensureActiveGroupWordsSynced();
+  }, [
+    ensureActiveGroupWordsSynced,
+    isGroupScopeActive,
+    mappedTermCount,
+    scopedWords.length,
+  ]);
 
   function scrollQuizToBottom() {
     const scrollToEnd = () => {

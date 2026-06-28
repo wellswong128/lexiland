@@ -1,5 +1,8 @@
 import { requireAiApiAccess, sendAuthError } from "../_authz.js";
+import { isAiJsonOutputError, parseAgnesJson } from "../_parse-agnes-json.js";
+
 const AGNES_API_URL = "https://apihub.agnes-ai.com/v1/chat/completions";
+const AI_OUTPUT_RETRY_ATTEMPTS = 3;
 
 const LOCALE_LABELS = {
   "zh-Hant": "Traditional Chinese",
@@ -11,16 +14,6 @@ function sendJson(response, statusCode, payload) {
   response.statusCode = statusCode;
   response.setHeader("Content-Type", "application/json");
   response.end(JSON.stringify(payload));
-}
-
-function parseAgnesJson(data) {
-  const text = data.choices?.[0]?.message?.content;
-
-  if (!text) {
-    throw new Error("AI response did not include text output.");
-  }
-
-  return JSON.parse(text);
 }
 
 function getRequestBody(request) {
@@ -66,7 +59,70 @@ Return only valid JSON with:
   - method: a short label such as phonetic link, root breakdown, image association, sentence trick, or confusable warning
   - content: 1-2 concise sentences explaining how to remember the word
 
+Use plain double quotes in JSON strings. Escape any internal quotes with backslashes. Do not use smart quotes or unescaped quotation marks inside values.
+
 Prioritize methods that fit this specific word. Avoid generic advice like "repeat many times".`;
+}
+
+async function requestMemoryTips(apiKey, body, locale) {
+  const term = String(body.term ?? "").trim();
+  let lastError = null;
+
+  for (let attempt = 0; attempt < AI_OUTPUT_RETRY_ATTEMPTS; attempt += 1) {
+    try {
+      const aiResponse = await fetch(AGNES_API_URL, {
+        method: "POST",
+        headers: {
+          Authorization: `Bearer ${apiKey}`,
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          model: process.env.AGNES_MODEL || "agnes-2.0-flash",
+          messages: [
+            {
+              role: "system",
+              content:
+                "You are a vocabulary coach helping learners remember English words. Return only valid JSON.",
+            },
+            {
+              role: "user",
+              content: buildPrompt({
+                term,
+                definition: String(body.definition ?? "").trim(),
+                translation: String(body.translation ?? "").trim(),
+                partOfSpeech: String(body.partOfSpeech ?? "").trim(),
+                example: String(body.example ?? "").trim(),
+                locale,
+              }),
+            },
+          ],
+          temperature: 0.4,
+        }),
+      });
+
+      if (!aiResponse.ok) {
+        const errorText = await aiResponse.text();
+        throw new Error(`AI request failed: ${errorText}`);
+      }
+
+      const data = await aiResponse.json();
+      const memoryTips = normalizeTips(parseAgnesJson(data));
+
+      if (memoryTips.tips.length === 0) {
+        throw new Error("AI response did not include memory tips.");
+      }
+
+      return memoryTips;
+    } catch (error) {
+      lastError = error;
+      if (attempt < AI_OUTPUT_RETRY_ATTEMPTS - 1 && isAiJsonOutputError(error)) {
+        continue;
+      }
+      throw error;
+    }
+  }
+
+  throw lastError ?? new Error("AI memory tips request failed.");
 }
 
 export default async function handler(request, response) {
@@ -101,56 +157,10 @@ export default async function handler(request, response) {
   }
 
   try {
-    const aiResponse = await fetch(AGNES_API_URL, {
-      method: "POST",
-      headers: {
-        Authorization: `Bearer ${apiKey}`,
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        model: process.env.AGNES_MODEL || "agnes-2.0-flash",
-        messages: [
-          {
-            role: "system",
-            content:
-              "You are a vocabulary coach helping learners remember English words. Return only valid JSON.",
-          },
-          {
-            role: "user",
-            content: buildPrompt({
-              term,
-              definition: String(body.definition ?? "").trim(),
-              translation: String(body.translation ?? "").trim(),
-              partOfSpeech: String(body.partOfSpeech ?? "").trim(),
-              example: String(body.example ?? "").trim(),
-              locale,
-            }),
-          },
-        ],
-        temperature: 0.4,
-      }),
-    });
-
-    if (!aiResponse.ok) {
-      const errorText = await aiResponse.text();
-      sendJson(response, aiResponse.status, {
-        error: `AI request failed: ${errorText}`,
-      });
-      return;
-    }
-
-    const data = await aiResponse.json();
-    const memoryTips = normalizeTips(parseAgnesJson(data));
-
-    if (memoryTips.tips.length === 0) {
-      sendJson(response, 502, {
-        error: "AI response did not include memory tips.",
-      });
-      return;
-    }
-
+    const memoryTips = await requestMemoryTips(apiKey, body, locale);
     sendJson(response, 200, { memoryTips });
   } catch (error) {
-    sendJson(response, 500, { error: error.message });
+    const statusCode = isAiJsonOutputError(error) ? 502 : 500;
+    sendJson(response, statusCode, { error: error.message });
   }
 }

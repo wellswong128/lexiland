@@ -14,9 +14,20 @@ from auth import session_file_lock
 from config import MAX_IMAGE_WIDTH, JPEG_QUALITY, IMAGE_EXTENSIONS, REPO_ROOT
 
 
-RETRYABLE_STATUS = {429, 502, 503, 504}
+RETRYABLE_STATUS = {429, 500, 502, 503, 504}
 RATE_LIMIT_RETRY_ATTEMPTS = 3
 RATE_LIMIT_RETRY_SECONDS = 60.0
+TRANSIENT_AI_MARKERS = (
+    "internalservererror",
+    "upstream_error",
+    "do_request_failed",
+    "openaiexception",
+    "upstream error",
+    "expected ',' or '}'",
+    "unexpected token",
+    "did not include memory tips",
+    "ai response did not include",
+)
 
 
 def _extract_error_message(data: dict, status_code: int) -> str:
@@ -37,6 +48,13 @@ def _is_rate_limit_error(status_code: int | None, message: object) -> bool:
         return True
     lowered = str(message).lower()
     return "rate limit" in lowered or "too many requests" in lowered
+
+
+def is_transient_ai_error(status_code: int | None, message: object) -> bool:
+    if status_code in RETRYABLE_STATUS:
+        return True
+    lowered = str(message).lower()
+    return any(marker in lowered for marker in TRANSIENT_AI_MARKERS)
 
 
 class ApiError(Exception):
@@ -122,7 +140,7 @@ class LexiLandApiClient:
                 data = response.json()
             except json.JSONDecodeError:
                 text = response.text.strip()
-                retryable = response.status_code in RETRYABLE_STATUS
+                retryable = is_transient_ai_error(response.status_code, text)
                 last_error = ApiError(
                     text or f"Non-JSON response ({response.status_code})",
                     status_code=response.status_code,
@@ -157,7 +175,7 @@ class LexiLandApiClient:
                             "Make sure IMPORT_API_KEY in local .env.local exactly matches Vercel "
                             "Environment Variables and redeploy learn.lexiland.cc."
                         )
-                retryable = response.status_code in RETRYABLE_STATUS
+                retryable = is_transient_ai_error(response.status_code, message)
                 last_error = ApiError(message, status_code=response.status_code, retryable=retryable)
                 if _is_rate_limit_error(response.status_code, message):
                     if rate_limit_retries < RATE_LIMIT_RETRY_ATTEMPTS:
