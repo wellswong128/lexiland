@@ -75,13 +75,13 @@ export function mapWordToDbRow(word, userId) {
     user_id: userId,
     term: word.term,
     definition: word.definition,
-    translation: word.translation,
-    pronunciation: word.pronunciation,
-    part_of_speech: word.partOfSpeech,
-    example: word.example,
-    example_translation: word.exampleTranslation,
-    notes: word.notes,
-    tags: word.tags,
+    translation: word.translation ?? "",
+    pronunciation: word.pronunciation ?? "",
+    part_of_speech: word.partOfSpeech ?? "",
+    example: word.example ?? "",
+    example_translation: word.exampleTranslation ?? "",
+    notes: word.notes ?? "",
+    tags: word.tags ?? [],
     source: toSupabaseSource(word.source),
     review_level: word.review.level,
     next_review_at: word.review.nextReviewAt,
@@ -198,12 +198,16 @@ export async function insertWordsInSupabase(words, userId) {
       if (error) {
         // Fallback: insert one by one to skip duplicates
         const saved = [];
+        let lastError = error;
         for (const word of batch) {
           try {
             saved.push(await insertWordInSupabase(word, userId));
-          } catch {
-            // Skip invalid or duplicate terms.
+          } catch (insertError) {
+            lastError = insertError;
           }
+        }
+        if (saved.length === 0 && batch.length > 0) {
+          throw lastError;
         }
         return saved;
       }

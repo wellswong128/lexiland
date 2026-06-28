@@ -131,6 +131,42 @@ export async function fetchUserActiveGroupWords(options = {}) {
   return inflightTermsRequest;
 }
 
+export async function importUserActiveGroupWords({ limit = null, wordLimit = 0 } = {}) {
+  const authHeaders = await getApiAuthHeaders();
+  const body = {};
+  if (limit != null && limit > 0) {
+    body.limit = limit;
+  }
+  if (wordLimit > 0) {
+    body.wordLimit = wordLimit;
+  }
+
+  const controller = new AbortController();
+  const timeoutId = window.setTimeout(() => controller.abort(), FETCH_TIMEOUT_MS);
+
+  try {
+    const response = await fetch(resolveApiUrl("/api/user-active-group-words"), {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        ...authHeaders,
+      },
+      body: JSON.stringify(body),
+      signal: controller.signal,
+    });
+
+    return parseJsonResponse(response);
+  } catch (error) {
+    if (error?.name === "AbortError") {
+      throw new Error("Timed out importing active group words.");
+    }
+
+    throw error;
+  } finally {
+    window.clearTimeout(timeoutId);
+  }
+}
+
 export async function fetchWordGroups() {
   const authHeaders = await getApiAuthHeaders();
   const response = await fetch(resolveApiUrl("/api/word-groups"), {

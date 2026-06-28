@@ -40,6 +40,7 @@ import {
 import {
   ACTIVE_GROUP_INITIAL_IMPORT_COUNT,
   fetchUserActiveGroupWords,
+  importUserActiveGroupWords,
   invalidateUserActiveGroupWordsCache,
 } from "../wordGroups/wordGroupsApi.js";
 import { saveCachedActiveGroupScope, loadCachedActiveGroupScope } from "../wordGroups/activeGroupScopeCache.js";
@@ -186,23 +187,21 @@ function hasRemoteWordChanges(changes) {
 
 async function importMissingActiveGroupWords(
   userId,
-  existingWords,
-  preloadedPayload = null,
+  _existingWords,
+  _preloadedPayload = null,
   { limit = null, wordLimit = 0, forceRefresh = false } = {},
 ) {
-  let payload = preloadedPayload;
-  const payloadHasWords =
-    Array.isArray(payload?.mappedWords) && payload.mappedWords.length > 0;
-
-  if (!payloadHasWords) {
-    payload = await fetchUserActiveGroupWords({
-      includeWords: true,
-      wordLimit: wordLimit > 0 ? wordLimit : 0,
-      forceRefresh,
-    });
+  if (forceRefresh) {
+    invalidateUserActiveGroupWordsCache();
   }
 
+  const payload = await importUserActiveGroupWords({
+    limit,
+    wordLimit: wordLimit > 0 ? wordLimit : 0,
+  });
+
   const mappedWords = Array.isArray(payload.mappedWords) ? payload.mappedWords : [];
+  const importedWords = Array.isArray(payload.importedWords) ? payload.importedWords : [];
 
   if (!payload.activeGroup) {
     return {
@@ -219,75 +218,9 @@ async function importMissingActiveGroupWords(
     });
   }
 
-  if (mappedWords.length === 0) {
-    return {
-      activeGroup: payload.activeGroup ?? null,
-      importedWords: [],
-      mappedWords,
-    };
-  }
-
-  const existingTerms = new Set(existingWords.map((word) => normalizeTerm(word.term)));
-  const drafts = [];
-
-  for (const sourceWord of mappedWords) {
-    const term = normalizeText(sourceWord?.term);
-    const definition =
-      normalizeText(sourceWord?.definition) ||
-      normalizeText(sourceWord?.translation) ||
-      term;
-    const termKey = normalizeTerm(term);
-    if (!termKey || existingTerms.has(termKey)) {
-      continue;
-    }
-
-    if (limit != null && drafts.length >= limit) {
-      break;
-    }
-
-    try {
-      drafts.push(
-        createWord(
-          {
-            term,
-            definition,
-            translation: normalizeText(sourceWord?.translation),
-            pronunciation: normalizeText(sourceWord?.pronunciation),
-            partOfSpeech: normalizeText(sourceWord?.partOfSpeech),
-            example: normalizeText(sourceWord?.example),
-            exampleTranslation: normalizeText(sourceWord?.exampleTranslation),
-            tags: normalizeTags(sourceWord?.tags),
-            memoryTipsByLocale:
-              sourceWord?.memoryTipsByLocale && typeof sourceWord.memoryTipsByLocale === "object"
-                ? sourceWord.memoryTipsByLocale
-                : {},
-            memoryImage:
-              sourceWord?.memoryImage && typeof sourceWord.memoryImage === "object"
-                ? sourceWord.memoryImage
-                : null,
-          },
-          {
-            source: WORD_SOURCES.IMPORT,
-          },
-        ),
-      );
-      existingTerms.add(termKey);
-    } catch {
-      // Skip invalid wordbase rows.
-    }
-  }
-
-  let savedWords = [];
-  if (drafts.length > 0) {
-    savedWords = await insertWordsInSupabase(drafts, userId);
-    if (savedWords.length === 0) {
-      throw new Error("Could not save group words to your word list.");
-    }
-  }
-
   return {
     activeGroup: payload.activeGroup ?? null,
-    importedWords: savedWords,
+    importedWords,
     mappedWords,
   };
 }
