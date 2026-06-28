@@ -2,6 +2,12 @@ function normalizeTermKey(value) {
   return String(value ?? "").trim().toLowerCase();
 }
 
+function isDuplicateTermError(error) {
+  const code = String(error?.code ?? "");
+  const message = String(error?.message ?? "").toLowerCase();
+  return code === "23505" || message.includes("words_user_term_unique");
+}
+
 function sanitizeMemoryTipsByLocale(value) {
   if (!value || typeof value !== "object") {
     return {};
@@ -124,6 +130,69 @@ const WORD_INSERT_SELECT =
   "id,user_id,term,definition,translation,pronunciation,part_of_speech,example,example_translation,notes,tags,source,review_level,next_review_at,last_reviewed_at,correct_count,incorrect_count,last_result,is_mistake,last_mistake_at,mistake_count,memory_tips_by_locale,memory_image,created_at,updated_at";
 
 const INSERT_BATCH_SIZE = 100;
+const EXISTING_WORDS_PAGE_SIZE = 1000;
+
+async function fetchExistingWordsByUser(rlsClient, userId) {
+  const rows = [];
+  let from = 0;
+
+  while (true) {
+    const { data, error } = await rlsClient
+      .from("words")
+      .select(WORD_INSERT_SELECT)
+      .eq("user_id", userId)
+      .order("created_at", { ascending: false })
+      .range(from, from + EXISTING_WORDS_PAGE_SIZE - 1);
+
+    if (error) {
+      throw new Error(error.message || "Failed to load existing words.");
+    }
+
+    const page = data ?? [];
+    rows.push(...page);
+
+    if (page.length < EXISTING_WORDS_PAGE_SIZE) {
+      break;
+    }
+
+    from += EXISTING_WORDS_PAGE_SIZE;
+  }
+
+  return rows;
+}
+
+function buildExistingWordsByTerm(rows) {
+  const existingByTerm = new Map();
+
+  for (const row of rows) {
+    const termKey = normalizeTermKey(row.term);
+    if (termKey && !existingByTerm.has(termKey)) {
+      existingByTerm.set(termKey, row);
+    }
+  }
+
+  return existingByTerm;
+}
+
+function collectMappedWordsForTerms(mappedWords, existingByTerm, excludeTermKeys = new Set()) {
+  const matched = [];
+  const seen = new Set(excludeTermKeys);
+
+  for (const mappedWord of mappedWords ?? []) {
+    const termKey = normalizeTermKey(mappedWord?.term);
+    if (!termKey || seen.has(termKey)) {
+      continue;
+    }
+
+    const existingRow = existingByTerm.get(termKey);
+    if (existingRow) {
+      matched.push(existingRow);
+      seen.add(termKey);
+    }
+  }
+
+  return matched;
+}
 
 export async function importMappedWordsForUser(
   rlsClient,
@@ -131,24 +200,15 @@ export async function importMappedWordsForUser(
   mappedWords,
   { limit = null } = {},
 ) {
-  const { data: existingRows, error: existingError } = await rlsClient
-    .from("words")
-    .select("term")
-    .eq("user_id", userId);
-
-  if (existingError) {
-    throw new Error(existingError.message || "Failed to load existing words.");
-  }
-
-  const existingTerms = new Set(
-    (existingRows ?? []).map((row) => normalizeTermKey(row.term)).filter(Boolean),
-  );
+  const existingRows = await fetchExistingWordsByUser(rlsClient, userId);
+  const existingByTerm = buildExistingWordsByTerm(existingRows);
 
   const insertRows = [];
+  const pendingInsertKeys = new Set();
 
   for (const mappedWord of mappedWords ?? []) {
     const termKey = normalizeTermKey(mappedWord?.term);
-    if (!termKey || existingTerms.has(termKey)) {
+    if (!termKey || existingByTerm.has(termKey) || pendingInsertKeys.has(termKey)) {
       continue;
     }
 
@@ -157,62 +217,110 @@ export async function importMappedWordsForUser(
       continue;
     }
 
+    const insertKey = normalizeTermKey(row.term);
+    if (!insertKey || pendingInsertKeys.has(insertKey)) {
+      continue;
+    }
+
     insertRows.push(row);
-    existingTerms.add(termKey);
+    pendingInsertKeys.add(insertKey);
 
     if (limit != null && insertRows.length >= limit) {
       break;
     }
   }
 
-  if (insertRows.length === 0) {
-    const hadMissingWords = (mappedWords ?? []).some((mappedWord) => {
-      const termKey = normalizeTermKey(mappedWord?.term);
-      return termKey && !existingTerms.has(termKey);
-    });
-
-    if (hadMissingWords) {
-      throw new Error(
-        "Could not prepare group words for import. Check wordbase entries for this group.",
-      );
-    }
-
-    return [];
-  }
-
   const importedRows = [];
-  let lastError = null;
 
-  for (let index = 0; index < insertRows.length; index += INSERT_BATCH_SIZE) {
-    const batch = insertRows.slice(index, index + INSERT_BATCH_SIZE);
-    const { data, error } = await rlsClient.from("words").insert(batch).select(WORD_INSERT_SELECT);
+  if (insertRows.length > 0) {
+    let lastNonDuplicateError = null;
 
-    if (error) {
-      lastError = error;
+    for (let index = 0; index < insertRows.length; index += INSERT_BATCH_SIZE) {
+      const batch = insertRows.slice(index, index + INSERT_BATCH_SIZE);
+      const { data, error } = await rlsClient.from("words").insert(batch).select(WORD_INSERT_SELECT);
 
-      for (const row of batch) {
-        const { data: single, error: singleError } = await rlsClient
-          .from("words")
-          .insert(row)
-          .select(WORD_INSERT_SELECT)
-          .single();
+      if (error) {
+        for (const row of batch) {
+          const { data: single, error: singleError } = await rlsClient
+            .from("words")
+            .insert(row)
+            .select(WORD_INSERT_SELECT)
+            .single();
 
-        if (!singleError && single) {
-          importedRows.push(single);
-        } else if (singleError) {
-          lastError = singleError;
+          if (!singleError && single) {
+            importedRows.push(single);
+            const termKey = normalizeTermKey(single.term);
+            if (termKey) {
+              existingByTerm.set(termKey, single);
+            }
+            continue;
+          }
+
+          if (isDuplicateTermError(singleError)) {
+            const termKey = normalizeTermKey(row.term);
+            const existingRow = termKey ? existingByTerm.get(termKey) : null;
+            if (existingRow) {
+              importedRows.push(existingRow);
+            }
+            continue;
+          }
+
+          if (singleError) {
+            lastNonDuplicateError = singleError;
+          }
+        }
+      } else {
+        for (const row of data ?? []) {
+          importedRows.push(row);
+          const termKey = normalizeTermKey(row.term);
+          if (termKey) {
+            existingByTerm.set(termKey, row);
+          }
         }
       }
-    } else {
-      importedRows.push(...(data ?? []));
+    }
+
+    const importedKeys = new Set(
+      importedRows.map((row) => normalizeTermKey(row.term)).filter(Boolean),
+    );
+    const stillMissing = insertRows.filter(
+      (row) => !importedKeys.has(normalizeTermKey(row.term)),
+    );
+
+    if (stillMissing.length > 0 && importedRows.length === 0 && lastNonDuplicateError) {
+      throw new Error(
+        lastNonDuplicateError.message || "Could not save group words to your word list.",
+      );
     }
   }
 
-  if (importedRows.length === 0) {
+  const importedKeys = new Set(
+    importedRows.map((row) => normalizeTermKey(row.term)).filter(Boolean),
+  );
+  const alreadyOwnedRows = collectMappedWordsForTerms(mappedWords, existingByTerm, importedKeys);
+
+  const unresolvedMappedWords = (mappedWords ?? []).filter((mappedWord) => {
+    const termKey = normalizeTermKey(mappedWord?.term);
+    return termKey && !existingByTerm.has(termKey);
+  });
+
+  if (
+    unresolvedMappedWords.length > 0 &&
+    importedRows.length === 0 &&
+    alreadyOwnedRows.length === 0
+  ) {
     throw new Error(
-      lastError?.message || "Could not save group words to your word list.",
+      "Could not prepare group words for import. Check wordbase entries for this group.",
     );
   }
 
-  return importedRows.map(mapWordRowToClient);
+  const uniqueRows = new Map();
+  for (const row of [...importedRows, ...alreadyOwnedRows]) {
+    const termKey = normalizeTermKey(row.term);
+    if (termKey && !uniqueRows.has(termKey)) {
+      uniqueRows.set(termKey, row);
+    }
+  }
+
+  return [...uniqueRows.values()].map(mapWordRowToClient);
 }

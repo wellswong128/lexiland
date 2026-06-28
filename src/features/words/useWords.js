@@ -722,19 +722,34 @@ export function useWords({ isAuthLoading = false, user = null } = {}, storage) {
 
       const applyImportedWords = (importedWords, activeGroup) => {
         if (importedWords.length === 0) {
-          return;
+          return 0;
         }
 
-        const nextWords = hydrateWords([...importedWords, ...wordsRef.current], storage);
+        const existingIds = new Set(wordsRef.current.map((word) => word.id));
+        const existingTerms = new Set(
+          wordsRef.current.map((word) => normalizeTerm(word.term)).filter(Boolean),
+        );
+        const newWords = importedWords.filter((word) => {
+          const termKey = normalizeTerm(word.term);
+          return !existingIds.has(word.id) && termKey && !existingTerms.has(termKey);
+        });
+
+        if (newWords.length === 0) {
+          return 0;
+        }
+
+        const nextWords = hydrateWords([...newWords, ...wordsRef.current], storage);
         wordsRef.current = nextWords;
         setWords(nextWords);
 
         if (activeGroup) {
           setAutoImportedNotice({
             ...buildAutoImportedNotice(activeGroup),
-            count: importedWords.length,
+            count: newWords.length,
           });
         }
+
+        return newWords.length;
       };
 
       try {
@@ -762,21 +777,12 @@ export function useWords({ isAuthLoading = false, user = null } = {}, storage) {
           { limit: ACTIVE_GROUP_INITIAL_IMPORT_COUNT },
         );
         lastMappedWordsRef.current = firstBatch.mappedWords;
-        applyImportedWords(firstBatch.importedWords, firstBatch.activeGroup);
-
-        const existingTerms = new Set(
-          wordsRef.current.map((word) => normalizeTerm(word.term)).filter(Boolean),
+        const appliedCount = applyImportedWords(
+          firstBatch.importedWords,
+          firstBatch.activeGroup,
         );
-        const hasMissingMappedWords = (firstBatch.mappedWords ?? []).some((mappedWord) => {
-          const termKey = normalizeTerm(mappedWord?.term);
-          return termKey && !existingTerms.has(termKey);
-        });
-        if (
-          firstBatch.importedWords.length === 0 &&
-          hasMissingMappedWords &&
-          (firstBatch.mappedWords?.length ?? 0) > 0
-        ) {
-          setActiveGroupImportError("Could not save group words to your word list.");
+        if (appliedCount > 0) {
+          setActiveGroupImportError("");
         }
       } catch (error) {
         console.warn("Could not sync active-group words from wordbase.", error);
@@ -797,8 +803,11 @@ export function useWords({ isAuthLoading = false, user = null } = {}, storage) {
       })
         .then((fullBatch) => {
           lastMappedWordsRef.current = fullBatch.mappedWords;
-          applyImportedWords(fullBatch.importedWords, fullBatch.activeGroup);
-          if (fullBatch.importedWords.length > 0) {
+          const appliedCount = applyImportedWords(
+            fullBatch.importedWords,
+            fullBatch.activeGroup,
+          );
+          if (appliedCount > 0) {
             setActiveGroupImportError("");
           }
         })

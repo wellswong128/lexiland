@@ -139,6 +139,12 @@ export function mapWordChangesToUpdate(changes) {
   return update;
 }
 
+function isDuplicateTermError(error) {
+  const code = String(error?.code ?? "");
+  const message = String(error?.message ?? "").toLowerCase();
+  return code === "23505" || message.includes("words_user_term_unique");
+}
+
 function ensureSupabase() {
   if (!supabase) {
     throw new Error("Supabase is not configured.");
@@ -203,10 +209,12 @@ export async function insertWordsInSupabase(words, userId) {
           try {
             saved.push(await insertWordInSupabase(word, userId));
           } catch (insertError) {
-            lastError = insertError;
+            if (!isDuplicateTermError(insertError)) {
+              lastError = insertError;
+            }
           }
         }
-        if (saved.length === 0 && batch.length > 0) {
+        if (saved.length === 0 && batch.length > 0 && lastError) {
           throw lastError;
         }
         return saved;
