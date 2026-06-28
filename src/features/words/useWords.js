@@ -288,6 +288,9 @@ function buildAutoImportedNotice(activeGroup) {
 let activeGroupSyncPending = false;
 let activeGroupSyncChain = null;
 let queuedScopePayload = null;
+let lastActiveGroupAutoSyncAt = 0;
+
+const ACTIVE_GROUP_AUTO_SYNC_COOLDOWN_MS = 30_000;
 
 export function useWords({ isAuthLoading = false, user = null } = {}, storage) {
   const [words, setWords] = useState(() => hydrateWords(loadWords(storage), storage));
@@ -902,6 +905,7 @@ export function useWords({ isAuthLoading = false, user = null } = {}, storage) {
     };
 
     const handleActiveGroupChanged = (event) => {
+      lastActiveGroupAutoSyncAt = 0;
       void runActiveGroupSync(event?.detail?.scopePayload ?? null);
     };
 
@@ -935,11 +939,21 @@ export function useWords({ isAuthLoading = false, user = null } = {}, storage) {
       return;
     }
 
-    const hasScopedWords = words.some((word) => mappedSet.has(normalizeTerm(word.term)));
-    if (!hasScopedWords && !activeGroupSyncPending) {
-      void runActiveGroupSync();
+    const hasScopedWords = wordsRef.current.some((word) =>
+      mappedSet.has(normalizeTerm(word.term)),
+    );
+    if (hasScopedWords || activeGroupSyncPending) {
+      return;
     }
-  }, [isUsingSupabase, isWordsLoading, runActiveGroupSync, user?.id, words]);
+
+    const now = Date.now();
+    if (now - lastActiveGroupAutoSyncAt < ACTIVE_GROUP_AUTO_SYNC_COOLDOWN_MS) {
+      return;
+    }
+
+    lastActiveGroupAutoSyncAt = now;
+    void runActiveGroupSync();
+  }, [isUsingSupabase, isWordsLoading, runActiveGroupSync, user?.id]);
 
   return {
     addWord,
