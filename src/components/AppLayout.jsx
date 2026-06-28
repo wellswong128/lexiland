@@ -91,7 +91,7 @@ function AppLayout({ children }) {
       {!isGamePage && !isAuthPage ? (
         <div className="top-status-banners">
           <OfflineBanner isOnline={isOnline} offlineReady={offlineReady} />
-          <UpdateBanner latestVersion={latestVersion} needsRefresh={needsRefresh} />
+          <UpdateBanner isOnline={isOnline} latestVersion={latestVersion} needsRefresh={needsRefresh} />
         </div>
       ) : null}
       <main

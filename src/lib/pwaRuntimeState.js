@@ -1,8 +1,10 @@
 const OFFLINE_READY_STORAGE_KEY = "lexiland.pwa.offlineReady";
 const NEEDS_REFRESH_STORAGE_KEY = "lexiland.pwa.needsRefresh";
+const PENDING_LATEST_VERSION_STORAGE_KEY = "lexiland.pwa.pendingLatestVersion";
 
 let offlineReady = readStoredOfflineReady();
 let needsRefresh = readStoredNeedsRefresh();
+let pendingLatestVersion = readStoredPendingLatestVersion();
 let updateServiceWorker = null;
 
 function readStoredOfflineReady() {
@@ -55,6 +57,37 @@ function readStoredNeedsRefresh() {
   }
 }
 
+function readStoredPendingLatestVersion() {
+  if (typeof localStorage === "undefined") {
+    return null;
+  }
+
+  try {
+    const value = localStorage.getItem(PENDING_LATEST_VERSION_STORAGE_KEY);
+    return typeof value === "string" && value.trim() ? value.trim() : null;
+  } catch {
+    return null;
+  }
+}
+
+function persistPendingLatestVersion(value) {
+  pendingLatestVersion = value;
+
+  if (typeof localStorage === "undefined") {
+    return;
+  }
+
+  try {
+    if (value) {
+      localStorage.setItem(PENDING_LATEST_VERSION_STORAGE_KEY, value);
+    } else {
+      localStorage.removeItem(PENDING_LATEST_VERSION_STORAGE_KEY);
+    }
+  } catch {
+    // Ignore private browsing / storage quota errors.
+  }
+}
+
 function persistNeedsRefresh(value) {
   needsRefresh = value;
 
@@ -73,12 +106,47 @@ function persistNeedsRefresh(value) {
   }
 }
 
-export function markNeedsRefresh() {
+export function markNeedsRefresh(latestVersionLabel) {
   persistNeedsRefresh(true);
+
+  if (typeof latestVersionLabel === "string" && latestVersionLabel.trim()) {
+    persistPendingLatestVersion(latestVersionLabel.trim());
+  }
 }
 
 export function clearNeedsRefresh() {
   persistNeedsRefresh(false);
+  persistPendingLatestVersion(null);
+}
+
+export function getPendingLatestVersion() {
+  return pendingLatestVersion;
+}
+
+/**
+ * Mark a pending update and notify listeners once (deduped).
+ * Returns false when an update prompt was already active.
+ */
+export function notifyUpdatePending(latestVersionLabel = null) {
+  const wasAlreadyPending = getNeedsRefresh();
+  const normalizedVersion =
+    typeof latestVersionLabel === "string" && latestVersionLabel.trim()
+      ? latestVersionLabel.trim()
+      : null;
+
+  markNeedsRefresh(normalizedVersion);
+
+  if (wasAlreadyPending) {
+    return false;
+  }
+
+  window.dispatchEvent(
+    new CustomEvent("lexiland:app-update-available", {
+      detail: { latestVersion: normalizedVersion || getPendingLatestVersion() || null },
+    }),
+  );
+
+  return true;
 }
 
 export function getNeedsRefresh() {
@@ -131,7 +199,7 @@ export async function probeNeedsRefresh() {
     const registration = await navigator.serviceWorker.getRegistration();
 
     if (registration?.waiting) {
-      markNeedsRefresh();
+      notifyUpdatePending();
       return true;
     }
   } catch {

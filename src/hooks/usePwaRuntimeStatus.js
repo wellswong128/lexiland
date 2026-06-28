@@ -11,6 +11,7 @@ import { isCapacitorNative } from "../lib/platform.js";
 import {
   getNeedsRefresh,
   getOfflineReady,
+  getPendingLatestVersion,
   probeNeedsRefresh,
   probeOfflineReady,
 } from "../lib/pwaRuntimeState.js";
@@ -23,7 +24,7 @@ export function usePwaRuntimeStatus() {
   );
   const [offlineReady, setOfflineReady] = useState(getOfflineReady);
   const [needsRefresh, setNeedsRefresh] = useState(getNeedsRefresh);
-  const [latestVersion, setLatestVersion] = useState(null);
+  const [latestVersion, setLatestVersion] = useState(getPendingLatestVersion);
   const [serviceWorkerState, setServiceWorkerState] = useState("checking");
   const currentVersion = getAppVersionLabel(displayLocale);
 
@@ -40,10 +41,6 @@ export function usePwaRuntimeStatus() {
       setOfflineReady(true);
     }
 
-    function handleNeedsRefresh() {
-      setNeedsRefresh(true);
-    }
-
     function handleAppUpdateAvailable(event) {
       const version = event?.detail?.latestVersion;
 
@@ -57,7 +54,6 @@ export function usePwaRuntimeStatus() {
     window.addEventListener("online", handleOnline);
     window.addEventListener("offline", handleOffline);
     window.addEventListener("lexiland:offline-ready", handleOfflineReady);
-    window.addEventListener("lexiland:sw-needs-refresh", handleNeedsRefresh);
     window.addEventListener("lexiland:app-update-available", handleAppUpdateAvailable);
 
     void probeOfflineReady().then((ready) => {
@@ -76,7 +72,6 @@ export function usePwaRuntimeStatus() {
       window.removeEventListener("online", handleOnline);
       window.removeEventListener("offline", handleOffline);
       window.removeEventListener("lexiland:offline-ready", handleOfflineReady);
-      window.removeEventListener("lexiland:sw-needs-refresh", handleNeedsRefresh);
       window.removeEventListener("lexiland:app-update-available", handleAppUpdateAvailable);
     };
   }, []);

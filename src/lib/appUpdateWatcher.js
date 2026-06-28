@@ -6,7 +6,7 @@ import {
   hasRemoteVersionUpdate,
 } from "./appVersion.js";
 import { isCapacitorNative } from "./platform.js";
-import { getNeedsRefresh, markNeedsRefresh } from "./pwaRuntimeState.js";
+import { notifyUpdatePending } from "./pwaRuntimeState.js";
 
 const DEFAULT_POLL_INTERVAL_MS = 60 * 1000;
 
@@ -58,24 +58,10 @@ async function promptServiceWorkerUpdateCheck() {
 }
 
 /**
- * Mark the app as needing refresh and notify listeners (UpdateBanner, settings panel, etc.).
+ * Mark the app as needing refresh and notify listeners (UpdateBanner).
  */
 export function notifyAppUpdateAvailable(latestVersionLabel) {
-  const wasAlreadyPending = getNeedsRefresh();
-  markNeedsRefresh();
-
-  if (wasAlreadyPending) {
-    return;
-  }
-
-  window.dispatchEvent(
-    new CustomEvent("lexiland:app-update-available", {
-      detail: { latestVersion: latestVersionLabel || null },
-    }),
-  );
-
-  // Backward compatibility with existing service-worker listeners.
-  window.dispatchEvent(new CustomEvent("lexiland:sw-needs-refresh"));
+  notifyUpdatePending(latestVersionLabel);
 }
 
 /**

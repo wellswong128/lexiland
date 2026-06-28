@@ -2,11 +2,16 @@ import { useState } from "react";
 import { useLocale } from "../features/locale/LocaleContext.jsx";
 import { applyServiceWorkerUpdate } from "../lib/pwaRuntimeState.js";
 
-function UpdateBanner({ latestVersion, needsRefresh }) {
+function UpdateBanner({ isOnline, latestVersion, needsRefresh }) {
   const { t } = useLocale();
   const [isUpdating, setIsUpdating] = useState(false);
 
   if (!needsRefresh) {
+    return null;
+  }
+
+  // Avoid flashing a generic message before the version label is loaded.
+  if (isOnline && !latestVersion) {
     return null;
   }
 

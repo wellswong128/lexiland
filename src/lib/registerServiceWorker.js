@@ -1,4 +1,4 @@
-import { markNeedsRefresh, markOfflineReady, setUpdateServiceWorker } from "./pwaRuntimeState.js";
+import { markOfflineReady, notifyUpdatePending, setUpdateServiceWorker } from "./pwaRuntimeState.js";
 import { isCapacitorNative } from "./platform.js";
 
 export function registerServiceWorker() {
@@ -11,8 +11,7 @@ export function registerServiceWorker() {
       const updateSW = registerSW({
         immediate: true,
         onNeedRefresh() {
-          markNeedsRefresh();
-          window.dispatchEvent(new CustomEvent("lexiland:sw-needs-refresh"));
+          notifyUpdatePending();
         },
         onOfflineReady() {
           markOfflineReady();
