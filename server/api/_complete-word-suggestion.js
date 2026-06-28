@@ -6,7 +6,7 @@ import {
   isIncompleteExamPhraseTranslation,
   resolveVocabularyLocale,
 } from "../../lib/vocabularyLocale.js";
-import { isAiJsonOutputError, parseAgnesJson } from "../_parse-agnes-json.js";
+import { isAiJsonOutputError, parseAgnesJson } from "./_parse-agnes-json.js";
 
 const AGNES_API_URL = "https://apihub.agnes-ai.com/v1/chat/completions";
 const AI_OUTPUT_RETRY_ATTEMPTS = 3;
