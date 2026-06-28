@@ -5,6 +5,7 @@ import { useLocale } from "../features/locale/LocaleContext.jsx";
 import WordScopeModeSwitch from "../features/wordGroups/WordScopeModeSwitch.jsx";
 import { getActiveGroupLabel } from "../features/wordGroups/getActiveGroupLabel.js";
 import { useActiveGroupWordScope } from "../features/wordGroups/useActiveGroupWordScope.js";
+import { useEnsureActiveGroupWords } from "../features/wordGroups/useEnsureActiveGroupWords.js";
 import { getDueWords } from "../features/review/reviewHelpers.js";
 import { useWordsContext } from "../features/words/WordsContext.jsx";
 import { canRoute, getRoleFromUser } from "../lib/authorization.js";
@@ -227,6 +228,7 @@ function HomePage() {
     missingMappedTermCount,
     scopedWords,
   } = useActiveGroupWordScope(words, user);
+  useEnsureActiveGroupWords();
   const isScopePending = isLoadingScope && isGroupScopeActive && scopedWords.length === 0;
   const isHomeLoading = isWordsLoading || isScopePending;
   const learningWords = isGroupScopeActive ? scopedWords : words;

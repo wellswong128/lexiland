@@ -707,6 +707,8 @@ const zhHant = {
       emptyNoMatches:
         "「{{group}}」已有詞彙映射，但你的單字庫中沒有匹配的單字。請新增或匯入此組別的單字。",
       importingActiveGroupWords: "正在匯入此組別的單字，請稍候…",
+      importGroupWords: "匯入組別單字",
+      importingButton: "匯入中…",
       openSettings: "前往設定組別",
       addWord: "新增單字",
     },
@@ -1764,6 +1766,8 @@ export const translations = {
       emptyNoMatches:
         '"{{group}}" has mapped vocabulary, but none of those words are in your personal word list yet.',
       importingActiveGroupWords: "Importing words for this group. Please wait…",
+      importGroupWords: "Import group words",
+      importingButton: "Importing…",
       openSettings: "Open Group Settings",
       addWord: "Add Word",
     },

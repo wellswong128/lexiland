@@ -133,8 +133,21 @@ export function buildActiveGroupWordPayload(wordbaseRows, { includeWords = false
 
 export function isImportableWordbaseRow(row) {
   const term = String(row?.term ?? row?.term_key ?? "").trim();
+  return Boolean(term);
+}
+
+function resolveWordbaseDefinition(row) {
   const definition = String(row?.definition ?? "").trim();
-  return Boolean(term && definition);
+  if (definition) {
+    return definition;
+  }
+
+  const translation = String(row?.translation ?? "").trim();
+  if (translation) {
+    return translation;
+  }
+
+  return String(row?.term ?? row?.term_key ?? "").trim();
 }
 
 export function selectImportableWordbaseRows(rows, wordLimit = 0) {
@@ -146,9 +159,12 @@ export function selectImportableWordbaseRows(rows, wordLimit = 0) {
 }
 
 export function mapWordbaseRowToMappedWord(row) {
+  const term = String(row.term ?? row.term_key ?? "").trim();
+  const definition = resolveWordbaseDefinition(row);
+
   return {
-    term: String(row.term ?? row.term_key ?? "").trim(),
-    definition: String(row.definition ?? "").trim(),
+    term,
+    definition,
     translation: row.translation ?? "",
     pronunciation: row.pronunciation ?? "",
     partOfSpeech: row.part_of_speech ?? "",

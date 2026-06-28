@@ -232,9 +232,12 @@ async function importMissingActiveGroupWords(
 
   for (const sourceWord of mappedWords) {
     const term = normalizeText(sourceWord?.term);
-    const definition = normalizeText(sourceWord?.definition);
+    const definition =
+      normalizeText(sourceWord?.definition) ||
+      normalizeText(sourceWord?.translation) ||
+      term;
     const termKey = normalizeTerm(term);
-    if (!termKey || !definition || existingTerms.has(termKey)) {
+    if (!termKey || existingTerms.has(termKey)) {
       continue;
     }
 
@@ -293,7 +296,7 @@ let activeGroupSyncChain = null;
 let queuedScopePayload = null;
 let lastActiveGroupAutoSyncAt = 0;
 
-const ACTIVE_GROUP_AUTO_SYNC_COOLDOWN_MS = 30_000;
+const ACTIVE_GROUP_AUTO_SYNC_COOLDOWN_MS = 10_000;
 
 export function useWords({ isAuthLoading = false, user = null } = {}, storage) {
   const [words, setWords] = useState(() => hydrateWords(loadWords(storage), storage));
@@ -972,6 +975,14 @@ export function useWords({ isAuthLoading = false, user = null } = {}, storage) {
   useEffect(() => {
     attemptActiveGroupWordImport();
   }, [attemptActiveGroupWordImport]);
+
+  useEffect(() => {
+    if (!isUsingSupabase || isWordsLoading || !user?.id || isActiveGroupSyncing) {
+      return;
+    }
+
+    attemptActiveGroupWordImport();
+  }, [attemptActiveGroupWordImport, isActiveGroupSyncing, isUsingSupabase, isWordsLoading, user?.id]);
 
   return {
     addWord,
