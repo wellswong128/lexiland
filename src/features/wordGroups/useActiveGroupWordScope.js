@@ -7,6 +7,46 @@ export function useActiveGroupWordScope(words, user) {
   const shouldScopeByGroup = hasSupabaseConfig && Boolean(user);
   const scope = useActiveGroupScopeContext();
 
+  const mappedSet = useMemo(() => {
+    if (!shouldScopeByGroup) {
+      return new Set();
+    }
+
+    return new Set(scope.mappedTerms.map((value) => normalizeTerm(value)).filter(Boolean));
+  }, [shouldScopeByGroup, scope.mappedTerms]);
+
+  const isGroupScopeActive = shouldScopeByGroup && scope.isGroupScopeActive;
+  const isUsingCustomWords = shouldScopeByGroup && scope.isUsingCustomWords;
+
+  const scopedWords = useMemo(() => {
+    if (!shouldScopeByGroup || !isGroupScopeActive) {
+      return words;
+    }
+
+    if (mappedSet.size === 0) {
+      return [];
+    }
+
+    return words.filter((word) => mappedSet.has(normalizeTerm(word.term)));
+  }, [isGroupScopeActive, mappedSet, shouldScopeByGroup, words]);
+
+  const mappedTermCount = mappedSet.size;
+  const missingMappedTermCount = isGroupScopeActive
+    ? Math.max(0, mappedTermCount - scopedWords.length)
+    : 0;
+
+  const scopeReason = !shouldScopeByGroup
+    ? "not-scoped"
+    : isUsingCustomWords
+      ? "custom-words"
+      : !scope.activeGroup
+        ? "no-active-group"
+        : mappedSet.size === 0
+          ? "active-group-empty"
+          : scopedWords.length === 0
+            ? "no-matches"
+            : "ok";
+
   if (!shouldScopeByGroup) {
     return {
       activeGroup: null,
@@ -25,42 +65,11 @@ export function useActiveGroupWordScope(words, user) {
     };
   }
 
-  const mappedSet = useMemo(
-    () => new Set(scope.mappedTerms.map((value) => normalizeTerm(value)).filter(Boolean)),
-    [scope.mappedTerms],
-  );
-
-  const scopedWords = useMemo(() => {
-    if (!scope.isGroupScopeActive) {
-      return words;
-    }
-    if (mappedSet.size === 0) {
-      return [];
-    }
-
-    return words.filter((word) => mappedSet.has(normalizeTerm(word.term)));
-  }, [mappedSet, scope.isGroupScopeActive, words]);
-
-  const mappedTermCount = mappedSet.size;
-  const missingMappedTermCount = scope.isGroupScopeActive
-    ? Math.max(0, mappedTermCount - scopedWords.length)
-    : 0;
-
-  const scopeReason = scope.isUsingCustomWords
-    ? "custom-words"
-    : !scope.activeGroup
-      ? "no-active-group"
-      : mappedSet.size === 0
-        ? "active-group-empty"
-        : scopedWords.length === 0
-          ? "no-matches"
-          : "ok";
-
   return {
     activeGroup: scope.activeGroup,
-    isGroupScopeActive: scope.isGroupScopeActive,
+    isGroupScopeActive,
     isScoped: scope.isScoped,
-    isUsingCustomWords: scope.isUsingCustomWords,
+    isUsingCustomWords,
     isLoadingScope: scope.isLoading,
     scopeError: scope.error,
     scopeMode: scope.scopeMode,
