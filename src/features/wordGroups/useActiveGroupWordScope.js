@@ -19,6 +19,20 @@ import {
   WORD_SCOPE_MODES,
 } from "./wordScopeMode.js";
 
+const SCOPE_FETCH_TIMEOUT_MS = 30_000;
+
+function fetchActiveGroupScopeWithTimeout(options) {
+  return Promise.race([
+    fetchUserActiveGroupWords(options),
+    new Promise((_, reject) => {
+      window.setTimeout(
+        () => reject(new Error("Timed out loading active group words.")),
+        SCOPE_FETCH_TIMEOUT_MS,
+      );
+    }),
+  ]);
+}
+
 export function useActiveGroupWordScope(words, user) {
   const shouldScopeByGroup = hasSupabaseConfig && Boolean(user);
   const initialScopeMode = loadWordScopeMode(user?.id);
@@ -90,7 +104,7 @@ export function useActiveGroupWordScope(words, user) {
 
     try {
       invalidateUserActiveGroupWordsCache();
-      const payload = await fetchUserActiveGroupWords({
+      const payload = await fetchActiveGroupScopeWithTimeout({
         forceRefresh,
         wordLimit: loadWordScopeMode(user?.id) === WORD_SCOPE_MODES.GROUP
           ? ACTIVE_GROUP_INITIAL_IMPORT_COUNT

@@ -27,9 +27,7 @@ function QuizPage() {
   useEnsureActiveGroupWords();
   const reviewWords = isGroupScopeActive ? scopedWords : words;
   const isScopeWordsPending =
-    isGroupScopeActive &&
-    reviewWords.length === 0 &&
-    (isActiveGroupSyncing || mappedTermCount > 0);
+    isGroupScopeActive && reviewWords.length === 0 && isActiveGroupSyncing;
   const reviewWordIdsKey = useMemo(
     () => reviewWords.map((word) => word.id).sort().join("|"),
     [reviewWords],

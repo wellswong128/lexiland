@@ -106,9 +106,7 @@ function FlashcardsPage() {
   useEnsureActiveGroupWords();
   const reviewWords = isGroupScopeActive ? scopedWords : words;
   const isScopeWordsPending =
-    isGroupScopeActive &&
-    reviewWords.length === 0 &&
-    (isActiveGroupSyncing || mappedTermCount > 0);
+    isGroupScopeActive && reviewWords.length === 0 && isActiveGroupSyncing;
   const enrichedExampleWordIdsRef = useRef(new Set());
   const [searchParams] = useSearchParams();
   const mistakesOnly = searchParams.get("mode") === "mistakes";
