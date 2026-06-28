@@ -245,35 +245,45 @@ async function importMissingActiveGroupWords(
       break;
     }
 
-    drafts.push(
-      createWord(
-        {
-          term,
-          definition,
-          translation: normalizeText(sourceWord?.translation),
-          pronunciation: normalizeText(sourceWord?.pronunciation),
-          partOfSpeech: normalizeText(sourceWord?.partOfSpeech),
-          example: normalizeText(sourceWord?.example),
-          exampleTranslation: normalizeText(sourceWord?.exampleTranslation),
-          tags: normalizeTags(sourceWord?.tags),
-          memoryTipsByLocale:
-            sourceWord?.memoryTipsByLocale && typeof sourceWord.memoryTipsByLocale === "object"
-              ? sourceWord.memoryTipsByLocale
-              : {},
-          memoryImage:
-            sourceWord?.memoryImage && typeof sourceWord.memoryImage === "object"
-              ? sourceWord.memoryImage
-              : null,
-        },
-        {
-          source: WORD_SOURCES.IMPORT,
-        },
-      ),
-    );
-    existingTerms.add(termKey);
+    try {
+      drafts.push(
+        createWord(
+          {
+            term,
+            definition,
+            translation: normalizeText(sourceWord?.translation),
+            pronunciation: normalizeText(sourceWord?.pronunciation),
+            partOfSpeech: normalizeText(sourceWord?.partOfSpeech),
+            example: normalizeText(sourceWord?.example),
+            exampleTranslation: normalizeText(sourceWord?.exampleTranslation),
+            tags: normalizeTags(sourceWord?.tags),
+            memoryTipsByLocale:
+              sourceWord?.memoryTipsByLocale && typeof sourceWord.memoryTipsByLocale === "object"
+                ? sourceWord.memoryTipsByLocale
+                : {},
+            memoryImage:
+              sourceWord?.memoryImage && typeof sourceWord.memoryImage === "object"
+                ? sourceWord.memoryImage
+                : null,
+          },
+          {
+            source: WORD_SOURCES.IMPORT,
+          },
+        ),
+      );
+      existingTerms.add(termKey);
+    } catch {
+      // Skip invalid wordbase rows.
+    }
   }
 
-  const savedWords = drafts.length > 0 ? await insertWordsInSupabase(drafts, userId) : [];
+  let savedWords = [];
+  if (drafts.length > 0) {
+    savedWords = await insertWordsInSupabase(drafts, userId);
+    if (savedWords.length === 0) {
+      throw new Error("Could not save group words to your word list.");
+    }
+  }
 
   return {
     activeGroup: payload.activeGroup ?? null,
@@ -296,12 +306,13 @@ let activeGroupSyncChain = null;
 let queuedScopePayload = null;
 let lastActiveGroupAutoSyncAt = 0;
 
-const ACTIVE_GROUP_AUTO_SYNC_COOLDOWN_MS = 10_000;
+const ACTIVE_GROUP_AUTO_SYNC_COOLDOWN_MS = 30_000;
 
 export function useWords({ isAuthLoading = false, user = null } = {}, storage) {
   const [words, setWords] = useState(() => hydrateWords(loadWords(storage), storage));
   const [isWordsLoading, setIsWordsLoading] = useState(hasSupabaseConfig);
   const [isActiveGroupSyncing, setIsActiveGroupSyncing] = useState(() => activeGroupSyncPending);
+  const [activeGroupImportError, setActiveGroupImportError] = useState("");
   const [wordsError, setWordsError] = useState("");
   const [autoImportedNotice, setAutoImportedNotice] = useState(null);
   const isUsingSupabase = hasSupabaseConfig && Boolean(user);
@@ -774,6 +785,7 @@ export function useWords({ isAuthLoading = false, user = null } = {}, storage) {
     const executeSync = async () => {
       activeGroupSyncPending = true;
       setIsActiveGroupSyncing(true);
+      setActiveGroupImportError("");
 
       const applyImportedWords = (importedWords, activeGroup) => {
         if (importedWords.length === 0) {
@@ -818,8 +830,26 @@ export function useWords({ isAuthLoading = false, user = null } = {}, storage) {
         );
         lastMappedWordsRef.current = firstBatch.mappedWords;
         applyImportedWords(firstBatch.importedWords, firstBatch.activeGroup);
+
+        const existingTerms = new Set(
+          wordsRef.current.map((word) => normalizeTerm(word.term)).filter(Boolean),
+        );
+        const hasMissingMappedWords = (firstBatch.mappedWords ?? []).some((mappedWord) => {
+          const termKey = normalizeTerm(mappedWord?.term);
+          return termKey && !existingTerms.has(termKey);
+        });
+        if (
+          firstBatch.importedWords.length === 0 &&
+          hasMissingMappedWords &&
+          (firstBatch.mappedWords?.length ?? 0) > 0
+        ) {
+          setActiveGroupImportError("Could not save group words to your word list.");
+        }
       } catch (error) {
         console.warn("Could not sync active-group words from wordbase.", error);
+        setActiveGroupImportError(
+          error.message || "Could not import group words. Please try again.",
+        );
       } finally {
         activeGroupSyncPending = false;
         setIsActiveGroupSyncing(false);
@@ -835,9 +865,15 @@ export function useWords({ isAuthLoading = false, user = null } = {}, storage) {
         .then((fullBatch) => {
           lastMappedWordsRef.current = fullBatch.mappedWords;
           applyImportedWords(fullBatch.importedWords, fullBatch.activeGroup);
+          if (fullBatch.importedWords.length > 0) {
+            setActiveGroupImportError("");
+          }
         })
         .catch((error) => {
           console.warn("Could not finish full active-group word import.", error);
+          setActiveGroupImportError(
+            error.message || "Could not import group words. Please try again.",
+          );
         });
 
       if (!updateWordRef.current) {
@@ -976,14 +1012,6 @@ export function useWords({ isAuthLoading = false, user = null } = {}, storage) {
     attemptActiveGroupWordImport();
   }, [attemptActiveGroupWordImport]);
 
-  useEffect(() => {
-    if (!isUsingSupabase || isWordsLoading || !user?.id || isActiveGroupSyncing) {
-      return;
-    }
-
-    attemptActiveGroupWordImport();
-  }, [attemptActiveGroupWordImport, isActiveGroupSyncing, isUsingSupabase, isWordsLoading, user?.id]);
-
   return {
     addWord,
     updateWord,
@@ -992,6 +1020,7 @@ export function useWords({ isAuthLoading = false, user = null } = {}, storage) {
     isUsingSupabase,
     isWordsLoading: isAuthLoading || isWordsLoading,
     isActiveGroupSyncing,
+    activeGroupImportError,
     autoImportedNotice,
     clearAutoImportedNotice,
     ensureActiveGroupWordsSynced,

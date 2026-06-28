@@ -2,6 +2,7 @@ import { getApiAuthHeaders } from "../../lib/apiAuth.js";
 import { resolveApiUrl } from "../../lib/apiBase.js";
 
 const CACHE_TTL_MS = 60_000;
+const FETCH_TIMEOUT_MS = 45_000;
 
 export const ACTIVE_GROUP_INITIAL_IMPORT_COUNT = 10;
 
@@ -38,17 +39,31 @@ async function fetchUserActiveGroupWordsFromNetwork({ includeWords = false, word
     params.set("wordLimit", String(wordLimit));
   }
   const queryString = params.toString();
-  const response = await fetch(
-    resolveApiUrl(`/api/user-active-group-words${queryString ? `?${queryString}` : ""}`),
-    {
-      headers: {
-        "Content-Type": "application/json",
-        ...authHeaders,
-      },
-    },
-  );
+  const controller = new AbortController();
+  const timeoutId = window.setTimeout(() => controller.abort(), FETCH_TIMEOUT_MS);
 
-  return parseJsonResponse(response);
+  try {
+    const response = await fetch(
+      resolveApiUrl(`/api/user-active-group-words${queryString ? `?${queryString}` : ""}`),
+      {
+        headers: {
+          "Content-Type": "application/json",
+          ...authHeaders,
+        },
+        signal: controller.signal,
+      },
+    );
+
+    return parseJsonResponse(response);
+  } catch (error) {
+    if (error?.name === "AbortError") {
+      throw new Error("Timed out loading active group words.");
+    }
+
+    throw error;
+  } finally {
+    window.clearTimeout(timeoutId);
+  }
 }
 
 export function invalidateUserActiveGroupWordsCache() {

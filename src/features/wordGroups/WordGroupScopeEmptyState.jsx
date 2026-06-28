@@ -10,7 +10,7 @@ function WordGroupScopeEmptyState({
   activeGroup = null,
 }) {
   const { locale, t } = useLocale();
-  const { isActiveGroupSyncing, syncActiveGroupWords } = useWordsContext();
+  const { isActiveGroupSyncing, syncActiveGroupWords, activeGroupImportError } = useWordsContext();
   const groupLabel = getActiveGroupLabel(activeGroup, locale);
   const showImporting = isImporting || isActiveGroupSyncing;
 
@@ -38,6 +38,11 @@ function WordGroupScopeEmptyState({
       {showImporting && scopeReason === "no-matches" ? (
         <p className="mx-auto mt-3 max-w-xl text-sm font-semibold text-blue-800">
           {t("wordGroupsScope.importingActiveGroupWords")}
+        </p>
+      ) : null}
+      {activeGroupImportError && scopeReason === "no-matches" && !showImporting ? (
+        <p className="mx-auto mt-3 max-w-xl text-sm font-semibold text-rose-700">
+          {activeGroupImportError}
         </p>
       ) : null}
       <div className="mt-5 flex flex-wrap justify-center gap-3">
