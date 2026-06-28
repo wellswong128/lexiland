@@ -14,7 +14,7 @@ import { REVIEW_RESULTS } from "../features/words/wordTypes.js";
 
 function QuizPage() {
   const { t } = useLocale();
-  const { ensureActiveGroupWordsSynced, updateWord, user, words } = useWordsContext();
+  const { ensureActiveGroupWordsSynced, isActiveGroupSyncing, updateWord, user, words } = useWordsContext();
   const {
     activeGroup,
     isLoadingScope,
@@ -133,7 +133,11 @@ function QuizPage() {
   if (isGroupScopeActive && reviewWords.length === 0) {
     return (
       <section className="w-full max-w-3xl rounded-3xl border border-blue-200/70 bg-white/90 p-8 shadow-2xl shadow-blue-950/10 sm:p-14">
-        <WordGroupScopeEmptyState activeGroup={activeGroup} scopeReason={scopeReason} />
+        <WordGroupScopeEmptyState
+          activeGroup={activeGroup}
+          isImporting={isActiveGroupSyncing}
+          scopeReason={scopeReason}
+        />
       </section>
     );
   }

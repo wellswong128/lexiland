@@ -706,6 +706,7 @@ const zhHant = {
         "「{{group}}」尚未建立任何詞彙映射。管理員請編輯對應的 word list JSON，然後執行 npm run word-groups:import-maps。",
       emptyNoMatches:
         "「{{group}}」已有詞彙映射，但你的單字庫中沒有匹配的單字。請新增或匯入此組別的單字。",
+      importingActiveGroupWords: "正在匯入此組別的單字，請稍候…",
       openSettings: "前往設定組別",
       addWord: "新增單字",
     },
@@ -1762,6 +1763,7 @@ export const translations = {
         '"{{group}}" has no mapped vocabulary yet. Edit the group word list JSON, then run npm run word-groups:import-maps.',
       emptyNoMatches:
         '"{{group}}" has mapped vocabulary, but none of those words are in your personal word list yet.',
+      importingActiveGroupWords: "Importing words for this group. Please wait…",
       openSettings: "Open Group Settings",
       addWord: "Add Word",
     },

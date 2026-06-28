@@ -119,8 +119,11 @@ export function buildMappedTermsFromWordbaseRows(rows) {
 }
 
 export function buildActiveGroupWordPayload(wordbaseRows, { includeWords = false, wordLimit = 0 } = {}) {
+  const mappableRows = (wordbaseRows ?? []).filter((row) =>
+    Boolean(String(row?.term ?? row?.term_key ?? "").trim()),
+  );
+  const mappedTerms = buildMappedTermsFromWordbaseRows(mappableRows);
   const importableRows = selectImportableWordbaseRows(wordbaseRows, wordLimit);
-  const mappedTerms = buildMappedTermsFromWordbaseRows(importableRows);
   const mappedWords = includeWords
     ? importableRows.map(mapWordbaseRowToMappedWord)
     : [];

@@ -43,7 +43,10 @@ import {
   invalidateUserActiveGroupWordsCache,
 } from "../wordGroups/wordGroupsApi.js";
 import { saveCachedActiveGroupScope, loadCachedActiveGroupScope } from "../wordGroups/activeGroupScopeCache.js";
-import { ACTIVE_GROUP_CHANGED_EVENT } from "../wordGroups/wordGroupScopeEvents.js";
+import {
+  ACTIVE_GROUP_CHANGED_EVENT,
+  ACTIVE_GROUP_SCOPE_LOADED_EVENT,
+} from "../wordGroups/wordGroupScopeEvents.js";
 import { syncActiveGroupWordMemory } from "../wordGroups/syncActiveGroupWordMemory.js";
 import { WORD_SCOPE_MODE_CHANGED_EVENT, loadWordScopeMode, WORD_SCOPE_MODES } from "../wordGroups/wordScopeMode.js";
 
@@ -887,42 +890,7 @@ export function useWords({ isAuthLoading = false, user = null } = {}, storage) {
     await runActiveGroupSync();
   }, [isUsingSupabase, runActiveGroupSync, user?.id]);
 
-  useEffect(() => {
-    if (!isUsingSupabase || isWordsLoading || !user?.id) {
-      return undefined;
-    }
-
-    void runActiveGroupMemorySync();
-  }, [isUsingSupabase, isWordsLoading, runActiveGroupMemorySync, user?.id]);
-
-  useEffect(() => {
-    if (!isUsingSupabase || typeof window === "undefined") {
-      return undefined;
-    }
-
-    const handleGroupSync = () => {
-      if (loadWordScopeMode(user?.id) !== WORD_SCOPE_MODES.GROUP) {
-        return;
-      }
-
-      void runActiveGroupSync();
-    };
-
-    const handleActiveGroupChanged = (event) => {
-      lastActiveGroupAutoSyncAt = 0;
-      void runActiveGroupSync(event?.detail?.scopePayload ?? null);
-    };
-
-    window.addEventListener(ACTIVE_GROUP_CHANGED_EVENT, handleActiveGroupChanged);
-    window.addEventListener(WORD_SCOPE_MODE_CHANGED_EVENT, handleGroupSync);
-
-    return () => {
-      window.removeEventListener(ACTIVE_GROUP_CHANGED_EVENT, handleActiveGroupChanged);
-      window.removeEventListener(WORD_SCOPE_MODE_CHANGED_EVENT, handleGroupSync);
-    };
-  }, [isUsingSupabase, runActiveGroupSync, user?.id]);
-
-  useEffect(() => {
+  const attemptActiveGroupWordImport = useCallback(() => {
     if (!isUsingSupabase || isWordsLoading || !user?.id) {
       return;
     }
@@ -958,6 +926,52 @@ export function useWords({ isAuthLoading = false, user = null } = {}, storage) {
     lastActiveGroupAutoSyncAt = now;
     void runActiveGroupSync();
   }, [isUsingSupabase, isWordsLoading, runActiveGroupSync, user?.id]);
+
+  useEffect(() => {
+    if (!isUsingSupabase || isWordsLoading || !user?.id) {
+      return undefined;
+    }
+
+    void runActiveGroupMemorySync();
+  }, [isUsingSupabase, isWordsLoading, runActiveGroupMemorySync, user?.id]);
+
+  useEffect(() => {
+    if (!isUsingSupabase || typeof window === "undefined") {
+      return undefined;
+    }
+
+    const handleGroupSync = () => {
+      if (loadWordScopeMode(user?.id) !== WORD_SCOPE_MODES.GROUP) {
+        return;
+      }
+
+      void runActiveGroupSync();
+    };
+
+    const handleActiveGroupChanged = (event) => {
+      lastActiveGroupAutoSyncAt = 0;
+      void runActiveGroupSync(event?.detail?.scopePayload ?? null);
+    };
+
+    const handleScopeLoaded = () => {
+      lastActiveGroupAutoSyncAt = 0;
+      attemptActiveGroupWordImport();
+    };
+
+    window.addEventListener(ACTIVE_GROUP_CHANGED_EVENT, handleActiveGroupChanged);
+    window.addEventListener(ACTIVE_GROUP_SCOPE_LOADED_EVENT, handleScopeLoaded);
+    window.addEventListener(WORD_SCOPE_MODE_CHANGED_EVENT, handleGroupSync);
+
+    return () => {
+      window.removeEventListener(ACTIVE_GROUP_CHANGED_EVENT, handleActiveGroupChanged);
+      window.removeEventListener(ACTIVE_GROUP_SCOPE_LOADED_EVENT, handleScopeLoaded);
+      window.removeEventListener(WORD_SCOPE_MODE_CHANGED_EVENT, handleGroupSync);
+    };
+  }, [attemptActiveGroupWordImport, isUsingSupabase, runActiveGroupSync, user?.id]);
+
+  useEffect(() => {
+    attemptActiveGroupWordImport();
+  }, [attemptActiveGroupWordImport]);
 
   return {
     addWord,

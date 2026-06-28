@@ -2,6 +2,8 @@ function getStorageKey(userId) {
   return userId ? `lexiland.activeGroupScope.${userId}` : "lexiland.activeGroupScope";
 }
 
+const ACTIVE_GROUP_SCOPE_CACHE_VERSION = 2;
+
 export function loadCachedActiveGroupScope(userId) {
   if (typeof window === "undefined" || !userId) {
     return null;
@@ -15,6 +17,10 @@ export function loadCachedActiveGroupScope(userId) {
 
     const parsed = JSON.parse(raw);
     if (!parsed || typeof parsed !== "object") {
+      return null;
+    }
+
+    if (parsed.cacheVersion !== ACTIVE_GROUP_SCOPE_CACHE_VERSION) {
       return null;
     }
 
@@ -40,6 +46,7 @@ export function saveCachedActiveGroupScope(userId, { activeGroup, mappedTerms })
   window.localStorage.setItem(
     getStorageKey(userId),
     JSON.stringify({
+      cacheVersion: ACTIVE_GROUP_SCOPE_CACHE_VERSION,
       activeGroup,
       mappedTerms: Array.isArray(mappedTerms) ? mappedTerms : [],
     }),

@@ -10,12 +10,19 @@ export function useEnsureActiveGroupWords() {
   const {
     isGroupScopeActive,
     isLoadingScope,
+    mappedTermCount,
     scopeReason,
     scopedWords,
   } = useActiveGroupWordScope(words, user);
   const lastEnsureSyncAtRef = useRef(0);
+  const lastMappedTermCountRef = useRef(0);
 
   useEffect(() => {
+    if (mappedTermCount !== lastMappedTermCountRef.current) {
+      lastMappedTermCountRef.current = mappedTermCount;
+      lastEnsureSyncAtRef.current = 0;
+    }
+
     if (
       isWordsLoading ||
       isLoadingScope ||
@@ -38,6 +45,7 @@ export function useEnsureActiveGroupWords() {
     isGroupScopeActive,
     isLoadingScope,
     isWordsLoading,
+    mappedTermCount,
     scopeReason,
     scopedWords.length,
     syncActiveGroupWords,

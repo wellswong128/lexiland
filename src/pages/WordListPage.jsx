@@ -53,7 +53,7 @@ function getVisibleWordTags(tags = []) {
 
 function WordListPage() {
   const { locale, t } = useLocale();
-  const { autoImportedNotice, clearAutoImportedNotice, deleteWord, user, words } =
+  const { autoImportedNotice, clearAutoImportedNotice, deleteWord, isActiveGroupSyncing, user, words } =
     useWordsContext();
   const {
     isLoadingScope,
@@ -252,7 +252,11 @@ function WordListPage() {
           <p className="text-sm text-slate-600">{t("wordGroupsScope.loading")}</p>
         </div>
       ) : isGroupScopeActive && scopedWords.length === 0 ? (
-        <WordGroupScopeEmptyState activeGroup={activeGroup} scopeReason={scopeReason} />
+        <WordGroupScopeEmptyState
+          activeGroup={activeGroup}
+          isImporting={isActiveGroupSyncing}
+          scopeReason={scopeReason}
+        />
       ) : words.length === 0 ? (
         <div className="rounded-2xl border border-dashed border-blue-200 bg-blue-50/70 p-8 text-center">
           <h2 className="text-xl font-bold text-blue-950">

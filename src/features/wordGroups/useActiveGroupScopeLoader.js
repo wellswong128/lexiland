@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useState } from "react";
 import { hasSupabaseConfig } from "../../lib/supabaseClient.js";
-import { ACTIVE_GROUP_CHANGED_EVENT } from "./wordGroupScopeEvents.js";
+import { ACTIVE_GROUP_SCOPE_LOADED_EVENT } from "./wordGroupScopeEvents.js";
 import {
   clearCachedActiveGroupScope,
   loadCachedActiveGroupScope,
@@ -9,7 +9,6 @@ import {
 import {
   fetchUserActiveGroupWords,
   invalidateUserActiveGroupWordsCache,
-  ACTIVE_GROUP_INITIAL_IMPORT_COUNT,
 } from "./wordGroupsApi.js";
 import {
   loadWordScopeMode,
@@ -109,9 +108,6 @@ export function useActiveGroupScopeLoader(user) {
       invalidateUserActiveGroupWordsCache();
       const payload = await fetchActiveGroupScopeWithTimeout({
         forceRefresh,
-        wordLimit: loadWordScopeMode(userId) === WORD_SCOPE_MODES.GROUP
-          ? ACTIVE_GROUP_INITIAL_IMPORT_COUNT
-          : 0,
       });
       const activeGroup = payload.activeGroup ?? null;
       const mappedTerms = Array.isArray(payload.mappedTerms) ? payload.mappedTerms : [];
@@ -126,6 +122,14 @@ export function useActiveGroupScopeLoader(user) {
         isLoading: false,
         error: "",
       });
+
+      if (typeof window !== "undefined") {
+        window.dispatchEvent(
+          new CustomEvent(ACTIVE_GROUP_SCOPE_LOADED_EVENT, {
+            detail: { mappedTermCount: mappedTerms.length },
+          }),
+        );
+      }
     } catch (error) {
       if (userId && !hasCachedData) {
         clearCachedActiveGroupScope(userId);
