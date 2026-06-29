@@ -20,6 +20,7 @@ from auth import AuthError, ImportAuth
 from config import DEFAULT_PDF_PROGRESS_PATH, DEFAULT_PDF_REPORT_DIR, load_settings
 from import_words_from_images import (
     count_statuses,
+    collect_terms_for_processing,
     filter_terms_against_wordbase,
     print_proxy_hint,
     process_term,
@@ -62,6 +63,11 @@ def parse_args() -> argparse.Namespace:
         "--reset-extract",
         action="store_true",
         help="Clear cached page extraction for PDFs in --pdf-dir and re-extract from page 1.",
+    )
+    parser.add_argument(
+        "--skip-extract",
+        action="store_true",
+        help="Skip PDF extraction; only run completion for incomplete terms in progress.",
     )
     parser.add_argument("--login", action="store_true", help="Force a new Supabase OTP login.")
     parser.add_argument("--limit-pdfs", type=int, default=0, help="Process only N PDF files.")
@@ -339,24 +345,30 @@ def main() -> int:
             print(f"PDF directory not found: {settings.pdf_dir}", file=sys.stderr)
             return 1
 
-        terms = extract_pdfs(
-            api=api,
-            import_auth=import_auth,
-            locale=settings.locale,
-            progress=progress,
-            pdf_dir=settings.pdf_dir,
-            pdf_zoom=settings.pdf_zoom,
-            limit_pdfs=args.limit_pdfs,
-            limit_pages=args.limit_pages,
-            page_start=args.page_start,
-            page_end=args.page_end,
-            resume=args.resume or settings.progress_path.exists(),
-            dry_run=args.dry_run,
-            skip_wordbase_extract_check=args.skip_wordbase_extract_check,
-            reset_extract=args.reset_extract,
-            progress_path=settings.progress_path,
-        )
-        save_progress(settings.progress_path, progress)
+        extracted_terms: list[str] = []
+        if args.skip_extract:
+            print("[extract] skipped (--skip-extract)")
+        else:
+            extracted_terms = extract_pdfs(
+                api=api,
+                import_auth=import_auth,
+                locale=settings.locale,
+                progress=progress,
+                pdf_dir=settings.pdf_dir,
+                pdf_zoom=settings.pdf_zoom,
+                limit_pdfs=args.limit_pdfs,
+                limit_pages=args.limit_pages,
+                page_start=args.page_start,
+                page_end=args.page_end,
+                resume=args.resume or settings.progress_path.exists(),
+                dry_run=args.dry_run,
+                skip_wordbase_extract_check=args.skip_wordbase_extract_check,
+                reset_extract=args.reset_extract,
+                progress_path=settings.progress_path,
+            )
+            save_progress(settings.progress_path, progress)
+
+        terms = collect_terms_for_processing(progress, extracted_terms)
 
         if args.term:
             terms = [args.term.strip().lower()] if args.term.strip() else terms

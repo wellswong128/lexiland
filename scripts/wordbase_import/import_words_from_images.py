@@ -413,6 +413,15 @@ def count_statuses(progress: dict) -> Counter:
     return counts
 
 
+def collect_terms_for_processing(progress: dict, extracted_terms: list[str]) -> list[str]:
+    """Union of newly extracted terms and any incomplete terms already in progress."""
+    terms = {term for term in extracted_terms if term}
+    for term, record in progress.get("terms", {}).items():
+        if record.get("status") != "complete":
+            terms.add(term)
+    return sorted(terms)
+
+
 def write_report(report_dir: Path, progress: dict, *, rounds: int, duration_seconds: float) -> Path:
     report_dir.mkdir(parents=True, exist_ok=True)
     stamp = datetime.now().strftime("%Y%m%d-%H%M%S")

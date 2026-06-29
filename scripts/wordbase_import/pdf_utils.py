@@ -64,27 +64,32 @@ def sync_pdf_dir_progress(
         cleared = clear_page_cache_for_pdfs(progress, pdf_names)
         print(f"[extract] reset requested; cleared {cleared} cached page(s) for current PDF dir")
     elif stored is not None and stored != normalized:
-        cached_names = {
-            page_record.get("pdf_file")
-            for page_record in pages.values()
-            if page_record.get("pdf_file")
-        }
-        if cached_names and cached_names <= pdf_names:
-            migrated = 0
-            for page_record in pages.values():
-                if page_record.get("pdf_file") in pdf_names:
-                    page_record["pdf_dir"] = normalized
-                    migrated += 1
-            print(
-                f"[extract] pdf_dir moved ({stored} -> {normalized}); "
-                f"kept {migrated} cached page(s)"
-            )
-        else:
-            cleared = clear_page_cache_for_pdfs(progress, pdf_names)
-            print(
-                f"[extract] pdf_dir changed ({stored} -> {normalized}); "
-                f"cleared {cleared} cached page(s) for current PDF dir"
-            )
+        migrated = 0
+        cleared = 0
+        for key, page_record in list(pages.items()):
+            pdf_file = page_record.get("pdf_file")
+            if not pdf_file or pdf_file not in pdf_names:
+                continue
+
+            if page_cache_matches_dir(page_record, pdf_dir):
+                migrated += 1
+                continue
+
+            del pages[key]
+            cleared += 1
+
+        print(
+            f"[extract] pdf_dir changed ({stored} -> {normalized}); "
+            f"kept {migrated} cached page(s) for PDFs in current dir, cleared {cleared}"
+        )
+    elif stored is not None and stored == normalized:
+        migrated = 0
+        for page_record in pages.values():
+            pdf_file = page_record.get("pdf_file")
+            if pdf_file and pdf_file in pdf_names and page_cache_matches_dir(page_record, pdf_dir):
+                migrated += 1
+        if migrated:
+            print(f"[extract] reusing {migrated} cached page(s) for {normalized}")
 
     progress["pdf_dir"] = normalized
 
