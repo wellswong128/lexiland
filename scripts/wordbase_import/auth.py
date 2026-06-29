@@ -3,6 +3,8 @@ from __future__ import annotations
 import json
 import os
 import re
+import subprocess
+import sys
 from contextlib import contextmanager
 from getpass import getpass
 from pathlib import Path
@@ -333,29 +335,156 @@ def verify_login_token(client: Client, email: str, raw_token: str) -> dict[str, 
     )
 
 
-def login_from_browser_session(client: Client) -> dict[str, Any]:
-    print(
-        "Paste the Supabase session from learn.lexiland.cc:\n"
-        "  1. Log in at https://learn.lexiland.cc\n"
-        "  2. Open DevTools → Console\n"
-        "  3. Run:\n"
-        "     copy(JSON.parse(localStorage.getItem(Object.keys(localStorage).find(k => k.includes('-auth-token')))))\n"
-        "  4. Paste the copied JSON below"
-    )
-    raw = input("Paste session JSON: ").strip()
-    if not raw:
-        raise AuthError("Session JSON is required.")
-
+def _parse_browser_session_payload(raw: str) -> dict[str, Any]:
     try:
-        payload = json.loads(raw)
+        payload: Any = json.loads(raw)
     except json.JSONDecodeError as error:
         raise AuthError(f"Could not parse session JSON: {error}") from error
+
+    if isinstance(payload, str):
+        try:
+            payload = json.loads(payload)
+        except json.JSONDecodeError as error:
+            raise AuthError(
+                "Could not parse session JSON: expected a JSON object or JSON string."
+            ) from error
 
     if isinstance(payload, dict) and isinstance(payload.get("currentSession"), dict):
         payload = payload["currentSession"]
 
+    if not isinstance(payload, dict):
+        raise AuthError("Session JSON must be a JSON object.")
+
+    return payload
+
+
+def _read_macos_clipboard() -> str:
+    result = subprocess.run(
+        ["pbpaste"],
+        capture_output=True,
+        text=True,
+        check=False,
+    )
+    return result.stdout.strip()
+
+
+def _looks_like_incomplete_json(raw: str) -> bool:
+    stripped = raw.strip()
+    if not stripped:
+        return True
+    if stripped.count("{") != stripped.count("}"):
+        return True
+    if stripped.count("[") != stripped.count("]"):
+        return True
+    try:
+        json.loads(stripped)
+        return False
+    except json.JSONDecodeError as error:
+        return error.pos is None or error.pos >= len(stripped) - 1
+
+
+def _read_text_from_path(raw_path: str) -> str:
+    path = Path(raw_path.strip()).expanduser()
+    if not path.is_file():
+        raise AuthError(f"Session file not found: {path}")
+    return path.read_text(encoding="utf-8").strip()
+
+
+def _read_browser_session_raw() -> str:
+    print(
+        "Sign in with your learn.lexiland.cc browser session:\n"
+        "  1. Log in at https://learn.lexiland.cc\n"
+        "  2. Open DevTools → Console\n"
+        "  3. Run:\n"
+        "     copy(localStorage.getItem(Object.keys(localStorage).find(k => k.includes('-auth-token'))))\n"
+    )
+
+    if sys.platform == "darwin":
+        choice = input(
+            "Copy the session in the browser, then press Enter to import from clipboard "
+            "(or type a file path): "
+        ).strip()
+        if not choice:
+            raw = _read_macos_clipboard()
+            if not raw:
+                raise AuthError(
+                    "Clipboard is empty. Run the copy(...) command in the browser console first, "
+                    "then press Enter here again."
+                )
+            print(f"Read {len(raw)} characters from clipboard.")
+            return raw
+        if choice.startswith("~") or choice.startswith("/") or choice.startswith("./"):
+            raw = _read_text_from_path(choice)
+            print(f"Read {len(raw)} characters from {Path(choice).expanduser()}.")
+            return raw
+        return _read_manual_session_json(choice)
+
+    return _read_manual_session_json(
+        input("Paste session JSON (or enter a file path): ").strip()
+    )
+
+
+def _read_manual_session_json(first: str) -> str:
+    if not first:
+        raise AuthError(
+            "Session JSON is required. Save the copied JSON to a file and enter its path, "
+            "or paste the JSON when prompted."
+        )
+
+    if first.startswith("~") or first.startswith("/") or first.startswith("./"):
+        raw = _read_text_from_path(first)
+        print(f"Read {len(raw)} characters from {Path(first).expanduser()}.")
+        return raw
+
+    lines = [first]
+    candidate = first
+    if not _looks_like_incomplete_json(candidate):
+        return candidate
+
+    print(
+        "JSON looks incomplete (terminal paste may have truncated it).\n"
+        "Paste remaining lines, then press Enter on a blank line."
+    )
+
+    while True:
+        try:
+            line = input()
+        except EOFError:
+            break
+
+        if not line.strip():
+            candidate = "\n".join(lines).strip()
+            if _looks_like_incomplete_json(candidate):
+                raise AuthError(
+                    "Session JSON looks truncated. Save the JSON to a file and enter its path, "
+                    "or on macOS press Enter at the prompt to import from clipboard."
+                )
+            break
+
+        lines.append(line)
+        candidate = "\n".join(lines).strip()
+        if not _looks_like_incomplete_json(candidate):
+            return candidate
+
+    candidate = "\n".join(lines).strip()
+    if not candidate:
+        raise AuthError("Session JSON is required.")
+    return candidate
+
+
+def login_from_browser_session(client: Client) -> dict[str, Any]:
+    raw = _read_browser_session_raw()
+    payload = _parse_browser_session_payload(raw)
+
     access_token = str(payload.get("access_token", "")).strip()
     refresh_token = str(payload.get("refresh_token", "")).strip()
+    if access_token and not refresh_token:
+        print("access_token found, but refresh_token is missing.")
+        if sys.platform == "darwin":
+            input("Copy refresh_token to clipboard, then press Enter: ")
+            refresh_token = _read_macos_clipboard().strip()
+        else:
+            refresh_token = input("Paste refresh_token: ").strip()
     if not access_token or not refresh_token:
         raise AuthError("Session JSON must include access_token and refresh_token.")
 
