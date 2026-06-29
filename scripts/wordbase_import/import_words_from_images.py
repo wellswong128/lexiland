@@ -26,6 +26,7 @@ from completeness import (
     missing_parts,
 )
 from config import load_settings
+from production_guard import assert_production_bulk_run_allowed
 from progress_store import ProgressIOError, append_round_log, ensure_term_record, load_progress, save_progress
 from terms import normalize_term, page_label_from_filename
 from wordbase_client import (
@@ -570,6 +571,8 @@ def main() -> int:
         progress_path=args.progress_file,
         report_dir=args.report_dir,
     )
+    if not args.dry_run:
+        assert_production_bulk_run_allowed(settings.api_base_url)
 
     print(f"Progress file: {settings.progress_path}")
     print(f"Report dir:    {settings.report_dir}")

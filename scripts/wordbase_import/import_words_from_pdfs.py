@@ -18,6 +18,7 @@ sys.path.insert(0, str(SCRIPT_DIR))
 from api_client import ApiError, LexiLandApiClient
 from auth import AuthError, ImportAuth
 from config import DEFAULT_PDF_PROGRESS_PATH, DEFAULT_PDF_REPORT_DIR, load_settings
+from production_guard import assert_production_bulk_run_allowed
 from import_words_from_images import (
     count_statuses,
     collect_terms_for_processing,
@@ -311,6 +312,8 @@ def main() -> int:
         default_progress_path=DEFAULT_PDF_PROGRESS_PATH,
         default_report_dir=DEFAULT_PDF_REPORT_DIR,
     )
+    if not args.dry_run:
+        assert_production_bulk_run_allowed(settings.api_base_url)
 
     print(f"PDF dir:       {settings.pdf_dir}")
     print(f"PDF zoom:      {settings.pdf_zoom}")

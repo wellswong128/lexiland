@@ -11,6 +11,7 @@ sys.path.insert(0, str(SCRIPT_DIR))
 from api_client import ApiError, LexiLandApiClient
 from auth import AuthError, ImportAuth
 from config import load_settings
+from production_guard import assert_production_bulk_run_allowed
 from text_locale import has_placeholder_translation, is_incomplete_exam_phrase_translation, needs_translation_fix
 from wordbase_client import fetch_entry, upsert_details
 
@@ -225,6 +226,8 @@ def print_proxy_hint(error: Exception) -> None:
 def main() -> int:
     args = parse_args()
     settings = load_settings()
+    if not args.dry_run:
+        assert_production_bulk_run_allowed(settings.api_base_url)
     locale = args.locale or settings.locale
 
     try:

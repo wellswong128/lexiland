@@ -6,6 +6,8 @@ from pathlib import Path
 
 from dotenv import load_dotenv
 
+from production_guard import DEFAULT_LOCAL_API_BASE_URL
+
 REPO_ROOT = Path(__file__).resolve().parents[2]
 DEFAULT_IMAGE_DIR = Path("/Users/mac/racer/projects/tempWordImage")
 DEFAULT_PDF_DIR = Path("/Users/mac/racer/book/dk1w3")
@@ -75,7 +77,7 @@ def load_settings(
     return Settings(
         supabase_url=_require("VITE_SUPABASE_URL", supabase_url),
         supabase_anon_key=_require("VITE_SUPABASE_ANON_KEY", supabase_anon_key),
-        api_base_url=(os.getenv("APP_API_BASE_URL") or "https://learn.lexiland.cc").rstrip("/"),
+        api_base_url=(os.getenv("APP_API_BASE_URL") or DEFAULT_LOCAL_API_BASE_URL).rstrip("/"),
         image_dir=image_dir or Path(os.getenv("IMAGE_DIR", str(DEFAULT_IMAGE_DIR))),
         pdf_dir=pdf_dir or Path(os.getenv("PDF_DIR", str(DEFAULT_PDF_DIR))),
         pdf_zoom=pdf_zoom

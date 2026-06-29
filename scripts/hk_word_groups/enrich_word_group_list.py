@@ -22,6 +22,7 @@ from ai_retries import call_ai_step  # noqa: E402
 from auth import _load_session  # noqa: E402
 from completeness import has_memory_image, has_memory_tips, missing_detail_fields, missing_parts  # noqa: E402
 from config import load_settings  # noqa: E402
+from production_guard import assert_production_bulk_run_allowed  # noqa: E402
 from terms import normalize_term  # noqa: E402
 from wordbase_client import (  # noqa: E402
     fetch_entry,
@@ -557,6 +558,8 @@ def main() -> int:
         file_paths = [args.file or DEFAULT_WORD_LIST]
 
     settings = load_settings()
+    if not args.dry_run:
+        assert_production_bulk_run_allowed(settings.api_base_url)
     api = LexiLandApiClient(
         settings.api_base_url,
         max_retries=settings.max_retries,

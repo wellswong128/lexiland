@@ -12,6 +12,7 @@ from PIL import Image
 
 from auth import session_file_lock
 from config import MAX_IMAGE_WIDTH, JPEG_QUALITY, IMAGE_EXTENSIONS, REPO_ROOT
+from production_guard import assert_bulk_api_allowed
 
 
 RETRYABLE_STATUS = {429, 500, 502, 503, 504}
@@ -114,6 +115,7 @@ class LexiLandApiClient:
         return str(payload.get("access_token", "")).strip()
 
     def _request_json(self, path: str, payload: dict, *, pause_after: float) -> dict:
+        assert_bulk_api_allowed(self.base_url, path)
         url = f"{self.base_url}{path}"
         last_error: Exception | None = None
         rate_limit_retries = 0

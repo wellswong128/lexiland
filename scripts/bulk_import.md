@@ -53,7 +53,8 @@ Configure these in the project root `.env` or `.env.local`:
 | `IMPORT_USER_PASSWORD` | Password (optional; can enter at runtime) |
 | `IMPORT_API_KEY` | LexiLand API key for extract/complete endpoints |
 | `IMAGE_DIR` | Default image folder (optional) |
-| `APP_API_BASE_URL` | API base URL (default: `https://learn.lexiland.cc`) |
+| `APP_API_BASE_URL` | API base URL (default: `http://localhost:5173` — run `npm run dev` first) |
+| `ALLOW_PRODUCTION_BULK_API` | Set to `1` to allow bulk scripts against production (not recommended; burns Vercel quota) |
 | `IMPORT_LOCALE` | Locale for memory tips (default: `zh-Hant`) |
 
 Optional tuning:
