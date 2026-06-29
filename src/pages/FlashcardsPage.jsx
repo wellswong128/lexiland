@@ -19,7 +19,7 @@ import {
   updateReviewResult,
 } from "../features/review/reviewHelpers.js";
 import { useWordsContext } from "../features/words/WordsContext.jsx";
-import { syncReviewSession } from "../lib/reviewSessionStorage.js";
+import { clearReviewSession, syncReviewSession } from "../lib/reviewSessionStorage.js";
 import { maybeRecordDailyMistakeClear } from "../lib/learningActivity.js";
 import { REVIEW_RESULTS } from "../features/words/wordTypes.js";
 
@@ -101,9 +101,13 @@ function FlashcardsPage() {
     mappedTermCount,
     scopeReason,
     scopedWords,
+    scopeRevision,
   } = useActiveGroupWordScope(words, user);
   useEnsureActiveGroupWords();
   const reviewWords = isGroupScopeActive ? scopedWords : words;
+  const isScopePending =
+    isGroupScopeActive &&
+    (isLoadingScope || (isActiveGroupSyncing && scopedWords.length === 0));
   const enrichedExampleWordIdsRef = useRef(new Set());
   const [searchParams] = useSearchParams();
   const mistakesOnly = searchParams.get("mode") === "mistakes";
@@ -133,6 +137,7 @@ function FlashcardsPage() {
   const imageQuestionsRef = useRef([]);
   const imageQuestionsLengthRef = useRef(0);
   const lastSpokenRef = useRef({ index: -1, term: "" });
+  const lastScopeRevisionRef = useRef(scopeRevision);
   const quizBottomRef = useRef(null);
 
   imageQuestionsRef.current = imageQuestions;
@@ -150,6 +155,26 @@ function FlashcardsPage() {
     mappedTermCount,
     scopedWords.length,
   ]);
+
+  useEffect(() => {
+    if (lastScopeRevisionRef.current === scopeRevision) {
+      return;
+    }
+
+    lastScopeRevisionRef.current = scopeRevision;
+    clearReviewSession();
+    enrichedExampleWordIdsRef.current = new Set();
+    setHasStarted(false);
+    setIsComplete(false);
+    setCurrentIndex(0);
+    setSelectedAnswer("");
+    setFeedback(null);
+    setImageQuestions([]);
+    setSessionClearedCount(0);
+    setPrepareError("");
+    setPrepareErrorCode("");
+    lastSpokenRef.current = { index: -1, term: "" };
+  }, [scopeRevision]);
 
   function scrollQuizToBottom() {
     const scrollToEnd = () => {
@@ -389,6 +414,14 @@ function FlashcardsPage() {
     }
 
     goToNextWord();
+  }
+
+  if (isScopePending) {
+    return (
+      <section className="w-full max-w-3xl rounded-3xl border border-blue-200/70 bg-white/90 p-8 text-center shadow-2xl shadow-blue-950/10 sm:p-14">
+        <p className="text-sm font-medium text-slate-600">{t("wordGroupsScope.loading")}</p>
+      </section>
+    );
   }
 
   if (isLoadingScope) {

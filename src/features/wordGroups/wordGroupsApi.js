@@ -69,6 +69,8 @@ async function fetchUserActiveGroupWordsFromNetwork({ includeWords = false, word
 export function invalidateUserActiveGroupWordsCache() {
   cachedFullPayload = null;
   cachedAt = 0;
+  inflightFullRequest = null;
+  inflightTermsRequest = null;
 }
 
 export async function fetchUserActiveGroupWords(options = {}) {

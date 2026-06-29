@@ -60,6 +60,7 @@ export function useActiveGroupWordScope(words, user) {
       mappedTermCount: 0,
       missingMappedTermCount: 0,
       scopedWords: words,
+      scopeRevision: 0,
       switchToCustomWords: scope.switchToCustomWords,
       switchToGroupWords: scope.switchToGroupWords,
     };
@@ -77,6 +78,7 @@ export function useActiveGroupWordScope(words, user) {
     mappedTermCount,
     missingMappedTermCount,
     scopedWords,
+    scopeRevision: scope.scopeRevision,
     switchToCustomWords: scope.switchToCustomWords,
     switchToGroupWords: scope.switchToGroupWords,
   };

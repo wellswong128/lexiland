@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { hasSupabaseConfig } from "../../lib/supabaseClient.js";
 import {
   ACTIVE_GROUP_CHANGED_EVENT,
@@ -9,6 +9,7 @@ import {
   loadCachedActiveGroupScope,
   saveCachedActiveGroupScope,
 } from "./activeGroupScopeCache.js";
+import { clearReviewSession } from "../../lib/reviewSessionStorage.js";
 import {
   fetchUserActiveGroupWords,
   invalidateUserActiveGroupWordsCache,
@@ -58,6 +59,17 @@ export function useActiveGroupScopeLoader(user) {
     error: "",
   }));
   const [scopeMode, setScopeMode] = useState(() => initialScopeMode);
+  const [scopeRevision, setScopeRevision] = useState(0);
+  const scopeRequestGenerationRef = useRef(0);
+
+  function invalidateInFlightScopeLoads() {
+    scopeRequestGenerationRef.current += 1;
+    setScopeRevision((revision) => revision + 1);
+  }
+
+  function isScopeLoadCurrent(requestId) {
+    return requestId === scopeRequestGenerationRef.current;
+  }
 
   useEffect(() => {
     const cachedScope = readCachedScope(userId);
@@ -96,22 +108,30 @@ export function useActiveGroupScopeLoader(user) {
       return;
     }
 
+    const requestId = ++scopeRequestGenerationRef.current;
     const cachedScope = readCachedScope(userId);
     const hasCachedData = hasCachedScopeData(cachedScope);
 
-    setState((current) => ({
-      ...current,
-      activeGroup: cachedScope?.activeGroup ?? current.activeGroup,
-      mappedTerms: cachedScope?.mappedTerms ?? current.mappedTerms,
-      isLoading: !hasCachedData,
-      error: "",
-    }));
+    if (isScopeLoadCurrent(requestId)) {
+      setState((current) => ({
+        ...current,
+        activeGroup: cachedScope?.activeGroup ?? current.activeGroup,
+        mappedTerms: cachedScope?.mappedTerms ?? current.mappedTerms,
+        isLoading: !hasCachedData,
+        error: "",
+      }));
+    }
 
     try {
       invalidateUserActiveGroupWordsCache();
       const payload = await fetchActiveGroupScopeWithTimeout({
         forceRefresh,
       });
+
+      if (!isScopeLoadCurrent(requestId)) {
+        return;
+      }
+
       const activeGroup = payload.activeGroup ?? null;
       const mappedTerms = Array.isArray(payload.mappedTerms) ? payload.mappedTerms : [];
 
@@ -134,6 +154,10 @@ export function useActiveGroupScopeLoader(user) {
         );
       }
     } catch (error) {
+      if (!isScopeLoadCurrent(requestId)) {
+        return;
+      }
+
       if (userId && !hasCachedData) {
         clearCachedActiveGroupScope(userId);
       }
@@ -158,6 +182,8 @@ export function useActiveGroupScopeLoader(user) {
 
     const handleActiveGroupChanged = (event) => {
       invalidateUserActiveGroupWordsCache();
+      invalidateInFlightScopeLoads();
+      clearReviewSession();
       if (loadWordScopeMode(userId) !== WORD_SCOPE_MODES.GROUP) {
         saveWordScopeMode(userId, WORD_SCOPE_MODES.GROUP, { notify: false });
       }
@@ -218,6 +244,7 @@ export function useActiveGroupScopeLoader(user) {
     isUsingCustomWords,
     mappedTerms: state.mappedTerms,
     scopeMode,
+    scopeRevision,
     switchToCustomWords,
     switchToGroupWords,
   };
