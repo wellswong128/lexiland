@@ -2,12 +2,22 @@ from __future__ import annotations
 
 import sys
 import tempfile
+import types
 import unittest
 from pathlib import Path
 
 
 WORDBASE_IMPORT_DIR = Path(__file__).resolve().parents[2] / "scripts" / "wordbase_import"
 sys.path.insert(0, str(WORDBASE_IMPORT_DIR))
+
+try:
+    from PIL import Image as _Image  # noqa: F401
+except ModuleNotFoundError:
+    pil_module = types.ModuleType("PIL")
+    image_module = types.ModuleType("PIL.Image")
+    pil_module.Image = image_module
+    sys.modules["PIL"] = pil_module
+    sys.modules["PIL.Image"] = image_module
 
 from pdf_utils import normalize_pdf_dir, page_cache_matches_dir, sync_pdf_dir_progress
 
