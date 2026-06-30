@@ -234,22 +234,6 @@ function FishingBlastPage() {
   const [fishStates, setFishStates] = useState({});
   const [fishingLine, setFishingLine] = useState(null);
 
-  if (isLoadingScope) {
-    return (
-      <section className="w-full max-w-4xl rounded-3xl border border-blue-200/70 bg-white/90 p-8 text-center shadow-2xl shadow-blue-950/10 sm:p-10">
-        <p className="text-sm font-medium text-slate-600">{t("wordGroupsScope.loading")}</p>
-      </section>
-    );
-  }
-
-  if (isGroupScopeActive && (gameWords.length === 0 || usingFallback)) {
-    return (
-      <section className="w-full max-w-4xl rounded-3xl border border-blue-200/70 bg-white/90 p-6 shadow-2xl shadow-blue-950/10 sm:p-10">
-        <WordGroupScopeEmptyState compact />
-      </section>
-    );
-  }
-
   const startGame = useCallback(() => {
     resetTracker();
     const bank = beginPlaySession();
@@ -409,6 +393,22 @@ function FishingBlastPage() {
 
     return () => window.clearInterval(timerId);
   }, [endGame, gameState, locked]);
+
+  if (isLoadingScope) {
+    return (
+      <section className="w-full max-w-4xl rounded-3xl border border-blue-200/70 bg-white/90 p-8 text-center shadow-2xl shadow-blue-950/10 sm:p-10">
+        <p className="text-sm font-medium text-slate-600">{t("wordGroupsScope.loading")}</p>
+      </section>
+    );
+  }
+
+  if (isGroupScopeActive && (gameWords.length === 0 || usingFallback)) {
+    return (
+      <section className="w-full max-w-4xl rounded-3xl border border-blue-200/70 bg-white/90 p-6 shadow-2xl shadow-blue-950/10 sm:p-10">
+        <WordGroupScopeEmptyState compact />
+      </section>
+    );
+  }
 
   const timerPercent = Math.max(0, (timeLeft / maxTime) * 100);
   const totalAttempts = correctCount + wrongCount;
