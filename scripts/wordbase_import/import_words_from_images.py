@@ -24,6 +24,7 @@ from completeness import (
     is_complete,
     missing_detail_fields,
     missing_parts,
+    wordbase_entry_exists,
 )
 from config import load_settings
 from production_guard import assert_production_bulk_run_allowed
@@ -153,6 +154,61 @@ def filter_terms_against_wordbase(
     return terms_to_process, skipped_terms
 
 
+def sync_terms_with_wordbase(
+    *,
+    terms: list[str],
+    locale: str,
+    import_auth: ImportAuth | None,
+    progress: dict,
+    dry_run: bool,
+) -> int:
+    """Batch-check wordbase for incomplete terms before calling AI completion APIs."""
+    if dry_run or import_auth is None:
+        return 0
+
+    incomplete_terms = [
+        term
+        for term in terms
+        if progress.get("terms", {}).get(term, {}).get("status") != "complete"
+    ]
+    if not incomplete_terms:
+        return 0
+
+    skipped_complete = 0
+    batch_size = 100
+
+    for index in range(0, len(incomplete_terms), batch_size):
+        batch = incomplete_terms[index : index + batch_size]
+        entries = import_auth.run(lambda: fetch_entries(import_auth.client, batch))
+
+        for term in batch:
+            term_key = normalize_term(term)
+            entry = entries.get(term_key)
+            record = progress.get("terms", {}).get(term, {})
+            if not record:
+                continue
+
+            if is_complete(entry, locale):
+                mark_term_exists_in_wordbase(record)
+                skipped_complete += 1
+                continue
+
+            if wordbase_entry_exists(entry):
+                record["wordbase_exists"] = True
+                record["missing"] = missing_parts(entry, locale)
+                record.pop("skipped_reason", None)
+                if record.get("status") == "pending" and record["missing"]:
+                    record["status"] = "incomplete"
+
+    if skipped_complete:
+        print(
+            f"[wordbase] {skipped_complete} term(s) already complete in wordbase; "
+            "skipping AI completion"
+        )
+
+    return skipped_complete
+
+
 def extract_images(
     *,
     api: LexiLandApiClient,
@@ -266,6 +322,11 @@ def process_term(
     if not dry_run and import_auth is not None:
         entry = import_auth.run(lambda: fetch_entry(import_auth.client, term))
 
+    if is_complete(entry, locale):
+        mark_term_exists_in_wordbase(record)
+        print(f"  [{term}] skipped (already complete in wordbase)")
+        return record
+
     missing = missing_parts(entry, locale)
 
     if not missing:
@@ -273,6 +334,10 @@ def process_term(
         record["missing"] = []
         record["completed_at"] = record.get("completed_at") or utc_now()
         return record
+
+    if wordbase_entry_exists(entry):
+        record["wordbase_exists"] = True
+        record.pop("skipped_reason", None)
 
     record["missing"] = missing
     record["status"] = "incomplete"
@@ -283,39 +348,53 @@ def process_term(
     try:
         detail_fields_missing = missing_detail_fields(entry)
         if detail_fields_missing:
-            current_step = "complete"
-            if dry_run:
-                print(f"  [{term}] complete-word ({', '.join(detail_fields_missing)})")
-                print("    dry-run: would call /api/complete-word and upsert details")
-            else:
-                print(f"  [{term}] complete-word ({', '.join(detail_fields_missing)})")
-                suggestion = call_ai_step(
-                    "complete-word",
-                    lambda: api.complete_word(term, locale),
-                )
-                if not suggestion.get("definition"):
-                    raise ApiError("Complete-word response missing definition.")
-                assert import_auth is not None
-                existing = import_auth.run(lambda: fetch_entry(import_auth.client, term))
-                contributor_id = import_auth.contributor_id
-                import_auth.run(
-                    lambda: upsert_details(
-                        import_auth.client,
-                        suggestion,
-                        contributor_id,
-                        existing,
+            if not dry_run and import_auth is not None:
+                entry = import_auth.run(lambda: fetch_entry(import_auth.client, term))
+                detail_fields_missing = missing_detail_fields(entry)
+                if not detail_fields_missing:
+                    print(f"  [{term}] using existing wordbase details (skipping complete-word API)")
+                    missing = missing_parts(entry, locale)
+                    record["missing"] = missing
+                    if not missing:
+                        record["status"] = "complete"
+                        record["completed_at"] = utc_now()
+                        print(f"  [{term}] complete")
+                        return record
+
+            if detail_fields_missing:
+                current_step = "complete"
+                if dry_run:
+                    print(f"  [{term}] complete-word ({', '.join(detail_fields_missing)})")
+                    print("    dry-run: would call /api/complete-word and upsert details")
+                else:
+                    print(f"  [{term}] complete-word ({', '.join(detail_fields_missing)})")
+                    suggestion = call_ai_step(
+                        "complete-word",
+                        lambda: api.complete_word(term, locale),
                     )
-                )
-                entry = import_auth.run(
-                    lambda: fetch_entry_resolved(
-                        import_auth.client,
-                        term,
-                        alternate_term=suggestion.get("term"),
+                    if not suggestion.get("definition"):
+                        raise ApiError("Complete-word response missing definition.")
+                    assert import_auth is not None
+                    existing = import_auth.run(lambda: fetch_entry(import_auth.client, term))
+                    contributor_id = import_auth.contributor_id
+                    import_auth.run(
+                        lambda: upsert_details(
+                            import_auth.client,
+                            suggestion,
+                            contributor_id,
+                            existing,
+                        )
                     )
-                )
-                entry = merge_suggestion_into_entry(entry, suggestion)
-                if not str((entry or {}).get("definition", "")).strip():
-                    raise ApiError("Complete-word upsert did not persist definition.")
+                    entry = import_auth.run(
+                        lambda: fetch_entry_resolved(
+                            import_auth.client,
+                            term,
+                            alternate_term=suggestion.get("term"),
+                        )
+                    )
+                    entry = merge_suggestion_into_entry(entry, suggestion)
+                    if not str((entry or {}).get("definition", "")).strip():
+                        raise ApiError("Complete-word upsert did not persist definition.")
 
         missing = missing_parts(entry, locale)
         if "memory_tips" in missing:
@@ -475,6 +554,14 @@ def run_completion_rounds(
     max_rounds = settings.max_rounds
     round_number = 0
 
+    sync_terms_with_wordbase(
+        terms=terms,
+        locale=settings.locale,
+        import_auth=import_auth,
+        progress=progress,
+        dry_run=dry_run,
+    )
+
     while True:
         round_number += 1
         if max_rounds > 0 and round_number > max_rounds:
@@ -490,6 +577,23 @@ def run_completion_rounds(
         if not incomplete_terms:
             print("All terms complete.")
             break
+
+        if round_number > 1:
+            sync_terms_with_wordbase(
+                terms=incomplete_terms,
+                locale=settings.locale,
+                import_auth=import_auth,
+                progress=progress,
+                dry_run=dry_run,
+            )
+            incomplete_terms = [
+                term
+                for term in terms
+                if progress.get("terms", {}).get(term, {}).get("status") != "complete"
+            ]
+            if not incomplete_terms:
+                print("All terms complete.")
+                break
 
         print(f"\n=== Round {round_number}: {len(incomplete_terms)} incomplete terms ===")
         round_started = time.time()
