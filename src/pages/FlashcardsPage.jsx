@@ -329,7 +329,11 @@ function FlashcardsPage() {
 
     let cancelled = false;
 
-    void prefetchSessionMemoryImages(sessionWords, { updateWord, user }).catch((error) => {
+    void prefetchSessionMemoryImages(sessionWords, {
+      locale,
+      updateWord,
+      user,
+    }).catch((error) => {
       if (!cancelled) {
         console.warn("Could not prefetch review memory images from wordbase.", error);
       }

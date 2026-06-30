@@ -14,7 +14,7 @@ import { maybeRecordDailyMistakeClear } from "../lib/learningActivity.js";
 import { REVIEW_RESULTS } from "../features/words/wordTypes.js";
 
 function QuizPage() {
-  const { t } = useLocale();
+  const { locale, t } = useLocale();
   const { ensureActiveGroupWordsSynced, isActiveGroupSyncing, updateWord, user, words } = useWordsContext();
   const {
     activeGroup,
@@ -85,7 +85,7 @@ function QuizPage() {
 
     let cancelled = false;
 
-    void prefetchSessionMemoryImages(reviewWords, { updateWord, user }).catch((error) => {
+    void prefetchSessionMemoryImages(reviewWords, { locale, updateWord, user }).catch((error) => {
       if (!cancelled) {
         console.warn("Could not prefetch quiz memory images from wordbase.", error);
       }
@@ -94,7 +94,7 @@ function QuizPage() {
     return () => {
       cancelled = true;
     };
-  }, [reviewWordIdsKey, reviewWords, updateWord, user]);
+  }, [locale, reviewWordIdsKey, reviewWords, updateWord, user]);
 
   useEffect(() => {
     if (isComplete || feedback || !currentQuestion?.word?.term) {

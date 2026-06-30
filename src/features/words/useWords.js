@@ -5,6 +5,7 @@ import {
   clearAllStoredWordAiMemory,
   clearStoredWordAiMemory,
   hydrateWordsAiMemory,
+  persistWordMemoryChangesToStorage,
 } from "../../lib/wordAiMemoryStorage.js";
 import { clearMemoryTipsCache } from "./memoryTipsApi.js";
 import { clearWordImageCache } from "./wordImageApi.js";
@@ -152,7 +153,9 @@ function mergeWordsPreservingMemory(remoteWords, existingWords) {
         ...(existing.memoryTipsByLocale ?? {}),
         ...(word.memoryTipsByLocale ?? {}),
       },
-      memoryImage: word.memoryImage ?? existing.memoryImage ?? null,
+      memoryImage: word.memoryImage?.imageUrl
+        ? word.memoryImage
+        : (existing.memoryImage?.imageUrl ? existing.memoryImage : (word.memoryImage ?? existing.memoryImage ?? null)),
     };
   });
 
@@ -284,7 +287,7 @@ export function useWords({ isAuthLoading = false, user = null } = {}, storage) {
 
     setWordsError("");
 
-    fetchWordsFromSupabase(user.id)
+    fetchWordsFromSupabase(user.id, { includeMemory: true })
       .then((remoteWords) => {
         if (!isMounted) {
           return;
@@ -419,13 +422,15 @@ export function useWords({ isAuthLoading = false, user = null } = {}, storage) {
         ...normalizeWordChanges(changes),
         updatedAt: now,
       };
-      const currentWord = words.find((word) => word.id === wordId);
+      const currentWord = wordsRef.current.find((word) => word.id === wordId);
 
       if (!currentWord) {
         return;
       }
 
       const nextWord = applyWordChanges(currentWord, normalizedChanges);
+
+      persistWordMemoryChangesToStorage(wordId, normalizedChanges, storage);
 
       setWords((currentWords) =>
         currentWords.map((word) => (word.id === wordId ? nextWord : word)),
@@ -685,6 +690,10 @@ export function useWords({ isAuthLoading = false, user = null } = {}, storage) {
         null,
         {
           batchUpdater: async (pendingUpdates) => {
+            for (const { wordId, changes } of pendingUpdates) {
+              persistWordMemoryChangesToStorage(wordId, changes, storage);
+            }
+
             const savedWords = await batchUpdateWordMemoryInSupabase(pendingUpdates);
             if (savedWords.length > 0) {
               const savedById = new Map(savedWords.map((w) => [w.id, w]));
@@ -819,6 +828,10 @@ export function useWords({ isAuthLoading = false, user = null } = {}, storage) {
             fullBatch.mappedWords,
             {
               batchUpdater: async (pendingUpdates) => {
+                for (const { wordId, changes } of pendingUpdates) {
+                  persistWordMemoryChangesToStorage(wordId, changes, storage);
+                }
+
                 const savedWords = await batchUpdateWordMemoryInSupabase(pendingUpdates);
                 if (savedWords.length > 0) {
                   const savedById = new Map(savedWords.map((w) => [w.id, w]));

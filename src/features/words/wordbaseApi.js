@@ -122,14 +122,15 @@ export async function fetchWordbaseEntry(term) {
     .select(WORDBASE_COLUMNS)
     .eq("term_key", termKey)
     .order("updated_at", { ascending: false })
-    .limit(1)
-    .maybeSingle();
+    .limit(1);
 
   if (error) {
     throw error;
   }
 
-  return data ? mapWordbaseRow(data) : null;
+  const row = Array.isArray(data) ? data[0] : null;
+
+  return row ? mapWordbaseRow(row) : null;
 }
 
 function resolveUpsertTerm(requestedTerm, suggestionTerm, existingTerm = "") {

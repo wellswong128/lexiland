@@ -25,10 +25,10 @@ function buildPrefetchQueue(sessionWords, allWords) {
   return queue;
 }
 
-async function fetchWordImageIntoPool(word, workingWords, { updateWord, user } = {}) {
-  const result = await fetchWordImageWithCache(word, { user });
+async function fetchWordImageIntoPool(word, workingWords, { updateWord, user, wordbaseOnly = false } = {}) {
+  const result = await fetchWordImageWithCache(word, { user, wordbaseOnly });
 
-  if (!result.changes) {
+  if (result.wordbaseMiss || !result.changes) {
     return workingWords;
   }
 
@@ -48,11 +48,27 @@ export async function prefetchImageReviewPool(
 
   for (let index = 0; index < sessionWords.length; index += 1) {
     const word = sessionWords[index];
-    workingWords = await fetchWordImageIntoPool(word, workingWords, { updateWord, user });
+    workingWords = await fetchWordImageIntoPool(word, workingWords, {
+      updateWord,
+      user,
+      wordbaseOnly: true,
+    });
     onProgress?.(index + 1, sessionWords.length);
   }
 
   let questions = createImageQuizQuestions(sessionWords, workingWords);
+
+  if (questions.length > 0) {
+    return { questions, words: workingWords };
+  }
+
+  for (let index = 0; index < sessionWords.length; index += 1) {
+    const word = sessionWords[index];
+    workingWords = await fetchWordImageIntoPool(word, workingWords, { updateWord, user });
+    onProgress?.(index + 1, sessionWords.length);
+  }
+
+  questions = createImageQuizQuestions(sessionWords, workingWords);
 
   if (questions.length > 0) {
     return { questions, words: workingWords };

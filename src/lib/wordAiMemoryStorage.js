@@ -125,6 +125,12 @@ const emptyMemoryEntry = {
 
 export function hydrateWordAiMemory(word, storage = getDefaultStorage(), store = null) {
   const entry = store ? (store[word.id] ?? emptyMemoryEntry) : getWordEntry(word.id, storage);
+  const wordImage = String(word.memoryImage?.imageUrl ?? "").trim()
+    ? word.memoryImage
+    : null;
+  const storedImage = String(entry.memoryImage?.imageUrl ?? "").trim()
+    ? entry.memoryImage
+    : null;
 
   return {
     ...word,
@@ -132,7 +138,7 @@ export function hydrateWordAiMemory(word, storage = getDefaultStorage(), store =
       ...entry.memoryTipsByLocale,
       ...(word.memoryTipsByLocale ?? {}),
     },
-    memoryImage: word.memoryImage ?? entry.memoryImage ?? null,
+    memoryImage: wordImage ?? storedImage ?? null,
   };
 }
 
@@ -167,4 +173,22 @@ export function buildWordMemoryImageChanges(memoryImage) {
       savedAt: new Date().toISOString(),
     },
   };
+}
+
+export function persistWordMemoryChangesToStorage(wordId, changes, storage = getDefaultStorage()) {
+  if (!wordId || !changes || typeof changes !== "object") {
+    return;
+  }
+
+  if (Object.hasOwn(changes, "memoryImage") && changes.memoryImage?.imageUrl) {
+    writeStoredMemoryImage(wordId, changes.memoryImage, storage);
+  }
+
+  if (Object.hasOwn(changes, "memoryTipsByLocale") && changes.memoryTipsByLocale) {
+    for (const [locale, tips] of Object.entries(changes.memoryTipsByLocale)) {
+      if (Array.isArray(tips?.tips) && tips.tips.length > 0) {
+        writeStoredMemoryTips(wordId, locale, tips, storage);
+      }
+    }
+  }
 }

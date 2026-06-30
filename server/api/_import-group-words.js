@@ -8,6 +8,89 @@ function isDuplicateTermError(error) {
   return code === "23505" || message.includes("words_user_term_unique");
 }
 
+const WORD_INSERT_SELECT =
+  "id,user_id,term,definition,translation,pronunciation,part_of_speech,example,example_translation,notes,tags,source,review_level,next_review_at,last_reviewed_at,correct_count,incorrect_count,last_result,is_mistake,last_mistake_at,mistake_count,memory_tips_by_locale,memory_image,created_at,updated_at";
+
+function hasMemoryTipsValue(value) {
+  if (!value || typeof value !== "object") {
+    return false;
+  }
+
+  return Array.isArray(value.tips) && value.tips.some(
+    (tip) => String(tip?.method ?? "").trim() && String(tip?.content ?? "").trim(),
+  );
+}
+
+function buildMemoryBackfillUpdate(existingRow, mappedWord) {
+  const update = {};
+  const mappedTips = sanitizeMemoryTipsByLocale(mappedWord?.memoryTipsByLocale);
+  const mappedImage = sanitizeMemoryImage(mappedWord?.memoryImage);
+  const existingTips = existingRow.memory_tips_by_locale ?? {};
+  const mergedTips = { ...existingTips };
+  let tipsDirty = false;
+
+  for (const [locale, tips] of Object.entries(mappedTips)) {
+    if (!hasMemoryTipsValue(existingTips[locale]) && hasMemoryTipsValue(tips)) {
+      mergedTips[locale] = tips;
+      tipsDirty = true;
+    }
+  }
+
+  if (tipsDirty) {
+    update.memory_tips_by_locale = mergedTips;
+  }
+
+  if (!sanitizeMemoryImage(existingRow.memory_image) && mappedImage) {
+    update.memory_image = mappedImage;
+  }
+
+  return Object.keys(update).length > 0 ? update : null;
+}
+
+function buildMappedWordsByTerm(mappedWords) {
+  const mappedByTerm = new Map();
+
+  for (const mappedWord of mappedWords ?? []) {
+    const termKey = normalizeTermKey(mappedWord?.term);
+    if (termKey && !mappedByTerm.has(termKey)) {
+      mappedByTerm.set(termKey, mappedWord);
+    }
+  }
+
+  return mappedByTerm;
+}
+
+async function backfillExistingWordMemory(rlsClient, existingRows, mappedWords) {
+  const mappedByTerm = buildMappedWordsByTerm(mappedWords);
+  const updatedRows = [];
+
+  for (const row of existingRows) {
+    const termKey = normalizeTermKey(row.term);
+    const mappedWord = termKey ? mappedByTerm.get(termKey) : null;
+    if (!mappedWord) {
+      continue;
+    }
+
+    const update = buildMemoryBackfillUpdate(row, mappedWord);
+    if (!update) {
+      continue;
+    }
+
+    const { data, error } = await rlsClient
+      .from("words")
+      .update(update)
+      .eq("id", row.id)
+      .select(WORD_INSERT_SELECT)
+      .single();
+
+    if (!error && data) {
+      updatedRows.push(data);
+    }
+  }
+
+  return updatedRows;
+}
+
 function sanitizeMemoryTipsByLocale(value) {
   if (!value || typeof value !== "object") {
     return {};
@@ -125,9 +208,6 @@ export function mapWordRowToClient(row) {
     memoryImage: row.memory_image ?? null,
   };
 }
-
-const WORD_INSERT_SELECT =
-  "id,user_id,term,definition,translation,pronunciation,part_of_speech,example,example_translation,notes,tags,source,review_level,next_review_at,last_reviewed_at,correct_count,incorrect_count,last_result,is_mistake,last_mistake_at,mistake_count,memory_tips_by_locale,memory_image,created_at,updated_at";
 
 const INSERT_BATCH_SIZE = 100;
 const EXISTING_WORDS_PAGE_SIZE = 1000;
@@ -298,6 +378,18 @@ export async function importMappedWordsForUser(
     importedRows.map((row) => normalizeTermKey(row.term)).filter(Boolean),
   );
   const alreadyOwnedRows = collectMappedWordsForTerms(mappedWords, existingByTerm, importedKeys);
+  const backfilledRows = await backfillExistingWordMemory(
+    rlsClient,
+    alreadyOwnedRows,
+    mappedWords,
+  );
+
+  for (const row of backfilledRows) {
+    const termKey = normalizeTermKey(row.term);
+    if (termKey) {
+      existingByTerm.set(termKey, row);
+    }
+  }
 
   const unresolvedMappedWords = (mappedWords ?? []).filter((mappedWord) => {
     const termKey = normalizeTermKey(mappedWord?.term);
