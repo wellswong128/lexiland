@@ -19,6 +19,12 @@ except ModuleNotFoundError:
     sys.modules["PIL"] = pil_module
     sys.modules["PIL.Image"] = image_module
 
+config_module = types.ModuleType("config")
+config_module.JPEG_QUALITY = 80
+config_module.MAX_IMAGE_WIDTH = 1600
+config_module.PDF_EXTENSIONS = {".pdf"}
+sys.modules["config"] = config_module
+
 from pdf_utils import normalize_pdf_dir, page_cache_matches_dir, sync_pdf_dir_progress
 
 
