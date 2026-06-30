@@ -678,14 +678,11 @@ export function useWords({ isAuthLoading = false, user = null } = {}, storage) {
     }
 
     try {
-      const preloadedMappedWords = lastMappedWordsRef.current;
-      lastMappedWordsRef.current = null;
-
       await syncActiveGroupWordMemory(
         wordsRef.current,
         (wordId, changes) => updateWordRef.current(wordId, changes),
         user.id,
-        preloadedMappedWords,
+        null,
         {
           batchUpdater: async (pendingUpdates) => {
             const savedWords = await batchUpdateWordMemoryInSupabase(pendingUpdates);
@@ -801,7 +798,7 @@ export function useWords({ isAuthLoading = false, user = null } = {}, storage) {
       void importMissingActiveGroupWords(user.id, wordsRef.current, null, {
         forceRefresh: true,
       })
-        .then((fullBatch) => {
+        .then(async (fullBatch) => {
           lastMappedWordsRef.current = fullBatch.mappedWords;
           const appliedCount = applyImportedWords(
             fullBatch.importedWords,
@@ -810,6 +807,31 @@ export function useWords({ isAuthLoading = false, user = null } = {}, storage) {
           if (appliedCount > 0) {
             setActiveGroupImportError("");
           }
+
+          if (!updateWordRef.current) {
+            return;
+          }
+
+          await syncActiveGroupWordMemory(
+            wordsRef.current,
+            (wordId, changes) => updateWordRef.current(wordId, changes),
+            user.id,
+            fullBatch.mappedWords,
+            {
+              batchUpdater: async (pendingUpdates) => {
+                const savedWords = await batchUpdateWordMemoryInSupabase(pendingUpdates);
+                if (savedWords.length > 0) {
+                  const savedById = new Map(savedWords.map((w) => [w.id, w]));
+                  setWords((currentWords) =>
+                    currentWords.map((word) => {
+                      const saved = savedById.get(word.id);
+                      return saved ? mergeWordAiMemory(saved, word) : word;
+                    }),
+                  );
+                }
+              },
+            },
+          );
         })
         .catch((error) => {
           console.warn("Could not finish full active-group word import.", error);
@@ -818,32 +840,6 @@ export function useWords({ isAuthLoading = false, user = null } = {}, storage) {
           );
         });
 
-      if (!updateWordRef.current) {
-        return;
-      }
-
-      void syncActiveGroupWordMemory(
-        wordsRef.current,
-        (wordId, changes) => updateWordRef.current(wordId, changes),
-        user.id,
-        lastMappedWordsRef.current,
-        {
-          batchUpdater: async (pendingUpdates) => {
-            const savedWords = await batchUpdateWordMemoryInSupabase(pendingUpdates);
-            if (savedWords.length > 0) {
-              const savedById = new Map(savedWords.map((w) => [w.id, w]));
-              setWords((currentWords) =>
-                currentWords.map((word) => {
-                  const saved = savedById.get(word.id);
-                  return saved ? mergeWordAiMemory(saved, word) : word;
-                }),
-              );
-            }
-          },
-        },
-      ).catch((error) => {
-        console.warn("Could not sync active-group word memory in background.", error);
-      });
     };
 
     activeGroupSyncChain = activeGroupSyncChain
