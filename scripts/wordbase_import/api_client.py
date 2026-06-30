@@ -231,7 +231,7 @@ class LexiLandApiClient:
         )
 
     def complete_word(self, term: str, locale: str, *, max_attempts: int = 3) -> dict:
-        from text_locale import has_placeholder_translation, is_incomplete_exam_phrase_translation
+        from text_locale import contains_chinese, has_placeholder_translation, is_incomplete_exam_phrase_translation
 
         last_error: ApiError | None = None
         last_suggestion: dict | None = None
@@ -242,9 +242,16 @@ class LexiLandApiClient:
             translation = str(suggestion.get("translation", "")).strip()
             example_translation = str(suggestion.get("example_translation", "")).strip()
             if (
-                not has_placeholder_translation(translation)
-                and not has_placeholder_translation(example_translation)
+                contains_chinese(translation)
+                and not has_placeholder_translation(translation)
                 and not is_incomplete_exam_phrase_translation(term, translation)
+                and (
+                    not example_translation
+                    or (
+                        contains_chinese(example_translation)
+                        and not has_placeholder_translation(example_translation)
+                    )
+                )
             ):
                 return suggestion
             last_error = ApiError(f"Incomplete translation returned for {term!r}.")

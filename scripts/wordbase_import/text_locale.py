@@ -1,8 +1,14 @@
 from __future__ import annotations
 
 import re
+import unicodedata
 
-CJK_PATTERN = re.compile(r"[\u3400-\u9fff\uf900-\ufaff]")
+CJK_PATTERN = re.compile(
+    r"[\u3400-\u9fff\uf900-\ufaff"
+    r"\U00020000-\U0002a6df\U0002a700-\U0002b73f"
+    r"\U0002b740-\U0002b81f\U0002b820-\U0002ceaf"
+    r"\U0002ceb0-\U0002ebef]"
+)
 
 EXAM_COMMAND_PREFIXES = {
     "analyse": ["分析"],
@@ -19,7 +25,11 @@ EXAM_COMMAND_PREFIXES = {
 
 
 def contains_chinese(text: str | None) -> bool:
-    return bool(CJK_PATTERN.search(str(text or "").strip()))
+    value = str(text or "").strip()
+    if CJK_PATTERN.search(value):
+        return True
+
+    return any("CJK" in unicodedata.name(char, "") for char in value)
 
 
 def looks_like_english_text(text: str | None) -> bool:
