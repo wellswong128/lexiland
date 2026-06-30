@@ -7,7 +7,7 @@ const AGNES_IMAGE_API_URL = "https://apihub.agnes-ai.com/v1/images/generations";
 const DEFAULT_IMAGE_MODEL = "agnes-image-2.1-flash";
 const FALLBACK_IMAGE_MODEL = "agnes-image-2.0-flash";
 const SUPPORTED_IMAGE_SIZE = "1024x768";
-const DEFAULT_GENERATION_TIMEOUT_MS = 20000;
+const DEFAULT_GENERATION_TIMEOUT_MS = 45000;
 const DEFAULT_MAX_GENERATIONS = 2;
 const DEFAULT_MAX_TEXT_CHECKS = 1;
 

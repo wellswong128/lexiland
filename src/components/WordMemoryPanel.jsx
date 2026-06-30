@@ -78,10 +78,14 @@ function WordMemoryPanel({
     }
   }
 
+  function needsMemoryFromWordbase(saved = readWordMemory(word, locale)) {
+    return !saved.memoryTips || !saved.memoryImage?.imageUrl;
+  }
+
   async function loadMissingMemoryFromWordbase() {
     const saved = readWordMemory(word, locale);
 
-    if (saved.memoryTips || saved.memoryImage?.imageUrl) {
+    if (!needsMemoryFromWordbase(saved)) {
       return;
     }
 
@@ -123,8 +127,7 @@ function WordMemoryPanel({
       return undefined;
     }
 
-    const saved = readWordMemory(word, locale);
-    if (saved.memoryTips || saved.memoryImage?.imageUrl) {
+    if (!needsMemoryFromWordbase(readWordMemory(word, locale))) {
       return undefined;
     }
 

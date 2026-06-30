@@ -1,9 +1,10 @@
-import { fetchWordImageWithCache } from "../words/wordImageApi.js";
+import { fetchWordImageWithCache, readWordMemoryImage } from "../words/wordImageApi.js";
 
 export async function prefetchSessionMemoryImages(sessionWords, { onProgress, updateWord, user }) {
+  const queue = sessionWords.filter((word) => !readWordMemoryImage(word)?.imageUrl);
   let completed = 0;
 
-  for (const word of sessionWords) {
+  for (const word of queue) {
     const result = await fetchWordImageWithCache(word, { user });
 
     if (result.changes) {
@@ -11,6 +12,6 @@ export async function prefetchSessionMemoryImages(sessionWords, { onProgress, up
     }
 
     completed += 1;
-    onProgress?.(completed, sessionWords.length);
+    onProgress?.(completed, queue.length);
   }
 }

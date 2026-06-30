@@ -29,6 +29,9 @@ export function getFriendlyAuthError(message, t) {
 
     return t("settings.redirectUrlError", {
       url: resolveAuthRedirectUrl() || t("settings.notConfigured"),
+      wildcard: resolveAuthRedirectUrl()
+        ? `${resolveAuthRedirectUrl().replace(/\/auth\/callback$/, "")}/**`
+        : t("settings.notConfigured"),
     });
   }
 

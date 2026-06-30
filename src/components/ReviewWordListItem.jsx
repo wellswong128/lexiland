@@ -40,6 +40,7 @@ function ReviewWordListItem({
           {showMemoryPanel ? (
             <div className="mt-4">
               <WordMemoryPanel
+                autoLoad
                 compact={memoryPanelCompact}
                 showTranslationOverlay={showTranslationOverlay}
                 word={word}

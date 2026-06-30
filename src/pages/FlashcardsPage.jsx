@@ -11,6 +11,7 @@ import {
   wordHasMemoryImage,
 } from "../features/review/imageQuizHelpers.js";
 import { prefetchImageReviewPool } from "../features/review/prefetchImageReviewPool.js";
+import { prefetchSessionMemoryImages } from "../features/review/prefetchSessionMemoryImages.js";
 import WordGroupScopeEmptyState from "../features/wordGroups/WordGroupScopeEmptyState.jsx";
 import { useActiveGroupWordScope } from "../features/wordGroups/useActiveGroupWordScope.js";
 import { useEnsureActiveGroupWords } from "../features/wordGroups/useEnsureActiveGroupWords.js";
@@ -320,6 +321,24 @@ function FlashcardsPage() {
       cancelled = true;
     };
   }, [hasStarted, locale, sessionWords, updateWord, user]);
+
+  useEffect(() => {
+    if (hasStarted || !user || sessionWords.length === 0) {
+      return undefined;
+    }
+
+    let cancelled = false;
+
+    void prefetchSessionMemoryImages(sessionWords, { updateWord, user }).catch((error) => {
+      if (!cancelled) {
+        console.warn("Could not prefetch review memory images from wordbase.", error);
+      }
+    });
+
+    return () => {
+      cancelled = true;
+    };
+  }, [hasStarted, sessionWords, updateWord, user]);
 
   useEffect(() => {
     if (!hasStarted || isComplete || feedback || imageQuestions.length === 0) {
@@ -774,7 +793,12 @@ function FlashcardsPage() {
             </p>
           ) : null}
           <div className="mt-4">
-            <WordMemoryPanel compact={false} showTranslationOverlay word={currentWord} />
+            <WordMemoryPanel
+              autoLoad
+              compact={false}
+              showTranslationOverlay
+              word={currentWord}
+            />
           </div>
           <button
             className="mt-5 rounded-full bg-blue-700 px-5 py-3 text-sm font-bold text-white transition hover:bg-blue-800"

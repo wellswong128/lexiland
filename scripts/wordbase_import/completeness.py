@@ -100,6 +100,19 @@ def missing_parts(entry: dict[str, Any] | None, locale: str) -> list[str]:
     return missing
 
 
+def missing_memory_parts(entry: dict[str, Any] | None, locale: str) -> list[str]:
+    entry = entry or {}
+    missing: list[str] = []
+
+    if not has_memory_tips(entry, locale):
+        missing.append("memory_tips")
+
+    if not has_memory_image(entry):
+        missing.append("memory_image")
+
+    return missing
+
+
 def is_complete(entry: dict[str, Any] | None, locale: str) -> bool:
     return not missing_parts(entry, locale)
 

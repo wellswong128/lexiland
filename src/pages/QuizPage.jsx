@@ -7,6 +7,7 @@ import WordGroupScopeEmptyState from "../features/wordGroups/WordGroupScopeEmpty
 import { useActiveGroupWordScope } from "../features/wordGroups/useActiveGroupWordScope.js";
 import { useEnsureActiveGroupWords } from "../features/wordGroups/useEnsureActiveGroupWords.js";
 import { createQuizQuestions } from "../features/review/quizHelpers.js";
+import { prefetchSessionMemoryImages } from "../features/review/prefetchSessionMemoryImages.js";
 import { updateReviewResult } from "../features/review/reviewHelpers.js";
 import { useWordsContext } from "../features/words/WordsContext.jsx";
 import { maybeRecordDailyMistakeClear } from "../lib/learningActivity.js";
@@ -76,6 +77,24 @@ function QuizPage() {
     setScore(0);
     setIsComplete(false);
   }, [reviewWordIdsKey]);
+
+  useEffect(() => {
+    if (!user || reviewWords.length === 0) {
+      return undefined;
+    }
+
+    let cancelled = false;
+
+    void prefetchSessionMemoryImages(reviewWords, { updateWord, user }).catch((error) => {
+      if (!cancelled) {
+        console.warn("Could not prefetch quiz memory images from wordbase.", error);
+      }
+    });
+
+    return () => {
+      cancelled = true;
+    };
+  }, [reviewWordIdsKey, reviewWords, updateWord, user]);
 
   useEffect(() => {
     if (isComplete || feedback || !currentQuestion?.word?.term) {
@@ -264,7 +283,7 @@ function QuizPage() {
             })}
           </p>
           <div className="mt-4">
-            <WordMemoryPanel compact word={currentWord} />
+            <WordMemoryPanel autoLoad compact word={currentWord} />
           </div>
           <button
             className="mt-5 rounded-full bg-blue-700 px-5 py-3 text-sm font-bold text-white transition hover:bg-blue-800"

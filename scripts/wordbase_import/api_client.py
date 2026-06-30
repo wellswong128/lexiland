@@ -28,6 +28,9 @@ TRANSIENT_AI_MARKERS = (
     "unexpected token",
     "did not include memory tips",
     "ai response did not include",
+    "timed out",
+    "timeout",
+    "temporarily unavailable",
 )
 
 
@@ -114,7 +117,14 @@ class LexiLandApiClient:
 
         return str(payload.get("access_token", "")).strip()
 
-    def _request_json(self, path: str, payload: dict, *, pause_after: float) -> dict:
+    def _request_json(
+        self,
+        path: str,
+        payload: dict,
+        *,
+        pause_after: float,
+        timeout_seconds: float | None = None,
+    ) -> dict:
         assert_bulk_api_allowed(self.base_url, path)
         url = f"{self.base_url}{path}"
         last_error: Exception | None = None
@@ -129,7 +139,12 @@ class LexiLandApiClient:
                     headers["x-lexiland-import-key"] = self.import_api_key
                 elif bearer_token:
                     headers["Authorization"] = f"Bearer {bearer_token}"
-                response = self._client.post(url, json=payload, headers=headers)
+                response = self._client.post(
+                    url,
+                    json=payload,
+                    headers=headers,
+                    timeout=timeout_seconds,
+                )
             except httpx.RequestError as error:
                 last_error = ApiError(str(error), retryable=True)
                 if generic_retries < self.max_retries - 1:
@@ -171,12 +186,20 @@ class LexiLandApiClient:
                             "Set IMPORT_API_KEY or ensure IMPORT_SESSION_PATH points to a valid session."
                         )
                     elif headers.get("x-lexiland-import-key") and not headers.get("Authorization"):
-                        message = (
-                            f"{message} "
-                            "IMPORT_API_KEY was sent but rejected. "
-                            "Make sure IMPORT_API_KEY in local .env.local exactly matches Vercel "
-                            "Environment Variables and redeploy learn.lexiland.cc."
-                        )
+                        if "localhost" in self.base_url or "127.0.0.1" in self.base_url:
+                            message = (
+                                f"{message} "
+                                "IMPORT_API_KEY was sent but rejected. "
+                                "Set IMPORT_API_KEY in .env.local, restart `npm run dev`, "
+                                "and run imports with APP_API_BASE_URL=http://localhost:5173."
+                            )
+                        else:
+                            message = (
+                                f"{message} "
+                                "IMPORT_API_KEY was sent but rejected. "
+                                "Make sure IMPORT_API_KEY in local .env.local exactly matches Vercel "
+                                "Environment Variables and redeploy learn.lexiland.cc."
+                            )
                 retryable = is_transient_ai_error(response.status_code, message)
                 last_error = ApiError(message, status_code=response.status_code, retryable=retryable)
                 if _is_rate_limit_error(response.status_code, message):
@@ -354,6 +377,7 @@ class LexiLandApiClient:
                 "example": word.get("example", ""),
             },
             pause_after=self.image_request_pause_seconds,
+            timeout_seconds=180.0,
         )
         image_url = str(data.get("imageUrl", "")).strip()
         if not image_url:

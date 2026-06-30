@@ -109,14 +109,38 @@ function localApiPlugin() {
   };
 }
 
+function applyLocalApiEnv(env) {
+  const assignIfMissing = (key, ...sources) => {
+    if (String(process.env[key] || "").trim()) {
+      return;
+    }
+
+    for (const sourceKey of sources) {
+      const value = String(env[sourceKey] || "").trim();
+      if (value) {
+        process.env[key] = value;
+        return;
+      }
+    }
+  };
+
+  assignIfMissing("IMPORT_API_KEY", "IMPORT_API_KEY");
+  assignIfMissing("AGNES_API_KEY", "AGNES_API_KEY");
+  assignIfMissing("AGNES_MODEL", "AGNES_MODEL");
+  assignIfMissing("AGNES_IMAGE_MODEL", "AGNES_IMAGE_MODEL");
+  assignIfMissing("AGNES_IMAGE_SIZE", "AGNES_IMAGE_SIZE");
+  assignIfMissing("AGNES_IMAGE_MAX_ATTEMPTS", "AGNES_IMAGE_MAX_ATTEMPTS");
+  assignIfMissing("AGNES_IMAGE_MAX_TEXT_CHECKS", "AGNES_IMAGE_MAX_TEXT_CHECKS");
+  assignIfMissing("AGNES_IMAGE_TIMEOUT_MS", "AGNES_IMAGE_TIMEOUT_MS");
+  assignIfMissing("SUPABASE_URL", "SUPABASE_URL", "VITE_SUPABASE_URL");
+  assignIfMissing("SUPABASE_ANON_KEY", "SUPABASE_ANON_KEY", "VITE_SUPABASE_ANON_KEY");
+  assignIfMissing("SUPABASE_SERVICE_ROLE_KEY", "SUPABASE_SERVICE_ROLE_KEY", "SUPABASE_SECRET_KEY");
+}
+
 export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, process.cwd(), "");
+  applyLocalApiEnv(env);
   const appVersion = resolveAppVersionMetadata(env);
-
-  process.env.AGNES_API_KEY ||= env.AGNES_API_KEY;
-  process.env.AGNES_MODEL ||= env.AGNES_MODEL;
-  process.env.AGNES_IMAGE_MODEL ||= env.AGNES_IMAGE_MODEL;
-  process.env.AGNES_IMAGE_SIZE ||= env.AGNES_IMAGE_SIZE;
 
   return {
     define: {

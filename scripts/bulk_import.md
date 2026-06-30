@@ -57,6 +57,23 @@ Configure these in the project root `.env` or `.env.local`:
 | `ALLOW_PRODUCTION_BULK_API` | Set to `1` to allow bulk scripts against production (not recommended; burns Vercel quota) |
 | `IMPORT_LOCALE` | Locale for memory tips (default: `zh-Hant`) |
 
+### Local API (recommended for bulk import)
+
+Bulk import/enrich calls `/api/complete-word`, `/api/word-memory-tips`, and `/api/word-memory-image`. Run the API locally so you do not burn Vercel quota:
+
+```bash
+# Terminal 1 — local API (reads .env.local, including IMPORT_API_KEY)
+npm run dev
+
+# Terminal 2 — generate key once if missing
+npm run setup:import-api-key
+
+# Run import against localhost (default APP_API_BASE_URL)
+APP_API_BASE_URL=http://localhost:5173 ./scripts/wordbase_import/run.sh --resume
+```
+
+If you change `IMPORT_API_KEY` in `.env.local`, restart `npm run dev` before resuming imports.
+
 Optional tuning:
 
 | Variable | Default | Purpose |

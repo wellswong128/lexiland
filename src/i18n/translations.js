@@ -608,7 +608,7 @@ const zhHant = {
       rateLimit:
         "寄信次數已達上限，請稍等幾分鐘後再要求登入連結。",
       redirectUrlError:
-        "登入導向網址未獲 Supabase 允許。請在 Supabase → Authentication → URL Configuration 加入：{{url}}",
+        "登入導向網址未獲 Supabase 允許。請在 Supabase → Authentication → URL Configuration 的 Redirect URLs 加入：{{url}}（建議同時加入 {{wildcard}}）",
       redirectUrlErrorNative:
         "登入導向網址未獲 Supabase 允許。請在 Supabase → Redirect URLs 全部加入：\n{{hints}}\n\n目前 App 使用的是：{{url}}",
       redirectNotConfigured:
@@ -1666,7 +1666,7 @@ export const translations = {
       rateLimit:
         "Email rate limit exceeded. Please wait a few minutes before requesting another login link.",
       redirectUrlError:
-        "The login redirect URL is not allowed by Supabase. Add this URL under Authentication → URL Configuration: {{url}}",
+        "The login redirect URL is not allowed by Supabase. Add this URL under Authentication → Redirect URLs: {{url}} (also add {{wildcard}})",
       redirectUrlErrorNative:
         "The login redirect URL is not allowed by Supabase. Add all of these under Redirect URLs:\n{{hints}}\n\nThis app is using: {{url}}",
       redirectNotConfigured:

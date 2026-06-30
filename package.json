@@ -19,6 +19,8 @@
     "wordbase:import:pdf:dry-run": "bash scripts/wordbase_import/run-pdf.sh --dry-run --limit-pdfs 1 --limit-pages 1",
     "wordbase:fix-translations": "bash scripts/wordbase_import/run-fix-translations.sh",
     "wordbase:fix-translations:dry-run": "bash scripts/wordbase_import/run-fix-translations.sh --dry-run",
+    "wordbase:enrich-memory": "bash scripts/wordbase_import/run-enrich-memory.sh",
+    "wordbase:enrich-memory:dry-run": "bash scripts/wordbase_import/run-enrich-memory.sh --dry-run",
     "word-groups:seed": "node scripts/hk_word_groups/seed_word_groups.mjs",
     "word-groups:seed:dry-run": "node scripts/hk_word_groups/seed_word_groups.mjs --dry-run",
     "word-groups:import-maps": "node scripts/hk_word_groups/import_word_group_maps.mjs",

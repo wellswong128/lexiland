@@ -94,7 +94,9 @@ export async function requireRole(
     if (providedImportKey && !expectedImportKey) {
       throw new ApiAuthError(
         401,
-        "Import API key is not configured on the server. Set IMPORT_API_KEY in Vercel and redeploy.",
+        process.env.VERCEL
+          ? "Import API key is not configured on the server. Set IMPORT_API_KEY in Vercel and redeploy."
+          : "Import API key is not configured on the local API server. Set IMPORT_API_KEY in .env.local and restart `npm run dev`.",
       );
     }
 
@@ -121,7 +123,9 @@ export async function requireAiApiAccess(request) {
   if (providedImportKey && !expectedImportKey) {
     throw new ApiAuthError(
       401,
-      "Import API key is not configured on the server. Set IMPORT_API_KEY in Vercel and redeploy.",
+      process.env.VERCEL
+        ? "Import API key is not configured on the server. Set IMPORT_API_KEY in Vercel and redeploy."
+        : "Import API key is not configured on the local API server. Set IMPORT_API_KEY in .env.local and restart `npm run dev`.",
     );
   }
 

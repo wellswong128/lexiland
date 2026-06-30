@@ -6,7 +6,7 @@ function normalizeUrl(url) {
   return url.trim().replace(/\/$/, "");
 }
 
-function normalizeNativeAuthRedirectUrl(url) {
+export function toAuthCallbackUrl(url) {
   const normalized = normalizeUrl(url);
 
   if (!normalized) {
@@ -89,11 +89,11 @@ export function getNativeAuthRedirectUrl() {
   const envUrl = import.meta.env.VITE_NATIVE_AUTH_REDIRECT_URL?.trim();
 
   if (envUrl) {
-    return normalizeNativeAuthRedirectUrl(envUrl);
+    return toAuthCallbackUrl(envUrl);
   }
 
   if (typeof window !== "undefined" && Capacitor.isNativePlatform()) {
-    return `${normalizeUrl(window.location.origin)}/auth/callback`;
+    return toAuthCallbackUrl(window.location.origin);
   }
 
   const appId = import.meta.env.VITE_CAPACITOR_APP_ID?.trim();
@@ -121,9 +121,19 @@ export function getSupabaseRedirectUrlHints() {
     "capacitor://**",
     "https://localhost/auth/callback",
     "https://localhost/**",
+    "http://localhost:5173/auth/callback",
+    "http://localhost:5173/**",
     `${APP_HOME_URL}/auth/callback`,
     `${APP_HOME_URL}/**`,
   ]);
+
+  if (typeof window !== "undefined") {
+    const runtimeOrigin = normalizeUrl(window.location.origin);
+    if (runtimeOrigin) {
+      hints.add(toAuthCallbackUrl(runtimeOrigin));
+      hints.add(`${runtimeOrigin}/**`);
+    }
+  }
 
   const nativeRedirect = getNativeAuthRedirectUrl();
   hints.add(nativeRedirect);
@@ -149,16 +159,21 @@ export function resolveAuthRedirectUrl({ strict = false } = {}) {
   const runtimeOrigin =
     typeof window !== "undefined" ? normalizeUrl(window.location.origin) : "";
 
-  if (runtimeOrigin && !isLocalhostUrl(runtimeOrigin) && !isLanHost(runtimeOrigin)) {
-    return runtimeOrigin;
+  // Local dev should always use the current origin callback, even when env points at production.
+  if (runtimeOrigin && (isLocalhostUrl(runtimeOrigin) || isLanHost(runtimeOrigin))) {
+    return toAuthCallbackUrl(runtimeOrigin);
+  }
+
+  if (runtimeOrigin) {
+    return toAuthCallbackUrl(runtimeOrigin);
   }
 
   if (configured) {
-    return normalizeUrl(configured);
+    return toAuthCallbackUrl(configured);
   }
 
   if (!runtimeOrigin) {
-    return strict ? APP_HOME_URL : "";
+    return strict ? getNativeHttpsAuthCallbackUrl() : "";
   }
 
   if (isLocalhostUrl(runtimeOrigin) || isLanHost(runtimeOrigin)) {
@@ -169,5 +184,5 @@ export function resolveAuthRedirectUrl({ strict = false } = {}) {
     }
   }
 
-  return runtimeOrigin;
+  return toAuthCallbackUrl(runtimeOrigin);
 }

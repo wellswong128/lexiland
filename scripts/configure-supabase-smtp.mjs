@@ -63,8 +63,10 @@ requireEnv(
 const redirectUrls = [
   siteUrl,
   `${siteUrl}/**`,
+  `${siteUrl}/auth/callback`,
   "http://localhost:5173",
   "http://localhost:5173/**",
+  "http://localhost:5173/auth/callback",
 ];
 
 async function patchAuthConfig() {
