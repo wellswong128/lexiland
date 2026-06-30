@@ -101,18 +101,17 @@ export async function fetchWordMemoryWithCache(
 
   const hasTips = Boolean(memoryTips);
   const hasImage = Boolean(memoryImage?.imageUrl);
+  const changeList = [];
+
+  if (!savedTips && memoryTips) {
+    changeList.push(persistWordMemoryTips(word, locale, memoryTips));
+  }
+
+  if (!savedImage?.imageUrl && memoryImage?.imageUrl) {
+    changeList.push(persistWordMemoryImage(word, memoryImage));
+  }
 
   if (!forceRefresh && hasTips && hasImage) {
-    const changeList = [];
-
-    if (!savedTips && memoryTips) {
-      changeList.push(persistWordMemoryTips(word, locale, memoryTips));
-    }
-
-    if (!savedImage?.imageUrl && memoryImage?.imageUrl) {
-      changeList.push(persistWordMemoryImage(word, memoryImage));
-    }
-
     const changes = mergeChanges(...changeList);
 
     return {
@@ -129,7 +128,6 @@ export async function fetchWordMemoryWithCache(
   let usedFallback = false;
   let fallbackReason = "";
   let imageError = null;
-  const changeList = [];
 
   const tasks = [];
 

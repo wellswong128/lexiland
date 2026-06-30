@@ -3,6 +3,7 @@ import { useLocale } from "../features/locale/LocaleContext.jsx";
 import { getQuizOptionLabel } from "../features/review/quizHelpers.js";
 import { useWordsContext } from "../features/words/WordsContext.jsx";
 import { can, getRoleFromUser, PERMISSIONS } from "../lib/authorization.js";
+import { fetchWordImageWithCache } from "../features/words/wordImageApi.js";
 import {
   fetchWordMemoryWithCache,
   readWordMemory,
@@ -91,10 +92,30 @@ function WordMemoryPanel({
 
     const requestId = autoLoadRequestRef.current + 1;
     autoLoadRequestRef.current = requestId;
+    const needsImage = !saved.memoryImage?.imageUrl;
+    const needsTips = !saved.memoryTips;
 
     try {
       setIsLoading(true);
       setNotice("");
+
+      if (needsImage && !needsTips) {
+        const imageResult = await fetchWordImageWithCache(word, { user });
+
+        if (autoLoadRequestRef.current !== requestId) {
+          return;
+        }
+
+        if (imageResult.changes) {
+          await updateWord(word.id, imageResult.changes);
+        }
+
+        setMemoryImage({
+          imageUrl: imageResult.imageUrl,
+          prompt: imageResult.prompt ?? "",
+        });
+        return;
+      }
 
       const result = await fetchWordMemoryWithCache(word, locale, {
         forceRefresh: false,
@@ -144,6 +165,7 @@ function WordMemoryPanel({
   }
 
   const hasContent = Boolean(memoryTips || memoryImage?.imageUrl);
+  const showLoadingPlaceholder = autoLoad && isLoading && !hasContent;
 
   return (
     <section className="rounded-2xl border border-indigo-200/80 bg-gradient-to-br from-sky-50/80 via-white to-violet-50/80 p-4 sm:p-5">
@@ -181,6 +203,10 @@ function WordMemoryPanel({
         >
           {notice}
         </p>
+      ) : null}
+
+      {showLoadingPlaceholder ? (
+        <p className="mt-4 text-sm font-medium text-slate-500">{t("wordMemory.loading")}</p>
       ) : null}
 
       {hasContent ? (

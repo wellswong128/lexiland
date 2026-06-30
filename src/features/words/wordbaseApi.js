@@ -121,6 +121,8 @@ export async function fetchWordbaseEntry(term) {
     .from("wordbase")
     .select(WORDBASE_COLUMNS)
     .eq("term_key", termKey)
+    .order("updated_at", { ascending: false })
+    .limit(1)
     .maybeSingle();
 
   if (error) {
