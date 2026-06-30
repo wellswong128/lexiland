@@ -100,7 +100,7 @@ function WordMemoryPanel({
       setNotice("");
 
       if (needsImage && !needsTips) {
-        const imageResult = await fetchWordImageWithCache(word, { user });
+        const imageResult = await fetchWordImageWithCache(word, { user, wordbaseOnly: true });
 
         if (autoLoadRequestRef.current !== requestId) {
           return;
@@ -110,16 +110,19 @@ function WordMemoryPanel({
           await updateWord(word.id, imageResult.changes);
         }
 
-        setMemoryImage({
-          imageUrl: imageResult.imageUrl,
-          prompt: imageResult.prompt ?? "",
-        });
+        if (imageResult.imageUrl) {
+          setMemoryImage({
+            imageUrl: imageResult.imageUrl,
+            prompt: imageResult.prompt ?? "",
+          });
+        }
         return;
       }
 
       const result = await fetchWordMemoryWithCache(word, locale, {
         forceRefresh: false,
         user,
+        wordbaseOnly: true,
       });
 
       if (autoLoadRequestRef.current !== requestId) {
@@ -130,6 +133,10 @@ function WordMemoryPanel({
         await updateWord(word.id, result.changes);
       }
 
+      if (autoLoadRequestRef.current !== requestId) {
+        return;
+      }
+
       setMemoryTips(result.memoryTips);
       setMemoryImage(result.memoryImage);
     } catch (error) {
@@ -137,9 +144,7 @@ function WordMemoryPanel({
         console.warn("Could not load memory assist from wordbase.", error);
       }
     } finally {
-      if (autoLoadRequestRef.current === requestId) {
-        setIsLoading(false);
-      }
+      setIsLoading(false);
     }
   }
 

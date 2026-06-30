@@ -5,7 +5,13 @@ export async function prefetchSessionMemoryImages(sessionWords, { onProgress, up
   let completed = 0;
 
   for (const word of queue) {
-    const result = await fetchWordImageWithCache(word, { user });
+    const result = await fetchWordImageWithCache(word, { user, wordbaseOnly: true });
+
+    if (result.wordbaseMiss) {
+      completed += 1;
+      onProgress?.(completed, queue.length);
+      continue;
+    }
 
     if (result.changes) {
       await updateWord(word.id, result.changes);

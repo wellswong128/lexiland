@@ -156,7 +156,7 @@ export async function fetchWordImage(word, { timeoutMs = 90000 } = {}) {
 
 export async function fetchWordImageWithCache(
   word,
-  { forceRefresh = false, user } = {},
+  { forceRefresh = false, user, wordbaseOnly = false } = {},
 ) {
   if (!forceRefresh) {
     const savedImage = readWordMemoryImage(word);
@@ -186,6 +186,17 @@ export async function fetchWordImageWithCache(
       } catch (wordbaseError) {
         console.warn("Could not read memory image from wordbase.", wordbaseError);
       }
+    }
+
+    if (wordbaseOnly) {
+      return {
+        imageUrl: "",
+        prompt: "",
+        changes: null,
+        fromCache: false,
+        fromWordbase: false,
+        wordbaseMiss: true,
+      };
     }
   }
 

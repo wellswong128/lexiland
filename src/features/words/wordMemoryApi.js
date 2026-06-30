@@ -76,7 +76,7 @@ async function readWordbaseMemory(word, locale, user) {
 export async function fetchWordMemoryWithCache(
   word,
   locale,
-  { forceRefresh = false, user } = {},
+  { forceRefresh = false, user, wordbaseOnly = false } = {},
 ) {
   const savedTips = readWordMemoryTips(word, locale);
   const savedImage = readWordMemoryImage(word);
@@ -111,7 +111,10 @@ export async function fetchWordMemoryWithCache(
     changeList.push(persistWordMemoryImage(word, memoryImage));
   }
 
-  if (!forceRefresh && hasTips && hasImage) {
+  const stillNeedsTips = !hasTips;
+  const stillNeedsImage = !hasImage;
+
+  if (!forceRefresh && !stillNeedsTips && !stillNeedsImage) {
     const changes = mergeChanges(...changeList);
 
     return {
@@ -123,8 +126,21 @@ export async function fetchWordMemoryWithCache(
     };
   }
 
-  const shouldRefreshTips = forceRefresh || !hasTips;
-  const shouldRefreshImage = forceRefresh || !hasImage;
+  if (wordbaseOnly) {
+    const changes = mergeChanges(...changeList);
+
+    return {
+      memoryTips,
+      memoryImage,
+      fromCache: tipsFromCache && imageFromCache,
+      usedFallback: false,
+      changes: Object.keys(changes).length > 0 ? changes : null,
+      wordbaseMiss: stillNeedsTips || stillNeedsImage,
+    };
+  }
+
+  const shouldRefreshTips = forceRefresh || stillNeedsTips;
+  const shouldRefreshImage = forceRefresh || stillNeedsImage;
   let usedFallback = false;
   let fallbackReason = "";
   let imageError = null;
@@ -148,7 +164,7 @@ export async function fetchWordMemoryWithCache(
 
   if (shouldRefreshImage) {
     tasks.push(
-      fetchWordImageWithCache(word, { forceRefresh, user })
+      fetchWordImageWithCache(word, { forceRefresh, user, wordbaseOnly })
         .then((result) => {
           memoryImage = result;
           imageFromCache = Boolean(result.fromCache || result.fromWordbase);
