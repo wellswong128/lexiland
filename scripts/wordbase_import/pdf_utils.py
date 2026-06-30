@@ -71,7 +71,7 @@ def sync_pdf_dir_progress(
             if not pdf_file or pdf_file not in pdf_names:
                 continue
 
-            if page_cache_matches_dir(page_record, pdf_dir):
+            if page_cache_matches_dir(page_record, pdf_dir, allow_legacy_without_dir=False):
                 migrated += 1
                 continue
 
@@ -94,18 +94,22 @@ def sync_pdf_dir_progress(
     progress["pdf_dir"] = normalized
 
 
-def page_cache_matches_dir(page_record: dict, pdf_dir: Path) -> bool:
+def page_cache_matches_dir(
+    page_record: dict,
+    pdf_dir: Path,
+    *,
+    allow_legacy_without_dir: bool = True,
+) -> bool:
     normalized = normalize_pdf_dir(pdf_dir)
     stored = page_record.get("pdf_dir")
     if stored == normalized:
         return True
 
-    pdf_file = page_record.get("pdf_file")
-    if pdf_file and (pdf_dir / pdf_file).is_file():
+    if not stored and allow_legacy_without_dir:
         page_record["pdf_dir"] = normalized
         return True
 
-    return not stored
+    return False
 
 
 def count_pdf_pages(pdf_path: Path) -> int:
