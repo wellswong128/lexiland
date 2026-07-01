@@ -10,7 +10,7 @@ import {
   getImageReviewReadiness,
   wordHasMemoryImage,
 } from "../features/review/imageQuizHelpers.js";
-import { prefetchImageReviewPool } from "../features/review/prefetchImageReviewPool.js";
+import { prefetchImageReviewPool, buildImagePrefetchQueue } from "../features/review/prefetchImageReviewPool.js";
 import { prefetchSessionMemoryImages } from "../features/review/prefetchSessionMemoryImages.js";
 import WordGroupScopeEmptyState from "../features/wordGroups/WordGroupScopeEmptyState.jsx";
 import { useActiveGroupWordScope } from "../features/wordGroups/useActiveGroupWordScope.js";
@@ -131,7 +131,7 @@ function FlashcardsPrepareErrorActions({
 
 function FlashcardsPage() {
   const { locale, t } = useLocale();
-  const { ensureActiveGroupWordsSynced, isActiveGroupSyncing, syncActiveGroupWordMemory, updateWord, user, words } = useWordsContext();
+  const { ensureActiveGroupWordsSynced, isActiveGroupSyncing, syncActiveGroupWordMemory, syncGroupWordMemoryFromServer, updateWord, user, words } = useWordsContext();
   const {
     activeGroup,
     isLoadingScope,
@@ -284,6 +284,10 @@ function FlashcardsPage() {
         user,
       });
 
+      await syncGroupWordMemoryFromServer({
+        terms: buildImagePrefetchQueue(sessionWords, reviewWords).map((word) => word.term),
+      });
+
       const { questions } = await prefetchImageReviewPool(sessionWords, reviewWords, {
         onProgress: (current, total) => {
           setPrepareProgress({ current, total });
@@ -367,27 +371,41 @@ function FlashcardsPage() {
 
     let cancelled = false;
 
-    void syncActiveGroupWordMemory?.().finally(() => {
-      if (cancelled) {
-        return;
-      }
-
-      void prefetchSessionMemoryImages(sessionWords, {
-        allWords: reviewWords,
-        locale,
-        updateWord,
-        user,
-      }).catch((error) => {
+    void syncGroupWordMemoryFromServer({
+      terms: buildImagePrefetchQueue(sessionWords, reviewWords).map((word) => word.term),
+    })
+      .catch((error) => {
         if (!cancelled) {
-          console.warn("Could not prefetch review memory images from wordbase.", error);
+          console.warn("Could not sync review memory from server.", error);
         }
+      })
+      .finally(() => {
+        if (cancelled) {
+          return;
+        }
+
+        void syncActiveGroupWordMemory?.().finally(() => {
+          if (cancelled) {
+            return;
+          }
+
+          void prefetchSessionMemoryImages(sessionWords, {
+            allWords: reviewWords,
+            locale,
+            updateWord,
+            user,
+          }).catch((error) => {
+            if (!cancelled) {
+              console.warn("Could not prefetch review memory images from wordbase.", error);
+            }
+          });
+        });
       });
-    });
 
     return () => {
       cancelled = true;
     };
-  }, [hasStarted, locale, reviewWords, sessionWords, syncActiveGroupWordMemory, updateWord, user]);
+  }, [hasStarted, locale, reviewWords, sessionWords, syncActiveGroupWordMemory, syncGroupWordMemoryFromServer, updateWord, user]);
 
   useEffect(() => {
     if (!hasStarted || isComplete || feedback || imageQuestions.length === 0) {

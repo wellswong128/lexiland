@@ -11,6 +11,7 @@ import userGroupPicks from "./handlers/user-group-picks.js";
 import wordGroups from "./handlers/word-groups.js";
 import wordMemoryImage from "./handlers/word-memory-image.js";
 import wordMemoryTips from "./handlers/word-memory-tips.js";
+import wordbaseEntry from "./handlers/wordbase-entry.js";
 
 const ROUTES = new Map([
   ["admin-users", adminUsers],
@@ -26,6 +27,7 @@ const ROUTES = new Map([
   ["word-groups", wordGroups],
   ["word-memory-image", wordMemoryImage],
   ["word-memory-tips", wordMemoryTips],
+  ["wordbase-entry", wordbaseEntry],
 ]);
 
 function sendNotFound(response) {

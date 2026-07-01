@@ -169,6 +169,40 @@ export async function importUserActiveGroupWords({ limit = null, wordLimit = 0 }
   }
 }
 
+export async function syncUserActiveGroupWordMemory({ terms = [] } = {}) {
+  const authHeaders = await getApiAuthHeaders();
+  const body = { syncMemoryOnly: true };
+
+  if (Array.isArray(terms) && terms.length > 0) {
+    body.terms = terms;
+  }
+
+  const controller = new AbortController();
+  const timeoutId = window.setTimeout(() => controller.abort(), FETCH_TIMEOUT_MS);
+
+  try {
+    const response = await fetch(resolveApiUrl("/api/user-active-group-words"), {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        ...authHeaders,
+      },
+      body: JSON.stringify(body),
+      signal: controller.signal,
+    });
+
+    return parseJsonResponse(response);
+  } catch (error) {
+    if (error?.name === "AbortError") {
+      throw new Error("Timed out syncing group word memory.");
+    }
+
+    throw error;
+  } finally {
+    window.clearTimeout(timeoutId);
+  }
+}
+
 export async function fetchWordGroups() {
   const authHeaders = await getApiAuthHeaders();
   const response = await fetch(resolveApiUrl("/api/word-groups"), {

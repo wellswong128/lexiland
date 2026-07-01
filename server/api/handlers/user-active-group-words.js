@@ -1,6 +1,7 @@
 import { sendAuthError } from "../_authz.js";
 import {
   importMappedWordsForUser,
+  syncGroupWordMemoryForUser,
 } from "../_import-group-words.js";
 import {
   buildActiveGroupWordPayload,
@@ -143,6 +144,7 @@ async function handleGet(request, response, auth) {
 
 async function handlePost(request, response, auth) {
   const body = getRequestBody(request);
+  const syncMemoryOnly = Boolean(body.syncMemoryOnly);
   const limit =
     body.limit == null || body.limit === ""
       ? null
@@ -159,6 +161,7 @@ async function handlePost(request, response, auth) {
       mappedTerms: [],
       mappedWords: [],
       importedWords: [],
+      updatedWords: [],
     });
     return;
   }
@@ -170,6 +173,7 @@ async function handlePost(request, response, auth) {
       mappedTerms: [],
       mappedWords: [],
       importedWords: [],
+      updatedWords: [],
     });
     return;
   }
@@ -183,6 +187,22 @@ async function handlePost(request, response, auth) {
     includeWords: true,
     wordLimit,
   });
+
+  if (syncMemoryOnly) {
+    const terms = Array.isArray(body.terms)
+      ? body.terms.map((term) => String(term ?? "").trim()).filter(Boolean)
+      : null;
+    const updatedWords = await syncGroupWordMemoryForUser(rlsClient, userId, mappedWords, {
+      terms,
+    });
+
+    sendJson(response, 200, {
+      activeGroup,
+      mappedTerms,
+      updatedWords,
+    });
+    return;
+  }
 
   const importedWords = await importMappedWordsForUser(rlsClient, userId, mappedWords, {
     limit,

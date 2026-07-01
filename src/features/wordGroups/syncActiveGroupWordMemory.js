@@ -1,4 +1,4 @@
-import { fetchUserActiveGroupWords } from "./wordGroupsApi.js";
+import { fetchUserActiveGroupWords, invalidateUserActiveGroupWordsCache } from "./wordGroupsApi.js";
 import { readWordMemoryImage } from "../words/wordImageApi.js";
 import { hasMemoryImageUrl, normalizeMemoryImage } from "../words/memoryImageUtils.js";
 import { normalizeTerm } from "../words/wordTypes.js";
@@ -74,9 +74,11 @@ export async function syncActiveGroupWordMemory(
 
   let mappedWords = preloadedMappedWords;
   if (!Array.isArray(mappedWords)) {
+    invalidateUserActiveGroupWordsCache();
     const payload = await fetchUserActiveGroupWords({
       includeWords: true,
       wordLimit: 0,
+      forceRefresh: true,
     });
     if (!payload.activeGroup) {
       return 0;

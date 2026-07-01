@@ -406,13 +406,39 @@ export async function importMappedWordsForUser(
     );
   }
 
-  const uniqueRows = new Map();
-  for (const row of [...importedRows, ...alreadyOwnedRows]) {
-    const termKey = normalizeTermKey(row.term);
-    if (termKey && !uniqueRows.has(termKey)) {
-      uniqueRows.set(termKey, row);
-    }
+  const affectedTermKeys = new Set([
+    ...importedRows.map((row) => normalizeTermKey(row.term)).filter(Boolean),
+    ...alreadyOwnedRows.map((row) => normalizeTermKey(row.term)).filter(Boolean),
+  ]);
+
+  return [...affectedTermKeys]
+    .map((termKey) => existingByTerm.get(termKey))
+    .filter(Boolean)
+    .map(mapWordRowToClient);
+}
+
+export async function syncGroupWordMemoryForUser(
+  rlsClient,
+  userId,
+  mappedWords,
+  { terms = null } = {},
+) {
+  const existingRows = await fetchExistingWordsByUser(rlsClient, userId);
+  const existingByTerm = buildExistingWordsByTerm(existingRows);
+  let rowsToBackfill = [];
+
+  if (Array.isArray(terms) && terms.length > 0) {
+    const termKeys = new Set(terms.map((term) => normalizeTermKey(term)).filter(Boolean));
+    rowsToBackfill = existingRows.filter((row) => termKeys.has(normalizeTermKey(row.term)));
+  } else {
+    rowsToBackfill = collectMappedWordsForTerms(mappedWords, existingByTerm, new Set());
   }
 
-  return [...uniqueRows.values()].map(mapWordRowToClient);
+  const backfilledRows = await backfillExistingWordMemory(
+    rlsClient,
+    rowsToBackfill,
+    mappedWords,
+  );
+
+  return backfilledRows.map(mapWordRowToClient);
 }

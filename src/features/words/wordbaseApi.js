@@ -2,6 +2,8 @@ import {
   containsChinese,
   pickChineseText,
 } from "../../../lib/vocabularyLocale.js";
+import { getApiAuthHeaders } from "../../lib/apiAuth.js";
+import { resolveApiUrl } from "../../lib/apiBase.js";
 import { hasSupabaseConfig, supabase } from "../../lib/supabaseClient.js";
 import { hasMemoryImageUrl, normalizeMemoryImage } from "./memoryImageUtils.js";
 import { normalizeTerm } from "./wordTypes.js";
@@ -33,23 +35,56 @@ function ensureSupabase() {
 }
 
 function mapWordbaseRow(row) {
+  if (!row) {
+    return null;
+  }
+
   return {
     id: row.id,
     term: row.term,
-    definition: row.definition,
+    definition: row.definition ?? "",
     translation: row.translation ?? "",
     pronunciation: row.pronunciation ?? "",
-    partOfSpeech: row.part_of_speech ?? "",
+    partOfSpeech: row.part_of_speech ?? row.partOfSpeech ?? "",
     example: row.example ?? "",
-    exampleTranslation: row.example_translation ?? "",
+    exampleTranslation: row.example_translation ?? row.exampleTranslation ?? "",
     notes: row.notes ?? "",
     tags: row.tags ?? [],
-    source: row.source,
-    memoryTipsByLocale: row.memory_tips_by_locale ?? {},
-    memoryImage: normalizeMemoryImage(row.memory_image),
-    createdAt: row.created_at,
-    updatedAt: row.updated_at,
+    source: row.source ?? "",
+    memoryTipsByLocale: row.memory_tips_by_locale ?? row.memoryTipsByLocale ?? {},
+    memoryImage: normalizeMemoryImage(row.memory_image ?? row.memoryImage),
+    createdAt: row.created_at ?? row.createdAt,
+    updatedAt: row.updated_at ?? row.updatedAt,
   };
+}
+
+async function fetchWordbaseEntryFromApi(term) {
+  const authHeaders = await getApiAuthHeaders();
+
+  if (!authHeaders.Authorization) {
+    return null;
+  }
+
+  try {
+    const response = await fetch(
+      resolveApiUrl(`/api/wordbase-entry?term=${encodeURIComponent(term)}`),
+      {
+        headers: {
+          ...authHeaders,
+        },
+      },
+    );
+
+    if (!response.ok) {
+      return null;
+    }
+
+    const payload = await response.json();
+    return mapWordbaseRow(payload.entry);
+  } catch (error) {
+    console.warn("Could not load wordbase entry from API.", error);
+    return null;
+  }
 }
 
 function defaultWordbaseReviewFields() {
@@ -108,13 +143,18 @@ export function hasWordbaseMemoryImage(entry) {
 }
 
 export async function fetchWordbaseEntry(term) {
-  if (!hasSupabaseConfig || !supabase) {
-    return null;
-  }
-
   const termKey = normalizeTerm(term);
 
   if (!termKey) {
+    return null;
+  }
+
+  const apiEntry = await fetchWordbaseEntryFromApi(term);
+  if (apiEntry) {
+    return apiEntry;
+  }
+
+  if (!hasSupabaseConfig || !supabase) {
     return null;
   }
 

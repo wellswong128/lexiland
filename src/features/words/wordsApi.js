@@ -1,5 +1,6 @@
 import { supabase } from "../../lib/supabaseClient.js";
 import { toSupabaseSource } from "./wordTypes.js";
+import { normalizeMemoryImage } from "./memoryImageUtils.js";
 
 const WORD_LIST_COLUMNS = `
   id,
@@ -62,7 +63,7 @@ function mapDbWordToWord(row) {
       mistakeCount: row.mistake_count,
     },
     memoryTipsByLocale: row.memory_tips_by_locale ?? {},
-    memoryImage: row.memory_image ?? null,
+    memoryImage: normalizeMemoryImage(row.memory_image),
   };
 }
 

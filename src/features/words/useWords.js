@@ -4,6 +4,7 @@ import { clearLearningActivity } from "../../lib/learningActivity.js";
 import {
   clearAllStoredWordAiMemory,
   clearStoredWordAiMemory,
+  hydrateWordAiMemory,
   hydrateWordsAiMemory,
   persistWordMemoryChangesToStorage,
 } from "../../lib/wordAiMemoryStorage.js";
@@ -43,6 +44,7 @@ import {
   fetchUserActiveGroupWords,
   importUserActiveGroupWords,
   invalidateUserActiveGroupWordsCache,
+  syncUserActiveGroupWordMemory,
 } from "../wordGroups/wordGroupsApi.js";
 import { saveCachedActiveGroupScope, loadCachedActiveGroupScope } from "../wordGroups/activeGroupScopeCache.js";
 import {
@@ -199,6 +201,37 @@ function applyPendingMemoryUpdatesToState(pendingUpdates, storage, setWords) {
       return pending ? applyWordChanges(word, pending.changes) : word;
     }),
   );
+}
+
+function mergeRemoteWordMemoryUpdates(updatedWords, storage, setWords) {
+  if (!Array.isArray(updatedWords) || updatedWords.length === 0) {
+    return 0;
+  }
+
+  const updatedById = new Map(updatedWords.map((word) => [word.id, word]));
+
+  setWords((currentWords) =>
+    currentWords.map((word) => {
+      const updated = updatedById.get(word.id);
+      if (!updated) {
+        return word;
+      }
+
+      const merged = mergeWordAiMemory(updated, word);
+      persistWordMemoryChangesToStorage(
+        word.id,
+        {
+          memoryImage: merged.memoryImage ?? null,
+          memoryTipsByLocale: merged.memoryTipsByLocale ?? {},
+        },
+        storage,
+      );
+
+      return hydrateWordAiMemory(merged, storage);
+    }),
+  );
+
+  return updatedWords.length;
 }
 
 function hasRemoteWordChanges(changes) {
@@ -727,6 +760,29 @@ export function useWords({ isAuthLoading = false, user = null } = {}, storage) {
     }
   }, [isUsingSupabase, user?.id]);
 
+  const syncGroupWordMemoryFromServer = useCallback(
+    async ({ terms = [] } = {}) => {
+      if (!isUsingSupabase || !user?.id) {
+        return 0;
+      }
+
+      if (loadWordScopeMode(user.id) !== WORD_SCOPE_MODES.GROUP) {
+        return 0;
+      }
+
+      try {
+        invalidateUserActiveGroupWordsCache();
+        const payload = await syncUserActiveGroupWordMemory({ terms });
+        const updatedWords = Array.isArray(payload.updatedWords) ? payload.updatedWords : [];
+        return mergeRemoteWordMemoryUpdates(updatedWords, storage, setWords);
+      } catch (error) {
+        console.warn("Could not sync group word memory from server.", error);
+        return 0;
+      }
+    },
+    [isUsingSupabase, storage, user?.id],
+  );
+
   const runActiveGroupSync = useCallback(async (preloadedPayload = null) => {
     if (!isUsingSupabase || !user?.id) {
       return;
@@ -991,6 +1047,7 @@ export function useWords({ isAuthLoading = false, user = null } = {}, storage) {
     resetAllWords,
     syncActiveGroupWordMemory: runActiveGroupMemorySync,
     syncActiveGroupWords: runActiveGroupSync,
+    syncGroupWordMemoryFromServer,
     syncLocalWordsToSupabase,
     words,
     wordsError,
