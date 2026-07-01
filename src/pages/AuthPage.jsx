@@ -3,6 +3,7 @@ import { Link, useLocation, useNavigate, useSearchParams } from "react-router-do
 import { Capacitor } from "@capacitor/core";
 import LexiMascot from "../components/LexiMascot.jsx";
 import { getFriendlyAuthError } from "../features/auth/authErrors.js";
+import { navigateAfterAuth, shouldHardNavigateAfterAuth } from "../features/auth/authBootstrap.js";
 import { resolveAuthRedirectUrl } from "../features/auth/authRedirect.js";
 import { useLocale } from "../features/locale/LocaleContext.jsx";
 import { useWordsContext } from "../features/words/WordsContext.jsx";
@@ -74,7 +75,6 @@ function AuthPage() {
   const [searchParams, setSearchParams] = useSearchParams();
   const {
     authError,
-    clearAuthError,
     hasSupabaseConfig,
     isAuthLoading,
     signInWithEmail,
@@ -102,6 +102,11 @@ function AuthPage() {
 
   useEffect(() => {
     if (!isAuthLoading && user) {
+      if (shouldHardNavigateAfterAuth()) {
+        navigateAfterAuth(redirectTo);
+        return;
+      }
+
       navigate(redirectTo, { replace: true });
     }
   }, [isAuthLoading, navigate, redirectTo, user]);
@@ -119,12 +124,20 @@ function AuthPage() {
   }, [emailCooldown]);
 
   useEffect(() => {
-    clearAuthError();
+    const hash = window.location.hash;
+    const isAuthFragment =
+      hash.includes("access_token=") ||
+      hash.includes("error=") ||
+      hash.includes("error_description=");
 
-    if (window.location.hash) {
-      window.history.replaceState({}, document.title, window.location.pathname + window.location.search);
+    if (hash && !isAuthFragment) {
+      window.history.replaceState(
+        {},
+        document.title,
+        window.location.pathname + window.location.search,
+      );
     }
-  }, [clearAuthError]);
+  }, []);
 
   useEffect(() => {
     if (!location.state?.authError) {

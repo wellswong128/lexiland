@@ -1,5 +1,10 @@
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { Capacitor } from "@capacitor/core";
+import {
+  isIosStandalonePwa,
+  markIosStandaloneOAuthStart,
+} from "./authBootstrap.js";
+import { completeAuthCallbackFromUrl, hasPendingAuthCallback } from "./completeAuthCallback.js";
 import { resolveAuthRedirectUrlAsync } from "./authRedirect.js";
 import { hasSupabaseConfig, supabase } from "../../lib/supabaseClient.js";
 
@@ -7,6 +12,7 @@ export function useSupabaseAuth() {
   const [session, setSession] = useState(null);
   const [isAuthLoading, setIsAuthLoading] = useState(hasSupabaseConfig);
   const [authError, setAuthError] = useState("");
+  const bootstrapCompleteRef = useRef(false);
 
   useEffect(() => {
     if (!supabase) {
@@ -15,53 +21,67 @@ export function useSupabaseAuth() {
     }
 
     let isMounted = true;
+    const pendingCallback = hasPendingAuthCallback();
 
-    if (typeof window !== "undefined") {
-      const hashParams = window.location.hash.startsWith("#")
-        ? new URLSearchParams(window.location.hash.slice(1))
-        : new URLSearchParams();
-      const searchParams = new URLSearchParams(window.location.search);
-      const authCallbackError =
-        hashParams.get("error_description") ||
-        hashParams.get("error") ||
-        searchParams.get("error_description") ||
-        searchParams.get("error");
+    void completeAuthCallbackFromUrl()
+      .then(({ session: callbackSession, error }) => {
+        if (!isMounted) {
+          return;
+        }
 
-      if (authCallbackError) {
-        setAuthError(decodeURIComponent(authCallbackError.replace(/\+/g, " ")));
-        window.history.replaceState({}, document.title, window.location.pathname);
-      }
-    }
+        bootstrapCompleteRef.current = true;
 
-    supabase.auth.getSession().then(({ data, error }) => {
-      if (!isMounted) return;
+        if (error) {
+          setAuthError(error.message);
+        }
 
-      if (error) {
-        setAuthError(error.message);
-      }
+        if (callbackSession) {
+          setSession(callbackSession);
+          setAuthError("");
+          setIsAuthLoading(false);
+          return;
+        }
 
-      setSession(data.session);
-      setIsAuthLoading(false);
+        supabase.auth.getSession().then(({ data, sessionError }) => {
+          if (!isMounted) {
+            return;
+          }
 
-      if (
-        typeof window !== "undefined" &&
-        data.session &&
-        (window.location.search.includes("code=") ||
-          window.location.hash.includes("access_token="))
-      ) {
-        window.history.replaceState(
-          {},
-          document.title,
-          window.location.pathname,
-        );
-      }
-    });
+          if (sessionError) {
+            setAuthError(sessionError.message);
+          }
+
+          setSession(data.session);
+          setIsAuthLoading(false);
+        });
+      })
+      .catch((error) => {
+        if (!isMounted) {
+          return;
+        }
+
+        bootstrapCompleteRef.current = true;
+        setAuthError(error?.message || "Could not restore sign-in.");
+        setIsAuthLoading(false);
+      });
 
     const {
       data: { subscription },
     } = supabase.auth.onAuthStateChange((_event, nextSession) => {
+      if (!isMounted) {
+        return;
+      }
+
+      if (!bootstrapCompleteRef.current && pendingCallback && !nextSession) {
+        return;
+      }
+
       setSession(nextSession);
-      setIsAuthLoading(false);
+
+      if (bootstrapCompleteRef.current) {
+        setIsAuthLoading(false);
+      }
+
       if (nextSession) {
         setAuthError("");
       }
@@ -94,6 +114,10 @@ export function useSupabaseAuth() {
       );
     }
 
+    if (isIosStandalonePwa()) {
+      markIosStandaloneOAuthStart();
+    }
+
     const { error } = await supabase.auth.signInWithOtp({
       email: normalizedEmail,
       options: {
@@ -123,11 +147,17 @@ export function useSupabaseAuth() {
       );
     }
 
+    const useManualRedirect = Capacitor.isNativePlatform() || isIosStandalonePwa();
+
+    if (isIosStandalonePwa()) {
+      markIosStandaloneOAuthStart();
+    }
+
     const { data, error } = await supabase.auth.signInWithOAuth({
       provider,
       options: {
         redirectTo,
-        skipBrowserRedirect: Capacitor.isNativePlatform(),
+        skipBrowserRedirect: useManualRedirect,
       },
     });
 
@@ -136,9 +166,8 @@ export function useSupabaseAuth() {
       throw error;
     }
 
-    if (Capacitor.isNativePlatform() && data?.url) {
+    if (useManualRedirect && data?.url) {
       window.location.assign(data.url);
-      return;
     }
   }, []);
 
