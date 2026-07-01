@@ -67,7 +67,11 @@ function formatReviewSyncError(error, t) {
     "";
 
   if (/quota has been exceeded/i.test(message)) {
-    return t("flashcards.syncWordbaseQuotaExceeded");
+    return t("flashcards.syncVercelMemoryQuotaExceeded");
+  }
+
+  if (/provisioned memory|memory quota|compute time quota/i.test(message)) {
+    return t("flashcards.syncVercelMemoryQuotaExceeded");
   }
 
   return message || t("flashcards.syncWordbaseMemoryFailed");

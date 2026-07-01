@@ -535,6 +535,8 @@ const zhHant = {
       syncWordbaseSignInRequired: "請先登入後再同步字庫記憶圖。",
       syncWordbaseQuotaExceeded:
         "資料庫配額已用完，暫時無法同步。請稍後再試，或到 Supabase 控制台查看用量。",
+      syncVercelMemoryQuotaExceeded:
+        "Vercel 函式記憶體配額已用完，暫時無法同步。請稍後再試，或到 Vercel 控制台查看 Fluid Compute 用量。",
       prepareTryQuizCta: "改用測驗複習",
       prepareRetryCta: "重試",
       prepareAddWordsCta: "拍照加新字",
@@ -1600,6 +1602,8 @@ export const translations = {
       syncWordbaseSignInRequired: "Sign in to sync memory images from Wordbase.",
       syncWordbaseQuotaExceeded:
         "Database quota exceeded, so sync is temporarily unavailable. Try again later or check usage in the Supabase dashboard.",
+      syncVercelMemoryQuotaExceeded:
+        "Vercel function memory quota exceeded, so sync is temporarily unavailable. Try again later or check Fluid Compute usage in the Vercel dashboard.",
       prepareTryQuizCta: "Use Text Quiz Instead",
       prepareRetryCta: "Try Again",
       prepareAddWordsCta: "Add Words with Photo",

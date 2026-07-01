@@ -183,6 +183,32 @@ export function mapWordbaseRowToMappedWord(row) {
 }
 
 const WORDBASE_ID_CHUNK_SIZE = 80;
+const WORDBASE_TERM_KEY_CHUNK_SIZE = 100;
+
+export async function fetchWordbaseRowsByTermKeys(rlsClient, termKeys, selectColumns) {
+  const uniqueKeys = [...new Set(termKeys.map((value) => normalizeTermForGroup(value)).filter(Boolean))];
+  if (uniqueKeys.length === 0) {
+    return [];
+  }
+
+  const rows = [];
+
+  for (let index = 0; index < uniqueKeys.length; index += WORDBASE_TERM_KEY_CHUNK_SIZE) {
+    const chunk = uniqueKeys.slice(index, index + WORDBASE_TERM_KEY_CHUNK_SIZE);
+    const { data, error } = await rlsClient
+      .from("wordbase")
+      .select(selectColumns)
+      .in("term_key", chunk);
+
+    if (error) {
+      throw new Error(error.message || "Failed to load mapped words.");
+    }
+
+    rows.push(...(data ?? []));
+  }
+
+  return rows;
+}
 
 export async function fetchWordbaseRowsByIds(rlsClient, wordbaseIds, selectColumns) {
   const uniqueIds = [...new Set(wordbaseIds.filter(Boolean))];

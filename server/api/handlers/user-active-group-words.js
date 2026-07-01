@@ -7,6 +7,7 @@ import {
   buildActiveGroupWordPayload,
   createRlsClientForRequest,
   fetchWordbaseRowsByIds,
+  fetchWordbaseRowsByTermKeys,
   getRequestBody,
   normalizeGroupCode,
   requireUserGroupAccess,
@@ -178,20 +179,19 @@ async function handlePost(request, response, auth) {
     return;
   }
 
-  const wordbaseSelect =
-    "term_key,term,definition,translation,pronunciation,part_of_speech,example,example_translation,tags,memory_tips_by_locale,memory_image";
-
-  const wordbaseRows = await fetchWordbaseRowsByIds(rlsClient, wordbaseIds, wordbaseSelect);
-
-  const { mappedTerms, mappedWords } = buildActiveGroupWordPayload(wordbaseRows, {
-    includeWords: true,
-    wordLimit,
-  });
-
   if (syncMemoryOnly) {
     const terms = Array.isArray(body.terms)
       ? body.terms.map((term) => String(term ?? "").trim()).filter(Boolean)
       : null;
+    const memorySyncSelect = "term_key,term,memory_tips_by_locale,memory_image";
+    const wordbaseRows =
+      Array.isArray(terms) && terms.length > 0
+        ? await fetchWordbaseRowsByTermKeys(rlsClient, terms, memorySyncSelect)
+        : await fetchWordbaseRowsByIds(rlsClient, wordbaseIds, memorySyncSelect);
+    const { mappedTerms, mappedWords } = buildActiveGroupWordPayload(wordbaseRows, {
+      includeWords: true,
+      wordLimit,
+    });
     const updatedWords = await syncGroupWordMemoryForUser(rlsClient, userId, mappedWords, {
       terms,
     });
@@ -203,6 +203,16 @@ async function handlePost(request, response, auth) {
     });
     return;
   }
+
+  const wordbaseSelect =
+    "term_key,term,definition,translation,pronunciation,part_of_speech,example,example_translation,tags,memory_tips_by_locale,memory_image";
+
+  const wordbaseRows = await fetchWordbaseRowsByIds(rlsClient, wordbaseIds, wordbaseSelect);
+
+  const { mappedTerms, mappedWords } = buildActiveGroupWordPayload(wordbaseRows, {
+    includeWords: true,
+    wordLimit,
+  });
 
   const importedWords = await importMappedWordsForUser(rlsClient, userId, mappedWords, {
     limit,
