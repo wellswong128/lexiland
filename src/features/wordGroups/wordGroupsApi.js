@@ -12,9 +12,17 @@ let inflightFullRequest = null;
 let inflightTermsRequest = null;
 
 async function parseJsonResponse(response) {
-  const payload = await response.json();
+  let payload = {};
+
+  try {
+    payload = await response.json();
+  } catch {
+    payload = {};
+  }
+
   if (!response.ok) {
-    throw new Error(payload.error || "Request failed.");
+    const apiError = typeof payload.error === "string" ? payload.error.trim() : "";
+    throw new Error(apiError || `Request failed (${response.status}).`);
   }
 
   return payload;

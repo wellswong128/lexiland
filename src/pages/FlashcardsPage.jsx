@@ -59,16 +59,33 @@ function FlashcardsMissingImagesPanel({ imageReviewReadiness, t }) {
   );
 }
 
+function FlashcardsSyncErrorAlert({ message }) {
+  if (!message) {
+    return null;
+  }
+
+  return (
+    <div className="mb-4">
+      <p className="rounded-2xl border border-red-200 bg-red-50 px-4 py-3 text-sm font-medium text-red-700">
+        {message}
+      </p>
+    </div>
+  );
+}
+
 function FlashcardsPrepareErrorActions({
   canQuiz,
   isSyncingMemory,
   mistakesOnly,
   onRetry,
   onSyncMemory,
+  syncError,
   t,
 }) {
   return (
-    <div className="mb-6 flex flex-wrap justify-center gap-3">
+    <div className="mb-6">
+      <FlashcardsSyncErrorAlert message={syncError} />
+      <div className="flex flex-wrap justify-center gap-3">
       <button
         className="rounded-full bg-blue-700 px-5 py-3 text-sm font-bold text-white transition hover:bg-blue-800 disabled:bg-slate-300"
         disabled={isSyncingMemory}
@@ -122,6 +139,7 @@ function FlashcardsPrepareErrorActions({
       >
         {t("flashcards.noDueHomeCta")}
       </Link>
+      </div>
     </div>
   );
 }
@@ -260,6 +278,7 @@ function FlashcardsPage() {
 
   const runReviewMemorySync = useCallback(async () => {
     if (!user) {
+      setReviewMemorySyncError(t("flashcards.syncWordbaseSignInRequired"));
       return wordsRef.current;
     }
 
@@ -270,7 +289,11 @@ function FlashcardsPage() {
       const { words: syncedWords } = await syncGroupWordMemoryFromServer({ terms: null });
       return syncedWords;
     } catch (error) {
-      setReviewMemorySyncError(error.message || t("flashcards.syncWordbaseMemoryFailed"));
+      const message =
+        (error instanceof Error && error.message.trim()) ||
+        (typeof error === "string" && error.trim()) ||
+        t("flashcards.syncWordbaseMemoryFailed");
+      setReviewMemorySyncError(message);
       return wordsRef.current;
     } finally {
       setIsReviewMemorySyncing(false);
@@ -620,9 +643,6 @@ function FlashcardsPage() {
                 {t("flashcards.syncingWordbaseMemory")}
               </p>
             ) : null}
-            {reviewMemorySyncError ? (
-              <p className="mt-2 text-sm font-semibold text-red-700">{reviewMemorySyncError}</p>
-            ) : null}
             {!imageReviewReadiness.canStart && !prepareError ? (
               <div className="mt-3 space-y-3">
                 <p className="text-sm font-semibold text-amber-800">
@@ -639,6 +659,7 @@ function FlashcardsPage() {
                   onSyncMemory={() => {
                     void runReviewMemorySync();
                   }}
+                  syncError={reviewMemorySyncError}
                   t={t}
                 />
               </div>
@@ -662,6 +683,10 @@ function FlashcardsPage() {
           </button>
         </div>
 
+        {reviewMemorySyncError && imageReviewReadiness.canStart && !prepareError ? (
+          <FlashcardsSyncErrorAlert message={reviewMemorySyncError} />
+        ) : null}
+
         {prepareError ? (
           <div className="mb-6">
             <p className="rounded-2xl border border-red-200 bg-red-50 px-4 py-3 text-sm font-medium text-red-700">
@@ -678,6 +703,7 @@ function FlashcardsPage() {
                   onSyncMemory={() => {
                     void runReviewMemorySync();
                   }}
+                  syncError={reviewMemorySyncError}
                   t={t}
                 />
               </div>

@@ -812,6 +812,11 @@ export function useWords({ isAuthLoading = false, user = null } = {}, storage) {
         const payload = await syncUserActiveGroupWordMemory({
           terms: Array.isArray(terms) ? terms : undefined,
         });
+
+        if (!payload.activeGroup) {
+          throw new Error("No active word group is set. Choose a group in Menu, then try again.");
+        }
+
         const updatedWords = Array.isArray(payload.updatedWords) ? payload.updatedWords : [];
         const result = mergeRemoteWordMemoryUpdates(
           updatedWords,
