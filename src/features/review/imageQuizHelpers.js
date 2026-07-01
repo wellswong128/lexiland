@@ -25,6 +25,28 @@ export function getImageReviewReadiness(sessionWords, allWords) {
   };
 }
 
+export function getFlashcardReviewReadiness(sessionWords, allWords) {
+  const imageReadiness = getImageReviewReadiness(sessionWords, allWords);
+
+  return {
+    ...imageReadiness,
+    canStart: sessionWords.length > 0,
+    canStartImageMode: imageReadiness.canStart,
+    willUseTextMode: sessionWords.length > 0 && !imageReadiness.canStart,
+  };
+}
+
+export function createTextFlashcardQuestions(sessionWords) {
+  if (!Array.isArray(sessionWords) || sessionWords.length === 0) {
+    return [];
+  }
+
+  return shuffleItems(sessionWords).map((word) => ({
+    mode: "text",
+    word,
+  }));
+}
+
 export function createImageQuizQuestions(sessionWords, allWords, optionCount = 4) {
   const imagePool = allWords.filter(wordHasMemoryImage);
   const eligibleSessionWords = sessionWords.filter(wordHasMemoryImage);
@@ -57,6 +79,7 @@ export function createImageQuizQuestions(sessionWords, allWords, optionCount = 4
 
     return {
       word,
+      mode: "image",
       options,
       correctAnswer: word.id,
     };

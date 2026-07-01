@@ -6,7 +6,8 @@ import WordImageWithTranslationOverlay from "../components/WordImageWithTranslat
 import WordMemoryPanel from "../components/WordMemoryPanel.jsx";
 import { useLocale } from "../features/locale/LocaleContext.jsx";
 import {
-  getImageReviewReadiness,
+  createTextFlashcardQuestions,
+  getFlashcardReviewReadiness,
 } from "../features/review/imageQuizHelpers.js";
 import { prefetchImageReviewPool } from "../features/review/prefetchImageReviewPool.js";
 import WordGroupScopeEmptyState from "../features/wordGroups/WordGroupScopeEmptyState.jsx";
@@ -23,8 +24,8 @@ import { clearReviewSession, syncReviewSession } from "../lib/reviewSessionStora
 import { maybeRecordDailyMistakeClear } from "../lib/learningActivity.js";
 import { REVIEW_RESULTS } from "../features/words/wordTypes.js";
 
-function FlashcardsMissingImagesPanel({ imageReviewReadiness, t }) {
-  const { missingSessionWords, poolCount, needsMorePoolWords } = imageReviewReadiness;
+function FlashcardsMissingImagesPanel({ flashcardReadiness, t }) {
+  const { missingSessionWords, poolCount, needsMorePoolWords, willUseTextMode } = flashcardReadiness;
 
   if (missingSessionWords.length === 0 && !needsMorePoolWords) {
     return null;
@@ -32,8 +33,11 @@ function FlashcardsMissingImagesPanel({ imageReviewReadiness, t }) {
 
   return (
     <div className="mt-3 rounded-2xl border border-amber-200 bg-amber-50 px-4 py-3 text-left text-sm text-amber-950">
-      {needsMorePoolWords ? (
-        <p className="font-semibold leading-6">
+      {willUseTextMode ? (
+        <p className="font-semibold leading-6">{t("flashcards.textModeNotice")}</p>
+      ) : null}
+      {needsMorePoolWords && !willUseTextMode ? (
+        <p className={`font-semibold leading-6 ${willUseTextMode ? "mt-3" : ""}`}>
           {t("flashcards.imagePoolTooSmall", { count: poolCount })}
         </p>
       ) : null}
@@ -189,12 +193,14 @@ function FlashcardsPage() {
       }),
     [mistakesOnly, reviewWords],
   );
-  const imageReviewReadiness = useMemo(
-    () => getImageReviewReadiness(sessionWords, reviewWords),
+  const flashcardReadiness = useMemo(
+    () => getFlashcardReviewReadiness(sessionWords, reviewWords),
     [reviewWords, sessionWords],
   );
   const canQuiz = reviewWords.length >= 2;
   const [hasStarted, setHasStarted] = useState(false);
+  const [reviewMode, setReviewMode] = useState("image");
+  const [showAnswer, setShowAnswer] = useState(false);
   const [isPreparing, setIsPreparing] = useState(false);
   const [prepareProgress, setPrepareProgress] = useState({ current: 0, total: 0 });
   const [prepareError, setPrepareError] = useState("");
@@ -247,6 +253,8 @@ function FlashcardsPage() {
     setSessionClearedCount(0);
     setPrepareError("");
     setPrepareErrorCode("");
+    setShowAnswer(false);
+    setReviewMode("image");
     lastSpokenRef.current = { index: -1, term: "" };
   }, [scopeRevision]);
 
@@ -338,7 +346,9 @@ function FlashcardsPage() {
     setPrepareProgress({ current: 0, total: sessionWords.length });
 
     try {
-      const syncedWords = await runReviewMemorySync();
+      const syncedWords = flashcardReadiness.canStartImageMode
+        ? await runReviewMemorySync()
+        : wordsRef.current;
       const freshReviewWords = filterWordsToGroupScope(syncedWords, {
         isGroupScopeActive,
         mappedTerms,
@@ -347,21 +357,32 @@ function FlashcardsPage() {
         mistakesOnly,
       });
 
-      const { questions } = await prefetchImageReviewPool(freshSessionWords, freshReviewWords, {
-        onProgress: (current, total) => {
-          setPrepareProgress({ current, total });
+      const { questions: imageQuestionsResult } = await prefetchImageReviewPool(
+        freshSessionWords,
+        freshReviewWords,
+        {
+          onProgress: (current, total) => {
+            setPrepareProgress({ current, total });
+          },
+          updateWord,
         },
-        updateWord,
-      });
+      );
 
-      if (questions.length === 0) {
-        setPrepareError(t("flashcards.notEnoughImages"));
-        setPrepareErrorCode("notEnoughImages");
+      const nextQuestions =
+        imageQuestionsResult.length > 0
+          ? imageQuestionsResult
+          : createTextFlashcardQuestions(freshSessionWords);
+      const nextMode = imageQuestionsResult.length > 0 ? "image" : "text";
+
+      if (nextQuestions.length === 0) {
+        setPrepareError(t("flashcards.noDueDefault"));
         return;
       }
 
-      imageQuestionsRef.current = questions;
-      setImageQuestions(questions);
+      imageQuestionsRef.current = nextQuestions;
+      setImageQuestions(nextQuestions);
+      setReviewMode(nextMode);
+      setShowAnswer(false);
       setCurrentIndex(0);
       setSelectedAnswer("");
       setFeedback(null);
@@ -448,6 +469,7 @@ function FlashcardsPage() {
   function goToNextWord() {
     setSelectedAnswer("");
     setFeedback(null);
+    setShowAnswer(false);
 
     setCurrentIndex((index) => {
       if (index >= imageQuestionsLengthRef.current - 1) {
@@ -469,7 +491,26 @@ function FlashcardsPage() {
     setFeedback(null);
     setImageQuestions([]);
     setSessionClearedCount(0);
+    setShowAnswer(false);
+    setReviewMode("image");
     setPrepareError("");
+  }
+
+  function handleTextRecall(result) {
+    if (!currentQuestion?.word) {
+      return;
+    }
+
+    const hadMistake = currentQuestion.word.mistake?.isMistake;
+
+    maybeRecordDailyMistakeClear(currentQuestion.word, result);
+    updateWord(currentQuestion.word.id, updateReviewResult(currentQuestion.word, result));
+
+    if (result === REVIEW_RESULTS.REMEMBERED && hadMistake) {
+      setSessionClearedCount((count) => count + 1);
+    }
+
+    goToNextWord();
   }
 
   function handleImageAnswer(answerWordId) {
@@ -662,25 +703,25 @@ function FlashcardsPage() {
                 {t("flashcards.syncingWordbaseMemory")}
               </p>
             ) : null}
-            {!imageReviewReadiness.canStart && !prepareError ? (
+            {reviewMemorySyncError || flashcardReadiness.willUseTextMode ? (
               <div className="mt-3 space-y-3">
-                <p className="text-sm font-semibold text-amber-800">
-                  {mistakesOnly
-                    ? t("flashcards.imageReviewNotReadyMistakesDescription")
-                    : t("flashcards.imageReviewNotReadyDescription")}
-                </p>
-                <FlashcardsMissingImagesPanel imageReviewReadiness={imageReviewReadiness} t={t} />
-                <FlashcardsPrepareErrorActions
-                  canQuiz={canQuiz}
-                  isSyncingMemory={isReviewMemorySyncing}
-                  mistakesOnly={mistakesOnly}
-                  onRetry={handleStartReview}
-                  onSyncMemory={() => {
-                    void runReviewMemorySync();
-                  }}
-                  syncError={reviewMemorySyncError}
-                  t={t}
-                />
+                <FlashcardsSyncErrorAlert message={reviewMemorySyncError} />
+                {flashcardReadiness.willUseTextMode ? (
+                  <FlashcardsMissingImagesPanel flashcardReadiness={flashcardReadiness} t={t} />
+                ) : null}
+                {!flashcardReadiness.canStartImageMode ? (
+                  <FlashcardsPrepareErrorActions
+                    canQuiz={canQuiz}
+                    isSyncingMemory={isReviewMemorySyncing}
+                    mistakesOnly={mistakesOnly}
+                    onRetry={handleStartReview}
+                    onSyncMemory={() => {
+                      void runReviewMemorySync();
+                    }}
+                    syncError={reviewMemorySyncError}
+                    t={t}
+                  />
+                ) : null}
               </div>
             ) : null}
           </div>
@@ -702,31 +743,11 @@ function FlashcardsPage() {
           </button>
         </div>
 
-        {reviewMemorySyncError && imageReviewReadiness.canStart && !prepareError ? (
-          <FlashcardsSyncErrorAlert message={reviewMemorySyncError} />
-        ) : null}
-
         {prepareError ? (
           <div className="mb-6">
             <p className="rounded-2xl border border-red-200 bg-red-50 px-4 py-3 text-sm font-medium text-red-700">
               {prepareError}
             </p>
-            {prepareErrorCode === "notEnoughImages" ? (
-              <div className="mt-4">
-                <FlashcardsMissingImagesPanel imageReviewReadiness={imageReviewReadiness} t={t} />
-                <FlashcardsPrepareErrorActions
-                  canQuiz={canQuiz}
-                  isSyncingMemory={isReviewMemorySyncing}
-                  mistakesOnly={mistakesOnly}
-                  onRetry={handleStartReview}
-                  onSyncMemory={() => {
-                    void runReviewMemorySync();
-                  }}
-                  syncError={reviewMemorySyncError}
-                  t={t}
-                />
-              </div>
-            ) : null}
           </div>
         ) : null}
 
@@ -826,7 +847,50 @@ function FlashcardsPage() {
         ) : null}
       </div>
 
-      {feedback === null || feedback === "incorrect" ? (
+      {reviewMode === "text" ? (
+        <div className="mt-6">
+          <p className="text-center text-sm text-slate-600">{t("flashcards.recallPrompt")}</p>
+          {!showAnswer ? (
+            <button
+              className="mt-5 w-full rounded-full bg-blue-700 px-5 py-3 text-sm font-bold text-white transition hover:bg-blue-800"
+              onClick={() => setShowAnswer(true)}
+              type="button"
+            >
+              {t("flashcards.showAnswer")}
+            </button>
+          ) : (
+            <div className="mt-5 rounded-2xl border border-blue-100 bg-white p-5 text-center">
+              <p className="text-xs font-bold uppercase tracking-[0.14em] text-blue-700">
+                {t("flashcards.answer")}
+              </p>
+              <p className="mt-3 text-2xl font-bold text-blue-950">
+                {currentWord.translation || currentWord.definition}
+              </p>
+              {currentWord.translation && currentWord.definition ? (
+                <p className="mt-2 text-slate-600">{currentWord.definition}</p>
+              ) : null}
+              <div className="mt-6 flex flex-wrap justify-center gap-3">
+                <button
+                  className="rounded-full border border-red-200 bg-red-50 px-5 py-3 text-sm font-bold text-red-700 transition hover:bg-red-100"
+                  onClick={() => handleTextRecall(REVIEW_RESULTS.FORGOT)}
+                  type="button"
+                >
+                  {t("flashcards.forgot")}
+                </button>
+                <button
+                  className="rounded-full bg-green-700 px-5 py-3 text-sm font-bold text-white transition hover:bg-green-800"
+                  onClick={() => handleTextRecall(REVIEW_RESULTS.REMEMBERED)}
+                  type="button"
+                >
+                  {t("flashcards.remembered")}
+                </button>
+              </div>
+            </div>
+          )}
+        </div>
+      ) : null}
+
+      {reviewMode === "image" && (feedback === null || feedback === "incorrect") ? (
         <div className="mt-6">
           <p className="mb-4 text-center text-sm font-bold uppercase tracking-[0.14em] text-slate-500">
             {t("flashcards.chooseMemoryImage")}
@@ -868,7 +932,7 @@ function FlashcardsPage() {
         </div>
       ) : null}
 
-      {feedback === "incorrect" ? (
+      {reviewMode === "image" && feedback === "incorrect" ? (
         <div className="mt-6 rounded-2xl border border-red-200 bg-red-50/60 p-5">
           <p className="font-bold text-red-700">{t("flashcards.incorrect")}</p>
           {currentWord.translation ? (

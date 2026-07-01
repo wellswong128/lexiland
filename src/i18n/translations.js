@@ -538,6 +538,7 @@ const zhHant = {
       syncVercelMemoryQuotaExceeded:
         "Vercel 函式記憶體配額已用完，暫時無法同步。請稍後再試，或到 Vercel 控制台查看 Fluid Compute 用量。",
       prepareTryQuizCta: "改用測驗複習",
+      textModeNotice: "部分單字缺少記憶圖，將改用文字字卡複習（先回想，再顯示答案）。",
       prepareRetryCta: "重試",
       prepareAddWordsCta: "拍照加新字",
       incorrect: "答錯了",
@@ -1605,6 +1606,8 @@ export const translations = {
       syncVercelMemoryQuotaExceeded:
         "Vercel function memory quota exceeded, so sync is temporarily unavailable. Try again later or check Fluid Compute usage in the Vercel dashboard.",
       prepareTryQuizCta: "Use Text Quiz Instead",
+      textModeNotice:
+        "Some words are missing memory images. Text flashcards will be used instead (recall first, then reveal the answer).",
       prepareRetryCta: "Try Again",
       prepareAddWordsCta: "Add Words with Photo",
       incorrect: "Incorrect",
