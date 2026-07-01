@@ -2,9 +2,9 @@ import { readWordMemoryTips } from "../words/memoryTipsApi.js";
 import { readWordMemoryImage } from "../words/wordImageApi.js";
 import { hasMemoryImageUrl } from "../words/memoryImageUtils.js";
 import {
-  applyWordbaseMemoryToWord,
-  wordNeedsWordbaseMemoryImage,
-} from "./syncWordMemoryFromWordbase.js";
+  applyReviewMemoryFromWordbase,
+  reviewWordNeedsMemoryImage,
+} from "./reviewWordbaseMemory.js";
 import { buildImagePrefetchQueue } from "./prefetchImageReviewPool.js";
 
 const PREFETCH_CONCURRENCY = 4;
@@ -34,7 +34,7 @@ function needsWordbaseTips(word, locale) {
 }
 
 function needsWordbaseMemory(word, locale) {
-  return wordNeedsWordbaseMemoryImage(word, locale) || needsWordbaseTips(word, locale);
+  return reviewWordNeedsMemoryImage(word) || needsWordbaseTips(word, locale);
 }
 
 export async function prefetchSessionMemoryImages(
@@ -47,7 +47,7 @@ export async function prefetchSessionMemoryImages(
 
   await runWithConcurrency(queue, async (word) => {
     try {
-      await applyWordbaseMemoryToWord(word, { locale, updateWord, user });
+      await applyReviewMemoryFromWordbase(word, { locale, updateWord, user });
     } catch (error) {
       console.warn("Could not prefetch review memory from wordbase.", word.term, error);
     } finally {

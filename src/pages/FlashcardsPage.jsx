@@ -867,6 +867,7 @@ function FlashcardsPage() {
               compact={false}
               showTranslationOverlay
               word={currentWord}
+              wordbaseOnly
             />
           </div>
           <button

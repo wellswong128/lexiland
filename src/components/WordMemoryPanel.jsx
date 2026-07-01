@@ -16,6 +16,7 @@ function WordMemoryPanel({
   compact = false,
   showTranslationOverlay = false,
   word,
+  wordbaseOnly = false,
 }) {
   const { locale, t } = useLocale();
   const { updateWord, user } = useWordsContext();
@@ -47,8 +48,9 @@ function WordMemoryPanel({
       setNotice("");
 
       const result = await fetchWordMemoryWithCache(word, locale, {
-        forceRefresh,
+        forceRefresh: wordbaseOnly ? false : forceRefresh,
         user,
+        wordbaseOnly,
       });
 
       if (result.changes) {
@@ -184,7 +186,7 @@ function WordMemoryPanel({
             {t("wordMemory.description")}
           </p>
         </div>
-        {canRegenerateMemory ? (
+        {canRegenerateMemory && !wordbaseOnly ? (
           <button
             className="inline-flex shrink-0 justify-center rounded-full bg-indigo-700 px-5 py-3 text-sm font-bold text-white transition hover:bg-indigo-800 disabled:bg-slate-300"
             disabled={isLoading}

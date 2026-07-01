@@ -289,7 +289,7 @@ function QuizPage() {
             })}
           </p>
           <div className="mt-4">
-            <WordMemoryPanel autoLoad compact word={currentWord} />
+            <WordMemoryPanel autoLoad compact word={currentWord} wordbaseOnly />
           </div>
           <button
             className="mt-5 rounded-full bg-blue-700 px-5 py-3 text-sm font-bold text-white transition hover:bg-blue-800"

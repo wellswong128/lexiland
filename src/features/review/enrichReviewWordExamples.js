@@ -59,7 +59,7 @@ async function readAiExampleDetails(term, locale, user) {
 
 export async function enrichReviewWordExamples(
   words,
-  { allowAiFallback = true, locale = "zh-Hant", updateWord, user } = {},
+  { allowAiFallback = false, locale = "zh-Hant", updateWord, user } = {},
 ) {
   for (const word of words) {
     if (!needsExampleEnrichment(word)) {

@@ -1,7 +1,6 @@
 import { createImageQuizQuestions, wordHasMemoryImage } from "./imageQuizHelpers.js";
-import { fetchWordImageWithCache } from "../words/wordImageApi.js";
 import { buildWordMemoryImageChanges } from "../../lib/wordAiMemoryStorage.js";
-import { normalizeMemoryImage } from "../words/memoryImageUtils.js";
+import { fetchReviewMemoryImageFromWordbase } from "./reviewWordbaseMemory.js";
 
 export const IMAGE_PREFETCH_EXTRA_LIMIT = 12;
 
@@ -32,18 +31,13 @@ export function buildImagePrefetchQueue(
 }
 
 async function fetchWordImageIntoPool(word, workingWords, { updateWord, user } = {}) {
-  const result = await fetchWordImageWithCache(word, { user, wordbaseOnly: true });
+  const result = await fetchReviewMemoryImageFromWordbase(word, { user });
 
-  if (result.wordbaseMiss) {
+  if (result.wordbaseMiss || !result.memoryImage) {
     return workingWords;
   }
 
-  const memoryImage = normalizeMemoryImage(result);
-  if (!memoryImage) {
-    return workingWords;
-  }
-
-  const changes = result.changes ?? buildWordMemoryImageChanges(memoryImage);
+  const changes = result.changes ?? buildWordMemoryImageChanges(result.memoryImage);
 
   if (updateWord) {
     await updateWord(word.id, changes);
