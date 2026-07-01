@@ -529,6 +529,9 @@ const zhHant = {
       imageReviewNotReadyMistakesDescription:
         "字卡複習需要至少 2 個單字有記憶圖。你可以先生成記憶圖、改用測驗，或回到錯題本逐字複習。",
       prepareGenerateImagesCta: "前往生成記憶圖",
+      syncWordbaseMemoryCta: "從字庫同步記憶圖",
+      syncingWordbaseMemory: "正在從字庫同步記憶圖…",
+      syncWordbaseMemoryFailed: "無法從字庫同步記憶圖，請稍後再試。",
       prepareTryQuizCta: "改用測驗複習",
       prepareRetryCta: "重試",
       prepareAddWordsCta: "拍照加新字",
@@ -1588,6 +1591,9 @@ export const translations = {
       imageReviewNotReadyMistakesDescription:
         "Image flashcards need at least 2 words with memory images. Generate images, use a text quiz, or go back to your mistake notebook.",
       prepareGenerateImagesCta: "Generate Memory Images",
+      syncWordbaseMemoryCta: "Sync from Wordbase",
+      syncingWordbaseMemory: "Syncing memory images from Wordbase…",
+      syncWordbaseMemoryFailed: "Could not sync memory images from Wordbase. Please try again.",
       prepareTryQuizCta: "Use Text Quiz Instead",
       prepareRetryCta: "Try Again",
       prepareAddWordsCta: "Add Words with Photo",

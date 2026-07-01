@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { Link, useSearchParams } from "react-router-dom";
 import ReviewWordListItem from "../components/ReviewWordListItem.jsx";
 import SpeakButton, { primeSpeechSynthesis, speakText, unlockSpeechSynthesis } from "../components/SpeakButton.jsx";
@@ -7,14 +7,13 @@ import WordMemoryPanel from "../components/WordMemoryPanel.jsx";
 import { useLocale } from "../features/locale/LocaleContext.jsx";
 import {
   getImageReviewReadiness,
-  wordHasMemoryImage,
 } from "../features/review/imageQuizHelpers.js";
-import { prefetchImageReviewPool, buildImagePrefetchQueue } from "../features/review/prefetchImageReviewPool.js";
-import { prefetchSessionMemoryImages } from "../features/review/prefetchSessionMemoryImages.js";
+import { prefetchImageReviewPool } from "../features/review/prefetchImageReviewPool.js";
 import WordGroupScopeEmptyState from "../features/wordGroups/WordGroupScopeEmptyState.jsx";
 import { useActiveGroupWordScope } from "../features/wordGroups/useActiveGroupWordScope.js";
 import { useEnsureActiveGroupWords } from "../features/wordGroups/useEnsureActiveGroupWords.js";
 import {
+  filterWordsToGroupScope,
   getReviewSessionWords,
   updateReviewResult,
 } from "../features/review/reviewHelpers.js";
@@ -62,25 +61,24 @@ function FlashcardsMissingImagesPanel({ imageReviewReadiness, t }) {
 
 function FlashcardsPrepareErrorActions({
   canQuiz,
+  isSyncingMemory,
   mistakesOnly,
   onRetry,
-  sessionWords,
+  onSyncMemory,
   t,
 }) {
-  const wordNeedingImage =
-    sessionWords.find((word) => !wordHasMemoryImage(word)) ?? sessionWords[0];
-  const generateImageTo = wordNeedingImage ? `/words/${wordNeedingImage.id}` : "/words";
-
   return (
     <div className="mb-6 flex flex-wrap justify-center gap-3">
-      {wordNeedingImage ? (
-        <Link
-          className="rounded-full bg-blue-700 px-5 py-3 text-sm font-bold text-white transition hover:bg-blue-800"
-          to={generateImageTo}
-        >
-          {t("flashcards.prepareGenerateImagesCta")}
-        </Link>
-      ) : null}
+      <button
+        className="rounded-full bg-blue-700 px-5 py-3 text-sm font-bold text-white transition hover:bg-blue-800 disabled:bg-slate-300"
+        disabled={isSyncingMemory}
+        onClick={onSyncMemory}
+        type="button"
+      >
+        {isSyncingMemory
+          ? t("flashcards.syncingWordbaseMemory")
+          : t("flashcards.syncWordbaseMemoryCta")}
+      </button>
       {canQuiz ? (
         <Link
           className="rounded-full bg-blue-700 px-5 py-3 text-sm font-bold text-white transition hover:bg-blue-800"
@@ -136,6 +134,7 @@ function FlashcardsPage() {
     isLoadingScope,
     isGroupScopeActive,
     mappedTermCount,
+    mappedTerms,
     scopeReason,
     scopedWords,
     scopeRevision,
@@ -170,9 +169,13 @@ function FlashcardsPage() {
   const [feedback, setFeedback] = useState(null);
   const [sessionClearedCount, setSessionClearedCount] = useState(0);
   const [isComplete, setIsComplete] = useState(false);
+  const [isReviewMemorySyncing, setIsReviewMemorySyncing] = useState(false);
+  const [reviewMemorySyncError, setReviewMemorySyncError] = useState("");
   const imageQuestionsRef = useRef([]);
   const imageQuestionsLengthRef = useRef(0);
   const lastSpokenRef = useRef({ index: -1, term: "" });
+  const wordsRef = useRef(words);
+  wordsRef.current = words;
   const lastScopeRevisionRef = useRef(scopeRevision);
   const quizBottomRef = useRef(null);
 
@@ -255,6 +258,25 @@ function FlashcardsPage() {
     return true;
   }
 
+  const runReviewMemorySync = useCallback(async () => {
+    if (!user) {
+      return wordsRef.current;
+    }
+
+    setIsReviewMemorySyncing(true);
+    setReviewMemorySyncError("");
+
+    try {
+      const { words: syncedWords } = await syncGroupWordMemoryFromServer({ terms: null });
+      return syncedWords;
+    } catch (error) {
+      setReviewMemorySyncError(error.message || t("flashcards.syncWordbaseMemoryFailed"));
+      return wordsRef.current;
+    } finally {
+      setIsReviewMemorySyncing(false);
+    }
+  }, [syncGroupWordMemoryFromServer, t, user]);
+
   function handleStartReview() {
     primeSpeechSynthesis();
     unlockSpeechSynthesis();
@@ -274,7 +296,16 @@ function FlashcardsPage() {
     setPrepareProgress({ current: 0, total: sessionWords.length });
 
     try {
-      const { questions } = await prefetchImageReviewPool(sessionWords, reviewWords, {
+      const syncedWords = await runReviewMemorySync();
+      const freshReviewWords = filterWordsToGroupScope(syncedWords, {
+        isGroupScopeActive,
+        mappedTerms,
+      });
+      const { sessionWords: freshSessionWords } = getReviewSessionWords(freshReviewWords, {
+        mistakesOnly,
+      });
+
+      const { questions } = await prefetchImageReviewPool(freshSessionWords, freshReviewWords, {
         onProgress: (current, total) => {
           setPrepareProgress({ current, total });
         },
@@ -322,33 +353,12 @@ function FlashcardsPage() {
 
     let cancelled = false;
 
-    void syncGroupWordMemoryFromServer({
-      terms: buildImagePrefetchQueue(sessionWords, reviewWords).map((word) => word.term),
-    })
-      .catch((error) => {
-        if (!cancelled) {
-          console.warn("Could not sync review memory from server.", error);
-        }
-      })
-      .finally(() => {
-        if (cancelled) {
-          return;
-        }
-
-        void prefetchSessionMemoryImages(sessionWords, {
-          allWords: reviewWords,
-          updateWord,
-        }).catch((error) => {
-          if (!cancelled) {
-            console.warn("Could not hydrate review memory images locally.", error);
-          }
-        });
-      });
+    void runReviewMemorySync();
 
     return () => {
       cancelled = true;
     };
-  }, [hasStarted, reviewWords, sessionWords, syncGroupWordMemoryFromServer, updateWord, user]);
+  }, [hasStarted, runReviewMemorySync, sessionWords.length, user]);
 
   useEffect(() => {
     if (!hasStarted || isComplete || feedback || imageQuestions.length === 0) {
@@ -605,6 +615,14 @@ function FlashcardsPage() {
                 {t("flashcards.reviewFirstTenOnly")}
               </p>
             ) : null}
+            {isReviewMemorySyncing ? (
+              <p className="mt-2 text-sm font-semibold text-blue-800">
+                {t("flashcards.syncingWordbaseMemory")}
+              </p>
+            ) : null}
+            {reviewMemorySyncError ? (
+              <p className="mt-2 text-sm font-semibold text-red-700">{reviewMemorySyncError}</p>
+            ) : null}
             {!imageReviewReadiness.canStart && !prepareError ? (
               <div className="mt-3 space-y-3">
                 <p className="text-sm font-semibold text-amber-800">
@@ -615,9 +633,12 @@ function FlashcardsPage() {
                 <FlashcardsMissingImagesPanel imageReviewReadiness={imageReviewReadiness} t={t} />
                 <FlashcardsPrepareErrorActions
                   canQuiz={canQuiz}
+                  isSyncingMemory={isReviewMemorySyncing}
                   mistakesOnly={mistakesOnly}
                   onRetry={handleStartReview}
-                  sessionWords={sessionWords}
+                  onSyncMemory={() => {
+                    void runReviewMemorySync();
+                  }}
                   t={t}
                 />
               </div>
@@ -626,7 +647,7 @@ function FlashcardsPage() {
 
           <button
             className="inline-flex justify-center rounded-full bg-blue-700 px-5 py-3 text-sm font-bold text-white shadow-lg shadow-blue-900/20 transition hover:bg-blue-800 disabled:bg-slate-300"
-            disabled={isPreparing}
+            disabled={isPreparing || isReviewMemorySyncing}
             onClick={handleStartReview}
             type="button"
           >
@@ -635,7 +656,9 @@ function FlashcardsPage() {
                   current: prepareProgress.current,
                   total: prepareProgress.total,
                 })
-              : t("flashcards.startReview")}
+              : isReviewMemorySyncing
+                ? t("flashcards.syncingWordbaseMemory")
+                : t("flashcards.startReview")}
           </button>
         </div>
 
@@ -649,9 +672,12 @@ function FlashcardsPage() {
                 <FlashcardsMissingImagesPanel imageReviewReadiness={imageReviewReadiness} t={t} />
                 <FlashcardsPrepareErrorActions
                   canQuiz={canQuiz}
+                  isSyncingMemory={isReviewMemorySyncing}
                   mistakesOnly={mistakesOnly}
                   onRetry={handleStartReview}
-                  sessionWords={sessionWords}
+                  onSyncMemory={() => {
+                    void runReviewMemorySync();
+                  }}
                   t={t}
                 />
               </div>
@@ -676,6 +702,7 @@ function FlashcardsPage() {
               showTranslationOverlay
               t={t}
               word={word}
+              wordbaseOnly
             />
           ))}
         </ul>

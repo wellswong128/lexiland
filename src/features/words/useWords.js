@@ -9,6 +9,7 @@ import {
   persistWordMemoryChangesToStorage,
 } from "../../lib/wordAiMemoryStorage.js";
 import { clearMemoryTipsCache } from "./memoryTipsApi.js";
+import { hasMemoryImageUrl } from "./memoryImageUtils.js";
 import { clearWordImageCache } from "./wordImageApi.js";
 import {
   loadWords,
@@ -179,11 +180,76 @@ function splitWordChanges(changes) {
 }
 
 function mergeWordAiMemory(word, sourceWord) {
+  const sourceImage = sourceWord.memoryImage;
+  const wordImage = word.memoryImage;
+
   return {
     ...word,
     memoryTipsByLocale: sourceWord.memoryTipsByLocale ?? word.memoryTipsByLocale,
-    memoryImage: sourceWord.memoryImage ?? word.memoryImage,
+    memoryImage: hasMemoryImageUrl(sourceImage)
+      ? sourceImage
+      : hasMemoryImageUrl(wordImage)
+        ? wordImage
+        : sourceImage ?? wordImage ?? null,
   };
+}
+
+function mergeRemoteWordMemoryFields(localWord, remoteWord) {
+  const remoteImage = remoteWord?.memoryImage;
+  const localImage = localWord?.memoryImage;
+
+  return {
+    ...localWord,
+    memoryTipsByLocale: {
+      ...(remoteWord?.memoryTipsByLocale ?? {}),
+      ...(localWord.memoryTipsByLocale ?? {}),
+    },
+    memoryImage: hasMemoryImageUrl(remoteImage)
+      ? remoteImage
+      : hasMemoryImageUrl(localImage)
+        ? localImage
+        : remoteImage ?? localImage ?? null,
+  };
+}
+
+function applyRemoteWordMemoryUpdates(currentWords, updatedWords, storage) {
+  if (!Array.isArray(currentWords) || currentWords.length === 0) {
+    return { words: currentWords ?? [], updatedCount: 0 };
+  }
+
+  if (!Array.isArray(updatedWords) || updatedWords.length === 0) {
+    return { words: currentWords, updatedCount: 0 };
+  }
+
+  const updatedById = new Map(updatedWords.map((word) => [word.id, word]));
+  const updatedByTerm = new Map(
+    updatedWords
+      .map((word) => [normalizeTerm(word.term), word])
+      .filter(([termKey]) => Boolean(termKey)),
+  );
+
+  let updatedCount = 0;
+  const nextWords = currentWords.map((word) => {
+    const remote = updatedById.get(word.id) ?? updatedByTerm.get(normalizeTerm(word.term));
+    if (!remote) {
+      return word;
+    }
+
+    updatedCount += 1;
+    const merged = mergeRemoteWordMemoryFields(word, remote);
+    persistWordMemoryChangesToStorage(
+      word.id,
+      {
+        memoryImage: merged.memoryImage ?? null,
+        memoryTipsByLocale: merged.memoryTipsByLocale ?? {},
+      },
+      storage,
+    );
+
+    return hydrateWordAiMemory(merged, storage);
+  });
+
+  return { words: nextWords, updatedCount };
 }
 
 function applyPendingMemoryUpdatesToState(pendingUpdates, storage, setWords) {
@@ -203,35 +269,10 @@ function applyPendingMemoryUpdatesToState(pendingUpdates, storage, setWords) {
   );
 }
 
-function mergeRemoteWordMemoryUpdates(updatedWords, storage, setWords) {
-  if (!Array.isArray(updatedWords) || updatedWords.length === 0) {
-    return 0;
-  }
-
-  const updatedById = new Map(updatedWords.map((word) => [word.id, word]));
-
-  setWords((currentWords) =>
-    currentWords.map((word) => {
-      const updated = updatedById.get(word.id);
-      if (!updated) {
-        return word;
-      }
-
-      const merged = mergeWordAiMemory(updated, word);
-      persistWordMemoryChangesToStorage(
-        word.id,
-        {
-          memoryImage: merged.memoryImage ?? null,
-          memoryTipsByLocale: merged.memoryTipsByLocale ?? {},
-        },
-        storage,
-      );
-
-      return hydrateWordAiMemory(merged, storage);
-    }),
-  );
-
-  return updatedWords.length;
+function mergeRemoteWordMemoryUpdates(updatedWords, storage, setWords, currentWords) {
+  const result = applyRemoteWordMemoryUpdates(currentWords, updatedWords, storage);
+  setWords(result.words);
+  return result;
 }
 
 function hasRemoteWordChanges(changes) {
@@ -761,23 +802,28 @@ export function useWords({ isAuthLoading = false, user = null } = {}, storage) {
   }, [isUsingSupabase, user?.id]);
 
   const syncGroupWordMemoryFromServer = useCallback(
-    async ({ terms = [] } = {}) => {
+    async ({ terms = null } = {}) => {
       if (!isUsingSupabase || !user?.id) {
-        return 0;
-      }
-
-      if (loadWordScopeMode(user.id) !== WORD_SCOPE_MODES.GROUP) {
-        return 0;
+        return { words: wordsRef.current, updatedCount: 0 };
       }
 
       try {
         invalidateUserActiveGroupWordsCache();
-        const payload = await syncUserActiveGroupWordMemory({ terms });
+        const payload = await syncUserActiveGroupWordMemory({
+          terms: Array.isArray(terms) ? terms : undefined,
+        });
         const updatedWords = Array.isArray(payload.updatedWords) ? payload.updatedWords : [];
-        return mergeRemoteWordMemoryUpdates(updatedWords, storage, setWords);
+        const result = mergeRemoteWordMemoryUpdates(
+          updatedWords,
+          storage,
+          setWords,
+          wordsRef.current,
+        );
+        wordsRef.current = result.words;
+        return result;
       } catch (error) {
         console.warn("Could not sync group word memory from server.", error);
-        return 0;
+        throw error;
       }
     },
     [isUsingSupabase, storage, user?.id],

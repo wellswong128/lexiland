@@ -10,6 +10,7 @@ function ReviewWordListItem({
   showTranslationOverlay = false,
   t,
   word,
+  wordbaseOnly = false,
 }) {
   return (
     <li className="rounded-2xl border border-slate-200 bg-white p-5">
@@ -44,6 +45,7 @@ function ReviewWordListItem({
                 compact={memoryPanelCompact}
                 showTranslationOverlay={showTranslationOverlay}
                 word={word}
+                wordbaseOnly={wordbaseOnly}
               />
             </div>
           ) : null}

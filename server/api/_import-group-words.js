@@ -205,7 +205,7 @@ export function mapWordRowToClient(row) {
       mistakeCount: row.mistake_count,
     },
     memoryTipsByLocale: row.memory_tips_by_locale ?? {},
-    memoryImage: row.memory_image ?? null,
+    memoryImage: sanitizeMemoryImage(row.memory_image),
   };
 }
 
@@ -440,5 +440,14 @@ export async function syncGroupWordMemoryForUser(
     mappedWords,
   );
 
-  return backfilledRows.map(mapWordRowToClient);
+  for (const row of backfilledRows) {
+    const termKey = normalizeTermKey(row.term);
+    if (termKey) {
+      existingByTerm.set(termKey, row);
+    }
+  }
+
+  return rowsToBackfill
+    .map((row) => existingByTerm.get(normalizeTermKey(row.term)) ?? row)
+    .map(mapWordRowToClient);
 }

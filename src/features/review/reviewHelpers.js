@@ -1,4 +1,4 @@
-import { REVIEW_RESULTS } from "../words/wordTypes.js";
+import { normalizeTerm, REVIEW_RESULTS } from "../words/wordTypes.js";
 
 export const REVIEW_INTERVAL_DAYS_BY_LEVEL = {
   0: 1,
@@ -17,6 +17,16 @@ function addDays(date, days) {
 }
 
 export const REVIEW_SESSION_WORD_LIMIT = 10;
+
+export function filterWordsToGroupScope(words, { isGroupScopeActive = false, mappedTerms = [] } = {}) {
+  if (!isGroupScopeActive || !Array.isArray(mappedTerms) || mappedTerms.length === 0) {
+    return words;
+  }
+
+  const mappedSet = new Set(mappedTerms.map((value) => normalizeTerm(value)).filter(Boolean));
+
+  return words.filter((word) => mappedSet.has(normalizeTerm(word.term)));
+}
 
 export function getDueWords(words, now = new Date()) {
   return words.filter((word) => {
