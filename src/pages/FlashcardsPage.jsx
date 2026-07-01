@@ -241,6 +241,7 @@ function FlashcardsPage() {
 
     try {
       await enrichReviewWordExamples(sessionWords, {
+        allowAiFallback: false,
         locale,
         updateWord,
         user,

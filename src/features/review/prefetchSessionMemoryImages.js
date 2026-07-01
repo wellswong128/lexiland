@@ -6,7 +6,8 @@ import {
 import {
   fetchWordMemoryWithCache,
 } from "../words/wordMemoryApi.js";
-import { hasMemoryImageUrl } from "../words/memoryImageUtils.js";
+import { hasMemoryImageUrl, normalizeMemoryImage } from "../words/memoryImageUtils.js";
+import { buildWordMemoryImageChanges } from "../../lib/wordAiMemoryStorage.js";
 
 const PREFETCH_CONCURRENCY = 4;
 
@@ -52,9 +53,13 @@ async function prefetchWordMemoryFromWordbase(word, { locale, updateWord, user }
 
   if (needsImage && !needsTips) {
     const result = await fetchWordImageWithCache(word, { user, wordbaseOnly: true });
+    const memoryImage = normalizeMemoryImage(result);
 
-    if (result.changes) {
-      await updateWord(word.id, result.changes);
+    if (memoryImage) {
+      const changes = result.changes ?? buildWordMemoryImageChanges(memoryImage);
+      if (result.changes) {
+        await updateWord(word.id, result.changes);
+      }
     }
 
     return;
