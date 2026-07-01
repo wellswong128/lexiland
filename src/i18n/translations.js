@@ -522,6 +522,8 @@ const zhHant = {
       chooseMemoryImage: "選擇正確的記憶圖",
       preparingImages: "正在準備記憶圖 {{current}} / {{total}}",
       notEnoughImages: "記憶圖不足，無法開始圖片字卡複習。",
+      missingImagesTitle: "以下 {{count}} 個字缺少記憶圖：",
+      imagePoolTooSmall: "你的字庫中只有 {{count}} 個字有記憶圖（至少需要 2 個）。",
       imageReviewNotReadyDescription:
         "字卡複習需要至少 2 個單字有記憶圖。你可以先為生字生成記憶圖，或改用測驗複習。",
       imageReviewNotReadyMistakesDescription:
@@ -1579,6 +1581,8 @@ export const translations = {
       chooseMemoryImage: "Choose the correct memory image",
       preparingImages: "Preparing memory images {{current}} / {{total}}",
       notEnoughImages: "Not enough memory images to start image flashcards.",
+      missingImagesTitle: "{{count}} word(s) missing memory images:",
+      imagePoolTooSmall: "Your library has only {{count}} word(s) with memory images (at least 2 required).",
       imageReviewNotReadyDescription:
         "Image flashcards need at least 2 words with memory images. Generate images for your words or use a text quiz instead.",
       imageReviewNotReadyMistakesDescription:

@@ -24,6 +24,43 @@ import { clearReviewSession, syncReviewSession } from "../lib/reviewSessionStora
 import { maybeRecordDailyMistakeClear } from "../lib/learningActivity.js";
 import { REVIEW_RESULTS } from "../features/words/wordTypes.js";
 
+function FlashcardsMissingImagesPanel({ imageReviewReadiness, t }) {
+  const { missingSessionWords, poolCount, needsMorePoolWords } = imageReviewReadiness;
+
+  if (missingSessionWords.length === 0 && !needsMorePoolWords) {
+    return null;
+  }
+
+  return (
+    <div className="mt-3 rounded-2xl border border-amber-200 bg-amber-50 px-4 py-3 text-left text-sm text-amber-950">
+      {needsMorePoolWords ? (
+        <p className="font-semibold leading-6">
+          {t("flashcards.imagePoolTooSmall", { count: poolCount })}
+        </p>
+      ) : null}
+      {missingSessionWords.length > 0 ? (
+        <>
+          <p className={`font-semibold leading-6 ${needsMorePoolWords ? "mt-3" : ""}`}>
+            {t("flashcards.missingImagesTitle", { count: missingSessionWords.length })}
+          </p>
+          <ul className="mt-2 space-y-1">
+            {missingSessionWords.map((word) => (
+              <li key={word.id}>
+                <Link
+                  className="font-bold text-blue-700 transition hover:text-blue-900 hover:underline"
+                  to={`/words/${word.id}`}
+                >
+                  {word.term}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </>
+      ) : null}
+    </div>
+  );
+}
+
 function FlashcardsPrepareErrorActions({
   canQuiz,
   mistakesOnly,
@@ -613,6 +650,7 @@ function FlashcardsPage() {
                     ? t("flashcards.imageReviewNotReadyMistakesDescription")
                     : t("flashcards.imageReviewNotReadyDescription")}
                 </p>
+                <FlashcardsMissingImagesPanel imageReviewReadiness={imageReviewReadiness} t={t} />
                 <FlashcardsPrepareErrorActions
                   canQuiz={canQuiz}
                   mistakesOnly={mistakesOnly}
@@ -646,6 +684,7 @@ function FlashcardsPage() {
             </p>
             {prepareErrorCode === "notEnoughImages" ? (
               <div className="mt-4">
+                <FlashcardsMissingImagesPanel imageReviewReadiness={imageReviewReadiness} t={t} />
                 <FlashcardsPrepareErrorActions
                   canQuiz={canQuiz}
                   mistakesOnly={mistakesOnly}

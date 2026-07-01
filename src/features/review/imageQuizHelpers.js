@@ -11,13 +11,17 @@ export function wordHasMemoryImage(word) {
 }
 
 export function getImageReviewReadiness(sessionWords, allWords) {
+  const missingSessionWords = sessionWords.filter((word) => !wordHasMemoryImage(word));
+  const eligibleCount = sessionWords.length - missingSessionWords.length;
   const poolCount = allWords.filter(wordHasMemoryImage).length;
-  const eligibleCount = sessionWords.filter(wordHasMemoryImage).length;
+  const needsMorePoolWords = poolCount < 2;
 
   return {
-    canStart: eligibleCount > 0 && poolCount >= 2,
+    canStart: eligibleCount > 0 && !needsMorePoolWords,
     poolCount,
     eligibleCount,
+    missingSessionWords,
+    needsMorePoolWords,
   };
 }
 
