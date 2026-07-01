@@ -190,17 +190,17 @@ export async function fetchWordImageWithCache(
         console.warn("Could not read memory image from wordbase.", wordbaseError);
       }
     }
+  }
 
-    if (wordbaseOnly) {
-      return {
-        imageUrl: "",
-        prompt: "",
-        changes: null,
-        fromCache: false,
-        fromWordbase: false,
-        wordbaseMiss: true,
-      };
-    }
+  if (wordbaseOnly) {
+    return {
+      imageUrl: "",
+      prompt: "",
+      changes: null,
+      fromCache: false,
+      fromWordbase: false,
+      wordbaseMiss: true,
+    };
   }
 
   const image = await fetchWordImage(word);

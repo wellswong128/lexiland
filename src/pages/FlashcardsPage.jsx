@@ -5,7 +5,6 @@ import SpeakButton, { primeSpeechSynthesis, speakText, unlockSpeechSynthesis } f
 import WordImageWithTranslationOverlay from "../components/WordImageWithTranslationOverlay.jsx";
 import WordMemoryPanel from "../components/WordMemoryPanel.jsx";
 import { useLocale } from "../features/locale/LocaleContext.jsx";
-import { enrichReviewWordExamples, needsExampleEnrichment } from "../features/review/enrichReviewWordExamples.js";
 import {
   getImageReviewReadiness,
   wordHasMemoryImage,
@@ -131,7 +130,7 @@ function FlashcardsPrepareErrorActions({
 
 function FlashcardsPage() {
   const { locale, t } = useLocale();
-  const { ensureActiveGroupWordsSynced, isActiveGroupSyncing, syncActiveGroupWordMemory, syncGroupWordMemoryFromServer, updateWord, user, words } = useWordsContext();
+  const { ensureActiveGroupWordsSynced, isActiveGroupSyncing, syncGroupWordMemoryFromServer, updateWord, user, words } = useWordsContext();
   const {
     activeGroup,
     isLoadingScope,
@@ -146,7 +145,6 @@ function FlashcardsPage() {
   const isScopePending =
     isGroupScopeActive &&
     (isLoadingScope || (isActiveGroupSyncing && scopedWords.length === 0));
-  const enrichedExampleWordIdsRef = useRef(new Set());
   const [searchParams] = useSearchParams();
   const mistakesOnly = searchParams.get("mode") === "mistakes";
   const { isLimited, sessionWords, totalCount } = useMemo(
@@ -201,7 +199,6 @@ function FlashcardsPage() {
 
     lastScopeRevisionRef.current = scopeRevision;
     clearReviewSession();
-    enrichedExampleWordIdsRef.current = new Set();
     setHasStarted(false);
     setIsComplete(false);
     setCurrentIndex(0);
@@ -277,23 +274,11 @@ function FlashcardsPage() {
     setPrepareProgress({ current: 0, total: sessionWords.length });
 
     try {
-      await enrichReviewWordExamples(sessionWords, {
-        allowAiFallback: false,
-        locale,
-        updateWord,
-        user,
-      });
-
-      await syncGroupWordMemoryFromServer({
-        terms: buildImagePrefetchQueue(sessionWords, reviewWords).map((word) => word.term),
-      });
-
       const { questions } = await prefetchImageReviewPool(sessionWords, reviewWords, {
         onProgress: (current, total) => {
           setPrepareProgress({ current, total });
         },
         updateWord,
-        user,
       });
 
       if (questions.length === 0) {
@@ -331,40 +316,6 @@ function FlashcardsPage() {
   }, [hasStarted, mistakesOnly, sessionWords, totalCount]);
 
   useEffect(() => {
-    if (hasStarted || sessionWords.length === 0) {
-      return undefined;
-    }
-
-    const wordsToEnrich = sessionWords.filter(
-      (word) =>
-        needsExampleEnrichment(word) && !enrichedExampleWordIdsRef.current.has(word.id),
-    );
-
-    if (wordsToEnrich.length === 0) {
-      return undefined;
-    }
-
-    let cancelled = false;
-
-    void enrichReviewWordExamples(wordsToEnrich, {
-      allowAiFallback: false,
-      locale,
-      updateWord,
-      user,
-    }).finally(() => {
-      if (!cancelled) {
-        wordsToEnrich.forEach((word) => {
-          enrichedExampleWordIdsRef.current.add(word.id);
-        });
-      }
-    });
-
-    return () => {
-      cancelled = true;
-    };
-  }, [hasStarted, locale, sessionWords, updateWord, user]);
-
-  useEffect(() => {
     if (hasStarted || !user || sessionWords.length === 0) {
       return undefined;
     }
@@ -384,28 +335,20 @@ function FlashcardsPage() {
           return;
         }
 
-        void syncActiveGroupWordMemory?.().finally(() => {
-          if (cancelled) {
-            return;
+        void prefetchSessionMemoryImages(sessionWords, {
+          allWords: reviewWords,
+          updateWord,
+        }).catch((error) => {
+          if (!cancelled) {
+            console.warn("Could not hydrate review memory images locally.", error);
           }
-
-          void prefetchSessionMemoryImages(sessionWords, {
-            allWords: reviewWords,
-            locale,
-            updateWord,
-            user,
-          }).catch((error) => {
-            if (!cancelled) {
-              console.warn("Could not prefetch review memory images from wordbase.", error);
-            }
-          });
         });
       });
 
     return () => {
       cancelled = true;
     };
-  }, [hasStarted, locale, reviewWords, sessionWords, syncActiveGroupWordMemory, syncGroupWordMemoryFromServer, updateWord, user]);
+  }, [hasStarted, reviewWords, sessionWords, syncGroupWordMemoryFromServer, updateWord, user]);
 
   useEffect(() => {
     if (!hasStarted || isComplete || feedback || imageQuestions.length === 0) {

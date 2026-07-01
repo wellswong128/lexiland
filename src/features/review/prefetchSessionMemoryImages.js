@@ -1,10 +1,6 @@
-import { readWordMemoryTips } from "../words/memoryTipsApi.js";
 import { readWordMemoryImage } from "../words/wordImageApi.js";
 import { hasMemoryImageUrl } from "../words/memoryImageUtils.js";
-import {
-  applyReviewMemoryFromWordbase,
-  reviewWordNeedsMemoryImage,
-} from "./reviewWordbaseMemory.js";
+import { applyReviewMemoryImageLocally, reviewWordNeedsMemoryImage } from "./reviewWordbaseMemory.js";
 import { buildImagePrefetchQueue } from "./prefetchImageReviewPool.js";
 
 const PREFETCH_CONCURRENCY = 4;
@@ -29,27 +25,19 @@ async function runWithConcurrency(items, worker, limit = PREFETCH_CONCURRENCY) {
   await Promise.all(workers);
 }
 
-function needsWordbaseTips(word, locale) {
-  return !readWordMemoryTips(word, locale);
-}
-
-function needsWordbaseMemory(word, locale) {
-  return reviewWordNeedsMemoryImage(word) || needsWordbaseTips(word, locale);
-}
-
 export async function prefetchSessionMemoryImages(
   sessionWords,
-  { allWords = sessionWords, locale = "zh-Hant", onProgress, updateWord, user } = {},
+  { allWords = sessionWords, onProgress, updateWord } = {},
 ) {
   const prefetchWords = buildImagePrefetchQueue(sessionWords, allWords);
-  const queue = prefetchWords.filter((word) => needsWordbaseMemory(word, locale));
+  const queue = prefetchWords.filter((word) => reviewWordNeedsMemoryImage(word));
   let completed = 0;
 
   await runWithConcurrency(queue, async (word) => {
     try {
-      await applyReviewMemoryFromWordbase(word, { locale, updateWord, user });
+      await applyReviewMemoryImageLocally(word, { updateWord });
     } catch (error) {
-      console.warn("Could not prefetch review memory from wordbase.", word.term, error);
+      console.warn("Could not hydrate review memory image locally.", word.term, error);
     } finally {
       completed += 1;
       onProgress?.(completed, queue.length);
@@ -57,8 +45,8 @@ export async function prefetchSessionMemoryImages(
   });
 }
 
-export function wordNeedsReviewMemoryImage(word, locale = "zh-Hant") {
-  return needsWordbaseMemory(word, locale);
+export function wordNeedsReviewMemoryImage(word) {
+  return reviewWordNeedsMemoryImage(word);
 }
 
 export function wordHasReviewMemoryImage(word) {

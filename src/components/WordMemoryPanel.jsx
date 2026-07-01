@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { useLocale } from "../features/locale/LocaleContext.jsx";
 import { getQuizOptionLabel } from "../features/review/quizHelpers.js";
+import { applyReviewMemoryImageLocally } from "../features/review/reviewWordbaseMemory.js";
 import { useWordsContext } from "../features/words/WordsContext.jsx";
 import { can, getRoleFromUser, PERMISSIONS } from "../lib/authorization.js";
 import { fetchWordImageWithCache } from "../features/words/wordImageApi.js";
@@ -95,12 +96,24 @@ function WordMemoryPanel({
 
     const requestId = autoLoadRequestRef.current + 1;
     autoLoadRequestRef.current = requestId;
-    const needsImage = !hasMemoryImageUrl(saved.memoryImage);
-    const needsTips = !saved.memoryTips;
 
     try {
       setIsLoading(true);
       setNotice("");
+
+      if (wordbaseOnly) {
+        const result = await applyReviewMemoryImageLocally(word, { updateWord });
+
+        if (autoLoadRequestRef.current !== requestId) {
+          return;
+        }
+
+        setMemoryImage(result.memoryImage);
+        return;
+      }
+
+      const needsImage = !hasMemoryImageUrl(saved.memoryImage);
+      const needsTips = !saved.memoryTips;
 
       if (needsImage && !needsTips) {
         const imageResult = await fetchWordImageWithCache(word, { user, wordbaseOnly: true });

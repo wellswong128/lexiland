@@ -30,8 +30,8 @@ export function buildImagePrefetchQueue(
   return queue;
 }
 
-async function fetchWordImageIntoPool(word, workingWords, { updateWord, user } = {}) {
-  const result = await fetchReviewMemoryImageFromWordbase(word, { user });
+async function fetchWordImageIntoPool(word, workingWords, { updateWord } = {}) {
+  const result = await fetchReviewMemoryImageFromWordbase(word, { updateWord });
 
   if (result.wordbaseMiss || !result.memoryImage) {
     return workingWords;
@@ -49,7 +49,7 @@ async function fetchWordImageIntoPool(word, workingWords, { updateWord, user } =
 export async function prefetchImageReviewPool(
   sessionWords,
   allWords,
-  { onProgress, updateWord, user } = {},
+  { onProgress, updateWord } = {},
 ) {
   let workingWords = allWords;
   const queue = buildImagePrefetchQueue(sessionWords, allWords);
@@ -62,7 +62,6 @@ export async function prefetchImageReviewPool(
     if (!wordHasMemoryImage(currentWord)) {
       workingWords = await fetchWordImageIntoPool(word, workingWords, {
         updateWord,
-        user,
       });
     }
 
