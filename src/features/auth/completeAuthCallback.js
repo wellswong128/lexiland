@@ -1,4 +1,3 @@
-import { consumeIosStandaloneOAuthStart } from "./authBootstrap.js";
 import { supabase } from "../../lib/supabaseClient.js";
 
 function readAuthCallbackError() {
@@ -62,18 +61,6 @@ export function cleanAuthCallbackUrl() {
   );
 }
 
-function buildIosStandaloneOAuthError(error) {
-  const startedInStandalone = consumeIosStandaloneOAuthStart();
-  if (!startedInStandalone) {
-    return error;
-  }
-
-  const message = error?.message || String(error || "Could not complete sign-in.");
-  return new Error(
-    `${message} If Google opened Safari, sign in at learn.lexiland.cc in Safari first, or use email login in the home screen app.`,
-  );
-}
-
 export async function completeAuthCallbackFromUrl() {
   if (!supabase || typeof window === "undefined") {
     return { session: null, error: null, hadCallback: false };
@@ -106,7 +93,7 @@ export async function completeAuthCallbackFromUrl() {
 
     return {
       session: null,
-      error: buildIosStandaloneOAuthError(error ?? sessionError ?? new Error("Could not complete sign-in.")),
+      error: error ?? sessionError ?? new Error("Could not complete sign-in."),
       hadCallback: true,
     };
   }

@@ -114,10 +114,6 @@ export function useSupabaseAuth() {
       );
     }
 
-    if (isIosStandalonePwa()) {
-      markIosStandaloneOAuthStart();
-    }
-
     const { error } = await supabase.auth.signInWithOtp({
       email: normalizedEmail,
       options: {
@@ -132,9 +128,73 @@ export function useSupabaseAuth() {
     }
   }, []);
 
+  const sendEmailSignInCode = useCallback(async (email, { shouldCreateUser = true } = {}) => {
+    if (!supabase) {
+      throw new Error("Supabase is not configured.");
+    }
+
+    const normalizedEmail = email.trim().toLowerCase();
+
+    if (!normalizedEmail) {
+      throw new Error("Please enter your email address.");
+    }
+
+    setAuthError("");
+
+    const { error } = await supabase.auth.signInWithOtp({
+      email: normalizedEmail,
+      options: {
+        shouldCreateUser,
+      },
+    });
+
+    if (error) {
+      setAuthError(error.message);
+      throw error;
+    }
+  }, []);
+
+  const verifyEmailSignInCode = useCallback(async (email, token) => {
+    if (!supabase) {
+      throw new Error("Supabase is not configured.");
+    }
+
+    const normalizedEmail = email.trim().toLowerCase();
+    const normalizedToken = token.trim();
+
+    if (!normalizedEmail) {
+      throw new Error("Please enter your email address.");
+    }
+
+    if (!normalizedToken) {
+      throw new Error("Please enter the code from your email.");
+    }
+
+    setAuthError("");
+
+    const { data, error } = await supabase.auth.verifyOtp({
+      email: normalizedEmail,
+      token: normalizedToken,
+      type: "email",
+    });
+
+    if (error) {
+      setAuthError(error.message);
+      throw error;
+    }
+
+    setSession(data.session);
+    setAuthError("");
+    return data.session;
+  }, []);
+
   const signInWithOAuth = useCallback(async (provider) => {
     if (!supabase) {
       throw new Error("Supabase is not configured.");
+    }
+
+    if (isIosStandalonePwa()) {
+      throw new Error("Google sign-in is not available in the iPhone home screen app.");
     }
 
     setAuthError("");
@@ -198,6 +258,8 @@ export function useSupabaseAuth() {
     session,
     signInWithEmail,
     signInWithOAuth,
+    sendEmailSignInCode,
+    verifyEmailSignInCode,
     signOut,
     user: session?.user ?? null,
   };

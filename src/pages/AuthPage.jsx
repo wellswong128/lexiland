@@ -3,7 +3,11 @@ import { Link, useLocation, useNavigate, useSearchParams } from "react-router-do
 import { Capacitor } from "@capacitor/core";
 import LexiMascot from "../components/LexiMascot.jsx";
 import { getFriendlyAuthError } from "../features/auth/authErrors.js";
-import { navigateAfterAuth, shouldHardNavigateAfterAuth } from "../features/auth/authBootstrap.js";
+import {
+  isIosStandalonePwa,
+  navigateAfterAuth,
+  shouldHardNavigateAfterAuth,
+} from "../features/auth/authBootstrap.js";
 import { resolveAuthRedirectUrl } from "../features/auth/authRedirect.js";
 import { useLocale } from "../features/locale/LocaleContext.jsx";
 import { useWordsContext } from "../features/words/WordsContext.jsx";
@@ -77,10 +81,14 @@ function AuthPage() {
     authError,
     hasSupabaseConfig,
     isAuthLoading,
+    sendEmailSignInCode,
     signInWithEmail,
     signInWithOAuth,
+    verifyEmailSignInCode,
     user,
   } = useWordsContext();
+
+  const isIosPwa = isIosStandalonePwa();
 
   const mode = searchParams.get("mode") === "login" ? "login" : "signup";
   const redirectTo = searchParams.get("redirect") || "/";
@@ -93,8 +101,10 @@ function AuthPage() {
     return "/";
   }, [redirectTo]);
 
-  const [showEmailForm, setShowEmailForm] = useState(false);
+  const [showEmailForm, setShowEmailForm] = useState(isIosStandalonePwa());
   const [email, setEmail] = useState("");
+  const [emailCode, setEmailCode] = useState("");
+  const [emailCodeSent, setEmailCodeSent] = useState(false);
   const [emailCooldown, setEmailCooldown] = useState(0);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [notice, setNotice] = useState("");
@@ -150,10 +160,12 @@ function AuthPage() {
   }, [location.pathname, location.search, location.state, navigate, t]);
 
   useEffect(() => {
-    setShowEmailForm(false);
+    setShowEmailForm(isIosPwa);
     setNotice("");
     setEmail("");
-  }, [mode]);
+    setEmailCode("");
+    setEmailCodeSent(false);
+  }, [isIosPwa, mode]);
 
   const nativeRedirectUrl = Capacitor.isNativePlatform() ? resolveAuthRedirectUrl() : "";
 
@@ -195,6 +207,30 @@ function AuthPage() {
       return;
     }
 
+    if (isIosPwa && emailCodeSent) {
+      if (!emailCode.trim()) {
+        setNoticeType("error");
+        setNotice(t("auth.enterEmailCode"));
+        return;
+      }
+
+      try {
+        setIsSubmitting(true);
+        setNotice("");
+        await verifyEmailSignInCode(email.trim(), emailCode.trim());
+        if (shouldHardNavigateAfterAuth()) {
+          navigateAfterAuth(redirectTo);
+        }
+      } catch (error) {
+        setNoticeType("error");
+        setNotice(getFriendlyAuthError(error.message, t));
+      } finally {
+        setIsSubmitting(false);
+      }
+
+      return;
+    }
+
     if (emailCooldown > 0) {
       setNoticeType("error");
       setNotice(t("settings.waitCooldown", { seconds: emailCooldown }));
@@ -204,9 +240,19 @@ function AuthPage() {
     try {
       setIsSubmitting(true);
       setNotice("");
-      await signInWithEmail(email.trim(), { shouldCreateUser: isSignup });
-      setNoticeType("success");
-      setNotice(isSignup ? t("auth.emailSentSignup") : t("auth.emailSentLogin"));
+
+      if (isIosPwa) {
+        await sendEmailSignInCode(email.trim(), { shouldCreateUser: isSignup });
+        setEmailCodeSent(true);
+        setEmailCode("");
+        setNoticeType("success");
+        setNotice(isSignup ? t("auth.emailCodeSentSignup") : t("auth.emailCodeSentLogin"));
+      } else {
+        await signInWithEmail(email.trim(), { shouldCreateUser: isSignup });
+        setNoticeType("success");
+        setNotice(isSignup ? t("auth.emailSentSignup") : t("auth.emailSentLogin"));
+      }
+
       setEmailCooldown(EMAIL_COOLDOWN_SECONDS);
     } catch (error) {
       setNoticeType("error");
@@ -275,6 +321,12 @@ function AuthPage() {
         </p>
       ) : null}
 
+      {isIosPwa ? (
+        <p className="mt-6 w-full rounded-2xl border border-amber-200 bg-amber-50 px-4 py-3 text-sm leading-6 text-amber-900">
+          {t("auth.pwaIosNotice")}
+        </p>
+      ) : null}
+
       {hasSupabaseConfig ? (
         <div className="mt-8 w-full space-y-3">
           {!showEmailForm ? (
@@ -309,26 +361,48 @@ function AuthPage() {
                 type="email"
                 value={email}
               />
+              {isIosPwa && emailCodeSent ? (
+                <input
+                  autoComplete="one-time-code"
+                  className="w-full rounded-full border border-slate-200 bg-white px-5 py-3.5 text-center text-lg tracking-[0.35em] text-slate-900 outline-none transition focus:border-blue-500 focus:ring-4 focus:ring-blue-100"
+                  inputMode="numeric"
+                  maxLength={8}
+                  onChange={(event) => setEmailCode(event.target.value.replace(/\s+/g, ""))}
+                  placeholder={t("auth.emailCodePlaceholder")}
+                  type="text"
+                  value={emailCode}
+                />
+              ) : null}
               <button
                 className="w-full rounded-full bg-blue-700 px-5 py-3.5 text-sm font-bold text-white transition hover:bg-blue-800 disabled:bg-slate-300"
-                disabled={isSubmitting || emailCooldown > 0}
+                disabled={isSubmitting || (!isIosPwa && emailCooldown > 0) || (isIosPwa && !emailCodeSent && emailCooldown > 0)}
                 type="submit"
               >
                 {isSubmitting
                   ? t("settings.sending")
-                  : emailCooldown > 0
-                    ? t("settings.tryAgainIn", { seconds: emailCooldown })
-                    : isSignup
-                      ? t("auth.sendSignupLink")
-                      : t("auth.sendLoginLink")}
+                  : isIosPwa && emailCodeSent
+                    ? t("auth.verifyEmailCode")
+                    : isIosPwa
+                      ? emailCooldown > 0
+                        ? t("settings.tryAgainIn", { seconds: emailCooldown })
+                        : isSignup
+                          ? t("auth.sendEmailCodeSignup")
+                          : t("auth.sendEmailCodeLogin")
+                      : emailCooldown > 0
+                        ? t("settings.tryAgainIn", { seconds: emailCooldown })
+                        : isSignup
+                          ? t("auth.sendSignupLink")
+                          : t("auth.sendLoginLink")}
               </button>
-              <button
-                className="w-full py-2 text-sm font-semibold text-slate-600 transition hover:text-blue-700"
-                onClick={() => setShowEmailForm(false)}
-                type="button"
-              >
-                {t("auth.backToOptions")}
-              </button>
+              {!isIosPwa ? (
+                <button
+                  className="w-full py-2 text-sm font-semibold text-slate-600 transition hover:text-blue-700"
+                  onClick={() => setShowEmailForm(false)}
+                  type="button"
+                >
+                  {t("auth.backToOptions")}
+                </button>
+              ) : null}
             </form>
           )}
         </div>

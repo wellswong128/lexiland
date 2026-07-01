@@ -67,6 +67,17 @@ export function getFriendlyAuthError(message, t) {
     return t("settings.oauthEmailError");
   }
 
+  if (lower.includes("google sign-in is not available in the iphone home screen app")) {
+    return t("auth.pwaIosNotice");
+  }
+
+  if (
+    lower.includes("code verifier not found") ||
+    (lower.includes("pkce") && lower.includes("storage"))
+  ) {
+    return t("auth.pkceStorageError");
+  }
+
   if (
     lower.includes("redirect url is not configured") ||
     lower.includes("vite_auth_redirect_url")

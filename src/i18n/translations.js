@@ -41,6 +41,17 @@ const zhHant = {
     emailSentLogin: "請到信箱查看登入連結。若沒收到，請檢查垃圾郵件。",
     continueWithoutAccount: "先不登入，繼續使用",
     completingLogin: "正在完成登入，請稍候…",
+    pwaIosNotice:
+      "iPhone 主屏幕 App 無法使用 Google 登入（會跳轉到 Chrome 而中斷登入）。請用下方電郵驗證碼登入，或在 Chrome 瀏覽器開啟 learn.lexiland.cc 登入。",
+    emailCodeSentSignup: "驗證碼已寄出。請輸入電郵中的 6 位數驗證碼完成註冊。",
+    emailCodeSentLogin: "驗證碼已寄出。請輸入電郵中的 6 位數驗證碼完成登入。",
+    emailCodePlaceholder: "6 位數驗證碼",
+    sendEmailCodeSignup: "寄送註冊驗證碼",
+    sendEmailCodeLogin: "寄送登入驗證碼",
+    verifyEmailCode: "確認驗證碼",
+    enterEmailCode: "請輸入電郵中的驗證碼。",
+    pkceStorageError:
+      "登入流程在 App 與瀏覽器之間中斷（Chrome 與主屏幕 App 的儲存空間分開）。請用電郵驗證碼登入，或在 Chrome 開啟 learn.lexiland.cc 登入。",
     nativeRedirectDebug:
       "原生 App 登入回調：{{url}}（請在 Supabase Redirect URLs 加入此網址，以及 capacitor://** 通配）",
     settingsPrompt: "登入後可同步單字到雲端，並在多裝置使用。",
@@ -1105,6 +1116,17 @@ export const translations = {
       emailSentLogin: "Check your email for the login link. If it does not arrive, check spam.",
       continueWithoutAccount: "Continue without signing in",
       completingLogin: "Completing sign-in, please wait…",
+      pwaIosNotice:
+        "Google sign-in does not work in the iPhone home screen app because Chrome opens separately and breaks login. Use the email code below, or sign in at learn.lexiland.cc in Chrome.",
+      emailCodeSentSignup: "Code sent. Enter the 6-digit code from your email to finish signing up.",
+      emailCodeSentLogin: "Code sent. Enter the 6-digit code from your email to finish signing in.",
+      emailCodePlaceholder: "6-digit code",
+      sendEmailCodeSignup: "Send sign-up code",
+      sendEmailCodeLogin: "Send login code",
+      verifyEmailCode: "Verify code",
+      enterEmailCode: "Please enter the code from your email.",
+      pkceStorageError:
+        "Sign-in was interrupted between the app and the browser (Chrome and the home screen app use separate storage). Use the email code below, or sign in at learn.lexiland.cc in Chrome.",
       nativeRedirectDebug:
         "Native app auth callback: {{url}} (add this URL and capacitor://** to Supabase Redirect URLs)",
       settingsPrompt: "Sign in to sync words to the cloud and use them across devices.",
