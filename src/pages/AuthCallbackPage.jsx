@@ -1,6 +1,7 @@
 import { useEffect, useRef } from "react";
 import { useNavigate, useSearchParams } from "react-router-dom";
 import {
+  getSafeAuthRedirectPath,
   navigateAfterAuth,
   shouldHardNavigateAfterAuth,
   waitForPersistedSession,
@@ -14,7 +15,7 @@ function AuthCallbackPage() {
   const navigate = useNavigate();
   const [searchParams] = useSearchParams();
   const { authError, isAuthLoading, user } = useWordsContext();
-  const redirectTo = searchParams.get("redirect") || "/";
+  const redirectTo = getSafeAuthRedirectPath(searchParams.get("redirect") || "/");
   const pendingCallback = hasPendingAuthCallback();
   const hasCompletedRedirectRef = useRef(false);
 

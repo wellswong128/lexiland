@@ -1,11 +1,12 @@
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { Link, useLocation, useNavigate, useSearchParams } from "react-router-dom";
 import { Capacitor } from "@capacitor/core";
 import LexiMascot from "../components/LexiMascot.jsx";
 import { getFriendlyAuthError } from "../features/auth/authErrors.js";
 import {
+  getSafeAuthRedirectPath,
   isIosStandalonePwa,
-  navigateAfterAuth,
+  navigateAfterPersistedSession,
   shouldHardNavigateAfterAuth,
 } from "../features/auth/authBootstrap.js";
 import { resolveAuthRedirectUrl } from "../features/auth/authRedirect.js";
@@ -91,8 +92,9 @@ function AuthPage() {
   const isIosPwa = isIosStandalonePwa();
 
   const mode = searchParams.get("mode") === "login" ? "login" : "signup";
-  const redirectTo = searchParams.get("redirect") || "/";
+  const redirectTo = getSafeAuthRedirectPath(searchParams.get("redirect") || "/");
   const isSignup = mode === "signup";
+  const hasCompletedRedirectRef = useRef(false);
   const continueWithoutAccountTo = useMemo(() => {
     if (canRoute(ROLES.GUEST, redirectTo)) {
       return redirectTo;
@@ -111,15 +113,39 @@ function AuthPage() {
   const [noticeType, setNoticeType] = useState("success");
 
   useEffect(() => {
-    if (!isAuthLoading && user) {
-      if (shouldHardNavigateAfterAuth()) {
-        navigateAfterAuth(redirectTo);
-        return;
-      }
-
-      navigate(redirectTo, { replace: true });
+    if (isAuthLoading || !user || hasCompletedRedirectRef.current) {
+      return undefined;
     }
-  }, [isAuthLoading, navigate, redirectTo, user]);
+
+    hasCompletedRedirectRef.current = true;
+
+    if (shouldHardNavigateAfterAuth()) {
+      let isCancelled = false;
+
+      void navigateAfterPersistedSession(redirectTo)
+        .then((didNavigate) => {
+          if (!didNavigate && !isCancelled) {
+            hasCompletedRedirectRef.current = false;
+          }
+        })
+        .catch((error) => {
+          if (isCancelled) {
+            return;
+          }
+
+          hasCompletedRedirectRef.current = false;
+          setNoticeType("error");
+          setNotice(getFriendlyAuthError(error?.message || "Could not restore sign-in.", t));
+        });
+
+      return () => {
+        isCancelled = true;
+      };
+    }
+
+    navigate(redirectTo, { replace: true });
+    return undefined;
+  }, [isAuthLoading, navigate, redirectTo, t, user]);
 
   useEffect(() => {
     if (emailCooldown <= 0) {
@@ -218,9 +244,6 @@ function AuthPage() {
         setIsSubmitting(true);
         setNotice("");
         await verifyEmailSignInCode(email.trim(), emailCode.trim());
-        if (shouldHardNavigateAfterAuth()) {
-          navigateAfterAuth(redirectTo);
-        }
       } catch (error) {
         setNoticeType("error");
         setNotice(getFriendlyAuthError(error.message, t));

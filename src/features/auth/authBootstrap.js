@@ -37,13 +37,25 @@ export function shouldHardNavigateAfterAuth() {
   return isIosStandalonePwa();
 }
 
-export async function waitForPersistedSession({ attempts = 20, delayMs = 100 } = {}) {
-  if (!supabase) {
+function delay(delayMs) {
+  const timeout = typeof window === "undefined" ? globalThis.setTimeout : window.setTimeout;
+
+  return new Promise((resolve) => {
+    timeout(resolve, delayMs);
+  });
+}
+
+export async function waitForPersistedSession({
+  attempts = 20,
+  delayMs = 100,
+  authClient = supabase?.auth,
+} = {}) {
+  if (!authClient) {
     return null;
   }
 
   for (let attempt = 0; attempt < attempts; attempt += 1) {
-    const { data, error } = await supabase.auth.getSession();
+    const { data, error } = await authClient.getSession();
     if (error) {
       throw error;
     }
@@ -52,15 +64,42 @@ export async function waitForPersistedSession({ attempts = 20, delayMs = 100 } =
       return data.session;
     }
 
-    await new Promise((resolve) => {
-      window.setTimeout(resolve, delayMs);
-    });
+    await delay(delayMs);
   }
 
   return null;
 }
 
+export function getSafeAuthRedirectPath(redirectTo) {
+  if (typeof redirectTo !== "string") {
+    return "/";
+  }
+
+  const safeRedirect = redirectTo.trim();
+
+  if (
+    !safeRedirect.startsWith("/") ||
+    safeRedirect.startsWith("//") ||
+    safeRedirect.startsWith("/\\")
+  ) {
+    return "/";
+  }
+
+  return safeRedirect;
+}
+
 export function navigateAfterAuth(redirectTo) {
-  const safeRedirect = redirectTo.startsWith("/") ? redirectTo : "/";
+  const safeRedirect = getSafeAuthRedirectPath(redirectTo);
   window.location.replace(safeRedirect);
+}
+
+export async function navigateAfterPersistedSession(redirectTo, options) {
+  const persistedSession = await waitForPersistedSession(options);
+
+  if (!persistedSession) {
+    return false;
+  }
+
+  navigateAfterAuth(redirectTo);
+  return true;
 }
