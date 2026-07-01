@@ -15,6 +15,7 @@ import { useEnsureActiveGroupWords } from "../features/wordGroups/useEnsureActiv
 import {
   filterWordsToGroupScope,
   getReviewSessionWords,
+  resolveReviewSyncTerms,
   updateReviewResult,
 } from "../features/review/reviewHelpers.js";
 import { useWordsContext } from "../features/words/WordsContext.jsx";
@@ -57,6 +58,19 @@ function FlashcardsMissingImagesPanel({ imageReviewReadiness, t }) {
       ) : null}
     </div>
   );
+}
+
+function formatReviewSyncError(error, t) {
+  const message =
+    (error instanceof Error && error.message.trim()) ||
+    (typeof error === "string" && error.trim()) ||
+    "";
+
+  if (/quota has been exceeded/i.test(message)) {
+    return t("flashcards.syncWordbaseQuotaExceeded");
+  }
+
+  return message || t("flashcards.syncWordbaseMemoryFailed");
 }
 
 function FlashcardsSyncErrorAlert({ message }) {
@@ -286,19 +300,20 @@ function FlashcardsPage() {
     setReviewMemorySyncError("");
 
     try {
-      const { words: syncedWords } = await syncGroupWordMemoryFromServer({ terms: null });
+      const termsToSync = resolveReviewSyncTerms(wordsRef.current, {
+        isGroupScopeActive,
+        mappedTerms,
+        mistakesOnly,
+      });
+      const { words: syncedWords } = await syncGroupWordMemoryFromServer({ terms: termsToSync });
       return syncedWords;
     } catch (error) {
-      const message =
-        (error instanceof Error && error.message.trim()) ||
-        (typeof error === "string" && error.trim()) ||
-        t("flashcards.syncWordbaseMemoryFailed");
-      setReviewMemorySyncError(message);
+      setReviewMemorySyncError(formatReviewSyncError(error, t));
       return wordsRef.current;
     } finally {
       setIsReviewMemorySyncing(false);
     }
-  }, [syncGroupWordMemoryFromServer, t, user]);
+  }, [isGroupScopeActive, mappedTerms, mistakesOnly, syncGroupWordMemoryFromServer, t, user]);
 
   function handleStartReview() {
     primeSpeechSynthesis();

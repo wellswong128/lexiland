@@ -533,6 +533,8 @@ const zhHant = {
       syncingWordbaseMemory: "正在從字庫同步記憶圖…",
       syncWordbaseMemoryFailed: "無法從字庫同步記憶圖，請稍後再試。",
       syncWordbaseSignInRequired: "請先登入後再同步字庫記憶圖。",
+      syncWordbaseQuotaExceeded:
+        "資料庫配額已用完，暫時無法同步。請稍後再試，或到 Supabase 控制台查看用量。",
       prepareTryQuizCta: "改用測驗複習",
       prepareRetryCta: "重試",
       prepareAddWordsCta: "拍照加新字",
@@ -1596,6 +1598,8 @@ export const translations = {
       syncingWordbaseMemory: "Syncing memory images from Wordbase…",
       syncWordbaseMemoryFailed: "Could not sync memory images from Wordbase. Please try again.",
       syncWordbaseSignInRequired: "Sign in to sync memory images from Wordbase.",
+      syncWordbaseQuotaExceeded:
+        "Database quota exceeded, so sync is temporarily unavailable. Try again later or check usage in the Supabase dashboard.",
       prepareTryQuizCta: "Use Text Quiz Instead",
       prepareRetryCta: "Try Again",
       prepareAddWordsCta: "Add Words with Photo",

@@ -1,4 +1,5 @@
 import { normalizeTerm, REVIEW_RESULTS } from "../words/wordTypes.js";
+import { buildImagePrefetchQueue } from "./prefetchImageReviewPool.js";
 
 export const REVIEW_INTERVAL_DAYS_BY_LEVEL = {
   0: 1,
@@ -26,6 +27,16 @@ export function filterWordsToGroupScope(words, { isGroupScopeActive = false, map
   const mappedSet = new Set(mappedTerms.map((value) => normalizeTerm(value)).filter(Boolean));
 
   return words.filter((word) => mappedSet.has(normalizeTerm(word.term)));
+}
+
+export function resolveReviewSyncTerms(
+  allWords,
+  { isGroupScopeActive = false, mappedTerms = [], mistakesOnly = false } = {},
+) {
+  const reviewWords = filterWordsToGroupScope(allWords, { isGroupScopeActive, mappedTerms });
+  const { sessionWords } = getReviewSessionWords(reviewWords, { mistakesOnly });
+
+  return buildImagePrefetchQueue(sessionWords, reviewWords).map((word) => word.term);
 }
 
 export function getDueWords(words, now = new Date()) {

@@ -11,6 +11,10 @@ function isDuplicateTermError(error) {
 const WORD_INSERT_SELECT =
   "id,user_id,term,definition,translation,pronunciation,part_of_speech,example,example_translation,notes,tags,source,review_level,next_review_at,last_reviewed_at,correct_count,incorrect_count,last_result,is_mistake,last_mistake_at,mistake_count,memory_tips_by_locale,memory_image,created_at,updated_at";
 
+const WORD_MEMORY_SYNC_SELECT = "id,user_id,term,memory_tips_by_locale,memory_image";
+
+const MEMORY_BACKFILL_CONCURRENCY = 8;
+
 function hasMemoryTipsValue(value) {
   if (!value || typeof value !== "object") {
     return false;
@@ -62,7 +66,7 @@ function buildMappedWordsByTerm(mappedWords) {
 
 async function backfillExistingWordMemory(rlsClient, existingRows, mappedWords) {
   const mappedByTerm = buildMappedWordsByTerm(mappedWords);
-  const updatedRows = [];
+  const pendingUpdates = [];
 
   for (const row of existingRows) {
     const termKey = normalizeTermKey(row.term);
@@ -76,16 +80,31 @@ async function backfillExistingWordMemory(rlsClient, existingRows, mappedWords) 
       continue;
     }
 
-    const { data, error } = await rlsClient
-      .from("words")
-      .update(update)
-      .eq("id", row.id)
-      .select(WORD_INSERT_SELECT)
-      .single();
+    pendingUpdates.push({ row, update });
+  }
 
-    if (!error && data) {
-      updatedRows.push(data);
-    }
+  const updatedRows = [];
+
+  for (let index = 0; index < pendingUpdates.length; index += MEMORY_BACKFILL_CONCURRENCY) {
+    const chunk = pendingUpdates.slice(index, index + MEMORY_BACKFILL_CONCURRENCY);
+    const chunkResults = await Promise.all(
+      chunk.map(async ({ row, update }) => {
+        const { data, error } = await rlsClient
+          .from("words")
+          .update(update)
+          .eq("id", row.id)
+          .select(WORD_MEMORY_SYNC_SELECT)
+          .single();
+
+        if (error || !data) {
+          return null;
+        }
+
+        return data;
+      }),
+    );
+
+    updatedRows.push(...chunkResults.filter(Boolean));
   }
 
   return updatedRows;
@@ -176,6 +195,15 @@ export function mapMappedWordToWordsInsertRow(mappedWord, userId, now = new Date
   };
 }
 
+export function mapWordMemorySyncRowToClient(row) {
+  return {
+    id: row.id,
+    term: row.term,
+    memoryTipsByLocale: row.memory_tips_by_locale ?? {},
+    memoryImage: sanitizeMemoryImage(row.memory_image),
+  };
+}
+
 export function mapWordRowToClient(row) {
   return {
     id: row.id,
@@ -220,6 +248,59 @@ async function fetchExistingWordsByUser(rlsClient, userId) {
     const { data, error } = await rlsClient
       .from("words")
       .select(WORD_INSERT_SELECT)
+      .eq("user_id", userId)
+      .order("created_at", { ascending: false })
+      .range(from, from + EXISTING_WORDS_PAGE_SIZE - 1);
+
+    if (error) {
+      throw new Error(error.message || "Failed to load existing words.");
+    }
+
+    const page = data ?? [];
+    rows.push(...page);
+
+    if (page.length < EXISTING_WORDS_PAGE_SIZE) {
+      break;
+    }
+
+    from += EXISTING_WORDS_PAGE_SIZE;
+  }
+
+  return rows;
+}
+
+async function fetchExistingWordsForMemorySync(rlsClient, userId, { terms = null } = {}) {
+  if (Array.isArray(terms) && terms.length > 0) {
+    const uniqueTerms = [...new Set(terms.map((term) => String(term ?? "").trim()).filter(Boolean))];
+    const rows = [];
+
+    for (let index = 0; index < uniqueTerms.length; index += 100) {
+      const chunk = uniqueTerms.slice(index, index + 100);
+      const { data, error } = await rlsClient
+        .from("words")
+        .select(WORD_MEMORY_SYNC_SELECT)
+        .eq("user_id", userId)
+        .in("term", chunk);
+
+      if (error) {
+        throw new Error(error.message || "Failed to load existing words.");
+      }
+
+      rows.push(...(data ?? []));
+    }
+
+    if (rows.length > 0) {
+      return rows;
+    }
+  }
+
+  const rows = [];
+  let from = 0;
+
+  while (true) {
+    const { data, error } = await rlsClient
+      .from("words")
+      .select(WORD_MEMORY_SYNC_SELECT)
       .eq("user_id", userId)
       .order("created_at", { ascending: false })
       .range(from, from + EXISTING_WORDS_PAGE_SIZE - 1);
@@ -417,13 +498,27 @@ export async function importMappedWordsForUser(
     .map(mapWordRowToClient);
 }
 
+function filterMappedWordsByTerms(mappedWords, terms) {
+  if (!Array.isArray(terms) || terms.length === 0) {
+    return mappedWords ?? [];
+  }
+
+  const termKeys = new Set(terms.map((term) => normalizeTermKey(term)).filter(Boolean));
+
+  return (mappedWords ?? []).filter((mappedWord) => {
+    const termKey = normalizeTermKey(mappedWord?.term);
+    return termKey && termKeys.has(termKey);
+  });
+}
+
 export async function syncGroupWordMemoryForUser(
   rlsClient,
   userId,
   mappedWords,
   { terms = null } = {},
 ) {
-  const existingRows = await fetchExistingWordsByUser(rlsClient, userId);
+  const scopedMappedWords = filterMappedWordsByTerms(mappedWords, terms);
+  const existingRows = await fetchExistingWordsForMemorySync(rlsClient, userId, { terms });
   const existingByTerm = buildExistingWordsByTerm(existingRows);
   let rowsToBackfill = [];
 
@@ -431,13 +526,13 @@ export async function syncGroupWordMemoryForUser(
     const termKeys = new Set(terms.map((term) => normalizeTermKey(term)).filter(Boolean));
     rowsToBackfill = existingRows.filter((row) => termKeys.has(normalizeTermKey(row.term)));
   } else {
-    rowsToBackfill = collectMappedWordsForTerms(mappedWords, existingByTerm, new Set());
+    rowsToBackfill = collectMappedWordsForTerms(scopedMappedWords, existingByTerm, new Set());
   }
 
   const backfilledRows = await backfillExistingWordMemory(
     rlsClient,
     rowsToBackfill,
-    mappedWords,
+    scopedMappedWords,
   );
 
   for (const row of backfilledRows) {
@@ -449,5 +544,5 @@ export async function syncGroupWordMemoryForUser(
 
   return rowsToBackfill
     .map((row) => existingByTerm.get(normalizeTermKey(row.term)) ?? row)
-    .map(mapWordRowToClient);
+    .map(mapWordMemorySyncRowToClient);
 }
