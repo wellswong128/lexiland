@@ -126,7 +126,7 @@ function sanitizeMemoryImage(value) {
     return null;
   }
 
-  const imageUrl = String(value.imageUrl ?? "").trim();
+  const imageUrl = String(value.imageUrl ?? value.url ?? "").trim();
   if (!imageUrl || imageUrl.length > 2048) {
     return null;
   }

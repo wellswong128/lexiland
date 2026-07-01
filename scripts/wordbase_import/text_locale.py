@@ -32,6 +32,46 @@ def contains_chinese(text: str | None) -> bool:
     return any("CJK" in unicodedata.name(char, "") for char in value)
 
 
+def is_han_character(char: str) -> bool:
+    if len(char) != 1:
+        return False
+    if CJK_PATTERN.fullmatch(char):
+        return True
+    return "CJK" in unicodedata.name(char, "")
+
+
+def count_han_characters(text: str | None) -> int:
+    return sum(1 for char in str(text or "") if is_han_character(char))
+
+
+def term_word_count(term: str | None) -> int:
+    return len([part for part in str(term or "").split() if part.strip()])
+
+
+def has_incomplete_multiword_translation(
+    entry: dict,
+    *,
+    max_han_chars: int = 3,
+    min_term_words: int = 3,
+) -> bool:
+    term = str(entry.get("term", "")).strip()
+    translation = str(entry.get("translation", "")).strip()
+
+    if term_word_count(term) < min_term_words:
+        return False
+
+    if not translation or not contains_chinese(translation):
+        return False
+
+    if has_placeholder_translation(translation):
+        return True
+
+    if is_incomplete_exam_phrase_translation(term, translation):
+        return True
+
+    return count_han_characters(translation) <= max_han_chars
+
+
 def looks_like_english_text(text: str | None) -> bool:
     value = str(text or "").strip()
     if not value or contains_chinese(value):

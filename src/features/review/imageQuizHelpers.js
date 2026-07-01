@@ -1,4 +1,5 @@
 import { readWordMemoryImage } from "../words/wordImageApi.js";
+import { hasMemoryImageUrl } from "../words/memoryImageUtils.js";
 import { getQuizOptionLabel } from "./quizHelpers.js";
 
 function shuffleItems(items) {
@@ -6,7 +7,7 @@ function shuffleItems(items) {
 }
 
 export function wordHasMemoryImage(word) {
-  return Boolean(readWordMemoryImage(word)?.imageUrl);
+  return hasMemoryImageUrl(readWordMemoryImage(word));
 }
 
 export function getImageReviewReadiness(sessionWords, allWords) {

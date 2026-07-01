@@ -1,7 +1,12 @@
+import { readWordMemoryTips } from "../words/memoryTipsApi.js";
+import {
+  fetchWordImageWithCache,
+  readWordMemoryImage,
+} from "../words/wordImageApi.js";
 import {
   fetchWordMemoryWithCache,
-  readWordMemory,
 } from "../words/wordMemoryApi.js";
+import { hasMemoryImageUrl } from "../words/memoryImageUtils.js";
 
 const PREFETCH_CONCURRENCY = 4;
 
@@ -25,9 +30,44 @@ async function runWithConcurrency(items, worker, limit = PREFETCH_CONCURRENCY) {
   await Promise.all(workers);
 }
 
+function needsWordbaseImage(word) {
+  return !hasMemoryImageUrl(readWordMemoryImage(word));
+}
+
+function needsWordbaseTips(word, locale) {
+  return !readWordMemoryTips(word, locale);
+}
+
 function needsWordbaseMemory(word, locale) {
-  const saved = readWordMemory(word, locale);
-  return !saved.memoryImage?.imageUrl || !saved.memoryTips;
+  return needsWordbaseImage(word) || needsWordbaseTips(word, locale);
+}
+
+async function prefetchWordMemoryFromWordbase(word, { locale, updateWord, user }) {
+  const needsImage = needsWordbaseImage(word);
+  const needsTips = needsWordbaseTips(word, locale);
+
+  if (!needsImage && !needsTips) {
+    return;
+  }
+
+  if (needsImage && !needsTips) {
+    const result = await fetchWordImageWithCache(word, { user, wordbaseOnly: true });
+
+    if (result.changes) {
+      await updateWord(word.id, result.changes);
+    }
+
+    return;
+  }
+
+  const result = await fetchWordMemoryWithCache(word, locale, {
+    user,
+    wordbaseOnly: true,
+  });
+
+  if (result.changes) {
+    await updateWord(word.id, result.changes);
+  }
 }
 
 export async function prefetchSessionMemoryImages(
@@ -39,14 +79,7 @@ export async function prefetchSessionMemoryImages(
 
   await runWithConcurrency(queue, async (word) => {
     try {
-      const result = await fetchWordMemoryWithCache(word, locale, {
-        user,
-        wordbaseOnly: true,
-      });
-
-      if (result.changes) {
-        await updateWord(word.id, result.changes);
-      }
+      await prefetchWordMemoryFromWordbase(word, { locale, updateWord, user });
     } catch (error) {
       console.warn("Could not prefetch review memory from wordbase.", word.term, error);
     } finally {
@@ -54,4 +87,8 @@ export async function prefetchSessionMemoryImages(
       onProgress?.(completed, queue.length);
     }
   });
+}
+
+export function wordNeedsReviewMemoryImage(word, locale = "zh-Hant") {
+  return needsWordbaseMemory(word, locale);
 }

@@ -4,6 +4,7 @@ import {
   readWordMemoryImage,
   persistWordMemoryImage,
 } from "./wordImageApi.js";
+import { normalizeMemoryImage } from "./memoryImageUtils.js";
 import {
   canUseWordbase,
   contributeMemoryImageToWordbase,
@@ -65,7 +66,9 @@ async function readWordbaseMemory(word, locale, user) {
       memoryTips: hasWordbaseMemoryTips(entry, locale)
         ? stripSavedAt(entry.memoryTipsByLocale[locale])
         : null,
-      memoryImage: hasWordbaseMemoryImage(entry) ? stripSavedAt(entry.memoryImage) : null,
+      memoryImage: hasWordbaseMemoryImage(entry)
+        ? stripSavedAt(normalizeMemoryImage(entry.memoryImage))
+        : null,
     };
   } catch (wordbaseError) {
     console.warn("Could not read memory assist from wordbase.", wordbaseError);
@@ -166,9 +169,12 @@ export async function fetchWordMemoryWithCache(
     tasks.push(
       fetchWordImageWithCache(word, { forceRefresh, user, wordbaseOnly })
         .then((result) => {
-          memoryImage = result;
+          memoryImage = normalizeMemoryImage(result) ?? memoryImage;
           imageFromCache = Boolean(result.fromCache || result.fromWordbase);
-          changeList.push(result.changes);
+
+          if (result.changes) {
+            changeList.push(result.changes);
+          }
         })
         .catch((error) => {
           imageError = error.message;

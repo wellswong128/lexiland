@@ -125,10 +125,10 @@ const emptyMemoryEntry = {
 
 export function hydrateWordAiMemory(word, storage = getDefaultStorage(), store = null) {
   const entry = store ? (store[word.id] ?? emptyMemoryEntry) : getWordEntry(word.id, storage);
-  const wordImage = String(word.memoryImage?.imageUrl ?? "").trim()
+  const wordImage = String(word.memoryImage?.imageUrl ?? word.memoryImage?.url ?? "").trim()
     ? word.memoryImage
     : null;
-  const storedImage = String(entry.memoryImage?.imageUrl ?? "").trim()
+  const storedImage = String(entry.memoryImage?.imageUrl ?? entry.memoryImage?.url ?? "").trim()
     ? entry.memoryImage
     : null;
 

@@ -12,6 +12,7 @@ import {
   fetchWordbaseEntry,
   hasWordbaseMemoryImage,
 } from "./wordbaseApi.js";
+import { hasMemoryImageUrl, normalizeMemoryImage } from "./memoryImageUtils.js";
 
 export const WORD_IMAGE_CACHE_KEY = "lexiland.wordImageCache.v1";
 
@@ -78,19 +79,21 @@ function readLegacyCachedWordImage(word, storage = getDefaultStorage()) {
 }
 
 export function readWordMemoryImage(word, storage = getDefaultStorage()) {
-  if (word.memoryImage?.imageUrl) {
-    return stripSavedAt(word.memoryImage);
+  const fromWord = normalizeMemoryImage(word.memoryImage);
+
+  if (fromWord) {
+    return fromWord;
   }
 
-  const fromStore = readStoredMemoryImage(word.id, storage);
+  const fromStore = normalizeMemoryImage(readStoredMemoryImage(word.id, storage));
 
-  if (fromStore?.imageUrl) {
-    return stripSavedAt(fromStore);
+  if (fromStore) {
+    return fromStore;
   }
 
-  const legacyImage = readLegacyCachedWordImage(word, storage);
+  const legacyImage = normalizeMemoryImage(readLegacyCachedWordImage(word, storage));
 
-  if (legacyImage?.imageUrl) {
+  if (legacyImage) {
     writeStoredMemoryImage(word.id, legacyImage, storage);
     return legacyImage;
   }
@@ -173,7 +176,7 @@ export async function fetchWordImageWithCache(
         const entry = await fetchWordbaseEntry(word.term);
 
         if (hasWordbaseMemoryImage(entry)) {
-          const memoryImage = stripSavedAt(entry.memoryImage);
+          const memoryImage = normalizeMemoryImage(entry.memoryImage);
           const changes = persistWordMemoryImage(word, memoryImage);
 
           return {

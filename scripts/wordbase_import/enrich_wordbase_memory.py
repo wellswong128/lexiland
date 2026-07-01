@@ -42,7 +42,18 @@ def parse_args() -> argparse.Namespace:
     )
     parser.add_argument("--dry-run", action="store_true", help="List affected rows without writing.")
     parser.add_argument("--login", action="store_true", help="Force a new Supabase OTP login.")
-    parser.add_argument("--term", type=str, default="", help="Process only one normalized term.")
+    parser.add_argument(
+        "--term",
+        action="append",
+        default=[],
+        help="Process one term (repeatable). Matched by normalized term_key.",
+    )
+    parser.add_argument(
+        "--terms",
+        type=str,
+        default="",
+        help="Comma- or newline-separated terms to process.",
+    )
     parser.add_argument(
         "--locale",
         type=str,
@@ -74,6 +85,52 @@ def parse_args() -> argparse.Namespace:
 
 def utc_now() -> str:
     return datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+
+
+def resolve_target_term_keys(args: argparse.Namespace) -> list[str]:
+    raw_terms: list[str] = []
+
+    for term in args.term or []:
+        value = str(term or "").strip()
+        if value:
+            raw_terms.append(value)
+
+    if args.terms:
+        for part in str(args.terms).replace("\n", ",").split(","):
+            value = part.strip()
+            if value:
+                raw_terms.append(value)
+
+    term_keys: list[str] = []
+    seen: set[str] = set()
+
+    for term in raw_terms:
+        term_key = normalize_term(term)
+        if term_key and term_key not in seen:
+            seen.add(term_key)
+            term_keys.append(term_key)
+
+    return term_keys
+
+
+def should_skip_for_progress(
+    record: dict,
+    entry: dict,
+    locale: str,
+    args: argparse.Namespace,
+) -> bool:
+    if args.no_resume or record.get("status") != "complete":
+        return False
+
+    if resolve_target_term_keys(args):
+        missing = missing_memory_parts(entry, locale)
+        if args.tips_only:
+            missing = [part for part in missing if part == "memory_tips"]
+        elif args.images_only:
+            missing = [part for part in missing if part == "memory_image"]
+        return not missing
+
+    return True
 
 
 def load_progress(path: Path) -> dict:
@@ -181,23 +238,45 @@ def row_needs_enrich(
 
 
 def list_wordbase_rows(client, args: argparse.Namespace, locale: str) -> list[dict]:
+    term_keys = resolve_target_term_keys(args)
+
     if args.group_code:
         wordbase_ids = fetch_group_wordbase_ids(client, args.group_code)
         rows = fetch_wordbase_rows_by_ids(client, wordbase_ids)
+        if term_keys:
+            allowed = set(term_keys)
+            rows = [
+                row
+                for row in rows
+                if normalize_term(row.get("term_key") or row.get("term")) in allowed
+            ]
+    elif term_keys:
+        response = (
+            client.table("wordbase")
+            .select(WORDBASE_COLUMNS)
+            .in_("term_key", term_keys)
+            .execute()
+        )
+        rows = response.data or []
+        found_keys = {
+            normalize_term(row.get("term_key") or row.get("term"))
+            for row in rows
+        }
+        for term_key in term_keys:
+            if term_key not in found_keys:
+                print(f"  warning: no wordbase row for term_key={term_key!r}")
     else:
         rows = []
         start = 0
         page_size = 1000
 
         while True:
-            query = client.table("wordbase").select(WORDBASE_COLUMNS)
-            if args.term:
-                query = query.eq("term_key", normalize_term(args.term))
-                response = query.execute()
-                rows.extend(response.data or [])
-                break
-
-            response = query.range(start, start + page_size - 1).execute()
+            response = (
+                client.table("wordbase")
+                .select(WORDBASE_COLUMNS)
+                .range(start, start + page_size - 1)
+                .execute()
+            )
             batch = response.data or []
             rows.extend(batch)
             if len(batch) < page_size:
@@ -253,7 +332,7 @@ def enrich_row(
         {"status": "pending", "missing": [], "errors": {}, "completed_at": None},
     )
 
-    if not args.no_resume and record.get("status") == "complete":
+    if should_skip_for_progress(record, entry, locale, args):
         print(f"  [{term}] skipped (already complete in progress)")
         return
 
@@ -390,6 +469,9 @@ def main() -> int:
         print(f"  locale: {locale}")
         if args.group_code:
             print(f"  group: {args.group_code}")
+        target_term_keys = resolve_target_term_keys(args)
+        if target_term_keys:
+            print(f"  terms: {', '.join(target_term_keys)}")
         print(f"  mode: {'dry-run' if args.dry_run else 'write'}")
         print(f"  to process: {len(rows)}")
         print(f"  progress: {args.progress_file}")

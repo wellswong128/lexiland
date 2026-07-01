@@ -15,7 +15,7 @@ import { REVIEW_RESULTS } from "../features/words/wordTypes.js";
 
 function QuizPage() {
   const { locale, t } = useLocale();
-  const { ensureActiveGroupWordsSynced, isActiveGroupSyncing, updateWord, user, words } = useWordsContext();
+  const { ensureActiveGroupWordsSynced, isActiveGroupSyncing, syncActiveGroupWordMemory, updateWord, user, words } = useWordsContext();
   const {
     activeGroup,
     isLoadingScope,
@@ -85,16 +85,22 @@ function QuizPage() {
 
     let cancelled = false;
 
-    void prefetchSessionMemoryImages(reviewWords, { locale, updateWord, user }).catch((error) => {
-      if (!cancelled) {
-        console.warn("Could not prefetch quiz memory images from wordbase.", error);
+    void syncActiveGroupWordMemory?.().finally(() => {
+      if (cancelled) {
+        return;
       }
+
+      void prefetchSessionMemoryImages(reviewWords, { locale, updateWord, user }).catch((error) => {
+        if (!cancelled) {
+          console.warn("Could not prefetch quiz memory images from wordbase.", error);
+        }
+      });
     });
 
     return () => {
       cancelled = true;
     };
-  }, [locale, reviewWordIdsKey, reviewWords, updateWord, user]);
+  }, [locale, reviewWordIdsKey, reviewWords, syncActiveGroupWordMemory, updateWord, user]);
 
   useEffect(() => {
     if (isComplete || feedback || !currentQuestion?.word?.term) {

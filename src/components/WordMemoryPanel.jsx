@@ -8,6 +8,7 @@ import {
   fetchWordMemoryWithCache,
   readWordMemory,
 } from "../features/words/wordMemoryApi.js";
+import { hasMemoryImageUrl } from "../features/words/memoryImageUtils.js";
 import WordImageWithTranslationOverlay from "./WordImageWithTranslationOverlay.jsx";
 
 function WordMemoryPanel({
@@ -80,7 +81,7 @@ function WordMemoryPanel({
   }
 
   function needsMemoryFromWordbase(saved = readWordMemory(word, locale)) {
-    return !saved.memoryTips || !saved.memoryImage?.imageUrl;
+    return !saved.memoryTips || !hasMemoryImageUrl(saved.memoryImage);
   }
 
   async function loadMissingMemoryFromWordbase() {
@@ -92,7 +93,7 @@ function WordMemoryPanel({
 
     const requestId = autoLoadRequestRef.current + 1;
     autoLoadRequestRef.current = requestId;
-    const needsImage = !saved.memoryImage?.imageUrl;
+    const needsImage = !hasMemoryImageUrl(saved.memoryImage);
     const needsTips = !saved.memoryTips;
 
     try {
@@ -163,14 +164,16 @@ function WordMemoryPanel({
       autoLoadRequestRef.current += 1;
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [autoLoad, locale, user, word.id]);
+  }, [autoLoad, locale, user, word.id, word.memoryImage, word.memoryTipsByLocale]);
 
   if (!word) {
     return null;
   }
 
-  const hasContent = Boolean(memoryTips || memoryImage?.imageUrl);
-  const showLoadingPlaceholder = autoLoad && isLoading && !hasContent;
+  const hasContent = Boolean(memoryTips || hasMemoryImageUrl(memoryImage));
+  const showLoadingPlaceholder = autoLoad && isLoading && !hasMemoryImageUrl(memoryImage);
+  const showImageLoadingPlaceholder =
+    autoLoad && isLoading && !hasMemoryImageUrl(memoryImage) && Boolean(memoryTips);
 
   return (
     <section className="rounded-2xl border border-indigo-200/80 bg-gradient-to-br from-sky-50/80 via-white to-violet-50/80 p-4 sm:p-5">
@@ -214,6 +217,10 @@ function WordMemoryPanel({
         <p className="mt-4 text-sm font-medium text-slate-500">{t("wordMemory.loading")}</p>
       ) : null}
 
+      {showImageLoadingPlaceholder ? (
+        <p className="mt-4 text-sm font-medium text-slate-500">{t("wordMemory.loadingImage")}</p>
+      ) : null}
+
       {hasContent ? (
         <div className="mt-4 space-y-4">
           {compact ? (
@@ -228,7 +235,7 @@ function WordMemoryPanel({
 
           {isExpanded ? (
             <>
-              {memoryImage?.imageUrl ? (
+              {hasMemoryImageUrl(memoryImage) ? (
                 showTranslationOverlay ? (
                   <WordImageWithTranslationOverlay
                     alt={t("wordImage.alt", { term: word.term })}

@@ -94,7 +94,7 @@ function FlashcardsPrepareErrorActions({
 
 function FlashcardsPage() {
   const { locale, t } = useLocale();
-  const { ensureActiveGroupWordsSynced, isActiveGroupSyncing, updateWord, user, words } = useWordsContext();
+  const { ensureActiveGroupWordsSynced, isActiveGroupSyncing, syncActiveGroupWordMemory, updateWord, user, words } = useWordsContext();
   const {
     activeGroup,
     isLoadingScope,
@@ -329,20 +329,26 @@ function FlashcardsPage() {
 
     let cancelled = false;
 
-    void prefetchSessionMemoryImages(sessionWords, {
-      locale,
-      updateWord,
-      user,
-    }).catch((error) => {
-      if (!cancelled) {
-        console.warn("Could not prefetch review memory images from wordbase.", error);
+    void syncActiveGroupWordMemory?.().finally(() => {
+      if (cancelled) {
+        return;
       }
+
+      void prefetchSessionMemoryImages(sessionWords, {
+        locale,
+        updateWord,
+        user,
+      }).catch((error) => {
+        if (!cancelled) {
+          console.warn("Could not prefetch review memory images from wordbase.", error);
+        }
+      });
     });
 
     return () => {
       cancelled = true;
     };
-  }, [hasStarted, sessionWords, updateWord, user]);
+  }, [hasStarted, locale, sessionWords, syncActiveGroupWordMemory, updateWord, user]);
 
   useEffect(() => {
     if (!hasStarted || isComplete || feedback || imageQuestions.length === 0) {

@@ -3,6 +3,7 @@ import {
   pickChineseText,
 } from "../../../lib/vocabularyLocale.js";
 import { hasSupabaseConfig, supabase } from "../../lib/supabaseClient.js";
+import { hasMemoryImageUrl, normalizeMemoryImage } from "./memoryImageUtils.js";
 import { normalizeTerm } from "./wordTypes.js";
 
 const WORDBASE_COLUMNS = `
@@ -45,7 +46,7 @@ function mapWordbaseRow(row) {
     tags: row.tags ?? [],
     source: row.source,
     memoryTipsByLocale: row.memory_tips_by_locale ?? {},
-    memoryImage: row.memory_image ?? null,
+    memoryImage: normalizeMemoryImage(row.memory_image),
     createdAt: row.created_at,
     updatedAt: row.updated_at,
   };
@@ -103,7 +104,7 @@ export function hasWordbaseMemoryTips(entry, locale) {
 }
 
 export function hasWordbaseMemoryImage(entry) {
-  return Boolean(entry?.memoryImage?.imageUrl);
+  return hasMemoryImageUrl(entry?.memoryImage);
 }
 
 export async function fetchWordbaseEntry(term) {

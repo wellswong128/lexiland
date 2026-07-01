@@ -976,6 +976,7 @@ export function useWords({ isAuthLoading = false, user = null } = {}, storage) {
     clearAutoImportedNotice,
     ensureActiveGroupWordsSynced,
     resetAllWords,
+    syncActiveGroupWordMemory: runActiveGroupMemorySync,
     syncActiveGroupWords: runActiveGroupSync,
     syncLocalWordsToSupabase,
     words,
