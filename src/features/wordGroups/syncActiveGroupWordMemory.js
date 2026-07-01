@@ -1,4 +1,6 @@
 import { fetchUserActiveGroupWords } from "./wordGroupsApi.js";
+import { readWordMemoryImage } from "../words/wordImageApi.js";
+import { hasMemoryImageUrl, normalizeMemoryImage } from "../words/memoryImageUtils.js";
 import { normalizeTerm } from "../words/wordTypes.js";
 import { loadWordScopeMode, WORD_SCOPE_MODES } from "./wordScopeMode.js";
 
@@ -23,7 +25,7 @@ function wordHasMemoryTips(word, locale) {
 }
 
 function wordHasMemoryImage(word) {
-  return Boolean(String(word.memoryImage?.imageUrl ?? "").trim());
+  return hasMemoryImageUrl(readWordMemoryImage(word));
 }
 
 export function buildWordMemoryChangesFromMapped(word, mappedWord) {
@@ -44,9 +46,12 @@ export function buildWordMemoryChangesFromMapped(word, mappedWord) {
     changes.memoryTipsByLocale = mergedTips;
   }
 
-  if (!wordHasMemoryImage(word) && mappedWord.memoryImage?.imageUrl) {
-    changes.memoryImage = stripSavedAt(mappedWord.memoryImage);
-    dirty = true;
+  if (!wordHasMemoryImage(word)) {
+    const mappedImage = normalizeMemoryImage(mappedWord.memoryImage);
+    if (mappedImage) {
+      changes.memoryImage = stripSavedAt(mappedImage);
+      dirty = true;
+    }
   }
 
   return dirty ? changes : null;

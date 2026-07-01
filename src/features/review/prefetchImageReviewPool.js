@@ -3,18 +3,22 @@ import { fetchWordImageWithCache } from "../words/wordImageApi.js";
 import { buildWordMemoryImageChanges } from "../../lib/wordAiMemoryStorage.js";
 import { normalizeMemoryImage } from "../words/memoryImageUtils.js";
 
-const EXTRA_PREFETCH_LIMIT = 12;
+export const IMAGE_PREFETCH_EXTRA_LIMIT = 12;
 
 function applyWordChanges(words, wordId, changes) {
   return words.map((word) => (word.id === wordId ? { ...word, ...changes } : word));
 }
 
-function buildPrefetchQueue(sessionWords, allWords) {
+export function buildImagePrefetchQueue(
+  sessionWords,
+  allWords,
+  extraLimit = IMAGE_PREFETCH_EXTRA_LIMIT,
+) {
   const queue = [...sessionWords];
   const queuedIds = new Set(sessionWords.map((word) => word.id));
 
   for (const word of allWords) {
-    if (queue.length >= sessionWords.length + EXTRA_PREFETCH_LIMIT) {
+    if (queue.length >= sessionWords.length + extraLimit) {
       break;
     }
 
@@ -41,8 +45,8 @@ async function fetchWordImageIntoPool(word, workingWords, { updateWord, user } =
 
   const changes = result.changes ?? buildWordMemoryImageChanges(memoryImage);
 
-  if (result.changes) {
-    await updateWord(word.id, result.changes);
+  if (updateWord) {
+    await updateWord(word.id, changes);
   }
 
   return applyWordChanges(workingWords, word.id, changes);
@@ -54,7 +58,7 @@ export async function prefetchImageReviewPool(
   { onProgress, updateWord, user } = {},
 ) {
   let workingWords = allWords;
-  const queue = buildPrefetchQueue(sessionWords, allWords);
+  const queue = buildImagePrefetchQueue(sessionWords, allWords);
   let sessionProgress = 0;
 
   for (let index = 0; index < queue.length; index += 1) {

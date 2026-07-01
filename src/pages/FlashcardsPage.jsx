@@ -157,8 +157,8 @@ function FlashcardsPage() {
     [mistakesOnly, reviewWords],
   );
   const imageReviewReadiness = useMemo(
-    () => getImageReviewReadiness(sessionWords, words),
-    [sessionWords, words],
+    () => getImageReviewReadiness(sessionWords, reviewWords),
+    [reviewWords, sessionWords],
   );
   const canQuiz = reviewWords.length >= 2;
   const [hasStarted, setHasStarted] = useState(false);
@@ -284,7 +284,7 @@ function FlashcardsPage() {
         user,
       });
 
-      const { questions } = await prefetchImageReviewPool(sessionWords, words, {
+      const { questions } = await prefetchImageReviewPool(sessionWords, reviewWords, {
         onProgress: (current, total) => {
           setPrepareProgress({ current, total });
         },
@@ -373,6 +373,7 @@ function FlashcardsPage() {
       }
 
       void prefetchSessionMemoryImages(sessionWords, {
+        allWords: reviewWords,
         locale,
         updateWord,
         user,
@@ -386,7 +387,7 @@ function FlashcardsPage() {
     return () => {
       cancelled = true;
     };
-  }, [hasStarted, locale, sessionWords, syncActiveGroupWordMemory, updateWord, user]);
+  }, [hasStarted, locale, reviewWords, sessionWords, syncActiveGroupWordMemory, updateWord, user]);
 
   useEffect(() => {
     if (!hasStarted || isComplete || feedback || imageQuestions.length === 0) {

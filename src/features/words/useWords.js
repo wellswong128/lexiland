@@ -184,6 +184,23 @@ function mergeWordAiMemory(word, sourceWord) {
   };
 }
 
+function applyPendingMemoryUpdatesToState(pendingUpdates, storage, setWords) {
+  if (!Array.isArray(pendingUpdates) || pendingUpdates.length === 0) {
+    return;
+  }
+
+  for (const { wordId, changes } of pendingUpdates) {
+    persistWordMemoryChangesToStorage(wordId, changes, storage);
+  }
+
+  setWords((currentWords) =>
+    currentWords.map((word) => {
+      const pending = pendingUpdates.find((entry) => entry.wordId === word.id);
+      return pending ? applyWordChanges(word, pending.changes) : word;
+    }),
+  );
+}
+
 function hasRemoteWordChanges(changes) {
   return Object.keys(mapWordChangesToUpdate(changes)).length > 0;
 }
@@ -690,9 +707,7 @@ export function useWords({ isAuthLoading = false, user = null } = {}, storage) {
         null,
         {
           batchUpdater: async (pendingUpdates) => {
-            for (const { wordId, changes } of pendingUpdates) {
-              persistWordMemoryChangesToStorage(wordId, changes, storage);
-            }
+            applyPendingMemoryUpdatesToState(pendingUpdates, storage, setWords);
 
             const savedWords = await batchUpdateWordMemoryInSupabase(pendingUpdates);
             if (savedWords.length > 0) {
@@ -828,9 +843,7 @@ export function useWords({ isAuthLoading = false, user = null } = {}, storage) {
             fullBatch.mappedWords,
             {
               batchUpdater: async (pendingUpdates) => {
-                for (const { wordId, changes } of pendingUpdates) {
-                  persistWordMemoryChangesToStorage(wordId, changes, storage);
-                }
+                applyPendingMemoryUpdatesToState(pendingUpdates, storage, setWords);
 
                 const savedWords = await batchUpdateWordMemoryInSupabase(pendingUpdates);
                 if (savedWords.length > 0) {
