@@ -95,8 +95,13 @@ function normalizeRole(role) {
     return ROLES.GUEST;
   }
 
-  const lower = role.toLowerCase();
+  const lower = role.trim().toLowerCase();
   return Object.values(ROLES).includes(lower) ? lower : ROLES.GUEST;
+}
+
+function normalizeAuthenticatedRole(role) {
+  const normalizedRole = normalizeRole(role);
+  return normalizedRole === ROLES.GUEST ? ROLES.STUDENT : normalizedRole;
 }
 
 export function getRoleFromUser(user) {
@@ -104,13 +109,7 @@ export function getRoleFromUser(user) {
     return ROLES.GUEST;
   }
 
-  const candidateRole =
-    user?.app_metadata?.role ??
-    user?.user_metadata?.role ??
-    user?.role ??
-    ROLES.STUDENT;
-
-  return normalizeRole(candidateRole);
+  return normalizeAuthenticatedRole(user?.app_metadata?.role);
 }
 
 function patternToRegex(pattern) {
