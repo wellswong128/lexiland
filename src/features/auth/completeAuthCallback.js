@@ -1,4 +1,5 @@
 import { supabase, usesAutoSessionDetection } from "../../lib/supabaseClient.js";
+import { isMobileWebBrowser } from "../../lib/pwaPlatform.js";
 import {
   clearPkceVerifierBackup,
   restorePkceVerifierBackup,
@@ -139,6 +140,10 @@ async function completeAuthCallbackFromUrlInternal() {
 
   if (authCode) {
     restorePkceVerifierBackup();
+
+    if (isMobileWebBrowser()) {
+      restorePkceVerifierBackup();
+    }
 
     if (usesAutoSessionDetection) {
       const { data, error } = await supabase.auth.getSession();

@@ -13,6 +13,24 @@ export function canUseGoogleIdentity() {
   return Boolean(getGoogleClientId()) && typeof window !== "undefined";
 }
 
+export function shouldFallbackGoogleSignInToOAuth(error) {
+  const message = String(error?.message || error || "").toLowerCase();
+
+  if (!message) {
+    return false;
+  }
+
+  if (message.includes("cancelled") || message.includes("canceled")) {
+    return false;
+  }
+
+  if (message.includes("not configured")) {
+    return false;
+  }
+
+  return true;
+}
+
 export function loadGoogleIdentityScript() {
   if (typeof window === "undefined") {
     return Promise.reject(new Error("Google sign-in is only available in the browser."));

@@ -13,7 +13,7 @@ import {
   waitForPkceVerifier,
 } from "./pkceStorage.js";
 import { resolveAuthRedirectUrlAsync } from "./authRedirect.js";
-import { canUseGoogleIdentity, requestGoogleIdToken } from "./googleIdentity.js";
+import { canUseGoogleIdentity, requestGoogleIdToken, shouldFallbackGoogleSignInToOAuth } from "./googleIdentity.js";
 import { hasSupabaseConfig, supabase } from "../../lib/supabaseClient.js";
 import { isMobileWebBrowser } from "../../lib/pwaPlatform.js";
 
@@ -276,7 +276,7 @@ export function useSupabaseAuth() {
 
     if (useManualRedirect && data?.url) {
       if (isMobileWeb) {
-        const hasVerifier = await waitForPkceVerifier();
+        const hasVerifier = await waitForPkceVerifier({ attempts: 120, delayMs: 100 });
 
         if (!hasVerifier) {
           throw new Error(
@@ -284,6 +284,10 @@ export function useSupabaseAuth() {
           );
         }
 
+        backupPkceVerifier();
+        await new Promise((resolve) => {
+          window.setTimeout(resolve, 50);
+        });
         backupPkceVerifier();
       }
 
@@ -307,21 +311,30 @@ export function useSupabaseAuth() {
       rememberPostAuthRedirect(safePostAuthRedirect);
 
       if (canUseGoogleIdentity() && !Capacitor.isNativePlatform()) {
-        const { idToken, nonce } = await requestGoogleIdToken();
-        const { data, error } = await supabase.auth.signInWithIdToken({
-          provider: "google",
-          token: idToken,
-          nonce,
-        });
+        try {
+          const { idToken, nonce } = await requestGoogleIdToken();
+          const { data, error } = await supabase.auth.signInWithIdToken({
+            provider: "google",
+            token: idToken,
+            nonce,
+          });
 
-        if (error) {
-          setAuthError(error.message);
-          throw error;
+          if (error) {
+            throw error;
+          }
+
+          setSession(data.session);
+          setAuthError("");
+          return data.session;
+        } catch (error) {
+          const useOAuthFallback =
+            isMobileWebBrowser() && shouldFallbackGoogleSignInToOAuth(error);
+
+          if (!useOAuthFallback) {
+            setAuthError(error.message);
+            throw error;
+          }
         }
-
-        setSession(data.session);
-        setAuthError("");
-        return data.session;
       }
 
       return signInWithOAuth("google", { postAuthRedirect: safePostAuthRedirect });
