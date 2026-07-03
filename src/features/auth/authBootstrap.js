@@ -64,3 +64,7 @@ export function navigateAfterAuth(redirectTo) {
   const safeRedirect = redirectTo.startsWith("/") ? redirectTo : "/";
   window.location.replace(safeRedirect);
 }
+
+export function navigateAfterSignOut() {
+  window.location.replace("/");
+}

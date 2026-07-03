@@ -233,7 +233,7 @@ function HomePage() {
   const isHomeLoading = isWordsLoading || isScopePending;
   const learningWords = isGroupScopeActive ? scopedWords : words;
   const role = getRoleFromUser(user);
-  const mistakeWords = learningWords.filter((word) => word.mistake.isMistake);
+  const mistakeWords = learningWords.filter((word) => word.mistake?.isMistake);
   const wordCount = isGroupScopeActive
     ? Math.max(learningWords.length, mappedTermCount)
     : learningWords.length;

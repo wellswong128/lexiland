@@ -1,7 +1,8 @@
 import { useMemo, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import InstallQrCard from "../components/InstallQrCard.jsx";
 import LanguageToggle from "../components/LanguageToggle.jsx";
+import { navigateAfterSignOut } from "../features/auth/authBootstrap.js";
 import { getFriendlyAuthError } from "../features/auth/authErrors.js";
 import { useLocale } from "../features/locale/LocaleContext.jsx";
 import { useWordsContext } from "../features/words/WordsContext.jsx";
@@ -15,7 +16,6 @@ import "../styles/install-page.css";
 
 function SettingsPage() {
   const { t } = useLocale();
-  const navigate = useNavigate();
   const {
     authError,
     hasSupabaseConfig,
@@ -40,11 +40,10 @@ function SettingsPage() {
     try {
       setIsAuthSubmitting(true);
       await signOut();
-      navigate("/", { replace: true });
+      navigateAfterSignOut();
     } catch (error) {
       setNoticeType("error");
       setNotice(error.message);
-    } finally {
       setIsAuthSubmitting(false);
     }
   }

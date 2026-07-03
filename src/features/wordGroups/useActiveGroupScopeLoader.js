@@ -73,7 +73,7 @@ export function useActiveGroupScopeLoader(user) {
 
   useEffect(() => {
     if (!userId) {
-      invalidateInFlightScopeLoads();
+      scopeRequestGenerationRef.current += 1;
       setScopeMode(loadWordScopeMode(null));
       setState({
         activeGroup: null,

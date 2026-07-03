@@ -2,7 +2,6 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import { Capacitor } from "@capacitor/core";
 import { isIosStandalonePwa } from "./authBootstrap.js";
 import {
-  cleanAuthCallbackUrl,
   clearPostAuthRedirect,
   completeAuthCallbackFromUrl,
   hasPendingAuthCallback,
@@ -301,7 +300,6 @@ export function useSupabaseAuth() {
     setIsAuthLoading(false);
     clearPostAuthRedirect();
     clearPkceVerifierBackup();
-    cleanAuthCallbackUrl();
 
     const { error } = await supabase.auth.signOut({ scope: "local" });
 
