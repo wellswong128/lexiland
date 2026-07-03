@@ -17,11 +17,15 @@ export function getFriendlyAuthError(message, t) {
 
   const lower = message.toLowerCase();
 
-  if (
-    lower.includes("rate limit") ||
-    lower.includes("over_email_send_rate_limit") ||
-    lower.includes("over_request_rate_limit")
-  ) {
+  if (lower.includes("over_email_send_rate_limit") || lower.includes("email rate limit exceeded")) {
+    return t("auth.emailSendRateLimit");
+  }
+
+  if (lower.includes("over_request_rate_limit")) {
+    return t("auth.authRequestRateLimit");
+  }
+
+  if (lower.includes("rate limit")) {
     return t("settings.rateLimit");
   }
 

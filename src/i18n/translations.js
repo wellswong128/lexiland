@@ -55,6 +55,10 @@ const zhHant = {
       "Gmail 用戶請檢查「垃圾郵件」和「促銷內容」資料夾，並將 no-reply@lexiland.cc 加入聯絡人。",
     emailLoginCreateAccount:
       "此電郵尚未註冊。請切換到「註冊」再索取驗證碼，或確認電郵地址是否正確。",
+    emailSendRateLimit:
+      "此電郵地址索取驗證碼次數太多（通常因多次測試登入）。請等約 1 小時後再試，或暫時改用其他電郵。Hotmail 能用、Gmail 不能，通常代表 Gmail 地址已觸發上限，並非 Gmail 被封鎖。",
+    authRequestRateLimit:
+      "登入請求次數太多（例如多次 Google 登入或驗證碼嘗試）。請等約 1 小時後再試。",
     pkceStorageError:
       "登入流程在 App 與瀏覽器之間中斷（Chrome 與主屏幕 App 的儲存空間分開）。請用電郵驗證碼登入，或在 Chrome 開啟 learn.lexiland.cc 登入。",
     oauthCallbackError:
@@ -1149,6 +1153,10 @@ export const translations = {
         "Gmail users: check Spam and Promotions, and add no-reply@lexiland.cc to your contacts.",
       emailLoginCreateAccount:
         "This email is not registered yet. Switch to Sign up and request a code, or double-check the address.",
+      emailSendRateLimit:
+        "Too many codes were requested for this email address (often from repeated login tests). Wait about 1 hour, or use another email for now. Hotmail working while Gmail does not usually means the Gmail address hit the limit — Gmail itself is not blocked.",
+      authRequestRateLimit:
+        "Too many sign-in requests (for example repeated Google sign-in or code attempts). Wait about 1 hour and try again.",
       pkceStorageError:
         "Sign-in was interrupted between the app and the browser (Chrome and the home screen app use separate storage). Use the email code below, or sign in at learn.lexiland.cc in Chrome.",
       oauthCallbackError:
