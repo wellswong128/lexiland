@@ -30,7 +30,7 @@ export function useSupabaseAuth() {
     const pendingCallback = hasPendingAuthCallback();
 
     void completeAuthCallbackFromUrl()
-      .then(({ session: callbackSession, error }) => {
+      .then(async ({ session: callbackSession, error }) => {
         if (!isMounted) {
           return;
         }
@@ -48,18 +48,18 @@ export function useSupabaseAuth() {
           return;
         }
 
-        supabase.auth.getSession().then(({ data, sessionError }) => {
-          if (!isMounted) {
-            return;
-          }
+        const { data, sessionError } = await supabase.auth.getSession();
 
-          if (sessionError) {
-            setAuthError(sessionError.message);
-          }
+        if (!isMounted) {
+          return;
+        }
 
-          setSession(data.session);
-          setIsAuthLoading(false);
-        });
+        if (sessionError) {
+          setAuthError(sessionError.message);
+        }
+
+        setSession(data.session);
+        setIsAuthLoading(false);
       })
       .catch((error) => {
         if (!isMounted) {

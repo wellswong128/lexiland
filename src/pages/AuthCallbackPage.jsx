@@ -6,12 +6,15 @@ import {
   waitForPersistedSession,
 } from "../features/auth/authBootstrap.js";
 import {
+  cleanAuthCallbackUrl,
   clearPostAuthRedirect,
   hasPendingAuthCallback,
   resolvePostAuthRedirect,
 } from "../features/auth/completeAuthCallback.js";
 import { useLocale } from "../features/locale/LocaleContext.jsx";
 import { useWordsContext } from "../features/words/WordsContext.jsx";
+
+const CALLBACK_TIMEOUT_MS = 15000;
 
 function AuthCallbackPage() {
   const { t } = useLocale();
@@ -23,37 +26,51 @@ function AuthCallbackPage() {
     redirectToRef.current = resolvePostAuthRedirect(searchParams.get("redirect") || "/");
   }
   const redirectTo = redirectToRef.current;
-  const pendingCallback = hasPendingAuthCallback();
   const hasCompletedRedirectRef = useRef(false);
 
-  useEffect(() => {
+  function redirectToLogin(errorMessage) {
     if (hasCompletedRedirectRef.current) {
       return;
     }
 
-    if (isAuthLoading || pendingCallback) {
+    hasCompletedRedirectRef.current = true;
+    cleanAuthCallbackUrl();
+    navigate(`/auth?mode=login&redirect=${encodeURIComponent(redirectTo)}`, {
+      replace: true,
+      state: errorMessage ? { authError: errorMessage } : null,
+    });
+  }
+
+  useEffect(() => {
+    const timeoutId = window.setTimeout(() => {
+      redirectToLogin("Sign-in timed out. Please try again.");
+    }, CALLBACK_TIMEOUT_MS);
+
+    return () => window.clearTimeout(timeoutId);
+  }, [navigate, redirectTo]);
+
+  useEffect(() => {
+    if (hasCompletedRedirectRef.current || isAuthLoading) {
       return;
     }
 
     if (user) {
       hasCompletedRedirectRef.current = true;
+      clearPostAuthRedirect();
 
-      void waitForPersistedSession().then((persistedSession) => {
-        if (!persistedSession) {
-          hasCompletedRedirectRef.current = false;
-          return;
-        }
+      if (shouldHardNavigateAfterAuth()) {
+        void waitForPersistedSession().then((persistedSession) => {
+          if (!persistedSession) {
+            hasCompletedRedirectRef.current = false;
+            return;
+          }
 
-        if (shouldHardNavigateAfterAuth()) {
-          clearPostAuthRedirect();
           navigateAfterAuth(redirectTo);
-          return;
-        }
+        });
+        return;
+      }
 
-        clearPostAuthRedirect();
-        navigate(redirectTo, { replace: true });
-      });
-
+      navigate(redirectTo, { replace: true });
       return;
     }
 
@@ -63,26 +80,14 @@ function AuthCallbackPage() {
       searchParams.get("error");
 
     if (errorDescription) {
-      hasCompletedRedirectRef.current = true;
-      navigate(`/auth?mode=login&redirect=${encodeURIComponent(redirectTo)}`, {
-        replace: true,
-        state: { authError: errorDescription },
-      });
+      redirectToLogin(errorDescription);
       return;
     }
 
-    const timeoutId = window.setTimeout(() => {
-      hasCompletedRedirectRef.current = true;
-      navigate(`/auth?mode=login&redirect=${encodeURIComponent(redirectTo)}`, {
-        replace: true,
-        state: {
-          authError: "Sign-in timed out. Please try again.",
-        },
-      });
-    }, 15000);
-
-    return () => window.clearTimeout(timeoutId);
-  }, [authError, isAuthLoading, navigate, pendingCallback, redirectTo, searchParams, user]);
+    if (!hasPendingAuthCallback()) {
+      redirectToLogin("Sign-in timed out. Please try again.");
+    }
+  }, [authError, isAuthLoading, navigate, redirectTo, searchParams, user]);
 
   return (
     <section className="flex min-h-[70svh] w-full max-w-lg items-center justify-center px-4">

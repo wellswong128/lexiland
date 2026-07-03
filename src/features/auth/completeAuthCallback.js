@@ -168,6 +168,8 @@ async function completeAuthCallbackFromUrlInternal() {
         return { session: retryData.session, error: null, hadCallback: true };
       }
 
+      cleanAuthCallbackUrl();
+
       return {
         session: null,
         error: exchangeError ?? retryError ?? error ?? new Error("Could not complete sign-in."),
@@ -189,6 +191,8 @@ async function completeAuthCallbackFromUrlInternal() {
       clearPkceVerifierBackup();
       return { session: sessionData.session, error: null, hadCallback: true };
     }
+
+    cleanAuthCallbackUrl();
 
     return {
       session: null,
