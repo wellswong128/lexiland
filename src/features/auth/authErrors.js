@@ -1,4 +1,5 @@
 import { Capacitor } from "@capacitor/core";
+import { isIosStandalonePwa } from "./authBootstrap.js";
 import { resolveAuthRedirectUrl, getSupabaseRedirectUrlHints } from "./authRedirect.js";
 import { getFriendlyNetworkError } from "../../lib/networkErrors.js";
 
@@ -75,7 +76,11 @@ export function getFriendlyAuthError(message, t) {
     lower.includes("code verifier not found") ||
     (lower.includes("pkce") && lower.includes("storage"))
   ) {
-    return t("auth.pkceStorageError");
+    if (isIosStandalonePwa()) {
+      return t("auth.pkceStorageError");
+    }
+
+    return t("auth.oauthCallbackError");
   }
 
   if (

@@ -1,4 +1,4 @@
-import { supabase } from "../../lib/supabaseClient.js";
+import { supabase, usesAutoSessionDetection } from "../../lib/supabaseClient.js";
 
 const POST_AUTH_REDIRECT_KEY = "lexiland.auth.post-login-redirect";
 
@@ -134,6 +134,23 @@ async function completeAuthCallbackFromUrlInternal() {
   const authCode = searchParams.get("code");
 
   if (authCode) {
+    if (usesAutoSessionDetection) {
+      const { data, error } = await supabase.auth.getSession();
+
+      if (data?.session) {
+        cleanAuthCallbackUrl();
+        return { session: data.session, error: null, hadCallback: true };
+      }
+
+      cleanAuthCallbackUrl();
+
+      return {
+        session: null,
+        error: error ?? new Error("Could not complete sign-in."),
+        hadCallback: true,
+      };
+    }
+
     const { data, error } = await supabase.auth.exchangeCodeForSession(authCode);
 
     if (!error && data?.session) {
