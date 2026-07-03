@@ -1,11 +1,12 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import { Capacitor } from "@capacitor/core";
+import { isIosStandalonePwa } from "./authBootstrap.js";
 import {
-  isIosStandalonePwa,
-  markIosStandaloneOAuthStart,
-} from "./authBootstrap.js";
-import { completeAuthCallbackFromUrl, hasPendingAuthCallback } from "./completeAuthCallback.js";
-import { resolveAuthRedirectUrlAsync } from "./authRedirect.js";
+  completeAuthCallbackFromUrl,
+  hasPendingAuthCallback,
+  rememberPostAuthRedirect,
+} from "./completeAuthCallback.js";
+import { buildOAuthCallbackUrl, resolveAuthRedirectUrlAsync } from "./authRedirect.js";
 import { hasSupabaseConfig, supabase } from "../../lib/supabaseClient.js";
 
 export function useSupabaseAuth() {
@@ -188,7 +189,7 @@ export function useSupabaseAuth() {
     return data.session;
   }, []);
 
-  const signInWithOAuth = useCallback(async (provider) => {
+  const signInWithOAuth = useCallback(async (provider, { postAuthRedirect = "/" } = {}) => {
     if (!supabase) {
       throw new Error("Supabase is not configured.");
     }
@@ -199,26 +200,34 @@ export function useSupabaseAuth() {
 
     setAuthError("");
 
-    const redirectTo = await resolveAuthRedirectUrlAsync({ strict: true });
+    const callbackUrl = await resolveAuthRedirectUrlAsync({ strict: true });
 
-    if (!redirectTo) {
+    if (!callbackUrl) {
       throw new Error(
         "Auth redirect URL is not configured. Set VITE_AUTH_REDIRECT_URL and add it to Supabase Redirect URLs.",
       );
     }
 
-    const useManualRedirect = Capacitor.isNativePlatform() || isIosStandalonePwa();
+    const safePostAuthRedirect = postAuthRedirect.startsWith("/") ? postAuthRedirect : "/";
+    rememberPostAuthRedirect(safePostAuthRedirect);
 
-    if (isIosStandalonePwa()) {
-      markIosStandaloneOAuthStart();
+    const redirectTo = buildOAuthCallbackUrl(callbackUrl, safePostAuthRedirect);
+    const useManualRedirect = Capacitor.isNativePlatform() || isIosStandalonePwa();
+    const options = {
+      redirectTo,
+      skipBrowserRedirect: useManualRedirect,
+    };
+
+    if (provider === "google") {
+      options.scopes = "https://www.googleapis.com/auth/userinfo.email";
+      options.queryParams = {
+        prompt: "select_account",
+      };
     }
 
     const { data, error } = await supabase.auth.signInWithOAuth({
       provider,
-      options: {
-        redirectTo,
-        skipBrowserRedirect: useManualRedirect,
-      },
+      options,
     });
 
     if (error) {

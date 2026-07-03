@@ -79,7 +79,7 @@ function AppRoutes() {
         <Route path="/admin/wordbase-library" element={<ProtectedRoute><AdminWordbaseLibraryPage /></ProtectedRoute>} />
         <Route path="/words" element={<ProtectedRoute><WordListPage /></ProtectedRoute>} />
         <Route path="/words/new" element={<ProtectedRoute><AddWordPage /></ProtectedRoute>} />
-        <Route path="/words/lookup" element={<ProtectedRoute><WordLookupPage /></ProtectedRoute>} />
+        <Route path="/words/lookup" element={<WordLookupPage />} />
         <Route path="/words/:wordId" element={<ProtectedRoute><WordDetailPage /></ProtectedRoute>} />
         <Route path="/review/flashcards" element={<ProtectedRoute><FlashcardsPage /></ProtectedRoute>} />
         <Route path="/review/quiz" element={<ProtectedRoute><QuizPage /></ProtectedRoute>} />

@@ -2,6 +2,8 @@ from __future__ import annotations
 
 import json
 import os
+import signal
+import sys
 import time
 from contextlib import contextmanager
 from pathlib import Path
@@ -30,6 +32,16 @@ def empty_progress() -> dict[str, Any]:
 
 def _lock_path(path: Path) -> Path:
     return path.with_name(f"{path.name}.lock")
+
+
+@contextmanager
+def _ignore_sigint():
+    previous = signal.getsignal(signal.SIGINT)
+    try:
+        signal.signal(signal.SIGINT, signal.SIG_IGN)
+        yield
+    finally:
+        signal.signal(signal.SIGINT, previous)
 
 
 @contextmanager
@@ -66,6 +78,7 @@ def load_progress(path: Path) -> dict[str, Any]:
 
 
 def save_progress(path: Path, data: dict[str, Any]) -> None:
+    path = path.expanduser().resolve()
     path.parent.mkdir(parents=True, exist_ok=True)
     temp_path = path.with_name(f"{path.name}.{os.getpid()}.{time.time_ns()}.tmp")
 
@@ -97,6 +110,20 @@ def save_progress(path: Path, data: dict[str, Any]) -> None:
                 temp_path.unlink()
             except OSError:
                 pass
+
+
+def save_progress_best_effort(path: Path, data: dict[str, Any]) -> bool:
+    """Save progress without raising; ignores SIGINT during the write."""
+    try:
+        with _ignore_sigint():
+            save_progress(path, data)
+        return True
+    except BaseException as error:
+        print(
+            f"Warning: could not save progress to {path}: {error}",
+            file=sys.stderr,
+        )
+        return False
 
 
 def ensure_term_record(progress: dict[str, Any], term: str, source_image: str | None = None) -> dict[str, Any]:

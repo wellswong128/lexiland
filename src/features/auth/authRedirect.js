@@ -26,6 +26,17 @@ export function toAuthCallbackUrl(url) {
   return normalized;
 }
 
+export function buildOAuthCallbackUrl(baseCallbackUrl, postAuthRedirect = "") {
+  const normalizedRedirect = String(postAuthRedirect || "").trim();
+
+  if (!normalizedRedirect.startsWith("/")) {
+    return baseCallbackUrl;
+  }
+
+  const separator = baseCallbackUrl.includes("?") ? "&" : "?";
+  return `${baseCallbackUrl}${separator}redirect=${encodeURIComponent(normalizedRedirect)}`;
+}
+
 export function isLocalhostUrl(url) {
   try {
     const { hostname, protocol } = new URL(url);

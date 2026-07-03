@@ -1,9 +1,5 @@
-import { sendAuthError } from "../_authz.js";
-import {
-  createRlsClientForRequest,
-  requireUserGroupAccess,
-  sendJson,
-} from "../_user-groups.js";
+import { getAdminServiceClient } from "../_admin-supabase.js";
+import { sendJson } from "../_user-groups.js";
 
 const WORDBASE_ENTRY_COLUMNS =
   "id,term_key,term,definition,translation,pronunciation,part_of_speech,example,example_translation,notes,tags,source,memory_tips_by_locale,memory_image,created_at,updated_at";
@@ -38,13 +34,6 @@ export default async function handler(request, response) {
     return;
   }
 
-  try {
-    await requireUserGroupAccess(request);
-  } catch (error) {
-    sendAuthError(response, error);
-    return;
-  }
-
   const termKey = normalizeTermKey(request.query?.term);
   if (!termKey) {
     sendJson(response, 400, { error: "term is required." });
@@ -52,8 +41,9 @@ export default async function handler(request, response) {
   }
 
   try {
-    const rlsClient = createRlsClientForRequest(request);
-    const { data, error } = await rlsClient
+    // Wordbase is a shared dictionary; public read via service role.
+    const adminClient = getAdminServiceClient();
+    const { data, error } = await adminClient
       .from("wordbase")
       .select(WORDBASE_ENTRY_COLUMNS)
       .eq("term_key", termKey)

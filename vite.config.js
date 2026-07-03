@@ -97,7 +97,12 @@ function localApiPlugin() {
           }
 
           request.body = await readRequestBody(request);
-          request.query = { ...(request.query || {}), path: path.split("/") };
+          const query = { ...(request.query || {}) };
+          for (const [key, value] of url.searchParams.entries()) {
+            query[key] = value;
+          }
+          query.path = path.split("/");
+          request.query = query;
           await routeRequest(path, request, response);
         } catch (error) {
           response.statusCode = 500;

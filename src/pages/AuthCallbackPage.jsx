@@ -5,7 +5,10 @@ import {
   shouldHardNavigateAfterAuth,
   waitForPersistedSession,
 } from "../features/auth/authBootstrap.js";
-import { hasPendingAuthCallback } from "../features/auth/completeAuthCallback.js";
+import {
+  hasPendingAuthCallback,
+  resolvePostAuthRedirect,
+} from "../features/auth/completeAuthCallback.js";
 import { useLocale } from "../features/locale/LocaleContext.jsx";
 import { useWordsContext } from "../features/words/WordsContext.jsx";
 
@@ -14,7 +17,7 @@ function AuthCallbackPage() {
   const navigate = useNavigate();
   const [searchParams] = useSearchParams();
   const { authError, isAuthLoading, user } = useWordsContext();
-  const redirectTo = searchParams.get("redirect") || "/";
+  const redirectTo = resolvePostAuthRedirect(searchParams.get("redirect") || "/");
   const pendingCallback = hasPendingAuthCallback();
   const hasCompletedRedirectRef = useRef(false);
 

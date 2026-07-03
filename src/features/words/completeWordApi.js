@@ -2,7 +2,9 @@ import { containsChinese, resolveVocabularyLocale } from "../../../lib/vocabular
 import { getApiAuthHeaders } from "../../lib/apiAuth.js";
 import { resolveApiUrl } from "../../lib/apiBase.js";
 import { findWordInLibrary } from "../review/gameMistakeHelpers.js";
+import { normalizeMemoryImage } from "./memoryImageUtils.js";
 import {
+  canReadWordbase,
   canUseWordbase,
   contributeWordDetailsFromSuggestion,
   fetchWordbaseEntry,
@@ -106,6 +108,8 @@ export async function fetchCompleteWordWithFallback(
   if (localWord && hasLocalWordDetails(localWord)) {
     return {
       suggestion: wordToSuggestion(localWord),
+      memoryImage: normalizeMemoryImage(localWord.memoryImage),
+      memoryTipsByLocale: localWord.memoryTipsByLocale ?? {},
       usedFallback: false,
       fromLocal: true,
       fromWordbase: false,
@@ -114,12 +118,14 @@ export async function fetchCompleteWordWithFallback(
 
   if (!skipWordbase) {
     try {
-      if (canUseWordbase(user)) {
+      if (canReadWordbase()) {
         const entry = await fetchWordbaseEntry(term);
 
         if (hasWordbaseDetails(entry)) {
           return {
             suggestion: wordbaseEntryToSuggestion(entry),
+            memoryImage: entry.memoryImage ?? null,
+            memoryTipsByLocale: entry.memoryTipsByLocale ?? {},
             usedFallback: false,
             fromLocal: false,
             fromWordbase: true,

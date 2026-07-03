@@ -189,7 +189,7 @@ function AuthPage() {
     try {
       setIsSubmitting(true);
       setNotice("");
-      await signInWithOAuth(provider);
+      await signInWithOAuth(provider, { postAuthRedirect: redirectTo });
     } catch (error) {
       setNoticeType("error");
       setNotice(getFriendlyAuthError(error.message, t));

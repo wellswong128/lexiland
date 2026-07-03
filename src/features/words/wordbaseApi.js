@@ -61,10 +61,6 @@ function mapWordbaseRow(row) {
 async function fetchWordbaseEntryFromApi(term) {
   const authHeaders = await getApiAuthHeaders();
 
-  if (!authHeaders.Authorization) {
-    return null;
-  }
-
   try {
     const response = await fetch(
       resolveApiUrl(`/api/wordbase-entry?term=${encodeURIComponent(term)}`),
@@ -109,6 +105,10 @@ function stripSavedAt(value) {
   const { savedAt: _savedAt, ...rest } = value;
 
   return rest;
+}
+
+export function canReadWordbase() {
+  return true;
 }
 
 export function canUseWordbase(user) {

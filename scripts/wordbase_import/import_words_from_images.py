@@ -28,7 +28,14 @@ from completeness import (
 )
 from config import load_settings
 from production_guard import assert_production_bulk_run_allowed
-from progress_store import ProgressIOError, append_round_log, ensure_term_record, load_progress, save_progress
+from progress_store import (
+    ProgressIOError,
+    append_round_log,
+    ensure_term_record,
+    load_progress,
+    save_progress,
+    save_progress_best_effort,
+)
 from terms import normalize_term, page_label_from_filename
 from wordbase_client import (
     fetch_entries,
@@ -762,8 +769,9 @@ def main() -> int:
         print_proxy_hint(error)
         return 2
     except KeyboardInterrupt:
-        print("\nInterrupted. Progress saved.")
-        save_progress(settings.progress_path, progress)
+        print("\nInterrupted.", file=sys.stderr)
+        if save_progress_best_effort(settings.progress_path, progress):
+            print("Progress saved.")
         return 130
     except ProgressIOError as error:
         print(f"Progress error: {error}", file=sys.stderr)
@@ -771,7 +779,7 @@ def main() -> int:
     except Exception as error:
         print(f"Fatal error: {error}", file=sys.stderr)
         print_proxy_hint(error)
-        save_progress(settings.progress_path, progress)
+        save_progress_best_effort(settings.progress_path, progress)
         return 1
     finally:
         api.close()

@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import ExampleSentence from "../components/ExampleSentence.jsx";
 import SpeakButton from "../components/SpeakButton.jsx";
 import { useLocale } from "../features/locale/LocaleContext.jsx";
@@ -8,7 +8,9 @@ import {
   suggestionToFormValues,
 } from "../features/words/completeWordApi.js";
 import { findWordInLibrary } from "../features/review/gameMistakeHelpers.js";
+import { hasMemoryImageUrl } from "../features/words/memoryImageUtils.js";
 import { contributeWordDetailsFromSuggestion } from "../features/words/wordbaseApi.js";
+import { WORD_SOURCES } from "../features/words/wordTypes.js";
 import { useWordsContext } from "../features/words/WordsContext.jsx";
 
 function LookupSourceBadge({ sourceKey, t }) {
@@ -21,7 +23,8 @@ function LookupSourceBadge({ sourceKey, t }) {
 
 function WordLookupPage() {
   const { locale, t } = useLocale();
-  const { addWord, user, words } = useWordsContext();
+  const location = useLocation();
+  const { addWord, hasSupabaseConfig, isUsingSupabase, user, words } = useWordsContext();
   const [term, setTerm] = useState("");
   const [error, setError] = useState("");
   const [isSearching, setIsSearching] = useState(false);
@@ -91,32 +94,45 @@ function WordLookupPage() {
     handleSearch();
   }
 
-  function canSaveToLibrary(result) {
+  function canAddToWordList(result) {
     if (!result || result.localWordId || result.usedFallback) {
+      return false;
+    }
+
+    if (!result.values?.term?.trim() || !result.values?.definition?.trim()) {
       return false;
     }
 
     return result.fromWordbase || (!result.fromLocal && !result.fromWordbase);
   }
 
-  function isAiSource(result) {
-    return Boolean(result && !result.fromLocal && !result.fromWordbase && !result.usedFallback);
+  function buildWordListInput(result) {
+    return {
+      ...result.values,
+      memoryImage: result.memoryImage ?? null,
+      memoryTipsByLocale: result.memoryTipsByLocale ?? {},
+    };
   }
 
-  async function handleSaveWord() {
-    if (!lookupResult?.values || !canSaveToLibrary(lookupResult)) {
-      return;
+  function resolveWordSource(result) {
+    if (result.fromWordbase) {
+      return WORD_SOURCES.IMPORT;
     }
 
-    if (!lookupResult.values.term.trim() || !lookupResult.values.definition.trim()) {
-      setError(t("addWord.requiredFields"));
+    return WORD_SOURCES.AI;
+  }
+
+  async function handleAddToWordList() {
+    if (!lookupResult || !canAddToWordList(lookupResult)) {
       return;
     }
 
     try {
       setIsSaving(true);
       setError("");
-      const savedWord = await addWord(lookupResult.values);
+      const savedWord = await addWord(buildWordListInput(lookupResult), {
+        source: resolveWordSource(lookupResult),
+      });
 
       if (isAiSource(lookupResult) && lookupResult.suggestion && user?.id) {
         try {
@@ -126,7 +142,7 @@ function WordLookupPage() {
         }
       }
 
-      setSaveMessage(t("wordLookup.saveSuccess"));
+      setSaveMessage(t("wordLookup.addSuccess"));
       setLookupResult((currentResult) =>
         currentResult
           ? {
@@ -143,6 +159,15 @@ function WordLookupPage() {
     }
   }
 
+  function isAiSource(result) {
+    return Boolean(result && !result.fromLocal && !result.fromWordbase && !result.usedFallback);
+  }
+
+  const loginRedirect = `/auth?mode=login&redirect=${encodeURIComponent(
+    `${location.pathname}${location.search}`,
+  )}`;
+  const showGuestLocalHint =
+    canAddToWordList(lookupResult) && hasSupabaseConfig && !user?.id && !isUsingSupabase;
   const resultValues = lookupResult?.values;
 
   return (
@@ -222,6 +247,17 @@ function WordLookupPage() {
             ) : null}
           </div>
 
+          {hasMemoryImageUrl(lookupResult.memoryImage) ? (
+            <figure className="overflow-hidden rounded-2xl border border-sky-100 bg-white">
+              <img
+                alt={t("wordImage.alt", { term: resultValues.term })}
+                className="mx-auto h-auto max-h-[360px] w-full object-contain"
+                loading="lazy"
+                src={lookupResult.memoryImage.imageUrl}
+              />
+            </figure>
+          ) : null}
+
           {resultValues.partOfSpeech ? (
             <div>
               <p className="review-word-field-label">{t("addWord.partOfSpeech")}</p>
@@ -253,26 +289,43 @@ function WordLookupPage() {
       ) : null}
 
       {lookupResult && resultValues && lookupResult.localWordId ? (
-        <div className="mt-4">
+        <div className="mt-4 flex flex-col gap-3">
           <Link
             className="inline-flex w-full items-center justify-center rounded-full bg-blue-700 px-5 py-3 text-sm font-bold text-white transition hover:bg-blue-800"
             to={`/words/${lookupResult.localWordId}`}
           >
-            {t("wordLookup.viewInLibrary")}
+            {t("wordLookup.viewWord")}
+          </Link>
+          <Link
+            className="inline-flex w-full items-center justify-center rounded-full border border-blue-200 bg-white px-5 py-3 text-sm font-bold text-blue-700 transition hover:bg-blue-50"
+            to="/words"
+          >
+            {t("wordLookup.viewWordList")}
           </Link>
         </div>
       ) : null}
 
-      {lookupResult && resultValues && canSaveToLibrary(lookupResult) ? (
-        <div className="mt-4">
+      {lookupResult && resultValues && canAddToWordList(lookupResult) ? (
+        <div className="mt-4 space-y-2">
           <button
             className="inline-flex w-full items-center justify-center rounded-full bg-blue-700 px-5 py-3 text-sm font-bold text-white transition hover:bg-blue-800 disabled:bg-slate-300"
             disabled={isSaving}
-            onClick={handleSaveWord}
+            onClick={handleAddToWordList}
             type="button"
           >
-            {isSaving ? t("common.saving") : t("wordLookup.saveWord")}
+            {isSaving ? t("common.saving") : t("wordLookup.addToWordList")}
           </button>
+          {showGuestLocalHint ? (
+            <p className="text-center text-xs text-slate-500">{t("wordLookup.guestLocalHint")}</p>
+          ) : null}
+          {hasSupabaseConfig && !user?.id ? (
+            <p className="text-center text-sm text-slate-600">
+              {t("wordLookup.signInPrompt")}{" "}
+              <Link className="font-semibold text-blue-700 hover:text-blue-800" to={loginRedirect}>
+                {t("wordLookup.signInLink")}
+              </Link>
+            </p>
+          ) : null}
         </div>
       ) : null}
     </section>

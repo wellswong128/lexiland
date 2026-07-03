@@ -1,5 +1,9 @@
 import { supabase } from "../../lib/supabaseClient.js";
 
+const POST_AUTH_REDIRECT_KEY = "lexiland.auth.post-login-redirect";
+
+let activeCallbackPromise = null;
+
 function readAuthCallbackError() {
   if (typeof window === "undefined") {
     return "";
@@ -21,6 +25,62 @@ function readAuthCallbackError() {
   }
 
   return decodeURIComponent(rawError.replace(/\+/g, " "));
+}
+
+export function rememberPostAuthRedirect(redirectPath) {
+  if (typeof sessionStorage === "undefined") {
+    return;
+  }
+
+  const normalizedRedirect = String(redirectPath || "").trim();
+  if (!normalizedRedirect.startsWith("/")) {
+    return;
+  }
+
+  try {
+    sessionStorage.setItem(POST_AUTH_REDIRECT_KEY, normalizedRedirect);
+  } catch {
+    // sessionStorage may be unavailable.
+  }
+}
+
+export function resolvePostAuthRedirect(fallback = "/") {
+  if (typeof window === "undefined") {
+    return fallback;
+  }
+
+  const searchParams = new URLSearchParams(window.location.search);
+  const redirectFromUrl = searchParams.get("redirect");
+
+  if (redirectFromUrl?.startsWith("/")) {
+    clearPostAuthRedirect();
+    return redirectFromUrl;
+  }
+
+  try {
+    const storedRedirect = sessionStorage.getItem(POST_AUTH_REDIRECT_KEY);
+    sessionStorage.removeItem(POST_AUTH_REDIRECT_KEY);
+
+    if (storedRedirect?.startsWith("/")) {
+      return storedRedirect;
+    }
+  } catch {
+    // sessionStorage may be unavailable.
+  }
+
+  return fallback;
+}
+
+function clearPostAuthRedirect() {
+  if (typeof sessionStorage === "undefined") {
+    return;
+  }
+
+  try {
+    sessionStorage.removeItem(POST_AUTH_REDIRECT_KEY);
+  } catch {
+    // sessionStorage may be unavailable.
+  }
 }
 
 export function hasPendingAuthCallback() {
@@ -61,7 +121,7 @@ export function cleanAuthCallbackUrl() {
   );
 }
 
-export async function completeAuthCallbackFromUrl() {
+async function completeAuthCallbackFromUrlInternal() {
   if (!supabase || typeof window === "undefined") {
     return { session: null, error: null, hadCallback: false };
   }
@@ -108,4 +168,16 @@ export async function completeAuthCallbackFromUrl() {
     error,
     hadCallback: window.location.hash.includes("access_token="),
   };
+}
+
+export async function completeAuthCallbackFromUrl() {
+  if (activeCallbackPromise) {
+    return activeCallbackPromise;
+  }
+
+  activeCallbackPromise = completeAuthCallbackFromUrlInternal().finally(() => {
+    activeCallbackPromise = null;
+  });
+
+  return activeCallbackPromise;
 }
