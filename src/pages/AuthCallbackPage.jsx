@@ -42,12 +42,16 @@ function AuthCallbackPage() {
   }
 
   useEffect(() => {
+    if (hasCompletedRedirectRef.current || isAuthLoading || user) {
+      return undefined;
+    }
+
     const timeoutId = window.setTimeout(() => {
       redirectToLogin("Sign-in timed out. Please try again.");
     }, CALLBACK_TIMEOUT_MS);
 
     return () => window.clearTimeout(timeoutId);
-  }, [navigate, redirectTo]);
+  }, [isAuthLoading, navigate, redirectTo, user]);
 
   useEffect(() => {
     if (hasCompletedRedirectRef.current || isAuthLoading) {

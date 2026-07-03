@@ -12,6 +12,7 @@ import {
   backupPkceVerifier,
   waitForPkceVerifier,
 } from "./pkceStorage.js";
+import { normalizeSameOriginRedirectPath } from "./redirectSafety.js";
 import { resolveAuthRedirectUrlAsync } from "./authRedirect.js";
 import { canUseGoogleIdentity, requestGoogleIdToken, shouldFallbackGoogleSignInToOAuth } from "./googleIdentity.js";
 import { hasSupabaseConfig, supabase } from "../../lib/supabaseClient.js";
@@ -267,7 +268,7 @@ export function useSupabaseAuth() {
       );
     }
 
-    const safePostAuthRedirect = postAuthRedirect.startsWith("/") ? postAuthRedirect : "/";
+    const safePostAuthRedirect = normalizeSameOriginRedirectPath(postAuthRedirect);
     rememberPostAuthRedirect(safePostAuthRedirect);
 
     const isMobileWeb = isMobileWebBrowser();
@@ -326,7 +327,7 @@ export function useSupabaseAuth() {
 
       setAuthError("");
 
-      const safePostAuthRedirect = postAuthRedirect.startsWith("/") ? postAuthRedirect : "/";
+      const safePostAuthRedirect = normalizeSameOriginRedirectPath(postAuthRedirect);
       rememberPostAuthRedirect(safePostAuthRedirect);
 
       if (canUseGoogleIdentity() && !Capacitor.isNativePlatform()) {
