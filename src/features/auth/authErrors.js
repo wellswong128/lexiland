@@ -75,7 +75,10 @@ export function getFriendlyAuthError(message, t) {
 
   if (
     lower.includes("code verifier not found") ||
-    (lower.includes("pkce") && lower.includes("storage"))
+    lower.includes("pkce_code_verifier") ||
+    (lower.includes("pkce") && lower.includes("storage")) ||
+    lower.includes("could not start google sign-in on this device") ||
+    (isMobileWebBrowser() && lower.includes("could not complete sign-in"))
   ) {
     if (isIosStandalonePwa()) {
       return t("auth.pkceStorageError");

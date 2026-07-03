@@ -12,6 +12,7 @@ import { resolveAuthRedirectUrl } from "../features/auth/authRedirect.js";
 import { useLocale } from "../features/locale/LocaleContext.jsx";
 import { useWordsContext } from "../features/words/WordsContext.jsx";
 import { canRoute, ROLES } from "../lib/authorization.js";
+import { isMobileWebBrowser } from "../lib/pwaPlatform.js";
 
 const EMAIL_COOLDOWN_SECONDS = 60;
 
@@ -89,6 +90,8 @@ function AuthPage() {
   } = useWordsContext();
 
   const isIosPwa = isIosStandalonePwa();
+  const isMobileWeb = isMobileWebBrowser();
+  const useEmailCodeFlow = isIosPwa || isMobileWeb;
 
   const mode = searchParams.get("mode") === "login" ? "login" : "signup";
   const redirectTo = searchParams.get("redirect") || "/";
@@ -101,7 +104,7 @@ function AuthPage() {
     return "/";
   }, [redirectTo]);
 
-  const [showEmailForm, setShowEmailForm] = useState(isIosStandalonePwa());
+  const [showEmailForm, setShowEmailForm] = useState(useEmailCodeFlow);
   const [email, setEmail] = useState("");
   const [emailCode, setEmailCode] = useState("");
   const [emailCodeSent, setEmailCodeSent] = useState(false);
@@ -156,16 +159,19 @@ function AuthPage() {
 
     setNoticeType("error");
     setNotice(getFriendlyAuthError(String(location.state.authError), t));
+    if (isMobileWeb) {
+      setShowEmailForm(true);
+    }
     navigate(`${location.pathname}${location.search}`, { replace: true, state: null });
-  }, [location.pathname, location.search, location.state, navigate, t]);
+  }, [isMobileWeb, location.pathname, location.search, location.state, navigate, t]);
 
   useEffect(() => {
-    setShowEmailForm(isIosPwa);
+    setShowEmailForm(useEmailCodeFlow);
     setNotice("");
     setEmail("");
     setEmailCode("");
     setEmailCodeSent(false);
-  }, [isIosPwa, mode]);
+  }, [mode, useEmailCodeFlow]);
 
   const nativeRedirectUrl = Capacitor.isNativePlatform() ? resolveAuthRedirectUrl() : "";
 
@@ -173,7 +179,11 @@ function AuthPage() {
     const lower = (authError || "").toLowerCase();
     if (
       lower.includes("error getting user email from external provider") ||
-      lower.includes("error getting user profile from external provider")
+      lower.includes("error getting user profile from external provider") ||
+      lower.includes("code verifier not found") ||
+      lower.includes("pkce") ||
+      lower.includes("could not complete sign-in") ||
+      lower.includes("could not start google sign-in")
     ) {
       setShowEmailForm(true);
     }
@@ -193,6 +203,9 @@ function AuthPage() {
     } catch (error) {
       setNoticeType("error");
       setNotice(getFriendlyAuthError(error.message, t));
+      if (isMobileWeb) {
+        setShowEmailForm(true);
+      }
     } finally {
       setIsSubmitting(false);
     }
@@ -207,7 +220,7 @@ function AuthPage() {
       return;
     }
 
-    if (isIosPwa && emailCodeSent) {
+    if (useEmailCodeFlow && emailCodeSent) {
       if (!emailCode.trim()) {
         setNoticeType("error");
         setNotice(t("auth.enterEmailCode"));
@@ -241,7 +254,7 @@ function AuthPage() {
       setIsSubmitting(true);
       setNotice("");
 
-      if (isIosPwa) {
+      if (useEmailCodeFlow) {
         await sendEmailSignInCode(email.trim(), { shouldCreateUser: isSignup });
         setEmailCodeSent(true);
         setEmailCode("");
@@ -352,7 +365,19 @@ function AuthPage() {
               </button>
             </>
           ) : (
-            <form className="space-y-3" onSubmit={handleEmailSubmit}>
+            <>
+              {!isIosPwa ? (
+                <button
+                  className="flex w-full items-center justify-center gap-3 rounded-full bg-[#4285F4] px-5 py-3.5 text-sm font-bold text-white transition hover:bg-[#3367D6] disabled:opacity-60"
+                  disabled={isSubmitting}
+                  onClick={() => handleOAuth("google")}
+                  type="button"
+                >
+                  <GoogleIcon />
+                  {t("auth.continueGoogle")}
+                </button>
+              ) : null}
+              <form className="space-y-3" onSubmit={handleEmailSubmit}>
               <input
                 autoComplete="email"
                 className="w-full rounded-full border border-slate-200 bg-white px-5 py-3.5 text-slate-900 outline-none transition focus:border-blue-500 focus:ring-4 focus:ring-blue-100"
@@ -361,7 +386,7 @@ function AuthPage() {
                 type="email"
                 value={email}
               />
-              {isIosPwa && emailCodeSent ? (
+              {useEmailCodeFlow && emailCodeSent ? (
                 <input
                   autoComplete="one-time-code"
                   className="w-full rounded-full border border-slate-200 bg-white px-5 py-3.5 text-center text-lg tracking-[0.35em] text-slate-900 outline-none transition focus:border-blue-500 focus:ring-4 focus:ring-blue-100"
@@ -375,14 +400,14 @@ function AuthPage() {
               ) : null}
               <button
                 className="w-full rounded-full bg-blue-700 px-5 py-3.5 text-sm font-bold text-white transition hover:bg-blue-800 disabled:bg-slate-300"
-                disabled={isSubmitting || (!isIosPwa && emailCooldown > 0) || (isIosPwa && !emailCodeSent && emailCooldown > 0)}
+                disabled={isSubmitting || (!useEmailCodeFlow && emailCooldown > 0) || (useEmailCodeFlow && !emailCodeSent && emailCooldown > 0)}
                 type="submit"
               >
                 {isSubmitting
                   ? t("settings.sending")
-                  : isIosPwa && emailCodeSent
+                  : useEmailCodeFlow && emailCodeSent
                     ? t("auth.verifyEmailCode")
-                    : isIosPwa
+                    : useEmailCodeFlow
                       ? emailCooldown > 0
                         ? t("settings.tryAgainIn", { seconds: emailCooldown })
                         : isSignup
@@ -394,7 +419,7 @@ function AuthPage() {
                           ? t("auth.sendSignupLink")
                           : t("auth.sendLoginLink")}
               </button>
-              {!isIosPwa ? (
+              {!useEmailCodeFlow ? (
                 <button
                   className="w-full py-2 text-sm font-semibold text-slate-600 transition hover:text-blue-700"
                   onClick={() => setShowEmailForm(false)}
@@ -404,6 +429,7 @@ function AuthPage() {
                 </button>
               ) : null}
             </form>
+            </>
           )}
         </div>
       ) : null}

@@ -273,7 +273,14 @@ export function useSupabaseAuth() {
 
     if (useManualRedirect && data?.url) {
       if (isMobileWeb) {
-        await waitForPkceVerifier();
+        const hasVerifier = await waitForPkceVerifier();
+
+        if (!hasVerifier) {
+          throw new Error(
+            "Could not start Google sign-in on this device. Use the email code below.",
+          );
+        }
+
         backupPkceVerifier();
       }
 
