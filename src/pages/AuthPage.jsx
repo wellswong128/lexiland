@@ -91,7 +91,7 @@ function AuthPage() {
 
   const isIosPwa = isIosStandalonePwa();
   const isMobileWeb = isMobileWebBrowser();
-  const useEmailCodeFlow = isIosPwa || isMobileWeb;
+  const useEmailCodeFlow = true;
 
   const mode = searchParams.get("mode") === "login" ? "login" : "signup";
   const redirectTo = searchParams.get("redirect") || "/";
@@ -104,7 +104,7 @@ function AuthPage() {
     return "/";
   }, [redirectTo]);
 
-  const [showEmailForm, setShowEmailForm] = useState(useEmailCodeFlow);
+  const [showEmailForm, setShowEmailForm] = useState(true);
   const [email, setEmail] = useState("");
   const [emailCode, setEmailCode] = useState("");
   const [emailCodeSent, setEmailCodeSent] = useState(false);

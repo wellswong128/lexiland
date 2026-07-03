@@ -69,6 +69,15 @@ const redirectUrls = [
   "http://localhost:5173/auth/callback",
 ];
 
+const otpEmailSubject = "力思樂園登入驗證碼 / LexiLand sign-in code";
+const otpEmailContent = [
+  "<h2>力思樂園 LexiLand</h2>",
+  "<p>你的登入驗證碼是：</p>",
+  '<p style="font-size: 28px; font-weight: bold; letter-spacing: 0.3em;">{{ .Token }}</p>',
+  "<p>Your sign-in code is: <strong>{{ .Token }}</strong></p>",
+  "<p>此驗證碼 1 小時內有效。This code expires in 1 hour.</p>",
+].join("");
+
 async function patchAuthConfig() {
   const response = await fetch(`https://api.supabase.com/v1/projects/${projectRef}/config/auth`, {
     method: "PATCH",
@@ -88,6 +97,8 @@ async function patchAuthConfig() {
       smtp_sender_name: senderName,
       smtp_max_frequency: 30,
       mailer_autoconfirm: false,
+      mailer_subjects_magic_link: otpEmailSubject,
+      mailer_templates_magic_link_content: otpEmailContent,
     }),
   });
 
@@ -111,6 +122,7 @@ async function patchAuthConfig() {
   console.log(`  SMTP user: ${smtpUser}`);
   console.log(`  Sender: ${senderName} <${senderEmail}>`);
   console.log(`  Redirect URLs: ${redirectUrls.join(", ")}`);
+  console.log("  Email OTP template: magic link template now sends {{ .Token }}");
   console.log("");
   console.log(
     "Important: the sender domain must be onboarded in Cloudflare Email Service → Email Sending.",
