@@ -13,6 +13,7 @@ import {
   waitForPkceVerifier,
 } from "./pkceStorage.js";
 import { resolveAuthRedirectUrlAsync } from "./authRedirect.js";
+import { canUseGoogleIdentity, requestGoogleIdToken } from "./googleIdentity.js";
 import { hasSupabaseConfig, supabase } from "../../lib/supabaseClient.js";
 import { isMobileWebBrowser } from "../../lib/pwaPlatform.js";
 
@@ -290,6 +291,44 @@ export function useSupabaseAuth() {
     }
   }, []);
 
+  const signInWithGoogle = useCallback(
+    async ({ postAuthRedirect = "/" } = {}) => {
+      if (!supabase) {
+        throw new Error("Supabase is not configured.");
+      }
+
+      if (isIosStandalonePwa()) {
+        throw new Error("Google sign-in is not available in the iPhone home screen app.");
+      }
+
+      setAuthError("");
+
+      const safePostAuthRedirect = postAuthRedirect.startsWith("/") ? postAuthRedirect : "/";
+      rememberPostAuthRedirect(safePostAuthRedirect);
+
+      if (canUseGoogleIdentity() && !Capacitor.isNativePlatform()) {
+        const { idToken, nonce } = await requestGoogleIdToken();
+        const { data, error } = await supabase.auth.signInWithIdToken({
+          provider: "google",
+          token: idToken,
+          nonce,
+        });
+
+        if (error) {
+          setAuthError(error.message);
+          throw error;
+        }
+
+        setSession(data.session);
+        setAuthError("");
+        return data.session;
+      }
+
+      return signInWithOAuth("google", { postAuthRedirect: safePostAuthRedirect });
+    },
+    [signInWithOAuth],
+  );
+
   const signOut = useCallback(async () => {
     if (!supabase) {
       return;
@@ -320,6 +359,7 @@ export function useSupabaseAuth() {
     isAuthLoading,
     session,
     signInWithEmail,
+    signInWithGoogle,
     signInWithOAuth,
     sendEmailSignInCode,
     verifyEmailSignInCode,

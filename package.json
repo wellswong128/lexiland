@@ -13,6 +13,7 @@
     "preview": "vite preview",
     "configure:supabase-smtp": "node scripts/configure-supabase-smtp.mjs",
     "configure:supabase-otp-email": "node scripts/configure-supabase-otp-email.mjs",
+    "sync:google-oauth-env": "node scripts/sync-google-oauth-env.mjs",
     "setup:import-api-key": "node scripts/setup-import-api-key.mjs",
     "wordbase:check-api": "bash scripts/wordbase_import/check-api-target.sh",
     "wordbase:import": "bash scripts/wordbase_import/run.sh",

@@ -1,0 +1,27 @@
+---
+description: Do not run production builds unless the user explicitly asks
+alwaysApply: true
+---
+
+# No Build Unless Asked
+
+Do **not** run `npm run build`, `vite build`, or equivalent production build commands unless the user explicitly requests a build.
+
+## Default for testing and verification
+
+- Use `npm run dev` for local testing.
+- Prefer reading code, lint checks, and targeted tests when available.
+- Only suggest a build if the user is preparing to deploy.
+
+## When a build is allowed
+
+Run a build only when the user clearly asks, for example:
+- "run the build"
+- "verify the production build"
+- "build before deploy"
+
+## Do not build proactively
+
+- Do not build after code changes to "verify it compiles".
+- Do not build to test UI or auth flows — use the dev server instead.
+- Do not build as part of routine task completion unless deployment is the stated goal.

@@ -84,7 +84,7 @@ function AuthPage() {
     isAuthLoading,
     sendEmailSignInCode,
     signInWithEmail,
-    signInWithOAuth,
+    signInWithGoogle,
     verifyEmailSignInCode,
     user,
   } = useWordsContext();
@@ -195,11 +195,11 @@ function AuthPage() {
     setSearchParams(nextParams, { replace: true });
   }
 
-  async function handleOAuth(provider) {
+  async function handleGoogleSignIn() {
     try {
       setIsSubmitting(true);
       setNotice("");
-      await signInWithOAuth(provider, { postAuthRedirect: redirectTo });
+      await signInWithGoogle({ postAuthRedirect: redirectTo });
     } catch (error) {
       setNoticeType("error");
       setNotice(getFriendlyAuthError(error.message, t));
@@ -347,7 +347,7 @@ function AuthPage() {
               <button
                 className="flex w-full items-center justify-center gap-3 rounded-full bg-[#4285F4] px-5 py-3.5 text-sm font-bold text-white transition hover:bg-[#3367D6] disabled:opacity-60"
                 disabled={isSubmitting}
-                onClick={() => handleOAuth("google")}
+                onClick={handleGoogleSignIn}
                 type="button"
               >
                 <GoogleIcon />
@@ -370,7 +370,7 @@ function AuthPage() {
                 <button
                   className="flex w-full items-center justify-center gap-3 rounded-full bg-[#4285F4] px-5 py-3.5 text-sm font-bold text-white transition hover:bg-[#3367D6] disabled:opacity-60"
                   disabled={isSubmitting}
-                  onClick={() => handleOAuth("google")}
+                  onClick={handleGoogleSignIn}
                   type="button"
                 >
                   <GoogleIcon />
