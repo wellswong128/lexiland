@@ -7,7 +7,7 @@
  *   npm run sync:google-oauth-env
  */
 
-import { appendFileSync, existsSync, readFileSync } from "node:fs";
+import { appendFileSync, existsSync, readFileSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
 import { loadEnv, projectRefFromSupabaseUrl } from "./load-env.mjs";
 
@@ -15,6 +15,7 @@ loadEnv();
 
 const repoRoot = join(import.meta.dirname, "..");
 const envLocalPath = join(repoRoot, ".env.local");
+const publicClientIdPath = join(repoRoot, "src/config/googleOAuth.public.js");
 const accessToken = process.env.SUPABASE_ACCESS_TOKEN?.trim();
 const projectRef =
   process.env.SUPABASE_PROJECT_REF?.trim() ||
@@ -89,6 +90,15 @@ function upsertEnvLocal(key, value) {
   return "added";
 }
 
+function writePublicClientId(clientId) {
+  const contents = `// Public OAuth client ID (not a secret). Synced via: npm run sync:google-oauth-env
+export const GOOGLE_OAUTH_CLIENT_ID =
+  "${clientId}";
+`;
+
+  writeFileSync(publicClientIdPath, contents, "utf8");
+}
+
 const authConfig = await fetchAuthConfig();
 const clientId = authConfig.external_google_client_id?.trim() || "";
 
@@ -98,11 +108,13 @@ if (!clientId) {
 }
 
 const envStatus = upsertEnvLocal("VITE_GOOGLE_CLIENT_ID", clientId);
+writePublicClientId(clientId);
 
 console.log("Google OAuth env sync");
 console.log(`  project: ${projectRef}`);
 console.log(`  client id: ${clientId.slice(0, 16)}...`);
 console.log(`  .env.local: VITE_GOOGLE_CLIENT_ID ${envStatus}`);
+console.log(`  bundled: src/config/googleOAuth.public.js updated`);
 console.log("");
 console.log("To show LexiLand instead of *.supabase.co on the Google account picker:");
 console.log("  1. Open https://console.cloud.google.com/apis/credentials/consent");
@@ -115,9 +127,6 @@ console.log(`     - Authorized JavaScript origins: ${appDomain}, http://localhos
 console.log(`     - Authorized redirect URIs: https://${projectRef}.supabase.co/auth/v1/callback`);
 console.log("  7. Publish the OAuth consent screen (or keep Testing with test users)");
 console.log("");
-console.log("Then add the same client ID to Vercel:");
-console.log(`  VITE_GOOGLE_CLIENT_ID=${clientId}`);
-console.log("");
 console.log(
-  "The app now uses Google Identity Services on web, so users should see your app name instead of the Supabase project URL.",
+  "The client ID is bundled in src/config/googleOAuth.public.js, so Vercel does not need VITE_GOOGLE_CLIENT_ID for branded sign-in.",
 );
