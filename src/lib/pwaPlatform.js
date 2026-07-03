@@ -42,3 +42,11 @@ export function getIsStandaloneDisplay() {
 export function getServiceWorkerSupport() {
   return typeof navigator !== "undefined" && "serviceWorker" in navigator;
 }
+
+export function isMobileWebBrowser() {
+  if (typeof navigator === "undefined" || Capacitor.isNativePlatform()) {
+    return false;
+  }
+
+  return /iphone|ipad|ipod|android/i.test(navigator.userAgent || "");
+}

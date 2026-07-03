@@ -171,7 +171,7 @@ export default defineConfig(({ mode }) => {
           globPatterns: ["**/*.{js,css,html,ico,png,svg,webp,woff2,webmanifest}"],
           globIgnores: ["**/version.json"],
           navigateFallback: "/index.html",
-          navigateFallbackDenylist: [/^\/api\//, /^\/version\.json$/],
+          navigateFallbackDenylist: [/^\/api\//, /^\/version\.json$/, /^\/auth\/callback/],
           runtimeCaching: [
             {
               urlPattern: /\/version\.json(?:\?.*)?$/,

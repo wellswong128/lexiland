@@ -2,6 +2,7 @@ import { Capacitor } from "@capacitor/core";
 import { isIosStandalonePwa } from "./authBootstrap.js";
 import { resolveAuthRedirectUrl, getSupabaseRedirectUrlHints } from "./authRedirect.js";
 import { getFriendlyNetworkError } from "../../lib/networkErrors.js";
+import { isMobileWebBrowser } from "../../lib/pwaPlatform.js";
 
 export function getFriendlyAuthError(message, t) {
   const offlineFriendly = getFriendlyNetworkError(message, t, "errors.offlineCloudLoad");
@@ -78,6 +79,10 @@ export function getFriendlyAuthError(message, t) {
   ) {
     if (isIosStandalonePwa()) {
       return t("auth.pkceStorageError");
+    }
+
+    if (isMobileWebBrowser()) {
+      return t("auth.mobileOAuthError");
     }
 
     return t("auth.oauthCallbackError");

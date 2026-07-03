@@ -6,8 +6,13 @@ import {
   hasPendingAuthCallback,
   rememberPostAuthRedirect,
 } from "./completeAuthCallback.js";
+import {
+  backupPkceVerifier,
+  waitForPkceVerifier,
+} from "./pkceStorage.js";
 import { resolveAuthRedirectUrlAsync } from "./authRedirect.js";
 import { hasSupabaseConfig, supabase } from "../../lib/supabaseClient.js";
+import { isMobileWebBrowser } from "../../lib/pwaPlatform.js";
 
 export function useSupabaseAuth() {
   const [session, setSession] = useState(null);
@@ -91,6 +96,38 @@ export function useSupabaseAuth() {
     return () => {
       isMounted = false;
       subscription.unsubscribe();
+    };
+  }, []);
+
+  useEffect(() => {
+    if (!supabase || typeof window === "undefined") {
+      return undefined;
+    }
+
+    function retryAuthCallback(event) {
+      if (!event.persisted || !hasPendingAuthCallback()) {
+        return;
+      }
+
+      void completeAuthCallbackFromUrl().then(({ session: callbackSession, error }) => {
+        if (callbackSession) {
+          setSession(callbackSession);
+          setAuthError("");
+          setIsAuthLoading(false);
+          return;
+        }
+
+        if (error) {
+          setAuthError(error.message);
+          setIsAuthLoading(false);
+        }
+      });
+    }
+
+    window.addEventListener("pageshow", retryAuthCallback);
+
+    return () => {
+      window.removeEventListener("pageshow", retryAuthCallback);
     };
   }, []);
 
@@ -211,7 +248,8 @@ export function useSupabaseAuth() {
     const safePostAuthRedirect = postAuthRedirect.startsWith("/") ? postAuthRedirect : "/";
     rememberPostAuthRedirect(safePostAuthRedirect);
 
-    const useManualRedirect = Capacitor.isNativePlatform() || isIosStandalonePwa();
+    const isMobileWeb = isMobileWebBrowser();
+    const useManualRedirect = Capacitor.isNativePlatform() || isIosStandalonePwa() || isMobileWeb;
     const options = {
       redirectTo: callbackUrl,
       skipBrowserRedirect: useManualRedirect,
@@ -234,6 +272,11 @@ export function useSupabaseAuth() {
     }
 
     if (useManualRedirect && data?.url) {
+      if (isMobileWeb) {
+        await waitForPkceVerifier();
+        backupPkceVerifier();
+      }
+
       window.location.assign(data.url);
     }
   }, []);

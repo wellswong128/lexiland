@@ -1,4 +1,8 @@
 import { supabase, usesAutoSessionDetection } from "../../lib/supabaseClient.js";
+import {
+  clearPkceVerifierBackup,
+  restorePkceVerifierBackup,
+} from "./pkceStorage.js";
 
 const POST_AUTH_REDIRECT_KEY = "lexiland.auth.post-login-redirect";
 
@@ -134,19 +138,39 @@ async function completeAuthCallbackFromUrlInternal() {
   const authCode = searchParams.get("code");
 
   if (authCode) {
+    restorePkceVerifierBackup();
+
     if (usesAutoSessionDetection) {
       const { data, error } = await supabase.auth.getSession();
 
       if (data?.session) {
         cleanAuthCallbackUrl();
+        clearPkceVerifierBackup();
         return { session: data.session, error: null, hadCallback: true };
       }
 
-      cleanAuthCallbackUrl();
+      restorePkceVerifierBackup();
+
+      const { data: exchangeData, error: exchangeError } =
+        await supabase.auth.exchangeCodeForSession(authCode);
+
+      if (exchangeData?.session) {
+        cleanAuthCallbackUrl();
+        clearPkceVerifierBackup();
+        return { session: exchangeData.session, error: null, hadCallback: true };
+      }
+
+      const { data: retryData, error: retryError } = await supabase.auth.getSession();
+
+      if (retryData?.session) {
+        cleanAuthCallbackUrl();
+        clearPkceVerifierBackup();
+        return { session: retryData.session, error: null, hadCallback: true };
+      }
 
       return {
         session: null,
-        error: error ?? new Error("Could not complete sign-in."),
+        error: exchangeError ?? retryError ?? error ?? new Error("Could not complete sign-in."),
         hadCallback: true,
       };
     }
@@ -155,16 +179,16 @@ async function completeAuthCallbackFromUrlInternal() {
 
     if (!error && data?.session) {
       cleanAuthCallbackUrl();
+      clearPkceVerifierBackup();
       return { session: data.session, error: null, hadCallback: true };
     }
 
     const { data: sessionData, error: sessionError } = await supabase.auth.getSession();
     if (sessionData?.session) {
       cleanAuthCallbackUrl();
+      clearPkceVerifierBackup();
       return { session: sessionData.session, error: null, hadCallback: true };
     }
-
-    cleanAuthCallbackUrl();
 
     return {
       session: null,

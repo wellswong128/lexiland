@@ -54,6 +54,8 @@ const zhHant = {
       "登入流程在 App 與瀏覽器之間中斷（Chrome 與主屏幕 App 的儲存空間分開）。請用電郵驗證碼登入，或在 Chrome 開啟 learn.lexiland.cc 登入。",
     oauthCallbackError:
       "Google 登入未能完成。請再試一次，或改用下方電郵驗證碼登入。",
+    mobileOAuthError:
+      "手機瀏覽器的 Google 登入未能完成。請再試一次，或改用下方電郵驗證碼登入。",
     nativeRedirectDebug:
       "原生 App 登入回調：{{url}}（請在 Supabase Redirect URLs 加入此網址，以及 capacitor://** 通配）",
     settingsPrompt: "登入後可同步單字到雲端，並在多裝置使用。",
@@ -1138,6 +1140,8 @@ export const translations = {
         "Sign-in was interrupted between the app and the browser (Chrome and the home screen app use separate storage). Use the email code below, or sign in at learn.lexiland.cc in Chrome.",
       oauthCallbackError:
         "Google sign-in could not be completed. Please try again, or use the email code below.",
+      mobileOAuthError:
+        "Google sign-in could not finish in your phone browser. Please try again, or use the email code below.",
       nativeRedirectDebug:
         "Native app auth callback: {{url}} (add this URL and capacitor://** to Supabase Redirect URLs)",
       settingsPrompt: "Sign in to sync words to the cloud and use them across devices.",
