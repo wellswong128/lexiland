@@ -53,13 +53,11 @@ export function resolvePostAuthRedirect(fallback = "/") {
   const redirectFromUrl = searchParams.get("redirect");
 
   if (redirectFromUrl?.startsWith("/")) {
-    clearPostAuthRedirect();
     return redirectFromUrl;
   }
 
   try {
     const storedRedirect = sessionStorage.getItem(POST_AUTH_REDIRECT_KEY);
-    sessionStorage.removeItem(POST_AUTH_REDIRECT_KEY);
 
     if (storedRedirect?.startsWith("/")) {
       return storedRedirect;
@@ -71,7 +69,7 @@ export function resolvePostAuthRedirect(fallback = "/") {
   return fallback;
 }
 
-function clearPostAuthRedirect() {
+export function clearPostAuthRedirect() {
   if (typeof sessionStorage === "undefined") {
     return;
   }

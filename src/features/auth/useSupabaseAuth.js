@@ -6,7 +6,7 @@ import {
   hasPendingAuthCallback,
   rememberPostAuthRedirect,
 } from "./completeAuthCallback.js";
-import { buildOAuthCallbackUrl, resolveAuthRedirectUrlAsync } from "./authRedirect.js";
+import { resolveAuthRedirectUrlAsync } from "./authRedirect.js";
 import { hasSupabaseConfig, supabase } from "../../lib/supabaseClient.js";
 
 export function useSupabaseAuth() {
@@ -211,15 +211,13 @@ export function useSupabaseAuth() {
     const safePostAuthRedirect = postAuthRedirect.startsWith("/") ? postAuthRedirect : "/";
     rememberPostAuthRedirect(safePostAuthRedirect);
 
-    const redirectTo = buildOAuthCallbackUrl(callbackUrl, safePostAuthRedirect);
     const useManualRedirect = Capacitor.isNativePlatform() || isIosStandalonePwa();
     const options = {
-      redirectTo,
+      redirectTo: callbackUrl,
       skipBrowserRedirect: useManualRedirect,
     };
 
     if (provider === "google") {
-      options.scopes = "https://www.googleapis.com/auth/userinfo.email";
       options.queryParams = {
         prompt: "select_account",
       };

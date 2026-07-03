@@ -6,6 +6,7 @@ import {
   waitForPersistedSession,
 } from "../features/auth/authBootstrap.js";
 import {
+  clearPostAuthRedirect,
   hasPendingAuthCallback,
   resolvePostAuthRedirect,
 } from "../features/auth/completeAuthCallback.js";
@@ -17,7 +18,11 @@ function AuthCallbackPage() {
   const navigate = useNavigate();
   const [searchParams] = useSearchParams();
   const { authError, isAuthLoading, user } = useWordsContext();
-  const redirectTo = resolvePostAuthRedirect(searchParams.get("redirect") || "/");
+  const redirectToRef = useRef(null);
+  if (redirectToRef.current === null) {
+    redirectToRef.current = resolvePostAuthRedirect(searchParams.get("redirect") || "/");
+  }
+  const redirectTo = redirectToRef.current;
   const pendingCallback = hasPendingAuthCallback();
   const hasCompletedRedirectRef = useRef(false);
 
@@ -40,10 +45,12 @@ function AuthCallbackPage() {
         }
 
         if (shouldHardNavigateAfterAuth()) {
+          clearPostAuthRedirect();
           navigateAfterAuth(redirectTo);
           return;
         }
 
+        clearPostAuthRedirect();
         navigate(redirectTo, { replace: true });
       });
 
