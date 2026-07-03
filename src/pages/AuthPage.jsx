@@ -230,7 +230,7 @@ function AuthPage() {
       try {
         setIsSubmitting(true);
         setNotice("");
-        await verifyEmailSignInCode(email.trim(), emailCode.trim());
+        await verifyEmailSignInCode(email.trim(), emailCode.trim(), { isSignup });
         if (shouldHardNavigateAfterAuth()) {
           navigateAfterAuth(redirectTo);
         }
@@ -255,7 +255,7 @@ function AuthPage() {
       setNotice("");
 
       if (useEmailCodeFlow) {
-        await sendEmailSignInCode(email.trim(), { shouldCreateUser: isSignup });
+        await sendEmailSignInCode(email.trim(), { shouldCreateUser: true });
         setEmailCodeSent(true);
         setEmailCode("");
         setNoticeType("success");

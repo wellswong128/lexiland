@@ -4,6 +4,11 @@ import { resolveAuthRedirectUrl, getSupabaseRedirectUrlHints } from "./authRedir
 import { getFriendlyNetworkError } from "../../lib/networkErrors.js";
 import { isMobileWebBrowser } from "../../lib/pwaPlatform.js";
 
+function extractEmailFromErrorMessage(message) {
+  const match = String(message || "").match(/[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}/i);
+  return match?.[0]?.toLowerCase() ?? "";
+}
+
 export function getFriendlyAuthError(message, t) {
   const offlineFriendly = getFriendlyNetworkError(message, t, "errors.offlineCloudLoad");
   if (offlineFriendly !== message) {
@@ -47,6 +52,27 @@ export function getFriendlyAuthError(message, t) {
 
   if (lower.includes("signup") || lower.includes("sign ups")) {
     return t("settings.signupsDisabled");
+  }
+
+  if (
+    lower.includes("user not found") ||
+    lower.includes("no user found") ||
+    lower.includes("signups not allowed for otp")
+  ) {
+    return t("auth.emailLoginCreateAccount");
+  }
+
+  if (
+    lower.includes("token has expired") ||
+    lower.includes("otp has expired") ||
+    (lower.includes("invalid") && (lower.includes("token") || lower.includes("otp")))
+  ) {
+    const email = extractEmailFromErrorMessage(message);
+    if (email?.endsWith("@gmail.com") || email?.endsWith("@googlemail.com")) {
+      return `${t("auth.emailCodeInvalid")} ${t("auth.emailCodeGmailHint")}`;
+    }
+
+    return t("auth.emailCodeInvalid");
   }
 
   if (

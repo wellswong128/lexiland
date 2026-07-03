@@ -195,7 +195,7 @@ export function useSupabaseAuth() {
     }
   }, []);
 
-  const verifyEmailSignInCode = useCallback(async (email, token) => {
+  const verifyEmailSignInCode = useCallback(async (email, token, { isSignup = false } = {}) => {
     if (!supabase) {
       throw new Error("Supabase is not configured.");
     }
@@ -213,20 +213,39 @@ export function useSupabaseAuth() {
 
     setAuthError("");
 
-    const { data, error } = await supabase.auth.verifyOtp({
-      email: normalizedEmail,
-      token: normalizedToken,
-      type: "email",
-    });
+    const otpTypes = isSignup ? ["signup", "email"] : ["email", "signup"];
+    let lastError = null;
 
-    if (error) {
-      setAuthError(error.message);
-      throw error;
+    for (const type of otpTypes) {
+      const { data, error } = await supabase.auth.verifyOtp({
+        email: normalizedEmail,
+        token: normalizedToken,
+        type,
+      });
+
+      if (!error && data.session) {
+        setSession(data.session);
+        setAuthError("");
+        return data.session;
+      }
+
+      lastError = error;
+
+      const message = String(error?.message || "").toLowerCase();
+      const retryable =
+        message.includes("invalid") ||
+        message.includes("expired") ||
+        message.includes("otp") ||
+        message.includes("token");
+
+      if (!retryable) {
+        break;
+      }
     }
 
-    setSession(data.session);
-    setAuthError("");
-    return data.session;
+    const errorMessage = lastError?.message || "Could not verify the email code.";
+    setAuthError(errorMessage);
+    throw lastError ?? new Error(errorMessage);
   }, []);
 
   const signInWithOAuth = useCallback(async (provider, { postAuthRedirect = "/" } = {}) => {

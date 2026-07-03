@@ -43,13 +43,18 @@ const zhHant = {
     completingLogin: "正在完成登入，請稍候…",
     pwaIosNotice:
       "iPhone 主屏幕 App 無法使用 Google 登入（會跳轉到 Chrome 而中斷登入）。請用下方電郵驗證碼登入，或在 Chrome 瀏覽器開啟 learn.lexiland.cc 登入。",
-    emailCodeSentSignup: "驗證碼已寄出。請輸入電郵中的 6 位數驗證碼完成註冊。",
-    emailCodeSentLogin: "驗證碼已寄出。請輸入電郵中的 6 位數驗證碼完成登入。",
-    emailCodePlaceholder: "6 位數驗證碼",
+    emailCodeSentSignup: "驗證碼已寄出。請輸入電郵中的 8 位數驗證碼完成註冊。",
+    emailCodeSentLogin: "驗證碼已寄出。請輸入電郵中的 8 位數驗證碼完成登入。",
+    emailCodePlaceholder: "8 位數驗證碼",
     sendEmailCodeSignup: "寄送註冊驗證碼",
     sendEmailCodeLogin: "寄送登入驗證碼",
     verifyEmailCode: "確認驗證碼",
     enterEmailCode: "請輸入電郵中的驗證碼。",
+    emailCodeInvalid: "驗證碼不正確或已過期。請重新索取驗證碼，並輸入電郵中最新的 8 位數驗證碼。",
+    emailCodeGmailHint:
+      "Gmail 用戶請檢查「垃圾郵件」和「促銷內容」資料夾，並將 no-reply@lexiland.cc 加入聯絡人。",
+    emailLoginCreateAccount:
+      "此電郵尚未註冊。請切換到「註冊」再索取驗證碼，或確認電郵地址是否正確。",
     pkceStorageError:
       "登入流程在 App 與瀏覽器之間中斷（Chrome 與主屏幕 App 的儲存空間分開）。請用電郵驗證碼登入，或在 Chrome 開啟 learn.lexiland.cc 登入。",
     oauthCallbackError:
@@ -1131,13 +1136,19 @@ export const translations = {
       completingLogin: "Completing sign-in, please wait…",
       pwaIosNotice:
         "Google sign-in does not work in the iPhone home screen app because Chrome opens separately and breaks login. Use the email code below, or sign in at learn.lexiland.cc in Chrome.",
-      emailCodeSentSignup: "Code sent. Enter the 6-digit code from your email to finish signing up.",
-      emailCodeSentLogin: "Code sent. Enter the 6-digit code from your email to finish signing in.",
-      emailCodePlaceholder: "6-digit code",
+      emailCodeSentSignup: "Code sent. Enter the 8-digit code from your email to finish signing up.",
+      emailCodeSentLogin: "Code sent. Enter the 8-digit code from your email to finish signing in.",
+      emailCodePlaceholder: "8-digit code",
       sendEmailCodeSignup: "Send sign-up code",
       sendEmailCodeLogin: "Send login code",
       verifyEmailCode: "Verify code",
       enterEmailCode: "Please enter the code from your email.",
+      emailCodeInvalid:
+        "That code is invalid or expired. Request a new code and enter the latest 8-digit code from your email.",
+      emailCodeGmailHint:
+        "Gmail users: check Spam and Promotions, and add no-reply@lexiland.cc to your contacts.",
+      emailLoginCreateAccount:
+        "This email is not registered yet. Switch to Sign up and request a code, or double-check the address.",
       pkceStorageError:
         "Sign-in was interrupted between the app and the browser (Chrome and the home screen app use separate storage). Use the email code below, or sign in at learn.lexiland.cc in Chrome.",
       oauthCallbackError:
