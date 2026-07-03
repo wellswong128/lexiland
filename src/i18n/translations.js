@@ -641,6 +641,8 @@ const zhHant = {
       resetSuccess: "所有單字已刪除。",
       rateLimit:
         "寄信次數已達上限，請稍等幾分鐘後再要求登入連結。",
+      authQuotaExceeded:
+        "Supabase 或電郵服務配額已用完，登入暫時無法使用。請稍後再試，或到 Supabase 控制台查看用量。",
       redirectUrlError:
         "登入導向網址未獲 Supabase 允許。請在 Supabase → Authentication → URL Configuration 的 Redirect URLs 加入：{{url}}（建議同時加入 {{wildcard}}）",
       redirectUrlErrorNative:
@@ -1734,6 +1736,8 @@ export const translations = {
       resetSuccess: "All words were deleted.",
       rateLimit:
         "Email rate limit exceeded. Please wait a few minutes before requesting another login link.",
+      authQuotaExceeded:
+        "Supabase or email service quota has been exceeded, so sign-in is temporarily unavailable. Try again later or check usage in the Supabase dashboard.",
       redirectUrlError:
         "The login redirect URL is not allowed by Supabase. Add this URL under Authentication → Redirect URLs: {{url}} (also add {{wildcard}})",
       redirectUrlErrorNative:

@@ -12,8 +12,16 @@ export function getFriendlyAuthError(message, t) {
 
   const lower = message.toLowerCase();
 
-  if (lower.includes("rate limit")) {
+  if (
+    lower.includes("rate limit") ||
+    lower.includes("over_email_send_rate_limit") ||
+    lower.includes("over_request_rate_limit")
+  ) {
     return t("settings.rateLimit");
+  }
+
+  if (lower.includes("quota has been exceeded") || lower.includes("quota exceeded")) {
+    return t("settings.authQuotaExceeded");
   }
 
   if (
