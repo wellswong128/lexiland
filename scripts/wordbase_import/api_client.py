@@ -12,7 +12,7 @@ from PIL import Image
 
 from auth import session_file_lock
 from config import MAX_IMAGE_WIDTH, JPEG_QUALITY, IMAGE_EXTENSIONS, REPO_ROOT
-from production_guard import assert_bulk_api_allowed
+from production_guard import assert_bulk_api_allowed, assert_production_bulk_run_allowed
 
 
 RETRYABLE_STATUS = {429, 500, 502, 503, 504}
@@ -78,6 +78,7 @@ class LexiLandApiClient:
         image_request_pause_seconds: float = 2.5,
     ):
         self.base_url = base_url.rstrip("/")
+        assert_production_bulk_run_allowed(self.base_url)
         self.max_retries = max_retries
         self.request_pause_seconds = request_pause_seconds
         self.image_request_pause_seconds = image_request_pause_seconds

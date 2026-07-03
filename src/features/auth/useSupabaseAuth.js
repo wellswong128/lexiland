@@ -2,10 +2,13 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import { Capacitor } from "@capacitor/core";
 import { isIosStandalonePwa } from "./authBootstrap.js";
 import {
+  cleanAuthCallbackUrl,
+  clearPostAuthRedirect,
   completeAuthCallbackFromUrl,
   hasPendingAuthCallback,
   rememberPostAuthRedirect,
 } from "./completeAuthCallback.js";
+import { clearPkceVerifierBackup } from "./pkceStorage.js";
 import {
   backupPkceVerifier,
   waitForPkceVerifier,
@@ -294,8 +297,13 @@ export function useSupabaseAuth() {
     }
 
     setAuthError("");
+    setSession(null);
+    setIsAuthLoading(false);
+    clearPostAuthRedirect();
+    clearPkceVerifierBackup();
+    cleanAuthCallbackUrl();
 
-    const { error } = await supabase.auth.signOut();
+    const { error } = await supabase.auth.signOut({ scope: "local" });
 
     if (error) {
       setAuthError(error.message);

@@ -11,4 +11,8 @@ if [[ ! -x "$PYTHON" ]]; then
   "$WORDBASE_IMPORT/.venv/bin/pip" install -r "$WORDBASE_IMPORT/requirements.txt"
 fi
 
+# shellcheck source=../wordbase_import/resolve-local-api.sh
+source "$WORDBASE_IMPORT/resolve-local-api.sh"
+prepare_bulk_api_env "$@"
+
 exec "$PYTHON" "$DIR/enrich_word_group_list.py" "$@"

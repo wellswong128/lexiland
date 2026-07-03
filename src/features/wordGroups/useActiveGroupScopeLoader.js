@@ -72,6 +72,18 @@ export function useActiveGroupScopeLoader(user) {
   }
 
   useEffect(() => {
+    if (!userId) {
+      invalidateInFlightScopeLoads();
+      setScopeMode(loadWordScopeMode(null));
+      setState({
+        activeGroup: null,
+        mappedTerms: [],
+        isLoading: false,
+        error: "",
+      });
+      return;
+    }
+
     const cachedScope = readCachedScope(userId);
     setScopeMode(loadWordScopeMode(userId));
     setState((current) => ({

@@ -50,6 +50,39 @@ def production_bulk_api_allowed() -> bool:
     return value in {"1", "true", "yes", "on"}
 
 
+def describe_api_target(base_url: str) -> str:
+    if is_production_api_base(base_url):
+        return f"production ({base_url.rstrip('/')})"
+    if is_local_api_host((urlparse(base_url.strip()).hostname or "")):
+        return f"local ({base_url.rstrip('/')})"
+    return base_url.rstrip("/")
+
+
+def warn_if_misconfigured_api_env() -> list[str]:
+    warnings: list[str] = []
+    app_api = os.getenv("APP_API_BASE_URL", "").strip()
+    vite_api = os.getenv("VITE_API_BASE_URL", "").strip()
+
+    if app_api and is_production_api_base(app_api) and not production_bulk_api_allowed():
+        warnings.append(
+            "APP_API_BASE_URL points to production. Bulk scripts will refuse to run. "
+            "Use APP_API_BASE_URL=http://localhost:5173 with `npm run dev`, or remove "
+            "APP_API_BASE_URL from .env.local to use the localhost default."
+        )
+    if (
+        not app_api
+        and vite_api
+        and is_production_api_base(vite_api)
+        and not production_bulk_api_allowed()
+    ):
+        warnings.append(
+            "VITE_API_BASE_URL points to production but APP_API_BASE_URL is unset. "
+            "Bulk scripts default to http://localhost:5173 — do not set "
+            "APP_API_BASE_URL=https://learn.lexiland.cc in .env.local."
+        )
+    return warnings
+
+
 def assert_bulk_api_allowed(base_url: str, path: str) -> None:
     if not is_bulk_ai_api_path(path) or not is_production_api_base(base_url):
         return

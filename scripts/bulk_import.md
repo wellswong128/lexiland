@@ -62,6 +62,9 @@ Configure these in the project root `.env` or `.env.local`:
 Bulk import/enrich calls `/api/complete-word`, `/api/word-memory-tips`, and `/api/word-memory-image`. Run the API locally so you do not burn Vercel quota:
 
 ```bash
+# Check what API target your env resolves to
+npm run wordbase:check-api
+
 # Terminal 1 — local API (reads .env.local, including IMPORT_API_KEY)
 npm run dev
 
@@ -71,6 +74,8 @@ npm run setup:import-api-key
 # Run import against localhost (default APP_API_BASE_URL)
 APP_API_BASE_URL=http://localhost:5173 ./scripts/wordbase_import/run.sh --resume
 ```
+
+All bulk wrapper scripts (`run.sh`, `run-pdf.sh`, `run-enrich-memory.sh`, `run-coca-terms.sh`, `word-groups:enrich`, etc.) now **refuse production API targets** unless you explicitly set `ALLOW_PRODUCTION_BULK_API=1`. Remove `APP_API_BASE_URL=https://learn.lexiland.cc` from `.env.local` if it was set there by mistake.
 
 If you change `IMPORT_API_KEY` in `.env.local`, restart `npm run dev` before resuming imports.
 

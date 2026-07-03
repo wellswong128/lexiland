@@ -14,6 +14,7 @@
     "configure:supabase-smtp": "node scripts/configure-supabase-smtp.mjs",
     "configure:supabase-otp-email": "node scripts/configure-supabase-otp-email.mjs",
     "setup:import-api-key": "node scripts/setup-import-api-key.mjs",
+    "wordbase:check-api": "bash scripts/wordbase_import/check-api-target.sh",
     "wordbase:import": "bash scripts/wordbase_import/run.sh",
     "wordbase:import:dry-run": "bash scripts/wordbase_import/run.sh --dry-run --limit-images 1",
     "wordbase:import:pdf": "bash scripts/wordbase_import/run-pdf.sh",

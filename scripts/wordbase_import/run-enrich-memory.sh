@@ -10,4 +10,8 @@ if [[ ! -x "$PYTHON" ]]; then
   "$DIR/.venv/bin/pip" install -r "$DIR/requirements.txt"
 fi
 
+# shellcheck source=resolve-local-api.sh
+source "$DIR/resolve-local-api.sh"
+prepare_bulk_api_env "$@"
+
 exec env PYTHONUNBUFFERED=1 "$PYTHON" "$DIR/enrich_wordbase_memory.py" "$@"

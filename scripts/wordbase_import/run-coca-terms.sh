@@ -38,6 +38,6 @@ fi
 
 # shellcheck source=resolve-local-api.sh
 source "$DIR/resolve-local-api.sh"
-resolve_local_api_base
+prepare_bulk_api_env "$@"
 
 exec env PYTHONUNBUFFERED=1 "$PYTHON" "$DIR/import_words_from_terms.py" "$@"

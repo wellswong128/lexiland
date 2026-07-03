@@ -20,6 +20,7 @@ from completeness import (
     missing_memory_parts,
 )
 from config import load_settings
+from production_guard import assert_production_bulk_run_allowed
 from terms import normalize_term
 from wordbase_client import (
     fetch_entry,
@@ -424,6 +425,8 @@ def main() -> int:
         return 1
 
     settings = load_settings()
+    if not args.dry_run:
+        assert_production_bulk_run_allowed(settings.api_base_url)
     locale = args.locale or settings.locale
     progress = load_progress(args.progress_file)
 
