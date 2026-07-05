@@ -14,6 +14,8 @@ import { maybeRecordDailyMistakeClear } from "../lib/learningActivity.js";
 import { ACTION_TYPES, awardLearningAction } from "../features/rewards/rewardsEngine.js";
 import { REVIEW_RESULTS } from "../features/words/wordTypes.js";
 
+const RAPID_INTERACTION_LOCK_MS = 1_000;
+
 function QuizPage() {
   const { locale, t } = useLocale();
   const { ensureActiveGroupWordsSynced, isActiveGroupSyncing, updateWord, user, words } = useWordsContext();
@@ -130,7 +132,7 @@ function QuizPage() {
       return false;
     }
 
-    interactionLockedUntilRef.current = now + 500;
+    interactionLockedUntilRef.current = now + RAPID_INTERACTION_LOCK_MS;
     return true;
   }
 

@@ -25,6 +25,8 @@ import { maybeRecordDailyMistakeClear } from "../lib/learningActivity.js";
 import { ACTION_TYPES, awardLearningAction } from "../features/rewards/rewardsEngine.js";
 import { REVIEW_RESULTS } from "../features/words/wordTypes.js";
 
+const RAPID_INTERACTION_LOCK_MS = 1_000;
+
 function FlashcardsMissingImagesPanel({ flashcardReadiness, t }) {
   const { missingSessionWords, poolCount, needsMorePoolWords, willUseTextMode } = flashcardReadiness;
 
@@ -490,7 +492,7 @@ function FlashcardsPage() {
       return false;
     }
 
-    interactionLockedUntilRef.current = now + 500;
+    interactionLockedUntilRef.current = now + RAPID_INTERACTION_LOCK_MS;
     return true;
   }
 
