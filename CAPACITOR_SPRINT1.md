@@ -90,10 +90,80 @@ npm run cap:sync
 - Service Worker is disabled in Capacitor; PWA web version unchanged
 - OAuth / Deep Link login is **Sprint 2** (not in this sprint)
 
-## Android (optional)
+## Android
+
+### Prerequisites
+
+- [Android Studio](https://developer.android.com/studio) (includes JDK 17+)
+- Android SDK Platform 36 (installed via Android Studio SDK Manager)
+
+### 1. Configure env
+
+Copy values from `.env.capacitor.example` into `.env.local`:
+
+```bash
+VITE_API_BASE_URL=https://learn.lexiland.cc
+VITE_CAPACITOR_APP_ID=com.lexiland.app
+VITE_NATIVE_AUTH_REDIRECT_URL=com.lexiland.app://auth/callback
+```
+
+For Supabase login, also add `VITE_SUPABASE_URL` and `VITE_SUPABASE_ANON_KEY`, then add these **Redirect URLs** in Supabase:
+
+```text
+com.lexiland.app://auth/callback
+com.lexiland.app://**
+capacitor://localhost/auth/callback
+capacitor://**
+https://learn.lexiland.cc/**
+```
+
+### 2. Build and sync
+
+```bash
+npm run cap:sync
+```
+
+This builds the web app into `dist/` and copies it into `android/app/src/main/assets/public`.
+
+### 3. Open Android Studio
 
 ```bash
 npm run cap:android
 ```
 
-Open Android Studio, run on device/emulator.
+Or:
+
+```bash
+npx cap open android
+```
+
+### 4. Run on device or emulator
+
+1. Connect an Android phone (USB debugging) or start an emulator
+2. Click **Run** in Android Studio
+
+### 5. Build APK from terminal (optional)
+
+```bash
+npm run cap:android:apk
+```
+
+Debug APK output:
+
+```text
+android/app/build/outputs/apk/debug/app-debug.apk
+```
+
+Release build (requires signing config in Android Studio):
+
+```bash
+npm run cap:android:release
+```
+
+### Android acceptance
+
+- [ ] App opens to homepage
+- [ ] Guest mode works without login
+- [ ] Photo add opens camera / gallery
+- [ ] Flashcards and quiz work
+- [ ] Google / email login returns via `com.lexiland.app://auth/callback`
