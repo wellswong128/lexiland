@@ -1,6 +1,7 @@
 import { lazy, Suspense } from "react";
 import { Navigate, Route, Routes, useLocation } from "react-router-dom";
 import AppLayout from "./components/AppLayout.jsx";
+import EveningReminderSync from "./features/reminders/EveningReminderSync.jsx";
 import { LocaleProvider } from "./features/locale/LocaleContext.jsx";
 import { useWordsContext, WordsProvider } from "./features/words/WordsContext.jsx";
 import { canRoute, getRoleFromUser } from "./lib/authorization.js";
@@ -104,13 +105,24 @@ function AppRoutes() {
   );
 }
 
+function AppShell() {
+  const { user, words } = useWordsContext();
+
+  return (
+    <>
+      <EveningReminderSync user={user} words={words} />
+      <AppLayout>
+        <AppRoutes />
+      </AppLayout>
+    </>
+  );
+}
+
 function App() {
   return (
     <LocaleProvider>
       <WordsProvider>
-        <AppLayout>
-          <AppRoutes />
-        </AppLayout>
+        <AppShell />
       </WordsProvider>
     </LocaleProvider>
   );

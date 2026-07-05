@@ -11,6 +11,7 @@ import { normalizeTerm, normalizeText } from "../features/words/wordTypes.js";
 import { loadWords, WORDS_STORAGE_KEY } from "../lib/storage.js";
 import PwaStatusPanel from "../components/PwaStatusPanel.jsx";
 import WordGroupSettingsSection from "../features/wordGroups/WordGroupSettingsSection.jsx";
+import EveningReminderSettings from "../features/reminders/EveningReminderSettings.jsx";
 import { getAppInstallUrl } from "../lib/appUrl.js";
 import "../styles/install-page.css";
 
@@ -159,6 +160,8 @@ function SettingsPage() {
       </div>
 
       <WordGroupSettingsSection hasSupabaseConfig={hasSupabaseConfig} user={user} />
+
+      {hasSupabaseConfig && user ? <EveningReminderSettings user={user} /> : null}
 
       <PwaStatusPanel />
 

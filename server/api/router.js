@@ -4,10 +4,13 @@ import adminWordbaseLibrary from "./handlers/admin-wordbase-library.js";
 import adminWordGroupMap from "./handlers/admin-word-group-map.js";
 import adminWordGroups from "./handlers/admin-word-groups.js";
 import completeWord from "./handlers/complete-word.js";
+import cronEveningReminders from "./handlers/cron-evening-reminders.js";
 import extractWordsFromImage from "./handlers/extract-words-from-image.js";
 import userActiveGroup from "./handlers/user-active-group.js";
 import userActiveGroupWords from "./handlers/user-active-group-words.js";
+import userDailySnapshot from "./handlers/user-daily-snapshot.js";
 import userGroupPicks from "./handlers/user-group-picks.js";
+import userReminderSettings from "./handlers/user-reminder-settings.js";
 import wordGroups from "./handlers/word-groups.js";
 import wordMemoryImage from "./handlers/word-memory-image.js";
 import wordMemoryTips from "./handlers/word-memory-tips.js";
@@ -20,10 +23,13 @@ const ROUTES = new Map([
   ["admin-word-group-map", adminWordGroupMap],
   ["admin-word-groups", adminWordGroups],
   ["complete-word", completeWord],
+  ["cron/evening-reminders", cronEveningReminders],
   ["extract-words-from-image", extractWordsFromImage],
   ["user-active-group", userActiveGroup],
   ["user-active-group-words", userActiveGroupWords],
+  ["user-daily-snapshot", userDailySnapshot],
   ["user-group-picks", userGroupPicks],
+  ["user-reminder-settings", userReminderSettings],
   ["word-groups", wordGroups],
   ["word-memory-image", wordMemoryImage],
   ["word-memory-tips", wordMemoryTips],

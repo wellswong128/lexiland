@@ -30,6 +30,7 @@ The first version uses `localStorage` so the app can be built quickly without a 
 - `PROJECT_PLAN.md`: product goal, MVP scope, pages, phases, and engineering principles.
 - `TASKS.md`: beginner-friendly task list ordered from setup to deployment.
 - `DATA_MODEL.md`: localStorage data model and future Supabase table design.
+- `EVENING_EMAIL_REMINDERS.md`: evening task reminder emails (opt-in, cron, SMTP setup).
 - `PROMPTS.md`: reusable Cursor prompts for development, debugging, refactoring, and future features.
 - `README.md`: project overview and setup notes.
 
