@@ -43,6 +43,8 @@ function QuizPage() {
   const questionsLengthRef = useRef(0);
   const quizSessionRef = useRef(`quiz-${Date.now()}`);
   const awardedCorrectRef = useRef(new Set());
+  const answeredQuestionRef = useRef(null);
+  const advancingQuestionRef = useRef(null);
   const scoreRef = useRef(0);
 
   questionsLengthRef.current = questions.length;
@@ -109,10 +111,29 @@ function QuizPage() {
     speakText(currentQuestion.word.term);
   }, [currentIndex, currentQuestion?.word?.term, feedback, isComplete]);
 
+  useEffect(() => {
+    answeredQuestionRef.current = null;
+    advancingQuestionRef.current = null;
+  }, [currentIndex, currentQuestion?.word.id]);
+
+  function getCurrentQuestionKey() {
+    return currentQuestion?.word?.id
+      ? `${currentQuestion.word.id}-${currentIndex}`
+      : `question-${currentIndex}`;
+  }
+
   function handleAnswer(answer) {
-    if (feedback) {
+    if (feedback || isComplete || !currentQuestion) {
       return;
     }
+
+    const questionKey = getCurrentQuestionKey();
+
+    if (answeredQuestionRef.current === questionKey) {
+      return;
+    }
+
+    answeredQuestionRef.current = questionKey;
 
     const isCorrect = answer === currentQuestion.correctAnswer;
     const result = isCorrect
@@ -151,6 +172,13 @@ function QuizPage() {
   }
 
   function handleNextQuestion(wasLastCorrect = false) {
+    const questionKey = getCurrentQuestionKey();
+
+    if (advancingQuestionRef.current === questionKey) {
+      return;
+    }
+
+    advancingQuestionRef.current = questionKey;
     setSelectedAnswer("");
     setFeedback(null);
 

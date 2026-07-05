@@ -223,6 +223,8 @@ function FlashcardsPage() {
   const quizBottomRef = useRef(null);
   const flashcardSessionRef = useRef(`flashcards-${Date.now()}`);
   const reviewEventCounterRef = useRef(0);
+  const answeredQuestionRef = useRef(null);
+  const advancingQuestionRef = useRef(null);
 
   imageQuestionsRef.current = imageQuestions;
   imageQuestionsLengthRef.current = imageQuestions.length;
@@ -469,7 +471,40 @@ function FlashcardsPage() {
     };
   }, [currentIndex, currentQuestion?.word.id, feedback, hasStarted, isComplete]);
 
+  useEffect(() => {
+    answeredQuestionRef.current = null;
+    advancingQuestionRef.current = null;
+  }, [currentIndex, currentQuestion?.word.id, reviewMode]);
+
+  function getCurrentQuestionKey() {
+    return currentQuestion?.word?.id
+      ? `${reviewMode}-${currentIndex}-${currentQuestion.word.id}`
+      : `${reviewMode}-${currentIndex}`;
+  }
+
+  function claimCurrentAnswer() {
+    if (!currentQuestion?.word) {
+      return false;
+    }
+
+    const questionKey = getCurrentQuestionKey();
+
+    if (answeredQuestionRef.current === questionKey) {
+      return false;
+    }
+
+    answeredQuestionRef.current = questionKey;
+    return true;
+  }
+
   function goToNextWord() {
+    const questionKey = getCurrentQuestionKey();
+
+    if (advancingQuestionRef.current === questionKey) {
+      return;
+    }
+
+    advancingQuestionRef.current = questionKey;
     setSelectedAnswer("");
     setFeedback(null);
     setShowAnswer(false);
@@ -492,6 +527,8 @@ function FlashcardsPage() {
     setCurrentIndex(0);
     setSelectedAnswer("");
     setFeedback(null);
+    answeredQuestionRef.current = null;
+    advancingQuestionRef.current = null;
     setImageQuestions([]);
     setSessionClearedCount(0);
     setShowAnswer(false);
@@ -522,7 +559,7 @@ function FlashcardsPage() {
   }
 
   function handleTextRecall(result) {
-    if (!currentQuestion?.word) {
+    if (!currentQuestion?.word || isComplete || !claimCurrentAnswer()) {
       return;
     }
 
@@ -540,7 +577,7 @@ function FlashcardsPage() {
   }
 
   function handleImageAnswer(answerWordId) {
-    if (feedback || !currentQuestion) {
+    if (feedback || !currentQuestion || isComplete || !claimCurrentAnswer()) {
       return;
     }
 

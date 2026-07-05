@@ -600,22 +600,43 @@ export function useWords({ isAuthLoading = false, user = null } = {}, storage) {
   const deleteWord = useCallback(
     async (wordId) => {
       const currentWords = words;
+      const deletedWord = currentWords.find((word) => word.id === wordId);
 
       setWords((currentWords) =>
         currentWords.filter((word) => word.id !== wordId),
       );
-      clearStoredWordAiMemory(wordId, storage);
 
       if (isUsingSupabase) {
         try {
           await deleteWordFromSupabase(wordId);
+          clearStoredWordAiMemory(wordId, storage);
         } catch (error) {
           setWordsError(error.message);
-          setWords(currentWords);
+          if (deletedWord) {
+            setWords((latestWords) => {
+              if (latestWords.some((word) => word.id === wordId)) {
+                return latestWords;
+              }
+
+              const restoreIndex = currentWords.findIndex((word) => word.id === wordId);
+              const restoredWords = [...latestWords];
+              restoredWords.splice(
+                restoreIndex < 0 ? restoredWords.length : restoreIndex,
+                0,
+                deletedWord,
+              );
+
+              return restoredWords;
+            });
+          }
         }
+
+        return;
       }
+
+      clearStoredWordAiMemory(wordId, storage);
     },
-    [isUsingSupabase, words],
+    [isUsingSupabase, storage, words],
   );
 
   const importWords = useCallback(
