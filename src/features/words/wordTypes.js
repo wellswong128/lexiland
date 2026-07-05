@@ -143,3 +143,59 @@ export function createWord(input, options = {}) {
         : null,
   };
 }
+
+function getWordLearningScore(word) {
+  return Math.max(
+    Number(word?.mistake?.mistakeCount) || 0,
+    Number(word?.review?.incorrectCount) || 0,
+  );
+}
+
+function pickPreferredDuplicateWord(existing, candidate) {
+  const existingActive = Boolean(existing.mistake?.isMistake);
+  const candidateActive = Boolean(candidate.mistake?.isMistake);
+
+  if (candidateActive !== existingActive) {
+    return candidateActive ? candidate : existing;
+  }
+
+  const existingScore = getWordLearningScore(existing);
+  const candidateScore = getWordLearningScore(candidate);
+
+  if (candidateScore !== existingScore) {
+    return candidateScore > existingScore ? candidate : existing;
+  }
+
+  const existingUpdated = Date.parse(existing.updatedAt || "") || 0;
+  const candidateUpdated = Date.parse(candidate.updatedAt || "") || 0;
+
+  if (candidateUpdated !== existingUpdated) {
+    return candidateUpdated > existingUpdated ? candidate : existing;
+  }
+
+  const existingCreated = Date.parse(existing.createdAt || "") || 0;
+  const candidateCreated = Date.parse(candidate.createdAt || "") || 0;
+
+  return candidateCreated > existingCreated ? candidate : existing;
+}
+
+export function dedupeWordsByTerm(words) {
+  if (!Array.isArray(words) || words.length === 0) {
+    return [];
+  }
+
+  const byTerm = new Map();
+
+  for (const word of words) {
+    const termKey = normalizeTerm(word?.term);
+
+    if (!termKey) {
+      continue;
+    }
+
+    const existing = byTerm.get(termKey);
+    byTerm.set(termKey, existing ? pickPreferredDuplicateWord(existing, word) : word);
+  }
+
+  return Array.from(byTerm.values());
+}

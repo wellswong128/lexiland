@@ -1,7 +1,12 @@
-import { useMemo } from "react";
+import { useEffect, useMemo } from "react";
 import { Link, useLocation } from "react-router-dom";
 import LexiMascot from "../components/LexiMascot.jsx";
+import BadgesPanel from "../components/rewards/BadgesPanel.jsx";
+import CoinsStatCard from "../components/rewards/CoinsStatCard.jsx";
+import HomeHeroAvatar from "../components/rewards/HomeHeroAvatar.jsx";
+import TodayMissions from "../components/rewards/TodayMissions.jsx";
 import { useLocale } from "../features/locale/LocaleContext.jsx";
+import { useRewards } from "../features/rewards/useRewards.js";
 import WordScopeModeSwitch from "../features/wordGroups/WordScopeModeSwitch.jsx";
 import { getActiveGroupLabel } from "../features/wordGroups/getActiveGroupLabel.js";
 import { useActiveGroupWordScope } from "../features/wordGroups/useActiveGroupWordScope.js";
@@ -77,6 +82,15 @@ const quickActionLinks = [
     bg: "home-quick-bg-teal",
     iconClass: "home-qi4",
     emoji: "🧩",
+  },
+  {
+    key: "rewards",
+    labelKey: "nav.rewards",
+    descKey: "home.rewardsDesc",
+    to: "/rewards",
+    bg: "home-quick-bg-amber",
+    iconClass: "home-qi-rewards",
+    emoji: "🎁",
   },
   {
     key: "learningReport",
@@ -243,10 +257,23 @@ function HomePage() {
   const mistakeCount = mistakeWords.length;
   const isEmpty = wordCount === 0;
   const showSyncPrompt = hasSupabaseConfig && !isWordsLoading && !user;
-  const { lastActivity, streak, todayReviewed, dailyTasks } = useMemo(
+  const { lastActivity, todayReviewed } = useMemo(
     () => getLearningSnapshot(learningWords),
     [learningWords, location.key],
   );
+  const {
+    allMissionsClaimed,
+    badges,
+    claimDailyHeroBonus,
+    claimMission,
+    dailyHeroClaimable,
+    dailyHeroClaimed,
+    lexicoins,
+    missions,
+    refreshBadges,
+    streak,
+    streakSafeToday,
+  } = useRewards(learningWords);
   const learningReport = useMemo(
     () => getLearningReport(learningWords),
     [learningWords, location.key],
@@ -261,7 +288,7 @@ function HomePage() {
   const starterPrimaryTo = getRouteOrSignupRedirect(role, starterPrimaryPath);
   const starterManualTo = getRouteOrSignupRedirect(role, STARTER_MANUAL_PATH);
   const showStarterAuthHint = !canRoute(role, starterPrimaryPath);
-  const showDailyTasks = !isHomeLoading && wordCount > 0 && !showStarterOnboarding;
+  const showDailyMissions = !isHomeLoading && wordCount > 0 && !showStarterOnboarding;
   const showLearningReport = !isHomeLoading && canRoute(role, "/learning-report");
   const learningReportTo = getRouteOrSignupRedirect(role, "/learning-report");
   const photoFlagshipTo = getRouteOrSignupRedirect(role, STARTER_PHOTO_PATH);
@@ -269,17 +296,9 @@ function HomePage() {
     !isHomeLoading && !showStarterOnboarding && canRoute(role, STARTER_PHOTO_PATH);
   const activeGroupLabel = getActiveGroupLabel(activeGroup, locale);
 
-  const dailyTaskLabelKeys = {
-    reviewWords: "home.dailyTaskReviewWords",
-    playGame: "home.dailyTaskPlayGame",
-    clearMistakes: "home.dailyTaskClearMistakes",
-  };
-
-  const dailyTaskDescKeys = {
-    reviewWords: "home.dailyTaskReviewWordsDesc",
-    playGame: "home.dailyTaskPlayGameDesc",
-    clearMistakes: "home.dailyTaskClearMistakesDesc",
-  };
+  useEffect(() => {
+    refreshBadges();
+  }, [learningWords, refreshBadges]);
 
   const values = {
     words: wordCount,
@@ -300,6 +319,7 @@ function HomePage() {
   return (
     <div className="home-page">
       <section className="home-hero">
+        <HomeHeroAvatar />
         <div className="home-hero-top">
           <div className="home-mascot-wrap">
             <LexiMascot className="home-mascot-image" size="xl" title={t("brand.mascotAlt")} />
@@ -335,7 +355,7 @@ function HomePage() {
         </div>
 
         {!isHomeLoading ? (
-          <div className="home-stats">
+          <div className="home-stats home-stats-3">
             <div className="home-card">
               <div className="home-stat-title">{t("home.todayReviewedLabel")}</div>
               <div className="home-stat-row">
@@ -354,6 +374,7 @@ function HomePage() {
                 </span>
               </div>
             </div>
+            <CoinsStatCard value={lexicoins} />
           </div>
         ) : null}
       </section>
@@ -365,318 +386,273 @@ function HomePage() {
           </p>
         ) : null}
 
-        {!isHomeLoading && canAccessPrimaryCta ? (
-          <Link className="home-cta" to={primaryCta.to}>
-            ✨{" "}
-            {primaryCta.count != null
-              ? t(primaryCta.labelKey, { count: primaryCta.count })
-              : t(primaryCta.labelKey)}
-          </Link>
-        ) : null}
+        {!isHomeLoading ? (
+          <div className="home-dashboard">
+            <div className="home-priority-row">
+              {canAccessPrimaryCta ? (
+                <Link className="home-cta" to={primaryCta.to}>
+                  ✨{" "}
+                  {primaryCta.count != null
+                    ? t(primaryCta.labelKey, { count: primaryCta.count })
+                    : t(primaryCta.labelKey)}
+                </Link>
+              ) : null}
 
-        {showStarterOnboarding ? (
-          <section className="home-starter" aria-labelledby="home-starter-title">
-            <div className="home-starter-copy">
-              <p className="home-starter-badge">{t("home.starterBadge")}</p>
-              <h2 id="home-starter-title">{t("home.starterTitle")}</h2>
-              <p>
-                {canStartStarterQuiz
-                  ? t("home.starterReadyDescription")
-                  : t("home.starterDescription", { count: starterWordsRemaining })}
-              </p>
-            </div>
-
-            <div className="home-starter-progress">
-              <span>{t("home.starterProgress", {
-                count: starterWordsReady,
-                target: STARTER_QUIZ_WORD_TARGET,
-              })}</span>
-            </div>
-
-            <ol className="home-starter-steps">
-              <li className={wordCount > 0 ? "home-starter-step-done" : ""}>
-                <span className="home-starter-step-number">1</span>
-                <div>
-                  <h3>{t("home.starterStepPhotoTitle")}</h3>
-                  <p>{t("home.starterStepPhotoDesc")}</p>
-                </div>
-              </li>
-              <li className={wordCount > 0 ? "home-starter-step-done" : ""}>
-                <span className="home-starter-step-number">2</span>
-                <div>
-                  <h3>{t("home.starterStepCardsTitle")}</h3>
-                  <p>{t("home.starterStepCardsDesc")}</p>
-                </div>
-              </li>
-              <li className={canStartStarterQuiz ? "home-starter-step-ready" : ""}>
-                <span className="home-starter-step-number">3</span>
-                <div>
-                  <h3>{t("home.starterStepQuizTitle")}</h3>
-                  <p>{t("home.starterStepQuizDesc")}</p>
-                </div>
-              </li>
-            </ol>
-
-            <div className="home-starter-actions">
-              <Link
-                className="home-starter-primary"
-                to={starterPrimaryTo}
-              >
-                {canStartStarterQuiz ? t("home.starterQuizCta") : t("home.starterPhotoCta")}
-              </Link>
-              {!canStartStarterQuiz ? (
-                <Link className="home-starter-secondary" to={starterManualTo}>
-                  {t("home.starterManualCta")}
+              {showContinue ? (
+                <Link className="home-continue" to={lastActivity.path}>
+                  <div className="home-continue-left">
+                    <div aria-hidden="true" className="home-iconbox">
+                      {lastActivity.icon}
+                    </div>
+                    <div>
+                      <div className="home-continue-t1">{t("home.continueTitle")}</div>
+                      <div className="home-continue-t2">
+                        {t("home.continueActivity", { name: t(lastActivity.labelKey) })}
+                      </div>
+                    </div>
+                  </div>
+                  <span aria-hidden="true" className="home-arrow">
+                    ›
+                  </span>
                 </Link>
               ) : null}
             </div>
-            {showStarterAuthHint ? (
-              <p className="home-starter-auth-hint">{t("home.starterAuthHint")}</p>
-            ) : null}
-          </section>
-        ) : null}
 
-        {showPhotoFlagship ? (
-          <section className="home-flagship" aria-labelledby="home-flagship-title">
-            <div className="home-flagship-copy">
-              <p className="home-flagship-badge">{t("home.flagshipBadge")}</p>
-              <h2 id="home-flagship-title">{t("home.flagshipTitle")}</h2>
-              <p>{t("home.flagshipDescription")}</p>
-            </div>
-
-            <ol className="home-flagship-steps" aria-label={t("home.flagshipTitle")}>
-              <li>
-                <span aria-hidden="true">1</span>
-                {t("home.flagshipStepExtract")}
-              </li>
-              <li>
-                <span aria-hidden="true">2</span>
-                {t("home.flagshipStepComplete")}
-              </li>
-              <li>
-                <span aria-hidden="true">3</span>
-                {t("home.flagshipStepPreview")}
-              </li>
-            </ol>
-
-            <Link className="home-flagship-cta" to={photoFlagshipTo}>
-              <span aria-hidden="true" className="home-flagship-cta-icon">
-                📷
-              </span>
-              {t("home.flagshipCta")}
-            </Link>
-          </section>
-        ) : null}
-
-        {showDailyTasks ? (
-          <section className="home-daily" aria-labelledby="home-daily-title">
-            <div className="home-daily-header">
-              <div>
-                <p className="home-daily-badge">{t("home.dailyTasksBadge")}</p>
-                <h2 id="home-daily-title">{t("home.dailyTasksTitle")}</h2>
-              </div>
-              <p className="home-daily-summary">
-                {t("home.dailyTasksSummary", {
-                  completed: dailyTasks.completedCount,
-                  total: dailyTasks.totalCount,
-                })}
-              </p>
-            </div>
-
-            {dailyTasks.allDone ? (
-              <p className="home-daily-complete">{t("home.dailyTasksAllDone")}</p>
+            {dueCount > 0 && mistakeCount > 0 ? (
+              <Link className="home-mini-pill" to="/mistakes">
+                {t("home.secondaryMistakesPill", { count: mistakeCount })}
+              </Link>
             ) : null}
 
-            <ul className="home-daily-list">
-              {dailyTasks.tasks.map((task) => {
-                const taskTo = getRouteOrSignupRedirect(role, task.to);
+            <div className="home-promo-grid">
+              {showStarterOnboarding ? (
+                <section className="home-starter" aria-labelledby="home-starter-title">
+                  <div className="home-starter-copy">
+                    <p className="home-starter-badge">{t("home.starterBadge")}</p>
+                    <h2 id="home-starter-title">{t("home.starterTitle")}</h2>
+                    <p>
+                      {canStartStarterQuiz
+                        ? t("home.starterReadyDescription")
+                        : t("home.starterDescription", { count: starterWordsRemaining })}
+                    </p>
+                  </div>
 
-                return (
-                  <li className={task.done ? "home-daily-item home-daily-item-done" : "home-daily-item"} key={task.id}>
-                    <Link className="home-daily-link" to={taskTo}>
-                      <span aria-hidden="true" className="home-daily-icon">
-                        {task.done ? "✓" : task.emoji}
-                      </span>
-                      <div className="home-daily-copy">
-                        <h3>
-                          {t(dailyTaskLabelKeys[task.id], { target: task.target })}
-                        </h3>
-                        <p>{t(dailyTaskDescKeys[task.id])}</p>
-                        <div className="home-daily-progress">
-                          <div
-                            className="home-daily-progress-bar"
-                            style={{
-                              width: `${Math.round((task.current / task.target) * 100)}%`,
-                            }}
-                          />
-                        </div>
-                        <span className="home-daily-count">
-                          {t("home.dailyTaskProgress", {
-                            current: task.current,
-                            target: task.target,
-                          })}
-                        </span>
+                  <div className="home-starter-progress">
+                    <span>{t("home.starterProgress", {
+                      count: starterWordsReady,
+                      target: STARTER_QUIZ_WORD_TARGET,
+                    })}</span>
+                  </div>
+
+                  <ol className="home-starter-steps">
+                    <li className={wordCount > 0 ? "home-starter-step-done" : ""}>
+                      <span className="home-starter-step-number">1</span>
+                      <div>
+                        <h3>{t("home.starterStepPhotoTitle")}</h3>
+                        <p>{t("home.starterStepPhotoDesc")}</p>
                       </div>
-                      <span aria-hidden="true" className="home-daily-go">
-                        ›
-                      </span>
-                    </Link>
-                  </li>
-                );
-              })}
-            </ul>
-          </section>
-        ) : null}
+                    </li>
+                    <li className={wordCount > 0 ? "home-starter-step-done" : ""}>
+                      <span className="home-starter-step-number">2</span>
+                      <div>
+                        <h3>{t("home.starterStepCardsTitle")}</h3>
+                        <p>{t("home.starterStepCardsDesc")}</p>
+                      </div>
+                    </li>
+                    <li className={canStartStarterQuiz ? "home-starter-step-ready" : ""}>
+                      <span className="home-starter-step-number">3</span>
+                      <div>
+                        <h3>{t("home.starterStepQuizTitle")}</h3>
+                        <p>{t("home.starterStepQuizDesc")}</p>
+                      </div>
+                    </li>
+                  </ol>
 
-        {showLearningReport ? (
-          <Link className="home-report" to={learningReportTo}>
-            <div className="home-report-copy">
-              <p className="home-report-badge">{t("learningReport.eyebrow")}</p>
-              <h2 className="home-report-title">{t("home.learningReportTitle")}</h2>
-              <p className="home-report-desc">{t("home.learningReportDesc")}</p>
-              {wordCount > 0 ? (
-                <p className="home-report-teaser">
-                  {t("home.learningReportTeaser", {
-                    games: learningReport.gamesCompletedThisWeek,
-                    streak: learningReport.streakDays,
-                    words: learningReport.wordsAddedThisWeek,
-                  })}
-                </p>
+                  <div className="home-starter-actions">
+                    <Link className="home-starter-primary" to={starterPrimaryTo}>
+                      {canStartStarterQuiz ? t("home.starterQuizCta") : t("home.starterPhotoCta")}
+                    </Link>
+                    {!canStartStarterQuiz ? (
+                      <Link className="home-starter-secondary" to={starterManualTo}>
+                        {t("home.starterManualCta")}
+                      </Link>
+                    ) : null}
+                  </div>
+                  {showStarterAuthHint ? (
+                    <p className="home-starter-auth-hint">{t("home.starterAuthHint")}</p>
+                  ) : null}
+                </section>
+              ) : null}
+
+              {showPhotoFlagship ? (
+                <section className="home-flagship" aria-labelledby="home-flagship-title">
+                  <div className="home-flagship-copy">
+                    <p className="home-flagship-badge">{t("home.flagshipBadge")}</p>
+                    <h2 id="home-flagship-title">{t("home.flagshipTitle")}</h2>
+                    <p>{t("home.flagshipDescription")}</p>
+                  </div>
+
+                  <ol className="home-flagship-steps" aria-label={t("home.flagshipTitle")}>
+                    <li>
+                      <span aria-hidden="true">1</span>
+                      {t("home.flagshipStepExtract")}
+                    </li>
+                    <li>
+                      <span aria-hidden="true">2</span>
+                      {t("home.flagshipStepComplete")}
+                    </li>
+                    <li>
+                      <span aria-hidden="true">3</span>
+                      {t("home.flagshipStepPreview")}
+                    </li>
+                  </ol>
+
+                  <Link className="home-flagship-cta" to={photoFlagshipTo}>
+                    <span aria-hidden="true" className="home-flagship-cta-icon">
+                      📷
+                    </span>
+                    {t("home.flagshipCta")}
+                  </Link>
+                </section>
+              ) : null}
+
+              {showDailyMissions ? (
+                <TodayMissions
+                  allMissionsClaimed={allMissionsClaimed}
+                  claimDailyHeroBonus={claimDailyHeroBonus}
+                  claimMission={claimMission}
+                  dailyHeroClaimable={dailyHeroClaimable}
+                  dailyHeroClaimed={dailyHeroClaimed}
+                  missions={missions.map((mission) => ({
+                    ...mission,
+                    to: getRouteOrSignupRedirect(role, mission.to),
+                  }))}
+                  streakSafeToday={streakSafeToday}
+                />
+              ) : null}
+
+              {showDailyMissions ? <BadgesPanel badges={badges} compact limit={6} /> : null}
+
+              {showLearningReport ? (
+                <Link className="home-report" to={learningReportTo}>
+                  <div className="home-report-copy">
+                    <p className="home-report-badge">{t("learningReport.eyebrow")}</p>
+                    <h2 className="home-report-title">{t("home.learningReportTitle")}</h2>
+                    <p className="home-report-desc">{t("home.learningReportDesc")}</p>
+                    {wordCount > 0 ? (
+                      <p className="home-report-teaser">
+                        {t("home.learningReportTeaser", {
+                          games: learningReport.gamesCompletedThisWeek,
+                          streak: learningReport.streakDays,
+                          words: learningReport.wordsAddedThisWeek,
+                        })}
+                      </p>
+                    ) : null}
+                  </div>
+                  <span aria-hidden="true" className="home-report-go">
+                    {t("home.learningReportCta")} ›
+                  </span>
+                </Link>
               ) : null}
             </div>
-            <span aria-hidden="true" className="home-report-go">
-              {t("home.learningReportCta")} ›
-            </span>
-          </Link>
-        ) : null}
 
-        {!isHomeLoading && dueCount > 0 && mistakeCount > 0 ? (
-          <Link className="home-mini-pill" to="/mistakes">
-            {t("home.secondaryMistakesPill", { count: mistakeCount })}
-          </Link>
-        ) : null}
+            {showSyncPrompt ? (
+              <div className="home-sync-banner">
+                <p>{t("home.syncPrompt")}</p>
+                <Link className="home-sync-action" to="/auth?mode=login&redirect=/">
+                  {t("home.syncAction")}
+                </Link>
+              </div>
+            ) : null}
 
-        {!isHomeLoading && showContinue ? (
-          <Link className="home-continue" to={lastActivity.path}>
-            <div className="home-continue-left">
-              <div aria-hidden="true" className="home-iconbox">
-                {lastActivity.icon}
-              </div>
-              <div>
-                <div className="home-continue-t1">{t("home.continueTitle")}</div>
-                <div className="home-continue-t2">
-                  {t("home.continueActivity", { name: t(lastActivity.labelKey) })}
-                </div>
-              </div>
+            {isEmpty ? <p className="home-empty-banner">{t("home.emptyGuidance")}</p> : null}
+
+            <div className="home-three">
+              {statCards.map((card) => (
+                <Link className={`home-small home-${card.tone}`} key={card.key} to={card.to}>
+                  <div className="home-small-label">{t(`home.${card.shortKey}`)}</div>
+                  <div className="home-small-num">{values[card.valueKey]}</div>
+                  <div className="home-small-desc">{t(`home.${card.descKey}`)}</div>
+                </Link>
+              ))}
             </div>
-            <span aria-hidden="true" className="home-arrow">
-              ›
-            </span>
-          </Link>
-        ) : null}
 
-        {!isHomeLoading && showSyncPrompt ? (
-          <div className="home-sync-banner">
-            <p>{t("home.syncPrompt")}</p>
-            <Link className="home-sync-action" to="/auth?mode=login&redirect=/">
-              {t("home.syncAction")}
-            </Link>
-          </div>
-        ) : null}
-
-        {!isHomeLoading && isEmpty ? (
-          <p className="home-empty-banner">{t("home.emptyGuidance")}</p>
-        ) : null}
-
-        {!isHomeLoading ? (
-        <div className="home-three">
-          {statCards.map((card) => (
-            <Link className={`home-small home-${card.tone}`} key={card.key} to={card.to}>
-              <div className="home-small-label">{t(`home.${card.shortKey}`)}</div>
-              <div className="home-small-num">{values[card.valueKey]}</div>
-              <div className="home-small-desc">{t(`home.${card.descKey}`)}</div>
-            </Link>
-          ))}
-        </div>
-        ) : null}
-
-        {!isHomeLoading ? (
-        <>
-        <h2 className="home-section-title">{t("home.quickActionsTitle")}</h2>
-        <div className="home-quick-grid">
-          {visibleQuickActions.map((action) => (
-            <Link
-              className={[
-                "home-quick",
-                action.bg,
-                action.featured ? "home-quick-featured" : "",
-                action.single ? "home-quick-single" : "",
-              ]
-                .filter(Boolean)
-                .join(" ")}
-              key={action.key}
-              to={action.to}
-            >
-              <div className="home-quick-left">
-                <span aria-hidden="true" className={`home-q-icon ${action.iconClass}`}>
-                  {action.emoji}
-                </span>
-                <div>
-                  <div className="home-quick-tt">{t(action.labelKey)}</div>
-                  <div className="home-quick-dd">{t(action.descKey)}</div>
-                </div>
-              </div>
-              <span aria-hidden="true" className="home-quick-go">
-                ›
-              </span>
-            </Link>
-          ))}
-        </div>
-
-        <section className={isEmpty ? "home-games-muted" : undefined}>
-          <h2 className="home-section-title">{t("home.featuredGamesTitle")}</h2>
-          {isEmpty ? <p className="home-games-hint">{t("home.emptyGamesHint")}</p> : null}
-          <div className="home-game-list">
-            {featuredGames.map((game) => (
-              <Link className={`home-game ${game.tone}`} key={game.key} to={game.to}>
-                <div className="home-g-left">
-                  <div aria-hidden="true" className="home-g-thumb">
-                    {game.art}
-                  </div>
-                  <div>
-                    <div className="home-g-name">{t(game.labelKey)}</div>
-                    <div className="home-g-sub">{t(game.descKey)}</div>
-                  </div>
-                </div>
-                <span aria-hidden="true" className="home-play">
-                  ▶
-                </span>
-              </Link>
-            ))}
-          </div>
-
-          <h2 className="home-section-title">{t("home.moreGamesTitle")}</h2>
-          <div className="home-more-grid">
-            {moreGames.map((game) => (
-              <Link className={`home-more ${game.tone}`} key={game.key} to={game.to}>
-                <div className="home-more-header">
-                  <span
-                    aria-hidden="true"
-                    className="home-more-art home-more-art-lg"
+            <section className="home-quick-section" aria-labelledby="home-quick-title">
+              <h2 className="home-section-title" id="home-quick-title">
+                {t("home.quickActionsTitle")}
+              </h2>
+              <div className="home-quick-grid">
+                {visibleQuickActions.map((action) => (
+                  <Link
+                    className={[
+                      "home-quick",
+                      action.bg,
+                      action.featured ? "home-quick-featured" : "",
+                      action.single ? "home-quick-single" : "",
+                    ]
+                      .filter(Boolean)
+                      .join(" ")}
+                    key={action.key}
+                    to={action.to}
                   >
-                    {game.art}
-                  </span>
-                  <span aria-hidden="true" className="home-more-play">
-                    ▶
-                  </span>
-                </div>
-                <div className="home-more-name">{t(game.labelKey)}</div>
-                <p className="home-more-desc">{t(game.descKey)}</p>
-              </Link>
-            ))}
+                    <div className="home-quick-left">
+                      <span aria-hidden="true" className={`home-q-icon ${action.iconClass}`}>
+                        {action.emoji}
+                      </span>
+                      <div>
+                        <div className="home-quick-tt">{t(action.labelKey)}</div>
+                        <div className="home-quick-dd">{t(action.descKey)}</div>
+                      </div>
+                    </div>
+                    <span aria-hidden="true" className="home-quick-go">
+                      ›
+                    </span>
+                  </Link>
+                ))}
+              </div>
+            </section>
+
+            <section className={isEmpty ? "home-games home-games-muted" : "home-games"}>
+              <h2 className="home-section-title">{t("home.featuredGamesTitle")}</h2>
+              {isEmpty ? <p className="home-games-hint">{t("home.emptyGamesHint")}</p> : null}
+              <div className="home-game-list">
+                {featuredGames.map((game) => (
+                  <Link className={`home-game ${game.tone}`} key={game.key} to={game.to}>
+                    <div className="home-g-left">
+                      <div aria-hidden="true" className="home-g-thumb">
+                        {game.art}
+                      </div>
+                      <div>
+                        <div className="home-g-name">{t(game.labelKey)}</div>
+                        <div className="home-g-sub">{t(game.descKey)}</div>
+                      </div>
+                    </div>
+                    <span aria-hidden="true" className="home-play">
+                      ▶
+                    </span>
+                  </Link>
+                ))}
+              </div>
+
+              <h2 className="home-section-title">{t("home.moreGamesTitle")}</h2>
+              <div className="home-more-grid">
+                {moreGames.map((game) => (
+                  <Link className={`home-more ${game.tone}`} key={game.key} to={game.to}>
+                    <div className="home-more-header">
+                      <span aria-hidden="true" className="home-more-art home-more-art-lg">
+                        {game.art}
+                      </span>
+                      <span aria-hidden="true" className="home-more-play">
+                        ▶
+                      </span>
+                    </div>
+                    <div className="home-more-name">{t(game.labelKey)}</div>
+                    <p className="home-more-desc">{t(game.descKey)}</p>
+                  </Link>
+                ))}
+              </div>
+            </section>
           </div>
-        </section>
-        </>
         ) : null}
       </div>
     </div>

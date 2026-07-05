@@ -148,6 +148,10 @@ export default defineConfig(({ mode }) => {
   const appVersion = resolveAppVersionMetadata(env);
 
   return {
+    server: {
+      host: true,
+      port: 5173,
+    },
     define: {
       __APP_VERSION__: JSON.stringify(appVersion.build),
       __APP_SEMVER__: JSON.stringify(appVersion.semver),

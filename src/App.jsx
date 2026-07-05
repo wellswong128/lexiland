@@ -5,6 +5,7 @@ import { LocaleProvider } from "./features/locale/LocaleContext.jsx";
 import { useWordsContext, WordsProvider } from "./features/words/WordsContext.jsx";
 import { canRoute, getRoleFromUser } from "./lib/authorization.js";
 
+const RewardCenterPage = lazy(() => import("./pages/RewardCenterPage.jsx"));
 const LearningReportPage = lazy(() => import("./pages/LearningReportPage.jsx"));
 const AchievementsPage = lazy(() => import("./pages/AchievementsPage.jsx"));
 const AdminUserRolesPage = lazy(() => import("./pages/AdminUserRolesPage.jsx"));
@@ -72,6 +73,7 @@ function AppRoutes() {
     <Suspense fallback={<RouteFallback />}>
       <Routes>
         <Route path="/" element={<HomePage />} />
+        <Route path="/rewards" element={<RewardCenterPage />} />
         <Route path="/learning-report" element={<ProtectedRoute><LearningReportPage /></ProtectedRoute>} />
         <Route path="/achievements" element={<ProtectedRoute><AchievementsPage /></ProtectedRoute>} />
         <Route path="/admin/users" element={<ProtectedRoute><AdminUserRolesPage /></ProtectedRoute>} />

@@ -1,13 +1,14 @@
 import { useMemo } from "react";
 import { Link } from "react-router-dom";
+import BadgesPanel from "../components/rewards/BadgesPanel.jsx";
 import { useLocale } from "../features/locale/LocaleContext.jsx";
+import { useRewards } from "../features/rewards/useRewards.js";
 import { useWordsContext } from "../features/words/WordsContext.jsx";
 import {
   ACHIEVEMENT_CATEGORIES,
   getAchievementsSummary,
   getNextAchievementGoal,
 } from "../lib/achievements.js";
-import { getLearningSnapshot } from "../lib/learningActivity.js";
 
 const CATEGORY_ORDER = [
   ACHIEVEMENT_CATEGORIES.CONSISTENCY,
@@ -59,7 +60,7 @@ function AchievementCard({ achievement, t }) {
 function AchievementsPage() {
   const { t } = useLocale();
   const { words } = useWordsContext();
-  const { streak } = getLearningSnapshot(words);
+  const { badges, streak } = useRewards(words);
   const summary = useMemo(() => getAchievementsSummary(words), [words]);
   const nextGoal = useMemo(
     () => getNextAchievementGoal(summary.achievements),
@@ -122,6 +123,10 @@ function AchievementsPage() {
           {t("bottomNav.learningRecord")}
         </Link>
       </header>
+
+      <div className="achievements-rewards-section">
+        <BadgesPanel badges={badges} />
+      </div>
 
       <div className="achievements-sections">
         {groupedAchievements.map((group) => (

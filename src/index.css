@@ -4,6 +4,8 @@
 @import "./styles/home-page.css";
 @import "./styles/achievements-page.css";
 @import "./styles/learning-report-page.css";
+@import "./styles/rewards.css";
+@import "./styles/reward-center.css";
 
 @theme {
   --text-xs: 12pt;

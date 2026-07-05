@@ -1,5 +1,5 @@
 import { supabase } from "../../lib/supabaseClient.js";
-import { toSupabaseSource } from "./wordTypes.js";
+import { normalizeTerm, toSupabaseSource } from "./wordTypes.js";
 import { normalizeMemoryImage } from "./memoryImageUtils.js";
 
 const WORD_LIST_COLUMNS = `
@@ -143,8 +143,49 @@ export function mapWordChangesToUpdate(changes) {
 function isDuplicateTermError(error) {
   const code = String(error?.code ?? "");
   const message = String(error?.message ?? "").toLowerCase();
-  return code === "23505" || message.includes("words_user_term_unique");
+  const details = String(error?.details ?? "").toLowerCase();
+
+  return (
+    code === "23505" ||
+    message.includes("words_user_term_unique") ||
+    details.includes("words_user_term_unique")
+  );
 }
+
+export async function fetchWordByTermFromSupabase(userId, term) {
+  ensureSupabase();
+
+  const trimmedTerm = String(term ?? "").trim();
+
+  if (!trimmedTerm) {
+    return null;
+  }
+
+  const { data, error } = await supabase
+    .from("words")
+    .select(WORD_COLUMNS)
+    .eq("user_id", userId)
+    .ilike("term", trimmedTerm)
+    .limit(5);
+
+  if (error) {
+    throw error;
+  }
+
+  const rows = Array.isArray(data) ? data : [];
+
+  if (rows.length === 0) {
+    return null;
+  }
+
+  const normalizedTerm = normalizeTerm(trimmedTerm);
+  const matchedRow =
+    rows.find((row) => normalizeTerm(row.term) === normalizedTerm) ?? rows[0];
+
+  return mapDbWordToWord(matchedRow);
+}
+
+export { isDuplicateTermError };
 
 function ensureSupabase() {
   if (!supabase) {
@@ -169,8 +210,10 @@ export async function fetchWordsFromSupabase(userId, { includeMemory = false } =
 
 const INSERT_BATCH_SIZE = 500;
 
-export async function insertWordInSupabase(word, userId) {
+export async function insertWordInSupabase(word, userId, options = {}) {
   ensureSupabase();
+
+  const onDuplicate = options.onDuplicate ?? "throw";
 
   const { data, error } = await supabase
     .from("words")
@@ -178,7 +221,23 @@ export async function insertWordInSupabase(word, userId) {
     .select(WORD_COLUMNS)
     .single();
 
-  if (error) throw error;
+  if (error) {
+    if (isDuplicateTermError(error)) {
+      if (onDuplicate === "return-existing") {
+        const existingWord = await fetchWordByTermFromSupabase(userId, word.term);
+
+        if (existingWord) {
+          return existingWord;
+        }
+      }
+
+      if (onDuplicate === "skip") {
+        return null;
+      }
+    }
+
+    throw error;
+  }
 
   return mapDbWordToWord(data);
 }
@@ -208,7 +267,13 @@ export async function insertWordsInSupabase(words, userId) {
         let lastError = error;
         for (const word of batch) {
           try {
-            saved.push(await insertWordInSupabase(word, userId));
+            const savedWord = await insertWordInSupabase(word, userId, {
+              onDuplicate: "return-existing",
+            });
+
+            if (savedWord) {
+              saved.push(savedWord);
+            }
           } catch (insertError) {
             if (!isDuplicateTermError(insertError)) {
               lastError = insertError;

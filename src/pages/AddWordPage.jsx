@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import { Capacitor } from "@capacitor/core";
 import { useLocation, useNavigate, useSearchParams } from "react-router-dom";
 import PhotoWordCapture from "../components/PhotoWordCapture.jsx";
 import { useLocale } from "../features/locale/LocaleContext.jsx";
@@ -8,6 +9,7 @@ import {
 } from "../features/words/completeWordApi.js";
 import { useWordsContext } from "../features/words/WordsContext.jsx";
 import { goBackToPreviousPage } from "../lib/navigation.js";
+import { isMobileWebBrowser } from "../lib/pwaPlatform.js";
 
 const initialFormValues = {
   term: "",
@@ -24,6 +26,14 @@ function getInitialTab(searchParams) {
   return searchParams.get("tab") === "manual" ? "manual" : "photo";
 }
 
+function shouldAutoOpenCameraScan(searchParams) {
+  if (searchParams.get("scan") !== "camera") {
+    return false;
+  }
+
+  return Capacitor.isNativePlatform() || isMobileWebBrowser();
+}
+
 function AddWordPage() {
   const { locale, t } = useLocale();
   const location = useLocation();
@@ -31,7 +41,8 @@ function AddWordPage() {
   const [searchParams, setSearchParams] = useSearchParams();
   const { addWord, user, words } = useWordsContext();
   const [activeTab, setActiveTab] = useState(() => getInitialTab(searchParams));
-  const autoOpenCamera = searchParams.get("scan") === "camera";
+  const wantsCameraScan = searchParams.get("scan") === "camera";
+  const autoOpenCamera = shouldAutoOpenCameraScan(searchParams);
   const [formValues, setFormValues] = useState(initialFormValues);
   const [aiMessage, setAiMessage] = useState("");
   const [error, setError] = useState("");
@@ -43,6 +54,17 @@ function AddWordPage() {
   useEffect(() => {
     setActiveTab(getInitialTab(searchParams));
   }, [searchParams]);
+
+  useEffect(() => {
+    if (!wantsCameraScan || autoOpenCamera) {
+      return;
+    }
+
+    const nextParams = new URLSearchParams(searchParams);
+    nextParams.delete("scan");
+    nextParams.set("tab", "photo");
+    setSearchParams(nextParams, { replace: true });
+  }, [autoOpenCamera, searchParams, setSearchParams, wantsCameraScan]);
 
   useEffect(() => {
     if (activeTab !== "manual") {

@@ -2,19 +2,29 @@ function shuffleItems(items) {
   return [...items].sort(() => Math.random() - 0.5);
 }
 
+export const QUIZ_SESSION_QUESTION_COUNT = 10;
+
 export function getQuizOptionLabel(word) {
   const translation = String(word.translation ?? "").trim();
   return translation || word.definition;
 }
 
-export function createQuizQuestions(words, optionCount = 4) {
+export function createQuizQuestions(
+  words,
+  { optionCount = 4, questionCount = QUIZ_SESSION_QUESTION_COUNT } = {},
+) {
   const eligibleWords = words.filter((word) => getQuizOptionLabel(word));
 
   if (eligibleWords.length < 2) {
     return [];
   }
 
-  return shuffleItems(eligibleWords).map((word) => {
+  const sessionWords = shuffleItems(eligibleWords).slice(
+    0,
+    Math.min(questionCount, eligibleWords.length),
+  );
+
+  return sessionWords.map((word) => {
     const wrongOptions = shuffleItems(
       eligibleWords.filter((candidate) => candidate.id !== word.id),
     )

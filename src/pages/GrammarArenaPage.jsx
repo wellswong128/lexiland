@@ -1,7 +1,8 @@
-import { useCallback, useEffect, useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import GameHomeButton from "../components/GameHomeButton.jsx";
 import { useLocale } from "../features/locale/LocaleContext.jsx";
+import { ACTION_TYPES, awardLearningAction } from "../features/rewards/rewardsEngine.js";
 import { recordDailyGameCompleted } from "../lib/learningActivity.js";
 
 const grammarBank = [
@@ -247,6 +248,7 @@ function ArenaScene({
 
 function GrammarArenaPage() {
   const { t } = useLocale();
+  const gameSessionRef = useRef(`grammar-${Date.now()}`);
 
   const [gameState, setGameState] = useState("start");
   const [score, setScore] = useState(0);
@@ -296,6 +298,8 @@ function GrammarArenaPage() {
   const endGame = useCallback(
     (reason) => {
       recordDailyGameCompleted();
+      awardLearningAction(ACTION_TYPES.PLAY_GAME, { dedupeKey: gameSessionRef.current });
+      gameSessionRef.current = `grammar-${Date.now()}`;
       setGameState("over");
       setLocked(true);
       setEndReason(reason);

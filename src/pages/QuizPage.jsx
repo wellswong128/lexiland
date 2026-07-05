@@ -11,6 +11,7 @@ import { prefetchSessionMemoryImages } from "../features/review/prefetchSessionM
 import { updateReviewResult } from "../features/review/reviewHelpers.js";
 import { useWordsContext } from "../features/words/WordsContext.jsx";
 import { maybeRecordDailyMistakeClear } from "../lib/learningActivity.js";
+import { ACTION_TYPES, awardLearningAction } from "../features/rewards/rewardsEngine.js";
 import { REVIEW_RESULTS } from "../features/words/wordTypes.js";
 
 function QuizPage() {
@@ -40,8 +41,12 @@ function QuizPage() {
   const [score, setScore] = useState(0);
   const [isComplete, setIsComplete] = useState(false);
   const questionsLengthRef = useRef(0);
+  const quizSessionRef = useRef(`quiz-${Date.now()}`);
+  const awardedCorrectRef = useRef(new Set());
+  const scoreRef = useRef(0);
 
   questionsLengthRef.current = questions.length;
+  scoreRef.current = score;
 
   const currentQuestion = questions[currentIndex];
   const currentWord =
@@ -120,20 +125,49 @@ function QuizPage() {
     updateWord(currentQuestion.word.id, updateReviewResult(currentQuestion.word, result));
 
     if (isCorrect) {
-      handleNextQuestion();
+      const answerKey = `${currentQuestion.word.id}-${currentIndex}`;
+      if (!awardedCorrectRef.current.has(answerKey)) {
+        awardLearningAction(
+          ACTION_TYPES.CORRECT_QUIZ_ANSWER,
+          { dedupeKey: answerKey },
+          { words: reviewWords },
+        );
+        awardedCorrectRef.current.add(answerKey);
+      }
+
+      if (currentQuestion.word.mistake?.isMistake) {
+        awardLearningAction(
+          ACTION_TYPES.FIX_MISTAKE,
+          { dedupeKey: `${quizSessionRef.current}:fix:${currentQuestion.word.id}` },
+          { words: reviewWords },
+        );
+      }
+
+      handleNextQuestion(true);
       return;
     }
 
     setFeedback("incorrect");
   }
 
-  function handleNextQuestion() {
+  function handleNextQuestion(wasLastCorrect = false) {
     setSelectedAnswer("");
     setFeedback(null);
 
     setCurrentIndex((index) => {
       if (index >= questionsLengthRef.current - 1) {
         setIsComplete(true);
+        const finalScore = scoreRef.current + (wasLastCorrect ? 1 : 0);
+        const totalQuestions = questionsLengthRef.current;
+        awardLearningAction(
+          ACTION_TYPES.COMPLETE_QUIZ,
+          {
+            dedupeKey: quizSessionRef.current,
+            scorePercent:
+              totalQuestions > 0 ? Math.round((finalScore / totalQuestions) * 100) : 0,
+          },
+          { words: reviewWordsRef.current },
+        );
         return index;
       }
 

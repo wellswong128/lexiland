@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import BottomNav from "./BottomNav.jsx";
 import LexiFloatingMenu from "./LexiFloatingMenu.jsx";
+import RewardToastHost from "./rewards/RewardToastHost.jsx";
 import OfflineBanner from "./OfflineBanner.jsx";
 import UpdateBanner from "./UpdateBanner.jsx";
 import { usePwaRuntimeStatus } from "../hooks/usePwaRuntimeStatus.js";
@@ -21,9 +22,14 @@ function AppLayout({ children }) {
   const isHomePage = location.pathname === "/";
   const isAchievementsPage = location.pathname === "/achievements";
   const isLearningReportPage = location.pathname === "/learning-report";
+  const isRewardsPage = location.pathname === "/rewards";
   const isWordLookupPage = location.pathname === "/words/lookup";
   const isMobileShellPage =
-    isHomePage || isAchievementsPage || isLearningReportPage || isWordLookupPage;
+    isHomePage ||
+    isAchievementsPage ||
+    isLearningReportPage ||
+    isRewardsPage ||
+    isWordLookupPage;
   const useMobileAppWidth = isMobileShellPage || (isStandalone && !isGamePage && !isAuthPage);
   const useFlushPagePadding = isMobileShellPage;
   const showFloatingMenu = !isGamePage && !isAuthPage;
@@ -101,7 +107,7 @@ function AppLayout({ children }) {
             : isAuthPage
               ? "mx-auto grid min-h-[100svh] w-full max-w-6xl flex-1 place-items-center px-2 py-2"
               : useFlushPagePadding
-                ? "relative z-0 mx-auto flex w-full max-w-[430px] flex-1 items-start justify-center px-0 py-0 pb-[calc(64px+env(safe-area-inset-bottom,0px))]"
+                ? "app-main-home relative z-0 mx-auto flex w-full max-w-[430px] flex-1 items-start justify-center px-0 py-0 pb-[calc(64px+env(safe-area-inset-bottom,0px))]"
                 : useMobileAppWidth
                   ? "relative z-0 mx-auto flex w-full max-w-[430px] flex-1 items-start justify-center px-3 py-3 pb-[calc(64px+env(safe-area-inset-bottom,0px))] sm:px-4 sm:py-4"
                   : "relative z-0 mx-auto flex w-full max-w-6xl flex-1 items-start justify-center px-3 py-3 pb-[calc(64px+env(safe-area-inset-bottom,0px))] sm:px-6 sm:py-6"
@@ -109,6 +115,7 @@ function AppLayout({ children }) {
       >
         {children}
       </main>
+      <RewardToastHost />
     </div>
   );
 }

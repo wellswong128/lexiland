@@ -22,6 +22,7 @@ import {
 import { useWordsContext } from "../features/words/WordsContext.jsx";
 import { clearReviewSession, syncReviewSession } from "../lib/reviewSessionStorage.js";
 import { maybeRecordDailyMistakeClear } from "../lib/learningActivity.js";
+import { ACTION_TYPES, awardLearningAction } from "../features/rewards/rewardsEngine.js";
 import { REVIEW_RESULTS } from "../features/words/wordTypes.js";
 
 function FlashcardsMissingImagesPanel({ flashcardReadiness, t }) {
@@ -220,6 +221,8 @@ function FlashcardsPage() {
   wordsRef.current = words;
   const lastScopeRevisionRef = useRef(scopeRevision);
   const quizBottomRef = useRef(null);
+  const flashcardSessionRef = useRef(`flashcards-${Date.now()}`);
+  const reviewEventCounterRef = useRef(0);
 
   imageQuestionsRef.current = imageQuestions;
   imageQuestionsLengthRef.current = imageQuestions.length;
@@ -496,6 +499,28 @@ function FlashcardsPage() {
     setPrepareError("");
   }
 
+  function recordFlashcardRewards(word, result, hadMistake) {
+    reviewEventCounterRef.current += 1;
+    awardLearningAction(
+      ACTION_TYPES.REVIEW_WORD,
+      {
+        dedupeKey: `${flashcardSessionRef.current}:${word.id}:${reviewEventCounterRef.current}`,
+      },
+      { words: wordsRef.current },
+    );
+
+    const remembered =
+      result === REVIEW_RESULTS.REMEMBERED || result === REVIEW_RESULTS.CORRECT;
+
+    if (hadMistake && remembered) {
+      awardLearningAction(
+        ACTION_TYPES.FIX_MISTAKE,
+        { dedupeKey: `${flashcardSessionRef.current}:fix:${word.id}` },
+        { words: wordsRef.current },
+      );
+    }
+  }
+
   function handleTextRecall(result) {
     if (!currentQuestion?.word) {
       return;
@@ -505,6 +530,7 @@ function FlashcardsPage() {
 
     maybeRecordDailyMistakeClear(currentQuestion.word, result);
     updateWord(currentQuestion.word.id, updateReviewResult(currentQuestion.word, result));
+    recordFlashcardRewards(currentQuestion.word, result, hadMistake);
 
     if (result === REVIEW_RESULTS.REMEMBERED && hadMistake) {
       setSessionClearedCount((count) => count + 1);
@@ -530,6 +556,8 @@ function FlashcardsPage() {
       setFeedback("incorrect");
       return;
     }
+
+    recordFlashcardRewards(currentQuestion.word, result, hadMistake);
 
     if (hadMistake) {
       setSessionClearedCount((count) => count + 1);

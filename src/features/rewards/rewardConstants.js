@@ -1,0 +1,34 @@
+export const REWARDS_STORAGE_KEY = "lexiland.rewards.v1";
+
+export const ACTION_TYPES = {
+  ADD_WORD: "add_word",
+  PHOTO_ADD: "photo_add",
+  REVIEW_WORD: "review_word",
+  COMPLETE_QUIZ: "complete_quiz",
+  CORRECT_QUIZ_ANSWER: "correct_quiz_answer",
+  PLAY_GAME: "play_game",
+  FIX_MISTAKE: "fix_mistake",
+};
+
+export const MEANINGFUL_ACTIONS = new Set([
+  ACTION_TYPES.ADD_WORD,
+  ACTION_TYPES.PHOTO_ADD,
+  ACTION_TYPES.REVIEW_WORD,
+  ACTION_TYPES.COMPLETE_QUIZ,
+  ACTION_TYPES.PLAY_GAME,
+  ACTION_TYPES.FIX_MISTAKE,
+]);
+
+export const COIN_REWARDS = {
+  [ACTION_TYPES.ADD_WORD]: 3,
+  [ACTION_TYPES.REVIEW_WORD]: 2,
+  [ACTION_TYPES.CORRECT_QUIZ_ANSWER]: 2,
+  [ACTION_TYPES.COMPLETE_QUIZ]: 20,
+  [ACTION_TYPES.PLAY_GAME]: 10,
+  [ACTION_TYPES.FIX_MISTAKE]: 5,
+  [ACTION_TYPES.PHOTO_ADD]: 0,
+};
+
+export const DAILY_HERO_BONUS = 50;
+
+export const XP_PER_COIN = 0;

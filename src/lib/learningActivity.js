@@ -1,4 +1,5 @@
 import { REVIEW_RESULTS } from "../features/words/wordTypes.js";
+import { loadRewardState } from "../features/rewards/rewardsStore.js";
 
 export const LEARNING_ACTIVITY_KEY = "lexiland.learningActivity.v1";
 
@@ -81,37 +82,17 @@ export function saveLearningActivity(activity, storage = getDefaultStorage()) {
   storage.setItem(LEARNING_ACTIVITY_KEY, JSON.stringify(activity));
 }
 
-function applyStreak(activity, dateKey) {
-  if (activity.lastActiveDate === dateKey) {
-    return activity;
-  }
-
-  const previousDateKey = getPreviousDateKey(dateKey);
-  const nextStreak =
-    activity.lastActiveDate === previousDateKey
-      ? Math.max(activity.currentStreak || 0, 0) + 1
-      : 1;
-
-  return {
-    ...activity,
-    currentStreak: nextStreak,
-    lastActiveDate: dateKey,
-  };
-}
-
 export function recordLearningActivity(partial, storage = getDefaultStorage()) {
-  const dateKey = getLocalDateKey();
   const currentActivity = loadLearningActivity(storage);
-  const withStreak = applyStreak(currentActivity, dateKey);
   const path = partial.path;
-  const visitedPaths = [...(withStreak.visitedPaths || [])];
+  const visitedPaths = [...(currentActivity.visitedPaths || [])];
 
   if (path && !visitedPaths.includes(path)) {
     visitedPaths.push(path);
   }
 
   const nextActivity = {
-    ...withStreak,
+    ...currentActivity,
     visitedPaths,
     lastActivity: {
       ...partial,
@@ -246,9 +227,10 @@ export function getDailyTasks(words, storage = getDefaultStorage()) {
 
 export function getLearningSnapshot(words, storage = getDefaultStorage()) {
   const activity = loadLearningActivity(storage);
+  const rewardState = loadRewardState(storage);
 
   return {
-    streak: activity.currentStreak || 0,
+    streak: rewardState.currentStreak || 0,
     todayReviewed: getTodayReviewedCount(words),
     lastActivity: activity.lastActivity,
     dailyTasks: getDailyTasks(words, storage),

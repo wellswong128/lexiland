@@ -1,4 +1,7 @@
 import { getLocalDateKey, loadLearningActivity } from "./learningActivity.js";
+import { dedupeWordsByTerm } from "../features/words/wordTypes.js";
+import { loadRewardState } from "../features/rewards/rewardsStore.js";
+import { getWeeklyRewardSummary } from "../features/rewards/rewardsEngine.js";
 
 const WEEKDAY_COUNT = 7;
 const TOP_MISTAKE_LIMIT = 10;
@@ -65,7 +68,7 @@ export function getWordsReviewedThisWeek(words, now = new Date()) {
 }
 
 export function getTopMistakeWords(words, limit = TOP_MISTAKE_LIMIT) {
-  return [...words]
+  return dedupeWordsByTerm(words)
     .map((word) => ({
       word,
       mistakeCount: getMistakeScore(word),
@@ -104,6 +107,8 @@ export function getGamesCompletedTotal(activity) {
 
 export function getLearningReport(words, storage = getDefaultStorage(), now = new Date()) {
   const activity = loadLearningActivity(storage);
+  const rewardState = loadRewardState(storage, now);
+  const rewardSummary = getWeeklyRewardSummary(rewardState, words);
   const wordsAddedThisWeek = getWordsAddedThisWeek(words, now);
   const wordsReviewedThisWeek = getWordsReviewedThisWeek(words, now);
   const topMistakeWords = getTopMistakeWords(words);
@@ -114,13 +119,19 @@ export function getLearningReport(words, storage = getDefaultStorage(), now = ne
   return {
     weekStartDate: weekStart.toISOString(),
     weekEndDate: now.toISOString(),
-    totalWords: words.length,
-    wordsAddedThisWeek: wordsAddedThisWeek.length,
-    wordsReviewedThisWeek: wordsReviewedThisWeek.length,
-    streakDays: activity.currentStreak || 0,
-    gamesCompletedThisWeek,
+    totalWords: dedupeWordsByTerm(words).length,
+    wordsAddedThisWeek: Math.max(wordsAddedThisWeek.length, rewardSummary.wordsAdded),
+    wordsReviewedThisWeek: Math.max(
+      wordsReviewedThisWeek.length,
+      rewardSummary.wordsReviewed,
+    ),
+    streakDays: rewardSummary.currentStreak,
+    longestStreakDays: rewardSummary.longestStreak,
+    gamesCompletedThisWeek: Math.max(gamesCompletedThisWeek, rewardSummary.gamesPlayed),
     gamesCompletedTotal,
     topMistakeWords,
-    activeMistakeCount: words.filter((word) => word.mistake?.isMistake).length,
+    activeMistakeCount: dedupeWordsByTerm(words).filter((word) => word.mistake?.isMistake)
+      .length,
+    rewardSummary,
   };
 }

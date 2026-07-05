@@ -61,6 +61,7 @@ const ROLE_PERMISSIONS = Object.freeze({
 
 const ROUTE_RULES = [
   { pattern: "/", anyOf: [] },
+  { pattern: "/rewards", anyOf: [] },
   { pattern: "/install", anyOf: [] },
   { pattern: "/auth", anyOf: [] },
   { pattern: "/achievements", anyOf: [PERMISSIONS.ANALYTICS_READ] },

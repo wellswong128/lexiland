@@ -7,7 +7,9 @@ import WordGroupScopeEmptyState from "../features/wordGroups/WordGroupScopeEmpty
 import { useActiveGroupWordScope } from "../features/wordGroups/useActiveGroupWordScope.js";
 import { useEnsureActiveGroupWords } from "../features/wordGroups/useEnsureActiveGroupWords.js";
 import { useWordsContext } from "../features/words/WordsContext.jsx";
+import { dedupeWordsByTerm } from "../features/words/wordTypes.js";
 import { recordDailyMistakeCleared } from "../lib/learningActivity.js";
+import { ACTION_TYPES, awardLearningAction } from "../features/rewards/rewardsEngine.js";
 
 function MistakesPage() {
   const { dateLocale, locale, t } = useLocale();
@@ -22,7 +24,7 @@ function MistakesPage() {
   } = useActiveGroupWordScope(words, user);
   useEnsureActiveGroupWords();
   const sourceWords = isGroupScopeActive ? scopedWords : words;
-  const mistakeWords = sourceWords.filter((word) => word.mistake.isMistake);
+  const mistakeWords = dedupeWordsByTerm(sourceWords).filter((word) => word.mistake.isMistake);
   const activeGroupLabel = getActiveGroupLabel(activeGroup, locale);
 
   function formatDate(value) {
@@ -42,6 +44,11 @@ function MistakesPage() {
         lastMistakeAt: null,
       },
     });
+    awardLearningAction(
+      ACTION_TYPES.FIX_MISTAKE,
+      { dedupeKey: `manual:${word.id}` },
+      { words: sourceWords },
+    );
   }
 
   return (

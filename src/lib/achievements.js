@@ -1,6 +1,7 @@
 import { getDueWords } from "../features/review/reviewHelpers.js";
+import { loadRewardState } from "../features/rewards/rewardsStore.js";
 import { REVIEW_RESULTS, WORD_SOURCES } from "../features/words/wordTypes.js";
-import { getLearningSnapshot, getTodayReviewedCount, loadLearningActivity } from "./learningActivity.js";
+import { getTodayReviewedCount, loadLearningActivity } from "./learningActivity.js";
 
 export const GAME_PATHS = [
   "/games/spelling-ninja",
@@ -51,7 +52,7 @@ function hasVisitedPath(visitedPaths, path) {
 
 export function buildAchievementContext(words, storage) {
   const activity = loadLearningActivity(storage);
-  const snapshot = getLearningSnapshot(words, storage);
+  const rewardState = loadRewardState(storage);
   const dueWords = getDueWords(words);
   const visitedPaths = activity.visitedPaths || [];
 
@@ -62,8 +63,8 @@ export function buildAchievementContext(words, storage) {
     mistakeCount: countMistakeWords(words),
     photoWordCount: countPhotoWords(words),
     totalCorrect: countTotalCorrect(words),
-    streak: snapshot.streak,
-    todayReviewed: snapshot.todayReviewed,
+    streak: rewardState.currentStreak || 0,
+    todayReviewed: getTodayReviewedCount(words),
     visitedPaths,
     visitedGameCount: countVisitedGames(visitedPaths),
     hasBounceBack: hasBounceBack(words),

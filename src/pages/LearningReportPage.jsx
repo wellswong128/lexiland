@@ -1,5 +1,6 @@
 import { useMemo } from "react";
 import { Link } from "react-router-dom";
+import WeeklyRewardReport from "../components/rewards/WeeklyRewardReport.jsx";
 import { useLocale } from "../features/locale/LocaleContext.jsx";
 import { useActiveGroupWordScope } from "../features/wordGroups/useActiveGroupWordScope.js";
 import { useWordsContext } from "../features/words/WordsContext.jsx";
@@ -91,6 +92,16 @@ function LearningReportPage() {
           {t("learningReport.totalWords", { count: report.totalWords })}
         </p>
       </section>
+
+      <WeeklyRewardReport words={learningWords} />
+
+      <Link className="reward-center-link-card" to="/rewards">
+        <div>
+          <strong>{t("rewards.center.linkTitle")}</strong>
+          <span>{t("rewards.center.linkDesc")}</span>
+        </div>
+        <span aria-hidden="true">🎁</span>
+      </Link>
 
       <section aria-labelledby="learning-report-mistakes-title" className="learning-report-section">
         <div className="learning-report-section-header">

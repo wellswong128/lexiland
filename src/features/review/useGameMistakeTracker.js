@@ -5,6 +5,7 @@ import {
   maybeRecordDailyMistakeClear,
   recordDailyGameCompleted,
 } from "../../lib/learningActivity.js";
+import { ACTION_TYPES, awardLearningAction } from "../rewards/rewardsEngine.js";
 import {
   commitGameMistakes,
   findWordInLibrary,
@@ -13,6 +14,7 @@ import { updateReviewResult } from "./reviewHelpers.js";
 
 export function useGameMistakeTracker() {
   const wrongCountsRef = useRef({});
+  const gameSessionRef = useRef(`game-${Date.now()}`);
   const { updateWord, words } = useWordsContext();
   const [lastCommittedTerms, setLastCommittedTerms] = useState([]);
 
@@ -66,6 +68,12 @@ export function useGameMistakeTracker() {
     wrongCountsRef.current = {};
     setLastCommittedTerms(addedTerms);
     recordDailyGameCompleted();
+    awardLearningAction(
+      ACTION_TYPES.PLAY_GAME,
+      { dedupeKey: gameSessionRef.current },
+      { words },
+    );
+    gameSessionRef.current = `game-${Date.now()}`;
 
     return addedTerms;
   }, [words]);

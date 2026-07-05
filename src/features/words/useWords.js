@@ -27,9 +27,11 @@ import {
   normalizeTags,
   normalizeTerm,
   normalizeText,
+  dedupeWordsByTerm,
   WORD_SOURCES,
   toSupabaseSource,
 } from "./wordTypes.js";
+import { ACTION_TYPES, awardLearningAction } from "../rewards/rewardsEngine.js";
 import {
   deleteAllWordsFromSupabase,
   deleteWordFromSupabase,
@@ -131,7 +133,7 @@ function applyWordChanges(word, changes) {
 }
 
 function hydrateWords(words, storage) {
-  return hydrateWordsAiMemory(words, storage);
+  return hydrateWordsAiMemory(dedupeWordsByTerm(words), storage);
 }
 
 function mergeWordsPreservingMemory(remoteWords, existingWords) {
@@ -486,12 +488,29 @@ export function useWords({ isAuthLoading = false, user = null } = {}, storage) {
   const addWord = useCallback(
     async (input, options = {}) => {
       const newWord = createWord(input, options);
+      const normalizedTerm = normalizeTerm(newWord.term);
+      const existingLocalWord = wordsRef.current.find(
+        (word) => normalizeTerm(word.term) === normalizedTerm,
+      );
+
+      if (existingLocalWord) {
+        return existingLocalWord;
+      }
 
       if (isUsingSupabase) {
         try {
-          const savedWord = await insertWordInSupabase(newWord, user.id);
+          const savedWord = await insertWordInSupabase(newWord, user.id, {
+            onDuplicate: "return-existing",
+          });
+          const alreadyInState = wordsRef.current.some((word) => word.id === savedWord.id);
 
-          setWords((currentWords) => [savedWord, ...currentWords]);
+          if (!alreadyInState) {
+            setWords((currentWords) =>
+              dedupeWordsByTerm([savedWord, ...currentWords]),
+            );
+            awardLearningAction(ACTION_TYPES.ADD_WORD, { dedupeKey: savedWord.id });
+          }
+
           return savedWord;
         } catch (error) {
           setWordsError(error.message);
@@ -499,7 +518,9 @@ export function useWords({ isAuthLoading = false, user = null } = {}, storage) {
         }
       }
 
-      setWords((currentWords) => [newWord, ...currentWords]);
+      setWords((currentWords) => dedupeWordsByTerm([newWord, ...currentWords]));
+
+      awardLearningAction(ACTION_TYPES.ADD_WORD, { dedupeKey: newWord.id });
 
       return newWord;
     },
@@ -600,7 +621,10 @@ export function useWords({ isAuthLoading = false, user = null } = {}, storage) {
   const importWords = useCallback(
     async (wordInputs, options = {}) => {
       const source = options.source ?? WORD_SOURCES.IMPORT;
-      const existingTerms = new Set(words.map((word) => normalizeTerm(word.term)));
+      const existingTerms = new Set(
+        wordsRef.current.map((word) => normalizeTerm(word.term)),
+      );
+      const existingWordIds = new Set(wordsRef.current.map((word) => word.id));
       const importedWords = [];
       const skippedWords = [];
 
@@ -623,11 +647,42 @@ export function useWords({ isAuthLoading = false, user = null } = {}, storage) {
 
         try {
           for (const importedWord of importedWords) {
-            const savedWord = await insertWordInSupabase(importedWord, user.id);
+            const savedWord = await insertWordInSupabase(importedWord, user.id, {
+              onDuplicate: "return-existing",
+            });
+
+            if (!savedWord) {
+              skippedWords.push(importedWord);
+              continue;
+            }
+
+            if (existingWordIds.has(savedWord.id)) {
+              skippedWords.push(importedWord);
+              continue;
+            }
+
+            const savedTerm = normalizeTerm(savedWord.term);
+
+            if (savedWords.some((word) => normalizeTerm(word.term) === savedTerm)) {
+              skippedWords.push(importedWord);
+              continue;
+            }
+
             savedWords.push(savedWord);
+            existingWordIds.add(savedWord.id);
           }
 
-          setWords((currentWords) => [...savedWords, ...currentWords]);
+          if (savedWords.length > 0) {
+            setWords((currentWords) => dedupeWordsByTerm([...savedWords, ...currentWords]));
+          }
+
+          if (source === WORD_SOURCES.PHOTO && options.photoBatchId && savedWords.length > 0) {
+            awardLearningAction(ACTION_TYPES.PHOTO_ADD, { dedupeKey: options.photoBatchId });
+          }
+
+          savedWords.forEach((savedWord) => {
+            awardLearningAction(ACTION_TYPES.ADD_WORD, { dedupeKey: savedWord.id });
+          });
 
           return {
             importedWords: savedWords,
@@ -635,7 +690,7 @@ export function useWords({ isAuthLoading = false, user = null } = {}, storage) {
           };
         } catch (error) {
           if (savedWords.length > 0) {
-            setWords((currentWords) => [...savedWords, ...currentWords]);
+            setWords((currentWords) => dedupeWordsByTerm([...savedWords, ...currentWords]));
           }
 
           setWordsError(error.message);
@@ -647,14 +702,22 @@ export function useWords({ isAuthLoading = false, user = null } = {}, storage) {
         }
       }
 
-      setWords((currentWords) => [...importedWords, ...currentWords]);
+      setWords((currentWords) => dedupeWordsByTerm([...importedWords, ...currentWords]));
+
+      if (source === WORD_SOURCES.PHOTO && options.photoBatchId) {
+        awardLearningAction(ACTION_TYPES.PHOTO_ADD, { dedupeKey: options.photoBatchId });
+      }
+
+      importedWords.forEach((importedWord) => {
+        awardLearningAction(ACTION_TYPES.ADD_WORD, { dedupeKey: importedWord.id });
+      });
 
       return {
         importedWords,
         skippedWords,
       };
     },
-    [isUsingSupabase, user, words],
+    [isUsingSupabase, user],
   );
 
   const syncLocalWordsToSupabase = useCallback(async () => {
@@ -716,17 +779,23 @@ export function useWords({ isAuthLoading = false, user = null } = {}, storage) {
             },
           },
           user.id,
+          { onDuplicate: "return-existing" },
         );
 
+        if (!savedWord || existingTerms.has(normalizeTerm(savedWord.term))) {
+          skippedWords.push(localWord);
+          continue;
+        }
+
         importedWords.push(savedWord);
-        existingTerms.add(normalizedTerm);
+        existingTerms.add(normalizeTerm(savedWord.term));
       } catch {
         skippedWords.push(localWord);
       }
     }
 
     if (importedWords.length > 0) {
-      setWords((currentWords) => [...importedWords, ...currentWords]);
+      setWords((currentWords) => dedupeWordsByTerm([...importedWords, ...currentWords]));
     }
 
     return {

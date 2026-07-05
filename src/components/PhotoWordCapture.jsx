@@ -425,7 +425,10 @@ function PhotoWordCapture({ autoOpenCamera = false, onAutoOpenCameraConsumed }) 
       setError("");
       setStatusMessage("");
 
-      const result = await importWords(wordsToSave, { source: WORD_SOURCES.PHOTO });
+      const result = await importWords(wordsToSave, {
+        source: WORD_SOURCES.PHOTO,
+        photoBatchId: `photo-${Date.now()}`,
+      });
 
       const importedCount = result.importedWords.length;
       const skippedCount = result.skippedWords.length;
