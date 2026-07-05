@@ -42,6 +42,7 @@ function QuizPage() {
   const [feedback, setFeedback] = useState(null);
   const [score, setScore] = useState(0);
   const [isComplete, setIsComplete] = useState(false);
+  const [isInteractionLocked, setIsInteractionLocked] = useState(false);
   const questionsLengthRef = useRef(0);
   const quizSessionRef = useRef(`quiz-${Date.now()}`);
   const awardedCorrectRef = useRef(new Set());
@@ -144,6 +145,7 @@ function QuizPage() {
     }
 
     interactionLockedRef.current = true;
+    setIsInteractionLocked(true);
     releaseInteractionAfterDelay();
     return true;
   }
@@ -155,6 +157,7 @@ function QuizPage() {
 
     interactionUnlockTimerRef.current = window.setTimeout(() => {
       interactionLockedRef.current = false;
+      setIsInteractionLocked(false);
       interactionUnlockTimerRef.current = null;
     }, RAPID_INTERACTION_LOCK_MS);
   }
@@ -366,7 +369,7 @@ function QuizPage() {
                   ? "border-slate-200 bg-white text-slate-700 hover:border-blue-300 hover:bg-blue-50"
                   : "",
               ].join(" ")}
-              disabled={Boolean(feedback)}
+              disabled={Boolean(feedback) || isInteractionLocked}
               key={`${option.wordId}-${optionIndex}`}
               onClick={() => handleAnswer(option.wordId)}
               type="button"
@@ -390,6 +393,7 @@ function QuizPage() {
           </div>
           <button
             className="mt-5 rounded-full bg-blue-700 px-5 py-3 text-sm font-bold text-white transition hover:bg-blue-800"
+            disabled={isInteractionLocked}
             onClick={handleNextQuestion}
             type="button"
           >

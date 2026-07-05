@@ -214,6 +214,7 @@ function FlashcardsPage() {
   const [feedback, setFeedback] = useState(null);
   const [sessionClearedCount, setSessionClearedCount] = useState(0);
   const [isComplete, setIsComplete] = useState(false);
+  const [isInteractionLocked, setIsInteractionLocked] = useState(false);
   const [isReviewMemorySyncing, setIsReviewMemorySyncing] = useState(false);
   const [reviewMemorySyncError, setReviewMemorySyncError] = useState("");
   const imageQuestionsRef = useRef([]);
@@ -504,6 +505,7 @@ function FlashcardsPage() {
     }
 
     interactionLockedRef.current = true;
+    setIsInteractionLocked(true);
     releaseInteractionAfterDelay();
     return true;
   }
@@ -515,6 +517,7 @@ function FlashcardsPage() {
 
     interactionUnlockTimerRef.current = window.setTimeout(() => {
       interactionLockedRef.current = false;
+      setIsInteractionLocked(false);
       interactionUnlockTimerRef.current = null;
     }, RAPID_INTERACTION_LOCK_MS);
   }
@@ -571,6 +574,7 @@ function FlashcardsPage() {
     answeredQuestionRef.current = null;
     advancingQuestionRef.current = null;
     interactionLockedRef.current = false;
+    setIsInteractionLocked(false);
     if (interactionUnlockTimerRef.current) {
       window.clearTimeout(interactionUnlockTimerRef.current);
       interactionUnlockTimerRef.current = null;
@@ -994,6 +998,7 @@ function FlashcardsPage() {
               <div className="mt-6 flex flex-wrap justify-center gap-3">
                 <button
                   className="rounded-full border border-red-200 bg-red-50 px-5 py-3 text-sm font-bold text-red-700 transition hover:bg-red-100"
+                  disabled={isInteractionLocked}
                   onClick={() => handleTextRecall(REVIEW_RESULTS.FORGOT)}
                   type="button"
                 >
@@ -1001,6 +1006,7 @@ function FlashcardsPage() {
                 </button>
                 <button
                   className="rounded-full bg-green-700 px-5 py-3 text-sm font-bold text-white transition hover:bg-green-800"
+                  disabled={isInteractionLocked}
                   onClick={() => handleTextRecall(REVIEW_RESULTS.REMEMBERED)}
                   type="button"
                 >
@@ -1036,7 +1042,7 @@ function FlashcardsPage() {
                       ? "border-slate-200 hover:border-blue-400 hover:shadow-md"
                       : "",
                   ].join(" ")}
-                  disabled={Boolean(feedback)}
+                  disabled={Boolean(feedback) || isInteractionLocked}
                   key={`${option.wordId}-${optionIndex}`}
                   onClick={() => handleImageAnswer(option.wordId)}
                   type="button"
@@ -1073,6 +1079,7 @@ function FlashcardsPage() {
           </div>
           <button
             className="mt-5 rounded-full bg-blue-700 px-5 py-3 text-sm font-bold text-white transition hover:bg-blue-800"
+            disabled={isInteractionLocked}
             onClick={goToNextWord}
             type="button"
           >
