@@ -225,6 +225,7 @@ function FlashcardsPage() {
   const reviewEventCounterRef = useRef(0);
   const answeredQuestionRef = useRef(null);
   const advancingQuestionRef = useRef(null);
+  const interactionLockedUntilRef = useRef(0);
 
   imageQuestionsRef.current = imageQuestions;
   imageQuestionsLengthRef.current = imageQuestions.length;
@@ -482,6 +483,17 @@ function FlashcardsPage() {
       : `${reviewMode}-${currentIndex}`;
   }
 
+  function claimInteraction() {
+    const now = Date.now();
+
+    if (interactionLockedUntilRef.current > now) {
+      return false;
+    }
+
+    interactionLockedUntilRef.current = now + 500;
+    return true;
+  }
+
   function claimCurrentAnswer() {
     if (!currentQuestion?.word) {
       return false;
@@ -497,7 +509,11 @@ function FlashcardsPage() {
     return true;
   }
 
-  function goToNextWord() {
+  function goToNextWord(options = {}) {
+    if (!options.skipInteractionLock && !claimInteraction()) {
+      return;
+    }
+
     const questionKey = getCurrentQuestionKey();
 
     if (advancingQuestionRef.current === questionKey) {
@@ -529,6 +545,7 @@ function FlashcardsPage() {
     setFeedback(null);
     answeredQuestionRef.current = null;
     advancingQuestionRef.current = null;
+    interactionLockedUntilRef.current = 0;
     setImageQuestions([]);
     setSessionClearedCount(0);
     setShowAnswer(false);
@@ -559,7 +576,12 @@ function FlashcardsPage() {
   }
 
   function handleTextRecall(result) {
-    if (!currentQuestion?.word || isComplete || !claimCurrentAnswer()) {
+    if (
+      !currentQuestion?.word ||
+      isComplete ||
+      !claimInteraction() ||
+      !claimCurrentAnswer()
+    ) {
       return;
     }
 
@@ -573,11 +595,17 @@ function FlashcardsPage() {
       setSessionClearedCount((count) => count + 1);
     }
 
-    goToNextWord();
+    goToNextWord({ skipInteractionLock: true });
   }
 
   function handleImageAnswer(answerWordId) {
-    if (feedback || !currentQuestion || isComplete || !claimCurrentAnswer()) {
+    if (
+      feedback ||
+      !currentQuestion ||
+      isComplete ||
+      !claimInteraction() ||
+      !claimCurrentAnswer()
+    ) {
       return;
     }
 
@@ -600,7 +628,7 @@ function FlashcardsPage() {
       setSessionClearedCount((count) => count + 1);
     }
 
-    goToNextWord();
+    goToNextWord({ skipInteractionLock: true });
   }
 
   if (isScopePending) {

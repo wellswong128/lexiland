@@ -45,6 +45,7 @@ function QuizPage() {
   const awardedCorrectRef = useRef(new Set());
   const answeredQuestionRef = useRef(null);
   const advancingQuestionRef = useRef(null);
+  const interactionLockedUntilRef = useRef(0);
   const scoreRef = useRef(0);
 
   questionsLengthRef.current = questions.length;
@@ -122,8 +123,19 @@ function QuizPage() {
       : `question-${currentIndex}`;
   }
 
+  function claimInteraction() {
+    const now = Date.now();
+
+    if (interactionLockedUntilRef.current > now) {
+      return false;
+    }
+
+    interactionLockedUntilRef.current = now + 500;
+    return true;
+  }
+
   function handleAnswer(answer) {
-    if (feedback || isComplete || !currentQuestion) {
+    if (feedback || isComplete || !currentQuestion || !claimInteraction()) {
       return;
     }
 
@@ -164,14 +176,18 @@ function QuizPage() {
         );
       }
 
-      handleNextQuestion(true);
+      handleNextQuestion(true, { skipInteractionLock: true });
       return;
     }
 
     setFeedback("incorrect");
   }
 
-  function handleNextQuestion(wasLastCorrect = false) {
+  function handleNextQuestion(wasLastCorrect = false, options = {}) {
+    if (!options.skipInteractionLock && !claimInteraction()) {
+      return;
+    }
+
     const questionKey = getCurrentQuestionKey();
 
     if (advancingQuestionRef.current === questionKey) {
