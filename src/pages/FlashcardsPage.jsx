@@ -25,7 +25,7 @@ import { maybeRecordDailyMistakeClear } from "../lib/learningActivity.js";
 import { ACTION_TYPES, awardLearningAction } from "../features/rewards/rewardsEngine.js";
 import { REVIEW_RESULTS } from "../features/words/wordTypes.js";
 
-const RAPID_INTERACTION_LOCK_MS = 1_000;
+const RAPID_INTERACTION_LOCK_MS = 2_000;
 
 function FlashcardsMissingImagesPanel({ flashcardReadiness, t }) {
   const { missingSessionWords, poolCount, needsMorePoolWords, willUseTextMode } = flashcardReadiness;
@@ -227,7 +227,8 @@ function FlashcardsPage() {
   const reviewEventCounterRef = useRef(0);
   const answeredQuestionRef = useRef(null);
   const advancingQuestionRef = useRef(null);
-  const interactionLockedUntilRef = useRef(0);
+  const interactionLockedRef = useRef(false);
+  const interactionUnlockTimerRef = useRef(null);
 
   imageQuestionsRef.current = imageQuestions;
   imageQuestionsLengthRef.current = imageQuestions.length;
@@ -477,7 +478,19 @@ function FlashcardsPage() {
   useEffect(() => {
     answeredQuestionRef.current = null;
     advancingQuestionRef.current = null;
+    if (interactionLockedRef.current) {
+      releaseInteractionAfterDelay();
+    }
   }, [currentIndex, currentQuestion?.word.id, reviewMode]);
+
+  useEffect(
+    () => () => {
+      if (interactionUnlockTimerRef.current) {
+        window.clearTimeout(interactionUnlockTimerRef.current);
+      }
+    },
+    [],
+  );
 
   function getCurrentQuestionKey() {
     return currentQuestion?.word?.id
@@ -486,14 +499,24 @@ function FlashcardsPage() {
   }
 
   function claimInteraction() {
-    const now = Date.now();
-
-    if (interactionLockedUntilRef.current > now) {
+    if (interactionLockedRef.current) {
       return false;
     }
 
-    interactionLockedUntilRef.current = now + RAPID_INTERACTION_LOCK_MS;
+    interactionLockedRef.current = true;
+    releaseInteractionAfterDelay();
     return true;
+  }
+
+  function releaseInteractionAfterDelay() {
+    if (interactionUnlockTimerRef.current) {
+      window.clearTimeout(interactionUnlockTimerRef.current);
+    }
+
+    interactionUnlockTimerRef.current = window.setTimeout(() => {
+      interactionLockedRef.current = false;
+      interactionUnlockTimerRef.current = null;
+    }, RAPID_INTERACTION_LOCK_MS);
   }
 
   function claimCurrentAnswer() {
@@ -547,7 +570,11 @@ function FlashcardsPage() {
     setFeedback(null);
     answeredQuestionRef.current = null;
     advancingQuestionRef.current = null;
-    interactionLockedUntilRef.current = 0;
+    interactionLockedRef.current = false;
+    if (interactionUnlockTimerRef.current) {
+      window.clearTimeout(interactionUnlockTimerRef.current);
+      interactionUnlockTimerRef.current = null;
+    }
     setImageQuestions([]);
     setSessionClearedCount(0);
     setShowAnswer(false);
