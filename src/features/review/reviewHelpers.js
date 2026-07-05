@@ -53,7 +53,7 @@ export function getDueWords(words, now = new Date()) {
 
 export function getReviewSessionWords(words, { mistakesOnly = false, now = new Date() } = {}) {
   const allWords = mistakesOnly
-    ? words.filter((word) => word.mistake.isMistake)
+    ? words.filter((word) => word.mistake?.isMistake)
     : getDueWords(words, now);
 
   return {
@@ -158,7 +158,8 @@ export function getReviewIntervalDays(level) {
 export function updateReviewResult(word, result, now = new Date()) {
   const remembered =
     result === REVIEW_RESULTS.REMEMBERED || result === REVIEW_RESULTS.CORRECT;
-  const nextLevel = remembered ? word.review.level + 1 : 0;
+  const currentLevel = word.review?.level ?? 0;
+  const nextLevel = remembered ? currentLevel + 1 : 0;
 
   return {
     review: {
@@ -166,8 +167,8 @@ export function updateReviewResult(word, result, now = new Date()) {
       level: nextLevel,
       nextReviewAt: getNextReviewAt(nextLevel, now),
       lastReviewedAt: now.toISOString(),
-      correctCount: word.review.correctCount + (remembered ? 1 : 0),
-      incorrectCount: word.review.incorrectCount + (remembered ? 0 : 1),
+      correctCount: (word.review?.correctCount ?? 0) + (remembered ? 1 : 0),
+      incorrectCount: (word.review?.incorrectCount ?? 0) + (remembered ? 0 : 1),
       lastResult: result,
     },
     mistake: remembered
@@ -179,7 +180,7 @@ export function updateReviewResult(word, result, now = new Date()) {
           ...word.mistake,
           isMistake: true,
           lastMistakeAt: now.toISOString(),
-          mistakeCount: word.mistake.mistakeCount + 1,
+          mistakeCount: (word.mistake?.mistakeCount ?? 0) + 1,
         },
   };
 }
