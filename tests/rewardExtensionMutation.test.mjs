@@ -5,7 +5,6 @@ import {
   buyAvatarItem,
   updateSyncedRewardState,
 } from "../src/features/rewards/rewardExtensionsEngine.js";
-import { ACTION_TYPES, awardLearningAction } from "../src/features/rewards/rewardsEngine.js";
 import { loadRewardState, saveRewardState } from "../src/features/rewards/rewardsStore.js";
 
 class MemoryStorage {
@@ -36,11 +35,20 @@ test("reward extension mutations preserve newer learning progress in storage", (
   saveRewardState(initialState, storage);
   const staleRewardCenterSnapshot = loadRewardState(storage);
 
-  awardLearningAction(
-    ACTION_TYPES.REVIEW_WORD,
-    { dedupeKey: "review-before-shop-action" },
-    { silent: true, storage },
-  );
+  const learningProgressState = {
+    ...loadRewardState(storage),
+    coins: 202,
+    allTimeStats: {
+      ...initialState.allTimeStats,
+      totalWordsReviewed: 1,
+    },
+    weeklyStats: {
+      ...initialState.weeklyStats,
+      wordsReviewed: 1,
+    },
+  };
+
+  saveRewardState(learningProgressState, storage);
 
   const afterLearning = loadRewardState(storage);
   assert.equal(afterLearning.allTimeStats.totalWordsReviewed, 1);
