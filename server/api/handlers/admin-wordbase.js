@@ -422,6 +422,10 @@ async function listWordbaseRows(request, response) {
   });
 }
 
+function hasMissingTextFields(row) {
+  return MISSING_FIELD_CONFIG.some(({ column }) => !String(row?.[column] ?? "").trim());
+}
+
 function buildAiPatch(existingRow, suggestion) {
   const patch = {};
 
@@ -449,8 +453,15 @@ function resolveMemoryTipLocale(locale) {
   return "zh-Hant";
 }
 
-async function buildMemoryPatch(existingRow, locale) {
+const ADMIN_REFILL_IMAGE_LIMITS = {
+  maxGenerations: 1,
+  maxTextChecks: 0,
+  generationTimeoutMs: 30000,
+};
+
+async function buildMemoryTipsPatch(existingRow, locale) {
   const patch = {};
+  const warnings = [];
   const apiKey = String(process.env.AGNES_API_KEY || "").trim();
   const wordContext = {
     term: existingRow.term,
@@ -463,44 +474,89 @@ async function buildMemoryPatch(existingRow, locale) {
 
   if (!hasContentMemoryTips(existingRow)) {
     if (!apiKey) {
-      throw new Error("AGNES_API_KEY is not configured on the server.");
+      warnings.push("AGNES_API_KEY is not configured on the server.");
+    } else {
+      try {
+        const memoryTips = await requestMemoryTips(apiKey, wordContext, tipLocale);
+        const existingTips =
+          existingRow.memory_tips_by_locale && typeof existingRow.memory_tips_by_locale === "object"
+            ? existingRow.memory_tips_by_locale
+            : {};
+
+        patch.memory_tips_by_locale = {
+          ...existingTips,
+          [tipLocale]: {
+            ...memoryTips,
+            savedAt: new Date().toISOString(),
+          },
+        };
+      } catch (error) {
+        warnings.push(error.message || "Could not generate memory tips.");
+      }
     }
-
-    const memoryTips = await requestMemoryTips(apiKey, wordContext, tipLocale);
-    const existingTips =
-      existingRow.memory_tips_by_locale && typeof existingRow.memory_tips_by_locale === "object"
-        ? existingRow.memory_tips_by_locale
-        : {};
-
-    patch.memory_tips_by_locale = {
-      ...existingTips,
-      [tipLocale]: {
-        ...memoryTips,
-        savedAt: new Date().toISOString(),
-      },
-    };
   }
+
+  return { patch, warnings };
+}
+
+async function buildMemoryImagePatch(existingRow) {
+  const patch = {};
+  const warnings = [];
+  const apiKey = String(process.env.AGNES_API_KEY || "").trim();
+  const wordContext = {
+    term: existingRow.term,
+    definition: existingRow.definition ?? "",
+    translation: existingRow.translation ?? "",
+    example: existingRow.example ?? "",
+  };
 
   if (!hasMemoryImage(existingRow)) {
     if (!apiKey) {
-      throw new Error("AGNES_API_KEY is not configured on the server.");
+      warnings.push("AGNES_API_KEY is not configured on the server.");
+    } else {
+      try {
+        const image = await generateWordMemoryImage({
+          ...wordContext,
+          apiKey,
+          limits: ADMIN_REFILL_IMAGE_LIMITS,
+        });
+
+        patch.memory_image = {
+          imageUrl: image.imageUrl,
+          prompt: image.prompt ?? "",
+          model: image.model ?? "",
+          size: image.size ?? "",
+          savedAt: new Date().toISOString(),
+        };
+      } catch (error) {
+        warnings.push(error.message || "Could not generate memory image.");
+      }
     }
-
-    const image = await generateWordMemoryImage({
-      ...wordContext,
-      apiKey,
-    });
-
-    patch.memory_image = {
-      imageUrl: image.imageUrl,
-      prompt: image.prompt ?? "",
-      model: image.model ?? "",
-      size: image.size ?? "",
-      savedAt: new Date().toISOString(),
-    };
   }
 
-  return patch;
+  return { patch, warnings };
+}
+
+async function applyWordbasePatch(serviceClient, rowId, patch) {
+  if (Object.keys(patch).length === 0) {
+    return null;
+  }
+
+  const { data, error } = await serviceClient
+    .from("wordbase")
+    .update({
+      ...patch,
+      source: "ai",
+    })
+    .eq("id", rowId)
+    .select(WORD_COLUMNS.join(","))
+    .single();
+
+  if (error) {
+    throw new Error(error.message || "Could not update WordBase row.");
+  }
+
+  return data;
 }
 
 async function deleteWordbaseRow(request, response) {
@@ -580,8 +636,18 @@ async function refillWordbaseRow(request, response) {
     return;
   }
 
-  const suggestion = await generateCompleteWordSuggestion(row.term, locale);
-  const textPatch = buildAiPatch(row, suggestion);
+  const warnings = [];
+  let textPatch = {};
+
+  if (hasMissingTextFields(row)) {
+    try {
+      const suggestion = await generateCompleteWordSuggestion(row.term, locale);
+      textPatch = buildAiPatch(row, suggestion);
+    } catch (error) {
+      throw new Error(error.message || "AI text fill failed.");
+    }
+  }
+
   const rowForMemory = {
     ...row,
     definition: textPatch.definition ?? row.definition,
@@ -591,38 +657,42 @@ async function refillWordbaseRow(request, response) {
     example: textPatch.example ?? row.example,
     example_translation: textPatch.example_translation ?? row.example_translation,
   };
-  const patch = {
+  const { patch: tipsPatch, warnings: tipWarnings } = await buildMemoryTipsPatch(rowForMemory, locale);
+  warnings.push(...tipWarnings);
+
+  let currentRow = row;
+  const initialPatch = {
     ...textPatch,
-    ...(await buildMemoryPatch(rowForMemory, locale)),
+    ...tipsPatch,
   };
 
-  if (Object.keys(patch).length > 0) {
-    patch.source = "ai";
+  if (Object.keys(initialPatch).length > 0) {
+    currentRow = await applyWordbasePatch(serviceClient, row.id, initialPatch);
   }
 
-  if (Object.keys(patch).length === 0) {
+  const { patch: imagePatch, warnings: imageWarnings } = await buildMemoryImagePatch(currentRow ?? rowForMemory);
+  warnings.push(...imageWarnings);
+
+  if (Object.keys(imagePatch).length > 0) {
+    currentRow = await applyWordbasePatch(serviceClient, row.id, imagePatch);
+  }
+
+  const updated = Object.keys({ ...initialPatch, ...imagePatch }).length > 0;
+
+  if (!updated) {
     sendJson(response, 200, {
       updated: false,
-      row: mapWordbaseRow(row, locale),
+      row: mapWordbaseRow(currentRow ?? row, locale),
       message: "No missing fields to fill.",
     });
     return;
   }
 
-  const { data: updatedRow, error: updateError } = await serviceClient
-    .from("wordbase")
-    .update(patch)
-    .eq("id", row.id)
-    .select(WORD_COLUMNS.join(","))
-    .single();
-
-  if (updateError) {
-    throw new Error(updateError.message || "Could not update WordBase row.");
-  }
-
   sendJson(response, 200, {
     updated: true,
-    row: mapWordbaseRow(updatedRow, locale),
+    partial: warnings.length > 0,
+    warnings,
+    row: mapWordbaseRow(currentRow ?? row, locale),
   });
 }
 

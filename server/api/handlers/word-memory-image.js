@@ -441,6 +441,7 @@ export async function generateWordMemoryImage({
   translation = "",
   example = "",
   apiKey,
+  limits = null,
 }) {
   const cleanTerm = String(term ?? "").trim();
   if (!cleanTerm) {
@@ -462,14 +463,14 @@ export async function generateWordMemoryImage({
   const blockedTerms = policySafe
     ? [meaning.translation].filter(Boolean)
     : [cleanTerm, meaning.translation, meaning.definition].filter(Boolean);
-  const limits = getGenerationLimits();
+  const generationLimits = limits ?? getGenerationLimits();
 
   const errors = [];
   let generationCount = 0;
   let textCheckCount = 0;
 
   for (const step of generationPlan) {
-    if (generationCount >= limits.maxGenerations) {
+    if (generationCount >= generationLimits.maxGenerations) {
       break;
     }
 
@@ -482,10 +483,11 @@ export async function generateWordMemoryImage({
         prompt: step.prompt,
         size: step.size,
         blockedTerms,
-        timeoutMs: limits.generationTimeoutMs,
+        timeoutMs: generationLimits.generationTimeoutMs,
       });
 
-      const shouldCheckText = step.checkText && textCheckCount < limits.maxTextChecks;
+      const shouldCheckText =
+        step.checkText && textCheckCount < generationLimits.maxTextChecks;
 
       if (shouldCheckText) {
         textCheckCount += 1;

@@ -182,7 +182,16 @@ function AdminWordbasePage() {
       }
 
       if (payload.updated) {
-        setNotice(t("adminWordbase.refillSuccess", { term: row.term }));
+        if (payload.partial && Array.isArray(payload.warnings) && payload.warnings.length > 0) {
+          setNotice(
+            t("adminWordbase.refillPartial", {
+              term: row.term,
+              details: payload.warnings.join(" "),
+            }),
+          );
+        } else {
+          setNotice(t("adminWordbase.refillSuccess", { term: row.term }));
+        }
       } else {
         setNotice(t("adminWordbase.noMissingData", { term: row.term }));
       }
