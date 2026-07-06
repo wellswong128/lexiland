@@ -262,15 +262,30 @@ function FlashcardsPage() {
   }, [scopeRevision]);
 
   function scrollQuizToBottom() {
-    const scrollToEnd = () => {
-      quizBottomRef.current?.scrollIntoView({ block: "end", behavior: "auto" });
+    const rootStyles = getComputedStyle(document.documentElement);
+    const tabbarHeight =
+      Number.parseFloat(rootStyles.getPropertyValue("--app-tabbar-height")) || 56;
+    const safeBottom =
+      Number.parseFloat(rootStyles.getPropertyValue("--app-safe-bottom")) || 0;
+    const bottomInset = tabbarHeight + safeBottom + 16;
+    const scrollContainer =
+      document.querySelector(".app-shell-standalone > main") ??
+      document.querySelector(".app-shell > main");
 
-      const scrollingElement = document.scrollingElement;
-      if (scrollingElement) {
-        scrollingElement.scrollTop = scrollingElement.scrollHeight;
+    const scrollToEnd = () => {
+      if (scrollContainer && scrollContainer.scrollHeight > scrollContainer.clientHeight) {
+        scrollContainer.scrollTop = scrollContainer.scrollHeight - scrollContainer.clientHeight;
+        return;
       }
 
-      window.scrollTo({ top: document.documentElement.scrollHeight, behavior: "auto" });
+      const target = quizBottomRef.current;
+      if (!target) {
+        return;
+      }
+
+      const rect = target.getBoundingClientRect();
+      const scrollTop = window.scrollY + rect.bottom - window.innerHeight + bottomInset;
+      window.scrollTo({ top: Math.max(0, scrollTop), behavior: "auto" });
     };
 
     scrollToEnd();
@@ -455,7 +470,7 @@ function FlashcardsPage() {
   }, [currentIndex, feedback, hasStarted, isComplete, imageQuestions.length]);
 
   useEffect(() => {
-    if (!hasStarted || isComplete || !currentQuestion) {
+    if (!hasStarted || isComplete || !currentQuestion || feedback !== "incorrect") {
       return undefined;
     }
 
@@ -846,32 +861,32 @@ function FlashcardsPage() {
   }
 
   return (
-    <section className="w-full max-w-3xl rounded-3xl border border-blue-200/70 bg-white/90 p-6 shadow-2xl shadow-blue-950/10 sm:p-10">
-      <div className="mb-8 flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
-        <div>
-          <p className="mb-3 text-xs font-bold uppercase tracking-[0.16em] text-blue-700">
+    <section className="flashcards-review-session w-full max-w-3xl rounded-3xl border border-blue-200/70 bg-white/90 p-4 shadow-2xl shadow-blue-950/10 sm:p-8">
+      <div className="flashcards-review-header mb-4 flex items-start justify-between gap-3 sm:mb-6">
+        <div className="min-w-0 text-left">
+          <p className="text-[11px] font-bold uppercase tracking-[0.14em] text-blue-700 sm:text-xs sm:tracking-[0.16em]">
             {t("flashcards.eyebrow")}
           </p>
-          <h1 className="text-4xl font-bold text-blue-950 sm:text-5xl">
+          <h1 className="text-2xl font-bold text-blue-950 sm:text-4xl">
             {t("flashcards.title")}
           </h1>
         </div>
-        <p className="rounded-full bg-blue-100 px-4 py-2 text-sm font-bold text-blue-700">
+        <p className="shrink-0 rounded-full bg-blue-100 px-3 py-1.5 text-xs font-bold text-blue-700 sm:px-4 sm:py-2 sm:text-sm">
           {progressText}
         </p>
       </div>
 
-      <div className="rounded-3xl border border-blue-100 bg-blue-50/70 p-8 text-center">
-        <p className="text-sm font-bold uppercase tracking-[0.14em] text-blue-700">
+      <div className="flashcards-review-word rounded-2xl border border-blue-100 bg-blue-50/70 p-4 text-center sm:rounded-3xl sm:p-6">
+        <p className="text-xs font-bold uppercase tracking-[0.14em] text-blue-700 sm:text-sm">
           {t("flashcards.word")}
         </p>
-        <div className="mt-4 flex flex-col items-center gap-3">
-          <h2 className="text-5xl font-bold text-blue-950">{currentWord.term}</h2>
+        <div className="mt-2 flex items-center justify-center gap-2 sm:mt-3 sm:gap-3">
+          <h2 className="text-3xl font-bold text-blue-950 sm:text-5xl">{currentWord.term}</h2>
           <SpeakButton text={currentWord.term} />
         </div>
 
         {currentWord.pronunciation ? (
-          <p className="mt-3 text-slate-500">{currentWord.pronunciation}</p>
+          <p className="mt-1 text-sm text-slate-500 sm:mt-2">{currentWord.pronunciation}</p>
         ) : null}
       </div>
 
@@ -919,11 +934,11 @@ function FlashcardsPage() {
       ) : null}
 
       {reviewMode === "image" && (feedback === null || feedback === "incorrect") ? (
-        <div className="mt-6">
-          <p className="mb-4 text-center text-sm font-bold uppercase tracking-[0.14em] text-slate-500">
+        <div className="flashcards-review-images mt-3 sm:mt-6">
+          <p className="mb-2 shrink-0 text-center text-xs font-bold uppercase tracking-[0.14em] text-slate-500 sm:mb-4 sm:text-sm">
             {t("flashcards.chooseMemoryImage")}
           </p>
-          <div className="grid grid-cols-2 gap-3">
+          <div className="flashcards-review-grid grid grid-cols-2 gap-2 sm:gap-3">
             {currentQuestion.options.map((option, optionIndex) => {
               const isSelected = selectedAnswer === option.wordId;
               const isCorrectAnswer = option.wordId === currentQuestion.correctAnswer;
@@ -933,7 +948,7 @@ function FlashcardsPage() {
               return (
                 <button
                   className={[
-                    "relative overflow-hidden rounded-2xl border-2 bg-white transition focus:outline-none focus-visible:ring-4 focus-visible:ring-blue-100",
+                    "relative min-h-0 overflow-hidden rounded-2xl border-2 bg-white transition focus:outline-none focus-visible:ring-4 focus-visible:ring-blue-100",
                     showCorrect
                       ? "border-green-400 ring-4 ring-green-100"
                       : "",
@@ -949,7 +964,8 @@ function FlashcardsPage() {
                 >
                   <WordImageWithTranslationOverlay
                     alt={t("wordImage.alt", { term: currentWord.term })}
-                    imageClassName="aspect-square w-full object-cover"
+                    className="flashcards-review-image-wrap relative overflow-hidden"
+                    imageClassName="flashcards-review-image"
                     src={option.imageUrl}
                     translation={option.translation}
                   />

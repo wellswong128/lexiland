@@ -1,5 +1,70 @@
 .home-stats-3 {
   grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.home-stats-3 .home-card {
+  position: relative;
+  min-width: 0;
+  overflow: hidden;
+  padding: 12px 10px 14px;
+}
+
+.home-stats-3 .home-stat-title {
+  padding-right: 28px;
+  font-size: clamp(11px, 2.85vw, 13px);
+  line-height: 1.25;
+}
+
+.home-stats-3 .home-stat-row {
+  margin-top: 6px;
+  display: block;
+}
+
+.home-stats-3 .home-stat-value {
+  display: block;
+  font-size: clamp(24px, 6.8vw, 32px);
+}
+
+.home-stats-3 .home-stat-emoji {
+  position: absolute;
+  top: 10px;
+  right: 8px;
+  font-size: clamp(18px, 4.8vw, 24px);
+  line-height: 1;
+}
+
+@media (min-width: 1024px) {
+  .home-stats-3 {
+    gap: 12px;
+  }
+
+  .home-stats-3 .home-card {
+    padding: 14px 16px;
+  }
+
+  .home-stats-3 .home-stat-title {
+    padding-right: 0;
+    font-size: 16px;
+  }
+
+  .home-stats-3 .home-stat-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 8px;
+    gap: 8px;
+  }
+
+  .home-stats-3 .home-stat-value {
+    display: inline;
+    font-size: 38px;
+  }
+
+  .home-stats-3 .home-stat-emoji {
+    position: static;
+    font-size: 34px;
+  }
 }
 
 .home-card-coins {
@@ -174,14 +239,19 @@
 
 .rewards-mission-title {
   color: #1f2a44;
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 800;
   text-decoration: none;
 }
 
-.rewards-mission-progress,
+.rewards-mission-progress {
+  font-size: 16px;
+  font-weight: 700;
+  color: #66738f;
+}
+
 .rewards-mission-reward {
-  font-size: 13px;
+  font-size: 16px;
   font-weight: 700;
   color: #66738f;
 }
@@ -200,7 +270,7 @@
 
 .rewards-mission-claimed,
 .rewards-missions-hero-done {
-  font-size: 12px;
+  font-size: 16px;
   font-weight: 800;
   color: #1f9d55;
 }
@@ -217,7 +287,7 @@
 
 .rewards-missions-bonus p {
   margin: 0;
-  font-size: 13px;
+  font-size: 16px;
   font-weight: 700;
   color: #4f5d7d;
 }
@@ -264,21 +334,21 @@
 
 .rewards-badge-copy h3 {
   margin: 0;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 900;
   color: #1f2a44;
 }
 
 .rewards-badge-copy p {
   margin: 4px 0 0;
-  font-size: 12px;
+  font-size: 16px;
   line-height: 1.35;
   color: #66738f;
 }
 
 .rewards-badge-status {
   margin-top: auto;
-  font-size: 11px;
+  font-size: 16px;
   font-weight: 800;
   color: #2457d6;
 }

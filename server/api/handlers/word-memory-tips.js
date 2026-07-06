@@ -64,7 +64,7 @@ Use plain double quotes in JSON strings. Escape any internal quotes with backsla
 Prioritize methods that fit this specific word. Avoid generic advice like "repeat many times".`;
 }
 
-async function requestMemoryTips(apiKey, body, locale) {
+export async function requestMemoryTips(apiKey, body, locale) {
   const term = String(body.term ?? "").trim();
   let lastError = null;
 

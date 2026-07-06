@@ -51,14 +51,13 @@
   display: flex;
   gap: 10px;
   align-items: center;
-  padding-top: 4px;
-  padding-right: 56px;
+  padding-top: 56px;
 }
 
 .home-hero-avatar {
   position: absolute;
   top: 12px;
-  right: 12px;
+  left: 12px;
   z-index: 4;
   display: grid;
   place-items: center;
@@ -802,7 +801,7 @@
 .home-report-teaser {
   margin: 8px 0 0;
   color: #4338ca;
-  font-size: 13px;
+  font-size: 16px;
   font-weight: 800;
   line-height: 1.4;
 }
@@ -1489,6 +1488,7 @@
 
   .home-hero-top {
     padding-top: 0;
+    padding-left: 64px;
     align-items: flex-start;
     gap: 16px;
   }

@@ -132,6 +132,8 @@ export function resetWordsForUser(userId, storage = getDefaultStorage()) {
   storage.removeItem(getUserWordsStorageKey(userId));
 }
 
+const PHOTO_CAPTURE_DRAFT_MAX_BYTES = 120_000;
+
 export function loadPhotoCaptureDraft(storage = getDefaultStorage()) {
   if (!storage) {
     return null;
@@ -143,6 +145,12 @@ export function loadPhotoCaptureDraft(storage = getDefaultStorage()) {
     return null;
   }
 
+  if (rawValue.length > PHOTO_CAPTURE_DRAFT_MAX_BYTES) {
+    console.warn("Photo capture draft was too large and has been cleared.");
+    storage.removeItem(PHOTO_CAPTURE_DRAFT_KEY);
+    return null;
+  }
+
   try {
     const parsedValue = JSON.parse(rawValue);
 
@@ -150,7 +158,11 @@ export function loadPhotoCaptureDraft(storage = getDefaultStorage()) {
       return null;
     }
 
-    return parsedValue;
+    return {
+      ...parsedValue,
+      imageDataUrl: "",
+      previewUrl: "",
+    };
   } catch (error) {
     console.warn("Could not parse stored photo capture draft.", error);
     return null;
@@ -162,7 +174,13 @@ export function savePhotoCaptureDraft(draft, storage = getDefaultStorage()) {
     return;
   }
 
-  storage.setItem(PHOTO_CAPTURE_DRAFT_KEY, JSON.stringify(draft));
+  const { imageDataUrl: _imageDataUrl, previewUrl: _previewUrl, ...rest } = draft;
+
+  try {
+    storage.setItem(PHOTO_CAPTURE_DRAFT_KEY, JSON.stringify(rest));
+  } catch (error) {
+    console.warn("Could not save photo capture draft.", error);
+  }
 }
 
 export function clearPhotoCaptureDraft(storage = getDefaultStorage()) {

@@ -4,14 +4,16 @@ import { useWordsContext } from "../features/words/WordsContext.jsx";
 import { getApiAuthHeaders } from "../lib/apiAuth.js";
 import { resolveApiUrl } from "../lib/apiBase.js";
 import { can, getRoleFromUser, PERMISSIONS } from "../lib/authorization.js";
+import { mapWordbaseRow } from "../lib/wordbaseCompleteness.js";
+import { hasSupabaseConfig, supabase } from "../lib/supabaseClient.js";
 
-const FIELD_LABELS = {
-  definition: "Definition",
-  translation: "Translation",
-  pronunciation: "Pronunciation",
-  partOfSpeech: "Part of Speech",
-  example: "Example",
-  exampleTranslation: "Example Translation",
+const FIELD_LABEL_KEYS = {
+  definition: "adminWordbaseLibrary.definition",
+  translation: "adminWordbaseLibrary.translation",
+  example: "adminWordbaseLibrary.example",
+  exampleTranslation: "adminWordbaseLibrary.exampleTranslation",
+  memoryTips: "adminWordbaseLibrary.memoryTips",
+  memoryImage: "adminWordbaseLibrary.memoryImage",
 };
 
 function formatDateTime(value, dateLocale) {
@@ -23,7 +25,7 @@ function formatDateTime(value, dateLocale) {
 }
 
 function AdminWordbasePage() {
-  const { t, dateLocale } = useLocale();
+  const { t, dateLocale, locale } = useLocale();
   const { isAuthLoading, user } = useWordsContext();
   const role = getRoleFromUser(user);
   const canManageWordbase = can(role, PERMISSIONS.SETTINGS_MANAGE_USERS);
@@ -34,11 +36,56 @@ function AdminWordbasePage() {
   const [error, setError] = useState("");
   const [notice, setNotice] = useState("");
   const [refillingId, setRefillingId] = useState("");
+  const [deletingId, setDeletingId] = useState("");
 
   const sortedRows = useMemo(
     () => [...rows].sort((a, b) => a.term.localeCompare(b.term)),
     [rows],
   );
+
+  async function loadRowsFromSupabase(nextSearch) {
+    if (!supabase) {
+      return null;
+    }
+
+    const { data, error } = await supabase.rpc("get_incomplete_wordbase_rows", {
+      p_limit: 120,
+      p_search: nextSearch.trim() || null,
+    });
+
+    if (error) {
+      return { error: error.message };
+    }
+
+    return {
+      rows: (data ?? []).map((row) => mapWordbaseRow(row, locale)),
+    };
+  }
+
+  async function loadRowsFromApi(nextSearch) {
+    const authHeaders = await getApiAuthHeaders();
+    const query = new URLSearchParams({
+      limit: "120",
+      missingOnly: "1",
+      locale,
+    });
+    if (nextSearch.trim()) {
+      query.set("search", nextSearch.trim());
+    }
+
+    const response = await fetch(resolveApiUrl(`/api/admin-wordbase?${query.toString()}`), {
+      headers: {
+        "Content-Type": "application/json",
+        ...authHeaders,
+      },
+    });
+    const payload = await response.json();
+    if (!response.ok) {
+      throw new Error(payload.error || t("adminWordbase.loadError"));
+    }
+
+    return payload;
+  }
 
   async function loadRows({ nextSearch = search, silent = false } = {}) {
     if (!canManageWordbase) {
@@ -54,27 +101,18 @@ function AdminWordbasePage() {
 
     try {
       setError("");
-      const authHeaders = await getApiAuthHeaders();
-      const query = new URLSearchParams({
-        limit: "120",
-        missingOnly: "1",
-      });
-      if (nextSearch.trim()) {
-        query.set("search", nextSearch.trim());
+      let payload = null;
+
+      if (hasSupabaseConfig) {
+        payload = await loadRowsFromSupabase(nextSearch);
+        if (payload?.error) {
+          payload = await loadRowsFromApi(nextSearch);
+        }
+      } else {
+        payload = await loadRowsFromApi(nextSearch);
       }
 
-      const response = await fetch(resolveApiUrl(`/api/admin-wordbase?${query.toString()}`), {
-        headers: {
-          "Content-Type": "application/json",
-          ...authHeaders,
-        },
-      });
-      const payload = await response.json();
-      if (!response.ok) {
-        throw new Error(payload.error || t("adminWordbase.loadError"));
-      }
-
-      setRows(payload.rows ?? []);
+      setRows(payload?.rows ?? []);
     } catch (loadError) {
       setError(loadError.message);
     } finally {
@@ -89,7 +127,40 @@ function AdminWordbasePage() {
     }
 
     void loadRows();
-  }, [canManageWordbase, isAuthLoading]);
+  }, [canManageWordbase, isAuthLoading, locale]);
+
+  async function handleDelete(row) {
+    const shouldDelete = window.confirm(t("adminWordbase.deleteConfirm", { term: row.term }));
+    if (!shouldDelete) {
+      return;
+    }
+
+    try {
+      setDeletingId(row.id);
+      setError("");
+      setNotice("");
+      const authHeaders = await getApiAuthHeaders();
+      const response = await fetch(resolveApiUrl("/api/admin-wordbase"), {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          ...authHeaders,
+        },
+        body: JSON.stringify({ action: "delete", wordbaseId: row.id, term: row.term }),
+      });
+      const payload = await response.json();
+      if (!response.ok) {
+        throw new Error(payload.error || t("adminWordbase.deleteError"));
+      }
+
+      setRows((current) => current.filter((item) => item.id !== row.id));
+      setNotice(t("adminWordbase.deleteSuccess", { term: row.term }));
+    } catch (deleteError) {
+      setError(deleteError.message);
+    } finally {
+      setDeletingId("");
+    }
+  }
 
   async function handleRefill(row) {
     try {
@@ -103,7 +174,7 @@ function AdminWordbasePage() {
           "Content-Type": "application/json",
           ...authHeaders,
         },
-        body: JSON.stringify({ wordbaseId: row.id }),
+        body: JSON.stringify({ wordbaseId: row.id, locale }),
       });
       const payload = await response.json();
       if (!response.ok) {
@@ -197,14 +268,24 @@ function AdminWordbasePage() {
                   {t("adminWordbase.updatedAt")}: {formatDateTime(row.updatedAt, dateLocale)}
                 </p>
               </div>
-              <button
-                className="rounded-full bg-blue-700 px-4 py-2 text-sm font-bold text-white transition hover:bg-blue-800 disabled:bg-slate-300"
-                disabled={refillingId === row.id || row.missingFields.length === 0}
-                onClick={() => void handleRefill(row)}
-                type="button"
-              >
-                {refillingId === row.id ? t("adminWordbase.refilling") : t("adminWordbase.refill")}
-              </button>
+              <div className="flex flex-wrap gap-2">
+                <button
+                  className="rounded-full bg-blue-700 px-4 py-2 text-sm font-bold text-white transition hover:bg-blue-800 disabled:bg-slate-300"
+                  disabled={refillingId === row.id || deletingId === row.id || row.missingFields.length === 0}
+                  onClick={() => void handleRefill(row)}
+                  type="button"
+                >
+                  {refillingId === row.id ? t("adminWordbase.refilling") : t("adminWordbase.refill")}
+                </button>
+                <button
+                  className="rounded-full bg-red-50 px-4 py-2 text-sm font-bold text-red-700 transition hover:bg-red-100 disabled:bg-slate-100 disabled:text-slate-400"
+                  disabled={refillingId === row.id || deletingId === row.id}
+                  onClick={() => void handleDelete(row)}
+                  type="button"
+                >
+                  {deletingId === row.id ? t("adminWordbase.deleting") : t("common.delete")}
+                </button>
+              </div>
             </div>
             <div className="mt-3 flex flex-wrap gap-2">
               {row.missingFields.map((field) => (
@@ -212,7 +293,7 @@ function AdminWordbasePage() {
                   className="rounded-full border border-amber-300 bg-amber-50 px-3 py-1 text-xs font-semibold text-amber-700"
                   key={`${row.id}-${field}`}
                 >
-                  {FIELD_LABELS[field] ?? field}
+                  {t(FIELD_LABEL_KEYS[field] ?? field)}
                 </span>
               ))}
             </div>

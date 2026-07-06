@@ -111,10 +111,27 @@ export function sendJson(response, statusCode, payload) {
 
 export function getRequestBody(request) {
   if (typeof request.body === "string") {
-    return JSON.parse(request.body || "{}");
+    return safeJsonParse(request.body);
+  }
+
+  if (Buffer.isBuffer(request.body)) {
+    return safeJsonParse(request.body.toString("utf8"));
   }
 
   return request.body ?? {};
+}
+
+function safeJsonParse(value) {
+  const trimmed = String(value ?? "").trim();
+  if (!trimmed) {
+    return {};
+  }
+
+  try {
+    return JSON.parse(trimmed);
+  } catch {
+    return {};
+  }
 }
 
 export function getAdminServiceClient() {

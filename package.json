@@ -9,6 +9,7 @@
     "build:cap": "vite build",
     "cap:sync": "npm run build:cap && npx cap sync",
     "cap:ios": "npm run cap:sync && npx cap open ios",
+    "cap:ios:device": "npm run build:cap && npx cap copy ios && bash scripts/ios-build-device.sh",
     "cap:android": "npm run cap:sync && bash scripts/open-android-studio.sh",
     "cap:android:apk": "npm run cap:sync && bash scripts/android-build-apk.sh",
     "cap:android:release": "npm run cap:sync && bash -lc 'source scripts/android-env.sh && cd android && ./gradlew assembleRelease'",
@@ -16,6 +17,7 @@
     "cap:android:device": "bash scripts/android-check-device.sh",
     "cap:android:install": "bash -lc 'source scripts/android-env.sh && adb install -r android/app/build/outputs/apk/debug/app-debug.apk'",
     "cap:icons": "python3 scripts/generate-capacitor-icons.py",
+    "postinstall": "patch-package",
     "preview": "vite preview",
     "configure:supabase-smtp": "node scripts/configure-supabase-smtp.mjs",
     "configure:supabase-otp-email": "node scripts/configure-supabase-otp-email.mjs",
@@ -272,6 +274,8 @@
     "@capacitor/cli": "^8.4.1",
     "@capacitor/core": "^8.4.1",
     "@capacitor/ios": "^8.4.1",
+    "@capacitor/local-notifications": "^8.2.0",
+    "@capawesome/capacitor-badge": "^8.0.2",
     "@supabase/supabase-js": "^2.108.0",
     "jsonrepair": "^3.14.1",
     "nodemailer": "^9.0.3",
@@ -283,6 +287,7 @@
   "devDependencies": {
     "@tailwindcss/vite": "^4.3.0",
     "@vitejs/plugin-react": "^6.0.2",
+    "patch-package": "^8.0.1",
     "tailwindcss": "^4.3.0",
     "vite": "^8.0.16",
     "vite-plugin-pwa": "^1.3.0"

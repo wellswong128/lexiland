@@ -42,11 +42,15 @@ function WordLookupPage() {
       return "wordLookup.sourceLocal";
     }
 
-    if (result.fromWordbase) {
-      return "wordLookup.sourceWordbase";
-    }
-
     return "wordLookup.sourceAi";
+  }
+
+  function handleClearTerm() {
+    setTerm("");
+    setError("");
+    setSaveMessage("");
+    setLookupResult(null);
+    inputRef.current?.focus();
   }
 
   async function handleSearch(event) {
@@ -177,24 +181,35 @@ function WordLookupPage() {
           {t("wordLookup.eyebrow")}
         </p>
         <h1 className="text-3xl font-bold text-blue-950 sm:text-4xl">{t("wordLookup.title")}</h1>
-        <p className="mx-auto mt-3 max-w-sm text-sm text-slate-600">{t("wordLookup.description")}</p>
       </div>
 
       <form className="space-y-4" onSubmit={handleSearch}>
         <label className="block">
           <span className="text-sm font-semibold text-slate-700">{t("addWord.englishWord")}</span>
-          <input
-            ref={inputRef}
-            autoFocus
-            className="mt-2 w-full rounded-2xl border border-slate-200 bg-white px-4 py-3 text-slate-900 outline-none transition focus:border-blue-500 focus:ring-4 focus:ring-blue-100"
-            onChange={(event) => {
-              setTerm(event.target.value);
-              setSaveMessage("");
-            }}
-            onKeyDown={handleTermKeyDown}
-            placeholder={t("wordLookup.searchPlaceholder")}
-            value={term}
-          />
+          <div className="relative mt-2">
+            <input
+              ref={inputRef}
+              autoFocus
+              className="w-full rounded-2xl border border-slate-200 bg-white py-3 pl-4 pr-11 text-slate-900 outline-none transition focus:border-blue-500 focus:ring-4 focus:ring-blue-100"
+              onChange={(event) => {
+                setTerm(event.target.value);
+                setSaveMessage("");
+              }}
+              onKeyDown={handleTermKeyDown}
+              placeholder={t("wordLookup.searchPlaceholder")}
+              value={term}
+            />
+            {term ? (
+              <button
+                aria-label={t("wordLookup.clearSearch")}
+                className="absolute right-2 top-1/2 inline-flex h-8 w-8 -translate-y-1/2 items-center justify-center rounded-full text-lg leading-none text-slate-400 transition hover:bg-slate-100 hover:text-slate-600"
+                onClick={handleClearTerm}
+                type="button"
+              >
+                ×
+              </button>
+            ) : null}
+          </div>
         </label>
 
         <button
@@ -230,12 +245,16 @@ function WordLookupPage() {
 
       {lookupResult && resultValues ? (
         <article className="mt-6 space-y-4 rounded-2xl border border-blue-100 bg-blue-50/70 p-4">
-          <div className="flex flex-wrap items-center justify-between gap-3">
-            <LookupSourceBadge sourceKey={getSourceKey(lookupResult)} t={t} />
-            {lookupResult.usedFallback ? (
-              <p className="text-xs font-medium text-amber-700">{t("wordLookup.aiFallbackNote")}</p>
-            ) : null}
-          </div>
+          {!lookupResult.fromWordbase || lookupResult.usedFallback ? (
+            <div className="flex flex-wrap items-center justify-between gap-3">
+              {!lookupResult.fromWordbase ? (
+                <LookupSourceBadge sourceKey={getSourceKey(lookupResult)} t={t} />
+              ) : null}
+              {lookupResult.usedFallback ? (
+                <p className="text-xs font-medium text-amber-700">{t("wordLookup.aiFallbackNote")}</p>
+              ) : null}
+            </div>
+          ) : null}
 
           <div>
             <div className="flex flex-wrap items-center gap-3">

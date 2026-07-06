@@ -1,4 +1,5 @@
 import { applyApiCors } from "../server/api/_cors.js";
+import { ensureRequestBody } from "../server/api/_request-body.js";
 import { routeRequest } from "../server/api/router.js";
 
 function readPathFromUrl(requestUrl) {
@@ -44,5 +45,6 @@ export default async function handler(request, response) {
     return;
   }
 
+  await ensureRequestBody(request);
   await routeRequest(readPath(request), request, response);
 }

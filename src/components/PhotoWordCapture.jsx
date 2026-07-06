@@ -52,6 +52,30 @@ function removeSavedTermsFromPreview(previewWords, savedWords) {
   return previewWords.filter((word) => !savedTerms.has(normalizeTerm(word.term)));
 }
 
+function toPreviewText(value) {
+  if (value == null) {
+    return "";
+  }
+
+  return typeof value === "string" ? value : String(value);
+}
+
+function buildPreviewWord(word, term, index) {
+  const values = suggestionToFormValues(word);
+
+  return {
+    ...values,
+    definition: toPreviewText(values.definition),
+    translation: toPreviewText(values.translation),
+    term: toPreviewText(values.term || term),
+    id: `${term}-${index}`,
+    enabled: true,
+    usedFallback: Boolean(word.usedFallback),
+    fromLocal: Boolean(word.fromLocal),
+    fromWordbase: Boolean(word.fromWordbase),
+  };
+}
+
 function PhotoWordCapture({ autoOpenCamera = false, onAutoOpenCameraConsumed }) {
   const initialState = useMemo(() => getInitialPhotoCaptureState(), []);
   const { locale, t } = useLocale();
@@ -253,11 +277,7 @@ function PhotoWordCapture({ autoOpenCamera = false, onAutoOpenCameraConsumed }) 
       });
 
       setPreviewWords(
-        completedWords.map((word, index) => ({
-          ...word,
-          id: `${selectedTerms[index]}-${index}`,
-          enabled: true,
-        })),
+        completedWords.map((word, index) => buildPreviewWord(word, selectedTerms[index], index)),
       );
       setStep("preview");
       setStatusMessage(t("addWord.photo.previewReady"));
@@ -554,7 +574,7 @@ function PhotoWordCapture({ autoOpenCamera = false, onAutoOpenCameraConsumed }) 
         </div>
       ) : null}
 
-      {step !== "upload" && previewUrl ? (
+      {step === "select" && previewUrl ? (
         <div className="overflow-hidden rounded-2xl border border-blue-100 bg-white">
           <img
             alt={t("addWord.photo.previewAlt")}
@@ -738,7 +758,7 @@ function PhotoWordCapture({ autoOpenCamera = false, onAutoOpenCameraConsumed }) 
                       onChange={(event) =>
                         updatePreviewWord(word.id, "definition", event.target.value)
                       }
-                      value={word.definition}
+                      value={word.definition ?? ""}
                     />
                   </label>
                   <label className="block text-sm">
@@ -748,7 +768,7 @@ function PhotoWordCapture({ autoOpenCamera = false, onAutoOpenCameraConsumed }) 
                       onChange={(event) =>
                         updatePreviewWord(word.id, "translation", event.target.value)
                       }
-                      value={word.translation}
+                      value={word.translation ?? ""}
                     />
                   </label>
                 </div>

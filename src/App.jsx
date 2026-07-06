@@ -2,6 +2,7 @@ import { lazy, Suspense } from "react";
 import { Navigate, Route, Routes, useLocation } from "react-router-dom";
 import AppLayout from "./components/AppLayout.jsx";
 import EveningReminderSync from "./features/reminders/EveningReminderSync.jsx";
+import LocalNotificationTestSync from "./features/reminders/LocalNotificationTestSync.jsx";
 import { LocaleProvider } from "./features/locale/LocaleContext.jsx";
 import { useWordsContext, WordsProvider } from "./features/words/WordsContext.jsx";
 import { canRoute, getRoleFromUser } from "./lib/authorization.js";
@@ -111,6 +112,7 @@ function AppShell() {
   return (
     <>
       <EveningReminderSync user={user} words={words} />
+      <LocalNotificationTestSync />
       <AppLayout>
         <AppRoutes />
       </AppLayout>

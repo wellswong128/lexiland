@@ -18,6 +18,20 @@ EOF
 fi
 
 cd "$ROOT_DIR/android"
+
+PUBLIC_INDEX="$ROOT_DIR/android/app/src/main/assets/public/index.html"
+if [[ ! -f "$PUBLIC_INDEX" ]]; then
+  cat <<'EOF'
+Web assets are missing from the Android project.
+
+Run this first:
+  npm run build:cap && npx cap copy android
+
+Then rebuild the APK.
+EOF
+  exit 1
+fi
+
 ./gradlew assembleDebug
 
 APK="$ROOT_DIR/android/app/build/outputs/apk/debug/app-debug.apk"

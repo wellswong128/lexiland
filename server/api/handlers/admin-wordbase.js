@@ -3,7 +3,15 @@ import { existsSync, readFileSync } from "node:fs";
 import { dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 import { requireRole, sendAuthError } from "../_authz.js";
+import { getRequestBody } from "../_request-body.js";
 import { generateCompleteWordSuggestion } from "../_complete-word-suggestion.js";
+import {
+  hasContentMemoryTips,
+  hasMemoryImage,
+  mapWordbaseRow,
+} from "../../../src/lib/wordbaseCompleteness.js";
+import { generateWordMemoryImage } from "./word-memory-image.js";
+import { requestMemoryTips } from "./word-memory-tips.js";
 
 const URL_ENV_KEYS = [
   "SUPABASE_URL",
@@ -41,17 +49,20 @@ const WORD_COLUMNS = [
   "part_of_speech",
   "example",
   "example_translation",
+  "memory_tips_by_locale",
+  "memory_image",
   "source",
   "updated_at",
 ];
 const MISSING_FIELD_CONFIG = [
   { key: "definition", column: "definition" },
   { key: "translation", column: "translation" },
-  { key: "pronunciation", column: "pronunciation" },
-  { key: "partOfSpeech", column: "part_of_speech" },
   { key: "example", column: "example" },
   { key: "exampleTranslation", column: "example_translation" },
 ];
+const CONTENT_TIP_LOCALES = ["zh-Hant", "zh-Hans"];
+const LIST_PAGE_SIZE = 500;
+const LIST_SCAN_LIMIT = 10000;
 
 let localEnvLoaded = false;
 
@@ -165,26 +176,180 @@ function normalizeTerm(value) {
   return String(value ?? "").trim().toLowerCase();
 }
 
-function missingFieldsForRow(row) {
-  return MISSING_FIELD_CONFIG.filter(({ column }) => !String(row?.[column] ?? "").trim()).map(
-    ({ key }) => key,
+function buildTextMissingOrFilter() {
+  return MISSING_FIELD_CONFIG.map(({ column }) => `${column}.eq.`).join(",");
+}
+
+function buildWordbaseListQuery(serviceClient, { search }) {
+  let query = serviceClient
+    .from("wordbase")
+    .select(WORD_COLUMNS.join(","))
+    .order("term_key", { ascending: true });
+
+  if (search) {
+    query = query.or(`term.ilike.%${search}%,term_key.ilike.%${normalizeTerm(search)}%`);
+  }
+
+  return query;
+}
+
+function matchesSearch(row, search) {
+  if (!search) {
+    return true;
+  }
+
+  const query = normalizeTerm(search);
+  return (
+    normalizeTerm(row?.term).includes(query) || normalizeTerm(row?.term_key).includes(query)
   );
 }
 
-function mapWordbaseRow(row) {
+function mergeMappedRows(targetById, rows, locale, { requireMissingFields = true, search = "" } = {}) {
+  for (const row of rows ?? []) {
+    if (!matchesSearch(row, search)) {
+      continue;
+    }
+
+    const mappedRow = mapWordbaseRow(row, locale);
+    if (requireMissingFields && mappedRow.missingFields.length === 0) {
+      continue;
+    }
+
+    targetById.set(mappedRow.id, mappedRow);
+  }
+}
+
+async function fetchWordbaseRowsByScan(serviceClient, { search, limit, locale }) {
+  const filteredRows = [];
+  let start = 0;
+
+  while (filteredRows.length < limit && start < LIST_SCAN_LIMIT) {
+    const { data, error } = await buildWordbaseListQuery(serviceClient, { search }).range(
+      start,
+      start + LIST_PAGE_SIZE - 1,
+    );
+
+    if (error) {
+      throw new Error(error.message || "Failed to load wordbase rows.");
+    }
+
+    const batch = data ?? [];
+    if (batch.length === 0) {
+      break;
+    }
+
+    for (const row of batch) {
+      const mappedRow = mapWordbaseRow(row, locale);
+      if (mappedRow.missingFields.length > 0) {
+        filteredRows.push(mappedRow);
+        if (filteredRows.length >= limit) {
+          break;
+        }
+      }
+    }
+
+    if (batch.length < LIST_PAGE_SIZE) {
+      break;
+    }
+
+    start += LIST_PAGE_SIZE;
+  }
+
+  return filteredRows;
+}
+
+async function fetchTextMissingRows(serviceClient, { limit }) {
+  const { data, error } = await serviceClient
+    .from("wordbase")
+    .select(WORD_COLUMNS.join(","))
+    .or(buildTextMissingOrFilter())
+    .order("term_key", { ascending: true })
+    .limit(limit);
+
+  if (error) {
+    throw new Error(error.message || "Failed to load text-missing wordbase rows.");
+  }
+
+  return data ?? [];
+}
+
+async function fetchNullImageRows(serviceClient, { limit }) {
+  const { data, error } = await serviceClient
+    .from("wordbase")
+    .select(WORD_COLUMNS.join(","))
+    .is("memory_image", null)
+    .order("term_key", { ascending: true })
+    .limit(limit);
+
+  if (error) {
+    throw new Error(error.message || "Failed to load image-missing wordbase rows.");
+  }
+
+  return data ?? [];
+}
+
+async function fetchIncompleteWordbaseRows(serviceClient, { search, limit, locale }) {
+  const rowsById = new Map();
+  const sources = [];
+  let rpcError = null;
+
+  const { data: rpcRows, error: rpcQueryError } = await serviceClient.rpc(
+    "get_incomplete_wordbase_rows",
+    {
+      p_limit: limit,
+      p_search: search || null,
+    },
+  );
+
+  if (rpcQueryError) {
+    rpcError = rpcQueryError.message || "RPC unavailable.";
+  } else if (rpcRows?.length) {
+    mergeMappedRows(rowsById, rpcRows, locale, { requireMissingFields: false, search });
+    sources.push("rpc");
+  }
+
+  if (rowsById.size < limit) {
+    const textRows = await fetchTextMissingRows(serviceClient, { limit });
+    const before = rowsById.size;
+    mergeMappedRows(rowsById, textRows, locale, { search });
+    if (rowsById.size > before) {
+      sources.push("text");
+    }
+  }
+
+  if (rowsById.size < limit) {
+    const nullImageRows = await fetchNullImageRows(serviceClient, { limit });
+    const before = rowsById.size;
+    mergeMappedRows(rowsById, nullImageRows, locale, { search });
+    if (rowsById.size > before) {
+      sources.push("nullImage");
+    }
+  }
+
+  if (rowsById.size < limit) {
+    const scannedRows = await fetchWordbaseRowsByScan(serviceClient, {
+      search,
+      limit,
+      locale,
+    });
+
+    for (const row of scannedRows) {
+      rowsById.set(row.id, row);
+    }
+
+    if (scannedRows.length > 0 && !sources.includes("scan")) {
+      sources.push("scan");
+    }
+  }
+
   return {
-    id: row.id,
-    termKey: row.term_key,
-    term: row.term,
-    definition: row.definition ?? "",
-    translation: row.translation ?? "",
-    pronunciation: row.pronunciation ?? "",
-    partOfSpeech: row.part_of_speech ?? "",
-    example: row.example ?? "",
-    exampleTranslation: row.example_translation ?? "",
-    source: row.source ?? "",
-    updatedAt: row.updated_at ?? "",
-    missingFields: missingFieldsForRow(row),
+    rows: [...rowsById.values()]
+      .sort((left, right) => left.term.localeCompare(right.term))
+      .slice(0, limit),
+    meta: {
+      sources,
+      rpcError,
+    },
   };
 }
 
@@ -210,38 +375,49 @@ function parseLimit(value, defaultValue = 50) {
   return Math.min(number, 200);
 }
 
+async function fetchWordbaseRows(serviceClient, { search, limit, missingOnly, locale }) {
+  if (!missingOnly) {
+    const { data, error } = await buildWordbaseListQuery(serviceClient, { search }).limit(limit);
+
+    if (error) {
+      throw new Error(error.message || "Failed to load wordbase rows.");
+    }
+
+    return {
+      rows: (data ?? []).map((row) => mapWordbaseRow(row, locale)),
+      meta: {
+        sources: ["list"],
+        rpcError: null,
+      },
+    };
+  }
+
+  return fetchIncompleteWordbaseRows(serviceClient, { search, limit, locale });
+}
+
 async function listWordbaseRows(request, response) {
   const serviceClient = getServiceClient();
   const search = String(request.query?.search ?? "").trim();
   const limit = parseLimit(request.query?.limit, 50);
   const missingOnly = parseBoolean(request.query?.missingOnly, true);
+  const locale = String(request.query?.locale ?? "zh-Hant").trim() || "zh-Hant";
 
-  let query = serviceClient
-    .from("wordbase")
-    .select(WORD_COLUMNS.join(","))
-    .order("updated_at", { ascending: false })
-    .limit(limit);
-
-  if (search) {
-    query = query.or(`term.ilike.%${search}%,term_key.ilike.%${normalizeTerm(search)}%`);
-  }
-
-  const { data, error } = await query;
-  if (error) {
-    throw new Error(error.message || "Failed to load wordbase rows.");
-  }
-
-  const rows = (data ?? []).map(mapWordbaseRow);
-  const filteredRows = missingOnly
-    ? rows.filter((row) => row.missingFields.length > 0)
-    : rows;
+  const { rows, meta: fetchMeta } = await fetchWordbaseRows(serviceClient, {
+    search,
+    limit,
+    missingOnly,
+    locale,
+  });
 
   sendJson(response, 200, {
-    rows: filteredRows,
+    rows,
     meta: {
       limit,
       missingOnly,
-      total: filteredRows.length,
+      locale,
+      total: rows.length,
+      sources: fetchMeta.sources,
+      rpcError: fetchMeta.rpcError,
     },
   });
 }
@@ -255,12 +431,6 @@ function buildAiPatch(existingRow, suggestion) {
   if (!String(existingRow.translation ?? "").trim() && suggestion.translation) {
     patch.translation = suggestion.translation;
   }
-  if (!String(existingRow.pronunciation ?? "").trim() && suggestion.pronunciation) {
-    patch.pronunciation = suggestion.pronunciation;
-  }
-  if (!String(existingRow.part_of_speech ?? "").trim() && suggestion.partOfSpeech) {
-    patch.part_of_speech = suggestion.partOfSpeech;
-  }
   if (!String(existingRow.example ?? "").trim() && suggestion.example) {
     patch.example = suggestion.example;
   }
@@ -268,18 +438,125 @@ function buildAiPatch(existingRow, suggestion) {
     patch.example_translation = suggestion.exampleTranslation;
   }
 
-  if (Object.keys(patch).length > 0) {
-    patch.source = "ai";
+  return patch;
+}
+
+function resolveMemoryTipLocale(locale) {
+  if (locale === "zh-Hans" || locale === "zh-Hant") {
+    return locale;
+  }
+
+  return "zh-Hant";
+}
+
+async function buildMemoryPatch(existingRow, locale) {
+  const patch = {};
+  const apiKey = String(process.env.AGNES_API_KEY || "").trim();
+  const wordContext = {
+    term: existingRow.term,
+    definition: existingRow.definition ?? "",
+    translation: existingRow.translation ?? "",
+    partOfSpeech: existingRow.part_of_speech ?? "",
+    example: existingRow.example ?? "",
+  };
+  const tipLocale = resolveMemoryTipLocale(locale);
+
+  if (!hasContentMemoryTips(existingRow)) {
+    if (!apiKey) {
+      throw new Error("AGNES_API_KEY is not configured on the server.");
+    }
+
+    const memoryTips = await requestMemoryTips(apiKey, wordContext, tipLocale);
+    const existingTips =
+      existingRow.memory_tips_by_locale && typeof existingRow.memory_tips_by_locale === "object"
+        ? existingRow.memory_tips_by_locale
+        : {};
+
+    patch.memory_tips_by_locale = {
+      ...existingTips,
+      [tipLocale]: {
+        ...memoryTips,
+        savedAt: new Date().toISOString(),
+      },
+    };
+  }
+
+  if (!hasMemoryImage(existingRow)) {
+    if (!apiKey) {
+      throw new Error("AGNES_API_KEY is not configured on the server.");
+    }
+
+    const image = await generateWordMemoryImage({
+      ...wordContext,
+      apiKey,
+    });
+
+    patch.memory_image = {
+      imageUrl: image.imageUrl,
+      prompt: image.prompt ?? "",
+      model: image.model ?? "",
+      size: image.size ?? "",
+      savedAt: new Date().toISOString(),
+    };
   }
 
   return patch;
 }
 
+async function deleteWordbaseRow(request, response) {
+  const body = getRequestBody(request);
+  const wordbaseId = String(body.wordbaseId ?? request.query?.wordbaseId ?? "").trim();
+  const term = String(body.term ?? request.query?.term ?? "").trim();
+
+  if (!wordbaseId && !term) {
+    sendJson(response, 400, { error: "wordbaseId or term is required." });
+    return;
+  }
+
+  const serviceClient = getServiceClient();
+  let lookupQuery = serviceClient.from("wordbase").select("id, term").limit(1);
+  if (wordbaseId) {
+    lookupQuery = lookupQuery.eq("id", wordbaseId);
+  } else {
+    lookupQuery = lookupQuery.eq("term_key", normalizeTerm(term));
+  }
+
+  const { data: row, error: rowError } = await lookupQuery.maybeSingle();
+
+  if (rowError) {
+    throw new Error(rowError.message || "Could not read wordbase row.");
+  }
+  if (!row) {
+    sendJson(response, 404, { error: "WordBase row not found." });
+    return;
+  }
+
+  const { data: deletedRows, error: deleteError } = await serviceClient
+    .from("wordbase")
+    .delete()
+    .eq("id", row.id)
+    .select("id, term");
+
+  if (deleteError) {
+    throw new Error(deleteError.message || "Could not delete WordBase row.");
+  }
+  if (!deletedRows?.length) {
+    sendJson(response, 404, { error: "WordBase row not found." });
+    return;
+  }
+
+  sendJson(response, 200, {
+    deleted: true,
+    id: deletedRows[0].id,
+    term: deletedRows[0].term ?? "",
+  });
+}
+
 async function refillWordbaseRow(request, response) {
-  const body = typeof request.body === "string" ? JSON.parse(request.body || "{}") : request.body ?? {};
+  const body = getRequestBody(request);
   const wordbaseId = String(body.wordbaseId ?? "").trim();
   const term = String(body.term ?? "").trim();
-  const locale = String(body.locale ?? "zh-Hant").trim();
+  const locale = String(body.locale ?? "zh-Hant").trim() || "zh-Hant";
 
   if (!wordbaseId && !term) {
     sendJson(response, 400, { error: "wordbaseId or term is required." });
@@ -304,12 +581,29 @@ async function refillWordbaseRow(request, response) {
   }
 
   const suggestion = await generateCompleteWordSuggestion(row.term, locale);
-  const patch = buildAiPatch(row, suggestion);
+  const textPatch = buildAiPatch(row, suggestion);
+  const rowForMemory = {
+    ...row,
+    definition: textPatch.definition ?? row.definition,
+    translation: textPatch.translation ?? row.translation,
+    pronunciation: textPatch.pronunciation ?? row.pronunciation,
+    part_of_speech: textPatch.part_of_speech ?? row.part_of_speech,
+    example: textPatch.example ?? row.example,
+    example_translation: textPatch.example_translation ?? row.example_translation,
+  };
+  const patch = {
+    ...textPatch,
+    ...(await buildMemoryPatch(rowForMemory, locale)),
+  };
+
+  if (Object.keys(patch).length > 0) {
+    patch.source = "ai";
+  }
 
   if (Object.keys(patch).length === 0) {
     sendJson(response, 200, {
       updated: false,
-      row: mapWordbaseRow(row),
+      row: mapWordbaseRow(row, locale),
       message: "No missing fields to fill.",
     });
     return;
@@ -328,7 +622,7 @@ async function refillWordbaseRow(request, response) {
 
   sendJson(response, 200, {
     updated: true,
-    row: mapWordbaseRow(updatedRow),
+    row: mapWordbaseRow(updatedRow, locale),
   });
 }
 
@@ -342,7 +636,18 @@ export default async function handler(request, response) {
     }
 
     if (request.method === "POST") {
+      const body = getRequestBody(request);
+      if (String(body.action ?? "").trim().toLowerCase() === "delete") {
+        await deleteWordbaseRow(request, response);
+        return;
+      }
+
       await refillWordbaseRow(request, response);
+      return;
+    }
+
+    if (request.method === "DELETE") {
+      await deleteWordbaseRow(request, response);
       return;
     }
 

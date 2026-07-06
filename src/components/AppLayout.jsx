@@ -47,6 +47,7 @@ function AppLayout({ children }) {
     window.scrollTo(0, 0);
     document.documentElement.scrollTop = 0;
     document.body.scrollTop = 0;
+    document.querySelector(".app-shell-standalone > main")?.scrollTo(0, 0);
   }, [location.pathname, location.search]);
 
   useEffect(() => {
