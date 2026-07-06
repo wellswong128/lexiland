@@ -189,9 +189,16 @@ function AdminWordbasePage() {
               details: payload.warnings.join(" "),
             }),
           );
+        } else if (
+          Array.isArray(payload.remainingMissingFields) &&
+          payload.remainingMissingFields.length > 0
+        ) {
+          setNotice(t("adminWordbase.refillContinue", { term: row.term }));
         } else {
           setNotice(t("adminWordbase.refillSuccess", { term: row.term }));
         }
+      } else if (payload.message && payload.message !== "No missing fields to fill.") {
+        setError(payload.message);
       } else {
         setNotice(t("adminWordbase.noMissingData", { term: row.term }));
       }

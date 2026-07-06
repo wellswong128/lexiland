@@ -608,6 +608,22 @@ async function deleteWordbaseRow(request, response) {
   });
 }
 
+function getNextRefillStep(row, locale) {
+  if (hasMissingTextFields(row)) {
+    return "text";
+  }
+
+  const mappedRow = mapWordbaseRow(row, locale);
+  if (mappedRow.missingFields.includes("memoryTips")) {
+    return "tips";
+  }
+  if (mappedRow.missingFields.includes("memoryImage")) {
+    return "image";
+  }
+
+  return null;
+}
+
 async function refillWordbaseRow(request, response) {
   const body = getRequestBody(request);
   const wordbaseId = String(body.wordbaseId ?? "").trim();
@@ -636,63 +652,58 @@ async function refillWordbaseRow(request, response) {
     return;
   }
 
-  const warnings = [];
-  let textPatch = {};
-
-  if (hasMissingTextFields(row)) {
-    try {
-      const suggestion = await generateCompleteWordSuggestion(row.term, locale);
-      textPatch = buildAiPatch(row, suggestion);
-    } catch (error) {
-      throw new Error(error.message || "AI text fill failed.");
-    }
-  }
-
-  const rowForMemory = {
-    ...row,
-    definition: textPatch.definition ?? row.definition,
-    translation: textPatch.translation ?? row.translation,
-    pronunciation: textPatch.pronunciation ?? row.pronunciation,
-    part_of_speech: textPatch.part_of_speech ?? row.part_of_speech,
-    example: textPatch.example ?? row.example,
-    example_translation: textPatch.example_translation ?? row.example_translation,
-  };
-  const { patch: tipsPatch, warnings: tipWarnings } = await buildMemoryTipsPatch(rowForMemory, locale);
-  warnings.push(...tipWarnings);
-
-  let currentRow = row;
-  const initialPatch = {
-    ...textPatch,
-    ...tipsPatch,
-  };
-
-  if (Object.keys(initialPatch).length > 0) {
-    currentRow = await applyWordbasePatch(serviceClient, row.id, initialPatch);
-  }
-
-  const { patch: imagePatch, warnings: imageWarnings } = await buildMemoryImagePatch(currentRow ?? rowForMemory);
-  warnings.push(...imageWarnings);
-
-  if (Object.keys(imagePatch).length > 0) {
-    currentRow = await applyWordbasePatch(serviceClient, row.id, imagePatch);
-  }
-
-  const updated = Object.keys({ ...initialPatch, ...imagePatch }).length > 0;
-
-  if (!updated) {
+  const step = getNextRefillStep(row, locale);
+  if (!step) {
     sendJson(response, 200, {
       updated: false,
-      row: mapWordbaseRow(currentRow ?? row, locale),
+      row: mapWordbaseRow(row, locale),
       message: "No missing fields to fill.",
     });
     return;
   }
 
+  const warnings = [];
+  let patch = {};
+
+  if (step === "text") {
+    try {
+      const suggestion = await generateCompleteWordSuggestion(row.term, locale);
+      patch = buildAiPatch(row, suggestion);
+    } catch (error) {
+      throw new Error(error.message || "AI text fill failed.");
+    }
+  } else if (step === "tips") {
+    const { patch: tipsPatch, warnings: tipWarnings } = await buildMemoryTipsPatch(row, locale);
+    warnings.push(...tipWarnings);
+    patch = tipsPatch;
+  } else if (step === "image") {
+    const { patch: imagePatch, warnings: imageWarnings } = await buildMemoryImagePatch(row);
+    warnings.push(...imageWarnings);
+    patch = imagePatch;
+  }
+
+  if (Object.keys(patch).length === 0) {
+    sendJson(response, 200, {
+      updated: false,
+      step,
+      partial: warnings.length > 0,
+      warnings,
+      row: mapWordbaseRow(row, locale),
+      message: warnings[0] || "Could not fill missing fields.",
+    });
+    return;
+  }
+
+  const updatedRow = await applyWordbasePatch(serviceClient, row.id, patch);
+  const mappedRow = mapWordbaseRow(updatedRow, locale);
+
   sendJson(response, 200, {
     updated: true,
-    partial: warnings.length > 0,
+    step,
+    partial: mappedRow.missingFields.length > 0 || warnings.length > 0,
     warnings,
-    row: mapWordbaseRow(currentRow ?? row, locale),
+    remainingMissingFields: mappedRow.missingFields,
+    row: mappedRow,
   });
 }
 
