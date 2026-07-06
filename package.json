@@ -34,6 +34,7 @@
     "wordbase:fix-incomplete-translations:dry-run": "bash scripts/wordbase_import/run-fix-incomplete-translations.sh --dry-run",
     "wordbase:enrich-memory": "bash scripts/wordbase_import/run-enrich-memory.sh",
     "wordbase:enrich-memory:dry-run": "bash scripts/wordbase_import/run-enrich-memory.sh --dry-run",
+    "wordbase:enrich-memory:cron": "bash scripts/wordbase_import/run-enrich-memory-cron.sh",
     "wordbase:import-missing-images": "bash scripts/wordbase_import/import-missing-images-by-term.sh",
     "wordbase:import-missing-images:dry-run": "bash scripts/wordbase_import/import-missing-images-by-term.sh --dry-run",
     "wordbase:import-coca": "bash scripts/wordbase_import/run-coca-terms.sh",

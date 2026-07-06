@@ -270,6 +270,7 @@ function PhotoWordCapture({ autoOpenCamera = false, onAutoOpenCameraConsumed }) 
 
       const completedWords = await completeWordsInBatch(selectedTerms, {
         locale,
+        textOnly: true,
         user,
         onProgress: (current, total) => {
           setCompletionProgress({ current, total });
@@ -328,6 +329,7 @@ function PhotoWordCapture({ autoOpenCamera = false, onAutoOpenCameraConsumed }) 
       const result = await fetchCompleteWordWithFallback(word.term, locale, {
         user,
         skipWordbase: true,
+        textOnly: true,
       });
 
       setPreviewWords((currentWords) =>
@@ -374,6 +376,7 @@ function PhotoWordCapture({ autoOpenCamera = false, onAutoOpenCameraConsumed }) 
           const result = await fetchCompleteWordWithFallback(word.term, locale, {
         user,
         skipWordbase: true,
+        textOnly: true,
       });
 
           setPreviewWords((currentWords) =>

@@ -27,12 +27,17 @@ export function getImageReviewReadiness(sessionWords, allWords) {
 
 export function getFlashcardReviewReadiness(sessionWords, allWords) {
   const imageReadiness = getImageReviewReadiness(sessionWords, allWords);
+  const canStartImageMode = imageReadiness.canStart;
+  const willUseMixedMode =
+    canStartImageMode && imageReadiness.missingSessionWords.length > 0;
+  const willUseTextMode = sessionWords.length > 0 && !canStartImageMode;
 
   return {
     ...imageReadiness,
     canStart: sessionWords.length > 0,
-    canStartImageMode: imageReadiness.canStart,
-    willUseTextMode: sessionWords.length > 0 && !imageReadiness.canStart,
+    canStartImageMode,
+    willUseMixedMode,
+    willUseTextMode,
   };
 }
 
@@ -45,6 +50,27 @@ export function createTextFlashcardQuestions(sessionWords) {
     mode: "text",
     word,
   }));
+}
+
+export function createMixedFlashcardQuestions(sessionWords, allWords, optionCount = 4) {
+  if (!Array.isArray(sessionWords) || sessionWords.length === 0) {
+    return [];
+  }
+
+  const imageQuestions = createImageQuizQuestions(sessionWords, allWords, optionCount);
+  const imageWordIds = new Set(imageQuestions.map((question) => question.word.id));
+  const textOnlyWords = sessionWords.filter((word) => !imageWordIds.has(word.id));
+  const textQuestions = createTextFlashcardQuestions(textOnlyWords);
+
+  if (imageQuestions.length === 0) {
+    return textQuestions;
+  }
+
+  if (textQuestions.length === 0) {
+    return imageQuestions;
+  }
+
+  return shuffleItems([...imageQuestions, ...textQuestions]);
 }
 
 export function createImageQuizQuestions(sessionWords, allWords, optionCount = 4) {

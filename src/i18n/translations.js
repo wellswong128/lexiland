@@ -818,6 +818,7 @@ const zhHant = {
         "Vercel 函式記憶體配額已用完，暫時無法同步。請稍後再試，或到 Vercel 控制台查看 Fluid Compute 用量。",
       prepareTryQuizCta: "改用測驗複習",
       textModeNotice: "部分單字缺少記憶圖，將改用文字字卡複習（先回想，再顯示答案）。",
+      mixedModeNotice: "沒有記憶圖的單字會用文字字卡複習，其餘仍用圖片字卡。",
       prepareRetryCta: "重試",
       prepareAddWordsCta: "拍照加新字",
       incorrect: "答錯了",
@@ -2209,6 +2210,8 @@ export const translations = {
       prepareTryQuizCta: "Use Text Quiz Instead",
       textModeNotice:
         "Some words are missing memory images. Text flashcards will be used instead (recall first, then reveal the answer).",
+      mixedModeNotice:
+        "Words without memory images will use text flashcards; the rest will still use image flashcards.",
       prepareRetryCta: "Try Again",
       prepareAddWordsCta: "Add Words with Photo",
       incorrect: "Incorrect",

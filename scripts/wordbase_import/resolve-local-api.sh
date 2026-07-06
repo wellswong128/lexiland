@@ -1,9 +1,14 @@
 #!/usr/bin/env bash
 # Resolve APP_API_BASE_URL to a local dev server that can run AI import routes.
 
+DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+# shellcheck source=load-env-local.sh
+source "$DIR/load-env-local.sh"
+
 block_production_bulk_api() {
-  local preferred="${APP_API_BASE_URL:-http://localhost:5173}"
-  preferred="${preferred%/}"
+  local preferred
+  preferred="$(normalize_app_api_base_url "${APP_API_BASE_URL:-http://localhost:5173}")"
+  export APP_API_BASE_URL="$preferred"
 
   if _production_bulk_api_blocked "$preferred"; then
     cat >&2 <<EOF

@@ -2503,6 +2503,14 @@ html.standalone-display .bottom-nav {
   overflow: hidden;
 }
 
+.flashcards-review-session--incorrect {
+  overflow-y: auto;
+}
+
+.flashcards-review-incorrect {
+  flex-shrink: 0;
+}
+
 .flashcards-review-header,
 .flashcards-review-word {
   flex-shrink: 0;

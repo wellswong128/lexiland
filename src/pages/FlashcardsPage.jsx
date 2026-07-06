@@ -6,6 +6,7 @@ import WordImageWithTranslationOverlay from "../components/WordImageWithTranslat
 import WordMemoryPanel from "../components/WordMemoryPanel.jsx";
 import { useLocale } from "../features/locale/LocaleContext.jsx";
 import {
+  createMixedFlashcardQuestions,
   createTextFlashcardQuestions,
   getFlashcardReviewReadiness,
 } from "../features/review/imageQuizHelpers.js";
@@ -26,7 +27,8 @@ import { ACTION_TYPES, awardLearningAction } from "../features/rewards/rewardsEn
 import { REVIEW_RESULTS } from "../features/words/wordTypes.js";
 
 function FlashcardsMissingImagesPanel({ flashcardReadiness, t }) {
-  const { missingSessionWords, poolCount, needsMorePoolWords, willUseTextMode } = flashcardReadiness;
+  const { missingSessionWords, poolCount, needsMorePoolWords, willUseMixedMode, willUseTextMode } =
+    flashcardReadiness;
 
   if (missingSessionWords.length === 0 && !needsMorePoolWords) {
     return null;
@@ -34,17 +36,19 @@ function FlashcardsMissingImagesPanel({ flashcardReadiness, t }) {
 
   return (
     <div className="mt-3 rounded-2xl border border-amber-200 bg-amber-50 px-4 py-3 text-left text-sm text-amber-950">
-      {willUseTextMode ? (
+      {willUseMixedMode ? (
+        <p className="font-semibold leading-6">{t("flashcards.mixedModeNotice")}</p>
+      ) : willUseTextMode ? (
         <p className="font-semibold leading-6">{t("flashcards.textModeNotice")}</p>
       ) : null}
       {needsMorePoolWords && !willUseTextMode ? (
-        <p className={`font-semibold leading-6 ${willUseTextMode ? "mt-3" : ""}`}>
+        <p className={`font-semibold leading-6 ${willUseMixedMode || willUseTextMode ? "mt-3" : ""}`}>
           {t("flashcards.imagePoolTooSmall", { count: poolCount })}
         </p>
       ) : null}
       {missingSessionWords.length > 0 ? (
         <>
-          <p className={`font-semibold leading-6 ${needsMorePoolWords ? "mt-3" : ""}`}>
+          <p className={`font-semibold leading-6 ${needsMorePoolWords || willUseMixedMode || willUseTextMode ? "mt-3" : ""}`}>
             {t("flashcards.missingImagesTitle", { count: missingSessionWords.length })}
           </p>
           <ul className="mt-2 space-y-1">
@@ -200,7 +204,6 @@ function FlashcardsPage() {
   );
   const canQuiz = reviewWords.length >= 2;
   const [hasStarted, setHasStarted] = useState(false);
-  const [reviewMode, setReviewMode] = useState("image");
   const [showAnswer, setShowAnswer] = useState(false);
   const [isPreparing, setIsPreparing] = useState(false);
   const [prepareProgress, setPrepareProgress] = useState({ current: 0, total: 0 });
@@ -257,7 +260,6 @@ function FlashcardsPage() {
     setPrepareError("");
     setPrepareErrorCode("");
     setShowAnswer(false);
-    setReviewMode("image");
     lastSpokenRef.current = { index: -1, term: "" };
   }, [scopeRevision]);
 
@@ -293,6 +295,7 @@ function FlashcardsPage() {
   }
 
   const currentQuestion = imageQuestions[currentIndex];
+  const currentQuestionMode = currentQuestion?.mode ?? "text";
   const currentWord =
     reviewWords.find((word) => word.id === currentQuestion?.word.id) ?? currentQuestion?.word;
   const progressText = t("flashcards.progress", {
@@ -374,23 +377,32 @@ function FlashcardsPage() {
       const { sessionWords: freshSessionWords } = getReviewSessionWords(freshReviewWords, {
         mistakesOnly,
       });
-
-      const { questions: imageQuestionsResult } = await prefetchImageReviewPool(
+      const refreshedReadiness = getFlashcardReviewReadiness(
         freshSessionWords,
         freshReviewWords,
-        {
-          onProgress: (current, total) => {
-            setPrepareProgress({ current, total });
-          },
-          updateWord,
-        },
       );
 
-      const nextQuestions =
-        imageQuestionsResult.length > 0
-          ? imageQuestionsResult
-          : createTextFlashcardQuestions(freshSessionWords);
-      const nextMode = imageQuestionsResult.length > 0 ? "image" : "text";
+      let nextQuestions = [];
+
+      if (refreshedReadiness.canStartImageMode) {
+        const { words: workingReviewWords } = await prefetchImageReviewPool(
+          freshSessionWords,
+          freshReviewWords,
+          {
+            onProgress: (current, total) => {
+              setPrepareProgress({ current, total });
+            },
+            updateWord,
+          },
+        );
+
+        nextQuestions = createMixedFlashcardQuestions(
+          freshSessionWords,
+          workingReviewWords,
+        );
+      } else {
+        nextQuestions = createTextFlashcardQuestions(freshSessionWords);
+      }
 
       if (nextQuestions.length === 0) {
         setPrepareError(t("flashcards.noDueDefault"));
@@ -399,7 +411,6 @@ function FlashcardsPage() {
 
       imageQuestionsRef.current = nextQuestions;
       setImageQuestions(nextQuestions);
-      setReviewMode(nextMode);
       setShowAnswer(false);
       setCurrentIndex(0);
       setSelectedAnswer("");
@@ -510,7 +521,6 @@ function FlashcardsPage() {
     setImageQuestions([]);
     setSessionClearedCount(0);
     setShowAnswer(false);
-    setReviewMode("image");
     setPrepareError("");
   }
 
@@ -746,10 +756,10 @@ function FlashcardsPage() {
                 {t("flashcards.syncingWordbaseMemory")}
               </p>
             ) : null}
-            {reviewMemorySyncError || flashcardReadiness.willUseTextMode ? (
+            {reviewMemorySyncError || flashcardReadiness.willUseTextMode || flashcardReadiness.willUseMixedMode ? (
               <div className="mt-3 space-y-3">
                 <FlashcardsSyncErrorAlert message={reviewMemorySyncError} />
-                {flashcardReadiness.willUseTextMode ? (
+                {flashcardReadiness.willUseTextMode || flashcardReadiness.willUseMixedMode ? (
                   <FlashcardsMissingImagesPanel flashcardReadiness={flashcardReadiness} t={t} />
                 ) : null}
                 {!flashcardReadiness.canStartImageMode ? (
@@ -861,7 +871,12 @@ function FlashcardsPage() {
   }
 
   return (
-    <section className="flashcards-review-session w-full max-w-3xl rounded-3xl border border-blue-200/70 bg-white/90 p-4 shadow-2xl shadow-blue-950/10 sm:p-8">
+    <section
+      className={[
+        "flashcards-review-session w-full max-w-3xl rounded-3xl border border-blue-200/70 bg-white/90 p-4 shadow-2xl shadow-blue-950/10 sm:p-8",
+        feedback === "incorrect" ? "flashcards-review-session--incorrect" : "",
+      ].join(" ")}
+    >
       <div className="flashcards-review-header mb-4 flex items-start justify-between gap-3 sm:mb-6">
         <div className="min-w-0 text-left">
           <p className="text-[11px] font-bold uppercase tracking-[0.14em] text-blue-700 sm:text-xs sm:tracking-[0.16em]">
@@ -890,7 +905,7 @@ function FlashcardsPage() {
         ) : null}
       </div>
 
-      {reviewMode === "text" ? (
+      {currentQuestionMode === "text" ? (
         <div className="mt-6">
           <p className="text-center text-sm text-slate-600">{t("flashcards.recallPrompt")}</p>
           {!showAnswer ? (
@@ -933,7 +948,7 @@ function FlashcardsPage() {
         </div>
       ) : null}
 
-      {reviewMode === "image" && (feedback === null || feedback === "incorrect") ? (
+      {currentQuestionMode === "image" && feedback === null ? (
         <div className="flashcards-review-images mt-3 sm:mt-6">
           <p className="mb-2 shrink-0 text-center text-xs font-bold uppercase tracking-[0.14em] text-slate-500 sm:mb-4 sm:text-sm">
             {t("flashcards.chooseMemoryImage")}
@@ -976,8 +991,8 @@ function FlashcardsPage() {
         </div>
       ) : null}
 
-      {reviewMode === "image" && feedback === "incorrect" ? (
-        <div className="mt-6 rounded-2xl border border-red-200 bg-red-50/60 p-5">
+      {currentQuestionMode === "image" && feedback === "incorrect" ? (
+        <div className="flashcards-review-incorrect mt-3 rounded-2xl border border-red-200 bg-red-50/60 p-5 sm:mt-6">
           <p className="font-bold text-red-700">{t("flashcards.incorrect")}</p>
           {currentWord.translation ? (
             <p className="mt-2 text-slate-700">
