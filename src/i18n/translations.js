@@ -672,6 +672,9 @@ const zhHant = {
         saveBlockedDemo: "尚有 {{count}} 個單字未完成 AI 填寫，無法儲存示範資料。",
         saveBlockedDemoHint:
           "尚有 {{count}} 個單字仍為示範資料，請先完成 AI 填寫後再儲存。",
+        offlineError: "無法連線。拍照加字需要網路，請檢查連線後再試。",
+        timeoutError: "AI 回應逾時，請稍後再試或改用較小的照片。",
+        requestFailed: "請求失敗，請稍後再試。",
       },
     },
     wordLookup: {
@@ -2063,6 +2066,10 @@ export const translations = {
           "{{count}} word(s) still need AI fill. Demo data cannot be saved.",
         saveBlockedDemoHint:
           "{{count}} word(s) still have demo data. Complete AI fill before saving.",
+        offlineError:
+          "Could not connect. Photo add needs a network connection — check your connection and try again.",
+        timeoutError: "The AI request timed out. Try again later or use a smaller photo.",
+        requestFailed: "Request failed. Please try again later.",
       },
     },
     wordLookup: {

@@ -10,6 +10,7 @@ import {
 import { WORD_SOURCES, normalizeTerm } from "../features/words/wordTypes.js";
 import { useWordsContext } from "../features/words/WordsContext.jsx";
 import { compressImageFile } from "../lib/compressImage.js";
+import { getFriendlyNetworkError } from "../lib/networkErrors.js";
 import { goBackToPreviousPage } from "../lib/navigation.js";
 import {
   clearPhotoCaptureDraft,
@@ -74,6 +75,19 @@ function buildPreviewWord(word, term, index) {
     fromLocal: Boolean(word.fromLocal),
     fromWordbase: Boolean(word.fromWordbase),
   };
+}
+
+function formatPhotoError(error, t) {
+  const message =
+    (error instanceof Error && error.message.trim()) ||
+    (typeof error === "string" && error.trim()) ||
+    t("addWord.photo.requestFailed");
+
+  if (/timed out/i.test(message)) {
+    return t("addWord.photo.timeoutError");
+  }
+
+  return getFriendlyNetworkError(message, t, "addWord.photo.offlineError");
 }
 
 function PhotoWordCapture({ autoOpenCamera = false, onAutoOpenCameraConsumed }) {
@@ -183,7 +197,7 @@ function PhotoWordCapture({ autoOpenCamera = false, onAutoOpenCameraConsumed }) 
       setStatusMessage("");
       setIsExtracting(true);
 
-      const compressed = await compressImageFile(file);
+      const compressed = await compressImageFile(file, { maxEdge: 1200, quality: 0.72 });
 
       setPreviewUrl(compressed.previewUrl);
       setImageDataUrl(compressed.dataUrl);
@@ -196,7 +210,7 @@ function PhotoWordCapture({ autoOpenCamera = false, onAutoOpenCameraConsumed }) 
       setStep("select");
       setStatusMessage(t("addWord.photo.detectedCount", { count: terms.length }));
     } catch (imageError) {
-      setError(imageError.message);
+      setError(formatPhotoError(imageError, t));
     } finally {
       setIsExtracting(false);
     }
@@ -283,7 +297,7 @@ function PhotoWordCapture({ autoOpenCamera = false, onAutoOpenCameraConsumed }) 
       setStep("preview");
       setStatusMessage(t("addWord.photo.previewReady"));
     } catch (completeError) {
-      setError(completeError.message);
+      setError(formatPhotoError(completeError, t));
     } finally {
       setIsCompleting(false);
     }

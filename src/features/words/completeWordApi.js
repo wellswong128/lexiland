@@ -1,6 +1,7 @@
 import { containsChinese, resolveVocabularyLocale } from "../../../lib/vocabularyLocale.js";
 import { getApiAuthHeaders } from "../../lib/apiAuth.js";
 import { resolveApiUrl } from "../../lib/apiBase.js";
+import { fetchWithTimeout } from "../../lib/fetchJsonApi.js";
 import { findWordInLibrary } from "../review/gameMistakeHelpers.js";
 import { normalizeMemoryImage } from "./memoryImageUtils.js";
 import {
@@ -45,6 +46,10 @@ export function createDemoSuggestion(term) {
 }
 
 export async function readJsonResponse(response) {
+  if (response.status === 504 || response.status === 502) {
+    throw new Error("AI service timed out. Please try again.");
+  }
+
   const text = await response.text();
 
   if (!text) {
@@ -75,17 +80,21 @@ export function suggestionToFormValues(suggestion) {
   };
 }
 
-export async function fetchCompleteWord(term, uiLocale = "zh-Hant") {
+export async function fetchCompleteWord(term, uiLocale = "zh-Hant", { quickFill = false } = {}) {
   const vocabularyLocale = resolveVocabularyLocale(uiLocale);
   const authHeaders = await getApiAuthHeaders();
-  const response = await fetch(resolveApiUrl("/api/complete-word"), {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-      ...authHeaders,
+  const response = await fetchWithTimeout(
+    resolveApiUrl("/api/complete-word"),
+    {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        ...authHeaders,
+      },
+      body: JSON.stringify({ term, locale: vocabularyLocale, vocabularyLocale, quickFill }),
     },
-    body: JSON.stringify({ term, locale: vocabularyLocale, vocabularyLocale }),
-  });
+    { timeoutMs: quickFill ? 75000 : 90000 },
+  );
   const data = await readJsonResponse(response);
 
   if (!response.ok) {
@@ -154,7 +163,7 @@ export async function fetchCompleteWordWithFallback(
   }
 
   try {
-    const result = await fetchCompleteWord(term, locale);
+    const result = await fetchCompleteWord(term, locale, { quickFill: textOnly });
 
     if (!skipWordbase && user?.id && !result.usedFallback) {
       void contributeWordDetailsFromSuggestion(result.suggestion, user.id).catch((syncError) => {
@@ -210,14 +219,18 @@ export async function completeWordsInBatch(
 export async function fetchExtractedWords(imageDataUrl) {
   // Returns all detected terms. No Wordbase lookup — that is bulk-import-only.
   const authHeaders = await getApiAuthHeaders();
-  const response = await fetch(resolveApiUrl("/api/extract-words-from-image"), {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-      ...authHeaders,
+  const response = await fetchWithTimeout(
+    resolveApiUrl("/api/extract-words-from-image"),
+    {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        ...authHeaders,
+      },
+      body: JSON.stringify({ imageDataUrl }),
     },
-    body: JSON.stringify({ imageDataUrl }),
-  });
+    { timeoutMs: 120000 },
+  );
   const data = await readJsonResponse(response);
 
   if (!response.ok) {

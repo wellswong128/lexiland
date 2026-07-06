@@ -32,6 +32,7 @@ export default async function handler(request, response) {
   const body = getRequestBody(request);
   const term = String(body.term ?? "").trim();
   const vocabularyLocale = String(body.vocabularyLocale ?? body.locale ?? "zh-Hant").trim();
+  const quickFill = Boolean(body.quickFill);
 
   if (!term) {
     sendJson(response, 400, { error: "Please provide an English word." });
@@ -39,7 +40,9 @@ export default async function handler(request, response) {
   }
 
   try {
-    const suggestion = await generateCompleteWordSuggestion(term, vocabularyLocale);
+    const suggestion = await generateCompleteWordSuggestion(term, vocabularyLocale, {
+      quickFill,
+    });
     sendJson(response, 200, { suggestion });
   } catch (error) {
     const statusCode = isAiJsonOutputError(error) ? 502 : 500;

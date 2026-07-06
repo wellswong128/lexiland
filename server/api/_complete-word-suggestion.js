@@ -263,7 +263,11 @@ function ensureAgnesApiKey() {
   return apiKey;
 }
 
-export async function generateCompleteWordSuggestion(term, locale = "zh-Hant") {
+export async function generateCompleteWordSuggestion(
+  term,
+  locale = "zh-Hant",
+  { quickFill = false } = {},
+) {
   const cleanTerm = String(term ?? "").trim();
   if (!cleanTerm) {
     throw new Error("Please provide an English word.");
@@ -276,6 +280,28 @@ export async function generateCompleteWordSuggestion(term, locale = "zh-Hant") {
   let suggestion = await requestSuggestion(cleanTerm, chineseLabel, apiKey, {
     phrase: isExamPhraseTerm(cleanTerm),
   });
+
+  if (quickFill) {
+    if (!hasValidChineseTranslationFields(suggestion, cleanTerm)) {
+      suggestion = await requestSuggestion(cleanTerm, chineseLabel, apiKey, {
+        strict: true,
+        phrase: isExamPhraseTerm(cleanTerm),
+      });
+    }
+
+    if (!suggestion.term || !suggestion.definition) {
+      throw new Error("AI response was missing term or definition.");
+    }
+
+    if (!hasValidChineseTranslationFields(suggestion, cleanTerm)) {
+      throw new Error("AI response did not include Chinese translation fields.");
+    }
+
+    return {
+      ...suggestion,
+      term: cleanTerm,
+    };
+  }
   if (!hasValidChineseTranslationFields(suggestion, cleanTerm)) {
     suggestion = await requestSuggestion(cleanTerm, chineseLabel, apiKey, { strict: true });
   }
