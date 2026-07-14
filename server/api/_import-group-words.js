@@ -395,6 +395,7 @@ export async function importMappedWordsForUser(
 
   if (insertRows.length > 0) {
     let lastNonDuplicateError = null;
+    const duplicateMissingKeys = new Set();
 
     for (let index = 0; index < insertRows.length; index += INSERT_BATCH_SIZE) {
       const batch = insertRows.slice(index, index + INSERT_BATCH_SIZE);
@@ -422,6 +423,8 @@ export async function importMappedWordsForUser(
             const existingRow = termKey ? existingByTerm.get(termKey) : null;
             if (existingRow) {
               importedRows.push(existingRow);
+            } else if (termKey) {
+              duplicateMissingKeys.add(termKey);
             }
             continue;
           }
@@ -441,6 +444,19 @@ export async function importMappedWordsForUser(
       }
     }
 
+    if (duplicateMissingKeys.size > 0) {
+      const refreshedExistingRows = await fetchExistingWordsByUser(rlsClient, userId);
+      const refreshedExistingByTerm = buildExistingWordsByTerm(refreshedExistingRows);
+
+      for (const termKey of duplicateMissingKeys) {
+        const existingRow = refreshedExistingByTerm.get(termKey);
+        if (existingRow) {
+          importedRows.push(existingRow);
+          existingByTerm.set(termKey, existingRow);
+        }
+      }
+    }
+
     const importedKeys = new Set(
       importedRows.map((row) => normalizeTermKey(row.term)).filter(Boolean),
     );
@@ -448,9 +464,9 @@ export async function importMappedWordsForUser(
       (row) => !importedKeys.has(normalizeTermKey(row.term)),
     );
 
-    if (stillMissing.length > 0 && importedRows.length === 0 && lastNonDuplicateError) {
+    if (stillMissing.length > 0) {
       throw new Error(
-        lastNonDuplicateError.message || "Could not save group words to your word list.",
+        lastNonDuplicateError?.message || "Could not save every group word to your word list.",
       );
     }
   }
