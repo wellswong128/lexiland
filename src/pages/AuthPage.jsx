@@ -8,6 +8,7 @@ import {
   navigateAfterAuth,
   shouldHardNavigateAfterAuth,
 } from "../features/auth/authBootstrap.js";
+import { normalizeAuthRedirectPath } from "../features/auth/safeRedirect.js";
 import { resolveAuthRedirectUrl } from "../features/auth/authRedirect.js";
 import { useLocale } from "../features/locale/LocaleContext.jsx";
 import { useWordsContext } from "../features/words/WordsContext.jsx";
@@ -94,7 +95,7 @@ function AuthPage() {
   const useEmailCodeFlow = true;
 
   const mode = searchParams.get("mode") === "login" ? "login" : "signup";
-  const redirectTo = searchParams.get("redirect") || "/";
+  const redirectTo = normalizeAuthRedirectPath(searchParams.get("redirect"));
   const isSignup = mode === "signup";
   const continueWithoutAccountTo = useMemo(() => {
     if (canRoute(ROLES.GUEST, redirectTo)) {
