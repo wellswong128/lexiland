@@ -14,6 +14,8 @@ import { maybeRecordDailyMistakeClear } from "../lib/learningActivity.js";
 import { ACTION_TYPES, awardLearningAction } from "../features/rewards/rewardsEngine.js";
 import { REVIEW_RESULTS } from "../features/words/wordTypes.js";
 
+const RAPID_INTERACTION_LOCK_MS = 2_000;
+
 function QuizPage() {
   const { locale, t } = useLocale();
   const { ensureActiveGroupWordsSynced, isActiveGroupSyncing, updateWord, user, words } = useWordsContext();
@@ -40,9 +42,14 @@ function QuizPage() {
   const [feedback, setFeedback] = useState(null);
   const [score, setScore] = useState(0);
   const [isComplete, setIsComplete] = useState(false);
+  const [isInteractionLocked, setIsInteractionLocked] = useState(false);
   const questionsLengthRef = useRef(0);
   const quizSessionRef = useRef(`quiz-${Date.now()}`);
   const awardedCorrectRef = useRef(new Set());
+  const answeredQuestionRef = useRef(null);
+  const advancingQuestionRef = useRef(null);
+  const interactionLockedRef = useRef(false);
+  const interactionUnlockTimerRef = useRef(null);
   const scoreRef = useRef(0);
 
   questionsLengthRef.current = questions.length;
@@ -109,10 +116,64 @@ function QuizPage() {
     speakText(currentQuestion.word.term);
   }, [currentIndex, currentQuestion?.word?.term, feedback, isComplete]);
 
+  useEffect(() => {
+    answeredQuestionRef.current = null;
+    advancingQuestionRef.current = null;
+    if (interactionLockedRef.current) {
+      releaseInteractionAfterDelay();
+    }
+  }, [currentIndex, currentQuestion?.word.id]);
+
+  useEffect(
+    () => () => {
+      if (interactionUnlockTimerRef.current) {
+        window.clearTimeout(interactionUnlockTimerRef.current);
+      }
+    },
+    [],
+  );
+
+  function getCurrentQuestionKey() {
+    return currentQuestion?.word?.id
+      ? `${currentQuestion.word.id}-${currentIndex}`
+      : `question-${currentIndex}`;
+  }
+
+  function claimInteraction() {
+    if (interactionLockedRef.current) {
+      return false;
+    }
+
+    interactionLockedRef.current = true;
+    setIsInteractionLocked(true);
+    releaseInteractionAfterDelay();
+    return true;
+  }
+
+  function releaseInteractionAfterDelay() {
+    if (interactionUnlockTimerRef.current) {
+      window.clearTimeout(interactionUnlockTimerRef.current);
+    }
+
+    interactionUnlockTimerRef.current = window.setTimeout(() => {
+      interactionLockedRef.current = false;
+      setIsInteractionLocked(false);
+      interactionUnlockTimerRef.current = null;
+    }, RAPID_INTERACTION_LOCK_MS);
+  }
+
   function handleAnswer(answer) {
-    if (feedback) {
+    if (feedback || isComplete || !currentQuestion || !claimInteraction()) {
       return;
     }
+
+    const questionKey = getCurrentQuestionKey();
+
+    if (answeredQuestionRef.current === questionKey) {
+      return;
+    }
+
+    answeredQuestionRef.current = questionKey;
 
     const isCorrect = answer === currentQuestion.correctAnswer;
     const result = isCorrect
@@ -143,14 +204,25 @@ function QuizPage() {
         );
       }
 
-      handleNextQuestion(true);
+      handleNextQuestion(true, { skipInteractionLock: true });
       return;
     }
 
     setFeedback("incorrect");
   }
 
-  function handleNextQuestion(wasLastCorrect = false) {
+  function handleNextQuestion(wasLastCorrect = false, options = {}) {
+    if (!options.skipInteractionLock && !claimInteraction()) {
+      return;
+    }
+
+    const questionKey = getCurrentQuestionKey();
+
+    if (advancingQuestionRef.current === questionKey) {
+      return;
+    }
+
+    advancingQuestionRef.current = questionKey;
     setSelectedAnswer("");
     setFeedback(null);
 
@@ -297,7 +369,7 @@ function QuizPage() {
                   ? "border-slate-200 bg-white text-slate-700 hover:border-blue-300 hover:bg-blue-50"
                   : "",
               ].join(" ")}
-              disabled={Boolean(feedback)}
+              disabled={Boolean(feedback) || isInteractionLocked}
               key={`${option.wordId}-${optionIndex}`}
               onClick={() => handleAnswer(option.wordId)}
               type="button"
@@ -321,6 +393,7 @@ function QuizPage() {
           </div>
           <button
             className="mt-5 rounded-full bg-blue-700 px-5 py-3 text-sm font-bold text-white transition hover:bg-blue-800"
+            disabled={isInteractionLocked}
             onClick={handleNextQuestion}
             type="button"
           >

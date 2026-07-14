@@ -26,6 +26,8 @@ import { maybeRecordDailyMistakeClear } from "../lib/learningActivity.js";
 import { ACTION_TYPES, awardLearningAction } from "../features/rewards/rewardsEngine.js";
 import { REVIEW_RESULTS } from "../features/words/wordTypes.js";
 
+const RAPID_INTERACTION_LOCK_MS = 2_000;
+
 function FlashcardsMissingImagesPanel({ flashcardReadiness, t }) {
   const { missingSessionWords, poolCount, needsMorePoolWords, willUseMixedMode, willUseTextMode } =
     flashcardReadiness;
@@ -215,6 +217,7 @@ function FlashcardsPage() {
   const [feedback, setFeedback] = useState(null);
   const [sessionClearedCount, setSessionClearedCount] = useState(0);
   const [isComplete, setIsComplete] = useState(false);
+  const [isInteractionLocked, setIsInteractionLocked] = useState(false);
   const [isReviewMemorySyncing, setIsReviewMemorySyncing] = useState(false);
   const [reviewMemorySyncError, setReviewMemorySyncError] = useState("");
   const imageQuestionsRef = useRef([]);
@@ -226,6 +229,10 @@ function FlashcardsPage() {
   const quizBottomRef = useRef(null);
   const flashcardSessionRef = useRef(`flashcards-${Date.now()}`);
   const reviewEventCounterRef = useRef(0);
+  const answeredQuestionRef = useRef(null);
+  const advancingQuestionRef = useRef(null);
+  const interactionLockedRef = useRef(false);
+  const interactionUnlockTimerRef = useRef(null);
 
   imageQuestionsRef.current = imageQuestions;
   imageQuestionsLengthRef.current = imageQuestions.length;
@@ -495,7 +502,79 @@ function FlashcardsPage() {
     };
   }, [currentIndex, currentQuestion?.word.id, feedback, hasStarted, isComplete]);
 
-  function goToNextWord() {
+  useEffect(() => {
+    answeredQuestionRef.current = null;
+    advancingQuestionRef.current = null;
+    if (interactionLockedRef.current) {
+      releaseInteractionAfterDelay();
+    }
+  }, [currentIndex, currentQuestion?.word.id, reviewMode]);
+
+  useEffect(
+    () => () => {
+      if (interactionUnlockTimerRef.current) {
+        window.clearTimeout(interactionUnlockTimerRef.current);
+      }
+    },
+    [],
+  );
+
+  function getCurrentQuestionKey() {
+    return currentQuestion?.word?.id
+      ? `${reviewMode}-${currentIndex}-${currentQuestion.word.id}`
+      : `${reviewMode}-${currentIndex}`;
+  }
+
+  function claimInteraction() {
+    if (interactionLockedRef.current) {
+      return false;
+    }
+
+    interactionLockedRef.current = true;
+    setIsInteractionLocked(true);
+    releaseInteractionAfterDelay();
+    return true;
+  }
+
+  function releaseInteractionAfterDelay() {
+    if (interactionUnlockTimerRef.current) {
+      window.clearTimeout(interactionUnlockTimerRef.current);
+    }
+
+    interactionUnlockTimerRef.current = window.setTimeout(() => {
+      interactionLockedRef.current = false;
+      setIsInteractionLocked(false);
+      interactionUnlockTimerRef.current = null;
+    }, RAPID_INTERACTION_LOCK_MS);
+  }
+
+  function claimCurrentAnswer() {
+    if (!currentQuestion?.word) {
+      return false;
+    }
+
+    const questionKey = getCurrentQuestionKey();
+
+    if (answeredQuestionRef.current === questionKey) {
+      return false;
+    }
+
+    answeredQuestionRef.current = questionKey;
+    return true;
+  }
+
+  function goToNextWord(options = {}) {
+    if (!options.skipInteractionLock && !claimInteraction()) {
+      return;
+    }
+
+    const questionKey = getCurrentQuestionKey();
+
+    if (advancingQuestionRef.current === questionKey) {
+      return;
+    }
+
+    advancingQuestionRef.current = questionKey;
     setSelectedAnswer("");
     setFeedback(null);
     setShowAnswer(false);
@@ -518,6 +597,14 @@ function FlashcardsPage() {
     setCurrentIndex(0);
     setSelectedAnswer("");
     setFeedback(null);
+    answeredQuestionRef.current = null;
+    advancingQuestionRef.current = null;
+    interactionLockedRef.current = false;
+    setIsInteractionLocked(false);
+    if (interactionUnlockTimerRef.current) {
+      window.clearTimeout(interactionUnlockTimerRef.current);
+      interactionUnlockTimerRef.current = null;
+    }
     setImageQuestions([]);
     setSessionClearedCount(0);
     setShowAnswer(false);
@@ -547,7 +634,12 @@ function FlashcardsPage() {
   }
 
   function handleTextRecall(result) {
-    if (!currentQuestion?.word) {
+    if (
+      !currentQuestion?.word ||
+      isComplete ||
+      !claimInteraction() ||
+      !claimCurrentAnswer()
+    ) {
       return;
     }
 
@@ -561,11 +653,17 @@ function FlashcardsPage() {
       setSessionClearedCount((count) => count + 1);
     }
 
-    goToNextWord();
+    goToNextWord({ skipInteractionLock: true });
   }
 
   function handleImageAnswer(answerWordId) {
-    if (feedback || !currentQuestion) {
+    if (
+      feedback ||
+      !currentQuestion ||
+      isComplete ||
+      !claimInteraction() ||
+      !claimCurrentAnswer()
+    ) {
       return;
     }
 
@@ -588,7 +686,7 @@ function FlashcardsPage() {
       setSessionClearedCount((count) => count + 1);
     }
 
-    goToNextWord();
+    goToNextWord({ skipInteractionLock: true });
   }
 
   if (isScopePending) {
@@ -930,6 +1028,7 @@ function FlashcardsPage() {
               <div className="mt-6 flex flex-wrap justify-center gap-3">
                 <button
                   className="rounded-full border border-red-200 bg-red-50 px-5 py-3 text-sm font-bold text-red-700 transition hover:bg-red-100"
+                  disabled={isInteractionLocked}
                   onClick={() => handleTextRecall(REVIEW_RESULTS.FORGOT)}
                   type="button"
                 >
@@ -937,6 +1036,7 @@ function FlashcardsPage() {
                 </button>
                 <button
                   className="rounded-full bg-green-700 px-5 py-3 text-sm font-bold text-white transition hover:bg-green-800"
+                  disabled={isInteractionLocked}
                   onClick={() => handleTextRecall(REVIEW_RESULTS.REMEMBERED)}
                   type="button"
                 >
@@ -972,7 +1072,7 @@ function FlashcardsPage() {
                       ? "border-slate-200 hover:border-blue-400 hover:shadow-md"
                       : "",
                   ].join(" ")}
-                  disabled={Boolean(feedback)}
+                  disabled={Boolean(feedback) || isInteractionLocked}
                   key={`${option.wordId}-${optionIndex}`}
                   onClick={() => handleImageAnswer(option.wordId)}
                   type="button"
@@ -1010,6 +1110,7 @@ function FlashcardsPage() {
           </div>
           <button
             className="mt-5 rounded-full bg-blue-700 px-5 py-3 text-sm font-bold text-white transition hover:bg-blue-800"
+            disabled={isInteractionLocked}
             onClick={goToNextWord}
             type="button"
           >
