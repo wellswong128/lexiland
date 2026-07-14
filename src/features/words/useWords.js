@@ -142,11 +142,8 @@ function mergeWordsPreservingMemory(remoteWords, existingWords) {
   }
 
   const existingById = new Map(existingWords.map((word) => [word.id, word]));
-  const remoteTerms = new Set(
-    remoteWords.map((word) => normalizeTerm(word.term)).filter(Boolean),
-  );
 
-  const mergedRemote = remoteWords.map((word) => {
+  return remoteWords.map((word) => {
     const existing = existingById.get(word.id);
     if (!existing) {
       return word;
@@ -163,12 +160,6 @@ function mergeWordsPreservingMemory(remoteWords, existingWords) {
         : (existing.memoryImage?.imageUrl ? existing.memoryImage : (word.memoryImage ?? existing.memoryImage ?? null)),
     };
   });
-
-  const localOnlyWords = existingWords.filter(
-    (word) => !remoteTerms.has(normalizeTerm(word.term)),
-  );
-
-  return [...mergedRemote, ...localOnlyWords];
 }
 
 function splitWordChanges(changes) {
@@ -355,7 +346,9 @@ export function useWords({ isAuthLoading = false, user = null } = {}, storage) {
 
   useEffect(() => {
     if (!hasSupabaseConfig || !user) {
-      setWords(hydrateWords(loadWords(storage), storage));
+      const localWords = hydrateWords(loadWords(storage), storage);
+      wordsRef.current = localWords;
+      setWords(localWords);
       setAutoImportedNotice(null);
       setIsWordsLoading(false);
       allowCacheSaveRef.current = false;
@@ -366,15 +359,19 @@ export function useWords({ isAuthLoading = false, user = null } = {}, storage) {
     allowCacheSaveRef.current = false;
     const cachedWords = loadWordsForUser(user.id, storage);
     const hasCachedWords = cachedWords.length > 0;
+    const hydratedCachedWords = hydrateWords(cachedWords, storage);
     const groupPayloadPromise = fetchUserActiveGroupWords({
       includeWords: true,
       wordLimit: ACTIVE_GROUP_INITIAL_IMPORT_COUNT,
     });
 
     if (hasCachedWords) {
-      setWords(hydrateWords(cachedWords, storage));
+      wordsRef.current = hydratedCachedWords;
+      setWords(hydratedCachedWords);
       setIsWordsLoading(false);
     } else {
+      wordsRef.current = [];
+      setWords([]);
       setIsWordsLoading(true);
     }
 
