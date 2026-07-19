@@ -31,6 +31,7 @@ import {
   WORD_SOURCES,
   toSupabaseSource,
 } from "./wordTypes.js";
+import { mergeWordsPreservingMemory } from "./mergeWords.js";
 import { ACTION_TYPES, awardLearningAction } from "../rewards/rewardsEngine.js";
 import {
   deleteAllWordsFromSupabase,
@@ -134,41 +135,6 @@ function applyWordChanges(word, changes) {
 
 function hydrateWords(words, storage) {
   return hydrateWordsAiMemory(dedupeWordsByTerm(words), storage);
-}
-
-function mergeWordsPreservingMemory(remoteWords, existingWords) {
-  if (!Array.isArray(existingWords) || existingWords.length === 0) {
-    return remoteWords;
-  }
-
-  const existingById = new Map(existingWords.map((word) => [word.id, word]));
-  const remoteTerms = new Set(
-    remoteWords.map((word) => normalizeTerm(word.term)).filter(Boolean),
-  );
-
-  const mergedRemote = remoteWords.map((word) => {
-    const existing = existingById.get(word.id);
-    if (!existing) {
-      return word;
-    }
-
-    return {
-      ...word,
-      memoryTipsByLocale: {
-        ...(existing.memoryTipsByLocale ?? {}),
-        ...(word.memoryTipsByLocale ?? {}),
-      },
-      memoryImage: word.memoryImage?.imageUrl
-        ? word.memoryImage
-        : (existing.memoryImage?.imageUrl ? existing.memoryImage : (word.memoryImage ?? existing.memoryImage ?? null)),
-    };
-  });
-
-  const localOnlyWords = existingWords.filter(
-    (word) => !remoteTerms.has(normalizeTerm(word.term)),
-  );
-
-  return [...mergedRemote, ...localOnlyWords];
 }
 
 function splitWordChanges(changes) {
