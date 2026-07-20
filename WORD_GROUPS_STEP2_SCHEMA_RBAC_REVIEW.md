@@ -65,7 +65,7 @@ This file records Step 2 review decisions for Phase 1 Word Groups.
 ## RLS / RBAC Behavior (Explicit)
 
 Role source: JWT claims via `current_app_role()`:
-- `app_metadata.role` -> fallback `user_metadata.role` -> fallback `student`
+- `app_metadata.role` -> fallback `student`
 
 Helper:
 - `is_owner_or_admin()` -> true only for `owner`, `admin`
