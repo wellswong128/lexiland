@@ -18,7 +18,7 @@ begin
 end;
 $$;
 
--- Read role from JWT claims (aligned with frontend/backend role model).
+-- Read only service-controlled role claims (aligned with frontend/backend role model).
 create or replace function public.current_app_role()
 returns text
 language sql
@@ -27,7 +27,6 @@ as $$
   select lower(
     coalesce(
       auth.jwt() -> 'app_metadata' ->> 'role',
-      auth.jwt() -> 'user_metadata' ->> 'role',
       'student'
     )
   );
