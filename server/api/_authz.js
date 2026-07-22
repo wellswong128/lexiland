@@ -1,4 +1,5 @@
 import { createClient } from "@supabase/supabase-js";
+import { readTrustedAppRole } from "./_roles.js";
 
 const AI_ALLOWED_ROLES = new Set(["owner", "admin", "teacher", "student"]);
 
@@ -33,10 +34,7 @@ function readBearerToken(request) {
 }
 
 function normalizeRole(user) {
-  const candidate =
-    user?.app_metadata?.role ?? user?.user_metadata?.role ?? user?.role ?? "student";
-  const role = String(candidate || "").trim().toLowerCase();
-  return role || "student";
+  return readTrustedAppRole(user);
 }
 
 function checkImportApiKey(request) {
