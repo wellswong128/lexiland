@@ -83,8 +83,6 @@ resolve_bulk_api_env() {
     allow_from_env="$(load_env_local_value ALLOW_PRODUCTION_BULK_API || true)"
     if [[ -n "$allow_from_env" ]]; then
       export ALLOW_PRODUCTION_BULK_API="$allow_from_env"
-    elif [[ "$APP_API_BASE_URL" == *learn.lexiland.cc* ]]; then
-      export ALLOW_PRODUCTION_BULK_API=1
     else
       unset ALLOW_PRODUCTION_BULK_API || true
     fi
