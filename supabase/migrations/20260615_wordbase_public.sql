@@ -58,5 +58,17 @@ with check (auth.uid() is not null and contributor_id = auth.uid());
 
 create policy "Authenticated users can update wordbase rows"
 on public.wordbase for update
-using (auth.uid() is not null)
-with check (auth.uid() is not null);
+using (
+  auth.uid() is not null
+  and (
+    contributor_id = auth.uid()
+    or lower(coalesce(auth.jwt() -> 'app_metadata' ->> 'role', 'student')) in ('owner', 'admin')
+  )
+)
+with check (
+  auth.uid() is not null
+  and (
+    contributor_id = auth.uid()
+    or lower(coalesce(auth.jwt() -> 'app_metadata' ->> 'role', 'student')) in ('owner', 'admin')
+  )
+);
