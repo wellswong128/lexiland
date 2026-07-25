@@ -27,7 +27,6 @@ as $$
   select lower(
     coalesce(
       auth.jwt() -> 'app_metadata' ->> 'role',
-      auth.jwt() -> 'user_metadata' ->> 'role',
       'student'
     )
   );

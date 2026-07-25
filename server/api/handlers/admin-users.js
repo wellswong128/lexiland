@@ -3,6 +3,7 @@ import { existsSync, readFileSync } from "node:fs";
 import { dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 import { requireRole, sendAuthError } from "../_authz.js";
+import { readTrustedAppRole } from "../_roles.js";
 
 const ASSIGNABLE_ROLES = ["owner", "admin", "teacher", "student", "parent"];
 const URL_ENV_KEYS = [
@@ -141,16 +142,12 @@ function getServiceClient() {
 }
 
 function mapUser(user) {
-  const role =
-    user?.app_metadata?.role ??
-    user?.user_metadata?.role ??
-    user?.role ??
-    "student";
+  const role = readTrustedAppRole(user);
 
   return {
     id: user.id,
     email: user.email ?? "",
-    role: String(role).toLowerCase(),
+    role,
     createdAt: user.created_at ?? "",
     lastSignInAt: user.last_sign_in_at ?? "",
   };
@@ -200,11 +197,7 @@ async function updateUserRole(request, response, actorRole) {
     return;
   }
 
-  const targetRole =
-    userData.user?.app_metadata?.role ??
-    userData.user?.user_metadata?.role ??
-    userData.user?.role ??
-    "student";
+  const targetRole = readTrustedAppRole(userData.user);
 
   if (actorRole !== "owner" && String(targetRole).toLowerCase() === "owner") {
     sendJson(response, 403, { error: "Only owner can modify owner accounts." });
