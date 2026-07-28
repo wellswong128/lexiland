@@ -1,5 +1,6 @@
 import { supabase, usesAutoSessionDetection } from "../../lib/supabaseClient.js";
 import { isMobileWebBrowser } from "../../lib/pwaPlatform.js";
+import { normalizeInAppRedirect } from "./safeRedirect.js";
 import {
   clearPkceVerifierBackup,
   restorePkceVerifierBackup,
@@ -37,8 +38,8 @@ export function rememberPostAuthRedirect(redirectPath) {
     return;
   }
 
-  const normalizedRedirect = String(redirectPath || "").trim();
-  if (!normalizedRedirect.startsWith("/")) {
+  const normalizedRedirect = normalizeInAppRedirect(redirectPath, "");
+  if (!normalizedRedirect) {
     return;
   }
 
@@ -57,15 +58,17 @@ export function resolvePostAuthRedirect(fallback = "/") {
   const searchParams = new URLSearchParams(window.location.search);
   const redirectFromUrl = searchParams.get("redirect");
 
-  if (redirectFromUrl?.startsWith("/")) {
-    return redirectFromUrl;
+  const safeRedirectFromUrl = normalizeInAppRedirect(redirectFromUrl, "");
+  if (safeRedirectFromUrl) {
+    return safeRedirectFromUrl;
   }
 
   try {
     const storedRedirect = sessionStorage.getItem(POST_AUTH_REDIRECT_KEY);
 
-    if (storedRedirect?.startsWith("/")) {
-      return storedRedirect;
+    const safeStoredRedirect = normalizeInAppRedirect(storedRedirect, "");
+    if (safeStoredRedirect) {
+      return safeStoredRedirect;
     }
   } catch {
     // sessionStorage may be unavailable.

@@ -346,13 +346,17 @@ function PhotoWordCapture({ autoOpenCamera = false, onAutoOpenCameraConsumed }) 
         textOnly: true,
       });
 
+      if (result.usedFallback) {
+        throw new Error(result.fallbackReason || t("addWord.photo.retryAllFailedMessage"));
+      }
+
       setPreviewWords((currentWords) =>
         currentWords.map((item) =>
           item.id === wordId
             ? {
                 ...item,
                 ...suggestionToFormValues(result.suggestion),
-                usedFallback: false,
+                usedFallback: Boolean(result.usedFallback),
               }
             : item,
         ),
@@ -388,10 +392,14 @@ function PhotoWordCapture({ autoOpenCamera = false, onAutoOpenCameraConsumed }) 
 
         try {
           const result = await fetchCompleteWordWithFallback(word.term, locale, {
-        user,
-        skipWordbase: true,
-        textOnly: true,
-      });
+            user,
+            skipWordbase: true,
+            textOnly: true,
+          });
+
+          if (result.usedFallback) {
+            continue;
+          }
 
           setPreviewWords((currentWords) =>
             currentWords.map((item) =>
@@ -399,7 +407,7 @@ function PhotoWordCapture({ autoOpenCamera = false, onAutoOpenCameraConsumed }) 
                 ? {
                     ...item,
                     ...suggestionToFormValues(result.suggestion),
-                    usedFallback: false,
+                    usedFallback: Boolean(result.usedFallback),
                   }
                 : item,
             ),
