@@ -1,5 +1,6 @@
 import { createClient } from "@supabase/supabase-js";
 
+const APP_ROLES = new Set(["owner", "admin", "teacher", "student", "parent"]);
 const AI_ALLOWED_ROLES = new Set(["owner", "admin", "teacher", "student"]);
 
 class ApiAuthError extends Error {
@@ -32,11 +33,9 @@ function readBearerToken(request) {
   return token.trim();
 }
 
-function normalizeRole(user) {
-  const candidate =
-    user?.app_metadata?.role ?? user?.user_metadata?.role ?? user?.role ?? "student";
-  const role = String(candidate || "").trim().toLowerCase();
-  return role || "student";
+export function readTrustedAppRole(user) {
+  const role = String(user?.app_metadata?.role || "").trim().toLowerCase();
+  return APP_ROLES.has(role) ? role : "student";
 }
 
 function checkImportApiKey(request) {
@@ -71,7 +70,7 @@ async function readAuthenticatedUser(request) {
     throw new ApiAuthError(401, "Unauthorized. Invalid or expired session.");
   }
 
-  return { role: normalizeRole(data.user), user: data.user };
+  return { role: readTrustedAppRole(data.user), user: data.user };
 }
 
 function readImportApiKeyHeader(request) {

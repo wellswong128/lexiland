@@ -1,5 +1,6 @@
 import { getIsStandaloneDisplay, getPwaPlatform } from "../../lib/pwaPlatform.js";
 import { supabase } from "../../lib/supabaseClient.js";
+import { normalizeInAppRedirect } from "./safeRedirect.js";
 
 const IOS_STANDALONE_OAUTH_FLAG = "lexiland.auth.ios-standalone-oauth";
 
@@ -61,8 +62,7 @@ export async function waitForPersistedSession({ attempts = 20, delayMs = 100 } =
 }
 
 export function navigateAfterAuth(redirectTo) {
-  const safeRedirect = redirectTo.startsWith("/") ? redirectTo : "/";
-  window.location.replace(safeRedirect);
+  window.location.replace(normalizeInAppRedirect(redirectTo));
 }
 
 export function navigateAfterSignOut() {
