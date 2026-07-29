@@ -32,6 +32,17 @@ function getDefaultStorage() {
   return window.localStorage;
 }
 
+export function mutateLatestRewardState(storage, mutate) {
+  const latestState = loadSyncedRewardState(storage);
+  const result = mutate(latestState);
+
+  if (result.success) {
+    saveRewardState(result.state, storage);
+  }
+
+  return result;
+}
+
 export function useRewardExtensions() {
   const { t } = useLocale();
   const [version, setVersion] = useState(0);
@@ -68,77 +79,76 @@ export function useRewardExtensions() {
     refresh();
   }, [refresh]);
 
-  const purchaseItem = useCallback(
-    (itemId) => {
-      const result = buyAvatarItem(state, itemId, { t });
+  const runLatestStateMutation = useCallback(
+    (mutate) => {
+      const result = mutateLatestRewardState(getDefaultStorage(), mutate);
 
       if (result.success) {
-        persist(result.state);
+        refresh();
       }
 
       return result;
     },
-    [persist, state, t],
+    [refresh],
+  );
+
+  const purchaseItem = useCallback(
+    (itemId) => {
+      return runLatestStateMutation((latestState) =>
+        buyAvatarItem(latestState, itemId, { t }),
+      );
+    },
+    [runLatestStateMutation, t],
   );
 
   const equipItem = useCallback(
     (itemId) => {
-      const result = equipAvatarItem(state, itemId, { t });
-
-      if (result.success) {
-        persist(result.state);
-      }
-
-      return result;
+      return runLatestStateMutation((latestState) =>
+        equipAvatarItem(latestState, itemId, { t }),
+      );
     },
-    [persist, state, t],
+    [runLatestStateMutation, t],
   );
 
   const selectTeam = useCallback(
     (teamId) => {
-      const result = joinTeam(state, teamId, { t });
-
-      if (result.success) {
-        persist(result.state);
-      }
-
-      return result;
+      return runLatestStateMutation((latestState) =>
+        joinTeam(latestState, teamId, { t }),
+      );
     },
-    [persist, state, t],
+    [runLatestStateMutation, t],
   );
 
   const saveLeaderboardSettings = useCallback(
     ({ displayName, optIn }) => {
-      persist(updateLeaderboardOptIn(state, { displayName, optIn }));
+      const latestState = loadSyncedRewardState(getDefaultStorage());
+      persist(updateLeaderboardOptIn(latestState, { displayName, optIn }));
     },
-    [persist, state],
+    [persist],
   );
 
   const openChest = useCallback(
     (chestId) => {
-      const result = openMysteryChest(state, chestId, { t });
+      const result = runLatestStateMutation((latestState) =>
+        openMysteryChest(latestState, chestId, { t }),
+      );
 
       if (result.success) {
-        persist(result.state);
         setChestResult(result.reward);
       }
 
       return result;
     },
-    [persist, state, t],
+    [runLatestStateMutation, t],
   );
 
   const claimMilestone = useCallback(
     (milestoneId) => {
-      const result = claimEventMilestone(state, milestoneId, { t });
-
-      if (result.success) {
-        persist(result.state);
-      }
-
-      return result;
+      return runLatestStateMutation((latestState) =>
+        claimEventMilestone(latestState, milestoneId, { t }),
+      );
     },
-    [persist, state, t],
+    [runLatestStateMutation, t],
   );
 
   const clearChestResult = useCallback(() => {
