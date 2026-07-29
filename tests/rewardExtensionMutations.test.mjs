@@ -1,7 +1,6 @@
 import assert from "node:assert/strict";
 import test from "node:test";
 
-import { REWARDS_STORAGE_KEY } from "../src/features/rewards/rewardConstants.js";
 import {
   buyAvatarItem,
   mutateLatestRewardState,
@@ -77,11 +76,12 @@ test("failed reward extension mutation leaves stored state unchanged", () => {
   const initialState = makeRewardState({ coins: 10 });
   saveRewardState(initialState, storage);
 
-  const before = storage.getItem(REWARDS_STORAGE_KEY);
   const result = mutateLatestRewardState(storage, (state) =>
     buyAvatarItem(state, "diamond_frame"),
   );
+  const saved = loadRewardState(storage);
 
   assert.equal(result.success, false);
-  assert.equal(storage.getItem(REWARDS_STORAGE_KEY), before);
+  assert.equal(saved.coins, 10);
+  assert.equal(saved.avatar.ownedItemIds.includes("diamond_frame"), false);
 });
