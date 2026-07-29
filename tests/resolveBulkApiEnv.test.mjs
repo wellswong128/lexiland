@@ -24,7 +24,7 @@ function runResolveBulkApiEnv(envContent, initialEnv = {}) {
           envExports,
           "resolve_bulk_api_env",
           "printf 'APP_API_BASE_URL=%s\\nALLOW_PRODUCTION_BULK_API=%s\\n' \"$APP_API_BASE_URL\" \"${ALLOW_PRODUCTION_BULK_API-}\"",
-        ].join("; "),
+        ].filter(Boolean).join("; "),
       ],
       { cwd: process.cwd(), encoding: "utf8" },
     );

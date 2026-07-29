@@ -2,8 +2,10 @@ import assert from "node:assert/strict";
 import test from "node:test";
 
 import { REWARDS_STORAGE_KEY } from "../src/features/rewards/rewardConstants.js";
-import { buyAvatarItem } from "../src/features/rewards/rewardExtensionsEngine.js";
-import { mutateLatestRewardState } from "../src/features/rewards/useRewardExtensions.js";
+import {
+  buyAvatarItem,
+  mutateLatestRewardState,
+} from "../src/features/rewards/rewardExtensionsEngine.js";
 import {
   defaultRewardState,
   getLocalDateKey,

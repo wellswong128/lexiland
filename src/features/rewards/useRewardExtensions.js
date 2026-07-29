@@ -18,6 +18,7 @@ import {
   isItemEquipped,
   joinTeam,
   loadSyncedRewardState,
+  mutateLatestRewardState,
   openMysteryChest,
   updateLeaderboardOptIn,
 } from "./rewardExtensionsEngine.js";
@@ -30,17 +31,6 @@ function getDefaultStorage() {
   }
 
   return window.localStorage;
-}
-
-export function mutateLatestRewardState(storage, mutate) {
-  const latestState = loadSyncedRewardState(storage);
-  const result = mutate(latestState);
-
-  if (result.success) {
-    saveRewardState(result.state, storage);
-  }
-
-  return result;
 }
 
 export function useRewardExtensions() {
