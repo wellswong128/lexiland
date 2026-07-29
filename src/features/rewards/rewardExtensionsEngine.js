@@ -814,3 +814,14 @@ export function loadSyncedRewardState(storage, now = new Date()) {
 
   return syncedState;
 }
+
+export function mutateLatestRewardState(storage, mutate) {
+  const latestState = loadSyncedRewardState(storage);
+  const result = mutate(latestState);
+
+  if (result.success) {
+    saveRewardState(result.state, storage);
+  }
+
+  return result;
+}

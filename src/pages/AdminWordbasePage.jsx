@@ -4,8 +4,6 @@ import { useWordsContext } from "../features/words/WordsContext.jsx";
 import { getApiAuthHeaders } from "../lib/apiAuth.js";
 import { resolveApiUrl } from "../lib/apiBase.js";
 import { can, getRoleFromUser, PERMISSIONS } from "../lib/authorization.js";
-import { mapWordbaseRow } from "../lib/wordbaseCompleteness.js";
-import { hasSupabaseConfig, supabase } from "../lib/supabaseClient.js";
 
 const FIELD_LABEL_KEYS = {
   definition: "adminWordbaseLibrary.definition",
@@ -42,25 +40,6 @@ function AdminWordbasePage() {
     () => [...rows].sort((a, b) => a.term.localeCompare(b.term)),
     [rows],
   );
-
-  async function loadRowsFromSupabase(nextSearch) {
-    if (!supabase) {
-      return null;
-    }
-
-    const { data, error } = await supabase.rpc("get_incomplete_wordbase_rows", {
-      p_limit: 120,
-      p_search: nextSearch.trim() || null,
-    });
-
-    if (error) {
-      return { error: error.message };
-    }
-
-    return {
-      rows: (data ?? []).map((row) => mapWordbaseRow(row, locale)),
-    };
-  }
 
   async function loadRowsFromApi(nextSearch) {
     const authHeaders = await getApiAuthHeaders();
@@ -101,16 +80,7 @@ function AdminWordbasePage() {
 
     try {
       setError("");
-      let payload = null;
-
-      if (hasSupabaseConfig) {
-        payload = await loadRowsFromSupabase(nextSearch);
-        if (payload?.error) {
-          payload = await loadRowsFromApi(nextSearch);
-        }
-      } else {
-        payload = await loadRowsFromApi(nextSearch);
-      }
+      const payload = await loadRowsFromApi(nextSearch);
 
       setRows(payload?.rows ?? []);
     } catch (loadError) {

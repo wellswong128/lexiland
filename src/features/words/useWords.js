@@ -136,36 +136,75 @@ function hydrateWords(words, storage) {
   return hydrateWordsAiMemory(dedupeWordsByTerm(words), storage);
 }
 
-function mergeWordsPreservingMemory(remoteWords, existingWords) {
+function parseTimestamp(value) {
+  return Date.parse(value || "") || 0;
+}
+
+function getLatestLearningTimestamp(word) {
+  return Math.max(
+    parseTimestamp(word?.updatedAt),
+    parseTimestamp(word?.review?.lastReviewedAt),
+    parseTimestamp(word?.mistake?.lastMistakeAt),
+  );
+}
+
+function mergeLearningProgress(remoteWord, existingWord) {
+  if (!existingWord) {
+    return remoteWord;
+  }
+
+  const existingLearningTimestamp = getLatestLearningTimestamp(existingWord);
+  const remoteLearningTimestamp = getLatestLearningTimestamp(remoteWord);
+  if (existingLearningTimestamp <= remoteLearningTimestamp) {
+    return remoteWord;
+  }
+
+  return {
+    ...remoteWord,
+    updatedAt: existingWord.updatedAt ?? remoteWord.updatedAt,
+    review: existingWord.review ?? remoteWord.review,
+    mistake: existingWord.mistake ?? remoteWord.mistake,
+  };
+}
+
+export function mergeWordsPreservingMemory(remoteWords, existingWords) {
   if (!Array.isArray(existingWords) || existingWords.length === 0) {
     return remoteWords;
   }
 
   const existingById = new Map(existingWords.map((word) => [word.id, word]));
+  const existingByTerm = new Map(
+    existingWords
+      .map((word) => [normalizeTerm(word.term), word])
+      .filter(([termKey]) => Boolean(termKey)),
+  );
+  const remoteIds = new Set(remoteWords.map((word) => word.id));
   const remoteTerms = new Set(
     remoteWords.map((word) => normalizeTerm(word.term)).filter(Boolean),
   );
 
   const mergedRemote = remoteWords.map((word) => {
-    const existing = existingById.get(word.id);
+    const existing = existingById.get(word.id) ?? existingByTerm.get(normalizeTerm(word.term));
     if (!existing) {
       return word;
     }
 
+    const progressMergedWord = mergeLearningProgress(word, existing);
+
     return {
-      ...word,
+      ...progressMergedWord,
       memoryTipsByLocale: {
         ...(existing.memoryTipsByLocale ?? {}),
-        ...(word.memoryTipsByLocale ?? {}),
+        ...(progressMergedWord.memoryTipsByLocale ?? {}),
       },
-      memoryImage: word.memoryImage?.imageUrl
-        ? word.memoryImage
+      memoryImage: progressMergedWord.memoryImage?.imageUrl
+        ? progressMergedWord.memoryImage
         : (existing.memoryImage?.imageUrl ? existing.memoryImage : (word.memoryImage ?? existing.memoryImage ?? null)),
     };
   });
 
   const localOnlyWords = existingWords.filter(
-    (word) => !remoteTerms.has(normalizeTerm(word.term)),
+    (word) => !remoteIds.has(word.id) && !remoteTerms.has(normalizeTerm(word.term)),
   );
 
   return [...mergedRemote, ...localOnlyWords];

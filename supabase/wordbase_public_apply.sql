@@ -160,6 +160,7 @@ drop policy if exists "Users can delete their own wordbase rows" on public.wordb
 drop policy if exists "Authenticated users can view wordbase" on public.wordbase;
 drop policy if exists "Authenticated users can insert wordbase rows" on public.wordbase;
 drop policy if exists "Authenticated users can update wordbase rows" on public.wordbase;
+drop policy if exists "Contributors and admins can update wordbase rows" on public.wordbase;
 
 create policy "Authenticated users can view wordbase"
 on public.wordbase for select
@@ -169,10 +170,22 @@ create policy "Authenticated users can insert wordbase rows"
 on public.wordbase for insert
 with check (auth.uid() is not null and contributor_id = auth.uid());
 
-create policy "Authenticated users can update wordbase rows"
+create policy "Contributors and admins can update wordbase rows"
 on public.wordbase for update
-using (auth.uid() is not null)
-with check (auth.uid() is not null);
+using (
+  auth.uid() is not null
+  and (
+    contributor_id = auth.uid()
+    or lower(coalesce(auth.jwt() -> 'app_metadata' ->> 'role', 'student')) in ('owner', 'admin')
+  )
+)
+with check (
+  auth.uid() is not null
+  and (
+    contributor_id = auth.uid()
+    or lower(coalesce(auth.jwt() -> 'app_metadata' ->> 'role', 'student')) in ('owner', 'admin')
+  )
+);
 
 -- ---------------------------------------------------------------------------
 -- Verification (optional — inspect results in the SQL editor output)

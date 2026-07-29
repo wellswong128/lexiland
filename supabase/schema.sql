@@ -216,10 +216,22 @@ create policy "Authenticated users can insert wordbase rows"
 on public.wordbase for insert
 with check (auth.uid() is not null and contributor_id = auth.uid());
 
-create policy "Authenticated users can update wordbase rows"
+create policy "Contributors and admins can update wordbase rows"
 on public.wordbase for update
-using (auth.uid() is not null)
-with check (auth.uid() is not null);
+using (
+  auth.uid() is not null
+  and (
+    contributor_id = auth.uid()
+    or lower(coalesce(auth.jwt() -> 'app_metadata' ->> 'role', 'student')) in ('owner', 'admin')
+  )
+)
+with check (
+  auth.uid() is not null
+  and (
+    contributor_id = auth.uid()
+    or lower(coalesce(auth.jwt() -> 'app_metadata' ->> 'role', 'student')) in ('owner', 'admin')
+  )
+);
 
 -- Evening email reminders (see supabase/migrations/20260705_evening_reminders.sql)
 
