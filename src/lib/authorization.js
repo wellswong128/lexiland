@@ -105,11 +105,7 @@ export function getRoleFromUser(user) {
     return ROLES.GUEST;
   }
 
-  const candidateRole =
-    user?.app_metadata?.role ??
-    user?.user_metadata?.role ??
-    user?.role ??
-    ROLES.STUDENT;
+  const candidateRole = user?.app_metadata?.role ?? ROLES.STUDENT;
 
   return normalizeRole(candidateRole);
 }
