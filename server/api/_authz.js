@@ -32,11 +32,12 @@ function readBearerToken(request) {
   return token.trim();
 }
 
-function normalizeRole(user) {
-  const candidate =
-    user?.app_metadata?.role ?? user?.user_metadata?.role ?? user?.role ?? "student";
+const TRUSTED_APP_ROLES = new Set(["owner", "admin", "teacher", "student", "parent"]);
+
+export function readTrustedAppRole(user) {
+  const candidate = user?.app_metadata?.role ?? "student";
   const role = String(candidate || "").trim().toLowerCase();
-  return role || "student";
+  return TRUSTED_APP_ROLES.has(role) ? role : "student";
 }
 
 function checkImportApiKey(request) {
@@ -71,7 +72,7 @@ async function readAuthenticatedUser(request) {
     throw new ApiAuthError(401, "Unauthorized. Invalid or expired session.");
   }
 
-  return { role: normalizeRole(data.user), user: data.user };
+  return { role: readTrustedAppRole(data.user), user: data.user };
 }
 
 function readImportApiKeyHeader(request) {
