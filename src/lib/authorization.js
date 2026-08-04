@@ -91,13 +91,13 @@ function normalizePath(pathname = "/") {
   return pathname.split("?")[0].replace(/\/+$/, "") || "/";
 }
 
-function normalizeRole(role) {
+function normalizeRole(role, fallback = ROLES.GUEST) {
   if (!role || typeof role !== "string") {
-    return ROLES.GUEST;
+    return fallback;
   }
 
   const lower = role.toLowerCase();
-  return Object.values(ROLES).includes(lower) ? lower : ROLES.GUEST;
+  return Object.values(ROLES).includes(lower) ? lower : fallback;
 }
 
 export function getRoleFromUser(user) {
@@ -105,13 +105,7 @@ export function getRoleFromUser(user) {
     return ROLES.GUEST;
   }
 
-  const candidateRole =
-    user?.app_metadata?.role ??
-    user?.user_metadata?.role ??
-    user?.role ??
-    ROLES.STUDENT;
-
-  return normalizeRole(candidateRole);
+  return normalizeRole(user?.app_metadata?.role, ROLES.STUDENT);
 }
 
 function patternToRegex(pattern) {
