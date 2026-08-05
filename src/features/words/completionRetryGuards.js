@@ -1,5 +1,5 @@
 export function isUsableCompletionRetryResult(result) {
-  return Boolean(result?.suggestion && !result.usedFallback);
+  return Boolean(result?.suggestion && result.usedFallback === false);
 }
 
 export function getCompletionRetryFailureReason(

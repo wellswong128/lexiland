@@ -40,3 +40,15 @@ test("completion retry guard rejects missing suggestions", () => {
     "Could not complete word.",
   );
 });
+
+test("completion retry guard rejects ambiguous results without explicit fallback state", () => {
+  assert.equal(
+    isUsableCompletionRetryResult({
+      suggestion: {
+        term: "ocean",
+        definition: "A large body of salt water.",
+      },
+    }),
+    false,
+  );
+});
