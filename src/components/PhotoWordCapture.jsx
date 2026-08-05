@@ -7,6 +7,10 @@ import {
   fetchExtractedWords,
   suggestionToFormValues,
 } from "../features/words/completeWordApi.js";
+import {
+  getCompletionRetryFailureReason,
+  isUsableCompletionRetryResult,
+} from "../features/words/completionRetryGuards.js";
 import { WORD_SOURCES, normalizeTerm } from "../features/words/wordTypes.js";
 import { useWordsContext } from "../features/words/WordsContext.jsx";
 import { compressImageFile } from "../lib/compressImage.js";
@@ -346,6 +350,16 @@ function PhotoWordCapture({ autoOpenCamera = false, onAutoOpenCameraConsumed }) 
         textOnly: true,
       });
 
+      if (!isUsableCompletionRetryResult(result)) {
+        setError(
+          t("addWord.photo.retryFailed", {
+            reason: getCompletionRetryFailureReason(result),
+            term: word.term,
+          }),
+        );
+        return;
+      }
+
       setPreviewWords((currentWords) =>
         currentWords.map((item) =>
           item.id === wordId
@@ -388,10 +402,14 @@ function PhotoWordCapture({ autoOpenCamera = false, onAutoOpenCameraConsumed }) 
 
         try {
           const result = await fetchCompleteWordWithFallback(word.term, locale, {
-        user,
-        skipWordbase: true,
-        textOnly: true,
-      });
+            user,
+            skipWordbase: true,
+            textOnly: true,
+          });
+
+          if (!isUsableCompletionRetryResult(result)) {
+            continue;
+          }
 
           setPreviewWords((currentWords) =>
             currentWords.map((item) =>
