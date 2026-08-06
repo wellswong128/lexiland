@@ -1,5 +1,6 @@
 import { REWARDS_STORAGE_KEY } from "./rewardConstants.js";
 import { selectDailyMissions } from "./missionDefinitions.js";
+import { getActiveStorageUserId, getScopedStorageKey } from "../../lib/userScopedStorage.js";
 
 export function getLocalDateKey(date = new Date()) {
   const year = date.getFullYear();
@@ -260,12 +261,20 @@ export function normalizeRewardState(rawState, now = new Date()) {
   return normalized;
 }
 
-export function loadRewardState(storage = getDefaultStorage(), now = new Date()) {
+function getRewardStorageKey(storage, userId = getActiveStorageUserId(storage)) {
+  return getScopedStorageKey(REWARDS_STORAGE_KEY, userId);
+}
+
+export function loadRewardState(
+  storage = getDefaultStorage(),
+  now = new Date(),
+  userId = getActiveStorageUserId(storage),
+) {
   if (!storage) {
     return normalizeRewardState(null, now);
   }
 
-  const rawValue = storage.getItem(REWARDS_STORAGE_KEY);
+  const rawValue = storage.getItem(getRewardStorageKey(storage, userId));
 
   if (!rawValue) {
     return normalizeRewardState(null, now);
@@ -279,20 +288,27 @@ export function loadRewardState(storage = getDefaultStorage(), now = new Date())
   }
 }
 
-export function saveRewardState(state, storage = getDefaultStorage()) {
+export function saveRewardState(
+  state,
+  storage = getDefaultStorage(),
+  userId = getActiveStorageUserId(storage),
+) {
   if (!storage) {
     return;
   }
 
-  storage.setItem(REWARDS_STORAGE_KEY, JSON.stringify(state));
+  storage.setItem(getRewardStorageKey(storage, userId), JSON.stringify(state));
 }
 
-export function clearRewardState(storage = getDefaultStorage()) {
+export function clearRewardState(
+  storage = getDefaultStorage(),
+  userId = getActiveStorageUserId(storage),
+) {
   if (!storage) {
     return;
   }
 
-  storage.removeItem(REWARDS_STORAGE_KEY);
+  storage.removeItem(getRewardStorageKey(storage, userId));
 }
 
 export function hasCompletedLearningToday(state, now = new Date()) {

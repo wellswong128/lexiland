@@ -2,9 +2,9 @@ import { getDailyMissionSummary } from "../rewards/rewardsEngine.js";
 import { loadRewardState } from "../rewards/rewardsStore.js";
 import { getDailyTasks, getLocalDateKey, getLearningSnapshot } from "../../lib/learningActivity.js";
 
-export function buildReminderSnapshot(words, locale = "zh-HK") {
-  const learningSnapshot = getLearningSnapshot(words);
-  const rewardState = loadRewardState();
+export function buildReminderSnapshot(words, locale = "zh-HK", { storage, userId } = {}) {
+  const learningSnapshot = getLearningSnapshot(words, storage, userId);
+  const rewardState = loadRewardState(storage, undefined, userId);
   const missionSummary = getDailyMissionSummary(rewardState);
   const missions = rewardState.dailyState?.missions ?? [];
   const pendingTaskLabels = learningSnapshot.dailyTasks.tasks

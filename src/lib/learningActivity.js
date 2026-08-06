@@ -1,5 +1,6 @@
 import { REVIEW_RESULTS } from "../features/words/wordTypes.js";
 import { loadRewardState } from "../features/rewards/rewardsStore.js";
+import { getActiveStorageUserId, getScopedStorageKey } from "./userScopedStorage.js";
 
 export const LEARNING_ACTIVITY_KEY = "lexiland.learningActivity.v1";
 
@@ -33,6 +34,10 @@ export function getLocalDateKey(date = new Date()) {
   return `${year}-${month}-${day}`;
 }
 
+function getLearningActivityStorageKey(storage, userId = getActiveStorageUserId(storage)) {
+  return getScopedStorageKey(LEARNING_ACTIVITY_KEY, userId);
+}
+
 function getPreviousDateKey(dateKey) {
   const [year, month, day] = dateKey.split("-").map(Number);
   const date = new Date(year, month - 1, day);
@@ -41,12 +46,15 @@ function getPreviousDateKey(dateKey) {
   return getLocalDateKey(date);
 }
 
-export function loadLearningActivity(storage = getDefaultStorage()) {
+export function loadLearningActivity(
+  storage = getDefaultStorage(),
+  userId = getActiveStorageUserId(storage),
+) {
   if (!storage) {
     return { ...defaultActivity };
   }
 
-  const rawValue = storage.getItem(LEARNING_ACTIVITY_KEY);
+  const rawValue = storage.getItem(getLearningActivityStorageKey(storage, userId));
 
   if (!rawValue) {
     return { ...defaultActivity };
@@ -74,16 +82,24 @@ export function loadLearningActivity(storage = getDefaultStorage()) {
   }
 }
 
-export function saveLearningActivity(activity, storage = getDefaultStorage()) {
+export function saveLearningActivity(
+  activity,
+  storage = getDefaultStorage(),
+  userId = getActiveStorageUserId(storage),
+) {
   if (!storage) {
     return;
   }
 
-  storage.setItem(LEARNING_ACTIVITY_KEY, JSON.stringify(activity));
+  storage.setItem(getLearningActivityStorageKey(storage, userId), JSON.stringify(activity));
 }
 
-export function recordLearningActivity(partial, storage = getDefaultStorage()) {
-  const currentActivity = loadLearningActivity(storage);
+export function recordLearningActivity(
+  partial,
+  storage = getDefaultStorage(),
+  userId = getActiveStorageUserId(storage),
+) {
+  const currentActivity = loadLearningActivity(storage, userId);
   const path = partial.path;
   const visitedPaths = [...(currentActivity.visitedPaths || [])];
 
@@ -100,7 +116,7 @@ export function recordLearningActivity(partial, storage = getDefaultStorage()) {
     },
   };
 
-  saveLearningActivity(nextActivity, storage);
+  saveLearningActivity(nextActivity, storage, userId);
 
   return nextActivity;
 }
@@ -135,13 +151,18 @@ function getTodayDailyStats(activity, dateKey = getLocalDateKey()) {
   };
 }
 
-function incrementTodayDailyStat(statKey, amount = 1, storage = getDefaultStorage()) {
+function incrementTodayDailyStat(
+  statKey,
+  amount = 1,
+  storage = getDefaultStorage(),
+  userId = getActiveStorageUserId(storage),
+) {
   if (!storage || amount <= 0) {
-    return loadLearningActivity(storage);
+    return loadLearningActivity(storage, userId);
   }
 
   const dateKey = getLocalDateKey();
-  const activity = loadLearningActivity(storage);
+  const activity = loadLearningActivity(storage, userId);
   const todayStats = getTodayDailyStats(activity, dateKey);
   const nextTodayStats = {
     ...todayStats,
@@ -156,30 +177,46 @@ function incrementTodayDailyStat(statKey, amount = 1, storage = getDefaultStorag
     },
   };
 
-  saveLearningActivity(nextActivity, storage);
+  saveLearningActivity(nextActivity, storage, userId);
 
   return nextActivity;
 }
 
-export function recordDailyGameCompleted(storage = getDefaultStorage()) {
-  return incrementTodayDailyStat("gamesPlayed", 1, storage);
+export function recordDailyGameCompleted(
+  storage = getDefaultStorage(),
+  userId = getActiveStorageUserId(storage),
+) {
+  return incrementTodayDailyStat("gamesPlayed", 1, storage, userId);
 }
 
-export function recordDailyMistakeCleared(amount = 1, storage = getDefaultStorage()) {
-  return incrementTodayDailyStat("mistakesCleared", amount, storage);
+export function recordDailyMistakeCleared(
+  amount = 1,
+  storage = getDefaultStorage(),
+  userId = getActiveStorageUserId(storage),
+) {
+  return incrementTodayDailyStat("mistakesCleared", amount, storage, userId);
 }
 
-export function maybeRecordDailyMistakeClear(word, result, storage = getDefaultStorage()) {
+export function maybeRecordDailyMistakeClear(
+  word,
+  result,
+  storage = getDefaultStorage(),
+  userId = getActiveStorageUserId(storage),
+) {
   const remembered =
     result === REVIEW_RESULTS.REMEMBERED || result === REVIEW_RESULTS.CORRECT;
 
   if (word?.mistake?.isMistake && remembered) {
-    recordDailyMistakeCleared(1, storage);
+    recordDailyMistakeCleared(1, storage, userId);
   }
 }
 
-export function getDailyTasks(words, storage = getDefaultStorage()) {
-  const activity = loadLearningActivity(storage);
+export function getDailyTasks(
+  words,
+  storage = getDefaultStorage(),
+  userId = getActiveStorageUserId(storage),
+) {
+  const activity = loadLearningActivity(storage, userId);
   const todayStats = getTodayDailyStats(activity);
   const reviewCurrent = getTodayReviewedCount(words);
   const reviewTarget = DAILY_TASK_TARGETS.reviewWords;
@@ -225,15 +262,19 @@ export function getDailyTasks(words, storage = getDefaultStorage()) {
   };
 }
 
-export function getLearningSnapshot(words, storage = getDefaultStorage()) {
-  const activity = loadLearningActivity(storage);
-  const rewardState = loadRewardState(storage);
+export function getLearningSnapshot(
+  words,
+  storage = getDefaultStorage(),
+  userId = getActiveStorageUserId(storage),
+) {
+  const activity = loadLearningActivity(storage, userId);
+  const rewardState = loadRewardState(storage, undefined, userId);
 
   return {
     streak: rewardState.currentStreak || 0,
     todayReviewed: getTodayReviewedCount(words),
     lastActivity: activity.lastActivity,
-    dailyTasks: getDailyTasks(words, storage),
+    dailyTasks: getDailyTasks(words, storage, userId),
   };
 }
 
@@ -309,10 +350,13 @@ export function getActivityForLocation(pathname, search = "") {
   return null;
 }
 
-export function clearLearningActivity(storage = getDefaultStorage()) {
+export function clearLearningActivity(
+  storage = getDefaultStorage(),
+  userId = getActiveStorageUserId(storage),
+) {
   if (!storage) {
     return;
   }
 
-  storage.removeItem(LEARNING_ACTIVITY_KEY);
+  storage.removeItem(getLearningActivityStorageKey(storage, userId));
 }

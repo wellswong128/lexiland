@@ -16,6 +16,26 @@ import { resolveAuthRedirectUrlAsync } from "./authRedirect.js";
 import { canUseGoogleIdentity, requestGoogleIdToken, shouldFallbackGoogleSignInToOAuth } from "./googleIdentity.js";
 import { hasSupabaseConfig, supabase } from "../../lib/supabaseClient.js";
 import { isMobileWebBrowser } from "../../lib/pwaPlatform.js";
+import { clearLearningActivity } from "../../lib/learningActivity.js";
+import { clearActiveStorageUserId, setActiveStorageUserId } from "../../lib/userScopedStorage.js";
+import { clearRewardState } from "../rewards/rewardsStore.js";
+
+function clearUnscopedLearningState() {
+  clearRewardState(undefined, null);
+  clearLearningActivity(undefined, null);
+}
+
+function syncScopedStorageUser(session, { clearUnscoped = false } = {}) {
+  if (session?.user?.id) {
+    setActiveStorageUserId(session.user.id);
+  } else {
+    clearActiveStorageUserId();
+
+    if (clearUnscoped) {
+      clearUnscopedLearningState();
+    }
+  }
+}
 
 export function useSupabaseAuth() {
   const [session, setSession] = useState(null);
@@ -45,6 +65,7 @@ export function useSupabaseAuth() {
         }
 
         if (callbackSession) {
+          syncScopedStorageUser(callbackSession);
           setSession(callbackSession);
           setAuthError("");
           setIsAuthLoading(false);
@@ -61,6 +82,7 @@ export function useSupabaseAuth() {
           setAuthError(sessionError.message);
         }
 
+        syncScopedStorageUser(data.session);
         setSession(data.session);
         setIsAuthLoading(false);
       })
@@ -85,6 +107,9 @@ export function useSupabaseAuth() {
         return;
       }
 
+      syncScopedStorageUser(nextSession, {
+        clearUnscoped: _event === "SIGNED_OUT" || _event === "USER_DELETED",
+      });
       setSession(nextSession);
 
       if (bootstrapCompleteRef.current) {
@@ -114,6 +139,7 @@ export function useSupabaseAuth() {
 
       void completeAuthCallbackFromUrl().then(({ session: callbackSession, error }) => {
         if (callbackSession) {
+          syncScopedStorageUser(callbackSession);
           setSession(callbackSession);
           setAuthError("");
           setIsAuthLoading(false);
@@ -342,6 +368,7 @@ export function useSupabaseAuth() {
             throw error;
           }
 
+          syncScopedStorageUser(data.session);
           setSession(data.session);
           setAuthError("");
           return data.session;
@@ -367,6 +394,7 @@ export function useSupabaseAuth() {
     }
 
     setAuthError("");
+    syncScopedStorageUser(null, { clearUnscoped: true });
     setSession(null);
     setIsAuthLoading(false);
     clearPostAuthRedirect();
