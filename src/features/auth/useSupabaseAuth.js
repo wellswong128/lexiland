@@ -25,12 +25,15 @@ function clearUnscopedLearningState() {
   clearLearningActivity(undefined, null);
 }
 
-function syncScopedStorageUser(session) {
+function syncScopedStorageUser(session, { clearUnscoped = false } = {}) {
   if (session?.user?.id) {
     setActiveStorageUserId(session.user.id);
   } else {
     clearActiveStorageUserId();
-    clearUnscopedLearningState();
+
+    if (clearUnscoped) {
+      clearUnscopedLearningState();
+    }
   }
 }
 
@@ -104,7 +107,9 @@ export function useSupabaseAuth() {
         return;
       }
 
-      syncScopedStorageUser(nextSession);
+      syncScopedStorageUser(nextSession, {
+        clearUnscoped: _event === "SIGNED_OUT" || _event === "USER_DELETED",
+      });
       setSession(nextSession);
 
       if (bootstrapCompleteRef.current) {
@@ -389,7 +394,7 @@ export function useSupabaseAuth() {
     }
 
     setAuthError("");
-    syncScopedStorageUser(null);
+    syncScopedStorageUser(null, { clearUnscoped: true });
     setSession(null);
     setIsAuthLoading(false);
     clearPostAuthRedirect();
