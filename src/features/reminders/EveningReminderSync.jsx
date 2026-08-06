@@ -23,7 +23,7 @@ export default function EveningReminderSync({ user, words }) {
 
       timeoutRef.current = window.setTimeout(async () => {
         try {
-          const snapshot = buildReminderSnapshot(words, locale);
+          const snapshot = buildReminderSnapshot(words, locale, { userId: user.id });
           const payloadKey = JSON.stringify(snapshot);
 
           if (payloadKey === lastPayloadRef.current) {
