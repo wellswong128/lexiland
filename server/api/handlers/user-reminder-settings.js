@@ -5,26 +5,17 @@ import {
   requireUserGroupAccess,
   sendJson,
 } from "../_user-groups.js";
+import { DEFAULT_REMINDER_TIMEZONE, normalizeReminderTimezone } from "../../lib/reminderTime.js";
 
 const DEFAULT_SETTINGS = {
   evening_reminder_enabled: false,
-  timezone: "Asia/Hong_Kong",
+  timezone: DEFAULT_REMINDER_TIMEZONE,
   locale: "zh-HK",
   last_reminder_sent_date: null,
 };
 
 function normalizeTimezone(value) {
-  const timezone = String(value || "").trim();
-  if (!timezone) {
-    return DEFAULT_SETTINGS.timezone;
-  }
-
-  try {
-    Intl.DateTimeFormat(undefined, { timeZone: timezone });
-    return timezone;
-  } catch {
-    return DEFAULT_SETTINGS.timezone;
-  }
+  return normalizeReminderTimezone(value);
 }
 
 function normalizeLocale(value) {
