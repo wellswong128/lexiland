@@ -7,6 +7,7 @@ import {
   fetchExtractedWords,
   suggestionToFormValues,
 } from "../features/words/completeWordApi.js";
+import { assertRealPhotoCompletion } from "../features/words/photoRetryGuards.js";
 import { WORD_SOURCES, normalizeTerm } from "../features/words/wordTypes.js";
 import { useWordsContext } from "../features/words/WordsContext.jsx";
 import { compressImageFile } from "../lib/compressImage.js";
@@ -340,11 +341,13 @@ function PhotoWordCapture({ autoOpenCamera = false, onAutoOpenCameraConsumed }) 
       setRetryingWordId(wordId);
       setError("");
 
-      const result = await fetchCompleteWordWithFallback(word.term, locale, {
-        user,
-        skipWordbase: true,
-        textOnly: true,
-      });
+      const result = assertRealPhotoCompletion(
+        await fetchCompleteWordWithFallback(word.term, locale, {
+          user,
+          skipWordbase: true,
+          textOnly: true,
+        }),
+      );
 
       setPreviewWords((currentWords) =>
         currentWords.map((item) =>
@@ -387,11 +390,13 @@ function PhotoWordCapture({ autoOpenCamera = false, onAutoOpenCameraConsumed }) 
         setRetryingWordId(word.id);
 
         try {
-          const result = await fetchCompleteWordWithFallback(word.term, locale, {
-        user,
-        skipWordbase: true,
-        textOnly: true,
-      });
+          const result = assertRealPhotoCompletion(
+            await fetchCompleteWordWithFallback(word.term, locale, {
+              user,
+              skipWordbase: true,
+              textOnly: true,
+            }),
+          );
 
           setPreviewWords((currentWords) =>
             currentWords.map((item) =>
