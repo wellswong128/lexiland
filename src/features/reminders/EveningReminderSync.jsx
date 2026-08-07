@@ -3,6 +3,7 @@ import { useLocale } from "../locale/LocaleContext.jsx";
 import { subscribeToRewardUpdates } from "../rewards/rewardToasts.js";
 import { buildReminderSnapshot } from "./buildReminderSnapshot.js";
 import { syncDailySnapshot } from "./reminderApi.js";
+import { buildReminderSyncKey } from "./reminderSyncKey.js";
 
 const SYNC_DEBOUNCE_MS = 4_000;
 
@@ -24,7 +25,7 @@ export default function EveningReminderSync({ user, words }) {
       timeoutRef.current = window.setTimeout(async () => {
         try {
           const snapshot = buildReminderSnapshot(words, locale);
-          const payloadKey = JSON.stringify(snapshot);
+          const payloadKey = buildReminderSyncKey(user.id, snapshot);
 
           if (payloadKey === lastPayloadRef.current) {
             return;

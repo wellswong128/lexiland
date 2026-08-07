@@ -5,26 +5,17 @@ import {
   requireUserGroupAccess,
   sendJson,
 } from "../_user-groups.js";
+import { buildDailySnapshotRow } from "../../lib/dailySnapshotRow.js";
 
-function clampCount(value, fallback = 0) {
-  const parsed = Number.parseInt(String(value ?? ""), 10);
-  return Number.isFinite(parsed) && parsed >= 0 ? parsed : fallback;
-}
+async function refreshReminderSettingsTimezone(rlsClient, userId, settingsPatch) {
+  const { error } = await rlsClient
+    .from("user_reminder_settings")
+    .update(settingsPatch)
+    .eq("user_id", userId);
 
-function normalizeDateKey(value) {
-  const dateKey = String(value || "").trim();
-  return /^\d{4}-\d{2}-\d{2}$/u.test(dateKey) ? dateKey : "";
-}
-
-function normalizeTaskLabels(value) {
-  if (!Array.isArray(value)) {
-    return [];
+  if (error) {
+    throw new Error(error.message || "Failed to refresh reminder timezone.");
   }
-
-  return value
-    .map((entry) => String(entry || "").trim())
-    .filter(Boolean)
-    .slice(0, 10);
 }
 
 export default async function userDailySnapshot(request, response) {
@@ -52,28 +43,16 @@ export default async function userDailySnapshot(request, response) {
   }
 
   const body = getRequestBody(request);
-  const dateKey = normalizeDateKey(body.dateKey);
+  const { settingsPatch, snapshot } = buildDailySnapshotRow(body, auth.user.id);
 
-  if (!dateKey) {
+  if (!snapshot.date_key) {
     sendJson(response, 400, { error: "dateKey is required (YYYY-MM-DD)." });
     return;
   }
 
-  const snapshot = {
-    user_id: auth.user.id,
-    date_key: dateKey,
-    streak: clampCount(body.streak),
-    has_completed_learning_today: Boolean(body.hasCompletedLearningToday),
-    daily_tasks_completed: clampCount(body.dailyTasksCompleted),
-    daily_tasks_total: clampCount(body.dailyTasksTotal, 3),
-    all_daily_tasks_done: Boolean(body.allDailyTasksDone),
-    missions_completed: clampCount(body.missionsCompleted),
-    missions_total: clampCount(body.missionsTotal),
-    streak_safe_today: Boolean(body.streakSafeToday),
-    pending_task_labels: normalizeTaskLabels(body.pendingTaskLabels),
-  };
-
   try {
+    await refreshReminderSettingsTimezone(rlsClient, auth.user.id, settingsPatch);
+
     const { data, error } = await rlsClient
       .from("user_daily_snapshots")
       .upsert(snapshot, { onConflict: "user_id,date_key" })

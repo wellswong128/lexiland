@@ -1,48 +1,11 @@
 import { buildEveningReminderEmail } from "./eveningReminderContent.js";
+import { getReminderLocalDateParts } from "./reminderTime.js";
 import { isEmailConfigured, sendEmail } from "./sendEmail.js";
 
 export const EVENING_REMINDER_HOUR = 20;
 
 export function getLocalHourAndDateKey(timezone, now = new Date()) {
-  const safeTimezone = String(timezone || "Asia/Hong_Kong").trim() || "Asia/Hong_Kong";
-
-  try {
-    const formatter = new Intl.DateTimeFormat("en-CA", {
-      timeZone: safeTimezone,
-      year: "numeric",
-      month: "2-digit",
-      day: "2-digit",
-      hour: "numeric",
-      hour12: false,
-    });
-    const parts = Object.fromEntries(
-      formatter.formatToParts(now).map((part) => [part.type, part.value]),
-    );
-
-    return {
-      dateKey: `${parts.year}-${parts.month}-${parts.day}`,
-      hour: Number.parseInt(parts.hour, 10),
-      timezone: safeTimezone,
-    };
-  } catch {
-    const formatter = new Intl.DateTimeFormat("en-CA", {
-      timeZone: "Asia/Hong_Kong",
-      year: "numeric",
-      month: "2-digit",
-      day: "2-digit",
-      hour: "numeric",
-      hour12: false,
-    });
-    const parts = Object.fromEntries(
-      formatter.formatToParts(now).map((part) => [part.type, part.value]),
-    );
-
-    return {
-      dateKey: `${parts.year}-${parts.month}-${parts.day}`,
-      hour: Number.parseInt(parts.hour, 10),
-      timezone: "Asia/Hong_Kong",
-    };
-  }
+  return getReminderLocalDateParts(timezone, now);
 }
 
 function normalizeDateKey(value) {
