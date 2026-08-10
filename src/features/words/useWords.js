@@ -33,6 +33,10 @@ import {
 } from "./wordTypes.js";
 import { ACTION_TYPES, awardLearningAction } from "../rewards/rewardsEngine.js";
 import {
+  getAnonymousWordsSaveAction,
+  shouldSkipAnonymousSaveAfterSignOut,
+} from "./anonymousWordsSaveGuard.js";
+import {
   deleteAllWordsFromSupabase,
   deleteWordFromSupabase,
   fetchWordsFromSupabase,
@@ -350,11 +354,22 @@ export function useWords({ isAuthLoading = false, user = null } = {}, storage) {
   const lastMappedWordsRef = useRef(null);
   const allowCacheSaveRef = useRef(false);
   const cacheSaveTimerRef = useRef(null);
+  const lastAuthenticatedUserIdRef = useRef(user?.id ?? null);
+  const skipNextAnonymousSaveRef = useRef(false);
 
   wordsRef.current = words;
 
   useEffect(() => {
     if (!hasSupabaseConfig || !user) {
+      if (
+        shouldSkipAnonymousSaveAfterSignOut({
+          hasSupabaseConfig,
+          lastAuthenticatedUserId: lastAuthenticatedUserIdRef.current,
+        })
+      ) {
+        skipNextAnonymousSaveRef.current = true;
+      }
+      lastAuthenticatedUserIdRef.current = null;
       setWords(hydrateWords(loadWords(storage), storage));
       setAutoImportedNotice(null);
       setIsWordsLoading(false);
@@ -363,6 +378,7 @@ export function useWords({ isAuthLoading = false, user = null } = {}, storage) {
     }
 
     let isMounted = true;
+    lastAuthenticatedUserIdRef.current = user.id;
     allowCacheSaveRef.current = false;
     const cachedWords = loadWordsForUser(user.id, storage);
     const hasCachedWords = cachedWords.length > 0;
@@ -478,7 +494,17 @@ export function useWords({ isAuthLoading = false, user = null } = {}, storage) {
       };
     }
 
-    if (!hasSupabaseConfig || !user) {
+    const anonymousSaveAction = getAnonymousWordsSaveAction({
+      hasSupabaseConfig,
+      hasUser: Boolean(user),
+      skipNextAnonymousSave: skipNextAnonymousSaveRef.current,
+    });
+
+    if (anonymousSaveAction.shouldClearSkip) {
+      skipNextAnonymousSaveRef.current = false;
+    }
+
+    if (anonymousSaveAction.shouldSave) {
       saveWords(words, storage);
     }
 
