@@ -19,19 +19,23 @@ import {
 } from "../lib/storage.js";
 import { splitIntoSingleWordTerms } from "../../lib/normalizeWordTerms.js";
 
-function getInitialPhotoCaptureState() {
-  const draft = loadPhotoCaptureDraft();
+function getEmptyPhotoCaptureState() {
+  return {
+    detectedWords: [],
+    hasRestoredDraft: false,
+    imageDataUrl: "",
+    previewUrl: "",
+    previewWords: [],
+    selectedTerms: [],
+    step: "upload",
+  };
+}
+
+function getInitialPhotoCaptureState(userId) {
+  const draft = loadPhotoCaptureDraft(userId);
 
   if (!draft) {
-    return {
-      detectedWords: [],
-      hasRestoredDraft: false,
-      imageDataUrl: "",
-      previewUrl: "",
-      previewWords: [],
-      selectedTerms: [],
-      step: "upload",
-    };
+    return getEmptyPhotoCaptureState();
   }
 
   const step = draft.step === "select" || draft.step === "preview" ? draft.step : "upload";
@@ -91,11 +95,15 @@ function formatPhotoError(error, t) {
 }
 
 function PhotoWordCapture({ autoOpenCamera = false, onAutoOpenCameraConsumed }) {
-  const initialState = useMemo(() => getInitialPhotoCaptureState(), []);
   const { locale, t } = useLocale();
   const location = useLocation();
   const navigate = useNavigate();
-  const { importWords, words, user } = useWordsContext();
+  const { importWords, isAuthLoading, words, user } = useWordsContext();
+  const draftUserId = user?.id ?? null;
+  const initialState = useMemo(
+    () => (isAuthLoading ? getEmptyPhotoCaptureState() : getInitialPhotoCaptureState(draftUserId)),
+    [draftUserId, isAuthLoading],
+  );
   const fileInputRef = useRef(null);
   const cameraInputRef = useRef(null);
   const hasShownRestoreMessageRef = useRef(false);
@@ -115,6 +123,9 @@ function PhotoWordCapture({ autoOpenCamera = false, onAutoOpenCameraConsumed }) 
   const [retryingWordId, setRetryingWordId] = useState(null);
   const [isRetryingAllFailed, setIsRetryingAllFailed] = useState(false);
   const [completionProgress, setCompletionProgress] = useState({ current: 0, total: 0 });
+  const [loadedDraftUserId, setLoadedDraftUserId] = useState(() =>
+    isAuthLoading ? undefined : draftUserId,
+  );
 
   const existingTerms = useMemo(
     () => new Set(words.map((word) => word.term.trim().toLowerCase())),
@@ -144,6 +155,25 @@ function PhotoWordCapture({ autoOpenCamera = false, onAutoOpenCameraConsumed }) 
   const canSavePreviewWords = enabledDemoPreviewWords.length === 0;
 
   useEffect(() => {
+    if (isAuthLoading) {
+      return;
+    }
+
+    setStep(initialState.step);
+    setPreviewUrl(initialState.previewUrl);
+    setImageDataUrl(initialState.imageDataUrl);
+    setDetectedWords(initialState.detectedWords);
+    setSelectedTerms(initialState.selectedTerms);
+    setPreviewWords(initialState.previewWords);
+    setManualTerm("");
+    setError("");
+    setStatusMessage("");
+    setCompletionProgress({ current: 0, total: 0 });
+    setLoadedDraftUserId(draftUserId);
+    hasShownRestoreMessageRef.current = false;
+  }, [draftUserId, initialState, isAuthLoading]);
+
+  useEffect(() => {
     if (!initialState.hasRestoredDraft || hasShownRestoreMessageRef.current) {
       return;
     }
@@ -166,8 +196,12 @@ function PhotoWordCapture({ autoOpenCamera = false, onAutoOpenCameraConsumed }) 
   }, [autoOpenCamera, isExtracting, onAutoOpenCameraConsumed, step]);
 
   useEffect(() => {
+    if (isAuthLoading || loadedDraftUserId !== draftUserId) {
+      return;
+    }
+
     if (step === "upload") {
-      clearPhotoCaptureDraft();
+      clearPhotoCaptureDraft(draftUserId);
       return;
     }
 
@@ -176,11 +210,11 @@ function PhotoWordCapture({ autoOpenCamera = false, onAutoOpenCameraConsumed }) 
       (step === "preview" && previewWords.length > 0);
 
     if (!hasDraft) {
-      clearPhotoCaptureDraft();
+      clearPhotoCaptureDraft(draftUserId);
       return;
     }
 
-    savePhotoCaptureDraft({
+    savePhotoCaptureDraft(draftUserId, {
       detectedWords,
       imageDataUrl,
       previewUrl: imageDataUrl || previewUrl,
@@ -189,7 +223,17 @@ function PhotoWordCapture({ autoOpenCamera = false, onAutoOpenCameraConsumed }) 
       step,
       updatedAt: new Date().toISOString(),
     });
-  }, [step, previewUrl, imageDataUrl, detectedWords, selectedTerms, previewWords]);
+  }, [
+    step,
+    previewUrl,
+    imageDataUrl,
+    detectedWords,
+    selectedTerms,
+    previewWords,
+    draftUserId,
+    isAuthLoading,
+    loadedDraftUserId,
+  ]);
 
   async function handleImageFile(file) {
     try {
@@ -494,7 +538,7 @@ function PhotoWordCapture({ autoOpenCamera = false, onAutoOpenCameraConsumed }) 
         return;
       }
 
-      clearPhotoCaptureDraft();
+      clearPhotoCaptureDraft(draftUserId);
       setStatusMessage(
         t("addWord.photo.saveSuccess", {
           imported: importedCount,
@@ -526,7 +570,7 @@ function PhotoWordCapture({ autoOpenCamera = false, onAutoOpenCameraConsumed }) 
   }
 
   function resetFlow() {
-    clearPhotoCaptureDraft();
+    clearPhotoCaptureDraft(draftUserId);
     setStep("upload");
     setPreviewUrl("");
     setImageDataUrl("");

@@ -599,6 +599,7 @@ const zhHant = {
       aiFallback: "AI 服務暫時無法使用，已改為示範資料。原因：{{reason}}",
       enterWordFirst: "使用 AI 填寫前，請先輸入英文單字。",
       requiredFields: "請同時輸入英文單字與定義。",
+      saveBlockedDemo: "目前內容仍標示為 AI 示範資料。請重新 AI 填寫，或先替換內容並移除 ai-fallback 標籤後再儲存。",
       saveSuccessNext: "單字已儲存，可繼續輸入下一個。",
       termEnterHint: "輸入英文單字後按 Enter 自動填寫。",
       englishWord: "英文單字",
@@ -1993,6 +1994,8 @@ export const translations = {
         "AI service was unavailable, so demo data was added instead. Reason: {{reason}}",
       enterWordFirst: "Enter an English word before using AI Fill.",
       requiredFields: "Please enter both an English word and a definition.",
+      saveBlockedDemo:
+        "This entry is still marked as AI demo data. Retry AI Fill, or replace the content and remove the ai-fallback tag before saving.",
       saveSuccessNext: "Word saved. Enter the next word.",
       termEnterHint: "Press Enter after typing an English word to auto-fill.",
       englishWord: "English word",

@@ -7,6 +7,7 @@ import {
   fetchCompleteWordWithFallback,
   suggestionToFormValues,
 } from "../features/words/completeWordApi.js";
+import { shouldBlockDemoFallbackSave } from "../features/words/demoFallbackGuard.js";
 import { useWordsContext } from "../features/words/WordsContext.jsx";
 import { goBackToPreviousPage } from "../lib/navigation.js";
 import { isMobileWebBrowser } from "../lib/pwaPlatform.js";
@@ -49,6 +50,7 @@ function AddWordPage() {
   const [isAiLoading, setIsAiLoading] = useState(false);
   const [isSaving, setIsSaving] = useState(false);
   const [saveMessage, setSaveMessage] = useState("");
+  const [hasPendingAiFallback, setHasPendingAiFallback] = useState(false);
   const termInputRef = useRef(null);
 
   useEffect(() => {
@@ -102,6 +104,7 @@ function AddWordPage() {
   function resetFormForNextWord() {
     setFormValues(initialFormValues);
     setAiMessage("");
+    setHasPendingAiFallback(false);
 
     requestAnimationFrame(() => {
       termInputRef.current?.focus();
@@ -143,6 +146,7 @@ function AddWordPage() {
         ...currentValues,
         ...suggestionToFormValues(result.suggestion),
       }));
+      setHasPendingAiFallback(Boolean(result.usedFallback));
 
       if (result.fromLocal) {
         setAiMessage(t("addWord.localSuccess"));
@@ -163,6 +167,11 @@ function AddWordPage() {
 
     if (!formValues.term.trim() || !formValues.definition.trim()) {
       setError(t("addWord.requiredFields"));
+      return;
+    }
+
+    if (shouldBlockDemoFallbackSave(formValues, hasPendingAiFallback)) {
+      setError(t("addWord.saveBlockedDemo"));
       return;
     }
 

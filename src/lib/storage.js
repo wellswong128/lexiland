@@ -134,12 +134,23 @@ export function resetWordsForUser(userId, storage = getDefaultStorage()) {
 
 const PHOTO_CAPTURE_DRAFT_MAX_BYTES = 120_000;
 
-export function loadPhotoCaptureDraft(storage = getDefaultStorage()) {
+export function getPhotoCaptureDraftStorageKey(userId = null) {
+  if (!userId) {
+    return "lexiland.photoCaptureDraft.anonymous.v1";
+  }
+
+  return `lexiland.photoCaptureDraft.${encodeURIComponent(userId)}.v1`;
+}
+
+export function loadPhotoCaptureDraft(userId = null, storage = getDefaultStorage()) {
   if (!storage) {
     return null;
   }
 
-  const rawValue = storage.getItem(PHOTO_CAPTURE_DRAFT_KEY);
+  storage.removeItem(PHOTO_CAPTURE_DRAFT_KEY);
+
+  const storageKey = getPhotoCaptureDraftStorageKey(userId);
+  const rawValue = storage.getItem(storageKey);
 
   if (!rawValue) {
     return null;
@@ -147,7 +158,7 @@ export function loadPhotoCaptureDraft(storage = getDefaultStorage()) {
 
   if (rawValue.length > PHOTO_CAPTURE_DRAFT_MAX_BYTES) {
     console.warn("Photo capture draft was too large and has been cleared.");
-    storage.removeItem(PHOTO_CAPTURE_DRAFT_KEY);
+    storage.removeItem(storageKey);
     return null;
   }
 
@@ -169,7 +180,7 @@ export function loadPhotoCaptureDraft(storage = getDefaultStorage()) {
   }
 }
 
-export function savePhotoCaptureDraft(draft, storage = getDefaultStorage()) {
+export function savePhotoCaptureDraft(userId = null, draft, storage = getDefaultStorage()) {
   if (!storage) {
     return;
   }
@@ -177,16 +188,18 @@ export function savePhotoCaptureDraft(draft, storage = getDefaultStorage()) {
   const { imageDataUrl: _imageDataUrl, previewUrl: _previewUrl, ...rest } = draft;
 
   try {
-    storage.setItem(PHOTO_CAPTURE_DRAFT_KEY, JSON.stringify(rest));
+    storage.removeItem(PHOTO_CAPTURE_DRAFT_KEY);
+    storage.setItem(getPhotoCaptureDraftStorageKey(userId), JSON.stringify(rest));
   } catch (error) {
     console.warn("Could not save photo capture draft.", error);
   }
 }
 
-export function clearPhotoCaptureDraft(storage = getDefaultStorage()) {
+export function clearPhotoCaptureDraft(userId = null, storage = getDefaultStorage()) {
   if (!storage) {
     return;
   }
 
   storage.removeItem(PHOTO_CAPTURE_DRAFT_KEY);
+  storage.removeItem(getPhotoCaptureDraftStorageKey(userId));
 }
