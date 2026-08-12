@@ -43,10 +43,33 @@ drop index if exists public.wordbase_user_term_unique_idx;
 create index if not exists wordbase_contributor_id_idx on public.wordbase(contributor_id);
 create unique index if not exists wordbase_term_key_unique_idx on public.wordbase(term_key);
 
+create or replace function public.current_app_role()
+returns text
+language sql
+stable
+as $$
+  select lower(
+    coalesce(
+      auth.jwt() -> 'app_metadata' ->> 'role',
+      'student'
+    )
+  );
+$$;
+
+create or replace function public.is_owner_or_admin()
+returns boolean
+language sql
+stable
+as $$
+  select public.current_app_role() in ('owner', 'admin');
+$$;
+
 drop policy if exists "Users can view their own wordbase rows" on public.wordbase;
 drop policy if exists "Users can insert their own wordbase rows" on public.wordbase;
 drop policy if exists "Users can update their own wordbase rows" on public.wordbase;
 drop policy if exists "Users can delete their own wordbase rows" on public.wordbase;
+drop policy if exists "Authenticated users can update wordbase rows" on public.wordbase;
+drop policy if exists "Contributors and admins can update wordbase rows" on public.wordbase;
 
 create policy "Authenticated users can view wordbase"
 on public.wordbase for select
@@ -56,7 +79,13 @@ create policy "Authenticated users can insert wordbase rows"
 on public.wordbase for insert
 with check (auth.uid() is not null and contributor_id = auth.uid());
 
-create policy "Authenticated users can update wordbase rows"
+create policy "Contributors and admins can update wordbase rows"
 on public.wordbase for update
-using (auth.uid() is not null)
-with check (auth.uid() is not null);
+using (
+  auth.uid() is not null
+  and (contributor_id = auth.uid() or public.is_owner_or_admin())
+)
+with check (
+  auth.uid() is not null
+  and (contributor_id = auth.uid() or public.is_owner_or_admin())
+);
