@@ -16,6 +16,7 @@ import { resolveAuthRedirectUrlAsync } from "./authRedirect.js";
 import { canUseGoogleIdentity, requestGoogleIdToken, shouldFallbackGoogleSignInToOAuth } from "./googleIdentity.js";
 import { hasSupabaseConfig, supabase } from "../../lib/supabaseClient.js";
 import { isMobileWebBrowser } from "../../lib/pwaPlatform.js";
+import { clearReviewSession } from "../../lib/reviewSessionStorage.js";
 
 export function useSupabaseAuth() {
   const [session, setSession] = useState(null);
@@ -371,6 +372,7 @@ export function useSupabaseAuth() {
     setIsAuthLoading(false);
     clearPostAuthRedirect();
     clearPkceVerifierBackup();
+    clearReviewSession();
 
     const { error } = await supabase.auth.signOut({ scope: "local" });
 
