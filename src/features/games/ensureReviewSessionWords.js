@@ -1,13 +1,12 @@
+import { getReviewSessionWords } from "../review/reviewHelpers.js";
 import {
-  getReviewSessionWords,
-} from "../review/reviewHelpers.js";
-import {
-  hasActiveReviewSession,
+  loadReviewSessionForWordIds,
   syncReviewSession,
 } from "../../lib/reviewSessionStorage.js";
 
-export function ensureReviewSessionWords(words, { mistakesOnly = false } = {}) {
-  if (hasActiveReviewSession() || words.length === 0) {
+export function ensureReviewSessionWords(words, { mistakesOnly = false, storage } = {}) {
+  const currentWordIds = words.map((word) => word.id).filter(Boolean);
+  if (loadReviewSessionForWordIds(currentWordIds, storage) || words.length === 0) {
     return;
   }
 
@@ -21,5 +20,5 @@ export function ensureReviewSessionWords(words, { mistakesOnly = false } = {}) {
     mistakesOnly,
     totalCount,
     wordIds: sessionWords.map((word) => word.id),
-  });
+  }, storage);
 }

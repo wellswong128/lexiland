@@ -107,6 +107,25 @@ export function loadReviewSession(storage = getDefaultStorage()) {
   }
 }
 
+export function loadReviewSessionForWordIds(wordIds, storage = getDefaultStorage()) {
+  const session = loadReviewSession(storage);
+  if (!session?.wordIds.length) {
+    return null;
+  }
+
+  const currentWordIds = new Set((wordIds ?? []).filter(Boolean));
+  const sessionMatchesCurrentWords = session.wordIds.every((wordId) =>
+    currentWordIds.has(wordId),
+  );
+
+  if (sessionMatchesCurrentWords) {
+    return session;
+  }
+
+  clearReviewSession(storage);
+  return null;
+}
+
 export function getActiveReviewSessionWordIds(storage = getDefaultStorage()) {
   const session = loadReviewSession(storage);
 
