@@ -10,6 +10,7 @@ import {
   createTextFlashcardQuestions,
   getFlashcardReviewReadiness,
 } from "../features/review/imageQuizHelpers.js";
+import { getImmediateImageReviewResult } from "../features/review/flashcardGrading.js";
 import { prefetchImageReviewPool } from "../features/review/prefetchImageReviewPool.js";
 import WordGroupScopeEmptyState from "../features/wordGroups/WordGroupScopeEmptyState.jsx";
 import { useActiveGroupWordScope } from "../features/wordGroups/useActiveGroupWordScope.js";
@@ -546,16 +547,18 @@ function FlashcardsPage() {
     }
   }
 
-  function handleTextRecall(result) {
-    if (!currentQuestion?.word) {
+  function handleRecallResult(result) {
+    const word = currentWord ?? currentQuestion?.word;
+
+    if (!word) {
       return;
     }
 
-    const hadMistake = currentQuestion.word.mistake?.isMistake;
+    const hadMistake = word.mistake?.isMistake;
 
-    maybeRecordDailyMistakeClear(currentQuestion.word, result);
-    updateWord(currentQuestion.word.id, updateReviewResult(currentQuestion.word, result));
-    recordFlashcardRewards(currentQuestion.word, result, hadMistake);
+    maybeRecordDailyMistakeClear(word, result);
+    updateWord(word.id, updateReviewResult(word, result));
+    recordFlashcardRewards(word, result, hadMistake);
 
     if (result === REVIEW_RESULTS.REMEMBERED && hadMistake) {
       setSessionClearedCount((count) => count + 1);
@@ -564,31 +567,31 @@ function FlashcardsPage() {
     goToNextWord();
   }
 
+  function handleTextRecall(result) {
+    handleRecallResult(result);
+  }
+
+  function handleImageRecall(result) {
+    handleRecallResult(result);
+  }
+
   function handleImageAnswer(answerWordId) {
     if (feedback || !currentQuestion) {
       return;
     }
 
-    const isCorrect = answerWordId === currentQuestion.correctAnswer;
-    const result = isCorrect ? REVIEW_RESULTS.REMEMBERED : REVIEW_RESULTS.FORGOT;
-    const hadMistake = currentQuestion.word.mistake?.isMistake;
+    const immediateResult = getImmediateImageReviewResult(
+      answerWordId,
+      currentQuestion.correctAnswer,
+    );
 
-    maybeRecordDailyMistakeClear(currentQuestion.word, result);
-    updateWord(currentQuestion.word.id, updateReviewResult(currentQuestion.word, result));
-
-    if (!isCorrect) {
+    if (!immediateResult) {
       setSelectedAnswer(answerWordId);
       setFeedback("incorrect");
       return;
     }
 
-    recordFlashcardRewards(currentQuestion.word, result, hadMistake);
-
-    if (hadMistake) {
-      setSessionClearedCount((count) => count + 1);
-    }
-
-    goToNextWord();
+    handleRecallResult(immediateResult);
   }
 
   if (isScopePending) {
@@ -1008,15 +1011,22 @@ function FlashcardsPage() {
               wordbaseOnly
             />
           </div>
-          <button
-            className="mt-5 rounded-full bg-blue-700 px-5 py-3 text-sm font-bold text-white transition hover:bg-blue-800"
-            onClick={goToNextWord}
-            type="button"
-          >
-            {currentIndex >= imageQuestions.length - 1
-              ? t("flashcards.finishReview")
-              : t("flashcards.nextWord")}
-          </button>
+          <div className="mt-5 flex flex-wrap justify-center gap-3">
+            <button
+              className="rounded-full border border-red-200 bg-red-50 px-5 py-3 text-sm font-bold text-red-700 transition hover:bg-red-100"
+              onClick={() => handleImageRecall(REVIEW_RESULTS.FORGOT)}
+              type="button"
+            >
+              {t("flashcards.forgot")}
+            </button>
+            <button
+              className="rounded-full bg-green-700 px-5 py-3 text-sm font-bold text-white transition hover:bg-green-800"
+              onClick={() => handleImageRecall(REVIEW_RESULTS.REMEMBERED)}
+              type="button"
+            >
+              {t("flashcards.remembered")}
+            </button>
+          </div>
         </div>
       ) : null}
       <div aria-hidden="true" className="h-px w-full shrink-0" ref={quizBottomRef} />
