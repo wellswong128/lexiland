@@ -1,15 +1,11 @@
 import { getApiAuthHeaders } from "../../lib/apiAuth.js";
 import { resolveApiUrl } from "../../lib/apiBase.js";
+import { supabase } from "../../lib/supabaseClient.js";
+import { activeGroupWordsCache } from "./activeGroupWordsCache.js";
 
-const CACHE_TTL_MS = 60_000;
 const FETCH_TIMEOUT_MS = 45_000;
 
 export const ACTIVE_GROUP_INITIAL_IMPORT_COUNT = 10;
-
-let cachedFullPayload = null;
-let cachedAt = 0;
-let inflightFullRequest = null;
-let inflightTermsRequest = null;
 
 async function parseJsonResponse(response) {
   let payload = {};
@@ -28,17 +24,32 @@ async function parseJsonResponse(response) {
   return payload;
 }
 
-function isCacheValid() {
-  return Boolean(cachedFullPayload) && Date.now() - cachedAt < CACHE_TTL_MS;
+async function getApiAuthContext() {
+  if (!supabase) {
+    return { authHeaders: {}, cacheScopeKey: "" };
+  }
+
+  try {
+    const { data } = await supabase.auth.getSession();
+    const session = data?.session;
+    const token = session?.access_token;
+    const userId = session?.user?.id;
+
+    return {
+      authHeaders: token ? { Authorization: `Bearer ${token}` } : {},
+      cacheScopeKey: userId ? `user:${userId}` : "",
+    };
+  } catch {
+    return { authHeaders: {}, cacheScopeKey: "" };
+  }
 }
 
-function stripWordsFromPayload(payload) {
-  const { mappedWords: _mappedWords, ...rest } = payload;
-  return rest;
-}
-
-async function fetchUserActiveGroupWordsFromNetwork({ includeWords = false, wordLimit = 0 } = {}) {
-  const authHeaders = await getApiAuthHeaders();
+async function fetchUserActiveGroupWordsFromNetwork({
+  includeWords = false,
+  wordLimit = 0,
+  authHeaders = null,
+} = {}) {
+  const resolvedAuthHeaders = authHeaders ?? (await getApiAuthHeaders());
   const params = new URLSearchParams();
   if (includeWords) {
     params.set("includeWords", "1");
@@ -56,7 +67,7 @@ async function fetchUserActiveGroupWordsFromNetwork({ includeWords = false, word
       {
         headers: {
           "Content-Type": "application/json",
-          ...authHeaders,
+          ...resolvedAuthHeaders,
         },
         signal: controller.signal,
       },
@@ -75,70 +86,77 @@ async function fetchUserActiveGroupWordsFromNetwork({ includeWords = false, word
 }
 
 export function invalidateUserActiveGroupWordsCache() {
-  cachedFullPayload = null;
-  cachedAt = 0;
-  inflightFullRequest = null;
-  inflightTermsRequest = null;
+  activeGroupWordsCache.clear();
 }
 
 export async function fetchUserActiveGroupWords(options = {}) {
   const includeWords = Boolean(options.includeWords);
   const wordLimit = Number(options.wordLimit) > 0 ? Number(options.wordLimit) : 0;
   const forceRefresh = Boolean(options.forceRefresh);
+  const { authHeaders, cacheScopeKey } = await getApiAuthContext();
+  const cachedPayload = !forceRefresh
+    ? activeGroupWordsCache.read(cacheScopeKey, { includeWords, wordLimit })
+    : null;
 
-  if (!forceRefresh && isCacheValid() && wordLimit === 0) {
-    if (!includeWords) {
-      return stripWordsFromPayload(cachedFullPayload);
-    }
-    if (Array.isArray(cachedFullPayload.mappedWords)) {
-      return cachedFullPayload;
-    }
+  if (cachedPayload) {
+    return cachedPayload;
   }
 
   if (includeWords) {
     if (wordLimit > 0) {
-      return fetchUserActiveGroupWordsFromNetwork({ includeWords: true, wordLimit });
+      return fetchUserActiveGroupWordsFromNetwork({
+        includeWords: true,
+        wordLimit,
+        authHeaders,
+      });
     }
 
-    if (!forceRefresh && inflightFullRequest) {
+    const inflightFullRequest = !forceRefresh
+      ? activeGroupWordsCache.readInflight(cacheScopeKey, "full")
+      : null;
+    if (inflightFullRequest) {
       return inflightFullRequest;
     }
 
-    inflightFullRequest = fetchUserActiveGroupWordsFromNetwork({ includeWords: true, wordLimit })
+    const nextFullRequest = fetchUserActiveGroupWordsFromNetwork({
+      includeWords: true,
+      wordLimit,
+      authHeaders,
+    })
       .then((payload) => {
-        cachedFullPayload = payload;
-        cachedAt = Date.now();
+        activeGroupWordsCache.writeFull(cacheScopeKey, payload);
         return payload;
-      })
-      .finally(() => {
-        inflightFullRequest = null;
       });
 
-    return inflightFullRequest;
+    return activeGroupWordsCache.trackInflight(cacheScopeKey, "full", nextFullRequest);
   }
 
-  if (!forceRefresh && inflightFullRequest && wordLimit === 0) {
+  const inflightFullRequest = !forceRefresh
+    ? activeGroupWordsCache.readInflight(cacheScopeKey, "full")
+    : null;
+  if (inflightFullRequest && wordLimit === 0) {
     const fullPayload = await inflightFullRequest;
-    return stripWordsFromPayload(fullPayload);
+    const { mappedWords: _mappedWords, ...rest } = fullPayload;
+    return rest;
   }
 
-  if (!forceRefresh && inflightTermsRequest) {
+  const inflightTermsRequest = !forceRefresh
+    ? activeGroupWordsCache.readInflight(cacheScopeKey, "terms")
+    : null;
+  if (inflightTermsRequest) {
     return inflightTermsRequest;
   }
 
-  inflightTermsRequest = fetchUserActiveGroupWordsFromNetwork({ includeWords: false })
+  const nextTermsRequest = fetchUserActiveGroupWordsFromNetwork({
+    includeWords: false,
+    authHeaders,
+  })
     .then((payload) => {
-      if (!isCacheValid() || cachedFullPayload?.mappedWords) {
-        cachedFullPayload = payload;
-        cachedAt = Date.now();
-      }
+      activeGroupWordsCache.writeTerms(cacheScopeKey, payload);
       return payload;
-    })
-    .finally(() => {
-      inflightTermsRequest = null;
     });
 
-  return inflightTermsRequest;
+  return activeGroupWordsCache.trackInflight(cacheScopeKey, "terms", nextTermsRequest);
 }
 
 export async function importUserActiveGroupWords({ limit = null, wordLimit = 0 } = {}) {
