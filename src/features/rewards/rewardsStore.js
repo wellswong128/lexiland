@@ -1,6 +1,8 @@
 import { REWARDS_STORAGE_KEY } from "./rewardConstants.js";
 import { selectDailyMissions } from "./missionDefinitions.js";
 
+export const LEGACY_LEARNING_ACTIVITY_KEY = "lexiland.learningActivity.v1";
+
 export function getLocalDateKey(date = new Date()) {
   const year = date.getFullYear();
   const month = String(date.getMonth() + 1).padStart(2, "0");
@@ -24,6 +26,98 @@ export function getYesterdayKey(now = new Date()) {
   date.setDate(date.getDate() - 1);
 
   return getLocalDateKey(date);
+}
+
+function getNextDateKey(dateKey) {
+  const [year, month, day] = String(dateKey).split("-").map(Number);
+
+  if (!year || !month || !day) {
+    return null;
+  }
+
+  const date = new Date(year, month - 1, day);
+  date.setDate(date.getDate() + 1);
+
+  return getLocalDateKey(date);
+}
+
+function normalizePositiveNumber(value) {
+  return Math.max(Number(value) || 0, 0);
+}
+
+function normalizeDateKey(value) {
+  return typeof value === "string" && /^\d{4}-\d{2}-\d{2}$/.test(value)
+    ? value
+    : null;
+}
+
+function loadLegacyLearningActivity(storage) {
+  if (!storage) {
+    return null;
+  }
+
+  const rawValue = storage.getItem(LEGACY_LEARNING_ACTIVITY_KEY);
+
+  if (!rawValue) {
+    return null;
+  }
+
+  try {
+    const parsedValue = JSON.parse(rawValue);
+
+    return parsedValue && typeof parsedValue === "object" ? parsedValue : null;
+  } catch (error) {
+    console.warn("Could not parse legacy learning activity.", error);
+    return null;
+  }
+}
+
+function mergeLegacyLearningStreak(state, legacyActivity) {
+  const legacyStreak = normalizePositiveNumber(legacyActivity?.currentStreak);
+
+  if (legacyStreak <= 0) {
+    return state;
+  }
+
+  const legacyLastActiveDate = normalizeDateKey(legacyActivity?.lastActiveDate);
+  const rewardStreak = normalizePositiveNumber(state.currentStreak);
+  const rewardLongestStreak = normalizePositiveNumber(state.longestStreak);
+  const rewardLastActiveDate = normalizeDateKey(state.lastActiveLearningDate);
+  const baseState = {
+    ...state,
+    longestStreak: Math.max(rewardLongestStreak, legacyStreak),
+  };
+
+  if (!rewardLastActiveDate && rewardStreak === 0) {
+    return {
+      ...baseState,
+      currentStreak: legacyStreak,
+      lastActiveLearningDate: legacyLastActiveDate,
+    };
+  }
+
+  if (legacyLastActiveDate && rewardLastActiveDate === legacyLastActiveDate) {
+    return {
+      ...baseState,
+      currentStreak: Math.max(rewardStreak, legacyStreak),
+    };
+  }
+
+  if (
+    legacyLastActiveDate &&
+    rewardLastActiveDate === getNextDateKey(legacyLastActiveDate) &&
+    rewardStreak === 1
+  ) {
+    const continuedStreak = legacyStreak + 1;
+
+    return {
+      ...baseState,
+      currentStreak: continuedStreak,
+      longestStreak: Math.max(baseState.longestStreak, continuedStreak),
+    };
+  }
+
+  return baseState;
 }
 
 export function isSameDay(dateKeyA, dateKeyB) {
@@ -266,16 +360,20 @@ export function loadRewardState(storage = getDefaultStorage(), now = new Date())
   }
 
   const rawValue = storage.getItem(REWARDS_STORAGE_KEY);
+  const legacyActivity = loadLegacyLearningActivity(storage);
 
   if (!rawValue) {
-    return normalizeRewardState(null, now);
+    return mergeLegacyLearningStreak(normalizeRewardState(null, now), legacyActivity);
   }
 
   try {
-    return normalizeRewardState(JSON.parse(rawValue), now);
+    return mergeLegacyLearningStreak(
+      normalizeRewardState(JSON.parse(rawValue), now),
+      legacyActivity,
+    );
   } catch (error) {
     console.warn("Could not parse stored reward state.", error);
-    return normalizeRewardState(null, now);
+    return mergeLegacyLearningStreak(normalizeRewardState(null, now), legacyActivity);
   }
 }
 
