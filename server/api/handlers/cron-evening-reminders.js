@@ -1,10 +1,10 @@
 import { getAdminServiceClient, sendJson } from "../_admin-supabase.js";
 import { runEveningReminderJob } from "../../lib/eveningReminderJob.js";
 
-function verifyCronSecret(request) {
+export function verifyCronSecret(request) {
   const secret = String(process.env.CRON_SECRET || "").trim();
   if (!secret) {
-    return process.env.NODE_ENV !== "production";
+    return false;
   }
 
   const authorization = String(
