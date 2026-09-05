@@ -231,7 +231,7 @@ Counts candidates that would receive mail without sending.
 4. Complete partial tasks (e.g. review 2 words, skip games)
 5. Inspect Supabase table `user_daily_snapshots` for today's row
 
-Local cron calls require `CRON_SECRET` in `.env.local` unless `NODE_ENV !== production` (dev allows missing secret).
+Local cron calls require `CRON_SECRET` in `.env.local`; pass the matching bearer token even in dev.
 
 ### Force a send (advanced)
 
