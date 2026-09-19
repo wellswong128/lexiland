@@ -20,9 +20,10 @@ import {
   loadSyncedRewardState,
   openMysteryChest,
   updateLeaderboardOptIn,
+  updateSyncedRewardState,
 } from "./rewardExtensionsEngine.js";
 import { saveRewardState } from "./rewardsStore.js";
-import { subscribeToRewardUpdates } from "./rewardToasts.js";
+import { notifyRewardUpdate, subscribeToRewardUpdates } from "./rewardToasts.js";
 
 function getDefaultStorage() {
   if (typeof window === "undefined") {
@@ -63,82 +64,77 @@ export function useRewardExtensions() {
     [state],
   );
 
-  const persist = useCallback((nextState) => {
-    saveRewardState(nextState, getDefaultStorage());
-    refresh();
-  }, [refresh]);
+  const persist = useCallback((nextState, storage = getDefaultStorage()) => {
+    saveRewardState(nextState, storage);
+    notifyRewardUpdate();
+  }, []);
 
-  const purchaseItem = useCallback(
-    (itemId) => {
-      const result = buyAvatarItem(state, itemId, { t });
+  const updatePersistedState = useCallback(
+    (mutator) => {
+      const storage = getDefaultStorage();
+      const result = updateSyncedRewardState(mutator, { storage });
 
       if (result.success) {
-        persist(result.state);
+        notifyRewardUpdate();
       }
 
       return result;
     },
-    [persist, state, t],
+    [],
+  );
+
+  const purchaseItem = useCallback(
+    (itemId) => {
+      return updatePersistedState((latestState) => buyAvatarItem(latestState, itemId, { t }));
+    },
+    [t, updatePersistedState],
   );
 
   const equipItem = useCallback(
     (itemId) => {
-      const result = equipAvatarItem(state, itemId, { t });
-
-      if (result.success) {
-        persist(result.state);
-      }
-
-      return result;
+      return updatePersistedState((latestState) => equipAvatarItem(latestState, itemId, { t }));
     },
-    [persist, state, t],
+    [t, updatePersistedState],
   );
 
   const selectTeam = useCallback(
     (teamId) => {
-      const result = joinTeam(state, teamId, { t });
-
-      if (result.success) {
-        persist(result.state);
-      }
-
-      return result;
+      return updatePersistedState((latestState) => joinTeam(latestState, teamId, { t }));
     },
-    [persist, state, t],
+    [t, updatePersistedState],
   );
 
   const saveLeaderboardSettings = useCallback(
     ({ displayName, optIn }) => {
-      persist(updateLeaderboardOptIn(state, { displayName, optIn }));
+      const storage = getDefaultStorage();
+      const latestState = loadSyncedRewardState(storage);
+      persist(updateLeaderboardOptIn(latestState, { displayName, optIn }), storage);
     },
-    [persist, state],
+    [persist],
   );
 
   const openChest = useCallback(
     (chestId) => {
-      const result = openMysteryChest(state, chestId, { t });
+      const result = updatePersistedState((latestState) =>
+        openMysteryChest(latestState, chestId, { t }),
+      );
 
       if (result.success) {
-        persist(result.state);
         setChestResult(result.reward);
       }
 
       return result;
     },
-    [persist, state, t],
+    [t, updatePersistedState],
   );
 
   const claimMilestone = useCallback(
     (milestoneId) => {
-      const result = claimEventMilestone(state, milestoneId, { t });
-
-      if (result.success) {
-        persist(result.state);
-      }
-
-      return result;
+      return updatePersistedState((latestState) =>
+        claimEventMilestone(latestState, milestoneId, { t }),
+      );
     },
-    [persist, state, t],
+    [t, updatePersistedState],
   );
 
   const clearChestResult = useCallback(() => {
