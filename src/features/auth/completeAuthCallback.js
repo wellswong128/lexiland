@@ -4,6 +4,7 @@ import {
   clearPkceVerifierBackup,
   restorePkceVerifierBackup,
 } from "./pkceStorage.js";
+import { normalizeAuthRedirectPath } from "./safeRedirect.js";
 
 const POST_AUTH_REDIRECT_KEY = "lexiland.auth.post-login-redirect";
 
@@ -37,8 +38,8 @@ export function rememberPostAuthRedirect(redirectPath) {
     return;
   }
 
-  const normalizedRedirect = String(redirectPath || "").trim();
-  if (!normalizedRedirect.startsWith("/")) {
+  const normalizedRedirect = normalizeAuthRedirectPath(redirectPath, "");
+  if (!normalizedRedirect) {
     return;
   }
 
@@ -50,28 +51,33 @@ export function rememberPostAuthRedirect(redirectPath) {
 }
 
 export function resolvePostAuthRedirect(fallback = "/") {
+  const safeFallback = normalizeAuthRedirectPath(fallback);
+
   if (typeof window === "undefined") {
-    return fallback;
+    return safeFallback;
   }
 
   const searchParams = new URLSearchParams(window.location.search);
   const redirectFromUrl = searchParams.get("redirect");
+  const safeRedirectFromUrl = normalizeAuthRedirectPath(redirectFromUrl, "");
 
-  if (redirectFromUrl?.startsWith("/")) {
-    return redirectFromUrl;
+  if (safeRedirectFromUrl) {
+    return safeRedirectFromUrl;
   }
 
   try {
     const storedRedirect = sessionStorage.getItem(POST_AUTH_REDIRECT_KEY);
 
-    if (storedRedirect?.startsWith("/")) {
-      return storedRedirect;
+    const safeStoredRedirect = normalizeAuthRedirectPath(storedRedirect, "");
+
+    if (safeStoredRedirect) {
+      return safeStoredRedirect;
     }
   } catch {
     // sessionStorage may be unavailable.
   }
 
-  return fallback;
+  return safeFallback;
 }
 
 export function clearPostAuthRedirect() {
