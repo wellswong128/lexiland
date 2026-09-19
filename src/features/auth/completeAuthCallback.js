@@ -4,6 +4,7 @@ import {
   clearPkceVerifierBackup,
   restorePkceVerifierBackup,
 } from "./pkceStorage.js";
+import { normalizeSameOriginRedirectPath } from "./redirectSafety.js";
 
 const POST_AUTH_REDIRECT_KEY = "lexiland.auth.post-login-redirect";
 
@@ -37,8 +38,8 @@ export function rememberPostAuthRedirect(redirectPath) {
     return;
   }
 
-  const normalizedRedirect = String(redirectPath || "").trim();
-  if (!normalizedRedirect.startsWith("/")) {
+  const normalizedRedirect = normalizeSameOriginRedirectPath(redirectPath, "");
+  if (!normalizedRedirect) {
     return;
   }
 
@@ -56,16 +57,19 @@ export function resolvePostAuthRedirect(fallback = "/") {
 
   const searchParams = new URLSearchParams(window.location.search);
   const redirectFromUrl = searchParams.get("redirect");
+  const safeRedirectFromUrl = normalizeSameOriginRedirectPath(redirectFromUrl, "");
 
-  if (redirectFromUrl?.startsWith("/")) {
-    return redirectFromUrl;
+  if (safeRedirectFromUrl) {
+    return safeRedirectFromUrl;
   }
 
   try {
     const storedRedirect = sessionStorage.getItem(POST_AUTH_REDIRECT_KEY);
 
-    if (storedRedirect?.startsWith("/")) {
-      return storedRedirect;
+    const safeStoredRedirect = normalizeSameOriginRedirectPath(storedRedirect, "");
+
+    if (safeStoredRedirect) {
+      return safeStoredRedirect;
     }
   } catch {
     // sessionStorage may be unavailable.

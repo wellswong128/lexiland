@@ -3,6 +3,7 @@ import { Link, useLocation, useNavigate, useSearchParams } from "react-router-do
 import { Capacitor } from "@capacitor/core";
 import LexiMascot from "../components/LexiMascot.jsx";
 import { getFriendlyAuthError } from "../features/auth/authErrors.js";
+import { normalizeSameOriginRedirectPath } from "../features/auth/redirectSafety.js";
 import {
   isIosStandalonePwa,
   navigateAfterAuth,
@@ -94,7 +95,7 @@ function AuthPage() {
   const useEmailCodeFlow = true;
 
   const mode = searchParams.get("mode") === "login" ? "login" : "signup";
-  const redirectTo = searchParams.get("redirect") || "/";
+  const redirectTo = normalizeSameOriginRedirectPath(searchParams.get("redirect"));
   const isSignup = mode === "signup";
   const continueWithoutAccountTo = useMemo(() => {
     if (canRoute(ROLES.GUEST, redirectTo)) {
