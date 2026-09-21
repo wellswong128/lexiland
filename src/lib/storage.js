@@ -145,12 +145,6 @@ export function loadPhotoCaptureDraft(storage = getDefaultStorage()) {
     return null;
   }
 
-  if (rawValue.length > PHOTO_CAPTURE_DRAFT_MAX_BYTES) {
-    console.warn("Photo capture draft was too large and has been cleared.");
-    storage.removeItem(PHOTO_CAPTURE_DRAFT_KEY);
-    return null;
-  }
-
   try {
     const parsedValue = JSON.parse(rawValue);
 
@@ -158,11 +152,23 @@ export function loadPhotoCaptureDraft(storage = getDefaultStorage()) {
       return null;
     }
 
-    return {
+    const draft = {
       ...parsedValue,
       imageDataUrl: "",
       previewUrl: "",
     };
+
+    if (rawValue.length > PHOTO_CAPTURE_DRAFT_MAX_BYTES) {
+      console.warn("Photo capture draft was too large and has been restored without image data.");
+
+      try {
+        storage.setItem(PHOTO_CAPTURE_DRAFT_KEY, JSON.stringify(draft));
+      } catch (error) {
+        console.warn("Could not compact stored photo capture draft.", error);
+      }
+    }
+
+    return draft;
   } catch (error) {
     console.warn("Could not parse stored photo capture draft.", error);
     return null;
