@@ -52,8 +52,13 @@ export async function updateReminderSettings({
   return parseJsonResponse(response);
 }
 
-export async function syncDailySnapshot(snapshot) {
-  const authHeaders = await getApiAuthHeaders();
+export async function syncDailySnapshot(snapshot, { userId } = {}) {
+  const authHeaders = await getApiAuthHeaders({ expectedUserId: userId });
+
+  if (userId && !authHeaders.Authorization) {
+    throw new Error("Auth session changed before evening reminder snapshot sync.");
+  }
+
   const response = await fetch(resolveApiUrl("/api/user-daily-snapshot"), {
     method: "POST",
     headers: {

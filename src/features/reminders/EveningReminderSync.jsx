@@ -10,11 +10,19 @@ export default function EveningReminderSync({ user, words }) {
   const { locale } = useLocale();
   const timeoutRef = useRef(null);
   const lastPayloadRef = useRef("");
+  const activeUserIdRef = useRef("");
+
+  useEffect(() => {
+    activeUserIdRef.current = user?.id || "";
+    lastPayloadRef.current = "";
+  }, [user?.id]);
 
   useEffect(() => {
     if (!user?.id) {
       return undefined;
     }
+
+    const syncUserId = user.id;
 
     const scheduleSync = () => {
       if (timeoutRef.current) {
@@ -30,8 +38,15 @@ export default function EveningReminderSync({ user, words }) {
             return;
           }
 
-          await syncDailySnapshot(snapshot);
-          lastPayloadRef.current = payloadKey;
+          if (activeUserIdRef.current !== syncUserId) {
+            return;
+          }
+
+          await syncDailySnapshot(snapshot, { userId: syncUserId });
+
+          if (activeUserIdRef.current === syncUserId) {
+            lastPayloadRef.current = payloadKey;
+          }
         } catch (error) {
           console.warn("Could not sync evening reminder snapshot.", error);
         }

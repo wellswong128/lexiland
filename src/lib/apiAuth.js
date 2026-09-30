@@ -1,21 +1,14 @@
 import { supabase } from "./supabaseClient.js";
+import { buildApiAuthHeaders } from "./apiAuthHeaders.js";
 
-export async function getApiAuthHeaders() {
+export async function getApiAuthHeaders(options = {}) {
   if (!supabase) {
     return {};
   }
 
   try {
     const { data } = await supabase.auth.getSession();
-    const token = data?.session?.access_token;
-
-    if (!token) {
-      return {};
-    }
-
-    return {
-      Authorization: `Bearer ${token}`,
-    };
+    return buildApiAuthHeaders(data?.session, options);
   } catch {
     return {};
   }
