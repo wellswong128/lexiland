@@ -575,14 +575,13 @@ function FlashcardsPage() {
 
     maybeRecordDailyMistakeClear(currentQuestion.word, result);
     updateWord(currentQuestion.word.id, updateReviewResult(currentQuestion.word, result));
+    recordFlashcardRewards(currentQuestion.word, result, hadMistake);
 
     if (!isCorrect) {
       setSelectedAnswer(answerWordId);
       setFeedback("incorrect");
       return;
     }
-
-    recordFlashcardRewards(currentQuestion.word, result, hadMistake);
 
     if (hadMistake) {
       setSessionClearedCount((count) => count + 1);
