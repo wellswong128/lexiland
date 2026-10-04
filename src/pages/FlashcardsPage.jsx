@@ -24,6 +24,7 @@ import { useWordsContext } from "../features/words/WordsContext.jsx";
 import { clearReviewSession, syncReviewSession } from "../lib/reviewSessionStorage.js";
 import { maybeRecordDailyMistakeClear } from "../lib/learningActivity.js";
 import { ACTION_TYPES, awardLearningAction } from "../features/rewards/rewardsEngine.js";
+import { buildMistakeFixDedupeKey } from "../features/rewards/mistakeFixDedupe.js";
 import { REVIEW_RESULTS } from "../features/words/wordTypes.js";
 
 function FlashcardsMissingImagesPanel({ flashcardReadiness, t }) {
@@ -540,7 +541,7 @@ function FlashcardsPage() {
     if (hadMistake && remembered) {
       awardLearningAction(
         ACTION_TYPES.FIX_MISTAKE,
-        { dedupeKey: `${flashcardSessionRef.current}:fix:${word.id}` },
+        { dedupeKey: buildMistakeFixDedupeKey(flashcardSessionRef.current, word) },
         { words: wordsRef.current },
       );
     }
