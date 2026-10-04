@@ -12,6 +12,7 @@ import { updateReviewResult } from "../features/review/reviewHelpers.js";
 import { useWordsContext } from "../features/words/WordsContext.jsx";
 import { maybeRecordDailyMistakeClear } from "../lib/learningActivity.js";
 import { ACTION_TYPES, awardLearningAction } from "../features/rewards/rewardsEngine.js";
+import { buildMistakeFixDedupeKey } from "../features/rewards/mistakeFixDedupe.js";
 import { REVIEW_RESULTS } from "../features/words/wordTypes.js";
 
 function QuizPage() {
@@ -138,7 +139,7 @@ function QuizPage() {
       if (currentQuestion.word.mistake?.isMistake) {
         awardLearningAction(
           ACTION_TYPES.FIX_MISTAKE,
-          { dedupeKey: `${quizSessionRef.current}:fix:${currentQuestion.word.id}` },
+          { dedupeKey: buildMistakeFixDedupeKey(quizSessionRef.current, currentQuestion.word) },
           { words: reviewWords },
         );
       }

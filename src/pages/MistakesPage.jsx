@@ -10,6 +10,7 @@ import { useWordsContext } from "../features/words/WordsContext.jsx";
 import { dedupeWordsByTerm } from "../features/words/wordTypes.js";
 import { recordDailyMistakeCleared } from "../lib/learningActivity.js";
 import { ACTION_TYPES, awardLearningAction } from "../features/rewards/rewardsEngine.js";
+import { buildMistakeFixDedupeKey } from "../features/rewards/mistakeFixDedupe.js";
 
 function MistakesPage() {
   const { dateLocale, locale, t } = useLocale();
@@ -46,7 +47,7 @@ function MistakesPage() {
     });
     awardLearningAction(
       ACTION_TYPES.FIX_MISTAKE,
-      { dedupeKey: `manual:${word.id}` },
+      { dedupeKey: buildMistakeFixDedupeKey("manual", word) },
       { words: sourceWords },
     );
   }
