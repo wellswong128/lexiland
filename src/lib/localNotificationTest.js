@@ -13,7 +13,9 @@ let lifecycleInitialized = false;
 
 function clearTestBadgeListeners() {
   testBadgeListenerHandles.forEach((handle) => {
-    handle.remove();
+    void Promise.resolve(handle)
+      .then((listenerHandle) => listenerHandle?.remove?.())
+      .catch(() => {});
   });
   testBadgeListenerHandles = [];
 }
