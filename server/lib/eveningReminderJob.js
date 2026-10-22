@@ -65,8 +65,27 @@ function userNeedsReminder(snapshot) {
   return !snapshot.streak_safe_today;
 }
 
-export async function runEveningReminderJob(adminClient, { now = new Date(), dryRun = false } = {}) {
-  if (!isEmailConfigured()) {
+async function claimReminderSend(adminClient, userId, dateKey) {
+  return adminClient
+    .from("user_reminder_settings")
+    .update({ last_reminder_sent_date: dateKey })
+    .eq("user_id", userId)
+    .eq("evening_reminder_enabled", true)
+    .or(`last_reminder_sent_date.is.null,last_reminder_sent_date.neq.${dateKey}`)
+    .select("user_id")
+    .maybeSingle();
+}
+
+export async function runEveningReminderJob(
+  adminClient,
+  {
+    now = new Date(),
+    dryRun = false,
+    emailConfigured = isEmailConfigured,
+    sendReminderEmail = sendEmail,
+  } = {},
+) {
+  if (!emailConfigured()) {
     return {
       ok: false,
       error: "Email is not configured. Set CLOUDFLARE_API_TOKEN and redeploy.",
@@ -152,22 +171,28 @@ export async function runEveningReminderJob(adminClient, { now = new Date(), dry
     }
 
     try {
-      await sendEmail({
+      const { data: reminderClaim, error: claimError } = await claimReminderSend(
+        adminClient,
+        settings.user_id,
+        dateKey,
+      );
+
+      if (claimError) {
+        errors.push({ userId: settings.user_id, message: claimError.message });
+        continue;
+      }
+
+      if (!reminderClaim) {
+        skipped += 1;
+        continue;
+      }
+
+      await sendReminderEmail({
         to: email,
         subject: emailContent.subject,
         html: emailContent.html,
         text: emailContent.text,
       });
-
-      const { error: updateError } = await adminClient
-        .from("user_reminder_settings")
-        .update({ last_reminder_sent_date: dateKey })
-        .eq("user_id", settings.user_id);
-
-      if (updateError) {
-        errors.push({ userId: settings.user_id, message: updateError.message });
-        continue;
-      }
 
       sent += 1;
     } catch (error) {
