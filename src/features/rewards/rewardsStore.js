@@ -1,5 +1,6 @@
-import { REWARDS_STORAGE_KEY } from "./rewardConstants.js";
-import { selectDailyMissions } from "./missionDefinitions.js";
+import { DAILY_HERO_BONUS, REWARDS_STORAGE_KEY } from "./rewardConstants.js";
+import { TEAM_POINT_RULES } from "./rewardExtensionDefinitions.js";
+import { getMissionDefinition, selectDailyMissions } from "./missionDefinitions.js";
 
 export function getLocalDateKey(date = new Date()) {
   const year = date.getFullYear();
@@ -181,6 +182,105 @@ function normalizeWeeklyStats(weeklyStats, weekStartDate) {
   };
 }
 
+function getExpiredDailySettlement(dailyState) {
+  if (!dailyState?.dateKey || !Array.isArray(dailyState.missions)) {
+    return {
+      missionCoins: 0,
+      settledMissionCount: 0,
+      dailyHeroCoins: 0,
+    };
+  }
+
+  const completedMissions = dailyState.missions.filter((mission) => mission.completed);
+  const unclaimedCompletedMissions = completedMissions.filter((mission) => !mission.claimed);
+  const allMissionsComplete =
+    dailyState.missions.length > 0 && completedMissions.length === dailyState.missions.length;
+  const missionCoins = unclaimedCompletedMissions.reduce((total, mission) => {
+    const definition = getMissionDefinition(mission.missionId);
+    return total + (definition?.rewardCoins ?? 0);
+  }, 0);
+
+  return {
+    missionCoins,
+    settledMissionCount: unclaimedCompletedMissions.length,
+    dailyHeroCoins: allMissionsComplete && !dailyState.dailyHeroClaimed ? DAILY_HERO_BONUS : 0,
+  };
+}
+
+function updateImprovementScore(weeklyScores) {
+  return (
+    (weeklyScores.mistakesFixed ?? 0) * 3 +
+    (weeklyScores.wordsReviewed ?? 0) +
+    (weeklyScores.missionsCompleted ?? 0) * 5
+  );
+}
+
+function applyExpiredDailySettlement(state, rawState, weekStartDate) {
+  if (rawState?.dailyState?.dateKey === state.dailyState.dateKey) {
+    return state;
+  }
+
+  const settlement = getExpiredDailySettlement(rawState?.dailyState);
+  const totalCoins = settlement.missionCoins + settlement.dailyHeroCoins;
+  const missionScoreCount =
+    settlement.settledMissionCount + (settlement.dailyHeroCoins > 0 ? 1 : 0);
+
+  if (totalCoins <= 0 && missionScoreCount <= 0) {
+    return state;
+  }
+
+  const shouldCreditCurrentWeek = rawState.weeklyStats?.weekStartDate === weekStartDate;
+  let nextState = {
+    ...state,
+    coins: state.coins + totalCoins,
+  };
+
+  if (shouldCreditCurrentWeek) {
+    const weeklyScores = {
+      ...nextState.leaderboard.weeklyScores,
+      missionsCompleted: nextState.leaderboard.weeklyScores.missionsCompleted + missionScoreCount,
+    };
+    weeklyScores.improvementScore = updateImprovementScore(weeklyScores);
+
+    nextState = {
+      ...nextState,
+      weeklyStats: {
+        ...nextState.weeklyStats,
+        coinsEarned: nextState.weeklyStats.coinsEarned + totalCoins,
+      },
+      leaderboard: {
+        ...nextState.leaderboard,
+        weeklyScores,
+      },
+    };
+  }
+
+  if (settlement.dailyHeroCoins > 0 && nextState.team.teamId) {
+    const currentWeekTeamPoints =
+      nextState.team.currentWeekTeamPoints + TEAM_POINT_RULES.daily_hero_bonus;
+
+    nextState = {
+      ...nextState,
+      team: {
+        ...nextState.team,
+        currentWeekTeamPoints,
+        lifetimeTeamPoints: nextState.team.lifetimeTeamPoints + TEAM_POINT_RULES.daily_hero_bonus,
+      },
+      leaderboard: shouldCreditCurrentWeek
+        ? {
+            ...nextState.leaderboard,
+            weeklyScores: {
+              ...nextState.leaderboard.weeklyScores,
+              teamPoints: currentWeekTeamPoints,
+            },
+          }
+        : nextState.leaderboard,
+    };
+  }
+
+  return nextState;
+}
+
 export function normalizeRewardState(rawState, now = new Date()) {
   const todayKey = getLocalDateKey(now);
   const weekStartDate = getWeekStartDate(now);
@@ -257,7 +357,7 @@ export function normalizeRewardState(rawState, now = new Date()) {
     },
   };
 
-  return normalized;
+  return applyExpiredDailySettlement(normalized, rawState, weekStartDate);
 }
 
 export function loadRewardState(storage = getDefaultStorage(), now = new Date()) {
@@ -272,7 +372,18 @@ export function loadRewardState(storage = getDefaultStorage(), now = new Date())
   }
 
   try {
-    return normalizeRewardState(JSON.parse(rawValue), now);
+    const normalized = normalizeRewardState(JSON.parse(rawValue), now);
+    const normalizedValue = JSON.stringify(normalized);
+
+    if (normalizedValue !== rawValue) {
+      try {
+        storage.setItem(REWARDS_STORAGE_KEY, normalizedValue);
+      } catch (error) {
+        console.warn("Could not persist normalized reward state.", error);
+      }
+    }
+
+    return normalized;
   } catch (error) {
     console.warn("Could not parse stored reward state.", error);
     return normalizeRewardState(null, now);
